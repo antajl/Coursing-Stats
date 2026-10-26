@@ -251,6 +251,85 @@ export function expandCoursingTimeline(
   )
 }
 
+/** Собирает полную хронологию скорости: текущий рекорд + записи из истории (history). */
+export function expandSpeedTimeline(
+  records: Array<{
+    speed_km_h: number | string
+    date: string | number
+    track_type?: unknown
+    screenshot_url?: unknown
+    history?: unknown
+  }>
+): Array<{
+  speed_km_h: number
+  date: string
+  track_type?: string | null
+  screenshot_url?: string | null
+}> {
+  const points: Array<{
+    speed_km_h: number
+    date: string
+    track_type?: string | null
+    screenshot_url?: string | null
+    ts: number
+  }> = []
+
+  for (const record of records) {
+    for (const entry of parseRecordHistory(record.history)) {
+      if (typeof entry !== 'object' || entry == null || !('speed_km_h' in entry)) continue
+      const e = entry as { speed_km_h: unknown; date: unknown; track_type?: unknown; screenshot_url?: unknown }
+      const speed = Number(e.speed_km_h)
+      const ts = parseRecordDate(e.date as string | number)?.getTime()
+      if (Number.isFinite(speed) && speed > 0 && ts != null) {
+        points.push({
+          speed_km_h: speed,
+          date: String(e.date),
+          track_type: (e.track_type as string) || null,
+          screenshot_url: (e.screenshot_url as string) || null,
+          ts,
+        })
+      }
+    }
+
+    const currentSpeed = Number(record.speed_km_h)
+    const currentTs = parseRecordDate(record.date)?.getTime()
+    if (Number.isFinite(currentSpeed) && currentSpeed > 0 && currentTs != null) {
+      points.push({
+        speed_km_h: currentSpeed,
+        date: String(record.date),
+        track_type: (record.track_type as string) || null,
+        screenshot_url: (record.screenshot_url as string) || null,
+        ts: currentTs,
+      })
+    }
+  }
+
+  const byDate = new Map<string, {
+    speed_km_h: number
+    date: string
+    track_type?: string | null
+    screenshot_url?: string | null
+  }>()
+
+  for (const point of points.sort((a, b) => a.ts - b.ts)) {
+    const key = normalizeRecordDateIso(point.date)
+    const existing = byDate.get(key)
+    if (!existing || point.speed_km_h > existing.speed_km_h) {
+      byDate.set(key, {
+        speed_km_h: point.speed_km_h,
+        date: point.date,
+        track_type: point.track_type,
+        screenshot_url: point.screenshot_url,
+      })
+    }
+  }
+
+  return [...byDate.values()].sort(
+    (a, b) =>
+      (parseRecordDate(a.date)?.getTime() ?? 0) - (parseRecordDate(b.date)?.getTime() ?? 0)
+  )
+}
+
 /** км/ч: 64 → «64», 64.5 → «64.5» (без лишнего .0) */
 export function formatDoninoSpeedKmh(value: number | string | null | undefined): string {
   if (value == null || value === '') return '—'

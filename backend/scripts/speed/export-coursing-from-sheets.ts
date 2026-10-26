@@ -14,7 +14,7 @@ interface CoursingRecordsCache {
 }
 
 const GOOGLE_SHEETS_URL =
-  'https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/export?format=xlsx&gid=0';
+  'https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/export?format=xlsx';
 const OUTPUT_FILE = 'data/v1/donino/coursing_records.json';
 
 async function main() {

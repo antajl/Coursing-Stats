@@ -191,7 +191,38 @@ export function useSpeedRecordsPage() {
       let filtered = baseRecords
 
       if (filterYears.length > 0) {
-        filtered = filtered.filter((record) => filterYears.includes(String(getRecordYear(record.date))))
+        filtered = filtered
+          .map((record) => {
+            const allRuns = [
+              {
+                speed_km_h: Number(record.speed_km_h),
+                date: record.date,
+                track_type: record.track_type,
+                screenshot_url: record.screenshot_url,
+              },
+              ...(Array.isArray(record.history) ? record.history : []).map((h: any) => ({
+                speed_km_h: Number(h.speed_km_h),
+                date: h.date,
+                track_type: h.track_type,
+                screenshot_url: h.screenshot_url,
+              })),
+            ]
+            const matchingRuns = allRuns.filter((run) => {
+              const y = getRecordYear(run.date)
+              return y != null && filterYears.includes(String(y))
+            })
+            if (matchingRuns.length === 0) return null
+            matchingRuns.sort((a, b) => b.speed_km_h - a.speed_km_h)
+            const best = matchingRuns[0]
+            return {
+              ...record,
+              speed_km_h: best.speed_km_h,
+              date: best.date,
+              track_type: best.track_type,
+              screenshot_url: best.screenshot_url,
+            }
+          })
+          .filter((r): r is (typeof baseRecords)[number] => r !== null)
       }
 
       if (filterBreeds.length > 0) {
@@ -307,7 +338,29 @@ export function useSpeedRecordsPage() {
       }
 
       if (filterYears.length > 0) {
-        filtered = filtered.filter((record) => filterYears.includes(String(getRecordYear(record.date))))
+        filtered = filtered
+          .map((record) => {
+            const allRuns = [
+              { time_seconds: Number(record.time_seconds), date: record.date },
+              ...(Array.isArray(record.history) ? record.history : []).map((h: any) => ({
+                time_seconds: Number(h.time_seconds),
+                date: h.date,
+              })),
+            ]
+            const matchingRuns = allRuns.filter((run) => {
+              const y = getRecordYear(run.date)
+              return y != null && filterYears.includes(String(y))
+            })
+            if (matchingRuns.length === 0) return null
+            matchingRuns.sort((a, b) => a.time_seconds - b.time_seconds)
+            const best = matchingRuns[0]
+            return {
+              ...record,
+              time_seconds: best.time_seconds,
+              date: best.date,
+            }
+          })
+          .filter((r): r is (typeof baseRecords)[number] => r !== null)
       }
 
       if (filterMinTime) {

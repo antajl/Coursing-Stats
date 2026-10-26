@@ -1,5 +1,13 @@
 import * as XLSX from 'xlsx';
 import { statusFromNameCell } from './speed-sheet-status';
+import { findSportDogId } from './match-donino-dog';
+
+export interface SpeedHistoryEntry {
+  speed_km_h: number | string;
+  date: string;
+  track_type?: string | null;
+  screenshot_url?: string | null;
+}
 
 export interface ParsedSpeedRecord {
   breed: string;
@@ -10,7 +18,8 @@ export interface ParsedSpeedRecord {
   screenshot_url?: string | null;
   status: string;
   track_type?: string | null;
-  history?: { speed_km_h: number | string; date: string; track_type?: string | null }[];
+  history?: SpeedHistoryEntry[];
+  dog_id?: number | null;
 }
 
 export function convertExcelDate(dateValue: unknown): string {
@@ -74,10 +83,13 @@ function headerIndex(headers: string[], ...names: string[]): number {
   return -1;
 }
 
+const IGNORED_SHEETS = new Set(['2025 по породам', 'Абсолютный зачёт']);
+
 export function parseSpeedRecordsFromWorkbook(workbook: XLSX.WorkBook): ParsedSpeedRecord[] {
   const records: ParsedSpeedRecord[] = [];
 
   for (const sheetName of workbook.SheetNames) {
+    if (IGNORED_SHEETS.has(sheetName)) continue;
     const worksheet = workbook.Sheets[sheetName];
     if (!worksheet['!ref']) continue;
 
@@ -86,11 +98,12 @@ export function parseSpeedRecordsFromWorkbook(workbook: XLSX.WorkBook): ParsedSp
     if (sheetName === 'старые личные рекорды') {
       for (let row = range.s.r; row <= range.e.r; row++) {
         const breedCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c })];
+        const sexCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 1 })];
         const nameCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 2 })];
         const speedCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 3 })];
         const dateCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 4 })];
         const screenshotCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 5 })];
-        const sexCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 1 })];
+        const trackTypeCell = worksheet[XLSX.utils.encode_cell({ r: row, c: range.s.c + 6 })];
 
         if (!breedCell?.v || !nameCell?.v) continue;
 
@@ -98,13 +111,14 @@ export function parseSpeedRecordsFromWorkbook(workbook: XLSX.WorkBook): ParsedSp
         if (speed_km_h <= 0) continue;
 
         records.push({
-          breed: String(breedCell.v),
-          sex: sexCell?.v ? String(sexCell.v) : '',
-          name: String(nameCell.v),
+          breed: String(breedCell.v).trim(),
+          sex: sexCell?.v ? String(sexCell.v).trim() : '',
+          name: String(nameCell.v).trim(),
           speed_km_h,
           date: convertExcelDate(dateCell?.v),
-          screenshot_url: screenshotCell?.v ? String(screenshotCell.v) : '',
+          screenshot_url: screenshotCell?.v ? String(screenshotCell.v).trim() : '',
           status: statusFromNameCell(nameCell, sheetName),
+          track_type: trackTypeCell?.v ? String(trackTypeCell.v).trim() : null,
         });
       }
       continue;
@@ -152,14 +166,14 @@ export function parseSpeedRecordsFromWorkbook(workbook: XLSX.WorkBook): ParsedSp
           : undefined;
 
       records.push({
-        breed: String(breedCell.v),
-        sex: sexCell?.v ? String(sexCell.v) : '',
-        name: String(nameCell.v),
+        breed: String(breedCell.v).trim(),
+        sex: sexCell?.v ? String(sexCell.v).trim() : '',
+        name: String(nameCell.v).trim(),
         speed_km_h,
         date: convertExcelDate(dateCell?.v),
-        screenshot_url: screenshotCell?.v ? String(screenshotCell.v) : '',
+        screenshot_url: screenshotCell?.v ? String(screenshotCell.v).trim() : '',
         status: statusFromNameCell(nameCell, sheetName),
-        track_type: trackTypeCell?.v ? String(trackTypeCell.v) : null,
+        track_type: trackTypeCell?.v ? String(trackTypeCell.v).trim() : null,
       });
     }
   }
@@ -181,33 +195,80 @@ export function dedupeSpeedRecords(records: ParsedSpeedRecord[]): ParsedSpeedRec
   return uniqueRecords;
 }
 
+/**
+ * Объединяет все замеры собаки в единую каноническую запись (1 собака = 1 запись).
+ * Лучший результат становится верхнеуровневым, остальные переходят в history.
+ */
+export function consolidateSpeedRecords(records: ParsedSpeedRecord[]): ParsedSpeedRecord[] {
+  const byDog = new Map<string, ParsedSpeedRecord[]>();
+
+  for (const r of records) {
+    const key = `${r.name}_${r.breed}`;
+    if (!byDog.has(key)) byDog.set(key, []);
+    byDog.get(key)!.push(r);
+  }
+
+  const result: ParsedSpeedRecord[] = [];
+
+  for (const runs of byDog.values()) {
+    // Дедупликация идентичных замеров (скорость + дата)
+    const runMap = new Map<string, ParsedSpeedRecord>();
+    for (const r of runs) {
+      const k = `${r.speed_km_h}_${r.date}`;
+      const existing = runMap.get(k);
+      if (!existing || (!existing.screenshot_url && r.screenshot_url)) {
+        runMap.set(k, r);
+      }
+    }
+
+    const allRuns = [...runMap.values()];
+    // Сортировка: максимальная скорость выше; при равенстве — более свежая дата
+    allRuns.sort((a, b) => b.speed_km_h - a.speed_km_h || b.date.localeCompare(a.date));
+
+    const bestRun = allRuns[0];
+    if (!bestRun) continue;
+
+    const sex = runs.find((r) => r.sex)?.sex || bestRun.sex || '';
+
+    // Статус: если у собаки есть статус 'new' или 'improved', сохраняем его
+    let status = bestRun.status || 'normal';
+    const highlightRun = runs.find((r) => r.status === 'new' || r.status === 'improved');
+    if (highlightRun) {
+      status = highlightRun.status;
+    } else if (allRuns.length > 1) {
+      status = 'improved';
+    }
+
+    const history: SpeedHistoryEntry[] = allRuns
+      .slice(1)
+      .map((r) => ({
+        speed_km_h: r.speed_km_h,
+        date: r.date,
+        track_type: r.track_type || null,
+        screenshot_url: r.screenshot_url || null,
+      }))
+      .sort((a, b) => a.date.localeCompare(b.date));
+
+    const dog_id = findSportDogId(bestRun.name, bestRun.breed);
+
+    result.push({
+      breed: bestRun.breed,
+      sex,
+      name: bestRun.name,
+      speed_km_h: bestRun.speed_km_h,
+      date: bestRun.date,
+      screenshot_url: bestRun.screenshot_url || null,
+      status,
+      track_type: bestRun.track_type || null,
+      history,
+      dog_id: dog_id || undefined,
+    });
+  }
+
+  return result.sort((a, b) => b.speed_km_h - a.speed_km_h);
+}
+
+/** Сохраняем обратную совместимость с прежним именем функции */
 export function attachSpeedRecordHistory(records: ParsedSpeedRecord[]): ParsedSpeedRecord[] {
-  const recordsByDog: Record<string, ParsedSpeedRecord[]> = {};
-
-  for (const record of records) {
-    const key = `${record.name}_${record.breed}`;
-    if (!recordsByDog[key]) recordsByDog[key] = [];
-    recordsByDog[key].push(record);
-  }
-
-  for (const dogRecords of Object.values(recordsByDog)) {
-    dogRecords.sort((a, b) => {
-      const parseDate = (d: string) => {
-        if (!d) return 0;
-        if (d.includes('-')) return new Date(d).getTime();
-        const parts = d.split('.');
-        if (parts.length !== 3) return 0;
-        return new Date(parseInt(parts[2], 10), parseInt(parts[1], 10) - 1, parseInt(parts[0], 10)).getTime();
-      };
-      return parseDate(b.date) - parseDate(a.date);
-    });
-
-    dogRecords.forEach((record, idx) => {
-      record.history = dogRecords
-        .filter((_, i) => i !== idx)
-        .map((r) => ({ speed_km_h: r.speed_km_h, date: r.date, track_type: r.track_type }));
-    });
-  }
-
-  return records;
+  return consolidateSpeedRecords(records);
 }

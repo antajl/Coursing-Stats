@@ -5,7 +5,7 @@ import SkeletonLoader from '../components/SkeletonLoader'
 import ErrorState from '../components/ErrorState'
 import DogSexIcon from '../components/DogSexIcon'
 import OwnerCrownName from '../components/OwnerCrownName'
-import { formatRecordDate, dedupeByRecordDate, expandCoursingTimeline } from '../lib/recordDates'
+import { formatRecordDate, dedupeByRecordDate, expandCoursingTimeline, expandSpeedTimeline } from '../lib/recordDates'
 import { SEO } from '../components/SEO'
 import DoninoAttribution from '../components/DoninoAttribution'
 import { api } from '../services/api'
@@ -54,13 +54,18 @@ export default function DoninoDogProfile() {
   // Calculate derived values with useMemo (must be before early returns)
   const hasSpeedRecords = useMemo(() => data?.speedStats?.total > 0, [data?.speedStats?.total])
   const hasCoursingRecords = useMemo(() => data?.coursingStats?.total > 0, [data?.coursingStats?.total])
+  const speedTimeline = useMemo(() => {
+    if (!data?.speedRecords) return []
+    return expandSpeedTimeline(data.speedRecords)
+  }, [data?.speedRecords])
   const uniqueSpeedRecords = useMemo(() => {
+    if (speedTimeline.length > 0) return speedTimeline
     if (!data?.speedRecords) return []
     return dedupeByRecordDate(
       data.speedRecords,
       (candidate, existing) => candidate.speed_km_h > existing.speed_km_h
     )
-  }, [data?.speedRecords])
+  }, [speedTimeline, data?.speedRecords])
   const coursingTimeline = useMemo(() => {
     if (!data?.coursingRecords) return []
     return expandCoursingTimeline(data.coursingRecords)

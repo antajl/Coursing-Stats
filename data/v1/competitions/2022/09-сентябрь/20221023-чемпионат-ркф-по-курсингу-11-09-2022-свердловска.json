@@ -1,0 +1,3592 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-26T09:14:24.246Z",
+  "source": "manual-entry",
+  "event_id": 20221023,
+  "event": {
+    "id": 20221023,
+    "year": 2022,
+    "date_start": "2022-09-11",
+    "date_end": "2022-09-11",
+    "rank_label": "Чемпионат РКФ",
+    "event_type": "coursing",
+    "competition_kind": "",
+    "competition_type": "",
+    "title": "Чемпионат РКФ по курсингу, 11.09.2022 (Свердловская обл., Большое Седельниково)",
+    "host_club": "РОО «СООиР СО»",
+    "region": "Свердловская область",
+    "location": "Свердловская область, д. Большое Седельниково",
+    "catalog_url": null,
+    "results_url": null,
+    "rules_url": null,
+    "results_pdf_url": null,
+    "confirmed": 1,
+    "last_modified": "2026-10-26T09:14:24.246Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": [
+      "Табуева Т.А.",
+      "Луговая К.И."
+    ],
+    "track_schemes": []
+  },
+  "result_count": 44,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20221023,
+      "dog_id": 11062,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 33,
+      "placement": 1,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 33,
+            "bib_color": "red",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 43,
+            "bib_color": "red",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 360,
+        "normalized_score": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11062,
+        "dog_key": "angavu-maisha-fargo--басенджи",
+        "name_lat": "ANGAVU MAISHA FARGO",
+        "name_ru": "АНГАВУ МАИША ФАРГО",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20221023,
+      "dog_id": 11063,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 35,
+      "placement": 2,
+      "total_score": 355,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 32,
+            "bib_color": "white",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 44,
+            "bib_color": "red",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          }
+        ],
+        "grand_total": 355,
+        "normalized_score": 355
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11063,
+        "dog_key": "tim-spirit-gektor--басенджи",
+        "name_lat": "TIM SPIRIT GEKTOR",
+        "name_ru": "ТИМ СПИРИТ ГЕКТОР",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20221023,
+      "dog_id": 11064,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 34,
+      "placement": 3,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 32,
+            "bib_color": "red",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 43,
+            "bib_color": "white",
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  16,
+                  17
+                ],
+                "sum": 87
+              }
+            ]
+          }
+        ],
+        "grand_total": 354,
+        "normalized_score": 354
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11064,
+        "dog_key": "bosco-bokari-maximus--басенджи",
+        "name_lat": "BOSCO BOKARI MAXIMUS",
+        "name_ru": "БОСКО БОКАРИ МАКСИМУС",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20221023,
+      "dog_id": 11065,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 41,
+      "placement": 1,
+      "total_score": 355,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 36,
+            "bib_color": "white",
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 47,
+            "bib_color": "red",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  19,
+                  17,
+                  16,
+                  19,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 355,
+        "normalized_score": 355
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11065,
+        "dog_key": "frantsuzskiy-talisman-ayris-sherm--басенджи",
+        "name_lat": "FRANTSUZSKIY TALISMAN AYRIS SHERM",
+        "name_ru": "ФРАНЦУЗСКИЙ ТАЛИСМАН АЙРИС ШЭРМ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20221023,
+      "dog_id": 11066,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 39,
+      "placement": 2,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 35,
+            "bib_color": "white",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 45,
+            "bib_color": "white",
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          }
+        ],
+        "grand_total": 354,
+        "normalized_score": 354
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11066,
+        "dog_key": "viva-viktoriya--басенджи",
+        "name_lat": "VIVA VIKTORIYA",
+        "name_ru": "ВИВА ВИКТОРИЯ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20221023,
+      "dog_id": 563,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 37,
+      "placement": 3,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 34,
+            "bib_color": "white",
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 46,
+            "bib_color": "red",
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          }
+        ],
+        "grand_total": 349,
+        "normalized_score": 349
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 563,
+        "dog_key": "angavu-maisha-fria--басенджи",
+        "name_lat": "ANGAVU MAISHA FRIA",
+        "name_ru": "АНГАВУ МАИША ФРИЯ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20221023,
+      "dog_id": 11067,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 40,
+      "placement": 4,
+      "total_score": 348,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 36,
+            "bib_color": "red",
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 46,
+            "bib_color": "white",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          }
+        ],
+        "grand_total": 348,
+        "normalized_score": 348
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11067,
+        "dog_key": "ok-she-is-beautiful-alisina-zvezdochka--басенджи",
+        "name_lat": "OK, SHE IS BEAUTIFUL ALISINA ZVEZDOCHKA",
+        "name_ru": "ОК, ШИ ИЗ БЬЮТИФУЛ АЛИСИНА ЗВЕЗДОЧКА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20221023,
+      "dog_id": 11068,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 36,
+      "placement": 5,
+      "total_score": 340,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 34,
+            "bib_color": "red",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 45,
+            "bib_color": "red",
+            "total": 159,
+            "penalty": "Ранний старт (штраф 10% от суммы баллов забега)",
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 340,
+        "normalized_score": 340
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11068,
+        "dog_key": "angavu-maisha-undina--басенджи",
+        "name_lat": "ANGAVU MAISHA UNDINA",
+        "name_ru": "АНГАВУ МАИША УНДИНА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20221023,
+      "dog_id": 11069,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 38,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 35,
+            "bib_color": "red",
+            "total": null,
+            "judges": []
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят",
+      "dog": {
+        "id": 11069,
+        "dog_key": "bosco-bokari-molly--басенджи",
+        "name_lat": "BOSCO BOKARI MOLLY",
+        "name_ru": "БОСКО БОКАРИ МОЛЛИ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20221023,
+      "dog_id": 5,
+      "breed_class": "Ирландский Вольфхаунд - Стандартный - Суки",
+      "catalog_no": 3,
+      "placement": 1,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 40,
+            "bib_color": "white",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 50,
+            "bib_color": "red",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 85
+              }
+            ]
+          }
+        ],
+        "grand_total": 350,
+        "normalized_score": 350
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 5,
+        "dog_key": "поместья-лариных-живанши--ирландскии-вольфхаунд",
+        "name_lat": "ПОМЕСТЬЯ ЛАРИНЫХ ЖИВАНШИ",
+        "name_ru": "ПОМЕСТЬЯ ЛАРИНЫХ ЖИВАНШИ",
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20221023,
+      "dog_id": 6,
+      "breed_class": "Ирландский Вольфхаунд - Стандартный - Суки",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 342,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 40,
+            "bib_color": "red",
+            "total": 174,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 50,
+            "bib_color": "white",
+            "total": 168,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 83
+              }
+            ]
+          }
+        ],
+        "grand_total": 342,
+        "normalized_score": 342
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 6,
+        "dog_key": "иришман-анаирэ--ирландскии-вольфхаунд",
+        "name_lat": "ИРИШМАН АНАЙРЭ",
+        "name_ru": "ИРИШМАН АНАЙРЭ",
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20221023,
+      "dog_id": 11070,
+      "breed_class": "Ирландский Вольфхаунд - Стандартный - Суки",
+      "catalog_no": 2,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 39,
+            "bib_color": "red",
+            "total": null,
+            "judges": []
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят",
+      "dog": {
+        "id": 11070,
+        "dog_key": "irishman-aredel--ирландскии-вольфхаунд",
+        "name_lat": "IRISHMAN AREDEL",
+        "name_ru": "ИРИШМАН АРЕДЕЛЬ",
+        "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20221023,
+      "dog_id": 11071,
+      "breed_class": "Родезийский Риджбек - Стандартный - Суки",
+      "catalog_no": 43,
+      "placement": 1,
+      "total_score": 355,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 38,
+            "bib_color": "red",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 49,
+            "bib_color": "red",
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 355,
+        "normalized_score": 355
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11071,
+        "dog_key": "zoloto-aleksa-raekha-tuni--родезиискии-риджбек",
+        "name_lat": "ZOLOTO ALEKSA RAEKHA TUNI",
+        "name_ru": "ЗОЛОТО АЛЕКСА РАЭХА ТУНИ",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 20221023,
+      "dog_id": 11072,
+      "breed_class": "Родезийский Риджбек - Стандартный - Суки",
+      "catalog_no": 44,
+      "placement": 2,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 38,
+            "bib_color": "white",
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 49,
+            "bib_color": "white",
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 346,
+        "normalized_score": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11072,
+        "dog_key": "zoloto-aleksa-roskoshnaya-matilda--родезиискии-риджбек",
+        "name_lat": "ZOLOTO ALEKSA ROSKOSHNAYA MATILDA",
+        "name_ru": "ЗОЛОТО АЛЕКСА РОСКОШНАЯ МАТИЛЬДА",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 20221023,
+      "dog_id": 11073,
+      "breed_class": "Родезийский Риджбек - Юниоры - Суки",
+      "catalog_no": 42,
+      "placement": 1,
+      "total_score": 348,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Лучший юниор",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 37,
+            "bib_color": "red",
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 48,
+            "bib_color": "red",
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  19
+                ],
+                "sum": 86
+              }
+            ]
+          }
+        ],
+        "grand_total": 348,
+        "normalized_score": 348
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11073,
+        "dog_key": "zoloto-aleksa-khanna--родезиискии-риджбек",
+        "name_lat": "ZOLOTO ALEKSA KHANNA",
+        "name_ru": "ЗОЛОТО АЛЕКСА ХАННА",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 20221023,
+      "dog_id": 11074,
+      "breed_class": "Русская Псовая Борзая - Ветераны - Кобели",
+      "catalog_no": 12,
+      "placement": 1,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Лучший ветеран",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_color": "red",
+            "total": 168,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ]
+          },
+          {
+            "heat_number": 19,
+            "bib_color": "red",
+            "total": 170,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ]
+          }
+        ],
+        "grand_total": 338,
+        "normalized_score": 338
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11074,
+        "dog_key": "dorogoy-drug-sverkay--русская-псовая-борзая",
+        "name_lat": "DOROGOY DRUG SVERKAY",
+        "name_ru": "ДОРОГОЙ ДРУГ СВЕРКАЙ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 20221023,
+      "dog_id": 10,
+      "breed_class": "Русская Псовая Борзая - Стандартный - Кобели",
+      "catalog_no": 7,
+      "placement": 1,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_color": "white",
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ]
+          },
+          {
+            "heat_number": 17,
+            "bib_color": "white",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 350,
+        "normalized_score": 350
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10,
+        "dog_key": "осман--русская-псовая-борзая",
+        "name_lat": "ОСМАН",
+        "name_ru": "ОСМАН",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 20221023,
+      "dog_id": 11075,
+      "breed_class": "Русская Псовая Борзая - Стандартный - Кобели",
+      "catalog_no": 6,
+      "placement": 2,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_color": "white",
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 16,
+            "bib_color": "white",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ]
+          }
+        ],
+        "grand_total": 346,
+        "normalized_score": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11075,
+        "dog_key": "kutezh--русская-псовая-борзая",
+        "name_lat": "KUTEZH",
+        "name_ru": "КУТЕЖ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 20221023,
+      "dog_id": 11076,
+      "breed_class": "Русская Псовая Борзая - Стандартный - Кобели",
+      "catalog_no": 5,
+      "placement": 3,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_color": "red",
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ]
+          },
+          {
+            "heat_number": 17,
+            "bib_color": "red",
+            "total": 169,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          }
+        ],
+        "grand_total": 341,
+        "normalized_score": 341
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11076,
+        "dog_key": "arbalet--русская-псовая-борзая",
+        "name_lat": "ARBALET",
+        "name_ru": "АРБАЛЕТ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 20221023,
+      "dog_id": 11077,
+      "breed_class": "Русская Псовая Борзая - Стандартный - Кобели",
+      "catalog_no": 4,
+      "placement": 4,
+      "total_score": 331,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_color": "red",
+            "total": 156,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  13,
+                  15
+                ],
+                "sum": 78
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 78
+              }
+            ]
+          },
+          {
+            "heat_number": 16,
+            "bib_color": "red",
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 331,
+        "normalized_score": 331
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11077,
+        "dog_key": "apriori-luxury-rezvy-yaroslav--русская-псовая-борзая",
+        "name_lat": "APRIORI LUXURY REZVY YAROSLAV",
+        "name_ru": "АПРИОРИ ЛЮКСЮРИ РЕЗВЫЙ ЯРОСЛАВ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 20221023,
+      "dog_id": 13,
+      "breed_class": "Русская Псовая Борзая - Стандартный - Суки",
+      "catalog_no": 11,
+      "placement": 1,
+      "total_score": 364,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_color": "white",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 19,
+            "bib_color": "red",
+            "total": 186,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 364,
+        "normalized_score": 364
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 13,
+        "dog_key": "отрада--русская-псовая-борзая",
+        "name_lat": "ОТРАДА",
+        "name_ru": "ОТРАДА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 20221023,
+      "dog_id": 11078,
+      "breed_class": "Русская Псовая Борзая - Стандартный - Суки",
+      "catalog_no": 10,
+      "placement": 2,
+      "total_score": 357,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_color": "red",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ]
+          },
+          {
+            "heat_number": 18,
+            "bib_color": "white",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          }
+        ],
+        "grand_total": 357,
+        "normalized_score": 357
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11078,
+        "dog_key": "razguljai-chudesitsa--русская-псовая-борзая",
+        "name_lat": "RAZGULJAI CHUDESITSA",
+        "name_ru": "РАЗГУЛЯЙ ЧУДЕСИЦА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 20221023,
+      "dog_id": 11079,
+      "breed_class": "Русская Псовая Борзая - Стандартный - Суки",
+      "catalog_no": 9,
+      "placement": 3,
+      "total_score": 355,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_color": "red",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  18,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 18,
+            "bib_color": "red",
+            "total": 174,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 355,
+        "normalized_score": 355
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11079,
+        "dog_key": "laura--русская-псовая-борзая",
+        "name_lat": "LAURA",
+        "name_ru": "ЛАУРА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 20221023,
+      "dog_id": 10317,
+      "breed_class": "Салюки - Ветераны - Суки",
+      "catalog_no": 16,
+      "placement": 1,
+      "total_score": 371,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Лучший ветеран",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_color": "white",
+            "total": 186,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 20,
+            "bib_color": "red",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 371,
+        "normalized_score": 371
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10317,
+        "dog_key": "catifa-al-naqawa--салюки",
+        "name_lat": "CATIFA AL NAQAWA",
+        "name_ru": "CATIFA AL NAQAWA",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 20221023,
+      "dog_id": 10237,
+      "breed_class": "Салюки - Стандартный - Суки",
+      "catalog_no": 15,
+      "placement": null,
+      "total_score": 167,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_color": "red",
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  15,
+                  16
+                ],
+                "sum": 80
+              }
+            ]
+          }
+        ],
+        "grand_total": 167,
+        "normalized_score": 167
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят владельцем",
+      "dog": {
+        "id": 10237,
+        "dog_key": "al-nafiseh-eleeza--салюки",
+        "name_lat": "AL NAFISEH ELEEZA",
+        "name_ru": "AL NAFISEH ELEEZA",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 20221023,
+      "dog_id": 17,
+      "breed_class": "Салюки - Юниоры - Суки",
+      "catalog_no": 13,
+      "placement": 1,
+      "total_score": 373,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Лучший юниор",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_color": "red",
+            "total": 187,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  20,
+                  20,
+                  19,
+                  20
+                ],
+                "sum": 98
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 21,
+            "bib_color": "red",
+            "total": 186,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 373,
+        "normalized_score": 373
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 17,
+        "dog_key": "ануш--салюки",
+        "name_lat": "АНУШ",
+        "name_ru": "АНУШ",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 20221023,
+      "dog_id": 18,
+      "breed_class": "Салюки - Юниоры - Суки",
+      "catalog_no": 14,
+      "placement": 2,
+      "total_score": 370,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_color": "white",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  20,
+                  20,
+                  19,
+                  20
+                ],
+                "sum": 97
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 21,
+            "bib_color": "white",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 370,
+        "normalized_score": 370
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 18,
+        "dog_key": "арья--салюки",
+        "name_lat": "АРЬЯ",
+        "name_ru": "АРЬЯ",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 20221023,
+      "dog_id": 24,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 23,
+      "placement": 1,
+      "total_score": 375,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_color": "red",
+            "total": 186,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 26,
+            "bib_color": "red",
+            "total": 189,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  20,
+                  20,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 98
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  19,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 375,
+        "normalized_score": 375
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 24,
+        "dog_key": "атреио-сильвер-свифт--уиппет",
+        "name_lat": "АТРЕЙО СИЛЬВЕР СВИФТ",
+        "name_ru": "АТРЕЙО СИЛЬВЕР СВИФТ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 20221023,
+      "dog_id": 11080,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 27,
+      "placement": 2,
+      "total_score": 367,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_color": "red",
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 26,
+            "bib_color": "white",
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 367,
+        "normalized_score": 367
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11080,
+        "dog_key": "tatyanin-den-imbirnyj-pryanik--уиппет",
+        "name_lat": "TATYANIN DEN IMBIRNYJ PRYANIK",
+        "name_ru": "ТАТЬЯНИН ДЕНЬ ИМБИРНЫЙ ПРЯНИК",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 20221023,
+      "dog_id": 11081,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 28,
+      "placement": 3,
+      "total_score": 364,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_color": "white",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 27,
+            "bib_color": "white",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  19,
+                  20
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          }
+        ],
+        "grand_total": 364,
+        "normalized_score": 364
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11081,
+        "dog_key": "skay-iz-kamelota--уиппет",
+        "name_lat": "SKAY IZ KAMELOTA",
+        "name_ru": "СКАЙ ИЗ КАМЕЛОТА",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 20221023,
+      "dog_id": 29,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 24,
+      "placement": 4,
+      "total_score": 352,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_color": "white",
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  16,
+                  17
+                ],
+                "sum": 85
+              }
+            ]
+          },
+          {
+            "heat_number": 27,
+            "bib_color": "red",
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  20,
+                  18,
+                  19,
+                  20
+                ],
+                "sum": 96
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          }
+        ],
+        "grand_total": 352,
+        "normalized_score": 352
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 29,
+        "dog_key": "би-хэппи--уиппет",
+        "name_lat": "БИ ХЭППИ",
+        "name_ru": "БИ ХЭППИ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 20221023,
+      "dog_id": 28,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 25,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_color": "red",
+            "total": null,
+            "judges": []
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят",
+      "dog": {
+        "id": 28,
+        "dog_key": "пабло-пикассо-из-камелота--уиппет",
+        "name_lat": "ПАБЛО ПИКАССО ИЗ КАМЕЛОТА",
+        "name_ru": "ПАБЛО ПИКАССО ИЗ КАМЕЛОТА",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 20221023,
+      "dog_id": 11082,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 26,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_color": "white",
+            "total": null,
+            "judges": []
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят",
+      "dog": {
+        "id": 11082,
+        "dog_key": "tatyanin-den-dushisty-med--уиппет",
+        "name_lat": "TATYANIN DEN DUSHISTY MED",
+        "name_ru": "ТАТЬЯНИН ДЕНЬ ДУШИСТЫЙ МЕД",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 20221023,
+      "dog_id": 10472,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 31,
+      "placement": 1,
+      "total_score": 373,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_color": "red",
+            "total": 188,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  20,
+                  20,
+                  19,
+                  20
+                ],
+                "sum": 98
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 28,
+            "bib_color": "red",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 373,
+        "normalized_score": 373
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10472,
+        "dog_key": "garda--уиппет",
+        "name_lat": "GARDA",
+        "name_ru": "GARDA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 35,
+      "event_id": 20221023,
+      "dog_id": 7034,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 32,
+      "placement": 2,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_color": "white",
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  13,
+                  18,
+                  15,
+                  13,
+                  16
+                ],
+                "sum": 75
+              }
+            ]
+          },
+          {
+            "heat_number": 28,
+            "bib_color": "white",
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 350,
+        "normalized_score": 350
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7034,
+        "dog_key": "татьянин-день-игрушка--уиппет",
+        "name_lat": "ТАТЬЯНИН ДЕНЬ ИГРУШКА",
+        "name_ru": "ТАТЬЯНИН ДЕНЬ ИГРУШКА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 36,
+      "event_id": 20221023,
+      "dog_id": 7432,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 29,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_color": "red",
+            "total": null,
+            "judges": []
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят",
+      "dog": {
+        "id": 7432,
+        "dog_key": "a-panda-arrow--уиппет",
+        "name_lat": "A PANDA ARROW",
+        "name_ru": "А ПАНДА ЭРРОУ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 37,
+      "event_id": 20221023,
+      "dog_id": 11083,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 30,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_color": "white",
+            "total": null,
+            "judges": []
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят",
+      "dog": {
+        "id": 11083,
+        "dog_key": "dogoni-veter-krylataya-feya--уиппет",
+        "name_lat": "DOGONI VETER KRYLATAYA FEYA",
+        "name_ru": "ДОГОНИ ВЕТЕР КРЫЛАТАЯ ФЕЯ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 38,
+      "event_id": 20221023,
+      "dog_id": 699,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 19,
+      "placement": 1,
+      "total_score": 370,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_color": "red",
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 23,
+            "bib_color": "red",
+            "total": 187,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 370,
+        "normalized_score": 370
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 699,
+        "dog_key": "intriga-s-riggs-riley--уиппет",
+        "name_lat": "INTRIGA’S RIGGS RILEY",
+        "name_ru": "INTRIGAS RIGGS RILEY",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 39,
+      "event_id": 20221023,
+      "dog_id": 10429,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 20,
+      "placement": 2,
+      "total_score": 366,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_color": "white",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 23,
+            "bib_color": "white",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 366,
+        "normalized_score": 366
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10429,
+        "dog_key": "кетлин-рутгер--уиппет",
+        "name_lat": "KETLIN RUTGER",
+        "name_ru": "КЕТЛИН РУТГЕР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 40,
+      "event_id": 20221023,
+      "dog_id": 23,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 21,
+      "placement": 3,
+      "total_score": 365,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_color": "white",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 24,
+            "bib_color": "red",
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 365,
+        "normalized_score": 365
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 23,
+        "dog_key": "хепи-хепри-пегасус--уиппет",
+        "name_lat": "ХЕПИ ХЕПРИ ПЕГАСУС",
+        "name_ru": "ХЕПИ ХЕПРИ ПЕГАСУС",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 20221023,
+      "dog_id": 11084,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 18,
+      "placement": 4,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_color": "red",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  18
+                ],
+                "sum": 83
+              }
+            ]
+          },
+          {
+            "heat_number": 25,
+            "bib_color": "red",
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 360,
+        "normalized_score": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11084,
+        "dog_key": "intriga-s-orsis--уиппет",
+        "name_lat": "INTRIGA'S ORSIS",
+        "name_ru": "ИНТРИГА'С ОРСИС",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 42,
+      "event_id": 20221023,
+      "dog_id": 11085,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 17,
+      "placement": 5,
+      "total_score": 343,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_color": "red",
+            "total": 161,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  16,
+                  19,
+                  18,
+                  16,
+                  19
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  13,
+                  17,
+                  15,
+                  13,
+                  15
+                ],
+                "sum": 73
+              }
+            ]
+          },
+          {
+            "heat_number": 24,
+            "bib_color": "white",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ]
+          }
+        ],
+        "grand_total": 343,
+        "normalized_score": 343
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11085,
+        "dog_key": "bia-khag--уиппет",
+        "name_lat": "BIA KHAG",
+        "name_ru": "БИА ХАГ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 43,
+      "event_id": 20221023,
+      "dog_id": 11086,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 22,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_color": "white",
+            "total": null,
+            "judges": []
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят",
+      "dog": {
+        "id": 11086,
+        "dog_key": "yasny-sokol--уиппет",
+        "name_lat": "YASNY SOKOL",
+        "name_ru": "ЯСНЫЙ СОКОЛ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 44,
+      "event_id": 20221023,
+      "dog_id": 15,
+      "breed_class": "Русская Псовая Борзая - Стандартный - Суки",
+      "catalog_no": 3,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 700,
+        "heats": [],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Неявка",
+      "dog": {
+        "id": 15,
+        "dog_key": "армада--русская-псовая-борзая",
+        "name_lat": "АРМАДА",
+        "name_ru": "АРМАДА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    }
+  ]
+}

@@ -148,22 +148,42 @@ export async function getDoninoDog(
   const speedRecords = allSpeed.filter((r) => r.name === name && r.breed === breed)
   const coursingRecords = allCoursing.filter((r) => r.name === name && r.breed === breed)
 
+  const allSpeedRuns: number[] = []
+  for (const r of speedRecords) {
+    if (Number(r.speed_km_h) > 0) allSpeedRuns.push(Number(r.speed_km_h))
+    if (Array.isArray(r.history)) {
+      for (const h of r.history as { speed_km_h?: unknown }[]) {
+        if (Number(h.speed_km_h) > 0) allSpeedRuns.push(Number(h.speed_km_h))
+      }
+    }
+  }
+
   const speedStats = {
-    total: speedRecords.length,
-    bestSpeed: speedRecords.length > 0 ? Math.max(...speedRecords.map((r) => Number(r.speed_km_h))) : 0,
+    total: allSpeedRuns.length,
+    bestSpeed: allSpeedRuns.length > 0 ? Math.max(...allSpeedRuns) : 0,
     avgSpeed:
-      speedRecords.length > 0
-        ? speedRecords.reduce((sum, r) => sum + Number(r.speed_km_h), 0) / speedRecords.length
+      allSpeedRuns.length > 0
+        ? allSpeedRuns.reduce((sum, v) => sum + v, 0) / allSpeedRuns.length
         : 0,
   }
 
+  const allCoursingRuns: number[] = []
+  for (const r of coursingRecords) {
+    if (Number(r.time_seconds) > 0) allCoursingRuns.push(Number(r.time_seconds))
+    if (Array.isArray(r.history)) {
+      for (const h of r.history as { time_seconds?: unknown }[]) {
+        if (Number(h.time_seconds) > 0) allCoursingRuns.push(Number(h.time_seconds))
+      }
+    }
+  }
+
   const coursingStats = {
-    total: coursingRecords.length,
+    total: allCoursingRuns.length,
     bestTime:
-      coursingRecords.length > 0 ? Math.min(...coursingRecords.map((r) => Number(r.time_seconds))) : 0,
+      allCoursingRuns.length > 0 ? Math.min(...allCoursingRuns) : 0,
     avgTime:
-      coursingRecords.length > 0
-        ? coursingRecords.reduce((sum, r) => sum + Number(r.time_seconds), 0) / coursingRecords.length
+      allCoursingRuns.length > 0
+        ? allCoursingRuns.reduce((sum, v) => sum + v, 0) / allCoursingRuns.length
         : 0,
   }
 

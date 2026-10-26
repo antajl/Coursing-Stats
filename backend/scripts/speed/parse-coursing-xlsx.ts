@@ -5,6 +5,7 @@ import {
   parseCoursingCommentHistory,
   statusFromCoursingNameCell,
 } from './coursing-sheet-status';
+import { findSportDogId } from './match-donino-dog';
 
 export interface ParsedCoursingRecord {
   breed: string;
@@ -14,6 +15,7 @@ export interface ParsedCoursingRecord {
   track_length: number;
   status: string;
   history: { time_seconds: number; date: string }[];
+  dog_id?: number | null;
 }
 
 function parseTimeValue(value: unknown): number {
@@ -108,15 +110,64 @@ export function parseCoursingRecordsFromWorkbook(workbook: XLSX.WorkBook): Parse
 }
 
 export function dedupeCoursingRecords(records: ParsedCoursingRecord[]): ParsedCoursingRecord[] {
-  const unique: ParsedCoursingRecord[] = [];
-  const seen = new Set<string>();
+  const byDog = new Map<string, ParsedCoursingRecord[]>();
 
-  for (const record of records) {
-    const key = `${record.name}_${record.breed}_${record.time_seconds}_${record.date}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    unique.push(record);
+  for (const r of records) {
+    const key = `${r.name}_${r.breed}`;
+    if (!byDog.has(key)) byDog.set(key, []);
+    byDog.get(key)!.push(r);
   }
 
-  return unique;
+  const result: ParsedCoursingRecord[] = [];
+
+  for (const dogRecords of byDog.values()) {
+    const runMap = new Map<string, { time_seconds: number; date: string }>();
+
+    for (const rec of dogRecords) {
+      if (rec.time_seconds > 0 && rec.date) {
+        runMap.set(`${rec.time_seconds}_${rec.date}`, {
+          time_seconds: rec.time_seconds,
+          date: rec.date,
+        });
+      }
+      for (const h of rec.history || []) {
+        if (h.time_seconds > 0 && h.date) {
+          runMap.set(`${h.time_seconds}_${h.date}`, {
+            time_seconds: h.time_seconds,
+            date: h.date,
+          });
+        }
+      }
+    }
+
+    const allRuns = [...runMap.values()];
+    allRuns.sort((a, b) => a.time_seconds - b.time_seconds || a.date.localeCompare(b.date));
+    const bestRun = allRuns[0];
+    if (!bestRun) continue;
+
+    const history = allRuns
+      .slice(1)
+      .sort((a, b) => a.date.localeCompare(b.date));
+
+    const baseRec =
+      dogRecords.find(
+        (r) => r.time_seconds === bestRun.time_seconds && r.date === bestRun.date
+      ) || dogRecords[0];
+
+    const status = history.length > 0 ? 'improved' : (baseRec.status || 'normal');
+    const dog_id = findSportDogId(baseRec.name, baseRec.breed);
+
+    result.push({
+      breed: baseRec.breed,
+      name: baseRec.name,
+      time_seconds: bestRun.time_seconds,
+      date: bestRun.date,
+      track_length: 350,
+      status,
+      history,
+      dog_id: dog_id || undefined,
+    });
+  }
+
+  return result.sort((a, b) => a.time_seconds - b.time_seconds);
 }
