@@ -8,7 +8,6 @@ import HomeDogSearch from '../components/HomeDogSearch'
 import MetricsWidget from '../components/MetricsWidget'
 import { useHomeData } from './Home/hooks/useHomeData'
 import { SeasonTopSection } from './Home/components/SeasonTopSection'
-import { DoninoRecordsSection } from './Home/components/DoninoRecordsSection'
 import { HomeFooter } from './Home/components/HomeFooter'
 import { formatDate } from './Home/utils/formatters'
 import { ANIMATION, IMAGES } from '../lib/constants'
@@ -26,8 +25,12 @@ export default function Home() {
     featuredEvents,
     featuredShows,
     competitionSlides,
+    racingSlides,
     showSlides,
-    doninoSpeedRecords, doninoCoursingRecords, heroLoading, seasonLoading, doninoLoading, loading,
+    topShowDogs,
+    doninoSpeedRecords, doninoCoursingRecords,
+    doninoSpeedSlides, doninoCoursingSlides,
+    heroLoading, seasonLoading, doninoLoading, loading,
     error,
   } = homeData
 
@@ -92,7 +95,7 @@ export default function Home() {
         children={
           <div
             className="flex flex-col items-start gap-4 lg:gap-6 select-none max-w-full"
-            style={{ width: 'clamp(400px, 36vw, 720px)' }}
+            style={{ width: 'clamp(320px, 28vw, 640px)' }}
           >
             <picture>
               <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
@@ -152,18 +155,29 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Season top section */}
+        {/* Tablet / compressed desktop (< 1280px): MetricsWidget in body flow to prevent covering hero logo */}
+        <div className="hidden md:block xl:hidden mb-8">
+          <MetricsWidget
+            events={featuredEvents}
+            shows={featuredShows}
+            stats={stats}
+            showStats={showStats}
+            loading={heroLoading}
+            formatDate={memoizedFormatDate}
+          />
+        </div>
+
+        {/* Season top & records section */}
         <SeasonTopSection
           competitionSlides={competitionSlides}
+          racingSlides={racingSlides}
           showSlides={showSlides}
-          loading={seasonLoading}
-        />
-
-        {/* Donino records section */}
-        <DoninoRecordsSection
+          topShowDogs={topShowDogs}
           doninoSpeedRecords={doninoSpeedRecords}
           doninoCoursingRecords={doninoCoursingRecords}
-          loading={doninoLoading}
+          doninoSpeedSlides={doninoSpeedSlides}
+          doninoCoursingSlides={doninoCoursingSlides}
+          loading={seasonLoading}
         />
 
         {/* Footer */}

@@ -185,6 +185,7 @@ export function breedAliasKey(breed: string): string {
 export const BREED_ALIAS_BY_KEY: Record<string, string> = {
   'БЕЗ ПОРОДЫ': 'БЕЗ ПОРОДЫ',
   'SIGHTHOUNDБЕЗ ПОРОДЫ': 'БЕЗ ПОРОДЫ',
+  'РПБ': 'РУССКАЯ ПСОВАЯ БОРЗАЯ',
   'ЛАБРАДОРРЕТРИВЕР': 'ЛАБРАДОР РЕТРИВЕР',
   'ГОЛДЕН РЕТРИВЕР': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',
   'GOLDEN RETRIEVER': 'ЗОЛОТИСТЫЙ РЕТРИВЕР',

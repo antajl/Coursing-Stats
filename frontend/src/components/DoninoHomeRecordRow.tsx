@@ -6,11 +6,13 @@ import DogSexIcon from './DogSexIcon'
 import OwnerCrownName from './OwnerCrownName'
 import SpeedHistorySparkline from './SpeedHistorySparkline'
 import SpeedStatusBadge from './SpeedStatusBadge'
+import RankBadge from './RankBadge'
 import {
   formatRecordDate,
   formatDoninoSpeedKmh,
   parseRecordHistory,
   isRecentDoninoDate,
+  time350ToSpeedKmh,
 } from '../lib/recordDates'
 import { toDogTitleCase } from '../lib/dogName'
 import { buildCoursingTimeline } from './CoursingHistorySparkline'
@@ -29,6 +31,7 @@ interface DoninoHomeRecordRowProps {
   rise?: boolean
   trackType?: string | null
   latestDateInDataset?: string | null
+  rank?: number
 }
 
 function getTrackTypeIcon(trackType: string | null | undefined) {
@@ -71,6 +74,7 @@ export default function DoninoHomeRecordRow({
   rise = false,
   trackType,
   latestDateInDataset,
+  rank,
 }: DoninoHomeRecordRowProps) {
   const historyItems = useMemo(() => parseRecordHistory(history), [history])
   const isRecent = useMemo(
@@ -102,6 +106,11 @@ export default function DoninoHomeRecordRow({
     }
   }, [hasHistory, historyItems, mode])
 
+  const coursingSpeedKmh = useMemo(() => {
+    if (mode !== 'coursing' || timeSeconds == null || timeSeconds <= 0) return null
+    return time350ToSpeedKmh(timeSeconds).toFixed(1)
+  }, [mode, timeSeconds])
+
   const hasSparkline =
     mode === 'speed'
       ? buildSpeedTimeline({ speed_km_h: speedKmh ?? 0, date: date ?? '' }, history).length >= 2
@@ -129,6 +138,11 @@ export default function DoninoHomeRecordRow({
       className="donino-home-row group items-center hover:bg-camel-100/60 transition-colors duration-150"
       {...(rise ? { 'data-rise': true } : {})}
     >
+      {rank != null && (
+        <div className="shrink-0 flex items-center justify-center w-8 sm:w-9">
+          <RankBadge rank={rank} hideDelta />
+        </div>
+      )}
       <div className="donino-home-row-main min-w-0 flex-1">
         <div className="flex min-w-0 items-center gap-1.5">
           <OwnerCrownName name={name} breed={breed} kind="donino">
@@ -153,28 +167,33 @@ export default function DoninoHomeRecordRow({
         </div>
       )}
 
-      <div className="relative shrink-0">
-        <div className="flex flex-col items-center gap-1">
+      <div className="relative shrink-0 flex flex-col items-end gap-0.5 text-right">
+        <div className="flex items-center justify-end gap-1.5">
+          {showNew && (
+            <SpeedStatusBadge
+              variant="new"
+              date={date}
+            />
+          )}
+          {showUpd && !showNew && (
+            <SpeedStatusBadge
+              variant="upd"
+              date={date}
+              currentValue={mode === 'speed' ? formatDoninoSpeedKmh(speedKmh) : formatTime(timeSeconds ?? 0)}
+              prevValue={prevValue}
+              unit={mode === 'speed' ? 'км/ч' : 'сек'}
+            />
+          )}
           <span className="donino-home-metric">
             {mode === 'speed' ? `${formatDoninoSpeedKmh(speedKmh)} км/ч` : `${formatTime(timeSeconds ?? 0)} сек`}
           </span>
-          {trackType && <TrackTypeBadge trackType={trackType} />}
         </div>
-        {showNew && (
-          <SpeedStatusBadge
-            variant="new"
-            date={date}
-          />
+        {coursingSpeedKmh && (
+          <span className="text-[11px] font-medium tracking-tight text-old-money-500 tabular-nums">
+            {coursingSpeedKmh} км/ч
+          </span>
         )}
-        {showUpd && !showNew && (
-          <SpeedStatusBadge
-            variant="upd"
-            date={date}
-            currentValue={mode === 'speed' ? formatDoninoSpeedKmh(speedKmh) : formatTime(timeSeconds ?? 0)}
-            prevValue={prevValue}
-            unit={mode === 'speed' ? 'км/ч' : 'сек'}
-          />
-        )}
+        {trackType && <TrackTypeBadge trackType={trackType} />}
       </div>
     </Link>
   )

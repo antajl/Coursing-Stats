@@ -125,7 +125,7 @@ export function useSpeedRecordsPage() {
       coursingRecordsData.map((record) => ({
         ...record,
         history: parseRecordHistory(record.history),
-        sex: sexByDog.get(`${record.name}_${record.breed}`) ?? '',
+        sex: (record.sex as string) || sexByDog.get(`${record.name}_${record.breed}`) || '',
       })),
     [coursingRecordsData, sexByDog]
   )

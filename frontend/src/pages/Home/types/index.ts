@@ -24,6 +24,7 @@ export interface SpeedRecord {
   status?: string
   history?: Record<string, unknown>
   track_type?: string | null
+  rank?: number
 }
 
 export interface CoursingRecord {
@@ -35,6 +36,8 @@ export interface CoursingRecord {
   status?: string
   history?: Record<string, unknown>
   track_type?: string | null
+  track_length?: number | null
+  rank?: number
 }
 
 export type RankingTab = 'placement' | 'score' | 'speed'

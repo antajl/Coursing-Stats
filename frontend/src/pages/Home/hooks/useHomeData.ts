@@ -14,6 +14,10 @@ import { pickFeaturedEvents, pickFeaturedShows } from '../utils/dataHelpers'
 import { validateHeroStats, validateHeroShowStats, validateArray } from '../utils/validators'
 import { buildCombinedRanking } from '../../TopDogs/mergeCombinedRanking'
 import { buildTopBreedSlides, type BreedSlide } from '../utils/breedSeasonSlides'
+import {
+  buildDoninoSpeedSlides,
+  buildDoninoCoursingSlides,
+} from '../utils/doninoSeasonSlides'
 import type { CombinedRankingDog } from '../../TopDogs/mergeCombinedRanking'
 
 interface HeroStats {
@@ -45,10 +49,13 @@ export function useHomeData() {
   const [featuredEvents, setFeaturedEvents] = useState<CalendarEvent[]>([])
   const [featuredShows, setFeaturedShows] = useState<ShowRkfCalendarEntry[]>([])
   const [competitionSlides, setCompetitionSlides] = useState<BreedSlide<CombinedRankingDog>[]>([])
+  const [racingSlides, setRacingSlides] = useState<BreedSlide<any>[]>([])
   const [showSlides, setShowSlides] = useState<BreedSlide<ShowHomeTopDog>[]>([])
   const [topShowDogs, setTopShowDogs] = useState<ShowHomeTopDog[]>([])
   const [doninoSpeedRecords, setDoninoSpeedRecords] = useState<SpeedRecord[]>([])
   const [doninoCoursingRecords, setDoninoCoursingRecords] = useState<CoursingRecord[]>([])
+  const [doninoSpeedSlides, setDoninoSpeedSlides] = useState<BreedSlide<SpeedRecord>[]>([])
+  const [doninoCoursingSlides, setDoninoCoursingSlides] = useState<BreedSlide<CoursingRecord>[]>([])
   const [heroLoading, setHeroLoading] = useState(true)
   const [seasonLoading, setSeasonLoading] = useState(true)
   const [doninoLoading, setDoninoLoading] = useState(true)
@@ -131,9 +138,10 @@ export function useHomeData() {
     // 2. Below-the-fold Data (Season Top Rankings)
     async function fetchSeasonTop() {
       try {
-        const [placementData, scoreData, showHomeTopData] = await Promise.all([
+        const [placementData, scoreData, speedData, showHomeTopData] = await Promise.all([
           api.getTopPlacement(String(CURRENT_SEASON), '', 0, 'gold', null, 0),
           api.getTopScore(String(CURRENT_SEASON), '', 0, 'rating_score', null, 0),
+          api.getTopSpeed(String(CURRENT_SEASON), '', 0, 'best_speed', null, 0),
           getShowHomeTop(String(CURRENT_SEASON)),
         ])
 
@@ -147,6 +155,11 @@ export function useHomeData() {
             score as Record<string, unknown>[],
           )
           setCompetitionSlides(buildTopBreedSlides(combined, 5, 3))
+        }
+
+        const speedDogs = extractTopDogs(speedData.success ? speedData.data : null)
+        if (speedDogs.length > 0) {
+          setRacingSlides(buildTopBreedSlides(speedDogs as Record<string, unknown>[], 5, 3))
         }
 
         if (showHomeTopData.success && showHomeTopData.data) {
@@ -195,8 +208,8 @@ export function useHomeData() {
     async function fetchDoninoRecords() {
       try {
         const [doninoSpeedData, doninoCoursingData] = await Promise.all([
-          api.getSpeedRecordsTopByBreed(3),
-          api.getCoursingRecordsTopByBreed(3),
+          api.getSpeedRecords('', '', 1000),
+          api.getCoursingRecords('', 1000),
         ])
 
         if (!isMounted) return
@@ -205,12 +218,14 @@ export function useHomeData() {
           const validatedSpeedRecords = validateArray<SpeedRecord>(doninoSpeedData.data)
           if (validatedSpeedRecords) {
             setDoninoSpeedRecords(validatedSpeedRecords)
+            setDoninoSpeedSlides(buildDoninoSpeedSlides(validatedSpeedRecords))
           }
         }
         if (doninoCoursingData.success) {
           const validatedCoursingRecords = validateArray<CoursingRecord>(doninoCoursingData.data)
           if (validatedCoursingRecords) {
             setDoninoCoursingRecords(validatedCoursingRecords)
+            setDoninoCoursingSlides(buildDoninoCoursingSlides(validatedCoursingRecords))
           }
         }
       } catch (err) {
@@ -239,10 +254,13 @@ export function useHomeData() {
     featuredEvents,
     featuredShows,
     competitionSlides,
+    racingSlides,
     showSlides,
     topShowDogs,
     doninoSpeedRecords,
     doninoCoursingRecords,
+    doninoSpeedSlides,
+    doninoCoursingSlides,
     heroLoading,
     seasonLoading,
     doninoLoading,

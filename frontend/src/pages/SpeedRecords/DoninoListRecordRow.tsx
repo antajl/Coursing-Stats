@@ -12,6 +12,7 @@ import {
   formatDoninoSpeedKmh,
   parseRecordHistory,
   isRecentDoninoDate,
+  time350ToSpeedKmh,
 } from '../../lib/recordDates'
 import { toDogTitleCase } from '../../lib/dogName'
 import { buildCoursingTimeline } from '../../components/CoursingHistorySparkline'
@@ -108,6 +109,11 @@ export default function DoninoListRecordRow({
     }
   }, [hasHistory, historyItems, mode])
 
+  const coursingSpeedKmh = useMemo(() => {
+    if (mode !== 'coursing' || timeSeconds == null || timeSeconds <= 0) return null
+    return time350ToSpeedKmh(timeSeconds).toFixed(1)
+  }, [mode, timeSeconds])
+
   const rowClass = embedded ? 'donino-list-row donino-list-row--embedded' : 'donino-list-row'
 
   const hasSparkline =
@@ -169,28 +175,33 @@ export default function DoninoListRecordRow({
         {hasSparkline ? sparkline : null}
       </div>
 
-      <div className="relative mt-2 ml-auto shrink-0 sm:mt-0">
-        <div className="flex flex-col items-center gap-1">
+      <div className="relative mt-2 ml-auto shrink-0 sm:mt-0 flex flex-col items-end gap-0.5 text-right">
+        <div className="flex items-center justify-end gap-1.5">
+          {showNew && (
+            <SpeedStatusBadge
+              variant="new"
+              date={date}
+            />
+          )}
+          {showUpd && !showNew && (
+            <SpeedStatusBadge
+              variant="upd"
+              date={date}
+              currentValue={mode === 'speed' ? formatDoninoSpeedKmh(speedKmh) : formatTime(timeSeconds ?? 0)}
+              prevValue={prevValue}
+              unit={mode === 'speed' ? 'км/ч' : 'сек'}
+            />
+          )}
           <span className="donino-home-metric">
             {mode === 'speed' ? `${formatDoninoSpeedKmh(speedKmh)} км/ч` : `${formatTime(timeSeconds ?? 0)} сек`}
           </span>
-          {trackType && <TrackTypeBadge trackType={trackType} />}
         </div>
-        {showNew && (
-          <SpeedStatusBadge
-            variant="new"
-            date={date}
-          />
+        {coursingSpeedKmh && (
+          <span className="text-[11px] font-medium tracking-tight text-old-money-500 tabular-nums">
+            {coursingSpeedKmh} км/ч
+          </span>
         )}
-        {showUpd && !showNew && (
-          <SpeedStatusBadge
-            variant="upd"
-            date={date}
-            currentValue={mode === 'speed' ? formatDoninoSpeedKmh(speedKmh) : formatTime(timeSeconds ?? 0)}
-            prevValue={prevValue}
-            unit={mode === 'speed' ? 'км/ч' : 'сек'}
-          />
-        )}
+        {trackType && <TrackTypeBadge trackType={trackType} />}
       </div>
     </Link>
   )

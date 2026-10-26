@@ -69,5 +69,336 @@
       "competition_dog_id": null
     }
   ],
-  "updated_at": "2026-10-26"
+  "updated_at": "2026-10-26",
+  "breed_slides": [
+    {
+      "breed": "УИППЕТ",
+      "dog_count": 481,
+      "dogs": [
+        {
+          "id": "1419212727",
+          "name_lat": "LAVING BRIZ AURELIANUS THE-GREATEST",
+          "name_ru": "",
+          "breed": "УИППЕТ",
+          "sex": "",
+          "total_shows": 35,
+          "best_award": "BIS",
+          "rank_score": 82690,
+          "rank": 1,
+          "titles": {
+            "BIS": 1,
+            "BIG": 4,
+            "BOB": 24,
+            "CAC": 31,
+            "CHRKF": 21
+          },
+          "competition_dog_id": null
+        },
+        {
+          "id": "766262365",
+          "name_lat": "VASURU TAFFI'S DUBLIN",
+          "name_ru": "",
+          "breed": "УИППЕТ",
+          "sex": "",
+          "total_shows": 17,
+          "best_award": "BIG",
+          "rank_score": 38740,
+          "rank": 2,
+          "titles": {
+            "BIG": 3,
+            "BOB": 11,
+            "JCAC": 14,
+            "YCHRKF": 10
+          },
+          "competition_dog_id": null
+        },
+        {
+          "id": "1395725090",
+          "name_lat": "GROZA KRIMSKOY STEPI",
+          "name_ru": "",
+          "breed": "УИППЕТ",
+          "sex": "",
+          "total_shows": 6,
+          "best_award": "BIS",
+          "rank_score": 37570,
+          "rank": 3,
+          "titles": {
+            "BIS": 1,
+            "BIG": 3,
+            "BOB": 6,
+            "CAC": 2,
+            "JCAC": 4,
+            "YCHRKF": 1
+          },
+          "competition_dog_id": null
+        }
+      ]
+    },
+    {
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "dog_count": 670,
+      "dogs": [
+        {
+          "id": "340257139",
+          "name_lat": "SOKROVISCHE TAIGI BUREVESTNIK",
+          "name_ru": "",
+          "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+          "sex": "",
+          "total_shows": 20,
+          "best_award": "BIS",
+          "rank_score": 77149,
+          "rank": 1,
+          "titles": {
+            "BIS": 2,
+            "BIG": 6,
+            "BOB": 11,
+            "CAC": 2,
+            "JCAC": 11,
+            "CW": 1,
+            "CHRKF": 2,
+            "YCHRKF": 3
+          },
+          "competition_dog_id": null
+        },
+        {
+          "id": "723075483",
+          "name_lat": "SOKROVISCHE TAIGI BALERION",
+          "name_ru": "",
+          "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+          "sex": "",
+          "total_shows": 23,
+          "best_award": "BIG",
+          "rank_score": 43652,
+          "rank": 2,
+          "titles": {
+            "BIG": 1,
+            "BOB": 18,
+            "CAC": 5,
+            "JCAC": 14,
+            "CHRKF": 5,
+            "YCHRKF": 10
+          },
+          "competition_dog_id": null
+        },
+        {
+          "id": "293716818",
+          "name_lat": "BARSKAYA PRIKHOT BELOGOR",
+          "name_ru": "",
+          "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+          "sex": "",
+          "total_shows": 8,
+          "best_award": "BIG",
+          "rank_score": 33170,
+          "rank": 3,
+          "titles": {
+            "BIG": 3,
+            "BOB": 4,
+            "JCAC": 4,
+            "YCHRKF": 1
+          },
+          "competition_dog_id": null
+        }
+      ]
+    },
+    {
+      "breed": "БАСЕНДЖИ",
+      "dog_count": 564,
+      "dogs": [
+        {
+          "id": "275039416",
+          "name_lat": "TIM SPIRIT KAYYA I",
+          "name_ru": "",
+          "breed": "БАСЕНДЖИ",
+          "sex": "",
+          "total_shows": 54,
+          "best_award": "BIG",
+          "rank_score": 88914,
+          "rank": 1,
+          "titles": {
+            "BIG": 3,
+            "BOB": 29,
+            "CAC": 3,
+            "JCAC": 41,
+            "CW": 2,
+            "CHRKF": 1,
+            "YCHRKF": 21
+          },
+          "competition_dog_id": null
+        },
+        {
+          "id": "1907040703",
+          "name_lat": "NASLEDIYE ETERA MILK`N HONEY LOLIPOP",
+          "name_ru": "",
+          "breed": "БАСЕНДЖИ",
+          "sex": "",
+          "total_shows": 33,
+          "best_award": "BIS",
+          "rank_score": 75285,
+          "rank": 2,
+          "titles": {
+            "BIS": 1,
+            "BIG": 3,
+            "BOB": 23,
+            "CAC": 28,
+            "CW": 1,
+            "CHRKF": 19
+          },
+          "competition_dog_id": null
+        },
+        {
+          "id": "353054014",
+          "name_lat": "ALANIYA LONG AVAYTED KVIN S FABRIKI GRYOZ",
+          "name_ru": "",
+          "breed": "БАСЕНДЖИ",
+          "sex": "",
+          "total_shows": 18,
+          "best_award": "BIS",
+          "rank_score": 75050,
+          "rank": 3,
+          "titles": {
+            "BIS": 2,
+            "BIG": 5,
+            "BOB": 14,
+            "CAC": 16,
+            "CHRKF": 6
+          },
+          "competition_dog_id": null
+        }
+      ]
+    },
+    {
+      "breed": "САЛЮКИ",
+      "dog_count": 125,
+      "dogs": [
+        {
+          "id": "97117709",
+          "name_lat": "BEL ETUAL LIBERA STELLA",
+          "name_ru": "",
+          "breed": "САЛЮКИ",
+          "sex": "",
+          "total_shows": 44,
+          "best_award": "BIS",
+          "rank_score": 150885,
+          "rank": 1,
+          "titles": {
+            "BIS": 1,
+            "BIG": 10,
+            "BOB": 38,
+            "BOS": 1,
+            "CAC": 2,
+            "JCAC": 42,
+            "CW": 2,
+            "CHRKF": 2,
+            "YCHRKF": 28
+          },
+          "competition_dog_id": null
+        },
+        {
+          "id": "5629",
+          "name_lat": "BEL ETUAL VERMONT",
+          "name_ru": "",
+          "breed": "САЛЮКИ",
+          "sex": "",
+          "total_shows": 26,
+          "best_award": "BIS",
+          "rank_score": 126125,
+          "rank": 2,
+          "titles": {
+            "BIS": 4,
+            "BIG": 9,
+            "BOB": 19,
+            "CAC": 25,
+            "CW": 2,
+            "CHRKF": 6
+          },
+          "competition_dog_id": 5629
+        },
+        {
+          "id": "1061836576",
+          "name_lat": "ALANSARI’S MASHTAN",
+          "name_ru": "",
+          "breed": "САЛЮКИ",
+          "sex": "",
+          "total_shows": 9,
+          "best_award": "BIS",
+          "rank_score": 69020,
+          "rank": 3,
+          "titles": {
+            "BIS": 2,
+            "BIG": 6,
+            "BOB": 9,
+            "CAC": 9,
+            "CHRKF": 2
+          },
+          "competition_dog_id": null
+        }
+      ]
+    },
+    {
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "dog_count": 182,
+      "dogs": [
+        {
+          "id": "1789070648",
+          "name_lat": "RED PRAYD EXPRESSIVE ENZO FOR JELANY RED",
+          "name_ru": "",
+          "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+          "sex": "",
+          "total_shows": 39,
+          "best_award": "BIG",
+          "rank_score": 111065,
+          "rank": 1,
+          "titles": {
+            "BIG": 10,
+            "BOB": 25,
+            "CAC": 25,
+            "JCAC": 7,
+            "CHRKF": 8,
+            "YCHRKF": 3
+          },
+          "competition_dog_id": null
+        },
+        {
+          "id": "804113822",
+          "name_lat": "JELANY RED UNO",
+          "name_ru": "",
+          "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+          "sex": "",
+          "total_shows": 23,
+          "best_award": "BIS",
+          "rank_score": 60820,
+          "rank": 2,
+          "titles": {
+            "BIS": 1,
+            "BIG": 3,
+            "BOB": 12,
+            "CAC": 1,
+            "VCAC": 20,
+            "CHRKF": 1
+          },
+          "competition_dog_id": null
+        },
+        {
+          "id": "1336314246",
+          "name_lat": "RED PRAYD EXCEEDING STAR EYA",
+          "name_ru": "",
+          "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+          "sex": "",
+          "total_shows": 40,
+          "best_award": "BIG",
+          "rank_score": 51230,
+          "rank": 3,
+          "titles": {
+            "BIG": 3,
+            "BOB": 16,
+            "CAC": 28,
+            "JCAC": 6,
+            "CHRKF": 10,
+            "YCHRKF": 1
+          },
+          "competition_dog_id": null
+        }
+      ]
+    }
+  ]
 }

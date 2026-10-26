@@ -7,10 +7,11 @@ export interface SpeedStatusBadgeProps {
   prevValue?: number | string | null
   unit?: string
   title?: string
+  className?: string
 }
 
 const badgeBase =
-  'absolute -right-1 -top-1.5 inline-flex items-center justify-center rounded px-1.5 py-0.5 text-[8.5px] font-bold uppercase tracking-wider shadow-2xs border leading-none select-none transition-transform group-hover:scale-105'
+  'inline-flex items-center justify-center rounded px-1.5 py-0.5 text-[8.5px] font-bold uppercase tracking-wider shadow-2xs border leading-none select-none shrink-0 transition-transform group-hover:scale-105'
 
 export default function SpeedStatusBadge({
   variant,
@@ -19,6 +20,7 @@ export default function SpeedStatusBadge({
   prevValue,
   unit,
   title: customTitle,
+  className = '',
 }: SpeedStatusBadgeProps) {
   const formattedDate = date ? formatRecordDate(date) : null
 
@@ -33,7 +35,7 @@ export default function SpeedStatusBadge({
       <span
         title={title}
         aria-label={title}
-        className={`${badgeBase} border-forest-700 bg-forest-600 text-white`}
+        className={`${badgeBase} border-forest-700 bg-forest-600 text-white ${className}`.trim()}
       >
         new
       </span>
@@ -55,7 +57,7 @@ export default function SpeedStatusBadge({
     <span
       title={title}
       aria-label={title}
-      className={`${badgeBase} border-warm-blue-700 bg-warm-blue-600 text-white`}
+      className={`${badgeBase} border-warm-blue-700 bg-warm-blue-600 text-white ${className}`.trim()}
     >
       upd ↑
     </span>

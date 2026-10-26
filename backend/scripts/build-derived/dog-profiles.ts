@@ -236,9 +236,10 @@ export type DogJudgeEvent = {
   event_id: number;
   title: string;
   date: string;
-  avg_score: number;
+  avg_score: number | null;
   scores: number[];
   role?: string;
+  discipline?: 'coursing' | 'racing';
 };
 
 export type DogJudgeItem = {
@@ -247,15 +248,21 @@ export type DogJudgeItem = {
   starts_count: number;
   starts_percent: number;
   evaluations_count: number;
-  avg_score: number;
-  min_score: number;
-  max_score: number;
-  delta_vs_dog_avg: number;
+  avg_score: number | null;
+  min_score: number | null;
+  max_score: number | null;
+  delta_vs_dog_avg: number | null;
+  disciplines?: ('coursing' | 'racing')[];
   events: DogJudgeEvent[];
 };
 
 export type DogJudgesStats = {
   total_starts: number;
+  total_events: number;
+  total_coursing_events: number;
+  coursing_events_with_judges: number;
+  events_without_judges: number;
+  racing_events_count: number;
   total_judges: number;
   global_avg_score: number;
   highest_concentration: {
@@ -271,79 +278,138 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
 
   type JudgeEntry = {
     judge_name: string;
-    events: Map<number, { event_id: number; title: string; date: string; scores: number[]; role: string }>;
+    events: Map<number, { event_id: number; title: string; date: string; scores: number[]; role: string; discipline: 'coursing' | 'racing' }>;
     all_scores: number[];
+    disciplines: Set<'coursing' | 'racing'>;
   };
 
   const judgeMap = new Map<string, JudgeEntry>();
   let coursingEventsCount = 0;
+  let coursingWithoutJudgesCount = 0;
+  let racingEventsCount = 0;
+  let racingWithoutJudgesCount = 0;
 
   for (const row of rows) {
-    if (!row.raw_scores_json || !row.event_judges) continue;
-    if (row.event_type !== 'coursing' && row.event_type !== 'bzmp') continue;
+    const isRacing = row.event_type === 'racing';
+    const isCoursing = row.event_type === 'coursing' || row.event_type === 'bzmp';
+    if (!isRacing && !isCoursing) continue;
 
-    let raw: any;
-    try {
-      raw = JSON.parse(row.raw_scores_json);
-    } catch {
-      continue;
-    }
+    const judgeNames = row.event_judges ? parseJudgeNames(row.event_judges) : [];
 
-    const judgeNames = parseJudgeNames(row.event_judges);
-    if (judgeNames.length === 0 || !Array.isArray(raw.heats) || raw.heats.length === 0) continue;
+    if (isCoursing) {
+      if (!row.raw_scores_json || judgeNames.length === 0) {
+        coursingWithoutJudgesCount += 1;
+        continue;
+      }
 
-    coursingEventsCount += 1;
+      let raw: any;
+      try {
+        raw = JSON.parse(row.raw_scores_json);
+      } catch {
+        coursingWithoutJudgesCount += 1;
+        continue;
+      }
 
-    for (const heat of raw.heats) {
-      if (!Array.isArray(heat.judges)) continue;
-      for (const j of heat.judges) {
-        const score = extractSingleJudgeHeatScore(j);
-        if (score === null) continue;
+      if (!Array.isArray(raw.heats) || raw.heats.length === 0) {
+        coursingWithoutJudgesCount += 1;
+        continue;
+      }
 
-        const judgeNum = j.judge_number;
-        const judgeRole = judgeNum === 1 ? 'Главный судья' : 'Судья';
-        const judgeName = j.judge_name || judgeNames[judgeNum - 1] || (judgeNames.length === 1 ? judgeNames[0] : `Судья ${judgeNum}`);
+      coursingEventsCount += 1;
 
-        allHeatScores.push(score);
+      for (const heat of raw.heats) {
+        if (!Array.isArray(heat.judges)) continue;
+        for (const j of heat.judges) {
+          const score = extractSingleJudgeHeatScore(j);
+          if (score === null) continue;
 
+          const judgeNum = j.judge_number;
+          const judgeRole = judgeNum === 1 ? 'Главный судья' : 'Судья';
+          const judgeName = j.judge_name || judgeNames[judgeNum - 1] || (judgeNames.length === 1 ? judgeNames[0] : `Судья ${judgeNum}`);
+
+          allHeatScores.push(score);
+
+          let entry = judgeMap.get(judgeName);
+          if (!entry) {
+            entry = {
+              judge_name: judgeName,
+              events: new Map(),
+              all_scores: [],
+              disciplines: new Set(),
+            };
+            judgeMap.set(judgeName, entry);
+          }
+          entry.all_scores.push(score);
+          entry.disciplines.add('coursing');
+
+          let ev = entry.events.get(row.event_id);
+          if (!ev) {
+            ev = {
+              event_id: row.event_id,
+              title: row.title || 'Соревнование',
+              date: row.date_start || '',
+              role: judgeRole,
+              scores: [],
+              discipline: 'coursing',
+            };
+            entry.events.set(row.event_id, ev);
+          }
+          ev.scores.push(score);
+        }
+      }
+    } else if (isRacing) {
+      if (judgeNames.length === 0) {
+        racingWithoutJudgesCount += 1;
+        continue;
+      }
+
+      racingEventsCount += 1;
+
+      for (const judgeName of judgeNames) {
         let entry = judgeMap.get(judgeName);
         if (!entry) {
           entry = {
             judge_name: judgeName,
             events: new Map(),
             all_scores: [],
+            disciplines: new Set(),
           };
           judgeMap.set(judgeName, entry);
         }
-        entry.all_scores.push(score);
+        entry.disciplines.add('racing');
 
-        let ev = entry.events.get(row.event_id);
-        if (!ev) {
-          ev = {
+        if (!entry.events.has(row.event_id)) {
+          entry.events.set(row.event_id, {
             event_id: row.event_id,
-            title: row.title || 'Соревнование',
+            title: row.title || 'Бега борзых',
             date: row.date_start || '',
-            role: judgeRole,
+            role: 'Судья соревнований',
             scores: [],
-          };
-          entry.events.set(row.event_id, ev);
+            discipline: 'racing',
+          });
         }
-        ev.scores.push(score);
       }
     }
   }
 
-  if (allHeatScores.length === 0) {
+  if (judgeMap.size === 0) {
     return null;
   }
 
-  const globalAvg = Math.round((allHeatScores.reduce((a, b) => a + b, 0) / allHeatScores.length) * 100) / 100;
+  const globalAvg = allHeatScores.length > 0
+    ? Math.round((allHeatScores.reduce((a, b) => a + b, 0) / allHeatScores.length) * 100) / 100
+    : 0;
+
+  const totalEventsWithJudges = coursingEventsCount + racingEventsCount;
 
   const judges: DogJudgeItem[] = Array.from(judgeMap.values()).map((entry) => {
-    const judgeAvg = Math.round((entry.all_scores.reduce((a, b) => a + b, 0) / entry.all_scores.length) * 100) / 100;
+    const hasScores = entry.all_scores.length > 0;
+    const judgeAvg = hasScores
+      ? Math.round((entry.all_scores.reduce((a, b) => a + b, 0) / entry.all_scores.length) * 100) / 100
+      : null;
     const startsCount = entry.events.size;
-    const startsPercent = coursingEventsCount > 0 ? Math.round((startsCount / coursingEventsCount) * 100) : 0;
-    const delta = Math.round((judgeAvg - globalAvg) * 100) / 100;
+    const startsPercent = totalEventsWithJudges > 0 ? Math.round((startsCount / totalEventsWithJudges) * 100) : 0;
+    const delta = judgeAvg !== null && globalAvg > 0 ? Math.round((judgeAvg - globalAvg) * 100) / 100 : null;
 
     return {
       judge_name: entry.judge_name,
@@ -352,23 +418,27 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
       starts_percent: startsPercent,
       evaluations_count: entry.all_scores.length,
       avg_score: judgeAvg,
-      min_score: Math.min(...entry.all_scores),
-      max_score: Math.max(...entry.all_scores),
+      min_score: hasScores ? Math.min(...entry.all_scores) : null,
+      max_score: hasScores ? Math.max(...entry.all_scores) : null,
       delta_vs_dog_avg: delta,
+      disciplines: Array.from(entry.disciplines),
       events: Array.from(entry.events.values()).map((ev) => ({
         event_id: ev.event_id,
         title: ev.title,
         date: ev.date,
         role: ev.role,
-        avg_score: Math.round((ev.scores.reduce((a, b) => a + b, 0) / ev.scores.length) * 100) / 100,
+        avg_score: ev.scores.length > 0
+          ? Math.round((ev.scores.reduce((a, b) => a + b, 0) / ev.scores.length) * 100) / 100
+          : null,
         scores: ev.scores,
+        discipline: ev.discipline,
       })),
     };
   });
 
-  judges.sort((a, b) => b.starts_count - a.starts_count || b.evaluations_count - a.evaluations_count);
+  judges.sort((a, b) => b.starts_count - a.starts_count || (b.avg_score ?? 0) - (a.avg_score ?? 0));
 
-  const topConcentration = judges.length > 0 && coursingEventsCount >= 3 && judges[0].starts_percent >= 33
+  const topConcentration = judges.length > 0 && totalEventsWithJudges >= 3 && judges[0].starts_percent >= 30
     ? {
         judge_name: judges[0].judge_name,
         starts_count: judges[0].starts_count,
@@ -377,7 +447,12 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
     : null;
 
   return {
-    total_starts: coursingEventsCount,
+    total_starts: totalEventsWithJudges,
+    total_events: totalEventsWithJudges,
+    total_coursing_events: coursingEventsCount + coursingWithoutJudgesCount,
+    coursing_events_with_judges: coursingEventsCount,
+    events_without_judges: coursingWithoutJudgesCount,
+    racing_events_count: racingEventsCount,
     total_judges: judges.length,
     global_avg_score: globalAvg,
     highest_concentration: topConcentration,
@@ -678,6 +753,7 @@ export function buildDogProfiles(db: Database.Database) {
         qualification: row.qualification?.trim() ? row.qualification.trim() : null,
         status: row.status,
         status_reason: row.status_reason || null,
+        judges: row.event_judges || null,
       };
       
       // Add racing-specific data for racing events

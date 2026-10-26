@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-speed-v1",
   "source": "google-sheets",
-  "count": 177,
+  "count": 176,
   "records": [
     {
       "breed": "Уиппет",
@@ -1204,7 +1204,7 @@
     {
       "breed": "Салюки",
       "sex": "С",
-      "name": "Каяла",
+      "name": "Тундра",
       "speed_km_h": 52,
       "date": "2026-06-25",
       "screenshot_url": "https://disk.yandex.ru/i/rYxSt2D1o46LrA",
@@ -1226,7 +1226,7 @@
       ],
       "dog_id": 10742,
       "aliases": [
-        "Тундра"
+        "Каяла"
       ]
     },
     {
@@ -1276,7 +1276,10 @@
       "status": "normal",
       "track_type": "круг",
       "history": [],
-      "dog_id": 9188
+      "dog_id": 7256,
+      "aliases": [
+        "Джаззи"
+      ]
     },
     {
       "breed": "Уиппет",
@@ -1310,7 +1313,17 @@
       "screenshot_url": "https://disk.yandex.ru/i/D1AIz0xGslYwUg",
       "status": "improved",
       "track_type": "прямая",
-      "history": []
+      "history": [
+        {
+          "speed_km_h": 48,
+          "date": "2026-06-07",
+          "track_type": null,
+          "screenshot_url": "https://disk.yandex.ru/i/gKnxmCFxxyxT4Q"
+        }
+      ],
+      "aliases": [
+        "Грэйси"
+      ]
     },
     {
       "breed": "Русская псовая борзая",
@@ -1719,17 +1732,6 @@
       "screenshot_url": "https://disk.yandex.ru/i/lRLVHsQreNZZvg",
       "status": "new",
       "track_type": "круг",
-      "history": []
-    },
-    {
-      "breed": "Салюки",
-      "sex": "С",
-      "name": "Грэйси",
-      "speed_km_h": 48,
-      "date": "2026-06-07",
-      "screenshot_url": "https://disk.yandex.ru/i/gKnxmCFxxyxT4Q",
-      "status": "old",
-      "track_type": null,
       "history": []
     },
     {

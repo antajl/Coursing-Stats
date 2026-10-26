@@ -1,5 +1,5 @@
 import { useId, useMemo } from 'react'
-import { parseRecordDate } from '../lib/recordDates'
+import { parseRecordDate, time350ToSpeedKmh } from '../lib/recordDates'
 
 export interface CoursingTimelinePoint {
   time_seconds: number
@@ -96,16 +96,17 @@ export default function CoursingHistorySparkline({
   const midY = (coords[0].y + coords[coords.length - 1].y) / 2
 
   const formatTime = (value: number) => value.toFixed(2).replace('.', ',')
+  const pointTooltip = (p: CoursingTimelinePoint) =>
+    `${formatTime(p.time_seconds)} с (${time350ToSpeedKmh(p.time_seconds).toFixed(1)} км/ч, ${p.date})`
 
   return (
     <svg
       viewBox={`0 0 ${width} ${height}`}
       className={`h-16 w-full max-w-[260px] ${className}`}
       role="img"
-      aria-label={`История времени: от ${formatTime(minTime)} до ${formatTime(maxTime)} сек`}
-      title={points.map((point) => `${formatTime(point.time_seconds)} сек`).join(' → ')}
+      aria-label={`История времени 350 м: от ${formatTime(minTime)} с (${time350ToSpeedKmh(minTime).toFixed(1)} км/ч) до ${formatTime(maxTime)} с (${time350ToSpeedKmh(maxTime).toFixed(1)} км/ч)`}
+      title={points.map(pointTooltip).join(' → ')}
     >
-
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#c4956a" stopOpacity="0.35" />
@@ -158,8 +159,8 @@ export default function CoursingHistorySparkline({
         </g>
       )}
 
-      {coords.map((point) => (
-        <g key={`${point.date}-${point.time_seconds}`}>
+      {coords.map((point, index) => (
+        <g key={`${point.date}-${point.time_seconds}-${index}`}>
           <text
             x={point.x}
             y={point.y - 8}

@@ -55,7 +55,7 @@ function PillChevron() {
 
 function sexLabel(sex: string): string {
   if (sex === 'С') return 'Сука'
-  if (sex === 'К') return 'Кабель'
+  if (sex === 'К') return 'Кобель'
   return sex
 }
 

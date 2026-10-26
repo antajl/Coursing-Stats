@@ -29,6 +29,7 @@ export const Icons = {
   location: MapPin,
   club: Users,
   championship: Trophy,
+  trophy: Trophy,
   medal: Medal,
   speed: Gauge,
   search: Search,
@@ -46,6 +47,7 @@ export const Icons = {
   trend: TrendingUp,
   award: Award,
   paw: PawPrint,
+  dog: PawPrint,
   speedFlash: Zap,
   fileText: FileText,
 } as const

@@ -4,7 +4,12 @@ import CoursingHistorySparkline from '../../components/CoursingHistorySparkline'
 import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import SpeedStatusBadge from '../../components/SpeedStatusBadge'
-import { formatRecordDate, isRecentDoninoDate, parseRecordHistory } from '../../lib/recordDates'
+import {
+  formatRecordDate,
+  isRecentDoninoDate,
+  parseRecordHistory,
+  time350ToSpeedKmh,
+} from '../../lib/recordDates'
 import { toDogTitleCase } from '../../lib/dogName'
 import { Icons } from '../../lib/icons'
 
@@ -44,20 +49,32 @@ export default function CoursingRecordCard({ record }: CoursingRecordCardProps) 
     return times.length > 0 ? Math.min(...times).toFixed(2) : null
   }, [hasHistoryChart, historyItems])
 
+  const speedKmh = useMemo(() => {
+    if (record.time_seconds == null || record.time_seconds <= 0) return null
+    return time350ToSpeedKmh(record.time_seconds).toFixed(1)
+  }, [record.time_seconds])
+
   const timeBlock = (
-    <div className="relative shrink-0">
-      <span className="inline-block rounded-full bg-camel-600 px-3 py-1.5 text-sm font-bold text-white shadow-sm">
-        {record.time_seconds} сек
-      </span>
-      {showNew && <SpeedStatusBadge variant="new" date={record.date} />}
-      {showUpd && (
-        <SpeedStatusBadge
-          variant="upd"
-          date={record.date}
-          currentValue={record.time_seconds}
-          prevValue={prevTime}
-          unit="сек"
-        />
+    <div className="relative shrink-0 flex flex-col items-end gap-0.5 text-right">
+      <div className="flex items-center gap-1.5">
+        {showNew && <SpeedStatusBadge variant="new" date={record.date} />}
+        {showUpd && (
+          <SpeedStatusBadge
+            variant="upd"
+            date={record.date}
+            currentValue={record.time_seconds}
+            prevValue={prevTime}
+            unit="сек"
+          />
+        )}
+        <span className="inline-block rounded-full bg-camel-600 px-3 py-1.5 text-sm font-bold text-white shadow-sm">
+          {record.time_seconds} сек
+        </span>
+      </div>
+      {speedKmh && (
+        <span className="text-xs font-semibold text-old-money-600 tabular-nums">
+          {speedKmh} км/ч
+        </span>
       )}
     </div>
   )

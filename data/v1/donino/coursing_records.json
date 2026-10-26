@@ -1,11 +1,12 @@
 {
   "schema": "coursing-stats/donino-coursing-v1",
   "source": "google-sheets",
-  "count": 222,
+  "count": 221,
   "records": [
     {
       "breed": "Уиппет",
       "name": "Таир",
+      "sex": "С",
       "time_seconds": 22.74,
       "date": "2026-08-01",
       "track_length": 350,
@@ -25,6 +26,7 @@
     {
       "breed": "Уиппет",
       "name": "Драми",
+      "sex": "С",
       "time_seconds": 22.8,
       "date": "2026-06-20",
       "track_length": 350,
@@ -74,6 +76,7 @@
     {
       "breed": "Уиппет",
       "name": "Дуня",
+      "sex": "С",
       "time_seconds": 23.16,
       "date": "2026-07-05",
       "track_length": 350,
@@ -93,6 +96,7 @@
     {
       "breed": "Уиппет",
       "name": "Уна",
+      "sex": "С",
       "time_seconds": 23.34,
       "date": "2026-09-20",
       "track_length": 350,
@@ -112,6 +116,7 @@
     {
       "breed": "Уиппет",
       "name": "Даня",
+      "sex": "С",
       "time_seconds": 23.36,
       "date": "2026-06-28",
       "track_length": 350,
@@ -131,6 +136,7 @@
     {
       "breed": "Уиппет",
       "name": "Каро",
+      "sex": "К",
       "time_seconds": 23.43,
       "date": "2026-09-20",
       "track_length": 350,
@@ -149,6 +155,7 @@
     {
       "breed": "Уиппет",
       "name": "Джипси",
+      "sex": "С",
       "time_seconds": 23.5,
       "date": "2026-06-06",
       "track_length": 350,
@@ -177,6 +184,7 @@
     {
       "breed": "Уиппет",
       "name": "Зизи",
+      "sex": "С",
       "time_seconds": 23.58,
       "date": "2026-10-24",
       "track_length": 350,
@@ -204,6 +212,7 @@
     {
       "breed": "Уиппет",
       "name": "Бонни",
+      "sex": "С",
       "time_seconds": 23.7,
       "date": "2026-07-31",
       "track_length": 350,
@@ -236,6 +245,7 @@
     {
       "breed": "Уиппет",
       "name": "Замир",
+      "sex": "С",
       "time_seconds": 23.91,
       "date": "2026-08-01",
       "track_length": 350,
@@ -295,6 +305,7 @@
     {
       "breed": "Уиппет",
       "name": "Симба",
+      "sex": "К",
       "time_seconds": 24.14,
       "date": "2026-06-20",
       "track_length": 350,
@@ -323,6 +334,7 @@
     {
       "breed": "Уиппет",
       "name": "Астрид",
+      "sex": "С",
       "time_seconds": 24.28,
       "date": "2026-10-24",
       "track_length": 350,
@@ -353,6 +365,7 @@
     {
       "breed": "Уиппет",
       "name": "Дива",
+      "sex": "С",
       "time_seconds": 24.41,
       "date": "2026-08-01",
       "track_length": 350,
@@ -368,6 +381,7 @@
     {
       "breed": "Уиппет",
       "name": "Ирвин",
+      "sex": "С",
       "time_seconds": 24.41,
       "date": "2026-09-12",
       "track_length": 350,
@@ -387,6 +401,7 @@
     {
       "breed": "Уиппет",
       "name": "Энола",
+      "sex": "С",
       "time_seconds": 24.44,
       "date": "2026-09-26",
       "track_length": 350,
@@ -402,6 +417,7 @@
     {
       "breed": "Гальго",
       "name": "Шерегеш",
+      "sex": "К",
       "time_seconds": 24.5,
       "date": "2026-08-30",
       "track_length": 350,
@@ -429,6 +445,7 @@
     {
       "breed": "Уиппет",
       "name": "Мазай",
+      "sex": "К",
       "time_seconds": 24.51,
       "date": "2026-09-26",
       "track_length": 350,
@@ -452,6 +469,7 @@
     {
       "breed": "Уиппет",
       "name": "Марго",
+      "sex": "С",
       "time_seconds": 24.54,
       "date": "2026-06-20",
       "track_length": 350,
@@ -494,6 +512,7 @@
     {
       "breed": "Уиппет",
       "name": "Версаль",
+      "sex": "С",
       "time_seconds": 24.62,
       "date": "2026-06-06",
       "track_length": 350,
@@ -513,6 +532,7 @@
     {
       "breed": "Гальго",
       "name": "Шелби",
+      "sex": "С",
       "time_seconds": 24.62,
       "date": "2026-10-24",
       "track_length": 350,
@@ -536,6 +556,7 @@
     {
       "breed": "Уиппет",
       "name": "Купидон",
+      "sex": "К",
       "time_seconds": 24.64,
       "date": "2026-09-20",
       "track_length": 350,
@@ -563,6 +584,7 @@
     {
       "breed": "Уиппет",
       "name": "Рик",
+      "sex": "К",
       "time_seconds": 24.66,
       "date": "2026-09-20",
       "track_length": 350,
@@ -586,6 +608,7 @@
     {
       "breed": "Уиппет",
       "name": "Энджи",
+      "sex": "С",
       "time_seconds": 24.67,
       "date": "2026-06-06",
       "track_length": 350,
@@ -623,6 +646,7 @@
     {
       "breed": "Уиппет",
       "name": "Мистраль",
+      "sex": "С",
       "time_seconds": 24.74,
       "date": "2026-10-24",
       "track_length": 350,
@@ -642,6 +666,7 @@
     {
       "breed": "Уиппет",
       "name": "Сильвер",
+      "sex": "К",
       "time_seconds": 24.78,
       "date": "2026-10-24",
       "track_length": 350,
@@ -665,6 +690,7 @@
     {
       "breed": "Уиппет",
       "name": "Марс",
+      "sex": "К",
       "time_seconds": 24.87,
       "date": "2026-09-26",
       "track_length": 350,
@@ -688,6 +714,7 @@
     {
       "breed": "Уиппет",
       "name": "Гарри",
+      "sex": "С",
       "time_seconds": 24.9,
       "date": "2026-09-20",
       "track_length": 350,
@@ -734,6 +761,7 @@
     {
       "breed": "Уиппет",
       "name": "Ди",
+      "sex": "С",
       "time_seconds": 24.99,
       "date": "2026-09-20",
       "track_length": 350,
@@ -749,6 +777,7 @@
     {
       "breed": "Уиппет",
       "name": "Зенит",
+      "sex": "К",
       "time_seconds": 25.01,
       "date": "2026-08-01",
       "track_length": 350,
@@ -772,6 +801,7 @@
     {
       "breed": "Уиппет",
       "name": "Донат",
+      "sex": "К",
       "time_seconds": 25.07,
       "date": "2026-06-28",
       "track_length": 350,
@@ -809,6 +839,7 @@
     {
       "breed": "Уиппет",
       "name": "Антоша",
+      "sex": "С",
       "time_seconds": 25.15,
       "date": "2026-08-01",
       "track_length": 350,
@@ -849,6 +880,7 @@
     {
       "breed": "Уиппет",
       "name": "Барон",
+      "sex": "К",
       "time_seconds": 25.17,
       "date": "2026-10-24",
       "track_length": 350,
@@ -894,6 +926,7 @@
     {
       "breed": "Уиппет",
       "name": "Барса",
+      "sex": "С",
       "time_seconds": 25.21,
       "date": "2026-08-09",
       "track_length": 350,
@@ -921,6 +954,7 @@
     {
       "breed": "Уиппет",
       "name": "Ерёма",
+      "sex": "К",
       "time_seconds": 25.21,
       "date": "2026-09-26",
       "track_length": 350,
@@ -936,6 +970,7 @@
     {
       "breed": "Уиппет",
       "name": "Груша",
+      "sex": "С",
       "time_seconds": 25.28,
       "date": "2026-05-30",
       "track_length": 350,
@@ -963,6 +998,7 @@
     {
       "breed": "Уиппет",
       "name": "Диамант",
+      "sex": "С",
       "time_seconds": 25.29,
       "date": "2026-06-19",
       "track_length": 350,
@@ -982,6 +1018,7 @@
     {
       "breed": "Уиппет",
       "name": "Редик",
+      "sex": "С",
       "time_seconds": 25.32,
       "date": "2026-08-09",
       "track_length": 350,
@@ -997,6 +1034,7 @@
     {
       "breed": "Уиппет",
       "name": "Эйва",
+      "sex": "С",
       "time_seconds": 25.34,
       "date": "2026-10-24",
       "track_length": 350,
@@ -1006,6 +1044,7 @@
     {
       "breed": "Уиппет",
       "name": "Амазонка",
+      "sex": "С",
       "time_seconds": 25.37,
       "date": "2026-06-06",
       "track_length": 350,
@@ -1016,6 +1055,7 @@
     {
       "breed": "Салюки",
       "name": "Тайга",
+      "sex": "С",
       "time_seconds": 25.41,
       "date": "2026-09-26",
       "track_length": 350,
@@ -1039,6 +1079,7 @@
     {
       "breed": "Уиппет",
       "name": "Ермак",
+      "sex": "С",
       "time_seconds": 25.43,
       "date": "2026-07-05",
       "track_length": 350,
@@ -1068,6 +1109,7 @@
     {
       "breed": "Уиппет",
       "name": "Лита",
+      "sex": "С",
       "time_seconds": 25.44,
       "date": "2026-09-26",
       "track_length": 350,
@@ -1082,6 +1124,7 @@
     {
       "breed": "Уиппет",
       "name": "Афи",
+      "sex": "С",
       "time_seconds": 25.45,
       "date": "2026-06-06",
       "track_length": 350,
@@ -1097,6 +1140,7 @@
     {
       "breed": "Уиппет",
       "name": "Винни",
+      "sex": "С",
       "time_seconds": 25.45,
       "date": "2026-07-31",
       "track_length": 350,
@@ -1120,6 +1164,7 @@
     {
       "breed": "Уиппет",
       "name": "Лева",
+      "sex": "С",
       "time_seconds": 25.46,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1130,6 +1175,7 @@
     {
       "breed": "Уиппет",
       "name": "Серый",
+      "sex": "К",
       "time_seconds": 25.46,
       "date": "2026-08-09",
       "track_length": 350,
@@ -1145,6 +1191,7 @@
     {
       "breed": "Уиппет",
       "name": "Толя",
+      "sex": "К",
       "time_seconds": 25.48,
       "date": "2026-08-09",
       "track_length": 350,
@@ -1164,6 +1211,7 @@
     {
       "breed": "Уиппет",
       "name": "Шерман",
+      "sex": "С",
       "time_seconds": 25.49,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1206,6 +1254,7 @@
     {
       "breed": "Уиппет",
       "name": "Джеймс",
+      "sex": "С",
       "time_seconds": 25.61,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1216,6 +1265,7 @@
     {
       "breed": "Уиппет",
       "name": "Ланди",
+      "sex": "С",
       "time_seconds": 25.62,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1226,6 +1276,7 @@
     {
       "breed": "Уиппет",
       "name": "Агата",
+      "sex": "С",
       "time_seconds": 25.68,
       "date": "2026-09-20",
       "track_length": 350,
@@ -1236,6 +1287,7 @@
     {
       "breed": "Уиппет",
       "name": "Каталина",
+      "sex": "С",
       "time_seconds": 25.72,
       "date": "2026-08-01",
       "track_length": 350,
@@ -1251,6 +1303,7 @@
     {
       "breed": "Уиппет",
       "name": "Корица",
+      "sex": "С",
       "time_seconds": 25.74,
       "date": "2026-06-06",
       "track_length": 350,
@@ -1275,6 +1328,7 @@
     {
       "breed": "Уиппет",
       "name": "Комета",
+      "sex": "С",
       "time_seconds": 25.84,
       "date": "2026-06-06",
       "track_length": 350,
@@ -1290,6 +1344,7 @@
     {
       "breed": "Уиппет",
       "name": "Макс",
+      "sex": "С",
       "time_seconds": 25.86,
       "date": "2026-06-28",
       "track_length": 350,
@@ -1305,6 +1360,7 @@
     {
       "breed": "Уиппет",
       "name": "Визави",
+      "sex": "С",
       "time_seconds": 25.92,
       "date": "2026-09-12",
       "track_length": 350,
@@ -1333,6 +1389,7 @@
     {
       "breed": "Уиппет",
       "name": "Милли",
+      "sex": "С",
       "time_seconds": 25.95,
       "date": "2026-06-06",
       "track_length": 350,
@@ -1343,6 +1400,7 @@
     {
       "breed": "Салюки",
       "name": "Велар",
+      "sex": "К",
       "time_seconds": 26.03,
       "date": "2026-09-12",
       "track_length": 350,
@@ -1358,6 +1416,7 @@
     {
       "breed": "Уиппет",
       "name": "Слава",
+      "sex": "С",
       "time_seconds": 26.11,
       "date": "2026-06-06",
       "track_length": 350,
@@ -1368,6 +1427,7 @@
     {
       "breed": "Уиппет",
       "name": "Ялта",
+      "sex": "С",
       "time_seconds": 26.11,
       "date": "2026-10-24",
       "track_length": 350,
@@ -1383,6 +1443,7 @@
     {
       "breed": "Уиппет",
       "name": "Элли",
+      "sex": "С",
       "time_seconds": 26.16,
       "date": "2026-06-06",
       "track_length": 350,
@@ -1393,6 +1454,7 @@
     {
       "breed": "Уиппет",
       "name": "Ник",
+      "sex": "С",
       "time_seconds": 26.16,
       "date": "2026-09-26",
       "track_length": 350,
@@ -1444,6 +1506,7 @@
     {
       "breed": "Уиппет",
       "name": "Марвин",
+      "sex": "С",
       "time_seconds": 26.31,
       "date": "2026-06-06",
       "track_length": 350,
@@ -1454,6 +1517,7 @@
     {
       "breed": "Уиппет",
       "name": "Блейз",
+      "sex": "С",
       "time_seconds": 26.34,
       "date": "2026-07-05",
       "track_length": 350,
@@ -1469,6 +1533,7 @@
     {
       "breed": "Уиппет",
       "name": "Рея",
+      "sex": "С",
       "time_seconds": 26.34,
       "date": "2026-06-28",
       "track_length": 350,
@@ -1478,7 +1543,8 @@
     },
     {
       "breed": "Салюки",
-      "name": "Каяла",
+      "name": "Тундра",
+      "sex": "С",
       "time_seconds": 26.38,
       "date": "2026-09-26",
       "track_length": 350,
@@ -1499,12 +1565,13 @@
       ],
       "dog_id": 10742,
       "aliases": [
-        "Тундра"
+        "Каяла"
       ]
     },
     {
       "breed": "Тазы",
       "name": "Мирасдар",
+      "sex": "К",
       "time_seconds": 26.44,
       "date": "2026-09-12",
       "track_length": 350,
@@ -1533,6 +1600,7 @@
     {
       "breed": "Уиппет",
       "name": "Ника",
+      "sex": "С",
       "time_seconds": 26.51,
       "date": "2026-08-09",
       "track_length": 350,
@@ -1543,6 +1611,7 @@
     {
       "breed": "Уиппет",
       "name": "Бисквит",
+      "sex": "С",
       "time_seconds": 26.56,
       "date": "2026-07-05",
       "track_length": 350,
@@ -1572,6 +1641,7 @@
     {
       "breed": "Уиппет",
       "name": "Бруно",
+      "sex": "К",
       "time_seconds": 26.66,
       "date": "2026-08-09",
       "track_length": 350,
@@ -1596,11 +1666,15 @@
     {
       "breed": "Салюки",
       "name": "Грейси",
+      "sex": "С",
       "time_seconds": 26.84,
       "date": "2026-10-24",
       "track_length": 350,
       "status": "normal",
-      "history": []
+      "history": [],
+      "aliases": [
+        "Грэйси"
+      ]
     },
     {
       "breed": "Салюки",
@@ -1637,6 +1711,7 @@
     {
       "breed": "Уиппет",
       "name": "Маруся",
+      "sex": "С",
       "time_seconds": 27.16,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1647,6 +1722,7 @@
     {
       "breed": "Уиппет",
       "name": "Соня",
+      "sex": "С",
       "time_seconds": 27.16,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1666,6 +1742,7 @@
     {
       "breed": "Салюки",
       "name": "Джази",
+      "sex": "К",
       "time_seconds": 27.3,
       "date": "2026-07-31",
       "track_length": 350,
@@ -1674,13 +1751,25 @@
         {
           "time_seconds": 30.31,
           "date": "2026-06-28"
+        },
+        {
+          "time_seconds": 32.59,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 27.8,
+          "date": "2026-09-26"
         }
       ],
-      "dog_id": 9188
+      "dog_id": 7256,
+      "aliases": [
+        "Джаззи"
+      ]
     },
     {
       "breed": "Уиппет",
       "name": "Зося",
+      "sex": "С",
       "time_seconds": 27.33,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1691,6 +1780,7 @@
     {
       "breed": "Родезийский риджбек",
       "name": "Кевин",
+      "sex": "К",
       "time_seconds": 27.35,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1701,6 +1791,7 @@
     {
       "breed": "Уиппет",
       "name": "Белла",
+      "sex": "С",
       "time_seconds": 27.35,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1711,6 +1802,7 @@
     {
       "breed": "Уиппет",
       "name": "Агния",
+      "sex": "С",
       "time_seconds": 27.56,
       "date": "2026-06-28",
       "track_length": 350,
@@ -1721,6 +1813,7 @@
     {
       "breed": "Уиппет",
       "name": "Талия",
+      "sex": "С",
       "time_seconds": 27.56,
       "date": "2026-09-12",
       "track_length": 350,
@@ -1731,6 +1824,7 @@
     {
       "breed": "Малинуа",
       "name": "Люцифер",
+      "sex": "К",
       "time_seconds": 27.66,
       "date": "2026-08-09",
       "track_length": 350,
@@ -1750,6 +1844,7 @@
     {
       "breed": "Родезийский Риджбек",
       "name": "Кевин",
+      "sex": "К",
       "time_seconds": 27.77,
       "date": "2026-09-20",
       "track_length": 350,
@@ -1763,23 +1858,9 @@
       "dog_id": 9165
     },
     {
-      "breed": "Салюки",
-      "name": "Джаззи",
-      "time_seconds": 27.8,
-      "date": "2026-09-26",
-      "track_length": 350,
-      "status": "improved",
-      "history": [
-        {
-          "time_seconds": 32.59,
-          "date": "2026-08-09"
-        }
-      ],
-      "dog_id": 7256
-    },
-    {
       "breed": "Родезийский Риджбек",
       "name": "Айна",
+      "sex": "С",
       "time_seconds": 27.81,
       "date": "2026-08-30",
       "track_length": 350,
@@ -1790,6 +1871,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Джед",
+      "sex": "К",
       "time_seconds": 27.83,
       "date": "2026-08-01",
       "track_length": 350,
@@ -1826,6 +1908,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Соня",
+      "sex": "С",
       "time_seconds": 27.94,
       "date": "2026-08-01",
       "track_length": 350,
@@ -1857,6 +1940,7 @@
     {
       "breed": "Уиппет",
       "name": "Кара",
+      "sex": "С",
       "time_seconds": 28.04,
       "date": "2026-05-31",
       "track_length": 350,
@@ -1867,6 +1951,7 @@
     {
       "breed": "Родезийский Риджбек",
       "name": "Скади",
+      "sex": "С",
       "time_seconds": 28.19,
       "date": "2026-08-09",
       "track_length": 350,
@@ -1891,6 +1976,7 @@
     {
       "breed": "Салюки",
       "name": "Синбад",
+      "sex": "К",
       "time_seconds": 28.31,
       "date": "2026-08-01",
       "track_length": 350,
@@ -1901,6 +1987,7 @@
     {
       "breed": "Чирнеко дель-Этна",
       "name": "Джус",
+      "sex": "К",
       "time_seconds": 28.36,
       "date": "2026-06-28",
       "track_length": 350,
@@ -1916,6 +2003,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Рэм",
+      "sex": "К",
       "time_seconds": 28.37,
       "date": "2026-09-26",
       "track_length": 350,
@@ -1960,6 +2048,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Гела",
+      "sex": "С",
       "time_seconds": 28.42,
       "date": "2026-06-28",
       "track_length": 350,
@@ -1999,6 +2088,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Эрен Егер",
+      "sex": "С",
       "time_seconds": 28.47,
       "date": "2026-06-28",
       "track_length": 350,
@@ -2050,6 +2140,7 @@
     {
       "breed": "Родезийский Риджбек",
       "name": "Риша",
+      "sex": "С",
       "time_seconds": 28.57,
       "date": "2026-08-09",
       "track_length": 350,
@@ -2074,6 +2165,7 @@
     {
       "breed": "Родезийский риджбек",
       "name": "Скиф",
+      "sex": "К",
       "time_seconds": 28.74,
       "date": "2026-08-01",
       "track_length": 350,
@@ -2084,6 +2176,7 @@
     {
       "breed": "Родезийский риджбек",
       "name": "Руна",
+      "sex": "С",
       "time_seconds": 28.76,
       "date": "2026-05-31",
       "track_length": 350,
@@ -2094,6 +2187,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Дез",
+      "sex": "С",
       "time_seconds": 28.83,
       "date": "2026-06-19",
       "track_length": 350,
@@ -2131,6 +2225,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Буба",
+      "sex": "К",
       "time_seconds": 29.08,
       "date": "2026-08-01",
       "track_length": 350,
@@ -2176,6 +2271,7 @@
     {
       "breed": "Родезийский риджбек",
       "name": "Скади",
+      "sex": "С",
       "time_seconds": 29.16,
       "date": "2026-06-06",
       "track_length": 350,
@@ -2191,6 +2287,7 @@
     {
       "breed": "Салюки",
       "name": "Бакст",
+      "sex": "С",
       "time_seconds": 29.27,
       "date": "2026-06-19",
       "track_length": 350,
@@ -2201,6 +2298,7 @@
     {
       "breed": "Родезийский риджбек",
       "name": "Риша",
+      "sex": "С",
       "time_seconds": 29.29,
       "date": "2026-08-01",
       "track_length": 350,
@@ -2220,6 +2318,7 @@
     {
       "breed": "Родезийский Риджбек",
       "name": "Скиф",
+      "sex": "К",
       "time_seconds": 29.31,
       "date": "2026-08-09",
       "track_length": 350,
@@ -2239,6 +2338,7 @@
     {
       "breed": "Родезийский Риджбек",
       "name": "Руна",
+      "sex": "С",
       "time_seconds": 29.34,
       "date": "2026-09-20",
       "track_length": 350,
@@ -2268,6 +2368,7 @@
     {
       "breed": "Салюки",
       "name": "Шайн",
+      "sex": "С",
       "time_seconds": 29.37,
       "date": "2026-06-28",
       "track_length": 350,
@@ -2278,6 +2379,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Юми",
+      "sex": "С",
       "time_seconds": 29.4,
       "date": "2026-06-28",
       "track_length": 350,
@@ -2297,6 +2399,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Ларс",
+      "sex": "К",
       "time_seconds": 29.46,
       "date": "2026-05-30",
       "track_length": 350,
@@ -2325,6 +2428,7 @@
     {
       "breed": "Родезийский риджбек",
       "name": "Чу",
+      "sex": "К",
       "time_seconds": 29.54,
       "date": "2026-05-31",
       "track_length": 350,
@@ -2372,6 +2476,7 @@
     {
       "breed": "Поденко Ибиценко",
       "name": "Йоши",
+      "sex": "К",
       "time_seconds": 29.87,
       "date": "2026-09-20",
       "track_length": 350,
@@ -2390,6 +2495,7 @@
     {
       "breed": "Родезийский Риджбек",
       "name": "Сёма",
+      "sex": "С",
       "time_seconds": 29.9,
       "date": "2026-08-09",
       "track_length": 350,
@@ -2405,6 +2511,7 @@
     {
       "breed": "Чирнеко дель-Этна",
       "name": "Ева",
+      "sex": "С",
       "time_seconds": 29.92,
       "date": "2026-07-31",
       "track_length": 350,
@@ -2442,6 +2549,7 @@
     {
       "breed": "Бакхмуль",
       "name": "Кики",
+      "sex": "С",
       "time_seconds": 30.14,
       "date": "2026-05-31",
       "track_length": 350,
@@ -2470,6 +2578,7 @@
     {
       "breed": "Родезийский риджбек",
       "name": "Сема",
+      "sex": "С",
       "time_seconds": 30.47,
       "date": "2026-06-06",
       "track_length": 350,
@@ -2480,6 +2589,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Шани",
+      "sex": "С",
       "time_seconds": 30.48,
       "date": "2026-06-20",
       "track_length": 350,
@@ -2490,6 +2600,7 @@
     {
       "breed": "Басенджи",
       "name": "Дик",
+      "sex": "К",
       "time_seconds": 30.51,
       "date": "2026-09-20",
       "track_length": 350,
@@ -2518,6 +2629,7 @@
     {
       "breed": "Басенджи",
       "name": "Генри",
+      "sex": "К",
       "time_seconds": 30.86,
       "date": "2026-09-12",
       "track_length": 350,
@@ -2533,6 +2645,7 @@
     {
       "breed": "Родезийский риджбек",
       "name": "Сандра",
+      "sex": "С",
       "time_seconds": 31.35,
       "date": "2026-06-06",
       "track_length": 350,
@@ -2543,6 +2656,7 @@
     {
       "breed": "Левретка",
       "name": "Вася",
+      "sex": "С",
       "time_seconds": 31.41,
       "date": "2026-06-06",
       "track_length": 350,
@@ -2553,6 +2667,7 @@
     {
       "breed": "Метис",
       "name": "Норд",
+      "sex": "К",
       "time_seconds": 31.42,
       "date": "2026-07-05",
       "track_length": 350,
@@ -2563,6 +2678,7 @@
     {
       "breed": "Метис",
       "name": "Марсель",
+      "sex": "К",
       "time_seconds": 31.45,
       "date": "2026-10-24",
       "track_length": 350,
@@ -2573,6 +2689,7 @@
     {
       "breed": "Ирландский терьер",
       "name": "Душечка",
+      "sex": "С",
       "time_seconds": 31.5,
       "date": "2026-09-20",
       "track_length": 350,
@@ -2605,6 +2722,7 @@
     {
       "breed": "Выжла",
       "name": "Тор",
+      "sex": "С",
       "time_seconds": 31.66,
       "date": "2026-07-05",
       "track_length": 350,
@@ -2615,6 +2733,7 @@
     {
       "breed": "Метис",
       "name": "Габи",
+      "sex": "С",
       "time_seconds": 31.68,
       "date": "2026-07-05",
       "track_length": 350,
@@ -2630,6 +2749,7 @@
     {
       "breed": "Родезийский риджбек",
       "name": "Никки",
+      "sex": "С",
       "time_seconds": 31.68,
       "date": "2026-05-31",
       "track_length": 350,
@@ -2654,6 +2774,7 @@
     {
       "breed": "Басенджи",
       "name": "Николь",
+      "sex": "С",
       "time_seconds": 31.92,
       "date": "2026-08-01",
       "track_length": 350,
@@ -2673,6 +2794,7 @@
     {
       "breed": "Ирландский терьер",
       "name": "Лода",
+      "sex": "С",
       "time_seconds": 31.98,
       "date": "2026-07-05",
       "track_length": 350,
@@ -2688,6 +2810,7 @@
     {
       "breed": "Басенджи",
       "name": "Ее Величество",
+      "sex": "С",
       "time_seconds": 32.11,
       "date": "2026-08-01",
       "track_length": 350,
@@ -2703,6 +2826,7 @@
     {
       "breed": "Левретка",
       "name": "Хогвартс",
+      "sex": "К",
       "time_seconds": 32.11,
       "date": "2026-08-30",
       "track_length": 350,
@@ -2721,6 +2845,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Гоша",
+      "sex": "К",
       "time_seconds": 32.42,
       "date": "2026-07-31",
       "track_length": 350,
@@ -2744,6 +2869,7 @@
     {
       "breed": "Родезийский Риджбек",
       "name": "Трой",
+      "sex": "К",
       "time_seconds": 32.43,
       "date": "2026-08-09",
       "track_length": 350,
@@ -2754,6 +2880,7 @@
     {
       "breed": "Левретка",
       "name": "Финик",
+      "sex": "К",
       "time_seconds": 32.45,
       "date": "2026-08-30",
       "track_length": 350,
@@ -2787,6 +2914,7 @@
     {
       "breed": "Фараонова собака",
       "name": "Рада",
+      "sex": "С",
       "time_seconds": 32.56,
       "date": "2026-06-06",
       "track_length": 350,
@@ -2811,6 +2939,7 @@
     {
       "breed": "АПБТ",
       "name": "Эльбрус",
+      "sex": "С",
       "time_seconds": 32.79,
       "date": "2026-07-05",
       "track_length": 350,
@@ -2834,6 +2963,7 @@
     {
       "breed": "Басенджи",
       "name": "Илона",
+      "sex": "С",
       "time_seconds": 32.83,
       "date": "2026-09-12",
       "track_length": 350,
@@ -2853,6 +2983,7 @@
     {
       "breed": "Левретка",
       "name": "Юкос",
+      "sex": "К",
       "time_seconds": 33.48,
       "date": "2026-08-30",
       "track_length": 350,
@@ -2868,6 +2999,7 @@
     {
       "breed": "Бордер колли",
       "name": "Вега",
+      "sex": "С",
       "time_seconds": 33.52,
       "date": "2026-05-31",
       "track_length": 350,
@@ -2887,6 +3019,7 @@
     {
       "breed": "Басенджи",
       "name": "Руби",
+      "sex": "С",
       "time_seconds": 33.57,
       "date": "2026-06-20",
       "track_length": 350,
@@ -2902,6 +3035,7 @@
     {
       "breed": "Уиппет",
       "name": "Спайк",
+      "sex": "С",
       "time_seconds": 33.61,
       "date": "2026-05-31",
       "track_length": 350,
@@ -2912,6 +3046,7 @@
     {
       "breed": "Басенджи",
       "name": "Дина",
+      "sex": "С",
       "time_seconds": 33.94,
       "date": "2026-09-12",
       "track_length": 350,
@@ -2922,6 +3057,7 @@
     {
       "breed": "Басенджи",
       "name": "Ноки",
+      "sex": "К",
       "time_seconds": 34.24,
       "date": "2026-10-24",
       "track_length": 350,
@@ -2931,6 +3067,7 @@
     {
       "breed": "Кане-корсо",
       "name": "Кир",
+      "sex": "К",
       "time_seconds": 34.29,
       "date": "2026-08-09",
       "track_length": 350,
@@ -2955,6 +3092,7 @@
     {
       "breed": "Басенджи",
       "name": "Император",
+      "sex": "К",
       "time_seconds": 34.84,
       "date": "2026-06-20",
       "track_length": 350,
@@ -2965,6 +3103,7 @@
     {
       "breed": "Кане-корсо",
       "name": "Дея",
+      "sex": "С",
       "time_seconds": 34.88,
       "date": "2026-05-31",
       "track_length": 350,
@@ -2980,6 +3119,7 @@
     {
       "breed": "Немецкая овчарка",
       "name": "Яра",
+      "sex": "С",
       "time_seconds": 34.95,
       "date": "2026-08-09",
       "track_length": 350,
@@ -2990,6 +3130,7 @@
     {
       "breed": "Немецкая овчарка",
       "name": "Вирна",
+      "sex": "С",
       "time_seconds": 34.97,
       "date": "2026-08-09",
       "track_length": 350,
@@ -3005,6 +3146,7 @@
     {
       "breed": "Алабай",
       "name": "Гретта",
+      "sex": "С",
       "time_seconds": 35.24,
       "date": "2026-10-24",
       "track_length": 350,
@@ -3014,6 +3156,7 @@
     {
       "breed": "АСТ",
       "name": "Бася",
+      "sex": "С",
       "time_seconds": 35.38,
       "date": "2026-08-09",
       "track_length": 350,
@@ -3023,6 +3166,7 @@
     {
       "breed": "Басенджи",
       "name": "Нокки",
+      "sex": "С",
       "time_seconds": 35.97,
       "date": "2026-07-05",
       "track_length": 350,
@@ -3033,6 +3177,7 @@
     {
       "breed": "Родезийский Риджбек",
       "name": "Вега",
+      "sex": "С",
       "time_seconds": 36.67,
       "date": "2026-09-20",
       "track_length": 350,
@@ -3052,6 +3197,7 @@
     {
       "breed": "Басенджи",
       "name": "Пайпер",
+      "sex": "С",
       "time_seconds": 37.17,
       "date": "2026-09-12",
       "track_length": 350,
@@ -3071,6 +3217,7 @@
     {
       "breed": "Басенджи",
       "name": "Терри",
+      "sex": "С",
       "time_seconds": 38.18,
       "date": "2026-05-31",
       "track_length": 350,
@@ -3081,6 +3228,7 @@
     {
       "breed": "Чирнеко дель-Этна",
       "name": "Белка",
+      "sex": "С",
       "time_seconds": 38.51,
       "date": "2026-06-28",
       "track_length": 350,
@@ -3091,6 +3239,7 @@
     {
       "breed": "Басенджи",
       "name": "Майли",
+      "sex": "С",
       "time_seconds": 39.21,
       "date": "2026-05-31",
       "track_length": 350,
@@ -3101,6 +3250,7 @@
     {
       "breed": "Спаниель",
       "name": "Локи",
+      "sex": "С",
       "time_seconds": 39.25,
       "date": "2026-06-28",
       "track_length": 350,
@@ -3111,6 +3261,7 @@
     {
       "breed": "Цвергпинчер",
       "name": "Марвел",
+      "sex": "К",
       "time_seconds": 39.25,
       "date": "2026-10-24",
       "track_length": 350,
@@ -3120,6 +3271,7 @@
     {
       "breed": "Вельштерьер",
       "name": "Борсук",
+      "sex": "С",
       "time_seconds": 56.7,
       "date": "2026-06-28",
       "track_length": 350,

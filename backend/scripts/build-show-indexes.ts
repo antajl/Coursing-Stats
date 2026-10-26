@@ -1355,6 +1355,34 @@ async function main() {
     }
 
     if (year !== 'unknown') {
+      const HOME_BREEDS = [
+        'УИППЕТ',
+        'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+        'БАСЕНДЖИ',
+        'САЛЮКИ',
+        'РОДЕЗИЙСКИЙ РИДЖБЕК',
+      ]
+      const breed_slides = HOME_BREEDS.map((breedName) => {
+        const matching = yearDogs.filter((d) => (d.breed || '').toUpperCase().includes(breedName))
+        return {
+          breed: breedName,
+          dog_count: matching.length,
+          dogs: matching.slice(0, 3).map((d, i) => ({
+            id: d.id,
+            name_lat: d.name_lat,
+            name_ru: d.name_ru || '',
+            breed: d.breed || breedName,
+            sex: d.sex || '',
+            total_shows: d.total_shows || 0,
+            best_award: d.best_award ?? null,
+            rank_score: d.rank_score ?? 0,
+            rank: i + 1,
+            titles: compactShowTitles(d.titles),
+            competition_dog_id: d.competition_dog_id ?? null,
+          })),
+        }
+      }).filter((s) => s.dogs.length > 0)
+
       const homeTop = {
         schema: 'coursing-stats/show-home-top-v1',
         year,
@@ -1370,6 +1398,7 @@ async function main() {
           titles: compactShowTitles(d.titles),
           competition_dog_id: d.competition_dog_id ?? null,
         })),
+        breed_slides,
         updated_at: new Date().toISOString().slice(0, 10),
       }
       const homeTopName = `home-top-${year}.json`

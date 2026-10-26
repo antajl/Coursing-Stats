@@ -45,10 +45,7 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
   }, [hasHistoryChart, historyItems])
 
   const speedBlock = (
-    <div className="relative shrink-0">
-      <span className="inline-block rounded-full bg-camel-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm">
-        {record.speed_km_h} км/ч
-      </span>
+    <div className="relative shrink-0 flex items-center gap-1.5">
       {showNew && <SpeedStatusBadge variant="new" date={record.date} />}
       {showUpd && (
         <SpeedStatusBadge
@@ -59,6 +56,9 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
           unit="км/ч"
         />
       )}
+      <span className="inline-block rounded-full bg-camel-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm">
+        {record.speed_km_h} км/ч
+      </span>
     </div>
   )
 

@@ -5,11 +5,12 @@ import {
   parseCoursingCommentHistory,
   statusFromCoursingNameCell,
 } from './coursing-sheet-status';
-import { findSportDogId, resolveDoninoDog } from './match-donino-dog';
+import { findDoninoDogSex, findSportDogId, resolveDoninoDog } from './match-donino-dog';
 
 export interface ParsedCoursingRecord {
   breed: string;
   name: string;
+  sex?: string;
   time_seconds: number;
   date: string;
   track_length: number;
@@ -95,10 +96,12 @@ export function parseCoursingRecordsFromWorkbook(workbook: XLSX.WorkBook): Parse
       const history = parseCoursingCommentHistory(commentTextFromDateCell(dateCell));
       const status = statusFromCoursingNameCell(nameCell, dateCell);
       const identity = resolveDoninoDog(name, breed);
+      const sex = findDoninoDogSex(name, breed, identity.sportDogId);
 
       records.push({
         breed,
         name: identity.canonicalName,
+        sex,
         time_seconds,
         date,
         track_length: 350,
@@ -128,9 +131,11 @@ export function dedupeCoursingRecords(records: ParsedCoursingRecord[]): ParsedCo
     const runMap = new Map<string, { time_seconds: number; date: string }>();
     const allAliases = new Set<string>();
     let dogId: number | undefined;
+    let sex: string | undefined;
 
     for (const rec of dogRecords) {
       if (rec.dog_id) dogId = rec.dog_id;
+      if (rec.sex) sex = rec.sex;
       if (rec.aliases) {
         for (const a of rec.aliases) allAliases.add(a);
       }
@@ -168,10 +173,14 @@ export function dedupeCoursingRecords(records: ParsedCoursingRecord[]): ParsedCo
     const identity = resolveDoninoDog(baseRec.name, baseRec.breed);
     if (!dogId && identity.sportDogId) dogId = identity.sportDogId;
     for (const a of identity.aliases) allAliases.add(a);
+    if (!sex) {
+      sex = findDoninoDogSex(baseRec.name, baseRec.breed, dogId);
+    }
 
     result.push({
       breed: baseRec.breed,
       name: baseRec.name,
+      sex,
       time_seconds: bestRun.time_seconds,
       date: bestRun.date,
       track_length: 350,

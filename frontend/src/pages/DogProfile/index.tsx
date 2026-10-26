@@ -770,7 +770,7 @@ export default function DogProfile() {
                     />
                     {judgeStats && (
                       <div className="mt-6">
-                        <DogJudgesSection judgeStats={judgeStats} />
+                        <DogJudgesSection judgeStats={judgeStats} competitions={events} />
                       </div>
                     )}
                   </>
@@ -892,7 +892,7 @@ export default function DogProfile() {
         {/* Десктопная секция судей */}
         {judgeStats && (
           <div className="hidden md:block">
-            <DogJudgesSection judgeStats={judgeStats} />
+            <DogJudgesSection judgeStats={judgeStats} competitions={events} />
           </div>
         )}
 

@@ -17,7 +17,6 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
   const mediaRef = useRef<HTMLDivElement>(null)
   const metricsRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
-  const [contentFaded, setContentFaded] = useState(false)
 
   // Scroll fade for metrics widget and hero content (logo + search) on desktop
   useEffect(() => {
@@ -48,45 +47,6 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [metrics])
-
-  // Overlap check for desktop content vs metrics
-  useEffect(() => {
-    const contentEl = contentRef.current
-    const metricsEl = metricsRef.current
-    if (!contentEl || !metricsEl) return
-
-    const checkOverlap = () => {
-      if (window.innerWidth < BREAKPOINTS.MOBILE) {
-        setContentFaded(false)
-        return
-      }
-
-      const targetEl = (contentEl.firstElementChild as HTMLElement) || contentEl
-      const targetRect = targetEl.getBoundingClientRect()
-      const metricsRect = metricsEl.getBoundingClientRect()
-
-      // If either rect has no dimensions (not laid out yet), do not falsely hide
-      if (targetRect.width === 0 || metricsRect.width === 0) {
-        setContentFaded(false)
-        return
-      }
-
-      const isOverlapping = targetRect.right > metricsRect.left - 16
-      setContentFaded(isOverlapping)
-    }
-
-    const observer = new ResizeObserver(checkOverlap)
-    observer.observe(contentEl)
-    observer.observe(metricsEl)
-
-    window.addEventListener('resize', checkOverlap)
-    checkOverlap()
-
-    return () => {
-      observer.disconnect()
-      window.removeEventListener('resize', checkOverlap)
-    }
-  }, [])
 
   const [mobileClosed, setMobileClosed] = useState(false)
   const isClosingRef = useRef(false)
@@ -194,7 +154,7 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
 
       <div
         ref={contentRef}
-        className={`hidden md:block md:fixed md:top-20 z-20 will-change-opacity w-fit max-w-full home-v2-stage-content ${contentFaded ? 'opacity-0 pointer-events-none invisible' : 'opacity-100 pointer-events-auto visible'}`}
+        className="hidden md:block md:fixed md:top-20 z-20 will-change-opacity w-fit max-w-full home-v2-stage-content opacity-100 pointer-events-auto visible"
       >
         {children}
       </div>
@@ -203,7 +163,7 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
         <div
           ref={metricsRef}
           data-metrics-panel="true"
-          className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 pb-4 md:py-0 md:fixed md:top-20 md:max-w-5xl md:px-0 will-change-opacity pointer-events-auto home-v2-stage-metrics"
+          className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 pb-4 md:hidden xl:block xl:py-0 xl:fixed xl:top-20 xl:max-w-5xl xl:px-0 will-change-opacity pointer-events-auto home-v2-stage-metrics"
         >
           {/* Mobile close button: smoothly collapses stage so content flies up */}
           <div className="md:hidden flex justify-end pb-1.5">

@@ -1,9 +1,8 @@
-import { memo } from 'react'
+import { memo, type ComponentType } from 'react'
 import { Link } from 'react-router-dom'
-import { Icons } from '../../../lib/icons'
 
 interface SectionHeadProps {
-  icon: typeof Icons.calendar
+  icon?: ComponentType<{ className?: string; strokeWidth?: number; 'aria-hidden'?: boolean }>
   title: string
   href?: string
   linkLabel?: string
@@ -13,7 +12,7 @@ function SectionHeadInner({ icon: Icon, title, href, linkLabel }: SectionHeadPro
   return (
     <div className="home-v2-section-head">
       <div className="home-v2-section-title">
-        <Icon className="h-5 w-5 shrink-0" strokeWidth={1.75} aria-hidden />
+        {Icon ? <Icon className="h-5 w-5 shrink-0" strokeWidth={1.75} aria-hidden /> : null}
         <h2>{title}</h2>
       </div>
       {href && linkLabel ? (

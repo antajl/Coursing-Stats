@@ -1,164 +1,379 @@
 import { memo, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { Icons } from '../../../lib/icons'
 import SeasonCompetitionsCarousel from './SeasonCompetitionsCarousel'
+import SeasonRacingCarousel from './SeasonRacingCarousel'
 import SeasonShowsCarousel from './SeasonShowsCarousel'
+import SeasonDoninoSpeedCarousel from './SeasonDoninoSpeedCarousel'
+import SeasonDoninoCoursingCarousel from './SeasonDoninoCoursingCarousel'
 import { SectionHead } from './SectionHead'
 import { SeasonTopSectionSkeleton } from './SeasonTopSectionSkeleton'
+import DoninoHomeRecordRow from '../../../components/DoninoHomeRecordRow'
+import HomeSeasonTopRow from '../../../components/HomeSeasonTopRow'
+import { showHomeMetric } from '../utils/formatters'
+import { parseDogName } from '../../../lib/dogName'
+import { showDogProfilePath } from '../../../lib/showDogProfilePath'
 import { carouselSlideIndex, useHomeBreedCarousel } from '../hooks/useHomeBreedCarousel'
 import { SegmentedTabs } from '../../../components/ui/SegmentedTabs'
 import type { BreedSlide } from '../utils/breedSeasonSlides'
 import type { CombinedRankingDog } from '../../TopDogs/mergeCombinedRanking'
 import type { ShowHomeTopDog } from '../../../lib/staticData'
+import type { SpeedRecord, CoursingRecord } from '../types'
 
 const CURRENT_SEASON = new Date().getFullYear()
 
+export type HubCategoryTab = 'sport' | 'shows' | 'donino'
+export type SportSubTab = 'coursing' | 'racing'
+export type ShowsSubTab = 'by-breed' | 'all-breeds'
+export type DoninoSubTab = 'speed' | 'coursing'
+
 interface SeasonTopSectionProps {
   competitionSlides: BreedSlide<CombinedRankingDog>[]
+  racingSlides: BreedSlide<any>[]
   showSlides: BreedSlide<ShowHomeTopDog>[]
+  topShowDogs: ShowHomeTopDog[]
+  doninoSpeedRecords: SpeedRecord[]
+  doninoCoursingRecords: CoursingRecord[]
+  doninoSpeedSlides?: BreedSlide<SpeedRecord>[]
+  doninoCoursingSlides?: BreedSlide<CoursingRecord>[]
   loading: boolean
 }
 
 function SeasonTopSectionInner({
   competitionSlides,
+  racingSlides,
   showSlides,
+  topShowDogs,
+  doninoSpeedRecords,
+  doninoCoursingRecords,
+  doninoSpeedSlides,
+  doninoCoursingSlides,
   loading,
 }: SeasonTopSectionProps) {
-  const showSeasonSection = loading || competitionSlides.length > 0 || showSlides.length > 0
-  const syncCount = Math.max(competitionSlides.length, showSlides.length, 0)
-  const carousel = useHomeBreedCarousel(syncCount)
-  const [activeMobileTab, setActiveMobileTab] = useState<'competitions' | 'shows'>('competitions')
+  const [activeTab, setActiveTab] = useState<HubCategoryTab>('sport')
+  const [activeSportSubTab, setActiveSportSubTab] = useState<SportSubTab>('coursing')
+  const [activeShowsSubTab, setActiveShowsSubTab] = useState<ShowsSubTab>('by-breed')
+  const [activeDoninoSubTab, setActiveDoninoSubTab] = useState<DoninoSubTab>('speed')
 
-  const hasCompetitions = competitionSlides.length > 0
-  const hasShows = showSlides.length > 0
-  const effectiveMobileTab =
-    !hasCompetitions && hasShows
-      ? 'shows'
-      : !hasShows && hasCompetitions
-        ? 'competitions'
-        : activeMobileTab
-
-  const currentCompSlide =
-    hasCompetitions
-      ? competitionSlides[carouselSlideIndex(carousel.contentIndex, competitionSlides.length)]
-      : undefined
-  const currentShowSlide =
-    hasShows
-      ? showSlides[carouselSlideIndex(carousel.contentIndex, showSlides.length)]
-      : undefined
-
-  const mobileTabs = useMemo(
-    () => [
-      {
-        id: 'competitions' as const,
-        label: 'Соревнования',
-        count: currentCompSlide?.dogCount,
-      },
-      {
-        id: 'shows' as const,
-        label: 'Выставки РКФ',
-        count: currentShowSlide?.dogCount,
-      },
-    ],
-    [currentCompSlide?.dogCount, currentShowSlide?.dogCount],
+  const speedSlideCount = doninoSpeedSlides?.length || 0
+  const coursingSlideCount = doninoCoursingSlides?.length || 0
+  const syncCount = Math.max(
+    competitionSlides.length,
+    racingSlides.length,
+    showSlides.length,
+    speedSlideCount,
+    coursingSlideCount,
+    0,
   )
+  const carousel = useHomeBreedCarousel(syncCount)
 
-  /** Same dots under both columns so pagers match width and active index. */
   const syncDots = useMemo(
     () =>
       Array.from({ length: syncCount }, (_, i) => {
         const comp = competitionSlides[i]
+        const rac = racingSlides[i]
         const show = showSlides[i]
+        const donSp = doninoSpeedSlides?.[i]
+        const donCo = doninoCoursingSlides?.[i]
         const label =
-          [comp?.breedLabel, show?.breedLabel].filter(Boolean).join(' · ') || `Слайд ${i + 1}`
+          [comp?.breedLabel, rac?.breedLabel, show?.breedLabel, donSp?.breedLabel, donCo?.breedLabel].filter(Boolean)[0] || `Слайд ${i + 1}`
         return {
-          key: `sync-${i}-${comp?.breedKey ?? ''}-${show?.breedKey ?? ''}`,
+          key: `sync-${i}-${comp?.breedKey ?? donSp?.breedKey ?? ''}`,
           label,
         }
       }),
-    [syncCount, competitionSlides, showSlides],
+    [syncCount, competitionSlides, racingSlides, showSlides, doninoSpeedSlides, doninoCoursingSlides],
+  )
+
+  const currentCompSlide =
+    competitionSlides[carouselSlideIndex(carousel.contentIndex, competitionSlides.length)]
+  const currentRacingSlide =
+    racingSlides[carouselSlideIndex(carousel.contentIndex, racingSlides.length)]
+  const currentShowSlide =
+    showSlides[carouselSlideIndex(carousel.contentIndex, showSlides.length)]
+  const currentDoninoSpeedSlide =
+    doninoSpeedSlides && doninoSpeedSlides.length > 0
+      ? doninoSpeedSlides[carouselSlideIndex(carousel.contentIndex, doninoSpeedSlides.length)]
+      : undefined
+  const currentDoninoCoursingSlide =
+    doninoCoursingSlides && doninoCoursingSlides.length > 0
+      ? doninoCoursingSlides[carouselSlideIndex(carousel.contentIndex, doninoCoursingSlides.length)]
+      : undefined
+
+  // Main 3 Domain Tabs
+  const mainTabs = useMemo(
+    () => [
+      { id: 'sport' as const, label: 'Соревнования' },
+      { id: 'shows' as const, label: 'Выставки РКФ' },
+      { id: 'donino' as const, label: 'Рекорды Донино' },
+    ],
+    [],
+  )
+
+  // Sport Subtabs for Mobile (< md)
+  const sportSubTabs = useMemo(
+    () => [
+      { id: 'coursing' as const, label: 'Курсинг', count: currentCompSlide?.dogCount },
+      { id: 'racing' as const, label: 'Рейсинг', count: currentRacingSlide?.dogCount },
+    ],
+    [currentCompSlide?.dogCount, currentRacingSlide?.dogCount],
+  )
+
+  // Shows Subtabs for Mobile (< md)
+  const showsSubTabs = useMemo(
+    () => [
+      { id: 'by-breed' as const, label: 'По породам', count: currentShowSlide?.dogCount },
+      { id: 'all-breeds' as const, label: 'Все породы', count: topShowDogs.length },
+    ],
+    [currentShowSlide?.dogCount, topShowDogs.length],
+  )
+
+  // Donino Subtabs for Mobile (< md)
+  const doninoSubTabs = useMemo(
+    () => [
+      { id: 'speed' as const, label: 'Замер скорости', count: currentDoninoSpeedSlide?.dogCount },
+      { id: 'coursing' as const, label: 'Бега 350 м', count: currentDoninoCoursingSlide?.dogCount },
+    ],
+    [currentDoninoSpeedSlide?.dogCount, currentDoninoCoursingSlide?.dogCount],
   )
 
   if (loading) return <SeasonTopSectionSkeleton />
-  if (!showSeasonSection) return null
 
-  const rankingHref =
-    effectiveMobileTab === 'shows'
-      ? `/shows?tab=ranking&year=${CURRENT_SEASON}`
-      : '/competitions?tab=ranking'
+  const sectionHref =
+    activeTab === 'sport'
+      ? '/competitions?tab=ranking'
+      : activeTab === 'shows'
+        ? `/shows?tab=ranking&year=${CURRENT_SEASON}`
+        : '/speed-records'
 
   return (
     <section id="season-top" className="home-v2-block scroll-mt-20" data-home-reveal>
       <SectionHead
-        icon={Icons.medal}
-        title={`Топ сезона ${CURRENT_SEASON}`}
-        href={rankingHref}
-        linkLabel="Весь рейтинг"
+        icon={Icons.trophy}
+        title="Рейтинги и достижения"
+        href={sectionHref}
+        linkLabel="Перейти в раздел"
       />
 
-      {hasCompetitions && hasShows && (
-        <SegmentedTabs
-          tabs={mobileTabs}
-          activeTab={effectiveMobileTab}
-          onChange={(tab) => setActiveMobileTab(tab as 'competitions' | 'shows')}
-          breakpoint="md"
-          className="mb-3.5"
-          ariaLabel="Разделы топа сезона"
-        />
-      )}
+      {/* Main 3 Category Tabs */}
+      <SegmentedTabs
+        tabs={mainTabs}
+        activeTab={activeTab}
+        onChange={(tab) => setActiveTab(tab as HubCategoryTab)}
+        breakpoint="all"
+        className="mb-4"
+        ariaLabel="Разделы рейтингов и достижений"
+      />
 
-      {hasCompetitions || hasShows ? (
-        <div className="home-v2-columns" {...carousel.pauseHandlers}>
-          <div
-            className={`home-v2-col ${
-              effectiveMobileTab === 'shows' && hasCompetitions && hasShows ? '!hidden md:!flex' : ''
-            }`}
-          >
-            {hasCompetitions ? (
+      {/* ─────────────────────────────────────────────────────────────
+          TAB 1: SPORT (COURSING & RACING)
+      ────────────────────────────────────────────────────────────── */}
+      {activeTab === 'sport' && (
+        <div>
+          {/* Mobile subtabs (< md) */}
+          <SegmentedTabs
+            tabs={sportSubTabs}
+            activeTab={activeSportSubTab}
+            onChange={(tab) => setActiveSportSubTab(tab as SportSubTab)}
+            breakpoint="md"
+            className="mb-3.5"
+            ariaLabel="Виды спортивных состязаний"
+          />
+
+          <div className="home-v2-columns" {...carousel.pauseHandlers}>
+            {/* Column 1: Coursing */}
+            <div
+              className={`home-v2-col ${
+                activeSportSubTab === 'racing' ? '!hidden md:!flex' : ''
+              }`}
+            >
               <SeasonCompetitionsCarousel
                 slides={competitionSlides}
                 carousel={carousel}
                 syncDots={syncDots}
                 driveAutoplay
               />
-            ) : (
-              <>
-                <div className="home-v2-col-head">Соревнования</div>
-                <p className="donino-home-empty" role="status">
-                  Нет данных
-                </p>
-              </>
-            )}
+            </div>
+
+            {/* Column 2: Racing */}
+            <div
+              className={`home-v2-col ${
+                activeSportSubTab === 'coursing' ? '!hidden md:!flex' : ''
+              }`}
+            >
+              <SeasonRacingCarousel
+                slides={racingSlides}
+                carousel={carousel}
+                syncDots={syncDots}
+                driveAutoplay={false}
+              />
+            </div>
           </div>
-          <div
-            className={`home-v2-col ${
-              effectiveMobileTab === 'competitions' && hasCompetitions && hasShows
-                ? '!hidden md:!flex'
-                : ''
-            }`}
-          >
-            {hasShows ? (
+        </div>
+      )}
+
+      {/* ─────────────────────────────────────────────────────────────
+          TAB 2: SHOWS (BREED CAROUSEL + ALL-BREEDS ABSOLUTE LEADERS)
+      ────────────────────────────────────────────────────────────── */}
+      {activeTab === 'shows' && (
+        <div>
+          {/* Mobile subtabs (< md) */}
+          <SegmentedTabs
+            tabs={showsSubTabs}
+            activeTab={activeShowsSubTab}
+            onChange={(tab) => setActiveShowsSubTab(tab as ShowsSubTab)}
+            breakpoint="md"
+            className="mb-3.5"
+            ariaLabel="Режим выставочного рейтинга"
+          />
+
+          <div className="home-v2-columns" {...carousel.pauseHandlers}>
+            {/* Left Column: Breed Carousel */}
+            <div
+              className={`home-v2-col ${
+                activeShowsSubTab === 'all-breeds' ? '!hidden md:!flex' : ''
+              }`}
+            >
               <SeasonShowsCarousel
                 slides={showSlides}
                 carousel={carousel}
                 syncDots={syncDots}
-                driveAutoplay={!hasCompetitions}
+                driveAutoplay
               />
-            ) : (
-              <>
-                <div className="home-v2-col-head">Выставки</div>
-                <p className="donino-home-empty" role="status">
-                  Нет данных
-                </p>
-              </>
-            )}
+            </div>
+
+            {/* Right Column: Absolute Top Season Dogs across all breeds */}
+            <div
+              className={`home-v2-col ${
+                activeShowsSubTab === 'by-breed' ? '!hidden md:!flex' : ''
+              }`}
+            >
+              <div className="home-v2-col-head home-v2-col-head--tabs">
+                <span>Абсолютные лидеры сезона</span>
+                <span className="text-[11px] font-normal text-old-money-600">
+                  Все породы · {CURRENT_SEASON}
+                </span>
+              </div>
+              <div className="donino-home-list" role="list">
+                {topShowDogs.slice(0, 3).map((dog, i) => {
+                  const { primary } = parseDogName(dog.name_lat, dog.name_ru)
+                  return (
+                    <div key={`shows-abs-${dog.id}`} className="relative group" role="listitem">
+                      <HomeSeasonTopRow
+                        to={showDogProfilePath(dog)}
+                        name={primary}
+                        breed={dog.breed}
+                        sex={dog.sex}
+                        dogId={dog.competition_dog_id}
+                        metric={showHomeMetric(dog)}
+                        showTitles={showHomeMetric(dog)}
+                        rank={dog.rank ?? i + 1}
+                        totalStarts={dog.total_shows}
+                        bestAward={dog.best_award}
+                      />
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
           </div>
         </div>
-      ) : (
-        <p className="home-v2-empty" aria-live="polite">
-          Пока нет данных за {CURRENT_SEASON}.{' '}
-          <Link to="/competitions?tab=ranking">Открыть рейтинг</Link>
-        </p>
+      )}
+
+      {/* ─────────────────────────────────────────────────────────────
+          TAB 3: DONINO (SPEED RADAR & 350M RUN CAROUSELS)
+      ────────────────────────────────────────────────────────────── */}
+      {activeTab === 'donino' && (
+        <div>
+          {/* Mobile subtabs (< md) */}
+          <SegmentedTabs
+            tabs={doninoSubTabs}
+            activeTab={activeDoninoSubTab}
+            onChange={(tab) => setActiveDoninoSubTab(tab as DoninoSubTab)}
+            breakpoint="md"
+            className="mb-3.5"
+            ariaLabel="Виды замеров Донино"
+          />
+
+          <div className="home-v2-columns" {...carousel.pauseHandlers}>
+            {/* Column 1: Speed Radar Carousel */}
+            <div
+              className={`home-v2-col ${
+                activeDoninoSubTab === 'coursing' ? '!hidden md:!flex' : ''
+              }`}
+            >
+              {doninoSpeedSlides && doninoSpeedSlides.length > 0 ? (
+                <SeasonDoninoSpeedCarousel
+                  slides={doninoSpeedSlides}
+                  carousel={carousel}
+                  syncDots={syncDots}
+                  driveAutoplay
+                />
+              ) : (
+                <>
+                  <div className="home-v2-col-head">Замер скорости (радар)</div>
+                  <div className="donino-home-list" role="list">
+                    {doninoSpeedRecords.slice(0, 5).map((record) => (
+                      <div key={`donino-speed-${record.breed}-${record.name}`} role="listitem">
+                        <DoninoHomeRecordRow
+                          mode="speed"
+                          name={record.name}
+                          breed={record.breed}
+                          sex={record.sex}
+                          date={record.date}
+                          status={record.status}
+                          history={record.history}
+                          speedKmh={record.speed_km_h}
+                          trackType={record.track_type}
+                          latestDateInDataset={null}
+                          rank={record.rank}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Column 2: 350m Track Carousel */}
+            <div
+              className={`home-v2-col ${
+                activeDoninoSubTab === 'speed' ? '!hidden md:!flex' : ''
+              }`}
+            >
+              {doninoCoursingSlides && doninoCoursingSlides.length > 0 ? (
+                <SeasonDoninoCoursingCarousel
+                  slides={doninoCoursingSlides}
+                  carousel={carousel}
+                  syncDots={syncDots}
+                  driveAutoplay={false}
+                />
+              ) : (
+                <>
+                  <div className="home-v2-col-head">Бега 350 м (спринт)</div>
+                  <div className="donino-home-list" role="list">
+                    {doninoCoursingRecords.slice(0, 5).map((record) => (
+                      <div key={`donino-run-${record.breed}-${record.name}`} role="listitem">
+                        <DoninoHomeRecordRow
+                          mode="coursing"
+                          name={record.name}
+                          breed={record.breed}
+                          sex={record.sex}
+                          date={record.date}
+                          status={record.status}
+                          history={record.history}
+                          timeSeconds={record.time_seconds}
+                          trackLength={record.track_length}
+                          latestDateInDataset={null}
+                          rank={record.rank}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
       )}
     </section>
   )
