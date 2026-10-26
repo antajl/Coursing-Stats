@@ -1474,30 +1474,6 @@
     "calendar_file": "calendar/2022.json"
   },
   {
-    "id": "20221012",
-    "year": 2022,
-    "date_start": "2022-05-14",
-    "date_end": "2022-05-14",
-    "rank_label": "",
-    "event_type": "coursing",
-    "competition_kind": "",
-    "competition_type": "",
-    "title": "Чемпионат РКФ - CACL по курсингу борзых",
-    "host_club": null,
-    "region": null,
-    "location": "Ярославская область, село Великое",
-    "has_results": true,
-    "results_file": "competitions/2022/05-май/20221012-чемпионат-ркф-cacl-по-курсингу-борзых.json",
-    "result_count": 43,
-    "participants_count": 43,
-    "judges": [
-      "Орлова М.О.",
-      "Крылова Е.В."
-    ],
-    "month": "05-май",
-    "calendar_file": "calendar/2022.json"
-  },
-  {
     "id": 20221012,
     "year": 2022,
     "date_start": "2022-05-14",
@@ -1540,6 +1516,54 @@
     "participants_count": 13,
     "judges": [
       "Орлова М.О.",
+      "Крылова Е.В."
+    ],
+    "month": "05-май",
+    "calendar_file": "calendar/2022.json"
+  },
+  {
+    "id": 20221014,
+    "year": 2022,
+    "date_start": "2022-05-28",
+    "date_end": "2022-05-29",
+    "rank_label": "",
+    "event_type": "coursing",
+    "competition_kind": "",
+    "competition_type": "",
+    "title": "Чемпионат РКФ - CACL по курсингу борзых, 28-29.05.2022 (Калужская область, б/о Головинка)",
+    "host_club": null,
+    "region": null,
+    "location": "Калужская область, б/о Головинка",
+    "has_results": true,
+    "results_file": "competitions/2022/05-май/20221014-чемпионат-ркф-cacl-по-курсингу-борзых-28-29-05-2.json",
+    "result_count": 82,
+    "participants_count": 82,
+    "judges": [
+      "Лукина Д.М.",
+      "Крылова Е.В."
+    ],
+    "month": "05-май",
+    "calendar_file": "calendar/2022.json"
+  },
+  {
+    "id": 20221015,
+    "year": 2022,
+    "date_start": "2022-05-28",
+    "date_end": "2022-05-29",
+    "rank_label": "",
+    "event_type": "bzmp",
+    "competition_kind": "",
+    "competition_type": "",
+    "title": "Чемпионат РКФ по бегам за механической приманкой, 28-29.05.2022 (Калужская область, б/о Головинка)",
+    "host_club": null,
+    "region": null,
+    "location": "Калужская область, б/о Головинка",
+    "has_results": true,
+    "results_file": "competitions/2022/05-май/20221015-чемпионат-ркф-по-бегам-за-механическои-приманкои.json",
+    "result_count": 15,
+    "participants_count": 15,
+    "judges": [
+      "Лукина Д.М.",
       "Крылова Е.В."
     ],
     "month": "05-май",

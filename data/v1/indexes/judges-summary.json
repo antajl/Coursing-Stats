@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/index-judges-summary-v1",
-  "count": 35,
+  "count": 36,
   "judges": [
     {
       "id": "Вронская О.В.",
@@ -256,6 +256,17 @@
       "unique_dogs": 207
     },
     {
+      "id": "\"Крылова Е.В.\"]",
+      "name": "\"Крылова Е.В.\"]",
+      "total_evaluations": 1265,
+      "total_evaluations_count": 253,
+      "avg_score": 16.693280632411067,
+      "unique_breeds": 14,
+      "unique_disciplines": 2,
+      "unique_events": 4,
+      "unique_dogs": 111
+    },
+    {
       "id": "[\"Кудрявцева Н.Г.\"",
       "name": "[\"Кудрявцева Н.Г.\"",
       "total_evaluations": 1230,
@@ -298,6 +309,17 @@
       "unique_disciplines": 1,
       "unique_events": 1,
       "unique_dogs": 84
+    },
+    {
+      "id": "[\"Лукина Д.М.\"",
+      "name": "[\"Лукина Д.М.\"",
+      "total_evaluations": 805,
+      "total_evaluations_count": 161,
+      "avg_score": 16.84223602484472,
+      "unique_breeds": 12,
+      "unique_disciplines": 2,
+      "unique_events": 2,
+      "unique_dogs": 81
     },
     {
       "id": "Коршунова И.А.",
@@ -360,17 +382,6 @@
       "total_evaluations": 460,
       "total_evaluations_count": 92,
       "avg_score": 17.502173913043478,
-      "unique_breeds": 8,
-      "unique_disciplines": 2,
-      "unique_events": 2,
-      "unique_dogs": 46
-    },
-    {
-      "id": "\"Крылова Е.В.\"]",
-      "name": "\"Крылова Е.В.\"]",
-      "total_evaluations": 460,
-      "total_evaluations_count": 92,
-      "avg_score": 16.56086956521739,
       "unique_breeds": 8,
       "unique_disciplines": 2,
       "unique_events": 2,
