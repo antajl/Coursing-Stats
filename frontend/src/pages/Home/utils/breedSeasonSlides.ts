@@ -1,4 +1,5 @@
 import { canonicalBreed, displayBreed } from '../../../lib/breedMapping'
+import { computeBreedDeltas } from '../../TopDogs/filterUtils'
 
 /** Породы без смысла для ротации «популярных» на главной. */
 const SKIP_BREEDS = new Set([
@@ -25,9 +26,18 @@ function breedKeyOf(breed: string | undefined | null): string {
 
 /**
  * Top N breeds by dog count; each slide keeps source order (already ranked)
- * and re-assigns display rank 1..k when `assignRank` is true.
+ * and re-assigns display rank 1..k and breed-specific rank delta when `assignRank` is true.
  */
-export function buildTopBreedSlidesFromRows<T extends { breed?: string; rank?: number }>(
+export function buildTopBreedSlidesFromRows<
+  T extends {
+    breed?: string
+    rank?: number
+    rank_delta?: number | 'NEW' | null
+    rank_delta_breed?: number | 'NEW' | null
+    dog_id?: number
+    id?: number
+  }
+>(
   rows: T[],
   topBreeds = 5,
   dogsPerSlide = 3,
@@ -46,10 +56,24 @@ export function buildTopBreedSlidesFromRows<T extends { breed?: string; rank?: n
 
   return rankedBreeds
     .map(([breedKey, dogCount]) => {
+      const breedDeltas = assignRank ? computeBreedDeltas(rows, breedKey) : null
       const dogs = rows
         .filter((row) => breedKeyOf(row.breed) === breedKey)
         .slice(0, dogsPerSlide)
-        .map((row, i) => (assignRank ? { ...row, rank: i + 1 } : row))
+        .map((row, i) => {
+          if (!assignRank) return row
+          const id = row.dog_id ?? row.id
+          const breedDelta =
+            id != null && breedDeltas?.has(id)
+              ? breedDeltas.get(id)
+              : (row.rank_delta_breed ?? null)
+
+          return {
+            ...row,
+            rank: i + 1,
+            rank_delta: breedDelta,
+          }
+        })
 
       return {
         breedKey,
@@ -62,7 +86,16 @@ export function buildTopBreedSlidesFromRows<T extends { breed?: string; rank?: n
 }
 
 /** Competition combined ranking → top breed slides. */
-export function buildTopBreedSlides<T extends { breed?: string; rank?: number }>(
+export function buildTopBreedSlides<
+  T extends {
+    breed?: string
+    rank?: number
+    rank_delta?: number | 'NEW' | null
+    rank_delta_breed?: number | 'NEW' | null
+    dog_id?: number
+    id?: number
+  }
+>(
   combined: T[],
   topBreeds = 5,
   dogsPerSlide = 3,

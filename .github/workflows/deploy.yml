@@ -80,6 +80,26 @@ jobs:
             --size-only \
             --cache-control "public, max-age=0, must-revalidate"
 
+          # 4. Critical SPA entrypoints (index.html, 404.html and core hubs) MUST ALWAYS be refreshed
+          # so new hashed JS/CSS chunk bundles take effect immediately regardless of byte size parity.
+          aws s3 cp frontend/dist/index.html s3://${{ secrets.S3_BUCKET }}/index.html \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --cache-control "public, max-age=0, must-revalidate"
+
+          aws s3 cp frontend/dist/404.html s3://${{ secrets.S3_BUCKET }}/404.html \
+            --endpoint-url https://storage.yandexcloud.net \
+            --acl public-read \
+            --cache-control "public, max-age=0, must-revalidate"
+
+          find frontend/dist -maxdepth 2 -name "index.html" -not -path "frontend/dist/index.html" | while read -r hubFile; do
+            relPath="${hubFile#frontend/dist/}"
+            aws s3 cp "$hubFile" "s3://${{ secrets.S3_BUCKET }}/$relPath" \
+              --endpoint-url https://storage.yandexcloud.net \
+              --acl public-read \
+              --cache-control "public, max-age=0, must-revalidate"
+          done
+
           aws s3 website s3://${{ secrets.S3_BUCKET }}/ \
             --index-document index.html \
             --error-document index.html \
