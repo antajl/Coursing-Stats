@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/donino-coursing-v1",
   "source": "google-sheets",
-  "count": 135,
+  "count": 222,
   "records": [
     {
       "breed": "Уиппет",
@@ -14,6 +14,10 @@
         {
           "time_seconds": 22.81,
           "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 23.06,
+          "date": "2026-08-09"
         }
       ],
       "dog_id": 9109
@@ -37,6 +41,10 @@
         {
           "time_seconds": 23.03,
           "date": "2026-06-28"
+        },
+        {
+          "time_seconds": 23.11,
+          "date": "2026-08-30"
         }
       ],
       "dog_id": 9110
@@ -52,6 +60,14 @@
         {
           "time_seconds": 23.5,
           "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 23.62,
+          "date": "2026-09-12"
+        },
+        {
+          "time_seconds": 23.27,
+          "date": "2026-09-26"
         }
       ]
     },
@@ -66,9 +82,32 @@
         {
           "time_seconds": 23.78,
           "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 23.72,
+          "date": "2026-09-12"
         }
       ],
       "dog_id": 9114
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Уна",
+      "time_seconds": 23.34,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 23.9,
+          "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 23.81,
+          "date": "2026-09-12"
+        }
+      ],
+      "dog_id": 9115
     },
     {
       "breed": "Уиппет",
@@ -91,33 +130,55 @@
     },
     {
       "breed": "Уиппет",
-      "name": "Джипси",
-      "time_seconds": 23.5,
-      "date": "2026-06-06",
-      "track_length": 350,
-      "status": "normal",
-      "history": [],
-      "dog_id": 9112
-    },
-    {
-      "breed": "Уиппет",
       "name": "Каро",
-      "time_seconds": 23.61,
-      "date": "2026-08-01",
+      "time_seconds": 23.43,
+      "date": "2026-09-20",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
           "time_seconds": 23.85,
           "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 23.61,
+          "date": "2026-08-01"
         }
       ]
     },
     {
       "breed": "Уиппет",
+      "name": "Джипси",
+      "time_seconds": 23.5,
+      "date": "2026-06-06",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 24.58,
+          "date": "2026-08-30"
+        },
+        {
+          "time_seconds": 24.26,
+          "date": "2026-09-12"
+        }
+      ],
+      "dog_id": 9112
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Том Том",
+      "time_seconds": 23.53,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
       "name": "Зизи",
-      "time_seconds": 23.69,
-      "date": "2026-08-01",
+      "time_seconds": 23.58,
+      "date": "2026-10-24",
       "track_length": 350,
       "status": "improved",
       "history": [
@@ -128,6 +189,14 @@
         {
           "time_seconds": 23.7,
           "date": "2026-06-19"
+        },
+        {
+          "time_seconds": 23.69,
+          "date": "2026-08-01"
+        },
+        {
+          "time_seconds": 23.87,
+          "date": "2026-08-09"
         }
       ],
       "dog_id": 9113
@@ -147,19 +216,22 @@
         {
           "time_seconds": 24.21,
           "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 23.87,
+          "date": "2026-09-12"
         }
       ],
       "dog_id": 9117
     },
     {
       "breed": "Уиппет",
-      "name": "Уна",
-      "time_seconds": 23.9,
-      "date": "2026-06-06",
+      "name": "Вина",
+      "time_seconds": 23.89,
+      "date": "2026-09-26",
       "track_length": 350,
       "status": "normal",
-      "history": [],
-      "dog_id": 9115
+      "history": []
     },
     {
       "breed": "Уиппет",
@@ -176,9 +248,31 @@
         {
           "time_seconds": 24.12,
           "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 24.24,
+          "date": "2026-09-12"
+        },
+        {
+          "time_seconds": 24.19,
+          "date": "2026-09-26"
         }
       ],
       "dog_id": 9116
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Тор",
+      "time_seconds": 24.07,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 24.17,
+          "date": "2026-09-20"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
@@ -191,6 +285,10 @@
         {
           "time_seconds": 24.18,
           "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 24.24,
+          "date": "2026-09-12"
         }
       ]
     },
@@ -205,9 +303,52 @@
         {
           "time_seconds": 24.52,
           "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 24.59,
+          "date": "2026-08-09"
         }
       ],
       "dog_id": 5650
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Севи",
+      "time_seconds": 24.16,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Астрид",
+      "time_seconds": 24.28,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.76,
+          "date": "2026-07-31"
+        },
+        {
+          "time_seconds": 26.18,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 25.35,
+          "date": "2026-08-30"
+        },
+        {
+          "time_seconds": 25.29,
+          "date": "2026-09-20"
+        },
+        {
+          "time_seconds": 25.12,
+          "date": "2026-09-26"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
@@ -226,6 +367,90 @@
     },
     {
       "breed": "Уиппет",
+      "name": "Ирвин",
+      "time_seconds": 24.41,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 24.71,
+          "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 24.6,
+          "date": "2026-08-01"
+        }
+      ],
+      "dog_id": 9120
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Энола",
+      "time_seconds": 24.44,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 24.82,
+          "date": "2026-06-20"
+        }
+      ],
+      "dog_id": 5897
+    },
+    {
+      "breed": "Гальго",
+      "name": "Шерегеш",
+      "time_seconds": 24.5,
+      "date": "2026-08-30",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.34,
+          "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 25.08,
+          "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 24.98,
+          "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 25.14,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 9123
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Мазай",
+      "time_seconds": 24.51,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.48,
+          "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 25.11,
+          "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 24.92,
+          "date": "2026-07-05"
+        }
+      ],
+      "dog_id": 9122
+    },
+    {
+      "breed": "Уиппет",
       "name": "Марго",
       "time_seconds": 24.54,
       "date": "2026-06-20",
@@ -235,24 +460,36 @@
         {
           "time_seconds": 25.48,
           "date": "06.06 2026"
+        },
+        {
+          "time_seconds": 25.09,
+          "date": "2026-09-20"
         }
       ],
       "dog_id": 9140
     },
     {
       "breed": "Уиппет",
-      "name": "Ирвин",
-      "time_seconds": 24.6,
-      "date": "2026-08-01",
+      "name": "Тара",
+      "time_seconds": 24.57,
+      "date": "2026-09-26",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 24.71,
-          "date": "2026-06-06"
+          "time_seconds": 24.88,
+          "date": "2026-09-12"
         }
-      ],
-      "dog_id": 9120
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Тина",
+      "time_seconds": 24.61,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Уиппет",
@@ -265,9 +502,86 @@
         {
           "time_seconds": 24.92,
           "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 24.63,
+          "date": "2026-10-24"
         }
       ],
       "dog_id": 9118
+    },
+    {
+      "breed": "Гальго",
+      "name": "Шелби",
+      "time_seconds": 24.62,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 27.94,
+          "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 26.68,
+          "date": "2026-06-28"
+        },
+        {
+          "time_seconds": 26.03,
+          "date": "2026-08-30"
+        }
+      ],
+      "dog_id": 9158
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Купидон",
+      "time_seconds": 24.64,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.25,
+          "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 24.79,
+          "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 25.01,
+          "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 24.65,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 5649
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Рик",
+      "time_seconds": 24.66,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.17,
+          "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 25.29,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 25.04,
+          "date": "2026-09-12"
+        }
+      ],
+      "dog_id": 9127
     },
     {
       "breed": "Уиппет",
@@ -280,47 +594,44 @@
         {
           "time_seconds": 24.93,
           "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 25.48,
+          "date": "2026-08-30"
+        },
+        {
+          "time_seconds": 25.56,
+          "date": "2026-08-30"
         }
       ],
       "dog_id": 9119
     },
     {
       "breed": "Уиппет",
-      "name": "Купидон",
-      "time_seconds": 24.79,
-      "date": "2026-06-20",
+      "name": "Бора",
+      "time_seconds": 24.72,
+      "date": "2026-09-26",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 25.25,
-          "date": "2026-06-06"
-        },
-        {
-          "time_seconds": 25.01,
-          "date": "2026-07-05"
+          "time_seconds": 24.76,
+          "date": "2026-09-12"
         }
-      ],
-      "dog_id": 5649
-    },
-    {
-      "breed": "Уиппет",
-      "name": "Энола",
-      "time_seconds": 24.82,
-      "date": "2026-06-20",
-      "track_length": 350,
-      "status": "normal",
-      "history": [],
-      "dog_id": 5897
+      ]
     },
     {
       "breed": "Уиппет",
       "name": "Мистраль",
-      "time_seconds": 24.84,
-      "date": "2026-05-31",
+      "time_seconds": 24.74,
+      "date": "2026-10-24",
       "track_length": 350,
       "status": "improved",
       "history": [
+        {
+          "time_seconds": 24.84,
+          "date": "2026-05-31"
+        },
         {
           "time_seconds": 25.32,
           "date": "2026-05-31"
@@ -330,31 +641,72 @@
     },
     {
       "breed": "Уиппет",
-      "name": "Злата",
-      "time_seconds": 24.89,
-      "date": "2026-08-01",
+      "name": "Сильвер",
+      "time_seconds": 24.78,
+      "date": "2026-10-24",
       "track_length": 350,
       "status": "normal",
       "history": []
     },
     {
       "breed": "Уиппет",
-      "name": "Мазай",
-      "time_seconds": 24.92,
-      "date": "2026-07-05",
+      "name": "Злата",
+      "time_seconds": 24.86,
+      "date": "2026-08-09",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 25.48,
+          "time_seconds": 24.89,
+          "date": "2026-08-01"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Марс",
+      "time_seconds": 24.87,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.96,
+          "date": "2026-05-30"
+        },
+        {
+          "time_seconds": 25.58,
           "date": "2026-06-06"
         },
         {
-          "time_seconds": 25.11,
+          "time_seconds": 25.28,
           "date": "2026-06-20"
         }
       ],
-      "dog_id": 9122
+      "dog_id": 9131
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Гарри",
+      "time_seconds": 24.9,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.71,
+          "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 25.07,
+          "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 24.99,
+          "date": "2026-09-12"
+        }
+      ],
+      "dog_id": 9125
     },
     {
       "breed": "Уиппет",
@@ -366,23 +718,33 @@
       "history": []
     },
     {
-      "breed": "Гальго",
-      "name": "Шерегеш",
-      "time_seconds": 24.98,
-      "date": "2026-07-05",
+      "breed": "Уиппет",
+      "name": "Драго",
+      "time_seconds": 24.97,
+      "date": "2026-09-26",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 25.34,
-          "date": "2026-05-31"
-        },
+          "time_seconds": 25.01,
+          "date": "2026-09-12"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Ди",
+      "time_seconds": 24.99,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
         {
-          "time_seconds": 25.08,
-          "date": "2026-06-20"
+          "time_seconds": 26.2,
+          "date": "2026-06-06"
         }
       ],
-      "dog_id": 9123
+      "dog_id": 9153
     },
     {
       "breed": "Уиппет",
@@ -395,24 +757,17 @@
         {
           "time_seconds": 25.16,
           "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 25.63,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 25.28,
+          "date": "2026-09-26"
         }
       ],
       "dog_id": 5634
-    },
-    {
-      "breed": "Уиппет",
-      "name": "Гарри",
-      "time_seconds": 25.07,
-      "date": "2026-07-05",
-      "track_length": 350,
-      "status": "improved",
-      "history": [
-        {
-          "time_seconds": 25.71,
-          "date": "2026-06-06"
-        }
-      ],
-      "dog_id": 9125
     },
     {
       "breed": "Уиппет",
@@ -425,9 +780,31 @@
         {
           "time_seconds": 26.01,
           "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 26,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 25.75,
+          "date": "2026-09-12"
         }
       ],
       "dog_id": 9126
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Энни",
+      "time_seconds": 25.13,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.95,
+          "date": "2026-09-20"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
@@ -452,19 +829,53 @@
         {
           "time_seconds": 25.33,
           "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 26.1,
+          "date": "2026-10-24"
         }
       ],
       "dog_id": 9133
     },
     {
       "breed": "Уиппет",
-      "name": "Рик",
-      "time_seconds": 25.17,
-      "date": "2026-05-31",
+      "name": "Аксель",
+      "time_seconds": 25.16,
+      "date": "2026-08-09",
       "track_length": 350,
       "status": "normal",
-      "history": [],
-      "dog_id": 9127
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Барон",
+      "time_seconds": 25.17,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.28,
+          "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 25.44,
+          "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 25.67,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 25.4,
+          "date": "2026-09-12"
+        },
+        {
+          "time_seconds": 25.34,
+          "date": "2026-09-26"
+        }
+      ],
+      "dog_id": 9136
     },
     {
       "breed": "Уиппет",
@@ -483,8 +894,8 @@
     {
       "breed": "Уиппет",
       "name": "Барса",
-      "time_seconds": 25.27,
-      "date": "2026-06-28",
+      "time_seconds": 25.21,
+      "date": "2026-08-09",
       "track_length": 350,
       "status": "improved",
       "history": [
@@ -495,24 +906,32 @@
         {
           "time_seconds": 25.45,
           "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 25.27,
+          "date": "2026-06-28"
+        },
+        {
+          "time_seconds": 25.52,
+          "date": "2026-08-09"
         }
       ],
       "dog_id": 9129
     },
     {
       "breed": "Уиппет",
-      "name": "Барон",
-      "time_seconds": 25.28,
-      "date": "2026-06-20",
+      "name": "Ерёма",
+      "time_seconds": 25.21,
+      "date": "2026-09-26",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 25.44,
-          "date": "2026-07-05"
+          "time_seconds": 25.22,
+          "date": "2026-09-12"
         }
       ],
-      "dog_id": 9136
+      "dog_id": 5814
     },
     {
       "breed": "Уиппет",
@@ -520,28 +939,26 @@
       "time_seconds": 25.28,
       "date": "2026-05-30",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
-      "dog_id": 9130
-    },
-    {
-      "breed": "Уиппет",
-      "name": "Марс",
-      "time_seconds": 25.28,
-      "date": "2026-06-20",
-      "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 25.96,
-          "date": "2026-05-30"
+          "time_seconds": 26.16,
+          "date": "2026-08-09"
         },
         {
-          "time_seconds": 25.58,
-          "date": "2026-06-06"
+          "time_seconds": 25.93,
+          "date": "2026-08-30"
+        },
+        {
+          "time_seconds": 25.5,
+          "date": "2026-09-20"
+        },
+        {
+          "time_seconds": 25.49,
+          "date": "2026-10-24"
         }
       ],
-      "dog_id": 9131
+      "dog_id": 9130
     },
     {
       "breed": "Уиппет",
@@ -564,6 +981,30 @@
     },
     {
       "breed": "Уиппет",
+      "name": "Редик",
+      "time_seconds": 25.32,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.44,
+          "date": "2026-06-20"
+        }
+      ],
+      "dog_id": 9137
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Эйва",
+      "time_seconds": 25.34,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
       "name": "Амазонка",
       "time_seconds": 25.37,
       "date": "2026-06-06",
@@ -573,24 +1014,70 @@
       "dog_id": 9134
     },
     {
+      "breed": "Салюки",
+      "name": "Тайга",
+      "time_seconds": 25.41,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 27.39,
+          "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 26.45,
+          "date": "2026-08-01"
+        },
+        {
+          "time_seconds": 25.92,
+          "date": "2026-09-12"
+        }
+      ],
+      "dog_id": 5782
+    },
+    {
       "breed": "Уиппет",
       "name": "Ермак",
       "time_seconds": 25.43,
       "date": "2026-07-05",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.89,
+          "date": "2026-08-09"
+        }
+      ],
       "dog_id": 9135
     },
     {
-      "breed": "Уиппет",
-      "name": "Редик",
+      "breed": "РПБ",
+      "name": "Флеш",
       "time_seconds": 25.44,
-      "date": "2026-06-20",
+      "date": "2026-09-12",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
-      "dog_id": 9137
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 29.19,
+          "date": "2026-08-09"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Лита",
+      "time_seconds": 25.44,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.49,
+          "date": "2026-09-20"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
@@ -598,8 +1085,13 @@
       "time_seconds": 25.45,
       "date": "2026-06-06",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 26.29,
+          "date": "2026-08-30"
+        }
+      ],
       "dog_id": 9138
     },
     {
@@ -617,6 +1109,10 @@
         {
           "time_seconds": 26.09,
           "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 25.55,
+          "date": "2026-08-09"
         }
       ],
       "dog_id": 9150
@@ -633,23 +1129,70 @@
     },
     {
       "breed": "Уиппет",
-      "name": "Шерман",
-      "time_seconds": 25.49,
-      "date": "2026-05-31",
+      "name": "Серый",
+      "time_seconds": 25.46,
+      "date": "2026-08-09",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
-      "dog_id": 9141
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.57,
+          "date": "2026-06-20"
+        }
+      ],
+      "dog_id": 11107
     },
     {
       "breed": "Уиппет",
       "name": "Толя",
-      "time_seconds": 25.5,
-      "date": "2026-06-06",
+      "time_seconds": 25.48,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.5,
+          "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 25.93,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 9142
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Шерман",
+      "time_seconds": 25.49,
+      "date": "2026-05-31",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 27.67,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 9141
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Игги",
+      "time_seconds": 25.49,
+      "date": "2026-09-26",
       "track_length": 350,
       "status": "normal",
-      "history": [],
-      "dog_id": 9142
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Корса",
+      "time_seconds": 25.53,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Уиппет",
@@ -659,16 +1202,6 @@
       "track_length": 350,
       "status": "normal",
       "history": []
-    },
-    {
-      "breed": "Уиппет",
-      "name": "Серый",
-      "time_seconds": 25.57,
-      "date": "2026-06-20",
-      "track_length": 350,
-      "status": "normal",
-      "history": [],
-      "dog_id": 11107
     },
     {
       "breed": "Уиппет",
@@ -692,12 +1225,27 @@
     },
     {
       "breed": "Уиппет",
+      "name": "Агата",
+      "time_seconds": 25.68,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 9673
+    },
+    {
+      "breed": "Уиппет",
       "name": "Каталина",
       "time_seconds": 25.72,
       "date": "2026-08-01",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 25.77,
+          "date": "2026-09-12"
+        }
+      ],
       "dog_id": 5645
     },
     {
@@ -712,12 +1260,17 @@
     },
     {
       "breed": "Уиппет",
-      "name": "Астрид",
-      "time_seconds": 25.76,
-      "date": "2026-07-31",
+      "name": "Джесси",
+      "time_seconds": 25.77,
+      "date": "2026-09-12",
       "track_length": 350,
-      "status": "normal",
-      "history": []
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 26.43,
+          "date": "2026-08-09"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
@@ -725,8 +1278,13 @@
       "time_seconds": 25.84,
       "date": "2026-06-06",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 26.64,
+          "date": "2026-09-12"
+        }
+      ],
       "dog_id": 9147
     },
     {
@@ -746,6 +1304,34 @@
     },
     {
       "breed": "Уиппет",
+      "name": "Визави",
+      "time_seconds": 25.92,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 7802
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Марси",
+      "time_seconds": 25.93,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "РПБ",
+      "name": "Ефросинья",
+      "time_seconds": 25.94,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
       "name": "Милли",
       "time_seconds": 25.95,
       "date": "2026-06-06",
@@ -753,6 +1339,21 @@
       "status": "normal",
       "history": [],
       "dog_id": 9149
+    },
+    {
+      "breed": "Салюки",
+      "name": "Велар",
+      "time_seconds": 26.03,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 26.74,
+          "date": "2026-08-01"
+        }
+      ],
+      "dog_id": 5779
     },
     {
       "breed": "Уиппет",
@@ -766,6 +1367,21 @@
     },
     {
       "breed": "Уиппет",
+      "name": "Ялта",
+      "time_seconds": 26.11,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 27,
+          "date": "2026-07-05"
+        }
+      ],
+      "dog_id": 9159
+    },
+    {
+      "breed": "Уиппет",
       "name": "Элли",
       "time_seconds": 26.16,
       "date": "2026-06-06",
@@ -776,13 +1392,54 @@
     },
     {
       "breed": "Уиппет",
-      "name": "Ди",
-      "time_seconds": 26.2,
-      "date": "2026-06-06",
+      "name": "Ник",
+      "time_seconds": 26.16,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 27.08,
+          "date": "2026-06-20"
+        }
+      ],
+      "dog_id": 9160
+    },
+    {
+      "breed": "РПБ",
+      "name": "Флёна",
+      "time_seconds": 26.16,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 28.4,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 26.7,
+          "date": "2026-09-12"
+        }
+      ]
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Клипса",
+      "time_seconds": 26.18,
+      "date": "2026-09-20",
       "track_length": 350,
       "status": "normal",
-      "history": [],
-      "dog_id": 9153
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Дуся",
+      "time_seconds": 26.24,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Уиппет",
@@ -800,8 +1457,13 @@
       "time_seconds": 26.34,
       "date": "2026-07-05",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 26.36,
+          "date": "2026-08-09"
+        }
+      ],
       "dog_id": 9155
     },
     {
@@ -816,18 +1478,67 @@
     },
     {
       "breed": "Салюки",
-      "name": "Тайга",
-      "time_seconds": 26.45,
-      "date": "2026-08-01",
+      "name": "Каяла",
+      "time_seconds": 26.38,
+      "date": "2026-09-26",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 27.39,
+          "time_seconds": 27.93,
           "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 26.76,
+          "date": "2026-07-31"
+        },
+        {
+          "time_seconds": 26.77,
+          "date": "2026-09-12"
         }
       ],
-      "dog_id": 9166
+      "dog_id": 10742,
+      "aliases": [
+        "Тундра"
+      ]
+    },
+    {
+      "breed": "Тазы",
+      "name": "Мирасдар",
+      "time_seconds": 26.44,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 6203
+    },
+    {
+      "breed": "Тазы",
+      "name": "Мерген Басир",
+      "time_seconds": 26.48,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Вираж",
+      "time_seconds": 26.5,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Ника",
+      "time_seconds": 26.51,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 9872
     },
     {
       "breed": "Уиппет",
@@ -845,64 +1556,83 @@
       "dog_id": 9157
     },
     {
-      "breed": "Гальго",
-      "name": "Шелби",
-      "time_seconds": 26.68,
-      "date": "2026-06-28",
+      "breed": "Уиппет",
+      "name": "Руночка",
+      "time_seconds": 26.57,
+      "date": "2026-08-30",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 27.94,
-          "date": "2026-05-31"
+          "time_seconds": 27.81,
+          "date": "2026-08-30"
         }
-      ],
-      "dog_id": 9158
+      ]
     },
     {
-      "breed": "Салюки",
-      "name": "Велар",
-      "time_seconds": 26.74,
-      "date": "2026-08-01",
+      "breed": "Уиппет",
+      "name": "Бруно",
+      "time_seconds": 26.66,
+      "date": "2026-08-09",
       "track_length": 350,
       "status": "normal",
       "history": [],
-      "dog_id": 5779
+      "dog_id": 11111
     },
     {
-      "breed": "Салюки",
-      "name": "Тундра",
-      "time_seconds": 26.76,
-      "date": "2026-07-31",
+      "breed": "Грейхаунд",
+      "name": "Рим",
+      "time_seconds": 26.75,
+      "date": "2026-09-12",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 27.93,
-          "date": "2026-05-31"
+          "time_seconds": 28.12,
+          "date": "2026-07-31"
         }
-      ],
-      "dog_id": 9169
+      ]
+    },
+    {
+      "breed": "Салюки",
+      "name": "Грейси",
+      "time_seconds": 26.84,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Салюки",
+      "name": "Бон Вояж",
+      "time_seconds": 26.91,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "РПБ",
+      "name": "Флолесс",
+      "time_seconds": 26.92,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 27.36,
+          "date": "2026-09-20"
+        }
+      ]
     },
     {
       "breed": "Уиппет",
-      "name": "Ялта",
-      "time_seconds": 27,
-      "date": "2026-07-05",
+      "name": "Эни",
+      "time_seconds": 26.94,
+      "date": "2026-08-09",
       "track_length": 350,
       "status": "normal",
-      "history": [],
-      "dog_id": 9159
-    },
-    {
-      "breed": "Уиппет",
-      "name": "Ник",
-      "time_seconds": 27.08,
-      "date": "2026-06-20",
-      "track_length": 350,
-      "status": "normal",
-      "history": [],
-      "dog_id": 9160
+      "history": []
     },
     {
       "breed": "Уиппет",
@@ -923,6 +1653,15 @@
       "status": "normal",
       "history": [],
       "dog_id": 9162
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Гордей",
+      "time_seconds": 27.29,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Салюки",
@@ -980,19 +1719,73 @@
       "dog_id": 9167
     },
     {
+      "breed": "Уиппет",
+      "name": "Талия",
+      "time_seconds": 27.56,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 10747
+    },
+    {
       "breed": "Малинуа",
       "name": "Люцифер",
-      "time_seconds": 27.68,
-      "date": "2026-06-06",
+      "time_seconds": 27.66,
+      "date": "2026-08-09",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
           "time_seconds": 28.03,
           "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 27.68,
+          "date": "2026-06-06"
         }
       ],
       "dog_id": 9168
+    },
+    {
+      "breed": "Родезийский Риджбек",
+      "name": "Кевин",
+      "time_seconds": 27.77,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 27.8,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 9165
+    },
+    {
+      "breed": "Салюки",
+      "name": "Джаззи",
+      "time_seconds": 27.8,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 32.59,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 7256
+    },
+    {
+      "breed": "Родезийский Риджбек",
+      "name": "Айна",
+      "time_seconds": 27.81,
+      "date": "2026-08-30",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 6066
     },
     {
       "breed": "Фараонова собака",
@@ -1009,9 +1802,26 @@
         {
           "time_seconds": 28.65,
           "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 28.58,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 28.23,
+          "date": "2026-09-12"
         }
       ],
       "dog_id": 9174
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Кадра",
+      "time_seconds": 27.88,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Фараонова собака",
@@ -1032,6 +1842,14 @@
         {
           "time_seconds": 28.23,
           "date": "2026-06-28"
+        },
+        {
+          "time_seconds": 27.94,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 28.64,
+          "date": "2026-08-09"
         }
       ],
       "dog_id": 9171
@@ -1047,10 +1865,25 @@
       "dog_id": 9170
     },
     {
-      "breed": "Грейхаунд",
-      "name": "Рим",
-      "time_seconds": 28.12,
-      "date": "2026-07-31",
+      "breed": "Родезийский Риджбек",
+      "name": "Скади",
+      "time_seconds": 28.19,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 29.12,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 9177
+    },
+    {
+      "breed": "Левретка",
+      "name": "Мегуми",
+      "time_seconds": 28.24,
+      "date": "2026-09-12",
       "track_length": 350,
       "status": "normal",
       "history": []
@@ -1082,6 +1915,50 @@
     },
     {
       "breed": "Фараонова собака",
+      "name": "Рэм",
+      "time_seconds": 28.37,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 30.93,
+          "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 29.92,
+          "date": "2026-06-28"
+        },
+        {
+          "time_seconds": 28.92,
+          "date": "2026-07-31"
+        },
+        {
+          "time_seconds": 28.67,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 28.59,
+          "date": "2026-09-12"
+        },
+        {
+          "time_seconds": 28.43,
+          "date": "2026-09-20"
+        }
+      ],
+      "dog_id": 9185
+    },
+    {
+      "breed": "Чирнеко дель'Этна",
+      "name": "Сид",
+      "time_seconds": 28.4,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Фараонова собака",
       "name": "Гела",
       "time_seconds": 28.42,
       "date": "2026-06-28",
@@ -1099,6 +1976,22 @@
         {
           "time_seconds": 29.95,
           "date": "2026-06-28"
+        },
+        {
+          "time_seconds": 28.95,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 29.02,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 28.87,
+          "date": "2026-09-26"
+        },
+        {
+          "time_seconds": 28.5,
+          "date": "2026-10-24"
         }
       ],
       "dog_id": 9186
@@ -1114,9 +2007,60 @@
         {
           "time_seconds": 30.06,
           "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 29.82,
+          "date": "2026-09-20"
         }
       ],
       "dog_id": 9173
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Айрис",
+      "time_seconds": 28.48,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Фараонова собака",
+      "name": "Алиса",
+      "time_seconds": 28.48,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Чирнеко дель'Этна",
+      "name": "Джус",
+      "time_seconds": 28.53,
+      "date": "2026-08-30",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 28.74,
+          "date": "2026-08-30"
+        }
+      ]
+    },
+    {
+      "breed": "Родезийский Риджбек",
+      "name": "Риша",
+      "time_seconds": 28.57,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 29.57,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 9179
     },
     {
       "breed": "Чирнеко дель-Этна",
@@ -1158,23 +2102,22 @@
       "dog_id": 9176
     },
     {
-      "breed": "Фараонова собака",
-      "name": "Рэм",
+      "breed": "Уиппет",
+      "name": "Андрюша",
       "time_seconds": 28.92,
-      "date": "2026-07-31",
+      "date": "2026-08-09",
       "track_length": 350,
-      "status": "improved",
-      "history": [
-        {
-          "time_seconds": 30.93,
-          "date": "2026-05-31"
-        },
-        {
-          "time_seconds": 29.92,
-          "date": "2026-06-28"
-        }
-      ],
-      "dog_id": 9185
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Левретка",
+      "name": "Аготи",
+      "time_seconds": 28.99,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Родезийский риджбек",
@@ -1204,9 +2147,31 @@
         {
           "time_seconds": 29.46,
           "date": "2026-06-28"
+        },
+        {
+          "time_seconds": 29.45,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 29.36,
+          "date": "2026-09-26"
         }
       ],
       "dog_id": 9182
+    },
+    {
+      "breed": "Родезийский Риджбек",
+      "name": "Фрея",
+      "time_seconds": 29.14,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 29.45,
+          "date": "2026-09-12"
+        }
+      ]
     },
     {
       "breed": "Родезийский риджбек",
@@ -1253,6 +2218,54 @@
       "dog_id": 9179
     },
     {
+      "breed": "Родезийский Риджбек",
+      "name": "Скиф",
+      "time_seconds": 29.31,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 6152
+    },
+    {
+      "breed": "Левретка",
+      "name": "Лоба",
+      "time_seconds": 29.34,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Родезийский Риджбек",
+      "name": "Руна",
+      "time_seconds": 29.34,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 29.99,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 9175
+    },
+    {
+      "breed": "Чирнеко дель'Этна",
+      "name": "Вольпе Кьяра",
+      "time_seconds": 29.34,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 29.44,
+          "date": "2026-09-12"
+        }
+      ]
+    },
+    {
       "breed": "Салюки",
       "name": "Шайн",
       "time_seconds": 29.37,
@@ -1273,6 +2286,10 @@
         {
           "time_seconds": 30.41,
           "date": "2026-06-06"
+        },
+        {
+          "time_seconds": 29.92,
+          "date": "2026-09-20"
         }
       ],
       "dog_id": 9181
@@ -1288,9 +2305,22 @@
         {
           "time_seconds": 30.1,
           "date": "2026-05-30"
+        },
+        {
+          "time_seconds": 29.78,
+          "date": "2026-08-30"
         }
       ],
       "dog_id": 9183
+    },
+    {
+      "breed": "Фараонова собака",
+      "name": "Слава",
+      "time_seconds": 29.51,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Родезийский риджбек",
@@ -1305,11 +2335,72 @@
     {
       "breed": "Левретка",
       "name": "Халва",
-      "time_seconds": 29.84,
-      "date": "2026-08-01",
+      "time_seconds": 29.74,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 29.84,
+          "date": "2026-08-01"
+        }
+      ]
+    },
+    {
+      "breed": "Левретка",
+      "name": "Жасмин",
+      "time_seconds": 29.8,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 30.27,
+          "date": "2026-08-01"
+        }
+      ]
+    },
+    {
+      "breed": "Поденко Ибиценко",
+      "name": "Додона",
+      "time_seconds": 29.8,
+      "date": "2026-09-12",
       "track_length": 350,
       "status": "normal",
       "history": []
+    },
+    {
+      "breed": "Поденко Ибиценко",
+      "name": "Йоши",
+      "time_seconds": 29.87,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Салюки",
+      "name": "Ноби",
+      "time_seconds": 29.87,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Родезийский Риджбек",
+      "name": "Сёма",
+      "time_seconds": 29.9,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 30.73,
+          "date": "2026-08-09"
+        }
+      ],
+      "dog_id": 9189
     },
     {
       "breed": "Чирнеко дель-Этна",
@@ -1331,6 +2422,24 @@
       "dog_id": 9190
     },
     {
+      "breed": "Бордер колли",
+      "name": "Тави",
+      "time_seconds": 29.93,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Чирнеко дель'Этна",
+      "name": "Заффиро",
+      "time_seconds": 30.11,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
       "breed": "Бакхмуль",
       "name": "Кики",
       "time_seconds": 30.14,
@@ -1341,10 +2450,19 @@
       "dog_id": 9187
     },
     {
-      "breed": "Левретка",
-      "name": "Жасмин",
-      "time_seconds": 30.27,
-      "date": "2026-08-01",
+      "breed": "Чирнеко дель'Этна",
+      "name": "Нэнси",
+      "time_seconds": 30.19,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Чирнеко дель'Этна",
+      "name": "Ева",
+      "time_seconds": 30.39,
+      "date": "2026-08-09",
       "track_length": 350,
       "status": "normal",
       "history": []
@@ -1371,12 +2489,45 @@
     },
     {
       "breed": "Басенджи",
-      "name": "Генри",
-      "time_seconds": 30.99,
-      "date": "2026-08-01",
+      "name": "Дик",
+      "time_seconds": 30.51,
+      "date": "2026-09-20",
       "track_length": 350,
       "status": "normal",
       "history": [],
+      "dog_id": 5828
+    },
+    {
+      "breed": "Родезийский Риджбек",
+      "name": "Забава",
+      "time_seconds": 30.57,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Чирнеко дель'Этна",
+      "name": "Личи",
+      "time_seconds": 30.69,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Басенджи",
+      "name": "Генри",
+      "time_seconds": 30.86,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 30.99,
+          "date": "2026-08-01"
+        }
+      ],
       "dog_id": 5735
     },
     {
@@ -1408,6 +2559,48 @@
       "status": "normal",
       "history": [],
       "dog_id": 9193
+    },
+    {
+      "breed": "Метис",
+      "name": "Марсель",
+      "time_seconds": 31.45,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 7747
+    },
+    {
+      "breed": "Ирландский терьер",
+      "name": "Душечка",
+      "time_seconds": 31.5,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 36.02,
+          "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 34.48,
+          "date": "2026-07-05"
+        },
+        {
+          "time_seconds": 32.03,
+          "date": "2026-08-30"
+        }
+      ],
+      "dog_id": 9205
+    },
+    {
+      "breed": "Уиппет",
+      "name": "Бади",
+      "time_seconds": 31.6,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Выжла",
@@ -1450,8 +2643,13 @@
       "time_seconds": 31.92,
       "date": "2026-06-20",
       "track_length": 350,
-      "status": "normal",
-      "history": []
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 32.03,
+          "date": "2026-09-12"
+        }
+      ]
     },
     {
       "breed": "Басенджи",
@@ -1464,6 +2662,10 @@
         {
           "time_seconds": 32.3,
           "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 32.21,
+          "date": "2026-09-12"
         }
       ],
       "dog_id": 387
@@ -1474,8 +2676,13 @@
       "time_seconds": 31.98,
       "date": "2026-07-05",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 32.16,
+          "date": "2026-08-09"
+        }
+      ],
       "dog_id": 9197
     },
     {
@@ -1494,6 +2701,24 @@
       "dog_id": 372
     },
     {
+      "breed": "Левретка",
+      "name": "Хогвартс",
+      "time_seconds": 32.11,
+      "date": "2026-08-30",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Левретка",
+      "name": "Лиза",
+      "time_seconds": 32.19,
+      "date": "2026-08-30",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
       "breed": "Фараонова собака",
       "name": "Гоша",
       "time_seconds": 32.42,
@@ -1504,9 +2729,42 @@
         {
           "time_seconds": 33.13,
           "date": "2026-06-28"
+        },
+        {
+          "time_seconds": 33.47,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 32.51,
+          "date": "2026-10-24"
         }
       ],
       "dog_id": 9200
+    },
+    {
+      "breed": "Родезийский Риджбек",
+      "name": "Трой",
+      "time_seconds": 32.43,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 10266
+    },
+    {
+      "breed": "Левретка",
+      "name": "Финик",
+      "time_seconds": 32.45,
+      "date": "2026-08-30",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 34.17,
+          "date": "2026-06-06"
+        }
+      ],
+      "dog_id": 9204
     },
     {
       "breed": "Басенджи",
@@ -1519,6 +2777,10 @@
         {
           "time_seconds": 32.8,
           "date": "2026-06-20"
+        },
+        {
+          "time_seconds": 33.23,
+          "date": "2026-09-12"
         }
       ]
     },
@@ -1533,6 +2795,20 @@
       "dog_id": 9198
     },
     {
+      "breed": "Басенджи",
+      "name": "Ева",
+      "time_seconds": 32.61,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 32.69,
+          "date": "2026-09-12"
+        }
+      ]
+    },
+    {
       "breed": "АПБТ",
       "name": "Эльбрус",
       "time_seconds": 32.79,
@@ -1543,9 +2819,51 @@
         {
           "time_seconds": 33.66,
           "date": "2026-05-31"
+        },
+        {
+          "time_seconds": 33.28,
+          "date": "2026-08-09"
+        },
+        {
+          "time_seconds": 32.84,
+          "date": "2026-09-20"
         }
       ],
       "dog_id": 9199
+    },
+    {
+      "breed": "Басенджи",
+      "name": "Илона",
+      "time_seconds": 32.83,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 10731
+    },
+    {
+      "breed": "Левретка",
+      "name": "Жека",
+      "time_seconds": 33.03,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Левретка",
+      "name": "Юкос",
+      "time_seconds": 33.48,
+      "date": "2026-08-30",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 34.09,
+          "date": "2026-07-05"
+        }
+      ],
+      "dog_id": 9203
     },
     {
       "breed": "Бордер колли",
@@ -1558,13 +2876,27 @@
       "dog_id": 9201
     },
     {
+      "breed": "Левретка",
+      "name": "Дейзи",
+      "time_seconds": 33.54,
+      "date": "2026-08-30",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
       "breed": "Басенджи",
       "name": "Руби",
       "time_seconds": 33.57,
       "date": "2026-06-20",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 34.29,
+          "date": "2026-09-12"
+        }
+      ],
       "dog_id": 5742
     },
     {
@@ -1578,39 +2910,47 @@
       "dog_id": 9202
     },
     {
-      "breed": "Левретка",
-      "name": "Юкос",
-      "time_seconds": 34.09,
-      "date": "2026-07-05",
+      "breed": "Басенджи",
+      "name": "Дина",
+      "time_seconds": 33.94,
+      "date": "2026-09-12",
       "track_length": 350,
       "status": "normal",
       "history": [],
-      "dog_id": 9203
+      "dog_id": 10733
     },
     {
-      "breed": "Левретка",
-      "name": "Финик",
-      "time_seconds": 34.17,
-      "date": "2026-06-06",
+      "breed": "Басенджи",
+      "name": "Ноки",
+      "time_seconds": 34.24,
+      "date": "2026-10-24",
       "track_length": 350,
       "status": "normal",
-      "history": [],
-      "dog_id": 9204
+      "history": []
     },
     {
-      "breed": "Ирландский терьер",
-      "name": "Душечка",
-      "time_seconds": 34.48,
-      "date": "2026-07-05",
+      "breed": "Кане-корсо",
+      "name": "Кир",
+      "time_seconds": 34.29,
+      "date": "2026-08-09",
       "track_length": 350,
       "status": "improved",
       "history": [
         {
-          "time_seconds": 36.02,
+          "time_seconds": 40.55,
           "date": "2026-05-31"
         }
       ],
-      "dog_id": 9205
+      "dog_id": 9213
+    },
+    {
+      "breed": "Левретка",
+      "name": "Сириус",
+      "time_seconds": 34.71,
+      "date": "2026-09-26",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Басенджи",
@@ -1628,19 +2968,57 @@
       "time_seconds": 34.88,
       "date": "2026-05-31",
       "track_length": 350,
-      "status": "normal",
-      "history": [],
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 36.88,
+          "date": "2026-08-09"
+        }
+      ],
       "dog_id": 9206
     },
     {
       "breed": "Немецкая овчарка",
-      "name": "Вирна",
-      "time_seconds": 35.88,
-      "date": "2026-07-05",
+      "name": "Яра",
+      "time_seconds": 34.95,
+      "date": "2026-08-09",
       "track_length": 350,
       "status": "normal",
       "history": [],
+      "dog_id": 10816
+    },
+    {
+      "breed": "Немецкая овчарка",
+      "name": "Вирна",
+      "time_seconds": 34.97,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "improved",
+      "history": [
+        {
+          "time_seconds": 35.88,
+          "date": "2026-07-05"
+        }
+      ],
       "dog_id": 9207
+    },
+    {
+      "breed": "Алабай",
+      "name": "Гретта",
+      "time_seconds": 35.24,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "АСТ",
+      "name": "Бася",
+      "time_seconds": 35.38,
+      "date": "2026-08-09",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Басенджи",
@@ -1651,6 +3029,44 @@
       "status": "normal",
       "history": [],
       "dog_id": 9208
+    },
+    {
+      "breed": "Родезийский Риджбек",
+      "name": "Вега",
+      "time_seconds": 36.67,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 10779
+    },
+    {
+      "breed": "РПБ",
+      "name": "Варница",
+      "time_seconds": 37.07,
+      "date": "2026-09-20",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
+    },
+    {
+      "breed": "Басенджи",
+      "name": "Пайпер",
+      "time_seconds": 37.17,
+      "date": "2026-09-12",
+      "track_length": 350,
+      "status": "normal",
+      "history": [],
+      "dog_id": 5696
+    },
+    {
+      "breed": "Парсон",
+      "name": "Джой",
+      "time_seconds": 37.99,
+      "date": "2026-10-24",
+      "track_length": 350,
+      "status": "normal",
+      "history": []
     },
     {
       "breed": "Басенджи",
@@ -1693,14 +3109,13 @@
       "dog_id": 9212
     },
     {
-      "breed": "Кане-корсо",
-      "name": "Кир",
-      "time_seconds": 40.55,
-      "date": "2026-05-31",
+      "breed": "Цвергпинчер",
+      "name": "Марвел",
+      "time_seconds": 39.25,
+      "date": "2026-10-24",
       "track_length": 350,
       "status": "normal",
-      "history": [],
-      "dog_id": 9213
+      "history": []
     },
     {
       "breed": "Вельштерьер",

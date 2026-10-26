@@ -13,6 +13,45 @@ export interface DogIndexItem {
   sex?: string;
 }
 
+export interface DoninoDogMapping {
+  canonicalName: string;
+  sportDogId: number;
+  aliases: string[];
+}
+
+/**
+ * Ручные привязки и объединения собак Донино с официальной базой соревнований:
+ * - Салюки Каяла и Салюки Тундра — одна и та же собака (Бэль этуаль Каяла, id 10742)
+ * - Салюки Тайга — Эмуль дэ гепард гелила аль равда (id 5782)
+ */
+export const DONINO_MANUAL_MAPPINGS: Record<string, DoninoDogMapping> = {
+  'САЛЮКИ:ТУНДРА': { canonicalName: 'Каяла', sportDogId: 10742, aliases: ['Тундра'] },
+  'САЛЮКИ:КАЯЛА': { canonicalName: 'Каяла', sportDogId: 10742, aliases: ['Тундра'] },
+  'САЛЮКИ:ТАЙГА': { canonicalName: 'Тайга', sportDogId: 5782, aliases: [] },
+};
+
+export function resolveDoninoDog(
+  doninoName: string,
+  doninoBreed: string,
+): { canonicalName: string; sportDogId: number | null; aliases: string[] } {
+  const normKey = `${normalizeText(doninoBreed)}:${normalizeText(doninoName)}`;
+  const manual = DONINO_MANUAL_MAPPINGS[normKey];
+  if (manual) {
+    return {
+      canonicalName: manual.canonicalName,
+      sportDogId: manual.sportDogId,
+      aliases: [...manual.aliases],
+    };
+  }
+
+  const sportDogId = findSportDogId(doninoName, doninoBreed);
+  return {
+    canonicalName: doninoName,
+    sportDogId,
+    aliases: [],
+  };
+}
+
 let cachedDogsIndex: DogIndexItem[] | null = null;
 
 export function loadDogsIndex(): DogIndexItem[] {

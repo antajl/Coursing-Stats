@@ -13,34 +13,54 @@ interface CoursingRecordsCache {
   records: ParsedCoursingRecord[];
 }
 
-const GOOGLE_SHEETS_URL =
-  'https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/export?format=xlsx';
+const COURSING_SHEETS_URLS = [
+  // 1. Таблица 1: Архив / исходный лист 2026 (135+ собак)
+  'https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/export?format=xlsx',
+  // 2. Таблица 3: Актуальный рабочий лист 2026 (содержит свежие забеги до 24.10.2026)
+  'https://docs.google.com/spreadsheets/d/1kpRjPy4OKZmqyM_J12a-MJqEUQD6Isglt-KRtSqLSAY/export?format=xlsx',
+];
 const OUTPUT_FILE = 'data/v1/donino/coursing_records.json';
 
-async function main() {
-  console.log('Exporting coursing (350 m) records from Google Sheets...');
-
-  console.log('Fetching XLSX from Google Sheets...');
-  const response = await fetch(GOOGLE_SHEETS_URL);
+async function fetchWorkbook(url: string, label: string): Promise<XLSX.WorkBook> {
+  console.log(`Fetching ${label}...`);
+  const response = await fetch(url);
   if (!response.ok) {
-    throw new Error(`Failed to fetch XLSX: ${response.status} ${response.statusText}`);
+    throw new Error(`Failed to fetch ${label}: ${response.status} ${response.statusText}`);
   }
   const arrayBuffer = await response.arrayBuffer();
   const buffer = Buffer.from(arrayBuffer);
-  console.log(`XLSX fetched: ${buffer.length} bytes`);
+  console.log(`${label} fetched: ${buffer.length} bytes`);
+  return XLSX.read(buffer, { type: 'buffer', cellStyles: true });
+}
 
-  const workbook = XLSX.read(buffer, { type: 'buffer', cellStyles: true });
-  const parsed = parseCoursingRecordsFromWorkbook(workbook);
-  const uniqueRecords = dedupeCoursingRecords(parsed);
+async function main() {
+  console.log('Exporting coursing (350 m) records from all Google Sheets sources...');
+
+  const allParsed: ParsedCoursingRecord[] = [];
+
+  for (let i = 0; i < COURSING_SHEETS_URLS.length; i++) {
+    const url = COURSING_SHEETS_URLS[i];
+    const label = `Table ${i === 0 ? '1 (archive)' : '3 (active)'}`;
+    try {
+      const workbook = await fetchWorkbook(url, label);
+      const parsed = parseCoursingRecordsFromWorkbook(workbook);
+      console.log(`Parsed ${parsed.length} raw runs from ${label}`);
+      allParsed.push(...parsed);
+    } catch (err) {
+      console.error(`Error processing ${label}:`, err);
+    }
+  }
+
+  const uniqueRecords = dedupeCoursingRecords(allParsed);
 
   const statusCounts = uniqueRecords.reduce<Record<string, number>>((acc, r) => {
     acc[r.status] = (acc[r.status] || 0) + 1;
     return acc;
   }, {});
   console.log(`Status breakdown: ${JSON.stringify(statusCounts)}`);
-  console.log(`Parsed ${parsed.length} coursing records from ${workbook.SheetNames.length} sheets`);
+  console.log(`Total raw runs parsed across all tables: ${allParsed.length}`);
   console.log(
-    `After deduplication: ${uniqueRecords.length} records (removed ${parsed.length - uniqueRecords.length} duplicates)`,
+    `After deduplication: ${uniqueRecords.length} records (removed ${allParsed.length - uniqueRecords.length} duplicates)`,
   );
 
   const output: CoursingRecordsCache = {

@@ -250,7 +250,12 @@ export function filterSpeedRecords(
   let filtered = records
   if (filters.search) {
     const q = filters.search.toLowerCase()
-    filtered = filtered.filter((r) => r.name.toLowerCase().includes(q))
+    filtered = filtered.filter(
+      (r) =>
+        r.name.toLowerCase().includes(q) ||
+        (Array.isArray((r as { aliases?: string[] }).aliases) &&
+          (r as { aliases?: string[] }).aliases!.some((a) => a.toLowerCase().includes(q))),
+    )
   }
   if (filters.years.length) {
     filtered = filtered.filter((r) => filters.years.includes(String(getRecordYear(r.date))))
@@ -287,7 +292,12 @@ export function filterCoursingRecords(
   let filtered = records
   if (filters.search) {
     const q = filters.search.toLowerCase()
-    filtered = filtered.filter((r) => r.name.toLowerCase().includes(q))
+    filtered = filtered.filter(
+      (r) =>
+        r.name.toLowerCase().includes(q) ||
+        (Array.isArray((r as { aliases?: string[] }).aliases) &&
+          (r as { aliases?: string[] }).aliases!.some((a) => a.toLowerCase().includes(q))),
+    )
   }
   if (filters.years.length) {
     filtered = filtered.filter((r) => filters.years.includes(String(getRecordYear(r.date))))

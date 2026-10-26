@@ -238,7 +238,12 @@ export function useSpeedRecordsPage() {
       if (searchQuery) {
         const searchLower = searchQuery.toLowerCase()
         filtered = filtered.filter((record) => {
-          const nameMatch = record.name.toLowerCase().includes(searchLower)
+          const nameMatch =
+            record.name.toLowerCase().includes(searchLower) ||
+            (Array.isArray((record as { aliases?: string[] }).aliases) &&
+              (record as { aliases?: string[] }).aliases!.some((a) =>
+                a.toLowerCase().includes(searchLower),
+              ))
           const breedMatch = record.breed.toLowerCase().includes(searchLower)
 
           let sexMatch = record.sex.toLowerCase().includes(searchLower)
@@ -327,7 +332,12 @@ export function useSpeedRecordsPage() {
         const query = searchQuery.toLowerCase()
         filtered = filtered.filter(
           (record) =>
-            record.name.toLowerCase().includes(query) || record.breed.toLowerCase().includes(query)
+            record.name.toLowerCase().includes(query) ||
+            record.breed.toLowerCase().includes(query) ||
+            (Array.isArray((record as { aliases?: string[] }).aliases) &&
+              (record as { aliases?: string[] }).aliases!.some((a) =>
+                a.toLowerCase().includes(query),
+              ))
         )
       }
 

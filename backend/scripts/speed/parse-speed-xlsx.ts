@@ -1,6 +1,6 @@
 import * as XLSX from 'xlsx';
 import { statusFromNameCell } from './speed-sheet-status';
-import { findSportDogId } from './match-donino-dog';
+import { findSportDogId, resolveDoninoDog } from './match-donino-dog';
 
 export interface SpeedHistoryEntry {
   speed_km_h: number | string;
@@ -20,6 +20,7 @@ export interface ParsedSpeedRecord {
   track_type?: string | null;
   history?: SpeedHistoryEntry[];
   dog_id?: number | null;
+  aliases?: string[];
 }
 
 export function convertExcelDate(dateValue: unknown): string {
@@ -203,9 +204,16 @@ export function consolidateSpeedRecords(records: ParsedSpeedRecord[]): ParsedSpe
   const byDog = new Map<string, ParsedSpeedRecord[]>();
 
   for (const r of records) {
-    const key = `${r.name}_${r.breed}`;
+    const identity = resolveDoninoDog(r.name, r.breed);
+    const canonicalRecord: ParsedSpeedRecord = {
+      ...r,
+      name: identity.canonicalName,
+      dog_id: identity.sportDogId || r.dog_id,
+      aliases: identity.aliases.length > 0 ? identity.aliases : r.aliases,
+    };
+    const key = `${canonicalRecord.name}_${canonicalRecord.breed}`;
     if (!byDog.has(key)) byDog.set(key, []);
-    byDog.get(key)!.push(r);
+    byDog.get(key)!.push(canonicalRecord);
   }
 
   const result: ParsedSpeedRecord[] = [];
@@ -213,7 +221,14 @@ export function consolidateSpeedRecords(records: ParsedSpeedRecord[]): ParsedSpe
   for (const runs of byDog.values()) {
     // Дедупликация идентичных замеров (скорость + дата)
     const runMap = new Map<string, ParsedSpeedRecord>();
+    const allAliases = new Set<string>();
+    let dogId: number | undefined;
+
     for (const r of runs) {
+      if (r.dog_id) dogId = r.dog_id;
+      if (r.aliases) {
+        for (const a of r.aliases) allAliases.add(a);
+      }
       const k = r.screenshot_url
         ? `${r.speed_km_h}_${r.screenshot_url}`
         : `${r.speed_km_h}_${r.date}`;
@@ -256,7 +271,9 @@ export function consolidateSpeedRecords(records: ParsedSpeedRecord[]): ParsedSpe
       }))
       .sort((a, b) => a.date.localeCompare(b.date));
 
-    const dog_id = findSportDogId(bestRun.name, bestRun.breed);
+    const identity = resolveDoninoDog(bestRun.name, bestRun.breed);
+    if (!dogId && identity.sportDogId) dogId = identity.sportDogId;
+    for (const a of identity.aliases) allAliases.add(a);
 
     result.push({
       breed: bestRun.breed,
@@ -268,7 +285,8 @@ export function consolidateSpeedRecords(records: ParsedSpeedRecord[]): ParsedSpe
       status,
       track_type: bestRun.track_type || null,
       history,
-      dog_id: dog_id || undefined,
+      dog_id: dogId || undefined,
+      aliases: allAliases.size > 0 ? [...allAliases] : undefined,
     });
   }
 

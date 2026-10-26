@@ -5,7 +5,7 @@ import {
   parseCoursingCommentHistory,
   statusFromCoursingNameCell,
 } from './coursing-sheet-status';
-import { findSportDogId } from './match-donino-dog';
+import { findSportDogId, resolveDoninoDog } from './match-donino-dog';
 
 export interface ParsedCoursingRecord {
   breed: string;
@@ -16,6 +16,7 @@ export interface ParsedCoursingRecord {
   status: string;
   history: { time_seconds: number; date: string }[];
   dog_id?: number | null;
+  aliases?: string[];
 }
 
 function parseTimeValue(value: unknown): number {
@@ -93,15 +94,18 @@ export function parseCoursingRecordsFromWorkbook(workbook: XLSX.WorkBook): Parse
 
       const history = parseCoursingCommentHistory(commentTextFromDateCell(dateCell));
       const status = statusFromCoursingNameCell(nameCell, dateCell);
+      const identity = resolveDoninoDog(name, breed);
 
       records.push({
         breed,
-        name,
+        name: identity.canonicalName,
         time_seconds,
         date,
         track_length: 350,
         status,
         history,
+        dog_id: identity.sportDogId || undefined,
+        aliases: identity.aliases.length > 0 ? identity.aliases : undefined,
       });
     }
   }
@@ -122,8 +126,14 @@ export function dedupeCoursingRecords(records: ParsedCoursingRecord[]): ParsedCo
 
   for (const dogRecords of byDog.values()) {
     const runMap = new Map<string, { time_seconds: number; date: string }>();
+    const allAliases = new Set<string>();
+    let dogId: number | undefined;
 
     for (const rec of dogRecords) {
+      if (rec.dog_id) dogId = rec.dog_id;
+      if (rec.aliases) {
+        for (const a of rec.aliases) allAliases.add(a);
+      }
       if (rec.time_seconds > 0 && rec.date) {
         runMap.set(`${rec.time_seconds}_${rec.date}`, {
           time_seconds: rec.time_seconds,
@@ -155,7 +165,9 @@ export function dedupeCoursingRecords(records: ParsedCoursingRecord[]): ParsedCo
       ) || dogRecords[0];
 
     const status = history.length > 0 ? 'improved' : (baseRec.status || 'normal');
-    const dog_id = findSportDogId(baseRec.name, baseRec.breed);
+    const identity = resolveDoninoDog(baseRec.name, baseRec.breed);
+    if (!dogId && identity.sportDogId) dogId = identity.sportDogId;
+    for (const a of identity.aliases) allAliases.add(a);
 
     result.push({
       breed: baseRec.breed,
@@ -165,7 +177,8 @@ export function dedupeCoursingRecords(records: ParsedCoursingRecord[]): ParsedCo
       track_length: 350,
       status,
       history,
-      dog_id: dog_id || undefined,
+      dog_id: dogId || undefined,
+      aliases: allAliases.size > 0 ? [...allAliases] : undefined,
     });
   }
 

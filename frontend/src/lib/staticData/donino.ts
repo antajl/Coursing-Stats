@@ -29,7 +29,8 @@ function filterDoninoRecords(
       (r) =>
         String(r.name ?? '').toLowerCase().includes(q) ||
         String(r.breed ?? '').toLowerCase().includes(q) ||
-        String(r.date ?? '').toLowerCase().includes(q),
+        String(r.date ?? '').toLowerCase().includes(q) ||
+        (Array.isArray(r.aliases) && (r.aliases as string[]).some((a) => String(a).toLowerCase().includes(q))),
     )
   }
 
@@ -147,8 +148,14 @@ export async function getDoninoDog(
 
   const normName = String(name || '').trim().toLowerCase()
   const normBreed = String(breed || '').trim().toLowerCase()
-  const speedRecords = allSpeed.filter((r) => String(r.name ?? '').trim().toLowerCase() === normName && String(r.breed ?? '').trim().toLowerCase() === normBreed)
-  const coursingRecords = allCoursing.filter((r) => String(r.name ?? '').trim().toLowerCase() === normName && String(r.breed ?? '').trim().toLowerCase() === normBreed)
+  const matchesDog = (r: Record<string, unknown>) => {
+    if (String(r.breed ?? '').trim().toLowerCase() !== normBreed) return false;
+    if (String(r.name ?? '').trim().toLowerCase() === normName) return true;
+    if (Array.isArray(r.aliases) && (r.aliases as string[]).some((a) => String(a).trim().toLowerCase() === normName)) return true;
+    return false;
+  };
+  const speedRecords = allSpeed.filter(matchesDog);
+  const coursingRecords = allCoursing.filter(matchesDog);
 
   const allSpeedRuns: number[] = []
   for (const r of speedRecords) {
@@ -231,11 +238,14 @@ export async function getDoninoDog(
 
   const sex = speedRecords.find((r) => r.sex)?.sex ?? null;
   const dogId = (speedRecords.find((r) => r.dog_id)?.dog_id) ?? (coursingRecords.find((r) => r.dog_id)?.dog_id) ?? null;
+  const canonicalName = String(speedRecords[0]?.name ?? coursingRecords[0]?.name ?? name);
+  const aliases = (speedRecords.find((r) => Array.isArray(r.aliases))?.aliases ?? coursingRecords.find((r) => Array.isArray(r.aliases))?.aliases ?? []) as string[];
 
   return {
     success: true,
     data: {
-      name,
+      name: canonicalName,
+      aliases,
       breed,
       sex,
       dog_id: dogId,

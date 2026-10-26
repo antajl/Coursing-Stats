@@ -166,7 +166,7 @@ export const DATA_SOURCE_LINKS = [
     label: 'Рекорды Донино (курсинг)',
   },
   {
-    href: 'https://docs.google.com/spreadsheets/d/1hpdA8vlIfeECgpnPvuk5xfezPsdUh1EXULjeATAF9dw/edit?pli=1&gid=0#gid=0',
+    href: 'https://docs.google.com/spreadsheets/d/1kpRjPy4OKZmqyM_J12a-MJqEUQD6Isglt-KRtSqLSAY/edit?gid=0#gid=0',
     label: 'Рекорды Донино (бега борзых)',
   },
 ] as const
