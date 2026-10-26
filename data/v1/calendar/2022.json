@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2022,
   "exported_at": "2026-09-28T13:21:42.917Z",
-  "event_count": 12,
-  "with_results": 12,
+  "event_count": 13,
+  "with_results": 13,
   "events": [
     {
       "id": 20221009,
@@ -241,6 +241,30 @@
       "judges": [
         "Карелина Н.В.",
         "Петровас Н.Е."
+      ]
+    },
+    {
+      "id": 20221020,
+      "year": 2022,
+      "date_start": "2022-09-03",
+      "date_end": "2022-09-03",
+      "rank_label": "Кубок России",
+      "event_type": "racing",
+      "competition_kind": "",
+      "competition_type": "",
+      "title": "Кубок России - CACL по бегам борзых, 03.09.2022 (Вологодская обл., г. Вологда)",
+      "host_club": "ВГООКС «Сириус»",
+      "region": "Вологодская область",
+      "location": "Вологодская область, г. Вологда",
+      "has_results": true,
+      "results_file": "competitions/2022/09-сентябрь/20221020-кубок-россии-cacl-по-бегам-борзых-03-09-2022-вол.json",
+      "result_count": 59,
+      "participants_count": 59,
+      "judges": [
+        "Полякова Г.Б.",
+        "Серова Т.Г.",
+        "Яковлева Т.С.",
+        "Кузнецова Н.Н."
       ]
     },
     {
