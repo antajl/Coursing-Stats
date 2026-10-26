@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "YR",
-  "count": 20,
+  "count": 22,
   "dogs": [
     {
       "id": "1053301011",
@@ -49,10 +49,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1258099376",
+      "id": "639839621",
       "name_lat": "YRAL TAU YU RACHA SLAVA NASHA",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -112,6 +112,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1527972139",
+      "name_lat": "YRAL TAY YAKSHI BASHAR",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1253102101",
       "name_lat": "YRAL TAY ABIGAYL BLAGORODNAYA",
       "name_ru": "",
@@ -148,6 +156,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1823556300",
+      "name_lat": "YRKY PRIMER OT BUMAGE",
+      "name_ru": "",
+      "breed": "СКАЙ ТЕРЬЕР) / SCOTTISH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1017677848",
+      "name_lat": "Y RAPSODII ЛЕГЕНД МОН’РЕПО",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА гладкошерс тный",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1785845451",
       "name_lat": "YRAL TAY FENIKS",
       "name_ru": "",
@@ -161,15 +187,6 @@
       "name_lat": "YRAL TAY MANLAYLY BAY",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1823556300",
-      "name_lat": "YRKY PRIMER OT BUMAGE",
-      "name_ru": "",
-      "breed": "СКАЙ ТЕРЬЕР) / SCOTTISH",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

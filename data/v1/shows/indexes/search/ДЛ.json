@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ДЛ",
-  "count": 32,
+  "count": 37,
   "dogs": [
     {
       "id": "1149813463",
@@ -15,10 +15,26 @@
     {
       "id": "83933540",
       "name_lat": "ДЛЯ РОТФАРТ ЯНТАРИНА",
-      "name_ru": "",
+      "name_ru": "ДЛЯ РОТФАРТ ЯНТАРИНА",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1651673192",
+      "name_lat": "Д'ЛУНА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1911627943",
+      "name_lat": "Д'ЛУНА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -67,10 +83,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1899241835",
+      "id": "1682574946",
       "name_lat": "ДЛЯ ДОСТОЯН ИЯ РЕСПУБЛ ИКИ",
       "name_ru": "",
-      "breed": "Я ОВЧАРКА СОБАКА) /",
+      "breed": "Я ОВЧАРКА СОБАКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -99,6 +115,14 @@
       "name_ru": "",
       "breed": "ПОКЕТ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1036410729",
+      "name_lat": "Д`ЛУНА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -157,10 +181,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1696818111",
+      "id": "28882228",
       "name_lat": "ДЛЯ ИМПЕРИИ СКОРПИОНА",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -186,7 +210,7 @@
     {
       "id": "735809873",
       "name_lat": "ДЛЯ ВЫСШЕЙ ЛИГИ ИЗ АЛЕКСАНДРОВ ГРАДА",
-      "name_ru": "",
+      "name_ru": "ДЛЯ ВЫСШЕЙ ЛИГИ ИЗ АЛЕКСАНДРОВ ГРАДА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
@@ -195,7 +219,7 @@
     {
       "id": "1197138979",
       "name_lat": "ДЛЯ САЯНСКИХ ГОР",
-      "name_ru": "",
+      "name_ru": "ДЛЯ САЯНСКИХ ГОР",
       "breed": "*СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -265,6 +289,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "670696388",
+      "name_lat": "Д'ЛЯРОН ЭТУАЛЬ МАГНОЛИЯ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "827767243",
       "name_lat": "ДЛЯ ХРАМА ДУШИ ИЗ КЛАНА АЛ-",
       "name_ru": "",
@@ -283,10 +316,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "59177934",
-      "name_lat": "ДЛЯ ЛЕДИ ФАВОРИТ ХЕЛЕНА'С ДАЙМОНД (К- Ш",
+      "id": "1537965700",
+      "name_lat": "ДЛЯ ЛЕДИ ФАВОРИТ ХЕЛЕНА'С ДАЙМОНД (К-Ш",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1228181351",
+      "name_lat": "Д-ЛУНА ЛАРМОНС ЭТТИ ТОЙ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

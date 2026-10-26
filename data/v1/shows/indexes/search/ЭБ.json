@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЭБ",
-  "count": 54,
+  "count": 57,
   "dogs": [
     {
       "id": "823873758",
@@ -10,15 +10,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "505809982",
-      "name_lat": "ЭБО",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -31,6 +22,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "505809982",
+      "name_lat": "ЭБО",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "47046577",
       "name_lat": "ЭБИГЕЛЬ",
       "name_ru": "",
@@ -40,19 +40,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "169143108",
+      "id": "947674609",
       "name_lat": "ЭБРУГОР ВОЛЬФ",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "name_ru": "ЭБРУГОР ВОЛЬФ",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1059592415",
-      "name_lat": "ЭББИГЕЙЛ УТРЕННЯЯ РАДОСТЬ",
+      "id": "381668701",
+      "name_lat": "ЭББИ",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ /",
+      "breed": "GERMAN WIRE-HAIRED",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "409437262",
+      "name_lat": "ЭББИГЕЙЛ УТРЕННЯЯ РАДОСТЬ",
+      "name_ru": "ЭББИГЕЙЛ УТРЕННЯЯ РАДОСТЬ",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -67,10 +75,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1866769132",
+      "id": "1269087210",
       "name_lat": "ЭБИГЕЙЛ РАДИАНТ ПРИНСЕС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЭБИГЕЙЛ РАДИАНТ ПРИНСЕС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -78,25 +86,16 @@
     {
       "id": "1147922029",
       "name_lat": "ЭБОНИ БЬЮТИ ОЛИВИЯ",
-      "name_ru": "",
+      "name_ru": "ЭБОНИ БЬЮТИ ОЛИВИЯ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "381668701",
-      "name_lat": "ЭББИ",
-      "name_ru": "",
-      "breed": "GERMAN WIRE-HAIRED",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1937849860",
       "name_lat": "ЭБИГЕЙЛ ГАЛА СТАР",
-      "name_ru": "",
+      "name_ru": "ЭБИГЕЙЛ ГАЛА СТАР",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
@@ -121,10 +120,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "662498427",
+      "id": "1519383835",
       "name_lat": "ЭББИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДРАТХААР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -148,10 +147,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "316157067",
+      "id": "618101943",
       "name_lat": "ЭБОНИ БЬЮТИ ДАМИАН",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -202,19 +201,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1355630885",
+      "id": "249400504",
       "name_lat": "ЭБОНИ",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1782437",
+      "id": "1917366332",
+      "name_lat": "Э-БАЙЧА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1744279550",
       "name_lat": "ЭБОНИТ АРРАС ФОМ ФЕСТБУРГ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -238,10 +246,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "482875529",
+      "id": "126546315",
       "name_lat": "ЭБЕРРОН ЛАЭТРА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "name_ru": "ЭБЕРРОН ЛАЭТРА",
+      "breed": "АРГЕНТИНСКИЙДОГ БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -301,10 +309,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1958575295",
-      "name_lat": "ЭБИГЕЙЛ СТАР ДЛЯ АЙРИН БЛЮ (Г/Ш)",
+      "id": "1043101388",
+      "name_lat": "ЭБОНИТ ФОМ ГРЮНЕН ШТАДТ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "GERMAN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "163563032",
+      "name_lat": "ЭБИГЕЙЛ СТАР ДЛЯ АЙРИН БЛЮ (Г/Ш)",
+      "name_ru": "ЭБИГЕЙЛ СТАР ДЛЯ АЙРИН БЛЮ (Г/Ш)",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -337,10 +353,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1931992938",
+      "id": "1821924558",
       "name_lat": "ЭБИГАЛЬ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1378161038",
+      "name_lat": "Э-БАЙЧА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -436,19 +461,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1789186388",
+      "id": "1301767998",
       "name_lat": "ЭБРУСКО АЛБЕРАТА",
       "name_ru": "",
-      "breed": "КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "595354214",
+      "id": "287912543",
       "name_lat": "ЭБИКА ИЗ ГУСАРСКОЙ БАЛЛАДЫ",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

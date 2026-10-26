@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "BV",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "136855080",
+      "name_lat": "BVC 80, REDIANT STAR OTIS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОРРЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1953236863",
+      "name_lat": "BVC 80, LACOTE AIVAZOVSKY",
+      "name_ru": "",
+      "breed": "ЛАБРАДОРРЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "85412578",
+      "name_lat": "B-VOLT",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

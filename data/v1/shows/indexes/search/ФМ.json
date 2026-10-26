@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ФМ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1462584083",
+      "name_lat": "ФМДЕЛИТИ ХЕРД ВЕТТЕРХОРН",
+      "name_ru": "ФМДЕЛИТИ ХЕРД ВЕТТЕРХОРН",
+      "breed": "АППЕНЦЕЛЛЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "402656033",
+      "name_lat": "ФМ КИНГ АЛВАЙС ВИНС",
+      "name_ru": "ФМ КИНГ АЛВАЙС ВИНС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    }
+  ]
+}

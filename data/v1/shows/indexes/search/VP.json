@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "VP",
-  "count": 4,
+  "count": 6,
   "dogs": [
     {
       "id": "1415809310",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 31,
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
@@ -37,6 +37,23 @@
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "NEWFOUNDLAND",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1817333044",
+      "name_lat": "V'PIXIE DES COSTYS DU TOMBERG",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "918834133",
+      "name_lat": "V'PRINCESSA VIKTORIA DLYA RADUGI ZHELANIY",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

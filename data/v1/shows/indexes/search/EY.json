@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EY",
-  "count": 89,
+  "count": 94,
   "dogs": [
     {
       "id": "44651077",
@@ -13,13 +13,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "9492",
+      "id": "10970",
       "name_lat": "EYO VELICHESTVO UDACHA IZ VOLSHEBNOGO LESA",
       "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed": "Ирландский волкодав",
       "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 73,
-      "competition_dog_id": 9492
+      "total_shows": 60,
+      "competition_dog_id": 10970
     },
     {
       "id": "46950725",
@@ -27,7 +27,7 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -54,7 +54,7 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "BEAGLE",
-      "total_shows": 32,
+      "total_shows": 37,
       "competition_dog_id": null
     },
     {
@@ -121,6 +121,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1335431575",
+      "name_lat": "EYES OF HOPE REVOLUTION SHOW",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1895569047",
       "name_lat": "EYS VENTURA",
       "name_ru": "",
@@ -130,10 +139,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "57841998",
+      "id": "106211622",
       "name_lat": "EYS VOIN SVETA IMPERII TSAREY",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -148,21 +157,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1982745070",
+      "name_lat": "EYWA MELODI DEL ALMA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "1794141561",
       "name_lat": "EYGAN OT NEVSKOGO HOBBITA",
       "name_ru": "",
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1982745070",
-      "name_lat": "EYWA MELODI DEL ALMA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -193,10 +202,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1470824507",
+      "id": "1695976068",
       "name_lat": "EYNORT SKYE MAELRUBHA FOR ELEDVEN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -208,6 +217,15 @@
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455051333",
+      "name_lat": "EYREY SO ZVEZDNOGO PUTI",
+      "name_ru": "ЭЙРЭЙ СО ЗВЕЗДНОГО ПУТИ",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -234,7 +252,7 @@
       "name_ru": "",
       "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -247,12 +265,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "455051333",
-      "name_lat": "EYREY SO ZVEZDNOGO PUTI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 33,
+      "id": "275303773",
+      "name_lat": "EYFORIYA IZ BELOY SOTNI",
+      "name_ru": "ЭЙФОРИЯ ИЗ БЕЛОЙ СОТНИ",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "breed_en": "DOGO ARGENTINO",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -265,21 +283,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "275303773",
-      "name_lat": "EYFORIYA IZ BELOY SOTNI",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "DOGO ARGENTINO",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "731169866",
       "name_lat": "EYASUHIRO ETAKAO FORTEFORTISSIMO ЗЛАТО' А ПАНАМЕРА ДЛЯ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -337,21 +346,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "43214151",
-      "name_lat": "EYFORIYA S BUHTY APPOLONA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "949272542",
       "name_lat": "EYES OF HOPE APRIL SONG",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1349929446",
+      "name_lat": "EYFORIYA S BUHTY APPOLONA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "461117733",
+      "name_lat": "EYRA SNEZHNAYA LEGENDA",
+      "name_ru": "ЭЙРА СНЕЖНАЯ ЛЕГЕНДА",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -400,8 +418,25 @@
       "competition_dog_id": null
     },
     {
-      "id": "1882658605",
-      "name_lat": "EYWA- KRASOTA,MOSHCH,SVOB ODA",
+      "id": "1543669116",
+      "name_lat": "EYA NESS BROWNIE",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "243462805",
+      "name_lat": "EYA NESS BRIANNA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "623578593",
+      "name_lat": "EYWA-KRASOTA,MOSHCH,SVOB ODA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
@@ -423,6 +458,14 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "233291987",
+      "name_lat": "EYES OF HOPE ANGEL LOVELY",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -477,7 +520,7 @@
       "name_ru": "",
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -499,10 +542,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1948892739",
+      "id": "1147556576",
+      "name_lat": "EYKO VOM THULIBERG",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1979693381",
       "name_lat": "EYZA DIKAYA L'VITSY",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -513,7 +564,7 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -571,24 +622,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "839356961",
-      "name_lat": "EYA NESS BRIANNA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1335431575",
-      "name_lat": "EYES OF HOPE REVOLUTION SHOW",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1737692105",
       "name_lat": "EYWA-KRASOTA",
       "name_ru": "",
@@ -603,6 +636,15 @@
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1232533131",
+      "name_lat": "EYA NESS BASALT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -643,6 +685,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "913425536",
+      "name_lat": "EYE-CATCHING LOT OF KISSES",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1524514590",
       "name_lat": "EYMI CHIZANA TENSHI",
       "name_ru": "",
@@ -670,24 +720,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1918121467",
-      "name_lat": "EYA NESS BASALT",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1543669116",
-      "name_lat": "EYA NESS BROWNIE",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "317136203",
       "name_lat": "EYZVI GERL",
       "name_ru": "",
@@ -697,10 +729,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "320607864",
+      "id": "1038009757",
       "name_lat": "EYDAN BIRI",
       "name_ru": "",
-      "breed": "КАНЕ КОРСО /",
+      "breed": "КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -742,11 +774,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1850595286",
+      "id": "623883009",
       "name_lat": "EYVERI PRINCESSA IZ SKAZKI",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "652514054",
+      "name_lat": "EYES OF HOPE BEST OF GRAND",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -769,10 +809,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "99799284",
+      "id": "242845227",
       "name_lat": "EYK VON ARLETT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

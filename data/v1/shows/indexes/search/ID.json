@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ID",
-  "count": 224,
+  "count": 227,
   "dogs": [
     {
       "id": "169291316",
@@ -18,7 +18,7 @@
       "name_ru": "",
       "breed": "МАЙОРКСКИЙ МАСТИФ",
       "breed_en": "MAJORCA MASTIFF",
-      "total_shows": 55,
+      "total_shows": 57,
       "competition_dog_id": null
     },
     {
@@ -33,10 +33,19 @@
     {
       "id": "746098485",
       "name_lat": "IDEAL DOGS GIV EMERALD",
-      "name_ru": "",
+      "name_ru": "ИДЕАЛ ДОГС ГИВ ЭМЕРАЛЬД",
       "breed": "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
       "breed_en": "SPANISH WATER DOG",
-      "total_shows": 20,
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1664127345",
+      "name_lat": "IDEAL DOGS GIV TEODORA LIAN",
+      "name_ru": "ИДЕАЛ ДОГС ГИВ ТЕОДОРА ЛИАН",
+      "breed": "МАЙОРКСКИЙ МАСТИФ",
+      "breed_en": "MAJORCA MASTIFF",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -58,12 +67,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1664127345",
-      "name_lat": "IDEAL DOGS GIV TEODORA LIAN",
+      "id": "99579917",
+      "name_lat": "IDEL BERN BERINA",
       "name_ru": "",
-      "breed": "МАЙОРКСКИЙ МАСТИФ",
-      "breed_en": "MAJORCA MASTIFF",
-      "total_shows": 17,
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -76,15 +85,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "99579917",
-      "name_lat": "IDEL BERN BERINA",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1886772473",
       "name_lat": "IDEAL BY BAUER",
       "name_ru": "",
@@ -94,12 +94,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1802817252",
+      "id": "354715963",
       "name_lat": "IDZHI IZ BELOGO YARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -112,12 +112,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "60859547",
+      "name_lat": "IDEAL DOGS GIV PATTAYA DIVA",
+      "name_ru": "",
+      "breed": "МАЙОРКСКИЙ МАСТИФ",
+      "breed_en": "MAJORCA MASTIFF",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "550665885",
       "name_lat": "IDEAL DOGS GIV FEKLA GRAFENOVA",
       "name_ru": "",
       "breed": "МАЙОРКСКИЙ МАСТИФ",
       "breed_en": "MAJORCA MASTIFF",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1299829967",
+      "name_lat": "IDEAL DOGS GIV DRAGON FRUIT (NBT)",
+      "name_ru": "",
+      "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -157,6 +175,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "71169679",
+      "name_lat": "IDEAL DOGS GIV HUNGRY TO WIN",
+      "name_ru": "",
+      "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
+      "breed_en": "SPANISH WATER DOG",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "409921699",
       "name_lat": "IDEL BERN ASLAN",
       "name_ru": "",
@@ -184,12 +211,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "886429649",
-      "name_lat": "IDEAL DOGS GIV DRAGON FRUIT (NBT)",
-      "name_ru": "",
-      "breed": "СОБАКА",
+      "id": "412366289",
+      "name_lat": "IDUSHCHIE ZA SOLNTSEM ERNI",
+      "name_ru": "ИДУЩИЕ ЗА СОЛНЦЕМ ЭРНИ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -202,39 +229,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "60859547",
-      "name_lat": "IDEAL DOGS GIV PATTAYA DIVA",
-      "name_ru": "",
-      "breed": "МАЙОРКСКИЙ МАСТИФ",
-      "breed_en": "MAJORCA MASTIFF",
-      "total_shows": 9,
+      "id": "100006516",
+      "name_lat": "IDILLIYA IZ ZVEZDNOGO GRAFSTVA",
+      "name_ru": "ИДИЛЛИЯ ИЗ ЗВЕЗДНОГО ГРАФСТВА",
+      "breed": "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "73002948",
-      "name_lat": "IDZUNA- DUKH LISY",
+      "id": "54784724",
+      "name_lat": "IDILLIYA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1940946358",
+      "name_lat": "IDZUNA-DUKH LISY",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "100006516",
-      "name_lat": "IDILLIYA IZ ZVEZDNOGO GRAFSTVA",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "71169679",
-      "name_lat": "IDEAL DOGS GIV HUNGRY TO WIN",
-      "name_ru": "",
-      "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
-      "breed_en": "SPANISH WATER DOG",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -292,15 +310,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1278613722",
-      "name_lat": "IDILLIYA",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "227861450",
       "name_lat": "IDAY GESTIYA AYSA",
       "name_ru": "",
@@ -319,11 +328,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1459708958",
+      "name_lat": "IDEN BASKUT AJTEKIN",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "414695361",
       "name_lat": "IDZUMI",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "53567899",
+      "name_lat": "IDEL BERN BIK MATHUR",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "BERNESE MOUNTAIN DOG",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -337,12 +364,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "204237698",
+      "id": "1565740225",
       "name_lat": "IDEAL DOGS GIV ENDLESS BLOSSOM",
       "name_ru": "",
-      "breed": "МАЙОРКСКИЙ МАСТИФ",
+      "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО)",
       "breed_en": "MAJORCA MASTIFF",
-      "total_shows": 7,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1310711705",
+      "name_lat": "IDEAL DOGS GIV H'QUEEN OF SPADES",
+      "name_ru": "",
+      "breed": "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
+      "breed_en": "SPANISH WATER DOG",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -355,21 +391,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1346887904",
-      "name_lat": "IDEAL DOGS GIV H`QUEEN OF SPADES",
-      "name_ru": "",
-      "breed": "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
-      "breed_en": "SPANISH WATER DOG",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "466049180",
       "name_lat": "IDEAL DOGS GIV GALAXY BERRY",
       "name_ru": "",
       "breed": "МАЙОРКСКИЙ МАСТИФ (КА ДЕ БО)",
       "breed_en": "MAJORCA MASTIFF",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -379,6 +406,15 @@
       "breed": "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
       "breed_en": "SPANISH WATER DOG",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "437023832",
+      "name_lat": "IDRIL SVETLAYA ZARYA IZ BELYKH GYAUROV",
+      "name_ru": "ИДРИЛЬ СВЕТЛАЯ ЗАРЯ ИЗ БЕЛЫХ ГЯУРОВ",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "IRISH WOLFHOUND",
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -397,6 +433,15 @@
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1475096312",
+      "name_lat": "IDEAL DOGS GIV WINNIE POOH",
+      "name_ru": "",
+      "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО)",
+      "breed_en": "MAJORCA MASTIFF",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -454,30 +499,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "412366289",
-      "name_lat": "IDUSHCHIE ZA SOLNTSEM ERNI",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "53567899",
-      "name_lat": "IDEL BERN BIK MATHUR",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "BERNESE MOUNTAIN DOG",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1423236787",
+      "id": "1757393239",
       "name_lat": "IDEL IZ KAZANSKOGO HANSTVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE MEDIUM BLACK, WHITE, BROWN",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1169404538",
+      "name_lat": "IDEAL DOGS GIV YOUNGSTER GANGSTER",
+      "name_ru": "",
+      "breed": "МАЙОРКСКИЙ МАСТИФ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -508,6 +543,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "519120578",
+      "name_lat": "I DORO IZ DOMA ELIV'S",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "CAIRN TERRIER",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "46893651",
       "name_lat": "IDEAL DOGS GIV RAMSES THESAURUS",
       "name_ru": "",
@@ -526,12 +570,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "471137199",
-      "name_lat": "IDEAL DOGS GIV WINNIE POOH",
+      "id": "230975205",
+      "name_lat": "IDEYA II IZ GRADA KATERINY",
       "name_ru": "",
-      "breed": "МАЙОРКСКИЙ МАСТИФ",
-      "breed_en": "MAJORCA MASTIFF",
-      "total_shows": 8,
+      "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -541,15 +585,6 @@
       "breed": "МАЙОРКСКИЙ МАСТИФ",
       "breed_en": "MAJORCA MASTIFF",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "230975205",
-      "name_lat": "IDEYA II IZ GRADA KATERINY",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
-      "breed_en": "SCHNAUZER P-S",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -567,7 +602,7 @@
       "name_ru": "",
       "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО)",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -634,21 +669,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1459708958",
-      "name_lat": "IDEN BASKUT AJTEKIN",
+      "id": "44431145",
+      "name_lat": "IDEAL FRIEND FOR A PERSON",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "678782016",
-      "name_lat": "IDILLIYA",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -670,19 +696,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1145048192",
+      "id": "57126705",
       "name_lat": "IDALGO S KRYMSKOY ZEMLI DIANY",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1241048309",
+      "id": "1215553160",
       "name_lat": "IDEAL",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -724,21 +750,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "563792315",
+      "id": "562349471",
       "name_lat": "IDEA FIX IZ KAZANSKOGO HANSTVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "44431145",
-      "name_lat": "IDEAL FRIEND FOR A PERSON",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -748,15 +765,6 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "BERNESE MOUNTAIN DOG",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "437023832",
-      "name_lat": "IDRIL SVETLAYA ZARYA IZ BELYKH GYAUROV",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -775,6 +783,15 @@
       "breed": "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
       "breed_en": "SPANISH WATER DOG",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1298131951",
+      "name_lat": "IDEAL DOGS GIV KIMBERLI QUEEN",
+      "name_ru": "",
+      "breed": "МАЙОРКСКИЙ МАСТИФ (КА ДЕ БО)",
+      "breed_en": "MAJORCA MASTIFF",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -832,15 +849,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1409896692",
-      "name_lat": "IDEAL DOGS GIV KIMBERLI QUEEN",
-      "name_ru": "",
-      "breed": "МАЙОРКСКИЙ МАСТИФ",
-      "breed_en": "MAJORCA MASTIFF",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "153297757",
       "name_lat": "IDEAL DOGS GIV GELIOS FORCE",
       "name_ru": "",
@@ -850,21 +858,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "64746692",
+      "name_lat": "IDEAL ANTONIO BANDERAS",
+      "name_ru": "ИДЕАЛ АНТОНИО БАНДЕРАС",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "257711190",
       "name_lat": "IDEAL OF DEVOTION PLAYBOY PERFECT",
       "name_ru": "",
       "breed": "БИВЕР",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "64746692",
-      "name_lat": "IDEAL ANTONIO BANDERAS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -886,19 +894,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "11993368",
+      "id": "1369184807",
       "name_lat": "IDEA FIX",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "596203400",
+      "id": "1865179949",
       "name_lat": "IDYLL SUMMER LARKY ONLINE",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -958,10 +966,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1136682544",
+      "id": "1233707269",
       "name_lat": "IDEA FIXE MEETING FLASH",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -976,12 +984,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "348337497",
+      "id": "1500725668",
       "name_lat": "IDALGO GORODSKOY PIZHON",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "16801512",
+      "name_lat": "IDZANAMI S OSTROVA UTRENNEY ZARI",
+      "name_ru": "ИДЗАНАМИ С ОСТРОВА УТРЕННЕЙ ЗАРИ",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -994,10 +1011,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "584067533",
+      "id": "1154518433",
       "name_lat": "IDEA FIX IZ VOROZHEI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1012,10 +1029,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "16801512",
-      "name_lat": "IDZANAMI S OSTROVA UTRENNEY ZARI",
+      "id": "14244998",
+      "name_lat": "IDEAL BOY IZ DOMA DEFRANSH",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1006577394",
+      "name_lat": "IDEL DE RADA",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1039,39 +1064,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1006577394",
-      "name_lat": "IDEL DE RADA",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1488348196",
+      "id": "799507268",
       "name_lat": "IDEAL DOGS GIV MR PERFECT",
       "name_ru": "",
-      "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО)",
+      "breed": "ЛЕОНБЕРГЕР МАЙОРСКИЙ МАСТИФ (КА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "347557264",
+      "id": "1539509174",
       "name_lat": "IDOL DE LORDSHIP’S",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР Окрас чёрный",
+      "breed": "ЦВЕРГШНАУЦЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "173964536",
+      "id": "1617360902",
       "name_lat": "IDVERD KATE CHELENTANO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "921474504",
+      "name_lat": "IDEL BERN BIKE",
+      "name_ru": "",
+      "breed": "BERNESE MOUNTAIN DOG",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1129,12 +1153,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1225617301",
+      "name_lat": "IDEAL MAGIYA USPEKHA",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "391648445",
       "name_lat": "IDZH ZERI KAMARIIA",
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1147,11 +1180,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "550004277",
+      "name_lat": "IDALGO",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "637303544",
       "name_lat": "IDOL VOM DIEMEL",
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1203359192",
+      "name_lat": "IDEA FIX OT SEROGO KARDINALA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1165,10 +1215,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1735177795",
+      "id": "1823969175",
       "name_lat": "IDEYA FIX",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1192,10 +1242,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "194159177",
+      "id": "1541528788",
       "name_lat": "IDEL VENTO SAMARA",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1237,6 +1287,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "63779142",
+      "name_lat": "IDEL LUIZA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "684325918",
       "name_lat": "IDEAL DOGS GIV EMPERATIZ SOPHY",
       "name_ru": "",
@@ -1246,28 +1305,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1225617301",
-      "name_lat": "IDEAL MAGIYA USPEKHA",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "480751732",
       "name_lat": "IDEAL PRINCE DA GAMA ANNARITA",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1424113690",
-      "name_lat": "IDALGO",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1318,20 +1359,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "63779142",
-      "name_lat": "IDEL LUIZA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1726919694",
       "name_lat": "IDEN",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА / AUSTRALIAN",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1049436230",
+      "name_lat": "IDEAL",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1435,19 +1475,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "697665349",
+      "id": "1898583186",
       "name_lat": "IDEALIST",
       "name_ru": "",
-      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER ШНАУЦЕР ЧЁРНЫЙ /",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "149541513",
+      "id": "1279597717",
       "name_lat": "IDALGO",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1498,15 +1538,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "240244776",
-      "name_lat": "IDALGO",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1308025304",
       "name_lat": "IDEL BERN AISHA",
       "name_ru": "",
@@ -1534,19 +1565,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1337689847",
-      "name_lat": "IDEL LUIZA",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1070142244",
+      "id": "138896802",
       "name_lat": "IDALGO BENO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1579,19 +1601,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "550004277",
-      "name_lat": "IDALGO",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "446332446",
+      "id": "136116157",
       "name_lat": "IDILIYA IZ BELOGO JARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1660,6 +1673,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1489775303",
+      "name_lat": "IDGAR OLIVER KROMVEL",
+      "name_ru": "ИДГАР ОЛИВЕР КРОМВЕЛЬ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "AMERICAN COCKER SPANIEL",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1726359755",
       "name_lat": "IDGIN HO VASILYEV OSTROV",
       "name_ru": "",
@@ -1678,6 +1700,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "227152942",
+      "name_lat": "IDEAL FANTASTIK ALMAZ SOLYARIS",
+      "name_ru": "ИДЕАЛ ФАНТАСТИК АЛМАЗ СОЛЯРИС",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1187031019",
+      "name_lat": "IDEL",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "898389206",
       "name_lat": "IDALGO RADUZHNYJ STIL",
       "name_ru": "",
@@ -1692,15 +1731,6 @@
       "name_ru": "",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "ALASKAN MALAMUTE",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1489775303",
-      "name_lat": "IDGAR OLIVER KROMVEL",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "AMERICAN COCKER SPANIEL",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1741,20 +1771,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "227152942",
-      "name_lat": "IDEAL FANTASTIK ALMAZ SOLYARIS",
+      "id": "1916705561",
+      "name_lat": "IDEAL DOGS GIV GIZMO SALVUS",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
+      "breed": "ЛЕОНБЕРГЕР МАЙОРСКИЙ МАСТИФ (КА ДЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1102089138",
-      "name_lat": "IDEAL DOGS GIV GIZMO SALVUS",
+      "id": "1797432041",
+      "name_lat": "IDOMENEUS YARKIJ",
       "name_ru": "",
-      "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО)",
-      "breed_en": "",
+      "breed": "BERNESE MOUNTAIN DOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1966,10 +1995,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1202908442",
+      "id": "768208945",
       "name_lat": "IDZHI IZ SMOLENSKOI KREPOSTI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2006,15 +2035,6 @@
       "name_lat": "IDAINARU ZENNO-",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "14244998",
-      "name_lat": "IDEAL BOY IZ DOMA DEFRANSH",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

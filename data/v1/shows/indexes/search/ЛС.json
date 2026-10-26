@@ -1,17 +1,8 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЛС",
-  "count": 40,
+  "count": 39,
   "dogs": [
-    {
-      "id": "98812879",
-      "name_lat": "ЛСА ГЛОБАЛ ГАБИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 34,
-      "competition_dog_id": null
-    },
     {
       "id": "1093089586",
       "name_lat": "ЛСА МАКСИМУС",
@@ -36,7 +27,15 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 5,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "830699781",
+      "name_lat": "ЛСА ОТХЕР СИДЕ",
+      "name_ru": "ЛСА ОТХЕР СИДЕ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -78,28 +77,27 @@
     {
       "id": "1374889132",
       "name_lat": "ЛСА  АБСОЛЮТЕ  ЛЕГЕНД",
-      "name_ru": "",
+      "name_ru": "ЛСА  АБСОЛЮТЕ  ЛЕГЕНД",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "1994193871",
       "name_lat": "ЛСА ОЗЗИ ФОР ТАН-РО",
-      "name_ru": "",
+      "name_ru": "ЛСА ОЗЗИ ФОР ТАН-РО",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "644084630",
-      "name_lat": "ЛСА ОТХЕР СИДЕ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
+      "id": "636102650",
+      "name_lat": "ЛСА ОКЕАН ОФ ЭМОТИОНС",
+      "name_ru": "ЛСА ОКЕАН ОФ ЭМОТИОНС",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -184,30 +182,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1591686611",
-      "name_lat": "ЛСА АТЛАНТИК СТАР",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "293884371",
       "name_lat": "ЛСА АНДРОМЕДА",
       "name_ru": "",
       "breed": "АКИТА АМЕРИКАНСКАЯ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1383500691",
-      "name_lat": "ЛСА ОКЕАН ОФ ЭМОТИОНС",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -231,7 +211,7 @@
     {
       "id": "858763221",
       "name_lat": "ЛСА СТАР ШОУ",
-      "name_ru": "",
+      "name_ru": "ЛСА СТАР ШОУ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -247,20 +227,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1664889092",
-      "name_lat": "ЛСА ГОЛДЕН ЛЕГЕНД",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "215730679",
       "name_lat": "ЛСА АБСОЛЮТ ЛЕГЕНД",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103122907",
+      "name_lat": "ЛСА АЛВАЮС ИН ЮОУК ХЕАРТ",
+      "name_ru": "ЛСА АЛВАЮС ИН ЮОУК ХЕАРТ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -292,20 +271,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "1011756077",
+      "name_lat": "ЛСА СУНДАНСУР",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1523618904",
+      "name_lat": "ЛСА СУНДАНСУР",
+      "name_ru": "",
+      "breed": "АКИТА /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "312626643",
+      "name_lat": "ЛСА АНДРОМЕДА",
+      "name_ru": "",
+      "breed": "AMERICAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1149993064",
       "name_lat": "ЛСА НАЛА",
       "name_ru": "",
       "breed": "АКИТА / AMERICAN",
       "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1800690227",
-      "name_lat": "ЛСА АНГЕЛ РИСИНГ СТАР",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -337,10 +331,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "656178038",
+      "id": "67986035",
       "name_lat": "ЛС ВАРТ ИМПЕРБУЛЬ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -348,15 +342,6 @@
     {
       "id": "1411110239",
       "name_lat": "ЛСА ОНЕ АНД ОНЛИ ГРИЗЗЛИ АТТАСК",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "103122907",
-      "name_lat": "ЛСА АЛВАЮС ИН ЮОУК ХЕАРТ",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",

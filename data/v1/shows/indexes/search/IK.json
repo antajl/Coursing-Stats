@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "IK",
-  "count": 56,
+  "count": 68,
   "dogs": [
     {
       "id": "759264588",
@@ -10,6 +10,24 @@
       "breed": "ВЕЛЬШ ТЕРЬЕР",
       "breed_en": "WELSH TERRIER",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "951930857",
+      "name_lat": "I-KARA AIDAKHAR",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1940678336",
+      "name_lat": "I-KANT",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -22,12 +40,48 @@
       "competition_dog_id": null
     },
     {
+      "id": "422215564",
+      "name_lat": "I-KANT",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
+      "breed_en": "GERMAN WIRE-HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1417943456",
+      "name_lat": "I-KUPER BEKASLEN",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
+      "breed_en": "ENTLEBUCH CATTLE DOG",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1894347424",
       "name_lat": "IKILIAN'S CHAMPION LEAGUE",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "892154059",
+      "name_lat": "IKIROJA ARCE DEOS S MYSA HERSONES",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1888736129",
+      "name_lat": "I KNOW WHO I`M CARCASSONNE TOLUGO",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -89,8 +143,16 @@
       "name_lat": "IKEBANA OLD GREYGUN",
       "name_ru": "",
       "breed": "ВОЛЧЬЯ СОБАКА",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1494290248",
+      "name_lat": "I-KARA EL ENISH",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -103,10 +165,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1659550673",
+      "id": "1604239954",
       "name_lat": "IKE VON DER PFLAUMBACHSTRA SSE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -139,6 +201,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1259285221",
+      "name_lat": "IKAR DZHABO DZHO",
+      "name_ru": "ИКАР ДЖАБО ДЖО",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "494531407",
       "name_lat": "IKONA REMIZ MAJOVE BOHEMIA",
       "name_ru": "",
@@ -148,10 +219,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1994492788",
+      "id": "1952936210",
       "name_lat": "IKS FAKTOR IZ KURGAN GRADA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -211,10 +282,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1290442715",
+      "id": "381092300",
       "name_lat": "IKE VON DER PFLAUMBACHSTRASSE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -229,10 +300,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "412352445",
+      "id": "1039157607",
+      "name_lat": "I-KANT",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "924870033",
       "name_lat": "IKAR S DOLINY BELYKH KAMNEY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -247,12 +327,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1657678652",
+      "name_lat": "IKI-TEK IZ ALEKSANDROVOI SLOBODY",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "570223859",
       "name_lat": "IKERU NEKKY",
       "name_ru": "",
       "breed": "БОРДЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "935218316",
+      "name_lat": "I KNOW WHO I’M CARCASSON NE TOLUGO",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1294933957",
+      "name_lat": "IKER BRAVO VISTA LEAL",
+      "name_ru": "ИКЕР БРАВО ВИСТА ЛЕАЛ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -274,21 +380,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1259285221",
-      "name_lat": "IKAR DZHABO DZHO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1927027775",
-      "name_lat": "IKEMEN- KLASSNYY PAREN",
+      "id": "1142512397",
+      "name_lat": "IKEMEN-KLASSNYY PAREN",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1300755997",
+      "name_lat": "I KNOW WHO I’M CARCASSONNE TOLUGO",
+      "name_ru": "",
+      "breed": "AUSTRALIAN SHEPHERD",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -319,21 +425,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "624229236",
+      "id": "294706849",
       "name_lat": "IKEBANA S BOSFORA VOSTOCHNOGO",
       "name_ru": "",
-      "breed": "Русский черный терьер /",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "892154059",
-      "name_lat": "IKIROJA ARCE DEOS S MYSA HERSONES",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -352,6 +449,15 @@
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1359359856",
+      "name_lat": "IKAR FRIEDRICH FLATER",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -409,15 +515,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1294933957",
-      "name_lat": "IKER BRAVO VISTA LEAL",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1149314108",
       "name_lat": "IKAMOTO CRIMEAN KHAN",
       "name_ru": "",
@@ -427,12 +524,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "587852048",
-      "name_lat": "IKAR FRIEDRICH FLATER",
+      "id": "22871983",
+      "name_lat": "I & KI MIDWAY BULLY KAMAZZ",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1576533836",
+      "name_lat": "I-KANT",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ Ж-Ш",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -445,10 +551,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "876583305",
+      "id": "165975626",
       "name_lat": "IKAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -463,20 +569,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1657678652",
-      "name_lat": "IKI-TEK IZ ALEKSANDROVOI SLOBODY",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1060411245",
       "name_lat": "IKS IKS EL IZ POMESTIYA GRAFA ORLOVA",
       "name_ru": "",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "924460148",
+      "name_lat": "IKONA STILYA OT SIBIRSKOGO MEDVEDJA",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -490,10 +595,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1082138316",
+      "id": "1706225624",
       "name_lat": "IKARO DE DOGALMAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

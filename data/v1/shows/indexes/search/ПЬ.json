@@ -1,15 +1,23 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ПЬ",
-  "count": 45,
+  "count": 47,
   "dogs": [
     {
       "id": "670547103",
       "name_lat": "ПЬЕР ДЕ РОНСАР",
-      "name_ru": "",
+      "name_ru": "ПЬЕР ДЕ РОНСАР",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1589547633",
+      "name_lat": "ПЬЕР ДЕ РОНСАР ИЗ ЗИМНИХ ГРЕЗ",
+      "name_ru": "ПЬЕР ДЕ РОНСАР ИЗ ЗИМНИХ ГРЕЗ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -22,28 +30,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "302305463",
-      "name_lat": "ПЬЕР ДЕ РОНСАР ИЗ ЗИМНИХ ГРЕЗ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ (Бел.Черн.Корич.)",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1357379376",
       "name_lat": "ПЬЕР ЭЖЕН ДЕ ДА ФАМИЛИЯ ВАРИНАРФИНИ",
-      "name_ru": "",
+      "name_ru": "ПЬЕР ЭЖЕН ДЕ ДА ФАМИЛИЯ ВАРИНАРФИНИ",
       "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "185740778",
+      "id": "177828086",
       "name_lat": "ПЬЕР ПАБЛЕС АСКВИТ ДЕ БУФФОН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙДОГ ОКРАС ЧЁРНЫЙ, МРАМОРНЫЙ , ПЛАЩЕВОЙ",
+      "name_ru": "ПЬЕР ПАБЛЕС АСКВИТ ДЕ БУФФОН",
+      "breed": "НЕМЕЦКИЙДОГ ОКРАС ЧЕРНЫЙ, МРАМОРНЫЙ , ПЛАЩЕВОЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -51,7 +50,7 @@
     {
       "id": "135774209",
       "name_lat": "ПЬЕТРО РИНАЛЬДИ",
-      "name_ru": "",
+      "name_ru": "ПЬЕТРО РИНАЛЬДИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -67,9 +66,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "201106122",
+      "name_lat": "ПЬЮР ИНСПЕРАТИОН ОФ СИЛЬВЕР ВЭЙ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "902318151",
       "name_lat": "ПЬЮР ЛАВ ЭКЗАМПЛ",
-      "name_ru": "",
+      "name_ru": "ПЬЮР ЛАВ ЭКЗАМПЛ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
@@ -85,12 +92,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "356488383",
+      "id": "1502156931",
       "name_lat": "ПЬЕР РОНСАР ИЗ БЕЛЫХ ГЯУРОВ",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ ИРЛАНДСКИЙ ИРЛАНДСКИЙ",
+      "name_ru": "ПЬЕР РОНСАР ИЗ БЕЛЫХ ГЯУРОВ",
+      "breed": "ШИ ТЦУ ИРЛАНДСКИЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -132,7 +139,7 @@
     {
       "id": "55348145",
       "name_lat": "ПЬЕР ПАРИС ИЗ ЕНИСЕЙСКОЙ ГУБЕРНИИ",
-      "name_ru": "",
+      "name_ru": "ПЬЕР ПАРИС ИЗ ЕНИСЕЙСКОЙ ГУБЕРНИИ",
       "breed": "вест хайленд уайт терьер",
       "breed_en": "",
       "total_shows": 2,
@@ -184,6 +191,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1931107787",
+      "name_lat": "ПЬЕР ПАППИ ЛАВ",
+      "name_ru": "ПЬЕР ПАППИ ЛАВ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "429087608",
       "name_lat": "ПЬЮРЕ КЛОУД СЕКРЕТ ЕССЕНСЕ",
       "name_ru": "",
@@ -211,6 +226,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1586682706",
+      "name_lat": "ПЬЮРЕ КЛОУД СУПЕРНАТЮРАЛ",
+      "name_ru": "",
+      "breed": "САМОЕД /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1614420401",
       "name_lat": "ПЬЮРЕ КЛОУД ЮДЖИН ПОЛАР ЛАЙТС",
       "name_ru": "",
@@ -220,30 +243,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1156344490",
+      "id": "1545176127",
       "name_lat": "ПЬЕР КАРДЕН",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "599431092",
+      "id": "1464151265",
       "name_lat": "ПЬЕР ШОУ СТЭНС",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "201106122",
-      "name_lat": "ПЬЮР ИНСПЕРАТИОН ОФ СИЛЬВЕР ВЭЙ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -256,11 +270,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1572547786",
+      "id": "180292334",
       "name_lat": "ПЬЕР-АЛЕКСО",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1412280694",
+      "name_lat": "ПЬЕРО",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -274,19 +296,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "147298172",
-      "name_lat": "ПЬЕРО ВЕЛИКОЛЕПНЫЙ",
+      "id": "559076597",
+      "name_lat": "ПЬЮР ЛАВ ШАРЛОТ БАЙ ВЕГИ БАЛИНТО",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ –",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1931107787",
-      "name_lat": "ПЬЕР ПАППИ ЛАВ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "id": "147298172",
+      "name_lat": "ПЬЕРО ВЕЛИКОЛЕПНЫЙ",
+      "name_ru": "ПЬЕРО ВЕЛИКОЛЕПНЫЙ",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ –",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -337,28 +359,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1366405857",
+      "id": "901184572",
       "name_lat": "ПЬЕРА-ПАОЛА",
       "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР /",
+      "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1214930357",
+      "id": "578061640",
       "name_lat": "ПЬЮРЕ КЛОУД ПРИНЦ ЧАРМИНГ",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1767073219",
+      "id": "1847323306",
       "name_lat": "ПЬЮЭ ЛАВ АЛЕКСА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -395,15 +417,6 @@
       "name_lat": "ПЬЕР ЗАЩИТНИК ИМПЕРИИ",
       "name_ru": "",
       "breed": "КОРСО / ITALIAN CANE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "559076597",
-      "name_lat": "ПЬЮР ЛАВ ШАРЛОТ БАЙ ВЕГИ БАЛИНТО",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

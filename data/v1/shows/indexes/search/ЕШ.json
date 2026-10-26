@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЕШ",
-  "count": 27,
+  "count": 28,
   "dogs": [
     {
       "id": "761795657",
       "name_lat": "ЕШКА ОТ ШАРЛЬ ДЕ ВАЛУА",
-      "name_ru": "",
+      "name_ru": "ЕШКА ОТ ШАРЛЬ ДЕ ВАЛУА",
       "breed": "ЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН)",
       "breed_en": "",
       "total_shows": 7,
@@ -15,7 +15,7 @@
     {
       "id": "1969253289",
       "name_lat": "ЕШЛИ ЭКСТЕРИОР ЛЕДИ ИН БЛЭК",
-      "name_ru": "",
+      "name_ru": "ЕШЛИ ЭКСТЕРИОР ЛЕДИ ИН БЛЭК",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -31,19 +31,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1131687047",
+      "id": "1543850674",
       "name_lat": "ЕШИЖАМСА ДЖЕММА ДЕШИН",
-      "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "name_ru": "ЕШИЖАМСА ДЖЕММА ДЕШИН",
+      "breed": "ЧУНЦИН",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "322271201",
+      "id": "1099521410",
       "name_lat": "ЕШКА ФОМ ВЕНЦЕЛЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЕШКА ФОМ ВЕНЦЕЛЬ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -51,10 +51,10 @@
     {
       "id": "1489157352",
       "name_lat": "ЕШИМАКИ ШИН ИЗ ТУЛЬСКОГО АРСЕНАЛА",
-      "name_ru": "",
+      "name_ru": "ЕШИМАКИ ШИН ИЗ ТУЛЬСКОГО АРСЕНАЛА",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -69,25 +69,16 @@
     {
       "id": "1228084930",
       "name_lat": "ЕШИ ШАРХАН БАЙКАЛ СТОРИ",
-      "name_ru": "",
+      "name_ru": "ЕШИ ШАРХАН БАЙКАЛ СТОРИ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1784917509",
-      "name_lat": "ЕШКА С ЧЕРНОГО МОРЯ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "153550597",
       "name_lat": "ЕШКО ВИЯ БРАЙТ СТАР",
-      "name_ru": "",
+      "name_ru": "ЕШКО ВИЯ БРАЙТ СТАР",
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
       "total_shows": 4,
@@ -100,6 +91,24 @@
       "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР / PARSON RUSSELL",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "884223713",
+      "name_lat": "ЕШЕРА ИЗ НОВОЙ СИБИРИ",
+      "name_ru": "ЕШЕРА ИЗ НОВОЙ СИБИРИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "402236917",
+      "name_lat": "Е-ШИХАН",
+      "name_ru": "",
+      "breed": "ЗАПАДНО-СИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -139,39 +148,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1163607570",
-      "name_lat": "ЕША ХОЛЕННАЯ КРАСОТКА",
+      "id": "466827569",
+      "name_lat": "ЕШЬ-ДА-ПЕЙ",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "11934197",
-      "name_lat": "ЕШЕРА ИЗ НОВОЙ СИБИРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
+      "breed": "PARSON RUSSELL TERRIER",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1910861344",
-      "name_lat": "ЕШИЛХИСАР",
+      "id": "270401129",
+      "name_lat": "ЕША ХОЛЕННАЯ КРАСОТКА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "256902110",
-      "name_lat": "ЕШКА ИЗ НАКАСАТО",
+      "id": "895005550",
+      "name_lat": "ЕШИЛХИСАР",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -184,10 +183,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "188141926",
+      "id": "1867717482",
       "name_lat": "ЕШКА МИЛКИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -225,6 +224,14 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "874793241",
+      "name_lat": "ЕШЕРЕЛИ С ДАЧНОЙ",
+      "name_ru": "",
+      "breed": "МОПС",
       "total_shows": 1,
       "competition_dog_id": null
     },

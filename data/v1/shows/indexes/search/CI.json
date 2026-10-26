@@ -1,33 +1,42 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "CI",
-  "count": 197,
+  "count": 202,
   "dogs": [
     {
-      "id": "84069139",
+      "id": "1917958572",
+      "name_lat": "CILANTRO DE AKRA-LEUKA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1256269084",
       "name_lat": "CITY MOON SENSATION",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "178753982",
+      "id": "848504578",
       "name_lat": "CIMBERLY'S LOVE ON TOP",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
       "total_shows": 55,
       "competition_dog_id": null
     },
     {
-      "id": "189565333",
-      "name_lat": "CILANTRO DE AKRA-LEUKA",
+      "id": "641693909",
+      "name_lat": "CINQ ETOILES DOR OSKAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
-      "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
-      "total_shows": 26,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -40,19 +49,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "641693909",
-      "name_lat": "CINQ ETOILES DOR OSKAR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1297725849",
+      "id": "1377132645",
       "name_lat": "CIMBERLY'S LOVE LOCKDOWN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -67,12 +67,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "599153366",
-      "name_lat": "CICERON IZ NOVO- PEREDELKINO",
+      "id": "163253899",
+      "name_lat": "CICERON IZ NOVO-PEREDELKINO",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
-      "total_shows": 83,
+      "total_shows": 90,
+      "competition_dog_id": null
+    },
+    {
+      "id": "474626202",
+      "name_lat": "CINQ ETOILES DOR ISHTAR",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -85,10 +94,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1992953634",
+      "id": "1171301982",
       "name_lat": "CIMBERLY'S MAXIMALISTA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -100,6 +109,15 @@
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "469710498",
+      "name_lat": "CIPPO CIPOLINO IDILIYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -130,19 +148,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "474626202",
-      "name_lat": "CINQ ETOILES DOR ISHTAR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "619785482",
+      "id": "1706300132",
       "name_lat": "CITUS KWAM VENTUS EVA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -166,19 +175,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "469710498",
-      "name_lat": "CIPPO CIPOLINO IDILIYA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "221903533",
+      "id": "235829738",
       "name_lat": "CITA Z KRIVOLACKY",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -193,10 +193,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "612007835",
+      "id": "96835259",
       "name_lat": "CILIA IZ SOKOLINOGO GNEZDA",
       "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -216,7 +216,7 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -247,19 +247,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "18250095",
+      "id": "953295483",
       "name_lat": "CISORIA AD COR",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "328207418",
+      "id": "995781462",
       "name_lat": "CINZANO IZ TSARSKOSELSKOY USADBY",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -274,21 +274,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1191843876",
+      "name_lat": "CIRCEYA S TAINSTVENNOGO OSTROVA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 64,
+      "competition_dog_id": null
+    },
+    {
       "id": "370048106",
       "name_lat": "CINQ ETOILES DOR DAENERYS",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1256310520",
-      "name_lat": "CIRCEYA S TAINSTVENNOGO OSTROVA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 61,
       "competition_dog_id": null
     },
     {
@@ -319,6 +319,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "159908021",
+      "name_lat": "CIRCEYA IZ DOLINY SOLNCA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1001548589",
       "name_lat": "CINQ ÉTOILES D'OR JAKLIN",
       "name_ru": "",
@@ -337,21 +346,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1469117089",
+      "id": "72571486",
       "name_lat": "CITY MOON VIP SHOW",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1903393071",
+      "id": "1373358703",
       "name_lat": "CIANA GUIDING STAR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1407625812",
+      "name_lat": "C.I.B., C.I.E., C.E.C. HANKYBELGE",
+      "name_ru": "",
+      "breed": "БОГЕМСКИЙ ЖЕСТКОШЕРСТНЫЙ ЛЕГАВЫЙ ГРИФФОН",
+      "breed_en": "BOHEMIAN WIRE-HAIRED POINTING GRIFFON",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -373,19 +391,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "942204836",
+      "id": "1139834499",
+      "name_lat": "CINQ ETOILES DOR SIMBA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1175921337",
       "name_lat": "CITY MOON SELDOM SOBER",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1068838449",
+      "id": "258975436",
       "name_lat": "CINQ ETOILES DOR DJOKER",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -406,6 +433,15 @@
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1071216304",
+      "name_lat": "CIRCEYA GRIFF QUEEN IZ ZIMNIKH GRYEZ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -490,6 +526,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "562665728",
+      "name_lat": "CISALIA V ZOLOTOM OSHEYNIKE",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1223559659",
+      "name_lat": "CIB MULTICH BELLISSIBOLO ALBERTO",
+      "name_ru": "",
+      "breed": "БОЛОНЬЕЗЕ",
+      "breed_en": "BOLOGNESE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1120529176",
       "name_lat": "CIERIMON BAROKKI",
       "name_ru": "",
@@ -499,19 +553,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "159908021",
-      "name_lat": "CIRCEYA IZ DOLINY SOLNCA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "221384599",
+      "id": "605599830",
       "name_lat": "CIPPO CIPOLINO ELISSA LANISTER",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -532,15 +577,6 @@
       "breed": "АМЕРИКАНСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "562665728",
-      "name_lat": "CISALIA V ZOLOTOM OSHEYNIKE",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -589,21 +625,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "824504982",
+      "id": "1157345146",
       "name_lat": "CICARO NOSTRI AMORE",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "298975440",
+      "id": "144206749",
       "name_lat": "CITY MOON IMAGE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "730702659",
+      "name_lat": "CICERON BONIFATICH",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -612,7 +657,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -625,12 +670,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "389760150",
+      "id": "649544352",
       "name_lat": "CIRCE OF SUNNY GLEN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -652,12 +697,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "37625832",
+      "id": "1824847245",
       "name_lat": "CINZANO S BEREGOV NEVI",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1960482290",
+      "name_lat": "CIAN GRAN CRUZ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -670,6 +724,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1597954450",
+      "name_lat": "CINECITTA' SABINA GUZZANTI",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "839090498",
       "name_lat": "CINOBERIS TAURAPILIS",
       "name_ru": "",
@@ -679,19 +742,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1677160518",
+      "id": "1998409407",
       "name_lat": "CINQ ÉTOILES D'OR GABRIELLA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "451779723",
+      "id": "1179904291",
       "name_lat": "CITY MOON OVATION LENDIVA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -706,10 +769,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "500545848",
+      "id": "569547357",
       "name_lat": "CINQ ETOILES D'OR ARABIKA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -724,19 +787,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "730702659",
-      "name_lat": "CICERON BONIFATICH",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "209472969",
+      "id": "108263325",
       "name_lat": "CICCONE LOUISE IRISS DELUX",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 5,
       "competition_dog_id": null
@@ -760,64 +814,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "1898461844",
+      "id": "302201812",
+      "name_lat": "CIONA AGNESS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "736738113",
       "name_lat": "CICERON (MENDEZ) MEX FCI",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ /",
+      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1597954450",
-      "name_lat": "CINECITTA' SABINA GUZZANTI",
+      "id": "1266368565",
+      "name_lat": "C.I.B. MULTICH BELLISSIBOLO ALBERTO",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "БОЛОНЬЕЗЕ",
+      "breed_en": "BOLOGNESE",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "263599277",
+      "id": "497289953",
       "name_lat": "CINNAMON STRUDEL IZ KOROLEVSTVA STAFF",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1139834499",
-      "name_lat": "CINQ ETOILES DOR SIMBA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1701009416",
+      "id": "377943207",
       "name_lat": "CIPPOLINO IZ LESNOGO GORODKA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1960482290",
-      "name_lat": "CIAN GRAN CRUZ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1574725662",
+      "id": "1733322535",
       "name_lat": "CINNAMON BEAR MINGOAVE TEAM (FCI)",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -832,10 +876,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "303182381",
+      "id": "705629840",
       "name_lat": "CIANA NIMFA IZ MIFA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -913,10 +957,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1327876117",
+      "id": "1581577421",
       "name_lat": "CIRCEYA SNOW LILI",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -944,15 +988,6 @@
       "name_lat": "CIPPO CIPOLINO UILLA",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "991164855",
-      "name_lat": "CIONA AGNESS",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1066,19 +1101,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "745525639",
-      "name_lat": "CINCINELLA IZ ADAMOVA YABLOKA",
+      "id": "882012281",
+      "name_lat": "CIMBALARIA IZ BELOY STAI",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "POODLE MINIATURE TOY BLACK, WHITE, BROWN, SILVER, APRICOT, RED FAWN ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1357551320",
-      "name_lat": "CIMBALARIA IZ BELOY STAI",
+      "id": "1300944454",
+      "name_lat": "CINCINELLA IZ ADAMOVA YABLOKA",
       "name_ru": "",
-      "breed": "POODLE MINIATURE TOY BLACK, WHITE, BROWN, SILVER, APRICOT, RED FAWN ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1102,10 +1137,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "627325928",
-      "name_lat": "CIRTSEYA LIHTENSHTEIN- OST",
+      "id": "1842442993",
+      "name_lat": "CIRTSEYA LIHTENSHTEIN-OST",
       "name_ru": "",
-      "breed": "Немецкая овчарка стандартная",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -1183,17 +1218,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "752535526",
+      "id": "9356098",
       "name_lat": "CIRCEYA S TAINSTVENNOG O OSTROVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1295831399",
-      "name_lat": "CICERON IZ NOVO- PEREDELKI NO",
+      "id": "1225138623",
+      "name_lat": "CICERON IZ NOVO-PEREDELKI NO",
       "name_ru": "",
       "breed": "DACHSHUND ZWERG",
       "breed_en": "",
@@ -1210,10 +1245,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1374606977",
+      "id": "123329580",
       "name_lat": "CIRCEYA FOREST",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1309,20 +1344,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "124827556",
-      "name_lat": "CIRCEYA GRIFF QUEEN IZ ZIMNIKH GRYEZ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1427467671",
       "name_lat": "CITADEL IZ DINASTII CHEMPIONOV",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1626946942",
+      "name_lat": "CIPRO IZ GYURGEVA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -1372,15 +1406,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1626946942",
-      "name_lat": "CIPRO IZ GYURGEVA",
-      "name_ru": "",
-      "breed": "немецкая овчарка",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "768533356",
       "name_lat": "CITADEL OF VICTORY ZLATAGOR",
       "name_ru": "",
@@ -1399,10 +1424,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "236845220",
+      "id": "1495350818",
       "name_lat": "CIRCEYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1453,6 +1478,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "973693589",
+      "name_lat": "C.I.B FI CH SE CH EE CH LT CH FIJW-12 SOLTAR'S IRON LADY",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "breed_en": "ITALIAN SIGHTHOUND",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1502414778",
       "name_lat": "CIARA IS HEAD OF CLAN",
       "name_ru": "",
@@ -1462,19 +1496,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "664373363",
+      "id": "1176464311",
       "name_lat": "CITADEL VOM MAIR HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1740154956",
-      "name_lat": "CIMBA LIHTENSHTEIN- OST",
+      "id": "1663616837",
+      "name_lat": "CIMBA LIHTENSHTEIN-OST",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1525,10 +1559,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1310643040",
+      "id": "65251567",
       "name_lat": "CITUS KWAM VENTUS YUDAR SHAH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1579,10 +1613,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "840508732",
+      "id": "1090900368",
       "name_lat": "CIRCEYA",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1615,19 +1649,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1782449357",
+      "id": "582386841",
       "name_lat": "CINIA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1287763151",
+      "id": "1976706413",
       "name_lat": "CINIA",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1651,10 +1685,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "27125321",
+      "id": "323808468",
       "name_lat": "CICI COLLECTION ALTO'Z HAUS MASTERPIECEPOM LG(TOY)",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1674,6 +1708,14 @@
       "name_ru": "",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "467145909",
+      "name_lat": "CINNAMON GIRL BREDBERY",
+      "name_ru": "",
+      "breed": "СПРИНГЕР СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1705,10 +1747,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "988765267",
+      "id": "1763781080",
       "name_lat": "CIARA MIO ANGELO",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

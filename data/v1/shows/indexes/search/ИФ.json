@@ -1,12 +1,21 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ИФ",
-  "count": 16,
+  "count": 17,
   "dogs": [
+    {
+      "id": "361661905",
+      "name_lat": "ИФ Ю ВОННА БИ ВИЗ МИ ДЭ ФЛАММЕС ДЕ МАРС",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
     {
       "id": "1390576051",
       "name_lat": "ИФКА НЕУГОМОННАЯ",
-      "name_ru": "",
+      "name_ru": "ИФКА НЕУГОМОННАЯ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -22,10 +31,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "595684726",
+      "id": "593654488",
       "name_lat": "ИФРИТ ИСТ СТАР",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ИФРИТ ИСТ СТАР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -33,19 +42,10 @@
     {
       "id": "1752318548",
       "name_lat": "ИФРИТ ИЗ НОВОЙ ИМПЕРИИ",
-      "name_ru": "",
+      "name_ru": "ИФРИТ ИЗ НОВОЙ ИМПЕРИИ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "361661905",
-      "name_lat": "ИФ Ю ВОННА БИ ВИЗ МИ ДЭ ФЛАММЕС ДЕ МАРС",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -60,7 +60,7 @@
     {
       "id": "868119714",
       "name_lat": "ИФ СЭН ЛОРАН ИЗ УЛЫБЧИВОЙ ДИНАСТИИ",
-      "name_ru": "",
+      "name_ru": "ИФ СЭН ЛОРАН ИЗ УЛЫБЧИВОЙ ДИНАСТИИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -85,21 +85,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1246933815",
+      "id": "898564651",
       "name_lat": "ИФА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1406737893",
-      "name_lat": "ИФЛАНД ПОМ СТЕЙДЖ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -112,12 +103,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1894964071",
+      "name_lat": "И ФО ФЭЙРИ ТЭЙЛ FLAMY",
+      "name_ru": "",
+      "breed": "RETRIEVER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1738768569",
       "name_lat": "ИФАСС",
       "name_ru": "",
       "breed": "МОПС БЕЖЕВЫЙ / PUG FAWN",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1603943439",
+      "name_lat": "ИФ СКАЙ КУЛД ТОЛК",
+      "name_ru": "ИФ СКАЙ КУЛД ТОЛК",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {

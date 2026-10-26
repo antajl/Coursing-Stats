@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "УК",
-  "count": 29,
+  "count": 35,
   "dogs": [
     {
       "id": "1306535621",
@@ -18,13 +18,13 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1165448389",
       "name_lat": "УКТАЙ ХРАНИТЕЛЬ РОДА",
-      "name_ru": "",
+      "name_ru": "УКТАЙ ХРАНИТЕЛЬ РОДА",
       "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
@@ -33,7 +33,7 @@
     {
       "id": "65038893",
       "name_lat": "УКОКА ПРИНЦЕССА АЛТАЯ ИЗ ДОМА РЕЙЧЕЛ",
-      "name_ru": "",
+      "name_ru": "УКОКА ПРИНЦЕССА АЛТАЯ ИЗ ДОМА РЕЙЧЕЛ",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -42,7 +42,7 @@
     {
       "id": "142144711",
       "name_lat": "УКРОТИТЕЛЬ СЕРДЕЦ",
-      "name_ru": "",
+      "name_ru": "УКРОТИТЕЛЬ СЕРДЕЦ",
       "breed": "РУССКАЯ САЛОННАЯ СОБАКА ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
@@ -51,10 +51,28 @@
     {
       "id": "634738975",
       "name_lat": "УКРАШЕНИЕ ДЛЯ МЕНЯ ИЗ ПРОВАНСА С ЛЮБОВЬЮ",
-      "name_ru": "",
+      "name_ru": "УКРАШЕНИЕ ДЛЯ МЕНЯ ИЗ ПРОВАНСА С ЛЮБОВЬЮ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1066700668",
+      "name_lat": "у КОДЕНЗО ГЕРДА",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "533037356",
+      "name_lat": "у КОСТБАР ШАТЦ ЧЕРРИ ЛЕДИ",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -63,7 +81,7 @@
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -78,7 +96,7 @@
     {
       "id": "1068374769",
       "name_lat": "УКРОТИТЕЛЬНИЦА СТИХИЙ МОНИФА",
-      "name_ru": "",
+      "name_ru": "УКРОТИТЕЛЬНИЦА СТИХИЙ МОНИФА",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 4,
@@ -139,10 +157,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "853897498",
+      "id": "199070461",
+      "name_lat": "у КАБРАЛЬ АЙКЕН НАЦУКО",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1000768404",
       "name_lat": "УКРАШЕНИЕ",
       "name_ru": "",
-      "breed": "ТАКСА ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -211,6 +238,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "959750785",
+      "name_lat": "у КАСПЕР",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "60847760",
       "name_lat": "УКОСО КАТСУ",
       "name_ru": "",
@@ -238,10 +274,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810067081",
+      "id": "1023955941",
       "name_lat": "УКИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -260,6 +296,24 @@
       "name_lat": "УКИ БЛЕК ТЕДДИ ОТ ДЖУЛИ СМАЙЛ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) / GERMAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1269734250",
+      "name_lat": "у КУРОКАВА ТАКАХИРО",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "934459966",
+      "name_lat": "у КАЙТ КЛАССИК РОМАНТИК",
+      "name_ru": "",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

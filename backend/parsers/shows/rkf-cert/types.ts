@@ -1,3 +1,5 @@
+import type { MainRingRow } from './main-ring'
+
 export interface ParsedCertDog {
   breed: string
   judge: string
@@ -17,6 +19,7 @@ export interface ParseCertificatePdfResult {
   page_count: number
   raw_token_count: number
   has_main_ring_sheet: boolean
+  main_ring?: MainRingRow[]
 }
 
 export type PdfItem = { str: string; x: number; y: number; page: number }

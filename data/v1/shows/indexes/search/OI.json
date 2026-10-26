@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OI",
-  "count": 7,
+  "count": 8,
   "dogs": [
     {
       "id": "786093778",
@@ -22,10 +22,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "154107382",
+      "id": "1299956152",
       "name_lat": "OILA IZ MISHKINOGO DOMA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -53,6 +53,15 @@
       "name_lat": "OIDA",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1321597233",
+      "name_lat": "O IZ SOLNECH NOGO",
+      "name_ru": "",
+      "breed": "LABRADOR",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

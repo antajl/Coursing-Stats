@@ -1,24 +1,33 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "VS",
-  "count": 24,
+  "count": 32,
   "dogs": [
     {
       "id": "357271092",
       "name_lat": "VSESLAVA-SLAVNAYA",
-      "name_ru": "",
+      "name_ru": "ВСЕСЛАВА СЛАВНАЯ",
       "breed": "СОБАКА",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
+      "id": "233802850",
+      "name_lat": "VSYA TAKAYA TAINSTVENNAYA FIBI BUFFE",
+      "name_ru": "ВСЯ ТАКАЯ ТАИНСТВЕННАЯ ФИБИ БУФФЕ",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
       "id": "535445945",
       "name_lat": "VSESLAVA IZ STRANY TSVETOV",
-      "name_ru": "",
+      "name_ru": "ВСЕСЛАВА ИЗ СТРАНЫ ЦВЕТОВ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -40,10 +49,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "422635727",
+      "id": "665011064",
       "name_lat": "VSESLAVA EDDA DOMENIKA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 13,
       "competition_dog_id": null
@@ -69,44 +78,44 @@
     {
       "id": "1241861901",
       "name_lat": "VSESLAVA IZ VYUGI TENEY",
-      "name_ru": "",
+      "name_ru": "ВСЕСЛАВА ИЗ ВЬЮГИ ТЕНЕЙ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "233802850",
-      "name_lat": "VSYA TAKAYA TAINSTVENNAYA FIBI BUFFE",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "53016544",
+      "id": "1103662993",
       "name_lat": "VSHNYA CHERESHNYA IZ SOZVEZDYA LORRI",
       "name_ru": "",
-      "breed": "СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "232431455",
+      "id": "1589007748",
       "name_lat": "VSEM PRIVET OT FOREST GIRTS",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1004449949",
+      "id": "1307612260",
+      "name_lat": "V SHOKOLA DE IZ IMPERAT ORSKOY",
+      "name_ru": "",
+      "breed": "МАЛАМУ НСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1406365737",
       "name_lat": "VSEMI LUBIMAYA BOGINYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ / POODLE STANDARD BROWN, BLACK, WHITE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ / POODLE STANDARD BROWN, BLACK, WHITE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -121,12 +130,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "436515337",
+      "name_lat": "V'STILE OLEANY MILLENIUM",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1820674922",
       "name_lat": "VSEMOGUSCHIY",
       "name_ru": "",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1457042327",
+      "name_lat": "V-SAKURA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -145,6 +171,15 @@
       "breed": "КАВАЛЕР КИНГ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "957360776",
+      "name_lat": "V SHOKOLADE APEL'SIN",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -184,10 +219,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "241307995",
+      "id": "1548588178",
       "name_lat": "VSEMIL DE PUSHE",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ /",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -197,6 +232,24 @@
       "name_lat": "VSELENNAYA KRASOTY VIRMA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "298329169",
+      "name_lat": "V'SATU RISING STAR ALKADAR",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "685401104",
+      "name_lat": "V SHOKOLA DE IZ IMPERII",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -216,6 +269,23 @@
       "name_ru": "",
       "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "952498938",
+      "name_lat": "V'SAINT LAURENT",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1849810632",
+      "name_lat": "VSESILNY VOEVODA",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

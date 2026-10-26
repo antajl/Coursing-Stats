@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ИБ",
-  "count": 68,
+  "count": 66,
   "dogs": [
     {
       "id": "332905172",
@@ -15,7 +15,7 @@
     {
       "id": "561522618",
       "name_lat": "ИБИС ГЛОРИУС КНАЙТ",
-      "name_ru": "",
+      "name_ru": "ИБИС ГЛОРИУС КНАЙТ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 28,
@@ -24,7 +24,7 @@
     {
       "id": "1788049683",
       "name_lat": "ИБЕРИЯ ГРАНТЕ ГЛАФИРА",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ ГЛАФИРА",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 8,
@@ -33,7 +33,7 @@
     {
       "id": "11631941",
       "name_lat": "ИБИСА КАЛА САНТ ВИСЕНТ",
-      "name_ru": "",
+      "name_ru": "ИБИСА КАЛА САНТ ВИСЕНТ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 14,
@@ -42,7 +42,7 @@
     {
       "id": "800694850",
       "name_lat": "ИБЕРИЯ ГРАНТЕ БАРСЕЛОНА",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ БАРСЕЛОНА",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 8,
@@ -51,7 +51,7 @@
     {
       "id": "204942704",
       "name_lat": "ИБЕРИЯ ГРАНТЕ БЕРЕТТА",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ БЕРЕТТА",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 7,
@@ -60,10 +60,18 @@
     {
       "id": "1358722830",
       "name_lat": "ИБАРА ДЗЕСИН",
-      "name_ru": "",
+      "name_ru": "ИБАРА ДЗЕСИН",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 23,
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116003342",
+      "name_lat": "ИБЕРИЯ ГРАНТЕ КАПИТОЛИНА",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ КАПИТОЛИНА",
+      "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -76,18 +84,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "116003342",
-      "name_lat": "ИБЕРИЯ ГРАНТЕ КАПИТОЛИНА",
-      "name_ru": "",
-      "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1854781885",
       "name_lat": "ИБЕРИЯ ГРАНТЕ КЛАВДИЯ ( )",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ КЛАВДИЯ ( )",
       "breed": "ВОДЯНАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
@@ -96,7 +95,7 @@
     {
       "id": "1282574725",
       "name_lat": "ИБЕРИЯ ГРАНТЕ ИРБИС",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ ИРБИС",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -105,7 +104,7 @@
     {
       "id": "430120271",
       "name_lat": "ИБЕРИЯ ГРАНТЕ БАРСЕЛОНА (К/Х)",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ БАРСЕЛОНА (К/Х)",
       "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -114,7 +113,7 @@
     {
       "id": "642839583",
       "name_lat": "ИБЕРИЯ ГРАНТЕ ИНДИГО",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ ИНДИГО",
       "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
       "breed_en": "",
       "total_shows": 7,
@@ -123,7 +122,7 @@
     {
       "id": "269000282",
       "name_lat": "ИБЕРИЯ ГРАНТЕ ДАЙРИН",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ ДАЙРИН",
       "breed": "ИРЛАНДСКИЙ ИСПАНСКАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -139,9 +138,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "4260540",
+      "name_lat": "ИБРИС ШАРМ КАРСПЕР",
+      "name_ru": "ИБРИС ШАРМ КАРСПЕР",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "253851826",
       "name_lat": "ИБЕРИЯ ГРАНТЕ АПОЛЛОН",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ АПОЛЛОН",
       "breed": "ГОЛДЕН ИСПАНСКАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -168,17 +176,17 @@
     {
       "id": "1740277073",
       "name_lat": "ИБЕРИЯ ГРАНТЕ КИРА",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ КИРА",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "246201232",
+      "id": "613198692",
       "name_lat": "ИБЕРИС",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -193,19 +201,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "131610632",
-      "name_lat": "ИБРИС ШАРМ КАРСПЕР",
+      "id": "1612655449",
+      "name_lat": "ИБЕРИЯ ГРАНТЕ НАЙТ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 13,
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1767746119",
+      "id": "229752070",
       "name_lat": "ИБЕРИС ИЗ ЦВЕТОЧНЫХ ЭЛЬФОВ",
-      "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР /",
+      "name_ru": "ИБЕРИС ИЗ ЦВЕТОЧНЫХ ЭЛЬФОВ",
+      "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -213,7 +220,7 @@
     {
       "id": "1012035075",
       "name_lat": "ИБЕРИКА ИНМАСТ ДРИМ",
-      "name_ru": "",
+      "name_ru": "ИБЕРИКА ИНМАСТ ДРИМ",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 6,
@@ -222,7 +229,7 @@
     {
       "id": "1054500367",
       "name_lat": "ИБРИСТАЙЛ МЕРСЕДЕС СТАРЛАЙТ",
-      "name_ru": "",
+      "name_ru": "ИБРИСТАЙЛ МЕРСЕДЕС СТАРЛАЙТ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 5,
@@ -231,7 +238,7 @@
     {
       "id": "1278152644",
       "name_lat": "Ибриз Де Юна",
-      "name_ru": "",
+      "name_ru": "Ибриз Де Юна",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 8,
@@ -240,26 +247,26 @@
     {
       "id": "675244901",
       "name_lat": "ИБОРИ КАСАДАКИ",
-      "name_ru": "",
+      "name_ru": "ИБОРИ КАСАДАКИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1846322486",
+      "id": "888361519",
       "name_lat": "ИБИРИ ЛАКШЕРИ САНРАЙЗ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "ИБИРИ ЛАКШЕРИ САНРАЙЗ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "241735138",
+      "id": "423033315",
       "name_lat": "ИБИ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -285,10 +292,10 @@
     {
       "id": "109353152",
       "name_lat": "ИБИКА ЗОЛОТАЯ ЛУНА",
-      "name_ru": "",
+      "name_ru": "ИБИКА ЗОЛОТАЯ ЛУНА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -301,21 +308,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "989227615",
-      "name_lat": "ИБРАГИМ ПАША",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
+      "id": "328618728",
+      "name_lat": "Иби Блак Стрим",
+      "name_ru": "Иби Блак Стрим",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "857932038",
-      "name_lat": "Иби Блак Стрим",
+      "id": "1302646842",
+      "name_lat": "Иберика",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -323,15 +330,6 @@
       "name_lat": "ИБН МУФАСА",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА - МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "691215977",
-      "name_lat": "Иберика",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -427,28 +425,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1305006018",
-      "name_lat": "ИБРИС ШАРМ КАСПЕР",
+      "id": "276830168",
+      "name_lat": "ИБЕРИЯ ГРАНТЕ ПЛАТОН N\\B",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "10885703",
       "name_lat": "ИБЕРИЯ ГРАНТЕ БЕРЕТТА (К/Х)",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ БЕРЕТТА (К/Х)",
       "breed": "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "144248043",
-      "name_lat": "ИБЕРИЯ ГРАНТЕ ПЛАТОН N\\B",
-      "name_ru": "",
-      "breed": "ВОДЯНАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -456,17 +444,17 @@
     {
       "id": "1307627141",
       "name_lat": "ИБЕРИЯ ГРАНТЕ ОНИКС",
-      "name_ru": "",
+      "name_ru": "ИБЕРИЯ ГРАНТЕ ОНИКС",
       "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1220770149",
+      "id": "631459576",
       "name_lat": "ИБИС",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -517,19 +505,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1960983675",
-      "name_lat": "Иберика",
+      "id": "947461861",
+      "name_lat": "И-БУМЕР",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "139414174",
+      "id": "488720722",
       "name_lat": "ИБЕРИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ / GERMAN",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ / GERMAN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -544,28 +532,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "222213084",
+      "name_lat": "ИБЕРИС ЯРОСЛАВ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1434632155",
+      "name_lat": "И БОГИНЯ ДОЧЬ АКТИМЕЛЬКИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1157250370",
       "name_lat": "ИБИС ОТ ТРЕНИРОВАНЫХ ПСОВ",
       "name_ru": "",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "999570883",
-      "name_lat": "Иберт Сенж Граф Феранж",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1904291248",
-      "name_lat": "ИБИС С КРЫМСКОЙ ЗЕМЛИ ДИАНЫ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -580,10 +568,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1752220764",
+      "id": "1669856387",
       "name_lat": "ИБАРД ДЖОКЕР",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -593,15 +581,6 @@
       "name_lat": "ИБИЦА ИЗ ОСТАФЬЕВО",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "512058008",
-      "name_lat": "ИБЕРИС ЯРОСЛАВ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

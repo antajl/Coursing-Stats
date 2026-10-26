@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "WU",
-  "count": 37,
+  "count": 41,
   "dogs": [
     {
       "id": "719675668",
@@ -54,7 +54,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "AMERICAN HAIRLESS TERRIER",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -238,11 +238,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "652280450",
+      "id": "1698206339",
       "name_lat": "WUNDERKIND",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "117340902",
+      "name_lat": "WUNDER HUND DRIVE",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -292,10 +300,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "69998431",
+      "name_lat": "WUNDER XUND ALEKSANDRIA",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "290640869",
       "name_lat": "WUNDER",
       "name_ru": "",
       "breed": "ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "562600191",
+      "name_lat": "W'UMKA ZVEZDA SEVERA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -319,6 +344,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "261758390",
+      "name_lat": "WULF JAGDUNIVERSAL",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "827087019",
       "name_lat": "WUNDERSTERN CLIFF",
       "name_ru": "",
@@ -328,10 +361,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1762701853",
+      "id": "1588741270",
       "name_lat": "WUNDER VOLF ILINDA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

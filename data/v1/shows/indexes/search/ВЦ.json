@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ВЦ",
-  "count": 1,
+  "count": 2,
   "dogs": [
     {
       "id": "312646203",
@@ -10,6 +10,15 @@
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "407084557",
+      "name_lat": "В-ЦУКИХИКО ЯМАТО",
+      "name_ru": "",
+      "breed": "акита",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЗУ",
-  "count": 181,
+  "count": 186,
   "dogs": [
     {
       "id": "1977247517",
       "name_lat": "ЗУМ СЕРДЦЕ ОКЕАНА",
-      "name_ru": "",
+      "name_ru": "ЗУМ СЕРДЦЕ ОКЕАНА",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
@@ -15,7 +15,7 @@
     {
       "id": "1354889900",
       "name_lat": "ЗУРБАГАН НОРД ВИНД",
-      "name_ru": "",
+      "name_ru": "ЗУРБАГАН НОРД ВИНД",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 10,
@@ -24,26 +24,26 @@
     {
       "id": "1751359086",
       "name_lat": "ЗУР БАШИ ЧОПАР",
-      "name_ru": "",
+      "name_ru": "ЗУР БАШИ ЧОПАР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "751369999",
+      "id": "157029455",
       "name_lat": "ЗУРИМ ИЗ КОРОЛЕВСТВА СТАФФ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1694020959",
+      "id": "897304767",
       "name_lat": "ЗУРИМ ИЗ КОРОЛЕВСТВА СТАФ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -51,7 +51,7 @@
     {
       "id": "1558892963",
       "name_lat": "Зурбаган из Казанского Ханства",
-      "name_ru": "",
+      "name_ru": "Зурбаган из Казанского Ханства",
       "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -69,16 +69,16 @@
     {
       "id": "475722413",
       "name_lat": "ЗУНИТА СТАЙЛ",
-      "name_ru": "",
+      "name_ru": "ЗУНИТА СТАЙЛ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
       "id": "902984213",
       "name_lat": "ЗУРБАГАН ИЗ ПАЛЕВЫХ БУЛЬДОГОВ",
-      "name_ru": "",
+      "name_ru": "ЗУРБАГАН ИЗ ПАЛЕВЫХ БУЛЬДОГОВ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 13,
@@ -87,7 +87,7 @@
     {
       "id": "69760983",
       "name_lat": "ЗУРИОНА СПАЙК",
-      "name_ru": "",
+      "name_ru": "ЗУРИОНА СПАЙК",
       "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ СОБАКА",
       "breed_en": "PYRENEAN MOUNTAIN DOG",
       "total_shows": 3,
@@ -112,6 +112,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1500290556",
+      "name_lat": "ЗУБРИК",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1212029285",
       "name_lat": "ЗУККИНА",
       "name_ru": "",
@@ -130,9 +139,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1034490039",
+      "name_lat": "ЗУЗА ФЕЯ",
+      "name_ru": "",
+      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "864505523",
       "name_lat": "ЗУЛУС ИЗ ХОРОВОДА ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ЗУЛУС ИЗ ХОРОВОДА ЗВЕЗД",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -141,7 +158,7 @@
     {
       "id": "545060878",
       "name_lat": "ЗУАРА С БОЛЬШОГО САМПСОНИЯ",
-      "name_ru": "",
+      "name_ru": "ЗУАРА С БОЛЬШОГО САМПСОНИЯ",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
@@ -154,6 +171,15 @@
       "breed": "ГРЕЙХАУНД",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1109274202",
+      "name_lat": "ЗУЗА ФЕЯ",
+      "name_ru": "",
+      "breed": "ЭПАНЬОЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -231,7 +257,7 @@
     {
       "id": "1791466405",
       "name_lat": "ЗУ ШИРАКИ ИЗ ГОРОДА ЧЕРНОГО ЛИСА",
-      "name_ru": "",
+      "name_ru": "ЗУ ШИРАКИ ИЗ ГОРОДА ЧЕРНОГО ЛИСА",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 12,
@@ -240,64 +266,37 @@
     {
       "id": "1049400977",
       "name_lat": "ЗУР БАШИ ЧАНГУЛ",
-      "name_ru": "",
+      "name_ru": "ЗУР БАШИ ЧАНГУЛ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1292978466",
+      "id": "1314616414",
       "name_lat": "ЗУМБА / ZUMBA ИЗ ЗАЗЕРКАЛЬЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "203430345",
-      "name_lat": "ЗУР БАШИ УММЕГУЛЬ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "323746316",
       "name_lat": "ЗУМА ПЕРЛ СНОУ ШТОРМ",
-      "name_ru": "",
+      "name_ru": "ЗУМА ПЕРЛ СНОУ ШТОРМ",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "37807475",
-      "name_lat": "ЗУРАБ С ДОНСКОЙ СТАИ",
-      "name_ru": "",
-      "breed": "БОРДЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1896133564",
-      "name_lat": "ЗУРИОНА СЧАСТЛИВЧИК",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД ПИРЕНЕЙСКАЯ",
+      "id": "203430345",
+      "name_lat": "ЗУР БАШИ УММЕГУЛЬ",
+      "name_ru": "ЗУР БАШИ УММЕГУЛЬ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "942286164",
-      "name_lat": "ЗУРИОНА ФАНТАСТИКА",
-      "name_ru": "",
-      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -306,7 +305,25 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1896133564",
+      "name_lat": "ЗУРИОНА СЧАСТЛИВЧИК",
+      "name_ru": "ЗУРИОНА СЧАСТЛИВЧИК",
+      "breed": "НЬЮФАУНДЛЕНД ПИРЕНЕЙСКАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "942286164",
+      "name_lat": "ЗУРИОНА ФАНТАСТИКА",
+      "name_ru": "ЗУРИОНА ФАНТАСТИКА",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -357,7 +374,7 @@
     {
       "id": "1126790922",
       "name_lat": "ЗУЗЗУСТАЙЛ ЭЛАНА",
-      "name_ru": "",
+      "name_ru": "ЗУЗЗУСТАЙЛ ЭЛАНА",
       "breed": "ПОЛЬСКАЯ ПОДГАЛЯНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -373,48 +390,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "540129320",
+      "id": "244147149",
       "name_lat": "ЗУЛИЯ ИЗ ПРИЛИЧНОЙ СЕМЬИ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "name_ru": "ЗУЛИЯ ИЗ ПРИЛИЧНОЙ СЕМЬИ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1383286473",
-      "name_lat": "ЗУМБА ИЗ ДОМИКА МАГРАТ",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР / NORWICH",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "119241324",
       "name_lat": "ЗУМРАД ИЗ ХОРОВОДА ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ЗУМРАД ИЗ ХОРОВОДА ЗВЕЗД",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "585153620",
+      "id": "1016785665",
       "name_lat": "ЗУЛЕЙКА ИСПАХАН",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ЗУЛЕЙКА ИСПАХАН",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1223256088",
+      "id": "1240149976",
       "name_lat": "ЗУЗЗУСТАЙЛ ДАНИ",
-      "name_ru": "",
-      "breed": "ПОЛЬСКАЯ ПОДГАЛЯНСКАЯ ОВЧАРКА",
+      "name_ru": "ЗУЗЗУСТАЙЛ ДАНИ",
+      "breed": "ПОДГАЛЯНСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -465,7 +473,7 @@
     {
       "id": "1189134534",
       "name_lat": "ЗУРИОНА ГЛАФИРА",
-      "name_ru": "",
+      "name_ru": "ЗУРИОНА ГЛАФИРА",
       "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -490,15 +498,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1903307610",
-      "name_lat": "ЗУРИОНА ФАЛЬКОН",
-      "name_ru": "",
-      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ СОБАКА",
-      "breed_en": "PYRENEAN MOUNTAIN DOG",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1634335446",
       "name_lat": "ЗУККИНА",
       "name_ru": "",
@@ -508,10 +507,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "836309517",
+      "id": "716121633",
       "name_lat": "ЗУРБАГАН ИЗ ГАВАНИ ВЕТРОВ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -528,7 +527,7 @@
     {
       "id": "1888975035",
       "name_lat": "ЗУМБА С БОЛЬШОЙ БУКВЫ ХОЛЛИ БЬЮТИ ФАМИЛЬНЫЙ",
-      "name_ru": "",
+      "name_ru": "ЗУМБА С БОЛЬШОЙ БУКВЫ ХОЛЛИ БЬЮТИ ФАМИЛЬНЫЙ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -537,10 +536,18 @@
     {
       "id": "251633454",
       "name_lat": "ЗУМБА ФОН ШТЕФФИЛД",
-      "name_ru": "",
+      "name_ru": "ЗУМБА ФОН ШТЕФФИЛД",
       "breed": "НЕМЕЦКИЙ МИНИАТЮРНЫЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1141846356",
+      "name_lat": "ЗУММЕР",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -553,28 +560,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1772088975",
+      "id": "1023380158",
       "name_lat": "ЗУНА РАМИ СЛИП",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ /",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1084981965",
+      "id": "736360637",
       "name_lat": "ЗУМРАД ИЗ СОЗВЕЗДИЯ ЧЕРНОГО ПСА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "name_ru": "ЗУМРАД ИЗ СОЗВЕЗДИЯ ЧЕРНОГО ПСА",
+      "breed": "DOBERMANN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1928614524",
+      "id": "1881790755",
       "name_lat": "ЗУ-ЗУ МИРИ",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -609,7 +616,7 @@
     {
       "id": "1012124748",
       "name_lat": "ЗУМАНН С ПОКРОВСКОЙ СЛОБОДЫ",
-      "name_ru": "",
+      "name_ru": "ЗУМАНН С ПОКРОВСКОЙ СЛОБОДЫ",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 3,
@@ -620,6 +627,15 @@
       "name_lat": "ЗУИУМОТО ТАКЕХИКО",
       "name_ru": "",
       "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "822475526",
+      "name_lat": "ЗУРИОНА ЛАЙФ",
+      "name_ru": "ЗУРИОНА ЛАЙФ",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -652,19 +668,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "822475526",
-      "name_lat": "ЗУРИОНА ЛАЙФ",
-      "name_ru": "",
-      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1974377132",
+      "id": "1263103938",
       "name_lat": "ЗУМА АУС ШОГЕР ХОФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -681,8 +688,17 @@
     {
       "id": "1162888454",
       "name_lat": "ЗУМ-ЗУМ МАЙ ХАРТ",
-      "name_ru": "",
+      "name_ru": "ЗУМ-ЗУМ МАЙ ХАРТ",
       "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1269051721",
+      "name_lat": "ЗУМИКО ТАКАХАСИ КАТО",
+      "name_ru": "ЗУМИКО ТАКАХАСИ КАТО",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -690,7 +706,7 @@
     {
       "id": "771560553",
       "name_lat": "ЗУНА РЭМИ СЛИП",
-      "name_ru": "",
+      "name_ru": "ЗУНА РЭМИ СЛИП",
       "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -715,10 +731,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1519642299",
-      "name_lat": "ЗУРИОНА БЕЛАЯ СИРЕНЬ",
+      "id": "62911141",
+      "name_lat": "ЗУЛАН",
       "name_ru": "",
-      "breed": "ГОРНАЯ СОБАКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "668148850",
+      "name_lat": "ЗУРИОНА БЕЛАЯ СИРЕНЬ",
+      "name_ru": "ЗУРИОНА БЕЛАЯ СИРЕНЬ",
+      "breed": "ГОРНАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -780,7 +805,7 @@
     {
       "id": "1102161862",
       "name_lat": "ЗУРИОНА ЛАЙМА",
-      "name_ru": "",
+      "name_ru": "ЗУРИОНА ЛАЙМА",
       "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -798,7 +823,7 @@
     {
       "id": "475480552",
       "name_lat": "ЗУММЕР ХЕППИ ЧЕЙЗ",
-      "name_ru": "",
+      "name_ru": "ЗУММЕР ХЕППИ ЧЕЙЗ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 3,
@@ -814,10 +839,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1236497245",
+      "id": "381554832",
+      "name_lat": "ЗУРБАГАН С ВЕРШИН САЯН",
+      "name_ru": "ЗУРБАГАН С ВЕРШИН САЯН",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1303966464",
       "name_lat": "ЗУХРА",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -895,15 +929,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "381554832",
-      "name_lat": "ЗУРБАГАН С ВЕРШИН САЯН",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "604473820",
       "name_lat": "Зубен Эльгенуби из Мира Гармонии",
       "name_ru": "",
@@ -913,37 +938,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1698121361",
+      "id": "241477541",
       "name_lat": "ЗУММИ САНШАЙН ИЗ ДОМА ЛАНКАСТЕР",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЗУММИ САНШАЙН ИЗ ДОМА ЛАНКАСТЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1269051721",
-      "name_lat": "ЗУМИКО ТАКАХАСИ КАТО",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "453656238",
       "name_lat": "ЗУИЧО ФУДЖИЯМА КЕНША",
-      "name_ru": "",
+      "name_ru": "ЗУИЧО ФУДЖИЯМА КЕНША",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1843870662",
+      "id": "359658181",
       "name_lat": "ЗУМБА ФОМ МАИР ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЗУМБА ФОМ МАИР ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -951,7 +967,7 @@
     {
       "id": "1570875348",
       "name_lat": "ЗУММЕР РЕННЕ ИЗ УЛЫБЧИВОЙ ДИНАСТИИ",
-      "name_ru": "",
+      "name_ru": "ЗУММЕР РЕННЕ ИЗ УЛЫБЧИВОЙ ДИНАСТИИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -960,7 +976,7 @@
     {
       "id": "63439615",
       "name_lat": "ЗУЛЬФИРА РЕД ЧИН",
-      "name_ru": "",
+      "name_ru": "ЗУЛЬФИРА РЕД ЧИН",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -969,7 +985,7 @@
     {
       "id": "1856676290",
       "name_lat": "ЗУХРА ИЗ ГАРЕМА БЕЛЫХ ДИВ",
-      "name_ru": "",
+      "name_ru": "ЗУХРА ИЗ ГАРЕМА БЕЛЫХ ДИВ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -987,7 +1003,7 @@
     {
       "id": "1797982097",
       "name_lat": "ЗУМРАТ КУТУРУК",
-      "name_ru": "",
+      "name_ru": "ЗУМРАТ КУТУРУК",
       "breed": "СРЕДНЕАЗИАТСКАЯ ХОТОШО (БУРЯТСКАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -1003,37 +1019,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1109274202",
-      "name_lat": "ЗУЗА ФЕЯ",
+      "id": "1554899645",
+      "name_lat": "ЗУРБАГАН ИЗ СОЮЗА",
       "name_ru": "",
-      "breed": "ЭПАНЬОЛЬ",
-      "breed_en": "",
+      "breed": "ПТИ БРАБАНСОН",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1468895038",
-      "name_lat": "ЗУММА ФОМ ХАУС БЛИЗАРД",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1795521211",
+      "id": "889481876",
       "name_lat": "ЗУТТА ИМПЕРИЯ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "902680474",
+      "id": "819116317",
+      "name_lat": "ЗУММА ФОМ ХАУС БЛИЗАРД",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1779541611",
       "name_lat": "ЗУЗА ЛЕДИ",
       "name_ru": "",
-      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ /",
+      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1093,6 +1108,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1809801595",
+      "name_lat": "ЗУМА ИЗ СОЛНЕЧНОГО ДОМА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "353643773",
+      "name_lat": "ЗУРБАГАН НОРЛ ВИНД",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "216556926",
       "name_lat": "ЗУЗЗУСТАЙЛ ХАННИ",
       "name_ru": "",
@@ -1102,10 +1134,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "299808932",
+      "id": "1032309162",
       "name_lat": "ЗУРИАНА ФОМ ХАУС ВАСТАР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1138,28 +1170,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "270314135",
+      "id": "1014681456",
       "name_lat": "ЗУЛУС ВЕЛТЕН ФОН КРИСТИН ХОФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "203884648",
+      "id": "1641583117",
       "name_lat": "ЗУРИОНА СИМОНА",
-      "name_ru": "",
-      "breed": "ГОРНАЯ СОБАКА /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "353643773",
-      "name_lat": "ЗУРБАГАН НОРЛ ВИНД",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "name_ru": "ЗУРИОНА СИМОНА",
+      "breed": "ГОРНАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1228,15 +1251,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "62911141",
-      "name_lat": "ЗУЛАН",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1090655514",
       "name_lat": "ЗУЛМАТ",
       "name_ru": "",
@@ -1273,10 +1287,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "271477649",
+      "id": "190636588",
       "name_lat": "ЗУЛЬФИЯ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1327,10 +1341,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "36899657",
+      "id": "773316052",
       "name_lat": "ЗУМА",
       "name_ru": "",
-      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ /",
+      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1354,11 +1368,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1500290556",
-      "name_lat": "ЗУБРИК",
+      "id": "901305367",
+      "name_lat": "ЗУБЕРИ Ф. ВАЙСНЭХТЕ",
       "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "",
+      "breed": "ШНАУЦЕР П-С",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1433436337",
+      "name_lat": "ЗУРИОНА ОБЛАЧНЫЙ ОНИКС",
+      "name_ru": "",
+      "breed": "ПИРЕНЕЙСКАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1368,15 +1390,6 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "901305367",
-      "name_lat": "ЗУБЕРИ Ф. ВАЙСНЭХТЕ",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР П-С",
-      "breed_en": "SCHNAUZER P-S",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1471,11 +1484,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "65033584",
+      "name_lat": "ЗУРИОНА НАРНИЯ",
+      "name_ru": "",
+      "breed": "ГОРНАЯ СОБАКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "347282979",
       "name_lat": "Зуллард Виннер",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1418318586",
+      "name_lat": "ЗУРИОНА КОКО ДО ОРО",
+      "name_ru": "",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1525,10 +1554,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "201518785",
+      "id": "1114645758",
       "name_lat": "ЗУУМ ИН РИНГ II ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1620,6 +1649,14 @@
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1296172426",
+      "name_lat": "ЗУРАБ ДЛЯ МАЛИХАТ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },

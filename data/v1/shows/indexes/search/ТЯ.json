@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ТЯ",
-  "count": 31,
+  "count": 32,
   "dogs": [
     {
       "id": "252664024",
       "name_lat": "ТЯНЬ ШИ БАЛУ",
-      "name_ru": "",
+      "name_ru": "ТЯНЬ ШИ БАЛУ",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 17,
@@ -42,7 +42,7 @@
     {
       "id": "1351471581",
       "name_lat": "ТЯНЬ ШИ ШЕРВУД",
-      "name_ru": "",
+      "name_ru": "ТЯНЬ ШИ ШЕРВУД",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 8,
@@ -58,10 +58,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "464268321",
+      "id": "1973720183",
+      "name_lat": "ТЯНЬ ШИ МАРИСАБЕЛЬ",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1756309180",
       "name_lat": "ТЯГАЧ ИЗ СТАВРОПОЛЬСКОЙ ГУБЕРНИИ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -85,10 +94,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1160547811",
+      "id": "1953579986",
       "name_lat": "ТЯГАЧ ИЗ СТАВРОПОЛЬСК ОЙ ГУБЕРНИИ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -103,12 +112,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "151603945",
+      "id": "370116468",
       "name_lat": "ТЯРНАРИ ФОН ВИШЕНХОФФ",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "name_ru": "ТЯРНАРИ ФОН ВИШЕНХОФФ",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -123,7 +132,7 @@
     {
       "id": "1178262064",
       "name_lat": "ТЯНЬ ШИ ГАРРИ",
-      "name_ru": "",
+      "name_ru": "ТЯНЬ ШИ ГАРРИ",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 2,
@@ -132,7 +141,7 @@
     {
       "id": "1956893060",
       "name_lat": "ТЯИРО НО КИТСУНЕ НО О ИМЭЙ",
-      "name_ru": "",
+      "name_ru": "ТЯИРО НО КИТСУНЕ НО О ИМЭЙ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -166,19 +175,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "446489470",
+      "id": "882285689",
       "name_lat": "ТЯНЬ ШИ КЕНТАВР",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1576510383",
+      "id": "69952478",
       "name_lat": "ТЯРНАРИ ФОН ВИШЕНХ ОФФ",
       "name_ru": "",
-      "breed": "СТКОМ /",
+      "breed": "СТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -238,15 +247,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1973720183",
-      "name_lat": "ТЯНЬ ШИ МАРИСАБЕЛЬ",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1831045834",
       "name_lat": "ТЯНЬ ЛЕО",
       "name_ru": "",
@@ -256,12 +256,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "80562438",
+      "name_lat": "ТЯНЬ ШИ МАРТИН",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "58130395",
       "name_lat": "ТЯНЬ ШИ ФОРТУНА (К-Ш)",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {

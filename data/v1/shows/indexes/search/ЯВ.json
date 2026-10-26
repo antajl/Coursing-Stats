@@ -1,13 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЯВ",
-  "count": 80,
+  "count": 90,
   "dogs": [
     {
-      "id": "1534760014",
+      "id": "1638411499",
       "name_lat": "ЯВА СТАР СМАЙЛ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ЯВА СТАР СМАЙЛ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -15,7 +15,7 @@
     {
       "id": "371064273",
       "name_lat": "ЯВНЫЙ ЛИДЕР ОТ ЗОЛОТОГО ПРИБОЯ",
-      "name_ru": "",
+      "name_ru": "ЯВНЫЙ ЛИДЕР ОТ ЗОЛОТОГО ПРИБОЯ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 13,
@@ -24,7 +24,7 @@
     {
       "id": "766739420",
       "name_lat": "ЯВНЫЕ СНЫ ЩЕГОЛЬ",
-      "name_ru": "",
+      "name_ru": "ЯВНЫЕ СНЫ ЩЕГОЛЬ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 8,
@@ -33,10 +33,18 @@
     {
       "id": "170963606",
       "name_lat": "ЯВА ФОМ ХАУС ХЕЛЕН",
-      "name_ru": "",
+      "name_ru": "ЯВА ФОМ ХАУС ХЕЛЕН",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1524880542",
+      "name_lat": "ЯВА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -46,6 +54,15 @@
       "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1105328312",
+      "name_lat": "Я-ВЛАСТЕЛИН МИРА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -60,7 +77,7 @@
     {
       "id": "777616881",
       "name_lat": "ЯВНЫЕ СНЫ ЩАМИЗУ",
-      "name_ru": "",
+      "name_ru": "ЯВНЫЕ СНЫ ЩАМИЗУ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 3,
@@ -69,17 +86,17 @@
     {
       "id": "483322571",
       "name_lat": "ЯВНЫЕ СНЫ НЕЛЬСОН",
-      "name_ru": "",
+      "name_ru": "ЯВНЫЕ СНЫ НЕЛЬСОН",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1720323423",
+      "id": "477085864",
       "name_lat": "ЯВЕС РОШЕ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -105,19 +122,28 @@
     {
       "id": "1627792686",
       "name_lat": "ЯВРИК-БЛАНКУС",
-      "name_ru": "",
+      "name_ru": "ЯВРИК-БЛАНКУС",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1993916973",
       "name_lat": "ЯВИТА НАЙТЛИ КОЛОРИС",
-      "name_ru": "",
+      "name_ru": "ЯВИТА НАЙТЛИ КОЛОРИС",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1371552452",
+      "name_lat": "Я ВСЯ ИЗ СЕБЯ ИЗ ГОРОДА ТАКС",
+      "name_ru": "Я ВСЯ ИЗ СЕБЯ ИЗ ГОРОДА ТАКС",
+      "breed": "DACHSHUND MINIATURE",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -132,7 +158,7 @@
     {
       "id": "1052506117",
       "name_lat": "ЯВЕЛИЯ ДЖУЛЬЕТ ИЗ ДОМА СОБОЛЕВЫХ",
-      "name_ru": "",
+      "name_ru": "ЯВЕЛИЯ ДЖУЛЬЕТ ИЗ ДОМА СОБОЛЕВЫХ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
@@ -141,16 +167,32 @@
     {
       "id": "239163640",
       "name_lat": "ЯВНАЯ ФАВОРИТКА",
-      "name_ru": "",
+      "name_ru": "ЯВНАЯ ФАВОРИТКА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "646750918",
+      "name_lat": "ЯВНЫЙ ФАВОРИТ",
+      "name_ru": "ЯВНЫЙ ФАВОРИТ",
+      "breed": "СКОТЧ СТАФФОРДШИРСКИЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1988643742",
+      "name_lat": "ЯВА ЯВНАЯ КРАСОТА",
+      "name_ru": "ЯВА ЯВНАЯ КРАСОТА",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1644667617",
       "name_lat": "ЯВА ЕР ЛАВ ИЗ Э ЛАЙФ КОНСТАНТА ПРАЙМ",
-      "name_ru": "",
+      "name_ru": "ЯВА ЕР ЛАВ ИЗ Э ЛАЙФ КОНСТАНТА ПРАЙМ",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
       "total_shows": 6,
@@ -166,10 +208,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1861829351",
+      "id": "1552242619",
       "name_lat": "ЯВНЫЕ СНЫ МАРТА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -184,21 +226,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1611152496",
+      "id": "321385408",
       "name_lat": "ЯВАНИКА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "646750918",
-      "name_lat": "ЯВНЫЙ ФАВОРИТ",
+      "id": "1720528030",
+      "name_lat": "Я ВАША НА ВЕКИ",
       "name_ru": "",
-      "breed": "СКОТЧ СТАФФОРДШИРСКИЙ",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -211,37 +253,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1257694670",
+      "id": "810133193",
       "name_lat": "ЯВА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ КУРЦХААР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "49811711",
+      "id": "572739652",
+      "name_lat": "Ява Айс Эрроу",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273567982",
       "name_lat": "ЯВА ЛИКА СТАР",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1988643742",
-      "name_lat": "ЯВА ЯВНАЯ КРАСОТА",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "592350044",
+      "id": "973389817",
       "name_lat": "ЯВНЫЙ ЛИДЕР",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -346,6 +387,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "539664139",
+      "name_lat": "ЯВНАЯ ФАВОРИТКА ОТ ГАРРИ ПОТТЕРА",
+      "name_ru": "ЯВНАЯ ФАВОРИТКА ОТ ГАРРИ ПОТТЕРА",
+      "breed": "RUSSIAN TOY LONG-",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "956388058",
       "name_lat": "ЯВАРА",
       "name_ru": "",
@@ -364,9 +414,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "672498746",
+      "name_lat": "Я ВИКТОРИ ОЛЛ ОЛЛ БЛЭК ПЕРЛ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "517534144",
       "name_lat": "ЯВНЫЙ ФАВОРИТ ИЗ ГОРОДА ТАКС",
-      "name_ru": "",
+      "name_ru": "ЯВНЫЙ ФАВОРИТ ИЗ ГОРОДА ТАКС",
       "breed": "DACHSHUND MINIATURE",
       "breed_en": "",
       "total_shows": 6,
@@ -384,7 +443,7 @@
     {
       "id": "33300506",
       "name_lat": "ЯВА ЗОЛОТАЯ РЫБКА ИЗ ХРИЗО ФЕРИЗЕ",
-      "name_ru": "",
+      "name_ru": "ЯВА ЗОЛОТАЯ РЫБКА ИЗ ХРИЗО ФЕРИЗЕ",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -427,10 +486,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "539664139",
-      "name_lat": "ЯВНАЯ ФАВОРИТКА ОТ ГАРРИ ПОТТЕРА",
+      "id": "56761785",
+      "name_lat": "Я ВАШЕ СЧАСТЬЕ",
       "name_ru": "",
-      "breed": "RUSSIAN TOY LONG-",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -454,9 +513,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "876656966",
+      "name_lat": "ЯВНАЯ УГРОЗА ПАГА МОНГУН",
+      "name_ru": "",
+      "breed": "ТУВИНСКАЯ СОБАКА (ТЫВА ЫТ)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "558756739",
       "name_lat": "ЯВНАЯ КРАСОТА",
-      "name_ru": "",
+      "name_ru": "ЯВНАЯ КРАСОТА",
       "breed": "ЗЕННЕНХУНД БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -481,10 +548,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "214143477",
+      "id": "1435378649",
       "name_lat": "ЯВА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -535,10 +602,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "133695140",
+      "id": "1279030432",
       "name_lat": "ЯВА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -548,6 +615,15 @@
       "name_lat": "ЯВАР",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24723642",
+      "name_lat": "ЯВИЛАСЬ Я ПАНТЕРА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -571,19 +647,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1697776150",
+      "id": "135011983",
       "name_lat": "ЯВЕЛИНА ФУЕНТЭ ЕТЕРНИДЕД",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "148951489",
+      "id": "1098857116",
       "name_lat": "ЯВНЫЙ ЛИДЕР ТАН",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -602,15 +678,6 @@
       "name_lat": "ЯВАТА ФЛЭШ СИГНАЛ",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "24723642",
-      "name_lat": "ЯВИЛАСЬ Я ПАНТЕРА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -643,11 +710,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "7555952",
+      "id": "1795652677",
       "name_lat": "ЯВА С КРАСНОГО ЯРА",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "788997881",
+      "name_lat": "Я ВАГНЕРЛИХ ПЕПСИ КОЛА",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1020681862",
+      "name_lat": "ЯВАРАКАЙ ХАНАБИРА",
+      "name_ru": "",
+      "breed": "СИБА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -661,10 +745,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "189793349",
+      "id": "729974104",
       "name_lat": "ЯВИРА ИЗ САМАРЫ ГОРОДКА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -679,10 +763,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "180340423",
+      "id": "913198011",
       "name_lat": "ЯВНЫЕ СНЫ МАЛИНКА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

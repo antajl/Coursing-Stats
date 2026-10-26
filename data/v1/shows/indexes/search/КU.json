@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "КU",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1279966384",
+      "name_lat": "КURSKY TALISMAN MAYBAH",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1684311254",
+      "name_lat": "КUBANBULLI SAM",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

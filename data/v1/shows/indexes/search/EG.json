@@ -1,33 +1,42 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EG",
-  "count": 209,
+  "count": 212,
   "dogs": [
     {
-      "id": "1437421269",
+      "id": "1701895569",
       "name_lat": "EGLERIA MANNERS MAKETH MAN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "193594804",
+      "id": "657936080",
       "name_lat": "EGERMASTER REINA ROVENA II",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 33,
       "competition_dog_id": null
     },
     {
-      "id": "1235836048",
+      "id": "1943576950",
+      "name_lat": "EGOIST",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "42255374",
       "name_lat": "EGO VELICHESTVO USPEKH",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -45,7 +54,16 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
       "breed_en": "BULL TERRIER STANDART",
-      "total_shows": 60,
+      "total_shows": 68,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1685314279",
+      "name_lat": "EGOZA IZ PETERGOFA",
+      "name_ru": "ЕГОЗА ИЗ ПЕТЕРГОФА",
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -55,15 +73,6 @@
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "37783753",
-      "name_lat": "EGOIST",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -94,10 +103,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1425783952",
+      "id": "387993460",
       "name_lat": "EGERMASTER ROSOMAHA II",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -108,34 +117,25 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "BEAGLE",
-      "total_shows": 18,
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1644528710",
+      "name_lat": "EGO VINCERE MUNDUM STELLA NOMINE SOLIS",
+      "name_ru": "",
+      "breed": "БУРБУЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "1642141835",
       "name_lat": "EGOIST PLATINUM BOS LEDI DRAGON",
-      "name_ru": "",
+      "name_ru": "ЭГОИСТ ПЛАТИНУМ БОС ЛЕДИ ДРАГОН",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1685314279",
-      "name_lat": "EGOZA IZ PETERGOFA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1943576950",
-      "name_lat": "EGOIST",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -148,21 +148,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1899759441",
+      "id": "1536010389",
       "name_lat": "EGLERIA DIVENDIS",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1644528710",
-      "name_lat": "EGO VINCERE MUNDUM STELLA NOMINE SOLIS",
-      "name_ru": "",
-      "breed": "БУРБУЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -193,8 +184,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1348580997",
-      "name_lat": "EGOIST PLATINUM O-LA- LA",
+      "id": "1275584381",
+      "name_lat": "EGOIST PLATINUM O-LA-LA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
@@ -211,12 +202,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "964828849",
+      "id": "1212284741",
       "name_lat": "EGOIST PLATINUM QUADRILLE",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1850733177",
+      "name_lat": "EGORIYA TAO SERZH",
+      "name_ru": "ЕГОРИЯ ТАО СЕРЖ",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "473584186",
+      "name_lat": "EGOIST IZ GORODA TAKS",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -229,12 +237,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1057639401",
+      "id": "273671741",
       "name_lat": "EGOR'KA IZ DOMA LANKASTER",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -265,6 +273,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1062145408",
+      "name_lat": "EGER ZARYA AZOVA",
+      "name_ru": "ЕГЕРЬ ЗАРЯ АЗОВА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1049929811",
+      "name_lat": "EGIDA KAVKAZA YASHMA",
+      "name_ru": "ЕГИДА КАВКАЗА ЯШМА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "369937500",
       "name_lat": "EGOIST PLATINUM YUNIK KOKO MANOI",
       "name_ru": "",
@@ -274,10 +300,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "965037973",
+      "id": "98193793",
       "name_lat": "EGO VINCERE MUNDUM ROSSIYA VELIKAYA",
       "name_ru": "",
-      "breed": "БУРБУЛЬ ЮЖНОАФРИКАНСКИЙ",
+      "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1321518676",
+      "name_lat": "EGIDA KAVKAZA DEGRA-ZLATA",
+      "name_ru": "ЕГИДА КАВКАЗА ДЕГРА-ЗЛАТА",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -319,24 +354,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "12295492",
-      "name_lat": "EGIDA KAVKAZA DEGRA- ZLATA",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "512423172",
-      "name_lat": "EGOIST IZ GORODA TAKS",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "322698662",
       "name_lat": "EGLERIA ARTANIS",
       "name_ru": "",
@@ -364,10 +381,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "777345329",
+      "id": "1293446446",
       "name_lat": "EGOIST PLATINUM IZ DINASTII CHEMPIONOV",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -382,21 +399,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "652921533",
-      "name_lat": "EGNAR FOR KATARINA STOLTS",
+      "id": "303629896",
+      "name_lat": "EGERA IZ KURGAN GRADA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "612605275",
-      "name_lat": "EGERMASTER OLMEKA PLATA II",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -405,7 +412,25 @@
       "name_ru": "",
       "breed": "ФЛАНДРСКИЙ БУВЬЕ",
       "breed_en": "BOUVIER DES FLANDRES",
-      "total_shows": 5,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1463678581",
+      "name_lat": "EGNAR FOR KATARINA STOLTS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "151653783",
+      "name_lat": "EGERMASTER OLMEKA PLATA II",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -415,15 +440,6 @@
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1049929811",
-      "name_lat": "EGIDA KAVKAZA YASHMA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -472,15 +488,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "303629896",
-      "name_lat": "EGERA IZ KURGAN GRADA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "945958608",
       "name_lat": "EGOIST PLATINUM KAMILA ROBINZON",
       "name_ru": "",
@@ -490,12 +497,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1850733177",
-      "name_lat": "EGORIYA TAO SERZH",
+      "id": "42269818",
+      "name_lat": "EGERMASTER URANIO LEGENDARIO II",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -508,8 +515,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1533232516",
-      "name_lat": "EGOIST PLATINUM BABL- GAM-ROK",
+      "id": "1475559948",
+      "name_lat": "EGOIST PLATINUM BABL-GAM-ROK",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
@@ -526,19 +533,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "980568790",
-      "name_lat": "EGERMASTER URANIO LEGENDARIO II",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1548161077",
+      "id": "1711059796",
       "name_lat": "EGOZA IZ JUZHNOY LEGENDY",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ /",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -550,15 +548,6 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1447523209",
-      "name_lat": "EGOIST",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -625,12 +614,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1463903910",
-      "name_lat": "EGOIST IZ DINASTII CHEMPIONOV",
+      "id": "268720921",
+      "name_lat": "EGOIST PLATINUM REVOLYTSIYA X",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1429391398",
+      "name_lat": "EGO DOG’S I AM INCREDIBLE UNA",
+      "name_ru": "",
+      "breed": "ПУМИ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -639,7 +637,16 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
-      "total_shows": 16,
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1463903910",
+      "name_lat": "EGOIST IZ DINASTII CHEMPIONOV",
+      "name_ru": "ЭГОИСТ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -652,30 +659,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "268720921",
-      "name_lat": "EGOIST PLATINUM REVOLYTSIYA X",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1429391398",
-      "name_lat": "EGO DOG’S I AM INCREDIBLE UNA",
-      "name_ru": "",
-      "breed": "ПУМИ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "257803292",
       "name_lat": "EGER IZ SAGI O GARDARIKE",
-      "name_ru": "",
+      "name_ru": "ЕГЕРЬ ИЗ САГИ О ГАРДАРИКЕ",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 26,
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1829785001",
+      "name_lat": "EGOISTKA IZ KAZANSKOGO HANSTVA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1837604091",
+      "name_lat": "EGREY AVENTODOR RAYDER",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -715,15 +722,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1837604091",
-      "name_lat": "EGREY AVENTODOR RAYDER",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1494498281",
       "name_lat": "EGREGIA GUM LAUDE OREAD",
       "name_ru": "",
@@ -742,12 +740,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1800159509",
-      "name_lat": "EGOISTKA IZ KAZANSKOGO HANSTVA",
+      "id": "343525698",
+      "name_lat": "EGOIST PLATINUM STAMM AZELFAFAGA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -760,8 +758,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "28539628",
-      "name_lat": "EGOIST PLATINUM SHAU- VAU PARAMARIBA",
+      "id": "702109152",
+      "name_lat": "EGOIST PLATINUM SHAU-VAU PARAMARIBA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
@@ -805,6 +803,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "692652301",
+      "name_lat": "EGIPTIAN KING",
+      "name_ru": "ЕГИПТИАН КИНГ",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1201178659",
+      "name_lat": "EGERMASTER CORTES ERNAN II",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1587258271",
       "name_lat": "EGERSKOY SLOBODY MARVITHOLL",
       "name_ru": "",
@@ -814,12 +829,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "343525698",
-      "name_lat": "EGOIST PLATINUM STAMM AZELFAFAGA",
+      "id": "736947509",
+      "name_lat": "EGOZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 14,
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -829,6 +844,24 @@
       "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "639860101",
+      "name_lat": "EGOSYA",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1958735866",
+      "name_lat": "EGOIST PLATINUM SUPERBA HYADUM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -859,24 +892,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "639860101",
-      "name_lat": "EGOSYA",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "736947509",
-      "name_lat": "EGOZA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1204306872",
       "name_lat": "EGO VYSOCHESTVO PRINCE",
       "name_ru": "",
@@ -886,30 +901,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1958735866",
-      "name_lat": "EGOIST PLATINUM SUPERBA HYADUM",
+      "id": "144092097",
+      "name_lat": "EGOIST PLATINUM YATABA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1201178659",
-      "name_lat": "EGERMASTER CORTES ERNAN II",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДРАТХААР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "953114064",
-      "name_lat": "EGIPTIAN KING",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ / BASENJI",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -931,12 +928,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1366005989",
+      "name_lat": "EGOIST PLATINUM SHAU-WOW PARAMARIBA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1138847612",
       "name_lat": "EGOSYA",
       "name_ru": "",
       "breed": "АКИТА / AKITA",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "618530541",
+      "name_lat": "EGIPETSKAYA CARICA D'LELAYUR TOY",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -958,21 +973,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "667794877",
+      "id": "558282720",
       "name_lat": "EGOIST PLATINUM OLIGARCH",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "855414548",
-      "name_lat": "EGOIST PLATINUM YATABA",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "id": "1331958278",
+      "name_lat": "EGERMASTER YUNKALI",
+      "name_ru": "ЕГЕРМАСТЕР ЮНКАЛИ",
+      "breed": "GERMAN WIRE-HAIRED",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1003,6 +1018,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "232847937",
+      "name_lat": "EGOIST VON OSTEN HERZ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1111617982",
       "name_lat": "EGRI BERNENSKIE IMPERIUM",
       "name_ru": "",
@@ -1027,6 +1050,15 @@
       "breed": "НЕМЕЦКИЙ ДРАТХААР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1450851417",
+      "name_lat": "EGOSURU SIMBOKU",
+      "name_ru": "ЕГОСУРУ СИМБОКУ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1066,30 +1098,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1331958278",
-      "name_lat": "EGERMASTER YUNKALI",
-      "name_ru": "",
-      "breed": "GERMAN WIRE-HAIRED",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "145503229",
       "name_lat": "EGORUSHKA IZ KAMELOTA",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "873405568",
-      "name_lat": "EGIPETSKAYA CARICA D'LELAYUR TOY",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1120,10 +1134,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "578836103",
+      "id": "1947230715",
       "name_lat": "EGOIST PLATINUM DEN SCHWARZEN WIRBEL",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1138,30 +1152,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "921322280",
-      "name_lat": "EGOZA",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "926039943",
       "name_lat": "EGREGIA CUM LAUDE LASTING IMPRESSION",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1450851417",
-      "name_lat": "EGOSURU SIMBOKU",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1192,6 +1188,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "626666911",
+      "name_lat": "EGOIST DIAMOND IN THE CROWN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1841631153",
       "name_lat": "Egipta",
       "name_ru": "",
@@ -1201,10 +1205,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1101720724",
+      "id": "1036136769",
       "name_lat": "EGERMEJSTER",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1219,10 +1223,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1319358083",
+      "id": "685577871",
       "name_lat": "EGOZA SDZ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1309,30 +1313,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1412255348",
-      "name_lat": "EGOIST PLATINUM SHAU- WOW PARAMARIBA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "972113776",
       "name_lat": "EGIPETSKAYA TSARITSA",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1062145408",
-      "name_lat": "EGER ZARYA AZOVA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1354,10 +1340,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "303558446",
+      "id": "1113145449",
       "name_lat": "EGERMAISTER",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1372,10 +1358,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1301744962",
+      "id": "251209273",
       "name_lat": "EGER EGOR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1561,6 +1547,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "288580985",
+      "name_lat": "EGERMASTER TSERLINA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1138293413",
       "name_lat": "Egoza Radost Mira",
       "name_ru": "",
@@ -1606,10 +1600,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1418020372",
+      "id": "1657493440",
       "name_lat": "EGOR TANTSUYUSSCHEE PLAMYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1642,10 +1636,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1298481134",
+      "id": "1390444434",
       "name_lat": "EGOZA SDZ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1664,6 +1658,40 @@
       "name_lat": "EGOZA",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1081908128",
+      "name_lat": "EGOZA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "184037394",
+      "name_lat": "EGOZA",
+      "name_ru": "",
+      "breed": "СПЛОШНОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1522591794",
+      "name_lat": "EGOIST PLATINUM TOP CHECKMATE TARAN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1707171812",
+      "name_lat": "EGOIST PLATINUM TAGANKA INFERNO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1705,10 +1733,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1820534929",
+      "id": "1870473038",
       "name_lat": "EGOZA LETNYAYA GROZA",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1723,10 +1751,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "858374356",
+      "id": "953506689",
       "name_lat": "EGOIST PLATINUM REBUS GALLA",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1849,28 +1877,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "296359986",
+      "name_lat": "EGOZA IZ SEVERNOI OHOTY",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "211321234",
       "name_lat": "EGIPETSKAYA SILA",
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "240939326",
-      "name_lat": "EGOIST PLATINUM TOP CHECKMATE TARAN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1950815872",
-      "name_lat": "EGOIST PLATINUM TAGANKA INFERNO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

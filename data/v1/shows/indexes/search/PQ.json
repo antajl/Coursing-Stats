@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "PQ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1861973558",
+      "name_lat": "P'QUHAYLA DU HARAS DE CROUZ",
+      "name_ru": "",
+      "breed": "АЗАВАК",
+      "breed_en": "AZAWAKH",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1110357646",
+      "name_lat": "P’QUNAYLA DU HARAS DE CROUZ",
+      "name_ru": "",
+      "breed": "АЗАВАК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1522376958",
+      "name_lat": "P'QHAYR DU HARAS DE CROUZ",
+      "name_ru": "",
+      "breed": "АЗАВАК",
+      "breed_en": "AZAWAKH",
+      "total_shows": 6,
+      "competition_dog_id": null
+    }
+  ]
+}

@@ -1,22 +1,22 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ШТ",
-  "count": 250,
+  "count": 256,
   "dogs": [
     {
       "id": "750978316",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ КАЙРИКИ",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ КАЙРИКИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 54,
       "competition_dog_id": null
     },
     {
-      "id": "1927576713",
+      "id": "1628047637",
       "name_lat": "ШТОРМ ВОСТОКА ЛИЛИС",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "name_ru": "ШТОРМ ВОСТОКА ЛИЛИС",
+      "breed": "СКАЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -24,17 +24,17 @@
     {
       "id": "654552805",
       "name_lat": "ШТАРКЕ УДН КРАФТ ОГРЕСС ОНИКС",
-      "name_ru": "",
+      "name_ru": "ШТАРКЕ УДН КРАФТ ОГРЕСС ОНИКС",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "20081957",
+      "id": "907487350",
       "name_lat": "ШТОРМ ВОСТОКА МАРКУС",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "name_ru": "ШТОРМ ВОСТОКА МАРКУС",
+      "breed": "СКАЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -42,28 +42,19 @@
     {
       "id": "1928681448",
       "name_lat": "ШТОРМ ВОСТОКА МЕЛОДИЯ ЛЮБВИ",
-      "name_ru": "",
+      "name_ru": "ШТОРМ ВОСТОКА МЕЛОДИЯ ЛЮБВИ",
       "breed": "СИЛИХЕМ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1112364322",
+      "id": "1855561656",
       "name_lat": "ШТОРМ ВОСТОКА ЛАВ СТОРИ",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "name_ru": "ШТОРМ ВОСТОКА ЛАВ СТОРИ",
+      "breed": "СИЛИХЕМ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "20270230",
-      "name_lat": "ШТОРМ ВОСТОКА САНТА",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -76,27 +67,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "854151966",
+      "id": "1327841120",
       "name_lat": "ШТАРКЕ УНД КРАФТ Т'НОРД ВИНД ОФ ФРИДОМ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ШТАРКЕ УНД КРАФТ Т'НОРД ВИНД ОФ ФРИДОМ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1594385724",
-      "name_lat": "ШТОРММЭЙД ВАНЕССА- РУССО",
-      "name_ru": "",
+      "id": "56698016",
+      "name_lat": "ШТОРММЭЙД ВАНЕССА-РУССО",
+      "name_ru": "ШТОРММЭЙД ВАНЕССА-РУССО",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1846705342",
       "name_lat": "ШТЕФА ДЕЙ ЭЛИТ БРАНКО",
-      "name_ru": "",
+      "name_ru": "ШТЕФА ДЕЙ ЭЛИТ БРАНКО",
       "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "",
       "total_shows": 8,
@@ -105,26 +96,26 @@
     {
       "id": "223465385",
       "name_lat": "ШТИРГЕН ЗЕЛА(М)",
-      "name_ru": "",
+      "name_ru": "ШТИРГЕН ЗЕЛА(М)",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "955969510",
-      "name_lat": "ШТОРММЕЙД ВИДЖЕО ФОРТИС",
-      "name_ru": "",
+      "id": "402305838",
+      "name_lat": "ШТОРММЭЙД ВИДЖЕО ФОРТИС",
+      "name_ru": "ШТОРММЕЙД ВИДЖЕО ФОРТИС",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1798135183",
+      "id": "418827475",
       "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ГАБИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -136,6 +127,15 @@
       "breed": "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "63089905",
+      "name_lat": "ШТЕРН ДЕ БОРМАН",
+      "name_ru": "ШТЕРН ДЕ БОРМАН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -166,10 +166,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "769166617",
+      "id": "1473153210",
       "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ВИЗАНТИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -177,7 +177,7 @@
     {
       "id": "1480904807",
       "name_lat": "ШТОРМ ИЗ БАНДЫ ГАРРИ",
-      "name_ru": "",
+      "name_ru": "ШТОРМ ИЗ БАНДЫ ГАРРИ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 12,
@@ -193,39 +193,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "898210176",
+      "id": "1217614374",
       "name_lat": "ШТЕРН ФОН НОРТ ТРАУМ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШТЕРН ФОН НОРТ ТРАУМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1263822879",
+      "id": "1559026268",
+      "name_lat": "ШТОЛЛИВУД СМАЙЛ АНТЕЙ ШИТА",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ АНТЕЙ ШИТА",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1867079054",
       "name_lat": "ШТОРМ БОЙ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1775228459",
-      "name_lat": "ШТОЛЛИВУД СМАЙЛ ВАТАРИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "887608232",
-      "name_lat": "ШТАРКЕ УНД КРАФТ ТАЛАССА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -234,25 +225,60 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "279778011",
-      "name_lat": "ШТУЧКА ЕЩЕ ТА ИЗ ВОЙСКА ТАМЕРЛАНА",
+      "id": "1775228459",
+      "name_lat": "ШТОЛЛИВУД СМАЙЛ ВАТАРИ",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ВАТАРИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259383830",
+      "name_lat": "ШТАРКЕ УНД КРАФТ ТАЛАССА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "134810859",
+      "name_lat": "ШТУЧКА ЕЩЕ ТА ИЗ ВОЙСКА ТАМЕРЛАНА",
+      "name_ru": "ШТУЧКА ЕЩЕ ТА ИЗ ВОЙСКА ТАМЕРЛАНА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1683252737",
-      "name_lat": "ШТОРМ ОКЕАН ИЗ ДИНАСТИИ ЧЕМ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "id": "3355004",
+      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС АЛЕФ",
+      "name_ru": "ШТЕФФИФЕТЧАРТАЛЕОКС АЛЕФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "901654078",
+      "name_lat": "ШТОРМ ОКЕАН ИЗ ДИНАСТИИ ЧЕМ",
+      "name_ru": "ШТОРМ ОКЕАН ИЗ ДИНАСТИИ ЧЕМ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1199600146",
+      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС БАГИРА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -274,30 +300,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "3355004",
-      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС АЛЕФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "422620347",
+      "id": "1363489455",
       "name_lat": "ШТЕРН ДЕР ЛИБЕ ЕСТЕЛЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1192170814",
-      "name_lat": "ШТИЛЬ ИЗ ГАЛАКУНА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -330,10 +338,9 @@
     {
       "id": "527709141",
       "name_lat": "ШТИРГЕН БОЛЬШОЙ ЗМЕЙ",
-      "name_ru": "",
+      "name_ru": "ШТИРГЕН БОЛЬШОЙ ЗМЕЙ",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -346,21 +353,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1329530379",
+      "id": "189845087",
       "name_lat": "ШТЕФФИФЕТЧ АРТАЛЕОКС ГАБИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1559026268",
-      "name_lat": "ШТОЛЛИВУД СМАЙЛ АНТЕЙ ШИТА",
+      "id": "1128356714",
+      "name_lat": "ШТЕФФИФЕТЧАРТ АЛЕОКС БАГИРА",
       "name_ru": "",
-      "breed": "АКИТА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1494040679",
+      "name_lat": "ШТЕФФИ ВАНИЛЛА СВИТ",
+      "name_ru": "ШТЕФФИ ВАНИЛЛА СВИТ",
+      "breed": "МАЛЫЙ той шпиц немецкий",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -373,10 +388,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "746183021",
+      "id": "251178500",
       "name_lat": "ШТЭНЕНЛЕЙТ ГАНДИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ШТЭНЕНЛЕЙТ ГАНДИ",
+      "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
@@ -391,10 +406,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "852090482",
+      "id": "1267521523",
       "name_lat": "ШТУЧНАЯ РАБОТА ИЗ КРАСНОГО ЯРА",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "ШТУЧНАЯ РАБОТА ИЗ КРАСНОГО ЯРА",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -420,7 +435,7 @@
     {
       "id": "1904383901",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ВАЭМИ ХИ",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ВАЭМИ ХИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 10,
@@ -429,7 +444,7 @@
     {
       "id": "1811428093",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ЮКИБАРЭ",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ЮКИБАРЭ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 9,
@@ -438,7 +453,7 @@
     {
       "id": "1991119780",
       "name_lat": "ШТУРМ ИЗ ХОРОВОДА ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ШТУРМ ИЗ ХОРОВОДА ЗВЕЗД",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 9,
@@ -447,16 +462,16 @@
     {
       "id": "607367155",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ВАКАРИ",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ВАКАРИ",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "637628224",
       "name_lat": "ШТЭНЕНЛЕЙТ АРЕС",
-      "name_ru": "",
+      "name_ru": "ШТЭНЕНЛЕЙТ АРЕС",
       "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
       "total_shows": 15,
@@ -465,34 +480,34 @@
     {
       "id": "652996460",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ВИРДЖИНИ",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ВИРДЖИНИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
+      "id": "1699543805",
+      "name_lat": "ШТОЛЛИВУД СМАЙЛ ДАЙОТОРЕ",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ДАЙОТОРЕ",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "847690261",
       "name_lat": "ШТЕРН ВЕГ ХОТ ХИТ",
-      "name_ru": "",
+      "name_ru": "ШТЕРН ВЕГ ХОТ ХИТ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "525121309",
-      "name_lat": "ШТЕРН ДЕ БОРМАН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "933598766",
       "name_lat": "ШТАРКЕ УНД КРАФТ ОЙРА",
-      "name_ru": "",
+      "name_ru": "ШТАРКЕ УНД КРАФТ ОЙРА",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 5,
@@ -501,7 +516,7 @@
     {
       "id": "1552100394",
       "name_lat": "ШТЕРН ВЕГ ГОЛДЕН СКОРПИОН ФОР РПХ НЕКАР",
-      "name_ru": "",
+      "name_ru": "ШТЕРН ВЕГ ГОЛДЕН СКОРПИОН ФОР РПХ НЕКАР",
       "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 6,
@@ -510,16 +525,25 @@
     {
       "id": "1036376954",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ БИШУЙО",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ БИШУЙО",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1490327158",
+      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ЯНТА",
+      "name_ru": "ШТЕФФИФЕТЧАРТАЛЕОКС ЯНТА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1413150880",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ДАЙФУКУ II",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ДАЙФУКУ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 8,
@@ -528,7 +552,7 @@
     {
       "id": "391684579",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ГАБИ",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ГАБИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 4,
@@ -544,46 +568,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "225350446",
+      "id": "497886872",
       "name_lat": "ШТЕРН ДЕР ЛИБЕ ГРЕЦИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "518136345",
-      "name_lat": "ШТЭНЕНЛЕЙТ ЖЕЙСОН",
+      "id": "586077715",
+      "name_lat": "ШТОЛЛИВУД СМАЙЛ АКЭГАТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "АКИТА",
+      "breed_en": "AKITA",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1728648634",
+      "name_lat": "ШТЭНЕНЛЕЙТ ЖЕЙСОН",
+      "name_ru": "ШТЭНЕНЛЕЙТ ЖЕЙСОН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
+      "id": "1961959330",
+      "name_lat": "ШТАЗИ ВОМ ХОНЕВЕРГ",
+      "name_ru": "ШТАЗИ ВОМ ХОНЕВЕРГ",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1797283296",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ БАЙСЭЙ",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ БАЙСЭЙ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1490327158",
-      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ЯНТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "946062727",
+      "id": "1874468348",
       "name_lat": "ШТОРМ ВОСТОКА НАВИГАТОР",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "name_ru": "ШТОРМ ВОСТОКА НАВИГАТОР",
+      "breed": "СИЛИХЕМ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -591,19 +624,27 @@
     {
       "id": "155046920",
       "name_lat": "ШТЕРН РЕДЖЕН НЕПТУН",
-      "name_ru": "",
+      "name_ru": "ШТЕРН РЕДЖЕН НЕПТУН",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1826911546",
+      "id": "1055893172",
       "name_lat": "ШТЕРН ДЕР ЛИБЕ ГЛАМУР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШТЕРН ДЕР ЛИБЕ ГЛАМУР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1113392312",
+      "name_lat": "ШТОЛЛИВУД СМАЙЛ АКАТЦУКИ",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ АКАТЦУКИ",
+      "breed": "АКИТА",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -616,19 +657,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1699543805",
-      "name_lat": "ШТОЛЛИВУД СМАЙЛ ДАЙОТОРЕ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1967417070",
+      "id": "1867468205",
       "name_lat": "ШТЭНЕНЛЕЙТ ЗОРГЕ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ШТЭНЕНЛЕЙТ ЗОРГЕ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -636,7 +668,7 @@
     {
       "id": "289045122",
       "name_lat": "ШТОРММЕЙД БЬЮТИФУЛ БЕЛЛА I",
-      "name_ru": "",
+      "name_ru": "ШТОРММЕЙД БЬЮТИФУЛ БЕЛЛА",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -645,7 +677,7 @@
     {
       "id": "1454562550",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ХАТИКО",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ХАТИКО",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 4,
@@ -654,26 +686,17 @@
     {
       "id": "374025271",
       "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС КЭРИ",
-      "name_ru": "",
+      "name_ru": "ШТЕФФИФЕТЧАРТАЛЕОКС КЭРИ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "987395413",
-      "name_lat": "ШТОЛЛИВУД СМАЙЛ ДАЙОТОРЭ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1328472919",
+      "id": "745639659",
       "name_lat": "ШТЕРН РЕДЖЕН РОМЕО",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "name_ru": "ШТЕРН РЕДЖЕН РОМЕО",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -681,9 +704,17 @@
     {
       "id": "1397324709",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ВАНЕССА",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ВАНЕССА",
       "breed": "АКИТА",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1567993339",
+      "name_lat": "ШТЕРН ДЕР ЛИБЕ БЕТТИ",
+      "name_ru": "ШТЕРН ДЕР ЛИБЕ БЕТТИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -697,56 +728,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "402305838",
-      "name_lat": "ШТОРММЭЙД ВИДЖЕО ФОРТИС",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
+      "id": "70073174",
+      "name_lat": "ШТЕРН ДЕР ЛИБЕ БЭССИ",
+      "name_ru": "ШТЕРН ДЕР ЛИБЕ БЭССИ",
+      "breed": "ДЛИННАЯ ОСТЕВАЯ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1390360514",
+      "id": "1652267193",
       "name_lat": "ШТЕРН РЕДЖЕН КОНКОРД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "425939978",
+      "id": "74511425",
       "name_lat": "ШТАЙНБАХ ГЁССЕН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ШТАЙНБАХ ГЁССЕН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1861556253",
+      "id": "874759616",
       "name_lat": "ШТОРМ БОЙЛИН ВОТЕР",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1429549748",
+      "id": "592848986",
       "name_lat": "ШТЕРН ДЕР ЛИБЕ АЛЯСКА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШТЕРН ДЕР ЛИБЕ АЛЯСКА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1961959330",
-      "name_lat": "ШТАЗИ ВОМ ХОНЕВЕРГ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДРАТХААР",
-      "breed_en": "",
+      "id": "1152027992",
+      "name_lat": "ШТАТТГОЛЬД БЛАНШЕ НОУТИ",
+      "name_ru": "ШТАТТГОЛЬД БЛАНШЕ НОУТИ",
+      "breed": "GOLDEN RETRIEVER",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -760,10 +790,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1870352046",
+      "id": "1267707383",
       "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ЖЕТЕМ-ЛИЛИ",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -778,37 +808,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "179761589",
+      "id": "1387020125",
       "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ГУФФИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШТЕФФИФЕТЧАРТАЛЕОКС ГУФФИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "696538205",
-      "name_lat": "ШТЕФФИ ОТ КРИСТАЛЛА АРИАНЫ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "783722538",
+      "id": "145196198",
       "name_lat": "ШТАТТГОЛЬД ЖУЛИО",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1071241924",
+      "id": "706672217",
+      "name_lat": "ШТЕФФИ ОТ КРИСТАЛЛА АРИАНЫ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1300974961",
       "name_lat": "ШТЭФАНИЯ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -818,15 +848,6 @@
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ЕМЭЙ",
       "name_ru": "",
       "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1494040679",
-      "name_lat": "ШТЕФФИ ВАНИЛЛА СВИТ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ той шпиц немецкий",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -859,10 +880,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "284554388",
+      "id": "602751243",
       "name_lat": "ШТЕФФИФЕТЧАРТ АЛЕОКС АЛЕФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -870,7 +891,7 @@
     {
       "id": "1837988137",
       "name_lat": "ШТИРЛИЦ ФОМ ОТТО",
-      "name_ru": "",
+      "name_ru": "ШТИРЛИЦ ФОМ ОТТО",
       "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 2,
@@ -888,28 +909,10 @@
     {
       "id": "189639906",
       "name_lat": "ШТЭНЕНЛЕЙТ АЛЬГУС",
-      "name_ru": "",
+      "name_ru": "ШТЭНЕНЛЕЙТ АЛЬГУС",
       "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "247114451",
-      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС СТЕФАНИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "105335096",
-      "name_lat": "ШТЕРН РЕДЖЕН ЖАНЕЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -922,10 +925,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1433324697",
-      "name_lat": "ШТУЧКА ЗОЛОТАЯ С СОБЕРБАШ",
+      "id": "247114451",
+      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС СТЕФАНИ",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1503450535",
+      "name_lat": "ШТЕРН РЕДЖЕН ЖАНЕЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1763894201",
+      "name_lat": "ШТУЧКА ЗОЛОТАЯ С СОБЕРБАШ",
+      "name_ru": "ШТУЧКА ЗОЛОТАЯ С СОБЕРБАШ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -933,7 +954,7 @@
     {
       "id": "1275610288",
       "name_lat": "ШТИРГЕН РАПИРА",
-      "name_ru": "",
+      "name_ru": "ШТИРГЕН РАПИРА",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 2,
@@ -958,37 +979,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "586077715",
-      "name_lat": "ШТОЛЛИВУД СМАЙЛ АКЭГАТА",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "AKITA",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1078340916",
-      "name_lat": "ШТОРММЕЙД ВАНЕССА- РУССО",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "284882202",
       "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКЕ ЖАНИ-ША-ДЕН",
-      "name_ru": "",
+      "name_ru": "ШТЕФФИФЕТЧАРТАЛЕОКЕ ЖАНИ-ША-ДЕН",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА ОСТЕВАЯ ШЕРСТЬ С ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "549644943",
+      "id": "590866967",
       "name_lat": "ШТУРМУЮ НЕБО ОТ БУМАЖЕ",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШТУРМУЮ НЕБО ОТ БУМАЖЕ",
+      "breed": "ОХОТНИЧИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1012,9 +1015,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1931057235",
+      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ХОРТА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1046060529",
       "name_lat": "ШТЕФИ С ВЯТСКИХ ХОЛМОВ",
-      "name_ru": "",
+      "name_ru": "ШТЕФИ С ВЯТСКИХ ХОЛМОВ",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 2,
@@ -1023,7 +1035,7 @@
     {
       "id": "125788319",
       "name_lat": "ШТРАУС КОРОЛЬ ВАЛЬСА",
-      "name_ru": "",
+      "name_ru": "ШТРАУС КОРОЛЬ ВАЛЬСА",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -1057,8 +1069,16 @@
       "competition_dog_id": null
     },
     {
-      "id": "4737746",
-      "name_lat": "ШТОРММ ЭЙД ВАНЕССА- РУССО",
+      "id": "1748801726",
+      "name_lat": "ШТЕФФИФЕТЧАРТ АЛЕОКС ЯНТА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1722202906",
+      "name_lat": "ШТОРММ ЭЙД ВАНЕССА-РУССО",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
@@ -1068,16 +1088,16 @@
     {
       "id": "1885299206",
       "name_lat": "ШТЭНЕНЛЕЙТ ЖИГАН",
-      "name_ru": "",
+      "name_ru": "ШТЭНЕНЛЕЙТ ЖИГАН",
       "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "127838888",
       "name_lat": "ШТУРМАН ВЕРНЫЙ КУРС",
-      "name_ru": "",
+      "name_ru": "ШТУРМАН ВЕРНЫЙ КУРС",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -1192,21 +1212,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1773781219",
+      "id": "688588916",
       "name_lat": "ШТЭНЕНЛЕЙТ ВАЛЬКИРИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ШТЭНЕНЛЕЙТ ВАЛЬКИРИЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "108879070",
+      "id": "1082872445",
       "name_lat": "ШТЭНЕНЛЕЙТ НАИРА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ШТЭНЕНЛЕЙТ НАИРА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1219,19 +1239,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "538627079",
+      "id": "778049734",
       "name_lat": "ШТЕФАНИ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1964776780",
+      "id": "470660483",
       "name_lat": "ШТЕРН РЕДЖЕН ЦЫГАНКА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1239,7 +1259,7 @@
     {
       "id": "1390135454",
       "name_lat": "ШТЭНЕНЛЕЙТ ЗЕНА",
-      "name_ru": "",
+      "name_ru": "ШТЭНЕНЛЕЙТ ЗЕНА",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 3,
@@ -1255,10 +1275,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "69635313",
+      "id": "687358860",
       "name_lat": "ШТЕФФИ ОДРИ ФРОМ ФОРТ ОГРИ",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1293,10 +1313,10 @@
     {
       "id": "273137578",
       "name_lat": "ШТЭЙНЕНЛЕЙТ НОРД",
-      "name_ru": "",
+      "name_ru": "ШТЭЙНЕНЛЕЙТ НОРД",
       "breed": "GERMAN",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1336,10 +1356,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "688515350",
+      "id": "998824568",
       "name_lat": "Штучка Еше Та из Войска Тамерлана",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1354,10 +1374,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "822831905",
+      "id": "1041916098",
       "name_lat": "ШТЕРН РЕДЖЕН МАРТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ШТЕРН РЕДЖЕН МАРТА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1365,28 +1385,37 @@
     {
       "id": "1645173372",
       "name_lat": "ШТЕРН ШОУ ШАРМ",
-      "name_ru": "",
+      "name_ru": "ШТЕРН ШОУ ШАРМ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "196354891",
+      "id": "109183324",
       "name_lat": "ШТЭНЕНЛЕЙТ МАГНИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ШТЭНЕНЛЕЙТ МАГНИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "514844653",
       "name_lat": "ШТЭНЕНЛЕЙТ ИНДИВИД",
-      "name_ru": "",
+      "name_ru": "ШТЭНЕНЛЕЙТ ИНДИВИД",
       "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1856771777",
+      "name_lat": "ШТАТТГОЛЛЬД КЕРРИЛАЙН",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1401,35 +1430,17 @@
     {
       "id": "1322667521",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ КАДЗАЙ",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ КАДЗАЙ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "566367035",
-      "name_lat": "ШТАТТГОЛЛЬД КЕРРИЛАЙН",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "70073174",
-      "name_lat": "ШТЕРН ДЕР ЛИБЕ БЭССИ",
-      "name_ru": "",
-      "breed": "ДЛИННАЯ ОСТЕВАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1240927671",
+      "id": "1585790288",
       "name_lat": "ШТЭНЕНЛЕЙТ АНАБЕЛЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ШТЭНЕНЛЕЙТ АНАБЕЛЬ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1437,7 +1448,7 @@
     {
       "id": "669427051",
       "name_lat": "ШТЭНЕНЛЕЙТ ВЕРВОЛЬФ",
-      "name_ru": "",
+      "name_ru": "ШТЭНЕНЛЕЙТ ВЕРВОЛЬФ",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 4,
@@ -1446,17 +1457,35 @@
     {
       "id": "1616170730",
       "name_lat": "ШТЭНЕНЛЕЙТ НЕРО",
-      "name_ru": "",
+      "name_ru": "ШТЭНЕНЛЕЙТ НЕРО",
       "breed": "GERMAN",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "412363676",
+      "id": "109194305",
+      "name_lat": "ШТЕРН РЕДЖЕН АРЕС",
+      "name_ru": "ШТЕРН РЕДЖЕН АРЕС",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1026445217",
+      "name_lat": "ШТЭНЕНЛЕЙТ МОНГОЛ",
+      "name_ru": "ШТЭНЕНЛЕЙТ МОНГОЛ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ /",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "471522873",
       "name_lat": "ШТОРМ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1489,19 +1518,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "6892611",
+      "id": "1028205972",
       "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ЦЕ-НИКА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "104199509",
+      "id": "445951758",
       "name_lat": "ШТИРЛИЦ ИЗ ФОРТУНА МЕРДИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1509,7 +1538,7 @@
     {
       "id": "713161159",
       "name_lat": "ШТОЛЛИВУД СМАЙЛ ДАЙСОТО",
-      "name_ru": "",
+      "name_ru": "ШТОЛЛИВУД СМАЙЛ ДАЙСОТО",
       "breed": "АКИТА",
       "breed_en": "AKITA",
       "total_shows": 3,
@@ -1518,26 +1547,8 @@
     {
       "id": "632221291",
       "name_lat": "ШТЭНЕНЛЕЙТ ЕСЕНИЯ",
-      "name_ru": "",
+      "name_ru": "ШТЭНЕНЛЕЙТ ЕСЕНИЯ",
       "breed": "SHEPHERD DOG DOUBLE",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "109194305",
-      "name_lat": "ШТЕРН РЕДЖЕН АРЕС",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "214623099",
-      "name_lat": "ШТЭНЕНЛЕЙТ МОНГОЛ",
-      "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG DOUBLE",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1615,10 +1626,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "939296180",
+      "id": "1966626529",
       "name_lat": "ШТУРМАНИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "name_ru": "",
-      "breed": "КАНЕ КОРСО /",
+      "breed": "КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1633,19 +1644,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "392202082",
+      "id": "1604395188",
       "name_lat": "ШТАРКЕ УНД КРАФТ ТИТАН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1931057235",
-      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ХОРТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1660,6 +1662,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "685564483",
+      "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ЯКОВ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "59691674",
       "name_lat": "ШТОРМ ИЗ РАДУГИ ЖЕЛАНИЙ",
       "name_ru": "",
@@ -1669,19 +1679,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "941086236",
+      "id": "1007505593",
       "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ЁГАНС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1113392312",
-      "name_lat": "ШТОЛЛИВУД СМАЙЛ АКАТЦУКИ",
-      "name_ru": "",
-      "breed": "АКИТА",
+      "name_ru": "ШТЕФФИФЕТЧАРТАЛЕОКС ЁГАНС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1689,7 +1690,7 @@
     {
       "id": "81766390",
       "name_lat": "ШТОРМ ОТ КРИСТАЛЛА АРИАНЫ",
-      "name_ru": "",
+      "name_ru": "ШТОРМ ОТ КРИСТАЛЛА АРИАНЫ",
       "breed": "MINIATURE SCHNAUZER BLACK",
       "breed_en": "",
       "total_shows": 2,
@@ -1795,11 +1796,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "23357177",
+      "id": "315857370",
       "name_lat": "ШТЕФФИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1120940358",
+      "name_lat": "ШТАТТГОЛЛЬД ЖУЛИО",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1813,10 +1822,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "24220244",
+      "id": "1705675",
       "name_lat": "ШТЕРН РЕДЖЕН БМВ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1849,19 +1858,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "604688339",
+      "id": "1412771972",
       "name_lat": "ШТЕРН РЕДЖЕН УРФИН ДЖУС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "498339420",
-      "name_lat": "ШТАТТГОЛЬД БЛАНШЕ НОУТИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1885,10 +1885,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "188891265",
+      "id": "1130875952",
       "name_lat": "ШТЕРН РЕДЖЕН РИДДИК",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ /",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1930,10 +1930,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "356051100",
+      "id": "840698681",
       "name_lat": "ШТЕФФИ ЛЕДИ ЛАРСЕН",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1948,28 +1948,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "398667927",
+      "id": "329943971",
       "name_lat": "ШТЕРН РЕДЖЕН ЮВЕЛИРНАЯ ШТУЧКА",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ / MINIATURE",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ / MINIATURE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1426593249",
+      "id": "842000188",
       "name_lat": "ШТЕРН РЕДЖЕН ЭГОИСТ",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1832506675",
+      "id": "1920660890",
       "name_lat": "ШТУЧНЫЙ ЭКЗЕМПЛЯР КРОШКА РУ",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1993,37 +1993,68 @@
       "competition_dog_id": null
     },
     {
-      "id": "830542129",
-      "name_lat": "ШТЕРН ИЗ ДОМА КУНЕЦ",
+      "id": "1707601717",
+      "name_lat": "ШТОЛЛИВУД СМАЙЛ ДАРУМА",
       "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР",
-      "breed_en": "",
+      "breed": "АКИТА /",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1156602296",
+      "id": "1826409392",
+      "name_lat": "ШТЕРН РЕДЖЕН АНАРХИСТ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "126186023",
       "name_lat": "ШТАРКЕ УНД КРАФТ АСТРАЛИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "810699766",
+      "id": "580206632",
+      "name_lat": "ШТАТТГОЛЬД ЖЕЙКОБ БРАВЕ",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "520777427",
+      "name_lat": "ШТРУДЕЛЬ С ТЬМАЦКОГО ПЕРЕКАТА",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ / MALTESE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1502169551",
+      "name_lat": "ШТОЛЛИВУД СМАЙЛ ДАЙСАГИ",
+      "name_ru": "",
+      "breed": "АКИТА /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "458224208",
       "name_lat": "ШТОЛЬЦ ДЕР ФАМИЛЛЕ ВИ ВИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1951629090",
+      "id": "1858618892",
       "name_lat": "ШТОЛЬЦ ДЭР ФАМИЛЛЕ ВАЛЬКИРИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2083,19 +2114,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "94341676",
+      "id": "385382819",
       "name_lat": "ШТАРКЕ УНД КРАФТ КАСПЕР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1512379776",
+      "id": "156365647",
       "name_lat": "ШТЕФФИФЕТЧАРТАЛЕОКС ЦЕНТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2119,19 +2150,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1394944375",
+      "id": "860169488",
       "name_lat": "ШТАРКЕ УНД КРАФТ ЖАКЛИН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "53820557",
+      "id": "852710886",
       "name_lat": "ШТЕРН РЕДЖЕН ДАР ДЕ МОНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2209,10 +2240,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "814045258",
+      "id": "1599348956",
       "name_lat": "ШТАРКЕ УНД КРАФТ ТИФФАНИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2227,10 +2258,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "422087611",
+      "id": "1213290476",
       "name_lat": "ШТАРКЕ УНД КРАФТ ПОРОХ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2245,10 +2276,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "797115301",
+      "id": "765553608",
+      "name_lat": "ШТИРГЕН ЕВРА",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1908352254",
       "name_lat": "ШТАЛЬГАРД АРТЕМИДА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

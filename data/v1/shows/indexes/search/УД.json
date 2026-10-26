@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "УД",
-  "count": 191,
+  "count": 198,
   "dogs": [
     {
       "id": "179300058",
@@ -15,19 +15,10 @@
     {
       "id": "1007304166",
       "name_lat": "УДАЧНЫЙ ВЫБОР ПИНКЕРТОН",
-      "name_ru": "",
+      "name_ru": "УДАЧНЫЙ ВЫБОР ПИНКЕРТОН",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1291292109",
-      "name_lat": "Удача Из Дома Актеона",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -40,28 +31,45 @@
       "competition_dog_id": null
     },
     {
+      "id": "9714",
+      "name_lat": "У-ДАР-ХАН",
+      "name_ru": "",
+      "breed": "ХОРТАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": 9714
+    },
+    {
       "id": "92063468",
       "name_lat": "УДАЧА ФОРТУНЫ МЕЙССИ",
-      "name_ru": "",
+      "name_ru": "УДАЧА ФОРТУНЫ МЕЙССИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1285917869",
+      "name_lat": "УДИВИТЕЛЬНАЯ УДАЧА ИЗ СТРАНЫ ГРЕЗ",
+      "name_ru": "УДИВИТЕЛЬНАЯ УДАЧА ИЗ СТРАНЫ ГРЕЗ",
+      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "709507565",
       "name_lat": "УДАЧА ФОРТУНЫ ЗЭНА",
-      "name_ru": "",
+      "name_ru": "УДАЧА ФОРТУНЫ ЗЭНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "539975402",
+      "id": "1353983044",
       "name_lat": "УДАЧА",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -69,7 +77,7 @@
     {
       "id": "966443521",
       "name_lat": "УДАЧА ДЛЯ ВАС ИЗ СНЕЖНОЙ ГУБЕРНИИ",
-      "name_ru": "",
+      "name_ru": "УДАЧА ДЛЯ ВАС ИЗ СНЕЖНОЙ ГУБЕРНИИ",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 10,
@@ -85,18 +93,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "49592623",
+      "id": "761013411",
       "name_lat": "УДАЛЕЦ-МОЛОДЕЦ ИЗ ЗИМНИХ ГРЕЗ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "name_ru": "УДАЛЕЦ-МОЛОДЕЦ ИЗ ЗИМНИХ ГРЕЗ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
       "id": "747523291",
       "name_lat": "УДАЧА ТАК УДАЧА ИЗ ДОМА КУНЕЦ",
-      "name_ru": "",
+      "name_ru": "УДАЧА ТАК УДАЧА ИЗ ДОМА КУНЕЦ",
       "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -139,6 +147,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1334368034",
+      "name_lat": "УДАЧА С КРАСНОГО ЯРА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1349918648",
       "name_lat": "УДРИС УРКИСС",
       "name_ru": "",
@@ -157,37 +173,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1754166436",
-      "name_lat": "УДАЛОЙ МОЛОДЕЦ ИЗ СТАРОЙ ШУИ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "SHETLAND SHEEPDOG",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1285917869",
-      "name_lat": "УДИВИТЕЛЬНАЯ УДАЧА ИЗ СТРАНЫ ГРЕЗ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "221220478",
+      "id": "1273192679",
       "name_lat": "УДАЧА",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "867568115",
+      "id": "466411854",
       "name_lat": "УДИВИТЕЛЬНОЕ СЧАСТЬЕ АИША",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "name_ru": "УДИВИТЕЛЬНОЕ СЧАСТЬЕ АИША",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -195,7 +193,7 @@
     {
       "id": "44990400",
       "name_lat": "Удача Фортуны Жемчуг Унита Ким с Костромского",
-      "name_ru": "",
+      "name_ru": "Удача Фортуны Жемчуг Унита Ким с Костромского",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -238,15 +236,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "164444078",
-      "name_lat": "УДАЧА ОБГОНЯЮЩАЯ ВЕТЕР",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1911127584",
       "name_lat": "УДАЧИ LUNNYI VETER",
       "name_ru": "",
@@ -265,45 +254,81 @@
       "competition_dog_id": null
     },
     {
+      "id": "474168443",
+      "name_lat": "УДАЧА С НАМИ ОТ БУМАЖЕ",
+      "name_ru": "УДАЧА С НАМИ ОТ БУМАЖЕ",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "366321858",
       "name_lat": "УДАЧА ФОМ РУС ХАУС ТРАУМ (Д-Ш)",
-      "name_ru": "",
+      "name_ru": "УДАЧА ФОМ РУС ХАУС ТРАУМ (Д-Ш)",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "43149354",
-      "name_lat": "УДАЧА С НАМИ ОТ БУМАЖЕ",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "id": "1094903460",
+      "name_lat": "УДАЛЕЦ-МОЛОДЕЦ С КРАСНОГО ЯРА",
+      "name_ru": "УДАЛЕЦ-МОЛОДЕЦ С КРАСНОГО ЯРА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1000599268",
+      "name_lat": "УДЖЕР",
+      "name_ru": "",
+      "breed": "АФФЕН БЕРНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1706456085",
+      "name_lat": "УДАЧНЫЙ ВЫБОР БРАЙТ СТАР",
+      "name_ru": "УДАЧНЫЙ ВЫБОР БРАЙТ СТАР",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1079150055",
+      "name_lat": "УДАЧНЫЙ ПРОЕКТ ОТ БУМАЖЕ",
+      "name_ru": "УДАЧНЫЙ ПРОЕКТ ОТ БУМАЖЕ",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "876159233",
       "name_lat": "УДАЧНЫЙ ВЫБОР ЯВНАЯ КРАСОТА ФОР ВОЛГА ВИННЕР",
-      "name_ru": "",
+      "name_ru": "УДАЧНЫЙ ВЫБОР ЯВНАЯ КРАСОТА ФОР ВОЛГА ВИННЕР",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1736862410",
+      "id": "774199889",
       "name_lat": "УДИВИТЕЛЬНОЕ РЯДОМ ИЗ ДОМА ЗОРРО",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "УДИВИТЕЛЬНОЕ РЯДОМ ИЗ ДОМА ЗОРРО",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "715732913",
       "name_lat": "УДАЧА С ВОЛЧЬЕЙ РЕКИ",
-      "name_ru": "",
+      "name_ru": "УДАЧА С ВОЛЧЬЕЙ РЕКИ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 9,
@@ -319,54 +344,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1706456085",
-      "name_lat": "УДАЧНЫЙ ВЫБОР БРАЙТ СТАР",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1658281884",
       "name_lat": "УДАЧНЫЙ ВЫБОР ЗАРЕТА",
-      "name_ru": "",
+      "name_ru": "УДАЧНЫЙ ВЫБОР ЗАРЕТА",
       "breed": "MINIATURE PINSCHER",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "315584355",
+      "id": "841287161",
       "name_lat": "УДИВИТЕЛЬНАЯ ИСТОРИЯ ИЗ СТОЛИЦЫ УРАЛА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "УДИВИТЕЛЬНАЯ ИСТОРИЯ ИЗ СТОЛИЦЫ УРАЛА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1094903460",
-      "name_lat": "УДАЛЕЦ-МОЛОДЕЦ С КРАСНОГО ЯРА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "931377858",
       "name_lat": "УДАЧНЫЙ ВЫБОР АМЕЙЗИН ГРЕЙС",
-      "name_ru": "",
+      "name_ru": "УДАЧНЫЙ ВЫБОР АМЕЙЗИН ГРЕЙС",
       "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "1965566643",
       "name_lat": "УДОНГЕ СЭЦУАЙ РИ",
-      "name_ru": "",
+      "name_ru": "УДОНГЕ СЭЦУАЙ РИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 9,
@@ -375,7 +381,7 @@
     {
       "id": "1476940293",
       "name_lat": "УДАЧА ЧИКИТА БУМ",
-      "name_ru": "",
+      "name_ru": "УДАЧА ЧИКИТА БУМ",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 5,
@@ -391,39 +397,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1500886067",
+      "id": "422128375",
       "name_lat": "УДАЧА НА УГАД ИЗ СТРАНЫ ГРЁЗ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "УДАЧА НА УГАД ИЗ СТРАНЫ ГРЁЗ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "213852052",
-      "name_lat": "УДАРНАЯ ВОЛНА",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1475294424",
+      "id": "142442082",
       "name_lat": "УДЕЛЬНАЯ СЛОБОДА ТИШКА",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "УДЕЛЬНАЯ СЛОБОДА ТИШКА",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1334368034",
-      "name_lat": "УДАЧА С КРАСНОГО ЯРА",
+      "id": "1729686538",
+      "name_lat": "УДАЧА ФОРТУНЫ МАЭСТРО",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -445,10 +442,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "743818155",
+      "id": "1628435236",
       "name_lat": "УДАЙ ИЗ ФОРЦАБЕЛЛО",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "УДАЙ ИЗ ФОРЦАБЕЛЛО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -463,12 +460,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "855497989",
+      "id": "1289947160",
       "name_lat": "УДАЧНЫЙ ВЫБОР ДЭНИЭЛ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "УДАЧНЫЙ ВЫБОР ДЭНИЭЛ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -483,17 +480,17 @@
     {
       "id": "237732274",
       "name_lat": "УДЖЕР УЕЛЬС ШЕПЕРД",
-      "name_ru": "",
+      "name_ru": "УДЖЕР УЕЛЬС ШЕПЕРД",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "859827141",
-      "name_lat": "УДДГЕР ИЗ ВОРОБЬИНОГО ГНЕЗДА",
+      "id": "1480422528",
+      "name_lat": "УДБАЛ",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed": "СОБАКА) / HOTOSHO (BURYATSKAYA SOBAKA)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -501,7 +498,7 @@
     {
       "id": "1957377868",
       "name_lat": "УДАЧНЫЙ ВЫБОР МИЛОЧКА ЧАРУТТИ",
-      "name_ru": "",
+      "name_ru": "УДАЧНЫЙ ВЫБОР МИЛОЧКА ЧАРУТТИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -519,7 +516,7 @@
     {
       "id": "581845998",
       "name_lat": "УДАЧНЫЙ ВЫБОР ЗЕНДАЯ",
-      "name_ru": "",
+      "name_ru": "УДАЧНЫЙ ВЫБОР ЗЕНДАЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -537,25 +534,41 @@
     {
       "id": "1397383192",
       "name_lat": "УДАРНАЯ ВОЛНА С СЕВЕРНОГО УРАЛА",
-      "name_ru": "",
+      "name_ru": "УДАРНАЯ ВОЛНА С СЕВЕРНОГО УРАЛА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1946946736",
+      "id": "204725313",
       "name_lat": "УДИВИТЕЛЬНАЯ ЛЕДИ ИЗ ТЕРЬЕР СИТИ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "УДИВИТЕЛЬНАЯ ЛЕДИ ИЗ ТЕРЬЕР СИТИ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
+      "id": "1929959049",
+      "name_lat": "УДАР В ЦЕЛЬ ИЗ ФОРЦАБЕЛЛО",
+      "name_ru": "УДАР В ЦЕЛЬ ИЗ ФОРЦАБЕЛЛО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "624944189",
+      "name_lat": "УДЕЛЬНАЯ СЛОБОДА ФОРТУНА",
+      "name_ru": "УДЕЛЬНАЯ СЛОБОДА ФОРТУНА",
+      "breed": "GERMAN",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "32920514",
       "name_lat": "УДАЧА ИЗ ПЕТЕРГОФА",
-      "name_ru": "",
+      "name_ru": "УДАЧА ИЗ ПЕТЕРГОФА",
       "breed": "ВЕЛЬШТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -564,7 +577,7 @@
     {
       "id": "79164371",
       "name_lat": "УДАЧА С СЕРЕБРЯННОЙ ЛАГУНЫ",
-      "name_ru": "",
+      "name_ru": "УДАЧА С СЕРЕБРЯННОЙ ЛАГУНЫ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -585,7 +598,7 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -598,20 +611,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1729686538",
-      "name_lat": "УДАЧА ФОРТУНЫ МАЭСТРО",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "431214573",
       "name_lat": "УДИВИТЕЛЬНАЯ ВИКТОРИЯ",
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "281873254",
+      "name_lat": "УДАЧА ОЛИГОРЕС ПАРАДИГМА",
+      "name_ru": "",
+      "breed": "ТОЙ-ФОКСТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -627,37 +639,19 @@
     {
       "id": "1127204869",
       "name_lat": "УДАЧА ФОН ВИШЕНХОФФ",
-      "name_ru": "",
+      "name_ru": "УДАЧА ФОН ВИШЕНХОФФ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1079150055",
-      "name_lat": "УДАЧНЫЙ ПРОЕКТ ОТ БУМАЖЕ",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "103795004",
+      "id": "730934617",
       "name_lat": "УДИВИТЕЛЬНЫЙ МИР ДЕННИ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "name_ru": "УДИВИТЕЛЬНЫЙ МИР ДЕННИ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1480422528",
-      "name_lat": "УДБАЛ",
-      "name_ru": "",
-      "breed": "СОБАКА) / HOTOSHO (BURYATSKAYA SOBAKA)",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -706,6 +700,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1609839998",
+      "name_lat": "УДЖАР ИЗ ЧЕРНОГО ЯНТАРЯ",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1716993249",
       "name_lat": "УДИВИТЕЛЬНАЯ ЧЕРНАЯ РОЗА",
       "name_ru": "",
@@ -717,10 +720,10 @@
     {
       "id": "62580230",
       "name_lat": "УДАЧА ФОРТУНЫ КАРАМЕЛЬКА ЭЛЬКА",
-      "name_ru": "",
+      "name_ru": "УДАЧА ФОРТУНЫ КАРАМЕЛЬКА ЭЛЬКА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -760,10 +763,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "373106217",
+      "id": "1028599189",
       "name_lat": "УДАЛЕЦ-МОЛОДЕЦИЗ ЗИМНИХ ГРЕЗ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -789,7 +792,7 @@
     {
       "id": "1977678133",
       "name_lat": "УДАЧА ФОРТУНЫ ЕЖЕНКА ЗОЛОТАЯ РОЗА",
-      "name_ru": "",
+      "name_ru": "УДАЧА ФОРТУНЫ ЕЖЕНКА ЗОЛОТАЯ РОЗА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -807,10 +810,10 @@
     {
       "id": "837272352",
       "name_lat": "УДИВИТЕЛЬНОЕ ЧЁРНОЕ ОБЛАКО",
-      "name_ru": "",
+      "name_ru": "УДИВИТЕЛЬНОЕ ЧЁРНОЕ ОБЛАКО",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -877,6 +880,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1856507282",
+      "name_lat": "у ДЭ АШЕНВАЛЬ ЕЖЕВИКА",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "509307688",
       "name_lat": "УДАЛЕЦ МОЛОДЕЦ ОТ КУФАНИ",
       "name_ru": "",
@@ -904,21 +916,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "677108243",
+      "id": "1850208399",
+      "name_lat": "Удача",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1915928247",
       "name_lat": "УДАЧА ИЗ СТРАНЫ",
       "name_ru": "",
-      "breed": "ТАКСА ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "804168450",
-      "name_lat": "УДАЧА ФОРТУНЫ АЛЛЕГРА",
+      "id": "209284757",
+      "name_lat": "УДЖИН ФОГГИ СТАР",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -942,7 +961,7 @@
     {
       "id": "943553006",
       "name_lat": "УДЖЕР БРИЗ ИЗ ДОМА КАРМАНОВОЙ",
-      "name_ru": "",
+      "name_ru": "УДЖЕР БРИЗ ИЗ ДОМА КАРМАНОВОЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 12,
@@ -958,10 +977,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "565002677",
+      "id": "896154952",
       "name_lat": "УДАЧА ФОРТУНЫ МАГИЯ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "УДАЧА ФОРТУНЫ МАГИЯ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -969,7 +988,7 @@
     {
       "id": "1625905210",
       "name_lat": "УДАЧА ОТ ТРЕНИРОВАННЫХ ПСОВ",
-      "name_ru": "",
+      "name_ru": "УДАЧА ОТ ТРЕНИРОВАННЫХ ПСОВ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -978,7 +997,7 @@
     {
       "id": "448806376",
       "name_lat": "Удрис с Хехцира",
-      "name_ru": "",
+      "name_ru": "Удрис с Хехцира",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -994,10 +1013,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1443034954",
+      "id": "169643883",
       "name_lat": "УДАЧИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1021,10 +1040,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1608459497",
+      "id": "845733236",
       "name_lat": "УДЕЛЬНАЯ СЛОБОДА ЧЕЙЗА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1104,34 +1123,33 @@
     {
       "id": "730506874",
       "name_lat": "УДАЧА С МИДГАРД ЗЕМЛИ",
-      "name_ru": "",
+      "name_ru": "УДАЧА С МИДГАРД ЗЕМЛИ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1962792433",
+      "id": "704579634",
       "name_lat": "УДАРНАЯ ВОЛНА ИЗ КАСТЫ ВОИНОВ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УДАРНАЯ ВОЛНА ИЗ КАСТЫ ВОИНОВ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "432099099",
-      "name_lat": "УДЕЛЬНАЯ СЛОБОДА ФОРТУНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "id": "1571550806",
+      "name_lat": "УДЗУКИ ФЛАЙТ",
+      "name_ru": "УДЗУКИ ФЛАЙТ",
+      "breed": "СИБА",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "273667474",
       "name_lat": "УДАЧИ ЗВЕЗДА ИЗ АДАМОВА ЯБЛОКА (М.БР.)",
-      "name_ru": "",
+      "name_ru": "УДАЧИ ЗВЕЗДА ИЗ АДАМОВА ЯБЛОКА (М.БР.)",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
@@ -1140,7 +1158,7 @@
     {
       "id": "1562147949",
       "name_lat": "УДАЧА ФАБРИКА ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "УДАЧА ФАБРИКА ЗВЕЗД",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -1149,7 +1167,7 @@
     {
       "id": "248254658",
       "name_lat": "УДАЧА МАНЯЩАЯ УСПЕХ",
-      "name_ru": "",
+      "name_ru": "УДАЧА МАНЯЩАЯ УСПЕХ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -1219,6 +1237,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1263885145",
+      "name_lat": "УДАЧА",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА / EAST",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "248297655",
       "name_lat": "УДАЧА",
       "name_ru": "",
@@ -1228,19 +1254,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1956901306",
+      "id": "375575766",
       "name_lat": "УДОКАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1000599268",
-      "name_lat": "УДЖЕР",
-      "name_ru": "",
-      "breed": "АФФЕН БЕРНСКИЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1273,11 +1290,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "1331242072",
+      "id": "881153382",
       "name_lat": "УДАЧЛИВАЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "454024359",
+      "name_lat": "УДАЧНЫЙ ВЫБОР СМАЙЛ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1030242162",
+      "name_lat": "у ДАРЭЛИСОН ДАНКО",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1934196608",
+      "name_lat": "УДИВИТЕЛЬНАЯ ИСТОРИЯ ХЕППИ ТЕЙЛ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "811785751",
+      "name_lat": "У'ДРАЙ МИ ИЗ ДОМА КОРОЛЕВОЙ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1327,10 +1378,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1872463495",
+      "id": "1229732678",
       "name_lat": "УДАЧА ФОРТУНЫ АЛИСА",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1417,10 +1468,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "906890528",
+      "id": "1806080979",
       "name_lat": "УДИВИТЕЛЬНЫЙ УРВИН БЛЮ",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1444,19 +1495,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1951310021",
+      "id": "1680949720",
       "name_lat": "УДАЧНЫЙ ВЫБОР ВАНЕССА ВИЛЬ",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1609839998",
-      "name_lat": "УДЖАР ИЗ ЧЕРНОГО ЯНТАРЯ",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1507,11 +1549,52 @@
       "competition_dog_id": null
     },
     {
-      "id": "807976285",
+      "id": "1845359870",
+      "name_lat": "у ДАНИЭЛЬ КОНТИ ОЛИВЕР ТИМ",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1317212869",
+      "name_lat": "УДАЧА ФОРТУНЫ ДЖАМИЛА ДАРЛИНГ СТАР",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1965257328",
+      "name_lat": "УДАЧА СВЕТЛАНЫ НИКОЛЬ",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "633433849",
+      "name_lat": "УДАЧА ФОРТУНЫ КРЕПКИЙ ОРЕШЕК",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "927960320",
       "name_lat": "УДИВИТЕЛЬНАЯ ЛУ ЛУ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1002882671",
+      "name_lat": "УДАЛЕЦ-МОЛОДЕЦ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1543,28 +1626,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1436368164",
-      "name_lat": "УДИВИТЕЛЬНАЯ ЕВА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) / GERMAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "561255937",
       "name_lat": "УДИВИТЕЛЬНАЯ ДЕВЧОНКА",
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "208460040",
-      "name_lat": "УДАЛОЙ МОЛОДЕЦ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1579,19 +1644,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "997519301",
+      "id": "1583225048",
       "name_lat": "УДАЧА ИЗ МУРОМСКОЙ ВАТАГИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "741562387",
-      "name_lat": "УДЗИЯСУ-АКИРА",
-      "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1705,20 +1761,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1090377347",
-      "name_lat": "УДАЧНЫЙ ВЫБОР СМАЙЛ",
+      "id": "493213711",
+      "name_lat": "УДИВИТЕЛЬНАЯ НУГА ИЗ ВКУСНОЙ БУЛОЧНОЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "281873254",
-      "name_lat": "УДАЧА ОЛИГОРЕС ПАРАДИГМА",
-      "name_ru": "",
-      "breed": "ТОЙ-ФОКСТЕРЬЕР",
-      "breed_en": "",
+      "breed": "ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     }

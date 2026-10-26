@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "KU",
-  "count": 412,
+  "count": 424,
   "dogs": [
     {
       "id": "1558622184",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "САЛЮКИ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -18,7 +18,16 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
-      "total_shows": 55,
+      "total_shows": 59,
+      "competition_dog_id": null
+    },
+    {
+      "id": "852449600",
+      "name_lat": "KURAZH IZ NOVO-PEREDELKINO",
+      "name_ru": "КУРАЖ ИЗ НОВО-ПЕРЕДЕЛКИНО",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -28,15 +37,6 @@
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1819493439",
-      "name_lat": "KURAZH IZ NOVO- PEREDELKINO",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -51,10 +51,10 @@
     {
       "id": "1507157081",
       "name_lat": "KUBIK RUBIK ZINEDIN YAZID ZIDAN",
-      "name_ru": "",
+      "name_ru": "КУБИК РУБИК ЗИНЕДИН ЯЗИД ЗИДАН",
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "BOSTON TERRIER",
-      "total_shows": 30,
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -67,10 +67,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "124095685",
+      "id": "1715574541",
       "name_lat": "KUPECHESKAYA DOCH' IZ DOMA AKSELYA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -81,7 +81,16 @@
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР П-С",
       "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 25,
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1361649994",
+      "name_lat": "KUHN BART AI DA OPTIMISTKA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -121,12 +130,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "208902767",
+      "name_lat": "KUNER'C EPANOUIR BONHER",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "1304014549",
       "name_lat": "KUROKAWA AYAME",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "AKITA",
-      "total_shows": 23,
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127996185",
+      "name_lat": "KURT LEGEND ROCK KRUIZER DEL AQVA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269322961",
+      "name_lat": "KUMIR S LADONI ANGELA",
+      "name_ru": "КУМИР С ЛАДОНИ АНГЕЛА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -139,19 +175,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "733536577",
+      "id": "1701772241",
       "name_lat": "KUDYKINYKH GOR KHOZYAYKA IZ OMSKOI KREPOSTI",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "741080355",
+      "id": "589992143",
       "name_lat": "KURAZH SVETLANY ERNIYA CRAZILY CUTE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -162,25 +198,24 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "366629091",
+      "name_lat": "KUNER'S EPANOUIR BONHER",
+      "name_ru": "",
+      "breed": "БИШОН",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "832788990",
+      "name_lat": "KUHN BART BRAVA FORTUNA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ /",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "208902767",
-      "name_lat": "KUNER'C EPANOUIR BONHER",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "347214816",
-      "name_lat": "KURT LEGEND ROCK",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -207,7 +242,7 @@
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "AKITA",
-      "total_shows": 38,
+      "total_shows": 41,
       "competition_dog_id": null
     },
     {
@@ -220,19 +255,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "427438821",
+      "id": "124443041",
       "name_lat": "KUHN BART FORSAZH",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "366629091",
-      "name_lat": "KUNER'S EPANOUIR BONHER",
-      "name_ru": "",
-      "breed": "БИШОН",
+      "id": "213661546",
+      "name_lat": "KUON BODZHING",
+      "name_ru": "Куон Боджинг",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1169620939",
+      "name_lat": "KUZBASS BASHI ERIKA",
+      "name_ru": "КУЗБАСС БАШИ ЭРИКА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -247,10 +290,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "140495002",
+      "id": "1437833067",
       "name_lat": "KURAZH MOSKOVII IMAGE LADY",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -262,24 +305,6 @@
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "782907388",
-      "name_lat": "KUMIR S LADONI ANGELA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "734723862",
-      "name_lat": "KUHN BART AI DA OPTIMISTKA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -310,10 +335,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "74932948",
+      "id": "1188084818",
+      "name_lat": "KUARTIERE ARETRATO FERNANDO",
+      "name_ru": "КУАРТИЕРЕ АРЕТРАТО ФЕРНАНДО",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "237976658",
       "name_lat": "KURTUBA MORANTE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР (ВЕЛИКОБРИТАНИЯ)",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 44,
       "competition_dog_id": null
@@ -328,6 +362,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "802740390",
+      "name_lat": "KURAT GRAND SANDEKS SAN",
+      "name_ru": "КУРАТ ГРАНД САНДЕКС САН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
       "id": "925596444",
       "name_lat": "KUHN BART DUSHA MOYA",
       "name_ru": "",
@@ -337,30 +380,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "569248792",
-      "name_lat": "KURAT GRAND SANDEKS SAN",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
       "id": "181986476",
       "name_lat": "KUROKAWA MIKA",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1188084818",
-      "name_lat": "KUARTIERE ARETRATO FERNANDO",
-      "name_ru": "",
-      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
-      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -396,34 +421,33 @@
       "name_ru": "",
       "breed": "БИШОН",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "666745041",
-      "name_lat": "KUHN BART YASMINA STUNNER",
+      "id": "397303550",
+      "name_lat": "KUARTIERE ARETRATO URSULA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "МАРЕММО-АБРУЦЦКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "213661546",
-      "name_lat": "KUON BODZHING",
+      "id": "331843615",
+      "name_lat": "KUSHAN DOKHTAR AYAN",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "225132679",
-      "name_lat": "KUHN BART BRAVA FORTUNA",
+      "id": "117033845",
+      "name_lat": "KUHN BART YASMINA STUNNER",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -454,6 +478,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "510614390",
+      "name_lat": "KUPENDA MOYO",
+      "name_ru": "КУПЕНДА МОЙО",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "179505465",
       "name_lat": "KUBANSKAYA NOCH IZ SNEZHNOY GUBERNII",
       "name_ru": "",
@@ -469,6 +502,15 @@
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "930773172",
+      "name_lat": "KUPIDON VILLI NELSON",
+      "name_ru": "КУПИДОН ВИЛЛИ НЕЛЬСОН",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -490,6 +532,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1269712221",
+      "name_lat": "KUKLA LADA IZ DOVMONTOV GRADA",
+      "name_ru": "КУКЛА ЛАДА ИЗ ДОВМОНТОВ ГРАДА",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1505276321",
+      "name_lat": "KUKHAFA NAGA MORICH",
+      "name_ru": "КУХАФА НАГА МОРИЧ",
+      "breed": "САЛЮКИ",
+      "breed_en": "SALUKI",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "419171590",
       "name_lat": "KURAZH SVETLANY SHEDA ROCK CRYSTAL",
       "name_ru": "",
@@ -499,21 +559,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "675629585",
+      "id": "622876205",
       "name_lat": "KURAZH SVETLANY GREF VANGUARD FORS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1269712221",
-      "name_lat": "KUKLA LADA IZ DOVMONTOV GRADA",
+      "id": "1980079486",
+      "name_lat": "KURAZH SVETLANY YASMINA KEEP MOVING FORWARD",
       "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1461551602",
+      "name_lat": "KUMIKO YOSHI NEKKA MAISO",
+      "name_ru": "КУМИКО ЙОШИ НЕККА МАИСО",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "249012275",
+      "name_lat": "KUZBASS BASHI TAGMA",
+      "name_ru": "КУЗБАСС БАШИ ТАГМА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -526,19 +604,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "10403",
+      "name_lat": "KUPENA IZ SELA TSAREVO",
+      "name_ru": "КУПЕНА ИЗ СЕЛА ЦАРЕВО",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 15,
+      "competition_dog_id": 10403
+    },
+    {
       "id": "821714580",
       "name_lat": "KUBA LIBRE CASA DELLA SPERANZA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1324511794",
-      "name_lat": "KURAZH SVETLANY YASMINA KEEP MOVING FORWARD",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -571,21 +649,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "987139429",
-      "name_lat": "KUPENA IZ SELA TSAREVO",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1472587658",
       "name_lat": "KURT RUSSEL",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "227599436",
+      "name_lat": "KURSKIY STRAZH ZEVS",
+      "name_ru": "КУРСКИЙ СТРАЖ ЗЕВС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -598,15 +676,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1169620939",
-      "name_lat": "KUZBASS BASHI ERIKA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1911715733",
       "name_lat": "KUNER'S GLORIA BEAUTIFUL WINNER",
       "name_ru": "",
@@ -616,21 +685,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "204338941",
+      "id": "1275175329",
       "name_lat": "KUJN GOLD OLIVIYA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "249012275",
-      "name_lat": "KUZBASS BASHI TAGMA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -643,10 +703,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "695064511",
+      "id": "512333468",
+      "name_lat": "KUHN BART VANILKA",
+      "name_ru": "",
+      "breed": "ПЕРЕЦ С СОЛЬЮ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1186721331",
       "name_lat": "KUHN BART EUREKA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -661,28 +729,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "510614390",
-      "name_lat": "KUPENDA MOYO",
-      "name_ru": "",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "785251485",
-      "name_lat": "KUHN BART VANILKA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "532303150",
+      "id": "1164299792",
       "name_lat": "KURAT GRAND GOLLI GREYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -769,6 +819,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "336999527",
+      "name_lat": "KUNER'S ARIEL SPACE",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "101065237",
       "name_lat": "KURAT GRAND CENTURY CERRI",
       "name_ru": "",
@@ -778,48 +836,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "336999527",
-      "name_lat": "KUNER'S ARIEL SPACE",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "394690528",
       "name_lat": "KURAZH SVETLANY SCHRAUT FON OTTO",
       "name_ru": "",
       "breed": "С СОЛЬЮ",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "539052273",
+      "id": "16280581",
       "name_lat": "KURAT GRAND ZHAIR ZHADO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1437414313",
-      "name_lat": "KUARON STARS GARDENA GRACE FOR NORA TOP",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1733551942",
-      "name_lat": "KURKON KAIKU UNELMA",
-      "name_ru": "",
-      "breed": "НОРБОТТЕН ШПИЦ /",
-      "breed_en": "NORRBOTTENSPITZ",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -828,7 +859,34 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "950671510",
+      "name_lat": "KUARON STARS GARDENA GRACE FOR NORA TOP",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1139094975",
+      "name_lat": "KURKON KAIKU UNELMA",
+      "name_ru": "",
+      "breed": "НОРБОТТЕН ШПИЦ",
+      "breed_en": "NORRBOTTENSPITZ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1699314392",
+      "name_lat": "KUZBASS BASHI ZHEMCHUG",
+      "name_ru": "КУЗБАСС БАШИ ЖЕМЧУГ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -877,10 +935,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "72850168",
+      "id": "1771742198",
       "name_lat": "KUBANBULLY TAYSON",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -931,15 +989,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "227599436",
-      "name_lat": "KURSKIY STRAZH ZEVS",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1890300501",
       "name_lat": "KUROKAWA MEIKO",
       "name_ru": "",
@@ -949,19 +998,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "331843615",
-      "name_lat": "KUSHAN DOKHTAR AYAN",
+      "id": "1397197527",
+      "name_lat": "Kurat Grand Caesar Ceik Berrywill's Totem Alpina Best In",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1852033957",
+      "id": "265674161",
+      "name_lat": "KUSOCHEK SCHASTYA LIKA",
+      "name_ru": "КУСОЧЕК СЧАСТЬЯ ЛИКА",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "182206601",
+      "name_lat": "KUBA SFORA NEMRODA",
+      "name_ru": "",
+      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "672404449",
+      "name_lat": "KURAZH SVETLANY AVIATOR",
+      "name_ru": "КУРАЖ СВЕТЛАНЫ АВИАТОР",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1548212833",
       "name_lat": "KUHN BART CHILESTA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1012,30 +1087,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "397303550",
-      "name_lat": "KUARTIERE ARETRATO URSULA",
-      "name_ru": "",
-      "breed": "МАРЕММО-АБРУЦЦКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "229369692",
       "name_lat": "KURAT GRAND SHAKHMAL SHEIKH",
       "name_ru": "",
       "breed": "СИЛИХЕМ СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "668621596",
-      "name_lat": "KURT LEGEND ROCK KRUIZER DEL AQVA",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1048,10 +1105,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1793108079",
+      "id": "1320995475",
       "name_lat": "KUKARSKAYA KRUGEVNITSA VREMYA MECHTY",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1075,15 +1132,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "930773172",
-      "name_lat": "KUPIDON VILLI NELSON",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "273474510",
       "name_lat": "KURAZH SVETLANY GEMINI",
       "name_ru": "",
@@ -1102,39 +1150,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "689241431",
+      "name_lat": "KUMIR MILLIONOV",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "186947127",
+      "name_lat": "KUBA STOFA NEMRODA",
+      "name_ru": "",
+      "breed": "ГОНЧАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1577068778",
+      "name_lat": "KURFURST KAIROS",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "699069790",
       "name_lat": "KUKI IZ OBSKOY LAGUNY",
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "672404449",
-      "name_lat": "KURAZH SVETLANY AVIATOR",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1862312763",
-      "name_lat": "KUMIR MILLIONOV",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "182206601",
-      "name_lat": "KUBA SFORA NEMRODA",
-      "name_ru": "",
-      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
-      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1147,12 +1195,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "122749443",
-      "name_lat": "KURFURST KAIROS",
+      "id": "41288720",
+      "name_lat": "KUHN BART ZHELEZNAYA LOGIKA",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1161,7 +1209,16 @@
       "name_ru": "",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
-      "total_shows": 13,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "876541113",
+      "name_lat": "KUARON STARS GALILEO",
+      "name_ru": "КУАРОН СТАРС ГАЛИЛЕО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1183,30 +1240,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "876541113",
-      "name_lat": "KUARON STARS GALILEO",
+      "id": "1116955978",
+      "name_lat": "KUMIKO YOSHI YAKUDZA ODZI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "186947127",
-      "name_lat": "KUBA STOFA NEMRODA",
-      "name_ru": "",
-      "breed": "ГОНЧАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1699314392",
-      "name_lat": "KUZBASS BASHI ZHEMCHUG",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
-      "total_shows": 5,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1219,15 +1258,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1116955978",
-      "name_lat": "KUMIKO YOSHI YAKUDZA ODZI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "774958912",
       "name_lat": "KURSKY TALISMAN ELITA",
       "name_ru": "",
@@ -1237,19 +1267,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1928152566",
+      "id": "550804525",
+      "name_lat": "KURSKOE SOZVEZDIE ZHIRAVA",
+      "name_ru": "КУРСКОЕ СОЗВЕЗДИЕ ЖИРАВА",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "564819183",
       "name_lat": "KURAT GRAND YASMINA YASNA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1752856168",
+      "id": "1291026012",
       "name_lat": "KUPIDON IZ KAZANSKOGO HANSTVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1273,21 +1312,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "442186684",
-      "name_lat": "KUHN BART ZHELEZNAYA LOGIKA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "167907965",
       "name_lat": "KUBANBULLY VENOM",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1896320196",
+      "name_lat": "KURAZH SVETLANY CHIN UP",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1300,10 +1339,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1519850243",
+      "id": "1751749098",
       "name_lat": "KURAKUMA S KINDRED SPIRIT AT NOIR ZAIN",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1327,10 +1366,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "329366003",
+      "id": "347479012",
       "name_lat": "KURSKY TALISMAN GREY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1345,10 +1384,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "69512547",
+      "id": "240425546",
       "name_lat": "KURAT GRAND BAKUR BALU",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -1363,13 +1402,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "306022739",
+      "name_lat": "KURAZH SVETLANY SHANSANY",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1916984395",
+      "name_lat": "KUARON STARS ARISH CREAM",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "577",
       "name_lat": "KULIKOVO POLE DANTE",
-      "name_ru": "",
+      "name_ru": "КУЛИКОВО ПОЛЕ ДАНТЕ",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 14,
+      "total_shows": 17,
       "competition_dog_id": 577
+    },
+    {
+      "id": "1872313193",
+      "name_lat": "KUMIKO YOSHI HOSHI BLACK STAR KIND",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
     },
     {
       "id": "1330400518",
@@ -1413,7 +1478,24 @@
       "name_ru": "",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "310729958",
+      "name_lat": "KUHN BART RUSH",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1711054684",
+      "name_lat": "KUPECHESKI DVOR DANA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1435,12 +1517,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1872313193",
-      "name_lat": "KUMIKO YOSHI HOSHI BLACK STAR KIND",
+      "id": "1957077424",
+      "name_lat": "KUDRYAVYI GNOM PUPPY LOVE",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1453,13 +1534,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "381136447",
+      "id": "10079",
       "name_lat": "KULIKOVO POLE BARON",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
       "total_shows": 12,
-      "competition_dog_id": null
+      "competition_dog_id": 10079
     },
     {
       "id": "1636928581",
@@ -1468,6 +1549,15 @@
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1720067045",
+      "name_lat": "KURAZH SVETLANY YASHMA",
+      "name_ru": "КУРАЖ СВЕТЛАНЫ ЯШМА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "MINIATURE SCHNAUZER BLACK",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1480,13 +1570,22 @@
       "competition_dog_id": null
     },
     {
-      "id": "306022739",
-      "name_lat": "KURAZH SVETLANY SHANSANY",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
-      "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 5,
+      "id": "1193662840",
+      "name_lat": "KUMIR MILLIONOV BETKHOVEN",
+      "name_ru": "КУМИР МИЛЛИОНОВ БЕТХОВЕН",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
+    },
+    {
+      "id": "9586",
+      "name_lat": "KULIKOVO POLE GORDEYA",
+      "name_ru": "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": 9586
     },
     {
       "id": "575269390",
@@ -1498,21 +1597,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "880898644",
-      "name_lat": "KUARON STARS ARISH CREAM",
+      "id": "380693559",
+      "name_lat": "KURJAK T ESTRELLA FOR AMELHUK",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "768218362",
-      "name_lat": "KUHN BART RUSH",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1525,40 +1615,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "1070564157",
+      "id": "10321",
       "name_lat": "KULIKOVO POLE VINTAGE",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1896320196",
-      "name_lat": "KURAZH SVETLANY CHIN UP",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1461551602",
-      "name_lat": "KUMIKO YOSHI NEKKA MAISO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1163977909",
-      "name_lat": "KURJAK T ESTRELLA FOR AMELHUK",
-      "name_ru": "",
-      "breed": "МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
+      "total_shows": 8,
+      "competition_dog_id": 10321
     },
     {
       "id": "1902397412",
@@ -1570,10 +1633,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1037269599",
+      "id": "1233281949",
       "name_lat": "KULTAKORVAN COFFEE PRINCE",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "СПРИНГЕР ВЕНГЕРСКАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1597,10 +1660,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "856628459",
+      "id": "592125540",
       "name_lat": "KURAZH BIG TAYGER IZ DINASTII KANTEMIROVYKH",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1615,6 +1678,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1035429106",
+      "name_lat": "KUZMA IZ DOMA MIROSLAVA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "87292626",
       "name_lat": "KUNER'C GLORIA BEAUTIFUL WINNER",
       "name_ru": "",
@@ -1622,15 +1694,6 @@
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
-    },
-    {
-      "id": "9586",
-      "name_lat": "KULIKOVO POLE GORDEYA",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": 9586
     },
     {
       "id": "1650845710",
@@ -1642,12 +1705,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "258863662",
+      "id": "25107693",
       "name_lat": "KUPAVA VOM ARRIAN HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "813063413",
+      "name_lat": "KUSHAN DOKHTAR BAKHET",
+      "name_ru": "КУШАН ДОХТАР БАХЕТ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1660,30 +1731,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1035429106",
-      "name_lat": "KUZMA IZ DOMA MIROSLAVA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "260716758",
-      "name_lat": "KURAT GRAND ELZA- BELLA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "234028252",
       "name_lat": "KURAZH OT ZVEZDY URALA",
-      "name_ru": "",
+      "name_ru": "КУРАЖ ОТ ЗВЕЗДЫ УРАЛА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1602706838",
+      "name_lat": "KURAT GRAND ELZA-BELLA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1705,28 +1767,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1314253044",
+      "id": "82552680",
       "name_lat": "KURAZH SVETLANY GREF VANGUARD FORCE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "117434822",
+      "id": "555785562",
       "name_lat": "KUHN BART STRATEG",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "233602519",
+      "id": "1676128619",
       "name_lat": "KURAZH SVETLANY YALTA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1795,19 +1857,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1243889926",
+      "id": "10483",
       "name_lat": "KULIKOVO POLE DAR",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
+      "competition_dog_id": 10483
     },
     {
-      "id": "1434953160",
+      "id": "1236468724",
       "name_lat": "KUZINA'YULIA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1822,19 +1884,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1711054684",
-      "name_lat": "KUPECHESKI DVOR DANA",
+      "id": "1457996980",
+      "name_lat": "KUKOLKI LA BELLE",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1334234224",
+      "id": "764609956",
       "name_lat": "KULTAKORVAN CHOCOLATE FANTASY",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1894,6 +1955,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "326229356",
+      "name_lat": "KUDESNITSA IS PITERSKOGO DOZORA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1958488580",
       "name_lat": "KURAZH SVETLANY MIREILLE MATHIEU",
       "name_ru": "",
@@ -1939,10 +2008,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "474157779",
+      "id": "972349535",
       "name_lat": "KUHN BART RUNNING UILD",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "985157207",
+      "name_lat": "KUSANAGI MOTOKO",
+      "name_ru": "КУСАНАГИ МОТОКО",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1957,15 +2035,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1473365542",
-      "name_lat": "KUSANAGI MOTOKO",
-      "name_ru": "",
-      "breed": "АКИТА / AKITA",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "857688140",
       "name_lat": "KUDESNIK KUROLES S ELENIGORII",
       "name_ru": "",
@@ -1975,21 +2044,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "846146900",
+      "id": "1521913675",
       "name_lat": "KUSTODE DELL'ANIMA BASKERVILL",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "326229356",
-      "name_lat": "KUDESNITSA IS PITERSKOGO DOZORA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 4,
+      "id": "1985520022",
+      "name_lat": "KURSKIY TALISMAN SARMAT",
+      "name_ru": "КУРСКИЙ ТАЛИСМАН САРМАТ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2002,10 +2071,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "369696308",
+      "id": "1186322770",
       "name_lat": "KURAT GRAND URAGAN HUGO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2029,11 +2098,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "210699104",
+      "id": "938445708",
       "name_lat": "KUHN BART ILE DE BEAUTE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455026523",
+      "name_lat": "KUBIK SYN ORSI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2052,6 +2129,14 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104722540",
+      "name_lat": "KUSARIK PABLO PIKASSO",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2110,6 +2195,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "250275457",
+      "name_lat": "KUNER'S AMADEUS LUMINUS",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1020251244",
       "name_lat": "KUSOCHEK SCHASTYA LILIYA",
       "name_ru": "",
@@ -2119,19 +2213,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1374834947",
+      "id": "967152618",
       "name_lat": "KUDESNITSA IZ RUSSKOY PROVINTSII",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1310372336",
+      "id": "72837829",
       "name_lat": "KURT AMADEU’S CONNOR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ /",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2146,12 +2240,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "386116455",
-      "name_lat": "KURT RUSSEL",
+      "id": "1878745777",
+      "name_lat": "KURKUMA DEL BOHEX",
       "name_ru": "",
-      "breed": "ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 1,
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2173,12 +2266,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1546273862",
-      "name_lat": "KURSKIY TALISMAN R- SULTAN",
+      "id": "174212412",
+      "name_lat": "KURSKIY TALISMAN R-SULTAN",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "177132653",
+      "name_lat": "KUNER'S FIONA BEAUTIFUL PRINCESS",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2200,19 +2301,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "204301241",
+      "id": "1466679613",
       "name_lat": "KUHN BART ZHAN ZHAK SHIKO",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "236051689",
+      "id": "1402715508",
       "name_lat": "KUBANSKAYA SAKURA ZARINA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2272,10 +2373,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "789121949",
+      "id": "325039913",
       "name_lat": "KUZINA'YULIA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ / POODLE STANDARD BROWN, BLACK, WHITE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ / POODLE STANDARD BROWN, BLACK, WHITE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2290,10 +2391,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "490849774",
+      "id": "1124320658",
       "name_lat": "KUZINA'YULIA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2326,19 +2427,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1408053980",
+      "id": "200286504",
       "name_lat": "KUHN BART GRAFIKA",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ / GIANT",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ / GIANT",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "436292679",
+      "id": "758368603",
       "name_lat": "KUHN BART ZHIVAYA LEGENDA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ / MINIATURE SCHNAUZER BLACK",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ / MINIATURE SCHNAUZER BLACK",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2398,10 +2499,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1862670423",
+      "id": "1488165168",
       "name_lat": "KUNO VON DER SCHMIETRANKE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2421,6 +2522,14 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ СЕРЫЙ, АБРИКОСОВЫЙ,",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1322263983",
+      "name_lat": "KURAZH SVETLANY SALVATORE",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2461,6 +2570,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1725405822",
+      "name_lat": "KUJN GOLD STREKOZA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "359327017",
       "name_lat": "KUJN GOLD OPRA",
       "name_ru": "",
@@ -2479,19 +2597,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1725405822",
-      "name_lat": "KUJN GOLD STREKOZA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "968395774",
+      "id": "36473309",
       "name_lat": "KUPAVA VOM ARIDAN HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2510,15 +2619,6 @@
       "name_lat": "KUPIDON",
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР / ROTTWEILER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1720313019",
-      "name_lat": "KUNER'S AMADEUS LUMINUS",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ / BICHON",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2578,33 +2678,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1878745777",
-      "name_lat": "KURKUMA DEL BOHEX",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1505276321",
-      "name_lat": "KUKHAFA NAGA MORICH",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "SALUKI",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "550804525",
-      "name_lat": "KURSKOE SOZVEZDIE ZHIRAVA",
-      "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "BULLMASTIFF",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "177886057",
       "name_lat": "KURAZH SVETLANY GREF VANGARD FORS",
       "name_ru": "",
@@ -2641,30 +2714,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "265674161",
-      "name_lat": "KUSOCHEK SCHASTYA LIKA",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "784736732",
       "name_lat": "KURSKY TALISMAN ZHASAYA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1720067045",
-      "name_lat": "KURAZH SVETLANY YASHMA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
-      "breed_en": "MINIATURE SCHNAUZER BLACK",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2749,15 +2804,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1985520022",
-      "name_lat": "KURSKIY TALISMAN SARMAT",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "305888884",
       "name_lat": "KURT DEE JAY STAR",
       "name_ru": "",
@@ -2803,12 +2849,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1835943665",
-      "name_lat": "KUARON STARS GARDENA GRACE",
+      "id": "1647610723",
+      "name_lat": "KUPIDON MILYY DRUG",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "67628196",
+      "name_lat": "KURAZH SVETLANY ZHUDI LAV ERNIYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2841,17 +2894,17 @@
     {
       "id": "373660505",
       "name_lat": "KUDESNITSA IZ NIENSHANSA",
-      "name_ru": "",
+      "name_ru": "КУДЕСНИЦА ИЗ НИЕНШАНСА",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1993844097",
+      "id": "1348984069",
       "name_lat": "KURAZH SVETLANY BRAVE BUDDY",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ / GIANT",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ / GIANT",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2866,11 +2919,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "813063413",
-      "name_lat": "KUSHAN DOKHTAR BAKHET",
+      "id": "1465668708",
+      "name_lat": "KUHN BART GARMONIYA DUSHI MOEJ",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ /",
       "total_shows": 10,
       "competition_dog_id": null
     },
@@ -2884,10 +2936,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "793104842",
+      "id": "1914795931",
       "name_lat": "KUARON STARS DIONA GELATTI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2895,10 +2947,10 @@
     {
       "id": "1044864768",
       "name_lat": "KULON UDACHI EVA",
-      "name_ru": "",
+      "name_ru": "КУЛОН УДАЧИ ЕВА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2907,6 +2959,14 @@
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "773042178",
+      "name_lat": "KUHN BART GOLDEN CLASSICS",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -2947,10 +3007,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "294879951",
+      "id": "1617350152",
       "name_lat": "KURT BLEK RAYVEN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2965,20 +3025,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "57786743",
-      "name_lat": "KUHN BART GARMONIYA DUSHI MOEJ",
-      "name_ru": "",
-      "breed": "MINIATURE SCHNAUZER BLACK",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1880340221",
       "name_lat": "KUPAKOS EVY",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1295228560",
+      "name_lat": "KUPER",
+      "name_ru": "",
+      "breed": "СИБА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2992,11 +3051,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "827863551",
+      "id": "536357358",
       "name_lat": "KURT RASSEL",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1519734653",
+      "name_lat": "KUPAKOS DANIYA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3033,15 +3101,6 @@
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1519734653",
-      "name_lat": "KUPAKOS DANIYA",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3114,6 +3173,15 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1678479350",
+      "name_lat": "KUMIKO YOSHI HOSHI BLACK STAR OF KIND",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3199,10 +3267,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1347177585",
+      "id": "1187360980",
       "name_lat": "KUKI KHEPPI SAN",
       "name_ru": "",
-      "breed": "СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3217,28 +3285,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "805920443",
+      "id": "1223479466",
       "name_lat": "KUKOLNAYA OCHAROVASHKA TSATSA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "773042178",
-      "name_lat": "KUHN BART GOLDEN CLASSICS",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1411343629",
+      "id": "708037196",
       "name_lat": "KUJN GOLD RADISLAVA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3271,10 +3330,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "581747681",
+      "id": "193897665",
+      "name_lat": "KUTEZH",
+      "name_ru": "",
+      "breed": "RUSSIAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1036870972",
       "name_lat": "KUKLA BARBI",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3330,6 +3397,23 @@
       "name_ru": "",
       "breed": "ДЛИННОШЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "461021017",
+      "name_lat": "KUMIR MILLIONOV РОЖДЕННЫЙ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "141522394",
+      "name_lat": "KULLBJORN BRIENNA",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3442,19 +3526,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1491572699",
+      "id": "1833081618",
       "name_lat": "KUARON STARS ABSOLUTE WINNER",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1080064246",
+      "id": "201708370",
       "name_lat": "KUHN BART YVES SAINT LAURENT",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3478,15 +3562,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1678479350",
-      "name_lat": "KUMIKO YOSHI HOSHI BLACK STAR OF KIND",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1729461966",
       "name_lat": "KULTAKO RVAN COFFEE",
       "name_ru": "",
@@ -3496,10 +3571,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "621868621",
+      "id": "1727045808",
       "name_lat": "KUBIKRUBIK ГЛОРИЯ",
       "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ /",
+      "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3514,6 +3589,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "92573965",
+      "name_lat": "KURSKAYA DINASTIYA FLAFI UIPPI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "698914590",
       "name_lat": "KUIN OF MY HEART",
       "name_ru": "",
@@ -3523,11 +3606,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "461021017",
-      "name_lat": "KUMIR MILLIONOV РОЖДЕННЫЙ",
+      "id": "823798179",
+      "name_lat": "KUMIKO YOSHI HOSHI BLACK",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "СИБА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3537,6 +3619,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "929302692",
+      "name_lat": "KURTIS BEAU MELIN’S",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3613,15 +3703,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1193662840",
-      "name_lat": "KUMIR MILLIONOV BETKHOVEN",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "922794562",
       "name_lat": "KUSTO ЧЕЛСИ ИЗ ЦАРЕВЩИН",
       "name_ru": "",
@@ -3676,10 +3757,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1282280581",
+      "id": "774409502",
       "name_lat": "KUBA VOM ALIHEL HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -6,18 +6,20 @@
   "name_lat": "DOROGOY DRUG FIFA",
   "name_ru": "ДОРОГОЙ ДРУГ ФИФА",
   "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "competition_ids": [
     1426,
     1428,
     1437,
     1444,
+    20210613,
+    20221011,
     20230415,
     20230430,
     20230527,
-    20231007,
-    20230819
+    20230819,
+    20231007
   ],
   "competition_files": [
     "competitions/2023/04-апрель/1428-национальные-монопородные-состязания.json",
@@ -25,7 +27,9 @@
     "competitions/2023/04-апрель/20230430--cacl-2904-01052023-.json",
     "competitions/2023/05-май/20230527--27-28052023-.json",
     "competitions/2023/10-октябрь/20231007--07-08102023-.json",
-    "competitions/2023/08-август/20230819--cacl-19082023-.json"
+    "competitions/2023/08-август/20230819--cacl-19082023-.json",
+    "competitions/2021/06-июнь/20210613-чемпионат-россии-по-бегам-борзых-за-механическим.json",
+    "competitions/2022/05-май/20221011-чемпионат-россии-по-курсингу-борзых.json"
   ],
   "pedigree_url": "https://borzoi.breedarchive.com/animal/view/dorogoy-drug-fifa-65363083-8251-4491-86ca-dfd7860d41b3"
 }

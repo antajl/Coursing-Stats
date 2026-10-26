@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ИЯ",
-  "count": 13,
+  "count": 20,
   "dogs": [
     {
       "id": "1894136430",
@@ -10,6 +10,15 @@
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1629593762",
+      "name_lat": "И Я ЦАРЕВНА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -22,19 +31,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "16110240",
+      "id": "1179589105",
       "name_lat": "ИЯ СНЕЖНАЯ МЕТЕЛИЦА ИЗ ЧЕРНОГО ЯНТАРЯ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ИЯ СНЕЖНАЯ МЕТЕЛИЦА ИЗ ЧЕРНОГО ЯНТАРЯ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "936611566",
+      "id": "1683146880",
+      "name_lat": "И Я ШАНЯ С ЯМСКОЙ СЛОБОДЫ",
+      "name_ru": "И Я ШАНЯ С ЯМСКОЙ СЛОБОДЫ",
+      "breed": "Д-Ш ZWERG-DACHSHUND (TECKEL) - LANGHAAR (Specialty) ТАКСА МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1447781431",
       "name_lat": "ИЯ ДЛЯ АСТА ДЕЛЬ МОНТЕ С ДАЛЁКОЙ РАДУГИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ СОБАКА) СРЕДНЯЯ /",
+      "name_ru": "ИЯ ДЛЯ АСТА ДЕЛЬ МОНТЕ С ДАЛЁКОЙ РАДУГИ",
+      "breed": "АМЕРИКАНСКАЯ СОБАКА) СРЕДНЯЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -42,7 +60,7 @@
     {
       "id": "953815648",
       "name_lat": "ИЯ С ДАЛЁКОЙ РАДУГИ ДЛЯ АСТА ДЕЛЬ МОНТЕ",
-      "name_ru": "",
+      "name_ru": "ИЯ С ДАЛЁКОЙ РАДУГИ ДЛЯ АСТА ДЕЛЬ МОНТЕ",
       "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 6,
@@ -51,10 +69,19 @@
     {
       "id": "1961162394",
       "name_lat": "ИЯ НЕВЕСТА ЦАРЯ",
-      "name_ru": "",
+      "name_ru": "ИЯ НЕВЕСТА ЦАРЯ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56321647",
+      "name_lat": "И Я ПРЕКРАСНА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -103,6 +130,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1308941115",
+      "name_lat": "И Я ДЛЯ УТРА",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1277655540",
       "name_lat": "ИЯ ЛУЛАДЖА ИЗ ДИВНОГО САДА",
       "name_ru": "",
@@ -116,6 +152,32 @@
       "name_lat": "ИЯ ИЗЯЩНАЯ",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "160909013",
+      "name_lat": "ИЯ САХАЯ",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "762222322",
+      "name_lat": "И Я ЦАРЕВНА",
+      "name_ru": "",
+      "breed": "ТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "374563013",
+      "name_lat": "И Я Шаня с Ямской",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР ТАКСА МИН.Д-ШЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,31 +1,31 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ХУ",
-  "count": 234,
+  "count": 249,
   "dogs": [
-    {
-      "id": "1780471181",
-      "name_lat": "ХУРМА ИЗ ОТЧЕГО ДОМА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
     {
       "id": "1621878308",
       "name_lat": "ХУ ТАО ИЗ ДОЛИНЫ ПЯТИ ОЗЁР",
       "name_ru": "",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1110984504",
+      "id": "1780471181",
+      "name_lat": "ХУРМА ИЗ ОТЧЕГО ДОМА",
+      "name_ru": "ХУРМА ИЗ ОТЧЕГО ДОМА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "44282934",
       "name_lat": "ХУРМА РЕД ЕВРИКА",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "name_ru": "ХУРМА РЕД ЕВРИКА",
+      "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -51,10 +51,19 @@
     {
       "id": "386500886",
       "name_lat": "ХУГО ХАУС ФОКС",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ФОКС",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1394189515",
+      "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ ОДИН",
+      "name_ru": "ХУНД ХАУС ТРУБЕЦКОЙ ОДИН",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -69,17 +78,17 @@
     {
       "id": "1993234416",
       "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ БОНЯ",
-      "name_ru": "",
+      "name_ru": "ХУНД ХАУС ТРУБЕЦКОЙ БОНЯ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "901477776",
+      "id": "1185891023",
       "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ ЕРАНИЯ",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "name_ru": "ХУНД ХАУС ТРУБЕЦКОЙ ЕРАНИЯ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -87,7 +96,7 @@
     {
       "id": "576939663",
       "name_lat": "ХУГО ХАУС АБСОЛЮТЕ МАРВЕЛ ФОР УАЙТ ЛАЙН",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС АБСОЛЮТЕ МАРВЕЛ ФОР УАЙТ ЛАЙН",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
@@ -121,10 +130,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1210360867",
+      "id": "1213579943",
       "name_lat": "ХУАНИТА РУЛЬГАРДИНА ПЕППИ ДЛИННЫЙ ЧУЛОК",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "name_ru": "ХУАНИТА РУЛЬГАРДИНА ПЕППИ ДЛИННЫЙ ЧУЛОК",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -141,7 +150,7 @@
     {
       "id": "273774766",
       "name_lat": "ХУГО ДЕ ХЬЮСТОН",
-      "name_ru": "",
+      "name_ru": "ХУГО ДЕ ХЬЮСТОН",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 5,
@@ -150,17 +159,17 @@
     {
       "id": "328144955",
       "name_lat": "ХУНДЕРТАУЭР НИРВАНА К/Х",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР НИРВАНА К/Х",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "167426420",
+      "id": "1459814013",
       "name_lat": "ХУРМА КОНФЕТКА ИЗ РОСТОВА ПАПЫ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -186,7 +195,7 @@
     {
       "id": "39754589",
       "name_lat": "ХУГО ХАУС ЖАСТИНА",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ЖАСТИНА",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 4,
@@ -195,7 +204,7 @@
     {
       "id": "1894494275",
       "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ ЕСЕНИЯ",
-      "name_ru": "",
+      "name_ru": "ХУНД ХАУС ТРУБЕЦКОЙ ЕСЕНИЯ",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 3,
@@ -220,6 +229,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1971927962",
+      "name_lat": "ХУНДЕРТАУЭР ОРИОН ФЛАЙМЗ ОФ ЛАВ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1697222806",
       "name_lat": "ХУНТЕРУНИВЕРСАЛ ФИНА",
       "name_ru": "",
@@ -231,17 +248,8 @@
     {
       "id": "1602756654",
       "name_lat": "ХУНТЕРУНИВЕРСАЛ ФАЯ",
-      "name_ru": "",
+      "name_ru": "ХУНТЕРУНИВЕРСАЛ ФАЯ",
       "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "319392953",
-      "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ ОДИН",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -256,9 +264,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "981183142",
+      "name_lat": "ХУАН САНЧЕС ЛЕОН АЛЬ-КАПОНЕ",
+      "name_ru": "ХУАН САНЧЕС ЛЕОН АЛЬ-КАПОНЕ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
       "id": "1553633922",
       "name_lat": "ХУГО ХАУС ШАЙНА ОРИДЖИНАЛ БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ШАЙНА ОРИДЖИНАЛ БЬЮТИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 18,
@@ -267,7 +284,7 @@
     {
       "id": "199148989",
       "name_lat": "ХУНДЕРТАУЭР НУЦЦА",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР НУЦЦА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 19,
@@ -276,28 +293,45 @@
     {
       "id": "636470338",
       "name_lat": "ХУЛИГАНКА С ЕНИСЕЙСКИХ ПОЛЕЙ",
-      "name_ru": "",
+      "name_ru": "ХУЛИГАНКА С ЕНИСЕЙСКИХ ПОЛЕЙ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "500815607",
       "name_lat": "ХУГО ХАУС ТАСКАНА ТАЛЛОМОР",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ТАСКАНА ТАЛЛОМОР",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
       "id": "136043843",
       "name_lat": "ХУНТИНГ ТРАИЛ ПИКАССО",
-      "name_ru": "",
+      "name_ru": "ХУНТИНГ ТРАИЛ ПИКАССО",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1297220460",
+      "name_lat": "ХУЛИГАНКА АСЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ той шпиц немецкий",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1207505167",
+      "name_lat": "ХУЛИГАНКА АСЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙТОЙ той шпиц немецкий",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -312,19 +346,18 @@
     {
       "id": "480365552",
       "name_lat": "ХУГО ХАУС ФАББИ",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ФАББИ",
       "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "981183142",
-      "name_lat": "ХУАН САНЧЕС ЛЕОН АЛЬ-КАПОНЕ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 22,
+      "id": "94582313",
+      "name_lat": "ХУГО ХАУС ОКИ СУМИ",
+      "name_ru": "ХУГО ХАУС ОКИ СУМИ",
+      "breed": "СИБА",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -357,7 +390,7 @@
     {
       "id": "819700924",
       "name_lat": "ХУГО ХАУС ДАЙКИ КАТАШИ",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ДАЙКИ КАТАШИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 8,
@@ -375,6 +408,15 @@
     {
       "id": "606879848",
       "name_lat": "ХУНДЕРТАУЭР РЕМИ МАРТЕН",
+      "name_ru": "ХУНДЕРТАУЭР РЕМИ МАРТЕН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "274057019",
+      "name_lat": "ХУРМА",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -382,21 +424,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "16934122",
-      "name_lat": "ХУРМА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "94582313",
-      "name_lat": "ХУГО ХАУС ОКИ СУМИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
+      "id": "1552332550",
+      "name_lat": "ХУНТИНГ ТРАИЛ МЕРКУРИ",
+      "name_ru": "ХУНТИНГ ТРАИЛ МЕРКУРИ",
+      "breed": "БИГЛЬ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -411,7 +443,7 @@
     {
       "id": "862316861",
       "name_lat": "ХУНДЕРТАУЭР СИЛВЕР СТАР",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР СИЛВЕР СТАР",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 12,
@@ -420,7 +452,7 @@
     {
       "id": "216391260",
       "name_lat": "ХУНДЕРТАУЭР ИЛОРД ЗЕ ФАЙРИ ДРАГОН",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР ИЛОРД ЗЕ ФАЙРИ ДРАГОН",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 5,
@@ -438,7 +470,7 @@
     {
       "id": "1863044027",
       "name_lat": "ХУНТИНГ ТРАИЛ СВИТ КЭНДИ",
-      "name_ru": "",
+      "name_ru": "ХУНТИНГ ТРАИЛ СВИТ КЭНДИ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -447,7 +479,7 @@
     {
       "id": "570479400",
       "name_lat": "ХУТОР РИАННЫ МЕДВЕДЬ РОССИИ",
-      "name_ru": "",
+      "name_ru": "ХУТОР РИАННЫ МЕДВЕДЬ РОССИИ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
@@ -456,7 +488,7 @@
     {
       "id": "1819268993",
       "name_lat": "ХУНДЕРТАУЭР ДРЕАМ СТАР",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР ДРЕАМ СТАР",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
@@ -465,7 +497,7 @@
     {
       "id": "227131904",
       "name_lat": "ХУГО ХАУС ДАРВИН",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ДАРВИН",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -474,7 +506,7 @@
     {
       "id": "368826367",
       "name_lat": "ХУНТИНГ ТРАИЛ КРОН КИНГ",
-      "name_ru": "",
+      "name_ru": "ХУНТИНГ ТРАИЛ КРОН КИНГ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 8,
@@ -492,7 +524,7 @@
     {
       "id": "343523784",
       "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ ГЕРДА",
-      "name_ru": "",
+      "name_ru": "ХУНД ХАУС ТРУБЕЦКОЙ ГЕРДА",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 14,
@@ -501,7 +533,7 @@
     {
       "id": "768289683",
       "name_lat": "ХУГО ХАУС АНДЖЕЛ БРИКС",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС АНДЖЕЛ БРИКС",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
@@ -512,6 +544,15 @@
       "name_lat": "ХУГО ХАУС ЮКС ДЕМОН",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "918651756",
+      "name_lat": "ХУНТЕРУНИВЕРСАЛ НОРА",
+      "name_ru": "ХУНТЕРУНИВЕРСАЛ НОРА",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -537,16 +578,24 @@
     {
       "id": "1001733155",
       "name_lat": "ХУГО ХАУС ЧИЗКЕЙК ВАНИЛЬНЫЙ",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ЧИЗКЕЙК ВАНИЛЬНЫЙ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1762548957",
+      "name_lat": "ХУГО ХАУС ГЛОРИЯ ВИКТОРИУС",
+      "name_ru": "ХУГО ХАУС ГЛОРИЯ ВИКТОРИУС",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1015047486",
       "name_lat": "ХУНТИНГ ТРАЙЛ ЗАОБЛАЧНАЯ ДАЛЬ",
-      "name_ru": "",
+      "name_ru": "ХУНТИНГ ТРАЙЛ ЗАОБЛАЧНАЯ ДАЛЬ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 7,
@@ -555,7 +604,7 @@
     {
       "id": "573679408",
       "name_lat": "ХУНДЕРТАУЭР НЕЙМ БЛЕССЕД",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР НЕЙМ БЛЕССЕД",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
@@ -564,7 +613,7 @@
     {
       "id": "1333205605",
       "name_lat": "ХУГО ХАУС ЧИВИТА РАМИРА",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ЧИВИТА РАМИРА",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -618,17 +667,17 @@
     {
       "id": "1661210460",
       "name_lat": "ХУНДЕРТАУЭР ЕНИСЕЙ",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР ЕНИСЕЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1058038465",
+      "id": "848017308",
       "name_lat": "ХУЛЬГЕН ХАУС ШУМЕРИЯ",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "name_ru": "ХУЛЬГЕН ХАУС ШУМЕРИЯ",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -643,19 +692,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "918651756",
-      "name_lat": "ХУНТЕРУНИВЕРСАЛ НОРА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "441766546",
+      "id": "1917182748",
       "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ АРЧИБАЛЬД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -670,19 +710,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1288806830",
+      "id": "942962299",
       "name_lat": "ХУББА БУББА С ЗЕЛЕНОГО ГОРОДА",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "731214307",
+      "id": "192703420",
       "name_lat": "ХУАНИТА",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -742,10 +782,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "521562097",
+      "id": "553174668",
       "name_lat": "ХУНДЕРТАУЭР МЕНФИЛД",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "ХУНДЕРТАУЭР МЕНФИЛД",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -762,10 +802,26 @@
     {
       "id": "426635095",
       "name_lat": "ХУРМА ИЗ ДОМА САТУРН",
-      "name_ru": "",
+      "name_ru": "ХУРМА ИЗ ДОМА САТУРН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "156386323",
+      "name_lat": "ХУНТЕРУНИВЕРСАЛ НАЙДА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "741616169",
+      "name_lat": "Хунд Хаус Трубецкой Ульрих",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -780,7 +836,7 @@
     {
       "id": "301531464",
       "name_lat": "ХУГО ХАУС РЫЖАЯ КРАСОТКА",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС РЫЖАЯ КРАСОТКА",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -868,10 +924,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1040143811",
+      "id": "1706130090",
       "name_lat": "ХУГО ХАУС ШЕР-ХАН",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -886,19 +942,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "43163952",
-      "name_lat": "ХУНДЕТАУЭР ЕНИСЕЙ К/Х",
+      "id": "417011725",
+      "name_lat": "ХУНДЕРТАУЭР ДЕКСТЕР КРЕЙЗИ ГАЙ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "breed": "Вельш корги пемброк",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1552332550",
-      "name_lat": "ХУНТИНГ ТРАИЛ МЕРКУРИ",
+      "id": "219977817",
+      "name_lat": "ХУГО ХАУС ГЕНРИЕТТА СТЮАРТ",
       "name_ru": "",
-      "breed": "Бигль",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "43163952",
+      "name_lat": "ХУНДЕТАУЭР ЕНИСЕЙ К/Х",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -967,6 +1030,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "394748328",
+      "name_lat": "ХУНТЕРУНИВЕРСАЛ ШУЛЬЦ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "132735162",
       "name_lat": "ХУАНТИНГ ТРАИЛ КРОН КИНГ",
       "name_ru": "",
@@ -1005,7 +1076,7 @@
     {
       "id": "590422820",
       "name_lat": "ХУНДЕРТАУЭР ГАЙ ЮЛИЙ ЦЕЗАРЬ (К/Х)",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР ГАЙ ЮЛИЙ ЦЕЗАРЬ (К/Х)",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 9,
@@ -1021,6 +1092,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1938476855",
+      "name_lat": "ХУНТИНГ ТРАЙЛ БЕЙД",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "781143189",
       "name_lat": "ХУНДЕРТАУЭР ОЛИМПИЯ (К/Х)",
       "name_ru": "",
@@ -1030,10 +1110,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "732139845",
+      "id": "487882328",
       "name_lat": "ХУНДЕРТАУЭР ПЕРПЕТУУМ МОБИЛЕ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "ХУНДЕРТАУЭР ПЕРПЕТУУМ МОБИЛЕ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1084,20 +1164,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1938476855",
-      "name_lat": "ХУНТИНГ ТРАЙЛ БЕЙД",
-      "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1393975895",
       "name_lat": "Хулия Белоснежка Эксклюзив от Марсель",
       "name_ru": "",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "782805124",
+      "name_lat": "ХУНТИНГ ТРАИЛ НИКОЛЬ КИДМАН",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1111,19 +1190,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1727431007",
+      "id": "827264206",
       "name_lat": "ХУГО ХАУС ЮНОНА",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "ХУГО ХАУС ЮНОНА",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "74033902",
+      "id": "116833709",
       "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ МИШЕЛЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1134,6 +1213,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1192510402",
+      "name_lat": "ХУГО ХАУС МАРСЕЛЬ",
+      "name_ru": "",
+      "breed": "GERMAN",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1165,10 +1252,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "431567219",
+      "id": "1301093220",
       "name_lat": "ХУРГАДА С ХЕХЦИРА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "Хургада с Хехцира",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1194,10 +1281,10 @@
     {
       "id": "806344130",
       "name_lat": "ХУНДЕРТАУЭР КОЛОМБИНА",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР КОЛОМБИНА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1210,10 +1297,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1307335090",
+      "id": "722244169",
       "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ ВИРДЖИНИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ХУНД ХАУС ТРУБЕЦКОЙ ВИРДЖИНИЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1221,7 +1308,7 @@
     {
       "id": "1381083269",
       "name_lat": "ХУНДЕРТАУЭР ЕВАНГЕЛИСТА",
-      "name_ru": "",
+      "name_ru": "ХУНДЕРТАУЭР ЕВАНГЕЛИСТА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
@@ -1241,6 +1328,24 @@
       "name_lat": "ХУГО ХАУС ФАНТАСТИКА",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1071700992",
+      "name_lat": "ХУНДЕРТАУЭР УМА ТУРМАН",
+      "name_ru": "ХУНДЕРТАУЭР УМА ТУРМАН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1820741483",
+      "name_lat": "ХУРМА ОДИССЕЯ",
+      "name_ru": "ХУРМА ОДИССЕЯ",
+      "breed": "РОДЕЗИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1282,10 +1387,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1916735378",
+      "id": "1573778707",
       "name_lat": "ХУНДЕНТАУЭР ПАЛОМА ДАНСЕР МИ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1363,10 +1468,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "449402143",
+      "id": "97532984",
       "name_lat": "ХУНДАЙ ШАДЭ ФОН ВИШЕНХОФФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1390,19 +1495,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1101538080",
+      "id": "1885874053",
       "name_lat": "ХУНДЕРТАУЭР ВИНСЕНТ",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1762548957",
-      "name_lat": "ХУГО ХАУС ГЛОРИЯ ВИКТОРИУС",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "name_ru": "ХУНДЕРТАУЭР ВИНСЕНТ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1410,8 +1506,17 @@
     {
       "id": "1119789693",
       "name_lat": "ХУБЕРТ ДИССИДЕНТ",
-      "name_ru": "",
+      "name_ru": "ХУБЕРТ ДИССИДЕНТ",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1861174708",
+      "name_lat": "ХУГО ХАУС АФИНА ПАЛЛАДА",
+      "name_ru": "ХУГО ХАУС АФИНА ПАЛЛАДА",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1419,7 +1524,7 @@
     {
       "id": "1884893175",
       "name_lat": "ХУГО ИЗ ЛАРЦА ВИВОН",
-      "name_ru": "",
+      "name_ru": "ХУГО ИЗ ЛАРЦА ВИВОН",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -1428,17 +1533,17 @@
     {
       "id": "110290504",
       "name_lat": "ХУАННА ИЗ ЖУРАВЛИНОГО КЛИНА",
-      "name_ru": "",
+      "name_ru": "ХУАННА ИЗ ЖУРАВЛИНОГО КЛИНА",
       "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "601543104",
+      "id": "1507951665",
       "name_lat": "ХУНДЕРТАУЭРНЬЮ СТАР",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "name_ru": "ХУНДЕРТАУЭРНЬЮ СТАР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1446,7 +1551,7 @@
     {
       "id": "279269379",
       "name_lat": "ХУГО ХАУС ЯКУДЗА",
-      "name_ru": "",
+      "name_ru": "ХУГО ХАУС ЯКУДЗА",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -1455,7 +1560,7 @@
     {
       "id": "942746001",
       "name_lat": "ХУГО БОСС ГЕЛИЭТ",
-      "name_ru": "",
+      "name_ru": "ХУГО БОСС ГЕЛИЭТ",
       "breed": "БУЛЬТЕРЬЕР ЦВЕТНОЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -1464,26 +1569,8 @@
     {
       "id": "630909236",
       "name_lat": "ХУРМА ИЗ ДОМА МАДАМИ",
-      "name_ru": "",
+      "name_ru": "ХУРМА ИЗ ДОМА МАДАМИ",
       "breed": "АППЕНЦЕЛЛЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1071700992",
-      "name_lat": "ХУНДЕРТАУЭР УМА ТУРМАН",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "712819479",
-      "name_lat": "ХУРМА ОДИССЕЯ",
-      "name_ru": "",
-      "breed": "И БРЕТОНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1498,10 +1585,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1564141222",
+      "id": "663775419",
       "name_lat": "ХУСЕЙН",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1525,10 +1612,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "963437019",
+      "id": "1603294482",
       "name_lat": "ХУРМА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1570,24 +1657,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1297220460",
-      "name_lat": "ХУЛИГАНКА АСЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ той шпиц немецкий",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1207505167",
-      "name_lat": "ХУЛИГАНКА АСЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙТОЙ той шпиц немецкий",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "955090579",
       "name_lat": "ХУРМА",
       "name_ru": "",
@@ -1624,10 +1693,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1463718700",
+      "id": "998461184",
       "name_lat": "Хуан Мигель",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1155772952",
+      "name_lat": "ХУГО ХОТ РЭД ЧИЛЛИ ПЕППЕР",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1804,19 +1882,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "722610959",
+      "id": "1116528446",
       "name_lat": "ХУАНИТА ИЗ АКАПУЛЬКО",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "435737385",
-      "name_lat": "ХУГО ХАУС АФИНА ПАЛЛАДА",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1840,10 +1909,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1150940409",
+      "id": "1225946916",
       "name_lat": "ХУНДЕРТАУЭР ИРВИН ИТ’С МАЙ ЛАВ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1867,6 +1936,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1878988823",
+      "name_lat": "ХУГО ХАУС ЮРМА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1657315379",
       "name_lat": "ХУТОР РИАННЫ ЯЗГУЛ",
       "name_ru": "",
@@ -1885,11 +1962,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1177398759",
+      "name_lat": "ХУГО ХАУС БЭЙБА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1287782168",
       "name_lat": "ХУГО ХАУС ФОЛДЕР",
       "name_ru": "",
       "breed": "СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "667969975",
+      "name_lat": "ХУНТА ИЗ ВОЙСКА ДОНСКОГО",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2011,8 +2104,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1982696262",
-      "name_lat": "ХУНДЕРТАУЭР ЖАННА - ДЕ- АРК",
+      "id": "640940406",
+      "name_lat": "ХУНДЕРТАУЭР ЖАННА - ДЕ-АРК",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -2065,15 +2158,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1155772952",
-      "name_lat": "ХУГО ХОТ РЭД ЧИЛЛИ ПЕППЕР",
-      "name_ru": "",
-      "breed": "ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "43227283",
       "name_lat": "ХУАНХЭ ДЛЯ КНЯЖЕСТВА ВОЛХОНСКО",
       "name_ru": "",
@@ -2092,10 +2176,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "205497179",
+      "id": "1619040738",
       "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ РУФФИ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2106,6 +2190,38 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1431830566",
+      "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ ТЕЯ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "280568249",
+      "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ СУПЕР СТАР ЕВА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "608454324",
+      "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ ПУГОВКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1268792475",
+      "name_lat": "ХУНД ХАУС ТРУБЕЦКОЙ ГРОСС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     }

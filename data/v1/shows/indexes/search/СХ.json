@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "СХ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "544360543",
+      "name_lat": "С'ХОШИКО",
+      "name_ru": "",
+      "breed": "АКИТА / AKITA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "573567548",
+      "name_lat": "СХУМАН ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    }
+  ]
+}

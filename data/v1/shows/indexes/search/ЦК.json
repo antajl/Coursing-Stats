@@ -1,24 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЦК",
-  "count": 89,
+  "count": 85,
   "dogs": [
     {
       "id": "1927728917",
       "name_lat": "ЦКАРО ДАР ЧИНГИЗХАНА",
-      "name_ru": "",
+      "name_ru": "ЦКАРО ДАР ЧИНГИЗХАНА",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1726229779",
-      "name_lat": "ЦКАРО ФАВОРИТ II",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -26,8 +17,7 @@
       "name_lat": "ЦКАРО ЮСТАС II",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -42,10 +32,19 @@
     {
       "id": "885848379",
       "name_lat": "ЦКАРО АЛАЯ ЗАРЯ",
-      "name_ru": "",
+      "name_ru": "ЦКАРО АЛАЯ ЗАРЯ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "870296895",
+      "name_lat": "ЦКАРО ЧАРУШ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -63,7 +62,7 @@
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -72,16 +71,16 @@
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "870296895",
-      "name_lat": "ЦКАРО ЧАРУШ",
+      "id": "1333838833",
+      "name_lat": "ЦКАРО АКУЛА",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -123,7 +122,7 @@
     {
       "id": "158118775",
       "name_lat": "ЦКАРО ЖЕМЧУЖНАЯ КАМЧАТКИ",
-      "name_ru": "",
+      "name_ru": "ЦКАРО ЖЕМЧУЖНАЯ КАМЧАТКИ",
       "breed": "Кавказская овчарка",
       "breed_en": "",
       "total_shows": 9,
@@ -136,15 +135,6 @@
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1333838833",
-      "name_lat": "ЦКАРО АКУЛА",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -193,46 +183,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "541681229",
-      "name_lat": "ЦКАРО КАРОЛИНА",
+      "id": "1409494028",
+      "name_lat": "ЦКАРО ШАНЕЛЬ",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "541681229",
+      "name_lat": "ЦКАРО КАРОЛИНА",
+      "name_ru": "ЦКАРО КАРОЛИНА",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "359919161",
+      "name_lat": "ЦКАРО КАРДИНАЛ ДЛЯ КАИМ КАМАЛ",
+      "name_ru": "ЦКАРО КАРДИНАЛ ДЛЯ КАИМ КАМАЛ",
+      "breed": "CAUCASIAN SHEPHERD",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "1936504948",
       "name_lat": "ЦКАРО ЛЮДВИКА",
-      "name_ru": "",
+      "name_ru": "ЦКАРО ЛЮДВИКА",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1240665281",
-      "name_lat": "ЦКАРО МЕДВЕДЬ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "410588678",
       "name_lat": "ЦКАРО ЖАНИБЕК ХАН",
-      "name_ru": "",
+      "name_ru": "ЦКАРО ЖАНИБЕК ХАН",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "359919161",
-      "name_lat": "ЦКАРО КАРДИНАЛ ДЛЯ КАИМ КАМАЛ",
-      "name_ru": "",
-      "breed": "CAUCASIAN SHEPHERD",
+      "id": "1240665281",
+      "name_lat": "ЦКАРО МЕДВЕДЬ",
+      "name_ru": "ЦКАРО МЕДВЕДЬ",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -267,7 +265,7 @@
     {
       "id": "74891681",
       "name_lat": "ЦКАРО ЕЛБАРС",
-      "name_ru": "",
+      "name_ru": "ЦКАРО ЕЛБАРС",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
@@ -276,10 +274,18 @@
     {
       "id": "259686846",
       "name_lat": "ЦКАРО УГРОЗА",
-      "name_ru": "",
+      "name_ru": "ЦКАРО УГРОЗА",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1236726993",
+      "name_lat": "ЦКАРО ЖАЙРЕМ",
+      "name_ru": "ЦКАРО ЖАЙРЕМ",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -292,27 +298,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1450123270",
+      "id": "1486360703",
       "name_lat": "ЦКАРО ТАВАДИ",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1089973227",
-      "name_lat": "ЦКАРО ПИТЕРСКИЙ БАНДИТ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1284467266",
       "name_lat": "ЦКАРО ПЕРВАЯ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ЦКАРО ПЕРВАЯ ЛЕДИ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -325,15 +322,6 @@
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "200047350",
-      "name_lat": "ЦКАРО САРМАТ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -357,7 +345,7 @@
     {
       "id": "1213250555",
       "name_lat": "ЦКАРО ПЕТЕРБУРЖЕНКА",
-      "name_ru": "",
+      "name_ru": "ЦКАРО ПЕТЕРБУРЖЕНКА",
       "breed": "CAUCASIAN SHEPHERD",
       "breed_en": "",
       "total_shows": 4,
@@ -375,7 +363,7 @@
     {
       "id": "1179034996",
       "name_lat": "ЦКАРО ШОКОЛАД",
-      "name_ru": "",
+      "name_ru": "ЦКАРО ШОКОЛАД",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -463,15 +451,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "311191758",
-      "name_lat": "ЦКАРО ЖАКОНДА",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "130821266",
       "name_lat": "ЦКАРО ПРАГА ДЛЯ АЙСЕНВИЛЬ",
       "name_ru": "",
@@ -499,12 +478,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "191210321",
-      "name_lat": "ЦКАРО ЛОТОС ДЛЯ МИРНОГО ДОМА",
+      "id": "929680574",
+      "name_lat": "ЦКАРО МАМБА",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -523,15 +502,6 @@
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "929680574",
-      "name_lat": "ЦКАРО МАМБА",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -580,18 +550,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "579943619",
-      "name_lat": "ЦКАРО МОРФЕЙ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "209779029",
       "name_lat": "ЦКАРО ЖЕМЧУЖНЫЙ",
-      "name_ru": "",
+      "name_ru": "ЦКАРО ЖЕМЧУЖНЫЙ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -607,19 +568,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1148162231",
+      "id": "1697510646",
       "name_lat": "ЦКАРО ВОСТОК",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1820062736",
-      "name_lat": "ЦКАРО ЖАЙРЕМ",
+      "id": "489162352",
+      "name_lat": "Ц’КЕЙТАРО ИЗ СИБИРСКОЙ ГЛУБИНКИ",
       "name_ru": "",
-      "breed": "CAUCASIAN SHEPHERD",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1392551610",
+      "name_lat": "ЦКАРО МЕТЕЛИЦА",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -681,15 +651,6 @@
     {
       "id": "42385000",
       "name_lat": "ЦКАРО РОСОМАХА ДЛЯ ЗАЧАРОВАННЫЙ ВЕРЕСК",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1729347016",
-      "name_lat": "ЦКАРО ЖИВАНШИ",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -769,15 +730,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1450234784",
-      "name_lat": "ЦКАРО ГАРДАРИКА",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "621014733",
       "name_lat": "ЦКАРО ЧИНАРА",
       "name_ru": "",
@@ -787,11 +739,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1392551610",
-      "name_lat": "ЦКАРО МЕТЕЛИЦА",
+      "id": "552858402",
+      "name_lat": "ЦКАРО ВЕРЕНЕЯ",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1383756009",
+      "name_lat": "ЦКАРО ЦЕФЕЙЯ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },

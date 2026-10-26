@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "TW",
-  "count": 33,
+  "count": 35,
   "dogs": [
     {
       "id": "530628464",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 20,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -45,7 +45,7 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -54,7 +54,7 @@
       "name_ru": "",
       "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
       "breed_en": "BRITTANY SPANIEL (EPAGNEUL BRETON)",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -67,12 +67,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1022519377",
+      "id": "546476230",
       "name_lat": "TWINKLY FLASH KIDDY WIN”S",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1293907032",
+      "name_lat": "TWILIGHT MYSTIC NIGHT",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -157,10 +165,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1090387360",
+      "id": "89447541",
       "name_lat": "TWINAN LIFE'S A BLAST",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -208,6 +216,14 @@
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "329404774",
+      "name_lat": "TWIXY IZ SLAVJANSKOI NADEZHDY",
+      "name_ru": "",
+      "breed": "ТАКСА",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

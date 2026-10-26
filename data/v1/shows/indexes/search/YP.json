@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "YP",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1884400073",
+      "name_lat": "Y PLUTON",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1914106891",
+      "name_lat": "YPSILON VON DIETRICH",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1300479038",
+      "name_lat": "Y PADI СОЦВЕТИ Е САДКО",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР / RUSSIAN BLACK",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

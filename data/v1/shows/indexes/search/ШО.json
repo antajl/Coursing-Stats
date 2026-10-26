@@ -1,40 +1,48 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ШО",
-  "count": 650,
+  "count": 670,
   "dogs": [
     {
-      "id": "191623104",
+      "id": "1879622140",
       "name_lat": "ШОН ЗЕ ШЕПЕРД",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "name_ru": "ШОН ЗЕ ШЕПЕРД",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "413925906",
+      "name_lat": "ШОУ-ХИТ ЗИП ЮЭР ЛИП",
+      "name_ru": "ШОУ-ХИТ ЗИП ЮЭР ЛИП",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "908753873",
+      "name_lat": "ШОУ НАДЕЖДЫ ХЭЙЛА ФЛАФФИ КЛОУД",
+      "name_ru": "ШОУ НАДЕЖДЫ ХЭЙЛА ФЛАФФИ КЛОУД",
+      "breed": "БИГЛЬ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "197305260",
       "name_lat": "ШОУ ГАЛАКТИКА ЛАУРИН НОЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ШОУ ГАЛАКТИКА ЛАУРИН НОЕЛЬ",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "413925906",
-      "name_lat": "ШОУ-ХИТ ЗИП ЮЭР ЛИП",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "67610116",
+      "id": "490651592",
       "name_lat": "ШОКОЛАДНОЕ ДИВО ИЗАБЕЛЬ РЕНЕССАНС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ШОКОЛАДНОЕ ДИВО ИЗАБЕЛЬ РЕНЕССАНС",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -42,17 +50,26 @@
     {
       "id": "170411684",
       "name_lat": "ШОУФАВОРИТ АЛЬ ПАЧИНО",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ АЛЬ ПАЧИНО",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "990645187",
+      "id": "1342458734",
+      "name_lat": "ШОНА ИЗ ДОМА ЛОЦМАН",
+      "name_ru": "ШОНА ИЗ ДОМА ЛОЦМАН",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "808104711",
       "name_lat": "ШОКОЛАДНОЕ РУНО МАГИЯ ШАРМА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "ШОКОЛАДНОЕ РУНО МАГИЯ ШАРМА",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -60,7 +77,7 @@
     {
       "id": "1581605342",
       "name_lat": "ШОУ ОФФ КИНГ ТОТОРО",
-      "name_ru": "",
+      "name_ru": "ШОУ ОФФ КИНГ ТОТОРО",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 18,
@@ -69,7 +86,7 @@
     {
       "id": "1694009779",
       "name_lat": "ШОУ ЕЛВЕРАС БРАЗИЛИАН КАРНАВАЛ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС БРАЗИЛИАН КАРНАВАЛ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 4,
@@ -78,10 +95,10 @@
     {
       "id": "1171173838",
       "name_lat": "ШОУ-ХИТ ИТ'С МАЙ ЛАВЛИ КРАШ-КУРАЖ",
-      "name_ru": "",
+      "name_ru": "ШОУ-ХИТ ИТ'С МАЙ ЛАВЛИ КРАШ-КУРАЖ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -94,45 +111,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "977701510",
-      "name_lat": "ШОУ НАДЕЖДЫ ХЭЙЛА ФЛАФФИ КЛОУД",
+      "id": "1072009316",
+      "name_lat": "ШОУФАВОРИТ ОНЕГИН",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
       "id": "391385752",
       "name_lat": "ШОУ ЛЕДИ СТАР ГЕРЛ (К-Ш)",
-      "name_ru": "",
+      "name_ru": "ШОУ ЛЕДИ СТАР ГЕРЛ (К-Ш)",
       "breed": "ШИ - ТЦУ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "221398689",
+      "name_lat": "ШОКОЛАДНАЯ ЛЕДИ",
+      "name_ru": "ШОКОЛАДНАЯ ЛЕДИ",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1771936051",
       "name_lat": "ШОУФАВОРИТ ВАЛЕНСИЯ",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ ВАЛЕНСИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "949757456",
-      "name_lat": "ШОКОЛАДНАЯ ЛЕДИ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "187932176",
       "name_lat": "ШОУБЕБИ ИЗ КОРОЛЕВСТВА АННЫ",
-      "name_ru": "",
+      "name_ru": "ШОУБЕБИ ИЗ КОРОЛЕВСТВА АННЫ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 18,
@@ -141,7 +158,7 @@
     {
       "id": "1613494885",
       "name_lat": "ШОКОЛАДНЫЙ КЕКСИК",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНЫЙ КЕКСИК",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "BULLMASTIFF",
       "total_shows": 15,
@@ -150,7 +167,7 @@
     {
       "id": "488991499",
       "name_lat": "ШОМОХТ БУШ АТОС ГРАФ ДЕ ЛА ФЕР",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ АТОС ГРАФ ДЕ ЛА ФЕР",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -159,7 +176,7 @@
     {
       "id": "932097237",
       "name_lat": "ШОКОЛАДНОЕ ДИВО ЕНИСЕЙ",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНОЕ ДИВО ЕНИСЕЙ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 10,
@@ -168,7 +185,7 @@
     {
       "id": "46802988",
       "name_lat": "ШОУЛАЙН МЕЛИН'С ОРЛЕАН",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С ОРЛЕАН",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
       "total_shows": 16,
@@ -186,7 +203,7 @@
     {
       "id": "977604807",
       "name_lat": "ШОУ ГЕРАТ СЕКРЕТ СЕРВИС",
-      "name_ru": "",
+      "name_ru": "ШОУ ГЕРАТ СЕКРЕТ СЕРВИС",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "AFGHAN HOUND",
       "total_shows": 28,
@@ -195,7 +212,7 @@
     {
       "id": "1795174393",
       "name_lat": "ШОТИБУЛЛС ВАРЮША",
-      "name_ru": "",
+      "name_ru": "ШОТИБУЛЛС ВАРЮША",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -204,7 +221,7 @@
     {
       "id": "1913139170",
       "name_lat": "ШОУ ЕЛВЕРАС ЧЕВАЛИЕР",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС ЧЕВАЛИЕР",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 3,
@@ -213,7 +230,7 @@
     {
       "id": "1633243841",
       "name_lat": "ШОУЛАЙН МЕЛИН'С РАШАН РЕВОЛЮТИОН",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С РАШАН РЕВОЛЮТИОН",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
       "total_shows": 28,
@@ -222,26 +239,26 @@
     {
       "id": "277314083",
       "name_lat": "ШОУЛАЙН МЕЛИН'С ЛАС-ВЕГАС",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С ЛАС-ВЕГАС",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
-      "total_shows": 25,
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
       "id": "1155786562",
       "name_lat": "ШОУЛАЙН МЕЛИН'С ОНТАРИО",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С ОНТАРИО",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1847615670",
+      "id": "237693729",
       "name_lat": "ШОУ ВИННЕР БОЙ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "ШОУ ВИННЕР БОЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -265,9 +282,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "118953759",
+      "name_lat": "ШОУ ЛИДЕР МАЗЕРАТИ",
+      "name_ru": "ШОУ ЛИДЕР МАЗЕРАТИ",
+      "breed": "БОКСЕР РЫЖИЙ",
+      "breed_en": "BOXER",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1530503533",
       "name_lat": "ШОУЛАЙН МЕЛИН'С НЕАПОЛЬ",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С НЕАПОЛЬ",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
       "total_shows": 20,
@@ -276,25 +302,16 @@
     {
       "id": "1927084803",
       "name_lat": "ШОКОМАФИЯ МОНАКО",
-      "name_ru": "",
+      "name_ru": "ШОКОМАФИЯ МОНАКО",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1072009316",
-      "name_lat": "ШОУФАВОРИТ ОНЕГИН",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
       "id": "988569430",
       "name_lat": "ШОУ СТАР РИЧИ БОЙ",
-      "name_ru": "",
+      "name_ru": "ШОУ СТАР РИЧИ БОЙ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 8,
@@ -312,7 +329,7 @@
     {
       "id": "1351838627",
       "name_lat": "ШОУ ЕЛВЕРАС ГРАНД ПРИ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС ГРАНД ПРИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 6,
@@ -321,7 +338,7 @@
     {
       "id": "1446582167",
       "name_lat": "ШОУ КУРАЖ БРАЙТ МИРЭКЛ",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ БРАЙТ МИРЭКЛ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -343,15 +360,6 @@
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1781171165",
-      "name_lat": "ШОНА ИЗ ДОМА ЛОЦМАН",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -409,10 +417,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "305368627",
+      "id": "1203492389",
       "name_lat": "ШОТЛАНДСКАЯ ЛЕГЕНДА ОТ БУМАЖЕ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "name_ru": "ШОТЛАНДСКАЯ ЛЕГЕНДА ОТ БУМАЖЕ",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -420,10 +428,18 @@
     {
       "id": "1810432049",
       "name_lat": "ШОУ ЕЛВЕРАС БОРН ОФ ЗЕ МУУН",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС БОРН ОФ ЗЕ МУУН",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1094025043",
+      "name_lat": "ШОУМЕН В ЗОЛОТОМ ОШЕЙНИКЕ",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -456,7 +472,7 @@
     {
       "id": "5303998",
       "name_lat": "Шоу Гаалактика Нефертити",
-      "name_ru": "",
+      "name_ru": "Шоу Гаалактика Нефертити",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 4,
@@ -499,10 +515,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "18422390",
+      "id": "1330657038",
       "name_lat": "ШОУ-ХИТ БУМБАРАШ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ШОУ-ХИТ БУМБАРАШ",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -510,7 +526,7 @@
     {
       "id": "794659963",
       "name_lat": "ШОУФАВОРИТ ЯРОМИР",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ ЯРОМИР",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 10,
@@ -519,26 +535,25 @@
     {
       "id": "1992440251",
       "name_lat": "ШОУ ЛИДЕР ЗИГРИТЕС ФОР ВАЛЬ ДЕ ИСТР",
-      "name_ru": "",
+      "name_ru": "ШОУ ЛИДЕР ЗИГРИТЕС ФОР ВАЛЬ ДЕ ИСТР",
       "breed": "БОКСЕР ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
       "id": "787176985",
       "name_lat": "ШОУ МИСТЕР СТАР",
-      "name_ru": "",
+      "name_ru": "ШОУ МИСТЕР СТАР",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "255246771",
+      "id": "1426463420",
       "name_lat": "ШОУ ВИСТА ОЛАФ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ШОУ ВИСТА ОЛАФ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -564,10 +579,19 @@
     {
       "id": "1815454047",
       "name_lat": "ШОУ ЛЕДИ СТАР ГЕРЛ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЛЕДИ СТАР ГЕРЛ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1968609419",
+      "name_lat": "ШОУ ЛИДЕР ЗИДАН",
+      "name_ru": "ШОУ ЛИДЕР ЗИДАН",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -580,6 +604,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1657118994",
+      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЦИРЦЕЯ",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЦИРЦЕЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "963852283",
       "name_lat": "ШОУ ЕЛВЕРАС ФАН ДАНГО",
       "name_ru": "",
@@ -589,46 +622,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "515174707",
-      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЦИРЦЕЯ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "2150516",
       "name_lat": "ШОУ ЕЛВЕРАС ЛЮБОЧКА",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС ЛЮБОЧКА",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "606413824",
+      "id": "94933240",
       "name_lat": "ШОУ ЕЛВЕРАС ФЕЛИЧИТА",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ШОУ ЕЛВЕРАС ФЕЛИЧИТА",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1666637782",
-      "name_lat": "ШОУ-ХИТ ГАЛАТЕЯ ДЖЕНТЛ СНОУ КУИН (Изменено по решению ВК от 22.11.2023 В. 38)",
-      "name_ru": "",
-      "breed": "ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "97360205",
+      "id": "1271766295",
       "name_lat": "ШОУ ЕЛВЕРАС БЕК ТО ФУТУРЕ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -645,7 +660,7 @@
     {
       "id": "327984080",
       "name_lat": "ШОУ ЕЛВЕРАС ХАГЕН",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС ХАГЕН",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ФАЛЕН",
       "breed_en": "",
       "total_shows": 6,
@@ -654,7 +669,7 @@
     {
       "id": "1261421505",
       "name_lat": "ШОУДОГ ФЕМЕЛИ БИГ ЛАВ",
-      "name_ru": "",
+      "name_ru": "ШОУДОГ ФЕМЕЛИ БИГ ЛАВ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -670,19 +685,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1200506869",
+      "id": "1142426408",
       "name_lat": "Шоколатье",
       "name_ru": "",
-      "breed": "ДЖЕК МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1590109951",
+      "id": "1947309019",
       "name_lat": "ШОУ АЛЬ ВИШИ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -697,19 +712,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "912053139",
+      "name_lat": "ШОУ-ХИТ ГАЛАТЕЯ ДЖЕНТЛ СНОУ КУИН",
+      "name_ru": "ШОУ-ХИТ ГАЛАТЕЯ ДЖЕНТЛ СНОУ КУИН",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1469879207",
       "name_lat": "ШОМОХТ БУШ ДИАНА",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ ДИАНА",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "325770160",
+      "id": "1293548165",
       "name_lat": "ШОУФАВОРИТ БЕТЕЛЬГЕЙЗЕ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -733,10 +757,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1412595620",
+      "id": "1757218489",
       "name_lat": "ШОУ ВИСТА МАЖОР",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -744,10 +768,10 @@
     {
       "id": "1425590875",
       "name_lat": "ШОУФАВОРИТ ЦВЕТ НОЧИ КАСАНДРА",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ ЦВЕТ НОЧИ КАСАНДРА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 4,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -778,10 +802,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1949411517",
+      "id": "1261959253",
       "name_lat": "ШОЛОК МАЛОК",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -796,11 +820,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1813903034",
+      "id": "1921662934",
       "name_lat": "ШОКОВАЯ ТЕРАПИЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605015510",
+      "name_lat": "ШОКОМАФИЯ МИГЕЛЬ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -814,10 +846,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "123329957",
+      "id": "279464618",
       "name_lat": "ШОУ ВИСТА ОТ КУТЮР",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -825,7 +857,7 @@
     {
       "id": "794917443",
       "name_lat": "Шоу Лидер Обеликс",
-      "name_ru": "",
+      "name_ru": "Шоу Лидер Обеликс",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
@@ -834,7 +866,7 @@
     {
       "id": "535159368",
       "name_lat": "ШОУФАВОРИТ БРЮС УИЛЛИС",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ БРЮС УИЛЛИС",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 14,
@@ -850,66 +882,75 @@
       "competition_dog_id": null
     },
     {
-      "id": "191147653",
-      "name_lat": "ШОУЛАЙН МЕЛИН'С МАЙ ЛИТЛ ФЕНИКС",
-      "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "breed_en": "THAI RIDGEBACK DOG",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1339853620",
-      "name_lat": "ШОУ ГЕРАТ ЙОШИ",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1985342377",
-      "name_lat": "ШОУФАВОРИТ ЦАРИНА",
-      "name_ru": "",
+      "id": "302187896",
+      "name_lat": "ШОУФАВОРИТ ХИЛАРИ ДАФФ",
+      "name_ru": "ШОУФАВОРИТ ХИЛАРИ ДАФФ",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 18,
+      "breed_en": "",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
       "id": "1223069003",
       "name_lat": "ШОУ-ХИТ КОСТА РИКА",
-      "name_ru": "",
+      "name_ru": "ШОУ-ХИТ КОСТА РИКА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "152773885",
+      "name_lat": "ШОУЛАЙН МЕЛИН'С КИНГ ОФ ЗЕ РИНГ СЕМЁН",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С КИНГ ОФ ЗЕ РИНГ СЕМЁН",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
       "id": "1514787357",
       "name_lat": "ШОУ ГАЛАКТИКА РИАННА",
-      "name_ru": "",
+      "name_ru": "ШОУ ГАЛАКТИКА РИАННА",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "152773885",
-      "name_lat": "ШОУЛАЙН МЕЛИН'С КИНГ ОФ ЗЕ РИНГ СЕМЁН",
-      "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "id": "430840183",
+      "name_lat": "ШОУ ВИСТА ГАНГ СТАР",
+      "name_ru": "ШОУ ВИСТА ГАНГ СТАР",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1968609419",
-      "name_lat": "ШОУ ЛИДЕР ЗИДАН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЕР",
-      "breed_en": "BOXER",
-      "total_shows": 7,
+      "id": "191147653",
+      "name_lat": "ШОУЛАЙН МЕЛИН'С МАЙ ЛИТЛ ФЕНИКС",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С МАЙ ЛИТЛ ФЕНИКС",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "THAI RIDGEBACK DOG",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1985342377",
+      "name_lat": "ШОУФАВОРИТ ЦАРИНА",
+      "name_ru": "ШОУФАВОРИТ ЦАРИНА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1236755240",
+      "name_lat": "ШОУ БОЙ ВОН ОСТЕН ХЕРЦ",
+      "name_ru": "ШОУ БОЙ ВОН ОСТЕН ХЕРЦ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -922,19 +963,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1236755240",
-      "name_lat": "ШОУ БОЙ ВОН ОСТЕН ХЕРЦ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "id": "1877877522",
+      "name_lat": "ШОН ИЗ БОЛЬШОГО ДОМА",
+      "name_ru": "ШОН ИЗ БОЛЬШОГО ДОМА",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1710601602",
+      "id": "1185588180",
       "name_lat": "ШОУ МАСТ ГОУ ОН ИЗ СОЗВЕЗДИЯ СТАФФ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ШОУ МАСТ ГОУ ОН ИЗ СОЗВЕЗДИЯ СТАФФ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 12,
       "competition_dog_id": null
@@ -942,7 +983,7 @@
     {
       "id": "1164972871",
       "name_lat": "ШОУ КУРАЖ ГЕРМИОНА ГРЕЙНДЖЕР",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ ГЕРМИОНА ГРЕЙНДЖЕР",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -958,9 +999,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "831536207",
+      "name_lat": "ШОУ ЛЕДИ ДЖЕССИКА",
+      "name_ru": "ШОУ ЛЕДИ ДЖЕССИКА",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "123798100",
       "name_lat": "ШОУ ЛИДЕР ИСТОРИЯ СЧАСТЛИВОЙ ЖИЗНИ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЛИДЕР ИСТОРИЯ СЧАСТЛИВОЙ ЖИЗНИ",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -1012,19 +1062,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1965245024",
+      "id": "79944501",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЖАН АРМАН",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "831536207",
-      "name_lat": "ШОУ ЛЕДИ ДЖЕССИКА",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЖАН АРМАН",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1057,45 +1098,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1747162639",
-      "name_lat": "ШОУ ВИСТА ГАНГ СТАР",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1358100401",
       "name_lat": "ШОМОХТ БУШ НЮША",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ НЮША",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1779077743",
+      "id": "1092353507",
       "name_lat": "ШОКОЛАДКА ИЗ КАЗАНСКОГО ХАНСТВА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "name_ru": "ШОКОЛАДКА ИЗ КАЗАНСКОГО ХАНСТВА",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1877877522",
-      "name_lat": "ШОН ИЗ БОЛЬШОГО ДОМА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "312692395",
       "name_lat": "ШОУ КУРАЖ ГАРРИ ГУДИНИ",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ ГАРРИ ГУДИНИ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -1104,43 +1127,25 @@
     {
       "id": "208759579",
       "name_lat": "ШОУ-ХИТ ИМПРЕССИОН ДОДЖЕР",
-      "name_ru": "",
+      "name_ru": "ШОУ-ХИТ ИМПРЕССИОН ДОДЖЕР",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1907185150",
-      "name_lat": "ШОУ НАДЕЖДЫ ЗЕМФИРА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "id": "772920018",
+      "name_lat": "ШОУ ЕЛВЕРАС НОКАУТ",
+      "name_ru": "ШОУ ЕЛВЕРАС НОКАУТ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "302187896",
-      "name_lat": "ШОУФАВОРИТ ХИЛАРИ ДАФФ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "772920018",
-      "name_lat": "ШОУ ЕЛВЕРАС НОКАУТ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "66358578",
       "name_lat": "ШО ЭМИ ПАНДА",
-      "name_ru": "",
+      "name_ru": "ШО ЭМИ ПАНДА",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 7,
@@ -1149,7 +1154,7 @@
     {
       "id": "225859699",
       "name_lat": "ШОУЛАЙН МЕЛИН’С МИССИСИПИ",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН’С МИССИСИПИ",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
       "total_shows": 8,
@@ -1158,17 +1163,17 @@
     {
       "id": "68380427",
       "name_lat": "ШОУФАВОРИТ РЕВОЛЮЦИЯ",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ РЕВОЛЮЦИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1110170166",
+      "id": "822678607",
       "name_lat": "ШОУ ВИСТА ЕГЕРИЯ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ШОУ ВИСТА ЕГЕРИЯ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1176,34 +1181,25 @@
     {
       "id": "939179262",
       "name_lat": "ШОУФАВОРИТ ЦИРКОНИЯ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "593278876",
-      "name_lat": "ШОУФАВОРИТ АДМИРАЛ ФОР СОЛО ВИЖН",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ ЦИРКОНИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1114312350",
-      "name_lat": "ШОКОЛАД СИННАМОН БУН/SHOKOLAD SINNAMON BUN",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
+      "id": "593278876",
+      "name_lat": "ШОУФАВОРИТ АДМИРАЛ ФОР СОЛО ВИЖН",
+      "name_ru": "ШОУФАВОРИТ АДМИРАЛ ФОР СОЛО ВИЖН",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "1770815538",
       "name_lat": "ШОМОХТ БУШ ЛИЗАБЕТ",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ ЛИЗАБЕТ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
@@ -1212,10 +1208,19 @@
     {
       "id": "322932484",
       "name_lat": "ШОУФАВОРИТ ЮЛИЙ ЦЕЗАРЬ",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ ЮЛИЙ ЦЕЗАРЬ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1819531650",
+      "name_lat": "ШОУ КУРАЖ ДЕ МАЖОР",
+      "name_ru": "ШОУ КУРАЖ ДЕ МАЖОР",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1230,7 +1235,7 @@
     {
       "id": "1242546724",
       "name_lat": "ШОНИ ТЕО НИК",
-      "name_ru": "",
+      "name_ru": "ШОНИ ТЕО НИК",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 5,
@@ -1239,17 +1244,26 @@
     {
       "id": "1801053532",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ МИСТИКА",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ МИСТИКА",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1256083436",
+      "id": "665148997",
+      "name_lat": "ШОМОХТ БУШ ЭДИСОН",
+      "name_ru": "ШОМОХТ БУШ ЭДИСОН",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "28426697",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЖЕМЧУЖИНА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЖЕМЧУЖИНА",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1257,7 +1271,7 @@
     {
       "id": "425460526",
       "name_lat": "ШОУ ПЕРФОРМАНС МАСТ ГОУ ОН",
-      "name_ru": "",
+      "name_ru": "ШОУ ПЕРФОРМАНС МАСТ ГОУ ОН",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
@@ -1268,6 +1282,15 @@
       "name_lat": "ШОУ НАДЕЖДЫ ЕРОН",
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "928052162",
+      "name_lat": "ШОМОХТ БУШ ОЛИВИЯ ГРЕЙС HAMILTON PRINCESS IZ SIBIRSKOGO",
+      "name_ru": "ШОМОХТ БУШ ОЛИВИЯ ГРЕЙС",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1284,7 +1307,7 @@
     {
       "id": "177907722",
       "name_lat": "ШОУ КАНТРИ ФОРЕВА ЕВЕЛИН ФОН ТРИНИТИ",
-      "name_ru": "",
+      "name_ru": "ШОУ КАНТРИ ФОРЕВА ЕВЕЛИН ФОН ТРИНИТИ",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 6,
@@ -1300,36 +1323,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "510172043",
-      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ Ю- КИТТИ",
-      "name_ru": "",
+      "id": "467862996",
+      "name_lat": "ШОКОЛАДНОЕ РУНО КОКЕТКА КЕЙСИ",
+      "name_ru": "ШОКОЛАДНОЕ РУНО КОКЕТКА КЕЙСИ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "281240745",
+      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ Ю-КИТТИ",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ Ю-КИТТИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "379654722",
+      "id": "1092799655",
       "name_lat": "ШОУ ПЕРФОМАНС ЛЕГЕНДА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ШОУ ПЕРФОМАНС ЛЕГЕНДА",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1819531650",
-      "name_lat": "ШОУ КУРАЖ ДЕ МАЖОР",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1073274723",
       "name_lat": "ШОУ НАДЕЖДЫ ЖУЛЬЕН",
-      "name_ru": "",
+      "name_ru": "ШОУ НАДЕЖДЫ ЖУЛЬЕН",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 4,
@@ -1338,7 +1360,7 @@
     {
       "id": "1440558006",
       "name_lat": "ШОУ НАДЕЖДЫ БРУНО",
-      "name_ru": "",
+      "name_ru": "ШОУ НАДЕЖДЫ БРУНО",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 4,
@@ -1347,10 +1369,10 @@
     {
       "id": "162098646",
       "name_lat": "ШОУФАВОРИТ ЦВЕТ НОЧИ КАССАНДРА",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ ЦВЕТ НОЧИ КАССАНДРА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1363,36 +1385,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1168970278",
+      "id": "1850560008",
       "name_lat": "ШОУ КРОКОДАИЛ УИНТЕР СТОРМ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ШОУ КРОКОДАИЛ УИНТЕР СТОРМ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "118953759",
-      "name_lat": "ШОУ ЛИДЕР МАЗЕРАТИ",
-      "name_ru": "",
-      "breed": "БОКСЕР РЫЖИЙ",
-      "breed_en": "BOXER",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "665148997",
-      "name_lat": "ШОМОХТ БУШ ЭДИСОН",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "51378986",
       "name_lat": "ШОН ИЗ КОРОЛЕВСТВА Д'АЛЬБА",
-      "name_ru": "",
+      "name_ru": "ШОН ИЗ КОРОЛЕВСТВА Д'АЛЬБА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
@@ -1408,18 +1412,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588100710",
-      "name_lat": "ШОМОХТ БУШ ОЛИВИЯ ГРЕЙС",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1680716093",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЕВРАЗИЯ",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЕВРАЗИЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 7,
@@ -1440,61 +1435,78 @@
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "802595521",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЕВРОППА",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЕВРОППА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1021099380",
+      "id": "465547425",
+      "name_lat": "ШОУ ГЕРАТ ОЛИВИЯ",
+      "name_ru": "ШОУ ГЕРАТ ОЛИВИЯ",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1693490136",
       "name_lat": "ШОУ БЭБИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1381206383",
+      "name_lat": "ШОКОЛАДНЫЙ БЕЛЫЙ БОСС",
+      "name_ru": "ШОКОЛАДНЫЙ БЕЛЫЙ БОСС",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "321238041",
       "name_lat": "ШОУ ПЕРФОРМАНС КАЛЛИСТА",
-      "name_ru": "",
+      "name_ru": "ШОУ ПЕРФОРМАНС КАЛЛИСТА",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1638277805",
+      "id": "255615760",
       "name_lat": "ШОУФАВОРИТ АМАНДА АРКУРИ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "677980120",
+      "id": "1614680829",
       "name_lat": "ШОУ ГЕРАТ ОЙДУ ВАЙЛЕТС",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "name_ru": "ШОУ ГЕРАТ ОЙДУ ВАЙЛЕТС",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "125782891",
-      "name_lat": "ШОКОЛАДКА- МАРМЕЛАДКА ЭЛЬШЕРИ",
-      "name_ru": "",
+      "id": "1918378589",
+      "name_lat": "ШОКОЛАДКА-МАРМЕЛАДКА ЭЛЬШЕРИ",
+      "name_ru": "ШОКОЛАДКА-МАРМЕЛАДКА ЭЛЬШЕРИ",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1518,7 +1530,7 @@
     {
       "id": "9053270",
       "name_lat": "ШОМОХТ БУШ САНДРА",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ САНДРА",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 11,
@@ -1527,7 +1539,7 @@
     {
       "id": "1314101034",
       "name_lat": "ШОУЛАЙН МЕЛИН'С МАЛИБУ",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С МАЛИБУ",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
       "total_shows": 5,
@@ -1536,7 +1548,7 @@
     {
       "id": "1542065663",
       "name_lat": "ШОУ КРОКОДАЙЛ УИНТЕР СТОРМ",
-      "name_ru": "",
+      "name_ru": "ШОУ КРОКОДАЙЛ УИНТЕР СТОРМ",
       "breed": "DACHSHUND STANDARD",
       "breed_en": "",
       "total_shows": 3,
@@ -1545,7 +1557,7 @@
     {
       "id": "295674932",
       "name_lat": "ШОМОХТ БУШ МАРКУС",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ МАРКУС",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -1554,17 +1566,26 @@
     {
       "id": "1650476378",
       "name_lat": "ШОННИ КВИСТИ",
-      "name_ru": "",
+      "name_ru": "ШОННИ КВИСТИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "493595598",
+      "id": "381108757",
+      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ БЕЛЛА РОЗА",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ БЕЛЛА РОЗА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1801978296",
       "name_lat": "ШОЛЬЦ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1581,17 +1602,17 @@
     {
       "id": "826200797",
       "name_lat": "ШОВИ КРИСТАЛ БЕЙБИЛИС",
-      "name_ru": "",
+      "name_ru": "ШОВИ КРИСТАЛ БЕЙБИЛИС",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "662474234",
+      "id": "218101468",
       "name_lat": "ШОНА РИСИНГ СТАР",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД ПИНЧЕР",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1601,8 +1622,7 @@
       "name_lat": "ШОИЧИ",
       "name_ru": "",
       "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1626,28 +1646,10 @@
     {
       "id": "1181745224",
       "name_lat": "ШОУ ПЕРФОРМАНС ДИНЬ ДИНЬ",
-      "name_ru": "",
+      "name_ru": "ШОУ ПЕРФОРМАНС ДИНЬ ДИНЬ",
       "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1273303828",
-      "name_lat": "Шомохт Буш Астра Стелла Марис",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "381108757",
-      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ БЕЛЛА РОЗА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1662,7 +1664,7 @@
     {
       "id": "1825897359",
       "name_lat": "ШОККО-РОККО МАРМЕЛАД",
-      "name_ru": "",
+      "name_ru": "ШОККО-РОККО МАРМЕЛАД",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -1671,17 +1673,25 @@
     {
       "id": "487313429",
       "name_lat": "ШОУ КУРАЖ УНИКА СОЛДИ",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ УНИКА СОЛДИ",
       "breed": "БИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1363708325",
-      "name_lat": "ШОН ОИЛИЛЛ НАНУК",
+      "id": "891693630",
+      "name_lat": "ШОУ ГЕРАТ ОВЭЙШН",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1701532984",
+      "name_lat": "ШОН ОИЛИЛЛ НАНУК",
+      "name_ru": "ШОН ОИЛИЛЛ НАНУК",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1716,7 +1726,7 @@
     {
       "id": "92169226",
       "name_lat": "ШОУ НАДЕЖДЫ ИЗАР",
-      "name_ru": "",
+      "name_ru": "ШОУ НАДЕЖДЫ ИЗАР",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
@@ -1725,7 +1735,7 @@
     {
       "id": "41362991",
       "name_lat": "ШОКОЛАДНАЯ РАДОСТЬ МИЛКА",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ РАДОСТЬ МИЛКА",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -1734,7 +1744,7 @@
     {
       "id": "1186423105",
       "name_lat": "ШОУ КУРАЖ БЕЛЛА СВОН",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ БЕЛЛА СВОН",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -1743,17 +1753,8 @@
     {
       "id": "876891426",
       "name_lat": "ШОУ-ХИТ ХАППИ ДОГ БРУКЛИН",
-      "name_ru": "",
+      "name_ru": "ШОУ-ХИТ ХАППИ ДОГ БРУКЛИН",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1701040168",
-      "name_lat": "ШОУ ГЕРАТ ОЛИВИЯ",
-      "name_ru": "",
-      "breed": "АФГАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1761,7 +1762,7 @@
     {
       "id": "64039679",
       "name_lat": "ШОН МАЙ ЧАРМИНГ ЛИТТЛ БОЙ",
-      "name_ru": "",
+      "name_ru": "ШОН МАЙ ЧАРМИНГ ЛИТТЛ БОЙ",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
@@ -1770,7 +1771,7 @@
     {
       "id": "386573567",
       "name_lat": "ШОУЛАЙН МЕЛИН'С НИКОЛАС ФЛАМЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С НИКОЛАС ФЛАМЕЛЬ",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
       "total_shows": 12,
@@ -1779,7 +1780,7 @@
     {
       "id": "886771667",
       "name_lat": "ШОУ ГЕРАТ КАРАМЕЛЬ И СОЛЬ",
-      "name_ru": "",
+      "name_ru": "ШОУ ГЕРАТ КАРАМЕЛЬ И СОЛЬ",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "AFGHAN HOUND",
       "total_shows": 3,
@@ -1788,16 +1789,16 @@
     {
       "id": "1611632960",
       "name_lat": "ШОУ ЕЛВЕРАС СПАРКЛЕ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС СПАРКЛЕ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1812609768",
       "name_lat": "ШОУ МАСТ ГОУ ОН",
-      "name_ru": "",
+      "name_ru": "ШОУ МАСТ ГОУ ОН",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 4,
@@ -1849,6 +1850,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "748408043",
+      "name_lat": "ШОУФАВОРИТ ПЕГГИ ЛИПТОН",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1053913517",
       "name_lat": "ШОПОТ АНГЕЛА ЖЕМЧУЖИНА БЕЛЛА",
       "name_ru": "",
@@ -1860,16 +1870,16 @@
     {
       "id": "43635967",
       "name_lat": "ШОУЛАЙН МЕЛИН'С МЕРЛИН МОНРО",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С МЕРЛИН МОНРО",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
-      "total_shows": 11,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
       "id": "46642185",
       "name_lat": "ШОУ КУРАЖ БОН БОН",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ БОН БОН",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -1878,7 +1888,7 @@
     {
       "id": "1935396185",
       "name_lat": "ШОУ КУРАЖ ЖИГАЛО",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ ЖИГАЛО",
       "breed": "БИВЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -1887,16 +1897,24 @@
     {
       "id": "899111642",
       "name_lat": "ШОВИ КРИСТАЛ БРУНО",
-      "name_ru": "",
+      "name_ru": "ШОВИ КРИСТАЛ БРУНО",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1784595701",
+      "name_lat": "ШОМОХТ БУШ ДЖАСТИН АРКТИК ВИНД",
+      "name_ru": "ШОМОХТ БУШ ДЖАСТИН АРКТИК ВИНД",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "656211094",
       "name_lat": "ШОУ КУРАЖ БЛЕК ДАЙМОНД",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ БЛЕК ДАЙМОНД",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -1905,7 +1923,7 @@
     {
       "id": "1804193544",
       "name_lat": "ШОНА ЛАВЛИ ТОЙ ДЖОЙ",
-      "name_ru": "",
+      "name_ru": "ШОНА ЛАВЛИ ТОЙ ДЖОЙ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -1948,10 +1966,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1269572121",
-      "name_lat": "ШОУ ВИСТА АИР ФОРС",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "id": "1481844150",
+      "name_lat": "Шоу Виста Аир Форс",
+      "name_ru": "Шоу Виста Аир Форс",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1959,7 +1977,7 @@
     {
       "id": "1613680349",
       "name_lat": "ШОМОХТ БУШ ХОЛМС",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ ХОЛМС",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -1968,35 +1986,43 @@
     {
       "id": "587575365",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ТИКФОРД",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ТИКФОРД",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ПЯТНИСТЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "24384022",
+      "id": "322477262",
+      "name_lat": "ШОУ ЕЛВЕРАС МАРКУС",
+      "name_ru": "ШОУ ЕЛВЕРАС МАРКУС",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1274912915",
       "name_lat": "ШОУ ПЕРФОРМАНС ЛЕГЕНДА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ШОУ ПЕРФОРМАНС ЛЕГЕНДА",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "54597629",
+      "id": "1733008433",
       "name_lat": "ШООЛА ФЕЛИЦИЯ ВАЛЕНТАЙН",
-      "name_ru": "",
-      "breed": "ПУЛИ БУЛЬДОГ",
+      "name_ru": "ШООЛА ФЕЛИЦИЯ ВАЛЕНТАЙН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1403969360",
+      "id": "1671898789",
       "name_lat": "ШОУ ГЕРАТ КАРНАВАЛЬНАЯ НОЧЬ",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "name_ru": "ШОУ ГЕРАТ КАРНАВАЛЬНАЯ НОЧЬ",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2029,10 +2055,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1407852402",
+      "id": "842665449",
       "name_lat": "ШОУ ЕЛВЕРАС ЯСОН",
-      "name_ru": "",
-      "breed": "СПАНИЕЛЬ/П",
+      "name_ru": "ШОУ ЕЛВЕРАС ЯСОН",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2040,17 +2066,17 @@
     {
       "id": "1651105931",
       "name_lat": "ШОУ ТАЙМ ИЗ ЦАРСТВА ЛИЛИПУТОВ",
-      "name_ru": "",
+      "name_ru": "ШОУ ТАЙМ ИЗ ЦАРСТВА ЛИЛИПУТОВ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "913560779",
+      "id": "1035755458",
       "name_lat": "ШОУ ГЕРАТ ЛЕАДИНГ РУЛЕ",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "name_ru": "ШОУ ГЕРАТ ЛЕАДИНГ РУЛЕ",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2065,6 +2091,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1682206131",
+      "name_lat": "ШОУ ГАЛАКТИКА ГРИФФИНДОР",
+      "name_ru": "ШОУ ГАЛАКТИКА ГРИФФИНДОР",
+      "breed": "КИТАЙСКАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "890032738",
       "name_lat": "ШОУ НАДЕЖДЫ БИЛЬНАР",
       "name_ru": "",
@@ -2074,18 +2108,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1788834722",
-      "name_lat": "ШОУ НАДЕЖДЫ ГРЕЙТ",
+      "id": "1739260050",
+      "name_lat": "ШОУ ГЕРАТ НОРД ВЕСТ БРИЗ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
-      "breed_en": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1959200499",
       "name_lat": "ШОУ КУРАЖ ТАИС АФИНСКАЯ",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ ТАИС АФИНСКАЯ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2094,7 +2127,7 @@
     {
       "id": "470485362",
       "name_lat": "ШОУ ЛИДЕР ОУШЕН",
-      "name_ru": "",
+      "name_ru": "ШОУ ЛИДЕР ОУШЕН",
       "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2103,16 +2136,16 @@
     {
       "id": "383963487",
       "name_lat": "ШОУ ЕЛВЕРАС ВЕЛВЕТ ДРИАМ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС ВЕЛВЕТ ДРИАМ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1999342390",
-      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ О- МИЛАШКА",
-      "name_ru": "",
+      "id": "175006744",
+      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ О-МИЛАШКА",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ О-МИЛАШКА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -2121,7 +2154,7 @@
     {
       "id": "1623584797",
       "name_lat": "ШОУ ЕЛВЕРАС РОМАНС",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС РОМАНС",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
@@ -2139,7 +2172,7 @@
     {
       "id": "721491678",
       "name_lat": "ШОУЛАЙН МЕЛИН'С ЕВЕЛИНА ФИЕРИ САНРАЙЗ",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С ЕВЕЛИНА ФИЕРИ САНРАЙЗ",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
       "total_shows": 2,
@@ -2166,7 +2199,7 @@
     {
       "id": "1887131683",
       "name_lat": "ШОУ-ШТУЧКА ОТ ЗОЛОТОГО ПРИБОЯ",
-      "name_ru": "",
+      "name_ru": "ШОУ-ШТУЧКА ОТ ЗОЛОТОГО ПРИБОЯ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -2175,7 +2208,7 @@
     {
       "id": "1249230208",
       "name_lat": "ШОМОХТ БУШ ИЗОЛЬДА",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ ИЗОЛЬДА",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -2191,21 +2224,47 @@
       "competition_dog_id": null
     },
     {
+      "id": "1823056887",
+      "name_lat": "ШОКОЛАДНОЕ ДИВО БАНД'ЭРОС",
+      "name_ru": "ШОКОЛАДНОЕ ДИВО БАНД'ЭРОС",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1254030804",
       "name_lat": "ШОКОЛАДНЫЙ БАКС",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНЫЙ БАКС",
       "breed": "чихуахуа длинношерстный",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1654578479",
+      "id": "1056819550",
       "name_lat": "ШОУ ГЕРАТ ИМАДЖЕРИ",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "name_ru": "ШОУ ГЕРАТ ИМАДЖЕРИ",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "582183761",
+      "name_lat": "ШОКОЛАДНОЕ ДИВО САМОРОДОК",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1199880859",
+      "name_lat": "ШОУ ЕЛВЕРАС СЕКРЕТАРИ",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2220,7 +2279,7 @@
     {
       "id": "1099561575",
       "name_lat": "ШОУ КУРАЖ ЛУКЕРИЯ",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ ЛУКЕРИЯ",
       "breed": "БИВЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2245,11 +2304,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "529012273",
+      "id": "1516567597",
+      "name_lat": "ШОКОЛАДКА",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1093655244",
       "name_lat": "ШОН СНЕЖНАЯ ВЬЮГА",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "429336938",
+      "name_lat": "ШОУФАВОРИТ АКАПЕЛЛА ОФ СО",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2272,10 +2347,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "531640467",
+      "id": "1494830395",
       "name_lat": "ШОКОЛАДНАЯ ВИВЕРВИЛЬ",
       "name_ru": "",
-      "breed": "ТАКСА ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ",
+      "breed": "ТАКСА Г-Ш ТАКСА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2292,19 +2367,10 @@
     {
       "id": "979600190",
       "name_lat": "ШОМОХТ БУШ ПАРКЕР",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ ПАРКЕР",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "ENGLISH COCKER SPANIEL",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1784595701",
-      "name_lat": "ШОМОХТ БУШ ДЖАСТИН АРКТИК ВИНД",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2317,19 +2383,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "471913546",
+      "id": "1233851931",
       "name_lat": "ШОУ ФАВОРИТ РЕВОЛЮЦИЯ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "899446301",
+      "id": "427324352",
       "name_lat": "ШОУ НАДЕЖДЫ РОСИТА",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2344,30 +2410,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "247895563",
+      "id": "990146306",
       "name_lat": "ШОУ ГЕРАТ ОДДС",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1742019302",
-      "name_lat": "ШОМОХТ БУШ ЭМИЛИ",
+      "id": "1797738837",
+      "name_lat": "ШОУЛАЙН МЕЛИН'С ШАДОУ КУИН СОФИ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "852227461",
-      "name_lat": "ШОУ ЕЛВЕРАС МАРКУС",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2416,10 +2473,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "619997509",
+      "id": "190027352",
       "name_lat": "ШОКОМАФИЯ БЭЛЛА ЛИЛА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "name_ru": "ШОКОМАФИЯ БЭЛЛА ЛИЛА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2427,7 +2484,7 @@
     {
       "id": "695061015",
       "name_lat": "ШОУ ЕЛВЕРАС ХЕННЕССИ ХОТ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС ХЕННЕССИ ХОТ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ- СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -2436,7 +2493,7 @@
     {
       "id": "79790911",
       "name_lat": "ШОУЛАЙН МЕЛИН'С ЗАИН ЗАХИР",
-      "name_ru": "",
+      "name_ru": "ШОУЛАЙН МЕЛИН'С ЗАИН ЗАХИР",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
       "total_shows": 4,
@@ -2452,21 +2509,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1690333066",
+      "id": "470514523",
       "name_lat": "ШОН КОНР ИЗ СОЛНЕЧНОГО ДОМА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ШОН КОНР ИЗ СОЛНЕЧНОГО ДОМА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1262318977",
+      "id": "242272549",
       "name_lat": "ШОКОЛАДНОЕ ДИВО ЭСМЕРАЛЬДА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ШОКОЛАДНОЕ ДИВО ЭСМЕРАЛЬДА",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1773043011",
+      "name_lat": "ШОУ ГАЛАКТИКА ЖЕМЧУЖНЫЙ ПРИНЦ",
+      "name_ru": "ШОУ ГАЛАКТИКА ЖЕМЧУЖНЫЙ ПРИНЦ",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2488,10 +2554,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1487595055",
+      "id": "1374711787",
       "name_lat": "ШОКОЛАДНОЕ ДИВО ЛИЛИ МАРЛЕН",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2499,7 +2565,7 @@
     {
       "id": "1254745199",
       "name_lat": "ШОТ СТРАЙТ ТУ ЗЕ ХЕРТ",
-      "name_ru": "",
+      "name_ru": "ШОТ СТРАЙТ ТУ ЗЕ ХЕРТ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -2537,24 +2603,6 @@
       "name_lat": "ШОННИ КВИСТИ (Изменено по Решению ВК от 24.03.2021 вопрос 19)",
       "name_ru": "",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "869814543",
-      "name_lat": "ШОКОЛАДКА С РОМОМ ИЗ ПИТЕРСКОГО ДОЗОРА",
-      "name_ru": "",
-      "breed": "PINSCHER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1434617474",
-      "name_lat": "ШОУ ГАЛАКТИКА ЖЕМЧУЖНЫЙ ПРИНЦ",
-      "name_ru": "",
-      "breed": "СОБАКА / CHINESE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2616,10 +2664,18 @@
     {
       "id": "243107698",
       "name_lat": "ШОНОР РЕАЛ ВИННЕР",
-      "name_ru": "",
+      "name_ru": "ШОНОР РЕАЛ ВИННЕР",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127834973",
+      "name_lat": "ШОУ ЛИДЕР АВРОРА",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2643,28 +2699,19 @@
     {
       "id": "163853795",
       "name_lat": "ШОУ ЕЛВЕРАС ЛЕГАСИ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС ЛЕГАСИ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1965478438",
+      "id": "1348091935",
       "name_lat": "ШОКОЛАДНАЯ КРОШКА С ТВЕРСКИХ ПРОСТОРОВ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "ШОКОЛАДНАЯ КРОШКА С ТВЕРСКИХ ПРОСТОРОВ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "226938178",
-      "name_lat": "ШОКОЛАДНЫЙ БЕЛЫЙ БОСС",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ / BICHON FRISE",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2704,10 +2751,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1338401139",
+      "id": "477932506",
       "name_lat": "ШОКОМАФИЯ ДИВА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2727,6 +2774,22 @@
       "name_ru": "",
       "breed": "GERMAN SPITZ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "233274085",
+      "name_lat": "ШОТЛАНДИЯ",
+      "name_ru": "",
+      "breed": "БРАЗИЛЬСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "705989363",
+      "name_lat": "ШОТЛАНДИЯ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ БУЛЬДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2758,10 +2821,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1246077690",
+      "id": "233425423",
       "name_lat": "ШОЛОК МАЛОК",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2776,8 +2839,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1664247797",
-      "name_lat": "ШОУ КАНТРИ ФОРЕВА ИЛАНГ- ИЛАНГ-ИНФАНТА",
+      "id": "522737985",
+      "name_lat": "ШОУ КАНТРИ ФОРЕВА ИЛАНГ-ИЛАНГ-ИНФАНТА",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
@@ -2794,10 +2857,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "453562841",
+      "id": "374406692",
       "name_lat": "ШОУ ГЕРАТ ЙОРУБА",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2834,15 +2897,6 @@
       "name_lat": "ШОЛОДОРИ МОТАКО КИШИРО",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1956681091",
-      "name_lat": "ШОКОЛАДНОЕ ДИВО БАНД'ЭРОС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2893,10 +2947,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1399916808",
+      "id": "825295166",
       "name_lat": "ШОКОЛАДКА ШАКИРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2940,25 +2994,16 @@
     {
       "id": "1675064324",
       "name_lat": "ШОН О ТАЙЛЕР",
-      "name_ru": "",
+      "name_ru": "ШОН О ТАЙЛЕР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "385264986",
-      "name_lat": "ШОУ НАДЕЖДЫ ЧИБИ ИЧИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "679923147",
       "name_lat": "ШОУ НАГРАДА БЕЛОГО ГОРОДА",
-      "name_ru": "",
+      "name_ru": "ШОУ НАГРАДА БЕЛОГО ГОРОДА",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -2994,7 +3039,7 @@
     {
       "id": "1373820822",
       "name_lat": "ШОМОХТ БУШ ГРАНД",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ ГРАНД",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -3046,10 +3091,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "266441571",
+      "id": "1966982763",
       "name_lat": "ШОУ ВИСТА ЕСКОРТ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3082,10 +3127,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1547135573",
+      "id": "174690318",
       "name_lat": "ШОКОЛАДКА С ГЛИНЯНОЙ ГОРКИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3100,19 +3145,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1641882901",
-      "name_lat": "ШОН СЭНД ЛАМАРАС",
+      "id": "528822796",
+      "name_lat": "ШОКИНГ ВАЙТ БАЙ СИМОНАЛЕНД",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1797738837",
-      "name_lat": "ШОУЛАЙН МЕЛИН'С ШАДОУ КУИН СОФИ",
-      "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3120,16 +3156,25 @@
     {
       "id": "1272415027",
       "name_lat": "ШОУ ГАЛАКТИКА БЕСТЕР",
-      "name_ru": "",
+      "name_ru": "ШОУ ГАЛАКТИКА БЕСТЕР",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "1309957033",
+      "name_lat": "ШОМОХТ БУШ НОРА",
+      "name_ru": "ШОМОХТ БУШ НОРА",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1729797342",
       "name_lat": "ШОУ БОЙ ИЗ МАЖОРНОГО ЛАДА",
-      "name_ru": "",
+      "name_ru": "ШОУ БОЙ ИЗ МАЖОРНОГО ЛАДА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -3226,10 +3271,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810860432",
+      "id": "1613731557",
       "name_lat": "ШОУ КАНТРИ ФОРЕВА ЖЕ ТЕМ АВГУСТИН",
       "name_ru": "",
-      "breed": "ПЕКИНЕС /",
+      "breed": "ПЕКИНЕС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3244,11 +3289,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1063643073",
-      "name_lat": "ШОМОХТ БУШ НОРА",
+      "id": "1006438859",
+      "name_lat": "Шоу-Хит Калифорния Спирит",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "241296657",
+      "name_lat": "ШОУ ЕЛВЕРАС ЛЕАДЕР",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3257,15 +3309,6 @@
       "name_lat": "ШОУФАВОРИТ ЦИРКОНИЯ СИЛЬВЕР ВИН ХАНТЕР",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1582022607",
-      "name_lat": "ШОМОХТ БУШ ВАСИЛИНА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3280,10 +3323,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1031571941",
+      "id": "263401336",
       "name_lat": "ШОН ТВИН РИЧЕС (Д/Ш)",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3293,6 +3336,15 @@
       "name_lat": "ШОУ КАНТРИ ФОРЕВА ВИКТОРИЯ СИКРЕТ",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "139328167",
+      "name_lat": "ШОУ-ХИТ ГАЛАТЕЯ ДЖЕНТЛ СНОУ КУИН (Изменено по решению ВК от 22.11.2023 В. 38)",
+      "name_ru": "",
+      "breed": "КИНГ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3316,12 +3368,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1831779160",
-      "name_lat": "ШОКОЛЭЙТ АНГЕЛ",
+      "id": "1357192000",
+      "name_lat": "ШОУМЭН В ЗОЛОТОМ ОШЕЙНИКЕ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "907021949",
+      "name_lat": "ШОКОЛЭЙТ АНГЕЛ",
+      "name_ru": "ШОКОЛЭЙТ АНГЕЛ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1565856090",
+      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ГРАЦИЯ ШИК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3329,15 +3398,6 @@
       "name_lat": "ШОУ КУРАЖ ЭНДЖИ МАЙЕР",
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "140754566",
-      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ГРАЦИЯ ШИК",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3361,15 +3421,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1199880859",
-      "name_lat": "ШОУ ЕЛВЕРАС СЕКРЕТАРИ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1319844997",
       "name_lat": "ШОУ ЕЛВЕРАС ЕКСКЛЮЗИВ СТАЙЛ",
       "name_ru": "",
@@ -3379,19 +3430,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "208367383",
+      "id": "319029371",
       "name_lat": "ШОН ИЗ НЕВСКОЙ ТРОЙКИ",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР Окрас чёрный",
+      "name_ru": "ШОН ИЗ НЕВСКОЙ ТРОЙКИ",
+      "breed": "ШНАУЦЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "266573656",
+      "id": "311009604",
       "name_lat": "ШОН АЗАРТ ГРАД МОРЕТТИ",
-      "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "name_ru": "ШОН АЗАРТ ГРАД МОРЕТТИ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3417,7 +3468,7 @@
     {
       "id": "1727131902",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ФИРАРИ ШИК",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ФИРАРИ ШИК",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
@@ -3451,10 +3502,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "971391922",
+      "id": "1870554491",
       "name_lat": "ШОУ ЕЛВЕРАС МИСТИКА",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ШОУ ЕЛВЕРАС МИСТИКА",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3462,7 +3513,7 @@
     {
       "id": "148325905",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ХАРИЗМА",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ХАРИЗМА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -3496,10 +3547,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1374781745",
-      "name_lat": "ШОУ ЛАКИ СТАР",
+      "id": "591255497",
+      "name_lat": "ШОУФАВОРИТ ЦЕЗАРА ФОР ЭНЕРГИЯ ЛЮБВИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1932692940",
+      "name_lat": "ШОУ ЛАКИ СТАР",
+      "name_ru": "ШОУ ЛАКИ СТАР",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3532,11 +3591,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "591255497",
-      "name_lat": "ШОУФАВОРИТ ЦЕЗАРА ФОР ЭНЕРГИЯ ЛЮБВИ",
+      "id": "1826015178",
+      "name_lat": "ШОКИНГ ЭНДЖЕЛ ОФ ДАКНЕС",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3561,7 +3619,7 @@
     {
       "id": "496444015",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЗАРРИНА",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЗАРРИНА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ПЯТНИСТЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3606,7 +3664,7 @@
     {
       "id": "738490404",
       "name_lat": "ШОКОЛАДНОЕ ДИВО ЕЖИК В ТУМАНЕ",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНОЕ ДИВО ЕЖИК В ТУМАНЕ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -3622,10 +3680,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "760850761",
+      "id": "375431709",
       "name_lat": "ШОТ БЕЛЫЙ МЕДВЕДЬ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ШОТ БЕЛЫЙ МЕДВЕДЬ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3633,7 +3691,7 @@
     {
       "id": "1927272602",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ БРИЗ БЬТТИ",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ БРИЗ БЬТТИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ПЯТНИСТЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3649,10 +3707,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "35933092",
+      "id": "138707409",
       "name_lat": "ШОУ ЕЛВЕРАС ФЛОРАНС",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "name_ru": "ШОУ ЕЛВЕРАС ФЛОРАНС",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3667,10 +3725,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1585893866",
+      "id": "783654971",
       "name_lat": "ШОУ НАДЕЖДЫ ЖАСМИНА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "name_ru": "ШОУ НАДЕЖДЫ ЖАСМИНА",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3712,6 +3770,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "542727619",
+      "name_lat": "Ш) ОПТИМУС ИН ТЕРРА",
+      "name_ru": "",
+      "breed": "чихуахуа д-ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1676497745",
       "name_lat": "ШОУ ЕЛВЕРАС УХАЖЕР",
       "name_ru": "",
@@ -3721,19 +3788,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "748408043",
-      "name_lat": "ШОУФАВОРИТ ПЕГГИ ЛИПТОН",
+      "id": "93972532",
+      "name_lat": "ШОН",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "НЕМЕЦКИЙ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "648767412",
+      "id": "187790561",
       "name_lat": "ШОН ДИГЕР С БЕРЕГА ТУРЫ",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3759,26 +3825,17 @@
     {
       "id": "634276639",
       "name_lat": "ШОУ МЕН ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
-      "name_ru": "",
+      "name_ru": "ШОУ МЕН ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1433407284",
+      "id": "1532978273",
       "name_lat": "ШОКОЛАДНЫЙ ТОФФИ ФИ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "173253613",
-      "name_lat": "ШОУДОГ ФЕМЕЛИ ПЕРСЕЙ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3786,10 +3843,19 @@
     {
       "id": "321302227",
       "name_lat": "ШОУФАВОРИТ ТРЭВЭЛ",
-      "name_ru": "",
+      "name_ru": "ШОУФАВОРИТ ТРЭВЭЛ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173253613",
+      "name_lat": "ШОУДОГ ФЕМЕЛИ ПЕРСЕЙ",
+      "name_ru": "ШОУДОГ ФЕМЕЛИ ПЕРСЕЙ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3804,7 +3870,7 @@
     {
       "id": "1441056192",
       "name_lat": "ШОУ ЕЛВЕРАС МАЙ ДРИМ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС МАЙ ДРИМ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 4,
@@ -3824,6 +3890,23 @@
       "name_lat": "ШОПЕН",
       "name_ru": "",
       "breed": "КАРДИГАН / WELSH",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "462741292",
+      "name_lat": "ШОН",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1958770181",
+      "name_lat": "ШОУ МЭН ИМПЕРИЭЛ ЛАШ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3858,7 +3941,7 @@
     {
       "id": "486609465",
       "name_lat": "ШОУН РОБЕРТС",
-      "name_ru": "",
+      "name_ru": "ШОУН РОБЕРТС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -3867,16 +3950,24 @@
     {
       "id": "1602207476",
       "name_lat": "ШОМОХТ БУШ МИШЕЛЬ2",
-      "name_ru": "",
+      "name_ru": "ШОМОХТ БУШ МИШЕЛЬ2",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1225959923",
+      "name_lat": "ШОНДА ДОЛОРЕС ФОМ ФЕСТБУРГ",
+      "name_ru": "ШОНДА ДОЛОРЕС ФОМ ФЕСТБУРГ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "607389801",
       "name_lat": "ШОУ ЛИДЕР ЕВАНГЕЛИНА",
-      "name_ru": "",
+      "name_ru": "ШОУ ЛИДЕР ЕВАНГЕЛИНА",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -3885,7 +3976,7 @@
     {
       "id": "599500873",
       "name_lat": "ШОКОЛАДНАЯ РАДОСТЬ",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ РАДОСТЬ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -3894,17 +3985,17 @@
     {
       "id": "1231005819",
       "name_lat": "ШОКОЛАДНЫЙ КОЗЫРЬ С БЕРЕНДЕЕВОЙ СЛОБОДЫ",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНЫЙ КОЗЫРЬ С БЕРЕНДЕЕВОЙ СЛОБОДЫ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "492049663",
+      "id": "358418627",
       "name_lat": "ШОУ ЛИДЕР ПАДДИНГТОН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР РЫЖИЙ",
+      "name_ru": "ШОУ ЛИДЕР ПАДДИНГТОН",
+      "breed": "НЕМЕЦКИЙ БОКСЕР РЫЖИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3982,6 +4073,42 @@
       "competition_dog_id": null
     },
     {
+      "id": "1996946060",
+      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЗНАТНАЯ ОСОБА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1759835538",
+      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯИЕЛЕНЫ ЗОЛОТКО",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "205247010",
+      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ КЛЮКВОЧКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "632492710",
+      "name_lat": "ШОМОХТ БУШ ДЮРАН ВУД ЛЕГАСИ",
+      "name_ru": "ШОМОХТ БУШ ДЮРАН ВУД ЛЕГАСИ",
+      "breed": "АМЕРИКАНСКИЙ АНГЛИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "116698427",
       "name_lat": "ШОУЛАЙН МЕЛИН'С ИМПРЕССИОН ГЛОСТАР'С",
       "name_ru": "",
@@ -4036,8 +4163,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "766070596",
-      "name_lat": "ШОУ- XИТ ЛИЛУ ФИФТ ЭЛЕМЕНТ (LILU FIFTH ELEMENT)",
+      "id": "381086878",
+      "name_lat": "ШОУ-XИТ ЛИЛУ ФИФТ ЭЛЕМЕНТ (LILU FIFTH ELEMENT)",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
@@ -4099,10 +4226,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1160279270",
+      "id": "719687402",
       "name_lat": "ШОКОЛАДНОЕ РУНО ЛЕОНСИЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4171,8 +4298,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "391034255",
-      "name_lat": "ШОКОЛАДНО- СЛИВОЧНЫЙ СТИЛЬ ШЕРИДАНС",
+      "id": "713730763",
+      "name_lat": "ШОКОЛАДНО-СЛИВОЧНЫЙ СТИЛЬ ШЕРИДАНС",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
@@ -4180,37 +4307,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "186397352",
-      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЗНАТНАЯ ОСОБА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1998823070",
-      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯИЕЛЕНЫ ЗОЛОТКО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1838093294",
+      "id": "56212362",
       "name_lat": "ШОКОЛАДНОЕ ДИВО ЛЕДИ ГАМИЛЬТОН",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "171360526",
-      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ КЛЮКВОЧКА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4225,11 +4325,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "528822796",
-      "name_lat": "ШОКИНГ ВАЙТ БАЙ СИМОНАЛЕНД",
+      "id": "1982103303",
+      "name_lat": "ШОУ ЕЛВЕРАС САКСОН",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4243,9 +4342,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1647944087",
+      "name_lat": "ШОН РЕД СТАР",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "777223606",
       "name_lat": "ШОУ ПЕРФОРМАНС КАМЕЛОТ",
-      "name_ru": "",
+      "name_ru": "ШОУ ПЕРФОРМАНС КАМЕЛОТ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -4254,7 +4361,7 @@
     {
       "id": "1938392149",
       "name_lat": "ШОУ КРОХА ИЗ ЦВЕТНЫХ СНОВ",
-      "name_ru": "",
+      "name_ru": "ШОУ КРОХА ИЗ ЦВЕТНЫХ СНОВ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -4263,7 +4370,7 @@
     {
       "id": "265425841",
       "name_lat": "ШОУ КУРАЖ БИЛАДЖИО ФОР ВИНДСОНГ",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ БИЛАДЖИО ФОР ВИНДСОНГ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -4272,7 +4379,7 @@
     {
       "id": "1467993990",
       "name_lat": "ШОУ МИ ЙО БЕСТ ИЗ ОРДЕНА ЕКАТЕ-РИНЫ",
-      "name_ru": "",
+      "name_ru": "ШОУ МИ ЙО БЕСТ ИЗ ОРДЕНА ЕКАТЕ-РИНЫ",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 2,
@@ -4281,7 +4388,7 @@
     {
       "id": "1462007152",
       "name_lat": "ШОВИ КРИСТАЛ ВЭЛЛОРИ",
-      "name_ru": "",
+      "name_ru": "ШОВИ КРИСТАЛ ВЭЛЛОРИ",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 2,
@@ -4290,44 +4397,43 @@
     {
       "id": "249215915",
       "name_lat": "ШОУ КУРАЖ ТЭЯ",
-      "name_ru": "",
+      "name_ru": "ШОУ КУРАЖ ТЭЯ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "519222894",
+      "id": "405613079",
       "name_lat": "ШОУ-ХИТ ФЛЕР ДЕ ЛИЗ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ШОУ-ХИТ ФЛЕР ДЕ ЛИЗ",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1378541",
+      "name_lat": "ШОКОЛАДНЫЙ БАТОНЧИК",
+      "name_ru": "ШОКОЛАДНЫЙ БАТОНЧИК",
+      "breed": "ШАР ПЕЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1285777725",
       "name_lat": "ШОПЕН ИЗ ХВОСТАТОГО БАЛАГАНА",
-      "name_ru": "",
+      "name_ru": "ШОПЕН ИЗ ХВОСТАТОГО БАЛАГАНА",
       "breed": "С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1979807641",
-      "name_lat": "ШОУ КВИН ИЗ ДАКС ШАРМ / SHOW QUEEN IZ DAKS SHARM",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "27812967",
+      "id": "1081270674",
       "name_lat": "ШОУ ЕЛВЕРАС СВЕЕТ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
+      "name_ru": "ШОУ ЕЛВЕРАС СВЕЕТ",
+      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4335,7 +4441,7 @@
     {
       "id": "709743903",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЖАКЛИН",
-      "name_ru": "",
+      "name_ru": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЖАКЛИН",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -4344,8 +4450,17 @@
     {
       "id": "43727738",
       "name_lat": "ШОУ ПЕРФОРМАНС ДОРИ",
-      "name_ru": "",
+      "name_ru": "ШОУ ПЕРФОРМАНС ДОРИ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "783787806",
+      "name_lat": "ШОУ ГЕРЛ МЭГГИ С ЯНТАРНОГО МОРЯ",
+      "name_ru": "ШОУ ГЕРЛ МЭГГИ С ЯНТАРНОГО МОРЯ",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4353,8 +4468,17 @@
     {
       "id": "14680073",
       "name_lat": "ШОУ ЕЛВЕРАС ВИЛОРИЯ ВАЛЕНСИ",
-      "name_ru": "",
+      "name_ru": "ШОУ ЕЛВЕРАС ВИЛОРИЯ ВАЛЕНСИ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "52514638",
+      "name_lat": "ШОУ ГАЛАКТИКА ЦИРКОН (ПУХ)",
+      "name_ru": "ШОУ ГАЛАКТИКА ЦИРКОН (ПУХ)",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4459,19 +4583,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "546407277",
+      "id": "1743377053",
       "name_lat": "ШОН ЛЮБИМЫЙ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "887447305",
+      "id": "838310804",
       "name_lat": "ШОУШАН",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4549,11 +4673,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "462741292",
+      "id": "283361748",
       "name_lat": "ШОН",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
+      "breed": "Немецкий\\малый\\шпиц",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4585,10 +4708,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1980710202",
+      "id": "609796350",
       "name_lat": "ШОУ БЭБИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4675,10 +4798,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "158150178",
+      "id": "1540570798",
       "name_lat": "ШОКОЛАДКА",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР ШНАУЦЕР ЧЕРНЫЙ",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4747,11 +4870,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1359349784",
+      "id": "1635346644",
       "name_lat": "ШОКОЛА ДНОЕ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1981574458",
+      "name_lat": "ШОКОЛАДКА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4760,6 +4891,42 @@
       "name_lat": "ШОТА",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "497203531",
+      "name_lat": "ШОУ ГАЛАКТИКА ЛИТЛ ФЛЭШ",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1799673172",
+      "name_lat": "ШОУ ГАЛАКТИКА ЗЛАТАН",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "252334514",
+      "name_lat": "ШОН ШОУ МАСТ ГО ОН АЛБА ДЕЛЛ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "667530794",
+      "name_lat": "ШОКОЛДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЭСМИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4855,15 +5022,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1665524403",
-      "name_lat": "ШОУФАВОРИТ ТРЕВЕЛ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "223193677",
       "name_lat": "ШОУ ПЕРФОРМАНС КАССИОПЕЯ",
       "name_ru": "",
@@ -4927,10 +5085,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "39682808",
+      "id": "151024285",
       "name_lat": "Шоколадка с Берега Шексны",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4945,10 +5103,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "920741393",
+      "id": "847115630",
       "name_lat": "ШОУ ВИСТА БАМБИНА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4963,10 +5121,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1609817514",
+      "id": "394975694",
       "name_lat": "ШОКОЛАДНОЕ ДИВО ЭТНА ОЧАРОВАНИЕ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4999,10 +5157,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1189466778",
+      "id": "1973003627",
       "name_lat": "ШОКОЛАДНАЯ КОКЕТКА",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5035,10 +5193,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1756208050",
+      "id": "1020792627",
       "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ИДИЛИЯ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5116,10 +5274,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1218457620",
+      "id": "405558465",
       "name_lat": "ШОКОЛА ДНАЯ ДЕВЧОНК",
       "name_ru": "",
-      "breed": "СОБАКА /",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5134,10 +5292,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "146518727",
+      "id": "211748230",
       "name_lat": "ШОКОЛАДНЫЙ МИШКА БАРНИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5179,6 +5337,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "645938260",
+      "name_lat": "ШОКОЛАДНАЯ ФАНТАЗИЯ ЕЛЕНЫ О- ЛАДУШКА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1225297326",
       "name_lat": "ШОУ КАНТРИ ФОРЕВА НИК НАК БАМБУЧА",
       "name_ru": "",
@@ -5188,29 +5354,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "176720392",
+      "id": "1387119620",
       "name_lat": "ШОУ КАНТРИ ФОРЕВА ЧИНЗАНО ТАЙГЕР",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "532396458",
+      "id": "1734866254",
       "name_lat": "ШОУ КАНТРИ ФОРЕВА ЖИЗЕЛЬ ЖЮЛЛИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "560488665",
+      "id": "211128677",
       "name_lat": "ШОУ КАНТРИ ФОРЕВА ИНГРИД ИНФИНИТИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "5164061",
+      "name_lat": "ШОУ КАНТРИ ФОРЕВА ЗОДИАК БЕСТСЕЛЛЕР",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5233,19 +5407,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1929878570",
+      "id": "1838050094",
+      "name_lat": "ШОКОЛАДНОЕ ДИВО ШУТКА ДЕВИЦЫ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "918486111",
+      "name_lat": "ШОУ ХИТ ДАНС КВИН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "672942203",
       "name_lat": "ШОНА-ТОРРИ БЕСТ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "644424738",
+      "id": "1272214370",
       "name_lat": "ШОПОТ АНГЕЛА ГОТ",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ АМЕРИКАНСКИЙ АМЕРИКАНСКИЙ",
+      "breed": "ШАР ПЕЙ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5265,6 +5455,23 @@
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1756781302",
+      "name_lat": "Ш) ОНТАРИВА ЕГРЕТТИ",
+      "name_ru": "",
+      "breed": "чихуахуа к-ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1516199847",
+      "name_lat": "ШООЛА БАХТЛИ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5305,15 +5512,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1378541",
-      "name_lat": "ШОКОЛАДНЫЙ БАТОНЧИК",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "409938998",
       "name_lat": "ШОКОЛАДКА ДОЛЛИ",
       "name_ru": "",
@@ -5323,10 +5521,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "645325451",
+      "id": "1490252471",
       "name_lat": "ШОУ КАНТРИ ФОРЕВА Я КЛЕПА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5431,24 +5629,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "497203531",
-      "name_lat": "ШОУ ГАЛАКТИКА ЛИТЛ ФЛЭШ",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1799673172",
-      "name_lat": "ШОУ ГАЛАКТИКА ЗЛАТАН",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "193228930",
       "name_lat": "ШОУ ВИСТА КАТАЛЕЯ",
       "name_ru": "",
@@ -5503,19 +5683,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "213265585",
+      "id": "1226107790",
       "name_lat": "ШОКОЛАДКА ЛУ ИЗ КОРОЛЕВСТВА Д' АЛЬБА ( Д.Ш)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "260898157",
+      "id": "59981041",
       "name_lat": "ШОКОЛАДНОЕ ДИВО ИЗАБЕЛЬ РЕНЕСАНС",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5525,15 +5705,6 @@
       "name_lat": "ШОУ ГАЛАКТИКА КУРО НЕКО",
       "name_ru": "",
       "breed": "ХОХЛАТАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1619124058",
-      "name_lat": "ШОКОЛАДНАЯ ДЕВОЧКА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5611,19 +5782,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1591797202",
+      "id": "1815662660",
       "name_lat": "ШОН РАЙМОНД СМИТ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "331259586",
+      "id": "834149603",
       "name_lat": "ШОУ ВИСТА ИЗ МАРИАДГРАДА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5665,37 +5836,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "783787806",
-      "name_lat": "ШОУ ГЕРЛ МЭГГИ С ЯНТАРНОГО МОРЯ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1698321035",
+      "id": "48141380",
       "name_lat": "ШОУ БИЗНЕС ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "252334514",
-      "name_lat": "ШОН ШОУ МАСТ ГО ОН АЛБА ДЕЛЛ",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "550044662",
-      "name_lat": "ШОКОЛДНАЯ ФАНТАЗИЯ ЕЛЕНЫ ЭСМИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5710,28 +5854,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1298176369",
-      "name_lat": "ШОУ МЭН ИМПЕРИЭЛ ЛАШ",
+      "id": "1968046434",
+      "name_lat": "ШОНА БРАЙТ ЭНДЖЕЛ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1633551099",
+      "id": "207244978",
       "name_lat": "ШОУ-ХИТ КИНГЛИ ПЕРСОНА ГРАТА",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1710803613",
-      "name_lat": "ШОУ ГАЛАКТИКА ЦИРКОН (ПУХ)",
-      "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5764,15 +5898,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "353964167",
-      "name_lat": "ШОМОХТ БУШ ДЮРАН ВУД ЛЕГАСИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1302738628",
       "name_lat": "ШОМОХТ БУШ ДАРСИ ВУД МЕЛОДИ",
       "name_ru": "",
@@ -5782,11 +5907,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "744675544",
-      "name_lat": "ШОМОХТ БУШ ДЮРАН ВУД",
+      "id": "671220979",
+      "name_lat": "ШОМОХТ БУШ ФЕОДОР НОБЛ ХАРТ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ АНГЛИЙСКИЙ",
-      "breed_en": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5800,11 +5924,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "1360830947",
+      "name_lat": "ШОУ ГАЛАКТИКА ЦИРКОН",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "38385472",
+      "name_lat": "ШОКОЛАДАИЗ СЛАВЯНСКОЙ",
+      "name_ru": "",
+      "breed": "КРОЛИЧЬЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "574468075",
       "name_lat": "ШОУ ЕЛВЕРАС НЬЮ ИМПРЕСС",
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1814628265",
+      "name_lat": "ШОУ ЛИДЕР АНГЕЛ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5818,10 +5966,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1336246223",
+      "id": "1627043552",
       "name_lat": "ШОУ ВИСТА ИЗ МАРИАЛГРАДА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5840,15 +5988,6 @@
       "name_lat": "ШОУМЕН ЛЁВА С БУХТЫ АППОЛОНА",
       "name_ru": "",
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1225959923",
-      "name_lat": "ШОНДА ДОЛОРЕС ФОМ ФЕСТБУРГ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

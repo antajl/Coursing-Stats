@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "АC",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1889686228",
+      "name_lat": "А' CAPELLA OF MY SOUL",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "626734150",
+      "name_lat": "АCCОЛЬ ИЗ РАЗДОЛЬЯ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "561013723",
+      "name_lat": "АCHIHUA-BOMOND YARANNA ARTSEZIYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "JK",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1060894550",
+      "name_lat": "J-K KENSHEI URSA MAJOR",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1415423398",
+      "name_lat": "JK'S ZEVS OF STORM",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9595",
+      "name_lat": "J-KAPITAN NELSON",
+      "name_ru": "",
+      "breed": "ГРЕЙХАУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": 9595
+    }
+  ]
+}

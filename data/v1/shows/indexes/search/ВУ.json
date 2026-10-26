@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ВУ",
-  "count": 270,
+  "count": 269,
   "dogs": [
     {
       "id": "603471878",
       "name_lat": "ВУЛКАН РАДОСТИ МАРМЕЛАД",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ МАРМЕЛАД",
       "breed": "БОЛОНКА",
       "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
       "total_shows": 36,
@@ -15,7 +15,7 @@
     {
       "id": "310884071",
       "name_lat": "ВУЛКАН РАДОСТИ НАИМА",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ НАИМА",
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 21,
@@ -24,7 +24,7 @@
     {
       "id": "956310398",
       "name_lat": "ВУЛКАН РАДОСТИ ИЛЛЮЗИЯ МРАКА",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ ИЛЛЮЗИЯ МРАКА",
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 31,
@@ -33,35 +33,35 @@
     {
       "id": "83414293",
       "name_lat": "ВУЛКАН РАДОСТИ АМЕНХОТЕП",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ АМЕНХОТЕП",
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1981810616",
+      "id": "1773861425",
       "name_lat": "ВУЛЬФ СТАЙЛ ЧЕКМЕЙТ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЧЕКМЕЙТ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "753378442",
+      "id": "96094620",
       "name_lat": "ВУЛЬФ СТАЙЛ ЧАББИ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЧАББИ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
-      "id": "1405566747",
+      "id": "1884794283",
       "name_lat": "ВУЛЬФ СТАЙЛ ЕКСПЕЛЛИАРМУС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЕКСПЕЛЛИАРМУС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
@@ -69,16 +69,25 @@
     {
       "id": "801430695",
       "name_lat": "ВУДНВЭЙ БАЛТИКА",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ БАЛТИКА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "13432813",
+      "name_lat": "ВУЛКАН РАДОСТИ КРЭЗИ КУРАЖ",
+      "name_ru": "ВУЛКАН РАДОСТИ КРЭЗИ КУРАЖ",
+      "breed": "БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1029606085",
       "name_lat": "ВУЛКАН РОМУЛУС ГРОНД",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РОМУЛУС ГРОНД",
       "breed": "НОРВИЧ СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -87,7 +96,7 @@
     {
       "id": "1749954375",
       "name_lat": "ВУДНВЭЙ ЮНГАР",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ ЮНГАР",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -96,10 +105,10 @@
     {
       "id": "1720489020",
       "name_lat": "ВУЛКАН РАДОСТИ ГЕРМИОНА РУССКАЯ РОСКОШЬ",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ ГЕРМИОНА РУССКАЯ РОСКОШЬ",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -112,10 +121,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "247308990",
+      "id": "1845299583",
+      "name_lat": "ВУЛЬФ СТАЙЛ ПАНДОРА",
+      "name_ru": "ВУЛЬФ СТАЙЛ ПАНДОРА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1136975488",
       "name_lat": "ВУЛЬФ СТАЙЛ ЦЕРЕБРО",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЦЕРЕБРО",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -123,7 +141,7 @@
     {
       "id": "298259986",
       "name_lat": "ВУЛКАН РАДОСТИ МАКАРЕНА",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ МАКАРЕНА",
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 13,
@@ -132,125 +150,124 @@
     {
       "id": "610314134",
       "name_lat": "ВУЛКАН РАДОСТИ ЛАДА КРАСА",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ ЛАДА КРАСА",
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1703278742",
+      "id": "1696914680",
       "name_lat": "ВУЛЬФ СТАЙЛ ЧИПОЛЛИНО",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЧИПОЛЛИНО",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1716697276",
+      "id": "1983195502",
+      "name_lat": "ВУЛКАН РАДОСТИ ОГНЕННАЯ ЛЕДИ",
+      "name_ru": "ВУЛКАН РАДОСТИ ОГНЕННАЯ ЛЕДИ",
+      "breed": "БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1069034330",
       "name_lat": "ВУЛЬФ СТАЙЛ ЖЕРОМ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЖЕРОМ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "936835386",
+      "id": "1649951340",
       "name_lat": "Вульф Стайл Политика Партии",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "Вульф Стайл Политика Партии",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1383693727",
-      "name_lat": "ВУЛЬФ СТАЙЛ ПАНДОРА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "210791691",
+      "name_lat": "ВУЛЬФ СТАЙЛ ОНЛАЙН",
+      "name_ru": "ВУЛЬФ СТАЙЛ ОНЛАЙН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 27,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
       "id": "65013211",
       "name_lat": "ВУЛКАН РАДОСТИ МИСТИКА",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ МИСТИКА",
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "13432813",
-      "name_lat": "ВУЛКАН РАДОСТИ КРЭЗИ КУРАЖ",
+      "id": "1379633183",
+      "name_lat": "ВУЛЬФ СТАЙЛ ЭКЛИПС",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЭКЛИПС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1168173560",
+      "name_lat": "ВУНДЕР ВОЛЬФ ШАФРАН",
       "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "860203521",
+      "name_lat": "ВУЛКАН РАДОСТИ КАССИОПЕЯ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ЦВЕТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "303147613",
+      "name_lat": "ВУЛКАН РАДОСТИ ОЧАРОВАНИЕ НОЧИ",
+      "name_ru": "ВУЛКАН РАДОСТИ ОЧАРОВАНИЕ НОЧИ",
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1318619199",
-      "name_lat": "ВУЛЬФ СТАЙЛ ЭКЛИПС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "389274254",
-      "name_lat": "ВУНДЕР ВОЛЬФ ШАФРАН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "509886068",
-      "name_lat": "ВУЛКАН РАДОСТИ НЕФЕРТАРИ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "408260991",
-      "name_lat": "ВУЛКАН РАДОСТИ ОГНЕННАЯ ЛЕДИ",
-      "name_ru": "",
-      "breed": "БОЛОНКА /",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "182159660",
+      "id": "232001604",
       "name_lat": "ВУДРЕЙС АУРЕЛИЯ ПЕРФЕКТ ГАРМОНИ",
-      "name_ru": "",
-      "breed": "КУНХАУНД ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ВУДРЕЙС АУРЕЛИЯ ПЕРФЕКТ ГАРМОНИ",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1004248227",
+      "id": "856745012",
       "name_lat": "ВУНДЕР ВОЛЬФ ХРИСТИНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ВУНДЕР ВОЛЬФ ХРИСТИНА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "272488612",
+      "id": "655520290",
       "name_lat": "ВУЛЬФ СТАЙЛ ЦИНТРА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЦИНТРА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -258,19 +275,19 @@
     {
       "id": "1229532065",
       "name_lat": "ВУК ЗЕ ЛАКИ ФОКС",
-      "name_ru": "",
+      "name_ru": "ВУК ЗЕ ЛАКИ ФОКС",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "822268827",
-      "name_lat": "ВУЛЬФ СТАЙЛ ЧЕНДЛЕР М. БИНГ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "239896551",
+      "name_lat": "ВУЛЬФ СТАЙЛ ЧЕНДЛЕР М БИНГ",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЧЕНДЛЕР М БИНГ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -294,7 +311,7 @@
     {
       "id": "472906039",
       "name_lat": "ВУЛКАН РАДОСТИ НАНУ",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ НАНУ",
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 12,
@@ -303,44 +320,44 @@
     {
       "id": "543282110",
       "name_lat": "ВУЛКАН РАДОСТИ ЛЮБОМИР",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ ЛЮБОМИР",
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "653974415",
-      "name_lat": "ВУЛЛПЭТ ЕСЕНИЯ-ЗЛАТА",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "239752515",
+      "id": "1977473619",
       "name_lat": "ВУЛЬФ СТАЙЛ ЛАВ ИЗ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЛАВ ИЗ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1132659881",
+      "id": "277355043",
       "name_lat": "ВУДРЕЙС АВРОРА РЕДИАНС ОФ ЗЕ ДОУН",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ВУДРЕЙС АВРОРА РЕДИАНС ОФ ЗЕ ДОУН",
+      "breed": "СПИНОНЕ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "35995716",
+      "id": "749342668",
+      "name_lat": "ВУЛЬФ СТАЙЛ ЛЕНСКИЙ",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЛЕНСКИЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "781035842",
       "name_lat": "ВУЛЬФ СТАЙЛ СУФФИКС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ СУФФИКС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -348,7 +365,7 @@
     {
       "id": "1448862847",
       "name_lat": "ВУЛКАН РАДОСТИ ОСЕННИЙ ВАЛЬС",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ ОСЕННИЙ ВАЛЬС",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -366,17 +383,17 @@
     {
       "id": "1919748913",
       "name_lat": "ВУЛКАН РАДОСТИ ОНЕГА ОБЕРЕГ",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ ОНЕГА ОБЕРЕГ",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1132319120",
+      "id": "1182363390",
       "name_lat": "ВУЛЬФ СТАЙЛ ЮДЖЕР-БУЧ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЮДЖЕР-БУЧ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -391,10 +408,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "207153030",
+      "id": "1891226568",
       "name_lat": "ВУЛЬФ СТАЙЛ БЛУМ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ БЛУМ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 17,
       "competition_dog_id": null
@@ -409,10 +426,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "32177354",
+      "id": "592922204",
       "name_lat": "ВУЛЬФ СТАЙЛ ЧЕНДЕР М.БИНГ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЧЕНДЕР М.БИНГ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -427,10 +444,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1729912490",
+      "id": "1570640316",
       "name_lat": "ВУЛЬФ СТАЙЛ ГЕРАЛЬТ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ГЕРАЛЬТ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -456,7 +473,7 @@
     {
       "id": "1072045160",
       "name_lat": "ВУЛКАН РАДОСТИ БИЗНЕС ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ БИЗНЕС ЛЕДИ",
       "breed": "ST. BERNARD SHORT-",
       "breed_en": "",
       "total_shows": 5,
@@ -474,16 +491,25 @@
     {
       "id": "60765441",
       "name_lat": "ВУЛКАН РАДОСТИ ИСКОРКА ОПАЛА",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ ИСКОРКА ОПАЛА",
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
+      "id": "148242370",
+      "name_lat": "ВУЛ МАРК",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "589674955",
       "name_lat": "ВУДНВЭЙ ЗОФИЯ",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ ЗОФИЯ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -499,18 +525,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "532694362",
-      "name_lat": "ВУЛКАН ИЗ ДОМА САМУРАЯ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 2,
+      "id": "1498742341",
+      "name_lat": "ВУЛКАН РАДОСТИ ЗАБАВНЫЙ ЗЕНОВИЙ",
+      "name_ru": "ВУЛКАН РАДОСТИ ЗАБАВНЫЙ ЗЕНОВИЙ",
+      "breed": "БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "1045979763",
       "name_lat": "ВУППИ ИЗ КИТАЙСКОГО КВАРТАЛА",
-      "name_ru": "",
+      "name_ru": "ВУППИ ИЗ КИТАЙСКОГО КВАРТАЛА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
@@ -519,46 +545,37 @@
     {
       "id": "1060426676",
       "name_lat": "ВУЛЬФ ВЛАСТЕЛИН МИРА",
-      "name_ru": "",
+      "name_ru": "ВУЛЬФ ВЛАСТЕЛИН МИРА",
       "breed": "САМОЕД",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "198538291",
       "name_lat": "ВУДРЕЙС АГИРРЕ САН ОФ ЗЕ ФАЕР",
-      "name_ru": "",
+      "name_ru": "ВУДРЕЙС АГИРРЕ САН ОФ ЗЕ ФАЕР",
       "breed": "БАССЕТ-ГРИФФОН",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1225593288",
+      "id": "1474332854",
       "name_lat": "ВУЛЬФ СТАЙЛ ГРИНЧ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ГРИНЧ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1498742341",
-      "name_lat": "ВУЛКАН РАДОСТИ ЗАБАВНЫЙ ЗЕНОВИЙ",
-      "name_ru": "",
-      "breed": "БОЛОНКА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1475196755",
       "name_lat": "ВУНДЕР ВОЛЬФ ШЕРМАН",
-      "name_ru": "",
+      "name_ru": "ВУНДЕР ВОЛЬФ ШЕРМАН",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -573,7 +590,7 @@
     {
       "id": "970671310",
       "name_lat": "ВУЛКАН РАДОСТИ НЕФРИНИ",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ НЕФРИНИ",
       "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "breed_en": "",
       "total_shows": 10,
@@ -582,7 +599,7 @@
     {
       "id": "1568569129",
       "name_lat": "ВУДНВЭЙ ЖОЗЕФИНА РЕАЛ ФОКСТРОТ",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ ЖОЗЕФИНА РЕАЛ ФОКСТРОТ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -591,44 +608,26 @@
     {
       "id": "99761365",
       "name_lat": "ВУЛЬФ СТАЙЛ ЯНТАРЬ",
-      "name_ru": "",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЯНТАРЬ",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "275285681",
-      "name_lat": "ВУКИ ИЗ ЛУННОГО САДА",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "303147613",
-      "name_lat": "ВУЛКАН РАДОСТИ ОЧАРОВАНИЕ НОЧИ",
-      "name_ru": "",
-      "breed": "БОЛОНКА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "110817893",
       "name_lat": "ВУНДЕР ХУНД ГЛЭДИС ФОРТУНАТО",
-      "name_ru": "",
+      "name_ru": "ВУНДЕР ХУНД ГЛЭДИС ФОРТУНАТО",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "66202050",
+      "id": "181240771",
       "name_lat": "ВУЛЬФ",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -645,62 +644,44 @@
     {
       "id": "11079228",
       "name_lat": "ВУДНВЭЙ ЖЕМЧУГ ПИТЕРСКИЙ СЮРПРИЗ",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ ЖЕМЧУГ ПИТЕРСКИЙ СЮРПРИЗ",
       "breed": "ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "90206587",
-      "name_lat": "ВУЛЬФ СТАЙЛ ОНЛАЙН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "294643161",
+      "id": "1641204109",
       "name_lat": "ВУЛКАН ФАЭР ЭМОУШЕНС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛКАН ФАЭР ЭМОУШЕНС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "117173070",
+      "id": "1522278519",
       "name_lat": "ВУЛЬФ СТАЙЛ ЛАВАНДА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЛАВАНДА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1908478291",
+      "id": "588380739",
       "name_lat": "ВУЛЬФ СТАЙЛ ПАТРОН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ПАТРОН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1832532616",
+      "id": "829457142",
       "name_lat": "ВУЛЬФ СТАЙЛ ЦУКАТ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "7615381",
-      "name_lat": "ВУЛЛПЭТ ДАРИНА ДАНА",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЦУКАТ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -708,7 +689,7 @@
     {
       "id": "1700399954",
       "name_lat": "ВУЛЬФ СТАЙЛ ПАНИ ГАЛИНА",
-      "name_ru": "",
+      "name_ru": "ВУЛЬФ СТАЙЛ ПАНИ ГАЛИНА",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -717,7 +698,7 @@
     {
       "id": "1076317767",
       "name_lat": "ВУКСИ КОРОЛЕВА СЕВЕРА",
-      "name_ru": "",
+      "name_ru": "ВУКСИ КОРОЛЕВА СЕВЕРА",
       "breed": "DACHSHUND ZWERG",
       "breed_en": "",
       "total_shows": 4,
@@ -726,16 +707,25 @@
     {
       "id": "1147965322",
       "name_lat": "ВУДНВЭЙ ЖЕМЧУЖИНА ДЛЯ МИЛИСЕНТЫ",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ ЖЕМЧУЖИНА ДЛЯ МИЛИСЕНТЫ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1162120231",
+      "name_lat": "ВУНДЕР ХУНД ДРАЙВ",
+      "name_ru": "ВУНДЕР ХУНД ДРАЙВ",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "297707055",
       "name_lat": "ВУДНВЭЙ ДЕНЕЖКА НА СЧАСТЬЕ",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ ДЕНЕЖКА НА СЧАСТЬЕ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -744,7 +734,7 @@
     {
       "id": "1671235917",
       "name_lat": "ВУЛФИ ГОЛДЕН СТАР МУН",
-      "name_ru": "",
+      "name_ru": "ВУЛФИ ГОЛДЕН СТАР МУН",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 6,
@@ -753,35 +743,35 @@
     {
       "id": "1972099861",
       "name_lat": "ВУДНВЭЙ ЭКЗОТИКА",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ ЭКЗОТИКА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "336009382",
+      "id": "1832492688",
       "name_lat": "ВУДИ ВАЛЕНТАЙН",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "ВУДИ ВАЛЕНТАЙН",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "219607994",
+      "id": "235625964",
       "name_lat": "ВУЛЬФ СТАЙЛ ЕНТАН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЕНТАН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1503743169",
+      "id": "516419234",
       "name_lat": "ВУДХАУС ВЕРНЕР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -798,26 +788,17 @@
     {
       "id": "220232680",
       "name_lat": "ВУЛКАН РАДОСТИ ЛЮБАВА",
-      "name_ru": "",
+      "name_ru": "ВУЛКАН РАДОСТИ ЛЮБАВА",
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1574415060",
-      "name_lat": "ВУЛКАН РАДОСТИ ГРИФИНДОР",
-      "name_ru": "",
-      "breed": "БОЛОНКА / RUSSKAYA",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "258905330",
+      "id": "1394972275",
       "name_lat": "ВУЧ",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -825,17 +806,26 @@
     {
       "id": "1812268981",
       "name_lat": "ВУЛЛПЭТ ЕРИК-ХАРОЛЬД",
-      "name_ru": "",
+      "name_ru": "ВУЛЛПЭТ ЕРИК-ХАРОЛЬД",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1980759614",
+      "id": "476451875",
+      "name_lat": "ВУЛЬФ СТАЙЛ АДРЕНАЛИН",
+      "name_ru": "ВУЛЬФ СТАЙЛ АДРЕНАЛИН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "980343559",
       "name_lat": "ВУДРЭЙС АЛЬФИЯ ПОЭМА ОФ ЛАВ",
       "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -850,39 +840,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "350685968",
+      "id": "665759614",
       "name_lat": "ВУЛЬФ СТАЙЛ БРАЙН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ БРАЙН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
+      "id": "342637334",
+      "name_lat": "ВУЛЬФ СТАЙЛ ЛИВИН'ЛА ВИДА ЛОКА",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЛИВИН'ЛА ВИДА ЛОКА",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1977528255",
       "name_lat": "ВУНДЕР ХУНД ГЛЭДИС ФОРТУНАТА",
-      "name_ru": "",
+      "name_ru": "ВУНДЕР ХУНД ГЛЭДИС ФОРТУНАТА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "956673285",
+      "id": "632125817",
       "name_lat": "ВУЛЬФ СТАЙЛ ПИНКИ ПАЙ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ПИНКИ ПАЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "441051162",
-      "name_lat": "ВУЛЬФ СТАЙЛ ЛЕНСКИЙ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -897,7 +886,7 @@
     {
       "id": "1456890463",
       "name_lat": "ВУЛЬФ НАЙТ С БЕРЕГОВ ТЕМЗЫ",
-      "name_ru": "",
+      "name_ru": "ВУЛЬФ НАЙТ С БЕРЕГОВ ТЕМЗЫ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -906,8 +895,17 @@
     {
       "id": "1776838543",
       "name_lat": "ВУДНВЭЙ ОДИССЕЙ",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ ОДИССЕЙ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1906983045",
+      "name_lat": "ВУДИ АЛЛЕН",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -942,7 +940,7 @@
     {
       "id": "1632765154",
       "name_lat": "ВУДНВЭЙ ЛАВАЛЕТТА",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ ЛАВАЛЕТТА",
       "breed": "ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -958,30 +956,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "302780755",
-      "name_lat": "ВУЛ МАРК",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1071155",
-      "name_lat": "ВУЛЬФ СТАЙЛ АДРЕНАЛИН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "763834105",
       "name_lat": "ВУЛЬФ",
       "name_ru": "",
       "breed": "SAMOYED",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1003,6 +983,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1423546865",
+      "name_lat": "ВУДНВЭЙ ПРЕСЛИ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1320302919",
       "name_lat": "ВУДНВЭЙ ЦЕНТУРИОН",
       "name_ru": "",
@@ -1016,15 +1005,6 @@
       "name_lat": "ВУДУ ФОРТУНA М",
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1423546865",
-      "name_lat": "ВУДНВЭЙ ПРЕСЛИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1057,30 +1037,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1264330526",
+      "id": "332548960",
       "name_lat": "ВУЛЬФ СТАЙЛ УИК",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1162120231",
-      "name_lat": "ВУНДЕР ХУНД ДРАЙВ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "153792149",
       "name_lat": "ВУНДЕР ХУНД ЖЕНУАРИЯ БРАЙТ ПЕРСОН",
-      "name_ru": "",
+      "name_ru": "ВУНДЕР ХУНД ЖЕНУАРИЯ БРАЙТ ПЕРСОН",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1102,6 +1073,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "618770110",
+      "name_lat": "ВУЛЬФ СТАЙЛ АРМАГЕДДОН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "973169915",
       "name_lat": "ВУЛЬФ",
       "name_ru": "",
@@ -1111,21 +1091,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "734389945",
+      "id": "914631789",
       "name_lat": "ВУЛЬФ СТАЙЛ БАРНИ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ БАРНИ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "20346950",
-      "name_lat": "ВУНДЕР ВОЛЬФ НЭС- ВИКОНТ",
+      "id": "389321080",
+      "name_lat": "ВУНДЕР ВОЛЬФ НЭС-ВИКОНТ",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1138,10 +1118,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "10545483",
+      "id": "111393339",
       "name_lat": "ВУЛЬФ СТАЙЛ ЖЕТ СЕТТЭР",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1149,26 +1129,25 @@
     {
       "id": "1087952998",
       "name_lat": "ВУСТЕР ДЖОЙ ИЗ ИМПЕРИИ АДАМАНТ (К/Х)",
-      "name_ru": "",
+      "name_ru": "ВУСТЕР ДЖОЙ ИЗ ИМПЕРИИ АДАМАНТ (К/Х)",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "817171644",
-      "name_lat": "ВУЛЛ МАРК МОИС",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 3,
+      "id": "34385151",
+      "name_lat": "ВУДРОУ ДЭНИЕЛ РЕДКЛИФ",
+      "name_ru": "ВУДРОУ ДЭНИЕЛ РЕДКЛИФ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "629255485",
+      "id": "370911761",
       "name_lat": "ВУМАН ИН РЭД ИЗ СОЗВЕЗДИЯ СТАФФ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУМАН ИН РЭД ИЗ СОЗВЕЗДИЯ СТАФФ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1180,15 +1159,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1101492656",
-      "name_lat": "ВУДИ АЛЛЕН",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1210,10 +1180,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1450166842",
+      "id": "1713048849",
       "name_lat": "ВУДХАУС АДЕЛЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1224,6 +1194,14 @@
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР / BIEWER TERRIER",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1021645666",
+      "name_lat": "ВУЛИИ",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР / BIEWER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1291,10 +1269,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1255529595",
+      "id": "1513542155",
       "name_lat": "ВУЛЬФ СТАЙЛ ЛАКШЕРИ ОФ ЛАЙФ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЛАКШЕРИ ОФ ЛАЙФ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1302,17 +1280,17 @@
     {
       "id": "296215550",
       "name_lat": "ВУЛЬФ СТАЙЛ УРБАН",
-      "name_ru": "",
+      "name_ru": "ВУЛЬФ СТАЙЛ УРБАН",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1583154910",
+      "id": "375381117",
       "name_lat": "ВУНДЕР ВОЛЬФ ЩАСТЬЕ МОЕ КАРМЕН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1327,19 +1305,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "881581171",
+      "id": "736938596",
       "name_lat": "ВУНДЕР ВОЛЬФ АСТРИД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1609324060",
+      "id": "1868584506",
       "name_lat": "ВУЛЬФ СТАЙЛ ГЕРАЛЬД",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1347,17 +1325,25 @@
     {
       "id": "1708112427",
       "name_lat": "ВУАКАЙ БУРБОНСАНИРО ГОЮ САБАЛИТА",
-      "name_ru": "",
+      "name_ru": "ВУАКАЙ БУРБОНСАНИРО ГОЮ САБАЛИТА",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1738583368",
+      "id": "1348814362",
+      "name_lat": "ВУДИ ВОСХОДЯЩАЯ ЗВЕЗДА",
+      "name_ru": "ВУДИ ВОСХОДЯЩАЯ ЗВЕЗДА",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "748136246",
       "name_lat": "ВУЛЬФ СТАЙЛ МУЛАН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ МУЛАН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1408,10 +1394,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1058797526",
+      "id": "551695951",
       "name_lat": "ВУЛЬФ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1444,15 +1430,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1599938256",
-      "name_lat": "ВУЛЬФ СТАЙЛ АРМАГЕДДОН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1371558978",
       "name_lat": "ВУНДЕР ХУНД ЛЕГЕНДА (Д/Ш)",
       "name_ru": "",
@@ -1462,37 +1439,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1118279700",
+      "id": "1701828747",
       "name_lat": "ВУНДЕР ВОЛЬФ БОГИНЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1714426376",
+      "id": "447239542",
       "name_lat": "ВУЛЬФ СТАЙЛ ИМПЕРИЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "351571971",
+      "id": "1219687059",
       "name_lat": "ВУЛЬФ СТАЙЛ ИДЕЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "594850491",
+      "id": "1694474671",
       "name_lat": "ВУППИ ГОЛД ЭЛИС ХАУС",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1507,15 +1484,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "246193517",
-      "name_lat": "ВУЛЛПЭТ ЕЛЕКТРОНИК РЭССИ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "958155758",
       "name_lat": "ВУДРЭЙС АВРОРА РЕДИАНС ОФ ЗЕ ДООН",
       "name_ru": "",
@@ -1525,19 +1493,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "248541555",
-      "name_lat": "ВУЛЛПЭТ ЕРМАК УДАЛОЙ",
+      "id": "1834396624",
+      "name_lat": "ВУЛЛПЭТ ЕЛЕКТРОНИК РЭССИ",
       "name_ru": "",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1742800832",
+      "id": "952111860",
+      "name_lat": "ВУПСИ БЕБИ АЙС",
+      "name_ru": "ВУПСИ БЕБИ АЙС",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "577628317",
       "name_lat": "ВУППИ ИЗ КИТАЙСКО ГО КВАРТАЛА",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ /",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1552,19 +1528,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "990777898",
+      "id": "1068035132",
       "name_lat": "ВУЛЬФ СТАЙЛ ЯГУАР",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЯГУАР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "861655600",
+      "id": "62799390",
       "name_lat": "ВУЛЬФ СТАЙЛ ПОКЕР ФЕЙС",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1579,10 +1555,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "75974544",
+      "id": "1118029785",
       "name_lat": "ВУЛЬФ СТАЙЛ ЮККИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1590,7 +1566,7 @@
     {
       "id": "1420827010",
       "name_lat": "ВУНДЕР ХУНД АМАЛИЯ ДЕСМОНД",
-      "name_ru": "",
+      "name_ru": "ВУНДЕР ХУНД АМАЛИЯ ДЕСМОНД",
       "breed": "МОПС",
       "breed_en": "PUG",
       "total_shows": 4,
@@ -1599,17 +1575,17 @@
     {
       "id": "1499007811",
       "name_lat": "ВУГАР БАХРАМ",
-      "name_ru": "",
+      "name_ru": "ВУГАР БАХРАМ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "291531943",
+      "id": "1501371238",
       "name_lat": "ВУДДИ ИМПЕРИАЛ ГРАНД",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "name_ru": "ВУДДИ ИМПЕРИАЛ ГРАНД",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1617,7 +1593,7 @@
     {
       "id": "1576753610",
       "name_lat": "ВУДНВЭЙ МАЙБАХ",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ МАЙБАХ",
       "breed": "ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -1626,7 +1602,7 @@
     {
       "id": "754340129",
       "name_lat": "ВУНДЕР ХУНД НЭНА ДАРЛИНГ",
-      "name_ru": "",
+      "name_ru": "ВУНДЕР ХУНД НЭНА ДАРЛИНГ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 4,
@@ -1671,44 +1647,44 @@
     {
       "id": "1476553776",
       "name_lat": "ВУДВАРД БРАВЫЙ ОХОТНИК",
-      "name_ru": "",
+      "name_ru": "ВУДВАРД БРАВЫЙ ОХОТНИК",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1802947320",
+      "id": "357822311",
       "name_lat": "ВУДХАУС ВИРДЖИНИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ВУДХАУС ВИРДЖИНИЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1405170642",
+      "id": "1792744361",
       "name_lat": "ВУДХАУС БАВАРИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ВУДХАУС БАВАРИЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "602955016",
-      "name_lat": "Вудрейс Аврора Редианс Оф Зе",
-      "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "248452349",
+      "id": "1041150289",
       "name_lat": "ВУЛЬФ СТАЙЛ БУМБОКС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ВУЛЬФ СТАЙЛ БУМБОКС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1763652395",
+      "name_lat": "ВУЛЬФ СТАЙЛ ЧЕНДЛЕР М. БИНГ",
+      "name_ru": "ВУЛЬФ СТАЙЛ ЧЕНДЛЕР М. БИНГ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1741,10 +1717,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "1498279236",
+      "name_lat": "ВУЛКАНА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "769876101",
       "name_lat": "ВУЛА",
       "name_ru": "",
       "breed": "ШЕЛТИ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "912175156",
+      "name_lat": "Вудрейс Аурелия",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1317742497",
+      "name_lat": "Вудрейс Гай Ричи",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1768,6 +1771,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "658317049",
+      "name_lat": "ВУЛКАН ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "908708519",
       "name_lat": "ВУНДЕР ХУНД ИКСИЯ",
       "name_ru": "",
@@ -1777,10 +1788,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1111762416",
+      "id": "1090539870",
       "name_lat": "ВУЛЬФ СТАЙЛ ЗЕВС",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1804,19 +1815,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1500251846",
-      "name_lat": "ВУЛЛПЭТ ЕЛЛАЙЗА МИДДЛТОН",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1733441152",
+      "id": "1158668238",
       "name_lat": "ВУЛЬФ СТАЙЛ ЛИЛУ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1840,19 +1842,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "274751294",
+      "id": "905449472",
       "name_lat": "ВУЛЬФ СТАЙЛ ЕКСПЕКТО ПАТРОНУМ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "743099427",
-      "name_lat": "ВУЛЬФ ДИ ФИАММА ВИВО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1860,17 +1853,8 @@
     {
       "id": "1695766542",
       "name_lat": "ВУДНВЭЙ МАРТИН",
-      "name_ru": "",
+      "name_ru": "ВУДНВЭЙ МАРТИН",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "743264493",
-      "name_lat": "Вудрейс Аурелия",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1957,11 +1941,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "148242370",
-      "name_lat": "ВУЛ МАРК",
+      "id": "680948081",
+      "name_lat": "ВУДИ ВАЙС",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2047,20 +2030,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1400078297",
-      "name_lat": "ВУЛКАНА",
+      "id": "1383648233",
+      "name_lat": "ВУППИ ЭКЛЕР",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1498279236",
-      "name_lat": "ВУЛКАНА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2079,6 +2052,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "564053523",
+      "name_lat": "ВУДИ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2182,10 +2163,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "19109663",
+      "id": "139473407",
       "name_lat": "ВУЛЬФ СТАЙЛ АДЕЛЬ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2227,6 +2208,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1171855313",
+      "name_lat": "ВУЛЬФ СТАЙЛ ДРИМ КАМ ТРУ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "809853378",
       "name_lat": "ВУЛЬФ СТАЙЛ НОВАК",
       "name_ru": "",
@@ -2236,28 +2225,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1387699001",
-      "name_lat": "ВУДИ ВОСХОДЯЩАЯ ЗВЕЗДА",
-      "name_ru": "",
-      "breed": "мопс пудель миниатюрный абрик., серебр.,красн.,",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1639148224",
+      "id": "295012495",
       "name_lat": "ВУНДЕР ВОЛЬФ ЧАРНИТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "804663078",
+      "id": "967003493",
       "name_lat": "ВУДХАУС БРИКСТАЙЛ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2272,19 +2252,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1801536518",
+      "id": "512288072",
       "name_lat": "ВУЛЬФ СТАЙЛ Г20",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1337403505",
+      "id": "1827143346",
       "name_lat": "ВУНДЕР ВОЛЬФ ЯЛЬВИНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2308,19 +2288,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "339946571",
+      "id": "323903291",
       "name_lat": "ВУЛЬФ СТАЙЛ ПОП ИТ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1805081271",
+      "id": "1148763031",
       "name_lat": "ВУЛЬФ СТАЙЛ БАЛЕНСИАГА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2344,19 +2324,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1393138881",
+      "id": "342831561",
       "name_lat": "ВУДИ ХАЕР ФОМ ФЕСТБУРГ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1694825216",
+      "id": "1485913422",
       "name_lat": "ВУЛЬФ СТАЙЛ ЭЙФОРИЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2371,10 +2351,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1166074217",
+      "id": "1494792893",
       "name_lat": "ВУЛЬФ СТАЙЛ МАРИЯ НЭВИ БЛУ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2389,20 +2369,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "342637334",
-      "name_lat": "ВУЛЬФ СТАЙЛ ЛИВИН'ЛА ВИДА ЛОКА",
+      "id": "179367249",
+      "name_lat": "ВУЛЬФ СТАЙЛ КРАШ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1989367037",
-      "name_lat": "ВУЛЬФ СТАЙЛ КРАШ",
+      "id": "403387034",
+      "name_lat": "ВУЛКАН РАДОСТИ ПРИНЦЕССА ЛЕЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "РУССКАЯ ЦВЕТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2416,20 +2395,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1317742497",
-      "name_lat": "Вудрейс Гай Ричи",
+      "id": "149511581",
+      "name_lat": "ВУДХАУС ГАБРИЭЛЬ",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1885324222",
-      "name_lat": "ВУДХАУС ГАБРИЭЛЬ",
+      "id": "874922929",
+      "name_lat": "ВУЛЬФ СТАЙЛ ТЭЙК МАЙ ЛАВ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

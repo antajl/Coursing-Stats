@@ -112,16 +112,17 @@ export function colForX(x: number, str: string, b: ColBounds): ColKey {
 
 export async function extractItems(pdfPath: string): Promise<{
   items: PdfItem[]
+  mainRingItems: PdfItem[]
   pageCount: number
   hasMainRing: boolean
 }> {
   const data = new Uint8Array(fs.readFileSync(pdfPath))
   const doc = await getDocument({ data, useSystemFonts: true, isEvalSupported: false }).promise
   const items: PdfItem[] = []
+  const mainRingItems: PdfItem[] = []
   let hasMainRing = false
-  let stop = false
 
-  for (let p = 1; p <= doc.numPages && !stop; p++) {
+  for (let p = 1; p <= doc.numPages; p++) {
     const page = await doc.getPage(p)
     const content = await page.getTextContent()
     type Raw = { str?: string; transform?: number[] }
@@ -132,7 +133,7 @@ export async function extractItems(pdfPath: string): Promise<{
       if (!str) continue
       const tr = raw.transform || [1, 0, 0, 1, 0, 0]
       const y = tr[5] ?? 0
-      if (MAIN_RING_RE.test(str)) {
+      if (!hasMainRing && MAIN_RING_RE.test(str)) {
         hasMainRing = true
         mainRingY = y
         continue
@@ -140,15 +141,16 @@ export async function extractItems(pdfPath: string): Promise<{
       pageItems.push({ str, x: tr[4] ?? 0, y, page: p })
     }
     if (mainRingY != null) {
-      // Keep only content above the main-ring sheet title (higher Y).
       items.push(...pageItems.filter((it) => it.y > mainRingY! + 2))
-      stop = true
+      mainRingItems.push(...pageItems.filter((it) => it.y < mainRingY! - 2))
+    } else if (hasMainRing) {
+      mainRingItems.push(...pageItems)
     } else {
       items.push(...pageItems)
     }
   }
 
-  return { items, pageCount: doc.numPages, hasMainRing }
+  return { items, mainRingItems, pageCount: doc.numPages, hasMainRing }
 }
 
 export function findCatalogAnchors(items: PdfItem[], bounds: ColBounds): PdfItem[] {

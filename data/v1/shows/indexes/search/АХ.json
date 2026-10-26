@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "АХ",
-  "count": 221,
+  "count": 231,
   "dogs": [
     {
       "id": "1034337164",
       "name_lat": "АХТАМАР ГИФТ ОФ ФОРЧУН",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ГИФТ ОФ ФОРЧУН",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1727019338",
+      "name_lat": "АХТАМАР ПАТРИК ФИЛИПП",
+      "name_ru": "АХТАМАР ПАТРИК ФИЛИПП",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -19,24 +28,6 @@
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1727019338",
-      "name_lat": "АХТАМАР ПАТРИК ФИЛИПП",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "883645152",
-      "name_lat": "АХТАМАР ГАЛО",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -51,7 +42,7 @@
     {
       "id": "1019105220",
       "name_lat": "АХТАМАР ИЛАНА",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ИЛАНА",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 13,
@@ -60,7 +51,7 @@
     {
       "id": "410650721",
       "name_lat": "АХТАМАР ДИ КАПРИО",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ДИ КАПРИО",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 16,
@@ -87,7 +78,7 @@
     {
       "id": "1382203986",
       "name_lat": "АХТАМАР ШАНСИ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ШАНСИ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 6,
@@ -96,16 +87,16 @@
     {
       "id": "985634783",
       "name_lat": "АХТАМАР АВАНТЮРА",
-      "name_ru": "",
+      "name_ru": "АХТАМАР АВАНТЮРА",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
       "id": "300380773",
       "name_lat": "АХТАМАР ШЕВАЛЬЕ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ШЕВАЛЬЕ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 16,
@@ -121,18 +112,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "182406052",
-      "name_lat": "АХТАМАР ГОЛД НАВИГАТОР",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
+      "id": "551557244",
+      "name_lat": "АХТАМАР ЦУКАТ",
+      "name_ru": "АХТАМАР ЦУКАТ",
+      "breed": "ГРИФФОН /",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "169144941",
       "name_lat": "АХИЛЛ СТАР ВЭЙ",
-      "name_ru": "",
+      "name_ru": "АХИЛЛ СТАР ВЭЙ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
       "total_shows": 17,
@@ -141,61 +131,52 @@
     {
       "id": "441259862",
       "name_lat": "АХТИЯР АК ЯР ГЕНДАЛЬФ",
-      "name_ru": "",
+      "name_ru": "АХТИЯР АК ЯР ГЕНДАЛЬФ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "581585847",
-      "name_lat": "АХИЛЛЕС ГОРДОСТЬ МОЯ",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
       "id": "1731041471",
       "name_lat": "АХТАМАР ШАМАН",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ШАМАН",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "788493172",
+      "id": "273041105",
       "name_lat": "АХ КАКАЯ КРАЛЯ ИЗ ПРОВИНЦИИ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "АХ КАКАЯ КРАЛЯ ИЗ ПРОВИНЦИИ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1959064003",
-      "name_lat": "АХТАМАР ШУМАХЕР",
-      "name_ru": "",
+      "id": "13829593",
+      "name_lat": "АХТАМАР МИСТИКА",
+      "name_ru": "АХТАМАР МИСТИКА",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "13829593",
-      "name_lat": "АХТАМАР МИСТИКА",
-      "name_ru": "",
+      "id": "1959064003",
+      "name_lat": "АХТАМАР ШУМАХЕР",
+      "name_ru": "АХТАМАР ШУМАХЕР",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "340740599",
       "name_lat": "АХТИЯР АК ЯР МОЯ ПРЕКРАСНАЯ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "АХТИЯР АК ЯР МОЯ ПРЕКРАСНАЯ ЛЕДИ",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 11,
@@ -211,21 +192,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "985821680",
-      "name_lat": "АХТИАР АК ЯР МЕДЖИК АЙС",
+      "id": "74618034",
+      "name_lat": "АХТИАР АК ЯР СИЛЬВЕР СТАР",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1117752373",
-      "name_lat": "АХТАМАР ФАВОРИТКА",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "id": "985821680",
+      "name_lat": "АХТИАР АК ЯР МЕДЖИК АЙС",
+      "name_ru": "АХТИАР АК ЯР МЕДЖИК АЙС",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -240,7 +221,7 @@
     {
       "id": "1751473273",
       "name_lat": "АХТАМАР ТРИУМФ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ТРИУМФ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 4,
@@ -249,7 +230,7 @@
     {
       "id": "250489562",
       "name_lat": "АХТАМАР ЦИАНА",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ЦИАНА",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 9,
@@ -258,7 +239,7 @@
     {
       "id": "1060477547",
       "name_lat": "АХТАМАР НАВАРРА",
-      "name_ru": "",
+      "name_ru": "АХТАМАР НАВАРРА",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 19,
@@ -267,7 +248,7 @@
     {
       "id": "340211452",
       "name_lat": "АХТАМАР ИНДИАНА ДЖОНС",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ИНДИАНА ДЖОНС",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "PETIT BRABANCON",
       "total_shows": 24,
@@ -294,16 +275,40 @@
     {
       "id": "298246327",
       "name_lat": "АХТАМАР ЖЕ СУИ БЕЛЛЬ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ЖЕ СУИ БЕЛЛЬ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
+      "id": "1877091007",
+      "name_lat": "АХТИАР АК ЯР САНСАРА",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "899598128",
+      "name_lat": "АХТИАР АК ЯР ЛОРД СЕВЕРА",
+      "name_ru": "АХТИАР АК ЯР ЛОРД СЕВЕРА",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103124920",
+      "name_lat": "АХТАМАР САКЭ",
+      "name_ru": "АХТАМАР САКЭ",
+      "breed": "ГРИФФОН",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "132150381",
       "name_lat": "Ахиллес Хард Хитт",
-      "name_ru": "",
+      "name_ru": "Ахиллес Хард Хитт",
       "breed": "ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ СОБАКА",
       "breed_en": "",
       "total_shows": 7,
@@ -319,21 +324,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "647039446",
+      "name_lat": "АХТИЯР АК ЯР РОКСОЛАНА",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1618611120",
       "name_lat": "АХТИАР АК ЯР РЮРИК",
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "74618034",
-      "name_lat": "АХТИАР АК ЯР СИЛЬВЕР СТАР",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -351,6 +355,14 @@
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "263431163",
+      "name_lat": "АХТАМАР МИСТИКА (М.БР)",
+      "name_ru": "АХТАМАР МИСТИКА (М.БР)",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -373,18 +385,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "281967779",
+      "name_lat": "АХТИАР АК ЯР РОКСОЛАНА",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "317462878",
       "name_lat": "АХТАМАР МАФИЯ ЗАЛОГ ЛЮБВИ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР МАФИЯ ЗАЛОГ ЛЮБВИ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1507686971",
       "name_lat": "АХТАМАР ОРЛЕАН",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ОРЛЕАН",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 12,
@@ -402,25 +422,49 @@
     {
       "id": "138724754",
       "name_lat": "АХТАМАР МО ЗЭН БЬЮТИФУЛ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР МО ЗЭН БЬЮТИФУЛ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "1908948120",
+      "name_lat": "АХТАМАР ШАНТАЛЬ",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "430179264",
       "name_lat": "АХТАМАР УНА БЕЛЛА ДАННА",
-      "name_ru": "",
+      "name_ru": "АХТАМАР УНА БЕЛЛА ДАННА",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "261618215",
+      "name_lat": "АХТИАР АК ЯР ГИЛАРА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1784317139",
+      "name_lat": "АХТАМАР ТЕСЛА",
+      "name_ru": "АХТАМАР ТЕСЛА",
+      "breed": "BRABANSON",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1386880911",
       "name_lat": "АХТАМАР ГРАЦИЯ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ГРАЦИЯ",
       "breed": "ЛЬНЫЙ МАЛЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -429,7 +473,7 @@
     {
       "id": "858533243",
       "name_lat": "АХТИАР АК ЯР ИЗАБЕЛЬ",
-      "name_ru": "",
+      "name_ru": "АХТИАР АК ЯР ИЗАБЕЛЬ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
@@ -438,7 +482,7 @@
     {
       "id": "106682347",
       "name_lat": "АХИЛЕС ИЗ ХАНСТВА МИЛЕНХАНА",
-      "name_ru": "",
+      "name_ru": "АХИЛЕС ИЗ ХАНСТВА МИЛЕНХАНА",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -490,33 +534,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1908948120",
-      "name_lat": "АХТАМАР ШАНТАЛЬ",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1168609905",
-      "name_lat": "АХТАМАР МИСТИКА (М.БР)",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1032661731",
-      "name_lat": "АХТАМАР ЦУКАТ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1771995243",
       "name_lat": "АХИЛЛЕС",
       "name_ru": "",
@@ -535,10 +552,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1136936134",
+      "id": "406845247",
       "name_lat": "АХТАМАР ОУН ОПИНИОН",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "name_ru": "АХТАМАР ОУН ОПИНИОН",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -553,19 +570,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1794347332",
-      "name_lat": "АХТАМАР ГЛАМУР ПРИНЦЕСС",
-      "name_ru": "",
+      "id": "1688654279",
+      "name_lat": "АХТАМАР ШАМПАНЬ КОКТЕЙЛЬ",
+      "name_ru": "АХТАМАР ШАМПАНЬ КОКТЕЙЛЬ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1067907907",
+      "id": "1794347332",
+      "name_lat": "АХТАМАР ГЛАМУР ПРИНЦЕСС",
+      "name_ru": "АХТАМАР ГЛАМУР ПРИНЦЕСС",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1008374984",
+      "name_lat": "АХТАМАР ГОЛДЕН ГЛОРИ",
+      "name_ru": "АХТАМАР ГОЛДЕН ГЛОРИ",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1641986090",
       "name_lat": "АХТАМАР МЕЛОДИ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "name_ru": "АХТАМАР МЕЛОДИ",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
@@ -580,21 +615,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "181258088",
+      "id": "1443216442",
+      "name_lat": "АХТАМАР СОЛО",
+      "name_ru": "АХТАМАР СОЛО",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1961426189",
       "name_lat": "АХТАМАР НИА МАЙ ХАТ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "name_ru": "АХТАМАР НИА МАЙ ХАТ",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1688654279",
-      "name_lat": "АХТАМАР ШАМПАНЬ КОКТЕЙЛЬ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН",
+      "id": "1630109850",
+      "name_lat": "АХМАТОВА ФОРЕВЕР ВЭ БЭСТ",
+      "name_ru": "АХМАТОВА ФОРЕВЕР ВЭ БЭСТ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -618,19 +662,28 @@
     {
       "id": "593834887",
       "name_lat": "АХТАМАР ИТС МАЙ ДЕСТИНИ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ИТС МАЙ ДЕСТИНИ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1630109850",
-      "name_lat": "АХМАТОВА ФОРЕВЕР ВЭ БЭСТ",
+      "id": "1959419823",
+      "name_lat": "АХ КАКАЯ КРАСОТКА ИЗ ДОМА АЛАНТЕС",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "30424879",
+      "name_lat": "АХТИАР АК ЯР ПАРВАТИ",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -645,7 +698,7 @@
     {
       "id": "998448135",
       "name_lat": "АХТАМАР СОЛАР БРЕНД",
-      "name_ru": "",
+      "name_ru": "АХТАМАР СОЛАР БРЕНД",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 9,
@@ -663,25 +716,25 @@
     {
       "id": "251829513",
       "name_lat": "АХЕАТ ТЕМПТЕЙШН ОФ ЛАВ",
-      "name_ru": "",
+      "name_ru": "АХЕАТ ТЕМПТЕЙШН ОФ ЛАВ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "219921119",
+      "id": "1245725262",
       "name_lat": "АХТИАР АК ЯР МАЛИФИСЕНТА",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1926937371",
-      "name_lat": "АХТАМАР ТЕТ-А- ТЕТ",
-      "name_ru": "",
+      "id": "583835477",
+      "name_lat": "АХТАМАР ТЕТ-А-ТЕТ",
+      "name_ru": "АХТАМАР ТЕТ-А-ТЕТ",
       "breed": "БРАБАНСОН",
       "breed_en": "",
       "total_shows": 5,
@@ -697,9 +750,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "601048255",
+      "name_lat": "АХТАМАР ВИНТАЖ",
+      "name_ru": "АХТАМАР ВИНТАЖ",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1421655705",
       "name_lat": "АХТАМАР СЕКРЕТ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР СЕКРЕТ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 7,
@@ -717,35 +779,26 @@
     {
       "id": "277489831",
       "name_lat": "АХАЛ ТЕКЕ ПАТВАР ЮМАН",
-      "name_ru": "",
+      "name_ru": "АХАЛ ТЕКЕ ПАТВАР ЮМАН",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1959419823",
-      "name_lat": "АХ КАКАЯ КРАСОТКА ИЗ ДОМА АЛАНТЕС",
+      "id": "1183790389",
+      "name_lat": "А'ХИНО РЕЙ",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "breed": "АКИТА / AKITA",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "30424879",
-      "name_lat": "АХТИАР АК ЯР ПАРВАТИ",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "204059698",
+      "id": "407021491",
       "name_lat": "АХТИАР АК ЯР ЯНТАРЬ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -753,7 +806,7 @@
     {
       "id": "1461951016",
       "name_lat": "АХТАМАР ЗАБАВА",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ЗАБАВА",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 13,
@@ -762,7 +815,7 @@
     {
       "id": "704726610",
       "name_lat": "АХТАМАР ЭСМЕРАЛЬДА",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ЭСМЕРАЛЬДА",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 6,
@@ -789,7 +842,7 @@
     {
       "id": "518320811",
       "name_lat": "АХТАМАР НИКОЛЬ РОЗМАРИ ФЛЕР",
-      "name_ru": "",
+      "name_ru": "АХТАМАР НИКОЛЬ РОЗМАРИ ФЛЕР",
       "breed": "БРАБАНСОН МАЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -798,7 +851,7 @@
     {
       "id": "808627094",
       "name_lat": "АХМАТОВА ФАСТ ЭНД БРЕЙВ",
-      "name_ru": "",
+      "name_ru": "АХМАТОВА ФАСТ ЭНД БРЕЙВ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
@@ -841,21 +894,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "1443216442",
-      "name_lat": "АХТАМАР СОЛО",
+      "id": "38594000",
+      "name_lat": "А'ХИНО РЕЙ",
       "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "201028949",
+      "name_lat": "АХТАМАР ЯНТАРНАЯ КАПЛЯ",
+      "name_ru": "АХТАМАР ЯНТАРНАЯ КАПЛЯ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1892716028",
+      "name_lat": "АХТИАР АК ЯР Ю НОКСИ",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "679951792",
+      "name_lat": "АХ-ЛАМ ХАН",
+      "name_ru": "",
+      "breed": "ЧУНЦИН",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "760175258",
       "name_lat": "АХТАМАР БАГРАТИОН",
-      "name_ru": "",
+      "name_ru": "АХТАМАР БАГРАТИОН",
       "breed": "ОХОТНИЧИЙ БЕЛЬГИЙСКИЙ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "506050533",
+      "name_lat": "АХТАМАР ЗЕНИТ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -870,7 +959,7 @@
     {
       "id": "1834481809",
       "name_lat": "АХТАМАР ОНЛИ ВАН",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ОНЛИ ВАН",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
@@ -879,7 +968,7 @@
     {
       "id": "1134027209",
       "name_lat": "АХТАМАР УЛЬРИХ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР УЛЬРИХ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 4,
@@ -895,10 +984,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "514004667",
+      "id": "2000379083",
       "name_lat": "АХОН МАСТЕР ОФФ МИНД",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "АХОН МАСТЕР ОФФ МИНД",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -915,7 +1004,7 @@
     {
       "id": "1037926083",
       "name_lat": "АХАЛ-ТЕХЕ ПАТВАР ЮМАН",
-      "name_ru": "",
+      "name_ru": "АХАЛ-ТЕХЕ ПАТВАР ЮМАН",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -994,10 +1083,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "936430811",
+      "id": "211754002",
       "name_lat": "АХТАМАР РИАЛ ВИННЕР",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "name_ru": "АХТАМАР РИАЛ ВИННЕР",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1012,30 +1101,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "466681489",
+      "id": "437902124",
       "name_lat": "АХТАМАР ЖЮЛЬЕТТ ГРЕКО",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "name_ru": "АХТАМАР ЖЮЛЬЕТТ ГРЕКО",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1532695241",
-      "name_lat": "АХ-ЛАМ ХАН",
-      "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "918934294",
-      "name_lat": "АХТАМАР ЕФАНИЯ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1050,25 +1121,16 @@
     {
       "id": "1262527050",
       "name_lat": "АХТАМАР ТЕССА ФОКС",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ТЕССА ФОКС",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "506050533",
-      "name_lat": "АХТАМАР ЗЕНИТ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "289014861",
       "name_lat": "АХТАМАР КАМПАРИ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР КАМПАРИ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 35,
@@ -1077,7 +1139,7 @@
     {
       "id": "195793721",
       "name_lat": "АХТАМАР БЭСТ ФАЙЭР",
-      "name_ru": "",
+      "name_ru": "АХТАМАР БЭСТ ФАЙЭР",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
@@ -1086,7 +1148,7 @@
     {
       "id": "1589197425",
       "name_lat": "АХТАМАР НОРМАНДИЯ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР НОРМАНДИЯ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
@@ -1113,7 +1175,7 @@
     {
       "id": "1870960187",
       "name_lat": "АХТАМАР УЛЬТРАСТАР",
-      "name_ru": "",
+      "name_ru": "АХТАМАР УЛЬТРАСТАР",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 5,
@@ -1138,10 +1200,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "451779499",
+      "id": "1180924578",
       "name_lat": "АХЕНУ АЧИК",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ СОБАКА) СРЕДНЯЯ /",
+      "breed": "БАСЕНДЖИ СОБАКА) СРЕДНЯЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1192,15 +1254,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "201028949",
-      "name_lat": "АХТАМАР ЯНТАРНАЯ КАПЛЯ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "666118286",
       "name_lat": "АХТАМАР АБСОЛЮТ ВИКТОРИЯ",
       "name_ru": "",
@@ -1212,7 +1265,7 @@
     {
       "id": "698130783",
       "name_lat": "Ахтамар Сакура",
-      "name_ru": "",
+      "name_ru": "Ахтамар Сакура",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
@@ -1282,19 +1335,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1242364525",
-      "name_lat": "АХТАМАР ТЕСЛА",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "702394385",
+      "id": "1411792044",
       "name_lat": "АХТИАР АК ЯР ЭМПРЕСС",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1302,10 +1346,18 @@
     {
       "id": "1309228456",
       "name_lat": "АХТИАР АК ЯР ДОБРЫЙ НЭШ",
-      "name_ru": "",
+      "name_ru": "АХТИАР АК ЯР ДОБРЫЙ НЭШ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1196383573",
+      "name_lat": "АХТАР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1315,6 +1367,14 @@
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1132744309",
+      "name_lat": "АХТИАР АК ЯР ТРАНДУИЛ",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1336,21 +1396,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "757516687",
+      "id": "1776180102",
+      "name_lat": "АХТИАР АК ЯР ИБИЦА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "703633854",
       "name_lat": "АХТАМАР ОДРИ СПЭРРОУ",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1561392316",
-      "name_lat": "АХТАМАР КУКЛА",
+      "id": "360923113",
+      "name_lat": "А-ХУРА",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed": "ВОСТОЧНОСИБИРСКАЯ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1359,14 +1428,14 @@
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1531384151",
+      "id": "1076489064",
       "name_lat": "АХИЛЛ ПЕЛЕЙ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1374,7 +1443,7 @@
     {
       "id": "1426979476",
       "name_lat": "АХТАМАР ВЕРИТАБЛ ТРЕЙЧ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ВЕРИТАБЛ ТРЕЙЧ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
@@ -1401,26 +1470,17 @@
     {
       "id": "196151824",
       "name_lat": "АХИЛЛЕС ЛЮБИМЕЦ БОГОВ",
-      "name_ru": "",
+      "name_ru": "АХИЛЛЕС ЛЮБИМЕЦ БОГОВ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "266975541",
-      "name_lat": "АХТАМАР ГОЛДЕН ГЛОРИ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1090194717",
+      "id": "1130984128",
       "name_lat": "АХТАМАР ЖЕННИ ДЮВАЛЬ",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1435,6 +1495,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "259471619",
+      "name_lat": "АХТИЯР АК ЯР ИМПЕРИЯ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "540129928",
       "name_lat": "АХИЛЛЕС СИЛЬНЕЙШИЙ ИЗ ГЕРОЕВ",
       "name_ru": "",
@@ -1444,20 +1513,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "336134875",
-      "name_lat": "АХТАМАР ФИШКА",
+      "id": "1514588751",
+      "name_lat": "АХТИАР АК ЯР ТАМЕРЛАН",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1363919378",
+      "name_lat": "АХТАМАР ФИШКА",
+      "name_ru": "АХТАМАР ФИШКА",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "259471619",
-      "name_lat": "АХТИЯР АК ЯР ИМПЕРИЯ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "id": "1497061703",
+      "name_lat": "АХТИАР АК ЯР АННИ-ФРИД",
+      "name_ru": "АХТИАР АК ЯР АННИ-ФРИД",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -1471,19 +1547,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "876783283",
+      "id": "54033288",
       "name_lat": "АХИЛЛЕС",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1892716028",
-      "name_lat": "АХТИАР АК ЯР Ю НОКСИ",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1525,6 +1592,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1762444317",
+      "name_lat": "АХТАМАР БАУНТИ",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1078467578",
       "name_lat": "АХТИЯР АК ЯР САНСАРА",
       "name_ru": "",
@@ -1543,36 +1619,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1776180102",
-      "name_lat": "АХТИАР АК ЯР ИБИЦА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1877091007",
-      "name_lat": "АХТИАР АК ЯР САНСАРА",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1721745990",
-      "name_lat": "АХТАМАР ВИНТАЖ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "497751676",
       "name_lat": "АХТАМАР ГАМБЛЕР'С ДРИМ",
-      "name_ru": "",
+      "name_ru": "АХТАМАР ГАМБЛЕР'С ДРИМ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
@@ -1581,8 +1630,25 @@
     {
       "id": "565305683",
       "name_lat": "АХИЛЛ УАН ЭНД ОНЛИ ИЗ ВЕСТЛАНДИИ",
-      "name_ru": "",
+      "name_ru": "АХИЛЛ УАН ЭНД ОНЛИ ИЗ ВЕСТЛАНДИИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273793880",
+      "name_lat": "АХТАМАР ЕРАЛАШ",
+      "name_ru": "АХТАМАР ЕРАЛАШ",
+      "breed": "ГРИФФОН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "536564920",
+      "name_lat": "АХТАМАР ЮНЕССА",
+      "name_ru": "АХТАМАР ЮНЕССА",
+      "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1615,10 +1681,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "47903214",
+      "id": "1183665975",
       "name_lat": "АХИЛЛ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1152146525",
+      "name_lat": "А-ХАНТЕР",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1660,10 +1735,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1594060939",
+      "id": "1994428802",
       "name_lat": "АХИЛЕС",
       "name_ru": "",
-      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ /",
+      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1678,10 +1753,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "6688958",
+      "id": "1914016283",
       "name_lat": "АХАТ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1795,10 +1870,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "164399809",
+      "id": "275679132",
       "name_lat": "АХТИАР АК ЯР ЭВРИДИКА",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1822,10 +1897,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "776940454",
+      "id": "1942432159",
       "name_lat": "АХТАМАР КОМПАНЬОН",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1849,19 +1924,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1080524559",
-      "name_lat": "АХ МАММА МИЯ ВИКТОРИЯ",
+      "id": "1382917270",
+      "name_lat": "АХТАМАР ХУК ЛЕФТ",
       "name_ru": "",
-      "breed": "YORKSHIRE TERRIER",
-      "breed_en": "",
+      "breed": "ПТИ БРАБАНСОН",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1497061703",
-      "name_lat": "АХТИАР АК ЯР АННИ-ФРИД",
+      "id": "384170515",
+      "name_lat": "АХТУНГ ПАНЗЕР",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1080524559",
+      "name_lat": "АХ МАММА МИЯ ВИКТОРИЯ",
+      "name_ru": "",
+      "breed": "YORKSHIRE TERRIER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1903,10 +1985,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "804028332",
+      "id": "1331683920",
       "name_lat": "АХ КАКАЯ АНАБЕЛЬ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1914,15 +1996,6 @@
     {
       "id": "775846719",
       "name_lat": "АХТАМАР СОЛО ХАРПЕРСБЭНД",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1762444317",
-      "name_lat": "АХТАМАР БАУНТИ",
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
@@ -1957,19 +2030,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1575337424",
+      "id": "1803561284",
       "name_lat": "АХИЛЛИЯ ЗВЕЗДНАЯ ПРИНЦЕССА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1587166679",
+      "id": "1108066091",
       "name_lat": "АХТАМАР ЛИЛИ МАРЛЕН",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1984,11 +2057,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1663531822",
-      "name_lat": "АХТАМАР ЮНЕССА",
+      "id": "1048045927",
+      "name_lat": "АХТАМАР ИНТРИГА",
       "name_ru": "",
-      "breed": "БРАБАНСОНПТИ",
-      "breed_en": "",
+      "breed": "ПТИ-БРАБАНСОН",
       "total_shows": 1,
       "competition_dog_id": null
     }

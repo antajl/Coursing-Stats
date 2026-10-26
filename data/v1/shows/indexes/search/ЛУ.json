@@ -1,31 +1,31 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЛУ",
-  "count": 946,
+  "count": 975,
   "dogs": [
     {
       "id": "190757959",
       "name_lat": "ЛУИ ЛЕКСУС ГРЕЙД",
-      "name_ru": "",
+      "name_ru": "ЛУИ ЛЕКСУС ГРЕЙД",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 33,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
       "id": "134",
       "name_lat": "ЛУННАЯ РАДУГА ШАРТРЕЗ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ШАРТРЕЗ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 27,
       "competition_dog_id": 134
     },
     {
-      "id": "1818537367",
+      "id": "927624491",
       "name_lat": "ЛУННАЯ СОНАТА",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "name_ru": "ЛУННАЯ СОНАТА",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 88,
       "competition_dog_id": null
@@ -33,16 +33,16 @@
     {
       "id": "108867491",
       "name_lat": "ЛУНАР ФОРСАЙД ИЗ ВИШНЕВОГО САДА",
-      "name_ru": "",
+      "name_ru": "ЛУНАР ФОРСАЙД ИЗ ВИШНЕВОГО САДА",
       "breed": "СОБАКА",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
       "id": "1307310035",
       "name_lat": "ЛУННАЯ РАДУГА ЗИМНИЙ ВАЛЬС",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЗИМНИЙ ВАЛЬС",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 11,
@@ -60,16 +60,34 @@
     {
       "id": "232288144",
       "name_lat": "ЛУГАР БЭТМАН'С ПРАЙД НЕЙСБИ",
-      "name_ru": "",
+      "name_ru": "ЛУГАР БЭТМАН'С ПРАЙД НЕЙСБИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
+      "id": "1322055155",
+      "name_lat": "ЛУИЗАДОР ЖАКЛИН",
+      "name_ru": "ЛУИЗАДОР ЖАКЛИН",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1450719469",
+      "name_lat": "ЛУКА ИЗ ЦВЕТНИКА",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
       "id": "1880469659",
       "name_lat": "ЛУНАР ДАЙМОНД ШАНЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ЛУНАР ДАЙМОНД ШАНЕЛЬ",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 10,
@@ -85,15 +103,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1181724504",
-      "name_lat": "ЛУЧШАЯ ИЗ ЛУЧШИХ ЖЕМЧУЖИНА СИБИРИ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1039435552",
       "name_lat": "ЛУННАЯ РАДУГА ДУНОВЕНИЕ ВЕТРА",
       "name_ru": "",
@@ -105,7 +114,7 @@
     {
       "id": "1813192480",
       "name_lat": "ЛУИЗА АНИМА ЛУМИНОЗА",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА АНИМА ЛУМИНОЗА",
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -121,27 +130,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1610854330",
+      "id": "1509357311",
       "name_lat": "ЛУНА ДЖИНДЖЕР",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ЛУНА ДЖИНДЖЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "905199995",
-      "name_lat": "ЛУЧЕЗАРА ИЗ ЗАМКА МЕЛВИН",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1721552638",
       "name_lat": "ЛУННАЯ РАДУГА ЦУНАМИ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЦУНАМИ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 14,
@@ -159,7 +159,7 @@
     {
       "id": "502667605",
       "name_lat": "ЛУЖАНОЧКА ОТ ЛУГАРЫ",
-      "name_ru": "",
+      "name_ru": "ЛУЖАНОЧКА ОТ ЛУГАРЫ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 23,
@@ -177,35 +177,26 @@
     {
       "id": "1021783471",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ЕНЕРДЖИ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ЕНЕРДЖИ",
       "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1163289161",
-      "name_lat": "ЛУКА ИЗ ЦВЕТНИКА",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
       "id": "167653095",
       "name_lat": "ЛУННАЯ РАДУГА НЕРЖАВЕЮЩАЯ СТАЛЬ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА НЕРЖАВЕЮЩАЯ СТАЛЬ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "395340740",
+      "id": "798958742",
       "name_lat": "ЛУТА ИЗ КРЫМА С ЛЮБОВЬЮ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ЛУТА ИЗ КРЫМА С ЛЮБОВЬЮ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -213,11 +204,27 @@
     {
       "id": "294",
       "name_lat": "ЛУННАЯ РАДУГА БРЮТ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА БРЮТ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 25,
       "competition_dog_id": 294
+    },
+    {
+      "id": "1599148168",
+      "name_lat": "ЛУЧЧИ ОТ ПИГАЛОВЫХ",
+      "name_ru": "ЛУЧЧИ ОТ ПИГАЛОВЫХ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "199559278",
+      "name_lat": "ЛУКУМ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 11,
+      "competition_dog_id": null
     },
     {
       "id": "758900568",
@@ -244,6 +251,24 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "404998762",
+      "name_lat": "ЛУНАЛИКА ПРЕШЕС КРИЭЙШН",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "795161496",
+      "name_lat": "ЛУННАЯ ФАНТАЗИЯ НИКОЛАС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -283,18 +308,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1741979961",
-      "name_lat": "ЛУПУС АЛЬБУС ИЗ БЕЛОЙ БРИГАДЫ",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "WHITE SWISS SHEPHERD DOG",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1825578144",
       "name_lat": "ЛУИЗИАНА СТАР ЕВА МАЙ СОУЛ",
-      "name_ru": "",
+      "name_ru": "ЛУИЗИАНА СТАР ЕВА МАЙ СОУЛ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 15,
@@ -312,44 +328,71 @@
     {
       "id": "1889894345",
       "name_lat": "ЛУННАЯ РАДУГА ЖЕЛЕЗНЫЙ АРГУМЕНТ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЖЕЛЕЗНЫЙ АРГУМЕНТ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "938115975",
-      "name_lat": "ЛУИЗАДОР ЖАКЛИН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "id": "314",
+      "name_lat": "ЛУННАЯ РАДУГА ФАРТОВЫЙ",
+      "name_ru": "ЛУННАЯ РАДУГА ФАРТОВЫЙ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
+      "total_shows": 12,
+      "competition_dog_id": 314
     },
     {
       "id": "1143398189",
       "name_lat": "ЛУННЫЙ АМИГО",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ АМИГО",
       "breed": "АМЕРИКАНСКАЯ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1410311765",
-      "name_lat": "ЛУННЫЙ ЗАЩИТНИК САБ- ЗИРО",
-      "name_ru": "",
+      "id": "143701003",
+      "name_lat": "ЛУННЫЙ ЗАЩИТНИК САБ-ЗИРО",
+      "name_ru": "ЛУННЫЙ ЗАЩИТНИК САБ-ЗИРО",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
+      "id": "324750051",
+      "name_lat": "ЛУНА",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1195471546",
+      "name_lat": "ЛУИЗА ГОЛД БРИГСС",
+      "name_ru": "ЛУИЗА ГОЛД БРИГСС",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1637438781",
       "name_lat": "ЛУЧШИЙ В МОЁМ СЕРДЦЕ",
-      "name_ru": "",
+      "name_ru": "ЛУЧШИЙ В МОЁМ СЕРДЦЕ",
       "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "801943347",
+      "name_lat": "ЛУНА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -357,25 +400,16 @@
     {
       "id": "1723322022",
       "name_lat": "ЛУННЫЙ ВЕТЕР ДЖУЛИАННА МУР",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ ВЕТЕР ДЖУЛИАННА МУР",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1195471546",
-      "name_lat": "ЛУИЗА ГОЛД БРИГСС",
-      "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "308824900",
       "name_lat": "ЛУННАЯ СОНАТА ОТ ЛУГАРЫ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ СОНАТА ОТ ЛУГАРЫ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -384,7 +418,7 @@
     {
       "id": "541584418",
       "name_lat": "ЛУГАР БЭТМАН'С ПРАЙД МАРТИНКА",
-      "name_ru": "",
+      "name_ru": "ЛУГАР БЭТМАН'С ПРАЙД МАРТИНКА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -400,30 +434,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "372902311",
+      "id": "243392347",
       "name_lat": "ЛУННЫЙ СВЕТ ОТ ГОСПОЖИ ПАНИНОЙ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "name_ru": "ЛУННЫЙ СВЕТ ОТ ГОСПОЖИ ПАНИНОЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "1099702442",
+      "id": "1879797798",
       "name_lat": "ЛУИЗАДОР БАГРАТИОН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ЛУИЗАДОР БАГРАТИОН",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1599148168",
-      "name_lat": "ЛУЧЧИ ОТ ПИГАЛОВЫХ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -436,39 +461,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "404998762",
-      "name_lat": "ЛУНАЛИКА ПРЕШЕС КРИЭЙШН",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1230294245",
+      "id": "667715625",
       "name_lat": "ЛУННАЯ СОНАТА II ИЗ ДОНСКОЙ ЛИБЕРИИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1674128549",
+      "id": "354173740",
       "name_lat": "ЛУИЗАДОР ГИПЕРИОН ФИЛИПП",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ /",
+      "name_ru": "ЛУИЗАДОР ГИПЕРИОН ФИЛИПП",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "795161496",
-      "name_lat": "ЛУННАЯ ФАНТАЗИЯ НИКОЛАС",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -481,10 +488,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1942982989",
+      "id": "1487761457",
       "name_lat": "ЛУИЗАДОР ЖЕМЧУЖИНКА РОССИИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ЛУИЗАДОР ЖЕМЧУЖИНКА РОССИИ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
       "total_shows": 5,
       "competition_dog_id": null
@@ -492,35 +499,25 @@
     {
       "id": "306484549",
       "name_lat": "ЛУГАР БЭТМАН'С ПРАЙД НЕССА",
-      "name_ru": "",
+      "name_ru": "ЛУГАР БЭТМАН'С ПРАЙД НЕССА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "314",
-      "name_lat": "ЛУННАЯ РАДУГА ФАРТОВЫЙ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
+      "id": "919446543",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ ШОТЛАНДИЯ",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ШОТЛАНДИЯ",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 10,
-      "competition_dog_id": 314
-    },
-    {
-      "id": "253584098",
-      "name_lat": "ЛУНА",
-      "name_ru": "",
-      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ /",
-      "breed_en": "",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "300765988",
-      "name_lat": "Лукас с Золотого Града",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "id": "1702004013",
+      "name_lat": "ЛУННАЯ СОНАТА МЕЛОДИЯ ЛЮБВИ",
+      "name_ru": "ЛУННАЯ СОНАТА МЕЛОДИЯ ЛЮБВИ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -535,19 +532,27 @@
       "competition_dog_id": 7950
     },
     {
+      "id": "1810170739",
+      "name_lat": "ЛУННЫЙ ЗАЩИТНИК ПРИМАДОННА",
+      "name_ru": "ЛУННЫЙ ЗАЩИТНИК ПРИМАДОННА",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
       "id": "1451947647",
       "name_lat": "ЛУННАЯ РАДУГА ЯНВАРСКАЯ ВЬЮГА",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЯНВАРСКАЯ ВЬЮГА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1049505839",
-      "name_lat": "ЛУЧЕ ЛОНДЖЕВИТА СТЕФАНИЯ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "id": "1902548226",
+      "name_lat": "Луче Лонджевита Стефания",
+      "name_ru": "ЛУЧЕ ЛОНДЖЕВИТА СТЕФАНИЯ",
+      "breed": "АМЕРИКАНСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -562,55 +567,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "801943347",
-      "name_lat": "ЛУНА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1135292525",
       "name_lat": "ЛУССО АНЖЕЛО НОННА",
-      "name_ru": "",
+      "name_ru": "ЛУССО АНЖЕЛО НОННА",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1748003314",
-      "name_lat": "ЛУННЫЙ ЗАЩИТНИК ПРИМАДОННА",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "484270504",
+      "id": "1602031581",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ЯСНА ФАЗЛИЧ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ЯСНА ФАЗЛИЧ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "180545431",
+      "name_lat": "ЛУННАЯ РАДУГА ТАЛЬЯНКА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "234673936",
       "name_lat": "ЛУЧ СОЛНЦА ЗОЛОТОГО ИЗ СОЛНЕЧНОЙ ДИНАСТИИ",
-      "name_ru": "",
+      "name_ru": "ЛУЧ СОЛНЦА ЗОЛОТОГО ИЗ СОЛНЕЧНОЙ ДИНАСТИИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "52304265",
+      "id": "1309614949",
       "name_lat": "ЛУИЗАДОР ЯЛЛИНИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -634,6 +629,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "165156667",
+      "name_lat": "ЛУНА БЛЭК РОССА",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1578250738",
       "name_lat": "ЛУНА ГРУША",
       "name_ru": "",
@@ -652,10 +655,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1257728235",
+      "id": "728458819",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ЕММИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ЕММИ",
+      "breed": "И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -663,17 +666,17 @@
     {
       "id": "1555648795",
       "name_lat": "ЛУЛУ ЛИТЛ ДОЛ",
-      "name_ru": "",
+      "name_ru": "ЛУЛУ ЛИТЛ ДОЛ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1551687464",
+      "id": "998680300",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ПЕННИ ЛЕЙН",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -681,7 +684,7 @@
     {
       "id": "7239",
       "name_lat": "ЛУННАЯ РАДУГА ЦАРСКАЯ ВОДКА",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЦАРСКАЯ ВОДКА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
       "total_shows": 15,
@@ -690,7 +693,7 @@
     {
       "id": "5765",
       "name_lat": "ЛУННАЯ РАДУГА ЯСМИН",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЯСМИН",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
       "total_shows": 17,
@@ -706,9 +709,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1311173746",
+      "name_lat": "ЛУННЫЙ СВЕТ УИЛФРЕД",
+      "name_ru": "ЛУННЫЙ СВЕТ УИЛФРЕД",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "635793498",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ЯРОН БРАУН",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ЯРОН БРАУН",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 11,
@@ -717,7 +728,7 @@
     {
       "id": "1810389100",
       "name_lat": "ЛУННАЯ РАДУГА ЮВЕЛИР",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЮВЕЛИР",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 10,
@@ -733,6 +744,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "297117880",
+      "name_lat": "ЛУНА ХОТАРУ МЭЙ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "657667179",
       "name_lat": "ЛУНАР ХЭЙЗ БЕЛИНДА ТХЕ ЛОВЕЛЙ",
       "name_ru": "",
@@ -744,53 +764,44 @@
     {
       "id": "1942016587",
       "name_lat": "ЛУИЗА ДЕНИЗ ОТ ДЯДИ СЭМА ЕЛЕСТА БЬЮТИ НАЙТ ОТ ДЯДИ",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА ДЕНИЗ ОТ ДЯДИ СЭМА ЕЛЕСТА БЬЮТИ НАЙТ ОТ ДЯДИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1368411233",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ ШОТЛАНДИЯ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1929119358",
       "name_lat": "ЛУНА ДЕЛЬ РЕЙ",
-      "name_ru": "",
+      "name_ru": "ЛУНА ДЕЛЬ РЕЙ",
       "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1162732965",
+      "id": "743323593",
       "name_lat": "ЛУИЗАДОР ЮНАЙК",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "95141575",
+      "id": "1527142767",
       "name_lat": "ЛУКАС ЛЬВИНОЕ СЕРДЦЕ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУКАС ЛЬВИНОЕ СЕРДЦЕ",
+      "breed": "КРОВЯНОМУ СЛЕДУ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1147389495",
+      "id": "689323779",
       "name_lat": "ЛУИЗАДОР ГЕОРГИЙ ПОБЕДОНОСЕЦ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ЛУИЗАДОР ГЕОРГИЙ ПОБЕДОНОСЕЦ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -798,7 +809,7 @@
     {
       "id": "864030101",
       "name_lat": "ЛУША СИМ-ТАЙ ВАН",
-      "name_ru": "",
+      "name_ru": "ЛУША СИМ-ТАЙ ВАН",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 4,
@@ -807,7 +818,7 @@
     {
       "id": "1505174674",
       "name_lat": "ЛУННАЯ СОНАТА ЮДЖИНА",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ СОНАТА ЮДЖИНА",
       "breed": "ЧИХУАХУА к.ш.",
       "breed_en": "",
       "total_shows": 3,
@@ -816,7 +827,7 @@
     {
       "id": "860832613",
       "name_lat": "ЛУКСУРИУС БОЙ ФРЕНД",
-      "name_ru": "",
+      "name_ru": "ЛУКСУРИУС БОЙ ФРЕНД",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 5,
@@ -825,7 +836,7 @@
     {
       "id": "748609957",
       "name_lat": "ЛУКРЕЦИЯ БОНИЭЛЛА НЕФРИТ",
-      "name_ru": "",
+      "name_ru": "ЛУКРЕЦИЯ БОНИЭЛЛА НЕФРИТ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 5,
@@ -855,7 +866,7 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 27,
       "competition_dog_id": 7059
     },
     {
@@ -879,10 +890,9 @@
     {
       "id": "1659453889",
       "name_lat": "ЛУННАЯ РАДУГА НЕФТЯНОЙ МАГНАТ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА НЕФТЯНОЙ МАГНАТ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -895,19 +905,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "297117880",
-      "name_lat": "ЛУНА ХОТАРУ МЭЙ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1879767605",
+      "id": "88059336",
       "name_lat": "ЛУЧЕЗАРНЫЙ ШЕД",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -940,6 +941,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "578113048",
+      "name_lat": "ЛУННАЯ ДЫМКА ИЗ ДОМА МИРАЛИН",
+      "name_ru": "ЛУННАЯ ДЫМКА ИЗ ДОМА МИРАЛИН",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "448484164",
       "name_lat": "ЛУНА",
       "name_ru": "",
@@ -949,10 +959,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "943551546",
+      "id": "1129364027",
       "name_lat": "ЛУНЭ ЛЭЙКС УНИКА БЕЛЬЕСА",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -976,17 +986,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "950064638",
+      "id": "1034682760",
       "name_lat": "ЛУКАС",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1414370145",
-      "name_lat": "ЛУИЗАДОР ЧЕРРИ- ЧЕЛСИЯ",
+      "id": "45178271",
+      "name_lat": "ЛУИЗАДОР ЧЕРРИ-ЧЕЛСИЯ",
       "name_ru": "",
       "breed": "FRENCH BULLDOG",
       "breed_en": "",
@@ -994,10 +1004,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "669167116",
+      "id": "9492558",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ УМИ",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ УМИ",
+      "breed": "КОРОТКОШЁРСТНЫЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "906870249",
       "name_lat": "ЛУНА",
       "name_ru": "",
-      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ /",
+      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1039,15 +1057,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "878985324",
-      "name_lat": "ЛУННАЯ РАДУГА ЛЕД И ПЛАМЕНЬ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "650181602",
       "name_lat": "ЛУКИЧИ ИЗЮМИНКА",
       "name_ru": "",
@@ -1075,12 +1084,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "826850329",
-      "name_lat": "ЛУОМО ДЕЙ СОНИ",
+      "id": "525364018",
+      "name_lat": "ЛУНА",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "БУЛЛИ ПОКЕТ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "136289198",
+      "name_lat": "ЛУНА КУИН",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1120,19 +1138,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1363853353",
-      "name_lat": "ЛУЧ СВЕТА ИЗ СТАИ ИГЭЛС",
+      "id": "1180656474",
+      "name_lat": "ЛУНА",
       "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "578113048",
-      "name_lat": "ЛУННАЯ ДЫМКА ИЗ ДОМА МИРАЛИН",
+      "id": "1363853353",
+      "name_lat": "ЛУЧ СВЕТА ИЗ СТАИ ИГЭЛС",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1147,15 +1164,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "902090937",
-      "name_lat": "ЛУННАЯ ЗВЕЗДА МЕЛИССА",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "PETIT BRABANCON",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1890816899",
       "name_lat": "ЛУГРА АСМИНА",
       "name_ru": "",
@@ -1165,19 +1173,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "65852829",
-      "name_lat": "ЛУИЗАДОР НОРРИС",
+      "id": "697847316",
+      "name_lat": "ЛУННЫЙ ЗАЩИТНИК ТОФ БЕЙФОНГ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1690188205",
+      "name_lat": "ЛУЧ СОЛНЦА ЗОЛОТОГО",
+      "name_ru": "ЛУЧ СОЛНЦА ЗОЛОТОГО",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1557171160",
+      "name_lat": "ЛУННАЯ РАДУГА РОССИЙСКАЯ ИМПЕРИЯ",
+      "name_ru": "ЛУННАЯ РАДУГА РОССИЙСКАЯ ИМПЕРИЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1043368097",
+      "name_lat": "ЛУИЗАДОР НОРРИС",
+      "name_ru": "ЛУИЗАДОР НОРРИС",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1195439594",
+      "id": "78602179",
       "name_lat": "ЛУСИАРТ ГРЕТА ГАРБО",
-      "name_ru": "",
-      "breed": "FOX TERRIER",
+      "name_ru": "ЛУСИАРТ ГРЕТА ГАРБО",
+      "breed": "ТОЙ-ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1192,10 +1226,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1566924309",
+      "id": "1691266901",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ОРАНДЖ",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ОРАНДЖ",
+      "breed": "ИТАЛЬЯНСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -1203,26 +1237,33 @@
     {
       "id": "1080778248",
       "name_lat": "ЛУНА ДОРАДА ФРОМ КОНЕВ-БОР",
-      "name_ru": "",
+      "name_ru": "ЛУНА ДОРАДА ФРОМ КОНЕВ-БОР",
       "breed": "АКИТА АЛЯСКИНСКИЙ",
       "breed_en": "ALASKAN MALAMUTE",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1463625889",
-      "name_lat": "ЛУКСУРИ ЛАЙФ ЧИВАС",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 12,
+      "id": "1723538978",
+      "name_lat": "ЛУННЫЙ ВЕТЕР УЛЫБКА ФОРТУНЫ ТЕССИ",
+      "name_ru": "ЛУННЫЙ ВЕТЕР УЛЫБКА ФОРТУНЫ ТЕССИ",
+      "breed": "САМОЕД /",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1695790586",
+      "id": "1463625889",
+      "name_lat": "ЛУКСУРИ ЛАЙФ ЧИВАС",
+      "name_ru": "ЛУКСУРИ ЛАЙФ ЧИВАС",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "98423883",
       "name_lat": "ЛУГАЮР ВЕРДЖИНИЯ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1230,10 +1271,19 @@
     {
       "id": "1051529117",
       "name_lat": "ЛУНА ИЗ ДОМА КАПАЛАК",
-      "name_ru": "",
+      "name_ru": "ЛУНА ИЗ ДОМА КАПАЛАК",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1765494372",
+      "name_lat": "ЛУННЫЙ ВЕТЕР АЗАЛИЯ ЛОРД ОФ ПАК",
+      "name_ru": "ЛУННЫЙ ВЕТЕР АЗАЛИЯ ЛОРД ОФ ПАК",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "SAMOYED",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1246,10 +1296,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "17463913",
+      "id": "1556605441",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ЛИЛИАНА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ЛИЛИАНА",
+      "breed": "SPRINGER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1266,7 +1316,7 @@
     {
       "id": "1013251976",
       "name_lat": "ЛУННАЯ РАДУГА ИЗ ЗИМНИХ ГРЁЗ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ИЗ ЗИМНИХ ГРЁЗ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
       "total_shows": 2,
@@ -1291,12 +1341,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "856654761",
-      "name_lat": "ЛУЧ СОЛНЦА ЗОЛОТОГО",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "id": "1246314418",
+      "name_lat": "ЛУЧЕЗАРНАЯ УЛЫБКА СЭМ",
+      "name_ru": "ЛУЧЕЗАРНАЯ УЛЫБКА СЭМ",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1311,7 +1361,7 @@
     {
       "id": "1213279146",
       "name_lat": "ЛУННАЯ РАДУГА ДУША СТЕПНАЯ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ДУША СТЕПНАЯ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 12,
@@ -1320,7 +1370,7 @@
     {
       "id": "351754097",
       "name_lat": "Лукавушка из Донской Либерии",
-      "name_ru": "",
+      "name_ru": "Лукавушка из Донской Либерии",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ (Оранж. И др.)",
       "breed_en": "",
       "total_shows": 10,
@@ -1329,17 +1379,17 @@
     {
       "id": "1594074235",
       "name_lat": "ЛУКАС ВАСКЕС ИЗ ЛЕВАНЖИ",
-      "name_ru": "",
+      "name_ru": "ЛУКАС ВАСКЕС ИЗ ЛЕВАНЖИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1335693581",
+      "id": "35458416",
       "name_lat": "ЛУННЫЙ ЗАЩИТНИК РАФАЭЛЬ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "name_ru": "ЛУННЫЙ ЗАЩИТНИК РАФАЭЛЬ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1347,7 +1397,7 @@
     {
       "id": "180220379",
       "name_lat": "ЛУАНА ИЗ САДА ТЕНЕЙ",
-      "name_ru": "",
+      "name_ru": "ЛУАНА ИЗ САДА ТЕНЕЙ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 14,
@@ -1356,7 +1406,7 @@
     {
       "id": "1047173885",
       "name_lat": "ЛУИЗИАНА СТАР АРНОЛЬД КИНГ",
-      "name_ru": "",
+      "name_ru": "ЛУИЗИАНА СТАР АРНОЛЬД КИНГ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 8,
@@ -1365,17 +1415,17 @@
     {
       "id": "103876116",
       "name_lat": "ЛУЧШАЯ ИНТРИГА ИЗ РОСТОВА ПАПЫ",
-      "name_ru": "",
+      "name_ru": "ЛУЧШАЯ ИНТРИГА ИЗ РОСТОВА ПАПЫ",
       "breed": "МОПС",
       "breed_en": "PUG",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "784854677",
+      "id": "1517722792",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ НАОМИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ НАОМИ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -1390,10 +1440,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "513187459",
+      "id": "1361142538",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ДОННА ЛЮСИНДА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ДОННА ЛЮСИНДА",
+      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1401,7 +1451,7 @@
     {
       "id": "480650823",
       "name_lat": "ЛУИЗА ЛЕДИ ЛИ",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА ЛЕДИ ЛИ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 6,
@@ -1410,38 +1460,38 @@
     {
       "id": "1701623885",
       "name_lat": "Луссо Анжело Мичиган",
-      "name_ru": "",
+      "name_ru": "Луссо Анжело Мичиган",
       "breed": "Лабрадор ретривер",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1329099303",
+      "id": "558346470",
       "name_lat": "ЛУКА ЗВЕЗДНЫЙ СЫН ОТ СИМБАДА",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "9510",
-      "name_lat": "ЛУННАЯ РАДУГА ТАНГО В НОЧИ",
-      "name_ru": "",
-      "breed": "Русская псовая борзая",
+      "id": "629669142",
+      "name_lat": "ЛУННАЯ СОНАТА ИЗ ТВЕРСКОЙ СКАЗКИ",
+      "name_ru": "ЛУННАЯ СОНАТА ИЗ ТВЕРСКОЙ СКАЗКИ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": 9510
+      "total_shows": 13,
+      "competition_dog_id": null
     },
     {
-      "id": "1557171160",
-      "name_lat": "ЛУННАЯ РАДУГА РОССИЙСКАЯ ИМПЕРИЯ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "id": "9510",
+      "name_lat": "ЛУННАЯ РАДУГА ТАНГО В НОЧИ",
+      "name_ru": "ЛУННАЯ РАДУГА ТАНГО В НОЧИ",
+      "breed": "Русская псовая борзая",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
+      "total_shows": 17,
+      "competition_dog_id": 9510
     },
     {
       "id": "243773224",
@@ -1453,10 +1503,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1223419",
-      "name_lat": "ЛУИ ДЕ БУРБОН НИКОЛЕТ",
+      "id": "1348664983",
+      "name_lat": "ЛУИ МАРСЕЛЬ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "814340435",
+      "name_lat": "ЛУИ ДЕ БУРБОН НИКОЛЕТ",
+      "name_ru": "ЛУИ ДЕ БУРБОН НИКОЛЕТ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1464,7 +1523,7 @@
     {
       "id": "1068285679",
       "name_lat": "ЛУИ ВИТТОН ИЗ СОЛНЕЧНОГО ГОРОДА",
-      "name_ru": "",
+      "name_ru": "ЛУИ ВИТТОН ИЗ СОЛНЕЧНОГО ГОРОДА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 9,
@@ -1480,72 +1539,63 @@
       "competition_dog_id": 9409
     },
     {
-      "id": "1765494372",
-      "name_lat": "ЛУННЫЙ ВЕТЕР АЗАЛИЯ ЛОРД ОФ ПАК",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА",
-      "breed_en": "SAMOYED",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "763228455",
       "name_lat": "ЛУГАР БЭТМАН'С ПРАЙД МАРТИША",
-      "name_ru": "",
+      "name_ru": "ЛУГАР БЭТМАН'С ПРАЙД МАРТИША",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "810148753",
+      "id": "1517862392",
       "name_lat": "ЛУИ ДЕ БУРБОН НИЛ ТЭК",
-      "name_ru": "",
-      "breed": "DACHSHUND",
+      "name_ru": "ЛУИ ДЕ БУРБОН НИЛ ТЭК",
+      "breed": "DACHSHUND KANINCHEN",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1405610323",
-      "name_lat": "ЛУНА С КАЗАНСКОЙ СТОРОНЫ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "477725251",
+      "name_lat": "Луна с Казанской стороны",
+      "name_ru": "Луна с Казанской стороны",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "9481",
       "name_lat": "ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 14,
       "competition_dog_id": 9481
-    },
-    {
-      "id": "629669142",
-      "name_lat": "ЛУННАЯ СОНАТА ИЗ ТВЕРСКОЙ СКАЗКИ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
     },
     {
       "id": "115655548",
       "name_lat": "ЛУЧШЕ ВСЕХ С ХЛЕБНОГО ХУТОРА",
-      "name_ru": "",
+      "name_ru": "ЛУЧШЕ ВСЕХ С ХЛЕБНОГО ХУТОРА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР (Великобритания)",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1605522782",
+      "name_lat": "ЛУННАЯ ДОРОЖКА ОХОТСКОГО МОРЯ",
+      "name_ru": "ЛУННАЯ ДОРОЖКА ОХОТСКОГО МОРЯ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "632003879",
       "name_lat": "ЛУННАЯ РАДУГА ЛЁД И ПЛАМЯ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЛЁД И ПЛАМЯ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 7,
@@ -1554,7 +1604,7 @@
     {
       "id": "1965625054",
       "name_lat": "ЛУКСУРИ ЛАЙФ КАПИТАН АМЕРИКА",
-      "name_ru": "",
+      "name_ru": "ЛУКСУРИ ЛАЙФ КАПИТАН АМЕРИКА",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 7,
@@ -1572,7 +1622,7 @@
     {
       "id": "52753544",
       "name_lat": "ЛУННАЯ РАДУГА НЕЖНОСТЬ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА НЕЖНОСТЬ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -1590,25 +1640,16 @@
     {
       "id": "1534182599",
       "name_lat": "ЛУННАЯ СОНАТА ПАМИР ПОРТА ФОРТУНА",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ СОНАТА ПАМИР ПОРТА ФОРТУНА",
       "breed": "МАЙОРСКИЙ МАСТИФ (ка де бо)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1348664983",
-      "name_lat": "ЛУИ МАРСЕЛЬ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1971041704",
       "name_lat": "ЛУННЫЙ ВЕТЕР ОКТАВИЯ",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ ВЕТЕР ОКТАВИЯ",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 6,
@@ -1626,46 +1667,28 @@
     {
       "id": "1294589266",
       "name_lat": "ЛУЧШИЙ КАЙФ ИЗ КУРГАН ГРАДА",
-      "name_ru": "",
+      "name_ru": "ЛУЧШИЙ КАЙФ ИЗ КУРГАН ГРАДА",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1510846007",
-      "name_lat": "ЛУМИНАРИ С ВЕРШИНЫ ИНЬ-ЯНЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1839370124",
-      "name_lat": "ЛУНЭ ЛЭЙКС СПЭЙС",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1048973897",
+      "id": "1913548614",
       "name_lat": "ЛУНЭ ЛЕЙКС ВЕРСАЧЕ БРАЙТ КРИСТАЛ",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1046016270",
-      "name_lat": "ЛУННАЯ ДОРОЖКА ОХОТСКОГО МОРЯ",
-      "name_ru": "",
-      "breed": "АКИТА АЛЯСКИНСКИЙ",
+      "name_ru": "ЛУНЭ ЛЕЙКС ВЕРСАЧЕ БРАЙТ КРИСТАЛ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1389766785",
+      "name_lat": "ЛУНЭ ЛЭЙКС СПЭЙС",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1680,7 +1703,7 @@
     {
       "id": "250681881",
       "name_lat": "ЛУННЫЙ ВЕТЕР ОЛИМП",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ ВЕТЕР ОЛИМП",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 5,
@@ -1689,34 +1712,25 @@
     {
       "id": "251179027",
       "name_lat": "ЛУКАС СКАНДИ НАВ",
-      "name_ru": "",
+      "name_ru": "ЛУКАС СКАНДИ НАВ",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "954021943",
-      "name_lat": "ЛУННЫЙ СВЕТ УИЛФРЕД",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1058440683",
+      "id": "1509668578",
       "name_lat": "ЛУННЫЙ ЗАЩИТНИК ПАНДЕМИЯ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "1771849134",
       "name_lat": "ЛУИЗА ИЗ КОРОЛЕВСТВА Д'АЛЬБА",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА ИЗ КОРОЛЕВСТВА Д'АЛЬБА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 7,
@@ -1725,17 +1739,17 @@
     {
       "id": "1840700006",
       "name_lat": "ЛУЧШИЙ ВЫБОР ВЕСТА МАРГРИТ",
-      "name_ru": "",
+      "name_ru": "ЛУЧШИЙ ВЫБОР ВЕСТА МАРГРИТ",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "224437701",
+      "id": "1409318616",
       "name_lat": "ЛУЧЕЗАРНАЯ УЛЫБКА ЯРА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "name_ru": "ЛУЧЕЗАРНАЯ УЛЫБКА ЯРА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1743,7 +1757,7 @@
     {
       "id": "575390204",
       "name_lat": "ЛУЧШАЯ СОБАКА В МИРЕ АНАБЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ЛУЧШАЯ СОБАКА В МИРЕ АНАБЕЛЬ",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 6,
@@ -1752,44 +1766,44 @@
     {
       "id": "674147729",
       "name_lat": "ЛУЧИК СЧАСТЬЯ",
-      "name_ru": "",
+      "name_ru": "ЛУЧИК СЧАСТЬЯ",
       "breed": "ТОЙ-ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "303211632",
+      "id": "1391068485",
       "name_lat": "ЛУИЗА БЬЮТИ БАТЕРФЛЯЙ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "ЛУИЗА БЬЮТИ БАТЕРФЛЯЙ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "816744358",
+      "id": "817273247",
       "name_lat": "ЛУНАР ДАЙМОНД ТЭЛЬ МАРИЭЛЛА",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "name_ru": "ЛУНАР ДАЙМОНД ТЭЛЬ МАРИЭЛЛА",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "101159349",
+      "id": "1989574984",
       "name_lat": "ЛУССО АНЖЕЛО АУРЕЛИЯ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "714030870",
+      "id": "221576496",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ МАКСИМИЛИАН",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ /",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ МАКСИМИЛИАН",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1804,10 +1818,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "65885834",
+      "id": "1385464732",
       "name_lat": "ЛУКРЕЦИЯ ИЗ ДОМА ФИРАН'С",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЛУКРЕЦИЯ ИЗ ДОМА ФИРАН'С",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1815,28 +1829,55 @@
     {
       "id": "1109628990",
       "name_lat": "ЛУННЫЙ ВЕТЕР БРИЗ ОФ ЭИР",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ ВЕТЕР БРИЗ ОФ ЭИР",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "217739765",
+      "id": "1869964168",
       "name_lat": "ЛУМИ ЛИНТУ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "719549638",
+      "name_lat": "ЛУССО АНЖЕЛО ВЕНДИ",
+      "name_ru": "ЛУССО АНЖЕЛО ВЕНДИ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1213120838",
       "name_lat": "ЛУИЗА ДЕ ЛОРИ ИЗ ГОРОДА ЛИП",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА ДЕ ЛОРИ ИЗ ГОРОДА ЛИП",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "794469090",
+      "name_lat": "ЛУКАС",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "102827205",
+      "name_lat": "Л’УРМАВИ ДАМБЛДОР",
+      "name_ru": "Л’УРМАВИ ДАМБЛДОР",
+      "breed": "БИШОН БРЮССЕЛЬСКИЙ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1849,36 +1890,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1982091184",
+      "id": "445047429",
       "name_lat": "ЛУНАР ХОУСЕ ТЕНЬОЗА ГРАНДЕ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ЛУНАР ХОУСЕ ТЕНЬОЗА ГРАНДЕ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "830434226",
+      "id": "1566804700",
       "name_lat": "ЛУИ ДЕ БУРБОН ВИКТОРИА'С СИКРЕТ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ЛУИ ДЕ БУРБОН ВИКТОРИА'С СИКРЕТ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "473327137",
+      "id": "1900217657",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ВЕНЕРА СЬЮЗИ БОУНС",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ВЕНЕРА СЬЮЗИ БОУНС",
+      "breed": "ВЕЙМАРАНЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "480853303",
       "name_lat": "ЛУГАЮР ТАКЕШИ",
-      "name_ru": "",
+      "name_ru": "ЛУГАЮР ТАКЕШИ",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 4,
@@ -1887,25 +1928,16 @@
     {
       "id": "1537825475",
       "name_lat": "ЛУНЭ ЛЭЙНС ТАБУЛА",
-      "name_ru": "",
+      "name_ru": "ЛУНЭ ЛЭЙНС ТАБУЛА",
       "breed": "ВОСТОЧНОЕВРОПЕ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "794469090",
-      "name_lat": "ЛУКАС",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "338968253",
       "name_lat": "ЛУНА ГОЛД ПИТАЛ УАЛД ФЛАУЭР",
-      "name_ru": "",
+      "name_ru": "ЛУНА ГОЛД ПИТАЛ УАЛД ФЛАУЭР",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
@@ -1914,7 +1946,7 @@
     {
       "id": "23812425",
       "name_lat": "ЛУННАЯ РАДУГА ВИВАТ МОСКВА",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ВИВАТ МОСКВА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 10,
@@ -1923,16 +1955,24 @@
     {
       "id": "1948017308",
       "name_lat": "ЛУКС ЛАЙК Э ДРИМ ИЗ МОСКОВСКОЙ МЕТЕЛИ",
-      "name_ru": "",
+      "name_ru": "ЛУКС ЛАЙК Э ДРИМ ИЗ МОСКОВСКОЙ МЕТЕЛИ",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "SAMOYED",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
+      "id": "443013269",
+      "name_lat": "ЛУКСУРИ ЛАЙФ ЦИКЛОН ШТОРМ УОРНИНГ",
+      "name_ru": "ЛУКСУРИ ЛАЙФ ЦИКЛОН ШТОРМ УОРНИНГ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "305442818",
       "name_lat": "ЛУННЫЙ ЗАЩИТНИК СКОРПИОН ВИНС",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ ЗАЩИТНИК СКОРПИОН ВИНС",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 6,
@@ -1948,10 +1988,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "235781478",
+      "id": "816491176",
       "name_lat": "ЛУННЫЙ СВЕТ ИЗ ВОЙСКА ТАМЕРЛАНА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЛУННЫЙ СВЕТ ИЗ ВОЙСКА ТАМЕРЛАНА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1959,7 +1999,7 @@
     {
       "id": "476811395",
       "name_lat": "ЛУКРЕЦИЯ ДОМИНИКА БОРДЖИА",
-      "name_ru": "",
+      "name_ru": "ЛУКРЕЦИЯ ДОМИНИКА БОРДЖИА",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 5,
@@ -1977,28 +2017,53 @@
     {
       "id": "891020061",
       "name_lat": "ЛУННАЯ СОНАТА ДАРЛИНГ АМЕЛИ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ СОНАТА ДАРЛИНГ АМЕЛИ",
       "breed": "КА ДЕ БО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "800451028",
+      "name_lat": "ЛУКРЕЦИЯ ИЗ УСАДЬБЫ РУДНЕВЫХ",
+      "name_ru": "ЛУКРЕЦИЯ ИЗ УСАДЬБЫ РУДНЕВЫХ",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1639368942",
       "name_lat": "ЛУННЫЙ ЗАЩИТНИК РЭЙНБОУ ДЭШ",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ ЗАЩИТНИК РЭЙНБОУ ДЭШ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
+      "id": "243751621",
+      "name_lat": "ЛУЧИАНА ИЗ ОВЕРЛОРД СОУЛ",
+      "name_ru": "ЛУЧИАНА ИЗ ОВЕРЛОРД СОУЛ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "253384601",
       "name_lat": "ЛУКСУРИ ЛАЙФ РОССУМ ЭММИ",
-      "name_ru": "",
+      "name_ru": "ЛУКСУРИ ЛАЙФ РОССУМ ЭММИ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1829910620",
+      "name_lat": "ЛУННАЯ РАДУГА ПАЛАШ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2029,30 +2094,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "248753867",
+      "id": "2746060",
       "name_lat": "ЛУИ ДЕ БУРБОН ЕГОРКА",
-      "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN",
+      "name_ru": "ЛУИ ДЕ БУРБОН ЕГОРКА",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "719549638",
-      "name_lat": "ЛУССО АНЖЕЛО ВЕНДИ",
+      "id": "634040685",
+      "name_lat": "ЛУННАЯ СОНАТА ИЗ ЗОЛОТЫХ ГРЕЗ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1633827590",
-      "name_lat": "ЛУННАЯ РАДУГА ФЕРЗЬ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2076,17 +2132,26 @@
     {
       "id": "30413925",
       "name_lat": "ЛУНА КАГАЮКИ ЯМАТО КАЙДЗЕН ОТ КИЛИНОЙ",
-      "name_ru": "",
+      "name_ru": "ЛУНА КАГАЮКИ ЯМАТО КАЙДЗЕН ОТ КИЛИНОЙ",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "697984142",
+      "id": "1316562645",
+      "name_lat": "ЛУННАЯ ФАНТАЗИЯ НИЯ",
+      "name_ru": "ЛУННАЯ ФАНТАЗИЯ НИЯ",
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1982671399",
       "name_lat": "ЛУНЭ ЛЭЙКС ПРАДО",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2094,7 +2159,7 @@
     {
       "id": "339996252",
       "name_lat": "ЛУРИД ДРАГОН ХЕАРТ С ПЛАНЕТЫ ЗВЁЗД",
-      "name_ru": "",
+      "name_ru": "ЛУРИД ДРАГОН ХЕАРТ С ПЛАНЕТЫ ЗВЁЗД",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
@@ -2103,17 +2168,17 @@
     {
       "id": "1073115589",
       "name_lat": "ЛУЧШИЙ ВЫБОР ВАТСОН ГРЕЙТ",
-      "name_ru": "",
+      "name_ru": "ЛУЧШИЙ ВЫБОР ВАТСОН ГРЕЙТ",
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "139877060",
+      "id": "1174617968",
       "name_lat": "ЛУННЫЙ ВЕТЕР",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "ЛУННЫЙ ВЕТЕР",
+      "breed": "МАЛЫЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2121,17 +2186,17 @@
     {
       "id": "1923553007",
       "name_lat": "ЛУННАЯ РАДУГА НАРЦИСС",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА НАРЦИСС",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1446664553",
+      "id": "1840233972",
       "name_lat": "ЛУИДЖИ ОТ ФИШТ ХАУС",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "name_ru": "ЛУИДЖИ ОТ ФИШТ ХАУС",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2146,13 +2211,22 @@
       "competition_dog_id": null
     },
     {
-      "id": "213601446",
+      "id": "779409374",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ЛЕЙЛА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ЛЕЙЛА",
+      "breed": "ITALIAN ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
+    },
+    {
+      "id": "12",
+      "name_lat": "ЛУКИЧИ КНЯЗЬ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": 12
     },
     {
       "id": "202913004",
@@ -2164,10 +2238,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1796424223",
+      "id": "1645707763",
       "name_lat": "ЛУАНА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "47266410",
+      "name_lat": "ЛУННАЯ РАДУГА СКОРОСТЬ СВЕТА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2184,34 +2267,33 @@
     {
       "id": "183908133",
       "name_lat": "ЛУСИНЕ ФОН ВАЙСНЭХТЕ",
-      "name_ru": "",
+      "name_ru": "ЛУСИНЕ ФОН ВАЙСНЭХТЕ",
       "breed": "Окрас перец с солью ШНАУЦЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1700638225",
-      "name_lat": "ЛУСИАРТ АМИРАНДА АМО",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 6,
+      "id": "430522319",
+      "name_lat": "ЛУННАЯ РАДУГА ЛОВЕЦ СОЛНЦА",
+      "name_ru": "ЛУННАЯ РАДУГА ЛОВЕЦ СОЛНЦА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "545665330",
-      "name_lat": "ЛУСИАРТ ЗАПФИР ЗАБЕРЗАТ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "id": "284122415",
+      "name_lat": "ЛУННЫЙ ЗАЩИТНИК ПЕГГИ КАРТЕР",
+      "name_ru": "ЛУННЫЙ ЗАЩИТНИК ПЕГГИ КАРТЕР",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "112593237",
       "name_lat": "ЛУИЗА ГРЕЙС ИЗ ДИНАСТИИ СТЮАРТОВ",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА ГРЕЙС ИЗ ДИНАСТИИ СТЮАРТОВ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -2229,7 +2311,7 @@
     {
       "id": "486462396",
       "name_lat": "ЛУИЗИАНА СТАР ДАРДАН",
-      "name_ru": "",
+      "name_ru": "ЛУИЗИАНА СТАР ДАРДАН",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -2238,20 +2320,11 @@
     {
       "id": "239994453",
       "name_lat": "ЛУНЭ ЛЭЙКС ОНЛИ Ю",
-      "name_ru": "",
+      "name_ru": "ЛУНЭ ЛЭЙКС ОНЛИ Ю",
       "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
-    },
-    {
-      "id": "12",
-      "name_lat": "ЛУКИЧИ КНЯЗЬ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": 12
     },
     {
       "id": "130939574",
@@ -2263,18 +2336,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "664292406",
+      "id": "137448751",
       "name_lat": "ЛУЦИАН ОФ САНКТУМ",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "name_ru": "ЛУЦИАН ОФ САНКТУМ",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1328762964",
+      "name_lat": "ЛУННАЯ РАДУГА АДЕЛАИДА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "94765672",
       "name_lat": "ЛУЧШИЙ ВЫБОР АДЕЛИНА СОФИ",
-      "name_ru": "",
+      "name_ru": "ЛУЧШИЙ ВЫБОР АДЕЛИНА СОФИ",
       "breed": "SCHNAUZER BLACK ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 2,
@@ -2283,7 +2365,7 @@
     {
       "id": "774655568",
       "name_lat": "ЛУННАЯ СОНАТА 11 ИЗ ДОНСКОЙ ЛИБЕРИИ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ СОНАТА 11 ИЗ ДОНСКОЙ ЛИБЕРИИ",
       "breed": "пудель той миниатюрный",
       "breed_en": "",
       "total_shows": 2,
@@ -2299,10 +2381,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1940477034",
+      "id": "816414558",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ САНРАЙЗ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ САНРАЙЗ",
+      "breed": "НЕМЕЦКИЙ ИТАЛЬЯНСКИЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2326,28 +2408,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "430522319",
-      "name_lat": "ЛУННАЯ РАДУГА ЛОВЕЦ СОЛНЦА",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "634040685",
-      "name_lat": "ЛУННАЯ СОНАТА ИЗ ЗОЛОТЫХ ГРЕЗ",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1675344038",
+      "id": "626536429",
       "name_lat": "ЛУИ ДЕ БУРБОН ВИКА БЬЮТТИ",
-      "name_ru": "",
-      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
+      "name_ru": "ЛУИ ДЕ БУРБОН ВИКА БЬЮТТИ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2362,57 +2426,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "388927785",
+      "id": "1970163197",
       "name_lat": "ЛУИЗИАНА ИЗ РОСТОВА ПАПЫ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЛУИЗИАНА ИЗ РОСТОВА ПАПЫ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1246314418",
-      "name_lat": "ЛУЧЕЗАРНАЯ УЛЫБКА СЭМ",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "422576591",
+      "id": "1565638880",
       "name_lat": "ЛУННАЯ СОНАТА ИЗ ХВОСТАТОГО БАЛАГАНА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "101858708",
+      "id": "934233847",
+      "name_lat": "ЛУДЖАЙН ФАНТАЗИЯ ИЗ КАНЕКСО",
+      "name_ru": "ЛУДЖАЙН ФАНТАЗИЯ ИЗ КАНЕКСО",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР /",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1853078081",
       "name_lat": "ЛУИ ЛЕ ШАТЕЛЬЕ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1668276842",
-      "name_lat": "ЛУННАЯ СОНАТА МЕЛОДИЯ ЛЮБВИ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "615994132",
-      "name_lat": "ЛУК ЭТ МИ НАУ ИЗ МИРА ЗВЕЗД",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2427,7 +2473,7 @@
     {
       "id": "992116485",
       "name_lat": "ЛУКРЕЦИЯ БОРДЖИА ЛУКСИ",
-      "name_ru": "",
+      "name_ru": "ЛУКРЕЦИЯ БОРДЖИА ЛУКСИ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
@@ -2445,7 +2491,7 @@
     {
       "id": "1394305787",
       "name_lat": "ЛУЧШАЯ ИЗ ЛУЧШИХ ОТ СИБИРСКОГО МЕДВЕДЯ",
-      "name_ru": "",
+      "name_ru": "ЛУЧШАЯ ИЗ ЛУЧШИХ ОТ СИБИРСКОГО МЕДВЕДЯ",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 3,
@@ -2461,37 +2507,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1948172190",
+      "id": "735246312",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ПАТРИСИЯ",
-      "name_ru": "",
-      "breed": "БАССЕТ-ГРИФФОН ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ПАТРИСИЯ",
+      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "9023",
       "name_lat": "ЛУННАЯ РАДУГА ДИНАСТИЯ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ДИНАСТИЯ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 12,
       "competition_dog_id": 9023
     },
     {
-      "id": "1177665560",
+      "id": "10479",
       "name_lat": "ЛУННАЯ РАДУГА ПАТРОНУС",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
+      "competition_dog_id": 10479
     },
     {
-      "id": "1236388465",
+      "id": "1390196974",
       "name_lat": "ЛУЧАНО ПАВАРОТТИ",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "name_ru": "ЛУЧАНО ПАВАРОТТИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2506,19 +2552,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "238252484",
+      "id": "1652774001",
       "name_lat": "ЛУКСУРИ ЛАЙФ БЛЭК ДЖЕК",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1896998718",
+      "id": "1222373319",
       "name_lat": "ЛУНА",
       "name_ru": "",
-      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН /",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2553,7 +2599,7 @@
     {
       "id": "47241868",
       "name_lat": "ЛУННЫЙ СВЕТ ИЗ ДОМА Ю-ТИ",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ СВЕТ ИЗ ДОМА Ю-ТИ",
       "breed": "РУССКИЙ ТОЙ (ГЛАДКОШЕРСТНЫЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -2562,10 +2608,18 @@
     {
       "id": "479307843",
       "name_lat": "ЛУЧШИЙ ВЫБОР ВЕТА АНИКА",
-      "name_ru": "",
+      "name_ru": "ЛУЧШИЙ ВЫБОР ВЕТА АНИКА",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "32701317",
+      "name_lat": "ЛУНА",
+      "name_ru": "",
+      "breed": "HUNTING TERRIER (GERMAN)",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2587,6 +2641,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1719610937",
+      "name_lat": "ЛУНА КУИН",
+      "name_ru": "",
+      "breed": "ЬНЫЙ ТОЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1029723527",
+      "name_lat": "ЛУИ ДЕ БУРБОН ЖУ ЖУКА",
+      "name_ru": "",
+      "breed": "ТАКСА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "24704047",
       "name_lat": "ЛУННАЯ РАДУГА ЗАТЕЯ",
       "name_ru": "",
@@ -2596,10 +2667,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1008533750",
+      "id": "762413146",
       "name_lat": "ЛУИЗАДОР НОРИСС",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ / GREAT",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ / GREAT",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2616,7 +2687,7 @@
     {
       "id": "1222809437",
       "name_lat": "ЛУИ ВИТОН ДИ СТЕЛЛА АРДЕНС",
-      "name_ru": "",
+      "name_ru": "ЛУИ ВИТОН ДИ СТЕЛЛА АРДЕНС",
       "breed": "ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -2625,7 +2696,7 @@
     {
       "id": "252297860",
       "name_lat": "ЛУИ ДЕ БУРБОН ВИОЛА",
-      "name_ru": "",
+      "name_ru": "ЛУИ ДЕ БУРБОН ВИОЛА",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2634,7 +2705,7 @@
     {
       "id": "169863411",
       "name_lat": "ЛУКЕРЬЯ ЛАЙТ",
-      "name_ru": "",
+      "name_ru": "ЛУКЕРЬЯ ЛАЙТ",
       "breed": "Бивер терьер",
       "breed_en": "",
       "total_shows": 2,
@@ -2643,53 +2714,44 @@
     {
       "id": "462735497",
       "name_lat": "ЛУИС ДЖОЗЕФ ПОБЕДИТЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ЛУИС ДЖОЗЕФ ПОБЕДИТЕЛЬ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1491600934",
+      "id": "14898207",
       "name_lat": "ЛУЧАНО ИЗ ЁЖКИНОГО ДОМА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "name_ru": "ЛУЧАНО ИЗ ЁЖКИНОГО ДОМА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "800451028",
-      "name_lat": "ЛУКРЕЦИЯ ИЗ УСАДЬБЫ РУДНЕВЫХ",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "id": "1557494664",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ ШЕДОУ",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ШЕДОУ",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "524317099",
+      "id": "1856454930",
       "name_lat": "ЛУНА",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "607925266",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ ШЕДОУ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1577097044",
+      "id": "19826177",
       "name_lat": "ЛУННЫЙ ВЕТЕР КАРОЛИНА",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "name_ru": "ЛУННЫЙ ВЕТЕР КАРОЛИНА",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2697,7 +2759,7 @@
     {
       "id": "59143068",
       "name_lat": "ЛУННАЯ РАДУГА ИСТРИБИТЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ИСТРИБИТЕЛЬ",
       "breed": "Русская псовая борзая",
       "breed_en": "",
       "total_shows": 2,
@@ -2706,9 +2768,17 @@
     {
       "id": "912200729",
       "name_lat": "ЛУННАЯ РАДУГА ИМПЕРИЯ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ИМПЕРИЯ",
       "breed": "Русская псовая борзая",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "945177476",
+      "name_lat": "ЛУННАЯ РАДУГА ЯСТРЕБ",
+      "name_ru": "ЛУННАЯ РАДУГА ЯСТРЕБ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2722,46 +2792,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "1899757641",
-      "name_lat": "ЛУННАЯ РАДУГА РОСА ДИВНАЯ",
+      "id": "10508",
+      "name_lat": "ЛУННАЯ РАДУГА РУССКАЯ КРАСА",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "284122415",
-      "name_lat": "ЛУННЫЙ ЗАЩИТНИК ПЕГГИ КАРТЕР",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
+      "total_shows": 4,
+      "competition_dog_id": 10508
     },
     {
       "id": "628",
       "name_lat": "ЛУННАЯ РАДУГА ЖАКАН ВЕРНЫЙ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЖАКАН ВЕРНЫЙ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": 628
     },
     {
-      "id": "4881044",
-      "name_lat": "ЛУССО АНЖЕЛО СИНТИЯ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "id": "81607322",
+      "name_lat": "Л'УРМАВИ ЯДЕЛЬ-ВИ-ГРАНДИ",
+      "name_ru": "Л'УРМАВИ ЯДЕЛЬ-ВИ-ГРАНДИ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "295126823",
+      "id": "1685455681",
+      "name_lat": "ЛУССО АНЖЕЛО СИНТИЯ",
+      "name_ru": "ЛУССО АНЖЕЛО СИНТИЯ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "600538577",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ ЛЮБАВА ЗВЕЗДА УРАЛА",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ЛЮБАВА ЗВЕЗДА УРАЛА",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "152479228",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ПЕРСЕЯ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ПЕРСЕЯ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2769,7 +2847,7 @@
     {
       "id": "715584943",
       "name_lat": "ЛУГАЮР ПРИНЦЕССА ЮМИ",
-      "name_ru": "",
+      "name_ru": "ЛУГАЮР ПРИНЦЕССА ЮМИ",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 3,
@@ -2780,15 +2858,6 @@
       "name_lat": "ЛУКРЕЦИЯ АЛИСА ИЗ ОЖЕРЕЛЬЯ",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1328762964",
-      "name_lat": "ЛУННАЯ РАДУГА АДЕЛАИДА",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2821,37 +2890,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "356849628",
-      "name_lat": "ЛУЧИК СОЛНЦА В ТЕМНОМ ЦАРСТВЕ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1836195871",
+      "id": "51220236",
       "name_lat": "ЛУНА ИЗ ДОМА МАРЛЕН",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "761831332",
-      "name_lat": "ЛУДЖАЙН ФАНТАЗИЯ ИЗ КАНЕКСО",
-      "name_ru": "",
-      "breed": "СИЛИХЕМ АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "528552209",
+      "id": "221560430",
       "name_lat": "ЛУНЭ ЛЭЙКС СКАЙ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2866,19 +2917,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "97814046",
+      "id": "548451623",
       "name_lat": "ЛУССО АНЖЕЛО ШЕРИФ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ЛУССО АНЖЕЛО ШЕРИФ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "159757014",
+      "id": "50852619",
       "name_lat": "ЛУИДОР МАЙ ЭСПИРЕЙШЕН",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИ Й ТЕРЬЕР)",
+      "name_ru": "ЛУИДОР МАЙ ЭСПИРЕЙШЕН",
+      "breed": "НОРВИЧ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2889,6 +2940,14 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1280131351",
+      "name_lat": "ЛУЧЕЗАР",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ /",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2920,15 +2979,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "47266410",
-      "name_lat": "ЛУННАЯ РАДУГА СКОРОСТЬ СВЕТА",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "551794600",
       "name_lat": "ЛУИС ЛОТАР ГРОЙЦЕГ ФОН ЛИХТЕНБЕРГ",
       "name_ru": "",
@@ -2947,18 +2997,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1474806813",
-      "name_lat": "ЛУИЗА ЖОЗЕФИНА БУШЕ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "593662604",
       "name_lat": "ЛУКАС ОЛИМПИК ЧЕМПИОНОВ",
-      "name_ru": "",
+      "name_ru": "ЛУКАС ОЛИМПИК ЧЕМПИОНОВ",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 2,
@@ -2967,7 +3008,7 @@
     {
       "id": "428796211",
       "name_lat": "ЛУННЫЙ ВЕТЕР ХОЛЛИ ВУД",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ ВЕТЕР ХОЛЛИ ВУД",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3019,10 +3060,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "298894672",
+      "id": "198610372",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ЕЖЕВИКА",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3030,19 +3071,10 @@
     {
       "id": "1578796998",
       "name_lat": "ЛУННАЯ РАДУГА ЖИМОЛОСТЬ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЖИМОЛОСТЬ",
       "breed": "НЕМЕЦКИЙ САМОЕДСКАЯ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "600538577",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ ЛЮБАВА ЗВЕЗДА УРАЛА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3075,7 +3107,7 @@
     {
       "id": "1687089274",
       "name_lat": "ЛУЧШИЙ КАРАТ",
-      "name_ru": "",
+      "name_ru": "ЛУЧШИЙ КАРАТ",
       "breed": "АМЕРИКАНСКАЯ ЗАПАДНОСИБИРСКАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -3084,6 +3116,15 @@
     {
       "id": "635780811",
       "name_lat": "ЛУРДЕС МАРИ",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ / BICHON",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1976408706",
+      "name_lat": "ЛУЧЕЗАР",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ / BICHON",
       "breed_en": "",
@@ -3102,7 +3143,7 @@
     {
       "id": "1273791905",
       "name_lat": "ЛУННАЯ СОНАТА ПАЛЕСИЯ СТАР КИСС",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ СОНАТА ПАЛЕСИЯ СТАР КИСС",
       "breed": "МАЙОРСКИЙ МАСТИФ (ка де бо)",
       "breed_en": "",
       "total_shows": 2,
@@ -3172,15 +3213,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1829910620",
-      "name_lat": "ЛУННАЯ РАДУГА ПАЛАШ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "321117048",
       "name_lat": "ЛУННЫЙ ВОЛК ИЗ РУССКОГО КОМЕЛОТА",
       "name_ru": "",
@@ -3208,28 +3240,53 @@
       "competition_dog_id": null
     },
     {
-      "id": "1233016073",
-      "name_lat": "ЛУКАС С СТАФ СПЕЙС",
+      "id": "477108744",
+      "name_lat": "ЛУССО АНЖЕЛО ЭВИТА ЭВРИДИКА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "34641458",
+      "name_lat": "ЛУКАС С СТАФ СПЕЙС",
+      "name_ru": "ЛУКАС С СТАФ СПЕЙС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1929135582",
+      "id": "644752680",
+      "name_lat": "ЛУННЫЙ ПРИНЦ",
+      "name_ru": "ЛУННЫЙ ПРИНЦ",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "963021543",
       "name_lat": "ЛУНА ЛИДИНГ ЛЕДИ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "ЛУНА ЛИДИНГ ЛЕДИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "926938031",
-      "name_lat": "ЛУННЫЙ ВЕТЕР ЦЕЗАРЬ",
+      "id": "1209338827",
+      "name_lat": "ЛУННАЯ РАДУГА ЛАСКОВАЯ ФРЕЯ",
       "name_ru": "",
-      "breed": "SAMOYED",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "903049781",
+      "name_lat": "ЛУННЫЙ ВЕТЕР ЦЕЗАРЬ",
+      "name_ru": "ЛУННЫЙ ВЕТЕР ЦЕЗАРЬ",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3237,7 +3294,7 @@
     {
       "id": "1554393613",
       "name_lat": "ЛУССО АНЖЕЛО ГРЭТА",
-      "name_ru": "",
+      "name_ru": "ЛУССО АНЖЕЛО ГРЭТА",
       "breed": "LABRADOR RETRIEVER",
       "breed_en": "",
       "total_shows": 3,
@@ -3246,7 +3303,7 @@
     {
       "id": "1739640486",
       "name_lat": "ЛУИЗА ДЕ МАРИЭЛЬ",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА ДЕ МАРИЭЛЬ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -3262,6 +3319,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1225171009",
+      "name_lat": "ЛУКСУРИ ЛАЙФ АРГОН",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "581531198",
       "name_lat": "ЛУННЫЙ СВЕТ",
       "name_ru": "",
@@ -3271,38 +3337,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "9262",
+      "id": "10599",
       "name_lat": "ЛУННАЯ РАДУГА ПАНГЕЯ УЛЬТИМА",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ПАНГЕЯ УЛЬТИМА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": 9262
+      "total_shows": 15,
+      "competition_dog_id": 10599
     },
     {
-      "id": "263364519",
-      "name_lat": "ЛУНТИК САЛЬВЕ МАРИС СТЕЛЛА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1225171009",
-      "name_lat": "ЛУКСУРИ ЛАЙФ АРГОН",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "id": "653505993",
+      "name_lat": "ЛУКАС ДИСКО БОЙ",
+      "name_ru": "ЛУКАС ДИСКО БОЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "653505993",
-      "name_lat": "ЛУКАС ДИСКО БОЙ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
+      "id": "706445218",
+      "name_lat": "ЛУКАС ФРОМ АМАТО МОРЕ",
+      "name_ru": "ЛУКАС ФРОМ АМАТО МОРЕ",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -3325,10 +3381,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "179345173",
+      "id": "931404696",
       "name_lat": "ЛУЧАНО ЛАККИ ЧАРЛЬЗ ГАНГСТЕР САЛЬВАТОРЕ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3343,19 +3399,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1181027625",
+      "id": "148997398",
       "name_lat": "ЛУНАР ЭКЛИПС ИЗ ОВЕРЛОРД СОУЛ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1638131751",
+      "id": "1275218662",
       "name_lat": "ЛУКСУРИ ЛАЙФ ШЕЙХ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3406,10 +3462,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1201494599",
+      "id": "798721600",
       "name_lat": "ЛУКАС",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3496,10 +3552,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1699675104",
+      "name_lat": "ЛУИ",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "458392723",
       "name_lat": "ЛУИДОР ИЗ ДОМА СУРАКОВЫХ",
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1497707692",
+      "name_lat": "Л'УРМАВИ ЦЕЗАРИЯ АДЕЛЬ",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3577,37 +3650,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "834358322",
+      "id": "805400885",
       "name_lat": "ЛУНАР ТУИНКЛ ОТ РУССКОГО КУТЮРЬЕ",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "69839506",
+      "id": "1901120531",
       "name_lat": "ЛУКРЕЦИЯ ПЕРФЕ БЛАНШ",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ /",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "656615544",
+      "id": "1805059997",
       "name_lat": "ЛУКЕРЬЯ ОТ КАРЕЛЬСКИХ МЕДВЕДЕЙ",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "882369667",
+      "id": "1196232607",
+      "name_lat": "ЛУННАЯ ДОРОЖКА ОДРИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1216890807",
       "name_lat": "ЛУМИНАРИС ВЕРШИНЫ ИНЬ-ЯНЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3622,6 +3703,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "922575825",
+      "name_lat": "ЛУИС",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1239897070",
       "name_lat": "ЛУННАЯ РАДУГА ЭНЛИЛЬ",
       "name_ru": "",
@@ -3631,10 +3720,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "946095421",
+      "id": "94095906",
       "name_lat": "ЛУВР ОФ ГОЛД КОЛЛЕКШН",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3642,7 +3731,7 @@
     {
       "id": "318659503",
       "name_lat": "ЛУКСУРИ ЛАЙФ БАРНИ",
-      "name_ru": "",
+      "name_ru": "ЛУКСУРИ ЛАЙФ БАРНИ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
@@ -3651,25 +3740,25 @@
     {
       "id": "447881729",
       "name_lat": "ЛУКСУРИ ЛАЙФ БЛЭНДА",
-      "name_ru": "",
+      "name_ru": "ЛУКСУРИ ЛАЙФ БЛЭНДА",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1207652989",
-      "name_lat": "ЛУННАЯ РАДУГА ВЕГВИЗИР",
+      "id": "5772",
+      "name_lat": "ЛУННАЯ РАДУГА ЕВРАЗИЯ",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
+      "total_shows": 36,
+      "competition_dog_id": 5772
     },
     {
       "id": "1362277310",
       "name_lat": "ЛУИЗИАНА СТАР ДАФНА",
-      "name_ru": "",
+      "name_ru": "ЛУИЗИАНА СТАР ДАФНА",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -3678,7 +3767,7 @@
     {
       "id": "1391664612",
       "name_lat": "ЛУКАВЫЙ АМУР ИЗ ХВОСТАТОГО БАЛАГАНА",
-      "name_ru": "",
+      "name_ru": "ЛУКАВЫЙ АМУР ИЗ ХВОСТАТОГО БАЛАГАНА",
       "breed": "РУССКИЙ ТОЙ (ДЛИННОШЕРСТНЫЙ)",
       "breed_en": "",
       "total_shows": 4,
@@ -3687,7 +3776,7 @@
     {
       "id": "1012182282",
       "name_lat": "ЛУИЗА ЧИКОННА",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА ЧИКОННА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
@@ -3696,7 +3785,7 @@
     {
       "id": "1456212372",
       "name_lat": "ЛУССО АНЖЕЛО ОЛЬГА",
-      "name_ru": "",
+      "name_ru": "ЛУССО АНЖЕЛО ОЛЬГА",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -3723,7 +3812,7 @@
     {
       "id": "50851796",
       "name_lat": "ЛУКАС ОЛИМПИК ЧЕМПИОН",
-      "name_ru": "",
+      "name_ru": "ЛУКАС ОЛИМПИК ЧЕМПИОН",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 3,
@@ -3732,17 +3821,17 @@
     {
       "id": "119579759",
       "name_lat": "ЛУИЗА ИЗ КРЫМСКОГО ЛЕГИОНА",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА ИЗ КРЫМСКОГО ЛЕГИОНА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "302239629",
+      "id": "15009776",
       "name_lat": "ЛУННЫЙ ВЕТЕР ЕСМИРАЛЬДА ЗЕ СНОУ КВИН",
-      "name_ru": "",
-      "breed": "САМОЕД /",
+      "name_ru": "ЛУННЫЙ ВЕТЕР ЕСМИРАЛЬДА ЗЕ СНОУ КВИН",
+      "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3766,19 +3855,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "443192628",
-      "name_lat": "ЛУКИЧИ ИСКУСТНИЦА",
+      "id": "39176414",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ ЦЕНТРА",
       "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1364087368",
+      "id": "10420",
+      "name_lat": "ЛУКИЧИ ИСКУСТНИЦА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": 10420
+    },
+    {
+      "id": "1775823263",
       "name_lat": "ЛУИЗА МИСТИК ШАРМ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3804,35 +3902,26 @@
     {
       "id": "5612780",
       "name_lat": "ЛУКИЧИ КОРОЛЕК",
-      "name_ru": "",
+      "name_ru": "ЛУКИЧИ КОРОЛЕК",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1913605923",
+      "id": "390728202",
       "name_lat": "ЛУЧИСТАЯ ЛАЙМА ВИКТОРИЯ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ЛУЧИСТАЯ ЛАЙМА ВИКТОРИЯ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1766480048",
-      "name_lat": "ЛУННА ИЗ ЯР ГРАДА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1714544130",
+      "id": "1524954393",
       "name_lat": "ЛУННАЯ НОЧЬ С ХЛЕБНОГО ХУТОРА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
+      "name_ru": "ЛУННАЯ НОЧЬ С ХЛЕБНОГО ХУТОРА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3840,17 +3929,8 @@
     {
       "id": "1577433977",
       "name_lat": "ЛУНА ЛАВ ГУД",
-      "name_ru": "",
+      "name_ru": "ЛУНА ЛАВ ГУД",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1059062362",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ ЦЕНТРА",
-      "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3874,10 +3954,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1643083569",
+      "id": "1651804108",
       "name_lat": "ЛУМИ ЛИНТУ",
       "name_ru": "",
-      "breed": "ХАСКИ /",
+      "breed": "ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3892,11 +3972,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "101969399",
+      "name_lat": "ЛУЧЕЗАР",
+      "name_ru": "",
+      "breed": "FRISE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "484038884",
       "name_lat": "ЛУКЕРЬЯ",
       "name_ru": "",
       "breed": "FRISE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "565459596",
+      "name_lat": "ЛУИ МИШЕЛЬ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3919,10 +4015,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1000799058",
+      "id": "372700977",
       "name_lat": "ЛУЧЕЗАРНЫЙ ЛИК",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ПУДЕЛЬ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3937,19 +4033,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "827026222",
+      "id": "1516063213",
       "name_lat": "ЛУНА НАША",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1719610937",
-      "name_lat": "ЛУНА КУИН",
-      "name_ru": "",
-      "breed": "ЬНЫЙ ТОЙ СПАНИЕЛЬ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3964,15 +4051,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "199559278",
-      "name_lat": "ЛУКУМ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1989030817",
       "name_lat": "ЛУКАС СТАР ХАНТЕР",
       "name_ru": "",
@@ -3982,19 +4060,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1917639060",
+      "id": "732138049",
       "name_lat": "ЛУЧИК БИСКОТТИ ДЛЯ СОЛНЕЧНЫХ",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР /",
+      "breed": "ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1975507610",
+      "id": "1993237867",
       "name_lat": "ЛУЧАНО АНДЖЕЛО КАРИНО",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4018,10 +4096,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1814457165",
+      "id": "1541947824",
       "name_lat": "ЛУЧШИЙ ОХОТНИК",
       "name_ru": "",
-      "breed": "СЕТТЕР ГОРДОН /",
+      "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4063,10 +4141,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "513871230",
+      "id": "219688663",
       "name_lat": "ЛУНГО КОСТА ФЕЛИЦИТАС ЖИЯ",
       "name_ru": "",
-      "breed": "такса стандартная г-ш такса стандартная г-ш",
+      "breed": "такса стандартная г-ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4099,8 +4177,8 @@
       "competition_dog_id": 636
     },
     {
-      "id": "1209338827",
-      "name_lat": "ЛУННАЯ РАДУГА ЛАСКОВАЯ ФРЕЯ",
+      "id": "1215401444",
+      "name_lat": "ЛУННАЯ РАДУГА НЕВА",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
@@ -4117,9 +4195,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1559521719",
+      "name_lat": "ЛУНА КАТАРИНА",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "155945117",
       "name_lat": "ЛУНАР ХОУСЕ МОН АМИ ШАРЛОТТА",
-      "name_ru": "",
+      "name_ru": "ЛУНАР ХОУСЕ МОН АМИ ШАРЛОТТА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -4171,9 +4257,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "141810807",
+      "name_lat": "ЛУИЗА",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "829946310",
       "name_lat": "ЛУЧ НАДЕЖДЫ ГИЛМОР",
-      "name_ru": "",
+      "name_ru": "ЛУЧ НАДЕЖДЫ ГИЛМОР",
       "breed": "АФФЕНПИНЧЕР БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -4198,19 +4293,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "9268",
-      "name_lat": "ЛУННАЯ РАДУГА РЕЛИКВИЯ (Изменено по Решению ВК от 28.12.22 вопрос 58)",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": 9268
-    },
-    {
-      "id": "1368975175",
+      "id": "1674323643",
       "name_lat": "ЛУССО АНЖЕЛО УЛЬТРА ШУРА МУРА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР ЧЁРНЫЙ",
+      "name_ru": "ЛУССО АНЖЕЛО УЛЬТРА ШУРА МУРА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР ЧЕРНЫЙ",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4236,7 +4322,7 @@
     {
       "id": "1961562839",
       "name_lat": "ЛУКРЕЦИЯ БОРДЖИА",
-      "name_ru": "",
+      "name_ru": "ЛУКРЕЦИЯ БОРДЖИА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
@@ -4252,10 +4338,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1850969699",
+      "id": "743177715",
       "name_lat": "ЛУК ГРЕАТ ИЗ СОЗВЕЗДИЯ СТАФ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4263,7 +4349,7 @@
     {
       "id": "1256479836",
       "name_lat": "ЛУИЗА-ОГНЕННАЯ ДЫМКА",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА-ОГНЕННАЯ ДЫМКА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -4288,19 +4374,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1710505655",
+      "id": "384793334",
       "name_lat": "ЛУКРЕЦИЯ БОРДЖИА ИЗ ЛЕВАНЖИ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "113376359",
+      "id": "1345214523",
       "name_lat": "ЛУГАР БЭТМАН'С ПРАЙД РЕЙН-ВЕСТФАЛИЯ (Д-Ш)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4308,7 +4394,7 @@
     {
       "id": "230594163",
       "name_lat": "ЛУЧАР С КРУТОЯРА",
-      "name_ru": "",
+      "name_ru": "ЛУЧАР С КРУТОЯРА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -4324,10 +4410,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1417213486",
+      "id": "48127240",
       "name_lat": "ЛУННЫЙ ПРИНЦ ОТ ЛУГАРЫ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4378,15 +4464,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "5772",
-      "name_lat": "ЛУННАЯ РАДУГА ЕВРАЗИЯ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": 5772
-    },
-    {
       "id": "447064614",
       "name_lat": "ЛУКЕРИЯ",
       "name_ru": "",
@@ -4414,9 +4491,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "492487259",
+      "name_lat": "ЛУКИЧИ ЛУКАС",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "627175621",
       "name_lat": "ЛУКАС ИС Э СЕЛЕБРЕЙШН ОФ АУР ЛАЙФ",
-      "name_ru": "",
+      "name_ru": "ЛУКАС ИС Э СЕЛЕБРЕЙШН ОФ АУР ЛАЙФ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -4427,24 +4512,6 @@
       "name_lat": "ЛУНА",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "141810807",
-      "name_lat": "ЛУИЗА",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1084097581",
-      "name_lat": "ЛУННАЯ РАДУГА РУССКАЯ КРАСА",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4477,10 +4544,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1653537659",
+      "id": "1429084783",
       "name_lat": "ЛУИЗАДОР МЕЛОРИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4497,7 +4564,7 @@
     {
       "id": "229092884",
       "name_lat": "ЛУИЗА ИЗ ДОМА САТУРН",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА ИЗ ДОМА САТУРН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
@@ -4549,10 +4616,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "900254461",
+      "id": "1359316016",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ НИКОЛАС",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ НИКОЛАС",
+      "breed": "АНГЛИЙСКИЙ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4560,7 +4627,7 @@
     {
       "id": "1122934663",
       "name_lat": "ЛУСИНДА ОТ НЕВСКОГО ХОББИТА",
-      "name_ru": "",
+      "name_ru": "ЛУСИНДА ОТ НЕВСКОГО ХОББИТА",
       "breed": "ГРИФФОН БРЮССЕЛЬСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -4569,7 +4636,7 @@
     {
       "id": "316207703",
       "name_lat": "ЛУННАЯ ДОЛЬКА",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ ДОЛЬКА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
@@ -4630,11 +4697,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "593846149",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ УМИ",
+      "id": "927656149",
+      "name_lat": "ЛУЛУ ОЧАРОВАШКА",
       "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "МОПС / PUG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1667566109",
+      "name_lat": "ЛУ ЭММИ ЛА БЕЛЛЬ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "354648443",
+      "name_lat": "Лунный Ветер Лорд Оф Пак",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4668,10 +4750,10 @@
     {
       "id": "9484",
       "name_lat": "ЛУННАЯ РАДУГА РОССИЯ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА РОССИЯ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 30,
       "competition_dog_id": 9484
     },
     {
@@ -4693,19 +4775,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "819052456",
+      "id": "10969",
       "name_lat": "ЛУННАЯ РАДУГА РУССКИЙ РОМАНС",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
+      "total_shows": 19,
+      "competition_dog_id": 10969
     },
     {
-      "id": "1627526637",
+      "id": "63000225",
       "name_lat": "ЛУЧШАЯ КОМПАНИЯ АНАБЕЛЬ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЛУЧШАЯ КОМПАНИЯ АНАБЕЛЬ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -4713,10 +4795,18 @@
     {
       "id": "1211661424",
       "name_lat": "ЛУИЗАДОР ЮДЖИНИЯ",
-      "name_ru": "",
+      "name_ru": "ЛУИЗАДОР ЮДЖИНИЯ",
       "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "886010836",
+      "name_lat": "ЛУИЗА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4738,15 +4828,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "886010836",
-      "name_lat": "ЛУИЗА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1617682444",
       "name_lat": "ЛУННАЯ РАДУГА РОССИИ",
       "name_ru": "",
@@ -4756,10 +4837,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "606736968",
-      "name_lat": "ЛУКАС ИЗ ДОМА ВИКИ ПИТЕРСКОЙ",
+      "id": "412410035",
+      "name_lat": "ЛУННАЯ РАДУГА РЕЛИКВИЯ (Изменено по Решению ВК от 28.12.22 вопрос 58)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "479825799",
+      "name_lat": "ЛУКАС ИЗ ДОМА ВИКИ ПИТЕРСКОЙ",
+      "name_ru": "ЛУКАС ИЗ ДОМА ВИКИ ПИТЕРСКОЙ",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -4776,7 +4866,7 @@
     {
       "id": "1996587358",
       "name_lat": "ЛУННЫЙ ЗАЩИТНИК САЙРАКС",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ ЗАЩИТНИК САЙРАКС",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 7,
@@ -4785,7 +4875,7 @@
     {
       "id": "1330941381",
       "name_lat": "ЛУСИАРТ ЕМЕРАЛД ЕКСПЕНСИВ",
-      "name_ru": "",
+      "name_ru": "ЛУСИАРТ ЕМЕРАЛД ЕКСПЕНСИВ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 6,
@@ -4794,10 +4884,19 @@
     {
       "id": "1839995284",
       "name_lat": "ЛУННАЯ РАДУГА ЯКОВ СОРОЧИНСКИЙ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ЯКОВ СОРОЧИНСКИЙ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "338808291",
+      "name_lat": "ЛУКЬЯН ОТ БОЯРИНА ИВАНА",
+      "name_ru": "ЛУКЬЯН ОТ БОЯРИНА ИВАНА",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -4821,19 +4920,19 @@
     {
       "id": "1422589183",
       "name_lat": "ЛУННАЯ РАДУГА ГУЛЯЙ ПЛАМЕНЬ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ГУЛЯЙ ПЛАМЕНЬ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "338808291",
-      "name_lat": "ЛУКЬЯН ОТ БОЯРИНА ИВАНА",
+      "id": "127383884",
+      "name_lat": "ЛУЧИК СЧАСТЬЯ ХОНДА",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4855,13 +4954,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "982856040",
-      "name_lat": "ЛУЧИК СЧАСТЬЯ ХОНДА",
+      "id": "10781",
+      "name_lat": "ЛУННАЯ РАДУГА ЛАТИНИЦА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
+      "competition_dog_id": 10781
     },
     {
       "id": "708963567",
@@ -4882,11 +4981,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "211212118",
+      "name_lat": "ЛУНА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "291690336",
       "name_lat": "ЛУННАЯ РАДУГА ЭМПИРЕЙ",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "306369055",
+      "name_lat": "ЛУНА ИЗ БРАТСКОГО ЖАРКА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -4927,9 +5043,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1713205214",
+      "name_lat": "ЛУННАЯ СОНАТА ОТ ГАРРИ ПОТТЕРА (Д.Ш.)",
+      "name_ru": "ЛУННАЯ СОНАТА ОТ ГАРРИ ПОТТЕРА (Д.Ш.)",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "296793862",
       "name_lat": "ЛУКЕРЬЯ УСЛАДА ДУШИ",
-      "name_ru": "",
+      "name_ru": "ЛУКЕРЬЯ УСЛАДА ДУШИ",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -4938,7 +5063,7 @@
     {
       "id": "789821130",
       "name_lat": "ЛУКАВАЯ БЕСТИЯ",
-      "name_ru": "",
+      "name_ru": "ЛУКАВАЯ БЕСТИЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -4947,7 +5072,7 @@
     {
       "id": "1712947201",
       "name_lat": "ЛУГРЕС ЗАВИДНЫЙ ЖЕНИХ",
-      "name_ru": "",
+      "name_ru": "ЛУГРЕС ЗАВИДНЫЙ ЖЕНИХ",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
@@ -4956,17 +5081,8 @@
     {
       "id": "1137564529",
       "name_lat": "ЛУЧАЯ ЦЕНТУРИЯ",
-      "name_ru": "",
+      "name_ru": "ЛУЧАЯ ЦЕНТУРИЯ",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "135664969",
-      "name_lat": "ЛУННЫЙ ПРИНЦ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4974,7 +5090,7 @@
     {
       "id": "1008675095",
       "name_lat": "ЛУИЗА БЬЮТИФУЛ БАТТЕРФЛЯЙ",
-      "name_ru": "",
+      "name_ru": "ЛУИЗА БЬЮТИФУЛ БАТТЕРФЛЯЙ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 3,
@@ -4983,17 +5099,26 @@
     {
       "id": "7248",
       "name_lat": "ЛУННАЯ РАДУГА ГРОЗНЫЙ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ РАДУГА ГРОЗНЫЙ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": 7248
     },
     {
       "id": "641762699",
       "name_lat": "ЛУК ГРЕАТ ИЗ СОЗВЕЗДИЯ СТАФФ",
-      "name_ru": "",
+      "name_ru": "ЛУК ГРЕАТ ИЗ СОЗВЕЗДИЯ СТАФФ",
       "breed": "ЦВЕРГШНАУЦЕР АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "517608842",
+      "name_lat": "ЛУГАР БЭТМАН'С ПРАЙД РИКЛИНГ",
+      "name_ru": "ЛУГАР БЭТМАН'С ПРАЙД РИКЛИНГ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5001,7 +5126,7 @@
     {
       "id": "1843725548",
       "name_lat": "ЛУКАС ТАЛИСМАН УДАЧИ",
-      "name_ru": "",
+      "name_ru": "ЛУКАС ТАЛИСМАН УДАЧИ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -5010,7 +5135,7 @@
     {
       "id": "1759817214",
       "name_lat": "ЛУЧШАЯ КОМПАНИЯ БОСС",
-      "name_ru": "",
+      "name_ru": "ЛУЧШАЯ КОМПАНИЯ БОСС",
       "breed": "СТАФФОРДШ",
       "breed_en": "",
       "total_shows": 3,
@@ -5019,7 +5144,7 @@
     {
       "id": "181092293",
       "name_lat": "Лукавая Бестия с Самого Черного Моря",
-      "name_ru": "",
+      "name_ru": "Лукавая Бестия с Самого Черного Моря",
       "breed": "Немецк.овч.длинношерст",
       "breed_en": "",
       "total_shows": 3,
@@ -5028,7 +5153,7 @@
     {
       "id": "104139695",
       "name_lat": "Луиза-Мирабела Благородная Леди",
-      "name_ru": "",
+      "name_ru": "Луиза-Мирабела Благородная Леди",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -5040,6 +5165,14 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1818082469",
+      "name_lat": "ЛУЧЕЗАРА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5098,10 +5231,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "120583805",
+      "id": "190832289",
       "name_lat": "ЛУЧЕЗАРНЫЙ ЛЮК",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5125,19 +5258,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "289141893",
+      "id": "438756345",
       "name_lat": "ЛУКАС",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "211212118",
-      "name_lat": "ЛУНА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5170,20 +5294,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1709541106",
-      "name_lat": "ЛУИ ДЕ БУРБОН У'ДАР",
+      "id": "1786524297",
+      "name_lat": "Л'УРМАВИ ЯДВИГА ДЖЕЙМС ПРАДА",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
-      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1713205214",
-      "name_lat": "ЛУННАЯ СОНАТА ОТ ГАРРИ ПОТТЕРА (Д.Ш.)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5215,19 +5330,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "959662995",
+      "id": "1034244668",
       "name_lat": "ЛУНА БЕРНАРДЕТТА",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "919993832",
+      "id": "1647322641",
       "name_lat": "ЛУКСОРИЯ ИНЖОЙ ОФ ВИКТОРИ",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ МИНИАТЮРНЫЙ ШПИЦ",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5269,6 +5384,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1412146291",
+      "name_lat": "ЛУКСУРИ ЛАЙФ АЙЗА",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1703068871",
       "name_lat": "ЛУКУМ РАХАТ ЭРЛИНА",
       "name_ru": "",
@@ -5278,19 +5402,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1597414927",
+      "id": "1062301542",
+      "name_lat": "ЛУКЕРЬЯ БАРХАТНОЕ СЧАСТЬЕ ИЗ ЛОРАНС",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "785370686",
       "name_lat": "ЛУША ТОПОТУША",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "968263192",
+      "id": "902148897",
+      "name_lat": "ЛУНА ГОР ИСМА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1022768957",
       "name_lat": "ЛУННЫЙ ВЕТЕР ВИОЛА СНОУ МАДЖИК",
       "name_ru": "",
-      "breed": "САМОЕД /",
+      "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5332,28 +5472,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "518534755",
+      "id": "777427183",
       "name_lat": "ЛУИЗА ИСТОЧНИК РАДОСТИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1598160157",
+      "id": "893571137",
       "name_lat": "ЛУИ ГОЛД ПРИНЦ ЮГА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "638776431",
+      "id": "1466324443",
       "name_lat": "ЛУЧЕЗАРНАЯ ЖАСМИН",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5404,15 +5544,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "697847316",
-      "name_lat": "ЛУННЫЙ ЗАЩИТНИК ТОФ БЕЙФОНГ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "842353076",
       "name_lat": "ЛУКА ИЗ ЦАРИЦЫНСКОЙ ОХОТЫ",
       "name_ru": "",
@@ -5458,19 +5589,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "206021936",
+      "id": "1131754492",
       "name_lat": "ЛУКАС ЗВЕЗДА СЧАСТЬЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "568680975",
+      "id": "1359701379",
       "name_lat": "ЛУИЗА ДЕ МОНИКА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5553,7 +5684,7 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": 5977
     },
     {
@@ -5579,15 +5710,6 @@
       "name_lat": "ЛУЧИК СЧАСТЬЯ ЮЛЬФИКА",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "868848841",
-      "name_lat": "ЛУГАР БЭТМАН'С ПРАЙД РИКЛИНГ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5620,22 +5742,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "1683135894",
+      "id": "10782",
       "name_lat": "ЛУННАЯ РАДУГА ЖДАННАЯ РАДОСТЬ",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "905229962",
-      "name_lat": "ЛУННАЯ РАДУГА ЛАТИНИЦА",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
+      "competition_dog_id": 10782
     },
     {
       "id": "774788880",
@@ -5643,6 +5756,14 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1557197171",
+      "name_lat": "ЛУНА ТЕЙЛ ПРАУД СПИРИТ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5656,9 +5777,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "102141811",
+      "name_lat": "ЛУННАЯ РАДУГА ФОРСАЖ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1209340208",
       "name_lat": "ЛУКСУРИ ЛАЙФ ЛЮБИМАЯ СКАЗКА",
-      "name_ru": "",
+      "name_ru": "ЛУКСУРИ ЛАЙФ ЛЮБИМАЯ СКАЗКА",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
@@ -5667,8 +5796,17 @@
     {
       "id": "1256500267",
       "name_lat": "ЛУННАЯ СОНАТА ИЗ БЕЛЫХ ГЯУРОВ",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ СОНАТА ИЗ БЕЛЫХ ГЯУРОВ",
       "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1086087993",
+      "name_lat": "Л'УРМАВИ ЛАРА КРОФТ",
+      "name_ru": "Л'УРМАВИ ЛАРА КРОФТ",
+      "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5676,7 +5814,7 @@
     {
       "id": "904470978",
       "name_lat": "ЛУКСУРИ ЛАЙФ ОЛИМПИЯ ТЕЙСТ ОФ ВИКТОРИ",
-      "name_ru": "",
+      "name_ru": "ЛУКСУРИ ЛАЙФ ОЛИМПИЯ ТЕЙСТ ОФ ВИКТОРИ",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
       "total_shows": 2,
@@ -5685,8 +5823,17 @@
     {
       "id": "681402822",
       "name_lat": "ЛУЧ СВЕТА ОСКАР",
-      "name_ru": "",
+      "name_ru": "ЛУЧ СВЕТА ОСКАР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "49739886",
+      "name_lat": "ЛУЧЕЗАРНАЯ ДЕВАНА",
+      "name_ru": "ЛУЧЕЗАРНАЯ ДЕВАНА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5694,7 +5841,7 @@
     {
       "id": "437128391",
       "name_lat": "ЛУИДЖИ ПРОХОР НЕПРЕВЗОЙДЕННЫЙ",
-      "name_ru": "",
+      "name_ru": "ЛУИДЖИ ПРОХОР НЕПРЕВЗОЙДЕННЫЙ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -5703,7 +5850,7 @@
     {
       "id": "387405486",
       "name_lat": "ЛУННЫЙ БЛИК БЕРКУТ",
-      "name_ru": "",
+      "name_ru": "ЛУННЫЙ БЛИК БЕРКУТ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -5712,7 +5859,7 @@
     {
       "id": "1021413608",
       "name_lat": "ЛУНИЯ ФЕЙТФУЛ ХАТ",
-      "name_ru": "",
+      "name_ru": "ЛУНИЯ ФЕЙТФУЛ ХАТ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -5721,7 +5868,7 @@
     {
       "id": "1641194994",
       "name_lat": "ЛУССО АНЖЕЛО СИЛЬВИЯ",
-      "name_ru": "",
+      "name_ru": "ЛУССО АНЖЕЛО СИЛЬВИЯ",
       "breed": "LABRADOR RETRIEVER",
       "breed_en": "",
       "total_shows": 2,
@@ -5730,7 +5877,7 @@
     {
       "id": "263801700",
       "name_lat": "ЛУНА ДЕ ЛОЛА",
-      "name_ru": "",
+      "name_ru": "ЛУНА ДЕ ЛОЛА",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -5739,7 +5886,7 @@
     {
       "id": "1209571769",
       "name_lat": "ЛУКЕРЬЯ ДЛЯ ДОГИРАЙ",
-      "name_ru": "",
+      "name_ru": "ЛУКЕРЬЯ ДЛЯ ДОГИРАЙ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -5748,26 +5895,26 @@
     {
       "id": "1526905505",
       "name_lat": "ЛУКЕРЬЯ КРАСА",
-      "name_ru": "",
+      "name_ru": "ЛУКЕРЬЯ КРАСА",
       "breed": "Мопс чёрный",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1581100862",
+      "id": "435771010",
       "name_lat": "ЛУКУМ РАХАТ ДЭЯНА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "name_ru": "ЛУКУМ РАХАТ ДЭЯНА",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "451370439",
+      "id": "803473044",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ СЕЛФИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ СЕЛФИ",
+      "breed": "СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5775,7 +5922,7 @@
     {
       "id": "264346789",
       "name_lat": "ЛУЧИК СЧАСТЬЯ МОНТАНА ЛАВ",
-      "name_ru": "",
+      "name_ru": "ЛУЧИК СЧАСТЬЯ МОНТАНА ЛАВ",
       "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
@@ -5784,7 +5931,7 @@
     {
       "id": "193371037",
       "name_lat": "ЛУЭИДЖЕЛС ПРАЙЛ ОЛЕСАНДРА",
-      "name_ru": "",
+      "name_ru": "ЛУЭИДЖЕЛС ПРАЙЛ ОЛЕСАНДРА",
       "breed": "HIGHLAND WHITE TERRIER",
       "breed_en": "",
       "total_shows": 2,
@@ -5793,7 +5940,7 @@
     {
       "id": "1027393312",
       "name_lat": "ЛУКСУРИ ЛАЙФ ВАЙКИКИ",
-      "name_ru": "",
+      "name_ru": "ЛУКСУРИ ЛАЙФ ВАЙКИКИ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
@@ -5802,17 +5949,17 @@
     {
       "id": "556642717",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ЯФФИ КЕН",
-      "name_ru": "",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ЯФФИ КЕН",
       "breed": "БИГЛЬ НЕМЕЦКАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "525877723",
+      "id": "1663862732",
       "name_lat": "ЛУННАЯ МЕЛОДИЯ ХРИС",
-      "name_ru": "",
-      "breed": "БИГЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЛУННАЯ МЕЛОДИЯ ХРИС",
+      "breed": "ТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5989,6 +6136,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "195178667",
+      "name_lat": "Л'УРМАВИ",
+      "name_ru": "",
+      "breed": "ДЖЕК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "372294990",
       "name_lat": "ЛУИ КОРОЛЬ",
       "name_ru": "",
@@ -5998,19 +6154,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1976408706",
-      "name_lat": "ЛУЧЕЗАР",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ / BICHON",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1792707223",
+      "id": "1131122902",
       "name_lat": "ЛУНА",
       "name_ru": "",
-      "breed": "GERMAN HUNTING TERRIER (GERMAN JAGDTERRIER) ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "GERMAN HUNTING TERRIER (GERMAN JAGDTERRIER) ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6034,10 +6181,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1941027906",
+      "id": "1402310526",
+      "name_lat": "ЛУЛА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1271478647",
+      "name_lat": "ЛУИДОР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1847126251",
       "name_lat": "ЛУНА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6070,10 +6233,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "255432401",
+      "id": "749901164",
       "name_lat": "ЛУИЗА ШАРМ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6093,6 +6256,14 @@
       "name_ru": "",
       "breed": "МОПС / PUG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1997023599",
+      "name_lat": "ЛУИДЖИНА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6133,6 +6304,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1620279707",
+      "name_lat": "ЛУИ МАРСЕЛЬ",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1202238028",
       "name_lat": "ЛУИЗА",
       "name_ru": "",
@@ -6151,11 +6330,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1818082469",
-      "name_lat": "ЛУЧЕЗАРА",
+      "id": "1091978868",
+      "name_lat": "ЛУЧАНО",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "КОРСО",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6214,10 +6392,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1975689784",
+      "id": "1551334612",
       "name_lat": "ЛУКРЕЦИЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6376,15 +6554,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "235264295",
-      "name_lat": "ЛУНА",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "73978485",
       "name_lat": "ЛУНА",
       "name_ru": "",
@@ -6466,19 +6635,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "606729185",
+      "id": "1527818556",
       "name_lat": "ЛУГАЮР УРАН",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1147121036",
+      "id": "162508809",
       "name_lat": "ЛУКРЕЦИЯ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6574,10 +6743,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1862097532",
+      "id": "1281195609",
       "name_lat": "ЛУНА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6592,10 +6761,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1907213566",
+      "id": "421300103",
       "name_lat": "ЛУНА БЕЛЛЕ",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ /",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6628,10 +6797,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1748098455",
+      "id": "857185579",
       "name_lat": "ЛУИЗА",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6655,15 +6824,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "525364018",
-      "name_lat": "ЛУНА",
-      "name_ru": "",
-      "breed": "БУЛЛИ ПОКЕТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "184508503",
       "name_lat": "ЛУИЗА НИКА",
       "name_ru": "",
@@ -6673,10 +6833,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1469883510",
+      "id": "1653274410",
       "name_lat": "ЛУНА КВИН",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6686,15 +6846,6 @@
       "name_lat": "ЛУНА КВИН",
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "136289198",
-      "name_lat": "ЛУНА КУИН",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6745,6 +6896,87 @@
       "competition_dog_id": null
     },
     {
+      "id": "164819793",
+      "name_lat": "ЛУННЫЙ СВЕТ ИЗ ЗВЕЗДНОГО ЛЕГИОНА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "191816356",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ ЛИОНА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "458158974",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ МАГНОЛИЯ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "155915448",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ СТЕЛЛА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "748374663",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ СЕН ДЖОВАННИ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1159991913",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ САБИНА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "54605073",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ ХРАНИТЕЛЬНИЦА МИРА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "152542695",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ ШАМОНИ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "117655399",
+      "name_lat": "ЛУННАЯ МЕЛОДИЯ ШОТЛАНД ИЯ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1360869682",
       "name_lat": "ЛУННАЯ СОНАТА НАРСЕ ДИАМАНТ НУАР",
       "name_ru": "",
@@ -6763,19 +6995,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "916163602",
-      "name_lat": "ЛУСИАРТ АМРИТА АМЕЛИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1219268425",
+      "id": "1011196372",
       "name_lat": "ЛУКСУРИ ЛАЙФ ЧАРЛОТТЕ ФЛЕР ДЕЛИКАТ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6817,15 +7040,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "626573050",
-      "name_lat": "ЛУННЫЙ СВЕТ ИЗ ЗВЕЗДНОГО ЛЕГИОНА",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "390398292",
       "name_lat": "ЛУННАЯ РАДУГА МАГИЯ",
       "name_ru": "",
@@ -6862,6 +7076,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1935517645",
+      "name_lat": "Л'УРМАВИ АЛЬПИЙСКИЙ ЦВЕТОК",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1362633973",
       "name_lat": "ЛУИЗА СЛАВНАЯ ДЕВЧЕНКА",
       "name_ru": "",
@@ -6889,10 +7112,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "380389639",
+      "id": "30410182",
       "name_lat": "ЛУННЫЙ ВЕТЕР С БЕЛОГО БЕРЕГА",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6902,15 +7125,6 @@
       "name_lat": "ЛУКРЕЦИЯ БОРДЖИА С ЗЕЛЁНОГО ГОРОДА",
       "name_ru": "",
       "breed": "DACHSHUND ZWERG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1326583654",
-      "name_lat": "ЛУННАЯ СОНАТА ОТ ГАРРИ ПОТТЕРА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6961,6 +7175,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1076381425",
+      "name_lat": "Л'УРМАВИ ЯРЧИ ВАЛИАНТ КНАЙТ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "731815952",
       "name_lat": "ЛУКЕРЬЯ ВОМ КЛИНОВ ХОВ",
       "name_ru": "",
@@ -6988,10 +7211,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "962253160",
+      "id": "1016523533",
       "name_lat": "ЛУННЫЙ ВЕТЕР ХОНЕЙ МУН",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7006,10 +7229,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1403347328",
+      "id": "1567717333",
       "name_lat": "ЛУННЫЙ ВЕТЕР ФЛЭЙМ ОФ ЛАВ",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7096,10 +7319,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "766439623",
+      "id": "1335569272",
+      "name_lat": "Л'УРМАВИ ЯРОСЛАВ МУДРЫЙ",
+      "name_ru": "",
+      "breed": "JACK RUSSELL TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1168413574",
       "name_lat": "ЛУННАЯ СОНАТА ОТ НЕВСКОГО ДУЭТА",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7123,24 +7355,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1878979840",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ ЛИОНА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "805845899",
-      "name_lat": "ЛУННЫЙ ВЕТЕР УЛЫБКА ФОРТУНЫ ТЕССИ",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "14050760",
       "name_lat": "ЛУЧЕЗАРНАЯ ФЕЛИСИЯ",
       "name_ru": "",
@@ -7150,8 +7364,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "366179730",
-      "name_lat": "ЛУХАН КИКИ ЛУ- ЛУ",
+      "id": "1842430846",
+      "name_lat": "ЛУХАН КИКИ ЛУ-ЛУ",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
@@ -7159,19 +7373,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1467283355",
+      "id": "1264187602",
       "name_lat": "ЛУКЕРЬЯ С ЗОЛОТОЙ ГОРЫ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1283737926",
+      "id": "1562629055",
       "name_lat": "ЛУСИЛА ЛОРИА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7186,19 +7400,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1790307445",
-      "name_lat": "ЛУЧЕЗАРНАЯ ДЕВАНА",
+      "id": "1132106887",
+      "name_lat": "ЛУЧЕ ДИ СТЕЛЛЕ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1132106887",
-      "name_lat": "ЛУЧЕ ДИ СТЕЛЛЕ",
+      "id": "1155947515",
+      "name_lat": "Л`УРМАВИ ЯХТСМЕН ЯНКИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7231,19 +7445,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "563098168",
+      "id": "479210333",
       "name_lat": "ЛУЧИК СЧАСТЬЯ НИКОЛЬ КИДМАН",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "273195027",
+      "id": "1855516794",
       "name_lat": "ЛУСИАРТ А'МЕГА АСТИ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "194377812",
+      "name_lat": "Л'УРМАВИ ВАЙС СЛИМ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1544643389",
+      "name_lat": "Л'УРМАВИ РОЙНА",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7285,10 +7517,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "640735954",
+      "id": "1673652819",
       "name_lat": "ЛУРДЕС ТЕНШИ ФИЗИНАТА",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7303,22 +7535,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "233300128",
+      "id": "10478",
       "name_lat": "ЛУННАЯ РАДУГА ПАНАЦЕЯ",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "458158974",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ МАГНОЛИЯ",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
+      "competition_dog_id": 10478
     },
     {
       "id": "1882530230",
@@ -7330,10 +7553,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1508632525",
+      "id": "1346819632",
       "name_lat": "ЛУССО АНЖЕЛО СЕРДЖИО",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7357,19 +7580,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "86200214",
+      "id": "509759503",
       "name_lat": "ЛУННЫЙ ВЕТЕР АРИЕЛЬ ПРИНСЕС ОФ ЗЕ ОУШЕН",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "59033921",
+      "id": "462843420",
       "name_lat": "ЛУРДЕС ИЗ СОЗВЕЗДИЯ ЧЕРНОГО ПСА",
       "name_ru": "",
-      "breed": "КОРИЧНЕВО- ПОДПАЛЫЙ /",
+      "breed": "КОРИЧНЕВО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7384,10 +7607,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "677593147",
+      "id": "1459921394",
       "name_lat": "ЛУЧИСТАЯИЗ ПРИМОРСК ОГО БАГУЛЬНИК",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ /",
+      "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7429,10 +7652,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1045485898",
-      "name_lat": "ЛУГАР БЭТМАН С ПРАЙД КУНО- ЕРМАК",
+      "id": "1321377785",
+      "name_lat": "ЛУГАР БЭТМАН С ПРАЙД КУНО-ЕРМАК",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7456,6 +7679,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1386363997",
+      "name_lat": "ЛУССО АНЖЕЛО ЖАКЛИН",
+      "name_ru": "",
+      "breed": "LABRADOR",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "87112098",
       "name_lat": "Лукреция с Большого Сампсония",
       "name_ru": "",
@@ -7465,19 +7696,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "187806079",
-      "name_lat": "ЛУННАЯ НОЧЬ С ВЕРШИН САЯН",
+      "id": "273769336",
+      "name_lat": "ЛУКСУРИ ЛАЙФ ЧАРА ЧИНУК СЕППАЛА",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA SHEPHERD",
-      "breed_en": "",
+      "breed": "Сибирский хаски",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "39894770",
-      "name_lat": "ЛУКСУРИ ЛАЙФ АЙЗА",
+      "id": "187806079",
+      "name_lat": "ЛУННАЯ НОЧЬ С ВЕРШИН САЯН",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA SHEPHERD",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7492,11 +7722,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1557451530",
+      "id": "1636290809",
+      "name_lat": "ЛУРА РИЧ ВАНЕССА МЭЙ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "313348827",
       "name_lat": "ЛУССО АНЖЕЛО УНДРЕАМТ ОФ ВОЛЬФ МЕССИНГ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "18020305",
+      "name_lat": "ЛУКСУРИ ЛАЙФ ЧЕСТЕР",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7546,11 +7792,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "902148897",
-      "name_lat": "ЛУНА ГОР ИСМА",
+      "id": "1901541224",
+      "name_lat": "ЛУННЫЙ ВЕТЕР БРИЗ ОФ ЛАВ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1113109606",
+      "name_lat": "ЛУННЫЙ ВЕТЕР БЛИЗЗАРТ МИСТ",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7591,10 +7844,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "366857911",
+      "id": "731483926",
       "name_lat": "ЛУИ ДЕ БУРБОН ФОВАРИТ",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7636,19 +7889,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "239506755",
+      "id": "754699818",
       "name_lat": "ЛУКУМ РАХАТ ДАРАЛИНА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1033376932",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ СТЕЛЛА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7744,37 +7988,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1062301542",
-      "name_lat": "ЛУКЕРЬЯ БАРХАТНОЕ СЧАСТЬЕ ИЗ ЛОРАНС",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "256876248",
       "name_lat": "ЛУИ РУА СОЛЕЙ",
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "520301730",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ СЕН ДЖОВАННИ",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1159991913",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ САБИНА",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7825,10 +8042,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "264356520",
+      "id": "644437205",
       "name_lat": "ЛУИС ФЕЛИПЕ ЭДВАРДС",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7843,19 +8060,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "164538164",
+      "id": "514411994",
       "name_lat": "ЛУЧАНА ИЗ НОВОЙ СИБИРИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "660365609",
+      "id": "1991586309",
       "name_lat": "ЛУИЗАДОР ЦАРИЦА НОЧИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7951,10 +8168,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1158304542",
+      "id": "53926077",
       "name_lat": "ЛУНА ИЗ НОВОЙ СИБИРИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7964,15 +8181,6 @@
       "name_lat": "ЛУССО АНЖЕЛО ЗЕМФИРА",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "246237674",
-      "name_lat": "ЛУННАЯ РАДУГА ВЛАСТЬ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8050,15 +8258,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "202588780",
-      "name_lat": "ЛУНА КОРОЛЕВА СЕРДЕЦ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1430048349",
       "name_lat": "ЛУННАЯ РАДУГА ХЛОЯ",
       "name_ru": "",
@@ -8077,10 +8276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "927648135",
+      "id": "46317223",
       "name_lat": "ЛУНОЛИКАЯ ПРИНЦЕССА РУББИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8104,10 +8303,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "632377265",
+      "id": "172449837",
       "name_lat": "ЛУКРЕЦИЯ ГОРЬКИЙ ШОКОЛАД",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8176,10 +8375,10 @@
       "competition_dog_id": 9682
     },
     {
-      "id": "100997228",
+      "id": "262710086",
       "name_lat": "ЛУНЭ ЛЭЙКС РАПСОДИ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8198,15 +8397,6 @@
       "name_lat": "ЛУННАЯ РАДУГА ОТ БУМАЖЕ",
       "name_ru": "",
       "breed": "НОРВИЧ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1316562645",
-      "name_lat": "ЛУННАЯ ФАНТАЗИЯ НИЯ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8266,28 +8456,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "156374199",
+      "id": "1577430096",
       "name_lat": "ЛУКА ФОН УМАРТО ТАЛ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "632760131",
+      "id": "313082487",
       "name_lat": "ЛУИЗАДОР БРАЙТ ВИНД АРИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "246671584",
+      "id": "227683180",
       "name_lat": "ЛУЧЕЗАРА ИЗ ХВОСТАТОГО БАЛАГАНА",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8320,28 +8510,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "249704083",
+      "id": "670589756",
       "name_lat": "ЛУНА ИЗ КАМЕЛОТА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1240948275",
+      "id": "155159588",
       "name_lat": "ЛУНА ФОМ АЛЕКС БИРКЕНДОРФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "54605073",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ ХРАНИТЕЛЬНИЦА МИРА",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8351,15 +8532,6 @@
       "name_lat": "ЛУННАЯ РАДУГА ЗЕЛЕНКА",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "536350210",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ ШАМОНИ",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8392,10 +8564,10 @@
       "competition_dog_id": 637
     },
     {
-      "id": "180112078",
+      "id": "721971431",
       "name_lat": "ЛУНЭ ЛЭЙКС КСАНДЕР",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8437,20 +8609,59 @@
       "competition_dog_id": null
     },
     {
-      "id": "1215401444",
-      "name_lat": "ЛУННАЯ РАДУГА НЕВА",
+      "id": "584588015",
+      "name_lat": "ЛУЧ ЛЮБВИ ИЗ СОЗВЕЗДИЯ СВИЖАЧ",
+      "name_ru": "",
+      "breed": "СОБАКА ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1553953984",
+      "name_lat": "ЛУННАЯ РАДУГА ХОРС",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "206252424",
+      "name_lat": "ЛУННАЯ РАДУГА ЭЙРЕНА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1906399783",
+      "name_lat": "ЛУННЫЙ СВЕТ ЛАРСЕН ОТ ШАРЛЬ ДЕ ВАЛУА",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "263479065",
+      "name_lat": "ЛУЧШАЯ КОМПАНИЯ ВИЗАРД КВИН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1216946341",
-      "name_lat": "ЛУЧШАЯ КОМПАНИЯ ВИЗАРД КВИН",
+      "id": "1477934201",
+      "name_lat": "ЛУКАС СТРОНГ ФЛЭЙН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "407106665",
+      "name_lat": "ЛУНА-КОРОЛЕВА НОЧИ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8464,11 +8675,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1996503079",
-      "name_lat": "ЛУННАЯ МЕЛОДИЯ ШОТЛАНД ИЯ",
+      "id": "1320062878",
+      "name_lat": "ЛУЧЕЗАРНЫЙ МИШКА",
       "name_ru": "",
-      "breed": "ВЫЖЛА ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8500,19 +8710,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "578712324",
-      "name_lat": "ЛУКАС СТРОНГ ФЛЕЙМ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "259285518",
+      "id": "1688451725",
       "name_lat": "ЛУКА ФОМ ХАУС ШИРАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

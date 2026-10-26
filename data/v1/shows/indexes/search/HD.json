@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "HD",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "121731600",
+      "name_lat": "H-DZHIM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1192893834",
+      "name_lat": "H-DZHIM",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ (ДРАТХААР)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1791370905",
+      "name_lat": "H-DZHIM",
+      "name_ru": "",
+      "breed": "GERMAN WIRE-HAIRED",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

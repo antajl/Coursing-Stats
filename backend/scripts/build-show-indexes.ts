@@ -64,6 +64,34 @@ const RKF_EXHIBITIONS_DIR = path.join(ROOT, 'data/local/shows/exhibitions-rkf')
 const INDEXES_DIR = path.join(SHOWS_DIR, 'indexes')
 const DOGS_BY_ID_DIR = path.join(ROOT, 'data/v1/dogs/by-id')
 
+const _sab = new SharedArrayBuffer(4)
+const _sleepArray = new Int32Array(_sab)
+function sleepMs(ms: number) {
+  Atomics.wait(_sleepArray, 0, 0, ms)
+}
+
+function safeWriteFileSync(filePath: string, content: string | Buffer, retries = 10, delayMs = 300) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const tmpPath = `${filePath}.${process.pid}.${Date.now()}.tmp`
+      fs.writeFileSync(tmpPath, content)
+      try {
+        fs.renameSync(tmpPath, filePath)
+      } catch {
+        try { if (fs.existsSync(filePath)) fs.unlinkSync(filePath) } catch {}
+        fs.renameSync(tmpPath, filePath)
+      }
+      return
+    } catch (err) {
+      if (i === retries - 1) {
+        fs.writeFileSync(filePath, content)
+        return
+      }
+      sleepMs(delayMs * (i + 1))
+    }
+  }
+}
+
 interface ShowResult {
   breed: string
   breed_en?: string
@@ -621,6 +649,7 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
     gradedTotal: number
   }
   const byKey = new Map<string, Acc>()
+  const fullKeyByPrefix = new Map<string, string>()
 
   const bumpExhibitionGrade = (
     acc: Acc,
@@ -688,16 +717,15 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
     let actualKey = key
     const [, keyFirst = ''] = key.split('|')
     if (keyFirst) {
+      const prefix = `${parts.last}|${keyFirst}`
       if (!parts.middleInitial) {
-        for (const existingKey of byKey.keys()) {
-          const [last, first, middle] = existingKey.split('|')
-          if (last === parts.last && first === keyFirst && middle && middle !== '*') {
-            actualKey = existingKey
-            break
-          }
+        const existingFullKey = fullKeyByPrefix.get(prefix)
+        if (existingFullKey) {
+          actualKey = existingFullKey
         }
       } else {
-        const wild = `${parts.last}|${keyFirst}|*`
+        fullKeyByPrefix.set(prefix, key)
+        const wild = `${prefix}|*`
         const wildAcc = byKey.get(wild)
         if (wildAcc) {
           const existing = byKey.get(key)
@@ -1113,11 +1141,11 @@ async function main() {
   const { list: judges, details: judgeDetails, baseline } = buildJudgesIndex(exhibitions)
   const judgesCount = judges.length
   console.log(`Built index for ${judgesCount} judges`)
-  fs.writeFileSync(path.join(INDEXES_DIR, 'judges.json'), JSON.stringify(judges))
+  safeWriteFileSync(path.join(INDEXES_DIR, 'judges.json'), JSON.stringify(judges))
   writeJudgesPage0(judges)
 
   // Save strictness baseline
-  fs.writeFileSync(
+  safeWriteFileSync(
     path.join(INDEXES_DIR, 'judges-strictness-baseline.json'),
     JSON.stringify(baseline, null, 2),
   )
@@ -1147,7 +1175,7 @@ async function main() {
       byKey,
     })
     judgePackBytes += Buffer.byteLength(body)
-    fs.writeFileSync(path.join(judgeDetailsDir, `pack-${shard}.json`), body)
+    safeWriteFileSync(path.join(judgeDetailsDir, `pack-${shard}.json`), body)
   }
   console.log(
     `  Saved judge-details/pack-*.json (${judgePacks.size} packs, ${judgeDetails.length} judges, ${(judgePackBytes / (1024 * 1024)).toFixed(1)} MB)`,
@@ -1236,7 +1264,7 @@ async function main() {
   for (const [year, entries] of calendarByYear) {
     entries.sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')))
     const filePath = path.join(calendarDir, `${year}.json`)
-    fs.writeFileSync(filePath, JSON.stringify({ year, exhibitions: entries }))
+    safeWriteFileSync(filePath, JSON.stringify({ year, exhibitions: entries }))
     console.log(`  Saved calendar/${year}.json (${entries.length} exhibitions)`)
   }
 
@@ -1286,7 +1314,7 @@ async function main() {
     const mb = (bytes / (1024 * 1024)).toFixed(1)
 
     if (bytes <= SHARD_IF_OVER_BYTES) {
-      fs.writeFileSync(filePath, JSON.stringify(payload))
+      safeWriteFileSync(filePath, JSON.stringify(payload))
       if (bytes > PAGES_LIMIT_BYTES) {
         console.warn(`  WARNING ${fileName} is ${mb} MB (>25 MB Pages limit)`)
       }
@@ -1301,13 +1329,13 @@ async function main() {
         const letter = String.fromCharCode(97 + i) // a, b, c…
         const shardName = `dog-ranking-${year}-${letter}.json`
         const shardBody = JSON.stringify(slice)
-        fs.writeFileSync(path.join(INDEXES_DIR, shardName), shardBody)
+        safeWriteFileSync(path.join(INDEXES_DIR, shardName), shardBody)
         shardFiles.push(shardName)
         console.log(
           `  Saved ${shardName} (${slice.length} dogs, ${(Buffer.byteLength(shardBody) / (1024 * 1024)).toFixed(1)} MB)`,
         )
       }
-      fs.writeFileSync(
+      safeWriteFileSync(
         filePath,
         `${JSON.stringify(
           {
@@ -1344,8 +1372,8 @@ async function main() {
         updated_at: new Date().toISOString().slice(0, 10),
       }
       const homeTopName = `home-top-${year}.json`
-      fs.writeFileSync(path.join(INDEXES_DIR, homeTopName), `${JSON.stringify(homeTop, null, 2)}\n`)
-      console.log(`  Saved ${homeTopName} (top ${homeTop.dogs.length})`)
+      safeWriteFileSync(path.join(INDEXES_DIR, homeTopName), `${JSON.stringify(homeTop, null, 2)}\n`)
+      console.log(`  Saved home-top-${year}.json (top ${homeTop.dogs.length})`)
 
       // First-paint lean slice (UI paints before full year / shards load)
       writeRankingPage0(year, payload as Array<Record<string, unknown>>)
@@ -1489,7 +1517,7 @@ async function main() {
   for (const [shard, pack] of detailShards) {
     const body = JSON.stringify(pack)
     detailBytes += Buffer.byteLength(body)
-    fs.writeFileSync(path.join(DETAILS_DIR, `${shard}.json`), body)
+    safeWriteFileSync(path.join(DETAILS_DIR, `${shard}.json`), body)
   }
   console.log(
     `  Saved dog-details/ (${detailShards.size} shards, ${dogs.length} dogs, ${(detailBytes / (1024 * 1024)).toFixed(1)} MB total)`,
@@ -1538,13 +1566,13 @@ async function main() {
       ...data,
     })
     lookupBytes += Buffer.byteLength(body)
-    fs.writeFileSync(path.join(LOOKUP_DIR, `${shardKey}.json`), body)
+    safeWriteFileSync(path.join(LOOKUP_DIR, `${shardKey}.json`), body)
   }
   console.log(
     `  Saved show-dog-lookup/ (${lookupShards.size} shards, ${Object.keys(byCompetitionId).length} competition links, ${Object.keys(byNameBreed).length} name keys, ${(lookupBytes / (1024 * 1024)).toFixed(1)} MB total)`,
   )
 
-  fs.writeFileSync(
+  safeWriteFileSync(
     path.join(INDEXES_DIR, 'dog-all-time-ranks.json'),
     JSON.stringify({
       schema: 'coursing-stats/show-dog-all-time-ranks-v1',
@@ -1574,7 +1602,7 @@ async function main() {
     const arr = [...group]
     if (arr.length >= 2) aliasPairs.push([arr[0], arr[1]])
   }
-  fs.writeFileSync(
+  safeWriteFileSync(
     path.join(INDEXES_DIR, 'breed-aliases.json'),
     JSON.stringify({ schema: 'coursing-stats/show-breed-aliases-v1', pairs: aliasPairs }),
   )
@@ -1607,22 +1635,30 @@ async function main() {
     breeds: showBreeds.size,
     updated_at: new Date().toISOString().slice(0, 10),
   }
-  fs.writeFileSync(path.join(INDEXES_DIR, 'hero-stats.json'), `${JSON.stringify(heroStats, null, 2)}\n`)
+  safeWriteFileSync(path.join(INDEXES_DIR, 'hero-stats.json'), `${JSON.stringify(heroStats, null, 2)}\n`)
   console.log(
     `  Saved hero-stats.json (exhibitions=${heroStats.exhibitions}, dogs=${heroStats.dogs}, judges=${heroStats.judges}, breeds=${heroStats.breeds})`,
   )
 
   // Generate search manifest sharded by name prefix (first 2 characters)
   const searchDir = path.join(INDEXES_DIR, 'search')
-  if (!fs.existsSync(searchDir)) {
+  if (fs.existsSync(searchDir)) {
+    for (const file of fs.readdirSync(searchDir)) {
+      if (file.endsWith('.json')) {
+        try { fs.unlinkSync(path.join(searchDir, file)) } catch {}
+      }
+    }
+  } else {
     fs.mkdirSync(searchDir, { recursive: true })
   }
 
   const searchShards = new Map<string, any[]>()
   
   for (const dog of dogs) {
-    const name = (dog.name_lat || dog.name_ru || '').toUpperCase()
-    const prefix = name.slice(0, 2).padEnd(2, '_')
+    const name = (dog.name_lat || dog.name_ru || '').toUpperCase().trim()
+    const cleanName = name.replace(/[^A-ZА-ЯЁ0-9]/gi, '')
+    const basePrefix = cleanName.length >= 2 ? cleanName.slice(0, 2) : (cleanName + name).slice(0, 2)
+    const prefix = basePrefix.replace(/[\\/:*?"<>|\x00-\x1f]/g, '_').padEnd(2, '_')
     
     if (!searchShards.has(prefix)) {
       searchShards.set(prefix, [])
@@ -1642,7 +1678,7 @@ async function main() {
 
   for (const [prefix, entries] of searchShards.entries()) {
     const shardPath = path.join(searchDir, `${prefix}.json`)
-    fs.writeFileSync(shardPath, JSON.stringify({
+    safeWriteFileSync(shardPath, JSON.stringify({
       schema: 'coursing-stats/show-search-v1',
       prefix,
       count: entries.length,
@@ -1653,7 +1689,7 @@ async function main() {
 
   // Write search manifest index
   const manifestPath = path.join(searchDir, 'manifest.json')
-  fs.writeFileSync(manifestPath, JSON.stringify({
+  safeWriteFileSync(manifestPath, JSON.stringify({
     schema: 'coursing-stats/show-search-manifest-v1',
     shards: Array.from(searchShards.keys()).sort(),
     total_dogs: dogs.length,
@@ -1685,7 +1721,7 @@ async function main() {
     }
     if (additions.length > 0) {
       xml = xml.replace('</urlset>', `${additions.join('')}</urlset>`)
-      fs.writeFileSync(publicSitemap, xml)
+      safeWriteFileSync(publicSitemap, xml)
       console.log(`  Appended ${additions.length} show-only /dog/{id} URLs to frontend/public/sitemap.xml`)
     }
   }

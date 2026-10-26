@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "АИ",
-  "count": 102,
+  "count": 109,
   "dogs": [
     {
       "id": "676963047",
       "name_lat": "АИША ПЕРФЕКТ МЕДЖИК",
-      "name_ru": "",
+      "name_ru": "АИША ПЕРФЕКТ МЕДЖИК",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -15,10 +15,19 @@
     {
       "id": "1832089119",
       "name_lat": "АИСТИ ИЛЕОМ ФАНТАСТИК",
-      "name_ru": "",
+      "name_ru": "АИСТИ ИЛЕОМ ФАНТАСТИК",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1287103972",
+      "name_lat": "АИША САЙДЕНХЕРЦ/AISHA SEIDENHERZ",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -37,15 +46,6 @@
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1908720632",
-      "name_lat": "АИША САЙДЕНХЕРЦ/AISHA SEIDENHERZ",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -78,7 +78,7 @@
     {
       "id": "37428342",
       "name_lat": "Аис Фарт Хантер WINDUP BARBERRY SILVER",
-      "name_ru": "",
+      "name_ru": "Аис Фарт Хантер",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -87,7 +87,7 @@
     {
       "id": "565576511",
       "name_lat": "АИША ДОУТЕР ОФ ВАМПАИРЕ",
-      "name_ru": "",
+      "name_ru": "АИША ДОУТЕР ОФ ВАМПАИРЕ",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 21,
@@ -112,6 +112,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1357780893",
+      "name_lat": "АИША ЛАКШЕРИ БЭТТИ",
+      "name_ru": "АИША ЛАКШЕРИ БЭТТИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1972550742",
       "name_lat": "АИША",
       "name_ru": "",
@@ -130,18 +139,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1357780893",
-      "name_lat": "АИША ЛАКШЕРИ БЭТТИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1178527499",
       "name_lat": "АИ ТО ХОКОРИ ВАКАНА",
-      "name_ru": "",
+      "name_ru": "АИ ТО ХОКОРИ ВАКАНА",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 9,
@@ -159,10 +159,27 @@
     {
       "id": "1351651035",
       "name_lat": "АИША АВИОР БЛЭЙЗ ИЗ ДИНАСТИИ КАНТЕМИРОВЫХ",
-      "name_ru": "",
+      "name_ru": "АИША АВИОР БЛЭЙЗ ИЗ ДИНАСТИИ КАНТЕМИРОВЫХ",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "588112349",
+      "name_lat": "АИРИ СТЕП ЕНДЖОЙМЕНТ",
+      "name_ru": "АИРИ СТЕП ЕНДЖОЙМЕНТ",
+      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "692842342",
+      "name_lat": "АИША ДЛЯ АК ТЫНЬЯК",
+      "name_ru": "АИША ДЛЯ АК ТЫНЬЯК",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -177,10 +194,10 @@
     {
       "id": "1625271368",
       "name_lat": "АИМЕР ЛА ВИ КРИЖАНА ЯГОДКА МОЯ",
-      "name_ru": "",
+      "name_ru": "АИМЕР ЛА ВИ КРИЖАНА ЯГОДКА МОЯ",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -193,54 +210,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "158749996",
+      "id": "817894233",
       "name_lat": "АИ ЗЕНГ ГУАНГ",
       "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "breed": "ЧУНЦИН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "481277655",
-      "name_lat": "АИША ВОСТОЧНАЯ КРАСАВИЦА / AISHA EASTERN BEAUTY",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1215671930",
       "name_lat": "АИША ИЗ ВИКИНГЕМА",
-      "name_ru": "",
+      "name_ru": "АИША ИЗ ВИКИНГЕМА",
       "breed": "STANDART ПУЛИ ЧЕРНЫЙ, СЕРЫЙ, РЫЖИЙ",
       "breed_en": "PULI OTHER COLORS",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1817712693",
-      "name_lat": "АИДА НЕУЛОВИМАЯ",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "588112349",
-      "name_lat": "АИРИ СТЕП ЕНДЖОЙМЕНТ",
-      "name_ru": "",
-      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1831978145",
       "name_lat": "АИДА ДЕ НИКОЛЯ ВЕРОН",
-      "name_ru": "",
+      "name_ru": "АИДА ДЕ НИКОЛЯ ВЕРОН",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -251,6 +241,15 @@
       "name_lat": "АИМИ",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1532713605",
+      "name_lat": "АИМЕР ЛА ВИ ДЭЯ БОНА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -267,7 +266,7 @@
     {
       "id": "1204504086",
       "name_lat": "АИДА ПРИНЦЕССА НОЧИ",
-      "name_ru": "",
+      "name_ru": "АИДА ПРИНЦЕССА НОЧИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -303,7 +302,7 @@
     {
       "id": "1281044689",
       "name_lat": "АИМЕР ЛА ВИ ГЕРТРУДА",
-      "name_ru": "",
+      "name_ru": "АИМЕР ЛА ВИ ГЕРТРУДА",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 2,
@@ -319,10 +318,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "520327244",
+      "id": "244996649",
       "name_lat": "АИКО КАЗОКУ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -346,6 +345,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "193964235",
+      "name_lat": "А-ИРИС",
+      "name_ru": "",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "842406267",
       "name_lat": "АИША СВИТ ОРАНЖ",
       "name_ru": "",
@@ -364,10 +372,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1924774905",
+      "id": "669987701",
       "name_lat": "АИКА ЖЕМЧУЖИНА НИРВАНЫ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "name_ru": "АИКА ЖЕМЧУЖИНА НИРВАНЫ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -382,15 +390,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1532713605",
-      "name_lat": "АИМЕР ЛА ВИ ДЭЯ БОНА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1662699001",
       "name_lat": "АИС-НИЛЬС",
       "name_ru": "",
@@ -400,10 +399,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "312308429",
+      "id": "987017826",
       "name_lat": "АИР ФОРС",
       "name_ru": "",
-      "breed": "DALMATIAN ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed": "DALMATIAN ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -445,19 +444,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "893236455",
+      "id": "694194598",
       "name_lat": "АИРИС БЛУ РЕБЕККА РАЙДЖИНГ БЬЮТИ",
       "name_ru": "",
-      "breed": "БЕДЛИНГТОН ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "426614499",
-      "name_lat": "АИША АВИОР БЛЕЙЗ ИЗ ДИНАСТИИ КАНТЕМИРОВЫХ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -472,6 +462,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "745190961",
+      "name_lat": "АИР ФОРС",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1034472971",
       "name_lat": "АИША",
       "name_ru": "",
@@ -481,12 +480,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1035725867",
-      "name_lat": "АИР ФОРС",
+      "id": "863300719",
+      "name_lat": "АИМЕР ЛА ВИ КОРСАР НАСЛЕДНИК РУСИЧЕЙ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -499,9 +497,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1814867611",
+      "name_lat": "А ИН БИ ЧИПИОНА ФОР АЛЬТА ОЛА",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР / BIEWER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "70171703",
       "name_lat": "АИМИ МЭНДИ БЕРНАДЕТТ",
-      "name_ru": "",
+      "name_ru": "АИМИ МЭНДИ БЕРНАДЕТТ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
@@ -510,17 +517,17 @@
     {
       "id": "272675545",
       "name_lat": "АИША ЛЮКСЕМБОР",
-      "name_ru": "",
+      "name_ru": "АИША ЛЮКСЕМБОР",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1482457580",
+      "id": "72467242",
       "name_lat": "АИША ГОЛДЕН ЛЕДИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "АИША ГОЛДЕН ЛЕДИ",
+      "breed": "ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -535,10 +542,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "175810343",
+      "id": "1864716595",
       "name_lat": "АИР ФОРС",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -573,19 +580,10 @@
     {
       "id": "129212136",
       "name_lat": "АИ ТО ХОКОРИ АСОН",
-      "name_ru": "",
+      "name_ru": "АИ ТО ХОКОРИ АСОН",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1961474005",
-      "name_lat": "АИЛАН'ЗОН ЛУНА НЬЮ СТАР",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -625,9 +623,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "27771432",
+      "name_lat": "АИМЕР ЛА ВИ КАМИЛЛА СЕРДЦУ МИЛА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "67433694",
       "name_lat": "АИД ПОВЕЛИТЕЛЬ ИЗ ИМПЕРИИ ДРЕВНИХ ВОИНОВ",
-      "name_ru": "",
+      "name_ru": "АИД ПОВЕЛИТЕЛЬ ИЗ ИМПЕРИИ ДРЕВНИХ ВОИНОВ",
       "breed": "ВОСТОЧНО-ЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -636,8 +642,17 @@
     {
       "id": "245664110",
       "name_lat": "АИ ТО ХОКОРИ ИРИСКА",
-      "name_ru": "",
+      "name_ru": "АИ ТО ХОКОРИ ИРИСКА",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "237312088",
+      "name_lat": "АИМУТ ВОЛГА ВИШНЯ",
+      "name_ru": "АИМУТ ВОЛГА ВИШНЯ",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -652,19 +667,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1414112509",
+      "id": "1063022880",
       "name_lat": "АИША",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "262480402",
+      "id": "391753619",
       "name_lat": "АИ НИНГ",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -697,10 +712,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "176203481",
+      "id": "1399119652",
       "name_lat": "АИДА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -742,15 +757,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "936760236",
-      "name_lat": "АИР ФОРС",
-      "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "621333587",
       "name_lat": "АИР ФОРС",
       "name_ru": "",
@@ -778,10 +784,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "292638552",
+      "id": "153011675",
       "name_lat": "АИША ТАКАРА",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -796,10 +802,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1449139350",
+      "id": "1730223375",
       "name_lat": "АИША",
       "name_ru": "",
-      "breed": "GERMAN ИЙ) /",
+      "breed": "GERMAN ИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -850,19 +856,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "643093321",
+      "id": "1730186015",
       "name_lat": "АИМИ ДОРОТЕ ВЕСТА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ (белый, черный, коричневый) ПУДЕЛЬ ТОЙ (белый, черный, коричневый) ПУДЕЛЬ ТОЙ (белый, черный, коричневый)",
+      "breed": "ПУДЕЛЬ ТОЙ (белый, черный, коричневый)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1521408066",
+      "id": "1616085571",
       "name_lat": "АИ ТО ХОКОРИ ДИАНА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -886,6 +892,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1100401704",
+      "name_lat": "АИМЕР ЛА ВИ КУРАЖ ЧЕРНЫЙ СОКОЛ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1588772489",
+      "name_lat": "АИ ТО ХОКОРИ БУСИДО",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "522662322",
+      "name_lat": "АИДВОЛ ЧАЛИССА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "473398236",
+      "name_lat": "АИДА ИЗ ДОНСКОЙ ЛИБЕРИИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "689814900",
       "name_lat": "АИМИ БЬЮТИ АЙЗА",
       "name_ru": "",
@@ -904,19 +942,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "530164394",
-      "name_lat": "АИДА МЕДЖИК СКАЙ",
+      "id": "969645021",
+      "name_lat": "А ИЗ ДОМА РЕЙЧЕЛ",
       "name_ru": "",
-      "breed": "Д/Ш немецкая овчарка",
+      "breed": "УАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "864111886",
-      "name_lat": "АИМУТ ВОЛГА ВИШНЯ",
+      "id": "1901095493",
+      "name_lat": "А ИН БИ ФАБИОЛА ФЭЙ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "788800819",
+      "name_lat": "А ИН БИ ЧЕЛЕСТА ЧЕРНЫЙ ЖЕМЧУГ",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "530164394",
+      "name_lat": "АИДА МЕДЖИК СКАЙ",
+      "name_ru": "",
+      "breed": "Д/Ш немецкая овчарка",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,60 +1,51 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "УР",
-  "count": 1096,
+  "count": 1104,
   "dogs": [
     {
       "id": "677373980",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ФАВОРИТ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ФАВОРИТ",
       "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1348715324",
-      "name_lat": "УРБАН ФЭШН ИЗ ДОМА АКТЕОНА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "465724783",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ЕВА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ЕВА",
       "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1685698235",
-      "name_lat": "УРГАНДА ГОЛАДРИЕЛЬ",
-      "name_ru": "",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "breed_en": "PHARAOH HOUND",
-      "total_shows": 15,
+      "id": "799811467",
+      "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ЕМЕЛЬЯН",
+      "name_ru": "УРАЛЬСКАЯ ЗВЕЗДА ЕМЕЛЬЯН",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1306802135",
+      "name_lat": "УРАЛ ТАУ АЙСУЛУ",
+      "name_ru": "УРАЛ ТАУ АЙСУЛУ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "1711697270",
       "name_lat": "УРСО БРАВО ЕВА МАНИФИКА",
-      "name_ru": "",
+      "name_ru": "УРСО БРАВО ЕВА МАНИФИКА",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1364636790",
-      "name_lat": "УРАЛ БЕАР АТОМ-АСКЕР",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -67,30 +58,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1577564726",
-      "name_lat": "УРАЛЬСКИЙ СУВЕНИР ШЕРМАН",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 12,
+      "id": "1936458849",
+      "name_lat": "УРАЛ МОДУС НОЧНАЯ КАССИОПЕЯ",
+      "name_ru": "УРАЛ МОДУС НОЧНАЯ КАССИОПЕЯ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 37,
       "competition_dog_id": null
     },
     {
-      "id": "1390887462",
+      "id": "567279578",
       "name_lat": "УРМАН ДЖУС ЧЕРНЫЙ БРИЛЛИАНТ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "УРМАН ДЖУС ЧЕРНЫЙ БРИЛЛИАНТ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "526676697",
-      "name_lat": "УРАЛ ТАУ АЙСУЛУ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -103,18 +85,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "629877807",
-      "name_lat": "УРАЛ БЕАР АТАКА",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "305048276",
       "name_lat": "УРИЯ ПРЕКРАСНАЯ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "УРИЯ ПРЕКРАСНАЯ ЛЕДИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 20,
@@ -123,7 +96,7 @@
     {
       "id": "198207057",
       "name_lat": "УРАЛЬСКИЙ БАСТИОН ВЕОЛЕТТА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ БАСТИОН ВЕОЛЕТТА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
@@ -132,7 +105,7 @@
     {
       "id": "1277589256",
       "name_lat": "УР-ТУЛАН МАЛЬТА",
-      "name_ru": "",
+      "name_ru": "УР-ТУЛАН МАЛЬТА",
       "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 14,
@@ -157,6 +130,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "148795783",
+      "name_lat": "УРАЛ МОДУС АРЕТА",
+      "name_ru": "УРАЛ МОДУС АРЕТА",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "389573456",
       "name_lat": "УРМА",
       "name_ru": "",
@@ -177,7 +159,7 @@
     {
       "id": "262167152",
       "name_lat": "Урсус Хаус Артемон",
-      "name_ru": "",
+      "name_ru": "Урсус Хаус Артемон",
       "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 6,
@@ -195,7 +177,7 @@
     {
       "id": "1547529840",
       "name_lat": "УРИЭЛА ДЛЯ ВЕСТ КАССИ",
-      "name_ru": "",
+      "name_ru": "УРИЭЛА ДЛЯ ВЕСТ КАССИ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
       "total_shows": 30,
@@ -204,35 +186,35 @@
     {
       "id": "832428010",
       "name_lat": "УРАЛ ВИКТОРИС ИНТАРИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛ ВИКТОРИС ИНТАРИЯ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1812387877",
+      "id": "1025645950",
       "name_lat": "УРМА Ф.ЛИЛУ ЛЭНД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "22760286",
+      "id": "812733210",
       "name_lat": "УРМАС УНИКУМ АМУЛЕТ УДАЧИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "УРМАС УНИКУМ АМУЛЕТ УДАЧИ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "47236273",
+      "id": "1468885454",
       "name_lat": "УРСУЛА ДИ РОССО КОРНО",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "УРСУЛА ДИ РОССО КОРНО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -249,7 +231,7 @@
     {
       "id": "105711060",
       "name_lat": "УРСУЛА УНИКАЛЬНАЯ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА УНИКАЛЬНАЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 15,
@@ -258,7 +240,7 @@
     {
       "id": "1660757973",
       "name_lat": "УРФИН ДЖУС ХАУС",
-      "name_ru": "",
+      "name_ru": "УРФИН ДЖУС ХАУС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
@@ -270,7 +252,7 @@
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -294,34 +276,16 @@
     {
       "id": "182192093",
       "name_lat": "УРСУЛА СИБИРСКАЯ РОСКОШЬ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА СИБИРСКАЯ РОСКОШЬ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "1936458849",
-      "name_lat": "УРАЛ МОДУС НОЧНАЯ КАССИОПЕЯ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 28,
-      "competition_dog_id": null
-    },
-    {
-      "id": "319815422",
-      "name_lat": "УРСУС КОРОЛЬ СЕВЕРА НЭРИС",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "747546472",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ГЕРА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ГЕРА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -330,7 +294,7 @@
     {
       "id": "1025815291",
       "name_lat": "УРАЛЬСКИЙ САД ЦУКЕРБЕРГ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ САД ЦУКЕРБЕРГ",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 13,
@@ -348,7 +312,7 @@
     {
       "id": "890987074",
       "name_lat": "УРАЛ ХАУС ЭТТЕРИ",
-      "name_ru": "",
+      "name_ru": "УРАЛ ХАУС ЭТТЕРИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 16,
@@ -364,10 +328,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1662281016",
+      "id": "833997223",
       "name_lat": "УРУСВАТИ ГОЛД ОСТ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УРУСВАТИ ГОЛД ОСТ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -384,7 +348,7 @@
     {
       "id": "269636255",
       "name_lat": "УРФИН ЛАКИ ДЖУС",
-      "name_ru": "",
+      "name_ru": "УРФИН ЛАКИ ДЖУС",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 9,
@@ -402,10 +366,10 @@
     {
       "id": "1415912205",
       "name_lat": "УРФИН ЛАККИ ДЖУС",
-      "name_ru": "",
+      "name_ru": "УРФИН ЛАККИ ДЖУС",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -427,10 +391,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "928510246",
+      "id": "1797450819",
       "name_lat": "УРСУЛА ИЗ ДОМА ЛОЦМАН",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -454,10 +418,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1957654764",
+      "id": "715853939",
       "name_lat": "УРМАН СОКРОВИЩЕ ОРИОНА",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "УРМАН СОКРОВИЩЕ ОРИОНА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -492,7 +456,7 @@
     {
       "id": "931959503",
       "name_lat": "УРМАН УАЙТ С ГОРЫ МЕЗМАЙ",
-      "name_ru": "",
+      "name_ru": "УРМАН УАЙТ С ГОРЫ МЕЗМАЙ",
       "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -501,10 +465,10 @@
     {
       "id": "49812721",
       "name_lat": "УРАЛ ХАНТЕР ДРАТ ВЕНЕЦИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛ ХАНТЕР ДРАТ ВЕНЕЦИЯ",
       "breed": "GERMAN WIRE-HAIRED",
       "breed_en": "GERMAN WIRE-HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -519,7 +483,7 @@
     {
       "id": "92210196",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ВИВЬЕН МАРЧЕЛЛИН",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ВИВЬЕН МАРЧЕЛЛИН",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 16,
@@ -537,7 +501,7 @@
     {
       "id": "1457685628",
       "name_lat": "УРАЛ ТАУ КУПАВА",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ КУПАВА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 20,
@@ -553,10 +517,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "154755035",
+      "id": "1212747471",
       "name_lat": "УРСА ИЗ КЕМЕРГРАДА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "УРСА ИЗ КЕМЕРГРАДА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -564,7 +528,7 @@
     {
       "id": "870717695",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ЗЕВС",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ЗЕВС",
       "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 13,
@@ -573,19 +537,18 @@
     {
       "id": "986817312",
       "name_lat": "УРУС АНСТОППАБЛ ЧЕМПИОН",
-      "name_ru": "",
+      "name_ru": "УРУС АНСТОППАБЛ ЧЕМПИОН",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "518433160",
-      "name_lat": "УРСУЛА БАККИ",
+      "id": "1998096875",
+      "name_lat": "УРАГАН С ГЛИНЯНОЙ ГОРКИ",
       "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 17,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -598,30 +561,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1998096875",
-      "name_lat": "УРАГАН С ГЛИНЯНОЙ ГОРКИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1206159539",
       "name_lat": "УРАЛЬСКИЙ САД РУССКАЯ КРАСОТКА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ САД РУССКАЯ КРАСОТКА",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "799811467",
-      "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ЕМЕЛЬЯН",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -654,7 +599,7 @@
     {
       "id": "1626967949",
       "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ТРАДИЦИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ ЗВЕЗДА ТРАДИЦИЯ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -663,7 +608,7 @@
     {
       "id": "843077191",
       "name_lat": "УРСУЛА ИЗ ГАЛАКУНА",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ИЗ ГАЛАКУНА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
@@ -672,16 +617,24 @@
     {
       "id": "1867331521",
       "name_lat": "УРСУЛА НОРД СТАР",
-      "name_ru": "",
+      "name_ru": "УРСУЛА НОРД СТАР",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "48870422",
+      "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ЮРГИТТА БЕЛЛ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1961748499",
       "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ВИШЕНКА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ЦВЕТОК ВИШЕНКА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
@@ -690,7 +643,7 @@
     {
       "id": "1027939871",
       "name_lat": "УРФИН ДЖЮС ГУД ЛАК ВИННЕР",
-      "name_ru": "",
+      "name_ru": "УРФИН ДЖЮС ГУД ЛАК ВИННЕР",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 4,
@@ -699,7 +652,7 @@
     {
       "id": "1788662624",
       "name_lat": "УРМАН СЕРЕБРЯНЫЙ ВЕТЕР",
-      "name_ru": "",
+      "name_ru": "УРМАН СЕРЕБРЯНЫЙ ВЕТЕР",
       "breed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -717,17 +670,17 @@
     {
       "id": "228140353",
       "name_lat": "УРАЛЬСКИЙ САД ПОСЕЙДОН",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ САД ПОСЕЙДОН",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1340863887",
+      "id": "1515705267",
       "name_lat": "УРМАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -735,7 +688,7 @@
     {
       "id": "510133884",
       "name_lat": "УРСУЛА ДЕ ДЕЛАЛИНИ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ДЕ ДЕЛАЛИНИ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 6,
@@ -744,7 +697,7 @@
     {
       "id": "1579277049",
       "name_lat": "УРАГАН ТАИР ИЗ ИМПЕРИИ ДРЕВНИХ ВОИНОВ",
-      "name_ru": "",
+      "name_ru": "УРАГАН ТАИР ИЗ ИМПЕРИИ ДРЕВНИХ ВОИНОВ",
       "breed": "ВОСТОЧНОЕВРОПЕ",
       "breed_en": "",
       "total_shows": 2,
@@ -753,7 +706,7 @@
     {
       "id": "1901774230",
       "name_lat": "УРСАЛИНА ПОКОРИТЕЛЬНИЦ А СЕРДЕЦ",
-      "name_ru": "",
+      "name_ru": "УРСАЛИНА ПОКОРИТЕЛЬНИЦ А СЕРДЕЦ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -771,25 +724,33 @@
     {
       "id": "600957556",
       "name_lat": "Урка Де Лима Пелагея",
-      "name_ru": "",
+      "name_ru": "Урка Де Лима Пелагея",
       "breed": "НЕМЕЦКИЙ ШПИЦ-ВОЛЬФШПИЦ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1848523489",
-      "name_lat": "УРХАН ВЕЛИКИЙ",
+      "id": "738856130",
+      "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ЛЕВ",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "457310410",
+      "name_lat": "УРАЛЬСКИЙ СТРАЖ ЦЕНТНЕР",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ЦЕНТНЕР",
+      "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1767296664",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ШОУН РОБЕРТС",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ШОУН РОБЕРТС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 24,
@@ -805,19 +766,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "113919830",
+      "id": "87868021",
       "name_lat": "УРКАН С ФЭМЕЛИ С ФРИВЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УРКАН С ФЭМЕЛИ С ФРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1662678879",
+      "id": "1958253262",
       "name_lat": "УРИАНФАЙБЕР ОФ МАЙ ИММОРТАЛ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "name_ru": "УРИАНФАЙБЕР ОФ МАЙ ИММОРТАЛ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -825,7 +786,7 @@
     {
       "id": "1993340385",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ИЛЛАРИОН БО",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ИЛЛАРИОН БО",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 15,
@@ -843,19 +804,10 @@
     {
       "id": "1135430057",
       "name_lat": "УРСУЛИНА ЗАСТУПНИЦА",
-      "name_ru": "",
+      "name_ru": "УРСУЛИНА ЗАСТУПНИЦА",
       "breed": "КАВКАЗСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "106307043",
-      "name_lat": "УРИ СВЕТ МОЙ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -877,28 +829,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "148795783",
-      "name_lat": "УРАЛ МОДУС АРЕТА",
+      "id": "637467407",
+      "name_lat": "УРУЙ С ОСИНОВЦА",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "545636942",
       "name_lat": "УРМАН С ЯМСКОЙ СЛОБОДЫ",
-      "name_ru": "",
+      "name_ru": "УРМАН С ЯМСКОЙ СЛОБОДЫ",
       "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1593309062",
+      "id": "607018362",
       "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА РОСКОШЬ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "УРАЛЬСКАЯ ЗВЕЗДА РОСКОШЬ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -906,7 +858,7 @@
     {
       "id": "1649143346",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ЛЭНДОН КАРТЕР",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ЛЭНДОН КАРТЕР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
@@ -922,18 +874,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "89565132",
+      "id": "11614211",
       "name_lat": "УРМАН ФО МАК ВИВА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "972773257",
-      "name_lat": "УРАЛЬСКИЙ СТРАЖ З- МУХИЧ",
-      "name_ru": "",
+      "id": "1580617005",
+      "name_lat": "УРАЛЬСКИЙ СТРАЖ З-МУХИЧ",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ З-МУХИЧ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -942,7 +894,7 @@
     {
       "id": "1193567953",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ БОГДАНА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ БОГДАНА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
@@ -951,7 +903,7 @@
     {
       "id": "1787089366",
       "name_lat": "Урса Сноу Квин Оф Зе Норд",
-      "name_ru": "",
+      "name_ru": "УРСА СНОУ КВИН ОФ ЗЕ НОРД",
       "breed": "ЦВЕРГШНАУЦЕР (Перец с солью)",
       "breed_en": "",
       "total_shows": 4,
@@ -960,7 +912,7 @@
     {
       "id": "1636616553",
       "name_lat": "УРАЛЬСКАЯ СКАЗКА ОЛИВИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ СКАЗКА ОЛИВИЯ",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -969,7 +921,7 @@
     {
       "id": "1565278080",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ АРИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ АРИЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
@@ -996,8 +948,17 @@
     {
       "id": "296416861",
       "name_lat": "УРСАНАЛ ОТ ЗОЛОТОГО ПРИБОЯ",
-      "name_ru": "",
+      "name_ru": "УРСАНАЛ ОТ ЗОЛОТОГО ПРИБОЯ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "48396077",
+      "name_lat": "УРСУЛА",
+      "name_ru": "",
+      "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1005,19 +966,10 @@
     {
       "id": "1764475193",
       "name_lat": "УРАГАН ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
-      "name_ru": "",
+      "name_ru": "УРАГАН ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "502603656",
-      "name_lat": "УРСУЛА",
-      "name_ru": "",
-      "breed": "МАЛАМУТ /",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1039,10 +991,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "984788947",
+      "id": "790371759",
       "name_lat": "УРСУЛА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1057,39 +1009,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "583616369",
-      "name_lat": "УРАЛ БУЛЬ ЕМЕЛЬЯН",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "974389932",
       "name_lat": "УРАЛ МОДУС КАСАБЛАНКА",
-      "name_ru": "",
+      "name_ru": "УРАЛ МОДУС КАСАБЛАНКА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "148355930",
-      "name_lat": "УРБИНА ПАЛАЦЦО ДУКАЛЕ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "943285086",
-      "name_lat": "УРАНИЯ ИЗ КОРОЛЕВСТВА СТАФФ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1097,8 +1022,25 @@
       "name_lat": "УРБАН",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "148355930",
+      "name_lat": "УРБИНА ПАЛАЦЦО ДУКАЛЕ",
+      "name_ru": "УРБИНА ПАЛАЦЦО ДУКАЛЕ",
+      "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1686215712",
+      "name_lat": "УРАНИЯ ИЗ КОРОЛЕВСТВА СТАФФ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1111,12 +1053,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "637467407",
-      "name_lat": "УРУЙ С ОСИНОВЦА",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "id": "574901496",
+      "name_lat": "УРАЛ БУЛЬ ВАЛЬКИРИЯ",
+      "name_ru": "УРАЛ БУЛЬ ВАЛЬКИРИЯ",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "111830736",
+      "name_lat": "УРАЛ МОДУС ШТУРМ СИНЕТ",
+      "name_ru": "УРАЛ МОДУС ШТУРМ СИНЕТ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1131,7 +1082,7 @@
     {
       "id": "1218809770",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ОКСЕНТ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ОКСЕНТ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -1178,15 +1129,6 @@
       "name_lat": "УРС КАНИС ЗАФАТ",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "111830736",
-      "name_lat": "УРАЛ МОДУС ШТУРМ СИНЕТ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1239,7 +1181,7 @@
     {
       "id": "208991020",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ЛИЛИ РОУЗ МЕЛОДИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ЛИЛИ РОУЗ МЕЛОДИЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
@@ -1275,7 +1217,7 @@
     {
       "id": "1639264408",
       "name_lat": "УРСУЛА БУЭНДИЯ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА БУЭНДИЯ",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -1309,10 +1251,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "281203285",
+      "id": "1606544762",
       "name_lat": "УРСУЛА",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1336,10 +1278,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1935536149",
+      "id": "1076282920",
       "name_lat": "УРАЛЬСКОЙ",
       "name_ru": "",
-      "breed": "ТОЙ-ФОКСТЕРЬЕР /",
+      "breed": "ТОЙ-ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1363,9 +1305,25 @@
       "competition_dog_id": null
     },
     {
+      "id": "55598971",
+      "name_lat": "Урания Оллада Арлекин",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1607022679",
+      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ЛОРИДА ЗЕ ПРИТТИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "536959968",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ГЛОРИЯ ГУИДА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ГЛОРИЯ ГУИДА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
@@ -1374,7 +1332,7 @@
     {
       "id": "914727815",
       "name_lat": "УРАЛЬСКАЯ БУСИНКА СКАЗКА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ БУСИНКА СКАЗКА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
@@ -1426,57 +1384,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "574901496",
-      "name_lat": "УРАЛ БУЛЬ ВАЛЬКИРИЯ",
+      "id": "584719875",
+      "name_lat": "у РОТЕРР ГРИФФ БРУСНИКА",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БЕЛЬГИЙСКИЙ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "917111340",
       "name_lat": "УРАЛ МОДУС НОВАЦИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛ МОДУС НОВАЦИЯ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "612441702",
+      "id": "961456552",
       "name_lat": "УРСА-ЭЛЬ ЛАВИНА ПРИМ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "УРСА-ЭЛЬ ЛАВИНА ПРИМ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
       "id": "701389460",
       "name_lat": "УРФИН ДЖУС ИЗ ИМПЕРИИ ФАВОРИТОВ",
-      "name_ru": "",
+      "name_ru": "УРФИН ДЖУС ИЗ ИМПЕРИИ ФАВОРИТОВ",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "444193410",
+      "id": "129626596",
       "name_lat": "УРМАНТ ИЗ ДОМА ЗОРРО",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "УРМАНТ ИЗ ДОМА ЗОРРО",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "317455515",
-      "name_lat": "УРСУЛИНА ЭРМРУД СТАР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "id": "902869996",
+      "name_lat": "УРСУЛА ИЗ КАЗАНСКОГО ХАНСТВА",
+      "name_ru": "УРСУЛА ИЗ КАЗАНСКОГО ХАНСТВА",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1489,28 +1447,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1678650707",
-      "name_lat": "УРБА ГРЕСС ИЗ ЛАРЦА ВИВОН",
+      "id": "1532589186",
+      "name_lat": "УРАГАН",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1012886527",
+      "name_lat": "УРБА ГРЕСС ИЗ ЛАРЦА ВИВОН",
+      "name_ru": "УРБА ГРЕСС ИЗ ЛАРЦА ВИВОН",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "940857317",
+      "id": "1932639550",
       "name_lat": "УРФИНА ИЗ НОВОЙ СИБИРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УРФИНА ИЗ НОВОЙ СИБИРИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "578840529",
+      "id": "602683237",
       "name_lat": "УРАН ДЕКАМЕН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "УРАН ДЕКАМЕН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -1518,35 +1485,34 @@
     {
       "id": "1269205317",
       "name_lat": "УРАГАН БАЛУ ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
-      "name_ru": "",
+      "name_ru": "УРАГАН БАЛУ ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "1532589186",
-      "name_lat": "УРАГАН",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 17,
+      "id": "1931534359",
+      "name_lat": "УРАЛЬСКАЯ БОГЕМИЯ АФРОДИТА",
+      "name_ru": "УРАЛЬСКАЯ БОГЕМИЯ АФРОДИТА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "125524542",
       "name_lat": "УРИКА ЭНЖЕЛ АИС БУСИНКА (Изменено по решению ВК от 22.05.2024 В. 43)",
-      "name_ru": "",
+      "name_ru": "УРИКА ЭНЖЕЛ АИС БУСИНКА (Изменено по решению ВК от 22.05.2024 В. 43)",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "274537917",
+      "id": "845334006",
       "name_lat": "УРАЛИЯ ИЗ ДОМА АЛЛЕНС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УРАЛИЯ ИЗ ДОМА АЛЛЕНС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1554,55 +1520,64 @@
     {
       "id": "325196600",
       "name_lat": "УРСО БРАВО ЯТАЙ ROYAL FAIRMONBULLY",
-      "name_ru": "",
+      "name_ru": "УРСО БРАВО ЯТАЙ",
       "breed": "СХИПЕРКЕ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "340580473",
+      "name_lat": "УРСУС ФОМ РУС ХАУС ТРАУМ",
+      "name_ru": "УРСУС ФОМ РУС ХАУС ТРАУМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "371384608",
       "name_lat": "УРАЛЬСКИЙ СУВЕНИР ЦАРСКАЯ ОСОБА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СУВЕНИР ЦАРСКАЯ ОСОБА",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1096424977",
-      "name_lat": "УРСУС ФОМ РУС ХАУС ТРАУМ",
-      "name_ru": "",
-      "breed": "Немецкая овчарка длинношерстная",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1162618832",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН РАДА МИТЧЕЛ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН РАДА МИТЧЕЛ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1689207477",
+      "id": "595240977",
       "name_lat": "УРФИНА С ТАГАНЬЕГО РОГА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "name_ru": "УРФИНА С ТАГАНЬЕГО РОГА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "134427462",
+      "id": "390534591",
       "name_lat": "УРУНЧА ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "name_ru": "УРУНЧА ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1136556173",
+      "name_lat": "УРБАН ЛАЙН КУЛЛИНАН СЕЛЕБРИТИ СТАЙЛ",
+      "name_ru": "УРБАН ЛАЙН КУЛЛИНАН СЕЛЕБРИТИ СТАЙЛ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1612,15 +1587,6 @@
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "705924116",
-      "name_lat": "УРГАЛ СУЛУЗ ДАНА",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
-      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1653,28 +1619,46 @@
     {
       "id": "1993012588",
       "name_lat": "УРА-ГАН ИЗ БЕЛОЙ БРИГАДЫ",
-      "name_ru": "",
+      "name_ru": "УРА-ГАН ИЗ БЕЛОЙ БРИГАДЫ",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1587074098",
-      "name_lat": "УРБАН ЛАЙН КУЛЛИНАН СЕЛЕБРИТИ СТАЙЛ",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "id": "1572083603",
+      "name_lat": "УРАЛ МОДУС ПРЕЛЕСТЬ",
+      "name_ru": "УРАЛ МОДУС ПРЕЛЕСТЬ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "278567656",
+      "name_lat": "УРБАН ФОМ ХАУС ХЕЛЕН",
+      "name_ru": "УРБАН ФОМ ХАУС ХЕЛЕН",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1611087066",
       "name_lat": "УРСУЛА БЕНТЛИ ДЕЙЗИ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА БЕНТЛИ ДЕЙЗИ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "184255229",
+      "name_lat": "УРМИ ТОЙ ИЗ ДОНСКОЙ ЛИБЕРИИ",
+      "name_ru": "УРМИ ТОЙ ИЗ ДОНСКОЙ ЛИБЕРИИ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1687,54 +1671,53 @@
       "competition_dog_id": null
     },
     {
-      "id": "184255229",
-      "name_lat": "УРМИ ТОЙ ИЗ ДОНСКОЙ ЛИБЕРИИ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "id": "211441705",
+      "name_lat": "УРУС ШАЙТАН РАВШАН",
+      "name_ru": "УРУС ШАЙТАН РАВШАН",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "992762160",
       "name_lat": "УРСУЛА ФЕЛИЦИЯ ИЗ СТРАНЫ ЦВЕТОВ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ФЕЛИЦИЯ ИЗ СТРАНЫ ЦВЕТОВ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "902869996",
-      "name_lat": "УРСУЛА ИЗ КАЗАНСКОГО ХАНСТВА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1225500335",
+      "id": "1839165555",
       "name_lat": "УРАЛ ФОМ РУС ХАУС ТРАУМ",
-      "name_ru": "",
-      "breed": "Немецкая овчарка длинношерстная",
+      "name_ru": "УРАЛ ФОМ РУС ХАУС ТРАУМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "933386305",
       "name_lat": "УРСУС КЛИФФ НОРТИС",
-      "name_ru": "",
+      "name_ru": "УРСУС КЛИФФ НОРТИС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
+      "id": "1267916667",
+      "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН ГЕРА",
+      "name_ru": "УРАЛЬСКИЙ ДИВИЗИОН ГЕРА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "795509115",
       "name_lat": "УРСО БРАВО МАЛИФИСЕНТА ФО ОФ ФЛОКИШ ФЕСТ",
-      "name_ru": "",
+      "name_ru": "УРСО БРАВО МАЛИФИСЕНТА ФО ОФ ФЛОКИШ ФЕСТ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 7,
@@ -1745,15 +1728,6 @@
       "name_lat": "УРАЛ ТАУ ГУЛЬНАР",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "80097158",
-      "name_lat": "УРАЛЬСКАЯ БУСИНКА ОФЕЛИЯ",
-      "name_ru": "",
-      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1788,7 +1762,7 @@
     {
       "id": "873660348",
       "name_lat": "УРАЛ ТАУ ЯКШИ БАШАР",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ ЯКШИ БАШАР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -1797,7 +1771,7 @@
     {
       "id": "592266847",
       "name_lat": "УРУС ШАЙТАН НУКЕР",
-      "name_ru": "",
+      "name_ru": "УРУС ШАЙТАН НУКЕР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -1806,7 +1780,7 @@
     {
       "id": "1518971155",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН НИК МАККОЛИ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН НИК МАККОЛИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
@@ -1815,16 +1789,25 @@
     {
       "id": "533569928",
       "name_lat": "УРЛАУБ Ф.Д. КЛЯЙНЕН БЭРТИГЕН",
-      "name_ru": "",
+      "name_ru": "УРЛАУБ Ф.Д. КЛЯЙНЕН БЭРТИГЕН",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
+      "id": "649636366",
+      "name_lat": "УРФИНА С ВИШНЁВОЙ РОЩИ",
+      "name_ru": "УРФИНА С ВИШНЁВОЙ РОЩИ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1762118944",
       "name_lat": "УРУС ШАЙТАН РАДА",
-      "name_ru": "",
+      "name_ru": "УРУС ШАЙТАН РАДА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -1833,44 +1816,44 @@
     {
       "id": "1561511313",
       "name_lat": "УРУС ШАЙТАН РЭМ",
-      "name_ru": "",
+      "name_ru": "УРУС ШАЙТАН РЭМ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "768637817",
+      "id": "1735094957",
       "name_lat": "УРАЛ БЕСТ ЗЛАТА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "243446052",
+      "id": "568295917",
       "name_lat": "УРАЛ БУЛЬ АНДРОМЕДА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "УРАЛ БУЛЬ АНДРОМЕДА",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "952795094",
+      "id": "806743535",
       "name_lat": "УРБИНО",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "278567656",
-      "name_lat": "УРБАН ФОМ ХАУС ХЕЛЕН",
+      "id": "471260299",
+      "name_lat": "УРУС",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1878,7 +1861,7 @@
     {
       "id": "1793786344",
       "name_lat": "УРАЛЬСКАЯ БОГЕМИЯ ТИФФАНИ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ БОГЕМИЯ ТИФФАНИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
@@ -1887,7 +1870,7 @@
     {
       "id": "232800455",
       "name_lat": "УРСУЛА ТАУРИЭЛЬ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ТАУРИЭЛЬ",
       "breed": "НОРВЕЖСКИЙ ЭЛЬХУНД СЕРЫЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -1903,37 +1886,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "733031612",
-      "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА СНЕЖНАЯ КОРОЛЕВА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1572083603",
-      "name_lat": "УРАЛ МОДУС ПРЕЛЕСТЬ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "1889868146",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН БАРБАРА СТЕНВИК",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН БАРБАРА СТЕНВИК",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1452270471",
+      "id": "1284512100",
+      "name_lat": "УРСА-ЭЛЬ ЛОСК",
+      "name_ru": "УРСА-ЭЛЬ ЛОСК",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1217354255",
+      "name_lat": "УРМАН ПАША ВАЗИРА",
+      "name_ru": "УРМАН ПАША ВАЗИРА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "761635910",
       "name_lat": "УРАЛ ХАУС ГОЛДЕН ДЕЙЗИ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "УРАЛ ХАУС ГОЛДЕН ДЕЙЗИ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1941,17 +1924,17 @@
     {
       "id": "842528226",
       "name_lat": "УРАЛ ХАУС АМБАССАДОР",
-      "name_ru": "",
+      "name_ru": "УРАЛ ХАУС АМБАССАДОР",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "194058829",
+      "id": "119332385",
       "name_lat": "УРИЭЛЬ-ДЖЕНИФЕР",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "name_ru": "УРИЭЛЬ-ДЖЕНИФЕР",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -1959,34 +1942,34 @@
     {
       "id": "1097225556",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ШЕРИЛИН ФАНН",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ШЕРИЛИН ФАНН",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1143670897",
+      "id": "166679308",
       "name_lat": "УРАН ИЗ БЕЛОГО ЯРА",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "name_ru": "УРАН ИЗ БЕЛОГО ЯРА",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1167734455",
-      "name_lat": "УРАЛ ТАУ КАДРИЛЬ",
+      "id": "1832765566",
+      "name_lat": "УРАЙ КИЦУНЕ ЛЭТ БЬЮТИ БИ ИТЁНЭЛ",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "577903586",
       "name_lat": "УРИАНА ЛЭНД СКАЙ",
-      "name_ru": "",
+      "name_ru": "УРИАНА ЛЭНД СКАЙ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 10,
@@ -1995,53 +1978,44 @@
     {
       "id": "250817273",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ЕЛИСЕЙ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ЕЛИСЕЙ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1069828317",
+      "id": "28902426",
+      "name_lat": "УРАЛ ПРАЙД АЙКИ",
+      "name_ru": "УРАЛ ПРАЙД АЙКИ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "368224789",
       "name_lat": "УРАН ИЗ СИБИРСКИХ АФИН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "УРАН ИЗ СИБИРСКИХ АФИН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "211441705",
-      "name_lat": "УРУС ШАЙТАН РАВШАН",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "481900774",
-      "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН ГЕРА",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "8887351",
       "name_lat": "УРБАН ЛИОНЕСС САНДЕРРА",
-      "name_ru": "",
+      "name_ru": "УРБАН ЛИОНЕСС САНДЕРРА",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "47745792",
+      "id": "39631189",
       "name_lat": "УРСУЛА ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "name_ru": "УРСУЛА ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2058,17 +2032,8 @@
     {
       "id": "1978871053",
       "name_lat": "УРАРУСАНРИН ОДЗИ",
-      "name_ru": "",
+      "name_ru": "УРАРУСАНРИН ОДЗИ",
       "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1939916395",
-      "name_lat": "УРГАЛ СУЛУЗ ДЮНА",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2076,7 +2041,7 @@
     {
       "id": "570099194",
       "name_lat": "УРАЛЬСКИЙ СУВЕНИР ЦЕРЦЕЯ СУПЕР ШОУ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СУВЕНИР ЦЕРЦЕЯ СУПЕР ШОУ",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -2085,16 +2050,16 @@
     {
       "id": "242443487",
       "name_lat": "УРУК БАШ ИМПЕРИЯ",
-      "name_ru": "",
+      "name_ru": "УРУК БАШ ИМПЕРИЯ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "106933391",
-      "name_lat": "УРСУЛА ЗАГАДКА СТОЛЕТИЯ (Д- Ш)",
-      "name_ru": "",
+      "id": "1532981679",
+      "name_lat": "УРСУЛА ЗАГАДКА СТОЛЕТИЯ (Д-Ш)",
+      "name_ru": "УРСУЛА ЗАГАДКА СТОЛЕТИЯ (Д-Ш)",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 10,
@@ -2110,28 +2075,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "610762521",
-      "name_lat": "УРСА-ЭЛЬ ЛОСК",
+      "id": "1154687451",
+      "name_lat": "УРАЛ МОДУС ОЧАРОВАНЬЕ",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "ДОБЕРМАН",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "655665439",
       "name_lat": "УРСУЛА БЛЭК ИЗ ЗАМКА ПРИОРА",
-      "name_ru": "",
+      "name_ru": "УРСУЛА БЛЭК ИЗ ЗАМКА ПРИОРА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1648060001",
+      "id": "1901140986",
+      "name_lat": "УРАЛЬСКИЙ СУВЕНИР РИККИ МАРТИН",
+      "name_ru": "УРАЛЬСКИЙ СУВЕНИР РИККИ МАРТИН",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1528880684",
+      "name_lat": "УРАЛ ХАНТЕР ФАРТА",
+      "name_ru": "УРАЛ ХАНТЕР ФАРТА",
+      "breed": "GERMAN HUNTING TERRIER (GERMAN JAGDTERRIER)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1503457373",
       "name_lat": "УРСУЛА ДАР ВАЛЬКИРИИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "name_ru": "УРСУЛА ДАР ВАЛЬКИРИИ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2139,7 +2121,7 @@
     {
       "id": "721517254",
       "name_lat": "УРАЛ ИЗ ФОРТУНА МЕРДИ",
-      "name_ru": "",
+      "name_ru": "УРАЛ ИЗ ФОРТУНА МЕРДИ",
       "breed": "ДЛИННАЯ ОСТЕВАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -2148,26 +2130,17 @@
     {
       "id": "781213202",
       "name_lat": "УРАЛЬСКИЙ САД ЕКАТЕРИНА ВЕЛИКАЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ САД ЕКАТЕРИНА ВЕЛИКАЯ",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1486592894",
-      "name_lat": "УРСО БРАВО МАРВЕЛ БРУКС",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "91536041",
+      "id": "1519750452",
       "name_lat": "УРСУЛА",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -2175,7 +2148,7 @@
     {
       "id": "401142005",
       "name_lat": "УРУС ШАЙТАН ДИНАРА",
-      "name_ru": "",
+      "name_ru": "УРУС ШАЙТАН ДИНАРА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -2184,7 +2157,7 @@
     {
       "id": "240025544",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ЛАДА ЛЕГЕНДА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ЛАДА ЛЕГЕНДА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -2193,17 +2166,17 @@
     {
       "id": "672387139",
       "name_lat": "УРАЛ МОДУС РОНАЛЬДИНЬО",
-      "name_ru": "",
+      "name_ru": "УРАЛ МОДУС РОНАЛЬДИНЬО",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1651312221",
+      "id": "1371346134",
       "name_lat": "УРКАН С ФЭМИЛИ С ФРИВЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УРКАН С ФЭМИЛИ С ФРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2211,17 +2184,17 @@
     {
       "id": "1615809440",
       "name_lat": "УРГАНТ ВАНЕЧКА",
-      "name_ru": "",
+      "name_ru": "УРГАНТ ВАНЕЧКА",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1763317580",
+      "id": "234793257",
       "name_lat": "УРАЛЬСКИЙ ПРЕСТИЖ НИНА РИЧЧИ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2247,7 +2220,7 @@
     {
       "id": "1770535782",
       "name_lat": "УРБАН ЛАЙН ДИВА ДИА",
-      "name_ru": "",
+      "name_ru": "УРБАН ЛАЙН ДИВА ДИА",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 6,
@@ -2256,7 +2229,7 @@
     {
       "id": "821193753",
       "name_lat": "Урания Вон Хаус Белогорие",
-      "name_ru": "",
+      "name_ru": "Урания Вон Хаус Белогорие",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -2272,18 +2245,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1173139765",
-      "name_lat": "УРАЛЬСКИЙ САД ТАМЕРЛАН",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "id": "1439092980",
+      "name_lat": "УРСИНИЯ САНТИНИ ЗВЕЗДА УРАЛА",
+      "name_ru": "УРСИНИЯ САНТИНИ ЗВЕЗДА УРАЛА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1317631947",
+      "name_lat": "УРГА ДОЧЬ ГРОМА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "1459496650",
       "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН ВЕНЕРА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ДИВИЗИОН ВЕНЕРА",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 4,
@@ -2292,7 +2274,7 @@
     {
       "id": "1291163529",
       "name_lat": "УРАЛ ХАНТЕР ТАЛОС",
-      "name_ru": "",
+      "name_ru": "УРАЛ ХАНТЕР ТАЛОС",
       "breed": "GERMAN HUNTING",
       "breed_en": "",
       "total_shows": 3,
@@ -2301,28 +2283,10 @@
     {
       "id": "416544259",
       "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ЛЕДИ НОВОГОДНИЙ ПОДАРОК",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ ЗВЕЗДА ЛЕДИ НОВОГОДНИЙ ПОДАРОК",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1166717880",
-      "name_lat": "УРФИНА С ВИШНЁВОЙ РОЩИ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1154687451",
-      "name_lat": "УРАЛ МОДУС ОЧАРОВАНЬЕ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2337,7 +2301,7 @@
     {
       "id": "1002023315",
       "name_lat": "УРСУЛА ИЗ СОЮЗА КУРНОСЫХ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ИЗ СОЮЗА КУРНОСЫХ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 6,
@@ -2355,7 +2319,7 @@
     {
       "id": "173479122",
       "name_lat": "УРСУЛА ТЕНДЕР",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ТЕНДЕР",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -2371,48 +2335,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1088854074",
-      "name_lat": "УРУС",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1238301066",
       "name_lat": "УРСУЛА КРЫЛАТЫЙ СТРАЖ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА КРЫЛАТЫЙ СТРАЖ",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1440651915",
       "name_lat": "УРСУЛА ФОМ АЛИХЕЛЬ ХОФ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ФОМ АЛИХЕЛЬ ХОФ",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "28902426",
-      "name_lat": "УРАЛ ПРАЙД АЙКИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1317631947",
-      "name_lat": "УРГА ДОЧЬ ГРОМА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2434,18 +2371,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1183335410",
-      "name_lat": "УРСУЛА ИЗ ДОМА КАПАЛАК",
+      "id": "1999215962",
+      "name_lat": "УРСУС ХАУС АЛВАЙД",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "САМОЕД",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "1582284273",
       "name_lat": "УРАЛЬСКИЙ САД ХАЛИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ САД ХАЛИЯ",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
@@ -2454,25 +2390,16 @@
     {
       "id": "1317702822",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ЖИГАЛО",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ЖИГАЛО",
       "breed": "Неаполитанский мастиф",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1832765566",
-      "name_lat": "УРАЙ КИЦУНЕ ЛЭТ БЬЮТИ БИ ИТЁНЭЛ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1309767343",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ЧЕВ ЧЕЛИОС",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ЧЕВ ЧЕЛИОС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
@@ -2481,7 +2408,7 @@
     {
       "id": "719123657",
       "name_lat": "УРАЛЬСКИЙ СУВЕНИР ЧИЛИТА МАЙ МЕЛОДИ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СУВЕНИР ЧИЛИТА МАЙ МЕЛОДИ",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -2515,18 +2442,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "427652145",
-      "name_lat": "УРАЛЬСКАЯ БОГЕМИЯ ФРАНЧЕСКА",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
+      "id": "388643523",
+      "name_lat": "УРМАН ФОРСАЙТ ХЁРТ",
+      "name_ru": "УРМАН ФОРСАЙТ ХЁРТ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "401951531",
       "name_lat": "УРАЛ ТАУ ДОЛЬЧЕ ВИТА",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ ДОЛЬЧЕ ВИТА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 6,
@@ -2544,7 +2470,7 @@
     {
       "id": "279408523",
       "name_lat": "УРУС ШАЙТАН ФАН-ФАН ТЮЛЬПАН",
-      "name_ru": "",
+      "name_ru": "УРУС ШАЙТАН ФАН-ФАН ТЮЛЬПАН",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -2569,73 +2495,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1453256093",
+      "id": "70646893",
       "name_lat": "УРАЛ БУРЖУЙ ФОРЕВА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "name_ru": "УРАЛ БУРЖУЙ ФОРЕВА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1137167323",
+      "id": "1109764432",
       "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН ИЗАБЕЛЛА",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "name_ru": "УРАЛЬСКИЙ ДИВИЗИОН ИЗАБЕЛЛА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1439092980",
-      "name_lat": "УРСИНИЯ САНТИНИ ЗВЕЗДА УРАЛА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "878289212",
       "name_lat": "УРАНИЯ ЕРАМБУЛЬ",
-      "name_ru": "",
+      "name_ru": "УРАНИЯ ЕРАМБУЛЬ",
       "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1217354255",
-      "name_lat": "УРМАН ПАША ВАЗИРА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "189732757",
       "name_lat": "УРСУЛА ФЕЙРИ ПРИНЦЕСС",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ФЕЙРИ ПРИНЦЕСС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1901140986",
-      "name_lat": "УРАЛЬСКИЙ СУВЕНИР РИККИ МАРТИН",
+      "id": "589997202",
+      "name_lat": "Урания из Соколиного Гнезда",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "69949046",
-      "name_lat": "УРАНИЯ ИЗ СОКОЛИНОГО ГНЕЗДА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2643,7 +2542,7 @@
     {
       "id": "907035817",
       "name_lat": "УРГО КИНГ ДЭ БЭСТ",
-      "name_ru": "",
+      "name_ru": "УРГО КИНГ ДЭ БЭСТ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
@@ -2652,7 +2551,7 @@
     {
       "id": "285920232",
       "name_lat": "УРАЛ ТАУ НУРГУШ",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ НУРГУШ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -2686,10 +2585,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "182965672",
+      "id": "954518861",
       "name_lat": "УРАЛМАШЕНЬКА С ЗОЛОТОГО ГРАДА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР /",
+      "name_ru": "УРАЛМАШЕНЬКА С ЗОЛОТОГО ГРАДА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2715,8 +2614,17 @@
     {
       "id": "978760304",
       "name_lat": "УРСА СЛИПИНГ БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "УРСА СЛИПИНГ БЬЮТИ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1702447172",
+      "name_lat": "УРАЛА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2724,34 +2632,25 @@
     {
       "id": "725932578",
       "name_lat": "УРКАН С ФЕМИЛИ С ФРИВЕР",
-      "name_ru": "",
+      "name_ru": "УРКАН С ФЕМИЛИ С ФРИВЕР",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1811172828",
+      "id": "1685740830",
       "name_lat": "УРАЛЬСКАЯ БУСИНКА МИСТИКА",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_ru": "УРАЛЬСКАЯ БУСИНКА МИСТИКА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1210052961",
-      "name_lat": "УРАЛЬСКИЙ САД БОНИФАЦИЙ",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1821065618",
       "name_lat": "УРАЛ ТАУ КАЙСАР",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ КАЙСАР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -2785,10 +2684,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "1229489094",
+      "name_lat": "УРАЛЬСКИЙ СТРАЖ БАХТ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "685039372",
       "name_lat": "УРФИН МОРРИС",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "366443187",
+      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ЛАДОМИЛА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2814,7 +2731,7 @@
     {
       "id": "317727637",
       "name_lat": "УРБАН ЛАЙН КОРА КЭШМИР ДАЙМОНД",
-      "name_ru": "",
+      "name_ru": "УРБАН ЛАЙН КОРА КЭШМИР ДАЙМОНД",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 3,
@@ -2823,17 +2740,17 @@
     {
       "id": "303144858",
       "name_lat": "УРСУЛИЯ ИЗ ДОМА АЛЛЕНС",
-      "name_ru": "",
+      "name_ru": "УРСУЛИЯ ИЗ ДОМА АЛЛЕНС",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "439999208",
+      "id": "956979770",
       "name_lat": "УРСУЛА ЗАГАДКА СТОЛЕТИЯ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "УРСУЛА ЗАГАДКА СТОЛЕТИЯ",
+      "breed": "чихуахуа длинношерстный",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2844,13 +2761,13 @@
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "817909232",
       "name_lat": "УРАЛ ТАУ ЧИЛИТА",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ ЧИЛИТА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -2859,7 +2776,7 @@
     {
       "id": "1401277914",
       "name_lat": "УРТАШ ИЗ ОЗЕРНОГО КРАЯ",
-      "name_ru": "",
+      "name_ru": "УРТАШ ИЗ ОЗЕРНОГО КРАЯ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -2868,26 +2785,17 @@
     {
       "id": "1645430956",
       "name_lat": "УРСУЛА БРИТ ФАЙЕР",
-      "name_ru": "",
+      "name_ru": "УРСУЛА БРИТ ФАЙЕР",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "576441480",
+      "id": "1339912277",
       "name_lat": "УРСУЛА ИЗ ДОМА ГРЕЗ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1844257923",
-      "name_lat": "УРАЛЬСКАЯ БОГЕМИЯ АПОЛЛОН",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_ru": "УРСУЛА ИЗ ДОМА ГРЕЗ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2904,8 +2812,17 @@
     {
       "id": "276910452",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ БЛЕК СТАР",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ БЛЕК СТАР",
       "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "52151223",
+      "name_lat": "УРУС СПИРИТ ЛЮМОС",
+      "name_ru": "УРУС СПИРИТ ЛЮМОС",
+      "breed": "MINIATURE BULL",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2947,28 +2864,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "52151223",
-      "name_lat": "УРУС СПИРИТ ЛЮМОС",
-      "name_ru": "",
-      "breed": "MINIATURE BULL",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1405813945",
       "name_lat": "УРАЛЬСКИЙ ПРЕСТИЖ ДЕЙЕНЕРИС",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ПРЕСТИЖ ДЕЙЕНЕРИС",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "1289459998",
+      "name_lat": "УРАНИЯ СИБИРСКАЯ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "108743448",
       "name_lat": "УРАГАН ВИЛСОН ЛИ",
-      "name_ru": "",
+      "name_ru": "УРАГАН ВИЛСОН ЛИ",
       "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269066612",
+      "name_lat": "УРСУЛА БЛЭК ГОЛД",
+      "name_ru": "УРСУЛА БЛЭК ГОЛД",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2976,7 +2901,7 @@
     {
       "id": "1447679336",
       "name_lat": "УР-ТУЛАН АЙВА",
-      "name_ru": "",
+      "name_ru": "УР-ТУЛАН АЙВА",
       "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 5,
@@ -2985,17 +2910,17 @@
     {
       "id": "502174228",
       "name_lat": "УРКАН С ФЭМИЛИ'С ФРИВЕР",
-      "name_ru": "",
+      "name_ru": "УРКАН С ФЭМИЛИ'С ФРИВЕР",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "106342756",
+      "id": "1811158971",
       "name_lat": "УРАЛ ХАУС НАБОБ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УРАЛ ХАУС НАБОБ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3010,46 +2935,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "269066612",
-      "name_lat": "УРСУЛА БЛЭК ГОЛД",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "180826044",
-      "name_lat": "УРАЛ БУЛЬ ВАРВАРА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "601588968",
       "name_lat": "УРСУЛА",
       "name_ru": "",
       "breed": "КОРСО / ITALIAN CANE",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1191302004",
-      "name_lat": "УРМАН ИЗ ДОНСКОЙ ЛИБЕРИИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "575545699",
-      "name_lat": "УРСУЛА БЕЛАЯ КОРОЛЕВА",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3075,7 +2964,7 @@
     {
       "id": "994869888",
       "name_lat": "УРМАС БЛЭК ЛАЙТ ИЗ ДОМА ФИРКИС",
-      "name_ru": "",
+      "name_ru": "УРМАС БЛЭК ЛАЙТ ИЗ ДОМА ФИРКИС",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -3084,7 +2973,7 @@
     {
       "id": "19701554",
       "name_lat": "УРАГАН СТИВ С КРАСНОЙ ГОРКИ",
-      "name_ru": "",
+      "name_ru": "УРАГАН СТИВ С КРАСНОЙ ГОРКИ",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3102,7 +2991,7 @@
     {
       "id": "126029703",
       "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН ИЛЛИАДА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ДИВИЗИОН ИЛЛИАДА",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
@@ -3111,7 +3000,7 @@
     {
       "id": "1315629062",
       "name_lat": "УРАЛ ТАУ ТАТАМИ",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ ТАТАМИ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -3145,6 +3034,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "937772460",
+      "name_lat": "УРТОК ИЗ ЛЕГЕНДЫ РОХА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "905256777",
       "name_lat": "УРБАН ГЛОСС",
       "name_ru": "",
@@ -3163,18 +3061,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "619623532",
+      "name_lat": "УРФИНА",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "537365636",
       "name_lat": "Урус Шайтан Пинта",
-      "name_ru": "",
+      "name_ru": "Урус Шайтан Пинта",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "36599656",
       "name_lat": "УРФИН ДЖУС С БОЛЬШОЙ ВОЛГИ",
-      "name_ru": "",
+      "name_ru": "УРФИН ДЖУС С БОЛЬШОЙ ВОЛГИ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 5,
@@ -3183,17 +3090,26 @@
     {
       "id": "1282796447",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ЛЕТИЦИЯ КАСТА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ЛЕТИЦИЯ КАСТА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "90112554",
+      "id": "828256891",
       "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ЧАРЛЬЗ - 2",
+      "name_ru": "УРАЛЬСКИЙ ЦВЕТОК ЧАРЛЬЗ - 2",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1460237343",
+      "name_lat": "УРСУЛА",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3208,24 +3124,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1186527432",
-      "name_lat": "УРСУЛА",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "310827857",
-      "name_lat": "УРАЛА",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1224412774",
       "name_lat": "УРАЛЬСКИЙ ЦВЕТОК БАБЕТТА",
       "name_ru": "",
@@ -3237,7 +3135,7 @@
     {
       "id": "268846473",
       "name_lat": "УРАРУСАНРИН КУРО",
-      "name_ru": "",
+      "name_ru": "УРАРУСАНРИН КУРО",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
@@ -3246,7 +3144,7 @@
     {
       "id": "64861167",
       "name_lat": "УРМАНС ВЕЛИКОЛЕПНОЕ ЧУДО",
-      "name_ru": "",
+      "name_ru": "УРМАНС ВЕЛИКОЛЕПНОЕ ЧУДО",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -3255,7 +3153,7 @@
     {
       "id": "468363916",
       "name_lat": "УРБАНИЯ ИЗ ЛИКИНСКИХ",
-      "name_ru": "",
+      "name_ru": "УРБАНИЯ ИЗ ЛИКИНСКИХ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -3264,7 +3162,7 @@
     {
       "id": "1313373715",
       "name_lat": "УРСА ФОР ВИННЕРЗ ПРАЙСЗ",
-      "name_ru": "",
+      "name_ru": "УРСА ФОР ВИННЕРЗ ПРАЙСЗ",
       "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3316,6 +3214,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "30749716",
+      "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ЦЕЛАЯ ВСЕЛЕННАЯ",
+      "name_ru": "",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "426562486",
       "name_lat": "УРСА-ХАНДА БЛЭК",
       "name_ru": "",
@@ -3352,19 +3258,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "168214922",
-      "name_lat": "УРАЛ БЕАР АРМИЯ",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
+      "id": "1146402012",
+      "name_lat": "УРАЛ ПРАЙД АРЧИ",
+      "name_ru": "УРАЛ ПРАЙД АРЧИ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1091157875",
+      "id": "1562047671",
       "name_lat": "УРИКА АУС ШОГЕР ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "УРИКА АУС ШОГЕР ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3381,7 +3286,7 @@
     {
       "id": "1503474571",
       "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ЦАРИНА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ ЗВЕЗДА ЦАРИНА",
       "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -3390,7 +3295,7 @@
     {
       "id": "671828275",
       "name_lat": "УРАГНАР ЭЙШЕНТ ЛЕДЖЕНД",
-      "name_ru": "",
+      "name_ru": "УРАГНАР ЭЙШЕНТ ЛЕДЖЕНД",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -3424,33 +3329,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1728029939",
-      "name_lat": "УРАЛ БУЛЬ АГАТА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1229489094",
-      "name_lat": "УРАЛЬСКИЙ СТРАЖ БАХТ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "366443187",
-      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ЛАДОМИЛА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "170824182",
       "name_lat": "УРАН МОГУЧИЙ УРАГАН",
       "name_ru": "",
@@ -3471,17 +3349,17 @@
     {
       "id": "1911763867",
       "name_lat": "УРСАЛИНА ГОРДАЯ ЗВЕЗДА",
-      "name_ru": "",
+      "name_ru": "УРСАЛИНА ГОРДАЯ ЗВЕЗДА",
       "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "153847991",
+      "id": "594537131",
       "name_lat": "УРМАС ИЗ ДОМА СУРАКОВЫХ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "УРМАС ИЗ ДОМА СУРАКОВЫХ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3498,7 +3376,7 @@
     {
       "id": "1355550228",
       "name_lat": "УРАЛЬСКИЙ САД ШАХЕРЕЗАДА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ САД ШАХЕРЕЗАДА",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -3507,10 +3385,18 @@
     {
       "id": "126355750",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ БАРБИ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ БАРБИ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1325254839",
+      "name_lat": "УРМАН",
+      "name_ru": "",
+      "breed": "СИБИРСКАЯ ЛАЙКА",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3532,10 +3418,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1308147301",
+      "id": "1569906920",
       "name_lat": "УРАЛ БУЛЬ БЕРТА БРЕТАНИ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "УРАЛ БУЛЬ БЕРТА БРЕТАНИ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3543,7 +3429,7 @@
     {
       "id": "269767583",
       "name_lat": "УРИМАНКА АКСЕЛЬ ДЖЕМП",
-      "name_ru": "",
+      "name_ru": "УРИМАНКА АКСЕЛЬ ДЖЕМП",
       "breed": "Мопс чёрный",
       "breed_en": "",
       "total_shows": 4,
@@ -3559,10 +3445,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "680455013",
+      "id": "820864937",
       "name_lat": "УРАЛ ХАНТЕР ДРАТ ДАНКО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3570,7 +3456,7 @@
     {
       "id": "998276982",
       "name_lat": "УРЭСИЙ НАМАГАСИ",
-      "name_ru": "",
+      "name_ru": "УРЭСИЙ НАМАГАСИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -3579,7 +3465,7 @@
     {
       "id": "1209864666",
       "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА НА РАДОСТЬ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ ЗВЕЗДА НА РАДОСТЬ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -3588,7 +3474,7 @@
     {
       "id": "645556706",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ УРАН",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ УРАН",
       "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 2,
@@ -3622,10 +3508,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1552891888",
+      "id": "1820448247",
       "name_lat": "УРСУС ПРАЙМ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3644,15 +3530,6 @@
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ПАСКАЛЬ ЛЕ РОММ",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH BULLDOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1528880684",
-      "name_lat": "УРАЛ ХАНТЕР ФАРТА",
-      "name_ru": "",
-      "breed": "GERMAN HUNTING TERRIER (GERMAN JAGDTERRIER)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3712,18 +3589,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "367910069",
+      "id": "1866942598",
       "name_lat": "УРАЛ МОДУС РЕСПЕКТ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "name_ru": "УРАЛ МОДУС РЕСПЕКТ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1451350828",
       "name_lat": "УРАЛ ТАУ РУБИ РОУЗ",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ РУБИ РОУЗ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 8,
@@ -3732,7 +3609,7 @@
     {
       "id": "752774105",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ОРЛИТТА РУТ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ОРЛИТТА РУТ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -3745,6 +3622,14 @@
       "breed": "БАСЕНДЖИ ЗАПАДНОСИБИРСКАЯ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "188933626",
+      "name_lat": "УРБАН ИЗ ДОМА АЛЛЕНС",
+      "name_ru": "УРБАН ИЗ ДОМА АЛЛЕНС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3770,23 +3655,13 @@
       "name_lat": "УРСУЛА",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "236925787",
-      "name_lat": "УРАЛЬСКАЯ БОГЕМИЯ ГЕРБЕРА",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "617690923",
       "name_lat": "УРАЛ ХАУС ВИКИНГ ПОБЕДИТЕЛЬ К/Х",
-      "name_ru": "",
+      "name_ru": "УРАЛ ХАУС ВИКИНГ ПОБЕДИТЕЛЬ К/Х",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
@@ -3802,28 +3677,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "266552255",
-      "name_lat": "УРАЛЬСКАЯ БУСИНКА УВЕРТЮРА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "277042336",
+      "id": "493137455",
       "name_lat": "УРУСВАТИ РУС НОРД",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УРУСВАТИ РУС НОРД",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "532589719",
+      "id": "1165076747",
       "name_lat": "УРСУЛА 2 С ТИХОГО ДОНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3840,26 +3706,17 @@
     {
       "id": "1352706463",
       "name_lat": "УРУК БАШ ВАЙРА",
-      "name_ru": "",
+      "name_ru": "УРУК БАШ ВАЙРА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1392872235",
-      "name_lat": "УРУК БАШ ИМПЕРИАЛ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "17467842",
+      "id": "35200807",
       "name_lat": "УРАЛ БУЛЬ БЕНЖАМИН",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "УРАЛ БУЛЬ БЕНЖАМИН",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3966,7 +3823,7 @@
     {
       "id": "1021965675",
       "name_lat": "УРАН КАЙРАТ НУКЕР",
-      "name_ru": "",
+      "name_ru": "УРАН КАЙРАТ НУКЕР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3975,7 +3832,7 @@
     {
       "id": "258650753",
       "name_lat": "УРЛИХ ИЗ ДОМА МАДАМИ",
-      "name_ru": "",
+      "name_ru": "УРЛИХ ИЗ ДОМА МАДАМИ",
       "breed": "большой швейцарский зенненхунд",
       "breed_en": "",
       "total_shows": 2,
@@ -3984,7 +3841,7 @@
     {
       "id": "292507588",
       "name_lat": "УРСАЛИНА БЭЛЬ",
-      "name_ru": "",
+      "name_ru": "УРСАЛИНА БЭЛЬ",
       "breed": "СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 2,
@@ -3993,7 +3850,7 @@
     {
       "id": "175943505",
       "name_lat": "УРСУЛА ДЖАМИ",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ДЖАМИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -4009,10 +3866,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "116823824",
+      "id": "1607631319",
       "name_lat": "УРСАЛИНА",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4045,10 +3902,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1855176790",
+      "id": "1053655534",
       "name_lat": "УРСУЛА РУЖ",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4090,10 +3947,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1822281813",
+      "id": "146120362",
+      "name_lat": "УРМАН",
+      "name_ru": "",
+      "breed": "ЛАЙКА ЗАПАДНО",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "982429800",
       "name_lat": "УРИЯ",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4144,6 +4009,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1564021417",
+      "name_lat": "УРАЛ-ТАУ УЙ-ТАШ КОЛЫБЕЛЬ АРИЕВ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "441859448",
       "name_lat": "УРАЛЬСКАЯ ВЬЮГА ИЗ ДОМА ОСТЕЕ",
       "name_ru": "",
@@ -4162,10 +4036,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1042872378",
+      "id": "1640624922",
       "name_lat": "УРСУЛА БАМБОЛА",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ АКИТА",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4189,10 +4063,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1390005369",
+      "id": "1607636548",
       "name_lat": "УР-ТУЛАН ЕНЕЙ",
       "name_ru": "",
-      "breed": "ЗАПАДНО-СИБИРСКАЯ ЛАЙКА /",
+      "breed": "ЗАПАДНО-СИБИРСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4243,28 +4117,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1050475282",
+      "id": "481722515",
       "name_lat": "УРУС ШАЙТАН ЧЕРЧИЛЬ",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1624680900",
-      "name_lat": "УРАЛ-ТАУ УЙ-ТАШ КОЛЫБЕЛЬ АРИЕВ",
-      "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1889683513",
+      "id": "1526190084",
       "name_lat": "УРАГАН ЗОВ ПОЛЕЙ",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ /",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4324,11 +4189,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "438683182",
+      "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ЭЛЕН ДЕ ФУЖРОЛЬ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "32529767",
       "name_lat": "УРГАНТ ВЕЧЕРНИЙ",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1159304172",
+      "name_lat": "УРСУЛА БРИФТ ФАЙЕР",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "251677265",
+      "name_lat": "УРАЛ ФОМ РУС ХАУС ТРАУМ (Д/Ш)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4389,7 +4278,7 @@
     {
       "id": "1379612600",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ХИРАДДА МАККИ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ХИРАДДА МАККИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
@@ -4414,21 +4303,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "787997083",
+      "id": "867803060",
       "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН ИТАЛО КИРО",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "УРАЛЬСКИЙ ДИВИЗИОН ИТАЛО КИРО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "924423190",
       "name_lat": "УРСАЛИНА ЛУЛУ ИЗ ВИЛЛИНОГО ДОМА",
-      "name_ru": "",
+      "name_ru": "УРСАЛИНА ЛУЛУ ИЗ ВИЛЛИНОГО ДОМА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1512801284",
+      "name_lat": "УРС БЛЕК ДАЙМОНД",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4441,19 +4339,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "894854201",
-      "name_lat": "УРС БЛЕК ДАЙМОНД",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "462170342",
       "name_lat": "УРФИНА",
       "name_ru": "",
       "breed": "TIBETAN MASTIFF",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "657398885",
+      "name_lat": "УРСУЛА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4488,7 +4386,7 @@
     {
       "id": "85870735",
       "name_lat": "УРСО БРАВО ЕНАЙ",
-      "name_ru": "",
+      "name_ru": "УРСО БРАВО ЕНАЙ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
@@ -4569,7 +4467,7 @@
     {
       "id": "38112365",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ОЛЕРИ ДРИМ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ОЛЕРИ ДРИМ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -4578,7 +4476,7 @@
     {
       "id": "1564498709",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ПАССИЯ ВАЛЕРИ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ПАССИЯ ВАЛЕРИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -4587,7 +4485,7 @@
     {
       "id": "527309607",
       "name_lat": "УРСУЛА ВЕЛЕКОЛЕПНАЯ КНЯЖНА МАРГО",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ВЕЛЕКОЛЕПНАЯ КНЯЖНА МАРГО",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -4612,10 +4510,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "265053036",
+      "id": "1356568647",
       "name_lat": "УРСУЛА ЛЕДИ",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4666,15 +4564,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1868499040",
-      "name_lat": "УРАЛА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "988135077",
       "name_lat": "УРСУС ПРАЙМ",
       "name_ru": "",
@@ -4720,10 +4609,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "968109197",
+      "id": "201588158",
       "name_lat": "УРАН",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4756,10 +4645,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "960758624",
+      "id": "1895911949",
       "name_lat": "УРМАС ГОЛДЕН ВИНД",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4828,19 +4717,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1244641740",
+      "id": "122307426",
       "name_lat": "УРУС ФОМ РУС ХАУС ТРАУМ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "394076925",
-      "name_lat": "УРАЙ КИЦУНЕ ЕМЭЙ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4878,6 +4758,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1941971934",
+      "name_lat": "УРУС ФОМ РУС ХАУС ТРАУМ (Д/Ш)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4963,6 +4851,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1074296909",
+      "name_lat": "УРСА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "30145204",
       "name_lat": "УРАЛЬСКАЯ БОГЕМИЯ ВИКТОРИЯ",
       "name_ru": "",
@@ -4990,15 +4886,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1289459998",
-      "name_lat": "УРАНИЯ СИБИРСКАЯ",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1116978963",
       "name_lat": "УРАЛ ХАУС БУКЛЯ ВЫБОР КОРОЛЕВЫ",
       "name_ru": "",
@@ -5010,7 +4897,7 @@
     {
       "id": "269919206",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ДЕЛИЯ ФЕРНАНДОС",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ДЕЛИЯ ФЕРНАНДОС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -5019,28 +4906,19 @@
     {
       "id": "1479697896",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН СИТОНИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН СИТОНИЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "619623532",
-      "name_lat": "УРФИНА",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "48448998",
       "name_lat": "УРГУТ ИЗ ЛЕГЕНДЫ РОХА",
-      "name_ru": "",
+      "name_ru": "УРГУТ ИЗ ЛЕГЕНДЫ РОХА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -5059,6 +4937,14 @@
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1791172160",
+      "name_lat": "У-РЫЖИЙ",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -5082,7 +4968,7 @@
     {
       "id": "50043863",
       "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН ДИАНА ДАЙМОНД",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ДИВИЗИОН ДИАНА ДАЙМОНД",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 3,
@@ -5098,10 +4984,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "715863783",
+      "id": "1369615291",
       "name_lat": "УРРИС АУС ОЛЕНБУРГ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -5109,10 +4995,9 @@
     {
       "id": "1243646311",
       "name_lat": "УРАЛ ТАУ СИМПАТЯШКА",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ СИМПАТЯШКА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -5143,8 +5028,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1952694829",
-      "name_lat": "УРАЛЬСКАЯ БУСИНКА ПАННА- КОТТА",
+      "id": "13163651",
+      "name_lat": "УРАЛЬСКАЯ БУСИНКА ПАННА-КОТТА",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
@@ -5170,10 +5055,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "110115581",
+      "id": "611404062",
+      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК НЕЛЛИ",
+      "name_ru": "УРАЛЬСКИЙ ЦВЕТОК НЕЛЛИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "705299232",
       "name_lat": "УРСУЛА",
       "name_ru": "",
-      "breed": "КАНЕ КОРСО /",
+      "breed": "КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5269,15 +5163,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "611404062",
-      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК НЕЛЛИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "54183577",
       "name_lat": "УРЛАНА AMORE CORDE",
       "name_ru": "",
@@ -5307,7 +5192,7 @@
     {
       "id": "1176287220",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ГАБРИЭЛЬ АНВАР",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ГАБРИЭЛЬ АНВАР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -5341,12 +5226,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "937772460",
-      "name_lat": "УРТОК ИЗ ЛЕГЕНДЫ РОХА",
+      "id": "655308128",
+      "name_lat": "УРСУЛА БЕЛАЯ МЕДВЕДИЦА",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ (пятно)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1758203451",
+      "name_lat": "у РУССКИЙ ФЛАГМАН ГЕНИЙ",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -5379,10 +5272,19 @@
     {
       "id": "1372431792",
       "name_lat": "УРАЛ ТАУ ЯМАЛ",
-      "name_ru": "",
+      "name_ru": "УРАЛ ТАУ ЯМАЛ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "524274640",
+      "name_lat": "УРУГВАЙ С ЖЕМЧУЖНОЙ",
+      "name_ru": "УРУГВАЙ С ЖЕМЧУЖНОЙ",
+      "breed": "LABRADOR RETRIEVER",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -5397,19 +5299,18 @@
     {
       "id": "220467417",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ОЛИНДА ФОРД",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ОЛИНДА ФОРД",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1235210241",
-      "name_lat": "УРУГВАЙ С ЖЕМЧУЖНОЙ",
+      "id": "723361070",
+      "name_lat": "УРФИН",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -5417,6 +5318,15 @@
       "name_lat": "УРУМИ ЯТО",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116230051",
+      "name_lat": "-УРИ ГРАНД ВАЛЕНТАЙН",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5449,15 +5359,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "723361070",
-      "name_lat": "УРФИН",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1743264377",
       "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ЭТАЛОН",
       "name_ru": "",
@@ -5476,10 +5377,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1355410341",
+      "id": "665914622",
       "name_lat": "УРАЛ ХАУС АНТАНТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5521,6 +5422,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "427387381",
+      "name_lat": "УРФИН",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "943627655",
       "name_lat": "УРЛИХ ИЗ БЕЛОГО ЯРА",
       "name_ru": "",
@@ -5536,6 +5445,14 @@
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1702168769",
+      "name_lat": "УРКАН С ФЭМЕЛИ'С ФРИВЕР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -5575,30 +5492,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "218869075",
-      "name_lat": "УРУНЧА ИЗ АЛЕКСАНДРОВОЙ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1584492922",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ИВАН ГРОЗНЫЙ",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1367332441",
-      "name_lat": "УРБАН ИЗ ДОМА АЛЛЕНС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -5631,37 +5530,44 @@
     {
       "id": "246279070",
       "name_lat": "УРАЛЬСКИЙ САД ЖГУЧИЙ ПЕРЕЦ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ САД ЖГУЧИЙ ПЕРЕЦ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1742692875",
-      "name_lat": "УРСУЛИНА ИЗ БЕЛОЙ БРИГАДЫ",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "id": "10481954",
+      "name_lat": "УРСУЛ С АЛТАЙ АЯН",
+      "name_ru": "УРСУЛ С АЛТАЙ АЯН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "125101935",
+      "name_lat": "УРАЛ БЕАР БОМБА",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1954864645",
-      "name_lat": "УРАЙ КИЦУНЕ ДАКИНИ",
+      "id": "1665832928",
+      "name_lat": "УРЗА МАЛИЛОВЕ АНЮТИНЫ ГЛАЗКИ",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "10481954",
-      "name_lat": "УРСУЛ С АЛТАЙ АЯН",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "1742692875",
+      "name_lat": "УРСУЛИНА ИЗ БЕЛОЙ БРИГАДЫ",
+      "name_ru": "УРСУЛИНА ИЗ БЕЛОЙ БРИГАДЫ",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -5674,19 +5580,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "125101935",
-      "name_lat": "УРАЛ БЕАР БОМБА",
+      "id": "1098974857",
+      "name_lat": "УРМАН-ЛОКИ",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1517483705",
+      "id": "778342833",
+      "name_lat": "УРЗА МАЛИЛОВЕ АЗАЛИЯ",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1028705341",
       "name_lat": "УРБАН",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5696,6 +5610,31 @@
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ЕСЕНИЯ",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1435582866",
+      "name_lat": "УРАЛ БЕАР ВЕРТА",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "931717037",
+      "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА РЕЙНА",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1312246062",
+      "name_lat": "УРАЛ ПРАЙД АЗУМИ АЙ",
+      "name_ru": "УРАЛ ПРАЙД АЗУМИ АЙ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5719,10 +5658,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "1066003090",
+      "name_lat": "УРСУЛА ДЖОНС",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1473150921",
       "name_lat": "УРАЛЬСКАЯ БУСИНКА КАРАМЕЛЬКА",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "518820935",
+      "name_lat": "УРМАС БРЕЙВ ХАРТ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5755,18 +5712,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "982269250",
-      "name_lat": "УРМАС БРЕЙВ ХАРТ",
+      "id": "1172641175",
+      "name_lat": "УРАЛ БЕАР ВАЛЬКИРИЯ",
       "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
+      "breed": "РОТВЕЙЛЕР",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "1729293899",
       "name_lat": "УРАЛЬСКАЯ СКАЗКА УДАЛАЯ КАЛИНКА МАЛИНКА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ СКАЗКА УДАЛАЯ КАЛИНКА МАЛИНКА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -5782,6 +5738,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "930630240",
+      "name_lat": "УРМАН",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "492911978",
       "name_lat": "УРСУЛА",
       "name_ru": "",
@@ -5791,37 +5756,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "294517004",
-      "name_lat": "УРМАН-ЛОКИ",
+      "id": "1843295349",
+      "name_lat": "УР ХАН ЭМИР",
       "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1066003090",
-      "name_lat": "УРСУЛА ДЖОНС",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "741875890",
-      "name_lat": "УРАЛЬСКАЯ ЛИНИЯ АЛАТЫРЬ КАК СОЛЬ С ПЕРЦЕМ.",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "730576275",
-      "name_lat": "УРАЛ ПРАЙД АЗУМИ АЙ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5917,18 +5855,25 @@
       "competition_dog_id": null
     },
     {
-      "id": "1435582866",
-      "name_lat": "УРАЛ БЕАР ВЕРТА",
+      "id": "1552282959",
+      "name_lat": "УРАЛ БЕАР ВЕЛЕС",
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "617274146",
+      "name_lat": "УРАЛЬСКИЙ СТРАЖ ЧАЧА",
+      "name_ru": "",
+      "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "598935288",
       "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН БРИДЖИТ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ДИВИЗИОН БРИДЖИТ",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 3,
@@ -5937,7 +5882,7 @@
     {
       "id": "42952259",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ВИКТОРИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ВИКТОРИЯ",
       "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
@@ -5946,7 +5891,7 @@
     {
       "id": "1670713485",
       "name_lat": "УРУСАЙ ТЕНШИ",
-      "name_ru": "",
+      "name_ru": "УРУСАЙ ТЕНШИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -5955,17 +5900,25 @@
     {
       "id": "807343246",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ГОЛИАФ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ГОЛИАФ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1691350493",
+      "id": "1324538493",
+      "name_lat": "УРСУЛА ЭТУАЛЬ",
+      "name_ru": "УРСУЛА ЭТУАЛЬ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "890004686",
       "name_lat": "УРБАН ПРИНЦЕСС ЖАСМИН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "УРБАН ПРИНЦЕСС ЖАСМИН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5973,17 +5926,25 @@
     {
       "id": "34570786",
       "name_lat": "УРСУЛА ФОН ДЕР ЛЯЙН",
-      "name_ru": "",
+      "name_ru": "УРСУЛА ФОН ДЕР ЛЯЙН",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "893709285",
+      "id": "1146438892",
+      "name_lat": "Урфин Джус из Ахлябиновской Рощи",
+      "name_ru": "Урфин Джус из Ахлябиновской Рощи",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "358961470",
       "name_lat": "УРСУЛА НОРДХОФ ИГЛЕН С ЛАДОНИ АНГЕЛА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УРСУЛА НОРДХОФ ИГЛЕН С ЛАДОНИ АНГЕЛА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5991,7 +5952,7 @@
     {
       "id": "1859340827",
       "name_lat": "УРАЛЬСКИЙ БАСТИОН ГАММА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ БАСТИОН ГАММА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -6003,15 +5964,6 @@
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "446203338",
-      "name_lat": "УРСУЛА",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6106,15 +6058,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "266477326",
-      "name_lat": "УРМАН-ЛОКИ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "861664700",
       "name_lat": "УР-ЗАРА",
       "name_ru": "",
@@ -6124,19 +6067,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "465871665",
+      "id": "344671534",
       "name_lat": "УРСА",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1953041220",
+      "id": "1260685890",
       "name_lat": "УРАЛ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6151,19 +6094,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810824866",
+      "id": "109758541",
       "name_lat": "УРСУЛА",
       "name_ru": "",
-      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР) ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР) ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1884538323",
+      "id": "15085678",
       "name_lat": "УРАЛЬСКОЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР /",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "938522467",
+      "name_lat": "УРС ИЗ НЕВСКОЙ ТРОЙКИ",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "242625188",
+      "name_lat": "УРАГАН ИЗ ЦАРСКОСЕЛЬСКОЙ УСАДЬБЫ",
+      "name_ru": "УРАГАН ИЗ ЦАРСКОСЕЛЬСКОЙ УСАДЬБЫ",
+      "breed": "СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6250,11 +6211,44 @@
       "competition_dog_id": null
     },
     {
+      "id": "741875890",
+      "name_lat": "УРАЛЬСКАЯ ЛИНИЯ АЛАТЫРЬ КАК СОЛЬ С ПЕРЦЕМ.",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "596405074",
       "name_lat": "УРСАЛИНА ТРИУМФАЛЬ",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1411281993",
+      "name_lat": "УРАЛЬСКИЙ САД ПЕГАС",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1452765153",
+      "name_lat": "УРАНА С КОЛЫМСКОЙ СТРАЖИ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА / EAST",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1630940123",
+      "name_lat": "УРГА С КОЛЫМСКОЙ СТРАЖИ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА / EAST",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6277,10 +6271,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "240162332",
+      "id": "230680357",
       "name_lat": "УРАЛ БУЛЬ ГАЛА",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6295,11 +6289,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "336063239",
+      "id": "109048774",
       "name_lat": "УРГАН БРЭЙВ ЭЗ Э ЛАЙН",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "210715367",
+      "name_lat": "УРАЛ МОДУС РОСКОШЬ",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1548044775",
+      "name_lat": "УРАЛ ХАУС ПРИНЦЕСС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6389,15 +6399,6 @@
       "name_lat": "УРАНИЯ БРИЛЛИАНСЕ ГАЛАКСИ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1702168769",
-      "name_lat": "УРКАН С ФЭМЕЛИ'С ФРИВЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6529,6 +6530,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1785030811",
+      "name_lat": "УРСУЛА ПРИНЦЕСА НОЧИ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "466569249",
       "name_lat": "УРСУЛИНА АЙСИ НАЙС ОТ ДЯДИ СЭМА",
       "name_ru": "",
@@ -6637,10 +6647,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "271182866",
+      "id": "1960806781",
       "name_lat": "УРФИН ДЖУС ГАРСИА",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6655,11 +6665,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1172641175",
-      "name_lat": "УРАЛ БЕАР ВАЛЬКИРИЯ",
+      "id": "900627724",
+      "name_lat": "УРСУС ИЗ ДОМА РАЙДЕР",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6673,9 +6682,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1173471563",
+      "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН БЕН БАРНС",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1782487958",
       "name_lat": "УРУС ШАЙТАН ЧАК",
-      "name_ru": "",
+      "name_ru": "УРУС ШАЙТАН ЧАК",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
       "total_shows": 2,
@@ -6684,7 +6701,7 @@
     {
       "id": "860158634",
       "name_lat": "УРЖ ГРЭЙТ АЛАНИЯ",
-      "name_ru": "",
+      "name_ru": "УРЖ ГРЭЙТ АЛАНИЯ",
       "breed": "СТАФФОРДШ СТАНДАРТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -6693,7 +6710,7 @@
     {
       "id": "1922729269",
       "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ГОРАЦИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ЦВЕТОК ГОРАЦИЯ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -6702,7 +6719,7 @@
     {
       "id": "1354924488",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ОТИЛИЯ ДАРЛЕН",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ОТИЛИЯ ДАРЛЕН",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -6711,7 +6728,7 @@
     {
       "id": "269052817",
       "name_lat": "УРАЛ ХАУС ШАЛЬНАЯ ИМПЕРАТРИЦА",
-      "name_ru": "",
+      "name_ru": "УРАЛ ХАУС ШАЛЬНАЯ ИМПЕРАТРИЦА",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -6720,7 +6737,7 @@
     {
       "id": "1995575217",
       "name_lat": "УРУС ШАЙТАН ИРИСКА ШАЙН СТАР",
-      "name_ru": "",
+      "name_ru": "УРУС ШАЙТАН ИРИСКА ШАЙН СТАР",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -6729,7 +6746,7 @@
     {
       "id": "1515807065",
       "name_lat": "УРАЙ КИЦУНЕ ДЕНСЕЦУ",
-      "name_ru": "",
+      "name_ru": "УРАЙ КИЦУНЕ ДЕНСЕЦУ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
@@ -6738,26 +6755,17 @@
     {
       "id": "209367658",
       "name_lat": "УРАГАН ИЗУМРУД МЭН",
-      "name_ru": "",
+      "name_ru": "УРАГАН ИЗУМРУД МЭН",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "242625188",
-      "name_lat": "УРАГАН ИЗ ЦАРСКОСЕЛЬСКОЙ УСАДЬБЫ",
-      "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "987267742",
+      "id": "598195014",
       "name_lat": "УРСУЛА СИЛК ДИВА",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "УРСУЛА СИЛК ДИВА",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6765,7 +6773,7 @@
     {
       "id": "215150384",
       "name_lat": "УРФИНА ДЖУСС ТЕСОРО",
-      "name_ru": "",
+      "name_ru": "УРФИНА ДЖУСС ТЕСОРО",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -6774,26 +6782,25 @@
     {
       "id": "267584523",
       "name_lat": "УРАЛЬСКАЯ БУСИНКА ПРЕЛЕСТНАЯ МАЛЫШКА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ БУСИНКА ПРЕЛЕСТНАЯ МАЛЫШКА",
       "breed": "SPITZ MINIATURE SPITZ ORANGE, GREY, OTHER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1625613092",
-      "name_lat": "УРС ИЗ НЕВСКОЙ ТРОЙКИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
+      "id": "1551003419",
+      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК КРИСТИН",
+      "name_ru": "УРАЛЬСКИЙ ЦВЕТОК КРИСТИН",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "147837413",
+      "id": "1196768062",
       "name_lat": "УРФИН С ЛАДОНИ АНГЕЛА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "УРФИН С ЛАДОНИ АНГЕЛА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6801,7 +6808,7 @@
     {
       "id": "712297760",
       "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА МАМИН КАПРИЗ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКАЯ ЗВЕЗДА МАМИН КАПРИЗ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -6810,7 +6817,7 @@
     {
       "id": "295327998",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ЕВА ФЕНТИ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ЕВА ФЕНТИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -6819,17 +6826,8 @@
     {
       "id": "236500561",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ЦИНИЯ",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ ТАЛИСМАН ЦИНИЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1154742532",
-      "name_lat": "УРСУЛА ПРИНЦЕСА НОЧИ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6837,7 +6835,7 @@
     {
       "id": "588831081",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ОДЕССА",
-      "name_ru": "",
+      "name_ru": "УРАЛЬСКИЙ СТРАЖ ОДЕССА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -6846,17 +6844,26 @@
     {
       "id": "136552485",
       "name_lat": "УРБАН СТАЙЛ ПЕРФЕКТ СКАЙУОКЕР",
-      "name_ru": "",
+      "name_ru": "УРБАН СТАЙЛ ПЕРФЕКТ СКАЙУОКЕР",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "639011704",
+      "id": "424943372",
       "name_lat": "УРСУС ХАУС БЛЭК ДЖЕК",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "УРСУС ХАУС БЛЭК ДЖЕК",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1255475321",
+      "name_lat": "УРСА ЛАВИНА ИЗ ЛЮБИМОЙ СКАЗКИ",
+      "name_ru": "УРСА ЛАВИНА ИЗ ЛЮБИМОЙ СКАЗКИ",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6916,10 +6923,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "687193986",
+      "id": "1193918339",
       "name_lat": "УРАГАН МИТЧ",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7042,10 +7049,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1328840398",
+      "id": "12513815",
       "name_lat": "УРМАН",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7132,10 +7139,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "353678908",
+      "id": "1931517529",
       "name_lat": "УРТА",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7145,15 +7152,6 @@
       "name_lat": "УРФИНА",
       "name_ru": "",
       "breed": "ФАРАОНОВ ЯПОНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "930630240",
-      "name_lat": "УРМАН",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7195,20 +7193,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "762513002",
+      "id": "1124901051",
       "name_lat": "УРЕЛИЙ",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "681824613",
+      "id": "1123513080",
       "name_lat": "УРЕЛИЙ",
       "name_ru": "",
-      "breed": "KING ФАЛЕН) ПАПИЙОН /",
+      "breed": "KING ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "180641665",
+      "name_lat": "УРА РЕ МИЯ",
+      "name_ru": "",
+      "breed": "СЕТТЕР ГОРДОН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7231,6 +7237,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1393053023",
+      "name_lat": "УРФИН ДЖУС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1181844493",
       "name_lat": "УРБАН",
       "name_ru": "",
@@ -7249,19 +7263,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "171053285",
+      "id": "1888713295",
       "name_lat": "УРАН",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1171953424",
-      "name_lat": "УРСУЛА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7276,10 +7281,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1304956569",
+      "id": "682207460",
       "name_lat": "УРСУЛА",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР /",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7321,28 +7326,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "246484711",
+      "id": "148482869",
       "name_lat": "УРМАС ЛОЙД",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1552677978",
-      "name_lat": "УР ХАН ЭМИР",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1843295349",
-      "name_lat": "УР ХАН ЭМИР",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7528,10 +7515,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "244341013",
+      "id": "340032523",
       "name_lat": "УРФИН ДЖУС",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7546,8 +7533,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1803302105",
-      "name_lat": "УРМАН- ЛОКИ",
+      "id": "1346473417",
+      "name_lat": "УРМАН-ЛОКИ",
       "name_ru": "",
       "breed": "СКИЙ",
       "breed_en": "",
@@ -7564,10 +7551,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1429932694",
+      "id": "1877604139",
       "name_lat": "УРСА УАЙТ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7582,28 +7569,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "746360896",
-      "name_lat": "УРСУЛА",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1976037083",
       "name_lat": "УРАЙ",
       "name_ru": "",
       "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1098974857",
-      "name_lat": "УРМАН-ЛОКИ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7690,8 +7659,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "667557354",
-      "name_lat": "УРГАН Д-Ш",
+      "id": "264167327",
+      "name_lat": "УРГАН",
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
@@ -7762,19 +7731,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1897156840",
-      "name_lat": "УР ХАН ЭМИР",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "117613723",
+      "id": "1203936722",
       "name_lat": "УРАЛЬСКОЙ",
       "name_ru": "",
-      "breed": "ИСПАНСКАЯ ГОНЧАЯ /",
+      "breed": "ИСПАНСКАЯ ГОНЧАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7789,10 +7749,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1606895153",
-      "name_lat": "УРГАН Д-Ш",
+      "id": "508947314",
+      "name_lat": "УРГАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7807,10 +7767,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "289571332",
+      "id": "578497051",
       "name_lat": "УРСУЛА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7820,6 +7780,50 @@
       "name_lat": "УРАН",
       "name_ru": "",
       "breed": "ЗЕННЕНХУНД БЕРНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1847552445",
+      "name_lat": "УРЗЕНА ЗОЛОТАЯ КОРОЛЕВА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1470312435",
+      "name_lat": "УРААН С ЯСИНОВЦА",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1499696279",
+      "name_lat": "УРАГАН КУРАЖА МИЛАНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "262288839",
+      "name_lat": "УРАЛ БОГАТЫРЬ ЗЛАТО ЕКАТЕРИНЫ",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1841281927",
+      "name_lat": "УР-ТУЛАН ТАВА",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7879,10 +7883,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1859404221",
+      "id": "1475967968",
       "name_lat": "УРСУЛА ПЭРИС ЗЕСТ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7951,10 +7955,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "954124806",
+      "id": "836392003",
       "name_lat": "УРЖ ГРЭЙ АЛАНИЯ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7978,10 +7982,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "229298665",
+      "id": "85017204",
       "name_lat": "УРСУЛА ЭНИСТОН ДИАС",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8007,15 +8011,6 @@
     {
       "id": "1069541855",
       "name_lat": "УРУШ МАКУР-НАРДЭК",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "24497871",
-      "name_lat": "УРМАН ПАША ВИДЖАЙ ДЛЯ АЛЬМЕТЬЕВСКА",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
       "breed_en": "",
@@ -8068,10 +8063,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "529605765",
+      "id": "1815719832",
       "name_lat": "УРУСВАТИ РУС ТРАМП",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8081,6 +8076,15 @@
       "name_lat": "УРСУЛА БОЛЬШАЯ БЕЛАЯ",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "433214686",
+      "name_lat": "у РОЗА ЛОУНА ФОР ФРОЛАНД",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8266,10 +8270,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1675561089",
+      "id": "1765791580",
       "name_lat": "УРАЛ МОДУС НЕНАГЛЯДНАЯ",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8293,10 +8297,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "940397623",
+      "id": "1306115088",
       "name_lat": "УРСУЛА ЭЛЛАР",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8356,10 +8360,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "622846684",
+      "id": "61586405",
       "name_lat": "УРАЛ БУЛЬ ВЕРИНЕЯ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8450,6 +8454,15 @@
       "name_lat": "УРАЛЬСКИЙ САД ЗНАТНАЯ ДИНАСТИЯ",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "527149556",
+      "name_lat": "УРАЛЬСКАЯ ЛИНИЯ АЛАТЫРЬ КАК СОЛЬ С ПЕРЦЕМ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8554,19 +8567,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1946419964",
-      "name_lat": "УРАЛ ПРАЙД АРЧИ",
-      "name_ru": "",
-      "breed": "АКИТА АМЕРИКАНСКАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "784652912",
+      "id": "1109904197",
       "name_lat": "УРУС ШАЙТАН ФАРТОВЫЙ",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8599,10 +8603,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "238591864",
+      "id": "1440732952",
       "name_lat": "УРАГАН ИЗ ДИНАСТИИ КОНОЛ\"С",
       "name_ru": "",
-      "breed": "немецкая овчарка длинная остевая шерсть с подшерстком немецкая овчарка длинная остевая шерсть с подшерстком немецкая овчарка длинная остевая шерсть с подшерстком немецкая овчарка длинная остевая шерсть с подшерстком немецкая овчарка длинная остевая шерсть с подшерстком",
+      "breed": "немецкая овчарка длинная остевая шерсть с подшерстком",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8635,28 +8639,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974749682",
+      "id": "671051635",
       "name_lat": "УРФИНА ФОМ ХАУС ТЕРСЕЙ",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "135932488",
+      "id": "338654869",
       "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН ИМПЕРАТРИЦА",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "42618938",
+      "id": "1580850315",
       "name_lat": "УРСУЛА ИЗ ДИНАСТИИ КОНОЛ'C",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8707,6 +8711,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "38680726",
+      "name_lat": "УРАЛЬСКИЙ ДИВИЗИОН ДЭРИНГ БОЙ",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "508415736",
       "name_lat": "УРАЛЬСКАЯ СКАЗКА БЬЯНКА",
       "name_ru": "",
@@ -8716,10 +8728,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "576504960",
+      "id": "533456621",
       "name_lat": "УРАЛЬСКАЯ СКАЗКА ЗИЗИ МЫШКА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8734,20 +8746,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "276090675",
+      "id": "1482563654",
       "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ЗОЛОТАЯ РЫБКА",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "136621079",
+      "id": "1188417776",
       "name_lat": "УРМАС С ФЭМИЛИ С ФРИВЕР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "901900023",
+      "name_lat": "УРАЛ ЗОЛОТОЙ ЛЕС",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8765,15 +8785,6 @@
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН БОББИ КАМПО",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "690434183",
-      "name_lat": "УРЗЕНА ЗОЛОТАЯ КОРОЛЕВА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8806,10 +8817,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "601363204",
+      "id": "1437394062",
       "name_lat": "УРАНИЯ УЮТНАЯ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8887,15 +8898,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1332504408",
-      "name_lat": "УРСУЛА ЭТУАЛЬ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "885418779",
       "name_lat": "УРАЛЬСКИЙ ТАЛИСМАН ЭВЕЛИН ПЛЕССИР",
       "name_ru": "",
@@ -8914,11 +8916,50 @@
       "competition_dog_id": null
     },
     {
-      "id": "1551003419",
-      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК КРИСТИН",
+      "id": "1481120199",
+      "name_lat": "УРСЕЛЬ ИЗ ДОМА СТЕФАНИКИ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "ПЕМБРОК /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1733566888",
+      "name_lat": "УРАЛ ТАУ ЯКОБ ЛЬВОВИЧ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1916738943",
+      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК АВРОРА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "189192717",
+      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК КЛАВДИЯ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1896576499",
+      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ЛАВАНДА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "606079605",
+      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК НИКОЛЕТТА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8932,6 +8973,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "133084612",
+      "name_lat": "УРМА ЧЕРРИ ВАЙС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1391657838",
       "name_lat": "УРАНИЯ МУСЕ ОФ СПЕЙС",
       "name_ru": "",
@@ -8941,11 +8990,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1308826742",
+      "id": "128886639",
       "name_lat": "УРАЛ ИЗ ГАРЕМА БЕЛЫХ ДИВ",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1222404448",
+      "name_lat": "УРАЛ ХАУС ПОКЕР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "57417659",
+      "name_lat": "УРФИНА ЛАРГИЗ С БЕЛОЙ РЕКИ",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8963,6 +9028,15 @@
       "name_lat": "УРСА МЕДЖОР UINSTON CHERCHILL",
       "name_ru": "",
       "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1794464333",
+      "name_lat": "у РОТЕРР ГРИФФ ЕМИНЕМ",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН / GRIFFON BELGE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8986,10 +9060,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1512804614",
+      "id": "1005900159",
       "name_lat": "УРВАН АЙ ДА МОЛОДЕЦ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9121,15 +9195,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1068386807",
-      "name_lat": "УРАЛЬСКИЙ СУВЕНИР ШАМАН",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1855887818",
       "name_lat": "УРСУЛА МЭЙЗИКЕН",
       "name_ru": "",
@@ -9157,10 +9222,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1498604190",
+      "id": "66980263",
       "name_lat": "УРАЛ ТАУ РЭЙБОУ ДЭШ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9175,10 +9240,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "182921201",
+      "id": "1721569932",
       "name_lat": "УРСЕЛИНА ИЗ ПРИМОРСКОГО БАГУЛЬНИКА",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ / SHAR PEI ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ /",
+      "breed": "ШАР ПЕЙ / SHAR PEI ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9220,10 +9285,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "224139716",
+      "id": "1840715277",
       "name_lat": "УРАЛ БУЛЬ ЕСАУЛ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9251,24 +9316,6 @@
       "name_lat": "УРФИНА ИЗ КАЗАЧЬЕГО ДОМА",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "279882353",
-      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ЧАРЛЬЗ -",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1811441091",
-      "name_lat": "УРСУЛА МАРГАРЕТ СТИЛЛ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9328,10 +9375,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1392946101",
+      "id": "1560045917",
       "name_lat": "УРЗУС Ф. ЛИЛУ ЛЭНД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9341,15 +9388,6 @@
       "name_lat": "УРАЛЬСКИЙ ЦВЕТОК ПЕЛАГЕЯ",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "621033974",
-      "name_lat": "УРАЛЬСКИЙ ЦВЕТОК НЭЛЛИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9382,8 +9420,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "803105710",
-      "name_lat": "УРСУЛАНА ДЕ ТРУА (К- Ш )",
+      "id": "1245774732",
+      "name_lat": "УРСУЛАНА ДЕ ТРУА (К-Ш )",
       "name_ru": "",
       "breed": "ЧИХУАХУА К-Ш",
       "breed_en": "",
@@ -9400,19 +9438,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1197963151",
+      "id": "1876419023",
       "name_lat": "УРАЛ БЕСТ НИКОЛЬ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1862117200",
-      "name_lat": "УРУС ШАЙТАН ЛАЗИМ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9445,10 +9474,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "366572436",
+      "id": "1495721995",
       "name_lat": "УРГАНА ФОН ВЭСПЕН ХАУС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9481,10 +9510,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1987098309",
+      "id": "282139553",
       "name_lat": "УРАЛЬСКАЯ СКАЗКА СЕБАСТЬЯН АЖУР",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9499,10 +9528,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1355425151",
+      "id": "1406348591",
       "name_lat": "УРАЛЬСКАЯ БУСИНКА ОКСИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9526,15 +9555,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "613897811",
-      "name_lat": "УРАГАН КУРАЖА МИЛАНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "441132877",
       "name_lat": "УРСУЛА ИЗ ФАНТАЗИИ ПИНК",
       "name_ru": "",
@@ -9544,10 +9564,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1633304854",
+      "id": "66288842",
       "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ПАЛЬМА ПЕРВЕНСТВА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9562,37 +9582,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1603585220",
-      "name_lat": "УРАЛ БОГАТЫРЬ",
-      "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1111852782",
       "name_lat": "УРГАЛ СУЛУЗ ДЕРА",
       "name_ru": "",
       "breed": "ЯКУТСКАЯ ЛАЙКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "262288839",
-      "name_lat": "УРАЛ БОГАТЫРЬ ЗЛАТО ЕКАТЕРИНЫ",
-      "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1841281927",
-      "name_lat": "УР-ТУЛАН ТАВА",
-      "name_ru": "",
-      "breed": "ЗАПАДНОСИБИРСКАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9611,15 +9604,6 @@
       "name_lat": "УРСО БРАВО СОЛЬВЕЙГ",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1255475321",
-      "name_lat": "УРСА ЛАВИНА ИЗ ЛЮБИМОЙ СКАЗКИ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9679,19 +9663,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1998584239",
+      "id": "388889115",
       "name_lat": "УРАЛЬСКИЙ СУВЕНИР ШАГАНЭ",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "738856130",
-      "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА ЛЕВ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9715,29 +9690,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "1493974307",
+      "id": "860232744",
       "name_lat": "УРСУЛА МАРЛЕН",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "648579211",
+      "id": "181936948",
       "name_lat": "УРСУЛА МИНОР ИЗ КРЫМСКОЙ СТОЛИЦЫ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1841359896",
+      "id": "1610408263",
       "name_lat": "УРСУЛА 2 ИЗ БЕРЕЗОВОГО ЛОГА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1657209785",
+      "name_lat": "УРЗА МАЛИЛОВЕ АЙВА",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "976446312",
+      "name_lat": "УРСУЛА ПРИНЦЕССА НОЧИ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -9751,11 +9742,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1109777255",
+      "name_lat": "УРЗА МАЛИЛОВЕ АСТРА",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "811046539",
       "name_lat": "УРАЛЬСКИЙ СТРАЖ ЦЕЦИЛИЯ",
       "name_ru": "",
       "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1520682451",
+      "name_lat": "УРАЛЬСКАЯ ЗВЕЗДА РОМИ (К-Ш)",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -9787,11 +9794,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1552282959",
-      "name_lat": "УРАЛ БЕАР ВЕЛЕС",
+      "id": "1311904363",
+      "name_lat": "УРКА ДЕ ЛИМА ЧЕРРИ",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ МИНИАТЮРНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -9832,11 +9838,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1428636790",
-      "name_lat": "Урфин Джус из Ахлябиновской Рощи",
+      "id": "1699003586",
+      "name_lat": "УРАЛЬСКИЙ СТРАЖ ВИНТИК",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -9859,10 +9864,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "613650305",
+      "id": "916646085",
       "name_lat": "УРАГАН СЧАСТЬЯ И УДАЧИ",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

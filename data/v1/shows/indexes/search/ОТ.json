@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОТ",
-  "count": 335,
+  "count": 348,
   "dogs": [
     {
       "id": "1993442750",
       "name_lat": "ОТТОШ ИЗ ХРАМА ДУШИ",
-      "name_ru": "",
+      "name_ru": "ОТТОШ ИЗ ХРАМА ДУШИ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 18,
@@ -24,7 +24,7 @@
     {
       "id": "175464673",
       "name_lat": "ОТТО ФОН РИЧЧАРД",
-      "name_ru": "",
+      "name_ru": "ОТТО ФОН РИЧЧАРД",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -33,19 +33,18 @@
     {
       "id": "1744838234",
       "name_lat": "ОТДЫХЛАФ РОКСАНА",
-      "name_ru": "",
+      "name_ru": "ОТДЫХЛАФ РОКСАНА",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1103172770",
+      "id": "1729372835",
       "name_lat": "ОТТАВА ИЗ ТВЕРСКОГО ДОМА",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
-      "breed_en": "",
-      "total_shows": 12,
+      "name_ru": "ОТТАВА ИЗ ТВЕРСКОГО ДОМА",
+      "breed": "РОТВЕЙЛЕР",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -58,28 +57,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "138186662",
+      "id": "1005612330",
       "name_lat": "ОТТО ФОН БАРОН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "95220157",
+      "id": "1269956497",
       "name_lat": "ОТВАЖНЫЙ ДРУГ КИВИ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ КИВИ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "39769262",
+      "id": "1434002200",
       "name_lat": "ОТИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -87,7 +86,7 @@
     {
       "id": "869555023",
       "name_lat": "Отакар Элли Енисей",
-      "name_ru": "",
+      "name_ru": "Отакар Элли Енисей",
       "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -114,28 +113,19 @@
     {
       "id": "996138033",
       "name_lat": "ОТТО ФОН РИЧ",
-      "name_ru": "",
+      "name_ru": "ОТТО ФОН РИЧ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "125843873",
+      "id": "516347157",
       "name_lat": "ОТВАЖНЫЙ ДРУГ КАСТЕЛЛО",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ КАСТЕЛЛО",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "503430092",
-      "name_lat": "ОТЛИЧНЫЙ ВЫБОР Я ТАКАЯ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -144,6 +134,14 @@
       "name_ru": "",
       "breed": "БИГЛЬ / BEAGLE",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "4384787",
+      "name_lat": "ОТЛИЧНЫЙ ВЫБОР ЭРА",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -157,12 +155,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1566082544",
+      "id": "215626068",
       "name_lat": "ОТРАДА АНКА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "296885067",
+      "name_lat": "ОТРАДА АНКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -177,19 +184,10 @@
     {
       "id": "664261531",
       "name_lat": "ОТТАВА СОЛНЕЧНАЯ КОРОЛЕВА",
-      "name_ru": "",
+      "name_ru": "ОТТАВА СОЛНЕЧНАЯ КОРОЛЕВА",
       "breed": "РУССКАЯ САЛОННАЯ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1959636865",
-      "name_lat": "ОТРАДА СЕРДЦА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -207,23 +205,32 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "264637962",
       "name_lat": "ОТВАЖНЫЙ ДРУГ ЗЕНИТ",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ ЗЕНИТ",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "835426860",
+      "id": "12614344",
+      "name_lat": "ОТДЫХЛАФ НИКОЛЬ ПУШ (изм. Реш ВК 22.12.25 В.47)",
+      "name_ru": "ОТДЫХЛАФ НИКОЛЬ ПУШ (изм. Реш ВК 22.12.25 В.47)",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1207077283",
       "name_lat": "ОТИС С СЕВЕРНОЙ ЗЕМЛИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ОТИС С СЕВЕРНОЙ ЗЕМЛИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -231,10 +238,10 @@
     {
       "id": "1621014521",
       "name_lat": "Отакар Элли Галла",
-      "name_ru": "",
+      "name_ru": "Отакар Элли Галла",
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -256,15 +263,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "801307112",
-      "name_lat": "ОТОМБИ ЗУЛУ ФРОМ СОУС АФРИКА",
-      "name_ru": "",
-      "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
-      "breed_en": "SOUTH AFRICAN BOERBOEL",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1277328627",
       "name_lat": "ОТИС",
       "name_ru": "",
@@ -276,7 +274,7 @@
     {
       "id": "238517998",
       "name_lat": "ОТЛИЧНЫЙ ВЫБОР УХТА",
-      "name_ru": "",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР УХТА",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 6,
@@ -303,7 +301,7 @@
     {
       "id": "1180999011",
       "name_lat": "Оттавиа Хани",
-      "name_ru": "",
+      "name_ru": "Оттавиа Хани",
       "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -337,21 +335,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "419177249",
+      "id": "937356924",
       "name_lat": "ОТЕЧЕСТВА ЗАЩИТНИК ИЗ ДОН-ГРАДА",
-      "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ /",
+      "name_ru": "ОТЕЧЕСТВА ЗАЩИТНИК ИЗ ДОН-ГРАДА",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1509297928",
-      "name_lat": "ОТРАДА АНКА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР)",
-      "breed_en": "",
-      "total_shows": 1,
+      "id": "981629572",
+      "name_lat": "ОТРАДА ЛУЧ СВЕТА",
+      "name_ru": "ОТРАДА ЛУЧ СВЕТА",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -364,11 +361,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "558540561",
-      "name_lat": "ОТРАДА ЛУЧ СВЕТА",
+      "id": "764785549",
+      "name_lat": "ОТРЕЙ РАГНАР OSKAR",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -393,7 +389,7 @@
     {
       "id": "1477563995",
       "name_lat": "ОТВАЖНЫЙ ОСТАП",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНЫЙ ОСТАП",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -407,15 +403,6 @@
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": 9669
-    },
-    {
-      "id": "711587687",
-      "name_lat": "ОТРАДА АНКА",
-      "name_ru": "",
-      "breed": "СЕТТЕР ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
     },
     {
       "id": "1774857956",
@@ -436,8 +423,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1468496450",
-      "name_lat": "ОТНАРИВА ТАЙРА К-Ш",
+      "id": "837537667",
+      "name_lat": "ОТНАРИВА ТАЙРА",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
@@ -477,40 +464,67 @@
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "ROTTWEILER",
-      "total_shows": 13,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1210999780",
+      "name_lat": "ОТВАЖНЫЙ ДРУГ ЕЛЕЙНА",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ ЕЛЕЙНА",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
       "id": "1907895056",
       "name_lat": "ОТДЫХЛАФ СЕРАФИМА",
-      "name_ru": "",
+      "name_ru": "ОТДЫХЛАФ СЕРАФИМА",
       "breed": "Шелти",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1601444216",
+      "id": "1297146465",
+      "name_lat": "ОТДЫХЛАФ ФЕРРАНТ ЮСТ",
+      "name_ru": "ОТДЫХЛАФ ФЕРРАНТ ЮСТ",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "420920710",
       "name_lat": "ОТВАЖНЫЙ ДРУГ ЖИТИЭР СКАЙ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ ЖИТИЭР СКАЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1210999780",
-      "name_lat": "ОТВАЖНЫЙ ДРУГ ЕЛЕЙНА",
-      "name_ru": "",
+      "id": "217189202",
+      "name_lat": "ОТЛИЧНЫЙ ВЫБОР ЦУНАМИ",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР ЦУНАМИ",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "7018607",
+      "name_lat": "ОТВАЖНЫЙ ДРУГ ДЕЛЬТА",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ ДЕЛЬТА",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "1035461428",
       "name_lat": "ОТЛИЧНЫЙ ВЫБОР ХЭППИ (Изменено по Решению ВК от 16.11.22 вопрос 21)",
-      "name_ru": "",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР ХЭППИ (Изменено по Решению ВК от 16.11.22 вопрос 21)",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 9,
@@ -519,10 +533,19 @@
     {
       "id": "586438723",
       "name_lat": "ОТВАЖНЫЙ ДРУГ ЕЛЛОУ РОУЗ",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ ЕЛЛОУ РОУЗ",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1956854430",
+      "name_lat": "ОТТИЛИЯ С БЕРЕГА ШЕКСНЫ",
+      "name_ru": "ОТТИЛИЯ С БЕРЕГА ШЕКСНЫ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -535,6 +558,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "659948360",
+      "name_lat": "ОТ КОМОГОРЦЕВЫ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1332059958",
+      "name_lat": "Отчаяно Красивая Сэра",
+      "name_ru": "",
+      "breed": "шпиц немецкий померанский",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1683545270",
       "name_lat": "ОТДЫХЛАФ ЮТА",
       "name_ru": "",
@@ -544,27 +585,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1241316088",
+      "id": "1839780938",
       "name_lat": "ОТТИЛИЯ ГРАНД-ОТТ",
-      "name_ru": "",
-      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
+      "name_ru": "ОТТИЛИЯ ГРАНД-ОТТ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1297146465",
-      "name_lat": "ОТДЫХЛАФ ФЕРРАНТ ЮСТ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "238659042",
       "name_lat": "ОТВАЖНАЯ ЭЛЬФИЙКА АРВЕН",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНАЯ ЭЛЬФИЙКА АРВЕН",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -573,7 +605,7 @@
     {
       "id": "1833662225",
       "name_lat": "ОТВАЖНАЯ ЕВРАЖКА",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНАЯ ЕВРАЖКА",
       "breed": "ПЕКИНЕС",
       "breed_en": "",
       "total_shows": 8,
@@ -582,17 +614,17 @@
     {
       "id": "38125417",
       "name_lat": "ОТВАЖНЫЙ ОСМАН ИЗ ГРАДА СИМБИРСКА",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНЫЙ ОСМАН ИЗ ГРАДА СИМБИРСКА",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1649486806",
+      "id": "663336527",
       "name_lat": "ОТТАВА",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -600,7 +632,7 @@
     {
       "id": "1876345672",
       "name_lat": "ОТРАДА ФАВОРИТ ФЛОВЕР",
-      "name_ru": "",
+      "name_ru": "ОТРАДА ФАВОРИТ ФЛОВЕР",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -609,34 +641,43 @@
     {
       "id": "287268401",
       "name_lat": "ОТДЫХЛАФ КАВАСАКИ",
-      "name_ru": "",
+      "name_ru": "ОТДЫХЛАФ КАВАСАКИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "7018607",
-      "name_lat": "ОТВАЖНЫЙ ДРУГ ДЕЛЬТА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "133466392",
       "name_lat": "ОТТИМА ВАЙ УНО",
-      "name_ru": "",
+      "name_ru": "ОТТИМА ВАЙ УНО",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
+      "id": "736633439",
+      "name_lat": "ОТИС ДАЙМОНД РЕЙ",
+      "name_ru": "ОТИС ДАЙМОНД РЕЙ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1132582038",
+      "name_lat": "ОТОМЕЗА ЧИМЕЙ",
+      "name_ru": "ОТОМЕЗА ЧИМЕЙ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1867651267",
       "name_lat": "ОТОРВА МАЛЕНЬКАЯ ПУПА ОТ КУФАНИ",
-      "name_ru": "",
+      "name_ru": "ОТОРВА МАЛЕНЬКАЯ ПУПА ОТ КУФАНИ",
       "breed": "БИШОН БРЮССЕЛЬСКИЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -645,7 +686,7 @@
     {
       "id": "255645824",
       "name_lat": "ОТРАДА МАЙ СОУЛ",
-      "name_ru": "",
+      "name_ru": "ОТРАДА МАЙ СОУЛ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 6,
@@ -654,25 +695,16 @@
     {
       "id": "1114770386",
       "name_lat": "ОТДЫХЛАФ АМАТОРИ БОСОМ",
-      "name_ru": "",
+      "name_ru": "ОТДЫХЛАФ АМАТОРИ БОСОМ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "217189202",
-      "name_lat": "ОТЛИЧНЫЙ ВЫБОР ЦУНАМИ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1171539775",
       "name_lat": "ОТВАЖНОЕ СЕРДЦЕ БЕАТРИС ДАТСКАЯ",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНОЕ СЕРДЦЕ БЕАТРИС ДАТСКАЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
@@ -688,57 +720,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "973800813",
+      "id": "1626141985",
       "name_lat": "ОТВАЖНЫЙ ДРУГ КАЙСАР",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ КАЙСАР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1063180750",
+      "id": "1115519463",
       "name_lat": "ОТВАЖНЫЙ СИМБА",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1956854430",
-      "name_lat": "ОТТИЛИЯ С БЕРЕГА ШЕКСНЫ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "12614344",
-      "name_lat": "ОТДЫХЛАФ НИКОЛЬ ПУШ (изм. Реш ВК 22.12.25 В.47)",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "718637224",
+      "id": "1625429069",
       "name_lat": "ОТВАЖНОЕ СЕРДЦЕ НОВЫЙ РУССКИЙ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "name_ru": "ОТВАЖНОЕ СЕРДЦЕ НОВЫЙ РУССКИЙ",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1132582038",
-      "name_lat": "ОТОМЕЗА ЧИМЕЙ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -751,27 +756,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "736633439",
-      "name_lat": "ОТИС ДАЙМОНД РЕЙ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "585407270",
-      "name_lat": "ОТВАЖНАЯ ОДЕТТА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1076136917",
       "name_lat": "Отважный Воин",
-      "name_ru": "",
+      "name_ru": "Отважный Воин",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -780,7 +767,7 @@
     {
       "id": "400061946",
       "name_lat": "ОТЛИЧНИЦА ИЗ ПИТЕРСКОГО ДОЗОРА",
-      "name_ru": "",
+      "name_ru": "ОТЛИЧНИЦА ИЗ ПИТЕРСКОГО ДОЗОРА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -789,7 +776,7 @@
     {
       "id": "621220971",
       "name_lat": "ОТТИМА ВАЙ НИКА ДРИМ",
-      "name_ru": "",
+      "name_ru": "ОТТИМА ВАЙ НИКА ДРИМ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 6,
@@ -805,10 +792,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1559763023",
+      "id": "251968527",
       "name_lat": "ОТТО ФОН РИЧ ИЗ ДОМА ЗИДАНА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ОТТО ФОН РИЧ ИЗ ДОМА ЗИДАНА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -816,7 +803,7 @@
     {
       "id": "1573574696",
       "name_lat": "ОТТИМА ВАЙ ДЖЕТ ФЛЭЙМ",
-      "name_ru": "",
+      "name_ru": "ОТТИМА ВАЙ ДЖЕТ ФЛЭЙМ",
       "breed": "ГЛАДКОШЕРС",
       "breed_en": "",
       "total_shows": 6,
@@ -832,15 +819,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1386544263",
-      "name_lat": "ОТИС ДАЙМОНД РЭЙ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "55979701",
       "name_lat": "ОТЛИЧНЫЙ ВЫБОР ЖЕЛАННАЯ",
       "name_ru": "",
@@ -850,9 +828,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1318533870",
+      "name_lat": "ОТВАЖНЫЙ ДРУГ ЕСЕНИЯ",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ ЕСЕНИЯ",
+      "breed": "СТАФФОРДШ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "960152115",
       "name_lat": "ОТВАЖНЫЙ ВОИН ЕРИН КАЙДЕН",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНЫЙ ВОИН ЕРИН КАЙДЕН",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -861,25 +848,25 @@
     {
       "id": "210478914",
       "name_lat": "ОТТО ИЗ ДОМА ЛЕВШОВОЙ",
-      "name_ru": "",
+      "name_ru": "ОТТО ИЗ ДОМА ЛЕВШОВОЙ",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1297450768",
-      "name_lat": "ОТЛИЧНЫЙ ВЫБОР ИНТРИГА",
-      "name_ru": "",
+      "id": "1949207816",
+      "name_lat": "ОТЛИЧНЫЙ ВЫБОР ЦИТРУС",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР ЦИТРУС",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "221607098",
       "name_lat": "ОТЛИЧНЫЙ ВЫБОР УЭЛЛС",
-      "name_ru": "",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР УЭЛЛС",
       "breed": "SHEEPDOG",
       "breed_en": "",
       "total_shows": 4,
@@ -906,19 +893,28 @@
     {
       "id": "652074662",
       "name_lat": "ОТЛИЧНЫЙ ВЫБОР ТИТАНИЯ",
-      "name_ru": "",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР ТИТАНИЯ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "888512792",
+      "id": "135219820",
       "name_lat": "ОТКРОВЕНИЕ ДУШИ ДЛЯ ГВЕНЛЕНД",
-      "name_ru": "",
-      "breed": "й булли бернский зенненхунд бульдог бульдог бульдог",
+      "name_ru": "ОТКРОВЕНИЕ ДУШИ ДЛЯ ГВЕНЛЕНД",
+      "breed": "й булли бернский зенненхунд бульдог",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1753205633",
+      "name_lat": "О'ТЕЙЛА СО ЗВЕЗДНОГО ПУТИ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -931,10 +927,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1135871765",
+      "id": "1352224257",
       "name_lat": "ОТВАЖНЫЙ ВОИН ЛУКЬЯН ЯСНЫЙ",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -942,7 +938,7 @@
     {
       "id": "681899893",
       "name_lat": "ОТЕЛЛО ИЗ ДОМА ДИМАИС",
-      "name_ru": "",
+      "name_ru": "ОТЕЛЛО ИЗ ДОМА ДИМАИС",
       "breed": "БОРДОСКИЙ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -976,30 +972,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "4384787",
-      "name_lat": "ОТЛИЧНЫЙ ВЫБОР ЭРА",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "659517881",
       "name_lat": "ОТДЫХЛАФ ШОКОЛАДНАЯ КОНФЕТКА",
       "name_ru": "",
       "breed": "ШЕЛТИ / SHETLAND",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1267732623",
-      "name_lat": "ОТВАГА С КРУТОЯРА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1012,10 +990,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1115443566",
+      "id": "958750416",
       "name_lat": "ОТВАЖНЫЙ ДРУГ ФОРД ГЕНРИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1039,10 +1017,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "253499060",
+      "id": "884593972",
       "name_lat": "от 16.11.22 вопрос 20) ГАЛАКСИ СОНАТА КАТАНА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1086,7 +1064,7 @@
     {
       "id": "1804314267",
       "name_lat": "ОТТИМА ВАЙ УГАР",
-      "name_ru": "",
+      "name_ru": "ОТТИМА ВАЙ УГАР",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
@@ -1095,17 +1073,17 @@
     {
       "id": "930373755",
       "name_lat": "ОТЛИЧНЫЙ ВЫБОР УИЛЬЯМ",
-      "name_ru": "",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР УИЛЬЯМ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1318533870",
-      "name_lat": "ОТВАЖНЫЙ ДРУГ ЕСЕНИЯ",
+      "id": "410326524",
+      "name_lat": "О ТАНОС",
       "name_ru": "",
-      "breed": "СТАФФОРДШ",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1131,7 +1109,7 @@
     {
       "id": "250373464",
       "name_lat": "ОТТИМА ВАЙ ПИНГ - ПОНГ",
-      "name_ru": "",
+      "name_ru": "ОТТИМА ВАЙ ПИНГ - ПОНГ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -1147,10 +1125,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "121944597",
+      "id": "1192665913",
       "name_lat": "ОТТАЛИЯ ФОМ ХАУС ЭРФЮЛЮНГЕН ВЮНШЕН",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "name_ru": "ОТТАЛИЯ ФОМ ХАУС ЭРФЮЛЮНГЕН ВЮНШЕН",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1165,9 +1143,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "728727654",
+      "name_lat": "ОТИКА ФОМ НЕО РАЙХ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "191187596",
       "name_lat": "ОТТО ЮЛЬЕВИЧ С БОСФОРА ВОСТОЧНОГО",
-      "name_ru": "",
+      "name_ru": "ОТТО ЮЛЬЕВИЧ С БОСФОРА ВОСТОЧНОГО",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -1176,10 +1162,18 @@
     {
       "id": "896929085",
       "name_lat": "Отчаянно Красивая Сэра",
-      "name_ru": "",
+      "name_ru": "Отчаянно Красивая Сэра",
       "breed": "Немецкий Шпиц Померанский",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "964731391",
+      "name_lat": "ОТВАЖНОЕ СЕРДЦЕ ИЗ ДОМА АЛАНТЕС",
+      "name_ru": "ОТВАЖНОЕ СЕРДЦЕ ИЗ ДОМА АЛАНТЕС",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1230,7 +1224,7 @@
     {
       "id": "1990476891",
       "name_lat": "ОТТАЛИН ГЭМБЛ ИЗ ЛЕВАНЖИ",
-      "name_ru": "",
+      "name_ru": "ОТТАЛИН ГЭМБЛ ИЗ ЛЕВАНЖИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 8,
@@ -1284,7 +1278,7 @@
     {
       "id": "68424012",
       "name_lat": "ОТВАЖНОЕ СЕРДЦЕ ЕСАУЛ",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНОЕ СЕРДЦЕ ЕСАУЛ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -1372,6 +1366,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1751923033",
+      "name_lat": "ОТДЫХЛАФ МЭГГИ",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1927293269",
+      "name_lat": "от 24.11.21 вопрос 26) ДЮРФИНА ИЗ РУССКОЙ ПРОВИНЦИИ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "184809521",
       "name_lat": "от 13.07.22 вопрос 15) FAR EAST STATUATTE IMPRESSIVE LADY",
       "name_ru": "",
@@ -1399,10 +1409,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1087388300",
-      "name_lat": "ОТВАЖНЫЙ ДРУГ ДЖЕКИ",
+      "id": "267669568",
+      "name_lat": "ОТКРЫТЫЙ ОКЕАН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "757262730",
+      "name_lat": "ОТВАЖНЫЙ ДРУГ ДЖЕКИ",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ ДЖЕКИ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1410,7 +1428,7 @@
     {
       "id": "705529955",
       "name_lat": "ОТВАЖНЫЙ ОЛИВЕР",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНЫЙ ОЛИВЕР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1480,10 +1498,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1391465205",
+      "id": "1756721288",
       "name_lat": "ОТВАЖНАЯ ЭЛЬФИЙКА АРВЕН FERNFLOWER QUICKSILVER YOUR",
       "name_ru": "",
-      "breed": "Американский кокер спаниель / American сocker spaniel Золотистый ретривер /",
+      "breed": "Американский кокер спаниель / American сocker spaniel Золотистый ретривер",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1509,7 +1527,7 @@
     {
       "id": "1140282720",
       "name_lat": "ОТАКАР ЭЛЛИ ВИНСЕНТ",
-      "name_ru": "",
+      "name_ru": "ОТАКАР ЭЛЛИ ВИНСЕНТ",
       "breed": "НОРФОЛК ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -1543,6 +1561,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1497606988",
+      "name_lat": "ОТРАДА С КРУТОЯРА",
+      "name_ru": "ОТРАДА С КРУТОЯРА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "37178581",
       "name_lat": "ОТОМИ МИНЕ",
       "name_ru": "",
@@ -1570,10 +1597,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "929582858",
+      "id": "1130199324",
       "name_lat": "ОТВАЖНЫЙ ДРУГ ЖАККАР КАМАЗ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ ЖАККАР КАМАЗ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1588,10 +1615,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "601607422",
+      "id": "648934109",
       "name_lat": "ОТ ОКСИ ГОЛД ДОГ ИДЖИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1678,6 +1705,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "679505435",
+      "name_lat": "ОТВАЖНОЕ СЕРДЦЕ ОНИКА",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1635870212",
       "name_lat": "ОТДАЙ СВОЮ",
       "name_ru": "",
@@ -1687,12 +1722,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1497606988",
-      "name_lat": "ОТРАДА С КРУТОЯРА",
+      "id": "1470167104",
+      "name_lat": "О ТЕККЕЛЬ ВИ МИСС",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "ЖЕСТКО ЮРНАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1707,7 +1742,7 @@
     {
       "id": "163980776",
       "name_lat": "ОТРАДА ИЗ СТАИ ВОЛКОВ",
-      "name_ru": "",
+      "name_ru": "ОТРАДА ИЗ СТАИ ВОЛКОВ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -1723,10 +1758,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "729368994",
+      "id": "330436515",
       "name_lat": "ОТВАЖНАЯ АМАЗОНКА",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1741,27 +1776,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "69219694",
+      "id": "911194157",
       "name_lat": "ОТАКУ ФОМ МАИР ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "Отаку Фом Маир Хоф",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "602230155",
+      "id": "450489986",
       "name_lat": "ОТТАВА",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1885232183",
-      "name_lat": "ОТВАЖНЫЙ ДРУГ З- ГИЗМО ГРЕМЛИН",
-      "name_ru": "",
+      "id": "1800721239",
+      "name_lat": "ОТВАЖНЫЙ ДРУГ З-ГИЗМО ГРЕМЛИН",
+      "name_ru": "ОТВАЖНЫЙ ДРУГ З-ГИЗМО ГРЕМЛИН",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -1770,19 +1805,27 @@
     {
       "id": "1064504998",
       "name_lat": "Отрада Любви",
-      "name_ru": "",
+      "name_ru": "Отрада Любви",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1727110646",
+      "id": "189833045",
       "name_lat": "ОТТОМИ Ф ХАУС КСЕНИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1353850419",
+      "name_lat": "ОТВАЖНЫЙ ДРУГ ЗЕЙН",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1822,6 +1865,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "221294698",
+      "name_lat": "ОТОМЕЗА ФИБИ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "173367564",
       "name_lat": "ОТТО БАМБИНА",
       "name_ru": "",
@@ -1831,9 +1882,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1966278900",
+      "name_lat": "ОТАКАР ЭЛЛИ ГАЛА",
+      "name_ru": "",
+      "breed": "НОРФОЛК ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1531214292",
       "name_lat": "ОТ ЛУКЬЯНОВОЙ ЕВА ВАЛЕНСИЯ",
-      "name_ru": "",
+      "name_ru": "ОТ ЛУКЬЯНОВОЙ ЕВА ВАЛЕНСИЯ",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
@@ -1842,7 +1901,7 @@
     {
       "id": "490376963",
       "name_lat": "ОТТАВА ШАХРИ ИЗАР",
-      "name_ru": "",
+      "name_ru": "ОТТАВА ШАХРИ ИЗАР",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 3,
@@ -1867,10 +1926,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "287161200",
+      "name_lat": "ОТРАДА МАЙ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА д-ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "475564621",
       "name_lat": "ОТРАДА",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ / MALTESE",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1056736940",
+      "name_lat": "ОТВАЖНЫЙ ОСВАЛЬД",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1894,37 +1971,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1949207816",
-      "name_lat": "ОТЛИЧНЫЙ ВЫБОР ЦИТРУС",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1075460381",
       "name_lat": "ОТДЫХЛАВ ПРАЙМРОУЗ ДЛЯ ДУБРАВЫ",
       "name_ru": "",
       "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "221294698",
-      "name_lat": "ОТОМЕЗА ФИБИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "20423752",
-      "name_lat": "ОТВАЖНЫЙ ОСВАЛЬД",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1943,6 +1993,15 @@
       "name_lat": "ОТРАДА ИЗ ДОМА РОМАНА",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1119990466",
+      "name_lat": "О'ТАНГО МАЙ ЛАЙФ",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2004,7 +2063,7 @@
     {
       "id": "124671023",
       "name_lat": "ОТВАЖНОЕ СЕРДЦЕ РАДА МЕДВЕЖЬЕ ЦАРСТВО БОМБА ИЗ",
-      "name_ru": "",
+      "name_ru": "ОТВАЖНОЕ СЕРДЦЕ РАДА МЕДВЕЖЬЕ ЦАРСТВО БОМБА ИЗ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -2013,7 +2072,7 @@
     {
       "id": "1684819176",
       "name_lat": "ОТЛИЧНЫЙ ВЫБОР ЦИНИЯ",
-      "name_ru": "",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР ЦИНИЯ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 2,
@@ -2022,26 +2081,17 @@
     {
       "id": "492077648",
       "name_lat": "ОТРАДА И УТЕШЕНИЕ АДЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ОТРАДА И УТЕШЕНИЕ АДЕЛЬ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "262376304",
+      "id": "1121831785",
       "name_lat": "ОТРАДА ИЗ ПОМЕСТЬЯ БОГОВИК",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "461856086",
-      "name_lat": "Отважное Сердце из Дома Алантес",
-      "name_ru": "",
-      "breed": "ХОТОШО (БУРЯТСКАЯ СОБАКА)",
+      "name_ru": "ОТРАДА ИЗ ПОМЕСТЬЯ БОГОВИК",
+      "breed": "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2128,11 +2178,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "287161200",
-      "name_lat": "ОТРАДА МАЙ",
+      "id": "82880144",
+      "name_lat": "ОТТО ДЖЕК",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА д-ш",
-      "breed_en": "",
+      "breed": "БИГЛЬ / BEAGLE",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2155,19 +2204,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "49993850",
-      "name_lat": "ОТАВА",
+      "id": "1355284397",
+      "name_lat": "ОТРАДА",
       "name_ru": "",
-      "breed": "Французский бульдог",
-      "breed_en": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1564774550",
-      "name_lat": "ОТРАДА МАЙ",
+      "id": "49993850",
+      "name_lat": "ОТАВА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "Французский бульдог",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2209,10 +2257,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "227837953",
+      "id": "284638043",
       "name_lat": "ОТРАДА АНКА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР) ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2227,15 +2275,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "659948360",
-      "name_lat": "ОТ КОМОГОРЦЕВЫ",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1077093050",
       "name_lat": "ОТИС",
       "name_ru": "",
@@ -2245,10 +2284,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1289419636",
+      "id": "584557265",
       "name_lat": "ОТИ ТРЕШ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2267,6 +2306,15 @@
       "name_lat": "ОТТИЛИЯ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "310290534",
+      "name_lat": "ОТТАЛИЯ МАРНА",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2304,7 +2352,7 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2371,19 +2419,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "577875139",
-      "name_lat": "ОТЧИЙ ДОМ ЖАР- ПТИЦА",
+      "id": "1749227363",
+      "name_lat": "ОТЧИЙ ДОМ ЖАР-ПТИЦА",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1462301153",
-      "name_lat": "ОТЛИЧНЫЙ ВЫБОР ТУРМАЛИН",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2443,10 +2482,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "715546062",
+      "id": "348971597",
       "name_lat": "ОТТО-ХАРТ ФОМ ШАНТАЛЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2461,10 +2500,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1940859548",
+      "id": "1815712057",
       "name_lat": "ОТВАЖНОЕ СЕРДЦЕ ТУРУНА",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2506,17 +2545,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1332059958",
-      "name_lat": "Отчаяно Красивая Сэра",
-      "name_ru": "",
-      "breed": "шпиц немецкий померанский",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "219062473",
-      "name_lat": "ОТВАЖНЫЕ ПСЫ БОРЕЙ- АРДЖУНА",
+      "id": "64663851",
+      "name_lat": "ОТВАЖНЫЕ ПСЫ БОРЕЙ-АРДЖУНА",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -2542,10 +2572,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "174823943",
+      "id": "1001117382",
       "name_lat": "ОТВАЖНЫЙ ШКЕТ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2560,10 +2590,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1903333692",
+      "id": "1753629017",
       "name_lat": "ОТТО УНЕРШРОКЕН",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2600,15 +2630,6 @@
       "name_lat": "ОТОРВА ЛИКООКАЯ",
       "name_ru": "",
       "breed": "БИГЛЬ / BEAGLE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "310290534",
-      "name_lat": "ОТТАЛИЯ МАРНА",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2686,6 +2707,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "914666321",
+      "name_lat": "ОТРАДА ОТ ПАНИ ЯНИНЫ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1167758278",
+      "name_lat": "ОТОМЕЗА ДАРИНА",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1752446413",
+      "name_lat": "ОТЛИЧНЫЙ ВЫБОР АГАТА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "819988655",
       "name_lat": "ОТВАГА ИЗ ХОРОВОДА ЗВЁЗД",
       "name_ru": "",
@@ -2695,11 +2740,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1680801394",
+      "id": "1206411700",
       "name_lat": "от 15.06.22 вопрос 15) ЭВИДЕНС ЛАВ ШАНИКА",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "799354377",
+      "name_lat": "ОТТИМА ВАЙ МАРИЯ- МИРАБЕЛА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1891987086",
+      "name_lat": "ОТРАДА ОЧЕЙ МОИХ",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2722,11 +2783,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "393453115",
+      "name_lat": "ОТТАЛИЯ ИЗ КОРОЛЕВСТВА МАРГАРИТЫ",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "679266430",
       "name_lat": "от 15.06.22 вопрос 23) ФИОРЕ ДЕЛЛА ВИТА ФРЕШ УИНД",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "468453364",
+      "name_lat": "ОТАЛИЯ КАЛАШНИКХОФ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2758,10 +2835,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1792255291",
+      "id": "786623783",
       "name_lat": "ОТРАДА ИЗ КНЯЖЕСТВА ВОЛХОНСКОЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ / GREAT DANE BLACK, HARLEKIN",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ / GREAT DANE BLACK, HARLEKIN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2961,6 +3038,23 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "255772210",
+      "name_lat": "О ТЕККЕЛЬ ЗИМПЛИ",
+      "name_ru": "",
+      "breed": "Я",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1741402091",
+      "name_lat": "Отелло Черный Мавр",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },

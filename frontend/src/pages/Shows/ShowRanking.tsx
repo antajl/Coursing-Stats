@@ -238,7 +238,11 @@ export default function ShowRanking() {
       idx.push({ breed, competition_count: count, dog_count: count })
       breedList.push(breed)
     }
-    breedList.sort((a, b) => a.localeCompare(b, 'ru'))
+    breedList.sort((a, b) => {
+      const diff = (counts.get(b) || 0) - (counts.get(a) || 0)
+      if (diff !== 0) return diff
+      return a.localeCompare(b, 'ru')
+    })
     return { breeds: breedList, dogIndex: idx }
   }, [allDogs])
 

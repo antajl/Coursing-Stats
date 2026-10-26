@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ШЭ",
-  "count": 411,
+  "count": 399,
   "dogs": [
     {
       "id": "458623688",
       "name_lat": "Шэр Деми Мур Террифик Смайл",
-      "name_ru": "",
+      "name_ru": "Шэр Деми Мур Террифик Смайл",
       "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -31,18 +31,36 @@
       "competition_dog_id": null
     },
     {
+      "id": "644760871",
+      "name_lat": "ШЭР ЦЕРРА",
+      "name_ru": "",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1632728420",
       "name_lat": "ШЭР ГЕЛИЯ БРЕЙВ ХЁРТ",
-      "name_ru": "",
+      "name_ru": "ШЭР ГЕЛИЯ БРЕЙВ ХЁРТ",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "606988517",
+      "name_lat": "ШЭР ДУШЕЧКА КРАСАВИЦА",
+      "name_ru": "ШЭР ДУШЕЧКА КРАСАВИЦА",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "AIREDALE TERRIER",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "606313998",
       "name_lat": "ШЭР ДОБРЫЙ ДРУГ",
-      "name_ru": "",
+      "name_ru": "ШЭР ДОБРЫЙ ДРУГ",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
@@ -51,7 +69,7 @@
     {
       "id": "1882334428",
       "name_lat": "ШЭР ПРЕСТИЖ ПЛЮМЕРИЯ-ДЕ-МАЙСИ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ПЛЮМЕРИЯ-ДЕ-МАЙСИ",
       "breed": "ХАВАНЕЗ",
       "breed_en": "HAVANESE",
       "total_shows": 11,
@@ -60,7 +78,7 @@
     {
       "id": "938301528",
       "name_lat": "ШЭР ПРЕСТИЖ КАМИЛЛА",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ КАМИЛЛА",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 9,
@@ -81,43 +99,34 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "1190027748",
       "name_lat": "ШЭР ПРЕСТИЖ ГАРРИ ЛАККИ (К/Х)",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ГАРРИ ЛАККИ (К/Х)",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1890573949",
+      "id": "607792578",
       "name_lat": "ШЭР ПРЕСТИЖ СУЛТАН МОЕГО СЕРДЦА",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "name_ru": "ШЭР ПРЕСТИЖ СУЛТАН МОЕГО СЕРДЦА",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "606988517",
-      "name_lat": "ШЭР ДУШЕЧКА КРАСАВИЦА",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "579725997",
       "name_lat": "ШЭР БЕРТРАМ ВУСТЕР",
-      "name_ru": "",
+      "name_ru": "ШЭР БЕРТРАМ ВУСТЕР",
       "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -130,8 +139,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "644760871",
-      "name_lat": "ШЭР ЦЕРРА",
+      "id": "1194781238",
+      "name_lat": "ШЭР МИДОУ ЛИФ",
       "name_ru": "",
       "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
@@ -139,10 +148,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "765510932",
+      "id": "192688981",
       "name_lat": "ШЭРЛОК ХОЛМС",
-      "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
+      "name_ru": "ШЭРЛОК ХОЛМС",
+      "breed": "BULLDOG",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -177,10 +186,19 @@
     {
       "id": "1436825835",
       "name_lat": "ШЭР ФАЙН ФАНТАЗИ",
-      "name_ru": "",
+      "name_ru": "ШЭР ФАЙН ФАНТАЗИ",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "595643657",
+      "name_lat": "ШЭР ЖЕНЕВА ЛУННАЯ",
+      "name_ru": "ШЭР ЖЕНЕВА ЛУННАЯ",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -193,21 +211,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "524394924",
+      "id": "1051296655",
       "name_lat": "ШЭДОУС ВИЛЛИС НАТАНИЭЛЬ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "name_ru": "ШЭДОУС ВИЛЛИС НАТАНИЭЛЬ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "595643657",
-      "name_lat": "ШЭР ЖЕНЕВА ЛУННАЯ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -238,29 +247,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1194781238",
-      "name_lat": "ШЭР МИДОУ ЛИФ",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1402955183",
-      "name_lat": "ШЭР РЕМИ МАРТИН",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "829405764",
       "name_lat": "ШЭР ЗИФА ЗИЛОЛА ФОР ПОКОРИТЕЛЬ ЗАРИ",
       "name_ru": "",
       "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605211097",
+      "name_lat": "ШЭР ЧЕСТЕР ЧЕЙЗ",
+      "name_ru": "ШЭР ЧЕСТЕР ЧЕЙЗ",
+      "breed": "TERRIER ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -303,19 +302,18 @@
     {
       "id": "1752845255",
       "name_lat": "ШЭР БРЕНДИ КЕЙК АЙОЛА",
-      "name_ru": "",
+      "name_ru": "ШЭР БРЕНДИ КЕЙК АЙОЛА",
       "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1388998427",
+      "id": "1182750802",
       "name_lat": "ШЭР ЮНИОН",
       "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -330,7 +328,7 @@
     {
       "id": "238773508",
       "name_lat": "ШЭР ПРЕСТИЖ ШАНЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ШАНЕЛЬ",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "POODLE TOY FAWN, GREY",
       "total_shows": 6,
@@ -348,7 +346,7 @@
     {
       "id": "177495132",
       "name_lat": "ШЭРОН СТОУН УАЙТ ИЗ ЗОЛОТОЙ ГАВАНИ",
-      "name_ru": "",
+      "name_ru": "ШЭРОН СТОУН УАЙТ ИЗ ЗОЛОТОЙ ГАВАНИ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -400,8 +398,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1383738842",
-      "name_lat": "ШЭР ПРЕСТИЖ МИЛЕНА-ДЭЛЬ- СУР",
+      "id": "1075782914",
+      "name_lat": "ШЭР ПРЕСТИЖ МИЛЕНА-ДЭЛЬ-СУР",
       "name_ru": "",
       "breed": "ХАВАНЕЗ",
       "breed_en": "",
@@ -409,10 +407,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1746466667",
+      "id": "1266955235",
+      "name_lat": "ШЭГГИ СКАЙ ЖЕЙН ЭЙР",
+      "name_ru": "ШЭГГИ СКАЙ ЖЕЙН ЭЙР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "642608226",
       "name_lat": "ШЭР ПРЕСТИЖ НЕЙМАР",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "name_ru": "ШЭР ПРЕСТИЖ НЕЙМАР",
+      "breed": "ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 15,
       "competition_dog_id": null
@@ -447,9 +454,18 @@
     {
       "id": "1557051202",
       "name_lat": "ШЭР ЖИРАЛЬДО РЫЦАРЬ ДЛЯ СВЕТОСТАРА",
-      "name_ru": "",
+      "name_ru": "ШЭР ЖИРАЛЬДО РЫЦАРЬ ДЛЯ СВЕТОСТАРА",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "AIREDALE TERRIER",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1767758152",
+      "name_lat": "ШЭР ЦЕРЕТЕЛИ",
+      "name_ru": "",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
@@ -459,14 +475,14 @@
       "name_ru": "",
       "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "523023283",
+      "id": "842924220",
       "name_lat": "ШЭР ФУИРАНДО",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -492,7 +508,25 @@
     {
       "id": "712974759",
       "name_lat": "ШЭР ОРО АЗТЕКО",
-      "name_ru": "",
+      "name_ru": "ШЭР ОРО АЗТЕКО",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1744813045",
+      "name_lat": "ШЭР СИМПЛИ РЭД",
+      "name_ru": "ШЭР СИМПЛИ РЭД",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "766813171",
+      "name_lat": "ШЭР ХЬЮГО БРЭЙВ ФАЛЬК",
+      "name_ru": "ШЭР ХЬЮГО БРЭЙВ ФАЛЬК",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
@@ -517,10 +551,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1982136162",
+      "id": "1681538410",
+      "name_lat": "ШЭР ЭДМОНТС БИЛЛ",
+      "name_ru": "ШЭР ЭДМОНТС БИЛЛ",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "breed_en": "LAKELAND TERRIER",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1513188195",
       "name_lat": "ШЭР ДЖОЛЛИ ДЖИ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "name_ru": "ШЭР ДЖОЛЛИ ДЖИ",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -528,43 +571,24 @@
     {
       "id": "1540471715",
       "name_lat": "ШЭГГИ СКАЙ ПЕРФЕКТО КАБАЛЛЕРО",
-      "name_ru": "",
+      "name_ru": "ШЭГГИ СКАЙ ПЕРФЕКТО КАБАЛЛЕРО",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "942002613",
-      "name_lat": "ШЭР ЦЕРЕТЕЛИ",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "766813171",
-      "name_lat": "ШЭР ХЬЮГО БРЭЙВ ФАЛЬК",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1744813045",
-      "name_lat": "ШЭР СИМПЛИ РЭД",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
+      "id": "844457683",
+      "name_lat": "ШЭР ПРЕСТИЖ ЕНИСЕЙ ХЭППИ ДЭЙ (К/Х)",
+      "name_ru": "ШЭР ПРЕСТИЖ ЕНИСЕЙ ХЭППИ ДЭЙ (К/Х)",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "1056969489",
       "name_lat": "ШЭР НИКОЛЕТТЕ ЖАУН",
-      "name_ru": "",
+      "name_ru": "ШЭР НИКОЛЕТТЕ ЖАУН",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
@@ -589,45 +613,62 @@
       "competition_dog_id": null
     },
     {
-      "id": "1681538410",
-      "name_lat": "ШЭР ЭДМОНТС БИЛЛ",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
-      "breed_en": "LAKELAND TERRIER",
-      "total_shows": 10,
+      "id": "1370894289",
+      "name_lat": "ШЭН ФУ-СИН ИНТРИГА ВЕКА",
+      "name_ru": "ШЭН ФУ-СИН ИНТРИГА ВЕКА",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "1513354126",
       "name_lat": "ШЭР ПРЕСТИЖ ЕССИ СВИТ ГЁРЛ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ЕССИ СВИТ ГЁРЛ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "844457683",
-      "name_lat": "ШЭР ПРЕСТИЖ ЕНИСЕЙ ХЭППИ ДЭЙ (к/х)",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "1783939925",
+      "name_lat": "ШЭР ТЕНДЕРНЕСС ОФ МИ АМУР",
+      "name_ru": "ШЭР ТЕНДЕРНЕСС ОФ МИ АМУР",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1444720202",
+      "name_lat": "ШЭР ХЕЛАВИСА ЛАКИ СТАР ОФ ЛАК",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "46303344",
       "name_lat": "ШЭР ЗНАТНАЯ ДАМА ДЛЯ СВЕТОСТАРА",
-      "name_ru": "",
+      "name_ru": "ШЭР ЗНАТНАЯ ДАМА ДЛЯ СВЕТОСТАРА",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "88265282",
+      "name_lat": "ШЭР ШТЕЙН",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1515224095",
       "name_lat": "ШЭР ПРЕСТИЖ ЖИВАНШИ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ЖИВАНШИ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 11,
@@ -636,19 +677,10 @@
     {
       "id": "946963352",
       "name_lat": "ШЭР БОГЕМИЯ КРИСТАЛЛ",
-      "name_ru": "",
+      "name_ru": "ШЭР БОГЕМИЯ КРИСТАЛЛ",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1370894289",
-      "name_lat": "ШЭН ФУ-СИН ИНТРИГА ВЕКА",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -663,19 +695,19 @@
     {
       "id": "18671726",
       "name_lat": "ШЭР ПРЕСТИЖ ВАЙВИД СПРИНГ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ВАЙВИД СПРИНГ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "416118561",
-      "name_lat": "ШЭР ЖИВАЯ ЛЕГЕНДА",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "id": "1382242103",
+      "name_lat": "ШЭР ПРЕСТИЖ МАРЧ ФЕСТ УАЙТ ФЛАВЕР",
+      "name_ru": "ШЭР ПРЕСТИЖ МАРЧ ФЕСТ УАЙТ ФЛАВЕР",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -697,12 +729,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1708658131",
+      "name_lat": "ШЭР ЧЕРРУТИ",
+      "name_ru": "",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1577699949",
       "name_lat": "ШЭР ПРЕСТИЖ РЕКОРД ДЖАМП",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ РЕКОРД ДЖАМП",
       "breed": "БИШОН ХАВАНЕС",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "111074426",
+      "name_lat": "ШЭР ОФЕЛИЯ",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -715,19 +765,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "103998070",
+      "id": "1600430897",
+      "name_lat": "ШЭН ФУ-СИН ДАРИНА РАДУГА МОРЕЙ",
+      "name_ru": "ШЭН ФУ-СИН ДАРИНА РАДУГА МОРЕЙ",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "SHAR PEI",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1964837231",
       "name_lat": "ШЭР БАДДИ БРАХМС",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "name_ru": "ШЭР БАДДИ БРАХМС",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "153481646",
+      "id": "295303415",
       "name_lat": "ШЭР ПРЕСТИЖ ПЭДЖИ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "ШЭР ПРЕСТИЖ ПЭДЖИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -735,19 +794,19 @@
     {
       "id": "36887591",
       "name_lat": "ШЭР СВИТ ДРИМ-II",
-      "name_ru": "",
+      "name_ru": "ШЭР СВИТ ДРИМ",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1266955235",
-      "name_lat": "ШЭГГИ СКАЙ ЖЕЙН ЭЙР",
-      "name_ru": "",
+      "id": "1222623028",
+      "name_lat": "ШЭГГИ СКАЙ ДАРВИН ЧАРЛЬЗ",
+      "name_ru": "ШЭГГИ СКАЙ ДАРВИН ЧАРЛЬЗ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -760,30 +819,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1629800787",
+      "id": "1657094074",
       "name_lat": "ШЭР ЖАЙС АРЧИ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "104006018",
-      "name_lat": "ШЭР ВИВА ЛА ДИВА",
-      "name_ru": "",
+      "name_ru": "ШЭР ЖАЙС АРЧИ",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1600430897",
-      "name_lat": "ШЭН ФУ-СИН ДАРИНА РАДУГА МОРЕЙ",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "SHAR PEI",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -850,15 +891,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1444720202",
-      "name_lat": "ШЭР ХЕЛАВИСА ЛАКИ СТАР ОФ ЛАК",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "698872688",
       "name_lat": "ШЭР ФОЛЛИ",
       "name_ru": "",
@@ -868,19 +900,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1382242103",
-      "name_lat": "ШЭР ПРЕСТИЖ МАРЧ ФЕСТ УАЙТ ФЛАВЕР",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1363746990",
+      "id": "913456119",
       "name_lat": "ШЭР ВИТАРА",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -888,19 +911,10 @@
     {
       "id": "953058248",
       "name_lat": "ШЭН ФУ-СИН ВИШНЯ В ШОКОЛАДЕ",
-      "name_ru": "",
+      "name_ru": "ШЭН ФУ-СИН ВИШНЯ В ШОКОЛАДЕ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1281752658",
-      "name_lat": "ШЭР ЧЕРРУТИ",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -913,18 +927,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1222623028",
-      "name_lat": "ШЭГГИ СКАЙ ДАРВИН ЧАРЛЬЗ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "564410588",
-      "name_lat": "ШЭР ПРЕСТИЖ МУЛЕН-А- ВАН",
-      "name_ru": "",
+      "id": "1984249142",
+      "name_lat": "ШЭР ПРЕСТИЖ МУЛЕН-А-ВАН",
+      "name_ru": "ШЭР ПРЕСТИЖ МУЛЕН-А-ВАН",
       "breed": "БИШОН ХАВАНЕС",
       "breed_en": "",
       "total_shows": 9,
@@ -937,15 +942,6 @@
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1737373952",
-      "name_lat": "ШЭР ТЕНДЕРНЕСС ОФ МИ АМУР",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -976,30 +972,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1509318044",
+      "id": "1013790777",
       "name_lat": "ШЭР ДАЙМОНД ДЕЙЗИ",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР /",
+      "name_ru": "ШЭР ДАЙМОНД ДЕЙЗИ",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "685723686",
-      "name_lat": "ШЭР НОРДИК ФИННА",
+      "id": "500275735",
+      "name_lat": "ШЭР ШОУ МАСТ ГО ОН",
       "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1174023711",
+      "name_lat": "ШЭР НОРДИК ФИННА",
+      "name_ru": "ШЭР НОРДИК ФИННА",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "88265282",
-      "name_lat": "ШЭР ШТЕЙН",
+      "id": "500266345",
+      "name_lat": "ШЭР ФИБИАНА",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "RUSSIAN TOY",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1032,7 +1036,7 @@
     {
       "id": "1546853857",
       "name_lat": "ШЭР ЮНГА СЕВЕРНОГО ФЛОТА",
-      "name_ru": "",
+      "name_ru": "ШЭР ЮНГА СЕВЕРНОГО ФЛОТА",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -1059,7 +1063,7 @@
     {
       "id": "1929727347",
       "name_lat": "ШЭРОН СТОУН ИЗ НЕВСКОЙ ТРОЙКИ",
-      "name_ru": "",
+      "name_ru": "ШЭРОН СТОУН ИЗ НЕВСКОЙ ТРОЙКИ",
       "breed": "ШАР ПЕЙ ШНАУЦЕР ШНАУЦЕР (ЧЕРН)",
       "breed_en": "",
       "total_shows": 3,
@@ -1104,7 +1108,7 @@
     {
       "id": "1615211821",
       "name_lat": "ШЭР ПРЕСТИЖ ПЛАТОН",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ПЛАТОН",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -1113,7 +1117,7 @@
     {
       "id": "875613974",
       "name_lat": "ШЭР БЛАЙЗ БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "ШЭР БЛАЙЗ БЬЮТИ",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -1147,10 +1151,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "645442096",
-      "name_lat": "ШЭР ПРЕСТИЖ АЭЛИТА",
+      "id": "962054528",
+      "name_lat": "ШЭР БРИТТАНИ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1996237036",
+      "name_lat": "ШЭР ПРЕСТИЖ АЭЛИТА",
+      "name_ru": "ШЭР ПРЕСТИЖ АЭЛИТА",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1167,19 +1180,10 @@
     {
       "id": "258705131",
       "name_lat": "ШЭР НИКОЛЬ БРАЙТ СТАР",
-      "name_ru": "",
+      "name_ru": "ШЭР НИКОЛЬ БРАЙТ СТАР",
       "breed": "AIREDALE TERRIER",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "500275735",
-      "name_lat": "ШЭР ШОУ МАСТ ГО ОН",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1187,15 +1191,6 @@
       "name_lat": "ШЭР ДОБЛЕСТНЫЙ РЫЦАРЬ",
       "name_ru": "",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "800622693",
-      "name_lat": "ШЭР ОДА ФО МОНТИКОР",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1212,7 +1207,7 @@
     {
       "id": "970224924",
       "name_lat": "ШЭН ФУ-СИН ЛАЙМА ФЛАВИЯ БЛЮ",
-      "name_ru": "",
+      "name_ru": "ШЭН ФУ-СИН ЛАЙМА ФЛАВИЯ БЛЮ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -1221,7 +1216,7 @@
     {
       "id": "1570362985",
       "name_lat": "ШЭР ХРИЗАНТЕМА АТЛИС",
-      "name_ru": "",
+      "name_ru": "ШЭР ХРИЗАНТЕМА АТЛИС",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1230,17 +1225,35 @@
     {
       "id": "1521469507",
       "name_lat": "ШЭРКАН ГРАН БАРБУДО",
-      "name_ru": "",
+      "name_ru": "ШЭРКАН ГРАН БАРБУДО",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1140756399",
+      "id": "1300385026",
+      "name_lat": "ШЭР ХОУП ОФ МАЙ СОУЛ",
+      "name_ru": "ШЭР ХОУП ОФ МАЙ СОУЛ",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "862371528",
+      "name_lat": "ШЭР ПРЕСТИЖ ЮССИ МЭЙ",
+      "name_ru": "ШЕР ПРЕСТИЖ ЮССИ МЭЙ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1430397918",
       "name_lat": "ШЭР ХАНТЕР КОРРА",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1248,7 +1261,7 @@
     {
       "id": "1893569889",
       "name_lat": "ШЭР ПРЕСТИЖ ЗОЛОТОЙ ДУКАТ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ЗОЛОТОЙ ДУКАТ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 15,
@@ -1266,10 +1279,18 @@
     {
       "id": "914684475",
       "name_lat": "ШЭР ПРЕСТИЖ РЭАР КАРИДЖ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ РЭАР КАРИДЖ",
       "breed": "Французский бульдог",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "523023283",
+      "name_lat": "ШЭР ФУИРАНДО",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1329,28 +1350,19 @@
     {
       "id": "602523675",
       "name_lat": "ШЭР ОДРИ ТИФФАНИ",
-      "name_ru": "",
+      "name_ru": "ШЭР ОДРИ ТИФФАНИ",
       "breed": "AIREDALE TERRIER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "105022310",
-      "name_lat": "ШЭР ПРЕСТИЖ ТАЛИСМАН ТАУЭР",
+      "id": "890731924",
+      "name_lat": "ШЭР ШАРОН",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "962054528",
-      "name_lat": "ШЭР БРИТТАНИ",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1372,28 +1384,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1308717980",
-      "name_lat": "ШЭР ЕЛИКА ПРЕКРАСНАЯ",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1694759515",
+      "id": "858533266",
       "name_lat": "ШЭР ЕЛЛОУ ТАРА",
-      "name_ru": "",
-      "breed": "AIREDALE TERRIER ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ /",
+      "name_ru": "ШЭР ЕЛЛОУ ТАРА",
+      "breed": "AIREDALE TERRIER ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "45442734",
+      "id": "449185271",
       "name_lat": "ШЭР ЛЕОНАРДО",
       "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР /",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1410,19 +1413,10 @@
     {
       "id": "1284471398",
       "name_lat": "ШЭЛТОН ХЭВЕНТПИ ГИФТ",
-      "name_ru": "",
+      "name_ru": "ШЭЛТОН ХЭВЕНТПИ ГИФТ",
       "breed": "PETIT BRABANSON",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "747753253",
-      "name_lat": "ШЭР НАЗАД В БУДУЩЕЕ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1437,28 +1431,28 @@
     {
       "id": "1404449263",
       "name_lat": "ШЭР ПРЕСТИЖ ПРАДА",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ПРАДА",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "WELSH CORGI CARDIGAN",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1485054382",
-      "name_lat": "ШЭН ФУ-СИН ЕРОФЕЙ(Д- Ш)",
-      "name_ru": "",
+      "id": "519709388",
+      "name_lat": "ШЭН ФУ-СИН ЕРОФЕЙ(Д-Ш)",
+      "name_ru": "ШЭН ФУ-СИН ЕРОФЕЙ(Д-Ш)",
       "breed": "Немецкая овчарка длинношерстная",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "890731924",
-      "name_lat": "ШЭР ШАРОН",
+      "id": "143121974",
+      "name_lat": "ШЭР РЕБЕККА",
       "name_ru": "",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1480,37 +1474,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "858142112",
+      "id": "1909375093",
       "name_lat": "ШЭР МУЛГОР ЗОЛОТО СЕВЕРА",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "380939488",
-      "name_lat": "ШЭР ХАН ХАНОЙ",
-      "name_ru": "",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1470920190",
-      "name_lat": "ШЭР НАТТИ КУРЛ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1814003053",
-      "name_lat": "ШЭР-АЛИ-ХАН СЭРА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1543,15 +1510,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1631439980",
-      "name_lat": "Шэн Фу-Син Унция Золота для Шат Шьюн",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "620426517",
       "name_lat": "ШЭР ФИБИАНА",
       "name_ru": "",
@@ -1561,28 +1519,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "120371526",
+      "id": "33691583",
       "name_lat": "ШЭР ПРЕСТИЖ УНА ЛИТТЕЛ ЭНДЖЕЛ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1300385026",
-      "name_lat": "ШЭР ХОУП ОФ МАЙ СОУЛ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "id": "210366474",
+      "name_lat": "ШЭР ПРЕСТИЖ БРИТАНИЯ",
+      "name_ru": "Шер Престиж Британия",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "897752248",
+      "id": "1768383965",
       "name_lat": "ШЭР ПРЕСТИЖ КЛЭНСИ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ШЭР ПРЕСТИЖ КЛЭНСИ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1597,10 +1555,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "725249554",
+      "id": "288879507",
       "name_lat": "ШЭР ЧИЛЬДА",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1615,10 +1573,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1242165033",
+      "id": "808917131",
       "name_lat": "ШЭР ЮДИТТА",
       "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1633,12 +1591,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1965461241",
+      "id": "759360043",
       "name_lat": "ШЭР УРАНИЯ",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬ ТЕРЬЕР ТАКСА, МИНИАТЮРНАЯ, ТАКСА, МИНИАТЮРНАЯ, ТАКСА, МИНИАТЮРНАЯ, ТАКСА, МИНИАТЮРНАЯ, ТАКСА, СТАНДАРТ, АКИТА",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "239921432",
+      "name_lat": "ШЭР ЗЕНДЕЯ",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1651,10 +1618,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "224507257",
+      "id": "834211643",
       "name_lat": "ШЭР АЛАРИС",
       "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1687,30 +1654,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1644620190",
-      "name_lat": "ШЭН ФУ-СИН КАССИОПЕЯ ДЛЯ ШАТ ШЬЮН",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "180341757",
+      "id": "50859040",
       "name_lat": "ШЭР ПРЕСТИЖ УЛЬФ ВАЛИАНТ КНАЙТ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "name_ru": "ШЭР ПРЕСТИЖ УЛЬФ ВАЛИАНТ КНАЙТ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1409841452",
-      "name_lat": "ШЭББА ОФ ФЛОКИШ ФЕСТ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1759,15 +1708,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "69232702",
-      "name_lat": "ШЭР ЛЕОНИЯ ЛЕГГЕРО",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "768071946",
       "name_lat": "ШЭР НОРЛИНА",
       "name_ru": "",
@@ -1777,10 +1717,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1174381815",
+      "id": "1731121974",
       "name_lat": "ШЭР ЕНВОЙ ХАРУ",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1849,12 +1789,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1305931513",
-      "name_lat": "ШЭР ЭТРУСКА СНУККИ",
+      "id": "452143524",
+      "name_lat": "ШЭРИ",
       "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР /",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1867,10 +1807,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "38187777",
+      "id": "1114439906",
       "name_lat": "ШЭДОУ ИЗ СТАИ ЗВЕЗД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1882,24 +1822,6 @@
       "breed": "Эрдельтерьер",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "143121974",
-      "name_lat": "ШЭР РЕБЕККА",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1797739911",
-      "name_lat": "ШЭР РЕБЕККА",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР ТАКСА",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1921,10 +1843,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "256997871",
+      "id": "206389278",
       "name_lat": "ШЭР ЦЕЛЕСТА",
       "name_ru": "",
-      "breed": "TERRIER ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "TERRIER ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1944,6 +1866,14 @@
       "name_ru": "",
       "breed": "РУССКИЙ ТОЙ ТЕРЬЕР (сс)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "196174399",
+      "name_lat": "ШЭР ЦЕРИТЕЛИ",
+      "name_ru": "",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1975,6 +1905,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "45703728",
+      "name_lat": "Ш ЭР-КЕРРИ",
+      "name_ru": "",
+      "breed": "БЛЮ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1558603274",
       "name_lat": "ШЭР ХАРИЗМА",
       "name_ru": "",
@@ -1984,10 +1923,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1386326940",
+      "id": "654174777",
       "name_lat": "ШЭР ВАНИТИ ФАЙР",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2092,18 +2031,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "862371528",
-      "name_lat": "ШЭР ПРЕСТИЖ ЮССИ МЭЙ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1926626332",
       "name_lat": "ШЭР УИТНИ ПЕРФЕКТ",
-      "name_ru": "",
+      "name_ru": "ШЭР УИТНИ ПЕРФЕКТ",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -2119,10 +2049,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1143147708",
+      "id": "572713875",
       "name_lat": "ШЭНА ЮГА ФРОМ КОРЯЖМА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2155,19 +2085,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "210366474",
-      "name_lat": "ШЭР ПРЕСТИЖ БРИТАНИЯ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "61428222",
+      "id": "617641787",
       "name_lat": "ШЭР ПРЕСТИЖ ПИРС МАСКОТТИ ДИ-ФРЕЙТАС (К/Х)",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "name_ru": "ШЭР ПРЕСТИЖ ПИРС МАСКОТТИ ДИ-ФРЕЙТАС (К/Х)",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2191,19 +2112,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "692100486",
+      "id": "987266559",
       "name_lat": "ШЭР РАСТЛИ",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1272305604",
+      "id": "14590577",
       "name_lat": "ШЭР ЕСЕНИЯ",
       "name_ru": "",
-      "breed": "TERRIER ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ /",
+      "breed": "TERRIER ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2249,15 +2170,6 @@
       "name_lat": "ШЭР МАРИЭТТА",
       "name_ru": "",
       "breed": "ЭРДЕЛЬТЕРЬЕР / AIREDALE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1142261641",
-      "name_lat": "ШЭРИ",
-      "name_ru": "",
-      "breed": "ПУЛИ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2371,12 +2283,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "1653322362",
+      "name_lat": "ШЭР ПРЕСТИЖ ГАВАНА (К/Х)",
+      "name_ru": "ШЭР ПРЕСТИЖ ГАВАНА (К/Х)",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1759891110",
+      "name_lat": "Шэр Юнион",
+      "name_ru": "",
+      "breed": "ЛЕЙКЛЕНДТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1666170901",
       "name_lat": "ШЭР ПРЕСТИЖ ЖЕКАРД ( К/Х)",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24418099",
+      "name_lat": "ШЭДОУМЕЙН ЦАРСКИЙ ПОДАРОК",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2391,7 +2328,7 @@
     {
       "id": "1461763032",
       "name_lat": "ШЭЛЛИ ДОЧЬ ВАН ГОГА",
-      "name_ru": "",
+      "name_ru": "ШЭЛЛИ ДОЧЬ ВАН ГОГА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -2452,30 +2389,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1759891110",
-      "name_lat": "Шэр Юнион",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНДТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "592960989",
+      "id": "1726704322",
       "name_lat": "ШЭР ФИБИАНА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "111074426",
-      "name_lat": "ШЭР ОФЕЛИЯ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2497,24 +2416,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "680585205",
-      "name_lat": "ШЭРИ",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "853346156",
-      "name_lat": "ШЭР ПРЕСТИЖ ГАВАНА (К/Х)",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "88123016",
       "name_lat": "ШЭР АМБИШН ФО МИКСТЕРРИ",
       "name_ru": "",
@@ -2533,17 +2434,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "711211581",
+      "id": "659792162",
       "name_lat": "ШЭР ЭДАНА ШАРМ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ШЭР ЭДАНА ШАРМ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "365488373",
-      "name_lat": "ШЭН ФУ- СИН КАМИЛЛ А ВИЛЬЕ",
+      "id": "376627019",
+      "name_lat": "ШЭН ФУ-СИН КАМИЛЛ А ВИЛЬЕ",
       "name_ru": "",
       "breed": "ШАР ПЕЙ / SHAR PEI",
       "breed_en": "",
@@ -2560,19 +2461,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1667831319",
-      "name_lat": "ШЭР ФАРРО ФАСС",
-      "name_ru": "",
+      "id": "188243450",
+      "name_lat": "ШЭР ШОНИ КИНГ",
+      "name_ru": "ШЭР ШОНИ КИНГ",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "188243450",
-      "name_lat": "ШЭР ШОНИ КИНГ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "id": "90163769",
+      "name_lat": "ШЭР ИЗ НОВОЙ СИБИРИ",
+      "name_ru": "ШЭР ИЗ НОВОЙ СИБИРИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2580,36 +2481,26 @@
     {
       "id": "1861266455",
       "name_lat": "ШЭР ПРЕСТИЖ ЛИНКОЛЬН",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ЛИНКОЛЬН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "230143716",
+      "id": "1419099960",
       "name_lat": "ШЭРМАН ФРОМ ХАУС ИРЕН",
-      "name_ru": "",
-      "breed": "КА ДЕ БО",
+      "name_ru": "ШЭРМАН ФРОМ ХАУС ИРЕН",
+      "breed": "ЛЕОНБЕРГЕР МАЙОРКСКИЙ МАСТИФ (КА ДЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "239921432",
-      "name_lat": "ШЭР ЗЕНДЕЯ",
+      "id": "960575930",
+      "name_lat": "ШЭР ДАМБОЛДОР",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "381147458",
-      "name_lat": "ШЭР ИЗ НОВОЙ СИБИРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2625,7 +2516,7 @@
     {
       "id": "1799034284",
       "name_lat": "ШЭР ПРЕСТИЖ ОРСИ ОФ ФЬЮРИ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ОРСИ ОФ ФЬЮРИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
@@ -2650,15 +2541,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "993517416",
-      "name_lat": "ШЭЛДИ ИЗ СОЗВЕЗДИЯ АДОМАСА",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1560062615",
       "name_lat": "ШЭДОУ СИЛЬВАНА ВИНДРАЙДЕР",
       "name_ru": "",
@@ -2668,10 +2550,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1256956474",
+      "id": "242112139",
       "name_lat": "ШЭР ПРЕСТИЖ ПАРАДАЙС БАТТЕРФЛАЙ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2704,10 +2586,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1256619199",
+      "id": "925162158",
       "name_lat": "ШЭР КЕНДИ БИЛЛ",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2749,9 +2631,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1690277918",
+      "name_lat": "ШЭР ХАРИЗМАТИЧНАЯ ЛЕДИ",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "352578305",
       "name_lat": "ШЭР ПРЕСТИЖ ЛЮКСОР",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ЛЮКСОР",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
@@ -2760,17 +2650,17 @@
     {
       "id": "291482449",
       "name_lat": "ШЭР ПРЕСТИЖ ТВИНКИ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ТВИНКИ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1658102028",
+      "id": "79570153",
       "name_lat": "ШЭР ПРЕСТИЖ ДОРОТИ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "ШЭР ПРЕСТИЖ ДОРОТИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2778,53 +2668,44 @@
     {
       "id": "1239052918",
       "name_lat": "ШЭР ПРЕСТИЖ МЕЙБЛ ПАЙНС",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ МЕЙБЛ ПАЙНС",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "799922496",
+      "id": "226865557",
       "name_lat": "ШЭР ПРЕСТИЖ РЭЙНБОУ РЭЙН",
-      "name_ru": "",
-      "breed": "БИШОН ХАВАНЕС /",
+      "name_ru": "ШЭР ПРЕСТИЖ РЭЙНБОУ РЭЙН",
+      "breed": "БИШОН ХАВАНЕС",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "776140177",
-      "name_lat": "ШЭРРА ОТ СВИВАРЫЧ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "657512322",
+      "id": "657512323",
       "name_lat": "ШЭР ПРЕСТИЖ БАЛУ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ БАЛУ",
       "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1308865357",
+      "id": "262640042",
       "name_lat": "ШЭР ПРЕСТИЖ БОНЯ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "ШЭР ПРЕСТИЖ БОНЯ",
+      "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "560104550",
+      "id": "1674497675",
       "name_lat": "ШЭР ПРЕСТИЖ ПЕГГИ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "ШЭР ПРЕСТИЖ ПЕГГИ",
+      "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2839,10 +2720,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1124347946",
+      "id": "31412087",
       "name_lat": "ШЭР ПРЕСТИЖ НОРИС (К/Х) /",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "name_ru": "ШЭР ПРЕСТИЖ НОРИС (К/Х) /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2850,7 +2731,7 @@
     {
       "id": "620940330",
       "name_lat": "ШЭР ПРЕСТИЖ ЛУИ",
-      "name_ru": "",
+      "name_ru": "ШЭР ПРЕСТИЖ ЛУИ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
@@ -2884,10 +2765,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "454623308",
+      "id": "1156991529",
       "name_lat": "ШЭР КЕВИН",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2938,10 +2819,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "911039691",
+      "id": "977840066",
       "name_lat": "ШЭЛЛИ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2951,15 +2832,6 @@
       "name_lat": "ШЭР ТОПИС",
       "name_ru": "",
       "breed": "AIREDALE TERRIER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1378368816",
-      "name_lat": "ШЭР ФИБИАНА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д/Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2992,6 +2864,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "592960989",
+      "name_lat": "ШЭР ФИБИАНА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "335094981",
+      "name_lat": "ШЭР ФАБИАНА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "176420419",
       "name_lat": "ШЭР КЛЕМЕНТИЙ",
       "name_ru": "",
@@ -3010,19 +2898,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "994770878",
+      "id": "314339097",
       "name_lat": "ШЭРОН",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "758765609",
+      "id": "1361951565",
       "name_lat": "ШЭРОН",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3059,33 +2947,6 @@
       "name_lat": "ШЭРИ",
       "name_ru": "",
       "breed": "БУЛЬДОГ / BULLDOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1562838407",
-      "name_lat": "ШЭРИ",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "146417570",
-      "name_lat": "ШЭРИ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1282172074",
-      "name_lat": "ШЭРИ",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙДОГ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3172,10 +3033,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1091205751",
+      "id": "1464427718",
       "name_lat": "ШЭР ПРЕСТИЖ МАТИЛЬДА",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3190,10 +3051,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1026119789",
+      "id": "1253232114",
       "name_lat": "ШЭР ПРЕСТИЖ РЕЙСИ РЕЛИАНТ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3226,10 +3087,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "502635051",
+      "id": "417669410",
       "name_lat": "ШЭР ЛАКИ ЛУЧАНО",
       "name_ru": "",
-      "breed": "TERRIER ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "TERRIER ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3280,10 +3141,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1129883574",
+      "id": "78144719",
       "name_lat": "ШЭР МЛЕЧНЫЙ ПУТЬ (Д.Ш.)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3298,10 +3159,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "67656981",
+      "id": "250753832",
       "name_lat": "ШЭР ПРЕСТИЖ ЦЕЗАРЬ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3334,10 +3195,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "795534725",
+      "id": "1364311192",
       "name_lat": "ШЭР ДЖИННИ УИЗЛИ",
       "name_ru": "",
-      "breed": "TERRIER ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "TERRIER ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3397,8 +3258,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "410316511",
-      "name_lat": "ШЭН ФУ- СИН ВЕНСКИЙ ВАЛЬС",
+      "id": "1508706437",
+      "name_lat": "ШЭН ФУ-СИН ВЕНСКИЙ ВАЛЬС",
       "name_ru": "",
       "breed": "ШАР ПЕЙ / SHAR PEI",
       "breed_en": "",
@@ -3424,28 +3285,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1939060620",
+      "id": "1091297129",
       "name_lat": "ШЭР ПРЕСТИЖ ФИАЛКА БЛОССОМ КРОУН",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "869774103",
+      "id": "1342994571",
       "name_lat": "ШЭН ФУ-СИН ВАРВАРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1733212777",
+      "id": "123831969",
       "name_lat": "ШЭН ФУ-СИН ВИШНЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3456,6 +3317,14 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "710276231",
+      "name_lat": "ШЭР ЭРИКА ПРЕКРАСНАЯ",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3478,11 +3347,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1080856048",
-      "name_lat": "ШЭЛФИ АМИРА С БЕЛОЙ РЕКИ",
+      "id": "1441960216",
+      "name_lat": "ШЭР ПРЕСТИЖ БУГАТТИ",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "",
+      "breed": "ПЕМБРОК /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3514,10 +3382,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "57554601",
+      "id": "1272484148",
       "name_lat": "ШЭР ПРЕСТИЖ ЮДЖЕНТ МАРТИН",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3532,10 +3400,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "569764338",
+      "id": "278458227",
       "name_lat": "ШЭР ПРИМА МАРТА",
       "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР /",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3586,10 +3454,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1474944025",
+      "id": "1700903862",
       "name_lat": "ШЭР ЩЕБЕТУНЬЯ СОФИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3690,6 +3558,14 @@
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1348302355",
+      "name_lat": "ШЭНЭН ИЗ ХОРОВОДА ЗВЕЗД",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "total_shows": 1,
       "competition_dog_id": null
     },

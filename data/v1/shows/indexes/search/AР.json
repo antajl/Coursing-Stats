@@ -1,0 +1,41 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "AР",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "55674333",
+      "name_lat": "AРМАЛЬД КАРА СЕВАДА",
+      "name_ru": "",
+      "breed": "Цвергшнауцер чёрный",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "55616648",
+      "name_lat": "AРИЕС ХАН РЕГОР РЕМБРАНТ",
+      "name_ru": "",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "26756719",
+      "name_lat": "AРT РАЕНС ИМЭДЖИН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "485509706",
+      "name_lat": "AРТИК ВОЯЖ ФИНЛАНД",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

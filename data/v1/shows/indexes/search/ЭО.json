@@ -1,21 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЭО",
-  "count": 20,
+  "count": 18,
   "dogs": [
-    {
-      "id": "1487942036",
-      "name_lat": "ЭОЛ ПОВЕЛИТЕЛЬ ВЕТРА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
     {
       "id": "1404236496",
       "name_lat": "ЭОЛИС ЖЕКА ЖГУЧИЙ ПЕРЧИК",
-      "name_ru": "",
+      "name_ru": "ЭОЛИС ЖЕКА ЖГУЧИЙ ПЕРЧИК",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 6,
@@ -24,28 +15,19 @@
     {
       "id": "901232961",
       "name_lat": "ЭОЛИС ЖОФФРЕЙ",
-      "name_ru": "",
+      "name_ru": "ЭОЛИС ЖОФФРЕЙ",
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1924168498",
       "name_lat": "ЭОГАНАХТА АРАБЕЛЛА",
-      "name_ru": "",
+      "name_ru": "ЭОГАНАХТА АРАБЕЛЛА",
       "breed": "ДИРХАУНД",
       "breed_en": "DEERHOUND",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1660747235",
-      "name_lat": "Эолис Ежевика",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -60,7 +42,7 @@
     {
       "id": "1834308030",
       "name_lat": "ЭОЛИС ДАРЬЯНА",
-      "name_ru": "",
+      "name_ru": "ЭОЛИС ДАРЬЯНА",
       "breed": "GERMAN PINSCHER",
       "breed_en": "",
       "total_shows": 3,
@@ -69,7 +51,7 @@
     {
       "id": "704485770",
       "name_lat": "ЭОЛИС ЛЕВЕНБУРГ",
-      "name_ru": "",
+      "name_ru": "ЭОЛИС ЛЕВЕНБУРГ",
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 4,
@@ -121,9 +103,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1082373002",
+      "name_lat": "ЭОН ЛАЙФ ТАЙМ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1327175559",
       "name_lat": "ЭОГАНАХТА АЛЬТАИР",
-      "name_ru": "",
+      "name_ru": "ЭОГАНАХТА АЛЬТАИР",
       "breed": "ДИРХАУНД",
       "breed_en": "DEERHOUND",
       "total_shows": 4,
@@ -166,19 +156,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "968341406",
+      "id": "256525131",
       "name_lat": "ЭОЛИС ВЭЙ ФЛЭШ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ШНАУЦЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "679269539",
-      "name_lat": "ЭОН ЛАЙФ ТАЙМ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЦВЕРГШНАУЦЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

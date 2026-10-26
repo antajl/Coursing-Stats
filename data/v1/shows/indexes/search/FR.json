@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "FR",
-  "count": 1281,
+  "count": 1314,
   "dogs": [
     {
       "id": "842574437",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "GRIFFON BRUXELLOIS",
-      "total_shows": 97,
+      "total_shows": 106,
       "competition_dog_id": null
     },
     {
@@ -18,16 +18,7 @@
       "name_ru": "",
       "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "ROMAGNA WATER DOG (LAGOTTO ROMAGNOLO)",
-      "total_shows": 79,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1621846924",
-      "name_lat": "FROSTY-CHAMPIONS JAMES BOND",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 62,
+      "total_shows": 86,
       "competition_dog_id": null
     },
     {
@@ -36,7 +27,25 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 54,
+      "total_shows": 68,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1572048508",
+      "name_lat": "FRIDZH SELEBRITIS OF BRITAN",
+      "name_ru": "Фридж Селебритис Оф Британ",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "BULL TERRIER STANDART",
+      "total_shows": 73,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1621846924",
+      "name_lat": "FROSTY-CHAMPIONS JAMES BOND",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 64,
       "competition_dog_id": null
     },
     {
@@ -46,6 +55,15 @@
       "breed": "ПИКАРДИЙСКАЯ ОВЧАРКА",
       "breed_en": "PICARDY SHEEPDOG",
       "total_shows": 37,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40818000",
+      "name_lat": "FRANZINI VERO",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "breed_en": "ENGLISH POINTER",
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -67,39 +85,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "40818000",
-      "name_lat": "FRANZINI VERO",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
-      "breed_en": "ENGLISH POINTER",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1624565293",
+      "id": "450362162",
       "name_lat": "FRIDENS VALCE DE VIENNE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 61,
       "competition_dog_id": null
     },
     {
-      "id": "1731927534",
-      "name_lat": "FRANK COSTELLO",
+      "id": "1414599107",
+      "name_lat": "FRIDENS OXYGEN",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 43,
       "competition_dog_id": null
     },
     {
-      "id": "93749803",
-      "name_lat": "FRIDENS OXYGEN",
+      "id": "1053432219",
+      "name_lat": "FROST FALCON FATE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "МАЛАЯ ЛЬВИНАЯ СОБАКА",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "321821495",
+      "name_lat": "FRANK COSTELLO",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 41,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
@@ -112,21 +129,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "615314291",
-      "name_lat": "FRAYTAL' HUNDO P",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 31,
-      "competition_dog_id": null
-    },
-    {
       "id": "521647527",
       "name_lat": "FRAYTAL' FANCY DRESS NBT",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 33,
+      "total_shows": 37,
+      "competition_dog_id": null
+    },
+    {
+      "id": "615314291",
+      "name_lat": "FRAYTAL' HUNDO P",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -157,30 +174,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "157047752",
+      "id": "1163098354",
       "name_lat": "FRIDENS SHOW MUST GO ON",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 30,
       "competition_dog_id": null
     },
     {
-      "id": "650179613",
+      "id": "1667489687",
+      "name_lat": "FRANTSUZSKAYA LEGENDA CHELLA",
+      "name_ru": "ФРАНЦУЗСКАЯ ЛЕГЕНДА ЧЕЛЛА",
+      "breed": "БРИАР",
+      "breed_en": "BRIARD",
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1705534850",
       "name_lat": "FRIDENS STATUS QUO",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "143294513",
+      "id": "251951630",
       "name_lat": "FRIDENS BARBA-ROSSA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ФРИДЕНС БАРБА-РОССА",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 30,
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -190,6 +216,15 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 37,
+      "competition_dog_id": null
+    },
+    {
+      "id": "843200805",
+      "name_lat": "FREYJA MARI-DOR",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -207,7 +242,7 @@
       "name_ru": "",
       "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
       "breed_en": "ENTLEBUCH CATTLE DOG",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -220,15 +255,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "843200805",
-      "name_lat": "FREYJA MARI-DOR",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1918552627",
       "name_lat": "FRIZE DELUXE NICOLA HELIOS AURELI",
       "name_ru": "",
@@ -238,19 +264,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "751351936",
+      "id": "412961965",
       "name_lat": "FRIDENS BRAVE HEART",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1623611686",
+      "id": "505034768",
       "name_lat": "FRIDENS BORA-BORA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 31,
       "competition_dog_id": null
@@ -261,16 +287,7 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "FRENCH BULLDOG",
-      "total_shows": 37,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1053432219",
-      "name_lat": "FROST FALCON FATE",
-      "name_ru": "",
-      "breed": "МАЛАЯ ЛЬВИНАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -283,10 +300,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "960278481",
+      "id": "1143066286",
       "name_lat": "FRIDENS KING'S SON",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 30,
       "competition_dog_id": null
@@ -301,10 +318,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "738165097",
+      "id": "1480443380",
       "name_lat": "FREI WIND ENNEFER",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 33,
       "competition_dog_id": null
@@ -337,6 +354,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "788714064",
+      "name_lat": "FRENCH SIBERIA RABBIT BONYA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
       "id": "1879537486",
       "name_lat": "FRAYTAL’ ZERO DOUBTS",
       "name_ru": "",
@@ -346,12 +372,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "279546538",
+      "id": "1411157855",
       "name_lat": "FREYAFELT BALLO CON TE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ жесткошерстная",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
-      "total_shows": 34,
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -364,10 +390,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "595401608",
+      "id": "1638003029",
       "name_lat": "FRIDENS SONARA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -382,12 +408,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1113214598",
+      "name_lat": "FRAYTAL' NUMBER ONE",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "1433787538",
       "name_lat": "FRAYTAL' KANAN JARRUS N/B",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 24,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -400,39 +434,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "788714064",
-      "name_lat": "FRENCH SIBERIA RABBIT BONYA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1667489687",
-      "name_lat": "FRANTSUZSKAYA LEGENDA CHELLA",
-      "name_ru": "",
-      "breed": "БРИАР",
-      "breed_en": "BRIARD",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "86871491",
+      "id": "1241090496",
       "name_lat": "FREYAFELT FORWARD LOOKING",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "505990984",
+      "id": "1183230101",
       "name_lat": "FRIDENS STAR TREK",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "644867106",
+      "name_lat": "FREYR NEIT MONICA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "GERMAN PINSCHER",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -445,10 +470,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1456455628",
+      "id": "1989806626",
+      "name_lat": "FREELIFE DOG RICCARDO FOGLI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "994126573",
+      "name_lat": "FRANCO FERREIRO ONIX",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1725199229",
       "name_lat": "FRI DZHAMP YAGAILO YAGGELON",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 34,
       "competition_dog_id": null
@@ -459,7 +502,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -472,12 +515,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "537673852",
+      "id": "1246472935",
+      "name_lat": "FREYAFELT SHAMROCK CHARM",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "684256337",
       "name_lat": "FRIDENS BLISSFUL HOT DREAM",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -508,21 +560,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "644867106",
-      "name_lat": "FREYR NEIT MONICA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "GERMAN PINSCHER",
-      "total_shows": 17,
+      "id": "1084558043",
+      "name_lat": "FRIDENS NEVA NEVA",
+      "name_ru": "ФРИДЕНС НЕВА НЕВА",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "25489280",
+      "id": "1854408109",
       "name_lat": "FRIDENS SUNLIGHT",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "171808521",
+      "name_lat": "FREMILEN'S LYUKS FOR EVI GRANOS",
+      "name_ru": "ФРЕМИЛЕН'С ЛЮКС ФОР ЭВИ ГРАНОС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -531,7 +592,7 @@
       "name_ru": "",
       "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
       "breed_en": "ENTLEBUCH CATTLE DOG",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -589,10 +650,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "217426469",
+      "id": "1681878946",
+      "name_lat": "FRIDENS VALCE'N'JAZZ ON MY MIND",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "117391800",
       "name_lat": "FRAM STARS MEDZHI SEM",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 31,
       "competition_dog_id": null
@@ -616,12 +686,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "108224209",
-      "name_lat": "FRANCO FERREIRO ONIX",
+      "id": "1593896661",
+      "name_lat": "FREMILEN'S COSTA RICA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
-      "total_shows": 21,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -634,19 +704,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1989806626",
-      "name_lat": "FREELIFE DOG RICCARDO FOGLI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "970948780",
+      "id": "1681030662",
       "name_lat": "FRIDENS PURE TASTE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -670,11 +731,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1185785248",
+      "name_lat": "FREYR NEIT BERNARDO",
+      "name_ru": "ФРЕЙР НЕИТ БЕРНАРДО",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "643615233",
       "name_lat": "FRAYTAL’ EFFECT SIZE",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "646984238",
+      "name_lat": "FRENKLIN",
+      "name_ru": "",
+      "breed": "ПРЕСА КАНАРИО",
+      "breed_en": "PRESA CANARIO",
       "total_shows": 14,
       "competition_dog_id": null
     },
@@ -685,6 +764,15 @@
       "breed": "ЗЕННЕНХУНД",
       "breed_en": "ENTLEBUCH CATTLE DOG",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "991250206",
+      "name_lat": "FRIDENS FLASHBACK",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -715,6 +803,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "906418235",
+      "name_lat": "FRIDENS DYNASTY",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455834635",
+      "name_lat": "FRIDENS FORGET ME NOT",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "907475242",
       "name_lat": "FRENCHMOLOS KENYA",
       "name_ru": "",
@@ -724,48 +830,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "89439656",
+      "id": "1667109365",
       "name_lat": "FRIDENS JEWEL ROSE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "906418235",
-      "name_lat": "FRIDENS DYNASTY",
-      "name_ru": "",
-      "breed": "КОЛЛИ Д-Ш",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 34,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1815176918",
+      "id": "1845536245",
       "name_lat": "FREDERIKA IZ FORTUNA MERDI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ФРЕДЕРИКА ИЗ ФОРТУНА МЕРДИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "1593896661",
-      "name_lat": "FREMILEN'S COSTA RICA",
+      "id": "116304381",
+      "name_lat": "FREIR SO STANITSY MAGNITNAJA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1113214598",
-      "name_lat": "FRAYTAL' NUMBER ONE",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -774,16 +862,16 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
       "id": "1891833762",
       "name_lat": "FRAM STARS ZHOZEF",
-      "name_ru": "",
+      "name_ru": "ФРАМ СТАРС ЖОЗЕФ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -793,24 +881,6 @@
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1881383058",
-      "name_lat": "FREYAFELT SHAMROCK CHARM",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "455834635",
-      "name_lat": "FRIDENS FORGET ME NOT",
-      "name_ru": "",
-      "breed": "КОЛЛИ Д-Ш",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -832,10 +902,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "334471827",
+      "id": "518003450",
       "name_lat": "FREJR-INGVI IZ ROSTOVA PAPY",
       "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ /",
+      "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -868,30 +938,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "934135122",
+      "name_lat": "FRAYTAL' READY SET GO (N/B)",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1934835958",
       "name_lat": "FREELIVE DOG GUERNSEY",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "741353809",
-      "name_lat": "FRAYTAL' READY SET GO",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1185785248",
-      "name_lat": "FREYR NEIT BERNARDO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -913,12 +974,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1806516554",
+      "id": "1329340162",
+      "name_lat": "FRENCHMOLOS DIORISSIMO",
+      "name_ru": "ФРЕНЧМОЛОС ДИОРИССИМО",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "822075927",
       "name_lat": "FREI WIND CHARLES",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "вельш корги пемброк",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1068801658",
+      "name_lat": "FRIDERIKA OGNENNAY LADY",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -931,6 +1010,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "185893816",
+      "name_lat": "FRIDA ZVEZDA ZILANTA",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1256355992",
+      "name_lat": "FRIDENS XTRAVAGANZA",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "143653478",
       "name_lat": "FRIDENS REFLECTION OF DREAM",
       "name_ru": "",
@@ -940,19 +1037,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1214302188",
+      "id": "1415881158",
       "name_lat": "FRIDENS ARTEK",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "405637695",
+      "id": "1949015344",
       "name_lat": "FRIDENS XOTICAL BLOSSOM",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 16,
       "competition_dog_id": null
@@ -967,30 +1064,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "641040490",
+      "id": "1131258372",
       "name_lat": "FRIDENS FORGRANT",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 37,
       "competition_dog_id": null
     },
     {
-      "id": "1167163546",
+      "id": "178784020",
       "name_lat": "FRIDENS FAME FOCUS",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "116304381",
-      "name_lat": "FREIR SO STANITSY MAGNITNAJA",
+      "id": "1291104339",
+      "name_lat": "FRANSCARDIUAR ACE HEARTS",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1021,28 +1118,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1256355992",
-      "name_lat": "FRIDENS XTRAVAGANZA",
+      "id": "1951624736",
+      "name_lat": "FRENIS KISSINDZHER",
       "name_ru": "",
-      "breed": "КОЛЛИ Д-Ш",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 16,
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "21122508",
+      "id": "1839976361",
       "name_lat": "FRENCH DIVINE MAGIC MALIBU SUNRISE",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "213624475",
+      "id": "1752672983",
       "name_lat": "FREDERICA CAROLINE",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1084,21 +1180,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1951624736",
-      "name_lat": "FRENIS KISSINDZHER",
+      "id": "956257622",
+      "name_lat": "FRANT RUSSKAYA ROSKOSH",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "105873223",
-      "name_lat": "FRANT RUSSKAYA ROSKOSH",
+      "id": "1154967736",
+      "name_lat": "FRIDENS MASCARPONE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -1120,15 +1216,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1612393431",
-      "name_lat": "FRENKLIN",
-      "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ)",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1619669862",
       "name_lat": "FRAYTAL' GO GO N/B",
       "name_ru": "",
@@ -1144,6 +1231,15 @@
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1825051467",
+      "name_lat": "FREYR NEIT DOLORES",
+      "name_ru": "ФРЕЙР НЕИТ ДОЛОРЕС",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "GERMAN PINSCHER",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1179,7 +1275,7 @@
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 32,
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -1192,12 +1288,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1992536510",
-      "name_lat": "FRIDENS MASCARPONE",
+      "id": "1931693385",
+      "name_lat": "FRUJE PUMA BRIGHT STAR",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 29,
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -1210,10 +1306,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1005940184",
+      "id": "285014533",
       "name_lat": "FRIDENS ONEGIN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "595431830",
+      "name_lat": "FRIDENS RUSSIA",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1367101788",
+      "name_lat": "FREYA IZ MURANOVO",
+      "name_ru": "ФРЕЯ ИЗ МУРАНОВО",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1228,6 +1342,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1604501717",
+      "name_lat": "FRIDENS EVER AFTER",
+      "name_ru": "ФРИДЕНС ЭВЕР АФТЭР",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "449135600",
       "name_lat": "FRAYTAL' KIR DAYKIRI",
       "name_ru": "",
@@ -1237,28 +1360,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "484622045",
+      "id": "216700354",
       "name_lat": "FRIDENS REFLECTION",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1184062139",
+      "id": "1305959940",
       "name_lat": "FRIDENS VIVA LA DIVA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ФРИДЕНС ВИВА ЛА ДИВА",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "356623311",
+      "name_lat": "FREMILEN'C CUBA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1887502430",
+      "name_lat": "FRANCO FERREIRO OFFELIYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1010604261",
+      "name_lat": "FRIDENS CHIANTI",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1473928999",
+      "id": "196176152",
       "name_lat": "FRIDENS VIOLET LIGHT",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1282,33 +1432,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "171808521",
-      "name_lat": "FREMILEN'S LYUKS FOR EVI GRANOS",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1329340162",
-      "name_lat": "FRENCHMOLOS DIORISSIMO",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "77003781",
-      "name_lat": "FRIDENS CHIANTI",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "871893988",
       "name_lat": "FRESH ENERGY SHAGANE",
       "name_ru": "",
@@ -1318,38 +1441,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "761702405",
+      "id": "227261322",
       "name_lat": "FRIDENS SHINE SO BRIGHT",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "356623311",
-      "name_lat": "FREMILEN'C CUBA",
+      "id": "208162622",
+      "name_lat": "FREELIFE DOG ULISS BION",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1068801658",
-      "name_lat": "FRIDERIKA OGNENNAY LADY",
+      "id": "1222855110",
+      "name_lat": "FREYAFELT FIREFLY NIGHT WITH SNOW SHINE",
       "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1898384904",
-      "name_lat": "FRIDENS EVER AFTER",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -1363,12 +1475,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "321300985",
-      "name_lat": "FRIDENS RUSSIA",
+      "id": "549980823",
+      "name_lat": "FRAYTAL' LETTER TO YOU",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 7,
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1390,10 +1501,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "816595731",
+      "id": "258840557",
       "name_lat": "FREYAFELT TOM SOWEYR",
       "name_ru": "",
-      "breed": "ТАКСА АМЕРИКАНСКИЙ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1408,21 +1519,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "185893816",
-      "name_lat": "FRIDA ZVEZDA ZILANTA",
+      "id": "787075398",
+      "name_lat": "FREDERICA IZ GRAFSKOGO POMESTIJA",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "842208090",
-      "name_lat": "FRIDENS NEVA NEVA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1435,10 +1537,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1342403020",
+      "id": "538091936",
       "name_lat": "FRISHER ATEM MILTRADA MITCHELL",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1453,10 +1555,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "168767292",
+      "id": "280071313",
       "name_lat": "FRIDENS GAVBENIKA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1480,30 +1582,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1028713743",
+      "id": "1266996555",
       "name_lat": "FRANKIE WHITE ANGEL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "456632387",
+      "id": "1060545964",
       "name_lat": "FRIDENS OBSESSION",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "1592283724",
-      "name_lat": "FREDDIE MERCURY SHAGGY EDITION",
+      "id": "659558590",
+      "name_lat": "FRIDENS CEDAR VALE",
       "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "OLD ENGLISH SHEEPDOG",
-      "total_shows": 22,
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1512,7 +1613,25 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 69,
+      "total_shows": 75,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1592283724",
+      "name_lat": "FREDDIE MERCURY SHAGGY EDITION",
+      "name_ru": "",
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "OLD ENGLISH SHEEPDOG",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "921819872",
+      "name_lat": "FROSTY-CHAMPIONS CORALINE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 42,
       "competition_dog_id": null
     },
     {
@@ -1525,21 +1644,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1681878946",
-      "name_lat": "FRIDENS VALCE'N'JAZZ ON MY MIND",
+      "id": "264012641",
+      "name_lat": "FRIDENS WOW POSITION",
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 10,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1260802284",
-      "name_lat": "FRIDENS WOW POSITION",
+      "id": "545197617",
+      "name_lat": "FRAYTAL' LOOK AT",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 23,
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1570,65 +1689,65 @@
       "competition_dog_id": null
     },
     {
-      "id": "921819872",
-      "name_lat": "FROSTY-CHAMPIONS CORALINE",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 38,
-      "competition_dog_id": null
-    },
-    {
       "id": "155426689",
       "name_lat": "FREELIFE DOG KANASTA KRIM",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "993351008",
+      "id": "797242933",
       "name_lat": "FRAYTAL' CAN GET THIS WORLD",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1918954077",
+      "id": "175952209",
       "name_lat": "FREE STAR FILIPP ROCKY TOP",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "57138792",
+      "id": "234457908",
+      "name_lat": "FRIDA FIT OT CHERNOY ZVEZDY",
+      "name_ru": "ФРИДА ФИТ ОТ ЧЁРНОЙ ЗВЕЗДЫ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1882417205",
       "name_lat": "FRIDENS SPACEMAN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "545197617",
-      "name_lat": "FRAYTAL' LOOK AT",
+      "id": "633033156",
+      "name_lat": "FRIDENS MARSHMALLOW",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 14,
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1938395131",
-      "name_lat": "FRIDENS MARSHMALLOW",
+      "id": "1990860058",
+      "name_lat": "FRANCHESKA IZ DOMA KARMANOVOI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
@@ -1651,12 +1770,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1990860058",
-      "name_lat": "FRANCHESKA IZ DOMA KARMANOVOI",
+      "id": "8545477",
+      "name_lat": "FREUD",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "САЛЮКИ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "447625275",
+      "name_lat": "FRANTSAYLAND PLATON",
+      "name_ru": "ФРАНЦАЙЛАНД ПЛАТОН",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1666,15 +1794,6 @@
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1682365845",
-      "name_lat": "FRIDA FIT OT CHERNOY ZVEZDY",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ /",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1705,12 +1824,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "870379200",
+      "id": "779422863",
       "name_lat": "FRANNI TEIL KRUELLA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1886140716",
+      "name_lat": "FREELIVE DOG GRENADA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1741,12 +1869,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1701764586",
-      "name_lat": "FRANTSAYLAND PLATON",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "id": "589133754",
+      "name_lat": "FREYR NEIT TEODOR",
+      "name_ru": "ФРЕЙР НЕИТ ТЕОДОР",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1768,19 +1896,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "366883385",
+      "id": "442743058",
+      "name_lat": "FRIZE STYLE ZHEMCHUZHINKA DOLGOZHDANNAYA",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1243533910",
       "name_lat": "FRIDENS BLOOMY FLOWER",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "304970854",
+      "id": "1493626975",
       "name_lat": "FRESH ENERGY SHERIDANS",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1795,21 +1932,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "52671239",
+      "name_lat": "FRIZZLED LIFE BARRY",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
       "id": "508456204",
       "name_lat": "FREYAFELT OODLES OF FUN",
       "name_ru": "",
       "breed": "DACHSHUND KANINCHEN",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "832864993",
-      "name_lat": "FRIDENS FLASHBACK",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -1822,19 +1959,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1825051467",
-      "name_lat": "FREYR NEIT DOLORES",
+      "id": "1366764362",
+      "name_lat": "FRAM STARS JOZEF",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "GERMAN PINSCHER",
-      "total_shows": 13,
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "514639969",
+      "id": "846544798",
       "name_lat": "FRIDENS QUEST WITH SURPRISE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 13,
       "competition_dog_id": null
@@ -1846,6 +1982,15 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "714089659",
+      "name_lat": "FRUSTYLE NON STOP TORRO",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1876,39 +2021,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "8545477",
-      "name_lat": "FREUD",
+      "id": "1414871835",
+      "name_lat": "FRUJE MIDNIGHT MONA FON DESIZ",
       "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 31,
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
-      "id": "147116774",
+      "id": "1542385569",
+      "name_lat": "FREYA GORDYY DAR",
+      "name_ru": "ФРЭЯ ГОРДЫЙ ДАР",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1757250737",
       "name_lat": "FREEDOM II IZ DINASTII CHEMPIONOV",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "788136785",
+      "id": "8719852",
       "name_lat": "FRAYTAL' YEAH",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "589133754",
-      "name_lat": "FREYR NEIT TEODOR",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1939,6 +2084,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "621371569",
+      "name_lat": "FRIDENS MARRAKESH",
+      "name_ru": "ФРИДЕНС МАРРАКЕШ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1697834114",
       "name_lat": "FREMILEN'S GENEVIEVE",
       "name_ru": "",
@@ -1957,6 +2111,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1430545481",
+      "name_lat": "FRANKI RICH",
+      "name_ru": "",
+      "breed": "ТОЙ-ФОКСТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "89645669",
+      "name_lat": "FRANNY FRAN FAVERSHAM",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "812198071",
       "name_lat": "FRANNI TEIL HARPER",
       "name_ru": "",
@@ -1972,6 +2143,24 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) / GERMAN",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1938049542",
+      "name_lat": "FRANTA IZ SVOBODNOI STAI",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "176309186",
+      "name_lat": "FRESH ENERGY NOVEMBER SWEET",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
+      "breed_en": "ENTLEBUCH CATTLE DOG",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2002,6 +2191,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1186805976",
+      "name_lat": "FRIDENS CADENZA",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1856883782",
+      "name_lat": "FRESH ENERGY YA”THE BEST,",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1279810392",
       "name_lat": "FREMILEN'S DJ JAM",
       "name_ru": "",
@@ -2011,12 +2217,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1938049542",
-      "name_lat": "FRANTA IZ SVOBODNOI STAI",
+      "id": "664244942",
+      "name_lat": "FRENCHESNA JUSTIN",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -2047,10 +2252,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "332563529",
+      "id": "482994160",
       "name_lat": "FRIDENS MOONBERRY",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2065,6 +2270,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1271553278",
+      "name_lat": "FREJYA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1966658181",
       "name_lat": "FREE STAR ROCKWELL",
       "name_ru": "",
@@ -2074,19 +2288,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "176309186",
-      "name_lat": "FRESH ENERGY NOVEMBER SWEET",
-      "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
-      "breed_en": "ENTLEBUCH CATTLE DOG",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "971470873",
       "name_lat": "FRIZE STYLE ASTI",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1254536109",
+      "name_lat": "FROHE GARDE NICOL",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2110,11 +2324,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "934733713",
+      "id": "1599296525",
       "name_lat": "FRAM",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "86306000",
+      "name_lat": "FREYA BELLE",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2137,21 +2359,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "695630013",
-      "name_lat": "FROSTY- CHAMPIONS GRACE LAMMY",
+      "id": "889937483",
+      "name_lat": "FROSTY-CHAMPIONS GRACE LAMMY",
       "name_ru": "",
       "breed": "ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1414871835",
-      "name_lat": "FRUJE MIDNIGHT MONA FON DESIZ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "DOBERMANN",
-      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -2164,24 +2377,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1542385569",
-      "name_lat": "FREYA GORDYY DAR",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "811179134",
-      "name_lat": "FRIZZLED LIFE BARRY",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ /",
-      "breed_en": "",
-      "total_shows": 28,
-      "competition_dog_id": null
-    },
-    {
       "id": "606140555",
       "name_lat": "FRIDENS CHATILLON",
       "name_ru": "",
@@ -2191,10 +2386,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "815088750",
+      "id": "968302024",
       "name_lat": "FRIDENS TICKET TO THE MOON",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 21,
       "competition_dog_id": null
@@ -2236,10 +2431,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "894170499",
+      "id": "1767726554",
+      "name_lat": "FRESH ENERGY DAIQUIRI",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
+      "breed_en": "ENTLEBUCH CATTLE DOG",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "795821707",
       "name_lat": "FRIDENS SHOWSTOPPER",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 19,
       "competition_dog_id": null
@@ -2251,15 +2455,6 @@
       "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
       "breed_en": "WEST HIGHLAND WHITE TERRIER",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1767726554",
-      "name_lat": "FRESH ENERGY DAIQUIRI",
-      "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
-      "breed_en": "ENTLEBUCH CATTLE DOG",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2317,12 +2512,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "224612022",
+      "id": "1412565935",
       "name_lat": "FRESH ENERGY YAMAMOTO",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "ENTLEBUCH CATTLE DOG",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "199621416",
+      "name_lat": "FRAYTAL' PUNK ROCK",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 45,
+      "competition_dog_id": null
+    },
+    {
+      "id": "337949706",
+      "name_lat": "FRIDENS AVRORA",
+      "name_ru": "ФРИДЕНС АВРОРА",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2344,10 +2557,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "150784193",
+      "id": "792189822",
       "name_lat": "FRIDENS DEVOTED TO DREAM",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -2362,10 +2575,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "388514564",
+      "id": "1441621145",
       "name_lat": "FRIDENS ACE OF SPADES",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -2380,10 +2593,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "26530315",
+      "id": "1037326260",
       "name_lat": "FRIDENS KEEP IN TOUCH",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2416,6 +2629,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "921859506",
+      "name_lat": "FRIDENS NEVERLIES",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1383435981",
       "name_lat": "FROSTY-CHAMPIONS EXPENSIVE THAN GOLD",
       "name_ru": "",
@@ -2425,19 +2647,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "88228117",
-      "name_lat": "FRAYTAL' PUNK ROCK",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 39,
-      "competition_dog_id": null
-    },
-    {
-      "id": "335010825",
+      "id": "793567589",
       "name_lat": "FRISHER ATEM FRANT DE FORTUNAT",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2569,10 +2782,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1991786003",
+      "id": "216079480",
       "name_lat": "FRANNI TEIL YARA",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2596,30 +2809,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "911663441",
+      "id": "1418153057",
       "name_lat": "FRIDENS ARRESTER",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "392864742",
+      "id": "1204906533",
       "name_lat": "FREI WIND KATANA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "958736624",
-      "name_lat": "FREELIVE DOG GRENADA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2641,10 +2845,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "70113378",
+      "id": "658195555",
       "name_lat": "FREELIFE DOG BARSELONA GLORIOUS",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2659,15 +2863,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "921859506",
-      "name_lat": "FRIDENS NEVERLIES",
-      "name_ru": "",
-      "breed": "КОЛЛИ Д-Ш",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1892491995",
       "name_lat": "FROSTEN RUSLAND BELIEVE IN DREAM",
       "name_ru": "",
@@ -2677,28 +2872,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1367101788",
-      "name_lat": "FREYA IZ MURANOVO",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1875650464",
+      "id": "1655862989",
       "name_lat": "FRIDENS FABULOUS WEALTH",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "316750096",
+      "id": "337015901",
       "name_lat": "FRIDENS SHE'S A MODEL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2719,6 +2905,15 @@
       "breed": "DACHSHUND MINIATURE",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "676348915",
+      "name_lat": "FRAYTAL' HOMEMADE PIZZA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -2749,12 +2944,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1606581270",
+      "id": "435318648",
       "name_lat": "FRIENDLY WORLD ORLANDA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "274525698",
+      "name_lat": "FRENK TEODOR",
+      "name_ru": "фрэнк Теодор",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2767,12 +2971,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1931693385",
-      "name_lat": "FRUJE PUMA BRIGHT STAR",
+      "id": "1212275224",
+      "name_lat": "FREI WING VEGAS",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2794,12 +2998,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1212275224",
-      "name_lat": "FREI WING VEGAS",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 7,
+      "id": "322786508",
+      "name_lat": "FRANSUAZA PRINTSESSA BONI",
+      "name_ru": "ФРАНСУАЗА ПРИНЦЕССА БОНИ",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "BICHON FRISE",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2812,21 +3016,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "621342421",
+      "id": "599160552",
       "name_lat": "FRUSYLE CADEAUDE LA REINE",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "948388300",
-      "name_lat": "FRANSCARDIUAR ACE HEARTS",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2844,7 +3039,16 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "741964971",
+      "name_lat": "FRIDENS IMPEROR",
+      "name_ru": "ФРИДЕНС ИМПЕРОР",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2854,15 +3058,6 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1534912778",
-      "name_lat": "FRIDENS IMPEROR",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2893,29 +3088,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "274525698",
-      "name_lat": "FRENK TEODOR",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1258639973",
       "name_lat": "FRIDA SO STANITSY MAGNITNAJA",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "714089659",
-      "name_lat": "FRUSTYLE NON STOP TORRO",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
       "total_shows": 8,
       "competition_dog_id": null
     },
@@ -2938,6 +3115,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1108214331",
+      "name_lat": "FREUD",
+      "name_ru": "",
+      "breed": "САЛЮКИ / SALUKI",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "666480181",
+      "name_lat": "FRESH ENERGY YA'THE BEST",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "24292180",
       "name_lat": "FRUSTYLE PATTY",
       "name_ru": "",
@@ -2956,30 +3150,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "108948014",
+      "id": "1195001543",
       "name_lat": "FRIDENS SHADY LOVEMACKER",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1556099170",
-      "name_lat": "FRESH ENERGY YA'THE BEST",
-      "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "676348915",
-      "name_lat": "FRAYTAL' HOMEMADE PIZZA",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -3010,12 +3186,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "569741890",
+      "id": "137594681",
       "name_lat": "FRANNI TEIL KENAI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -3037,10 +3213,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "36500677",
+      "id": "1338547617",
       "name_lat": "FRAER",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3055,10 +3231,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1219218768",
+      "id": "29762086",
+      "name_lat": "FRIDENS XOTICAL DREAM",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1753889752",
+      "name_lat": "FRAYTAL' EXPRESSION OF A UNIQUE",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "959751453",
       "name_lat": "FRIDENS RESPECT",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3082,10 +3276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "74824883",
+      "id": "1826494583",
       "name_lat": "FREA VOM HUHNEGRAB (L-H)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -3100,10 +3294,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "6699970",
+      "id": "1158524460",
       "name_lat": "FRIDENS EXPLOSION",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -3127,12 +3321,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1753889752",
-      "name_lat": "FRAYTAL' EXPRESSION OF A UNIQUE",
+      "id": "156115115",
+      "name_lat": "FRAYTAL' KNOW YOUR WORTH",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 12,
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3145,28 +3339,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1186805976",
-      "name_lat": "FRIDENS CADENZA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "2299502",
       "name_lat": "FRYAZINO MOLOSS RAKSHA",
-      "name_ru": "",
+      "name_ru": "ФРЯЗИНО МОЛОСС РАКША",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1096722896",
+      "id": "178302250",
       "name_lat": "FRIDENS MADE IN RUSSIA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -3181,19 +3366,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1850269499",
+      "id": "1479323183",
       "name_lat": "FRIDA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "620259346",
+      "id": "1932354919",
       "name_lat": "FREYAFELT DANDELION FLOWER",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3208,20 +3393,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "879551011",
-      "name_lat": "FRENKLIN",
-      "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) / PRESA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1430545481",
+      "id": "1211385755",
       "name_lat": "FRANKI RICH",
       "name_ru": "",
-      "breed": "ТОЙ-ФОКСТЕРЬЕР",
-      "breed_en": "",
+      "breed": "ФОКСТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3249,7 +3424,7 @@
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3289,10 +3464,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1672108366",
+      "id": "688554445",
       "name_lat": "FROZEN NOKAFI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3302,16 +3477,14 @@
       "name_lat": "FRENCH FANTASY NARYTA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1738807354",
-      "name_lat": "FRESH ENERGY YA”THE BEST,",
+      "id": "410017448",
+      "name_lat": "FRENCHESNA JAHMA ZOLOTAJA",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3327,17 +3500,17 @@
     {
       "id": "1971436121",
       "name_lat": "FREMILEN'S LAVR",
-      "name_ru": "",
+      "name_ru": "ФРЕМИЛЕН'С ЛАВР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "189311063",
+      "id": "1300845672",
       "name_lat": "FRIDENS CHARLEROI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3379,21 +3552,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1034795610",
-      "name_lat": "FRANCO FERREIRO OFFELIYA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "id": "699032256",
+      "name_lat": "FREMILEN'S BEN NEVIS",
+      "name_ru": "ФРЕМИЛЕНС БЕН НЕВИС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1271553278",
-      "name_lat": "FREJYA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3403,6 +3567,14 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "120036359",
+      "name_lat": "FREDERICKA",
+      "name_ru": "",
+      "breed": "ПЕМБРОК /",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3424,19 +3596,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "699032256",
-      "name_lat": "FREMILEN'S BEN NEVIS",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "325860197",
+      "id": "60910782",
       "name_lat": "FROSTEN RUSLAND LIVERPUL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3469,6 +3632,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1745449160",
+      "name_lat": "FRANNI TEIL BILKIS",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "2000371012",
+      "name_lat": "FRIDENS BRABUS",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "121102057",
       "name_lat": "FRIDENS MASCARAD",
       "name_ru": "",
@@ -3487,30 +3667,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "261845400",
+      "id": "1933628741",
       "name_lat": "FRINEDS ACE OF SPADES",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1383141027",
-      "name_lat": "FROSTY- CHAMPIO NS JAMES BOND",
+      "id": "165707169",
+      "name_lat": "FROSTY-CHAMPIO NS JAMES BOND",
       "name_ru": "",
       "breed": "ИЙ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "315707003",
-      "name_lat": "FRIDENS BRABUS",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3541,12 +3712,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1693726063",
+      "name_lat": "FRENCH MIRACLE EMMA ALIR BAUT",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
       "id": "2000074794",
       "name_lat": "FRIDENS COPPELITTA",
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1854154099",
+      "name_lat": "FRENCH DREAM BUGATTI II",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3559,12 +3748,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "209331082",
+      "id": "949014571",
       "name_lat": "FRIDENS EFFULGENT STAR",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1752382271",
+      "name_lat": "FRAYTAL' TIP TOP",
+      "name_ru": "ФРАЙТАЛЬ ТИП ТОП",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -3577,48 +3775,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "710295325",
+      "id": "466640237",
       "name_lat": "FRIDENS OVATION",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1693726063",
-      "name_lat": "FRENCH MIRACLE EMMA ALIR BAUT",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1107518979",
-      "name_lat": "FRAIDENREICH IRKHAN",
-      "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG",
-      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "199334541",
-      "name_lat": "FRIDENS KARRIZZMA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "771150761",
-      "name_lat": "FRIDENS XOTICAL DREAM",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3627,7 +3789,33 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1107518979",
+      "name_lat": "FRAIDENREICH IRKHAN",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "431102226",
+      "name_lat": "FRIDENS KARRIZZMA",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1759986678",
+      "name_lat": "FRANNI TEIL MALAR",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА /",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -3640,15 +3828,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "646984238",
-      "name_lat": "FRENKLIN",
-      "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО",
-      "breed_en": "PRESA CANARIO",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1158868797",
       "name_lat": "FRESH NEWS DAYSPRING",
       "name_ru": "",
@@ -3658,30 +3837,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "234988271",
-      "name_lat": "FRANNI TEIL MALAR",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1752382271",
-      "name_lat": "FRAYTAL' TIP TOP",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "239044618",
+      "id": "68185515",
       "name_lat": "FRIDENS SWEET CHERITY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 13,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "684903954",
+      "name_lat": "FRIENDLY WORLD NERO WOLFE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -3699,7 +3869,7 @@
       "name_ru": "",
       "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
       "breed_en": "ENTLEBUCH CATTLE DOG",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3712,28 +3882,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "627017093",
-      "name_lat": "FRIDENS AVRORA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "616524167",
       "name_lat": "FRANCISTOWN ARTHUR",
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "147426184",
+      "id": "1554022189",
       "name_lat": "FREYA ASPIN",
       "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР /",
+      "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3766,12 +3927,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1854154099",
-      "name_lat": "FRENCH DREAM BUGATTI II",
+      "id": "1899134122",
+      "name_lat": "FRENCH DREAM NOVEL LETUAL",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -3784,17 +3944,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "750448791",
+      "id": "55689829",
       "name_lat": "FRESH ENERGY MISTER X",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЭНТЛЕБУХЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1926754109",
-      "name_lat": "FROSTY-CHAMPIONS DANCE OF BLESSED SPIRITS",
+      "id": "560091450",
+      "name_lat": "FROSTY CHAMPIONS DANCE OF BLESSED SPIRITS",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
@@ -3802,10 +3962,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "493713752",
+      "id": "763799677",
       "name_lat": "FREIYA C ASGARDE",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -3820,21 +3980,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1899134122",
-      "name_lat": "FRENCH DREAM NOVEL LETUAL",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "247957532",
       "name_lat": "FREMILEN’S VALENTINO",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -3865,10 +4016,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "282376191",
+      "id": "1464057838",
       "name_lat": "FRANCOISE SAGAN IZ DOMA VENGRE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
@@ -3880,6 +4031,15 @@
       "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "IRISH SOFT COATED WHEATEN TERRIER",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "128648049",
+      "name_lat": "FRANTSUZSKAYA GALAKTIKA BARIN",
+      "name_ru": "ФРАНЦУЗСКАЯ ГАЛАКТИКА БАРИН",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -3901,10 +4061,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1033453410",
+      "id": "486255459",
       "name_lat": "FRANKO VALADA'S TIARA ERMINY FEMINY",
       "name_ru": "",
-      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР /",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -3919,21 +4079,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "916438665",
+      "name_lat": "FREYIA BLACK BRILLIANT",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1704651599",
       "name_lat": "FRIDENS MEGA VICTORI",
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1837805172",
-      "name_lat": "FRIENDLY WORLD NERO WOLFE",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -4000,10 +4160,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1210999392",
+      "id": "1065036469",
       "name_lat": "FREYAFELT KISS MY NOSE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
       "total_shows": 14,
       "competition_dog_id": null
@@ -4018,6 +4178,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1404723542",
+      "name_lat": "FRANCESCA PRIMA IS NOVELES",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1905682247",
+      "name_lat": "FRENCHESNA BERENDGER",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "1944678777",
       "name_lat": "FRANZINI RAPHAEL",
       "name_ru": "",
@@ -4027,10 +4205,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "724385980",
+      "id": "191370943",
       "name_lat": "FREE STAR FILIPPA ZAHARIA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
@@ -4072,28 +4250,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1404723542",
-      "name_lat": "FRANCESCA PRIMA IS NOVELES",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 4,
+      "id": "1197250907",
+      "name_lat": "FRIDENS FLIBBERTIGIBBET",
+      "name_ru": "ФРИДЕНС ФЛИББЕРТИГИББЕТ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1285251597",
+      "id": "935273072",
       "name_lat": "FRAYTAL’ PRIVATE THINK",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "891970079",
+      "id": "1622167438",
       "name_lat": "FREND LEND PERCIVAL",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -4108,12 +4286,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1832445612",
-      "name_lat": "FREYIA BLACK BRILLIANT",
+      "id": "274054459",
+      "name_lat": "FRENCH DREAM YUVENTA II",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -4126,46 +4304,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "816659728",
-      "name_lat": "FRENCH DIVINE MAGIC INFANTA GLORIYA",
-      "name_ru": "",
+      "id": "1257168069",
+      "name_lat": "FRAVIAN ASTON MARTIN",
+      "name_ru": "ФРАВИАН АСТОН МАРТИН",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1001722779",
-      "name_lat": "FRAYTAL' UNDER WRAPS",
+      "id": "762483559",
+      "name_lat": "FRIDENS MISTRESS OF THE DARK",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "467378008",
-      "name_lat": "FRIDENS EXCLUSIVE FOR YOU AT RADWAY",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1215560567",
-      "name_lat": "FRANTSUZSKAYA GALAKTIKA BARIN/ФРАНЦУЗСКАЯ ГАЛАКТИКА БАРИН",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "984796383",
+      "id": "816659728",
+      "name_lat": "FRENCH DIVINE MAGIC INFANTA GLORIYA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "70888658",
+      "name_lat": "FRAYTAL' UNDER WRAPS",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "971545058",
+      "name_lat": "FRIDENS EXCLUSIVE FOR YOU AT RADWAY",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "541887566",
       "name_lat": "FRAYTAL' WITH FLYING COLORS",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -4180,6 +4366,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1712472553",
+      "name_lat": "FRENCH DIVINE MAGIC YANKEL LEGEND",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "983785431",
       "name_lat": "FRANTSAYLAND FLYER SCOTTY",
       "name_ru": "",
@@ -4189,10 +4384,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "76215162",
+      "id": "105207243",
       "name_lat": "FROSTEN RUSLAND GUFFI",
       "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН /",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1991883293",
+      "name_lat": "FRANKO VALADA'S TIP-TOP",
+      "name_ru": "",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -4212,7 +4416,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -4239,7 +4443,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -4270,12 +4474,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "458613628",
+      "name_lat": "FRENCH DANDELION BONIFACE",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1803392234",
       "name_lat": "FREEDOM FREYA",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "159595642",
+      "name_lat": "FREI WIND SHAFRAN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1130812450",
+      "name_lat": "FRAYTAL' OVATIONS PLEASE",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -4288,21 +4518,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "531635870",
+      "name_lat": "FRIDENS VELVET ROYAL",
+      "name_ru": "ФРИДЕНС ВЕЛЬВЕТ РОЙАЛ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "143571804",
       "name_lat": "FRISE DELUXE INCREDIBLE",
       "name_ru": "",
       "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1897367258",
-      "name_lat": "FRIDENS FLIBBERTIGIBBET",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -4315,12 +4545,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1905682247",
-      "name_lat": "FRENCHESNA BERENDGER",
+      "id": "1623640240",
+      "name_lat": "FRAYTAL’ PROVE YOUR CLASS",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -4342,12 +4572,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1257168069",
-      "name_lat": "FRAVIAN ASTON MARTIN",
+      "id": "803667281",
+      "name_lat": "FRANTSUZKIY POTSELUY ZUCCARDI",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -4357,15 +4587,6 @@
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "59382992",
-      "name_lat": "FRANTSUZKIY POTSELUY ZUCCARDI",
-      "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -4396,6 +4617,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "253388717",
+      "name_lat": "FRENCH DREAM YUNONA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "848495499",
+      "name_lat": "FREYA IZ DINASTII KOROLEI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1677534018",
       "name_lat": "FRANTSUZKIY POTSELUY FONDANT",
       "name_ru": "",
@@ -4423,12 +4661,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "253388717",
-      "name_lat": "FRENCH DREAM YUNONA",
+      "id": "908881191",
+      "name_lat": "FRIDENS FAULTLESS LAD",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -4437,7 +4675,16 @@
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "342375395",
+      "name_lat": "FRANTSUZKIY POTSELUY ICE CREAM",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -4474,6 +4721,15 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1416546233",
+      "name_lat": "FRIDENS LINDEMANN",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -4540,10 +4796,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "405855137",
+      "id": "506947324",
       "name_lat": "FRANK POZITIV",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4558,10 +4814,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1047169725",
+      "id": "1916191394",
       "name_lat": "FRIDENS RUSSIA ВЕНГЕРСКАЯ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4621,21 +4877,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "458613628",
-      "name_lat": "FRENCH DANDELION BONIFACE",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "887726779",
-      "name_lat": "FRANKO VALADA'S TIP- TOP",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
+      "id": "59378886",
+      "name_lat": "FRENK FAVORIT",
+      "name_ru": "ФРЕНК ФАВОРИТ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -4644,7 +4891,7 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -4684,6 +4931,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "473803135",
+      "name_lat": "FRANTSUZKIY POTSELUY UNIKUM",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1151988706",
       "name_lat": "Fraytal’ Yeah",
       "name_ru": "",
@@ -4693,10 +4949,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1076536856",
-      "name_lat": "FRANTSUZKIY POTSELUY ICE CREAM",
-      "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
+      "id": "1585414845",
+      "name_lat": "FRANTSUZSKAYA LEGENDA CHISTAYA POBEDA",
+      "name_ru": "ФРАНЦУЗСКАЯ ЛЕГЕНДА ЧИСТАЯ ПОБЕДА",
+      "breed": "БРИАР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -4707,113 +4963,113 @@
       "name_ru": "",
       "breed": "БОСЕРОН",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "839388326",
+      "id": "1553130143",
       "name_lat": "FRAYTAL’ ZEITGEIST",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1522161150",
+      "id": "341787883",
+      "name_lat": "FREI WIND DUSHECHKA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "706321272",
       "name_lat": "FRIDENS DREAM COME TRUE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "99437482",
+      "id": "726170699",
       "name_lat": "FRIDENS EVERLASTING LOVE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "59378886",
-      "name_lat": "FRENK FAVORIT",
+      "id": "401925544",
+      "name_lat": "FREYAFELT BELLA CIAO",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 9,
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "397712487",
+      "id": "366888480",
+      "name_lat": "FRENCH FANTASY PATRISIYA DEAR",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "749839576",
       "name_lat": "FRIDENS BALMONT BRIGHT",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1708980178",
+      "id": "1605109843",
       "name_lat": "FRIDENS MAIN IN HOUSE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "159595642",
-      "name_lat": "FREI WIND SHAFRAN",
+      "id": "339622784",
+      "name_lat": "FREE FIRE YABLOCHNAYA ADELIYA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "640613781",
-      "name_lat": "FRAYTAL' PANCAKE WITH MAPLE SYRUP",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "814961421",
-      "name_lat": "FREI WIND DRIVE DJANGO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "341296343",
-      "name_lat": "FROSTEDUNION DENALI",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1722534489",
-      "name_lat": "FRIDENS LINDEMANN",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1130812450",
-      "name_lat": "FRAYTAL' OVATIONS PLEASE",
+      "id": "149338024",
+      "name_lat": "FRAYTAL' PANCAKE WITH MAPLE SYRUP",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "975653990",
+      "name_lat": "FREI WIND DRIVE DJANGO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "403414294",
+      "name_lat": "FROSTEDUNION DENALI",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4825,6 +5081,14 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "141206243",
+      "name_lat": "FRESH ENERGY CAMPARI",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4846,21 +5110,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "222317879",
+      "name_lat": "FRANT VELIKOLEPNYY",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1538646760",
       "name_lat": "FRIDENS MOTIVATOR",
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1366227079",
+      "id": "1449518406",
       "name_lat": "FRESH ENERGY ROTHSCHILD",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1926891923",
+      "name_lat": "FRANKLIN",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -4869,7 +5150,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -4891,21 +5172,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1585414845",
-      "name_lat": "FRANTSUZSKAYA LEGENDA CHISTAYA POBEDA",
-      "name_ru": "",
-      "breed": "БРИАР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "760728756",
       "name_lat": "FRENCHESNA BIRNELLA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -4927,21 +5199,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1623640240",
-      "name_lat": "FRAYTAL’ PROVE YOUR CLASS",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "id": "1433329944",
+      "name_lat": "FREYR NEIT REVOLUTION",
+      "name_ru": "ФРЕЙР НЕИТ РЕВОЛУТИОН",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1926891923",
-      "name_lat": "FRANKLIN",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "BEAGLE",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -4954,30 +5217,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1281474374",
-      "name_lat": "FREYAFELT BELLA CIAO",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "150907267",
+      "id": "622064267",
       "name_lat": "FRIDENS FLY TO THE SKY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "473803135",
-      "name_lat": "FRANTSUZKIY POTSELUY UNIKUM",
-      "name_ru": "",
-      "breed": "МОПС",
+      "id": "1462450481",
+      "name_lat": "FRANKO VALADA'S UDIVITELNAYA TUNDRA",
+      "name_ru": "ФРАНКО ВАЛАДА'С УДИВИТЕЛЬНАЯ ТУНДРА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -4990,10 +5244,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "100606926",
+      "id": "1860135600",
       "name_lat": "FRIENDLY WORLD SKAZOCHNAYA NIMFA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -5017,10 +5271,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1265617746",
+      "id": "502014806",
       "name_lat": "FRESH STAR KEITLIN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5035,15 +5289,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "366888480",
-      "name_lat": "FRENCH FANTASY PATRISIYA DEAR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1544214665",
       "name_lat": "FRENCH DANDELION VOLE LA VICTOIRE",
       "name_ru": "",
@@ -5053,10 +5298,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1156223809",
+      "id": "56503324",
       "name_lat": "FREIYA",
       "name_ru": "",
-      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР /",
+      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -5071,12 +5316,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1008973797",
+      "id": "772807272",
       "name_lat": "FREE STAR FIJI IRINAS",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1949288560",
+      "name_lat": "FRANBAR`S RENEGADE",
+      "name_ru": "",
+      "breed": "БАССЕТ ХАУНД",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -5098,12 +5352,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "610605791",
-      "name_lat": "FRIDENS MISTRESS OF THE DARK",
+      "id": "1011536264",
+      "name_lat": "FREELIFE DOG DYUBERRI EST LYUKSURIYA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "891694241",
+      "name_lat": "FRUKTOVAYA KARAMELKA OT GARRY POTTERA (LONG COAT)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -5125,19 +5387,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "121541621",
+      "id": "429009072",
       "name_lat": "FRANNI TEIL YANTAR",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed": "СТАНДАРТ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "286158830",
+      "id": "330820923",
       "name_lat": "FREYAFELT TOMBOY PRINCESS",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5152,39 +5414,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1000201187",
+      "id": "1338613068",
       "name_lat": "FRIDENS VOROSHILOV",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "122245297",
+      "id": "661903692",
       "name_lat": "FRENCHMOLOS MARSEL",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1433329944",
-      "name_lat": "FREYR NEIT REVOLUTION",
+      "id": "1547148046",
+      "name_lat": "FREYR NEIT LALUNA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1462450481",
-      "name_lat": "FRANKO VALADA'S UDIVITELNAYA TUNDRA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -5197,12 +5450,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1338538382",
-      "name_lat": "FRIDENS FAULTLESS LAD",
+      "id": "1432013664",
+      "name_lat": "FRANKO VALADA'S CHOPPER ROAD KING",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -5224,6 +5477,41 @@
       "competition_dog_id": null
     },
     {
+      "id": "510732667",
+      "name_lat": "FRITSWEET ZHEMCHUZHINA DUSHI",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "25032352",
+      "name_lat": "FRESH STAR GABBI",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1349563293",
+      "name_lat": "FREYAFELT SHAMELESSLY CUTE",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1256193169",
+      "name_lat": "FREI WIND ROMANTICA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1986771984",
       "name_lat": "FREELIFE DOG VALDIVIYA VIVA",
       "name_ru": "",
@@ -5233,10 +5521,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "559325051",
+      "id": "1678141394",
+      "name_lat": "FREYR NEIT ROSARIO",
+      "name_ru": "ФРЕЙР НЕИТ РОСАРИО",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1955603744",
       "name_lat": "FREELIFE DOG ZAGORELIY MACHO",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5251,12 +5548,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1363520132",
+      "id": "1599072446",
+      "name_lat": "FRENCH DREAM VERSAL",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1184182065",
       "name_lat": "FRUSTYLE ROSSO FERRARI",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -5287,12 +5593,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1712472553",
-      "name_lat": "FRENCH DIVINE MAGIC YANKEL LEGEND",
+      "id": "22938133",
+      "name_lat": "FRAGONARD BLEK ASTERISK",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -5300,6 +5606,15 @@
       "name_lat": "FRANTSUZSKY PRINCE V'STILE OLEANY",
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "749219860",
+      "name_lat": "FREYR NEIT NIKA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5319,16 +5634,7 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1572048508",
-      "name_lat": "FRIDZH SELEBRITIS OF BRITAN",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "BULL TERRIER STANDART",
-      "total_shows": 2,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -5341,12 +5647,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1026389977",
+      "id": "1173722571",
       "name_lat": "FREDO ALBERTO",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ-КОРСО",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -5359,37 +5665,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "403155739",
+      "id": "1690615890",
       "name_lat": "FRANKLIN OLIVER IZ SOLNECHNOGO DOMA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "266204038",
+      "id": "532713895",
       "name_lat": "FRIDENS MEGA VICTORY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1183543873",
+      "id": "1428949396",
+      "name_lat": "FREYR NEIT GALILEO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "366225891",
       "name_lat": "FRIDENS CLOSE TO PERFECT",
       "name_ru": "",
-      "breed": "ДЛИННОШЕРС",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1949288560",
-      "name_lat": "FRANBAR`S RENEGADE",
+      "id": "532358071",
+      "name_lat": "FRIDA SNOY PRINCESS",
       "name_ru": "",
-      "breed": "БАССЕТ ХАУНД",
+      "breed": "САМОЕД",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1041320555",
+      "name_lat": "FREYR NEIT OLA",
+      "name_ru": "ФРЕЙР НЕИТ ОЛА",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5422,12 +5745,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1228954854",
+      "id": "261218640",
       "name_lat": "FRIDENS GOLDRISE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "125203309",
+      "name_lat": "FREMILEN’S BAILEYS",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -5440,6 +5771,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "997339718",
+      "name_lat": "FREYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1054906046",
       "name_lat": "FROSTY ROLNICKA",
       "name_ru": "",
@@ -5449,28 +5788,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "876672925",
+      "id": "1911105137",
       "name_lat": "FRI DZHAMP YURATE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "американский стаффордширский терьер",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "738809516",
+      "id": "347401007",
       "name_lat": "FRIDENS FAME EMOTION",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "COLLIE ROUGH",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "504255758",
+      "id": "702092284",
       "name_lat": "FRANT GLAMURNIY MACHO",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ПЯТНИСТЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5485,19 +5824,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "442743058",
-      "name_lat": "FRIZE STYLE ZHEMCHUZHINKA DOLGOZHDANNAYA",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1042527214",
+      "id": "1448430903",
       "name_lat": "FRESH STAR FABIO",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР /",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5521,11 +5851,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1547148046",
-      "name_lat": "FREYR NEIT LALUNA",
+      "id": "1276813782",
+      "name_lat": "FRIDENS DIAMOND MIST",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -5548,10 +5878,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "318829707",
+      "id": "394515252",
       "name_lat": "FRIDENS EMOTION'N'MOTION",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5584,21 +5914,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1256193169",
-      "name_lat": "FREI WIND ROMANTICA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "766602435",
       "name_lat": "FRENCHMOLOS SPARTA",
-      "name_ru": "",
+      "name_ru": "ФРЕНЧМОЛОС СПАРТА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -5701,12 +6022,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "25032352",
-      "name_lat": "FRESH STAR GABBI",
+      "id": "1862782295",
+      "name_lat": "FREMILEN’S BOSCA ROSE",
       "name_ru": "",
-      "breed": "МОПС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -5719,28 +6040,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1528558579",
+      "id": "47177084",
       "name_lat": "FRIDENS SCHUMAKHER",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "167769031",
-      "name_lat": "FRANSHIZA IS ANTAGRADA",
-      "name_ru": "",
-      "breed": "НОРФОЛК ТЕРЬЕР /",
+      "id": "1295398675",
+      "name_lat": "FRUTTA DILETTO",
+      "name_ru": "ФРУТТА ДИЛЕТТО",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "890419953",
-      "name_lat": "FRAGONARD BLEK ASTERISK",
+      "id": "728702598",
+      "name_lat": "FRANSHIZA IS ANTAGRADA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "НОРФОЛК ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5764,10 +6085,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "782603552",
+      "id": "339591157",
       "name_lat": "FRISE DELUXE NIKOLA HELIOS AURELI",
       "name_ru": "",
-      "breed": "ЛАГОТТО РОМАНЬОЛО /",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5782,39 +6103,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "62739748",
-      "name_lat": "FRIDENS RUSSIА",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1276813782",
-      "name_lat": "FRIDENS DIAMOND MIST",
-      "name_ru": "",
-      "breed": "КОЛЛИ Д-Ш",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1406927062",
       "name_lat": "FRANTSYBULL DAFNA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1599072446",
-      "name_lat": "FRENCH DREAM VERSAL",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -5836,17 +6130,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1428949396",
-      "name_lat": "FREYR NEIT GALILEO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1155607846",
-      "name_lat": "FRANTSAYLAND ODREY- CANNY-WEST",
+      "id": "1872705222",
+      "name_lat": "FRANTSAYLAND ODREY-CANNY-WEST",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
@@ -5854,10 +6139,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1825310201",
+      "id": "1372114326",
       "name_lat": "FRIDENS BELISSIMA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5890,10 +6175,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "448758573",
+      "id": "1579997341",
       "name_lat": "FRUJE MILVA NICE FLEUR",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "DOBERMANN",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5908,6 +6193,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1766959105",
+      "name_lat": "FRANCHESKA DE LUX",
+      "name_ru": "",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "887396796",
       "name_lat": "FRENSIS FEY S BEREGA TURI",
       "name_ru": "",
@@ -5917,19 +6210,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1252136329",
-      "name_lat": "FROSTY- CHAMPIONS",
+      "id": "1022668315",
+      "name_lat": "FROSTY-CHAMPIONS",
       "name_ru": "",
       "breed": "СИБА/SHIBA СИБИРСКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "749219860",
-      "name_lat": "FREYR NEIT NIKA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5944,10 +6228,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1339013649",
+      "id": "202441305",
       "name_lat": "FREIEN WIND ARUNA",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "DOBERMANN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5962,10 +6246,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1729131703",
+      "id": "618569706",
+      "name_lat": "FRAM STARS MARKUS EYCH",
+      "name_ru": "ФРАМ СТАРС МАРКУС ЭЙЧ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1757624566",
       "name_lat": "FRANTSUZSKIY POTSELUY KIMI",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6007,21 +6300,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "925382295",
-      "name_lat": "FREE FIRE YABLOCHNAYA ADELIYA",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1946883867",
       "name_lat": "FRIDENS SNOW SPRING",
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "524985258",
+      "name_lat": "FRIDENS SEQUOIA",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -6115,12 +6408,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "61733034",
+      "id": "1539839685",
+      "name_lat": "FRUSTYLE LULLABELL",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1557278047",
       "name_lat": "FREYAFELT ELISIR D'AMORE",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1683860110",
+      "name_lat": "FRIDENS FIRESPARK",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -6160,10 +6470,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "325907418",
+      "id": "1173743707",
       "name_lat": "FRIENDS ACE OF SPADES",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -6175,6 +6485,15 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "581019787",
+      "name_lat": "FRANTSUZSKIY TALISMAN BERT TOBIAS STEFAN",
+      "name_ru": "ФРАНЦУЗСКИЙ ТАЛИСМАН БЕРТ ТОБИАС СТЕФАН",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -6196,39 +6515,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "63377744",
-      "name_lat": "FRIDENS SEQUOIA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "532358071",
-      "name_lat": "FRIDA SNOY PRINCESS",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "767660144",
       "name_lat": "Fraytal'Hi There",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1336820103",
-      "name_lat": "FREYA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -6313,10 +6605,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "809985387",
+      "id": "1009052719",
       "name_lat": "FRANCO FERREIRO PAOLA REINA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6331,10 +6623,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1905623335",
+      "id": "194130712",
       "name_lat": "FRIDENS FACE TO FACE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6358,19 +6650,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "555996479",
+      "id": "757428554",
+      "name_lat": "FRANK",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "151204304",
       "name_lat": "FRENRISH FRAID BRIGITTE BARDOT",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ХОХЛАТАЯ ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "823824183",
+      "id": "1852118736",
       "name_lat": "FRIGGA FOKKE VULF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6394,19 +6695,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "121974167",
+      "id": "315585576",
       "name_lat": "FRIDENS SHIMMER FIRST STAR",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1298039911",
+      "id": "1147259096",
       "name_lat": "FRIDENS SHPULLE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6421,12 +6722,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "343357708",
+      "name_lat": "FREELIFE DOG NIAGARA FOLS",
+      "name_ru": "",
+      "breed": "КАРДИГАН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1059227943",
       "name_lat": "FREI WIND SHEIKH",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1223472157",
+      "name_lat": "FRENIS ARISHA ( )",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -6457,21 +6775,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1977971944",
+      "id": "1775267668",
       "name_lat": "FREEDOM OF CHIVALRY",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed": "Шпиц (померанский) белый Шпиц (померанский) оранж",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1321297344",
-      "name_lat": "FRUKTOVAYA KARAMELKA OT GARRY POTTERA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -6493,19 +6802,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "581019787",
-      "name_lat": "FRANTSUZSKIY TALISMAN BERT TOBIAS STEFAN",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "368359927",
+      "id": "1476067976",
       "name_lat": "FRIDENS CHALYAPIN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -6520,21 +6820,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1122267379",
+      "id": "538580092",
       "name_lat": "FRIDENS SATIN'N SILK",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "98477183",
+      "id": "44690497",
       "name_lat": "FREYJA SIF",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -6673,8 +6973,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "476815275",
-      "name_lat": "FRABUNEL VENUS- BEAUTE",
+      "id": "19276739",
+      "name_lat": "FRABUNEL VENUS-BEAUTE",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
@@ -6691,10 +6991,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1360569751",
+      "id": "1910114802",
       "name_lat": "FRESH NEWS DREAMER",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6745,15 +7045,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "464139720",
-      "name_lat": "FREMILEN’S BAILEYS",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1218709572",
       "name_lat": "FREYER СОНРИЗА ФЕЛИС ЛУЗ",
       "name_ru": "",
@@ -6781,10 +7072,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1385310396",
+      "name_lat": "FRAU INFERNA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ АМЕРИКАНСКИЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1914774512",
       "name_lat": "FREYA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "818334027",
+      "name_lat": "FRANK VDL",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6799,10 +7107,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "49637042",
+      "id": "1268160051",
       "name_lat": "FRIDENS FAUTLESS LAD",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6831,7 +7139,7 @@
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -6853,21 +7161,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1222855110",
-      "name_lat": "FREYAFELT FIREFLY NIGHT WITH SNOW SHINE",
+      "id": "1757920970",
+      "name_lat": "FRIDENS BEYOND BELIEF",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1223472157",
-      "name_lat": "FRENIS ARISHA ( )",
+      "id": "1948616476",
+      "name_lat": "FREESTYLE",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -6934,15 +7241,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "891694241",
-      "name_lat": "FRUKTOVAYA KARAMELKA OT GARRY POTTERA (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1399661473",
       "name_lat": "FRA RIKET TERRY AUNE SOUL REGINLEVE",
       "name_ru": "",
@@ -6961,19 +7259,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "563809768",
-      "name_lat": "FREYAFELT SHAMELESSLY CUTE",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "123307410",
+      "id": "396648480",
       "name_lat": "FRENKY IZ ZOLOTOY GAVANI",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6997,10 +7286,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "23953766",
+      "id": "204920610",
       "name_lat": "FRIDENS BLUE VANILLA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "ЙСКАЯ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7024,12 +7313,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "122309422",
-      "name_lat": "FREI WIND DUSHECHKA",
+      "id": "1574640296",
+      "name_lat": "FRAPPE PUPPY ANABEL BABY SWEET",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "МОПС",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -7105,6 +7393,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "744983286",
+      "name_lat": "FRIDA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "34308070",
       "name_lat": "FRANKO VALADA'S FELICITATA",
       "name_ru": "",
@@ -7118,15 +7414,6 @@
       "name_lat": "FREYAFELT ELISIR D'AMORE ЕЛИСИР",
       "name_ru": "",
       "breed": "DACHSHUND KANINCHEN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1678141394",
-      "name_lat": "FREYR NEIT ROSARIO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7147,6 +7434,15 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1027744252",
+      "name_lat": "FRUSTYLE TERVOLINA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -7174,24 +7470,6 @@
       "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1027744252",
-      "name_lat": "FRUSTYLE TERVOLINA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1539755022",
-      "name_lat": "FREMILEN’S BOSCA ROSE",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -7227,14 +7505,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1538450738",
+      "id": "1091913907",
       "name_lat": "FRANTSUZSKIY ZEFIR",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -7285,24 +7563,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "222317879",
-      "name_lat": "FRANT VELIKOLEPNYY",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "457248328",
-      "name_lat": "FRANK",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1145568757",
       "name_lat": "FRANC",
       "name_ru": "",
@@ -7330,10 +7590,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "636017096",
+      "id": "801100530",
       "name_lat": "FRIDENS EVER SAY NEVER",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7357,10 +7617,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "626503152",
+      "id": "1832191685",
       "name_lat": "FRESH PRINS HONEY GOBLIN",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7384,30 +7644,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "10945402",
+      "id": "292704849",
       "name_lat": "FRAIDENREICH HARD ROCK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "582632606",
+      "id": "220822077",
       "name_lat": "FRAIDENREICH HITACHI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1267404627",
-      "name_lat": "FRANK",
+      "id": "1489833094",
+      "name_lat": "FREYR NEIT LEON",
       "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -7420,10 +7680,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "54692046",
+      "id": "431537187",
       "name_lat": "FRANK",
       "name_ru": "",
-      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7456,6 +7716,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "671523730",
+      "name_lat": "FRED",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МИНИАТЮРНЫЙ (МАЛЫЙ) ОКРАС",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "367322540",
+      "name_lat": "FRED",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МИНИАТЮРНЫЙ (МАЛЫЙ) ОКРАС НЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "838349902",
       "name_lat": "FRIDA",
       "name_ru": "",
@@ -7465,29 +7741,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1258829306",
+      "id": "440257880",
       "name_lat": "FRENKLIN",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД ДОГ)",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1586370641",
-      "name_lat": "FREESTYLE",
+      "id": "200352557",
+      "name_lat": "FREYA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1108214331",
-      "name_lat": "FREUD",
-      "name_ru": "",
-      "breed": "САЛЮКИ / SALUKI",
-      "breed_en": "",
+      "breed": "ГРЮНЕНДАЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7496,6 +7762,15 @@
       "name_lat": "FREDERICKA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1049594661",
+      "name_lat": "FRENCIS ROSTAPO DOG",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7591,19 +7866,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "753680238",
+      "id": "1755873992",
       "name_lat": "FRIDENS BUGS BUNNY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1423014890",
-      "name_lat": "FRENCIS ROSTAPO DOG",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7622,15 +7888,6 @@
       "name_lat": "FREDERIKA VELICHESTVENNAYAVE LICHIE IMPERATORA FREDERIKA",
       "name_ru": "",
       "breed": "Пекинес",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "656629113",
-      "name_lat": "FREYR NEIT LEON",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7690,19 +7947,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1766959105",
-      "name_lat": "FRANCHESKA DE LUX",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "855003341",
+      "id": "5691184",
       "name_lat": "FRENCH DANDELI ON BOURBON",
       "name_ru": "",
-      "breed": "ФРИЗЕ /",
+      "breed": "ФРИЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7771,10 +8019,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "745065925",
+      "id": "1186440321",
       "name_lat": "FRANCZ FERDINAND",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7798,15 +8046,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1432013664",
-      "name_lat": "FRANKO VALADA'S CHOPPER ROAD KING",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "67760730",
       "name_lat": "FREMILEN'S INFANTA FOR AMIDELAVI",
       "name_ru": "",
@@ -7816,28 +8055,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1253350151",
+      "id": "1443399808",
       "name_lat": "FRANCESCA IZ FORTUNA MERDI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "787075398",
-      "name_lat": "FREDERICA IZ GRAFSKOGO POMESTIJA",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "915801689",
+      "id": "1961770490",
       "name_lat": "FRANT IZ DOMA FENIKS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -7861,11 +8091,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1844422258",
+      "id": "281364860",
       "name_lat": "FRED VON HAUS BUSHIDO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "286440512",
+      "name_lat": "FREI WIND TAYBON",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -7906,15 +8144,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1757920970",
-      "name_lat": "FRIDENS BEYOND BELIEF",
-      "name_ru": "",
-      "breed": "КОЛЛИ Длинношерстный",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1020190723",
       "name_lat": "FRENKLIN",
       "name_ru": "",
@@ -7937,24 +8166,6 @@
       "name_lat": "FRANK VDL",
       "name_ru": "",
       "breed": "КОРСО / ITALIAN CANE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "818334027",
-      "name_lat": "FRANK VDL",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "382867284",
-      "name_lat": "FRANK VDL",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8032,19 +8243,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "618569706",
-      "name_lat": "FRAM STARS MARKUS EYCH",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1272278733",
+      "id": "1322261970",
       "name_lat": "FRIDENS DENFRIS CANTBERRY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8056,15 +8258,6 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1296801201",
-      "name_lat": "FRIDENS FIRESPARK",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -8158,6 +8351,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "921133082",
+      "name_lat": "FRIDENS ROSSIYANKA",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1148520251",
       "name_lat": "FROSTEN RUSLAND CRVENI PLAMEN",
       "name_ru": "",
@@ -8176,10 +8378,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1424489776",
+      "id": "162154877",
       "name_lat": "FRIDENS PALOMA PICASSO",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -8212,10 +8414,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "950456029",
+      "id": "393217073",
       "name_lat": "FRIENDLY WORLD UNA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -8275,6 +8477,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "472291250",
+      "name_lat": "FRIDENS ZTRAVAGANZA",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1526776867",
       "name_lat": "FRAXS FLEURS DE TAURIS",
       "name_ru": "",
@@ -8284,10 +8494,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1041872596",
+      "id": "238418366",
       "name_lat": "FRIDENS REVELATION",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8308,6 +8518,15 @@
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1764476855",
+      "name_lat": "FREI WIND VAREZHKA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -8338,10 +8557,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1764476855",
-      "name_lat": "FREI WIND VAREZHKA",
+      "id": "1077980344",
+      "name_lat": "FRUJE MILVA NACE FLEUR",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1460613297",
+      "name_lat": "FRUSTYLE TIFFANY GOLDEN ROSE",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -8401,6 +8628,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "767715765",
+      "name_lat": "FRI DZHAMP BEVERLI- HILLS",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1250399694",
       "name_lat": "FRIDENS LEITMOTIV",
       "name_ru": "",
@@ -8437,19 +8672,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1948616476",
-      "name_lat": "FREESTYLE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1589801573",
+      "id": "273196713",
       "name_lat": "FREY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8500,6 +8726,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "695639073",
+      "name_lat": "FRUSTYLE OBSIDIAN",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH BULLDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "99959465",
       "name_lat": "FRENCH LINE EDINSTVENNIY TIWAZ",
       "name_ru": "",
@@ -8518,19 +8752,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1085942309",
-      "name_lat": "FRIDRIKH",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1158305527",
       "name_lat": "FREI WIND CHE GUEVARA NB",
       "name_ru": "",
       "breed": "ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1085942309",
+      "name_lat": "FRIDRIKH",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -8581,15 +8815,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "921133082",
-      "name_lat": "FRIDENS ROSSIYANKA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "508858267",
       "name_lat": "FRANTSAYLAND FLYER",
       "name_ru": "",
@@ -8599,10 +8824,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1563490916",
+      "id": "1905296110",
       "name_lat": "FRIDENS SPECTACULAR (Изменено по Решению ВК от 16.03.22 вопрос 39)",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8662,15 +8887,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "157456875",
-      "name_lat": "FRUSTYLE LULLABELL",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "335219879",
       "name_lat": "Fremilen’s Genevieve",
       "name_ru": "",
@@ -8680,19 +8896,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1347769599",
+      "id": "1548889636",
       "name_lat": "FREYAFELT UPPER CLASS",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1084191931",
+      "id": "515941322",
+      "name_lat": "FREYA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1594131058",
       "name_lat": "FREMILEN’S DJ JAM",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -8704,15 +8929,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "515941322",
-      "name_lat": "FREYA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -8752,10 +8968,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1912177554",
+      "id": "1266587012",
       "name_lat": "FRIENDLY WORLD CHRISTIAN DIOR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -8770,28 +8986,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "934135122",
-      "name_lat": "FRAYTAL' READY SET GO (N/B)",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "606965617",
+      "id": "229982642",
       "name_lat": "FROSTEN ФРЕЯ ВИКТОРИЯ ФОН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1032609516",
+      "id": "500660425",
       "name_lat": "FRODI BERSI FOR RANDOGS",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8860,10 +9067,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1179143624",
+      "id": "1062156770",
       "name_lat": "FREE SPIRIT FOR BIG HOUP OF NETIV HA'AYIT",
       "name_ru": "",
-      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8878,10 +9085,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1751457957",
+      "id": "1930633130",
       "name_lat": "FRIDENS BALLANTINES",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 2,
       "competition_dog_id": null
@@ -8896,19 +9103,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1229916572",
+      "id": "231534418",
       "name_lat": "FREIGE IZ FORTUNA MERDI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "110196575",
-      "name_lat": "FRENCHESNA JUSTIN",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -8928,6 +9126,22 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "762015608",
+      "name_lat": "FREYA LZ VOLOTOVA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "264690877",
+      "name_lat": "FRANT IZ ZASMINOVOGO DVORTSA",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
       "total_shows": 6,
       "competition_dog_id": null
     },
@@ -9022,11 +9236,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "160793959",
+      "id": "1365483193",
+      "name_lat": "FREMILEN'S VICTOR",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1979030454",
       "name_lat": "FREE BLACK SILVER DEMON",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1377676789",
+      "name_lat": "FREELIFE DOG HURMA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -9045,7 +9275,7 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "PUG",
-      "total_shows": 4,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -9094,10 +9324,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1033758005",
+      "id": "351264968",
       "name_lat": "FRAYTAL' KISS MY NOSE",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -9118,6 +9348,15 @@
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "367125681",
+      "name_lat": "FRANTS ANTON BEKKENBAUER",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -9144,15 +9383,6 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "BULL TERRIER STANDART",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "367125681",
-      "name_lat": "FRANTS ANTON BEKKENBAUER",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -9211,10 +9441,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1454653754",
+      "id": "793865836",
       "name_lat": "FRIENDLY WORLD VAN HELSING",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -9247,28 +9477,36 @@
       "competition_dog_id": null
     },
     {
+      "id": "367805655",
+      "name_lat": "FREI WIND LYKKE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "929043401",
+      "name_lat": "FREELIFE DOG HAMON",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "188237815",
+      "name_lat": "FRESH ENERGY HIGHNESS RICHARD",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "588360617",
       "name_lat": "FRAM STARS BESARION",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "432643670",
-      "name_lat": "FRENCH FANTASY HERMES",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1467192929",
-      "name_lat": "FREELIFE DOG ULISS BION",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -9283,6 +9521,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "432643670",
+      "name_lat": "FRENCH FANTASY HERMES",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1233834474",
+      "name_lat": "FRIDENS VIRGINIA CROWN",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "420181993",
       "name_lat": "FRENKA",
       "name_ru": "",
@@ -9292,10 +9547,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1753489698",
+      "id": "321710774",
+      "name_lat": "FRENKA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "121225049",
       "name_lat": "FRANCESCA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9342,6 +9606,31 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56858479",
+      "name_lat": "FROL BOY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1814039604",
+      "name_lat": "FROSYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "67939969",
+      "name_lat": "FRENCH KISS DES JARDINS D'EPONA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -9400,15 +9689,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "621371569",
-      "name_lat": "FRIDENS MARRAKESH",
-      "name_ru": "",
-      "breed": "КОЛЛИ Д-Ш",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "699999603",
       "name_lat": "FRISHER ATEM LEONILLA SAJN-VITGENSHTEJN",
       "name_ru": "",
@@ -9423,24 +9703,6 @@
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "67939969",
-      "name_lat": "FRENCH KISS DES JARDINS D'EPONA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "156115115",
-      "name_lat": "FRAYTAL' KNOW YOUR WORTH",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -9643,10 +9905,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "796061911",
+      "id": "1632114095",
       "name_lat": "FRIDENS ALWAYS ONE STEP AHEAD",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9661,10 +9923,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1091802085",
+      "id": "546474346",
       "name_lat": "FRIDENS BE MY LUCKY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1247434951",
+      "name_lat": "FREI WIND PASTILA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9679,8 +9950,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1762137165",
-      "name_lat": "FRUSTYLE LINDSAY GO- GO",
+      "id": "929110869",
+      "name_lat": "FRUSTYLE LINDSAY GO-GO",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
@@ -9706,11 +9977,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "188237815",
-      "name_lat": "FRESH ENERGY HIGHNESS RICHARD",
+      "id": "1970187765",
+      "name_lat": "FRENCH DREAM CZACZA",
       "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "171620473",
+      "name_lat": "FREMILEN'S BACARDI GOLD",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -9742,19 +10020,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1033817265",
-      "name_lat": "FRAIDENREICH IRCK",
+      "id": "1337359515",
+      "name_lat": "FROHE GARDE PATRICIA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1626089313",
+      "id": "1640081138",
+      "name_lat": "FRAIDENREICH IRCK",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "138453150",
       "name_lat": "FRIDENS CODE DA VINCI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9805,19 +10092,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "111326341",
-      "name_lat": "FRAM STARS ESSI VIZ GRAND PERSONA",
+      "id": "1047440338",
+      "name_lat": "FRIDENS DIZZY GIRL",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "762015608",
-      "name_lat": "FREYA LZ VOLOTOVA",
+      "id": "1515109307",
+      "name_lat": "FRANTSUZSKIY POTSELUY",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "111326341",
+      "name_lat": "FRAM STARS ESSI VIZ GRAND PERSONA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9832,10 +10126,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "273702686",
+      "id": "325466020",
+      "name_lat": "FREI WIND YAMAICA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "69671463",
       "name_lat": "FROSTEN RUSLAND NEVER SAY NEVER FOR FELANGRY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9868,10 +10170,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "823532424",
+      "id": "437421869",
       "name_lat": "FRANK DELLA VALLE DEI LORD",
       "name_ru": "",
-      "breed": "КАНЕ КОРСО /",
+      "breed": "КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9895,29 +10197,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "667353879",
+      "name_lat": "FRODO ZIFBER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ СТАНДАРТ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29853228",
+      "name_lat": "FRIDENS CARUSCATE",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "438540582",
       "name_lat": "FREND",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "757428554",
-      "name_lat": "FRANK",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "692712073",
-      "name_lat": "FRENKA",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -9944,15 +10244,6 @@
       "name_lat": "FREZI GRANT",
       "name_ru": "",
       "breed": "ИСПАНСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1289486025",
-      "name_lat": "FRENKA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9985,10 +10276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "848572496",
+      "id": "793659711",
       "name_lat": "FRAU SALMA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10012,10 +10303,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1966874572",
+      "id": "1445685230",
       "name_lat": "FREDERICA",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10025,15 +10316,6 @@
       "name_lat": "FRENCH KISS",
       "name_ru": "",
       "breed": "БОСЕРОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1336147869",
-      "name_lat": "FREYJA SIF",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10093,10 +10375,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1743086265",
+      "id": "1615969924",
       "name_lat": "FRANC",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10183,29 +10465,59 @@
       "competition_dog_id": null
     },
     {
-      "id": "56858479",
-      "name_lat": "FROL BOY",
+      "id": "1673294003",
+      "name_lat": "FREYA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1814039604",
-      "name_lat": "FROSYA",
+      "id": "1346232506",
+      "name_lat": "FREYA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1909185917",
+      "id": "324847253",
       "name_lat": "FRANCHESKA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17616691",
+      "name_lat": "FRANCHESKA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "371852468",
+      "name_lat": "FRANCHESKA",
+      "name_ru": "",
+      "breed": "ТАКСА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1558321951",
+      "name_lat": "FRIDA",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1798684971",
+      "name_lat": "FRANCESCO",
+      "name_ru": "",
+      "breed": "СИБА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -10435,10 +10747,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "308704934",
+      "id": "516998303",
       "name_lat": "FRANTSAYALAND ASTON",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10489,10 +10801,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1494889470",
+      "id": "76261752",
       "name_lat": "FRIENDS BELISSIMA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10597,10 +10909,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1680316718",
+      "id": "217854104",
       "name_lat": "FRAIDENREICH STIV (LANGHAARIG)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10615,10 +10927,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1670450821",
+      "id": "1520926104",
       "name_lat": "FRENCH DREAM CZACZA (Изменено по Решению ВК от 23.12.2020 вопрос 30)",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10669,15 +10981,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1247434951",
-      "name_lat": "FREI WIND PASTILA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "246962313",
       "name_lat": "FRESH ENERGY NOTA BENE",
       "name_ru": "",
@@ -10691,24 +10994,6 @@
       "name_lat": "FROSTEN RUSLAND OFELIYA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1295398675",
-      "name_lat": "FRUTTA DILETTO",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1041320555",
-      "name_lat": "FREYR NEIT OLA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10759,19 +11044,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "552100005",
+      "id": "1745468359",
+      "name_lat": "FROM SEMPLE THE BEST SEPTEMCOLLES",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "617278378",
       "name_lat": "FRIDENS SATIN’N’SMILE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1803487216",
+      "id": "471186335",
       "name_lat": "FRAIDENREICH HARDI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10791,6 +11084,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ СПЛОШНОЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "683418506",
+      "name_lat": "FRIDENS WHAT'S A DREAM LAD",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -10867,19 +11168,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "287724635",
+      "id": "1688709011",
       "name_lat": "FRIDENS SHE’S A MODEL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "807555599",
+      "id": "1945555319",
       "name_lat": "FRIDENS MIYOKO",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10903,10 +11204,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "620020980",
+      "id": "28273536",
       "name_lat": "FREE AS TURTLE DOVE",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР / FLAT COATED",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР / FLAT COATED",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10957,10 +11258,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1979916676",
+      "id": "1993831449",
       "name_lat": "FRIDENS LINDEMANN Irlain of Beauty Believe",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10993,10 +11294,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "274745811",
+      "id": "722999644",
       "name_lat": "FRIDENS TAKE ME AWAY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11033,15 +11334,6 @@
       "name_lat": "FRUSTYLE MY CHERIE AMOUR",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1337359515",
-      "name_lat": "FROHE GARDE PATRICIA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11218,10 +11510,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1344709225",
+      "id": "1623986790",
       "name_lat": "FRIDENS BOMB FACE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11272,15 +11564,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "367805655",
-      "name_lat": "FREI WIND LYKKE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "284825151",
       "name_lat": "FRAYTAL' ICE ICE BABY",
       "name_ru": "",
@@ -11308,28 +11591,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1656132760",
+      "id": "871640960",
       "name_lat": "FREELIFEDOG MORTON",
       "name_ru": "",
-      "breed": "ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1526572105",
+      "id": "1933582830",
       "name_lat": "FREUD SIGMUND",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1460613297",
-      "name_lat": "FRUSTYLE TIFFANY GOLDEN ROSE",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11344,28 +11618,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1254536109",
-      "name_lat": "FROHE GARDE NICOL",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1717493422",
       "name_lat": "FRIELLA SHOKOLADNAYA",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "745776481",
-      "name_lat": "FRIDENS VELVET ROYAL",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11398,10 +11654,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1587460389",
+      "id": "1144737406",
       "name_lat": "FROSTEN RUSLAND TESLA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11416,20 +11672,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "71989922",
-      "name_lat": "FRODO ZIFBER",
+      "id": "219261165",
+      "name_lat": "FREYYA IDEALNAYA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ КЛАССИК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "286440512",
-      "name_lat": "FREI WIND TAYBON",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -11447,15 +11693,6 @@
       "name_lat": "FRAITAL' NOW OR NEVER NBT",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1385310396",
-      "name_lat": "FRAU INFERNA",
-      "name_ru": "",
-      "breed": "ШЕЛТИ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11506,15 +11743,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1176820305",
-      "name_lat": "FRIDENS CARUSCATE",
-      "name_ru": "",
-      "breed": "ДЛИННОШЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "159042457",
       "name_lat": "FRIDENS EMOTION'N' MOTION",
       "name_ru": "",
@@ -11524,11 +11752,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "322786508",
-      "name_lat": "FRANSUAZA PRINTSESSA BONI",
+      "id": "1781936014",
+      "name_lat": "FROSTEN RUSLAND LOVE STORY",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     }

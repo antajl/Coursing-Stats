@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ШР",
-  "count": 11,
+  "count": 15,
   "dogs": [
     {
       "id": "1157677604",
       "name_lat": "ШРИ ЛАНКА ОТ МАРИНЫ КУРАНОВОЙ",
-      "name_ru": "",
+      "name_ru": "ШРИ ЛАНКА ОТ МАРИНЫ КУРАНОВОЙ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -18,14 +18,23 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1451690643",
+      "id": "35342806",
+      "name_lat": "Ш'Р ПРЕСТИЖ ЮССИ МЭЙ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1024085203",
       "name_lat": "ШРЕК",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -40,11 +49,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1265374557",
+      "id": "566510848",
       "name_lat": "ШРИ ДЭВИ ФРОМ ХАУС НАТТИМ",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "791307284",
+      "name_lat": "ШРАПНЕЛЬ ОТ НЭЛ’З ЮССЭН",
+      "name_ru": "",
+      "breed": "МОПС",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -55,6 +72,14 @@
       "breed": "БУЛЬДОГ / BULLDOG",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1234459150",
+      "name_lat": "ШРАПНЕЛЬ ОТ НЭЛ'З ЮССЭН",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -81,6 +106,14 @@
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1115601950",
+      "name_lat": "ШРЕК",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРСТНАЯ /",
       "total_shows": 1,
       "competition_dog_id": null
     },

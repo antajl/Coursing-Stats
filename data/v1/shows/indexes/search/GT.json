@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "GT",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1570947023",
+      "name_lat": "G-TUNGUS",
+      "name_ru": "",
+      "breed": "РУССКО-ЕВРОПЕЙСКАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1190235349",
+      "name_lat": "G-TUNGUS",
+      "name_ru": "",
+      "breed": "ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455963679",
+      "name_lat": "G-TUNGUS",
+      "name_ru": "",
+      "breed": "РУССКО-ЕВРОПЕЙСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

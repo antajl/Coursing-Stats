@@ -1,0 +1,51 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ZB",
+  "count": 5,
+  "dogs": [
+    {
+      "id": "1650996633",
+      "name_lat": "Z-BRAND AKITA VILLA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "206146400",
+      "name_lat": "ZBANOF EZHEVIKA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "457933244",
+      "name_lat": "Z-BETTI BUP IZ DOMA VENGRE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "347799163",
+      "name_lat": "Z-BETTI KARDINIA",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "283075591",
+      "name_lat": "ZĂBAVĂ PUTIATISHNA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

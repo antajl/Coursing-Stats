@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ON",
-  "count": 360,
+  "count": 455,
   "dogs": [
     {
       "id": "1597410898",
       "name_lat": "ONEGIN OT ZHEMCHUZHNOY KORONY",
-      "name_ru": "",
+      "name_ru": "ОНЕГИН ОТ ЖЕМЧУЖНОЙ КОРОНЫ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "AMERICAN COCKER SPANIEL",
-      "total_shows": 15,
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "77028605",
+      "name_lat": "ONLY YOU IZ BANDI GARRI",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
@@ -22,12 +31,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "77028605",
-      "name_lat": "ONLY YOU IZ BANDI GARRI",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "id": "1660865219",
+      "name_lat": "ON KRASH MARIGAL PAG IZ ROSTOVA PAPY",
+      "name_ru": "ОН КРАШ МАРИГАЛ ПАГ ИЗ РОСТОВА ПАПЫ",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -63,16 +72,7 @@
       "name_ru": "",
       "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
-      "total_shows": 35,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1660865219",
-      "name_lat": "ON KRASH MARIGAL PAG IZ ROSTOVA PAPY",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
@@ -81,7 +81,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 37,
       "competition_dog_id": null
     },
     {
@@ -94,12 +94,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1702526502",
+      "name_lat": "ONOGYMARU TENZAN MIRYOKU KAT",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
       "id": "1684608121",
       "name_lat": "ONEZHSKAYA REGATA OT ZHEMCHUZHNOY KORONY",
-      "name_ru": "",
+      "name_ru": "ОНЕЖСКАЯ РЕГАТА ОТ ЖЕМЧУЖНОЙ КОРОНЫ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "AMERICAN COCKER SPANIEL",
-      "total_shows": 23,
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "976716487",
+      "name_lat": "ONIKS FOM GRUNEN STADT",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1052318239",
+      "name_lat": "ONATEL'",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN HAIRLESS TERRIER",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -130,39 +156,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "976716487",
-      "name_lat": "ONIKS FOM GRUNEN STADT",
+      "id": "1994889011",
+      "name_lat": "O.N.E. STAFF EZHEVIKA",
       "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1093531511",
+      "id": "737042870",
       "name_lat": "ONEGIN ULRIKH",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "ITALIAN SIGHTHOUND",
-      "total_shows": 38,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1052318239",
-      "name_lat": "ONATEL'",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN HAIRLESS TERRIER",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1702526502",
-      "name_lat": "ONOGYMARU TENZAN MIRYOKU KAT",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
@@ -171,7 +179,16 @@
       "name_ru": "",
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "SCOTTISH TERRIER",
-      "total_shows": 44,
+      "total_shows": 46,
+      "competition_dog_id": null
+    },
+    {
+      "id": "990986838",
+      "name_lat": "ONEIROS CLUB YARKAYA ZVEZDA",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -181,15 +198,6 @@
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "990986838",
-      "name_lat": "ONEIROS CLUB YARKAYA ZVEZDA",
-      "name_ru": "",
-      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
-      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
-      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -211,6 +219,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "516854646",
+      "name_lat": "ONZA DE ORO MILAGROSA",
+      "name_ru": "ОНЗА ДЕ ОРО МИЛАГРОСА",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1148300845",
       "name_lat": "ONZA DE ORO NEWBORN SUPERSTAR",
       "name_ru": "",
@@ -220,21 +237,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "516854646",
-      "name_lat": "ONZA DE ORO MILAGROSA",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1240371797",
       "name_lat": "ONORE-DE-BALZAC DU SECRET DES MASQUES NOIRS (T)",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА ТЕРВЮРЕН",
       "breed_en": "BELGIAN SHEPHERD DOG TERVUEREN",
-      "total_shows": 19,
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "130778656",
+      "name_lat": "ONZA DE ORO MACKERY FOX",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -247,12 +264,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1847101588",
+      "name_lat": "ONYX LAND VELES FOR BERN HAUS ON OKA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "BERNESE MOUNTAIN DOG",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "87543766",
+      "name_lat": "ONLI ONWARD HOROSHIY PAREN",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1858399878",
       "name_lat": "ONZA DE ORO EVA FOREVER",
-      "name_ru": "",
+      "name_ru": "ОНЗА ДЕ ОРО ЕвА ФОРЕВЕР",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
-      "total_shows": 15,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "839398225",
+      "name_lat": "ONIKS IZ PETERGOFA",
+      "name_ru": "ОНИКС ИЗ ПЕТЕРГОФА",
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
+      "breed_en": "WELSH TERRIER",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -270,7 +314,7 @@
       "name_ru": "",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -283,12 +327,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1847101588",
-      "name_lat": "ONYX LAND VELES FOR BERN HAUS ON OKA",
+      "id": "138019794",
+      "name_lat": "O.N.E. STAFF EVERYBODY ALL RIGHT",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "BERNESE MOUNTAIN DOG",
-      "total_shows": 25,
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -298,6 +342,24 @@
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "602885297",
+      "name_lat": "ONLY DRIVE ZOLOTOY ZAPAS (P.BR)",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "687764928",
+      "name_lat": "ONGA TAKARA OT DELIS SAKURA",
+      "name_ru": "ОНГА ТАКАРА ОТ ДЕЛИС САКУРА",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "breed_en": "JAPANESE CHIN",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -319,24 +381,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "130778656",
-      "name_lat": "ONZA DE ORO MACKERY FOX",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "687764928",
-      "name_lat": "ONGA TAKARA OT DELIS SAKURA",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "JAPANESE CHIN",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "260331981",
       "name_lat": "ONIKS",
       "name_ru": "",
@@ -352,6 +396,15 @@
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "185623016",
+      "name_lat": "ONAHIA DEL ATLANTE SPECIAL ONE",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -373,15 +426,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "185623016",
-      "name_lat": "ONAHIA DEL ATLANTE SPECIAL ONE",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 30,
-      "competition_dog_id": null
-    },
-    {
       "id": "213058537",
       "name_lat": "ONLY OVATION AMBER",
       "name_ru": "",
@@ -391,10 +435,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1848753161",
+      "id": "1576608298",
       "name_lat": "ONLY FIRST NEVER LOOK BACK",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -409,12 +453,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1700287947",
+      "name_lat": "ONLY FIRST IRIS IS MY GREAT LOVE",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1323146045",
       "name_lat": "ONLY YOU OSKAMILA POWER OF LOVE",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "279553981",
+      "name_lat": "ONZA DE ORO FIDELIA",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1826999421",
+      "name_lat": "O.N.E. STAFF Z-VICTORY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -427,11 +497,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "839398225",
-      "name_lat": "ONIKS IZ PETERGOFA",
+      "id": "489566768",
+      "name_lat": "ONEGA VOM HOF ANIRI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
-      "breed_en": "WELSH TERRIER",
+      "breed": "ХОВАВАРТ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1316018846",
+      "name_lat": "ONZA DE ORO RUFFINA",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -463,10 +540,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "839886903",
+      "id": "1641333584",
       "name_lat": "ONLY FIRST YOU ONLY YOU",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -481,10 +558,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "363215005",
+      "id": "1550866229",
+      "name_lat": "O.N.E. STAFF EVOLUTION-REVOLUTION",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "546854610",
+      "name_lat": "O.N.E. STAFF DEADPOOL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1205957",
+      "name_lat": "O.N.E. STAFF ZIZI ROCK AND ROSE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1937599885",
+      "name_lat": "O.N.E. STAFF ZAVULON",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "771599126",
       "name_lat": "ONLY VON GOLD SIEG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -508,28 +621,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1337671067",
-      "name_lat": "ONEZHKA",
+      "id": "953271436",
+      "name_lat": "ONIX FOR ANGEL'S CHARLI VOM BARENREICH",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "523892706",
-      "name_lat": "ONLY YOU MY LOVE COLL YMPIC WIND",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "807592120",
       "name_lat": "Onega Iz Sozvezdiya Surskikh Psov",
-      "name_ru": "",
+      "name_ru": "ОНЕГА ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
       "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1804627666",
+      "name_lat": "ONEZHKA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1570455176",
+      "name_lat": "/ ONZA DE ORO BRAHMSEL",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "224641539",
+      "name_lat": "ONLY YOU MY LOVE COLL YMPIC WIND",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -544,21 +675,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "92092338",
-      "name_lat": "ONLI ONWARD HOROSHIY PAREN",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
-      "breed_en": "",
-      "total_shows": 8,
+      "id": "1339594185",
+      "name_lat": "ONEGIN IZ DOMA ELEONORY",
+      "name_ru": "ОНЕГИН ИЗ ДОМА ЭЛЕОНОРЫ",
+      "breed": "БИГЛЬ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "953271436",
-      "name_lat": "ONIX FOR ANGEL'S CHARLI VOM BARENREICH",
+      "id": "36589472",
+      "name_lat": "ONIKS LA GRANZH",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1221755639",
+      "name_lat": "ONLY YOU OF LAVE",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -589,12 +727,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "695908651",
+      "id": "882599110",
+      "name_lat": "O.N.E. STAFF E'BOND JAMES BOND",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "386062899",
+      "name_lat": "O.N.E. STAFF LIVE’IS LIFE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "118811091",
+      "name_lat": "ONZA DE ORO TEFFY",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1614973396",
       "name_lat": "ONLY FIRST FOLLOW YOUR DREAMS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1553222777",
+      "name_lat": "ONEGIN FILAT",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -607,12 +781,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1017280476",
-      "name_lat": "ONEGIN FILAT",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
-      "breed_en": "",
+      "id": "11361378",
+      "name_lat": "ONTARIVA UILSI",
+      "name_ru": "ОНТАРИВА УИЛСИ",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
       "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1129096918",
+      "name_lat": "O.N.E. STAFF ILLUSION DECEPTION",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -621,7 +804,7 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -634,10 +817,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "130361320",
+      "id": "251156713",
       "name_lat": "ONIKSA FOR QUEEN DANCING OT DREVALLEY",
       "name_ru": "",
-      "breed": "СЕРЕБРОМ ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "Окрас чёрный ШНАУЦЕР",
       "breed_en": "SCHNAUZER BLACK",
       "total_shows": 9,
       "competition_dog_id": null
@@ -652,10 +835,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1543249463",
+      "id": "188393379",
+      "name_lat": "ONZA DE ORO DANDELION",
+      "name_ru": "ОНЗА ДЕ ОРО ДАНДЕЛИОН",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1321990921",
       "name_lat": "ONIKSA FOR QUEENN DANCING OT DREVALLEY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "SCHNAUZER BLACK ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -679,12 +871,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1199381730",
+      "id": "317625603",
       "name_lat": "ONLY YOU MY LOVE COLLYMPIC WIND",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -706,12 +898,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "894308107",
+      "id": "299122943",
       "name_lat": "ONLY ONWARD SHAMAN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "496060454",
+      "name_lat": "O.N.E. STAFF DIAMOND FANCY LOOK",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -724,10 +925,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "263026907",
+      "name_lat": "O. N. E. STAFF EZHEVIKA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1258911086",
       "name_lat": "ONIKA VALENTA GRIFF",
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1499890378",
+      "name_lat": "ONLY MY POM INTRIGUING STYLE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -751,21 +970,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1499890378",
-      "name_lat": "ONLY MY POM INTRIGUING STYLE",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "414116972",
       "name_lat": "ONATEL'",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР / AMERICAN",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "519227672",
+      "name_lat": "ONIKA VOM HOF ANIRI",
+      "name_ru": "",
+      "breed": "ХОВАВАРТ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -778,12 +996,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1700287947",
-      "name_lat": "ONLY FIRST IRIS IS MY GREAT LOVE",
+      "id": "104352782",
+      "name_lat": "O.N.E. STAFF DALLAS COWBOY",
       "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "742625015",
+      "name_lat": "O.N.E. STAFF INDIGO WOOD",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "915649638",
+      "name_lat": "ONEGIN YA STELLA",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -792,7 +1028,15 @@
       "name_ru": "",
       "breed": "СОБАКА",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "23516392",
+      "name_lat": "ONLY FIRST LOVE ME LIKE YOU DO",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -814,15 +1058,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "519227672",
-      "name_lat": "ONIKA VOM HOF ANIRI",
-      "name_ru": "",
-      "breed": "ХОВАВАРТ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1889392911",
       "name_lat": "ONE FOR ALL",
       "name_ru": "",
@@ -832,21 +1067,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "188393379",
-      "name_lat": "ONZA DE ORO DANDELION",
+      "id": "1104081569",
+      "name_lat": "O.N.E. STAFF LIVE'IS LIFE",
       "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1246100560",
+      "id": "494023578",
+      "name_lat": "ONEGA IZ LADOZHSKOGO DOMA",
+      "name_ru": "ОНЕГА ИЗ ЛАДОЖСКОГО ДОМА",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "52635596",
       "name_lat": "ONIGIRI KHITOSHI OT SERYH PSOV",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "758674105",
+      "name_lat": "O'NLY ONE DARLING JOY",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -859,19 +1112,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "432818843",
+      "id": "64084086",
       "name_lat": "ONLY ONWARD ZABAVA PUTYATISHNA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ) /",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1230090314",
+      "id": "1105787766",
       "name_lat": "ONLY MY POM INDIGO II",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -886,10 +1139,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "488768971",
+      "id": "1282923224",
+      "name_lat": "O.N.E. STAFF RIO DE JANERO",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "436791490",
       "name_lat": "ONEGIN FADEY",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -931,6 +1193,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1416741467",
+      "name_lat": "ONLY YOU OF PRIORITY AND MAJESTY",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
       "id": "157122406",
       "name_lat": "ONLY YOU ASHLEY",
       "name_ru": "",
@@ -949,12 +1220,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1416741467",
-      "name_lat": "ONLY YOU OF PRIORITY AND MAJESTY",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 28,
+      "id": "2211992",
+      "name_lat": "ONZA DE ORO ZENFENDAL",
+      "name_ru": "ОНЗА ДЕ ОРО ЗЕНФЕНДАЛ",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -967,6 +1238,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "220433622",
+      "name_lat": "O.N.E. STAFF VINS ROLLS-ROYCE PHANTOM",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "355248532",
+      "name_lat": "ONZA DE ORO ВLAZING ROSE CHILI",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "271504836",
       "name_lat": "ONE IN A MILLION SHELI ZHIGO",
       "name_ru": "",
@@ -976,12 +1264,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "355248532",
-      "name_lat": "ONZA DE ORO ВLAZING ROSE CHILI",
+      "id": "1541474490",
+      "name_lat": "O.N.E. STAFF ULTIMATUM",
       "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "410494661",
+      "name_lat": "ONTARIO ERAMBULL IZ DOMA VANDY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "AMERICAN BULLDOG",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -994,28 +1291,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1298035688",
+      "id": "659069303",
       "name_lat": "ONAHIA DEL ATLANTE IMAGINE",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "410494661",
-      "name_lat": "ONTARIO ERAMBULL IZ DOMA VANDY",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
-      "breed_en": "AMERICAN BULLDOG",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "54304835",
+      "id": "1045455372",
       "name_lat": "ONLY FIRST NOTHING ELSE MATTERS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1030,12 +1318,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1361157207",
+      "name_lat": "O.N.E. STAFF NUMBER ONE BLUE STAR",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
       "id": "1006052353",
       "name_lat": "ON THE TOP FOR BLINDERS PEAKY",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1393531182",
+      "name_lat": "O.N.E. STAFF NICE SHOW MUST GO ON",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -1075,6 +1381,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1764938413",
+      "name_lat": "O.N.E. STAFF SUB-ZERO",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "1253124975",
       "name_lat": "ONIEKA EJIRA",
       "name_ru": "",
@@ -1090,6 +1405,14 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17596222",
+      "name_lat": "ONLY YOU IZ VOLZHSKOY SERENADY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1111,10 +1434,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1106140266",
+      "id": "183298747",
       "name_lat": "ON THE RITZ TSERTUS",
       "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN RAUHHAAR ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ /",
+      "breed": "DACHSHUND KANINCHEN RAUHHAAR ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1138,19 +1461,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1946739627",
+      "id": "189295142",
       "name_lat": "ONEGIN FADDEY",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)/",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "83548894",
+      "id": "1855500413",
       "name_lat": "ONIKA VOM ALIHEL HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1174,6 +1497,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1934729364",
+      "name_lat": "O.N.E. STAFF EMELIAN WISCONSIN",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "869642365",
+      "name_lat": "O.N.E. STAFF G-A-L-A-K-T-I-K-A",
+      "name_ru": "О.Н.Е. СТАФФ Г-А-Л-А-К-Т-И-К-А",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "614619873",
       "name_lat": "ONELOVEEVER ANDERSON",
       "name_ru": "",
@@ -1183,21 +1524,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "779301532",
+      "id": "381571984",
       "name_lat": "ONIKA TANYA MANRAJDZH",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1895834630",
+      "id": "443234580",
+      "name_lat": "ONELLA LESNAYA NIMFA",
+      "name_ru": "ОНЕЛЛА ЛЕСНАЯ НИМФА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "816932634",
       "name_lat": "ONTARIVA ADELINA BIS BRAVO",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1210,12 +1560,74 @@
       "competition_dog_id": null
     },
     {
-      "id": "2211992",
-      "name_lat": "ONZA DE ORO ZENFENDAL",
+      "id": "1545508505",
+      "name_lat": "O.N.E. STAFF DIVA LA VIVA MAGIC MOON",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1574795242",
+      "name_lat": "ONAHIA DEL ATLANTE REMEMBER ME",
+      "name_ru": "",
+      "breed": "ШЕЛТИ БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "98939427",
+      "name_lat": "ONLY DANNY IS MY WINNER",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225479144",
+      "name_lat": "O.N.E. STAFF INTRIGA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "727263941",
+      "name_lat": "ONZA DE ORO TAELIA",
       "name_ru": "",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331661176",
+      "name_lat": "O.N.E. STAFF LOVE IS . . . LILI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1826026161",
+      "name_lat": "O.N.E. STAFF KEEPER OF THE SOUL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "293845176",
+      "name_lat": "ONLY YOU PRINCESS",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1225,6 +1637,15 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "68583140",
+      "name_lat": "ONZA DE ORO BLAZING ROSE CHILI",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1255,48 +1676,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "11361378",
-      "name_lat": "ONTARIVA UILSI",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1154435025",
+      "id": "187245860",
       "name_lat": "ONLY MY POM ZIPPO",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ЦВЕРГШПИЦ/",
+      "breed": "НЕМЕЦКИЙ ЦВЕРГШПИЦ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "98939427",
-      "name_lat": "ONLY DANNY IS MY WINNER",
+      "id": "1951913138",
+      "name_lat": "O.N.E. STAFF EY' RAILI WORLD IS YOURS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1687030784",
+      "id": "774360778",
       "name_lat": "ONE IN A MILLION IZ STRANI GREZ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "141348553",
-      "name_lat": "ONAHIA DEL ATLANTE REMEMBER ME",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
-      "breed_en": "BULLDOG",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1309,11 +1712,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "246407831",
+      "name_lat": "O.N.E. STAFF GOOD MORNING",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "925348378",
       "name_lat": "ONLY DRIVE ZAZNOBA MUHTESEM",
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "PETIT BRABANCON",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "156058845",
+      "name_lat": "O.N.E. STAFF MAZDA CAPELLA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1879970083",
+      "name_lat": "ONTARIVA SABRINA",
+      "name_ru": "",
+      "breed": "CHIHUAHUA LONG",
+      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -1336,12 +1766,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "68583140",
-      "name_lat": "ONZA DE ORO BLAZING ROSE CHILI",
+      "id": "1805894224",
+      "name_lat": "O.N.E. STAFF RAQUEL UNO VIVO DIO VITORIA",
       "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
-      "total_shows": 3,
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "900036160",
+      "name_lat": "O.N.E. STAFF L'SOFI LOREN",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1354,12 +1792,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "17596222",
-      "name_lat": "ONLY YOU IZ VOLZHSKOY SERENADY",
+      "id": "1098418444",
+      "name_lat": "O.N.E. STAFF EY’ RAILI WORLD IS YOURS",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1372,30 +1810,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "443234580",
-      "name_lat": "ONELLA LESNAYA NIMFA",
+      "id": "339118786",
+      "name_lat": "O.N.E. STAFF SOUL IS MINE ROYAL COURT",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "727263941",
-      "name_lat": "ONZA DE ORO TAELIA",
+      "id": "1758641557",
+      "name_lat": "O.N.E. STAFF MARY JANE",
       "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "525194155",
+      "id": "564877268",
       "name_lat": "ONLY YOU IZ LUNNOY SONATY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1535123380",
+      "name_lat": "O N E STAFF PALLADA DARK MOON",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1444,6 +1891,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "517966470",
+      "name_lat": "O.N.E. STAFF HUGO BOSS",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "602393706",
       "name_lat": "ONZA DE ORO SKY",
       "name_ru": "",
@@ -1462,10 +1918,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1592722889",
+      "id": "786415466",
       "name_lat": "ONLY FIRST ABSOLUTE WINNER",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1477,6 +1933,24 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "282369613",
+      "name_lat": "O.N.E. STAFF TOP DAO-GUAN GALLI AMELITA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "355551252",
+      "name_lat": "O.N.E. STAFF VITA MASERATI QUATTROPORTE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1516,15 +1990,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "36589472",
-      "name_lat": "ONIKS LA GRANZH",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1769101287",
       "name_lat": "Onli You",
       "name_ru": "",
@@ -1543,6 +2008,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1450414800",
+      "name_lat": "ONTARIVA INDI KERRO",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА Д/Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1052700661",
       "name_lat": "ONEPIECE'S JAPANESE WARRION @ ESTE'RA",
       "name_ru": "",
@@ -1552,10 +2026,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "34875069",
+      "id": "1811107552",
       "name_lat": "ONNA BUGEISHA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1579,6 +2053,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "786906776",
+      "name_lat": "ONTARIVA KASABLANKA",
+      "name_ru": "ОНТАРИВА КАСАБЛАНКА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "707935736",
       "name_lat": "ONLY DRIVE EL NINO",
       "name_ru": "",
@@ -1593,15 +2076,6 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1879970083",
-      "name_lat": "ONTARIVA SABRINA",
-      "name_ru": "",
-      "breed": "CHIHUAHUA LONG",
-      "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -1660,6 +2134,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1161209835",
+      "name_lat": "ONE STAFF VITA MASERATI QUATTROPORTE",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "88555784",
       "name_lat": "ONIKS IZ RODNOGO KRAYA",
       "name_ru": "",
@@ -1696,6 +2178,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "626383886",
+      "name_lat": "O.N.E. STAFF GIVE MY YOUR HEART",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1099744258",
       "name_lat": "ONYX PRIDE DJOANNA",
       "name_ru": "",
@@ -1705,10 +2196,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "49298861",
+      "id": "834833212",
+      "name_lat": "O.N.E. STAFF GLOSS AND CHIC",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1341239878",
       "name_lat": "ONLI VON GOLD SIEG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1718,6 +2218,15 @@
       "name_lat": "ONLY TOP QUALITY BERZE SUNRIZE LEUR",
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "760533222",
+      "name_lat": "ONEGA LETITSIYA",
+      "name_ru": "ОНЕГА ЛЕТИЦИЯ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1795,19 +2304,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "760533222",
-      "name_lat": "ONEGA LETITSIYA",
+      "id": "1109583042",
+      "name_lat": "O.N.E. STAFF GIVE ME YOUR HEART",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1892074064",
+      "id": "144217757",
       "name_lat": "ONLY FIRST BEAUTIFUL AND UNIQUE",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1867,10 +2376,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1194462751",
+      "id": "1528403593",
       "name_lat": "ONTARIO ERAMBUL L IZ DOMA VANDY",
       "name_ru": "",
-      "breed": "НСКИЙ БУЛЬДОГ /",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1903,6 +2412,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "649135500",
+      "name_lat": "ONLY MY POM IRIDA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "224246066",
       "name_lat": "ONE MORE CHANCE (KURZ.)",
       "name_ru": "",
@@ -1921,15 +2439,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1732003240",
-      "name_lat": "ONLY MY POM IRIDA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1592539648",
       "name_lat": "ONE HUNDRED KISSES INCIPITA VITA",
       "name_ru": "",
@@ -1943,6 +2452,15 @@
       "name_lat": "ONIX ROZHDESTVENSKAYA ZVEZDA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1876466550",
+      "name_lat": "O.N.E. STAFF CEREBRO",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1975,10 +2493,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "783175748",
+      "id": "983407352",
       "name_lat": "ON DOBROSL",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2002,19 +2520,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1983084545",
+      "id": "504830280",
       "name_lat": "ONIX PRIDE AVANTI",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1450414800",
-      "name_lat": "ONTARIVA INDI KERRO",
+      "id": "400185056",
+      "name_lat": "O.N.E.STAFF VINS ROLLS-ROYCE PHANTOM",
       "name_ru": "",
-      "breed": "ЧИХУАХУА Д/Ш",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2110,12 +2628,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "2506431",
+      "id": "36349131",
       "name_lat": "ONLY ONWARD MAGNAT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "412735182",
+      "name_lat": "O.N.E. STAFF JE T'AIME",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104494089",
+      "name_lat": "O.N.E STAFF INTERSTELLAR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "192105112",
+      "name_lat": "O.N.E. STAFF ZARA BLUESTAR ROYAL COURT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2128,12 +2673,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "593002421",
+      "name_lat": "O.N.E. STAFF GEYSER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1462327129",
       "name_lat": "ONIGIRI HITOSHI OT SERYH PSOV",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "142943598",
+      "name_lat": "ONLY FROM GOLD BEAUTY",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2218,11 +2781,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1957247358",
-      "name_lat": "ONLY FROM GOLD BEAUTY",
+      "id": "558228007",
+      "name_lat": "ONTEJ DEJF RADZHIGOLD",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2258,8 +2820,7 @@
       "name_lat": "ONIKUSO KURO",
       "name_ru": "",
       "breed": "СИБА / SHIBA",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2268,6 +2829,14 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "682760766",
+      "name_lat": "ONTARIVA KIMBERLI KRISTAL",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2290,6 +2859,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1261828105",
+      "name_lat": "O.N.E. STAFF ARMANI CODE BLUE DIAMOND",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "824073468",
+      "name_lat": "O.N.E. STAFF SKY LINE",
+      "name_ru": "",
+      "breed": "AMERICAN",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "356027462",
       "name_lat": "Only",
       "name_ru": "",
@@ -2308,6 +2895,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1013431839",
+      "name_lat": "O.N.E. STAFF KRISTEL BY MY LOVE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1565528608",
       "name_lat": "ONLY OVATION MICHELE VERT ROYAL ESCORT",
       "name_ru": "",
@@ -2317,10 +2913,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "835176835",
+      "name_lat": "ONTARIVA INDI KERRO (long coat )",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1031678316",
       "name_lat": "ONE AMONE",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1859952161",
+      "name_lat": "ONLYPASSION NERO D'AVOLA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "620814950",
+      "name_lat": "O,N,E,СТАФФ САБ-ЗЕРО",
+      "name_ru": "",
+      "breed": "СТАФ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2335,10 +2956,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "303151082",
+      "id": "1510089275",
       "name_lat": "ONIKS BLEK DEYMOND",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2353,10 +2974,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "212660962",
+      "id": "730731685",
+      "name_lat": "ONTARIVA KIMBERLI KRISTALL( LONG COAT)",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1825433315",
       "name_lat": "ONLY YOU SILVER SPIRIT",
       "name_ru": "",
-      "breed": "БОКСЕР РЫЖИЙ /",
+      "breed": "БОКСЕР РЫЖИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2398,6 +3027,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "297090805",
+      "name_lat": "O.N.E. STAFF JOIN ME FOREVER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "66348721",
       "name_lat": "ONITA SANTA MONIKA",
       "name_ru": "",
@@ -2421,6 +3059,15 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "255637919",
+      "name_lat": "O.N.E. STAFF JORNEY ALL OVER THE WORLD",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -2452,19 +3099,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "655541986",
+      "id": "135314630",
       "name_lat": "ONE AND ONLY IZ VOLZHSKOY SERENADY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "756593226",
+      "id": "31186501",
       "name_lat": "ONICS IZ DINASTII CHEMPIONOV",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2476,6 +3123,32 @@
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "198562473",
+      "name_lat": "ONIKA KHOZYAYKA MEDNOY GORY",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "884810260",
+      "name_lat": "ONLY YOU SHOW ASSORTY'K",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "213566165",
+      "name_lat": "O.N.E. STAFF GO LAND ROVER SPORT",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2497,11 +3170,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "949301536",
+      "name_lat": "ONLY OVATION VIVAT SHOW",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "171165732",
       "name_lat": "ONLY DRIVE ZAZNOBA MUNTESEM",
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "PETIT BRABANCON",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "797471952",
+      "name_lat": "O.N.E. SYAFF NUMBER ONE BLUE STAR II",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2587,19 +3278,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "201485101",
+      "id": "733501328",
       "name_lat": "ONEGIN HARITA",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "905228651",
+      "id": "1546646618",
       "name_lat": "ONNA BUQEISHA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2623,6 +3314,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1946446413",
+      "name_lat": "O.N.E. STAFF INTERSTELLAR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1149197578",
+      "name_lat": "O.N.E. STAFF KEY TO MY HEART",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1712351733",
       "name_lat": "ONTARIO WINTER LEGEND IZ MOSKOVSKOY METELY",
       "name_ru": "",
@@ -2632,20 +3341,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1633328772",
-      "name_lat": "ONLY OVATION VIVAT SHOW",
+      "id": "1138432833",
+      "name_lat": "ONZA DE ORO RAPSODIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "479618113",
-      "name_lat": "ONEGA VOM HOF ANIRI",
+      "id": "1942610975",
+      "name_lat": "ONLY ONWARD CHIZKEYK",
       "name_ru": "",
-      "breed": "ХОВАВАРТ / HOVAWART",
-      "breed_en": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2654,6 +3362,15 @@
       "name_lat": "ONLY CHAMPION GOLDEN RON",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1663418332",
+      "name_lat": "O.N.E. STAFF JOY AND PLEASURE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2668,20 +3385,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1859952161",
-      "name_lat": "ONLYPASSION NERO D'AVOLA",
+      "id": "727041286",
+      "name_lat": "O.N.E STAFF NICOLETTA VICTORIA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "198562473",
-      "name_lat": "ONIKA KHOZYAYKA MEDNOY GORY",
+      "id": "1256945681",
+      "name_lat": "ONIKS KLIMENTINA IZ DOMA MARLEN",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
+      "breed": "БОРДОСКИЙ БУЛЬДОГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2718,6 +3434,14 @@
       "name_ru": "",
       "breed": "RETRIEVER",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "205698147",
+      "name_lat": "ONYX BONN",
+      "name_ru": "",
+      "breed": "БРЕТОНСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2762,6 +3486,59 @@
       "name_lat": "ONIKS",
       "name_ru": "",
       "breed": "ВОЛЧЬЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736152944",
+      "name_lat": "ONELLE GLAMUR GLEDIS",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1718356291",
+      "name_lat": "ONLY NAJS FEYMIKA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "627017980",
+      "name_lat": "O.N.E. STAFF LOVE SHARLOZ TERON",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1428686121",
+      "name_lat": "O.N.E. STAFF FUSION SOUL",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1741522112",
+      "name_lat": "O'NELLIIZ DOMA DIMAIS",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "728396812",
+      "name_lat": "ONDO MAGNIFICENT",
+      "name_ru": "",
+      "breed": "ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2821,11 +3598,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1736152944",
-      "name_lat": "ONELLE GLAMUR GLEDIS",
+      "id": "1174337405",
+      "name_lat": "O.N.T. STAFF DARLING BLACK DIAMOND",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2834,6 +3611,15 @@
       "name_lat": "ONOKI DES JARDINS DE MARGAUX",
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29610153",
+      "name_lat": "O.N.E. STAFF VIVA FERRARI CALIFORNIA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2852,15 +3638,6 @@
       "name_lat": "ONLY OVATION TOP STEFANIE",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ЦВЕРГШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1718356291",
-      "name_lat": "ONLY NAJS FEYMIKA",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ / BULLDOG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2911,6 +3688,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "348697508",
+      "name_lat": "O.N.E. STAFF REVIVAL LEGEND",
+      "name_ru": "",
+      "breed": "СТАФФОРДШ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "623289436",
+      "name_lat": "O.N.E. STAFF MAYBACH VILGEL'M",
+      "name_ru": "",
+      "breed": "СТАФФОРДШ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "482739391",
+      "name_lat": "O.N.E.STAFF LOVE SHARLIZ TERON",
+      "name_ru": "",
+      "breed": "СТАФФОРДШ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1608361165",
       "name_lat": "ON IZ GRAFSKO GO POMESTI",
       "name_ru": "",
@@ -2929,10 +3733,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1580309649",
+      "id": "1505085740",
       "name_lat": "ONESSA OZORNAYA OT BARINA MOSKOVSKOGO",
       "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ /",
+      "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2942,6 +3746,15 @@
       "name_lat": "ONIKA DAR SUD’BY",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1163656343",
+      "name_lat": "O. N.E. STAFF INSIDE BIG HEART BIG SOUL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2974,10 +3787,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "253344396",
-      "name_lat": "ONTARIVA KASABLANKA",
+      "id": "594406994",
+      "name_lat": "ONESSA OZORNAYA OT BARINA MOSKOVSK OGO",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ / CHIHUAHUA LONG HAIRED",
+      "breed": "МОПС / PUG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "138570640",
+      "name_lat": "O.N.E. STAFF CENTURION FIGHT OR DIE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "158974713",
+      "name_lat": "O,N.E.STAFF EY*RAILI WORLD IS YOURS",
+      "name_ru": "",
+      "breed": "СТАФ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2992,10 +3822,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "850979811",
+      "id": "1650698442",
       "name_lat": "ONEGIN HIONA",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3046,10 +3876,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "924760239",
+      "id": "1428535720",
       "name_lat": "ONYX VON GOLD SIEG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3082,6 +3912,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "291379315",
+      "name_lat": "O.N.E. STAFF LET’S GO ROYAL COURT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "127265188",
       "name_lat": "ONLY OVEYSHN PRAYD",
       "name_ru": "",
@@ -3091,10 +3930,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "494023578",
-      "name_lat": "ONEGA IZ LADOZHSKOGO DOMA",
+      "id": "686992335",
+      "name_lat": "O.N.E Staff EZHEVIKA",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3136,10 +3975,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "605455507",
+      "id": "1670035015",
       "name_lat": "ONLY ONWARD MARYA ISKUSNITSA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3172,37 +4011,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "118811091",
-      "name_lat": "ONZA DE ORO TEFFY",
+      "id": "197956638",
+      "name_lat": "O.N.E. STAFF PA'TROL",
       "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1138432833",
-      "name_lat": "ONZA DE ORO RAPSODIYA",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "208716573",
+      "id": "1498390505",
       "name_lat": "ONLY ONWARD CHAROIT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "728396812",
-      "name_lat": "ONDO MAGNIFICENT",
-      "name_ru": "",
-      "breed": "ХОХЛАТАЯ",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3217,29 +4038,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "291105466",
+      "id": "1273415404",
       "name_lat": "ON IZ SOZVEZDIYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "915649638",
-      "name_lat": "ONEGIN YA STELLA",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "279553981",
-      "name_lat": "ONZA DE ORO FIDELIA",
+      "id": "169071662",
+      "name_lat": "ONZA DE ORO CHELSEA",
       "name_ru": "",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "812548487",
+      "name_lat": "O.N.E. STAFF ULTRAMARINA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1672252140",
+      "name_lat": "O.N.E. STAFF CHIKA- BOMB LIVE IS LIFE",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 1,
       "competition_dog_id": null
     }

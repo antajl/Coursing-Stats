@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОЙ",
-  "count": 45,
+  "count": 48,
   "dogs": [
     {
       "id": "1526579753",
@@ -15,10 +15,10 @@
     {
       "id": "1013900123",
       "name_lat": "ОЙЛА ИЗ МЫШКИНОГО ДОМА",
-      "name_ru": "",
+      "name_ru": "ОЙЛА ИЗ МЫШКИНОГО ДОМА",
       "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -27,14 +27,14 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "148294658",
+      "id": "1602539459",
       "name_lat": "ОЙ ЛЯЛЯ КАКАЯ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ОЙ ЛЯЛЯ КАКАЯ",
+      "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -42,10 +42,18 @@
     {
       "id": "243454819",
       "name_lat": "ОЙРА КЭРОЛИН ЛУВЕН",
-      "name_ru": "",
+      "name_ru": "ОЙРА КЭРОЛИН ЛУВЕН",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "280896327",
+      "name_lat": "ОЙРА УНИКА",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -67,12 +75,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "235438453",
+      "name_lat": "ОЙГУЛЬ ИЗ КЛОВИ",
+      "name_ru": "ОЙГУЛЬ ИЗ КЛОВИ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "201075877",
       "name_lat": "ОЙЗА",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1828560349",
+      "name_lat": "ОЙЛА ТАМИРА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -94,10 +118,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1158746539",
+      "id": "742505471",
       "name_lat": "ОЙРА УНИКА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -112,12 +136,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1827536157",
-      "name_lat": "ОЙКУМЕНА ИЗ МИРА МЕЧТЫ",
+      "id": "1548051396",
+      "name_lat": "ОЙРА-ТАЁЖКА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "ЛАЙКА / WEST",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -141,7 +164,7 @@
     {
       "id": "11856996",
       "name_lat": "ОЙГУЛЬ ЮЛДУЗ",
-      "name_ru": "",
+      "name_ru": "ОЙГУЛЬ ЮЛДУЗ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
@@ -202,10 +225,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "615998067",
+      "id": "1300890724",
       "name_lat": "ОЙРА ФОМ ХАУС КОГОР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -274,19 +297,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1827700637",
-      "name_lat": "ОЙЛА ТАМИРА",
+      "id": "785826278",
+      "name_lat": "ОЙРИС ФАЙ",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1828560349",
+      "id": "1827700637",
       "name_lat": "ОЙЛА ТАМИРА",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -355,15 +377,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "235438453",
-      "name_lat": "ОЙГУЛЬ ИЗ КЛОВИ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1159697659",
       "name_lat": "ОЙРА ДЕ МИ ВАН ИЗ СИЛЬНОЙ СТАИ",
       "name_ru": "",
@@ -373,10 +386,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "57810588",
+      "id": "451481808",
       "name_lat": "ОЙКАВА ТООРУ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -400,10 +413,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "374733075",
+      "id": "1416869677",
+      "name_lat": "О ЙОШИ ИЗ НОЧНЫХ СНАЙПЕРОВ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1569485187",
       "name_lat": "ОЙКА СМЕЛАЯ ДУХОМ АРЛОВ ДОВ-БЕР",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

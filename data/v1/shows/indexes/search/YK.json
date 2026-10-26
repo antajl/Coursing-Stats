@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "YK",
-  "count": 4,
+  "count": 5,
   "dogs": [
     {
       "id": "642735433",
@@ -9,14 +9,14 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР БЕЛЬГИЙСКИЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "350238943",
+      "id": "484536426",
       "name_lat": "YKA",
       "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "breed": "ЧУНЦИН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -28,6 +28,14 @@
       "breed": "CHONGQING DOG",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "350238943",
+      "name_lat": "YKA",
+      "name_ru": "",
+      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {

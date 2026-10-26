@@ -1,24 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЕТ",
-  "count": 50,
+  "count": 55,
   "dogs": [
     {
       "id": "761079140",
       "name_lat": "ЕТТИ ИЗ ЗЕ БРАВЕСТ",
-      "name_ru": "",
+      "name_ru": "ЕТТИ ИЗ ЗЕ БРАВЕСТ",
       "breed": "пти брабансон",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
       "id": "783234697",
       "name_lat": "ЕТЬЕН ТАЙ ВЭЙ ПАРКЕР",
-      "name_ru": "",
+      "name_ru": "ЕТЬЕН ТАЙ ВЭЙ ПАРКЕР",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -27,25 +27,43 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "78217188",
+      "name_lat": "Е'ТРОЛЬ С ЗЕЛЕНОГО ДОЛА",
+      "name_ru": "Е'ТРОЛЬ С ЗЕЛЕНОГО ДОЛА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "871759873",
       "name_lat": "ЕТЕРНАЛЛИ ЛОВИНГ СТЕФАНИ",
-      "name_ru": "",
+      "name_ru": "ЕТЕРНАЛЛИ ЛОВИНГ СТЕФАНИ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "543416009",
       "name_lat": "ЕТАРХАН ИЗ СОЗВЕЗДИЯ ЧЁРНОГО ПСА",
-      "name_ru": "",
+      "name_ru": "ЕТАРХАН ИЗ СОЗВЕЗДИЯ ЧЁРНОГО ПСА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1759488439",
+      "name_lat": "Е-ТИФАРИ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -63,7 +81,7 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -76,9 +94,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "496434803",
+      "name_lat": "Е-ТУНДРА ОЛИМ ПИКА",
+      "name_ru": "Е-ТУНДРА ОЛИМ ПИКА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "756265917",
       "name_lat": "ЕТЕРНАЛЛИ ЛОВИНГ ЛОУРЕНС",
-      "name_ru": "",
+      "name_ru": "ЕТЕРНАЛЛИ ЛОВИНГ ЛОУРЕНС",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -87,7 +114,7 @@
     {
       "id": "578935614",
       "name_lat": "ЕТТА ФОМ ДИНСК ХАУС",
-      "name_ru": "",
+      "name_ru": "ЕТТА ФОМ ДИНСК ХАУС",
       "breed": "НЕМЕЦКИЙ ДРАТХААР",
       "breed_en": "",
       "total_shows": 5,
@@ -96,17 +123,17 @@
     {
       "id": "249921309",
       "name_lat": "ЕТЕРНАЛЛИ ЛОВИНГ ТИФФАНИ",
-      "name_ru": "",
+      "name_ru": "ЕТЕРНАЛЛИ ЛОВИНГ ТИФФАНИ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "667833075",
+      "id": "1441840978",
       "name_lat": "ЕТУАЛЬ ДЮ СУАР ИЗ ИМПЕРИИ АДАМАНТ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "name_ru": "ЕТУАЛЬ ДЮ СУАР ИЗ ИМПЕРИИ АДАМАНТ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -114,7 +141,7 @@
     {
       "id": "1510688112",
       "name_lat": "ЕТИКАЛ КОДЕС",
-      "name_ru": "",
+      "name_ru": "ЕТИКАЛ КОДЕС",
       "breed": "СКОТЧ СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 8,
@@ -127,15 +154,6 @@
       "breed": "МАЛЬТЕЗЕПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "120870481",
-      "name_lat": "ЕТЬЕН ТАЙ ВЕЙ ПАРКЕР",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -157,12 +175,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1680813207",
+      "name_lat": "ЕТСУ САЮРИ",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1073868148",
       "name_lat": "ЕТЕРНАЛЛИ ЛОВИНГ НЕРИССА",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1805256152",
+      "name_lat": "Е’ТИФАНИ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -184,9 +219,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "527100901",
+      "name_lat": "ЕТЕРА ГЛАМУР ГЕРЛ",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "344600500",
       "name_lat": "ЕТЕРНАЛЛИ ЛОВИНГ ФЛОРИАНА",
-      "name_ru": "",
+      "name_ru": "ЕТЕРНАЛЛИ ЛОВИНГ ФЛОРИАНА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -211,10 +254,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1548565216",
+      "id": "89418920",
+      "name_lat": "Е*ТРОЛЬ С ЗЕЛЕНОГО ДОЛА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "933136836",
       "name_lat": "ЕТТИ МАЛИБУ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -247,19 +299,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "917844872",
+      "id": "1750240618",
       "name_lat": "ЕТТА",
       "name_ru": "",
-      "breed": "БОРДОССКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1680813207",
-      "name_lat": "ЕТСУ САЮРИ",
-      "name_ru": "",
-      "breed": "СИБА / SHIBA",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -283,10 +326,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "215819816",
+      "id": "1019670969",
       "name_lat": "ЕТУМИ С СИДЖЕРИУС",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -310,11 +353,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "235110784",
+      "id": "1393571759",
       "name_lat": "ЕТАН ГРАФ ДЕВОН",
-      "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР АМЕРИКАНСКИЙ",
+      "name_ru": "ЕТАН ГРАФ ДЕВОН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "272553570",
+      "name_lat": "ЕТОН ПАСКУАЛЕ ПЕРЬЕ",
+      "name_ru": "ЕТОН ПАСКУАЛЕ ПЕРЬЕ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -337,19 +388,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "49247514",
+      "id": "1079018678",
       "name_lat": "ЕТСУ УМИКО",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН / JAPANESE",
-      "breed_en": "",
+      "breed": "ЯПОНСКИЙ ХИН",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "752851230",
-      "name_lat": "ЕТТА БРУК",
+      "id": "49247514",
+      "name_lat": "ЕТСУ УМИКО",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "ЯПОНСКИЙ ХИН / JAPANESE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -382,19 +432,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "231171113",
+      "id": "1315311284",
       "name_lat": "ЕТИ БЛЭК САББАТ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "374743782",
+      "id": "1043632863",
       "name_lat": "ЕТАРХАН ИЗ СОЗВЕЗД ИЯ ЧЁРНОГО ПСА",
       "name_ru": "",
-      "breed": "Н /",
+      "breed": "Н",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -440,15 +490,6 @@
       "name_lat": "ЕТТИ БЕТТИ БЛОНД",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "272553570",
-      "name_lat": "ЕТОН ПАСКУАЛЕ ПЕРЬЕ",
-      "name_ru": "",
-      "breed": "французский бульдог",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

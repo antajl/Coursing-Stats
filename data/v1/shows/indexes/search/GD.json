@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "GD",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1755436365",
+      "name_lat": "G-DRAGON OF ANGELA WHITE KR",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1886149962",
+      "name_lat": "G-DARA",
+      "name_ru": "",
+      "breed": "GERMAN WIRE-HAIRED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1558806038",
+      "name_lat": "G-DARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

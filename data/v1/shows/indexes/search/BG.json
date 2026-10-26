@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "BG",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "587118781",
+      "name_lat": "B-GRETTA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "300191898",
+      "name_lat": "BGDBULLY'S KITANA",
+      "name_ru": "",
+      "breed": "XL",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

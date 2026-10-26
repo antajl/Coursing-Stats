@@ -1,33 +1,33 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OC",
-  "count": 278,
+  "count": 282,
   "dogs": [
     {
-      "id": "1004924626",
+      "id": "1190962512",
+      "name_lat": "OCHEY OCHAROVANIE NAOMI",
+      "name_ru": "ОЧЕЙ ОЧАРОВАНИЕ НАОМИ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "NEWFOUNDLAND",
+      "total_shows": 42,
+      "competition_dog_id": null
+    },
+    {
+      "id": "426830646",
       "name_lat": "OCHAROVATELNYI BLONDIN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 28,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
-      "id": "1011192381",
+      "id": "523132073",
       "name_lat": "OCEAN SACHIK'S AMBER",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "GERMAN SPITZ MINIATURE BLACK, BROWN",
       "total_shows": 28,
-      "competition_dog_id": null
-    },
-    {
-      "id": "65597143",
-      "name_lat": "OCHAROVANIE JE TAIM",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 86,
       "competition_dog_id": null
     },
     {
@@ -35,8 +35,34 @@
       "name_lat": "OCHAROVATELNAYA JESSICA PARKER",
       "name_ru": "",
       "breed": "КСОЛОИТЦКУИНТЛИ СРЕДНЯЯ",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1351964459",
+      "name_lat": "OCHAROVANIE JE TAIM",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 92,
+      "competition_dog_id": null
+    },
+    {
+      "id": "130957534",
+      "name_lat": "OCHAROVANIE KIMMERII MISTER BLACK МЕЧТА ВСЕЙ ЖИЗНИ ДЖЕНТЛЬМЕН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "582710059",
+      "name_lat": "OCHAROVANIE ULRIKA",
+      "name_ru": "ОЧАРОВАНИЕ УЛРИКА",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -44,15 +70,6 @@
       "name_lat": "OCHAROVATELNAYA MISHEL FROM MOONSHOT",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "968480350",
-      "name_lat": "OCHAROVANIE KIMMERII MISTER BLACK",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -76,28 +93,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1986681423",
+      "id": "1305918299",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH KRISTIAN",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1788568801",
+      "id": "1697045693",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH HARRISON",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "238101707",
+      "id": "1325435871",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH VAL'DEMAR",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1693912073",
+      "name_lat": "OCHAROVANIE TAVRIDY YANTARIK",
+      "name_ru": "ОЧАРОВАНИЕ ТАВРИДЫ ЯНТАРИК",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -112,30 +138,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "582710059",
-      "name_lat": "OCHAROVANIE ULRIKA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "id": "1568268286",
+      "name_lat": "OCHAROVANIE TAVRIDY ZARNITSA",
+      "name_ru": "ОЧАРОВАНИЕ ТАВРИДЫ ЗАРНИЦА",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1628012036",
+      "id": "1486287816",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH HARLETTA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1546801376",
+      "id": "260379740",
       "name_lat": "OCHAROVANIE ELEGANTE BELLA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "561109092",
+      "name_lat": "OCEAN BREEZE",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ",
+      "breed_en": "POODLE TOY BLACK, WHITE, BROWN",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -184,28 +219,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "900679548",
+      "id": "52679602",
       "name_lat": "OCEAN TEAM CARRERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1750717209",
+      "id": "172097781",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH KATARINA",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1754876867",
+      "id": "982990799",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH NELLA MEYLAND",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -234,14 +269,14 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "POODLE TOY FAWN, GREY",
-      "total_shows": 12,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "474466430",
+      "id": "1753384058",
       "name_lat": "OCHAROVANIE NURI NOW YOU WITH MY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -265,10 +300,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "240838001",
+      "id": "991959165",
       "name_lat": "OCHAROVANIE VSEMI LUBIMAYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -283,21 +318,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "572380684",
-      "name_lat": "OCHAROVANIE TAVRIDY YANTARIK",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "614208299",
       "name_lat": "OCEANA COMPATRIOTA DI BONFINI",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ БРАКК",
       "breed_en": "ITALIAN POINTING DOG (BRACCO ITALIANO)",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "177528542",
+      "name_lat": "OCHAROVATELNAYA EMMI",
+      "name_ru": "ОЧАРОВАТЕЛЬНАЯ ЭММИ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -328,12 +363,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1710357541",
+      "id": "1079402185",
       "name_lat": "OCHAROVATEL'NAYA OLIVA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -346,6 +381,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1790228",
+      "name_lat": "OCEAN BREATH NINJA BLACK",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1928841390",
+      "name_lat": "OCHAROVASHKA MELLI",
+      "name_ru": "ОЧАРОВАШКА МЭЛЛИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "427992631",
       "name_lat": "OCTAVA ERATO SELENE VAN EDELSIEGER (MEDIUM)",
       "name_ru": "",
@@ -355,46 +408,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1785400918",
+      "id": "296959570",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH SOLEIL SOFIYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "783108705",
+      "id": "630030588",
       "name_lat": "OCO ДЕ МИЕЛЬ ГАЛОПОМ ПО ЕВРОПАМ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1790228",
-      "name_lat": "OCEAN BREATH NINJA BLACK",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
-      "id": "260542797",
-      "name_lat": "OCHAROVANIE TAVRIDY ZARNITSA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1319563874",
+      "id": "207465542",
       "name_lat": "OCHAROVANIE IRVIN LORD",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -409,21 +444,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "807551265",
+      "id": "4886293",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH ASTORIYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "529893605",
-      "name_lat": "OCEAN BREEZE",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ /",
-      "breed_en": "POODLE TOY BLACK, WHITE, BROWN",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -432,7 +458,7 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "SHETLAND SHEEPDOG",
-      "total_shows": 26,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -445,6 +471,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "201755031",
+      "name_lat": "OCEAN OF TIME ABSOLUTE",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "1222755879",
       "name_lat": "OCHAROVANIE NOCHI IZ ZAMKA MELVIN",
       "name_ru": "",
@@ -454,28 +489,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "650546931",
-      "name_lat": "OCEAN OF TIME ABSOLUTE",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1655248142",
+      "id": "636529131",
       "name_lat": "OCHAROVANIE UNO MOMENTO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ /",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ",
       "breed_en": "POODLE TOY",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "370841172",
+      "id": "489652152",
       "name_lat": "OCHAROVANIE JE TAIME",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -490,20 +516,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "121808190",
+      "name_lat": "OCEAN DIAMOND KENDI SVITI",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
       "id": "1151797893",
       "name_lat": "OCHAROVANIE MOE MISHEL",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1190962512",
-      "name_lat": "OCHEY OCHAROVANIE NAOMI",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "NEWFOUNDLAND",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -526,15 +552,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1928841390",
-      "name_lat": "OCHAROVASHKA MELLI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "268286371",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH MAYA MARI",
       "name_ru": "",
@@ -544,21 +561,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1895660621",
+      "id": "1480557393",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH RONNI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1336163766",
+      "id": "1876511754",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH KVIKSTEP BRUNO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1383301480",
+      "name_lat": "OCHAROVANIE DOMA ROMANOVYH FEIYA LILU",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -571,19 +596,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1681988981",
+      "id": "234532729",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH CHANITTA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1387951575",
+      "id": "179011115",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH KAYRA QUEEN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -607,8 +632,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "601345583",
-      "name_lat": "OCHAROVANIE VINNI- PUKH",
+      "id": "178772369",
+      "name_lat": "OCHAROVANIE VINNI-PUKH",
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "",
@@ -634,6 +659,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1045719702",
+      "name_lat": "OCHAROVANIE DOMA ROMANOVYH FLORETTA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1576644802",
       "name_lat": "OCHAROVATELNAYA MALYSHKA",
       "name_ru": "",
@@ -652,55 +685,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "261909200",
-      "name_lat": "OCHAROVANIE KIMMERII MISTER BLACK МЕЧТА ВСЕЙ ЖИЗНИ ДЖЕНТЛЬМЕН",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1799334862",
+      "id": "887460778",
       "name_lat": "OCHAROVANIE FLORENCE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1487456561",
+      "id": "1990250383",
+      "name_lat": "OCHAROVANIE VIZANTIYA",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "887804333",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH EMILY LAIN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "42092262",
+      "id": "219354847",
       "name_lat": "OCHAROVANIE IZ NEVSKOY TROYKI",
       "name_ru": "",
-      "breed": "SCHNAUZER BLACK ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ /",
+      "breed": "SCHNAUZER BLACK ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1153367648",
+      "id": "1355980660",
       "name_lat": "OCHAROVANIE TOP STYLE ONLY YOU",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "POODLE TOY",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1104664313",
+      "id": "1184650365",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH ALEKSANDRIYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -715,21 +747,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "203148936",
+      "id": "1529298366",
       "name_lat": "OCEAN LIE ANNE LUR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "121808190",
-      "name_lat": "OCEAN DIAMOND KENDI SVITI",
+      "id": "903190588",
+      "name_lat": "OCEAN BREATH NATALY",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "BEAGLE",
-      "total_shows": 32,
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -738,16 +769,7 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "SHETLAND SHEEPDOG",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "903190588",
-      "name_lat": "OCEAN BREATH NATALY",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -760,73 +782,100 @@
       "competition_dog_id": null
     },
     {
-      "id": "1712437424",
-      "name_lat": "OCHAROVANIE NORD WEST",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1601771295",
-      "name_lat": "OCHAROVANIE DOMA ROMANOVYH JOZI VERONIK",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "632529001",
-      "name_lat": "Ocharovatel'naya Ledi Ada",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1176969365",
       "name_lat": "OCEAN HEART IZ ANGARII",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 18,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "827213577",
-      "name_lat": "OCTAVIA EMORI ANGELIC NATURE",
+      "id": "1712437424",
+      "name_lat": "OCHAROVANIE NORD WEST",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1928554346",
-      "name_lat": "OCHAROVANIE FAUSTINA",
+      "id": "1396409803",
+      "name_lat": "OCHAROVANIE DOMA ROMANOVYH JOZI VERONIK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "88442692",
+      "name_lat": "OCHAROVATEL'NAYA LEDI ADA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "488269774",
-      "name_lat": "OCHAROVANIE ODRI LUBIMITCA ZVEZD",
+      "id": "759662681",
+      "name_lat": "OCTAVIA EMORI ANGELIC NATURE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "998001339",
+      "id": "1839441688",
+      "name_lat": "OCHAROVANIE DOMA ROMANOVYH AZALIYA MELINA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "135336902",
+      "name_lat": "OCCULTUS MAGICUS EX VALHALOS SARGAS (Изменено по решению ВК от 24.03.21 вопрос 33)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "794644754",
+      "name_lat": "OCEAN OF TIME BEATRIS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "POODLE TOY",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "248978790",
+      "name_lat": "OCHAROVANIE FAUSTINA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1525367410",
+      "name_lat": "OCHAROVANIE ODRI LUBIMITCA ZVEZD",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "195780039",
       "name_lat": "OCHAROVANIE INFANTA SOLNECHNAYA ULYBKA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -850,19 +899,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1688097023",
+      "id": "94083032",
       "name_lat": "OCEAN Z AZOVSKOGO BEREGA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1957491367",
+      "id": "1545122150",
       "name_lat": "OCEAN IZ SOLNECHNOGO DOMA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -877,39 +926,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1893373625",
+      "id": "315770909",
       "name_lat": "OCHI CHERNYE IMPERATOR",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "794644754",
-      "name_lat": "OCEAN OF TIME BEATRIS",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "POODLE TOY",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "966983660",
-      "name_lat": "OCHAROVANIE DOMA ROMANOVYH AZALIYA MELINA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "id": "1640048141",
+      "name_lat": "OCHAROVANIE FELIZ ESTRELLA",
+      "name_ru": "ОЧАРОВАНИЕ ФЕЛИЗ ЭСТРЕЛЛА",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "970528431",
-      "name_lat": "OCHAROVATELNAYA EMMI",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -940,39 +971,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "1319705124",
+      "id": "928810296",
       "name_lat": "OCHAROVATEL'NAYA LEDI",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1556128802",
+      "id": "1818221091",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH TOFFIX MIX",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КРАСНЫЙ /",
+      "breed": "ПУДЕЛЬ ТОЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "10688277",
+      "id": "1199398809",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH CORNELIUS",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1246071872",
+      "id": "241698068",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH FLORISTAN",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1604756502",
+      "name_lat": "OCHAROVANIE DOMA ROMANOVYH NASTURTSIYA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ФАНТОМ) ЧЕРНЫЙ С ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -994,6 +1034,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "96616240",
+      "name_lat": "OCHAROVASHKA KENDI OLANA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "357728908",
       "name_lat": "OCEAN S NEVSKIH OSTROVOV",
       "name_ru": "",
@@ -1003,10 +1052,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "187673668",
+      "id": "168719046",
       "name_lat": "OCHAROVANIE IZ LESNOGO GORODKA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1021,28 +1070,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "388727928",
+      "id": "1673069469",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH SHOKER",
       "name_ru": "",
-      "breed": "КУДРЯВОЙ ШЕРСТЬЮ /",
+      "breed": "КУДРЯВОЙ ШЕРСТЬЮ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1957338510",
-      "name_lat": "OCHAROVANIE DOMA ROMANOVYH NASTURTSIYA",
-      "name_ru": "",
-      "breed": "ФАНТОМ) ЧЁРНЫЙ С ПОДПАЛОМ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1185367648",
+      "id": "332623732",
       "name_lat": "OCHAROVANIE YUKI SUN DANCE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1093,19 +1133,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "135336902",
-      "name_lat": "OCCULTUS MAGICUS EX VALHALOS SARGAS (Изменено по решению ВК от 24.03.21 вопрос 33)",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "480410164",
+      "id": "696447264",
       "name_lat": "OCHAROVANIE HEVENS STAR",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1129,10 +1160,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "28653149",
+      "id": "921200729",
       "name_lat": "OCEAN OF TIME AMBITION",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1147,15 +1178,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "96616240",
-      "name_lat": "OCHAROVASHKA KENDI OLANA",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "716486412",
       "name_lat": "OCHI CHERNYJE Z PUASCHOTNAI ZORKI",
       "name_ru": "",
@@ -1165,19 +1187,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1303825483",
+      "id": "260841282",
       "name_lat": "OCEAN DREAM IZ ZAMKA MELVIN",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1345633523",
+      "id": "1717971231",
       "name_lat": "OCHAROVANIE STROKE OF LUCK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1210,19 +1232,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1207091325",
+      "id": "1009629345",
       "name_lat": "OCHAROVANIE MAYRA ANGELS EYES",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1749156344",
+      "id": "1748769871",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH DOMENIK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed": "ЧАРЛЬЗ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1260,7 +1282,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1300,19 +1322,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "94808379",
+      "id": "1006157395",
       "name_lat": "OCCCULTUS EL OPIUM DE MI ALMA DEL SHARM ELNINYO",
       "name_ru": "",
-      "breed": "СОБАКА) МИНИАТЮРНАЯ",
+      "breed": "ТАКСА КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1337699131",
+      "id": "362619930",
       "name_lat": "OCHAROVANIE TRIUMPH OF THE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ( ПУДЕЛЬ ТОЙ ( ПУДЕЛЬ ТОЙ ( ПУДЕЛЬ ТОЙ ( РУССКАЯ",
+      "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1327,19 +1349,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1372648443",
+      "id": "315931856",
+      "name_lat": "OCHAROVANIE VILONA GOLDEN FLOWER",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1130572722",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH OSMAN",
       "name_ru": "",
-      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН /",
+      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1812298192",
+      "id": "283970348",
       "name_lat": "OCHAROVANIE SWEET DREAM SONAY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1354,10 +1384,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1446610820",
+      "id": "1469208904",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH ELIZAVETA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1435,10 +1465,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "796850023",
+      "id": "645413339",
       "name_lat": "OCHAROVANIE YANUSZ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1453,19 +1483,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1740097328",
+      "id": "288048676",
       "name_lat": "OCHAROVANIE TOP STILE ONLY YOU",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1821989938",
+      "id": "433532851",
       "name_lat": "OCEAN FLAME S MYSA HERSONES",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1525,10 +1555,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "483255526",
+      "id": "1642228138",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH MARIA MIRABELLA",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ ТОЙ ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ПУАЛЬ ФРИЗЕ ТОЙ ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1633,21 +1663,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "593840497",
+      "id": "1368733366",
       "name_lat": "OCHOTNICHYI AZART LEGOLAS",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "427645172",
+      "id": "245367142",
       "name_lat": "OCTOBER FEST",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "548194692",
+      "name_lat": "OCTORIAN AUGUST BERBERIS",
+      "name_ru": "",
+      "breed": "МАЛЫЙ коричневый, черный",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1660,37 +1699,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "548194692",
-      "name_lat": "OCTORIAN AUGUST BERBERIS",
-      "name_ru": "",
-      "breed": "МАЛЫЙ коричневый, черный",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "355072844",
+      "id": "682336240",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH BELLORA BERRY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1772750923",
+      "id": "159880999",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH ANNA MARIA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1074664430",
+      "id": "569319735",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH UL'YANA",
       "name_ru": "",
-      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН /",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1705,10 +1735,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "691306122",
+      "id": "1399978070",
       "name_lat": "OCHAROVANIE UNO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1732,10 +1762,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "953731943",
+      "id": "289993420",
+      "name_lat": "OCHEI OCHAROVAN'E",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1495333651",
       "name_lat": "OCTORIAN AUGUST BERBERIAN",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ / GERMAN SPITZ KLEINSPITZ BLACK, BROWN",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ / GERMAN SPITZ KLEINSPITZ BLACK, BROWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1768,12 +1807,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "329770176",
-      "name_lat": "OCHEI OCHAROVAN'E",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР ЧЁРНЫЙ",
+      "id": "1050919499",
+      "name_lat": "OCHEN VAZHNAYA",
+      "name_ru": "ОЧЕНЬ ВАЖНАЯ",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1790,15 +1829,6 @@
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH FLORA",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1607745855",
-      "name_lat": "OCHEN VAZHNAYA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1840,10 +1870,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1098298275",
+      "id": "654924211",
       "name_lat": "OCEAN DREAM",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1863,6 +1893,15 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "192711763",
+      "name_lat": "OCEAN BY BAUER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -1894,6 +1933,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "104234665",
+      "name_lat": "OCTAVIA GOLDEN MELODY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1438805690",
       "name_lat": "OCHAROVATELNAYA DOMINO DLYA DIAMOND KRISTEL",
       "name_ru": "",
@@ -1912,28 +1960,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1549361341",
-      "name_lat": "OCTAVIA GOLDEN MELODY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "95510947",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH YANIKA VESTA",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "192711763",
-      "name_lat": "OCEAN BY BAUER",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1948,10 +1978,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "858618500",
+      "id": "336988977",
       "name_lat": "OCEAN EYES",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1984,28 +2014,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "434957488",
+      "id": "1585323428",
       "name_lat": "OCEAN OF TIME ABSOLUT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1684313208",
+      "id": "108259220",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH ROYAL FLESH",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "811046954",
+      "id": "793164614",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH KAROLINA",
       "name_ru": "",
-      "breed": "ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- ПОДПАЛЫЙ / CHIEN",
+      "breed": "ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- ПОДПАЛЫЙ / CHIEN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2029,10 +2059,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "3060421",
+      "id": "825410353",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH SOFI ELIZA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2065,10 +2095,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1680347817",
+      "id": "133708037",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH DAYANA GOLD",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2110,10 +2140,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1784311360",
+      "id": "247013989",
       "name_lat": "OCHAROVASHKA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2173,19 +2203,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "823789473",
+      "id": "1517720898",
       "name_lat": "OCEAN MIRROR ЭЙРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1983984406",
+      "id": "630346293",
       "name_lat": "OCEAN MIRROR ЭЛИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2245,19 +2275,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "124336731",
-      "name_lat": "OCHAROVANIE FELIZ ESTRELLA",
+      "id": "1111230148",
+      "name_lat": "O CAROLINA PAYPER IZ DOMA USHKOVOY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
-      "breed_en": "",
+      "breed": "МОПС",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "747331813",
+      "id": "928401497",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH HALISA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2290,10 +2319,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "588545324",
+      "id": "1449505744",
       "name_lat": "OCHAROVANIE STREAK OF LIGHTNING",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2317,19 +2346,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1722599626",
+      "id": "1343111470",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH LYUBIMCHIK DENI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1529771131",
+      "id": "1436374919",
       "name_lat": "OCHAROVANIE DOMA ROMANOVYH SHANTAL' BIZHU",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2371,10 +2400,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "333434599",
+      "id": "8735899",
       "name_lat": "OCHEREDNOY SHEDEVR IZ ZIMNIH GREZ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2389,10 +2418,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "536873877",
+      "id": "55645297",
       "name_lat": "OCHAROVANIE IKS MEN VIKTORI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2470,19 +2499,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1224769479",
+      "id": "769537344",
       "name_lat": "OCTAVIANNA BAND BAKSTER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1593862585",
+      "id": "1274762841",
       "name_lat": "OCHAROVANIEMOE MISHEL",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

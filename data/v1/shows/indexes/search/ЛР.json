@@ -1,0 +1,42 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ЛР",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1435303300",
+      "name_lat": "Л-Рая",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "949753919",
+      "name_lat": "Л'РОСТ КЛАССИК ЭРИДАН БАТЛЕР",
+      "name_ru": "Л'РОСТ КЛАССИК ЭРИДАН БАТЛЕР",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103820963",
+      "name_lat": "Л РУБИНА ОТ ШАРМ-ЭЛЬ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1126223610",
+      "name_lat": "Л'РОСТ КЛАССИК ЭЛЬЗА МЕЛИСЕНТА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

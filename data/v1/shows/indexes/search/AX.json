@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AX",
-  "count": 95,
+  "count": 98,
   "dogs": [
     {
       "id": "1523990738",
@@ -9,14 +9,14 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "58958454",
+      "id": "1512308126",
       "name_lat": "AXIOM VALLEY CHINZANO ASTI",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 27,
       "competition_dog_id": null
@@ -58,6 +58,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1153779630",
+      "name_lat": "AXIOM VALLEY ARCTIC FOX",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "293716829",
       "name_lat": "AXEL",
       "name_ru": "",
@@ -67,17 +75,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "304074842",
+      "id": "1999154132",
       "name_lat": "AXEL GREAT HUNTER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "22435314",
-      "name_lat": "AXIOL' BLISS ZAGADKA ASTI",
+      "id": "619723083",
+      "name_lat": "AXIOL` BLISS ZAGADKA ASTI",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
@@ -94,15 +102,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1153779630",
-      "name_lat": "AXIOM VALLEY ARCTIC FOX",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "403351473",
       "name_lat": "AXEL",
       "name_ru": "",
@@ -112,10 +111,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1174283186",
+      "id": "484828788",
       "name_lat": "AXIOM VALLEY YA ODNA TAKAYA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
@@ -135,7 +134,15 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1272990873",
+      "name_lat": "AXI DE LUXE",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА (ХИЛЕР)",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -175,6 +182,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "287543092",
+      "name_lat": "AXEL XOLOMANIA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "478920892",
       "name_lat": "AXIOL' BLISS APHRODITA",
       "name_ru": "",
@@ -193,12 +209,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1559491369",
+      "name_lat": "AXIOM VALLEY AIVORI",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1883154813",
       "name_lat": "AXEL BRIGHT HEART PURE PAW",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1085000095",
+      "name_lat": "AXANDRIAN HOF ANIMAMOON",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -211,12 +244,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1559491369",
-      "name_lat": "AXIOM VALLEY AIVORI",
+      "id": "632368191",
+      "name_lat": "AXI DE LUXE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СОБАКА (АВСТРАЛИЙСК ИЙ ХИЛЕР)",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -247,15 +280,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "297327646",
-      "name_lat": "AXEL XOLOMANIA",
-      "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
       "id": "1868250511",
       "name_lat": "AXANDRIAN HOF SUPERBELLE",
       "name_ru": "",
@@ -271,15 +295,6 @@
       "breed": "ЮЖНОРУССКАЯ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1085000095",
-      "name_lat": "AXANDRIAN HOF ANIMAMOON",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -301,10 +316,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "358017071",
+      "id": "1421322334",
       "name_lat": "AXI DE LUXE",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА (АВСТРАЛИЙСКИЙ ХИЛЕР) /",
+      "breed": "АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА (АВСТРАЛИЙСКИЙ ХИЛЕР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -337,15 +352,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "632368191",
-      "name_lat": "AXI DE LUXE",
-      "name_ru": "",
-      "breed": "СОБАКА (АВСТРАЛИЙСК ИЙ ХИЛЕР)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "180542454",
       "name_lat": "AXEL WHITE BLIZZARD IZ MOSKOVSKOY METELY",
       "name_ru": "",
@@ -355,10 +361,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1321843680",
+      "id": "1530201723",
       "name_lat": "AXIOM VALLEY CHILLI PEPPER",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -373,12 +379,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1302776201",
+      "id": "286359794",
       "name_lat": "AXIOM VALLEY CHERRY BERRY",
       "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "Английский Золотистый ретривер",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -387,14 +393,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "39660806",
+      "id": "675701422",
       "name_lat": "AXIOM VALLEY CHALENGER",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -418,19 +424,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1286755754",
+      "id": "575577374",
+      "name_lat": "AXIOM VALLEY AVENSIS",
+      "name_ru": "",
+      "breed": "СПРИНГЕР АНГЛИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1792640985",
       "name_lat": "AXS DEL CASTELLO FIENGA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "109470960",
+      "id": "332798242",
+      "name_lat": "AXI DE LUXE",
+      "name_ru": "",
+      "breed": "СОБАКА (АВСТРАЛИЙСКИЙ)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "783548500",
       "name_lat": "AXIOM VALLEY APRAXIS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -454,10 +477,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "913667252",
+      "id": "938181089",
       "name_lat": "AXIOM ALL RIGHT BORN TO BE HUNTER",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -487,6 +510,14 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "550761878",
+      "name_lat": "AXIIOMA IZ DINASTII CHEMPIONOV",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -535,10 +566,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "849324574",
+      "id": "863708911",
       "name_lat": "AXANDRIANHOF PAVLOVA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -559,15 +590,6 @@
       "breed": "АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "575577374",
-      "name_lat": "AXIOM VALLEY AVENSIS",
-      "name_ru": "",
-      "breed": "СПРИНГЕР АНГЛИЙСКИЙ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -652,8 +674,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1686885329",
-      "name_lat": "AXIOL' BLISS NYUROCHKA- GLAMUROCHKA",
+      "id": "1082062867",
+      "name_lat": "AXIOL' BLISS NYUROCHKA-GLAMUROCHKA",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
@@ -661,10 +683,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "843909523",
+      "id": "683457495",
       "name_lat": "AXEL",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -688,6 +710,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1739154289",
+      "name_lat": "AXIOM VALLEY CHOCOLATE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "27628157",
+      "name_lat": "AXIOL' BLISS TATAMI QUEEN",
+      "name_ru": "",
+      "breed": "БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "858390085",
       "name_lat": "AXANDRIAN HOF ADELINA FOR LOVE",
       "name_ru": "",
@@ -697,19 +737,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1551189248",
+      "id": "344117077",
       "name_lat": "AXANDRIAN HOF DRIM LOVELY FROM BORDO",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1811257540",
-      "name_lat": "AXIOM VALLEY CHOCOLATE",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -796,10 +827,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "197640953",
+      "id": "1790301476",
       "name_lat": "AXANDRIAN HOF VIKING",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -845,15 +876,6 @@
       "name_lat": "AXANDRIAN HOF EVIN",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "27628157",
-      "name_lat": "AXIOL' BLISS TATAMI QUEEN",
-      "name_ru": "",
-      "breed": "БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

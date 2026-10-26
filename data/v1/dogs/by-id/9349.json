@@ -6,19 +6,23 @@
   "name_lat": "SALGREYS PRODIGY",
   "name_ru": "SALGREYS PRODIGY",
   "breed": "САЛЮКИ",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
   "competition_ids": [
     1434,
     1580,
     1582,
     1583,
+    20221009,
+    20221011,
     20230708
   ],
   "competition_files": [
     "competitions/2021/08-август/1580-международные-состязания-по-курсингу-cacil-чемпи.json",
     "competitions/2021/09-сентябрь/1582-кубок-россии-курсинг-борзых.json",
     "competitions/2021/10-октябрь/1583-заичик-листопадничек-курсинг-cacil-cacl.json",
-    "competitions/2023/07-июль/20230708--08072023-.json"
+    "competitions/2023/07-июль/20230708--08072023-.json",
+    "competitions/2022/04-апрель/20221009-чемпионат-ркф-по-курсингу.json",
+    "competitions/2022/05-май/20221011-чемпионат-россии-по-курсингу-борзых.json"
   ]
 }

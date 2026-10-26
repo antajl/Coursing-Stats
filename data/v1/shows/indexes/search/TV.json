@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "TV",
-  "count": 82,
+  "count": 85,
   "dogs": [
     {
       "id": "444541416",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -18,7 +18,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -31,6 +31,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "214075221",
+      "name_lat": "TVANTENGEN LLYR SON OF FIRE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
+      "breed_en": "WELSH TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "644104390",
+      "name_lat": "TVERSKOY UZOR ARIEL",
+      "name_ru": "ТВЕРСКОЙ УЗОР АРИЭЛЬ",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
       "id": "1652589027",
       "name_lat": "TVERSKOI SUVENIR NICOLE NIGHTLY",
       "name_ru": "",
@@ -40,17 +58,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "214075221",
-      "name_lat": "TVANTENGEN LLYR SON OF FIRE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
-      "breed_en": "WELSH TERRIER",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "80842209",
-      "name_lat": "TVANTENGEN ENVY ME SILENTLY FOR CRAMONS",
+      "name_lat": "Tvantengen Envy Me Silently for Cramons",
       "name_ru": "",
       "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
@@ -67,12 +76,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "636824765",
+      "name_lat": "TVANTENGEN CARTE NOIRE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "139583899",
+      "name_lat": "Tvoy Talisman Udachi Potseluy Angela",
+      "name_ru": "ТВОЙ ТАЛИСМАН УДАЧИ ПОЦЕЛУЙ АНГЕЛА",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "1087153303",
       "name_lat": "TVERSKOY UZOR DALYAN PATARA KILLI",
-      "name_ru": "",
+      "name_ru": "ТВЕРСКОЙ УЗОР ДАЛЬЯН ПАТАРА КИЛЛИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -82,24 +108,6 @@
       "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "139583899",
-      "name_lat": "Tvoy Talisman Udachi Potseluy Angela",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "636824765",
-      "name_lat": "TVANTENGEN CARTE NOIRE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -157,19 +165,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "644104390",
-      "name_lat": "TVERSKOY UZOR ARIEL",
+      "id": "193873673",
+      "name_lat": "TVANTENGEN MICKEY WINDERMERE",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 8,
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР МИНИАТЮРНЫЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1397438856",
+      "id": "1297657965",
       "name_lat": "TVERSKOY MOZAIKI EMMET",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -184,12 +191,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1471371028",
+      "id": "1163833222",
       "name_lat": "TVERSKOY MOZAIKI EKZOTIKA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -202,10 +209,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "885164837",
+      "id": "748010863",
       "name_lat": "Tvantengen Envy Me Silently for",
       "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -256,10 +263,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "86516845",
+      "id": "1559066981",
       "name_lat": "TVERSKOY MOZAIKI TAINA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -283,10 +290,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1313311045",
+      "id": "1660089491",
       "name_lat": "TVERSKOY MOZAIKI BERETTA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "237743331",
+      "name_lat": "Tvantengen Gucci Cardiff",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -301,21 +317,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "483146944",
+      "id": "861082363",
       "name_lat": "TVERSKOY MOZAIKI YASON",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "DACHSHUND ZWERG KURZHAAR ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "237743331",
-      "name_lat": "Tvantengen Gucci Cardiff",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -334,6 +341,15 @@
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1853952717",
+      "name_lat": "TVER' PREMIUM GAY",
+      "name_ru": "ТВЕРЬ ПРЕМИУМ ГАЙ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -373,10 +389,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1077322238",
+      "id": "162912144",
       "name_lat": "TVERSKOY MOZAIKI NEFERTITI",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -388,6 +404,14 @@
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "792017557",
+      "name_lat": "TVERSKOY MOZAIKI ZHE TEM",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -418,10 +442,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "627119875",
+      "id": "932573075",
       "name_lat": "TVIN SKROL IZ KOROLEVSTVA STAFF",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -508,15 +532,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "984022397",
-      "name_lat": "TVERSKOY MOZAIKI ZHE TEM",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1642735961",
       "name_lat": "TVERSKAYA ELITA LEILA",
       "name_ru": "",
@@ -568,15 +583,6 @@
       "breed": "ТАКСА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1853952717",
-      "name_lat": "TVER' PREMIUM GAY",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -719,6 +725,23 @@
       "name_lat": "TVERSKOY MOZAIKI CHINGISHAN",
       "name_ru": "",
       "breed": "КРОЛИЧЬЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1199949456",
+      "name_lat": "TVERSKOI SUVENIR ZEVS ZONDI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "126568304",
+      "name_lat": ";TVXE;BYF XTHYJPTVMZ [JYLF",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

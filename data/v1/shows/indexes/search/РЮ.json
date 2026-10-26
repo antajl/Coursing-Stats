@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "РЮ",
-  "count": 26,
+  "count": 28,
   "dogs": [
     {
       "id": "659460380",
@@ -15,16 +15,16 @@
     {
       "id": "1023956096",
       "name_lat": "Рюрик Сын Половецкий",
-      "name_ru": "",
+      "name_ru": "Рюрик Сын Половецкий",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "517863832",
       "name_lat": "РЮУТЕНСОУ БЭТАМИ ВЭЙ",
-      "name_ru": "",
+      "name_ru": "РЮУТЕНСОУ БЭТАМИ ВЭЙ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 14,
@@ -33,17 +33,17 @@
     {
       "id": "1132438173",
       "name_lat": "РЮУТЕНСОУ БАДЖИ",
-      "name_ru": "",
+      "name_ru": "РЮУТЕНСОУ БАДЖИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "47005116",
+      "id": "203995712",
       "name_lat": "РЮРИК",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -54,7 +54,7 @@
       "name_ru": "",
       "breed": "GERMAN WIRE-HAIRED",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -63,7 +63,7 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДРАТХААР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -96,7 +96,7 @@
     {
       "id": "1781167905",
       "name_lat": "РЮТО СОУСУКЕ ГО АКЕНОГУМОСОУ",
-      "name_ru": "",
+      "name_ru": "РЮТО СОУСУКЕ ГО АКЕНОГУМОСОУ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 3,
@@ -130,6 +130,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "683604799",
+      "name_lat": "РЮРИК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1560254591",
       "name_lat": "РЮРИК",
       "name_ru": "",
@@ -157,10 +165,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "899329863",
+      "id": "1207796928",
       "name_lat": "РЮРИК БРЮЛИК БРИЛЛИАНТ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -175,11 +183,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1394752614",
+      "id": "793225426",
       "name_lat": "РЮРИК",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДРАТХААР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "614999235",
+      "name_lat": "РЮРИК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },

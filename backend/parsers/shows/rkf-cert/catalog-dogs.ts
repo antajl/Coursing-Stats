@@ -15,6 +15,7 @@ import {
   normToken,
 } from './tokens'
 import { disentangleClassAndGrade, normalizeGrade } from './class-grade'
+import { parseMainRingItems, type MainRingRow } from './main-ring'
 import {
   type ColBounds,
   type ColKey,
@@ -367,7 +368,7 @@ export function parseCertificateTokens(tokens: string[]): ParsedCertDog[] {
 }
 
 export async function parseCertificatePdf(pdfPath: string): Promise<ParseCertificatePdfResult> {
-  const { items, pageCount, hasMainRing } = await extractItems(pdfPath)
+  const { items, mainRingItems, pageCount, hasMainRing } = await extractItems(pdfPath)
   let dogs = parseItemsColumnAware(items)
   // Fallback for odd layouts
   if (dogs.length === 0) {
@@ -377,10 +378,19 @@ export async function parseCertificatePdf(pdfPath: string): Promise<ParseCertifi
       .map((i) => i.str)
     dogs = parseCertificateTokens(tokens)
   }
+
+  let mainRing: MainRingRow[] = []
+  if (hasMainRing && mainRingItems && mainRingItems.length > 0) {
+    try {
+      mainRing = parseMainRingItems(mainRingItems)
+    } catch {}
+  }
+
   return {
     dogs,
     page_count: pageCount,
     raw_token_count: items.length,
     has_main_ring_sheet: hasMainRing,
+    main_ring: mainRing,
   }
 }

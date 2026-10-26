@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "3Д",
-  "count": 1,
+  "count": 2,
   "dogs": [
     {
-      "id": "694147143",
+      "id": "637515291",
       "name_lat": "3ДРАВСТВУЙТЕ ЭТО Я ИЗ СТРАНЫ ГРЁЗ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "3ДРАВСТВУЙТЕ ЭТО Я ИЗ СТРАНЫ ГРЁЗ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "935978939",
+      "name_lat": "3.ДЖОЙФУЛ ЭВЕНТ С РОК ЗЕ ВОРЛД ВИЗ КРИСТАЛИАНСИ",
+      "name_ru": "",
+      "breed": "КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

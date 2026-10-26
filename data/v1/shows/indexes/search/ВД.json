@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ВД",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1937773918",
+      "name_lat": "В’ДЕКАЙ ФУДЖИЯМА КЕНША",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1530578071",
+      "name_lat": "ВДОХНОВЕНИЯ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "928946073",
+      "name_lat": "ВДОХНОВЛЕННАЯ СОЛНЦЕМ ВЕСТА",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

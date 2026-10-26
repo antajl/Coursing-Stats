@@ -1,30 +1,21 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "СБ",
-  "count": 8,
+  "count": 12,
   "dogs": [
     {
-      "id": "1970262964",
+      "id": "1767831916",
       "name_lat": "СБОКУ БАНТИК БЕЙЛИ КЕТТИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "СБОКУ БАНТИК БЕЙЛИ КЕТТИ",
+      "breed": "SPRINGER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1507198285",
-      "name_lat": "СБОКУ БАНТИК БЕЙЛИ",
-      "name_ru": "",
-      "breed": "ЭПАНЬОЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "890669182",
       "name_lat": "СБОКУ БАНТИК АСТОРИЯ",
-      "name_ru": "",
+      "name_ru": "СБОКУ БАНТИК АСТОРИЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -40,12 +31,47 @@
       "competition_dog_id": null
     },
     {
+      "id": "926611787",
+      "name_lat": "С БУХТЫ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ / GERMAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "264130819",
+      "name_lat": "СБАЛЬЯТО ФЛОВЕРС ПОМ УРИЭЛЕ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "18255447",
+      "name_lat": "С БУХТЫ",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1931534837",
       "name_lat": "СБОКУ БАНТИК АКТИВИЯ",
-      "name_ru": "",
+      "name_ru": "СБОКУ БАНТИК АКТИВИЯ",
       "breed": "МАЛЫЙ ОРАНЖ., СЕРЫЙ И ДР.",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1857365350",
+      "name_lat": "СБАЯ НААРЧААНА",
+      "name_ru": "СБАЯ НААРЧААНА",
+      "breed": "LABRADOR RETRIEVER",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -58,21 +84,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1857365350",
-      "name_lat": "СБАЯ НААРЧААНА",
-      "name_ru": "",
-      "breed": "LABRADOR RETRIEVER",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "696638962",
       "name_lat": "СБОКУ БАНТИК УМКА",
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "468310083",
+      "name_lat": "С-БЕНЕЛЛИ",
+      "name_ru": "",
+      "breed": "ЗАПАДНО-",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1256207952",
+      "name_lat": "С БУХТЫ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

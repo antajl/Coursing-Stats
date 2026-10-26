@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "DT",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1053298636",
+      "name_lat": "D'TIANA MORNING FOR BEAULIS HAUSE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1211320864",
+      "name_lat": "D TIANA MORNING FOR",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

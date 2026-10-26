@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "КД",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1473650763",
+      "name_lat": "К ДЕМИР ЗИЯШ",
+      "name_ru": "",
+      "breed": "ASIA SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "307067605",
+      "name_lat": "К ДЖАНГО",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

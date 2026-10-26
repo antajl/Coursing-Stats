@@ -154,6 +154,10 @@ function detectMainRingCols(items: PdfItem[]): MainRingCols {
  */
 export async function parseMainRingPdf(pdfPath: string): Promise<MainRingRow[]> {
   const { items } = await extractAllItems(pdfPath)
+  return parseMainRingItems(items)
+}
+
+export function parseMainRingItems(items: PdfItem[]): MainRingRow[] {
   if (items.length === 0) return []
 
   const sorted = items.slice().sort((a, b) => a.page - b.page || b.y - a.y || a.x - b.x)

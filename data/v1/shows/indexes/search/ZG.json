@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ZG",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1472216265",
+      "name_lat": "Z'GIVENCHY HAUTE COUTURE IZ STOLITSY URALA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "594745245",
+      "name_lat": "Z'GIVENCHY HAUTE COUTURE IZ STOKITCY URALA",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "268408529",
+      "name_lat": "Z-GENERAL DESTON",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
+      "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "419917314",
+      "name_lat": "ZGUCHAIA BRIUNETKA",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

@@ -1,15 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "SN",
-  "count": 901,
+  "count": 937,
   "dogs": [
     {
-      "id": "1828061909",
+      "id": "1903315890",
       "name_lat": "SNOW SHINE AVANTAGE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
-      "total_shows": 87,
+      "total_shows": 99,
       "competition_dog_id": null
     },
     {
@@ -18,25 +18,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 193,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1710136900",
-      "name_lat": "SNOW DANWEST HONEY HOLIDEY",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 124,
-      "competition_dog_id": null
-    },
-    {
-      "id": "354202781",
-      "name_lat": "SNOU MIREKL VISCOUNT II",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 37,
+      "total_shows": 222,
       "competition_dog_id": null
     },
     {
@@ -45,25 +27,43 @@
       "name_ru": "",
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "SCOTTISH TERRIER",
-      "total_shows": 58,
+      "total_shows": 66,
       "competition_dog_id": null
     },
     {
-      "id": "531656384",
-      "name_lat": "SNOU MIREKL FLESH",
+      "id": "1710136900",
+      "name_lat": "SNOW DANWEST HONEY HOLIDEY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
-      "total_shows": 30,
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 134,
+      "competition_dog_id": null
+    },
+    {
+      "id": "354202781",
+      "name_lat": "SNOU MIREKL VISCOUNT II",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
       "id": "189030332",
       "name_lat": "SNEGIZI STAR LION BLEK",
-      "name_ru": "",
+      "name_ru": "СНЕГИЗИ СТАР ЛИОН БЛЕК",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 56,
+      "total_shows": 68,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1055054253",
+      "name_lat": "SNOU MIREKL FLESH",
+      "name_ru": "СНОУ МИРЕКЛ ФЛЕШ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -76,30 +76,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "6644919",
+      "id": "710145148",
       "name_lat": "SNOW SHINE AVGUSTA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
-      "total_shows": 53,
-      "competition_dog_id": null
-    },
-    {
-      "id": "427567388",
-      "name_lat": "SNOW SHINE EDELWEISS",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
-      "total_shows": 48,
+      "total_shows": 59,
       "competition_dog_id": null
     },
     {
       "id": "228812058",
       "name_lat": "SNEGIZI STAR GVARDEETS KARDINALA (Изм. реш ВК 16.10.25 в. 9)",
-      "name_ru": "",
+      "name_ru": "СНЕГИЗИ СТАР ГВАРДЕЕЦ КАРДИНАЛА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "FRENCH BULLDOG",
-      "total_shows": 73,
+      "total_shows": 112,
+      "competition_dog_id": null
+    },
+    {
+      "id": "881689657",
+      "name_lat": "SNOW SHINE EDELWEISS",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
+      "total_shows": 52,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1534071828",
+      "name_lat": "SNEZHNOE OCHAROVANIE KASHEMIR",
+      "name_ru": "СНЕЖНОЕ ОЧАРОВАНИЕ КАШЕМИР",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -108,7 +117,7 @@
       "name_ru": "",
       "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "SCOTTISH TERRIER",
-      "total_shows": 74,
+      "total_shows": 77,
       "competition_dog_id": null
     },
     {
@@ -117,25 +126,16 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 40,
+      "total_shows": 45,
       "competition_dog_id": null
     },
     {
-      "id": "1550067935",
-      "name_lat": "SNOW STAIL RETURN OF THE LASSIE",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 40,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1757449290",
-      "name_lat": "SNOW STAIL DIADEMA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 18,
+      "id": "30674046",
+      "name_lat": "SNEZHNOE OCHAROVANIE ZLATOMIR",
+      "name_ru": "СНЕЖНОЕ ОЧАРОВАНИЕ ЗЛАТОМИР",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 50,
       "competition_dog_id": null
     },
     {
@@ -144,25 +144,52 @@
       "name_ru": "",
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "SCOTTISH TERRIER",
-      "total_shows": 34,
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
-      "id": "141144729",
+      "id": "1757449290",
+      "name_lat": "SNOW STAIL DIADEMA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1926701415",
+      "name_lat": "SNOW STAIL RETURN OF THE LASSIE",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
+      "id": "376814471",
+      "name_lat": "SNEZHNOE OCHAROVANIE VINNI-PUKH",
+      "name_ru": "СНЕЖНОЕ ОЧАРОВАНИЕ ВИННИ-ПУХ",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 52,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1859846238",
       "name_lat": "SNOW SHINE SENSATION",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
       "total_shows": 42,
       "competition_dog_id": null
     },
     {
-      "id": "1575957026",
-      "name_lat": "SNOW STAIL VIS A VIS",
+      "id": "870161006",
+      "name_lat": "SNOW STAIL VIS-A-VIS",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 44,
+      "total_shows": 47,
       "competition_dog_id": null
     },
     {
@@ -171,7 +198,16 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 67,
+      "total_shows": 71,
+      "competition_dog_id": null
+    },
+    {
+      "id": "664507807",
+      "name_lat": "SNOU MIREKL YANKA KHULIGANKA",
+      "name_ru": "СНОУ МИРЕКЛ ЯНКА ХУЛИГАНКА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 58,
       "competition_dog_id": null
     },
     {
@@ -184,12 +220,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1829904388",
+      "id": "1131356542",
       "name_lat": "SNAILAND NARGIZ",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed": "НОРВИЧ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -202,6 +238,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1734891821",
+      "name_lat": "SNOW WHITE LAMB ALLEGRA",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "BICHON FRISE",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
       "id": "1916502779",
       "name_lat": "SNOW STAIL JAMIROQUAI",
       "name_ru": "",
@@ -211,28 +256,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1557813670",
-      "name_lat": "SNOU MIREKL YANKA KHULIGANKA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 23,
+      "id": "1068961063",
+      "name_lat": "SNEZHNOE SOZVEZDIE BOSTON",
+      "name_ru": "СНЕЖНОЕ СОЗВЕЗДИЕ БОСТОН",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "ST. BERNARD LONG HAIRED",
+      "total_shows": 45,
       "competition_dog_id": null
     },
     {
-      "id": "376814471",
-      "name_lat": "SNEZHNOE OCHAROVANIE VINNI-PUKH",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "SAMOYED",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "845675021",
+      "id": "165733194",
       "name_lat": "SNOW SHINE STRATEGYA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
       "total_shows": 26,
       "competition_dog_id": null
@@ -243,16 +279,7 @@
       "name_ru": "",
       "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "SCOTTISH TERRIER",
-      "total_shows": 45,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1534071828",
-      "name_lat": "SNEZHNOE OCHAROVANIE KASHEMIR",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "SAMOYED",
-      "total_shows": 7,
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
@@ -261,7 +288,7 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -274,21 +301,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1734891821",
-      "name_lat": "SNOW WHITE LAMB ALLEGRA",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "BICHON FRISE",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1549166360",
-      "name_lat": "SNEZHNOE SOZVEZDIE BOSTON",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР Д-Ш",
-      "breed_en": "ST. BERNARD LONG HAIRED",
-      "total_shows": 30,
+      "id": "1115104174",
+      "name_lat": "SNEGIZI STAR VESTFALSKAYA KUKLA",
+      "name_ru": "СНЕГИЗИ СТАР ВЕСТФАЛЬСКАЯ КУКЛА",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "IRISH WOLFHOUND",
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
@@ -306,7 +324,16 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 44,
+      "total_shows": 47,
+      "competition_dog_id": null
+    },
+    {
+      "id": "617391365",
+      "name_lat": "SNOW WHITE LAMB TUSYA",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -316,6 +343,24 @@
       "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "452141396",
+      "name_lat": "SNEZHNOE OCHAROVANIE LYUTIK",
+      "name_ru": "СНЕЖНОЕ ОЧАРОВАНИЕ ЛЮТИК",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1177964312",
+      "name_lat": "SNOU MIREKL ERALASH (LONG COAT)",
+      "name_ru": "СНОУ МИРЕКЛ ЕРАЛАШ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -346,21 +391,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "617391365",
-      "name_lat": "SNOW WHITE LAMB TUSYA",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1841719669",
+      "id": "1705812454",
       "name_lat": "SNOU MIREKL FEKLA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "name_ru": "СНОУ МИРЕКЛ ФЕКЛА",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -382,28 +418,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "30090515",
-      "name_lat": "SNOU MIREKL ERALASH",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "170633110",
       "name_lat": "SNEZHNYI ANGEL YUCHI",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 34,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
-      "id": "347855025",
+      "id": "148979251",
+      "name_lat": "SNOW FOREST ALTYN",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "50911880",
+      "name_lat": "SNAILAND FORMAT",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1804876108",
       "name_lat": "SNEZHNAYA DINASTIYA INFINITI",
       "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ /",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -418,6 +463,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1669599639",
+      "name_lat": "SNOU MIREKL INFINITI",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1491460043",
       "name_lat": "SNOW LIFE NIRVANA",
       "name_ru": "",
@@ -427,28 +481,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "148979251",
-      "name_lat": "SNOW FOREST ALTYN",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1633124106",
-      "name_lat": "SNOU MIREKL INFINITI",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "897219545",
+      "id": "1280096286",
       "name_lat": "SNOW SHINE SOULMATE",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
       "total_shows": 22,
       "competition_dog_id": null
@@ -468,7 +504,16 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 42,
+      "total_shows": 47,
+      "competition_dog_id": null
+    },
+    {
+      "id": "232601597",
+      "name_lat": "SNEZHNAYA RUSSIYA FEODOR",
+      "name_ru": "СНЕЖНАЯ РУССИЯ ФЕОДОР",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -481,21 +526,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "50911880",
-      "name_lat": "SNAILAND FORMAT",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 14,
+      "id": "1473350701",
+      "name_lat": "SNEZHNOE OCHAROVANIE LOTOS",
+      "name_ru": "СНЕЖНОЕ ОЧАРОВАНИЕ ЛОТОС",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "613480807",
-      "name_lat": "SNOU MIREKL OVACZIYA",
+      "id": "71833380",
+      "name_lat": "SNOU MIREKL OVACZIYA (LONG COAT)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 15,
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -513,7 +558,16 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "535841485",
+      "name_lat": "SNOU MIREKL JUNCAS",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -526,39 +580,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922563808",
-      "name_lat": "SNOU MIREKL JUNCAS",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
       "id": "14865675",
       "name_lat": "SNEZHNAYA MOROZNAYA VISHENKA",
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "232601597",
-      "name_lat": "SNEZHNAYA RUSSIYA FEODOR",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "452141396",
-      "name_lat": "SNEZHNOE OCHAROVANIE LYUTIK",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -580,6 +607,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1611140683",
+      "name_lat": "SNEGIZI STAR NEARBY GALAXY SHINE",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "1062118972",
       "name_lat": "SNOW SHINE EDITH PIAF",
       "name_ru": "",
@@ -589,21 +625,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1611140683",
-      "name_lat": "SNEGIZI STAR NEARBY GALAXY SHINE",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
       "id": "132432953",
       "name_lat": "SNOW STAIL JUDAS PRIEST",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 58,
+      "total_shows": 62,
+      "competition_dog_id": null
+    },
+    {
+      "id": "73074758",
+      "name_lat": "SNOW STAIL NORDIC",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1170595077",
+      "name_lat": "SNEZHNYY DOZOR KUZYA DOMOVENOK",
+      "name_ru": "СНЕЖНЫЙ ДОЗОР КУЗЯ ДОМОВЕНОК",
+      "breed": "БОЛОНЬЕЗЕ",
+      "breed_en": "BOLOGNESE",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1778749357",
+      "name_lat": "SNEZHNOE OCHAROVANIE GORDOST ROSSII",
+      "name_ru": "СНЕЖНОЕ ОЧАРОВАНИЕ ГОРДОСТЬ РОССИИ",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -625,10 +678,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1767992665",
+      "id": "1441342248",
+      "name_lat": "SNEZHNAYA LILIYA IZ VOLSHEBNOGO LESA",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "716582774",
       "name_lat": "SNOU MIREKL NUTS ENERGY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -670,12 +731,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1886357538",
+      "id": "58121815",
       "name_lat": "SNOW SHINE FOREST NYMPH",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "132487480",
+      "name_lat": "SNOW WHITE LAMB FLORY JANGA",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "BICHON FRISE",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -688,21 +758,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1115104174",
-      "name_lat": "SNEGIZI STAR VESTFALSKAYA KUKLA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "919244294",
       "name_lat": "SNEK DLYA VAS",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1248433137",
+      "name_lat": "SNOW STAIL OLIVE-BANCH",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -715,21 +785,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1248433137",
-      "name_lat": "SNOW STAIL OLIVE-BANCH",
+      "id": "157779478",
+      "name_lat": "SNOW SHINE GABRIELE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "132487480",
-      "name_lat": "SNOW WHITE LAMB FLORY JANGA",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "BICHON FRISE",
-      "total_shows": 24,
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -738,7 +799,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -748,15 +809,6 @@
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ФАЛЕН",
       "breed_en": "CONTINENTAL TOY SPANIEL PHALENE",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1793599760",
-      "name_lat": "SNOW SHINE GABRIELE",
-      "name_ru": "",
-      "breed": "Такса стандартная длинношерстная",
-      "breed_en": "",
-      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -814,21 +866,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "73074758",
-      "name_lat": "SNOW STAIL NORDIC",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "571115218",
       "name_lat": "SNOW AMADEUS COSMOS",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "614136394",
+      "name_lat": "SNOW STAIL ARANA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -841,21 +893,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "653060334",
+      "id": "1615007803",
       "name_lat": "SNOW SHINE ENIGMA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
       "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "614136394",
-      "name_lat": "SNOW STAIL ARANA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -864,7 +907,15 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "FRENCH BULLDOG",
-      "total_shows": 14,
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1361443",
+      "name_lat": "SNEZHNIY BARS IZ VOLSHEBNOGO LESA",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -877,8 +928,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1300587408",
-      "name_lat": "SNOW STAIL BADEN- BADEN",
+      "id": "1288641048",
+      "name_lat": "SNOW STAIL BADEN-BADEN",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -895,12 +946,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "723521562",
+      "id": "1519652123",
       "name_lat": "SNOW STAIL YUCATAN GOLD NUGGET",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1964667860",
+      "name_lat": "SNEGIZI STAR ODERZHANNAYA POBEDA",
+      "name_ru": "СНЕГИЗИ СТАР ОДЕРЖАННАЯ ПОБЕДА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "961942245",
+      "name_lat": "SNOU MIREKL TSUNAMI",
+      "name_ru": "СНОУ МИРЕКЛ ЦУНАМИ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -922,6 +991,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "281929835",
+      "name_lat": "SNEGIZI STAR GRANDBEST",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "921034948",
+      "name_lat": "SNOW IMAGE KLAUDIA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 67,
+      "competition_dog_id": null
+    },
+    {
       "id": "1202707635",
       "name_lat": "SNOW STAIL MONROE",
       "name_ru": "",
@@ -931,21 +1018,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "281929835",
-      "name_lat": "SNEGIZI STAR GRANDBEST",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 31,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1735055671",
+      "id": "1069143603",
       "name_lat": "SNOW SHINE POSEIDON",
       "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -955,15 +1033,6 @@
       "breed": "Французский бульдог",
       "breed_en": "",
       "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "921034948",
-      "name_lat": "SNOW IMAGE KLAUDIA",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 62,
       "competition_dog_id": null
     },
     {
@@ -985,12 +1054,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1936180781",
+      "name_lat": "SNEGIZI STAR MADAM KOKO",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
       "id": "2000021791",
       "name_lat": "SNOW GALAXY PARLAMENT",
       "name_ru": "",
       "breed": "КИСЮ",
       "breed_en": "KISHU",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "479942125",
+      "name_lat": "SNEZHNYY DRAKON BARSELONA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1021,21 +1108,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "680886357",
+      "id": "222377601",
+      "name_lat": "S'NEZHNOE LETO",
+      "name_ru": "С'НЕЖНОЕ ЛЕТО",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1097431265",
+      "name_lat": "SNEZHNAYA ISKRA EL GRAND",
+      "name_ru": "СНЕЖНАЯ ИСКРА ЕЛ ГРАНД",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "398281832",
       "name_lat": "SNOW QUEEN",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "479942125",
-      "name_lat": "SNEZHNYY DRAKON BARSELONA",
+      "id": "430685781",
+      "name_lat": "SNOU MIREKL BENTLEY (LONG COAT)",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 18,
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1048,12 +1153,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1097431265",
-      "name_lat": "SNEZHNAYA ISKRA EL GRAND",
+      "id": "1847457861",
+      "name_lat": "SNOU MIREKL BUGATTI",
+      "name_ru": "СНОУ МИРЕКЛ БУГАТТИ",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1595768432",
+      "name_lat": "SNOW STAIL SPARTA",
       "name_ru": "",
-      "breed": "САМОЕД",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "51194179",
+      "name_lat": "SNATCH IZ SEVERNOY IMPERII",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1066,15 +1188,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "52084620",
-      "name_lat": "SNOU MIREKL BENTLEY",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "486109303",
       "name_lat": "SNOW SHINE ELVIS PRESLEY",
       "name_ru": "",
@@ -1084,19 +1197,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1890659195",
+      "id": "175776562",
       "name_lat": "SNUG CINNAMON BUN",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 34,
       "competition_dog_id": null
     },
     {
-      "id": "645660012",
+      "id": "1292194633",
       "name_lat": "SNEZHNYY DRAKON ADREANO",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1111,12 +1224,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1313564905",
+      "name_lat": "S'NEZHNAYA VJUGA EIGHT SENSE",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1295416196",
+      "name_lat": "SNOU MIREKL PARKOUR (LONG COAT)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
       "id": "1013752846",
       "name_lat": "SNOU MIREKL MAXIMUS (LONG COAT)",
       "name_ru": "",
       "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "110915796",
+      "name_lat": "SNOW STAIL SAINT-LAURENT",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1165,6 +1305,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "366564266",
+      "name_lat": "SNOW STAIL GIVE ME MY DREAM",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "1465870495",
       "name_lat": "SNOW IMAGE SAMBUKA",
       "name_ru": "",
@@ -1174,10 +1323,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1897578903",
+      "id": "332573707",
       "name_lat": "SNEZHNYY DRAKON EVA",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1192,21 +1341,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1202897669",
+      "name_lat": "SNOW LORD DARINA",
+      "name_ru": "",
+      "breed": "МАЛАМУТ /",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "505255978",
       "name_lat": "SNOW LIFE DESSERT 2",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1919858000",
-      "name_lat": "SNOW STAIL GIVE ME MY DREAM",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -1237,6 +1385,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "576871271",
+      "name_lat": "SNOW SHINE CARDINAL",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "1466640140",
       "name_lat": "SNIKERS",
       "name_ru": "",
@@ -1264,15 +1420,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "855762466",
-      "name_lat": "SNOW LORD DARINA",
-      "name_ru": "",
-      "breed": "АКИТА АЛЯСКИНСКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1871481699",
       "name_lat": "SNEZHNII RIFEI VELES",
       "name_ru": "",
@@ -1291,10 +1438,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1172732213",
+      "id": "359722173",
+      "name_lat": "SNEGIZI STAR LAYZA KYARA",
+      "name_ru": "СНЕГИЗИ СТАР ЛАЙЗА КЬЯРА",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "IRISH WOLFHOUND",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "59021330",
       "name_lat": "SNOW SHINE KORSIKA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1318,6 +1474,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "589279592",
+      "name_lat": "SNOW ADVENTURES CHERNAYA ZHEMCHUZHINA",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "813875325",
+      "name_lat": "SNOWFLAKE IZ DOMA ANGELINY",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "117263069",
       "name_lat": "SNOW WHITE LAMB KINDLE GRAMMY",
       "name_ru": "",
@@ -1327,12 +1499,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "570270904",
-      "name_lat": "SNOU MIREKL TSUNAMI",
+      "id": "1099206980",
+      "name_lat": "SNEZHA SIYANIE SEVERA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "216019887",
+      "name_lat": "SNAILAND FLUSH-ROYAL",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1345,21 +1525,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1964667860",
-      "name_lat": "SNEGIZI STAR ODERZHANNAYA POBEDA",
+      "id": "334303415",
+      "name_lat": "SNOW SHINE TRINITI",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 20,
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1557636994",
-      "name_lat": "SNOW SHINE TRINITI",
+      "id": "1051442438",
+      "name_lat": "SNOW STAIL WEST END TRIUMPH",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
-      "total_shows": 17,
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1368,61 +1548,43 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "216019887",
-      "name_lat": "SNAILAND FLUSH-ROYAL",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1881735050",
-      "name_lat": "SNOW IMAGE MY HERO",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1582739655",
-      "name_lat": "SNOU MIREKL PARKOUR",
+      "id": "193724251",
+      "name_lat": "SNOW IMAGE MY HERO",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "124056669",
-      "name_lat": "SNOW STAIL MANGO-MANGO",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 30,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1936180781",
-      "name_lat": "SNEGIZI STAR MADAM KOKO",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
       "id": "1755729294",
       "name_lat": "SNEZHNOE OCHAROVANIE ZHIVANSHI",
-      "name_ru": "",
+      "name_ru": "Снежное Очарование Живанши",
       "breed": "САМОЕД",
       "breed_en": "SAMOYED",
-      "total_shows": 19,
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1333867520",
+      "name_lat": "SNOW STAIL MANGO-MANGO",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1723167382",
+      "name_lat": "SNOU MIREKL BEZ KOMPLEKSOV",
+      "name_ru": "СНОУ МИРЕКЛ БЕЗ КОМПЛЕКСОВ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1431,7 +1593,7 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1441,6 +1603,24 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "734066050",
+      "name_lat": "SNAILAND RUSLANA",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1135467492",
+      "name_lat": "S NEZHNY ZVER ERIKA-III",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1462,10 +1642,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1141208834",
+      "id": "1450139395",
       "name_lat": "SNEZHANA SHAJNI MINKS",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -1480,8 +1660,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1324440910",
-      "name_lat": "SNOW WEST LAND DU VIEUX MOULIN",
+      "id": "161584087",
+      "name_lat": "SNOW WEST-LAND DU VIEUX MOULIN",
       "name_ru": "",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "WEST HIGHLAND WHITE TERRIER",
@@ -1498,21 +1678,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "734066050",
-      "name_lat": "SNAILAND RUSLANA",
+      "id": "889058477",
+      "name_lat": "S NEZHNY ZVER ALEKSA STAR",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 12,
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1176725344",
+      "id": "311985248",
+      "name_lat": "SNOU MIREKL INDIGO",
+      "name_ru": "СНОУ МИРЕКЛ ИНДИГО",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29167578",
       "name_lat": "SNOW STAIL ORANGE SMILE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 23,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -1522,15 +1711,6 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА / AUSTRALIAN",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "30674046",
-      "name_lat": "SNEZHNOE OCHAROVANIE ZLATOMIR",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "SAMOYED",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1552,39 +1732,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1595768432",
-      "name_lat": "SNOW STAIL SPARTA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1873462258",
-      "name_lat": "SNEZHNAYA LILIYA IZ VOLSHEBNOGO LESA",
-      "name_ru": "",
-      "breed": "ВОЛЬФХАУНД",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "897523847",
-      "name_lat": "SNATCH IZ SEVERNOY IMPERII",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1051442438",
-      "name_lat": "SNOW STAIL WEST END TRIUMPH",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 2,
+      "id": "968040825",
+      "name_lat": "SNEGIZI STAR USYPANNAYA ZHEMCHUGOM",
+      "name_ru": "СНЕГИЗИ СТАР УСЫПАННАЯ ЖЕМЧУГОМ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1615,12 +1767,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "163701598",
+      "name_lat": "SNEZHNII RIFEI ONIKA ALICE",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
       "id": "462971802",
       "name_lat": "SNAILAND LEGEND",
       "name_ru": "",
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "SCOTTISH TERRIER",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "629429517",
+      "name_lat": "SNOW IMAGE KAPITON",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -1633,19 +1802,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "308960505",
-      "name_lat": "SNOU MIREKL BEZ KOMPLEKSOV",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "329812001",
+      "id": "628313822",
       "name_lat": "SNOU MIREKL LAMBRUSCO",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1656,34 +1816,16 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1352512164",
-      "name_lat": "SNOW SHINE FLOWER QUEEN",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1170595077",
-      "name_lat": "SNEZHNYY DOZOR KUZYA DOMOVENOK",
+      "id": "273626593",
+      "name_lat": "SNOW SHINE FLOWER QUEEN",
       "name_ru": "",
-      "breed": "БОЛОНЬЕЗЕ",
-      "breed_en": "BOLOGNESE",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "163701598",
-      "name_lat": "SNEZHNII RIFEI ONIKA ALICE",
-      "name_ru": "",
-      "breed": "САМОЕД",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1723,10 +1865,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "292507414",
+      "id": "1955220151",
+      "name_lat": "SNOW IMAGE DUPONT",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1083276547",
       "name_lat": "SNOW SHINE JACKPOT YUZHNOGO SOZVEZDIYA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1752,10 +1902,10 @@
     {
       "id": "1529226770",
       "name_lat": "SNEZHNAYA VYUGA IZ ZAMKA MELVIN",
-      "name_ru": "",
+      "name_ru": "Снежная Вьюга из Замка Мелвин",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1765,15 +1915,6 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "FRENCH BULLDOG",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "629429517",
-      "name_lat": "SNOW IMAGE KAPITON",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -1804,10 +1945,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "199105212",
+      "id": "1669515041",
       "name_lat": "SNOU MIREKL VALENCIA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1687722762",
+      "name_lat": "SNOW STAIL MISTER COOL",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1840,15 +1990,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1687722762",
-      "name_lat": "SNOW STAIL MISTER COOL",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1291344243",
       "name_lat": "SNEZHNY BARS IZ STRANY OZ",
       "name_ru": "",
@@ -1867,6 +2008,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "520333311",
+      "name_lat": "SNEZHNYY DRAKON ZHELANNAYA MOYA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1889960418",
       "name_lat": "SNEZHNAYA PRINCZESSA S LIPETSKIH OZER (LONG COAT)",
       "name_ru": "",
@@ -1876,21 +2026,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "61619651",
-      "name_lat": "SNEZHNYY DRAKON ZHELANNAYA MOYA",
+      "id": "998634887",
+      "name_lat": "SNOW WHITE QUEEN",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ БУЛЬДОГ",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "546141950",
-      "name_lat": "SNOW WHITE QUEEN",
+      "id": "853102286",
+      "name_lat": "S'NEZHNAYA VJUGA VENTO DI FIORI",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1921,21 +2071,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "197752911",
-      "name_lat": "SNOU MIREKL INDIGO",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "147916594",
+      "id": "1324229299",
       "name_lat": "SNOW ADVENTU RES ZOLTAN",
       "name_ru": "",
-      "breed": "АКИТА /",
+      "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1945,6 +2086,24 @@
       "breed": "АКИТА АЛЯСКИНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "554037590",
+      "name_lat": "SNOW DELIGHT EXPLOSION TEMPTATION MOON",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1615897645",
+      "name_lat": "S'NEZHAYA VJUGA GLEDIS GARDEN",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1966,12 +2125,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "613036446",
+      "name_lat": "SNOW SHINE OLYMPIA OF ICE CROWN",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "143033885",
       "name_lat": "SNEZHNYI ANGEL YUEN",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "372830458",
+      "name_lat": "SNEZHNYI DOZOR W-UMNITSA ULYANA",
+      "name_ru": "",
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (бобтейл)",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2038,10 +2215,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1150629318",
+      "id": "8206399",
       "name_lat": "SNOW LIFE KLEOPATRA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2065,19 +2242,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "918464113",
-      "name_lat": "SNOW STAIL XAFARRA (к/х)",
+      "id": "642100586",
+      "name_lat": "SNEZHNAYA LILIYA IZ VOLSHEBN OGO LESA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "642100586",
-      "name_lat": "SNEZHNAYA LILIYA IZ VOLSHEBN OGO LESA",
+      "id": "918464113",
+      "name_lat": "SNOW STAIL XAFARRA (к/х)",
       "name_ru": "",
-      "breed": "ВОЛЬФХАУНД",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2119,21 +2296,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "124312050",
-      "name_lat": "SNOW STAIL KEY TO MY HEART",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "1179016996",
       "name_lat": "SNOW SYMPHONY GREAT GATSBY",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "163716254",
+      "name_lat": "SNOW STAIL KEY TO MY HEART",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ-КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -2146,10 +2323,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1863329239",
+      "id": "1595194268",
       "name_lat": "SNOW SHINE RAPSODIE BOHEMIAN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
       "total_shows": 13,
       "competition_dog_id": null
@@ -2164,10 +2341,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "615190909",
+      "id": "1378855227",
       "name_lat": "SNOU MIREKL MUZYKA VETRA",
       "name_ru": "",
-      "breed": "RUSSIAN TOY LONG-",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -2182,6 +2359,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1267688440",
+      "name_lat": "SNAILAND RESPECT",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "827270579",
+      "name_lat": "SNOW STAIL JEMINA GENLE",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "430908230",
       "name_lat": "SNOW WHITE LAMB FRANKLIN STAR",
       "name_ru": "",
@@ -2191,12 +2386,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "191136357",
-      "name_lat": "SNAILAND RESPECT",
+      "id": "1439879590",
+      "name_lat": "SNEZHNYI VERNISAZH URSHULYA",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1349154106",
+      "name_lat": "SNOW STAIL NARYA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -2205,6 +2409,24 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "31218569",
+      "name_lat": "SNOU MIREKL BURYA EMOTSIY",
+      "name_ru": "СНОУ МИРЕКЛ БУРЯ ЭМОЦИЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1097106877",
+      "name_lat": "S NEZHNY ZVER CHARAIT (изм по реш ВК от 20.03.2024)",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
       "total_shows": 19,
       "competition_dog_id": null
     },
@@ -2218,12 +2440,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1349154106",
-      "name_lat": "SNOW STAIL NARYA",
+      "id": "1057917504",
+      "name_lat": "SNOU MIREKL HONDA (LONG COAT)",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 22,
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -2236,12 +2458,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "122781540",
-      "name_lat": "SNEZHNYI DOZOR W- UMNITSA ULYANA",
+      "id": "1134478130",
+      "name_lat": "SNOW STAIL BATTERFLY",
       "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (бобтейл)",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 41,
       "competition_dog_id": null
     },
     {
@@ -2251,6 +2473,24 @@
       "breed": "OLD ENGLISH SHEEPDOG (BOBTAIL)",
       "breed_en": "OLD ENGLISH SHEEPDOG",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "445348926",
+      "name_lat": "SNOW SHINE LP LAURA PERGOLIZZI",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1694760346",
+      "name_lat": "SNOW STAIL BETRIA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2272,6 +2512,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1968155346",
+      "name_lat": "SNOW SYMPHONY NUMBER ONE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1487120606",
+      "name_lat": "SNOU MIREKL AQUATORIYA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1792017829",
       "name_lat": "SNOW STAIL NAPOLI",
       "name_ru": "",
@@ -2281,39 +2539,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1921861019",
-      "name_lat": "SNOW SYMPHONY NUMBER ONE",
+      "id": "756885215",
+      "name_lat": "SNEZHIY DOZOR DIN DIN FEYA",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "БОЛОНЕЗ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1292644373",
+      "id": "960636456",
       "name_lat": "SNOW STAIL ELU TINGOL",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
     },
     {
-      "id": "1487120606",
-      "name_lat": "SNOU MIREKL AQUATORIYA",
+      "id": "1970858097",
+      "name_lat": "SNEZHNYI VERNISAZH URSULA",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1134478130",
-      "name_lat": "SNOW STAIL BATTERFLY",
+      "id": "1281571464",
+      "name_lat": "SNOW STAIL PRINCE CHARMING",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 35,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2322,14 +2579,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "415792838",
+      "id": "1016273215",
       "name_lat": "SNEZHNAYA RUSSIA SERAFIMA",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2340,16 +2597,25 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "277236932",
-      "name_lat": "SNOW SHINE LP LAURA PERGOLIZZI",
+      "id": "166634171",
+      "name_lat": "SNEZHNYY DRAKON ARISTOCRAT",
       "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "234154487",
+      "name_lat": "SNEGIZI STAR CHERVONA RUTO",
+      "name_ru": "СНЕГИЗИ СТАР ЧЕРВОНА РУТО",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -2358,25 +2624,15 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1274050518",
-      "name_lat": "SNOW STAIL WEST ЕND TRIUMPH",
+      "id": "1232292476",
+      "name_lat": "SNOW STAIL DUSHESS",
       "name_ru": "",
-      "breed": "Вельш корги пемброк",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1847294282",
-      "name_lat": "SNOU MIREKL HONDA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 14,
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -2398,10 +2654,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "122811695",
+      "id": "1791304030",
       "name_lat": "SNOW LIFE GERMIONA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2412,7 +2668,7 @@
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2434,24 +2690,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "91563460",
-      "name_lat": "SNEZHNYI VERNISAZH URSULA",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "166634171",
-      "name_lat": "SNEZHNYY DRAKON ARISTOCRAT",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1998714349",
       "name_lat": "SNEZHNYY DRAKON GOSPOZHA UDACHA",
       "name_ru": "",
@@ -2470,48 +2708,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "1903785940",
-      "name_lat": "SNOU MIREKL BURYA EMOTSIY",
+      "id": "1592237223",
+      "name_lat": "Snow Life Sekret Affair",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "Шелти",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1672215078",
+      "id": "875478163",
+      "name_lat": "SNEZHNAYA FEERIYA",
+      "name_ru": "СНЕЖНАЯ ФЕЕРИЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1133687203",
+      "name_lat": "SNEZHNYY DRAKON VARVARA KRASA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "845623071",
       "name_lat": "SNOW STAIL DIAMANT OF SANTREIV",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "637971762",
-      "name_lat": "SNOW STAIL JEMINA GENLE",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1338644188",
+      "id": "559001977",
       "name_lat": "SNOW SHINE TALISMAN",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "845732371",
-      "name_lat": "SNOW STAIL NENAR",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "915288490",
+      "name_lat": "SNEGIZI STAR BUMER",
+      "name_ru": "СНЕГИЗИ СТАР БУМЕР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -2560,30 +2807,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1439879590",
-      "name_lat": "SNEZHNYI VERNISAZH URSHULYA",
+      "id": "314547586",
+      "name_lat": "SNOW STAIL BUMBLEBEE",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "96485898",
-      "name_lat": "SNEZHNYY DRAKON VARVARA KRASA",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "98499063",
-      "name_lat": "SNOW STAIL PRINCE CHARMING",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2637,15 +2866,6 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "234154487",
-      "name_lat": "SNEGIZI STAR CHERVONA RUTO",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
@@ -2668,12 +2888,56 @@
       "competition_dog_id": null
     },
     {
+      "id": "1484110041",
+      "name_lat": "SNOW WHITE LAMB BRIDZHI",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "BICHON FRISE",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1047265965",
+      "name_lat": "SNOW STAIL KARNILE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127933685",
+      "name_lat": "SNOW LEGEND GAME ON",
+      "name_ru": "",
+      "breed": "МАЛАМУТ /",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1544276834",
       "name_lat": "SNEZHNII RIFEI ZHANNA ZHEVENIS",
       "name_ru": "",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "243633943",
+      "name_lat": "SNEZHNAYA RUSSIA CHESJAN",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1771376647",
+      "name_lat": "SNOW STAIL BEIDOU",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2704,12 +2968,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1765435135",
+      "id": "1539503612",
+      "name_lat": "SNOW STAIL SANGUINE OF SUCCESS",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "42654285",
+      "name_lat": "SNOW STAIL NORMA JEAN ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1844224684",
       "name_lat": "SNEZHNYY DRAKON BIG BOY",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "96950185",
+      "name_lat": "SNOW STAIL DYNASTY",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "811114072",
+      "name_lat": "SNEZHNYY DRAKON BLONDY",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2758,12 +3056,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1232292476",
-      "name_lat": "SNOW STAIL DUSHESS",
+      "id": "104087386",
+      "name_lat": "SNOW STAIL MISS MARPLE",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2772,6 +3070,15 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1010905376",
+      "name_lat": "SNOW GALAXY GARDEMARIN",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
       "total_shows": 10,
       "competition_dog_id": null
     },
@@ -2785,21 +3092,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "811114072",
-      "name_lat": "SNEZHNYY DRAKON BLONDY",
+      "id": "1575392975",
+      "name_lat": "SNOW SHINE PROMETEI",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "822257466",
-      "name_lat": "SNOW SHINE PROMETEI",
+      "id": "1438718913",
+      "name_lat": "SNOU MIREKL ORANGE DREAM",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2812,39 +3119,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1778749357",
-      "name_lat": "SNEZHNOE OCHAROVANIE GORDOST ROSSII",
+      "id": "444287129",
+      "name_lat": "SNOW STAIL UNICUM PEARSON",
       "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "SAMOYED",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "16310258",
-      "name_lat": "SNOW STAIL SANGUINE OF SUCCESS",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "104087386",
-      "name_lat": "SNOW STAIL MISS MARPLE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1484110041",
-      "name_lat": "SNOW WHITE LAMB BRIDZHI",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "BICHON FRISE",
-      "total_shows": 9,
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -2866,30 +3146,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "243633943",
-      "name_lat": "SNEZHNAYA RUSSIA CHESJAN",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1369743606",
+      "id": "457603055",
       "name_lat": "SNAILAND TANTARA",
       "name_ru": "",
-      "breed": "Скотч терьер (шотландский терьер) /",
+      "breed": "Скотч терьер (шотландский терьер)",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1694760346",
-      "name_lat": "SNOW STAIL BETRIA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2911,30 +3173,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "768069045",
+      "id": "1980631368",
       "name_lat": "SNOW STAIL IMINYE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "96950185",
-      "name_lat": "SNOW STAIL DYNASTY",
-      "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "42654285",
-      "name_lat": "SNOW STAIL NORMA JEAN ( )",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2965,21 +3209,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1047265965",
-      "name_lat": "SNOW STAIL KARNILE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "1028851334",
+      "name_lat": "SNIKERS SVIT BOY",
+      "name_ru": "СНИКЕРС СВИТ БОЙ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1295416196",
-      "name_lat": "SNOU MIREKL PARKOUR (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -3001,10 +3236,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1985802367",
+      "id": "1305822318",
       "name_lat": "SNOW DANWEST TIARE TAHITI",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3046,15 +3281,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "69770724",
-      "name_lat": "SNEZHIY DOZOR DIN DIN FEYA",
-      "name_ru": "",
-      "breed": "БОЛОНЕЗ / BOLOGNESE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1306615307",
       "name_lat": "SNEZHNYY DRAKON ARISTOKRAT",
       "name_ru": "",
@@ -3073,12 +3299,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "875478163",
-      "name_lat": "SNEZHNAYA FEERIYA",
+      "id": "1000936903",
+      "name_lat": "SNOW STAIL XENT MY DREAM",
       "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468999317",
+      "name_lat": "SNOW STAIL FITZGERALD",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3091,21 +3326,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1771376647",
-      "name_lat": "SNOW STAIL BEIDOU",
+      "id": "600764425",
+      "name_lat": "SNOW STAIL ZETA JOHNES",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1516483273",
-      "name_lat": "SNOW STAIL ZETA JOHNES",
+      "id": "132812636",
+      "name_lat": "SNOW STAIL VIVAT QUEEN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "898653347",
+      "name_lat": "S'NEZHNAYA VJUGA GLEDIS GARDEN",
+      "name_ru": "",
+      "breed": "ньюфаундленд",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3118,6 +3362,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1708504460",
+      "name_lat": "SNOW STAIL DANAE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 45,
+      "competition_dog_id": null
+    },
+    {
       "id": "922774348",
       "name_lat": "SNOW STAIL IN LOVE",
       "name_ru": "",
@@ -3127,10 +3380,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "537111864",
+      "id": "1914057078",
       "name_lat": "SNOW STAIL IMIN",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -3154,12 +3407,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1010905376",
-      "name_lat": "SNOW GALAXY GARDEMARIN",
+      "id": "508414154",
+      "name_lat": "SNOW STAIL QUASAR",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 8,
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -3190,29 +3443,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1438718913",
-      "name_lat": "SNOU MIREKL ORANGE DREAM",
-      "name_ru": "",
-      "breed": "RUSSIAN TOY SMOOTH-",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "314547586",
-      "name_lat": "SNOW STAIL BUMBLEBEE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "980570246",
       "name_lat": "SNOW STAIL INGENIOUS",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1325853780",
+      "name_lat": "SNOW STAIL WEST AND TRIUMF",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 8,
       "competition_dog_id": null
     },
@@ -3228,9 +3471,27 @@
     {
       "id": "1347285583",
       "name_lat": "SNEZHNAYA TROPA GEGEMON AMUR",
-      "name_ru": "",
+      "name_ru": "СНЕЖНАЯ ТРОПА ГЕГЕМОН АМУР",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "12122002",
+      "name_lat": "SNEZHINKA NA LADOSHKE OT BUMAGE",
+      "name_ru": "",
+      "breed": "СИЛИХЕМ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "278516987",
+      "name_lat": "S'NEZHNAYA VJUGA GRAND STYLE",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "NEWFOUNDLAND",
       "total_shows": 7,
       "competition_dog_id": null
     },
@@ -3244,10 +3505,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1122108680",
+      "id": "472519853",
       "name_lat": "SNEZHNAYA RUSSIA HAVRONIA",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3271,21 +3532,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1028851334",
-      "name_lat": "SNIKERS SVIT BOY",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "113238405",
       "name_lat": "SNOW SHINE FOREVER YOUNG",
       "name_ru": "",
       "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "360501846",
+      "name_lat": "SNOW STAIL NENAR",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -3298,10 +3559,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "450686857",
+      "name_lat": "SNEZHNOE OCHAROVANIE LUNARIYA",
+      "name_ru": "СНЕЖНОЕ ОЧАРОВАНИЕ ЛУНАРИЯ",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1656128484",
       "name_lat": "SNOU MIREKL LAVINA VOSTORGA",
       "name_ru": "",
       "breed": "RUSSIAN TOY LONG-",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1799883544",
+      "name_lat": "SNOW STAIL WINDZOR DYNASTY",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3322,6 +3601,15 @@
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1242568757",
+      "name_lat": "SNEZHNAYA KARAMEL KVINTESSA KOKETKA",
+      "name_ru": "СНЕЖНАЯ КАРАМЕЛЬ КВИНТЕССА КОКЕТКА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3361,12 +3649,48 @@
       "competition_dog_id": null
     },
     {
+      "id": "77182291",
+      "name_lat": "SNOU MIREKL FORSAZH",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "1222240222",
       "name_lat": "SNOW STAIL IOLANTA ( )",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "886219335",
+      "name_lat": "SNOW STAIL NENAR.",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1810636925",
+      "name_lat": "SNEZHNYI ANGEL NAYTO",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "137675141",
+      "name_lat": "SNEZHNYI DOZOR GVIDON",
+      "name_ru": "",
+      "breed": "БОЛОНЕЗ",
+      "breed_en": "BOLOGNESE",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3388,21 +3712,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "373114681",
-      "name_lat": "SNOW STAIL UNICUM PEARSON",
+      "id": "1599680796",
+      "name_lat": "SNOW WHITE LAMB ELLIS",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1000936903",
-      "name_lat": "SNOW STAIL XENT MY DREAM",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3415,21 +3730,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1468999317",
-      "name_lat": "SNOW STAIL FITZGERALD",
+      "id": "1075532592",
+      "name_lat": "SNOW STAIL ILIADE ( )",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1799883544",
-      "name_lat": "SNOW STAIL WINDZOR DYNASTY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3442,19 +3747,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "804346578",
-      "name_lat": "SNOU MIREKL FORSAZH",
+      "id": "1042975899",
+      "name_lat": "SNOW STAIL KATYUSHA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "287574177",
+      "id": "425010270",
       "name_lat": "SNOW STAIL INTELLIGENT PIRSON",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -3478,12 +3783,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "624424523",
-      "name_lat": "SNOU MIREKL ARCTIC BEAR",
+      "id": "85676680",
+      "name_lat": "SNOW VALLEY ANGEL",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1765531799",
+      "name_lat": "SNOU MIREKL HARIZMA SV",
+      "name_ru": "",
+      "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "851097922",
+      "name_lat": "SNOU MIREKL ARCTIC BEAR",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1400853341",
+      "name_lat": "SNEZHNII RIFEI RAYIT",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3505,12 +3837,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "508414154",
-      "name_lat": "SNOW STAIL QUASAR",
+      "id": "999505284",
+      "name_lat": "SNOW STAIL PONS",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3523,12 +3855,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "283757979",
-      "name_lat": "SNOW LEGEND GAME ON",
+      "id": "1147207957",
+      "name_lat": "SNOU MIREKL ZNAY NASHIH",
       "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3559,21 +3891,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "134196202",
+      "name_lat": "S'NEZHNAYA VJUGA GOLDEN PURISSIMA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1116857838",
       "name_lat": "SNEZHNAYA ISKRA GIVEN BY A DEMON",
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1472224211",
-      "name_lat": "SNOW STAIL VIVAT QUEEN",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -3595,30 +3927,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1765531799",
-      "name_lat": "SNOU MIREKL HARIZMA SV",
-      "name_ru": "",
-      "breed": "RUSSIAN TOY SMOOTH-",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "869816877",
+      "id": "1713975517",
       "name_lat": "SNOW STAIL MAJESTY EMPIRE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "12122002",
-      "name_lat": "SNEZHINKA NA LADOSHKE OT BUMAGE",
+      "id": "35919744",
+      "name_lat": "SNEGIZI STAR VERNAYA TSEL III",
       "name_ru": "",
-      "breed": "СИЛИХЕМ ТЕРЬЕР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3676,15 +3999,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1708504460",
-      "name_lat": "SNOW STAIL DANAE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 36,
-      "competition_dog_id": null
-    },
-    {
       "id": "624322301",
       "name_lat": "SNEZHNOE TANGO MAYBAH",
       "name_ru": "",
@@ -3694,19 +4008,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "110915796",
-      "name_lat": "SNOW STAIL SAINT-LAURENT",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "268043572",
+      "id": "392332529",
       "name_lat": "SNOU MIREKL ROCK-N-ROLL",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -3730,6 +4035,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1278963494",
+      "name_lat": "SNOW STAIL KENDRICK",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1963837430",
       "name_lat": "SNAILAND ZOUI",
       "name_ru": "",
@@ -3748,12 +4062,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "72118840",
-      "name_lat": "SNEZHNII RIFEI RAYIT",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "id": "1197220701",
+      "name_lat": "SNEGIZI STAR VIVA VIKTORIYA",
+      "name_ru": "СНЕГИЗИ СТАР ВИВА ВИКТОРИЯ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1567351008",
+      "name_lat": "SNOW STAIL RICHARD LIONHEART",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "136639814",
+      "name_lat": "SNOW STAIL SANSARA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3766,15 +4096,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "137675141",
-      "name_lat": "SNEZHNYI DOZOR GVIDON",
-      "name_ru": "",
-      "breed": "БОЛОНЕЗ",
-      "breed_en": "BOLOGNESE",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "451008009",
       "name_lat": "SNOW PRIDE KAMPA",
       "name_ru": "",
@@ -3784,10 +4105,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "112249967",
+      "id": "1574656",
       "name_lat": "SNOW STAIL PREMIER MINISTR",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3829,15 +4150,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1325853780",
-      "name_lat": "Snow Stail West And Triumf",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "737803658",
       "name_lat": "SNOW IMAGE GOOD FOR YOU",
       "name_ru": "",
@@ -3851,15 +4163,6 @@
       "name_lat": "SNOW STAIL BREAKING NEWS",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1278963494",
-      "name_lat": "SNOW STAIL KENDRICK",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3898,24 +4201,6 @@
       "breed": "ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "WHITE SWISS SHEPHERD DOG",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1042975899",
-      "name_lat": "SNOW STAIL KATYUSHA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1822867701",
-      "name_lat": "SNOW VALLEY ANGEL",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3982,6 +4267,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1777829446",
+      "name_lat": "SNOW STAIL PEPPE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "381781717",
       "name_lat": "SNEZHNAYA ISKRA IOSHI DAITI",
       "name_ru": "",
@@ -3991,10 +4284,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "171816943",
+      "id": "49887924",
       "name_lat": "Snow Shine Lionel Messi",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4009,10 +4302,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1797939091",
+      "id": "961236986",
       "name_lat": "SNEZHNII RIFEI FENLI",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4024,6 +4317,15 @@
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1402971802",
+      "name_lat": "SNOW STAIL NIMBUS ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -4045,28 +4347,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "824474133",
+      "id": "573235240",
       "name_lat": "SNOW IMAGE MARY ELIZABETH",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1057917504",
-      "name_lat": "SNOU MIREKL HONDA (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "699778139",
+      "id": "1149978514",
       "name_lat": "SNEZHNAYA ISKRA VOLOND",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -4081,19 +4374,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1279293623",
-      "name_lat": "SNOU MIREKL RONALDO",
+      "id": "1988237329",
+      "name_lat": "SNAILAND OVACIA",
       "name_ru": "",
-      "breed": "RUSSIAN TOY SMOOTH-",
+      "breed": "НОРВИЧ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1988237329",
-      "name_lat": "SNAILAND OVACIA",
+      "id": "1279293623",
+      "name_lat": "SNOU MIREKL RONALDO",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР)",
+      "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4108,10 +4401,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "276761287",
+      "id": "681610674",
+      "name_lat": "SNOW STAIL PERLAS",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "19436934",
       "name_lat": "SNOW PRIDE KIOSHI",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4123,15 +4425,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "430685781",
-      "name_lat": "SNOU MIREKL BENTLEY (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4153,12 +4446,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1053980920",
+      "name_lat": "SNEZHNAYA ISKRA GIFT OF THE NORTH",
+      "name_ru": "",
+      "breed": "САМОЕД /",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1827860257",
       "name_lat": "SNOW IMAGE CARLO PASOLINI",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "314133147",
+      "name_lat": "SNOU TAUN ELITE DOUBLE FANASY",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4180,10 +4490,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1847457861",
-      "name_lat": "SNOU MIREKL BUGATTI",
+      "id": "133630492",
+      "name_lat": "Snegizi Star Zhguchiy Macho",
+      "name_ru": "СНЕГИЗИ СТАР ЖГУЧИЙ МАЧО",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "165737144",
+      "name_lat": "SNOW PRIDE KONAN",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4198,10 +4517,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "999505284",
-      "name_lat": "SNOW STAIL PONS",
+      "id": "291376220",
+      "name_lat": "SNOW LIZARD ZHARKOE SERDTSE ARIA STARK",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4225,19 +4544,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "165737144",
-      "name_lat": "SNOW PRIDE KONAN",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "350295071",
+      "id": "1965238670",
       "name_lat": "SNEZHNII RIFEI SVYATOGOR",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4261,15 +4571,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1599680796",
-      "name_lat": "SNOW WHITE LAMB ELLIS",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "201297231",
       "name_lat": "SNK'ELENBOKS P'EVA ROZHDENNAYA POBEZHDAT",
       "name_ru": "",
@@ -4285,6 +4586,15 @@
       "breed": "SIBERIAN HUSKY",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1425708153",
+      "name_lat": "S’NEZHAYA VJUGA GRATSIOZA EKZOTIK",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4306,10 +4616,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "485596584",
+      "id": "1514461517",
       "name_lat": "SNAILAND TAKTIKA",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4369,24 +4679,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "450686857",
-      "name_lat": "SNEZHNOE OCHAROVANIE LUNARIYA",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "SAMOYED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1147207957",
-      "name_lat": "SNOU MIREKL ZNAY NASHIH",
-      "name_ru": "",
-      "breed": "RUSSIAN TOY LONG-",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1351548314",
       "name_lat": "SNEZHNYJ BARS IZ ALTAISKOGO KOVCHEGA",
       "name_ru": "",
@@ -4432,15 +4724,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1592237223",
-      "name_lat": "Snow Life Sekret Affair",
-      "name_ru": "",
-      "breed": "Шелти",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1659277060",
       "name_lat": "SNOW WHITE LAMB CHARINA NIKOL",
       "name_ru": "",
@@ -4450,12 +4733,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1849730087",
+      "id": "30365990",
       "name_lat": "SNOW QOEEN WHIH A RED KISS(LONG COAT)",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1883369390",
+      "name_lat": "S NEZHNY ZVER ZHOU-SHOW",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -4468,12 +4760,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1404027674",
+      "id": "1634579079",
       "name_lat": "SNOU MIREKL JARA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1463115448",
+      "name_lat": "SNOW STAIL RIANNA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "836879670",
+      "name_lat": "SNOW LIFE DA YA TAKAYA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4486,10 +4796,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "699282024",
+      "id": "795319776",
       "name_lat": "SNOU MIREKL LEON",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "СОБАКА РУССКИЙ ТОЙ (ГЛАДКОШЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4522,10 +4832,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1940829672",
+      "id": "912978755",
+      "name_lat": "S’NEZHAYA VJUGA GLEDIS GARDEN",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "368610849",
+      "name_lat": "SNOU MIREKL FLERA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1281964941",
       "name_lat": "SNOW MYSTERY GRUNYA",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4549,10 +4876,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1398033476",
+      "id": "1738766065",
       "name_lat": "SNEZHNA YA LYUBOV GREYT ELIZAVETA",
       "name_ru": "",
-      "breed": "САМОЕД /",
+      "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4573,15 +4900,6 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "136639814",
-      "name_lat": "SNOW STAIL SANSARA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4612,21 +4930,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1407630754",
+      "id": "68617027",
       "name_lat": "SNOW STAIL LUBAVA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1420057651",
-      "name_lat": "SNOU TAUN ELITE DOUBLE FANASY",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4666,10 +4975,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1232173162",
+      "id": "1629466299",
       "name_lat": "SNOW STAIL EMPERIOR OF MY HEART",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -4702,6 +5011,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "165595363",
+      "name_lat": "SNOW LIFE YUBER STAR GUY",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1207874431",
       "name_lat": "SNOW STAIL XANTI RISING STAR",
       "name_ru": "",
@@ -4720,12 +5038,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "194179468",
-      "name_lat": "SNOW MIRACL ROCK-N- ROLL",
+      "id": "999055799",
+      "name_lat": "SNOW MIRACL ROCK-N-ROLL",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "990288892",
+      "name_lat": "SNEZHNYI ANGEL YUСHI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4747,12 +5074,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1079056595",
-      "name_lat": "SNOW STAIL NIMBUS ( )",
+      "id": "875665800",
+      "name_lat": "S'NEZNAYA VJUGA EMMANUELLE DE BERLAND",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -4783,28 +5110,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "291376220",
-      "name_lat": "SNOW LIZARD ZHARKOE SERDTSE ARIA STARK",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "983954540",
+      "id": "226040207",
       "name_lat": "SNAYPER ELCIELO INSPIRACION",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "518796978",
+      "id": "275248150",
       "name_lat": "SNAILAND UNISON",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "ЙОРКШИРСКИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4819,19 +5137,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1357460852",
+      "id": "1019424929",
       "name_lat": "SNOW DANWEST VELVET VALLEY",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "836879670",
-      "name_lat": "SNOW LIFE DA YA TAKAYA",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4846,10 +5155,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "189235444",
+      "id": "1122878121",
       "name_lat": "SNOU MIREKL MUZYKA VETRA ПРИМАДОННА ИЗ РОССИИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4879,6 +5188,23 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "153983009",
+      "name_lat": "SNUP DOG ZVEZDA POLESYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР АМЕРИКАНСКИЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1123344166",
+      "name_lat": "S NEZHNY ZVER SHEYLIN VUDLI",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4954,30 +5280,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1463115448",
-      "name_lat": "SNOW STAIL RIANNA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "281732739",
       "name_lat": "SNOW STAIL NEVA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "513368707",
-      "name_lat": "SNOW STAIL PEPPE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -5062,10 +5370,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "348026778",
+      "id": "1504767595",
       "name_lat": "SNOW VIKING ADRIAN",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5089,11 +5397,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1227981502",
-      "name_lat": "SNOW- WHITE DIAMOND GOSUDAR VELIKIJ",
+      "id": "421555516",
+      "name_lat": "SNOW-WHITE DIAMOND GOSUDAR VELIKIJ",
       "name_ru": "",
       "breed": "САМОЕД / SAMOYED",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1324752072",
+      "name_lat": "SNOW STAIL MARY LOU (N / B)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5125,10 +5441,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "193716982",
+      "id": "245553791",
       "name_lat": "SNOW KYUTI MIA",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5152,19 +5468,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "213201050",
-      "name_lat": "SNOW WHITE LAMB POL- ZHANETT",
+      "id": "63333106",
+      "name_lat": "S'NEZHNAYA VJUGA GRAND STYL",
       "name_ru": "",
-      "breed": "FRISE",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "554037590",
-      "name_lat": "SNOW DELIGHT EXPLOSION TEMPTATION MOON",
+      "id": "97769872",
+      "name_lat": "SNOW WHITE LAMB POL-ZHANETT",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
+      "breed": "FRISE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5233,10 +5549,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1168677856",
+      "id": "1077168420",
       "name_lat": "SNOW SHINE LIV TAYLER",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5251,17 +5567,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "990288892",
-      "name_lat": "SNEZHNYI ANGEL YUСHI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "613894158",
-      "name_lat": "SNOW STAIL KISS-ME- QUICK",
+      "id": "994287568",
+      "name_lat": "SNOW STAIL KISS-ME-QUICK",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -5278,19 +5585,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1054744459",
+      "id": "554196098",
       "name_lat": "SNOW LIFE YUBER STAR GAY",
       "name_ru": "",
-      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН /",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1648658777",
-      "name_lat": "SNOW LIFE YUBER STAR GUY",
+      "id": "921228129",
+      "name_lat": "S NEZHNY ZVER ZHUSEN",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ-",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5346,6 +5653,14 @@
       "name_ru": "",
       "breed": "CORGI PEMBROKE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1040895322",
+      "name_lat": "SNOU MIREKL FLERA (Изменено по Решению ВК от 16.02.22 вопрос 24)",
+      "name_ru": "",
+      "breed": "русский той длинношерстный",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5422,15 +5737,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1242568757",
-      "name_lat": "SNEZHNAYA KARAMEL KVINTESSA KOKETKA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1930406730",
       "name_lat": "SNOW SPITZ SEMIA LIN",
       "name_ru": "",
@@ -5440,18 +5746,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1177964312",
-      "name_lat": "SNOU MIREKL ERALASH (LONG COAT)",
+      "id": "91024364",
+      "name_lat": "S NEZHNY ZVER SHER",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "1374977772",
       "name_lat": "SNEGIZI STAR PRIMADONNA",
       "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1481218307",
+      "name_lat": "SNEGIZI STAR UMBERTO",
+      "name_ru": "СНЕГИЗИ СТАР УМБЕРТО",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
@@ -5476,19 +5791,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "914063224",
+      "id": "1391284893",
       "name_lat": "SNEZHAYA KOROLEVA",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1650935200",
+      "id": "541413493",
       "name_lat": "SNOW IMAGE MYSTIC MARLIN MIGLIN",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5503,19 +5818,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "785901365",
+      "id": "1273786811",
+      "name_lat": "SNEZHNOE SAFARI LEKSA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "10324",
       "name_lat": "SNOW SWALLOW",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
       "total_shows": 2,
-      "competition_dog_id": null
+      "competition_dog_id": 10324
     },
     {
-      "id": "1080470462",
+      "id": "294754180",
       "name_lat": "SNOW STAIL JEMIMA GENLE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "COLLIE ROUGH",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5548,10 +5871,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1743494471",
+      "id": "1850001848",
       "name_lat": "SNOW STAIL GIVE MY DREAM",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5629,15 +5952,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1197220701",
-      "name_lat": "SNEGIZI STAR VIVA VIKTORIYA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "607312899",
       "name_lat": "SNOW SHINE PROMETEY",
       "name_ru": "",
@@ -5647,19 +5961,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "133630492",
-      "name_lat": "Snegizi Star Zhguchiy Macho",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "104261029",
+      "id": "745856312",
       "name_lat": "SNOW LIFE MAGOR",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5701,15 +6006,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "681610674",
-      "name_lat": "SNOW STAIL PERLAS",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1543287471",
       "name_lat": "SNOW LIFE SECRET AFFAIR",
       "name_ru": "",
@@ -5719,19 +6015,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "307281169",
+      "id": "192108961",
       "name_lat": "SNOW STAIL COMPLASANCE FOR ME",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1288187352",
+      "id": "1835716101",
       "name_lat": "SNOW STAIL JEMINA GENTLE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5800,15 +6096,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1473350701",
-      "name_lat": "SNEZHNOE OCHAROVANIE LOTOS",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "SAMOYED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "592224630",
       "name_lat": "SNOU MIREKL DAYANA (LONG COAT)",
       "name_ru": "",
@@ -5863,19 +6150,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "153983009",
-      "name_lat": "SNUP DOG ZVEZDA POLESYA",
+      "id": "1696879216",
+      "name_lat": "SNEZHNAYA KARAMEL DAYANA ROSS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР АМЕРИКАНСКИЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "125012956",
+      "name_lat": "SNEZHNIY VIHR IZ LAPLANDII KANIS",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1342158233",
+      "id": "164599693",
       "name_lat": "SNEZHNAYA CHAYKA ZAGADAY ZHELANIE",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5899,20 +6194,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1967120216",
+      "id": "1561811039",
+      "name_lat": "S'NEZHNAYA VJUGA AMORONE SARTORI",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "NEWFOUNDLAND",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1408660029",
       "name_lat": "SNOW STAIL VIVAT THE KING",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1696879216",
-      "name_lat": "SNEZHNAYA KARAMEL DAYANA ROSS",
+      "id": "37298328",
+      "name_lat": "SNEZHNYI ANGEL Z'RINKAN",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
+      "breed": "СИБА/SHIBA",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5966,24 +6269,6 @@
       "name_lat": "SNOW STAIL BELIGESTEL",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "35919744",
-      "name_lat": "SNEGIZI STAR VERNAYA TSEL III",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "814548784",
-      "name_lat": "SNEGIZI STAR BUMER",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6079,19 +6364,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "122990972",
+      "id": "1605790617",
       "name_lat": "SNEZNAYA RUSSIA SLAVIA",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "497787377",
-      "name_lat": "SNOW STAIL NIMBUS",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6106,10 +6382,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "99915977",
+      "id": "499151369",
       "name_lat": "SNOW STAIL ZARINA BRIGHT STAR",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6133,10 +6409,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "208041827",
+      "id": "810657120",
       "name_lat": "Snow Shine Adel Lori Blue Edkins",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6187,10 +6463,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "705290148",
+      "id": "1609014969",
       "name_lat": "SNOW STAIL ELDGEBETTA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6205,10 +6481,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1035868444",
+      "id": "1112968305",
       "name_lat": "SNOU TAUN ELITE DOUBLE FANTASY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6223,12 +6499,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "576871271",
-      "name_lat": "SNOW SHINE CARDINAL",
+      "id": "1503162892",
+      "name_lat": "SNOW SYMPHONY DISEL",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1260831501",
+      "name_lat": "SNOW STAIL ELDE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -6259,24 +6543,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1503162892",
-      "name_lat": "SNOW SYMPHONY DISEL",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1810636925",
-      "name_lat": "SNEZHNYI ANGEL NAYTO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1885818733",
       "name_lat": "SNEZHNOE SAFARI MEGGI BLACK",
       "name_ru": "",
@@ -6290,24 +6556,6 @@
       "name_lat": "SNOW AMADEUS",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1260831501",
-      "name_lat": "SNOW STAIL ELDE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "195607641",
-      "name_lat": "SNOW SHINE OLYMPIA OF ICE CROWN",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -6502,6 +6750,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "29166113",
+      "name_lat": "SNEGIZI STAR ULTRA STIL",
+      "name_ru": "СНЕГИЗИ СТАР УЛЬТРА СТИЛЬ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "327461003",
       "name_lat": "SNIKERS",
       "name_ru": "",
@@ -6556,8 +6813,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "467165875",
-      "name_lat": "SNOW STAYLE BADEN- BADEN",
+      "id": "1559525825",
+      "name_lat": "SNOW STAYLE BADEN-BADEN",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -6565,19 +6822,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1481218307",
-      "name_lat": "SNEGIZI STAR UMBERTO",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1619591422",
+      "id": "877653895",
       "name_lat": "SNEZHNII RIFEI OLLI MISS TEONA",
       "name_ru": "",
-      "breed": "СОБАКА /",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6610,12 +6858,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1930627433",
-      "name_lat": "SNEGIZI STAR ULTRA STIL",
+      "id": "1110335620",
+      "name_lat": "SNOW STAIL TOFFEE",
       "name_ru": "",
-      "breed": "FRENCH BULLDOG FAWN, BRINDLE",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1137728774",
+      "name_lat": "SNOU MIREKL AQUATORIYA N\\B",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -6655,11 +6911,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "230454997",
-      "name_lat": "SNOU MIREKL AQUATORIYA N/B",
+      "id": "489236129",
+      "name_lat": "SNEZHNAYA DINASTIYA ESTER",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6691,29 +6947,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "359722173",
-      "name_lat": "SNEGIZI STAR LAYZA KYARA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1387252806",
       "name_lat": "SNOW WHITE LAMB CHEROKI",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "71833380",
-      "name_lat": "SNOU MIREKL OVACZIYA (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6826,11 +7064,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "98646508",
-      "name_lat": "SNEZHNAYA ISKRA GIFT OF THE NORTH",
+      "id": "93416800",
+      "name_lat": "SNEZHNAYA LYUBOV BRUKLIN",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
-      "breed_en": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6853,10 +7090,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "859749910",
+      "id": "539585711",
       "name_lat": "SNOW STAIL LEXUS",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6871,10 +7108,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "339225878",
+      "id": "316462511",
       "name_lat": "SNOU MIREKL UDARNAYA VOLNA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6925,29 +7162,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "154082325",
-      "name_lat": "SNEZHNAYA DINASTIYA ESTER",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "996955597",
-      "name_lat": "SNOW STAIL RICHARD LIONHEART",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1757562902",
       "name_lat": "SNOW WHITE LAMB ELLI ELLI MIMOZA",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "28431055",
+      "name_lat": "SNEZNOE OBLAKO LOICE",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "311509953",
+      "name_lat": "SNEZHNOE SAFARI OLIVIA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "854988350",
+      "name_lat": "SNOW IMAGE SIMPLY RED",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6970,10 +7213,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "184880788",
+      "id": "792819521",
       "name_lat": "SNOW IMAGE BOM BIM BOM",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7024,10 +7267,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1613476945",
+      "id": "570041998",
       "name_lat": "SNOW STAIL KAMILLA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7042,28 +7285,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1007189841",
+      "id": "1421619692",
       "name_lat": "SNOW STAIL KANTRY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1265673078",
+      "id": "287323759",
       "name_lat": "SNOW IMAGE CHESTER",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "839692050",
+      "id": "24412307",
       "name_lat": "SNOW LORD BOYARYNYA",
       "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7105,6 +7348,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1238972075",
+      "name_lat": "SNEZHNAYA KOROLEVA SANTA SAKURA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ БЕЛЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "245372569",
+      "name_lat": "SNEGIZI STAR FORTIKO GRACEFUL",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1535169821",
       "name_lat": "SNEZHKA",
       "name_ru": "",
@@ -7127,6 +7386,15 @@
       "name_lat": "SNIKERS",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "789636172",
+      "name_lat": "SNEZHAYA LUBOV LEONARDO",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7168,11 +7436,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "927967720",
+      "name_lat": "S NEZHNY ZVER PERFEKTA",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1297365381",
       "name_lat": "SNOW WHITE LAMB BEKKI",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "818577009",
+      "name_lat": "S NEZHNY ZVER PANKRAT",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7285,26 +7571,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1985271992",
+      "id": "717502941",
       "name_lat": "SNOW VIKING BAMBI",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1536549339",
+      "id": "123717906",
       "name_lat": "SNOWMIST XTREMELY POOR LOSER",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1658315060",
-      "name_lat": "SNEZHNYI ANGEL FUMIKO- II",
+      "id": "1421212528",
+      "name_lat": "SNEZHNYI ANGEL FUMIKO-II",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
@@ -7325,6 +7611,15 @@
       "name_lat": "SNOU VELVIND GALATEA",
       "name_ru": "",
       "breed": "LABRADOR RETRIEVER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "781654617",
+      "name_lat": "S'NEZHNAYA VJUGA GRATSIOZA EKZOTIK",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7402,10 +7697,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "437992003",
+      "id": "109573930",
       "name_lat": "SNOW BREEZE SHERLY",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7420,10 +7715,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1977923297",
+      "id": "205452348",
       "name_lat": "SNOW IMAGE KONSTANTIN",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7537,19 +7832,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1983916371",
+      "id": "401085370",
       "name_lat": "SNOW PRIDE YUMSUN",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "789636172",
-      "name_lat": "SNEZHAYA LUBOV LEONARDO",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7582,11 +7868,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1294950464",
+      "name_lat": "SNOW-WHITE MIRAKLE RAFAEL",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "764106595",
       "name_lat": "SNOWDROPYA NEPOBEDIMYI PETR I OT DIAMANT DREAM",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "380940101",
+      "name_lat": "SNOW SHADE YUN",
+      "name_ru": "",
+      "breed": "ХАСКИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7600,11 +7902,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1497325849",
+      "id": "991906436",
       "name_lat": "SNOW STAIL INGWION",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "316833254",
+      "name_lat": "SNOW SHADE ANIMUS",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "992966354",
+      "name_lat": "SNOW SHADE AYRO",
+      "name_ru": "",
+      "breed": "ХАСКИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7627,11 +7945,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1418679557",
-      "name_lat": "SNOW SHADE TENGRI- TAG",
+      "id": "1792389335",
+      "name_lat": "SNOW SHADE TENGRI-TAG",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1666750273",
+      "name_lat": "SNOU MIREKL DJACK POT",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7645,11 +7971,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1620430661",
+      "id": "652036098",
       "name_lat": "SNOW SHINE STRONG MOVE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "429092276",
+      "name_lat": "SNEZHYI ANGEL EYGA",
+      "name_ru": "",
+      "breed": "СИБА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7676,6 +8010,15 @@
       "name_lat": "SNOW SHADE KYARA",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "927045259",
+      "name_lat": "S NEZHNY ZVER GUCCI",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7708,15 +8051,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1440819783",
-      "name_lat": "SNOU MIREKL AQUATORIYA N\\B",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1845441735",
       "name_lat": "SNEZHNAYA ISKRA EMMY",
       "name_ru": "",
@@ -7730,6 +8064,15 @@
       "name_lat": "SNEZHNAYA KOROLEVA IZ NEVSKOY TROYKI",
       "name_ru": "",
       "breed": "ШНАУЦЕР ОКРАС ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1958924261",
+      "name_lat": "S NEZHNY ZVER RIKI",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7780,10 +8123,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "140926992",
+      "id": "1258316229",
       "name_lat": "SNOW SHINE AGNESSA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7825,10 +8168,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1153185063",
+      "id": "1271100184",
       "name_lat": "SNOW STAIL ESCAPADE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7843,10 +8186,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "353859758",
+      "id": "983648247",
       "name_lat": "SNOW LIFE PAVLINA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7951,28 +8294,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "474667230",
-      "name_lat": "SNEZHNYY DRAKON ЖЕЛАННАЯ МОЯ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1022653960",
       "name_lat": "SNOW STAIL QUANTUM JUMP",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "968040825",
-      "name_lat": "SNEGIZI STAR USYPANNAYA ZHEMCHUGOM",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8014,24 +8339,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "125012956",
-      "name_lat": "SNEZHNIY VIHR IZ LAPLANDII KANIS",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "14215257",
-      "name_lat": "SNEZHNIY BARS IZ VOLSHEBNOGO LESA",
-      "name_ru": "",
-      "breed": "ГРЕЙХАУНД ИРЛАНДСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1570528935",
       "name_lat": "SNEZHNAYA CHAYKA ISTORIYA VTOROY LYUBVI",
       "name_ru": "",
@@ -8050,47 +8357,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1238972075",
-      "name_lat": "SNEZHNAYA KOROLEVA SANTA SAKURA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "778428532",
-      "name_lat": "SNEGIZI STAR FORTIKO",
-      "name_ru": "",
-      "breed": "ВОЛЬФХАУНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "88388316",
+      "id": "1486161273",
       "name_lat": "SNOW SHINE ORION OF NORTHERN SKY",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "204040529",
-      "name_lat": "SNOW STAIL TOFFEE",
+      "id": "1099341206",
+      "name_lat": "SNOW SHINE VANESSA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "854988350",
-      "name_lat": "SNOW IMAGE SIMPLY RED",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8104,11 +8383,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1099206980",
-      "name_lat": "SNEZHA SIYANIE SEVERA",
+      "id": "1780231544",
+      "name_lat": "SNEZHNOST SIMFONIA ANGEL OF ALASKA",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "МАЛАМУТ",
       "total_shows": 1,
       "competition_dog_id": null
     }

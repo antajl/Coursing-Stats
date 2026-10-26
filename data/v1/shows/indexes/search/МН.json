@@ -1,0 +1,41 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "МН",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "409966031",
+      "name_lat": "МНОГО НЕЖНОСТИ С ТОБОЙ ПОЛИНА",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1631549052",
+      "name_lat": "МНЕМОСИНА СИМФОНИЯ БУРИ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "192026898",
+      "name_lat": "МНА САНТО'С УРСА АМБЭР РЕЙНА",
+      "name_ru": "",
+      "breed": "ДЕЛЬ'ЭТНА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1178070348",
+      "name_lat": "МНА САНТО'С УВЕ МАРКУС",
+      "name_ru": "",
+      "breed": "ЧИРНЕКО ДЕЛЬ'ЭТНА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

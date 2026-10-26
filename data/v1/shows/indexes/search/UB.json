@@ -1,15 +1,33 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UB",
-  "count": 17,
+  "count": 20,
   "dogs": [
     {
-      "id": "268143951",
+      "id": "647451137",
+      "name_lat": "UBOYNAYA SILA IZ MARIALGRADA",
+      "name_ru": "УБОЙНАЯ СИЛА ИЗ МАРИАЛГРАДА",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1430726851",
       "name_lat": "UBER BLACK S TAINSTVENNOGO OSTROVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1495081769",
+      "name_lat": "U-BOAT KISSES OF FORTUNE",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -22,21 +40,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "262189032",
+      "id": "1485528959",
       "name_lat": "UBERTA TRAMANTE D'AMORE S NEVSKOI VOLNY",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "699139748",
-      "name_lat": "UBOYNAYA SILA IZ MARIALGRADA",
+      "id": "1925105491",
+      "name_lat": "UBERRIMA CORDI RECTRIX",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -76,6 +94,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "684090794",
+      "name_lat": "U-BANDIT",
+      "name_ru": "",
+      "breed": "СЕТТЕР АНГЛИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "734009842",
       "name_lat": "UBOYNAYA SILA NEBES",
       "name_ru": "",
@@ -85,12 +112,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1925105491",
-      "name_lat": "UBERRIMA CORDI RECTRIX",
+      "id": "1996780861",
+      "name_lat": "U-BANDIT",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed": "АНГЛИЙСКИЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "653137945",
+      "name_lat": "UBI SOL ORITUR VENIAMIN",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -107,15 +143,6 @@
       "name_lat": "UBAY S SEVERNOGO URALA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "653137945",
-      "name_lat": "UBI SOL ORITUR VENIAMIN",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null

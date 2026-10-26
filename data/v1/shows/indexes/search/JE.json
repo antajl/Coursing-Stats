@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "JE",
-  "count": 631,
+  "count": 645,
   "dogs": [
     {
       "id": "804113822",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "breed_en": "RHODESIAN RIDGEBACK",
-      "total_shows": 199,
+      "total_shows": 223,
       "competition_dog_id": null
     },
     {
@@ -18,7 +18,7 @@
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -31,6 +31,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1654113200",
+      "name_lat": "JEFELI SOUL SALLI",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "576194555",
       "name_lat": "JEDI SANSE LYUSILIYA",
       "name_ru": "",
@@ -40,28 +49,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1654113200",
-      "name_lat": "JEFELI SOUL SALLI",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
       "id": "877980746",
       "name_lat": "JE T'AIME DES FLAMMES DE MARS",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 22,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "727412140",
+      "id": "1632045225",
       "name_lat": "JEWERLY S ZELENOGO GORODA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
       "total_shows": 28,
       "competition_dog_id": null
@@ -157,10 +157,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "733869946",
+      "id": "1360249254",
       "name_lat": "JE TAIME CANE FORTUNA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -202,39 +202,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "284459281",
+      "id": "964164012",
       "name_lat": "JET TRAIL EBERGARD",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "610273840",
-      "name_lat": "JET TRAIL USSURI",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1382701029",
-      "name_lat": "JENEVIEVA KATI PARIZHSKAYA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "400775700",
-      "name_lat": "JEWEL SNOW EVRIK",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "ST. BERNARD LONG HAIRED",
-      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -243,16 +216,77 @@
       "name_ru": "",
       "breed": "БОСЕРОН",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1269454798",
+      "id": "1549948820",
+      "name_lat": "JEFELI SOUL HONEY LOVE",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1143170760",
+      "name_lat": "JEAN DARK ZUMMERTIME MAGIC",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1862564101",
+      "name_lat": "JET TRAIL USSURI",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "400775700",
+      "name_lat": "JEWEL SNOW EVRIK",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "ST. BERNARD LONG HAIRED",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "14748609",
+      "name_lat": "JENEVIEVA KATI PARIZHSKAYA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023659392",
+      "name_lat": "JENEVA BORN TO BE FREE",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР",
+      "breed_en": "LEONBERGER",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "971469924",
+      "name_lat": "JENEVIEVA SNOU TAUN OF SUNNY GLEN",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1209942619",
       "name_lat": "JETAIME TALHI MORELLA CATALONA",
       "name_ru": "",
-      "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "breed": "СОЛЬЮ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -283,12 +317,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1023659392",
-      "name_lat": "JENEVA BORN TO BE FREE",
+      "id": "1520498668",
+      "name_lat": "JET SET TOP RUSSELL",
       "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР",
-      "breed_en": "LEONBERGER",
-      "total_shows": 19,
+      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
+      "breed_en": "PARSON RUSSELL TERRIER",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -310,12 +344,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1699173107",
+      "id": "669694980",
+      "name_lat": "JETSTONE YANKISS FAST AND AGILE",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "258064730",
       "name_lat": "JEDI SANSE DIAS PASSION",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 40,
+      "total_shows": 43,
       "competition_dog_id": null
     },
     {
@@ -324,25 +367,34 @@
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "BIEWER TERRIER",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1269345087",
+      "id": "115745304",
       "name_lat": "JERRY LEE TEAM CARRERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1052375148",
-      "name_lat": "JEAN DARK ZUMMERTIME MAGIC",
+      "id": "1253262075",
+      "name_lat": "JENEVIEVA FROM HOUSE OF BLACKS",
       "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "257938331",
+      "name_lat": "JEWEL TOWER ULTRA FIRE OF MY SOUL",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -351,7 +403,7 @@
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -364,12 +416,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1472143050",
-      "name_lat": "JENEVIEVA SNOU TAUN OF SUNNY GLEN",
+      "id": "594259637",
+      "name_lat": "JEWEL TOWER UMUT VINER FO YU",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 13,
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -382,30 +433,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1549948820",
-      "name_lat": "JEFELI SOUL HONEY LOVE",
+      "id": "1009787101",
+      "name_lat": "JERAR",
       "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "669694980",
-      "name_lat": "JETSTONE YANKISS FAST AND AGILE",
+      "id": "723554461",
+      "name_lat": "J-ENERGY LIMITED EDITION",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "SHETLAND SHEEPDOG",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1877740605",
-      "name_lat": "JEAN DE LAFONTAIN",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 24,
+      "breed": "С СОЛЬЮ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -414,34 +454,52 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "684072938",
+      "id": "25818170",
+      "name_lat": "JETAIME TALHI MORELLA CATALONIA",
+      "name_ru": "",
+      "breed": "СОЛЬЮ",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "542155360",
+      "name_lat": "JEAN DE LAFONTAIN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "247490418",
+      "name_lat": "JERMINAL MISTY SHOW MAKER",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1968122427",
       "name_lat": "JEYN OT NEVSKOGO HOBBITA",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1253262075",
-      "name_lat": "JENEVIEVA FROM HOUSE OF BLACKS",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1097465699",
+      "id": "353372472",
       "name_lat": "JEAN FILLIOX",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 22,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -463,15 +521,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1520498668",
-      "name_lat": "JET SET TOP RUSSELL",
-      "name_ru": "",
-      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
-      "breed_en": "PARSON RUSSELL TERRIER",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1780530",
       "name_lat": "JET TRAIL ERDENETTA",
       "name_ru": "",
@@ -490,21 +539,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "536242730",
+      "name_lat": "JET TRAIL VIDJAIA",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "715245183",
       "name_lat": "JERMINAL MISTY VILLEROY BENJAMIN",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "247490418",
-      "name_lat": "JERMINAL MISTY SHOW MAKER",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -517,19 +566,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1829780761",
+      "id": "643688118",
       "name_lat": "JENOL QUAINT TOY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "646104396",
+      "id": "1643494185",
       "name_lat": "JEDI SANSE OLIMPIA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 39,
       "competition_dog_id": null
@@ -544,10 +593,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "931380758",
+      "id": "659484303",
       "name_lat": "JE SUIS UNE STAR ANETT IZ GRADA KATERINY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -577,6 +626,15 @@
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
       "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
+      "id": "590571772",
+      "name_lat": "JEWERLY PLACE BORN TO WIN",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -622,15 +680,6 @@
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "25818170",
-      "name_lat": "JETAIME TALHI MORELLA CATALONIA",
-      "name_ru": "",
-      "breed": "СОЛЬЮ",
-      "breed_en": "SCHNAUZER P-S",
-      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -697,6 +746,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "257925190",
+      "name_lat": "JEMCHUJINA CHERNAYA YUVETA MIREIL",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "77319886",
       "name_lat": "JERMINAL MISTY YACOBS MONARCH",
       "name_ru": "",
@@ -706,19 +764,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "404947468",
+      "id": "1741604472",
       "name_lat": "JE T'EME FOR RUSSIAN FIELD",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1455690735",
+      "id": "862760168",
       "name_lat": "JERRI LEE TEAM CARRERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -739,6 +797,15 @@
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "35031739",
+      "name_lat": "JEFELI SOUL KHARLEY",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -773,6 +840,15 @@
       "name_lat": "JEROME",
       "name_ru": "",
       "breed": "НОРВИЧ СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1568649073",
+      "name_lat": "JESSICA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -823,6 +899,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "818569686",
+      "name_lat": "JEFELI SOUL KHOLLI",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "874888919",
       "name_lat": "JEREMI ANGELIC NATURE",
       "name_ru": "",
@@ -832,30 +917,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "818569686",
-      "name_lat": "JEFELI SOUL KHOLLI",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "543872795",
       "name_lat": "JENTLEMAN JIM DOWN THE HILL",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "590571772",
-      "name_lat": "JEWERLY PLACE BORN TO WIN",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -900,7 +967,7 @@
       "name_ru": "",
       "breed": "ST. BERNARD SHORT-",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -922,6 +989,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1331191104",
+      "name_lat": "JEROM KIM RENOLD",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "471878613",
       "name_lat": "JETSETTER LAMBORGHINI DIABLO",
       "name_ru": "",
@@ -937,15 +1013,6 @@
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1331191104",
-      "name_lat": "JEROM KIM RENOLD",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -967,6 +1034,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "942790741",
+      "name_lat": "JENOL MOONLIGHT SONATA",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
       "id": "364610251",
       "name_lat": "JELANY RED REYA",
       "name_ru": "",
@@ -976,21 +1052,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1570737238",
+      "name_lat": "Jean-Jacques Rousseau Iriss Delux",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1212865250",
       "name_lat": "JE T'AIME VOM KLINOV HOF",
       "name_ru": "",
       "breed": "ХОВАВАРТ",
       "breed_en": "HOVAWART",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "257938331",
-      "name_lat": "JEWEL TOWER ULTRA FIRE OF MY SOUL",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1039,6 +1115,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1849002463",
+      "name_lat": "JET BLACK OT BASTINDY",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1561969759",
       "name_lat": "JET BUTTERFLY BRETONIQUE STYLE",
       "name_ru": "",
@@ -1057,39 +1142,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "3750995",
-      "name_lat": "JET BLACK OT BASTINDY",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1570737238",
-      "name_lat": "Jean-Jacques Rousseau Iriss Delux",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "305044124",
+      "id": "135449913",
       "name_lat": "JEDI SANSE DAENERYS",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "257925190",
-      "name_lat": "JEMCHUJINA CHERNAYA YUVETA MIREIL",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1099,6 +1157,14 @@
       "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "622840378",
+      "name_lat": "JERMINAL MISTY NUTELLA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1120,19 +1186,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "622840378",
-      "name_lat": "JERMINAL MISTY NUTELLA",
+      "id": "1349442622",
+      "name_lat": "JEANFREY ZOLOTAYA ORKHIDEYA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 15,
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "264606200",
+      "id": "1341202712",
+      "name_lat": "JEDI SANSE AKKORD",
+      "name_ru": "",
+      "breed": "YORKSHIRE TERRIER",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "672791359",
+      "name_lat": "JERMINAL MISTY GALAXY",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1893332253",
       "name_lat": "JET TRAIL KHARTIYA",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1147,19 +1229,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1317136184",
+      "id": "1534119113",
       "name_lat": "JENNY SHOW KANADA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "267018267",
+      "id": "535375186",
       "name_lat": "JECKS PARAG TILLADEN TARMARRU",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1183,15 +1265,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1218621189",
-      "name_lat": "JEANFREY ZOLOTAYA ORKHIDEYA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "246128236",
       "name_lat": "JEWEL SHINES IN MOONLIGHT",
       "name_ru": "",
@@ -1201,21 +1274,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "35031739",
-      "name_lat": "JEFELI SOUL KHARLEY",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "114848793",
       "name_lat": "JESS LIMIRLE KATARINA BIANCA",
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1785485910",
+      "name_lat": "JEDI SANSE ABSOLUTE WINNER",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1246,15 +1319,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1218790536",
-      "name_lat": "JENOL MOONLIGHT SONATA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 28,
-      "competition_dog_id": null
-    },
-    {
       "id": "1562773302",
       "name_lat": "JEROME",
       "name_ru": "",
@@ -1279,6 +1343,15 @@
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179524968",
+      "name_lat": "J'EN REVE ENCORE DES P'TITES OBSESSIONS",
+      "name_ru": "",
+      "breed": "МАЛАЯ ЛЬВИНАЯ СОБАКА",
+      "breed_en": "LITTLE LION DOG",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1309,10 +1382,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1149373001",
+      "id": "1959052102",
       "name_lat": "JENOL NEON BLUE DIAMOND",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1372,6 +1445,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "391989808",
+      "name_lat": "JEWERLY PLACE VAN PICE LYFFI",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1231801323",
       "name_lat": "JETTA FROM CANIS STAR",
       "name_ru": "",
@@ -1381,10 +1462,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1917700848",
+      "id": "1598621474",
       "name_lat": "JE T’AIME ASTON MARTIN",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1404,7 +1485,7 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "YORKSHIRE TERRIER",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -1417,6 +1498,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "44209725",
+      "name_lat": "JENEVA LAMIR",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "782851271",
       "name_lat": "JELANY RED PATRICIA LORI",
       "name_ru": "",
@@ -1426,13 +1516,22 @@
       "competition_dog_id": null
     },
     {
-      "id": "44209725",
-      "name_lat": "JENEVA LAMIR",
+      "id": "414967208",
+      "name_lat": "JEWEL ALEKSANDRINA DESERT FELKON",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 18,
       "competition_dog_id": null
+    },
+    {
+      "id": "10582",
+      "name_lat": "JENEVIEVA S KNJAZHESKOGO DVORA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": 10582
     },
     {
       "id": "1918920988",
@@ -1441,15 +1540,6 @@
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "IRISH RED SETTER",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "414967208",
-      "name_lat": "JEWEL ALEKSANDRINA DESERT FELKON",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "BEAGLE",
-      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1480,12 +1570,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "40025738",
-      "name_lat": "JENEVIEVA S KNJAZHESKOGO DVORA",
+      "id": "31341334",
+      "name_lat": "JETAIME IZ DOMA CHEKMANOVYKH",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ /",
+      "breed": "HIGHLAND WHITE",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "552417971",
+      "name_lat": "JE T'AIME LA VIE",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "757449745",
+      "name_lat": "JE M'APELLE KLEO",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "925875614",
+      "name_lat": "JEDI SANSE BLENFIL",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -1507,10 +1623,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "4989855",
+      "id": "655253774",
       "name_lat": "JEFELI SOUL AYSBERG",
       "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ /",
+      "breed": "ВОЛЬФШПИЦ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1525,28 +1641,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1472886726",
+      "id": "1147768700",
       "name_lat": "JEMCHUJINA CHERNAYA RONEE NIGELLA ELOIZ",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "31341334",
-      "name_lat": "JETAIME IZ DOMA CHEKMANOVYKH",
-      "name_ru": "",
-      "breed": "HIGHLAND WHITE",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "291837653",
+      "id": "62409466",
       "name_lat": "JENOL MICHELANGELO",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -1570,30 +1677,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1662481202",
-      "name_lat": "JE T'AIME LA VIE",
+      "id": "943606888",
+      "name_lat": "JEANETTE STYLE OF MARY",
       "name_ru": "",
-      "breed": "ПЕКИНЕС /",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "757449745",
-      "name_lat": "JE M'APELLE KLEO",
+      "id": "120209813",
+      "name_lat": "JEWEL TOWER MY FAVORITE BLUES NIGHT CITY",
       "name_ru": "",
-      "breed": "ПЕКИНЕС",
+      "breed": "СИЛИХЕМ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "925875614",
-      "name_lat": "JEDI SANSE BLENFIL",
+      "id": "1283365365",
+      "name_lat": "JEFF BEZOS",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 31,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1606,10 +1713,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1224155946",
+      "id": "1473137531",
       "name_lat": "JEAN JACQUES",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -1624,21 +1731,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "952528725",
+      "id": "1096418152",
       "name_lat": "JEAN JEAN MISHEL SIBIRSKIY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "937971088",
+      "id": "1253521777",
       "name_lat": "JEREMY BLACK-TREASURE DOGS",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "SWISS MOUNTAIN DOG БУЛЬДОГ",
       "breed_en": "BULLDOG",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1898249821",
+      "name_lat": "JEFFERSON IZ TERLETSKOY DUBRAVY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1660,48 +1776,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1898249821",
-      "name_lat": "JEFFERSON IZ TERLETSKOY DUBRAVY",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1283365365",
-      "name_lat": "JEFF BEZOS",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
       "id": "91596581",
       "name_lat": "JEYSI DROP OF SUN",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1392494881",
+      "id": "1820997756",
       "name_lat": "JET TRAIL UDGARS",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "121172114",
-      "name_lat": "JEWEL TOWER MY FAVORITE BLUES NIGHT CITY",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1728,7 +1817,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1786,12 +1875,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1596750863",
+      "name_lat": "JEDI SANSE KALIPSO",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "1698161268",
       "name_lat": "JEZZI GODDESS",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1472272532",
+      "name_lat": "JEWEL OF SEA BASILEVS",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "542920419",
+      "name_lat": "JENOL MOZART",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1813,10 +1929,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "132790346",
+      "id": "676776057",
+      "name_lat": "JEY STYLE ERMAK",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1150367254",
       "name_lat": "JELANNA IZ IMPERII LARIEL",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1831,10 +1956,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1550473248",
+      "id": "301235957",
       "name_lat": "JET TRAIL FAVORITKA",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1894,15 +2019,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "943606888",
-      "name_lat": "JEANETTE STYLE OF MARY",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1069103676",
       "name_lat": "JELANY RED CEFANIA РОМАНИ РОЯЛ КИП МИ ИН",
       "name_ru": "",
@@ -1921,12 +2037,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "320567183",
+      "id": "579155902",
       "name_lat": "JERMINAL MISTY NARNIA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1525283088",
+      "name_lat": "JETSETTER SAMBUCA ISOLABELLA",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1975,12 +2100,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "98273259",
-      "name_lat": "JEWEL OF SEA BASILEVS",
+      "id": "459497830",
+      "name_lat": "JETSETTER TRUTH IS OUT THERE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 10,
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
+      "breed_en": "IRISH RED SETTER",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1993,6 +2118,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1574820157",
+      "name_lat": "JETSETTER SIR FRANCIS DRAKE",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
+      "breed_en": "IRISH RED SETTER",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "378157442",
       "name_lat": "JEDI SANSE NICE MANIFIK PASSION CHELENTANO",
       "name_ru": "",
@@ -2002,10 +2136,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1099970328",
+      "id": "647267750",
       "name_lat": "JERRY LEMBERG DOMINANT DOG",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -2026,15 +2160,6 @@
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1596750863",
-      "name_lat": "JEDI SANSE KALIPSO",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -2083,21 +2208,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "38167746",
-      "name_lat": "JENOL MOZART",
+      "id": "1282930042",
+      "name_lat": "JEORGES VELIKOLEPNYI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "449136632",
-      "name_lat": "JEORGES VELIKOLEPNYI",
+      "id": "1800271712",
+      "name_lat": "JEREMY LORD OF THE RING",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2106,7 +2231,7 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2128,12 +2253,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1646805299",
+      "name_lat": "JET SET LEX FATI",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1681673436",
       "name_lat": "JEFELI SOUL SIRIUS ZAEL",
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "930354756",
+      "name_lat": "JERRY-LI",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2146,10 +2289,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1890729394",
-      "name_lat": "JET SET LEX FATI",
+      "id": "1329474932",
+      "name_lat": "JETEM ASTON MARTIN",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2164,6 +2307,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1921635340",
+      "name_lat": "JEDI SANSE BLOOMING BOUQUET",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1642286931",
       "name_lat": "JENEVIEVA SUN DELIGHT",
       "name_ru": "",
@@ -2173,28 +2325,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1318773989",
+      "id": "1898802285",
+      "name_lat": "JEAN-PAUL CRYSTAL'S SMIT",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "215205496",
       "name_lat": "JESSICA NEW STAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1215826038",
+      "id": "796223957",
       "name_lat": "JENEVA VON HAUS NOKS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "676776057",
-      "name_lat": "JEY STYLE ERMAK",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2227,6 +2379,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "821652968",
+      "name_lat": "JENOL MARIGOLD",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "930534914",
+      "name_lat": "JERMINAL MISTY BITCOIN ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1121831784",
       "name_lat": "JEWELRY FLYUORIT",
       "name_ru": "",
@@ -2236,12 +2406,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1574820157",
-      "name_lat": "JETSETTER SIR FRANCIS DRAKE",
+      "id": "334119596",
+      "name_lat": "J-ENERGY VON SHINING STAR EMPIRE",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
-      "breed_en": "IRISH RED SETTER",
-      "total_shows": 5,
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -2251,15 +2421,6 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "536242730",
-      "name_lat": "JET TRAIL VIDJAIA",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2326,15 +2487,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "526500477",
-      "name_lat": "JETSETTER TRUTH IS OUT THERE",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
-      "breed_en": "IRISH RED SETTER",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1573620426",
       "name_lat": "JERMINAL MISTY BIG BEN",
       "name_ru": "",
@@ -2344,19 +2496,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1525283088",
-      "name_lat": "JETSETTER SAMBUCA ISOLABELLA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1862306854",
+      "id": "907561730",
       "name_lat": "JESUS DEL POZO OLIGARCHIA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -2389,12 +2532,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1898802285",
-      "name_lat": "JEAN-PAUL CRYSTAL'S SMIT",
+      "id": "1946567467",
+      "name_lat": "JEAN",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "СИБА / SHIBA",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2404,15 +2546,6 @@
       "breed": "БИГЛЬ РЫЖИЙ БРЕТОНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "227245373",
-      "name_lat": "JEREMY LORD OF THE RING",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2488,10 +2621,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "223536409",
+      "id": "1952183365",
       "name_lat": "JEMCHUJINA CHERNAYA BEATA BERTINA",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ СИЛКИ ТЕРЬЕР",
+      "breed": "ШЕЛКОВИСТЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2515,21 +2648,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1547764614",
+      "id": "1600827084",
       "name_lat": "JEWELBOX BONNIE JET-SETTER",
       "name_ru": "",
-      "breed": "БЕДЛИНГТОН ТЕРЬЕР /",
+      "breed": "BEDLINGTON TERRIER",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "930534914",
-      "name_lat": "JERMINAL MISTY BITCOIN ( )",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2578,19 +2702,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1596505762",
+      "id": "577294964",
       "name_lat": "JEANETTE RAVISSANTE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1392010282",
+      "id": "903993467",
       "name_lat": "JERMINAL MISTY INSIGNIA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2632,10 +2756,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "709527338",
+      "id": "1245870188",
       "name_lat": "JESSICA JONES BONIMO",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2659,15 +2783,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "930354756",
-      "name_lat": "JERRY-LI",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1051520963",
       "name_lat": "JEWEL ALEKSANDRINA GRAN TORINO",
       "name_ru": "",
@@ -2677,10 +2792,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "318663582",
+      "id": "917328551",
       "name_lat": "JEDI SANSE LIBERTY",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2762,15 +2877,14 @@
       "name_lat": "JEMCHUZHINA JULIANA POTERE DI GRAZIA",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1946567467",
-      "name_lat": "JEAN",
+      "id": "1386116372",
+      "name_lat": "JESSICA",
       "name_ru": "",
-      "breed": "СИБА / SHIBA",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2826,7 +2940,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -2848,10 +2962,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "138246564",
+      "id": "1309131961",
       "name_lat": "JEWEL OF SEA BALLERINA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2893,6 +3007,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1723431203",
+      "name_lat": "JEWERLY PLACE BROOKLYN NINE-NINE",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1935931181",
       "name_lat": "JERMINAL MISTY HAPPY",
       "name_ru": "",
@@ -2911,15 +3033,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "821652968",
-      "name_lat": "JENOL MARIGOLD",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "183845149",
       "name_lat": "JERMINAL MISTY DEEP PURPLE",
       "name_ru": "",
@@ -2929,10 +3042,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1218705230",
+      "id": "1132392042",
       "name_lat": "JE T'AIME ASTON MARTIN",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2956,19 +3069,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "150757861",
+      "id": "1010430757",
       "name_lat": "JENOL INDIAN ROZE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1636754393",
+      "id": "219206772",
       "name_lat": "JESSICA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3010,28 +3123,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "774906581",
+      "id": "485170920",
       "name_lat": "JET TRAIL FREYD",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1698261784",
+      "id": "1409869885",
       "name_lat": "JETSETTER WOOD NYMPH",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР /",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "747258312",
+      "id": "424199362",
+      "name_lat": "JENEVA VOM ARRIAN HOF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "244953889",
       "name_lat": "JE TAIME FROM STAFFSPASE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3046,12 +3168,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1217809337",
+      "id": "862085890",
       "name_lat": "JES SOUL OF GRYFFINDOR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "340804618",
+      "name_lat": "JEDI SANSE BEVELINA AMALIYA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3070,15 +3201,6 @@
       "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "454415862",
-      "name_lat": "JETEM ASTON MARTIN",
-      "name_ru": "",
-      "breed": "СПРИНГЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3104,8 +3226,7 @@
       "name_lat": "JET TRAIL URSULA",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3149,15 +3270,6 @@
       "name_lat": "JERRY-LI",
       "name_ru": "",
       "breed": "BELGIAN SHEPHERD",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1028885286",
-      "name_lat": "JESSICA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3258,7 +3370,7 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3280,10 +3392,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "232176269",
+      "id": "228566768",
       "name_lat": "JET TRAIL SHAMAN",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3298,10 +3410,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1653205564",
+      "id": "780253785",
       "name_lat": "JEFFERSON",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3320,15 +3432,6 @@
       "name_lat": "JEANNETTE LEE",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1568649073",
-      "name_lat": "JESSICA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3361,15 +3464,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "672791359",
-      "name_lat": "JERMINAL MISTY GALAXY",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1106355531",
       "name_lat": "JELANNII DAR",
       "name_ru": "",
@@ -3379,10 +3473,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "989411985",
+      "id": "1230661065",
+      "name_lat": "JETAIME VON DEUTSCHEM BODEN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "782949650",
       "name_lat": "JENA VOM NEO REICH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3406,15 +3509,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "119478029",
-      "name_lat": "JEFF BEZOS",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "631649089",
       "name_lat": "JEAN PAUL",
       "name_ru": "",
@@ -3433,10 +3527,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "774367285",
+      "id": "448164826",
       "name_lat": "JENOL HARVEST MOON",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3478,10 +3572,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "214361682",
+      "id": "212937257",
       "name_lat": "JETTE VOM HAUS CERBA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3505,11 +3599,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "943624176",
-      "name_lat": "JESSICA",
+      "id": "1932860496",
+      "name_lat": "JERAR",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "КИНГ ЧАРЛЬЗ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3523,10 +3616,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "21796283",
+      "id": "1800868066",
       "name_lat": "JENNI J.LO FIERY DRAGON",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3541,10 +3634,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1363474618",
+      "id": "1078335853",
       "name_lat": "JETTYSPOOF’S SPARKLING BOLLINGER",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3622,15 +3715,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "416423218",
-      "name_lat": "JETAIME VON DEUTSCHEM BODEN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1770278515",
       "name_lat": "JESSIE TEST OF LOVE",
       "name_ru": "",
@@ -3682,6 +3766,14 @@
       "breed": "С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "595318237",
+      "name_lat": "JEAN PIER MINI DOG",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3802,10 +3894,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "805338534",
+      "id": "312715237",
       "name_lat": "JENA VOM NEO RAIH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3838,10 +3930,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "850289432",
+      "id": "1750174781",
       "name_lat": "JE T'AIME",
       "name_ru": "",
-      "breed": "Ротвейлер /",
+      "breed": "Ротвейлер",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3901,12 +3993,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1479276321",
-      "name_lat": "JENEVA VOM ARRIAN HOF",
+      "id": "575513698",
+      "name_lat": "JERMINAL MISTY GOTLAND",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3943,15 +4034,6 @@
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "340804618",
-      "name_lat": "JEDI SANSE BEVELINA AMALIYA",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "YORKSHIRE TERRIER",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -4018,10 +4100,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1976514465",
+      "id": "1196966652",
       "name_lat": "JENNIFER ADELLY",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4054,10 +4136,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1877039962",
+      "id": "28361126",
       "name_lat": "JEMCHUJINA VIKONTESSI",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4067,6 +4149,15 @@
       "name_lat": "JERAR",
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1911846114",
+      "name_lat": "JE T'AIME IL VENTO DELLA VITA",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4090,15 +4181,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "142660718",
-      "name_lat": "JE T'AIME IL VENTO DELLA VITA",
-      "name_ru": "",
-      "breed": "ДЛИННОШЁРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1146524875",
       "name_lat": "JETSETTER WILD SWAN",
       "name_ru": "",
@@ -4117,10 +4199,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "626378299",
+      "id": "33196564",
       "name_lat": "JESSICA MIRIAM DREW",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4189,37 +4271,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1897135267",
+      "id": "779905411",
       "name_lat": "JEOFFREY DE PEYRAC",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЁРНЫЕ, ЧЁРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЕРНЫЕ, ЧЕРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "334328448",
+      "id": "1009902895",
       "name_lat": "JENTLEMAN JIM DOWN THE HIL",
       "name_ru": "",
-      "breed": "ЛАБРАДОРРЕТРИВЕР/",
+      "breed": "ЛАБРАДОРРЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "174701327",
+      "id": "1354873171",
       "name_lat": "JETEM IZ FORTUNA MERDI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1667511167",
+      "id": "1254128458",
       "name_lat": "JERMINAL MISTY VINCENT,",
       "name_ru": "",
-      "breed": "ЛАБРАДОРРЕТРИВЕР/",
+      "breed": "ЛАБРАДОРРЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4297,6 +4379,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1213419553",
+      "name_lat": "JEAN-CLAUDE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1304699171",
       "name_lat": "JEWEL ALEKSANDRINA BAROLO",
       "name_ru": "",
@@ -4306,20 +4397,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "705657273",
+      "id": "340832644",
       "name_lat": "JERMINAL MISTY FORT KNOX",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1946998909",
+      "id": "303892662",
       "name_lat": "JESSY VON ALIQUANDO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1140032980",
+      "name_lat": "JEFELI SOUL SHERI",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -4446,15 +4545,6 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР МИХАИЛ ПЕРМЯКОВ",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "439263101",
-      "name_lat": "JEAN-CLAUDE",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4657,6 +4747,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1734568113",
+      "name_lat": "JESSICA BEAUTY",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1647173169",
       "name_lat": "JELE NOURA GIGI MI-HEL-ED SHOW",
       "name_ru": "",
@@ -4693,8 +4791,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1033591302",
-      "name_lat": "JEDI SANSE MAFIOZI- MIKE",
+      "id": "81677332",
+      "name_lat": "JEDI SANSE MAFIOZI-MIKE",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
       "breed_en": "",
@@ -4765,11 +4863,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1563701271",
-      "name_lat": "JEDI SANSE ABSOLUTE WINNER",
+      "id": "1975861524",
+      "name_lat": "JES GERMONT BARON",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4810,6 +4907,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1177047629",
+      "name_lat": "JENEVIEVE DE QUEEN OF LOVE",
+      "name_ru": "",
+      "breed": "LABRADOR RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "311720452",
       "name_lat": "JEWEL CHARM ZEYA",
       "name_ru": "",
@@ -4846,20 +4951,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "553515800",
+      "id": "890408534",
       "name_lat": "Jerales Show Toro",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1341202712",
-      "name_lat": "JEDI SANSE AKKORD",
+      "id": "1887147287",
+      "name_lat": "JEDI SANSE DARCY",
       "name_ru": "",
-      "breed": "YORKSHIRE TERRIER",
-      "breed_en": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4877,24 +4981,6 @@
       "name_lat": "JEAN RENO",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1213419553",
-      "name_lat": "JEAN-CLAUDE",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "300702487",
-      "name_lat": "JEAN-CLAUDE",
-      "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4927,10 +5013,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1046353864",
+      "id": "1730459367",
       "name_lat": "JENEVA",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4977,6 +5063,23 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ / GERMAN SPITZ MINIATURE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1337547627",
+      "name_lat": "JERRAR PHILIPPE OT BARBATSUTSY",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "SCHNAUZER BLACK",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1438279026",
+      "name_lat": "JESSICA CHANTILLY",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5044,15 +5147,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1337547627",
-      "name_lat": "JERRAR PHILIPPE OT BARBATSUTSY",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
-      "breed_en": "SCHNAUZER BLACK",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "345812537",
       "name_lat": "JETSETTER RIVERDANCE",
       "name_ru": "",
@@ -5116,10 +5210,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "501067761",
+      "id": "642730318",
       "name_lat": "JENEVIEVA SNOUTAUN OF SUNNY GLEN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5179,10 +5273,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1868845373",
+      "id": "1764966240",
       "name_lat": "JELERRAN’S SEVERUS SNAPE",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5197,10 +5291,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1785551961",
+      "id": "1348196804",
       "name_lat": "Jean Лайф Спринг Шизгара Элизабет Белла",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5215,10 +5309,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1956614501",
+      "id": "1760957176",
       "name_lat": "JETT FIRE ANGEL",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5269,20 +5363,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1469690091",
+      "id": "641997798",
       "name_lat": "JERMINAL MISTY INDIAN SUMMER",
       "name_ru": "",
-      "breed": "ИВЕР/",
+      "breed": "ИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1869859525",
+      "id": "174350009",
       "name_lat": "JEDI STAR WARS SOUL OF GRYFFINDOR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173983336",
+      "name_lat": "JENNIFER GREY OF ANGELOTTI",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "395694482",
+      "name_lat": "JE SUIS BELLE IZ VESTLANDII",
+      "name_ru": "",
+      "breed": "КЕЕСХУНД",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5332,15 +5442,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "595318237",
-      "name_lat": "JEAN PIER MINI DOG",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "784134844",
       "name_lat": "JENEVER DLYA BANDY GARRI",
       "name_ru": "",
@@ -5359,17 +5460,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "632618120",
+      "id": "349403382",
       "name_lat": "JERRI LEMBERG DOMINANT DOG",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1440746766",
-      "name_lat": "JELENA NOURA GIGI MI- HEL-ED SHOW",
+      "id": "449044770",
+      "name_lat": "JELENA NOURA GIGI MI-HEL-ED SHOW",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ / MALTESE",
       "breed_en": "",
@@ -5422,10 +5523,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "565696664",
+      "id": "1538108861",
       "name_lat": "JEMCHUG MINI BOY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5449,10 +5550,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "251652509",
+      "id": "1524135073",
       "name_lat": "JENNIFER IZ KOROLEVSKOGO ZAMKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5512,19 +5613,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922536481",
+      "id": "1211858301",
       "name_lat": "Je T’aime IL VENTO DELLA VITA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1442197000",
+      "id": "193689512",
       "name_lat": "JEWELRY TUTSI",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5620,10 +5721,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1124900475",
+      "id": "772430795",
       "name_lat": "JEWEL GORGEOUS",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5638,37 +5739,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "964836721",
-      "name_lat": "JEDI SANSE BLOOMING BOUQUET",
+      "id": "1819916328",
+      "name_lat": "JETAIME ZHIGAN",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1582238661",
-      "name_lat": "JEDI SANSE DARCY",
-      "name_ru": "",
-      "breed": "YORKSHIRE TERRIER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1757275488",
+      "id": "660692719",
       "name_lat": "JECK VON ALIQUANDO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1904202327",
+      "id": "1414335199",
       "name_lat": "JEWEL HERO OF",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5679,6 +5770,14 @@
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1835547410",
+      "name_lat": "JESS LIMIRLE PAULA CHRISTIE",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
       "total_shows": 1,
       "competition_dog_id": null
     }

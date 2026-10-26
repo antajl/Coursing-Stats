@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "KM",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "107033751",
+      "name_lat": "KMARIS'S DANS ORIANA WALTZ",
+      "name_ru": "",
+      "breed": "БРИАР",
+      "breed_en": "BRIARD",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "106895047",
+      "name_lat": "K-MARDA IZ RYABCHUKOVSKOGO SADA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

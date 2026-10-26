@@ -1,69 +1,78 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "NY",
-  "count": 79,
+  "count": 84,
   "dogs": [
     {
-      "id": "114635595",
+      "id": "1067533172",
       "name_lat": "NYITRAMENTI INNAMORAMENTO",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 35,
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
-      "id": "1240158334",
+      "id": "1659185314",
+      "name_lat": "NYITRAMENTI ULTIMATE GOAL",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "190203959",
       "name_lat": "NYITRAMENTI PRIMADONNA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "808572824",
-      "name_lat": "NYITRAMENTI ULTIMATE GOAL",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "12215573",
+      "id": "1355247034",
       "name_lat": "NYITRAMENTI BRITANNIA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "740910481",
+      "id": "351444729",
       "name_lat": "NYUSHANDRIYA SO SLAVJANSKOI DUSHOI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "732470329",
+      "id": "270488346",
       "name_lat": "NYU ART FREYA PESNYA LUBVI",
       "name_ru": "",
-      "breed": "Я ГОЛАЯ",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1028553906",
+      "id": "478841907",
       "name_lat": "NYITRAMENTI REAL HUNGARIAN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "564912886",
+      "name_lat": "NYITRAMENTI NORTHEAST",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -78,28 +87,45 @@
     {
       "id": "808728095",
       "name_lat": "NYUSHA OT LUKYANOVOY",
-      "name_ru": "",
+      "name_ru": "НЮША ОТ ЛУКЬЯНОВОЙ",
       "breed": "САМОЕД",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "515135545",
+      "id": "768313430",
       "name_lat": "NYITRAMENTI LEGENDA AUREA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1395874075",
-      "name_lat": "NYITRAMENTI MAGIC MIRROR",
+      "id": "504933070",
+      "name_lat": "NYITRAMENTI INNAMORATI OF RADWAY",
       "name_ru": "",
       "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1336023452",
+      "name_lat": "NYUSHKA-PLYUSHKA RELANSI",
+      "name_ru": "НЮШКА ПЛЮШКА РЕЛАНСИ",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "329109862",
+      "name_lat": "NYUSHA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -108,7 +134,16 @@
       "name_ru": "",
       "breed": "МУДИ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1330340324",
+      "name_lat": "NYITRAMENTI MAGIC MIRROR",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -121,12 +156,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "389130321",
+      "id": "1114063918",
       "name_lat": "NYITRAMENTI NEW MINSTREL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -139,21 +174,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "329109862",
-      "name_lat": "NYUSHA",
+      "id": "1791959975",
+      "name_lat": "NYITRAMENTI CAPPUCCINO CHOCO",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "1748101023",
-      "name_lat": "NYITRAMENTI CAPPUCCINO CHOCO",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 26,
+      "id": "1960234077",
+      "name_lat": "NYUD KHAPPINESS ARNOLD IGL KHARD",
+      "name_ru": "НЮД ХАППИНЕСС АРНОЛЬД ИГЛ ХАРД",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN HAIRLESS TERRIER",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -166,15 +201,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "504933070",
-      "name_lat": "NYITRAMENTI INNAMORATI OF RADWAY",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "68379305",
       "name_lat": "NYAR YUTLAND FIRE SHAYLA",
       "name_ru": "",
@@ -184,21 +210,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1504309135",
+      "id": "1656054263",
       "name_lat": "NYITRAMENTI MAHARAJAH",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1043879897",
-      "name_lat": "NYITRAMENTI NORTHEAST",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -220,21 +237,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1960234077",
-      "name_lat": "NYUD KHAPPINESS ARNOLD IGL KHARD",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN HAIRLESS TERRIER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1271185265",
       "name_lat": "NYMPHA GO MIKHEEVA ELENA",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 6,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1142110402",
+      "name_lat": "NYTRAMENTI PRIMADONNA",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -261,7 +278,7 @@
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -301,19 +318,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "559465314",
-      "name_lat": "NYASHA MALENKIY ANGELOCHEK",
+      "id": "253378908",
+      "name_lat": "NYU CEZARIO PALAZZI IZ KANEKSO",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1477216078",
+      "id": "559465314",
+      "name_lat": "NYASHA MALENKIY ANGELOCHEK",
+      "name_ru": "НЯША МАЛЕНЬКИЙ АНГЕЛОЧЕК",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1920214631",
       "name_lat": "NYTRAMENTINEW MINSTREL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -355,30 +380,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1336023452",
-      "name_lat": "NYUSHKA-PLYUSHKA RELANSI",
+      "id": "494243200",
+      "name_lat": "N-YASSIA NOSTALGIE DE FRANCE",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "834860517",
+      "id": "1767908202",
       "name_lat": "NYITRAMENTI LIONEL MESSI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "175787651",
+      "id": "1715684460",
       "name_lat": "NYITRAMENTINEW MINSTREL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "728926621",
+      "name_lat": "NYU EYFORIYA SHOU",
+      "name_ru": "НЬЮ ЭЙФОРИЯ ШОУ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -391,10 +425,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "693512455",
+      "id": "1111531",
       "name_lat": "NYUSHA",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -409,10 +443,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1402104999",
+      "id": "612077976",
       "name_lat": "NYITRAMENTI X-TRA BLAZE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -436,19 +470,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1140172394",
-      "name_lat": "NYU CEZARIO PALAZZI IZ KANEKSO",
-      "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1494140616",
+      "id": "898577293",
       "name_lat": "NYOKA VOM NORDISCHEN HOF",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -472,15 +497,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "728926621",
-      "name_lat": "NYU EYFORIYA SHOU",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1707702894",
       "name_lat": "NYOKO OSAKA",
       "name_ru": "",
@@ -490,10 +506,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "203058108",
+      "id": "344094225",
       "name_lat": "NYITRAMENTI INCH KENNETH",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -517,10 +533,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1832761541",
+      "id": "1693915341",
       "name_lat": "NYUSHANDRIYASO SLAVJANSKOI DUSHOI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -553,15 +569,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "75256797",
-      "name_lat": "NYTRAMENTI PRIMADONNA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1471909194",
       "name_lat": "NYSHAN-CHOPAN-ITI FATIRA",
       "name_ru": "",
@@ -571,10 +578,36 @@
       "competition_dog_id": null
     },
     {
+      "id": "364671176",
+      "name_lat": "NYU SHARM YAFINA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "761973334",
       "name_lat": "NYASHA",
       "name_ru": "",
       "breed": "DACHSHUND KANINCHEN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1508852048",
+      "name_lat": "N'yu Spejs",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1244436679",
+      "name_lat": "N'YU-MIRI",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -607,10 +640,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "741983834",
+      "id": "497259126",
       "name_lat": "NYSHA",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -634,10 +667,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "286516791",
-      "name_lat": "NYUSHA LIHTENSHTEIN- OST",
+      "id": "1800830532",
+      "name_lat": "NYU ART VEZUVIY",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "729529108",
+      "name_lat": "NYUSHA LIHTENSHTEIN-OST",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -688,19 +730,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "231524576",
-      "name_lat": "NYU ART VEZUVIY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1397855288",
+      "id": "814744006",
       "name_lat": "NYASHA PEOPLE'S DREAM",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -711,6 +744,14 @@
       "name_ru": "",
       "breed": "КОРОТКОШЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "60911664",
+      "name_lat": "NYU ART HALVA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

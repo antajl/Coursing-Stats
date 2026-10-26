@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "OХ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "499760889",
+      "name_lat": "O'ХАРА ВОСТОЧНАЯ КРАСОТКА",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1361364216",
+      "name_lat": "O'ХАРА ДЖУЛИЯ СТАЙЛ",
+      "name_ru": "",
+      "breed": "АКИТА АМЕРИКАНСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24836113",
+      "name_lat": "O'ХАРА СКАРЛЕТТ",
+      "name_ru": "",
+      "breed": "ШИ - ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

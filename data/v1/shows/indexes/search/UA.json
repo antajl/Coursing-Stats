@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UA",
-  "count": 28,
+  "count": 36,
   "dogs": [
     {
       "id": "101477479",
@@ -13,10 +13,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1631914819",
+      "id": "1937472401",
       "name_lat": "UAIT SIBOD IKEA FOREVER",
       "name_ru": "",
-      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -40,6 +40,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "494758253",
+      "name_lat": "U AMAROSO VERO BS RIURIK",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1044519201",
       "name_lat": "UAIT SIBOD SNOWFLAKE",
       "name_ru": "",
@@ -55,6 +64,24 @@
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1323987629",
+      "name_lat": "UAIT SIBOD FERRARY",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1338615355",
+      "name_lat": "U AMOROSO VERO BS RIURIK",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "breed_en": "ITALIAN SIGHTHOUND",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -81,7 +108,7 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "SHETLAND SHEEPDOG",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -103,21 +130,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "82708096",
-      "name_lat": "UAIT SIBOD FERRARY",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "42640418",
       "name_lat": "UAYT PRINCESS KENDY",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "194760568",
+      "name_lat": "U ARE MY DESTINY DE PASSERIPHANE",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -130,10 +157,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "141473581",
+      "id": "276646450",
       "name_lat": "UAIT SIBOD FLAGMAN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -202,6 +229,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "176753610",
+      "name_lat": "UŁAN MENGO CELEBRATION",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "896453694",
+      "name_lat": "U-ARKISH",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1826668315",
       "name_lat": "UALANTA LUNA",
       "name_ru": "",
@@ -220,12 +265,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1871434397",
+      "id": "1983108410",
       "name_lat": "UAYT",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "462224576",
+      "name_lat": "U-ASAHI BIMU",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "61480102",
+      "name_lat": "UAYLETT MEY",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1699955079",
+      "name_lat": "UAITI ROSS",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

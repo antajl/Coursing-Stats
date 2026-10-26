@@ -1,21 +1,30 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЩА",
-  "count": 9,
+  "count": 8,
   "dogs": [
     {
-      "id": "1504811628",
+      "id": "1698163798",
       "name_lat": "ЩАСЛАВ ГОЛДЕН ШОУ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ЩАСЛАВ ГОЛДЕН ШОУ",
+      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "1723336098",
+      "name_lat": "ЩАВЕЛИНКА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "61522709",
       "name_lat": "ЩАСТЬЕ МОЕ ФЕЛИКС ОТ ФОРЕСТ ГИРЦ",
-      "name_ru": "",
+      "name_ru": "ЩАСТЬЕ МОЕ ФЕЛИКС ОТ ФОРЕСТ ГИРЦ",
       "breed": "DACHSHUND",
       "breed_en": "",
       "total_shows": 3,
@@ -24,17 +33,8 @@
     {
       "id": "862188167",
       "name_lat": "ЩАОКИНГ ОЧАРОВАНИЕ СВЕТЛОЙ ЛУНЫ",
-      "name_ru": "",
+      "name_ru": "ЩАОКИНГ ОЧАРОВАНИЕ СВЕТЛОЙ ЛУНЫ",
       "breed": "Мопс",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1723336098",
-      "name_lat": "ЩАВЕЛИНКА",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -44,15 +44,6 @@
       "name_lat": "ЩАСТЬЕ ЕСТЬ ОТ ФОРЕСТ ГИРЦ",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1895141717",
-      "name_lat": "ЩА КАК ДАМ ИЗ ДОМА ТАШИ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null

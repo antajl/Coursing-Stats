@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "RM",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1613230719",
+      "name_lat": "R-MARS",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ (ДРАТХААР)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1416103646",
+      "name_lat": "R'MOLLI IZ DOMA KERIKI",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1480323183",
+      "name_lat": "R-MARS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1334496913",
+      "name_lat": "R'MARKUS DE LA CITE DES PLUIES (M)",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

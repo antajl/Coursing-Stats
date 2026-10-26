@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "КТ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1788151648",
+      "name_lat": "К-ТИЛЛЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1380659552",
+      "name_lat": "К'ТЕОНА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

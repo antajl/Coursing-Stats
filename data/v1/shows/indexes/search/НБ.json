@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "НБ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "781276872",
+      "name_lat": "Н-БУЧ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РУССКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "684348325",
+      "name_lat": "Н-БУЧ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "561036136",
+      "name_lat": "НББИ НЭЙЛ СЭНДИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА длинношерстный",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

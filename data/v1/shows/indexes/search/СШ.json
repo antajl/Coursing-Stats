@@ -1,15 +1,33 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "СШ",
-  "count": 12,
+  "count": 18,
   "dogs": [
+    {
+      "id": "1787827731",
+      "name_lat": "С-ШАЙЛА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
     {
       "id": "791969181",
       "name_lat": "СШЕИЛА ИНКАРНЕИШЕН СПИД",
-      "name_ru": "",
+      "name_ru": "СШЕИЛА ИНКАРНЕИШЕН СПИД",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "853337492",
+      "name_lat": "С-ШАХ ОФ ВИСТОРИ С КРАЙНЕГО СЕВЕРА",
+      "name_ru": "",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -22,21 +40,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1418688617",
+      "id": "598847768",
       "name_lat": "СШУМАХЕР МИХАЭЛЬ",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "name_ru": "СШУМАХЕР МИХАЭЛЬ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "603793947",
-      "name_lat": "СШИНИНГ ФОРСЕ ЖУ- ШОУ",
-      "name_ru": "",
+      "id": "773004653",
+      "name_lat": "СШИНИНГ ФОРСЕ ЖУ-ШОУ",
+      "name_ru": "СШИНИНГ ФОРСЕ ЖУ-ШОУ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1152723293",
+      "name_lat": "С'ШИНСЭЙ СО ЗВЕЗДНОГО ПУТИ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -45,6 +72,14 @@
       "name_ru": "",
       "breed": "СОБАКА / CHINESE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "473169370",
+      "name_lat": "СШОУ ВАЙТ ЛЕМБ ГЛЮКОЗА",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -67,6 +102,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1644007274",
+      "name_lat": "СШИНИНГ ФОРСЕ ЖУЛЬ ВЕРН",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "242567176",
       "name_lat": "СШИНА ЧОКО ПАЙ",
       "name_ru": "",
@@ -76,9 +119,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1087287243",
+      "name_lat": "С ШАРОМСК",
+      "name_ru": "",
+      "breed": "РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1039098638",
       "name_lat": "СШАЙНИНИГ ХОНЕЙ РОУЗ",
-      "name_ru": "",
+      "name_ru": "СШАЙНИНИГ ХОНЕЙ РОУЗ",
       "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,

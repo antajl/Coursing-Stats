@@ -1,13 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЗМ",
-  "count": 16,
+  "count": 17,
   "dogs": [
     {
-      "id": "1435661156",
+      "id": "1011939361",
       "name_lat": "ЗМЕЙ ГОРЫНЫЧ С МАГНИТНОЙ ГОРЫ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -42,17 +42,17 @@
     {
       "id": "1429243407",
       "name_lat": "ЗМЕЙ ИЗ САГИ О ГАРДАРИКЕ",
-      "name_ru": "",
+      "name_ru": "ЗМЕЙ ИЗ САГИ О ГАРДАРИКЕ",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1526899189",
+      "id": "286395272",
       "name_lat": "ЗМАРАГД АЙО",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -67,19 +67,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "765078321",
+      "id": "1211467724",
       "name_lat": "ЗМАРАГД АЙО",
       "name_ru": "",
-      "breed": "ХАСКИ /",
+      "breed": "ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1187735347",
+      "id": "1192359031",
       "name_lat": "ЗМИЛА С РУССКОГО БАЙКАЛА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -94,10 +94,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1572789403",
+      "id": "155103650",
+      "name_lat": "З'МИРАЙ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1638015167",
       "name_lat": "ЗМИЛКА С РУССКОГО БАЙКАЛА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -112,21 +121,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1434367708",
-      "name_lat": "ЗМАРАГД ЕЖЕВИКА",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1314722911",
       "name_lat": "ЗМЕЙ ГОРЫНЫЧ",
-      "name_ru": "",
+      "name_ru": "ЗМЕЙ ГОРЫНЫЧ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -135,6 +135,14 @@
       "name_ru": "",
       "breed": "Псовая Борзая",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "616310587",
+      "name_lat": "ЗМЕЙКА",
+      "name_ru": "",
+      "breed": "RUSSIAN",
       "total_shows": 1,
       "competition_dog_id": null
     },

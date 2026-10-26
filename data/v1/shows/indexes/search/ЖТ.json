@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ЖТ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1915018023",
+      "name_lat": "Ж-ТОБОЛ",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1234871259",
+      "name_lat": "ЖТЗНЬ УДАЛАСЬ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

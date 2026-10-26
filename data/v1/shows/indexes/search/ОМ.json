@@ -1,24 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОМ",
-  "count": 477,
+  "count": 500,
   "dogs": [
-    {
-      "id": "1138077043",
-      "name_lat": "ОМИКУДЗИ ЭСТРЕЛЛА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "JAPANESE CHIN",
-      "total_shows": 71,
-      "competition_dog_id": null
-    },
     {
       "id": "1267774397",
       "name_lat": "ОМ'С ШОУ ЦАРИНА",
-      "name_ru": "",
+      "name_ru": "ОМ'С ШОУ ЦАРИНА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 47,
+      "total_shows": 55,
       "competition_dog_id": null
     },
     {
@@ -27,7 +18,7 @@
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "SHIH TZU",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -40,30 +31,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "551288561",
+      "name_lat": "ОМСКАЯ ДРУЖИНА КАРА МИА ШАЙЛО",
+      "name_ru": "ОМСКАЯ ДРУЖИНА КАРА МИА ШАЙЛО",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
       "id": "15830281",
       "name_lat": "ОМ'С ШОУ ПОВЕЛИТЕЛЬ МИРА",
-      "name_ru": "",
+      "name_ru": "ОМ'С ШОУ ПОВЕЛИТЕЛЬ МИРА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "384053470",
-      "name_lat": "ОМСКАЯ ДРУЖИНА ЭЛЬФИЙСКИЙ КЛИНОК",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "110468214",
-      "name_lat": "ОМИКУДЗИ ЮПИТЕР",
-      "name_ru": "",
+      "id": "1056847441",
+      "name_lat": "ОМИКУДЗИ АНДАЛУЗИЯ",
+      "name_ru": "ОМИКУДЗИ АНДАЛУЗИЯ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "JAPANESE CHIN",
-      "total_shows": 28,
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -78,7 +69,7 @@
     {
       "id": "1033175021",
       "name_lat": "ОМИКУДЗИ НИЦЦА",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ НИЦЦА",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 11,
@@ -94,27 +85,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1056847441",
-      "name_lat": "ОМИКУДЗИ АНДАЛУЗИЯ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "JAPANESE CHIN",
-      "total_shows": 46,
-      "competition_dog_id": null
-    },
-    {
-      "id": "551288561",
-      "name_lat": "ОМСКАЯ ДРУЖИНА КАРА МИА ШАЙЛО",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
       "id": "1949204696",
       "name_lat": "ОМИКУДЗИ ЛУННЫЙ СВЕТ",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ ЛУННЫЙ СВЕТ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 10,
@@ -130,9 +103,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1519311679",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ЯНДЕКС",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЯНДЕКС",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "624077611",
       "name_lat": "ОМКАРА ДЖИ С ВОСХОДА",
-      "name_ru": "",
+      "name_ru": "ОМКАРА ДЖИ С ВОСХОДА",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 9,
@@ -141,7 +123,7 @@
     {
       "id": "1852062642",
       "name_lat": "ОМЕРО ДЕ ШОНЕТ ДРАКАРИС",
-      "name_ru": "",
+      "name_ru": "ОМЕРО ДЕ ШОНЕТ ДРАКАРИС",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 13,
@@ -150,7 +132,7 @@
     {
       "id": "1628095406",
       "name_lat": "ОМИКУДЗИ РЕТТ БАТЛЕР",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ РЕТТ БАТЛЕР",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "JAPANESE CHIN",
       "total_shows": 7,
@@ -159,7 +141,7 @@
     {
       "id": "1292993962",
       "name_lat": "ОМСКАЯ ДРУЖИНА ЮТОРИ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЮТОРИ",
       "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
       "breed_en": "",
       "total_shows": 15,
@@ -168,7 +150,7 @@
     {
       "id": "1107718811",
       "name_lat": "ОМ ' С ШОУ ПОВЕЛИТЕЛЬ МИРА",
-      "name_ru": "",
+      "name_ru": "ОМ ' С ШОУ ПОВЕЛИТЕЛЬ МИРА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 22,
@@ -177,10 +159,19 @@
     {
       "id": "1211975618",
       "name_lat": "ОМСТАР БУЛЛ КАЛИПСО",
-      "name_ru": "",
+      "name_ru": "ОМСТАР БУЛЛ КАЛИПСО",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "MINIATURE BULL TERRIER",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1533043996",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ЦВЕТ ЦУНАМИ",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЦВЕТ ЦУНАМИ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -193,24 +184,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1533043996",
-      "name_lat": "ОМСКАЯ ДРУЖИНА ЦВЕТ ЦУНАМИ",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1057050640",
-      "name_lat": "ОМИКУДЗИ БЭТМЕН",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1031104821",
       "name_lat": "ОМОН",
       "name_ru": "",
@@ -220,19 +193,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "775279018",
+      "id": "9116783",
       "name_lat": "ОМУНА ХАРЛИ КВИН",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ОМУНА ХАРЛИ КВИН",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1914039043",
+      "id": "5256715",
       "name_lat": "ОМЕГА ИЗ ОМСКОЙ КРЕПОСТИ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ОМЕГА ИЗ ОМСКОЙ КРЕПОСТИ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -240,7 +213,7 @@
     {
       "id": "983777856",
       "name_lat": "ОМСКАЯ ДРУЖИНА АТАМАН",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА АТАМАН",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 14,
@@ -249,7 +222,7 @@
     {
       "id": "1456031468",
       "name_lat": "ОМСКАЯ ДРУЖИНА ЖАЖДА СЛАВЫ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЖАЖДА СЛАВЫ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -265,6 +238,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "410624849",
+      "name_lat": "О'МЕЛЛИ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "883487281",
       "name_lat": "ОМЕГА",
       "name_ru": "",
@@ -276,7 +258,7 @@
     {
       "id": "856526994",
       "name_lat": "ОМСКАЯ ДРУЖИНА УБЕДИТЕЛЬНА ПОБЕДА",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА УБЕДИТЕЛЬНА ПОБЕДА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -285,15 +267,24 @@
     {
       "id": "64822027",
       "name_lat": "ОМСКАЯ ДРУЖИНА ИДЕАЛЬНАЯ ТАКТИКА",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ИДЕАЛЬНАЯ ТАКТИКА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
       "id": "1521036372",
       "name_lat": "ОМСКАЯ ДРУЖИНА ШТУРМ",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ШТУРМ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1082973166",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ИТАН МОГУЧИЙ",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -303,10 +294,28 @@
     {
       "id": "130267448",
       "name_lat": "ОМСКАЯ ДРУЖИНА ИМПЕРИАЛ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ИМПЕРИАЛ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1870974088",
+      "name_lat": "ОМОН БАТТЕРС",
+      "name_ru": "ОМОН БАТТЕРС",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1368664887",
+      "name_lat": "ОМИТСУ С ВОСТОЧНОГО ВЕТРА",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -328,30 +337,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1289584395",
-      "name_lat": "ОМИКУДЗИ КОНФУЦИЙ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "745993528",
-      "name_lat": "ОМИКУДЗИ ГЕРМЕС",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 62,
-      "competition_dog_id": null
-    },
-    {
       "id": "1112890412",
       "name_lat": "ОМИКУДЗИ ГУДЗОН",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ ГУДЗОН",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "924200048",
+      "name_lat": "ОМСКАЯ ДРУЖИНА АЛЬБЕРТА",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -366,79 +366,51 @@
     {
       "id": "1063932925",
       "name_lat": "ОМАЛИЯ ИЗ ДОМА ЛЕВШОВОЙ",
-      "name_ru": "",
+      "name_ru": "ОМАЛИЯ ИЗ ДОМА ЛЕВШОВОЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 38,
       "competition_dog_id": null
     },
     {
-      "id": "924200048",
-      "name_lat": "ОМСКАЯ ДРУЖИНА АЛЬБЕРТА",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1604983211",
-      "name_lat": "ОМЕЛИЯ ЯРКАЯ ЗВЕЗДОЧКА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "678387489",
       "name_lat": "ОМСКАЯ ДРУЖИНА СИЛА СИБИРИ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА СИЛА СИБИРИ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1129358107",
+      "name_lat": "ОМЕЛИЯ ЯРКАЯ ЗВЕЗДОЧКА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1764222476",
       "name_lat": "ОМСКАЯ ДРУЖИНА ИСКУСНАЯ СТРАТЕГИЯ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ИСКУСНАЯ СТРАТЕГИЯ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1082973166",
-      "name_lat": "ОМСКАЯ ДРУЖИНА ИТАН МОГУЧИЙ",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1610271418",
+      "id": "862361498",
       "name_lat": "Омикудзи Шарлиз",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- РЫЖИЙ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1870974088",
-      "name_lat": "ОМОН БАТТЕРС",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 15,
+      "name_ru": "ОМИКУДЗИ ШАРЛИЗ",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО-РЫЖИЙ",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "901635191",
       "name_lat": "ОМСКАЯ ДРУЖИНА НОМИНАЦИЯ УСПЕХА",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА НОМИНАЦИЯ УСПЕХА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
@@ -447,19 +419,10 @@
     {
       "id": "1965630502",
       "name_lat": "ОМСКИЕ ПРОСТОРЫ ЛАУРУС БЕРНИНИ АПОЛЛО",
-      "name_ru": "",
+      "name_ru": "ОМСКИЕ ПРОСТОРЫ ЛАУРУС БЕРНИНИ АПОЛЛО",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1368664887",
-      "name_lat": "ОМИТСУ С ВОСТОЧНОГО ВЕТРА",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -474,35 +437,26 @@
     {
       "id": "1274610948",
       "name_lat": "ОМСКАЯ ДРУЖИНА ГАСПАР ВЕРНЫЙ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ГАСПАР ВЕРНЫЙ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1577713147",
+      "id": "1887420074",
       "name_lat": "ОМСТАР БУЛЛ ОРДЕН ФЕНИКСА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ОМСТАР БУЛЛ ОРДЕН ФЕНИКСА",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "140181106",
-      "name_lat": "ОМБРА ДИ АСГАРД",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1768394199",
+      "id": "1821324976",
       "name_lat": "ОМЕГА С СЕВЕРНОЙ ЗЕМЛИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ОМЕГА С СЕВЕРНОЙ ЗЕМЛИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -510,7 +464,7 @@
     {
       "id": "452330923",
       "name_lat": "ОМИКУДЗИ ХАЛИ-ГАЛИ",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ ХАЛИ-ГАЛИ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 10,
@@ -526,10 +480,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1448698110",
+      "id": "1124952827",
       "name_lat": "ОМЕГА СТАЙЛ",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ /",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -553,10 +507,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1813087838",
+      "id": "1906656066",
       "name_lat": "ОМАНДА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -564,19 +518,27 @@
     {
       "id": "144295121",
       "name_lat": "ОМСКАЯ ДРУЖИНА ШИРОКАЯ ДУША РОССИИ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ШИРОКАЯ ДУША РОССИИ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1906921343",
-      "name_lat": "ОМСТАР БУЛЛ МАЛИНОВАЯ ЛАДА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "id": "926396756",
+      "name_lat": "ОМС ШОУ РЕЦЕПТ СЧАСТЬЯ",
+      "name_ru": "ОМС ШОУ РЕЦЕПТ СЧАСТЬЯ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "612405916",
+      "name_lat": "ОМИКУДЗИ НИРВАНА",
+      "name_ru": "ОМИКУДЗИ НИРВАНА",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- РЫЖИЙ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -586,6 +548,14 @@
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1983602168",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ГРОЗОВАЯ ТУЧА",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ГРОЗОВАЯ ТУЧА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -607,72 +577,53 @@
       "competition_dog_id": null
     },
     {
+      "id": "1600495636",
+      "name_lat": "ОМС ШОУ РОМАНТИКА ЛЮБВИ",
+      "name_ru": "ОМС ШОУ РОМАНТИКА ЛЮБВИ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1260165131",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ЭРА ВОДОЛЕЯ",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЭРА ВОДОЛЕЯ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
       "id": "357658028",
       "name_lat": "ОМИКУДЗИ ЕВРОПА",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ ЕВРОПА",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "JAPANESE CHIN",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "926396756",
-      "name_lat": "ОМС ШОУ РЕЦЕПТ СЧАСТЬЯ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1600495636",
-      "name_lat": "ОМС ШОУ РОМАНТИКА ЛЮБВИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1770275333",
       "name_lat": "ОМС ШОУ РУССКИЙ РОМАНС",
-      "name_ru": "",
+      "name_ru": "ОМС ШОУ РУССКИЙ РОМАНС",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1260165131",
-      "name_lat": "ОМСКАЯ ДРУЖИНА ЭРА ВОДОЛЕЯ",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "433779827",
-      "name_lat": "ОМИКУДЗИ БУГАТТИ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "472607197",
       "name_lat": "ОМЕЛИ САНШАЙН",
-      "name_ru": "",
+      "name_ru": "ОМЕЛИ САНШАЙН",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
       "id": "1377177734",
       "name_lat": "ОМЕРО ДЕ ШОНЕТ ИЛЛАРИЯ",
-      "name_ru": "",
+      "name_ru": "ОМЕРО ДЕ ШОНЕТ ИЛЛАРИЯ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 11,
@@ -681,16 +632,25 @@
     {
       "id": "918097263",
       "name_lat": "ОМСКАЯ ДРУЖИНА МЕГА МЕЧТА",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА МЕГА МЕЧТА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
+      "id": "1924434478",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ЯБЛОНЯ В ЦВЕТУ",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЯБЛОНЯ В ЦВЕТУ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "263154520",
       "name_lat": "ОМ'С ШОУ ПЕСНЯ ВЕТРА",
-      "name_ru": "",
+      "name_ru": "ОМ'С ШОУ ПЕСНЯ ВЕТРА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 18,
@@ -703,15 +663,6 @@
       "breed": "ЛЕГАВАЯ (ДРАТХААР) / GERMAN WIRE-",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1063945631",
-      "name_lat": "ОМСКАЯ ДРУЖИНА НОБЕЛЕВСКАЯ ПРЕМИЯ",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -733,10 +684,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1073056342",
+      "id": "1434794323",
       "name_lat": "ОМСТАР БУЛЛ ИСПАХАН СУЛТАН",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ОМСТАР БУЛЛ ИСПАХАН СУЛТАН",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -755,8 +706,7 @@
       "name_lat": "ОМИРХАН ОЯ ХАЙБАТ",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -780,25 +730,24 @@
     {
       "id": "833568264",
       "name_lat": "ОМСКАЯ ДРУЖИНА КАЛИНА КРАСНАЯ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА КАЛИНА КРАСНАЯ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1519311679",
-      "name_lat": "ОМСКАЯ ДРУЖИНА ЯНДЕКС",
+      "id": "1077650793",
+      "name_lat": "ОМ'ЧОУ ЕЛАТА",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "ШИ ТЦУ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "587016832",
       "name_lat": "ОМСКИЕ ПРОСТОРЫ ОПИУМ ОФ МИ СОУЛ",
-      "name_ru": "",
+      "name_ru": "ОМСКИЕ ПРОСТОРЫ ОПИУМ ОФ МИ СОУЛ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 6,
@@ -807,28 +756,19 @@
     {
       "id": "424834997",
       "name_lat": "ОМ*ЧОУ ЕЛИТА",
-      "name_ru": "",
+      "name_ru": "ОМ*ЧОУ ЕЛИТА",
       "breed": "ШИ - ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "730295626",
+      "id": "37055247",
       "name_lat": "ОМСТАР БУЛЛ ЖАКЛИН",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1933215194",
-      "name_lat": "ОМСТАР БУЛЛ ЛАВРОФФ",
-      "name_ru": "",
+      "name_ru": "ОМСТАР БУЛЛ ЖАКЛИН",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -841,10 +781,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "189907969",
+      "id": "1826088949",
       "name_lat": "ОМЕГА РЕНДИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -859,21 +799,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "691669340",
+      "id": "1297847601",
       "name_lat": "ОМЕГА СТАР ИЗ ПИТЕРСКОГО БОМОНДА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ОМЕГА СТАР ИЗ ПИТЕРСКОГО БОМОНДА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1917704091",
-      "name_lat": "ОМИКУДЗИ ПАТРИК",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -888,10 +819,18 @@
     {
       "id": "858583761",
       "name_lat": "ОМИКУДЗИ ХИКАРИ АСЕМИ",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ ХИКАРИ АСЕМИ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1638302092",
+      "name_lat": "О'МЭЛЛИ",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -906,10 +845,18 @@
     {
       "id": "1739692673",
       "name_lat": "ОМИКУДЗИ ВИВАТ КОРОЛЬ ФОР ПАРРИМА АРИХ",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ ВИВАТ КОРОЛЬ ФОР ПАРРИМА АРИХ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "JAPANESE CHIN",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "161440638",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ГЕРАЛЬТ ИЗ РИВИИ",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ГЕРАЛЬТ ИЗ РИВИИ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -926,15 +873,6 @@
       "name_lat": "ОМСКИЕ ПРОСТОРЫ ЭЛЬЯНА",
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1983602168",
-      "name_lat": "ОМСКАЯ ДРУЖИНА ГРОЗОВАЯ ТУЧА",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -967,64 +905,64 @@
       "competition_dog_id": null
     },
     {
-      "id": "1633033589",
-      "name_lat": "ОМИКУДЗИ ЖЕМЧУЖНАЯ БУСИНКА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "JAPANESE CHIN",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "163961871",
       "name_lat": "ОМСКАЯ ДРУЖИНА ЦАРИЦА НОЧИ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЦАРИЦА НОЧИ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "259020904",
-      "name_lat": "ОМНИЯ КРИСТАЛИН ИЗ КУРГАН ГРАДА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "1907985589",
+      "name_lat": "ОМИКУДЗИ СИМУРАН СЭМПАЙ",
+      "name_ru": "ОМИКУДЗИ СИМУРАН СЭМПАЙ",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
-      "total_shows": 32,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1907985589",
-      "name_lat": "ОМИКУДЗИ СИМУРАН СЭМПАЙ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
+      "id": "64159830",
+      "name_lat": "ОМНИЯ КРИСТАЛИН ИЗ КУРГАН ГРАДА",
+      "name_ru": "ОМНИЯ КРИСТАЛИН ИЗ КУРГАН ГРАДА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "315210768",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ДАРИНА",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ДАРИНА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "1494565698",
       "name_lat": "ОМ, С ШОУ ЦАРИНА",
-      "name_ru": "",
+      "name_ru": "ОМ, С ШОУ ЦАРИНА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1275344365",
-      "name_lat": "ОМСКАЯ ДРУЖИНА ДАРИНА",
+      "id": "238600585",
+      "name_lat": "ОМ*С ШОУ РОМАНТИКА ЛЮБВИ",
       "name_ru": "",
-      "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
+      "breed": "АМЕР.КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1686679924",
+      "id": "1668842592",
       "name_lat": "ОМЕЛИЯ ЛОНГ КИСС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ОМЕЛИЯ ЛОНГ КИСС",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1041,34 +979,34 @@
     {
       "id": "162853913",
       "name_lat": "ОМ 'ЧОУ БАРОНГ'",
-      "name_ru": "",
+      "name_ru": "ОМ 'ЧОУ БАРОНГ'",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "347094359",
-      "name_lat": "ОМИКУДЗИ СОКОЛИК САВВА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "JAPANESE CHIN",
-      "total_shows": 8,
+      "id": "381605309",
+      "name_lat": "О'МЭЛЛИ БЬЮТИ НАЙТ (Изменено по Решению ВК от 28.12.22 вопрос 55)",
+      "name_ru": "О'МЭЛЛИ БЬЮТИ НАЙТ (Изменено по Решению ВК от 28.12.22 вопрос 55)",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "1072755018",
       "name_lat": "ОМ'С ШОУ ЯРКАЯ ШТУЧКА",
-      "name_ru": "",
+      "name_ru": "ОМ'С ШОУ ЯРКАЯ ШТУЧКА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
       "id": "402719807",
       "name_lat": "ОМ'С ШОУ ЯНТАРНАЯ РОЗА",
-      "name_ru": "",
+      "name_ru": "ОМ'С ШОУ ЯНТАРНАЯ РОЗА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 13,
@@ -1077,7 +1015,7 @@
     {
       "id": "801741909",
       "name_lat": "ОМ'С ШОУ ХЬЮСТОН",
-      "name_ru": "",
+      "name_ru": "ОМ'С ШОУ ХЬЮСТОН",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
@@ -1102,18 +1040,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "954256459",
-      "name_lat": "ОМИЛИЯ ОТ НАТАЛИ ТЕРРА",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "JACK RUSSELL TERRIER",
-      "total_shows": 23,
-      "competition_dog_id": null
-    },
-    {
       "id": "753601455",
       "name_lat": "ОМЕРО ДЕ ШОНЕТ АЛЬСАФИ",
-      "name_ru": "",
+      "name_ru": "ОМЕРО ДЕ ШОНЕТ АЛЬСАФИ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
@@ -1129,37 +1058,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1924434478",
-      "name_lat": "ОМСКАЯ ДРУЖИНА ЯБЛОНЯ В ЦВЕТУ",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "750658377",
-      "name_lat": "ОМИКУДЗИ АСТИ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1373252389",
+      "id": "1358841528",
       "name_lat": "ОМЕЛЛА ПЭРИС ОТ ЮЛИАННЫ ШАРМ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "184659878",
+      "id": "1384773023",
       "name_lat": "ОМИКУДЗИ САНТА ЛЮЧИЯ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН /",
+      "name_ru": "ОМИКУДЗИ САНТА ЛЮЧИЯ",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1167,19 +1078,10 @@
     {
       "id": "276905116",
       "name_lat": "ОМИРАНА БЭЛЬ ИЗ ЛАРЦА ЧУДЕС",
-      "name_ru": "",
+      "name_ru": "ОМИРАНА БЭЛЬ ИЗ ЛАРЦА ЧУДЕС",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1164755236",
-      "name_lat": "ОМАНА С МЕДНОГО ОЗЕРА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1194,17 +1096,17 @@
     {
       "id": "1290284094",
       "name_lat": "ОМАЛИЯ ЧАМИНГ",
-      "name_ru": "",
+      "name_ru": "ОМАЛИЯ ЧАМИНГ",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1149676027",
+      "id": "1116331095",
       "name_lat": "ОМИ ЭСТИ ЛАУДЕР",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "name_ru": "ОМИ ЭСТИ ЛАУДЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1219,27 +1121,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "102726346",
-      "name_lat": "ОМЕРО ДЕ ШОНЕТ ДРОГО",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "819827662",
-      "name_lat": "ОМ'ЧОУ БАРОНГ",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "521467741",
       "name_lat": "ОМСКАЯ ДРУЖИНА ЛЬВИНОЕ СЕРДЦЕ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЛЬВИНОЕ СЕРДЦЕ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
@@ -1248,19 +1132,10 @@
     {
       "id": "286260672",
       "name_lat": "ОМНИВАРУС ШАД ВАЛИАНТ КНАЙТ",
-      "name_ru": "",
+      "name_ru": "ОМНИВАРУС ШАД ВАЛИАНТ КНАЙТ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1359229105",
-      "name_lat": "ОМОН ИЗ БЕЛОЙ БРИГАДЫ",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1273,9 +1148,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1962203813",
+      "name_lat": "ОМЕЛИЯ ИЗ ИМПЕРИИ ОКСВОЛЛ",
+      "name_ru": "ОМЕЛИЯ ИЗ ИМПЕРИИ ОКСВОЛЛ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "673402980",
       "name_lat": "ОМИКУДЗИ ЮНОНА",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ ЮНОНА",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 6,
@@ -1284,7 +1168,7 @@
     {
       "id": "1982593441",
       "name_lat": "ОМЕРО ДЕ ШОНЕТ ЕССОН",
-      "name_ru": "",
+      "name_ru": "ОМЕРО ДЕ ШОНЕТ ЕССОН",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -1300,6 +1184,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1564252627",
+      "name_lat": "ОМИО ПУМА НЕРА",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1952622689",
       "name_lat": "ОМСКАЯ ДРУЖИНА РИСКОВЫЙ ФАРТ",
       "name_ru": "",
@@ -1311,35 +1204,17 @@
     {
       "id": "113508883",
       "name_lat": "ОМИКУДЗИ АГАТ",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ АГАТ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1564252627",
-      "name_lat": "ОМИО ПУМА НЕРА",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "131930513",
-      "name_lat": "ОМСТАР БУЛЛ БЕРЕТТА БЕЛЬМОНТЕ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1453212527",
+      "id": "1191357854",
       "name_lat": "ОМСКИЕ ПРОСТОРЫ ИДЕЕ УНЕ БЕЛЛЕ",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "name_ru": "ОМСКИЕ ПРОСТОРЫ ИДЕЕ УНЕ БЕЛЛЕ",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1347,7 +1222,7 @@
     {
       "id": "1882581016",
       "name_lat": "ОМСКАЯ ДРУЖИНА РАДУЖНАЯ РОСА",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА РАДУЖНАЯ РОСА",
       "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
       "breed_en": "",
       "total_shows": 6,
@@ -1356,28 +1231,19 @@
     {
       "id": "1962976081",
       "name_lat": "ОМА ВАЛЕНСИЯ ГРОСЕФОХНОН",
-      "name_ru": "",
+      "name_ru": "ОМА ВАЛЕНСИЯ ГРОСЕФОХНОН",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "248196962",
-      "name_lat": "ОМИКУДЗИ ГЛАФИРА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "452790459",
+      "id": "1124852480",
       "name_lat": "ОМСКИЕ ПРОСТОРЫ ЗАРИЗА",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1392,26 +1258,17 @@
     {
       "id": "1221973373",
       "name_lat": "ОМ*С ШОУ ПОВЕЛИТЕЛЬ МИРА",
-      "name_ru": "",
+      "name_ru": "ОМ*С ШОУ ПОВЕЛИТЕЛЬ МИРА",
       "breed": "АМЕР.КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "84720521",
-      "name_lat": "ОМСТАР БУЛЛ МОРЕНА БЕЛЛА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "105443982",
-      "name_lat": "ОМИКУДЗИ ЛЮСИ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
+      "id": "3711765",
+      "name_lat": "ОМЕЛИЯ ДАМА СЕРДЦА",
+      "name_ru": "ОМЕЛИЯ ДАМА СЕРДЦА",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ (Абрикос.Серебр.)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1419,17 +1276,25 @@
     {
       "id": "519642410",
       "name_lat": "ОМЕЛИЯ СТАРВЭЙ ИН ЗЕ НАЙТ СКАЙ",
-      "name_ru": "",
+      "name_ru": "ОМЕЛИЯ СТАРВЭЙ ИН ЗЕ НАЙТ СКАЙ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "774720179",
+      "id": "608957512",
+      "name_lat": "ОМСКАЯ ДРУЖИНА АЛЫЙ ПОГРАНИЧНЫЙ ПЁС",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "287482650",
       "name_lat": "ОМЕГА СТАР",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ /",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1446,7 +1311,7 @@
     {
       "id": "842346241",
       "name_lat": "ОМСКАЯ ДРУЖИНА ФИЕСТА",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ФИЕСТА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -1455,7 +1320,7 @@
     {
       "id": "137091785",
       "name_lat": "ОМСТАР БУЛЛ АГАТА КРИСТИ",
-      "name_ru": "",
+      "name_ru": "ОМСТАР БУЛЛ АГАТА КРИСТИ",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -1471,21 +1336,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "927356011",
+      "id": "1854977378",
       "name_lat": "ОМОН РА СИМПЭЙ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "name_ru": "ОМОН РА СИМПЭЙ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "272648741",
-      "name_lat": "ОМИКУДЗИ САНДАЛ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1495,6 +1351,14 @@
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1716105738",
+      "name_lat": "ОМЕЛИЯ",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1561,11 +1425,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "186384230",
+      "id": "447470431",
       "name_lat": "ОМАР ХАЙЯМ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "752217542",
+      "name_lat": "ОМЕЛИЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1588,19 +1460,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "179105362",
+      "id": "452721107",
       "name_lat": "ОМАНДА ИЗ РОДА ГАЙДА",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА /",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "311620573",
+      "id": "1062902813",
       "name_lat": "ОМ*С ШОУ ЯРКАЯ ШТУЧКА",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ английский кокер спаниель английский кокер спаниель английский кокер спаниель английский кокер спаниель английский кокер спаниель",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ английский кокер спаниель",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1608,7 +1480,7 @@
     {
       "id": "911682070",
       "name_lat": "ОМСКАЯ ДРУЖИНА ВАЗИР-МУХТАР",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ВАЗИР-МУХТАР",
       "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
       "breed_en": "",
       "total_shows": 5,
@@ -1617,7 +1489,7 @@
     {
       "id": "848379961",
       "name_lat": "ОМСКАЯ ДРУЖИНА ДАРК СКАЙ СЕЛИН",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ДАРК СКАЙ СЕЛИН",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -1626,7 +1498,7 @@
     {
       "id": "1194837758",
       "name_lat": "ОМСКАЯ ДРУЖИНА ЗЛАТОЗАРА",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЗЛАТОЗАРА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -1651,12 +1523,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1267606100",
+      "name_lat": "О МЭЛЛИ ДЖУС ДЕ ЛАВЕР СТИЛЬ",
+      "name_ru": "О МЭЛЛИ ДЖУС ДЕ ЛАВЕР СТИЛЬ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "993338251",
       "name_lat": "ОМСТАР БУЛЛ ВИВЬЕН ЛИ",
-      "name_ru": "",
+      "name_ru": "ОМСТАР БУЛЛ ВИВЬЕН ЛИ",
       "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1687,39 +1568,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1736182156",
-      "name_lat": "ОМАЛИЯ СВИТ КЕНДИ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1962203813",
-      "name_lat": "ОМЕЛИЯ ИЗ ИМПЕРИИ ОКСВОЛЛ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "63031936",
       "name_lat": "ОМ'ЧОУ АКСЕЛЬ БОРН ТУ ВИН",
-      "name_ru": "",
+      "name_ru": "ОМ'ЧОУ АКСЕЛЬ БОРН ТУ ВИН",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "87673823",
-      "name_lat": "ОМСТАР БУЛЛ ЖОЗЕФИНА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1734,10 +1588,10 @@
     {
       "id": "349635570",
       "name_lat": "ОМЕГА ИЗ МИРАШЕЛА",
-      "name_ru": "",
+      "name_ru": "ОМЕГА ИЗ МИРАШЕЛА",
       "breed": "НЕМЕЦКИЙ ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1750,11 +1604,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "903213580",
+      "name_lat": "О'МОЛЛИ ЧОКО ВАЙТ ФРОМ ЗЕ ХОТ КЕЙ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1757021482",
       "name_lat": "ОМИКУДЗИ ДЖАНГО",
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "JAPANESE CHIN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "314193610",
+      "name_lat": "ОМСКИЕ ПРОСТОРЫ ЖОЙСТИГ",
+      "name_ru": "ОМСКИЕ ПРОСТОРЫ ЖОЙСТИГ",
+      "breed": "БОРДОСКИЙ БУЛЬДОГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1770,7 +1641,7 @@
     {
       "id": "1647247241",
       "name_lat": "ОМСКАЯ ДРУЖИНА РУНА РОДИНЫ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА РУНА РОДИНЫ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
@@ -1795,6 +1666,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "359922126",
+      "name_lat": "ОМСОРИ ЕВ ВИСТА",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1032904819",
       "name_lat": "ОМЕГА БРАЙТ СТАР",
       "name_ru": "",
@@ -1806,8 +1685,17 @@
     {
       "id": "1238886670",
       "name_lat": "Ом*с Шоу Хьюстон",
-      "name_ru": "",
+      "name_ru": "Ом*с Шоу Хьюстон",
       "breed": "Американски й кокер Спаниель",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "545444836",
+      "name_lat": "О МИ ЛУСКИ БАЛИ РИНГ ЧЕМПИОН",
+      "name_ru": "О МИ ЛУСКИ БАЛИ РИНГ ЧЕМПИОН",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1815,17 +1703,17 @@
     {
       "id": "32235968",
       "name_lat": "ОМАЛИЯ ЕВА АНГЕЛ",
-      "name_ru": "",
+      "name_ru": "ОМАЛИЯ ЕВА АНГЕЛ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1503166742",
+      "id": "382155151",
       "name_lat": "ОМЕГА СТАР",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1885,6 +1773,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1391981938",
+      "name_lat": "ОМЕЛИЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛОГО ОКРАСА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1501049240",
       "name_lat": "ОМИЛИЯ",
       "name_ru": "",
@@ -1899,6 +1795,14 @@
       "name_ru": "",
       "breed": "ЯПОНСКИЙХИН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1081812704",
+      "name_lat": "О'МЭЛЛИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1930,10 +1834,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1557328122",
+      "id": "1236129611",
       "name_lat": "ОМСТАР БУЛЛ КРИМ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1948,30 +1852,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1083778637",
-      "name_lat": "ОМИКУДЗИ СИМУРГ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "273700952",
       "name_lat": "ОМИКУДЗИ САНТЬЯГО",
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "261668573",
-      "name_lat": "ОМЕН ФОМ САФАРИ ЛАНД",
-      "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1993,19 +1879,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "3711765",
-      "name_lat": "ОМЕЛИЯ ДАМА СЕРДЦА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ (Абрикос.Серебр.)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "268024420",
+      "id": "2000946989",
       "name_lat": "ОМСТАР БУЛЛ ЛЕГАСИ БАЙ АНГОСТУРА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ОМСТАР БУЛЛ ЛЕГАСИ БАЙ АНГОСТУРА",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2015,8 +1892,24 @@
       "name_lat": "ОМОЛОЙ",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "644027269",
+      "name_lat": "О МАЙ БЬЮТИФОЛ ОВИЛ БУКЛЯ",
+      "name_ru": "О МАЙ БЬЮТИФОЛ ОВИЛ БУКЛЯ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1337391760",
+      "name_lat": "О'МЭЛЛИ КИНГА",
+      "name_ru": "",
+      "breed": "КОМОНДОР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2031,17 +1924,17 @@
     {
       "id": "1182453808",
       "name_lat": "ОМЕРО ДЕ ШОНЕТ ГАММИ",
-      "name_ru": "",
+      "name_ru": "ОМЕРО ДЕ ШОНЕТ ГАММИ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1060398269",
+      "id": "1512551136",
       "name_lat": "ОМАР ХАЯМ",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2067,7 +1960,7 @@
     {
       "id": "793633946",
       "name_lat": "ОМ, С ШОУ ЯНТАРНАЯ РОЗА",
-      "name_ru": "",
+      "name_ru": "ОМ, С ШОУ ЯНТАРНАЯ РОЗА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -2076,7 +1969,7 @@
     {
       "id": "6719260",
       "name_lat": "ОМСКИЕ ПРОСТОРЫ АЯ КОМТЕССА",
-      "name_ru": "",
+      "name_ru": "ОМСКИЕ ПРОСТОРЫ АЯ КОМТЕССА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -2119,6 +2012,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1478629441",
+      "name_lat": "О'МЕЛЛИ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА / EAST EUROPEN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "795271996",
       "name_lat": "ОМЕЛЬКА",
       "name_ru": "",
@@ -2141,15 +2043,6 @@
       "name_lat": "ОМИКУДЗИ САНТА ЛЮЧИЯ ЦЕЗАРЬ ИМПЕРАТРИС",
       "name_ru": "",
       "breed": "ЯПОНСКИЙХИН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "151714782",
-      "name_lat": "ОМИКУДЗИ ЭНИГМА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН / CHIN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2229,7 +2122,7 @@
     {
       "id": "1598284016",
       "name_lat": "ОМИКУДЗИ ШАЙОРИ ШАНЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ ШАЙОРИ ШАНЕЛЬ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 3,
@@ -2238,10 +2131,18 @@
     {
       "id": "1326816548",
       "name_lat": "ОМСКАЯ ДРУЖИНА РОСКОШНАЯ ГРАЦИЯ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА РОСКОШНАЯ ГРАЦИЯ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1965655476",
+      "name_lat": "ОМЕЛИЯ",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2256,7 +2157,7 @@
     {
       "id": "1764192302",
       "name_lat": "Оманда Гранд",
-      "name_ru": "",
+      "name_ru": "Оманда Гранд",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
@@ -2267,6 +2168,15 @@
       "name_lat": "ОМАНДА",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "851239955",
+      "name_lat": "О'МЕЛЛИ",
+      "name_ru": "",
+      "breed": "ЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2299,12 +2209,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1993530733",
+      "id": "1055636169",
       "name_lat": "Омикудзи Шерон",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЁРНЫЙ",
+      "name_ru": "Омикудзи Шерон",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1808036085",
+      "name_lat": "ОМЕГА ИЗ МИРАШЕЛЛА",
+      "name_ru": "ОМЕГА ИЗ МИРАШЕЛЛА",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2335,19 +2254,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1808036085",
-      "name_lat": "ОМЕГА ИЗ МИРАШЕЛЛА",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1392754146",
+      "id": "101596990",
       "name_lat": "ОМИКУДЗИ АУРУС",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЁРНЫЙ / JAPANESE",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЕРНЫЙ / JAPANESE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2364,7 +2274,7 @@
     {
       "id": "1754417641",
       "name_lat": "ОМИКУДЗИ ЯСОН",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ ЯСОН",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 4,
@@ -2380,30 +2290,46 @@
       "competition_dog_id": null
     },
     {
+      "id": "304610340",
+      "name_lat": "ОМСКАЯ ДРУЖИНА АЛТЕЯ СИБИРСКАЯ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "711964002",
+      "name_lat": "ОМСКАЯ ДРУЖИНА АЛАЯ РОЗА",
+      "name_ru": "ОМСКАЯ ДРУЖИНА АЛАЯ РОЗА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1453752072",
+      "name_lat": "ОМСТАР БУЛЛ АРАБИКА",
+      "name_ru": "ОМСТАР БУЛЛ АРАБИКА",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1431454328",
       "name_lat": "ОМИЛЛА КАРМЭН ВЕСТВУД БЛЭК",
-      "name_ru": "",
+      "name_ru": "ОМИЛЛА КАРМЭН ВЕСТВУД БЛЭК",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1453752072",
-      "name_lat": "ОМСТАР БУЛЛ АРАБИКА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1479099027",
+      "id": "430285969",
       "name_lat": "ОМАНДА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР) / GERMAN WIRE-",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2506,15 +2432,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1106090111",
-      "name_lat": "ОМСКИЕ ПРОСТОРЫ ИНЬ ЯНЬ",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "711197798",
       "name_lat": "ОМСКАЯ ДРУЖИНА ТОБОЛ СТРЕМИТЕЛЬНЫЙ",
       "name_ru": "",
@@ -2544,7 +2461,7 @@
     {
       "id": "1463363016",
       "name_lat": "ОМАР ШЕРИФ С МОЕЙ ЗВЕЗДЫ ВОСТОКА",
-      "name_ru": "",
+      "name_ru": "ОМАР ШЕРИФ С МОЕЙ ЗВЕЗДЫ ВОСТОКА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
@@ -2571,7 +2488,7 @@
     {
       "id": "834662086",
       "name_lat": "ОМСТАР БУЛЛ ЕВРАЗИЯ",
-      "name_ru": "",
+      "name_ru": "ОМСТАР БУЛЛ ЕВРАЗИЯ",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 11,
@@ -2580,17 +2497,17 @@
     {
       "id": "41973993",
       "name_lat": "ОМИКУДЗИ МЕРКУРИЙ",
-      "name_ru": "",
+      "name_ru": "ОМИКУДЗИ МЕРКУРИЙ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "95949560",
+      "id": "1514921097",
       "name_lat": "ОМСТАР БУЛЛ РАММШТАЙН",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ОМСТАР БУЛЛ РАММШТАЙН",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2601,6 +2518,14 @@
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1030644285",
+      "name_lat": "ОМ 'ЧОУ БАРОН1'",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ / SHIH TZU",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -2623,10 +2548,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1246019620",
+      "name_lat": "ОМСКАЯ ДРУЖИНА И Я ЧЕРНАЯ КОРОЛЕВА",
+      "name_ru": "ОМСКАЯ ДРУЖИНА И Я ЧЕРНАЯ КОРОЛЕВА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "193607771",
       "name_lat": "ОМЕГА",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1337564784",
+      "name_lat": "ОМСКИЕ ПРОСТОРЫ КАССАНДРА ДЕ РОУЗ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2641,28 +2583,62 @@
       "competition_dog_id": null
     },
     {
+      "id": "874407576",
+      "name_lat": "ОМ'ЧОУ КАЛЛИСТА",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1073381819",
+      "name_lat": "ОМСКАЯ ДРУЖИНА КЛАССИКА ЖАНРА",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "757402436",
+      "name_lat": "ОМСКАЯ ДРУЖИНА НИМФЕЯ АСТОРИЯ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1368528453",
       "name_lat": "ОМ'ЧОУ ВИВЬЕН ДАРК ЧОКОЛАТЕ",
-      "name_ru": "",
+      "name_ru": "ОМ'ЧОУ ВИВЬЕН ДАРК ЧОКОЛАТЕ",
       "breed": "ШИ - ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "373879796",
-      "name_lat": "ОМСКИЕ ПРОСТОРЫ КАССАНДРА ДЕ РОУЗ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ БУЛЬДОГ",
+      "id": "1961532161",
+      "name_lat": "ОМСТАР БУЛЛ ГЛАФИРА",
+      "name_ru": "ОМСТАР БУЛЛ ГЛАФИРА",
+      "breed": "MINIATURE BULL",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1025512012",
+      "id": "1627866588",
+      "name_lat": "О'МЭРИ ПУППИНС",
+      "name_ru": "О'МЭРИ ПУППИНС",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1365119619",
       "name_lat": "ОМЕН ИЗ БЕЛОГО ЯРА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ОМЕН ИЗ БЕЛОГО ЯРА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2740,6 +2716,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "315964641",
+      "name_lat": "О'МЕЛЛИ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1100976044",
       "name_lat": "ОМЕЛИЯ",
       "name_ru": "",
@@ -2753,6 +2738,15 @@
       "name_lat": "ОМЕЛИЯ",
       "name_ru": "",
       "breed": "БУРБУЛЬ / SOUTH AFRICAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "69685832",
+      "name_lat": "О'МЭЛЛИ",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2776,10 +2770,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "508957201",
+      "name_lat": "О'МЭДЖИК КАМИНО ДЕ СЕДА",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "76943981",
       "name_lat": "ОМЕЛА ИЗ АДАМОВА ЯБЛОКА",
       "name_ru": "",
       "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1341405594",
+      "name_lat": "О`МАЙ ЛИТЛ СТАР ТЭЯ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2821,19 +2833,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1961532161",
-      "name_lat": "ОМСТАР БУЛЛ ГЛАФИРА",
+      "id": "1127912246",
+      "name_lat": "ОМАЛИЯ ОКЕАН ЛЮБВИ",
       "name_ru": "",
-      "breed": "MINIATURE BULL",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "921889970",
-      "name_lat": "ОМАЛИЯ ОКЕАН ЛЮБВИ",
+      "id": "1149402398",
+      "name_lat": "О МЕЛЛИ ГРЕЙС",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2875,19 +2887,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "698971466",
+      "id": "1856373668",
       "name_lat": "ОМЕЛИЯ ИЗ БЕЛОГО ЯРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "212291934",
+      "id": "1806615959",
       "name_lat": "ОМБРОУЗ ЧИКО",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2902,10 +2914,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1255046415",
+      "id": "1494462694",
       "name_lat": "ОМСТАР БУЛЛ ЛАЙТ МАЙ ФАЙЕР",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1454305277",
+      "name_lat": "О'МЭЛЛИС ИЗ ПРЯНИЧНОГО ГОРОДА",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2992,11 +3013,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "171121217",
-      "name_lat": "ОМИКУДЗИ КВИКСТЕП",
+      "id": "1785823754",
+      "name_lat": "ОМСКАЯ ДРУЖИНА АРЕС ШАМРАЙ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "867691214",
+      "name_lat": "ОМЕГА ДЭ ФЛАММЕС ДЕ МАРС",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3012,17 +3041,17 @@
     {
       "id": "254954697",
       "name_lat": "ОМСКАЯ ДРУЖИНА МЭРФИН",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА МЭРФИН",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1861041367",
+      "id": "573088176",
       "name_lat": "ОМЕН С ФЭМИЛИ С ФРИВЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ОМЕН С ФЭМИЛИ С ФРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3030,7 +3059,7 @@
     {
       "id": "1268493171",
       "name_lat": "ОМСТАР БУЛЛ ДАМБЛДОР",
-      "name_ru": "",
+      "name_ru": "ОМСТАР БУЛЛ ДАМБЛДОР",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3039,7 +3068,7 @@
     {
       "id": "1095248745",
       "name_lat": "ОМЕЛЛИЯ МЭДЖИК СВИТ КИСС",
-      "name_ru": "",
+      "name_ru": "ОМЕЛЛИЯ МЭДЖИК СВИТ КИСС",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -3048,7 +3077,7 @@
     {
       "id": "380154036",
       "name_lat": "ОМЕГА МУН ИЗ ЛАГУНЫ ГРЕЗ",
-      "name_ru": "",
+      "name_ru": "ОМЕГА МУН ИЗ ЛАГУНЫ ГРЕЗ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -3057,7 +3086,7 @@
     {
       "id": "1992904141",
       "name_lat": "ОМСКИЕ ПРОСТОРЫ МОНИКА",
-      "name_ru": "",
+      "name_ru": "ОМСКИЕ ПРОСТОРЫ МОНИКА",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
@@ -3066,7 +3095,7 @@
     {
       "id": "869711775",
       "name_lat": "ОМСКИЕ ПРОСТОРЫ КОНОР",
-      "name_ru": "",
+      "name_ru": "ОМСКИЕ ПРОСТОРЫ КОНОР",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 2,
@@ -3075,7 +3104,7 @@
     {
       "id": "972218793",
       "name_lat": "ОМСТАР БУЛЛ САПЕРАВИ ЭТ ГАЛАНТ",
-      "name_ru": "",
+      "name_ru": "ОМСТАР БУЛЛ САПЕРАВИ ЭТ ГАЛАНТ",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ ЦВЕТНОЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3084,8 +3113,17 @@
     {
       "id": "200723403",
       "name_lat": "ОМЕРО ДЕ ШОНЕТ ИРЛОТТА",
-      "name_ru": "",
+      "name_ru": "ОМЕРО ДЕ ШОНЕТ ИРЛОТТА",
       "breed": "РОДЕЗИЙСКИЙ АНГЛИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1549771747",
+      "name_lat": "О МАТИЛЬДА БЛЮ СТАР",
+      "name_ru": "О МАТИЛЬДА БЛЮ СТАР",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3093,7 +3131,7 @@
     {
       "id": "769775313",
       "name_lat": "ОМСКАЯ ДРУЖИНА ЭРИК ВЕЛИКИЙ",
-      "name_ru": "",
+      "name_ru": "ОМСКАЯ ДРУЖИНА ЭРИК ВЕЛИКИЙ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3102,9 +3140,17 @@
     {
       "id": "1909640940",
       "name_lat": "ОМАЙДОГ ЕВЛАМПИЯ",
-      "name_ru": "",
+      "name_ru": "ОМАЙДОГ ЕВЛАМПИЯ",
       "breed": "БИГЛЬ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "620732834",
+      "name_lat": "ОМСКАЯ ДРУЖИНА НАСЛЕДНЫЙ ПРИНЦ АДАМ",
+      "name_ru": "ОМСКАЯ ДРУЖИНА НАСЛЕДНЫЙ ПРИНЦ АДАМ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3118,19 +3164,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "730298041",
+      "id": "202262148",
       "name_lat": "ОМАЛИЯ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "447961500",
+      "id": "1074715705",
       "name_lat": "ОМАР ШАРИФ",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3140,6 +3186,15 @@
       "name_lat": "ОМИЧИ БУСИ",
       "name_ru": "",
       "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "596180842",
+      "name_lat": "О'МЭЛЛИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3163,10 +3218,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "391978532",
+      "id": "588093711",
       "name_lat": "ОМАЛИЯ",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3181,10 +3236,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "535625182",
+      "id": "864715495",
       "name_lat": "ОМЕГА СТАР",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3199,11 +3254,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "290522651",
+      "name_lat": "ОМЕЛИЯ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "560575982",
+      "name_lat": "ОМЕЛА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "153719924",
       "name_lat": "ОМ'ЧОУ ВЕРТУ",
       "name_ru": "",
       "breed": "ШИ - ТЦУ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "196386097",
+      "name_lat": "ОМЕГА СТАР",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3221,6 +3300,15 @@
       "name_lat": "ОМОН",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "763651605",
+      "name_lat": "О-МАЙРА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3316,10 +3404,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1428299197",
+      "id": "1572389966",
       "name_lat": "ОМАНДА ЛИР",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3347,15 +3435,6 @@
       "name_lat": "ОМАНДА",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "68992730",
-      "name_lat": "ОМАНДА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР) / GERMAN WIRE-HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3397,6 +3476,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "77800547",
+      "name_lat": "ОМАР ШЕРИФ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "104515795",
       "name_lat": "Омрум Хатун",
       "name_ru": "",
@@ -3406,10 +3493,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1716105738",
-      "name_lat": "ОМЕЛИЯ",
+      "id": "459455823",
+      "name_lat": "ОМЕГА",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "937858175",
+      "name_lat": "ОМЕЛИЯ ОДДИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "965026183",
+      "name_lat": "ОМНИБУС БРАВИССИМО БЭСТ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "796896158",
+      "name_lat": "ОМЕРО ДЕ ШОНЕТ АРНИКА/ARNIKA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3428,15 +3540,6 @@
       "name_lat": "ОМАРИО РЕДДИ",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "700377668",
-      "name_lat": "ОМНИБУС БРАВИССИМО БЭСТ",
-      "name_ru": "",
-      "breed": "БРАЗИЛЬСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3604,10 +3707,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "50319914",
+      "id": "1269829243",
       "name_lat": "ОМЕЛИЯ ИЗ СТАВРОПОЛЬСКОЙ ГУБЕРНИИ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3685,10 +3788,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1849946440",
+      "id": "1589840621",
       "name_lat": "ОМБРА ИЗ ДИНАСТИИ СТЮАРТОВ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3721,15 +3824,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1157493785",
-      "name_lat": "ОМИКУДЗИ ЯУЗА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "676260246",
       "name_lat": "ОМЕЛИЯ ЛАРСЕН",
       "name_ru": "",
@@ -3757,10 +3851,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1790685568",
+      "id": "1293999061",
       "name_lat": "ОМНИВАРУСШАД НАВВИ",
       "name_ru": "",
-      "breed": "ТНАЯ /",
+      "breed": "ТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3775,10 +3869,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "307873844",
+      "id": "1693828788",
       "name_lat": "ОМНИВАРУС ШАД МАЛИБУ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3883,11 +3977,51 @@
       "competition_dog_id": null
     },
     {
+      "id": "361712963",
+      "name_lat": "ОМСКИЕ ПРОСТОРЫ ЖОЗЕФИНА",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "298309867",
+      "name_lat": "ОМАНДА НОРТ СТАР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1242349549",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ДУЛЬСИНЕЯ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "144201523",
+      "name_lat": "ОМЕЛИЯ МОЛЛИ",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "862288474",
       "name_lat": "ОМСТАР БУЛЛ ДАУРИЯ",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ / MINIATURE BULL",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1456789745",
+      "name_lat": "Омикудзи Шон,",
+      "name_ru": "",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО-РЫЖИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3906,6 +4040,14 @@
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "142097551",
+      "name_lat": "ОМЕГА С БЕЛОЙ РЕКИ",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ / SHAR PEI",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4054,10 +4196,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1082059131",
+      "id": "934268210",
       "name_lat": "ОМИРА ВОЛШЕБНАЯ ЛИРА",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4099,6 +4241,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1920730346",
+      "name_lat": "О' МЭЛЛИЯ РЭЙ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1299538714",
       "name_lat": "ОМИКУДЗИ ГОЛДЕН МАНДАРИН",
       "name_ru": "",
@@ -4117,10 +4268,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1094438449",
+      "id": "1413829820",
       "name_lat": "ОМСКАЯ ДРУЖИНА ЕНСЕН",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "669506417",
+      "name_lat": "О, МЭЛЛИ ГОЛД ФАЙЕР",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4148,24 +4308,6 @@
       "name_lat": "ОМАЛИЯ ИЗ ДОМА ЛЕВШОВ ОЙ",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "796896158",
-      "name_lat": "ОМЕРО ДЕ ШОНЕТ АРНИКА/ARNIKA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "238600585",
-      "name_lat": "ОМ*С ШОУ РОМАНТИКА ЛЮБВИ",
-      "name_ru": "",
-      "breed": "АМЕР.КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4216,20 +4358,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "304610340",
-      "name_lat": "ОМСКАЯ ДРУЖИНА АЛТЕЯ СИБИРСКАЯ",
+      "id": "797705683",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1785823754",
-      "name_lat": "ОМСКАЯ ДРУЖИНА АРЕС ШАМРАЙ",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4243,20 +4375,34 @@
       "competition_dog_id": null
     },
     {
-      "id": "1073381819",
-      "name_lat": "ОМСКАЯ ДРУЖИНА КЛАССИКА ЖАНРА",
+      "id": "189879662",
+      "name_lat": "ОМСКАЯ ДРУЖИНА ЯРЫЙ ТРЕЗОР",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "161440638",
-      "name_lat": "ОМСКАЯ ДРУЖИНА ГЕРАЛЬТ ИЗ РИВИИ",
+      "id": "1279739342",
+      "name_lat": "ОМИКУДЗИ МАНГО",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙ",
-      "breed_en": "",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1354780489",
+      "name_lat": "ОМИКУДЗИ УСПЕХ",
+      "name_ru": "",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "6723655",
+      "name_lat": "ОМСКАЯ ДРУЖИНА НУАРА-ЛЕОНОРА",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4270,11 +4416,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "251976816",
-      "name_lat": "ОМСКАЯ ДРУЖИНА АЛАЯ РОЗА",
+      "id": "904446014",
+      "name_lat": "ОМА РАНДА КОЙРА БИГ КУЛ ГЕРЛ",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕ",
-      "breed_en": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4288,11 +4433,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1246019620",
-      "name_lat": "ОМСКАЯ ДРУЖИНА И Я ЧЕРНАЯ КОРОЛЕВА",
+      "id": "540445319",
+      "name_lat": "ОМИКС СТАР ШАНТАЛЬ",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1297893960",
+      "name_lat": "ОМЕГА ОПТИМА ОТ МИКС КОЛОР ГРИФФОН/ OMEGA OPTIMA OT MIX COLOR GRIFFON",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "595667113",
+      "name_lat": "ОМЕЛИЯ С БОЛЬШОЙ ВОЛГИ",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 1,
       "competition_dog_id": null
     }

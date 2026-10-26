@@ -1,15 +1,23 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОШ",
-  "count": 25,
+  "count": 32,
   "dogs": [
     {
-      "id": "1307098071",
+      "id": "124312598",
       "name_lat": "ОШЕР ИОСИФ",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНАЯ /",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "126132863",
+      "name_lat": "ОШЕР ИОСИФ",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -49,6 +57,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "970670490",
+      "name_lat": "О-ШАМАН",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ШПИЦ /",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "183265750",
       "name_lat": "ОША БЬЮТИ",
       "name_ru": "",
@@ -58,12 +74,47 @@
       "competition_dog_id": null
     },
     {
+      "id": "1699281557",
+      "name_lat": "О-ШАМАН",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ШПИЦ / FINNISH",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "890647346",
+      "name_lat": "О'ШИОМАРУ ХАРДИ",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "158445374",
+      "name_lat": "О-ШИРО ЮКИ СУСУМЕЙ",
+      "name_ru": "",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1127614660",
       "name_lat": "ОШЕР ИОСИФ",
       "name_ru": "",
       "breed": "XOLOITZCUINTLE",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "433138974",
+      "name_lat": "ОШИ ШИНДУ ИЗ ДОМА КАРМАНОВОЙ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -85,10 +136,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "563231718",
+      "id": "839869563",
       "name_lat": "ОШЕЙНИКЕ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -130,28 +181,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "714915258",
+      "name_lat": "О-ШЕЛЛИ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1405771449",
+      "name_lat": "ОША ФОМ КИФЕР ЛАНД ТЕО ВИКТОРИ",
+      "name_ru": "ОША ФОМ КИФЕР ЛАНД ТЕО ВИКТОРИ",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "260066549",
       "name_lat": "ОШЕНЬЕР ДЕМАЛЯ",
-      "name_ru": "",
+      "name_ru": "ОШЕНЬЕР ДЕМАЛЯ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "699657537",
-      "name_lat": "ОША ФОМ КИФЕР ЛАНД ТЕО ВИКТОРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "657655068",
+      "id": "797490105",
       "name_lat": "ОШИ КЕЙ",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА /",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -193,19 +253,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "647755691",
+      "id": "205223586",
       "name_lat": "ОШЕР ИОСИФ",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ /",
+      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1255342327",
+      "id": "1077709500",
       "name_lat": "ОШЕЙНИКЕ ЗОЛТОН В ЗОЛОТОМ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,0 +1,6569 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-25T16:26:05.783Z",
+  "source": "manual-entry",
+  "event_id": 20211024,
+  "event": {
+    "id": 20211024,
+    "year": 2021,
+    "date_start": "2021-10-24",
+    "date_end": "2021-10-24",
+    "rank_label": "Командные состязания",
+    "event_type": "coursing",
+    "competition_kind": "Тройка",
+    "competition_type": "Командный курсинг",
+    "title": "Тройка, просто птица - 2021",
+    "host_club": null,
+    "region": null,
+    "location": "Московская обл., Михайловское",
+    "catalog_url": null,
+    "results_url": "http://www.procoursing.ru/results/2021-10-24/",
+    "rules_url": null,
+    "results_pdf_url": null,
+    "confirmed": 1,
+    "last_modified": "2026-10-25T16:26:05.783Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Серова Т.Г., Крылова Е.В.",
+    "track_schemes": []
+  },
+  "result_count": 64,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20211024,
+      "dog_id": 9283,
+      "breed_class": "Борзые",
+      "catalog_no": 19,
+      "placement": 1,
+      "total_score": 348,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Отцы и дети",
+        "team_placement": 1,
+        "team_members": [
+          "BATMAN NIGHT SHADOW",
+          "VARLOK YARKAYA MOLNIYA",
+          "ВАРВАР КОНАН БЕССТРАШНЫЙ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 27,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  20,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 178
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 40,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  17,
+                  23,
+                  4,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 348
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9283,
+        "dog_key": "batman-night-shadow--уиппет",
+        "name_lat": "BATMAN NIGHT SHADOW",
+        "name_ru": "BATMAN NIGHT SHADOW",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20211024,
+      "dog_id": 488,
+      "breed_class": "Борзые",
+      "catalog_no": 19,
+      "placement": 1,
+      "total_score": 348,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Отцы и дети",
+        "team_placement": 1,
+        "team_members": [
+          "BATMAN NIGHT SHADOW",
+          "VARLOK YARKAYA MOLNIYA",
+          "ВАРВАР КОНАН БЕССТРАШНЫЙ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 27,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  20,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 178
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 40,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  17,
+                  23,
+                  4,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 348
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 488,
+        "dog_key": "varlok-yarkaya-molniya--уиппет",
+        "name_lat": "VARLOK YARKAYA MOLNIYA",
+        "name_ru": "VARLOK YARKAYA MOLNIYA",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20211024,
+      "dog_id": 5658,
+      "breed_class": "Борзые",
+      "catalog_no": 19,
+      "placement": 1,
+      "total_score": 348,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Отцы и дети",
+        "team_placement": 1,
+        "team_members": [
+          "BATMAN NIGHT SHADOW",
+          "VARLOK YARKAYA MOLNIYA",
+          "ВАРВАР КОНАН БЕССТРАШНЫЙ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 27,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  20,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 178
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 40,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  17,
+                  23,
+                  4,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 348
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 5658,
+        "dog_key": "varvar-konan-besstrashnyi--уиппет",
+        "name_lat": "VARVAR KONAN BESSTRASHNYI",
+        "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20211024,
+      "dog_id": 10976,
+      "breed_class": "Борзые",
+      "catalog_no": 3,
+      "placement": 2,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Акварели",
+        "team_placement": 2,
+        "team_members": [
+          "ACUARELA DEL' RIO DRAGONFLY",
+          "ACUARELA DEL'RIO VANILLA SKY",
+          "АЦУАРЕЛА ДЕЛЬ РИО ИЛКЛИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174
+          }
+        ],
+        "grand_total": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10976,
+        "dog_key": "acuarela-del-rio-dragonfly--уиппет",
+        "name_lat": "ACUARELA DEL' RIO DRAGONFLY",
+        "name_ru": null,
+        "breed": "Уиппет",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20211024,
+      "dog_id": 10901,
+      "breed_class": "Борзые",
+      "catalog_no": 3,
+      "placement": 2,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Акварели",
+        "team_placement": 2,
+        "team_members": [
+          "ACUARELA DEL' RIO DRAGONFLY",
+          "ACUARELA DEL'RIO VANILLA SKY",
+          "АЦУАРЕЛА ДЕЛЬ РИО ИЛКЛИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174
+          }
+        ],
+        "grand_total": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10901,
+        "dog_key": "acuarela-del-rio-vanilla-sky-10901--уиппет",
+        "name_lat": "Acuarela Del’Rio Vanilla Sky",
+        "name_ru": null,
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20211024,
+      "dog_id": 10977,
+      "breed_class": "Борзые",
+      "catalog_no": 3,
+      "placement": 2,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Акварели",
+        "team_placement": 2,
+        "team_members": [
+          "ACUARELA DEL' RIO DRAGONFLY",
+          "ACUARELA DEL'RIO VANILLA SKY",
+          "АЦУАРЕЛА ДЕЛЬ РИО ИЛКЛИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174
+          }
+        ],
+        "grand_total": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10977,
+        "dog_key": "ацуарела-дель-рио-илкли--уиппет",
+        "name_lat": "АЦУАРЕЛА ДЕЛЬ РИО ИЛКЛИ",
+        "name_ru": null,
+        "breed": "Уиппет",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20211024,
+      "dog_id": 9866,
+      "breed_class": "Борзые",
+      "catalog_no": 3,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "reserve",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Акварели",
+        "team_placement": 2,
+        "team_members": [
+          "ACUARELA DEL' RIO DRAGONFLY",
+          "ACUARELA DEL'RIO VANILLA SKY",
+          "АЦУАРЕЛА ДЕЛЬ РИО ИЛКЛИ"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  21,
+                  5,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 32,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  19,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174
+          }
+        ],
+        "grand_total": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9866,
+        "dog_key": "голди-краунд-беатриса--уиппет",
+        "name_lat": "ГОЛДИ КРАУНД БЕАТРИСА",
+        "name_ru": "ГОЛДИ КРАУНД БЕАТРИСА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20211024,
+      "dog_id": 10187,
+      "breed_class": "Борзые",
+      "catalog_no": 17,
+      "placement": 3,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Родня",
+        "team_placement": 3,
+        "team_members": [
+          "BRILLIANT FLASH",
+          "ЛАКШЕРИ ВИПП НИКИТА",
+          "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  17,
+                  22,
+                  5,
+                  2
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 341
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10187,
+        "dog_key": "brilliant-flash--уиппет",
+        "name_lat": "BRILLIANT FLASH",
+        "name_ru": "BRILLIANT FLASH",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20211024,
+      "dog_id": 10383,
+      "breed_class": "Борзые",
+      "catalog_no": 17,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "reserve",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Родня",
+        "team_placement": 3,
+        "team_members": [
+          "BRILLIANT FLASH",
+          "ЛАКШЕРИ ВИПП НИКИТА",
+          "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  17,
+                  22,
+                  5,
+                  2
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 341
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10383,
+        "dog_key": "лакшери-випп-леди-деи--уиппет",
+        "name_lat": "ЛАКШЕРИ ВИПП ЛЕДИ ДЕЙ",
+        "name_ru": "ЛАКШЕРИ ВИПП ЛЕДИ ДЕЙ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20211024,
+      "dog_id": 9343,
+      "breed_class": "Борзые",
+      "catalog_no": 17,
+      "placement": 3,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Родня",
+        "team_placement": 3,
+        "team_members": [
+          "BRILLIANT FLASH",
+          "ЛАКШЕРИ ВИПП НИКИТА",
+          "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  17,
+                  22,
+                  5,
+                  2
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 341
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9343,
+        "dog_key": "luxury-whipp-nikita--уиппет",
+        "name_lat": "LUXURY WHIPP NIKITA",
+        "name_ru": "ЛАКШЕРИ ВИПП НИКИТА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20211024,
+      "dog_id": 249,
+      "breed_class": "Борзые",
+      "catalog_no": 17,
+      "placement": 3,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Родня",
+        "team_placement": 3,
+        "team_members": [
+          "BRILLIANT FLASH",
+          "ЛАКШЕРИ ВИПП НИКИТА",
+          "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 25,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  17,
+                  22,
+                  5,
+                  2
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 341
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 249,
+        "dog_key": "luxury-whipp-new-belle--уиппет",
+        "name_lat": "LUXURY WHIPP NEW BELLE",
+        "name_ru": "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20211024,
+      "dog_id": 9923,
+      "breed_class": "Борзые",
+      "catalog_no": 7,
+      "placement": 4,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Вижу цель - не вижу препятствий!",
+        "team_placement": 4,
+        "team_members": [
+          "FIRE WOLF",
+          "КЕТЛИН РУТГЕР",
+          "СТИЛАР ХАРЛИ КВИНН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 26,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 171
+          }
+        ],
+        "grand_total": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9923,
+        "dog_key": "fire-wolf--уиппет",
+        "name_lat": "FIRE WOLF",
+        "name_ru": "FIRE WOLF",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20211024,
+      "dog_id": 10429,
+      "breed_class": "Борзые",
+      "catalog_no": 7,
+      "placement": 4,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Вижу цель - не вижу препятствий!",
+        "team_placement": 4,
+        "team_members": [
+          "FIRE WOLF",
+          "КЕТЛИН РУТГЕР",
+          "СТИЛАР ХАРЛИ КВИНН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 26,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 171
+          }
+        ],
+        "grand_total": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10429,
+        "dog_key": "кетлин-рутгер--уиппет",
+        "name_lat": "KETLIN RUTGER",
+        "name_ru": "КЕТЛИН РУТГЕР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 20211024,
+      "dog_id": 9279,
+      "breed_class": "Борзые",
+      "catalog_no": 7,
+      "placement": 4,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Вижу цель - не вижу препятствий!",
+        "team_placement": 4,
+        "team_members": [
+          "FIRE WOLF",
+          "КЕТЛИН РУТГЕР",
+          "СТИЛАР ХАРЛИ КВИНН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 26,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 87
+              },
+              {
+                "scores": [
+                  19,
+                  8,
+                  8,
+                  18,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 171
+          }
+        ],
+        "grand_total": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9279,
+        "dog_key": "стилар-харли-квинн--уиппет",
+        "name_lat": "СТИЛАР ХАРЛИ КВИНН",
+        "name_ru": "СТИЛАР ХАРЛИ КВИНН",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 20211024,
+      "dog_id": 10537,
+      "breed_class": "Борзые",
+      "catalog_no": 8,
+      "placement": 5,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Кукуруза",
+        "team_placement": 5,
+        "team_members": [
+          "HORLEND'S INTERNAL ENERGY",
+          "VOLAR BLEK SHARC UMA",
+          "ДЕНСИ МИДНАЙТ САН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  23,
+                  3,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  19,
+                  23,
+                  3,
+                  4
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171
+          }
+        ],
+        "grand_total": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10537,
+        "dog_key": "horlend-s-intermal-energy--уиппет",
+        "name_lat": "HORLEND’S INTERMAL ENERGY",
+        "name_ru": "HORLEND’S INTERMAL ENERGY",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 20211024,
+      "dog_id": 10538,
+      "breed_class": "Борзые",
+      "catalog_no": 8,
+      "placement": 5,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Кукуруза",
+        "team_placement": 5,
+        "team_members": [
+          "HORLEND'S INTERNAL ENERGY",
+          "VOLAR BLEK SHARC UMA",
+          "ДЕНСИ МИДНАЙТ САН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  23,
+                  3,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  19,
+                  23,
+                  3,
+                  4
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171
+          }
+        ],
+        "grand_total": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10538,
+        "dog_key": "volar-blek-sharc-uma--уиппет",
+        "name_lat": "VOLAR BLEK SHARC UMA",
+        "name_ru": "VOLAR BLEK SHARC UMA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 20211024,
+      "dog_id": 600,
+      "breed_class": "Борзые",
+      "catalog_no": 8,
+      "placement": 5,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Кукуруза",
+        "team_placement": 5,
+        "team_members": [
+          "HORLEND'S INTERNAL ENERGY",
+          "VOLAR BLEK SHARC UMA",
+          "ДЕНСИ МИДНАЙТ САН"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  23,
+                  3,
+                  4
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  19,
+                  23,
+                  3,
+                  4
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 34,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  17,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  18,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171
+          }
+        ],
+        "grand_total": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 600,
+        "dog_key": "densi-midnight-sun--уиппет",
+        "name_lat": "DENSI MIDNIGHT SUN",
+        "name_ru": "ДЕНСИ МИДНАЙТ САН",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 20211024,
+      "dog_id": 622,
+      "breed_class": "Борзые",
+      "catalog_no": 11,
+      "placement": 6,
+      "total_score": 337,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Ураган",
+        "team_placement": 6,
+        "team_members": [
+          "ФАРИД ФРИДЖ",
+          "ФОРВАРД ГРИША",
+          "ФУДЖИСАН МИША"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 36,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  21,
+                  5,
+                  5
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 337
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 622,
+        "dog_key": "salam-isfahan-farid--афганская-борзая",
+        "name_lat": "SALAM ISFAHAN FARID",
+        "name_ru": "САЛАМ ИСФАХАН ФАРИД",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 20211024,
+      "dog_id": 623,
+      "breed_class": "Борзые",
+      "catalog_no": 11,
+      "placement": 6,
+      "total_score": 337,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Ураган",
+        "team_placement": 6,
+        "team_members": [
+          "ФАРИД ФРИДЖ",
+          "ФОРВАРД ГРИША",
+          "ФУДЖИСАН МИША"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 36,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  21,
+                  5,
+                  5
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 337
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 623,
+        "dog_key": "salam-isfahan-forward--афганская-борзая",
+        "name_lat": "SALAM ISFAHAN FORWARD",
+        "name_ru": "САЛАМ ИСФАХАН ФОРВАРД",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 20211024,
+      "dog_id": 10978,
+      "breed_class": "Борзые",
+      "catalog_no": 11,
+      "placement": 6,
+      "total_score": 337,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Ураган",
+        "team_placement": 6,
+        "team_members": [
+          "ФАРИД ФРИДЖ",
+          "ФОРВАРД ГРИША",
+          "ФУДЖИСАН МИША"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 23,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 36,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  21,
+                  5,
+                  5
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 165
+          }
+        ],
+        "grand_total": 337
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10978,
+        "dog_key": "фуджисан-миша--афганская-борзая",
+        "name_lat": "ФУДЖИСАН МИША",
+        "name_ru": null,
+        "breed": "Афганская борзая",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 20211024,
+      "dog_id": 10096,
+      "breed_class": "Борзые",
+      "catalog_no": 10,
+      "placement": 7,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Буря",
+        "team_placement": 7,
+        "team_members": [
+          "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
+          "ФАНТАСТИК АРТ АРТИ",
+          "ФАРИДА ФРИЗА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 31,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  25,
+                  5,
+                  2
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167
+          }
+        ],
+        "grand_total": 336
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10096,
+        "dog_key": "salam-isfahan-tramontana-vlastelina-gor--афганская-борзая",
+        "name_lat": "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
+        "name_ru": "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 20211024,
+      "dog_id": 8949,
+      "breed_class": "Борзые",
+      "catalog_no": 10,
+      "placement": 7,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Буря",
+        "team_placement": 7,
+        "team_members": [
+          "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
+          "ФАНТАСТИК АРТ АРТИ",
+          "ФАРИДА ФРИЗА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 31,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  25,
+                  5,
+                  2
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167
+          }
+        ],
+        "grand_total": 336
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 8949,
+        "dog_key": "salam-isfahan-fantastic-art--афганская-борзая",
+        "name_lat": "SALAM ISFAHAN FANTASTIC ART",
+        "name_ru": "САЛАМ ИСФАХАН ФАНТАСТИК АРТ",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 20211024,
+      "dog_id": 8950,
+      "breed_class": "Борзые",
+      "catalog_no": 10,
+      "placement": 7,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Буря",
+        "team_placement": 7,
+        "team_members": [
+          "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
+          "ФАНТАСТИК АРТ АРТИ",
+          "ФАРИДА ФРИЗА"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 18,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  9,
+                  18,
+                  25,
+                  5,
+                  4
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 31,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 83
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  25,
+                  5,
+                  2
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 167
+          }
+        ],
+        "grand_total": 336
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 8950,
+        "dog_key": "salam-isfahan-farida--афганская-борзая",
+        "name_lat": "SALAM ISFAHAN FARIDA",
+        "name_ru": "САЛАМ ИСФАХАН ФАРИДА",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 20211024,
+      "dog_id": 9630,
+      "breed_class": "Борзые",
+      "catalog_no": 13,
+      "placement": 8,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Грации в азарте",
+        "team_placement": 8,
+        "team_members": [
+          "ACUARELA DEL'RIO IBERICA",
+          "БЕАТРИС ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
+          "БЛОССОМТАЙМ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 24,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 80
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 168
+          }
+        ],
+        "grand_total": 330
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9630,
+        "dog_key": "ацуарела-дель-рио-иберика--уиппет",
+        "name_lat": "АЦУАРЕЛА ДЕЛЬ РИО ИБЕРИКА",
+        "name_ru": "АЦУАРЕЛА ДЕЛЬ РИО ИБЕРИКА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 20211024,
+      "dog_id": 9629,
+      "breed_class": "Борзые",
+      "catalog_no": 13,
+      "placement": 8,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Грации в азарте",
+        "team_placement": 8,
+        "team_members": [
+          "ACUARELA DEL'RIO IBERICA",
+          "БЕАТРИС ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
+          "БЛОССОМТАЙМ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 24,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 80
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 168
+          }
+        ],
+        "grand_total": 330
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9629,
+        "dog_key": "беатрис-из-созвездия-сурских-псов--уиппет",
+        "name_lat": "BEATRIS IZ SOZVEZDIYA SURSKIKH PSOV",
+        "name_ru": "БЕАТРИС ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 20211024,
+      "dog_id": 9434,
+      "breed_class": "Борзые",
+      "catalog_no": 13,
+      "placement": 8,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Грации в азарте",
+        "team_placement": 8,
+        "team_members": [
+          "ACUARELA DEL'RIO IBERICA",
+          "БЕАТРИС ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
+          "БЛОССОМТАЙМ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 24,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  16,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 80
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  8,
+                  18,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 168
+          }
+        ],
+        "grand_total": 330
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9434,
+        "dog_key": "блоссомтаим--уиппет",
+        "name_lat": "БЛОССОМТАЙМ",
+        "name_ru": "БЛОССОМТАЙМ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 20211024,
+      "dog_id": 9364,
+      "breed_class": "Борзые",
+      "catalog_no": 5,
+      "placement": 9,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Новички на старте",
+        "team_placement": 9,
+        "team_members": [
+          "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+          "АПРИОРИ СТАР СИРИУС",
+          "СМАРТ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  17,
+                  10,
+                  7,
+                  18,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 33,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 159
+          }
+        ],
+        "grand_total": 325
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9364,
+        "dog_key": "анжело-челесте-антонио-верди--малая-итальянская-борзая",
+        "name_lat": "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+        "name_ru": "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 20211024,
+      "dog_id": 541,
+      "breed_class": "Борзые",
+      "catalog_no": 5,
+      "placement": 9,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Новички на старте",
+        "team_placement": 9,
+        "team_members": [
+          "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+          "АПРИОРИ СТАР СИРИУС",
+          "СМАРТ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  17,
+                  10,
+                  7,
+                  18,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 33,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 159
+          }
+        ],
+        "grand_total": 325
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 541,
+        "dog_key": "apriori-star-sirius-sunni-boy--малая-итальянская-борзая",
+        "name_lat": "APRIORI STAR SIRIUS SUNNI BOY",
+        "name_ru": "АПРИОРИ СТАР СИРИУС СУННИ БОЙ",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 20211024,
+      "dog_id": 10979,
+      "breed_class": "Борзые",
+      "catalog_no": 5,
+      "placement": 9,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Новички на старте",
+        "team_placement": 9,
+        "team_members": [
+          "АНЖЕЛО ЧЕЛЕСТЕ АНТОНИО ВЕРДИ",
+          "АПРИОРИ СТАР СИРИУС",
+          "СМАРТ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  17,
+                  10,
+                  7,
+                  18,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 33,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 159
+          }
+        ],
+        "grand_total": 325
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10979,
+        "dog_key": "смарт--левретка",
+        "name_lat": "СМАРТ",
+        "name_ru": null,
+        "breed": "Левретка",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 20211024,
+      "dog_id": 10533,
+      "breed_class": "Борзые",
+      "catalog_no": 20,
+      "placement": 10,
+      "total_score": 322,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Трус, Балбес и Бывалый",
+        "team_placement": 10,
+        "team_members": [
+          "LAVING BRIZ OLIVER",
+          "VREMYA NE ZHDYOT ERAGON",
+          "КЕТЛИН ФАУСТ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  15,
+                  20,
+                  0,
+                  4
+                ],
+                "sum": 72
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  22,
+                  2,
+                  1
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 148
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 35,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  16,
+                  22,
+                  5,
+                  3
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  20,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 174
+          }
+        ],
+        "grand_total": 322
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10533,
+        "dog_key": "laving-briz-oliver--уиппет",
+        "name_lat": "LAVING BRIZ OLIVER",
+        "name_ru": "LAVING BRIZ OLIVER",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 20211024,
+      "dog_id": 10428,
+      "breed_class": "Борзые",
+      "catalog_no": 20,
+      "placement": 10,
+      "total_score": 322,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Трус, Балбес и Бывалый",
+        "team_placement": 10,
+        "team_members": [
+          "LAVING BRIZ OLIVER",
+          "VREMYA NE ZHDYOT ERAGON",
+          "КЕТЛИН ФАУСТ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  15,
+                  20,
+                  0,
+                  4
+                ],
+                "sum": 72
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  22,
+                  2,
+                  1
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 148
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 35,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  16,
+                  22,
+                  5,
+                  3
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  20,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 174
+          }
+        ],
+        "grand_total": 322
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10428,
+        "dog_key": "vremya-ne-zhdyot-eragon--уиппет",
+        "name_lat": "VREMYA NE ZHDYOT ERAGON",
+        "name_ru": "VREMYA NE ZHDYOT ERAGON",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 20211024,
+      "dog_id": 10973,
+      "breed_class": "Борзые",
+      "catalog_no": 20,
+      "placement": 10,
+      "total_score": 322,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Трус, Балбес и Бывалый",
+        "team_placement": 10,
+        "team_members": [
+          "LAVING BRIZ OLIVER",
+          "VREMYA NE ZHDYOT ERAGON",
+          "КЕТЛИН ФАУСТ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 22,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  15,
+                  20,
+                  0,
+                  4
+                ],
+                "sum": 72
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  22,
+                  2,
+                  1
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 148
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 35,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  16,
+                  22,
+                  5,
+                  3
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  19,
+                  9,
+                  9,
+                  20,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 174
+          }
+        ],
+        "grand_total": 322
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10973,
+        "dog_key": "ketlin-faust--уиппет",
+        "name_lat": "KETLIN FAUST",
+        "name_ru": "КЕТЛИН ФАУСТ",
+        "breed": "Уиппет",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 20211024,
+      "dog_id": 10980,
+      "breed_class": "Борзые",
+      "catalog_no": 6,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "reserve",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Итальянцы в России",
+        "team_placement": 11,
+        "team_members": [
+          "GRACE HAUND ELIZABETH HER EXCELLENCE",
+          "ЛАКШЕРИ ВИПП НИКИТА",
+          "МАГНИФИКО НЕРО"
+        ],
+        "ran": false,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  16,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  18,
+                  5,
+                  4
+                ],
+                "sum": 73
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  17,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 153
+          }
+        ],
+        "grand_total": 315
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10980,
+        "dog_key": "bonitas-spirit-outstanding-talisman--левретка",
+        "name_lat": "BONITAS SPIRIT OUTSTANDING TALISMAN",
+        "name_ru": null,
+        "breed": "Левретка",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 20211024,
+      "dog_id": 10430,
+      "breed_class": "Борзые",
+      "catalog_no": 6,
+      "placement": 11,
+      "total_score": 315,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Итальянцы в России",
+        "team_placement": 11,
+        "team_members": [
+          "GRACE HAUND ELIZABETH HER EXCELLENCE",
+          "ЛАКШЕРИ ВИПП НИКИТА",
+          "МАГНИФИКО НЕРО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  16,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  18,
+                  5,
+                  4
+                ],
+                "sum": 73
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  17,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 153
+          }
+        ],
+        "grand_total": 315
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10430,
+        "dog_key": "grace-haund-elizabeth-her-excellence--левретка",
+        "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "breed": "ЛЕВРЕТКА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 35,
+      "event_id": 20211024,
+      "dog_id": 9343,
+      "breed_class": "Борзые",
+      "catalog_no": 6,
+      "placement": 11,
+      "total_score": 315,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Итальянцы в России",
+        "team_placement": 11,
+        "team_members": [
+          "GRACE HAUND ELIZABETH HER EXCELLENCE",
+          "ЛАКШЕРИ ВИПП НИКИТА",
+          "МАГНИФИКО НЕРО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  16,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  18,
+                  5,
+                  4
+                ],
+                "sum": 73
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  17,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 153
+          }
+        ],
+        "grand_total": 315
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9343,
+        "dog_key": "luxury-whipp-nikita--уиппет",
+        "name_lat": "LUXURY WHIPP NIKITA",
+        "name_ru": "ЛАКШЕРИ ВИПП НИКИТА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 36,
+      "event_id": 20211024,
+      "dog_id": 10528,
+      "breed_class": "Борзые",
+      "catalog_no": 6,
+      "placement": 11,
+      "total_score": 315,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Итальянцы в России",
+        "team_placement": 11,
+        "team_members": [
+          "GRACE HAUND ELIZABETH HER EXCELLENCE",
+          "ЛАКШЕРИ ВИПП НИКИТА",
+          "МАГНИФИКО НЕРО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  16,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  17,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  18,
+                  5,
+                  4
+                ],
+                "sum": 73
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  17,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 153
+          }
+        ],
+        "grand_total": 315
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10528,
+        "dog_key": "магнифико-неро--левретка",
+        "name_lat": "МАГНИФИКО НЕРО",
+        "name_ru": "МАГНИФИКО НЕРО",
+        "breed": "ЛЕВРЕТКА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 37,
+      "event_id": 20211024,
+      "dog_id": 9277,
+      "breed_class": "Борзые",
+      "catalog_no": 12,
+      "placement": 12,
+      "total_score": 314,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Оборзевшая банда",
+        "team_placement": 12,
+        "team_members": [
+          "DERA BLUE",
+          "GUY",
+          "DJINI LAMBOR"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  15,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 160
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  16,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 154
+          }
+        ],
+        "grand_total": 314
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9277,
+        "dog_key": "dera-blue--уиппет",
+        "name_lat": "DERA BLUE",
+        "name_ru": "DERA BLUE",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 38,
+      "event_id": 20211024,
+      "dog_id": 78,
+      "breed_class": "Борзые",
+      "catalog_no": 12,
+      "placement": 12,
+      "total_score": 314,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Оборзевшая банда",
+        "team_placement": 12,
+        "team_members": [
+          "DERA BLUE",
+          "GUY",
+          "DJINI LAMBOR"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  15,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 160
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  16,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 154
+          }
+        ],
+        "grand_total": 314
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 78,
+        "dog_key": "guy--уиппет",
+        "name_lat": "GUY",
+        "name_ru": "GUY",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 39,
+      "event_id": 20211024,
+      "dog_id": 10320,
+      "breed_class": "Борзые",
+      "catalog_no": 12,
+      "placement": 12,
+      "total_score": 314,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Оборзевшая банда",
+        "team_placement": 12,
+        "team_members": [
+          "DERA BLUE",
+          "GUY",
+          "DJINI LAMBOR"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 15,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  15,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 78
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  22,
+                  5,
+                  5
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 160
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  16,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 154
+          }
+        ],
+        "grand_total": 314
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10320,
+        "dog_key": "djini-lambor--уиппет",
+        "name_lat": "DJINI LAMBOR",
+        "name_ru": "DJINI LAMBOR",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 40,
+      "event_id": 20211024,
+      "dog_id": 9342,
+      "breed_class": "Борзые",
+      "catalog_no": 14,
+      "placement": 13,
+      "total_score": 278,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Три мушкетёра",
+        "team_placement": 13,
+        "team_members": [
+          "DON CORLEONE",
+          "АМОРОУС БЭБИ ПИНКЕРТОН",
+          "GRINCH NOCHNOI POLET"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  6,
+                  5,
+                  12,
+                  16,
+                  4,
+                  3
+                ],
+                "sum": 63
+              },
+              {
+                "scores": [
+                  17,
+                  5,
+                  5,
+                  10,
+                  15,
+                  4,
+                  3
+                ],
+                "sum": 59
+              }
+            ],
+            "total": 122
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  15,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 278
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9342,
+        "dog_key": "don-corleone--уиппет",
+        "name_lat": "DON CORLEONE",
+        "name_ru": "DON CORLEONE",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 20211024,
+      "dog_id": 10458,
+      "breed_class": "Борзые",
+      "catalog_no": 14,
+      "placement": 13,
+      "total_score": 278,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Три мушкетёра",
+        "team_placement": 13,
+        "team_members": [
+          "DON CORLEONE",
+          "АМОРОУС БЭБИ ПИНКЕРТОН",
+          "GRINCH NOCHNOI POLET"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  6,
+                  5,
+                  12,
+                  16,
+                  4,
+                  3
+                ],
+                "sum": 63
+              },
+              {
+                "scores": [
+                  17,
+                  5,
+                  5,
+                  10,
+                  15,
+                  4,
+                  3
+                ],
+                "sum": 59
+              }
+            ],
+            "total": 122
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  15,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 278
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10458,
+        "dog_key": "амороус-бэби-пинкертон--уиппет",
+        "name_lat": "АМОРОУС БЭБИ ПИНКЕРТОН",
+        "name_ru": "АМОРОУС БЭБИ ПИНКЕРТОН",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 42,
+      "event_id": 20211024,
+      "dog_id": 10414,
+      "breed_class": "Борзые",
+      "catalog_no": 14,
+      "placement": 13,
+      "total_score": 278,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "Борзые",
+        "team_name": "Три мушкетёра",
+        "team_placement": 13,
+        "team_members": [
+          "DON CORLEONE",
+          "АМОРОУС БЭБИ ПИНКЕРТОН",
+          "GRINCH NOCHNOI POLET"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 16,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  6,
+                  5,
+                  12,
+                  16,
+                  4,
+                  3
+                ],
+                "sum": 63
+              },
+              {
+                "scores": [
+                  17,
+                  5,
+                  5,
+                  10,
+                  15,
+                  4,
+                  3
+                ],
+                "sum": 59
+              }
+            ],
+            "total": 122
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  15,
+                  19,
+                  5,
+                  4
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  7,
+                  17,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 156
+          }
+        ],
+        "grand_total": 278
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10414,
+        "dog_key": "grinch-nochnoi-polet--уиппет",
+        "name_lat": "GRINCH NOCHNOI POLET",
+        "name_ru": "GRINCH NOCHNOI POLET",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 43,
+      "event_id": 20211024,
+      "dog_id": 9232,
+      "breed_class": "НеБорзые",
+      "catalog_no": 1,
+      "placement": 1,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "СК КДЦ \"Тори\"",
+        "team_placement": 1,
+        "team_members": [
+          "БОНЯ",
+          "КНОПА",
+          "ПЁС"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  16,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          }
+        ],
+        "grand_total": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9232,
+        "dog_key": "боня--метис",
+        "name_lat": "BONYA",
+        "name_ru": "БОНЯ",
+        "breed": "МЕТИС",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 44,
+      "event_id": 20211024,
+      "dog_id": 9236,
+      "breed_class": "НеБорзые",
+      "catalog_no": 1,
+      "placement": 1,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "СК КДЦ \"Тори\"",
+        "team_placement": 1,
+        "team_members": [
+          "БОНЯ",
+          "КНОПА",
+          "ПЁС"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  16,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          }
+        ],
+        "grand_total": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9236,
+        "dog_key": "кнопа--метис",
+        "name_lat": "KNOPA",
+        "name_ru": "КНОПА",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 45,
+      "event_id": 20211024,
+      "dog_id": 9230,
+      "breed_class": "НеБорзые",
+      "catalog_no": 1,
+      "placement": 1,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "СК КДЦ \"Тори\"",
+        "team_placement": 1,
+        "team_members": [
+          "БОНЯ",
+          "КНОПА",
+          "ПЁС"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  16,
+                  24,
+                  5,
+                  5
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  5,
+                  5
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 13,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          }
+        ],
+        "grand_total": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9230,
+        "dog_key": "пес--метис",
+        "name_lat": "PES",
+        "name_ru": "ПЕС",
+        "breed": "МЕТИС",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 46,
+      "event_id": 20211024,
+      "dog_id": 10438,
+      "breed_class": "НеБорзые",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Лепреконы",
+        "team_placement": 2,
+        "team_members": [
+          "NEZNOYE PLAMYA BRODERICK",
+          "YURATE YANTARNYA KAPLYA",
+          "РИЧЛИ РЕД ХЭЙЛ СТОРМ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  22,
+                  4,
+                  4
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 155
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 175
+          }
+        ],
+        "grand_total": 330
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10438,
+        "dog_key": "neznoye-plamya-broderick--ирландскии-терьер",
+        "name_lat": "NEZNOYE PLAMYA BRODERICK",
+        "name_ru": "NEZNOYE PLAMYA BRODERICK",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 47,
+      "event_id": 20211024,
+      "dog_id": 10439,
+      "breed_class": "НеБорзые",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Лепреконы",
+        "team_placement": 2,
+        "team_members": [
+          "NEZNOYE PLAMYA BRODERICK",
+          "YURATE YANTARNYA KAPLYA",
+          "РИЧЛИ РЕД ХЭЙЛ СТОРМ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  22,
+                  4,
+                  4
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 155
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 175
+          }
+        ],
+        "grand_total": 330
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10439,
+        "dog_key": "yurate-yantarnya-kaplya--ирландскии-терьер",
+        "name_lat": "YURATE YANTARNYA KAPLYA",
+        "name_ru": "YURATE YANTARNYA KAPLYA",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 48,
+      "event_id": 20211024,
+      "dog_id": 9221,
+      "breed_class": "НеБорзые",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Лепреконы",
+        "team_placement": 2,
+        "team_members": [
+          "NEZNOYE PLAMYA BRODERICK",
+          "YURATE YANTARNYA KAPLYA",
+          "РИЧЛИ РЕД ХЭЙЛ СТОРМ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  6,
+                  17,
+                  22,
+                  4,
+                  4
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 155
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 11,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  17,
+                  24,
+                  5,
+                  4
+                ],
+                "sum": 86
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  5,
+                  5
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 175
+          }
+        ],
+        "grand_total": 330
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9221,
+        "dog_key": "ричли-рэд-хеил-сторм--ирландскии-терьер",
+        "name_lat": "РИЧЛИ РЭД ХЕЙЛ СТОРМ",
+        "name_ru": "РИЧЛИ РЭД ХЕЙЛ СТОРМ",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 49,
+      "event_id": 20211024,
+      "dog_id": 383,
+      "breed_class": "НеБорзые",
+      "catalog_no": 15,
+      "placement": 3,
+      "total_score": 321,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Рождённые вулканом",
+        "team_placement": 3,
+        "team_members": [
+          "MIA SANTO'S ILVA-NEVA",
+          "МИА САНТО'С ИВАНЕССЕНС",
+          "МИА САНТО'С МАРКО КВИНТО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  17,
+                  23,
+                  0,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  1,
+                  3
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 158
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  15,
+                  22,
+                  3,
+                  5
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  24,
+                  2,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 163
+          }
+        ],
+        "grand_total": 321
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 383,
+        "dog_key": "mia-santo-s-ilva-neva--чирнеко-дель-этна",
+        "name_lat": "MIA SANTO’S ILVA NEVA",
+        "name_ru": "MIA SANTO’S ILVA NEVA",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 50,
+      "event_id": 20211024,
+      "dog_id": 10540,
+      "breed_class": "НеБорзые",
+      "catalog_no": 15,
+      "placement": 3,
+      "total_score": 321,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Рождённые вулканом",
+        "team_placement": 3,
+        "team_members": [
+          "MIA SANTO'S ILVA-NEVA",
+          "МИА САНТО'С ИВАНЕССЕНС",
+          "МИА САНТО'С МАРКО КВИНТО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  17,
+                  23,
+                  0,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  1,
+                  3
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 158
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  15,
+                  22,
+                  3,
+                  5
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  24,
+                  2,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 163
+          }
+        ],
+        "grand_total": 321
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10540,
+        "dog_key": "миа-сантос-иванессенс--чирнеко-дель-этна",
+        "name_lat": "МИА САНТОС ИВАНЕССЕНС",
+        "name_ru": "МИА САНТОС ИВАНЕССЕНС",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 51,
+      "event_id": 20211024,
+      "dog_id": 7820,
+      "breed_class": "НеБорзые",
+      "catalog_no": 15,
+      "placement": 3,
+      "total_score": 321,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Рождённые вулканом",
+        "team_placement": 3,
+        "team_members": [
+          "MIA SANTO'S ILVA-NEVA",
+          "МИА САНТО'С ИВАНЕССЕНС",
+          "МИА САНТО'С МАРКО КВИНТО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  9,
+                  17,
+                  23,
+                  0,
+                  4
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  8,
+                  8,
+                  18,
+                  23,
+                  1,
+                  3
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 158
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 9,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  15,
+                  22,
+                  3,
+                  5
+                ],
+                "sum": 79
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  18,
+                  24,
+                  2,
+                  5
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 163
+          }
+        ],
+        "grand_total": 321
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7820,
+        "dog_key": "mia-santos-marco-qwinto--чирнеко-дель-этна",
+        "name_lat": "MIA SANTOS MARCO QWINTO",
+        "name_ru": "МИА САНТОС МАРКО КВИНТО",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 52,
+      "event_id": 20211024,
+      "dog_id": 9545,
+      "breed_class": "НеБорзые",
+      "catalog_no": 9,
+      "placement": 4,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Дружба народов",
+        "team_placement": 4,
+        "team_members": [
+          "AISKNEKHT TEQUILA",
+          "BRAVE FIGHTER'S MILK AND HONEY",
+          "ВЕНТУРО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  15,
+                  17,
+                  5,
+                  3
+                ],
+                "sum": 72
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  17,
+                  20,
+                  4,
+                  3
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 148
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  16,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 169
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9545,
+        "dog_key": "aisknekht-tequila--бордер-колли",
+        "name_lat": "AISKNEKHT TEQUILA",
+        "name_ru": "AISKNEKHT TEQUILA",
+        "breed": "БОРДЕР КОЛЛИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 53,
+      "event_id": 20211024,
+      "dog_id": 10502,
+      "breed_class": "НеБорзые",
+      "catalog_no": 9,
+      "placement": 4,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Дружба народов",
+        "team_placement": 4,
+        "team_members": [
+          "AISKNEKHT TEQUILA",
+          "BRAVE FIGHTER'S MILK AND HONEY",
+          "ВЕНТУРО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  15,
+                  17,
+                  5,
+                  3
+                ],
+                "sum": 72
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  17,
+                  20,
+                  4,
+                  3
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 148
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  16,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 169
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10502,
+        "dog_key": "brave-fighter-s-milk-and-honey--американскии-пит-бультер",
+        "name_lat": "BRAVE FIGHTER’S MILK AND HONEY",
+        "name_ru": "BRAVE FIGHTER’S MILK AND HONEY",
+        "breed": "АМЕРИКАНСКИЙ ПИТ БУЛЬТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 54,
+      "event_id": 20211024,
+      "dog_id": 10981,
+      "breed_class": "НеБорзые",
+      "catalog_no": 9,
+      "placement": 4,
+      "total_score": 317,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Дружба народов",
+        "team_placement": 4,
+        "team_members": [
+          "AISKNEKHT TEQUILA",
+          "BRAVE FIGHTER'S MILK AND HONEY",
+          "ВЕНТУРО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  15,
+                  17,
+                  5,
+                  3
+                ],
+                "sum": 72
+              },
+              {
+                "scores": [
+                  17,
+                  7,
+                  8,
+                  17,
+                  20,
+                  4,
+                  3
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 148
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 8,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  9,
+                  8,
+                  16,
+                  23,
+                  4,
+                  4
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  18,
+                  9,
+                  9,
+                  18,
+                  25,
+                  4,
+                  5
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 169
+          }
+        ],
+        "grand_total": 317
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10981,
+        "dog_key": "вентуро--чирнеко-дель-этна",
+        "name_lat": "ВЕНТУРО",
+        "name_ru": null,
+        "breed": "Чирнеко дель Этна",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 55,
+      "event_id": 20211024,
+      "dog_id": 10207,
+      "breed_class": "НеБорзые",
+      "catalog_no": 2,
+      "placement": 5,
+      "total_score": 313,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Третьим будешь?",
+        "team_placement": 5,
+        "team_members": [
+          "STANGERS LAND ALKIONA",
+          "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+          "УНО ЗАФИРА БЛАНКА ИЗ КАНЕКСО",
+          "ХАЙДИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  18,
+                  21,
+                  3,
+                  0
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 151
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  21,
+                  5,
+                  5
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  20,
+                  5,
+                  5
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 162
+          }
+        ],
+        "grand_total": 313
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10207,
+        "dog_key": "stangers-land-alkiona--уиппет",
+        "name_lat": "STANGERS LAND ALKIONA",
+        "name_ru": "STANGERS LAND ALKIONA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 56,
+      "event_id": 20211024,
+      "dog_id": 10513,
+      "breed_class": "НеБорзые",
+      "catalog_no": 2,
+      "placement": 5,
+      "total_score": 313,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Третьим будешь?",
+        "team_placement": 5,
+        "team_members": [
+          "STANGERS LAND ALKIONA",
+          "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+          "УНО ЗАФИРА БЛАНКА ИЗ КАНЕКСО",
+          "ХАЙДИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  18,
+                  21,
+                  3,
+                  0
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 151
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  21,
+                  5,
+                  5
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  20,
+                  5,
+                  5
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 162
+          }
+        ],
+        "grand_total": 313
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10513,
+        "dog_key": "vernaya-keltam-iz-volshebnogo-lesa--ирландскии-волкодав",
+        "name_lat": "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+        "name_ru": "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 57,
+      "event_id": 20211024,
+      "dog_id": 8143,
+      "breed_class": "НеБорзые",
+      "catalog_no": 2,
+      "placement": 5,
+      "total_score": 313,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Третьим будешь?",
+        "team_placement": 5,
+        "team_members": [
+          "STANGERS LAND ALKIONA",
+          "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+          "УНО ЗАФИРА БЛАНКА ИЗ КАНЕКСО",
+          "ХАЙДИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  18,
+                  21,
+                  3,
+                  0
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 151
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  21,
+                  5,
+                  5
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  20,
+                  5,
+                  5
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 162
+          }
+        ],
+        "grand_total": 313
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 8143,
+        "dog_key": "уно-зафира-бланка-из-канексо--ксолоитцкуинтли-мексикан",
+        "name_lat": "УНО ЗАФИРА БЛАНКА ИЗ КАНЕКСО",
+        "name_ru": "УНО ЗАФИРА БЛАНКА ИЗ КАНЕКСО",
+        "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 58,
+      "event_id": 20211024,
+      "dog_id": 10982,
+      "breed_class": "НеБорзые",
+      "catalog_no": 2,
+      "placement": 5,
+      "total_score": 313,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Третьим будешь?",
+        "team_placement": 5,
+        "team_members": [
+          "STANGERS LAND ALKIONA",
+          "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
+          "УНО ЗАФИРА БЛАНКА ИЗ КАНЕКСО",
+          "ХАЙДИ"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  16,
+                  22,
+                  4,
+                  3
+                ],
+                "sum": 77
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  7,
+                  18,
+                  21,
+                  3,
+                  0
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 151
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 10,
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  9,
+                  8,
+                  16,
+                  21,
+                  5,
+                  5
+                ],
+                "sum": 82
+              },
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  17,
+                  20,
+                  5,
+                  5
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 162
+          }
+        ],
+        "grand_total": 313
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10982,
+        "dog_key": "хаиди--ирландскии-терьер",
+        "name_lat": "ХАЙДИ",
+        "name_ru": null,
+        "breed": "Ирландский терьер",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 59,
+      "event_id": 20211024,
+      "dog_id": 9892,
+      "breed_class": "НеБорзые",
+      "catalog_no": 18,
+      "placement": 6,
+      "total_score": 305,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "БЭМС (Боевые, Энергичные, Молодые, Симпатичные)",
+        "team_placement": 6,
+        "team_members": [
+          "LIVELONG HIT ZHENEVIEVA",
+          "ВОНДЕРЛЕНД ИТАР РИО САНТА РИТА",
+          "ОРАБЕЛЛА ЛОРЕН ИЗ КАНЕКСО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 74
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  7,
+                  19,
+                  18,
+                  5,
+                  3
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 152
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  15,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 153
+          }
+        ],
+        "grand_total": 305
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9892,
+        "dog_key": "livelong-hit-zhenevieva--ксолоитцкуинтли-медио",
+        "name_lat": "LIVELONG HIT ZHENEVIEVA",
+        "name_ru": "LIVELONG HIT ZHENEVIEVA",
+        "breed": "КСОЛОИТЦКУИНТЛИ МЕДИО",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 60,
+      "event_id": 20211024,
+      "dog_id": 10904,
+      "breed_class": "НеБорзые",
+      "catalog_no": 18,
+      "placement": 6,
+      "total_score": 305,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "БЭМС (Боевые, Энергичные, Молодые, Симпатичные)",
+        "team_placement": 6,
+        "team_members": [
+          "LIVELONG HIT ZHENEVIEVA",
+          "ВОНДЕРЛЕНД ИТАР РИО САНТА РИТА",
+          "ОРАБЕЛЛА ЛОРЕН ИЗ КАНЕКСО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 74
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  7,
+                  19,
+                  18,
+                  5,
+                  3
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 152
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  15,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 153
+          }
+        ],
+        "grand_total": 305
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10904,
+        "dog_key": "вондерленд-итар-рио-санта-рита-10904--ксолоитцкуинтли-медио",
+        "name_lat": "ВОНДЕРЛЕНД ИТАР РИО САНТА РИТА",
+        "name_ru": "Вондерленд Итар Рио Санта Рита",
+        "breed": "КСОЛОИТЦКУИНТЛИ МЕДИО",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 61,
+      "event_id": 20211024,
+      "dog_id": 10983,
+      "breed_class": "НеБорзые",
+      "catalog_no": 18,
+      "placement": 6,
+      "total_score": 305,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "БЭМС (Боевые, Энергичные, Молодые, Симпатичные)",
+        "team_placement": 6,
+        "team_members": [
+          "LIVELONG HIT ZHENEVIEVA",
+          "ВОНДЕРЛЕНД ИТАР РИО САНТА РИТА",
+          "ОРАБЕЛЛА ЛОРЕН ИЗ КАНЕКСО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  7,
+                  15,
+                  20,
+                  4,
+                  4
+                ],
+                "sum": 74
+              },
+              {
+                "scores": [
+                  17,
+                  9,
+                  7,
+                  19,
+                  18,
+                  5,
+                  3
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 152
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 12,
+            "judges": [
+              {
+                "scores": [
+                  16,
+                  8,
+                  8,
+                  15,
+                  20,
+                  5,
+                  4
+                ],
+                "sum": 76
+              },
+              {
+                "scores": [
+                  16,
+                  7,
+                  7,
+                  16,
+                  22,
+                  5,
+                  4
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 153
+          }
+        ],
+        "grand_total": 305
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10983,
+        "dog_key": "орабелла-лорен-из-канексо--ксолоитцкуинтли-медио",
+        "name_lat": "ОРАБЕЛЛА ЛОРЕН ИЗ КАНЕКСО",
+        "name_ru": null,
+        "breed": "Ксолоитцкуинтли Медио",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 62,
+      "event_id": 20211024,
+      "dog_id": 10512,
+      "breed_class": "НеБорзые",
+      "catalog_no": 16,
+      "placement": 7,
+      "total_score": 280,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Риджевольфы",
+        "team_placement": 7,
+        "team_members": [
+          "BORS MES AMIS DE MAFINNS",
+          "DEYONGA GAYA MONIFA",
+          "ФАРГО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  19,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  17,
+                  5,
+                  2,
+                  16,
+                  15,
+                  4,
+                  4
+                ],
+                "sum": 63
+              }
+            ],
+            "total": 147
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  6,
+                  14,
+                  17,
+                  4,
+                  4
+                ],
+                "sum": 69
+              },
+              {
+                "scores": [
+                  15,
+                  5,
+                  5,
+                  15,
+                  17,
+                  3,
+                  4
+                ],
+                "sum": 64
+              }
+            ],
+            "total": 133
+          }
+        ],
+        "grand_total": 280
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10512,
+        "dog_key": "bors-mes-amis-de-mafinns--ирландскии-волкодав",
+        "name_lat": "BORS MES AMIS DE MAFINNS",
+        "name_ru": "BORS MES AMIS DE MAFINNS",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 63,
+      "event_id": 20211024,
+      "dog_id": 10017,
+      "breed_class": "НеБорзые",
+      "catalog_no": 16,
+      "placement": 7,
+      "total_score": 280,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Риджевольфы",
+        "team_placement": 7,
+        "team_members": [
+          "BORS MES AMIS DE MAFINNS",
+          "DEYONGA GAYA MONIFA",
+          "ФАРГО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  19,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  17,
+                  5,
+                  2,
+                  16,
+                  15,
+                  4,
+                  4
+                ],
+                "sum": 63
+              }
+            ],
+            "total": 147
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  6,
+                  14,
+                  17,
+                  4,
+                  4
+                ],
+                "sum": 69
+              },
+              {
+                "scores": [
+                  15,
+                  5,
+                  5,
+                  15,
+                  17,
+                  3,
+                  4
+                ],
+                "sum": 64
+              }
+            ],
+            "total": 133
+          }
+        ],
+        "grand_total": 280
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10017,
+        "dog_key": "deyonga-gaya-monifa--родезиискии-риджбек",
+        "name_lat": "DEYONGA GAYA MONIFA",
+        "name_ru": "ДЕЙОНГА ГАЙА МОНИФА",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 64,
+      "event_id": 20211024,
+      "dog_id": 10984,
+      "breed_class": "НеБорзые",
+      "catalog_no": 16,
+      "placement": 7,
+      "total_score": 280,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "team_coursing",
+        "category": "НеБорзые",
+        "team_name": "Риджевольфы",
+        "team_placement": 7,
+        "team_members": [
+          "BORS MES AMIS DE MAFINNS",
+          "DEYONGA GAYA MONIFA",
+          "ФАРГО"
+        ],
+        "ran": true,
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  8,
+                  8,
+                  19,
+                  23,
+                  5,
+                  4
+                ],
+                "sum": 84
+              },
+              {
+                "scores": [
+                  17,
+                  5,
+                  2,
+                  16,
+                  15,
+                  4,
+                  4
+                ],
+                "sum": 63
+              }
+            ],
+            "total": 147
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 14,
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  7,
+                  6,
+                  14,
+                  17,
+                  4,
+                  4
+                ],
+                "sum": 69
+              },
+              {
+                "scores": [
+                  15,
+                  5,
+                  5,
+                  15,
+                  17,
+                  3,
+                  4
+                ],
+                "sum": 64
+              }
+            ],
+            "total": 133
+          }
+        ],
+        "grand_total": 280
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10984,
+        "dog_key": "фарго--родезиискии-риджбек",
+        "name_lat": "ФАРГО",
+        "name_ru": null,
+        "breed": "Родезийский риджбек",
+        "sex": "Кобель",
+        "owner": null
+      }
+    }
+  ],
+  "results_pdf_url": "https://drive.google.com/file/d/10doww0245nAfgiLrSYVHyEdVqcTVuS5u/view?usp=sharing"
+}

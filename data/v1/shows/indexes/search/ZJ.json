@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ZJ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "180945935",
+      "name_lat": "Z'JASIE VON HAUS BELOGORIE",
+      "name_ru": "",
+      "breed": "ROTTWEILER",
+      "breed_en": "ROTTWEILER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1909460671",
+      "name_lat": "Z'JACGUES IZ MOSKOVSKOY BEMTY",
+      "name_ru": "",
+      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
+      "breed_en": "BEDLINGTON TERRIER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    }
+  ]
+}

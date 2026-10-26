@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "XL",
-  "count": 1,
+  "count": 2,
   "dogs": [
     {
       "id": "1355833753",
@@ -10,6 +10,15 @@
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "393651518",
+      "name_lat": "X-LYLU",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "breed_en": "ENGLISH POINTER",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

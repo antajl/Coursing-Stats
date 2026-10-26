@@ -1,24 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ИО",
-  "count": 162,
+  "count": 170,
   "dogs": [
     {
-      "id": "1103173581",
+      "id": "213265130",
       "name_lat": "ИОЛАНТА ДИ РОССО КОРНО",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "name_ru": "ИОЛАНТА ДИ РОССО КОРНО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "185659025",
-      "name_lat": "ИОГАНН С ИСАЕВСКОГО ПОДВОРЬЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
-      "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -33,7 +24,7 @@
     {
       "id": "1325956239",
       "name_lat": "ИОЛАНТА ФЕЛИЗ ЭСТРЕЛЛА",
-      "name_ru": "",
+      "name_ru": "ИОЛАНТА ФЕЛИЗ ЭСТРЕЛЛА",
       "breed": "МАЛЬТЕЗЕПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 4,
@@ -42,7 +33,7 @@
     {
       "id": "1613173967",
       "name_lat": "ИОЛАНДА ЯРА ГОЛД С ПЛАНЕТЫ ГРЕЗ",
-      "name_ru": "",
+      "name_ru": "ИОЛАНДА ЯРА ГОЛД С ПЛАНЕТЫ ГРЕЗ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -51,37 +42,54 @@
     {
       "id": "1312267881",
       "name_lat": "ИОЛАНТА ВОСХОДЯЩАЯ ЗВЕЗДА ФОМАДЖИ",
-      "name_ru": "",
+      "name_ru": "ИОЛАНТА ВОСХОДЯЩАЯ ЗВЕЗДА ФОМАДЖИ",
       "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1408724081",
+      "id": "1533062894",
       "name_lat": "ИОЛАНДА КРИСТАЛ ЛОРЕНЦО",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "name_ru": "ИОЛАНДА КРИСТАЛ ЛОРЕНЦО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "336640115",
+      "name_lat": "ИОЛАНТА",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1178078393",
       "name_lat": "ИОЛАНДА КРИСТАЛ ЭТЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ИОЛАНДА КРИСТАЛ ЭТЕЛЬ",
       "breed": "ОХОТНИЧИЙ БЕЛЬГИЙСКИЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "477429416",
+      "id": "192617037",
       "name_lat": "ИОШИЭКИ ОКУНИНУСИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "name_ru": "ИОШИЭКИ ОКУНИНУСИ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1823961637",
+      "name_lat": "ИОЛАНДА ЖИЗНЬ МОЯ",
+      "name_ru": "ИОЛАНДА ЖИЗНЬ МОЯ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -94,21 +102,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1823961637",
-      "name_lat": "ИОЛАНДА ЖИЗНЬ МОЯ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1535538483",
       "name_lat": "ИОШИ КИО",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -123,7 +122,7 @@
     {
       "id": "994550271",
       "name_lat": "ИОЛАНДА КРСТАЛ ЭТЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ИОЛАНДА КРСТАЛ ЭТЕЛЬ",
       "breed": "ОХОТНИЧИЙ БЕЛЬГИЙСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -157,6 +156,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1009115418",
+      "name_lat": "ИОЛАНТА ИЗ ХВОСТАТОГО БАЛАГАНА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "67914256",
       "name_lat": "ИОЛАНТА ИЗ ДАМА КРИСТИ",
       "name_ru": "",
@@ -166,30 +173,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "522095162",
+      "id": "420929062",
       "name_lat": "ИОЛАНДА ЖИЗЕЛЬ АВЕНТЮР",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1464046907",
+      "id": "1572010348",
       "name_lat": "ИОШШИ ИЗ НОВОЙ СИБИРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ИОШШИ ИЗ НОВОЙ СИБИРИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "336640115",
-      "name_lat": "ИОЛАНТА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -231,62 +229,71 @@
     {
       "id": "525130855",
       "name_lat": "ИОШИ ИЗ ЯСНОПОЛЯНСКОГО ДВОРЦА",
-      "name_ru": "",
+      "name_ru": "ИОШИ ИЗ ЯСНОПОЛЯНСКОГО ДВОРЦА",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "47236562",
-      "name_lat": "ИОЛАНТА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "409906695",
       "name_lat": "ИОШИ МИУЧИ МОММО",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "245847690",
-      "name_lat": "ИОШИКО ИЗ АРКАИМА",
-      "name_ru": "",
+      "name_ru": "ИОШИ МИУЧИ МОММО",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1328914741",
-      "name_lat": "ИОАННА ИЗ КАЗАНСКОГО ХАНСТВА",
+      "id": "664681811",
+      "name_lat": "ИОЛАНТА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "395347925",
-      "name_lat": "ИОЛАНТА ПРИНЦЕССА ПРОВАНСА",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1240022627",
+      "id": "245847690",
+      "name_lat": "ИОШИКО ИЗ АРКАИМА",
+      "name_ru": "ИОШИКО ИЗ АРКАИМА",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1270161905",
+      "name_lat": "ИОАННА ИЗ КАЗАНСКОГО ХАНСТВА",
+      "name_ru": "ИОАННА ИЗ КАЗАНСКОГО ХАНСТВА",
+      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "175083995",
+      "name_lat": "ИОШИМИ КИОКО МИЧИКУ",
+      "name_ru": "ИОШИМИ КИОКО МИЧИКУ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "494088573",
+      "name_lat": "ИОЛАНТА ПРИНЦЕССА ПРОВАНСА",
+      "name_ru": "ИОЛАНТА ПРИНЦЕССА ПРОВАНСА",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1312717768",
       "name_lat": "ИОЛАНТА ЗВЕЗДА АЛМАЗНАЯ",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "name_ru": "ИОЛАНТА ЗВЕЗДА АЛМАЗНАЯ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -312,7 +319,7 @@
     {
       "id": "31264533",
       "name_lat": "ИОЛАНТА ИТА С БЕРЕГА ТУРЫ",
-      "name_ru": "",
+      "name_ru": "ИОЛАНТА ИТА С БЕРЕГА ТУРЫ",
       "breed": "ROTTWEILER",
       "breed_en": "",
       "total_shows": 4,
@@ -339,7 +346,7 @@
     {
       "id": "1444875645",
       "name_lat": "ИОЛАНДА ИРСА ИЗ БЕРНОСИТИ",
-      "name_ru": "",
+      "name_ru": "ИОЛАНДА ИРСА ИЗ БЕРНОСИТИ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 12,
@@ -364,6 +371,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1880453735",
+      "name_lat": "ИОГАН ФРИДРИХ ФОН ФИЛИПП",
+      "name_ru": "ИОГАН ФРИДРИХ ФОН ФИЛИПП",
+      "breed": "Немецкий миниатюрный шпиц",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1524486639",
       "name_lat": "ИОСИФ",
       "name_ru": "",
@@ -373,28 +389,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "338008529",
+      "name_lat": "ИОЛАНДА СПРИНГ СТОРМ / IOLANDA SPRING STORM",
+      "name_ru": "ИОЛАНДА СПРИНГ СТОРМ",
+      "breed": "МАЛАМУТ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "473285768",
       "name_lat": "ИОШИЭКИ ОКУИНИУСИ",
-      "name_ru": "",
+      "name_ru": "ИОШИЭКИ ОКУИНИУСИ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1880453735",
-      "name_lat": "ИОГАН ФРИДРИХ ФОН ФИЛИПП",
-      "name_ru": "",
-      "breed": "Немецкий миниатюрный шпиц",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1062681693",
+      "id": "582600704",
       "name_lat": "ИОЛАНТА ИЗ МОСКОВСКОЙ БЕМТЫ",
       "name_ru": "",
-      "breed": "БЕДЛИНГТОН ТЕРЬЕР /",
+      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -411,7 +426,7 @@
     {
       "id": "1836110962",
       "name_lat": "ИОАХИМА С БЕРЕГА ШЕКСНЫ",
-      "name_ru": "",
+      "name_ru": "ИОАХИМА С БЕРЕГА ШЕКСНЫ",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 3,
@@ -427,21 +442,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1163415627",
-      "name_lat": "ИОШШИ ТОШИКО ДЛЯ ВОРЛД ШОУ",
+      "id": "735027456",
+      "name_lat": "ИОЛИССА",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "175083995",
-      "name_lat": "ИОШИМИ КИОКО МИЧИКУ",
-      "name_ru": "",
+      "id": "1163415627",
+      "name_lat": "ИОШШИ ТОШИКО ДЛЯ ВОРЛД ШОУ",
+      "name_ru": "ИОШШИ ТОШИКО ДЛЯ ВОРЛД ШОУ",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -463,12 +478,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "735027456",
-      "name_lat": "ИОЛИССА",
+      "id": "1985421917",
+      "name_lat": "ИОШИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "СИБА",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -481,12 +495,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1085359063",
+      "id": "952236832",
       "name_lat": "ИОЛАНДА КРИСТАЛ КОРТНИ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ИОЛАНДА КРИСТАЛ КОРТНИ",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "169098434",
+      "name_lat": "ИОННА ИЗ ВЕРЛИНА ЛЕСА",
+      "name_ru": "ИОННА ИЗ ВЕРЛИНА ЛЕСА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -494,15 +517,6 @@
       "name_lat": "ИОЛАНТА КРИСТАЛ ЛИЛИТ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "169098434",
-      "name_lat": "ИОННА ИЗ ВЕРЛИНА ЛЕСА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -517,6 +531,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1678023303",
+      "name_lat": "ИОЛИССА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "839448379",
       "name_lat": "ИОКО СЭНГО",
       "name_ru": "",
@@ -528,7 +551,7 @@
     {
       "id": "715228590",
       "name_lat": "ИОЛАНДА БЕКС",
-      "name_ru": "",
+      "name_ru": "ИОЛАНДА БЕКС",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -562,6 +585,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1305837450",
+      "name_lat": "ИОРКИ-ШАРМ ГЕМИНИ",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР / BIEWER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1565209695",
+      "name_lat": "ИОЛАНТА С БЕЛОЙ РЕКИ",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ / SHAR PEI",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1709117353",
       "name_lat": "ИОЛАНДА КРИСТАЛ ЭББИ",
       "name_ru": "",
@@ -582,7 +621,7 @@
     {
       "id": "246806643",
       "name_lat": "ИОЛАНДА КРИСТАЛ МАЛИБУ",
-      "name_ru": "",
+      "name_ru": "ИОЛАНДА КРИСТАЛ МАЛИБУ",
       "breed": "ДЛИННОШЕРС",
       "breed_en": "",
       "total_shows": 2,
@@ -598,10 +637,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "35799726",
+      "id": "18716371",
       "name_lat": "ИОЛАНДА КРИСТАЛ ПАЙК",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -663,7 +702,7 @@
     {
       "id": "180618003",
       "name_lat": "ИОЛАНДА ФОЛИЯ",
-      "name_ru": "",
+      "name_ru": "ИОЛАНДА ФОЛИЯ",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 10,
@@ -697,10 +736,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "103802872",
+      "id": "485620509",
       "name_lat": "ИОКА СНОУ УАЙТ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -735,28 +774,10 @@
     {
       "id": "38322347",
       "name_lat": "ИОЛАНДА КРИСТАЛ МАРСЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ИОЛАНДА КРИСТАЛ МАРСЕЛЬ",
       "breed": "ДЛИННОШЕРС",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1678023303",
-      "name_lat": "ИОЛИССА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "709069153",
-      "name_lat": "ИОН ФАННИ БЕБИ",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -778,19 +799,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "623097568",
+      "id": "1788055477",
       "name_lat": "ИОГАНН ВОЛЬФГАНГ ФОН ГЁТТЕ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "name_ru": "ИОГАНН ВОЛЬФГАНГ ФОН ГЁТТЕ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1722316535",
+      "id": "108919257",
       "name_lat": "ИОЛАНДА ИЗ БОЛЬШОГО ДОМА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "name_ru": "ИОЛАНДА ИЗ БОЛЬШОГО ДОМА",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -801,6 +822,14 @@
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "303279834",
+      "name_lat": "ИОЛА ЭВАНС",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -859,10 +888,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1520593360",
+      "id": "33819941",
       "name_lat": "ИОЛАНДА КРИСТАЛ ШЕРОН(Д-Ш)",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "name_ru": "ИОЛАНДА КРИСТАЛ ШЕРОН(Д-Ш)",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -870,17 +899,17 @@
     {
       "id": "1865365524",
       "name_lat": "ИОЛАНТА ИЗ ФАНТАЗИ ПИНК",
-      "name_ru": "",
+      "name_ru": "ИОЛАНТА ИЗ ФАНТАЗИ ПИНК",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "846039436",
+      "id": "70885067",
       "name_lat": "ИОЛАНДА КРИСТАЛ УИЛМА II",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -985,11 +1014,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1821353964",
+      "name_lat": "ИОСИФ",
+      "name_ru": "",
+      "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО) /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "428886064",
       "name_lat": "ИОНИКА-МРИЯ",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1269127558",
+      "name_lat": "ИОЛА ИТАЛЬ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1021,28 +1066,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "633499714",
+      "id": "521672422",
       "name_lat": "ИОЛАНДА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1899022716",
+      "id": "1530991104",
       "name_lat": "ИОЛАНДА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "785893729",
+      "id": "1759069581",
+      "name_lat": "И ОТВАГА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1461702527",
       "name_lat": "ИОЛАНТА",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1579203801",
+      "name_lat": "ИОАННА ГОЛДЕН ТАЙМ ИЗ ЛАГУНЫ ГРЕЗ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1106,6 +1169,15 @@
       "name_lat": "ИОЛАНТА КАБАУ",
       "name_ru": "",
       "breed": "БИГЛЬ / BEAGLE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "895767002",
+      "name_lat": "И ОН ЖАН-ПЬЕР",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1183,10 +1255,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "735135816",
+      "id": "538233325",
       "name_lat": "ИОЛАНДА КРИСТАЛ АМЕЛИ",
       "name_ru": "",
-      "breed": "ТНАЯ /",
+      "breed": "ТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1242,6 +1314,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "529086976",
+      "name_lat": "ИОЛАНДА КРИСТАЛ ПАМЕЛА",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1336,15 +1416,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "283258112",
-      "name_lat": "ИОЛАНТА ФЛОУЭР",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1497487798",
       "name_lat": "ИОЛАНТА ИЗ ЭЛЬФИЙСКОГО ЛЕСА",
       "name_ru": "",
@@ -1417,15 +1488,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1233802509",
-      "name_lat": "ИОАННА ГОЛДЕН ТАЙМ ИЗ ЛАГУНЫ ГРЕЗ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "226968868",
       "name_lat": "ИОЛАНДА КРИСТАЛ НЕКСТ",
       "name_ru": "",
@@ -1444,7 +1506,7 @@
       "competition_dog_id": null
     },
     {
-      "id": "705169267",
+      "id": "705169268",
       "name_lat": "Иоланда Кристал Леопольдо",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
@@ -1453,8 +1515,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "891827282",
-      "name_lat": "ИОНИКА- ЗОЛОТАЯ МЕЧТА",
+      "id": "866587756",
+      "name_lat": "ИОНИКА-ЗОЛОТАЯ МЕЧТА",
       "name_ru": "",
       "breed": "РСКИЙ ТЕРЬЕР",
       "breed_en": "",

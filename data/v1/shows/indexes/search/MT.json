@@ -1,15 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "MT",
-  "count": 15,
+  "count": 23,
   "dogs": [
     {
-      "id": "615334303",
+      "id": "26576503",
       "name_lat": "MT LINE OTIS",
       "name_ru": "",
-      "breed": "ПОКЕТ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
       "breed_en": "AMERICAN BULLY POCKET",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -33,10 +33,46 @@
     {
       "id": "800359911",
       "name_lat": "MTRIS RISKHVA TAMRO",
-      "name_ru": "",
+      "name_ru": "МТРИС РИСХВА ТАМРО",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "585985142",
+      "name_lat": "M-TORA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "516730301",
+      "name_lat": "M-TORA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "478639089",
+      "name_lat": "M-TORA",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ (ДРАТХААР)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1974237682",
+      "name_lat": "M-TORA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -76,6 +112,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1638716410",
+      "name_lat": "M-TORA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
+      "breed_en": "GERMAN WIRE-HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "588060153",
       "name_lat": "MT_LINE HMELIK",
       "name_ru": "",
@@ -103,8 +148,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1690435566",
-      "name_lat": "MTRCEDESFOR DAN- STAR-KOM",
+      "id": "281747360",
+      "name_lat": "MTRCEDESFOR DAN-STAR-KOM",
       "name_ru": "",
       "breed": "ZWERGSPITZ",
       "breed_en": "",
@@ -125,6 +170,31 @@
       "name_lat": "MT'LINE LUNA",
       "name_ru": "",
       "breed": "БУЛЛИ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "129227314",
+      "name_lat": "MTG AMOR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "8937482",
+      "name_lat": "MT LINE ATTRACTIVE IRONE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "321131636",
+      "name_lat": "M-TORA",
+      "name_ru": "",
+      "breed": "HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

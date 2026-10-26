@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЕО",
-  "count": 6,
+  "count": 7,
   "dogs": [
     {
       "id": "780349011",
@@ -22,10 +22,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "60209266",
+      "id": "1471130913",
+      "name_lat": "Е-ОСМАН СО ДВОРА ФЕДЯКИНЫХ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "592683507",
       "name_lat": "ЕОЛА МАЙ ЛАВ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null

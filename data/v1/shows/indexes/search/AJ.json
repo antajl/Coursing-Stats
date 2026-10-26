@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AJ",
-  "count": 92,
+  "count": 95,
   "dogs": [
+    {
+      "id": "521416290",
+      "name_lat": "AJRIS OZZI HABIBI",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
     {
       "id": "278926996",
       "name_lat": "AJRON",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -19,15 +28,6 @@
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "521416290",
-      "name_lat": "AJRIS OZZI HABIBI",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -45,7 +45,7 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -76,10 +76,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1844173365",
+      "id": "1913954660",
       "name_lat": "AJNA DZHEJ",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -99,7 +99,7 @@
       "name_ru": "",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "breed_en": "RHODESIAN RIDGEBACK",
-      "total_shows": 36,
+      "total_shows": 42,
       "competition_dog_id": null
     },
     {
@@ -157,6 +157,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "691567731",
+      "name_lat": "AJRON ZEVS",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1938808115",
       "name_lat": "AJSIDORA",
       "name_ru": "",
@@ -184,21 +193,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "691567731",
-      "name_lat": "AJRON ZEVS",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "216382439",
       "name_lat": "AJISAI LOVELI DIZEL",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 18,
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1335526913",
+      "name_lat": "AJ DA YUNKER",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ВАНДЕЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -306,7 +315,16 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1794774638",
+      "name_lat": "A'JOKER SHOW KENNEL CATTLE DOG",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА",
+      "breed_en": "AUSTRALIAN CATTLE DOG",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -316,6 +334,15 @@
       "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "42833211",
+      "name_lat": "AJUR RODOM IZ SIBIRI",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -382,10 +409,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "218406752",
+      "id": "1548128748",
       "name_lat": "AJA LEDY NEOBYKN OVENNOE",
       "name_ru": "",
-      "breed": "АУЦЕР ЧЁРНЫЙ",
+      "breed": "АУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
@@ -427,15 +454,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "42833211",
-      "name_lat": "AJUR RODOM IZ SIBIRI",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1403716495",
       "name_lat": "AJAX VOM EFEUS HOF",
       "name_ru": "",
@@ -472,10 +490,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "955547088",
+      "id": "758245055",
       "name_lat": "AJSA FRIIZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -508,21 +526,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "573717518",
-      "name_lat": "AJRON ZEVS",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "961756701",
+      "id": "1923930262",
       "name_lat": "AJLA ALIKANTO OSVESHCHYONNAYA LUNOJ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -540,6 +549,14 @@
       "name_ru": "",
       "breed": "ПОЛЬСКАЯ ПОДГАЛЯНСКАЯ ОВЧАРКА / TATRA SHEPHERD",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1161416273",
+      "name_lat": "AJZA KRASA ALYASKI",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -562,19 +579,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1276721320",
+      "id": "1373982924",
       "name_lat": "AJS OT WAISBERG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1356674049",
+      "id": "343160540",
       "name_lat": "AJSI TOLMA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -598,15 +615,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1335526913",
-      "name_lat": "AJ DA YUNKER",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ВАНДЕЙСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "272471502",
       "name_lat": "AJAX WINNER",
       "name_ru": "",
@@ -616,19 +624,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "24283774",
+      "id": "1096440027",
       "name_lat": "AJTODOR DOSPEHI BOGA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "312652427",
+      "id": "387248284",
       "name_lat": "AJYANKA S FAMILY S FRIVER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -670,6 +678,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1651048463",
+      "name_lat": "AJRON",
+      "name_ru": "",
+      "breed": "ЦВЕТНОЙ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1220183839",
       "name_lat": "AJS ОТ WAISBERG",
       "name_ru": "",
@@ -697,12 +713,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "105178348",
-      "name_lat": "AJRON ZEVS",
+      "id": "190592309",
+      "name_lat": "AJRON",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "ЦВЕТНОЙ МИНИАТЮРНЫЙ ЦВЕТНОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1828370507",
+      "name_lat": "AJRON",
+      "name_ru": "",
+      "breed": "ЦВЕТНОЙ / MINIATURE",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -715,19 +738,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "901982175",
+      "id": "1815421027",
       "name_lat": "AJTODOR HAJTJEK",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1797068567",
+      "id": "55326704",
       "name_lat": "AJLA ALIKANTO OSVESHCHYON NAYA LUNOJ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -760,10 +783,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "810591884",
+      "id": "1316582083",
       "name_lat": "AJRON",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -778,19 +801,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "651196043",
-      "name_lat": "AJSIYA S BEREGOV VOLHOVA",
+      "id": "195949232",
+      "name_lat": "AJRICH GOLDI",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "752967741",
-      "name_lat": "AJRICH GOLDI",
+      "id": "651196043",
+      "name_lat": "AJSIYA S BEREGOV VOLHOVA",
       "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

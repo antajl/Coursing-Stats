@@ -6,20 +6,25 @@
   "name_lat": "KULIKOVO POLE GORDEYA",
   "name_ru": "КУЛИКОВО ПОЛЕ ГОРДЕЯ",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "pedigree_url": "https://whippet.breedarchive.com/animal/view/kulikovo-pole-gordeya-97425b66-08aa-4bae-8915-1d74109cac22",
   "competition_ids": [
-    20240609,
     1577,
     1579,
+    20210613,
+    "20221012",
+    20221012,
+    20240609,
     20240901
   ],
   "competition_files": [
     "competitions/2021/05-май/1577-чемпионат-ркф-cacl-по-курсингу-борзых-зигзаг-уда.json",
     "competitions/2021/08-август/1579-чемпионат-ркф-cacl-по-бегам-борзых-за-механическ.json",
     "competitions/2024/06-июнь/20240609--09062024-.json",
-    "competitions/2024/09-сентябрь/20240901--01092024-.json"
+    "competitions/2024/09-сентябрь/20240901--01092024-.json",
+    "competitions/2021/06-июнь/20210613-чемпионат-россии-по-бегам-борзых-за-механическим.json",
+    "competitions/2022/05-май/20221012-чемпионат-ркф-cacl-по-курсингу-борзых.json"
   ],
   "merged_alias_ids": [
     10481

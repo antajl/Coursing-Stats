@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЮП",
-  "count": 78,
+  "count": 87,
   "dogs": [
     {
       "id": "883602969",
       "name_lat": "ЮПИТЕР ИЗ ТАЕЖНОЙ ДАЛИ",
-      "name_ru": "",
+      "name_ru": "ЮПИТЕР ИЗ ТАЕЖНОЙ ДАЛИ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 12,
@@ -31,6 +31,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "780635459",
+      "name_lat": "ЮПИТЕР",
+      "name_ru": "",
+      "breed": "ХАВАНЕЗ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1074736627",
       "name_lat": "ЮПИТЕР ИЗ ДОМА ФИЛАТОВЫХ",
       "name_ru": "",
@@ -42,19 +51,10 @@
     {
       "id": "1424872978",
       "name_lat": "ЮПИТЕР ЮНИВЕРС ОФ АНДЖЕЛОТТИ",
-      "name_ru": "",
+      "name_ru": "ЮПИТЕР ЮНИВЕРС ОФ АНДЖЕЛОТТИ",
       "breed": "ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "780635459",
-      "name_lat": "ЮПИТЕР",
-      "name_ru": "",
-      "breed": "ХАВАНЕЗ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -139,46 +139,64 @@
       "competition_dog_id": null
     },
     {
-      "id": "776032721",
+      "id": "991061014",
       "name_lat": "ЮПЕТРА",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
+      "id": "1174656122",
+      "name_lat": "Ю ПЕТРА",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "449315316",
+      "name_lat": "ЮПИТЕР ЦАРЬ БОГОВ",
+      "name_ru": "ЮПИТЕР ЦАРЬ БОГОВ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "1252087371",
       "name_lat": "ЮППИ БУСИНКА С ИСАЕВСКОГО ПОДВОРЬЯ",
-      "name_ru": "",
+      "name_ru": "ЮППИ БУСИНКА С ИСАЕВСКОГО ПОДВОРЬЯ",
       "breed": "СКОТЧ СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "287500578",
-      "name_lat": "ЮПИТЕР ЦАРЬ БОГОВ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "780641688",
+      "name_lat": "ЮПИТЕР ЗАСЛОНЯЮЩИЙ СОЛНЦЕ",
+      "name_ru": "ЮПИТЕР ЗАСЛОНЯЮЩИЙ СОЛНЦЕ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1328728142",
+      "id": "286075799",
       "name_lat": "ЮПИТЕР ВЕСТЕРН ПРИНЦ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ЮПИТЕР ВЕСТЕРН ПРИНЦ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1934988200",
+      "id": "335336269",
       "name_lat": "ЮПИТЕР С НЕВСКИХ ОСТРОВОВ",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -186,17 +204,26 @@
     {
       "id": "538851654",
       "name_lat": "ЮППИ СТАР ИЗ ДОМА КАРМАНОВОЙ К\\Х",
-      "name_ru": "",
+      "name_ru": "ЮППИ СТАР ИЗ ДОМА КАРМАНОВОЙ К\\Х",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "493192358",
+      "id": "397138108",
+      "name_lat": "Юпитер из Стаи Волков",
+      "name_ru": "Юпитер из Стаи Волков",
+      "breed": "Кавказская Овчарка",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1750295759",
       "name_lat": "ЮПИТЕР ИЗ ДОМА МАРЛЕН",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "name_ru": "ЮПИТЕР ИЗ ДОМА МАРЛЕН",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -204,52 +231,42 @@
     {
       "id": "1499656521",
       "name_lat": "ЮППИ АБРИКОСОВАЯ ШТУЧКА",
-      "name_ru": "",
+      "name_ru": "ЮППИ АБРИКОСОВАЯ ШТУЧКА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1912290893",
+      "id": "613950675",
       "name_lat": "ЮПИТЕР ТЕСТИ ВИН",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЮПИТЕР ТЕСТИ ВИН",
+      "breed": "Американский Золотистый ретривер",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "397138108",
-      "name_lat": "Юпитер из Стаи Волков",
-      "name_ru": "",
-      "breed": "Кавказская Овчарка",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "780641688",
-      "name_lat": "ЮПИТЕР ЗАСЛОНЯЮЩИЙ СОЛНЦЕ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1166708135",
       "name_lat": "ЮПИТЕР СОЛНЕЧНЫЙ",
-      "name_ru": "",
+      "name_ru": "ЮПИТЕР СОЛНЕЧНЫЙ",
       "breed": "ТАКСА КРОЛИЧЬЯ гладкошерстная",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "1664708287",
+      "name_lat": "Ю-ПИТЕР ДЛЯ ТАФФИРЫ С БУХТЫ АППОЛОНА",
+      "name_ru": "",
+      "breed": "СЕРЕБРОМ /",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1106691106",
       "name_lat": "ЮПИТЕР ВЛАСТЕЛИН ЗВЕЗДНЫХ ВЫСОТ",
-      "name_ru": "",
+      "name_ru": "ЮПИТЕР ВЛАСТЕЛИН ЗВЕЗДНЫХ ВЫСОТ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -258,7 +275,7 @@
     {
       "id": "962340513",
       "name_lat": "ЮППИ СЛАДКИЙ АПЕЛЬСИН",
-      "name_ru": "",
+      "name_ru": "ЮППИ СЛАДКИЙ АПЕЛЬСИН",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 5,
@@ -283,6 +300,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1274256522",
+      "name_lat": "Ю ПЕТРА",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР) ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1375375773",
       "name_lat": "ЮПИТЕР СТАФФ БОЙ",
       "name_ru": "",
@@ -294,17 +320,17 @@
     {
       "id": "340179051",
       "name_lat": "ЮППИ З ПЯШЧОТНАЙ ЗОРКИ",
-      "name_ru": "",
+      "name_ru": "ЮППИ З ПЯШЧОТНАЙ ЗОРКИ",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1281245279",
+      "id": "77644456",
       "name_lat": "ЮПИТЕР АЙМЕНС",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -312,26 +338,44 @@
     {
       "id": "588525720",
       "name_lat": "ЮППИ СЛАДКАЯ ЛАПКА",
-      "name_ru": "",
+      "name_ru": "ЮППИ СЛАДКАЯ ЛАПКА",
       "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "764418637",
-      "name_lat": "ЮПИТЕР СОЛНЕЧНЫЙ TEQUILA IZ SLAVJANSKOI",
+      "id": "1976566444",
+      "name_lat": "Ю ПЕТРА",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР) ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1304087860",
+      "id": "442466266",
+      "name_lat": "ЮПИТЕР СОЛНЕЧНЫЙ TEQUILA IZ SLAVJANSKOI",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "247880076",
+      "name_lat": "Ю-ПАНТЕРА ИЗ ЗВЁЗДНОЙ ЛИНИИ",
+      "name_ru": "Ю-ПАНТЕРА ИЗ ЗВЁЗДНОЙ ЛИНИИ",
+      "breed": "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1480036961",
       "name_lat": "ЮПЕЛИНА",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -382,6 +426,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1202282916",
+      "name_lat": "ЮПИТЕР СТАР БОЙ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "513764621",
       "name_lat": "ЮППИ",
       "name_ru": "",
@@ -395,15 +447,6 @@
       "name_lat": "ЮПИТЕР КРИСТАЛ",
       "name_ru": "",
       "breed": "ЖЕСТКОШЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1202282916",
-      "name_lat": "ЮПИТЕР СТАР БОЙ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -445,12 +488,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "639710072",
+      "id": "1271451844",
       "name_lat": "ЮПИТЕР ЛАЦИАРИС",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1532786463",
+      "name_lat": "ЮПИТЕР ЗВЕЗДНЫЙ МАЛЬЧИК",
+      "name_ru": "ЮПИТЕР ЗВЕЗДНЫЙ МАЛЬЧИК",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1790492397",
+      "name_lat": "ЮППИ",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -463,28 +523,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1543413449",
+      "id": "1512236893",
       "name_lat": "ЮППИ БЛЭК БОССОМ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1517908963",
+      "name_lat": "ЮПИ ТЕР МОНТЕРРЕЙ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "981486214",
       "name_lat": "ЮПИТЕР ФАВН КАЛЛИСТО",
-      "name_ru": "",
+      "name_ru": "ЮПИТЕР ФАВН КАЛЛИСТО",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1098058481",
-      "name_lat": "ЮПИТЕР ЗВЕЗДНЫЙ МАЛЬЧИК",
-      "name_ru": "",
-      "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -499,19 +558,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "619409094",
+      "id": "1282361009",
       "name_lat": "ЮПИТЕР",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1077619602",
+      "id": "1347268883",
       "name_lat": "ЮПИТЕР",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -530,6 +589,24 @@
       "name_lat": "ЮПИТЕР",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1458132642",
+      "name_lat": "Ю ПЕТРА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "32450880",
+      "name_lat": "Ю-ПАНДА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -562,10 +639,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1317108588",
+      "id": "1280400245",
       "name_lat": "ЮПИТЕР ИЗ ЗАМКА ЛАНСЕЛОТА",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -634,19 +711,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1795233860",
+      "id": "1998973403",
       "name_lat": "ЮПИТЕР ОПТИМУС МАКСИМУС СОТЕР",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1541809298",
+      "id": "53030547",
       "name_lat": "ЮПИТЕР СПЭЙС ФОРС",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -697,11 +774,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1517908963",
-      "name_lat": "ЮПИ ТЕР МОНТЕРРЕЙ",
+      "id": "1548549507",
+      "name_lat": "ЮППИ ПИНА-КОЛАДА",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     }

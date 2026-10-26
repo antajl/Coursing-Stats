@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ХЛ",
-  "count": 213,
+  "count": 220,
   "dogs": [
     {
       "id": "219514844",
@@ -15,7 +15,7 @@
     {
       "id": "1554780439",
       "name_lat": "ХЛОПЧИК КУЧЕРЯВЫЙ С ГРАДСКОГО ПРИИСКА",
-      "name_ru": "",
+      "name_ru": "ХЛОПЧИК КУЧЕРЯВЫЙ С ГРАДСКОГО ПРИИСКА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
@@ -42,7 +42,7 @@
     {
       "id": "505738445",
       "name_lat": "ХЛОЯ ИЗ ДОМА ФЕНИКС",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ИЗ ДОМА ФЕНИКС",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
@@ -51,7 +51,7 @@
     {
       "id": "1364248789",
       "name_lat": "Хлоя с Глиняной Горки",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ С ГЛИНЯНОЙ ГОРКИ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
@@ -69,10 +69,19 @@
     {
       "id": "312722789",
       "name_lat": "ХЛОЯ БЬЮТИ ОФ ЛАЙФ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ БЬЮТИ ОФ ЛАЙФ",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1998163680",
+      "name_lat": "ХЛОЯ ОТ ГАРРИ ПОТТЕРА (Д.Ш.)",
+      "name_ru": "ХЛОЯ ОТ ГАРРИ ПОТТЕРА (Д.Ш.)",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -85,19 +94,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "733502216",
-      "name_lat": "ХЛОЯ ОТ ГАРРИ ПОТТЕРА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1047259223",
+      "id": "1835250635",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -114,7 +114,7 @@
     {
       "id": "882800956",
       "name_lat": "ХЛОЯ ВИШНЕВЫЙ ЦВЕТОК",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ВИШНЕВЫЙ ЦВЕТОК",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 5,
@@ -123,26 +123,17 @@
     {
       "id": "42873174",
       "name_lat": "ХЛОЯ НАТУРЕЛЬ ДЕ СОЛ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ НАТУРЕЛЬ ДЕ СОЛ",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1275457401",
-      "name_lat": "ХЛОЯ ВАЙТ ЖАСМИН",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "716505981",
+      "id": "872572833",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -184,6 +175,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1238336307",
+      "name_lat": "ХЛОЯ",
+      "name_ru": "",
+      "breed": "ЛАЙКА ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1384899008",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
@@ -195,28 +194,36 @@
     {
       "id": "194041993",
       "name_lat": "ХЛОЯ ИЗ МИРАШЕЛА",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ИЗ МИРАШЕЛА",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1054973733",
+      "id": "1210874552",
       "name_lat": "ХЛОЯ МИЛОНД",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
       "id": "1353843035",
       "name_lat": "ХЛОЯ ОНЛИ ФО ЛАВ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ОНЛИ ФО ЛАВ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1636153206",
+      "name_lat": "ХЛОЯ СВИТ ХАННИ",
+      "name_ru": "ХЛОЯ СВИТ ХАННИ",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -231,7 +238,7 @@
     {
       "id": "404620121",
       "name_lat": "ХЛОЯ ПРИНЦЕССА МОНАКО",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ПРИНЦЕССА МОНАКО",
       "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -247,21 +254,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "611515739",
+      "name_lat": "ХЛОЯ ГРЕЙС",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1162597498",
       "name_lat": "ХЛОЯ КАЛЛИСТА",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ КАЛЛИСТА",
       "breed": "БОКСЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1320069995",
       "name_lat": "ХЛОЯ ИННОСЕНТ ЭНДЖЕЛ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ИННОСЕНТ ЭНДЖЕЛ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "185423392",
+      "name_lat": "ХЛОЯ ОТ СНЕЖНОГО ПРИНЦА",
+      "name_ru": "ХЛОЯ ОТ СНЕЖНОГО ПРИНЦА",
+      "breed": "САМОЕД /",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -283,15 +307,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1455058885",
-      "name_lat": "ХЛОЯ ГРЕЙС",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1642403486",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
@@ -301,27 +316,45 @@
       "competition_dog_id": null
     },
     {
+      "id": "778374063",
+      "name_lat": "ХЛОЯ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "350967760",
       "name_lat": "ХЛОЯ ДЕ ЛЮТВИНС",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ДЕ ЛЮТВИНС",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "279720702",
+      "id": "1634472834",
       "name_lat": "ХЛОЯ ИЗ ДОМА КУЛАКОВЫХ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ХЛОЯ ИЗ ДОМА КУЛАКОВЫХ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1296474317",
-      "name_lat": "ХЛОПУШКА ИЗ АЗОВ- СИТИ",
+      "id": "793429385",
+      "name_lat": "ХЛОЯ СТАР РЕЙН",
       "name_ru": "",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "26779477",
+      "name_lat": "ХЛОПУШКА ИЗ АЗОВ-СИТИ",
+      "name_ru": "ХЛОПУШКА ИЗ АЗОВ-СИТИ",
       "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "breed_en": "",
       "total_shows": 3,
@@ -330,18 +363,26 @@
     {
       "id": "1943197996",
       "name_lat": "ХЛОБТЕР СУПЕР МЕН",
-      "name_ru": "",
+      "name_ru": "ХЛОБТЕР СУПЕР МЕН",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "344128401",
+      "id": "565391404",
       "name_lat": "ХЛОЯ ФОРЕВА ВИКТОРИЯ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ /",
+      "name_ru": "ХЛОЯ ФОРЕВА ВИКТОРИЯ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1667187524",
+      "name_lat": "ХЛОЯ ДЖЕССИКА",
+      "name_ru": "ХЛОЯ ДЖЕССИКА",
+      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
       "total_shows": 8,
       "competition_dog_id": null
     },
@@ -352,15 +393,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1636153206",
-      "name_lat": "ХЛОЯ СВИТ ХАННИ",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -400,57 +432,65 @@
       "competition_dog_id": null
     },
     {
-      "id": "1869938917",
+      "id": "1562088237",
       "name_lat": "ХЛОПЧИК УДАЛОЙ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ХЛОПЧИК УДАЛОЙ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "793429385",
-      "name_lat": "ХЛОЯ СТАР РЕЙН",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
+      "id": "1139202843",
+      "name_lat": "ХЛУД ХАУС НАЙТИНГЕЙЛ НАЙЯ",
+      "name_ru": "ХЛУД ХАУС НАЙТИНГЕЙЛ НАЙЯ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "116418275",
+      "id": "1465087946",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1998163680",
-      "name_lat": "ХЛОЯ ОТ ГАРРИ ПОТТЕРА (Д.Ш.)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 5,
+      "id": "762191120",
+      "name_lat": "ХЛОЯ ТАЛИСМАН УДАЧИ",
+      "name_ru": "ХЛОЯ ТАЛИСМАН УДАЧИ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "436899017",
       "name_lat": "ХЛОЯ ДЕ ЛЮКС ИЗ ТАЁЖНОГО УРМАНА",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ДЕ ЛЮКС ИЗ ТАЁЖНОГО УРМАНА",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "948373084",
+      "id": "1927038835",
       "name_lat": "ХЛОЯ ФОМ МАИР ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ХЛОЯ ФОМ МАИР ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1113445135",
+      "name_lat": "ХЛОЯ МЕРИ ВЕНД",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ / RUSSKIY",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -481,15 +521,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "924998646",
-      "name_lat": "ХЛОЯ ТАЛИСМАН УДАЧИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1543035465",
       "name_lat": "ХЛОЯ ИЗ ПОКОЛЕНИЯ ЗВЕЗД",
       "name_ru": "",
@@ -510,28 +541,19 @@
     {
       "id": "1791690369",
       "name_lat": "ХЛОЯ ИЗ СОУ БЬЮТИФУЛ С КРАСНОЙ ГОРКИ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ИЗ СОУ БЬЮТИФУЛ С КРАСНОЙ ГОРКИ",
       "breed": "Схипперке",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1679739817",
+      "id": "943065638",
       "name_lat": "ХЛОЯ ХОУП ИЗ СТАРОЙ ШУИ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1761522850",
-      "name_lat": "ХЛОЯ ГРЕЙС",
-      "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -541,15 +563,6 @@
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "220209881",
-      "name_lat": "ХЛОЯ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -580,10 +593,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1371814370",
-      "name_lat": "ХЛОЯ СО СНЕЖНЫХ ГОР",
+      "id": "1592899189",
+      "name_lat": "ХЛОРИС ВЕСЕННЯЯ РАПСОДИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "854115916",
+      "name_lat": "ХЛОЯ СО СНЕЖНЫХ ГОР",
+      "name_ru": "ХЛОЯ СО СНЕЖНЫХ ГОР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -600,7 +621,7 @@
     {
       "id": "240625039",
       "name_lat": "ХЛУД ХАУС ЗАБАВА II",
-      "name_ru": "",
+      "name_ru": "ХЛУД ХАУС ЗАБАВА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -616,28 +637,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1561262673",
-      "name_lat": "ХЛОЯ ОТ СНЕЖНОГО ПРИНЦА",
+      "id": "1839580953",
+      "name_lat": "ХЛАДА",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1117673752",
       "name_lat": "ХЛО БЬЮТИФ ОТ ЗВЕЗДЫ ГЖЕССИКИ",
-      "name_ru": "",
+      "name_ru": "ХЛО БЬЮТИФ ОТ ЗВЕЗДЫ ГЖЕССИКИ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "469494584",
+      "id": "592004458",
       "name_lat": "ХЛОЯ ГРЕЙС",
       "name_ru": "",
-      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -661,10 +681,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1006618518",
+      "id": "1566576655",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
-      "breed": "СЕТТЕР ГОРДОН /",
+      "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -679,19 +699,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "180500088",
-      "name_lat": "ХЛОЯ",
+      "id": "292787290",
+      "name_lat": "ХЛОЯ ГРЕЙС",
       "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ТОЙ ШПИЦ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "883006047",
-      "name_lat": "ХЛОЯ",
+      "id": "872666408",
+      "name_lat": "ХЛОЯ КАПЕЛЬКА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДРАТХААР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -706,15 +725,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "595921594",
-      "name_lat": "ХЛОЯ КАПЕЛЬКА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1295962822",
       "name_lat": "ХЛУД ХАУС ОЛИВИЯ ВАРТБУРГ",
       "name_ru": "",
@@ -724,10 +734,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1891893522",
+      "id": "1023025811",
       "name_lat": "ХЛОЯ АЙРА МИТЧЕЛ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -751,15 +761,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1139202843",
-      "name_lat": "ХЛУД ХАУС НАЙТИНГЕЙЛ НАЙЯ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "439064112",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
@@ -778,10 +779,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "359878857",
+      "id": "1482619459",
       "name_lat": "ХЛОЯ ГРЕЙС",
       "name_ru": "",
-      "breed": "SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed": "SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -832,6 +833,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "295559090",
+      "name_lat": "ХЛОЯ КОРОЛЕВА СОЛНЦА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "602627131",
       "name_lat": "ХЛИН НОРТЕРН ГОДДЕСC",
       "name_ru": "",
@@ -850,28 +860,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1127568093",
-      "name_lat": "ХЛОЯ КОРОЛЕВА СОЛНЦА",
-      "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1368025148",
+      "id": "1649785108",
       "name_lat": "ХЛЕБНОГО ХУТОРА ALZAWAIA ALANA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "65374999",
+      "id": "1190581879",
       "name_lat": "ХЛЕБНОГО ХУТОРА",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -897,18 +898,17 @@
     {
       "id": "284956232",
       "name_lat": "ХЛАДНА ИЗ ЗЛАТОГЛАВОЙ",
-      "name_ru": "",
+      "name_ru": "ХЛАДНА ИЗ ЗЛАТОГЛАВОЙ",
       "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "449384111",
-      "name_lat": "ХЛОЯ",
+      "id": "1977926133",
+      "name_lat": "ХЛОЯ ОТ ФИДЕЛИС ЭТ ФОРТИС",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -931,10 +931,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1629451150",
+      "id": "1185529047",
       "name_lat": "ХЛОЕ ЛЮБЯЩЕ Е СЕРДЦЕ",
       "name_ru": "",
-      "breed": "Ь /",
+      "breed": "Ь",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -958,15 +958,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "430930319",
-      "name_lat": "ХЛОЯ ДЖЕССИКА",
-      "name_ru": "",
-      "breed": "CHIHUAHUA LONG",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "821417095",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
@@ -981,7 +972,15 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "576377388",
+      "name_lat": "ХЛОЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1014,7 +1013,7 @@
     {
       "id": "1085860303",
       "name_lat": "ХЛОЯ ИЗ ОРУЖЕЙНОГО КРАЯ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ИЗ ОРУЖЕЙНОГО КРАЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -1023,7 +1022,7 @@
     {
       "id": "1610966786",
       "name_lat": "ХЛОЯ ЖЕМЧУЖНАЯ КАПЛЯ ЛЮБВИ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ЖЕМЧУЖНАЯ КАПЛЯ ЛЮБВИ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
@@ -1032,7 +1031,7 @@
     {
       "id": "525848036",
       "name_lat": "ХЛОЯ ФЕЕРИЯ РАССВЕТА",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ФЕЕРИЯ РАССВЕТА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -1041,7 +1040,7 @@
     {
       "id": "554954114",
       "name_lat": "ХЛОЯ ЗИГЕРС ХОФ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ЗИГЕРС ХОФ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -1093,15 +1092,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "576377388",
-      "name_lat": "ХЛОЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "333398392",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
@@ -1138,6 +1128,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1941111611",
+      "name_lat": "ХЛОРА ТАКАРА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "421923217",
       "name_lat": "ХЛОЕ БОУРГЕОИС",
       "name_ru": "",
@@ -1147,10 +1146,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "186532405",
+      "id": "1453104584",
       "name_lat": "ХЛОЯ ФЭНТЭЗИ ГЛОРИ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1174,10 +1173,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "927999242",
+      "id": "886548252",
       "name_lat": "ХЛОЯ БУЛЛ СТРОНГ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1187,15 +1186,6 @@
       "name_lat": "ХЛОЯ ВЕЛИКОЛЕПНАЯ С ТАИНСТВЕННОГО ОСТРОВА",
       "name_ru": "",
       "breed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1295781605",
-      "name_lat": "ХЛОЯ ПРИНЦЕССА ВОСТОКА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1212,7 +1202,7 @@
     {
       "id": "1346147921",
       "name_lat": "ХЛОЯ ВОПЛОЩЕНИЕ МЕЧТЫ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ВОПЛОЩЕНИЕ МЕЧТЫ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "BIEWER TERRIER",
       "total_shows": 2,
@@ -1221,7 +1211,7 @@
     {
       "id": "1626150137",
       "name_lat": "ХЛОЯ МЕЛОДИ МИСТЕРИОС ДРИМС",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ МЕЛОДИ МИСТЕРИОС ДРИМС",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -1230,7 +1220,7 @@
     {
       "id": "170798100",
       "name_lat": "ХЛОЕ БОУРГЕОНС",
-      "name_ru": "",
+      "name_ru": "ХЛОЕ БОУРГЕОНС",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
@@ -1239,17 +1229,26 @@
     {
       "id": "166991334",
       "name_lat": "ХЛОЯ ЛЕСНАЯ НИМФА",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ ЛЕСНАЯ НИМФА",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1962477021",
+      "id": "1902832891",
+      "name_lat": "ХЛИН С МИДГАРД ЗЕМЛИ",
+      "name_ru": "ХЛИН С МИДГАРД ЗЕМЛИ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "88514944",
       "name_lat": "ХЛАДА СНОУФЛЕЙК",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "ХЛАДА СНОУФЛЕЙК",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1257,7 +1256,7 @@
     {
       "id": "1417841840",
       "name_lat": "ХЛОЯ МОН АМИ",
-      "name_ru": "",
+      "name_ru": "ХЛОЯ МОН АМИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -1331,6 +1330,15 @@
       "name_lat": "ХЛОЯ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1193768934",
+      "name_lat": "Х-ЛЯЛЯ",
+      "name_ru": "",
+      "breed": "СЕТТЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1444,11 +1452,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "205434201",
+      "name_lat": "ХЛОЯ",
+      "name_ru": "",
+      "breed": "СЕТТЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1534851343",
+      "name_lat": "ХЛОЯ",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА / WHITE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "607632587",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "848456292",
+      "name_lat": "ХЛОЯ/HLOYA",
+      "name_ru": "",
+      "breed": "МОПС",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1462,10 +1494,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1036359745",
+      "id": "525997129",
       "name_lat": "ХЛОЯ (ДШ)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1493,15 +1525,6 @@
       "name_lat": "ХЛОЯ",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1045668423",
-      "name_lat": "ХЛОЯ",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1552,10 +1575,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1892242864",
+      "id": "211304548",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER,",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER,",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1570,6 +1593,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1065353527",
+      "name_lat": "Х-ЛОЯ ХЕППИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "598440729",
       "name_lat": "ХЛОЯ",
       "name_ru": "",
@@ -1579,11 +1611,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "621458417",
+      "id": "1586830607",
+      "name_lat": "Х-ЛОЯ ХЕППИ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1834384645",
       "name_lat": "ХЛОЯ ДЛЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "101899017",
+      "name_lat": "ХЛОЯ",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1592,6 +1641,15 @@
       "name_lat": "ХЛОЯ",
       "name_ru": "",
       "breed": "ЧАРЛЬЗ ЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "224390388",
+      "name_lat": "ХЛОЯ УАЙТ ФЛАУЭ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1606,10 +1664,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "779414391",
+      "id": "288099766",
       "name_lat": "ХЛОЯ СКАЗОЧНАЯ ФЕЯ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1660,15 +1718,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1941111611",
-      "name_lat": "ХЛОРА ТАКАРА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1037454793",
       "name_lat": "ХЛОЯ ЕВЕЛИЯ ФЭРР ЭЙФРИДДЕ",
       "name_ru": "",
@@ -1678,10 +1727,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "142513193",
+      "id": "949862068",
       "name_lat": "ХЛОЯ ОТ САМАРСКОЙ ЖЕМЧУЖИНЫ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1691,15 +1740,6 @@
       "name_lat": "ХЛОЯ БЛУ СТАР",
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "206312687",
-      "name_lat": "ХЛИН С МИДГАРД ЗЕМЛИ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1741,6 +1781,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "841015530",
+      "name_lat": "ХЛОЯ ИЗ СПАРТЫ",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "163127971",
       "name_lat": "ХЛОЯ ЖЕМЧУЖИНА",
       "name_ru": "",
@@ -1750,19 +1798,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "466469520",
-      "name_lat": "ХЛОЯ УАЙТ ФЛАУЭ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "692565829",
+      "id": "978533596",
       "name_lat": "ХЛОЯ ЛИТЛ БЬЮТИ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1777,10 +1816,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "577116891",
+      "id": "467001295",
       "name_lat": "ХЛОЯ ОТ АЙРОН ВУД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1858,10 +1897,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1246319171",
+      "id": "1107291930",
       "name_lat": "ХЛОЯ ЦЗЯ ЛИНГ",
       "name_ru": "",
-      "breed": "CHOW CHOW",
+      "breed": "CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1908,6 +1947,14 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "121309646",
+      "name_lat": "ХЛОЯ ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },

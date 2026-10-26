@@ -1,15 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "RY",
-  "count": 226,
+  "count": 228,
   "dogs": [
     {
-      "id": "432249877",
+      "id": "150546365",
       "name_lat": "RYZHAYA BESTIYA ZHAKLIN KENNEDI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ЖАКЛИН КЕННЕДИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 50,
+      "total_shows": 66,
       "competition_dog_id": null
     },
     {
@@ -18,16 +18,16 @@
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
-      "total_shows": 49,
+      "total_shows": 54,
       "competition_dog_id": null
     },
     {
       "id": "1555461118",
       "name_lat": "RYZHAYA MOLNIYA CHITA-DRITA",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЧИТА ДРИТА",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
-      "total_shows": 22,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -42,28 +42,37 @@
     {
       "id": "145172563",
       "name_lat": "RYZHAYA MOLNIYA RU",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ РУ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
-      "id": "397044181",
+      "id": "32844345",
       "name_lat": "RYURIK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
+      "id": "1964959526",
+      "name_lat": "RYURIK",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
+      "breed_en": "GERMAN WIRE-HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "1972039565",
       "name_lat": "RYZHAYA MOLNIYA NIMFEYA",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ НИМФЕЯ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
-      "total_shows": 21,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -76,6 +85,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1690117608",
+      "name_lat": "RYZHAYA MOLNIYA YUMI",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЮМИ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1250406349",
       "name_lat": "RYZHAYA MOLNIYA ELENSIS",
       "name_ru": "",
@@ -85,10 +103,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "724650840",
+      "id": "1108108012",
       "name_lat": "RYBKA ZOLOTAYA IZ DOMA DUVAL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -100,6 +118,15 @@
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "858166464",
+      "name_lat": "RYZHAYA MOLNIYA ARIYA",
+      "name_ru": "РЫЖАЯ МОЛНИЯ АРИЯ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -121,15 +148,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1964959526",
-      "name_lat": "RYURIK",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
-      "breed_en": "GERMAN WIRE-HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "27796403",
       "name_lat": "RYZHAYA MOLNIYA CHARODEYKA",
       "name_ru": "",
@@ -148,12 +166,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "974598303",
+      "name_lat": "RYZHAYA MOLNIYA VAYRA",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "879447023",
       "name_lat": "RYZHYIY OKHOTNIK ZHELNA-ALEXA",
       "name_ru": "",
       "breed": "НОРБОТТЕНШПИЦ",
       "breed_en": "NORRBOTTENSPITZ",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1360454642",
+      "name_lat": "RYZHAYA MOLNIYA ODRI",
+      "name_ru": "Рыжая Молния Одри",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -166,21 +202,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "281063709",
-      "name_lat": "RYZHAYA MOLNIYA NIKO",
-      "name_ru": "",
+      "id": "1484732085",
+      "name_lat": "RYZHAYA MOLNIYA PERSIVAL LANSMARK",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ПЕРСИВАЛЬ ЛАНСМАРК",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
-      "total_shows": 16,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
-      "id": "1484732085",
-      "name_lat": "RYZHAYA MOLNIYA PERSIVAL LANSMARK",
-      "name_ru": "",
+      "id": "281063709",
+      "name_lat": "RYZHAYA MOLNIYA NIKO",
+      "name_ru": "РЫЖАЯ МОЛНИЯ НИКО",
       "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 28,
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -193,12 +229,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "206816617",
-      "name_lat": "RYZHAYA MOLNIYA K.ROY- MUSTANG",
-      "name_ru": "",
+      "id": "1277888921",
+      "name_lat": "RYZHAYA MOLNIYA K.ROY-MUSTANG",
+      "name_ru": "РЫЖАЯ МОЛНИЯ К.РОЙ-МУСТАНГ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -220,21 +256,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1360454642",
-      "name_lat": "RYZHAYA MOLNIYA ODRI",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
+      "id": "200444004",
+      "name_lat": "RYZHAYA MOLNIYA MEGAMI",
+      "name_ru": "РЫЖАЯ МОЛНИЯ МЕГАМИ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "399738327",
-      "name_lat": "RYURIK",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР)",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -247,15 +274,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "858166464",
-      "name_lat": "RYZHAYA MOLNIYA ARIYA",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "58573642",
       "name_lat": "RYUUTENSOU AKABOSHI FOR THE POLAR NIGHT",
       "name_ru": "",
@@ -265,12 +283,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "607166841",
+      "name_lat": "RYS IZ DINASTII KONOL'S",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "521885713",
       "name_lat": "RYABINOVAYA OSEN IZ YAR GRADA",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -301,6 +328,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "523565679",
+      "name_lat": "RYZHAYA MOLNIYA ELSI",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЕЛСИ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "196598184",
       "name_lat": "RYZAYA MOLNIYA AVRORA III",
       "name_ru": "",
@@ -325,15 +361,6 @@
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "200444004",
-      "name_lat": "RYZHAYA MOLNIYA MEGAMI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -382,6 +409,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1985439415",
+      "name_lat": "RYZHAYA MOLNIYA CHERRI",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЧЕРРИ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "1164922847",
       "name_lat": "RYZHAYA MOLNIYA ELIFAN",
       "name_ru": "",
@@ -418,39 +454,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "974598303",
-      "name_lat": "RYZHAYA MOLNIYA VAYRA",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "523565679",
-      "name_lat": "RYZHAYA MOLNIYA ELSI",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "658421816",
+      "id": "1625386149",
       "name_lat": "RYOGAWA GO DIDERUSUI NO ASAHI",
       "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1422544058",
-      "name_lat": "RYTSAR LVINOE SERDTSE IZ ZAMKA MELVIN",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "АКИТА /",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -458,6 +466,15 @@
       "name_lat": "RYZHAYA MOLNIYA HRIZANTEMA",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1692433675",
+      "name_lat": "RYTSAR LVINOE SERDTSE IZ ZAMKA MELVIN",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -487,6 +504,15 @@
       "breed": "СИКОКУ",
       "breed_en": "SHIKOKU",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "560566273",
+      "name_lat": "RYZHEY BLESCK BRANDON BODIGARD",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МАЛЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -535,21 +561,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "560566273",
-      "name_lat": "RYZHEY BLESCK BRANDON BODIGARD",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1985439415",
-      "name_lat": "RYZHAYA MOLNIYA CHERRI",
+      "id": "1704088137",
+      "name_lat": "RYZHAYA MOLNIYA BELISSIMO",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 8,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -571,15 +587,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "607166841",
-      "name_lat": "RYS IZ DINASTII KONOL'S",
-      "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1055012542",
       "name_lat": "RYZHAYA MOLNIYA KARL URBAN",
       "name_ru": "",
@@ -598,12 +605,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1535847124",
+      "name_lat": "RYZHAYA MOLNIYA MERSEDES",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "707905911",
       "name_lat": "RYZHAYA MOLNIYA ALARMD DANTALION",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -616,28 +632,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1535847124",
-      "name_lat": "RYZHAYA MOLNIYA MERSEDES",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1868481798",
       "name_lat": "RYURIK",
       "name_ru": "",
       "breed": "GERMAN WIRE-HAIRED",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1404937709",
-      "name_lat": "RYURIK",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР) / GERMAN WIRE-HAIRED",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -658,6 +656,23 @@
       "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "97433306",
+      "name_lat": "RYZHAYA MOLNIYA HUGO BOSS",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1231176063",
+      "name_lat": "RYTSAR MOEGO-SERDTSA ZGRAIA NADZEI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -692,15 +707,6 @@
       "name_lat": "RYCZAR NIFFON ALEKSIN'S ZHAK",
       "name_ru": "",
       "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "156759540",
-      "name_lat": "RYTSAR MOEGO SERDTSA ZGRAIA NADZEI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -742,12 +748,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "97433306",
-      "name_lat": "RYZHAYA MOLNIYA HUGO BOSS",
-      "name_ru": "",
+      "id": "1683350480",
+      "name_lat": "RYABINKA S ZELENOGO GORODA",
+      "name_ru": "РЯБИНКА С ЗЕЛЕНОГО ГОРОДА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1935721157",
+      "name_lat": "RYZHAYA MOLNIYA KONUNG RAGNAR",
+      "name_ru": "РЫЖАЯ МОЛНИЯ КОНУНГ РАГНАР",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -760,21 +775,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "190076901",
+      "name_lat": "RYZHAYA MOLNIYA PANDORA",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ПАНДОРА",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "797341842",
       "name_lat": "RYZHAYA MOLNIYA EASY",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1935721157",
-      "name_lat": "RYZHAYA MOLNIYA KONUNG RAGNAR",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -787,12 +802,56 @@
       "competition_dog_id": null
     },
     {
+      "id": "1586786258",
+      "name_lat": "RYUUTENSOU YUTAKI",
+      "name_ru": "",
+      "breed": "АКИТА /",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "214242879",
       "name_lat": "RYZHYIY OKHOTNIK BONGATA",
       "name_ru": "",
       "breed": "НОРБОТТЕН ШПИЦ",
       "breed_en": "NORRBOTTENSPITZ",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1446502307",
+      "name_lat": "RYUUTENSOU EITAR",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1351642970",
+      "name_lat": "RYZHAYA PASTUSHKA IZ DOMA INFANTY",
+      "name_ru": "РЫЖАЯ ПАСТУШКА ИЗ ДОМА ИНФАНТЫ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
+      "id": "317232337",
+      "name_lat": "RYZHAYA MOLNIYA BRITTANI",
+      "name_ru": "РЫЖАЯ МОЛНИЯ БРИТТАНИ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1940537218",
+      "name_lat": "RYAZANSKAYA BABOCHKA GAYDE",
+      "name_ru": "РЯЗАНСКАЯ БАБОЧКА ГАЙДЕ",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -841,19 +900,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1633480160",
+      "id": "451394229",
       "name_lat": "RYZHYIY OKHOTNIK DOZHD'",
       "name_ru": "",
-      "breed": "НОРБОТТЕН ШПИЦ /",
+      "breed": "НОРБОТТЕН ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1100143289",
+      "id": "483652030",
+      "name_lat": "Rysskiy Assorti'c Nasha ARISHA Libenzverg",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "820352401",
       "name_lat": "RYZHAYA BESTIYA CEZARION",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -877,10 +944,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "135032524",
+      "id": "1669195945",
       "name_lat": "RYZHAYA MOLNIYA OMALIA",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -906,10 +973,10 @@
     {
       "id": "1833892103",
       "name_lat": "RYZHAYA MOLNIYA PASIFIK OUSHEN",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ПАСИФИК ОУШЕН",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -931,19 +998,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "317232337",
-      "name_lat": "RYZHAYA MOLNIYA BRITTANI",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
+      "id": "87013861",
+      "name_lat": "RYZHAYA MOLNIYA IZYUMCHIK",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ИЗЮМЧИК",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1913917874",
+      "id": "16315699",
       "name_lat": "RYZHYIY OKHOTNIK CZARINA",
       "name_ru": "",
-      "breed": "НОРБОТТЕН ШПИЦ /",
+      "breed": "НОРБОТТЕН ШПИЦ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -958,12 +1025,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1683350480",
-      "name_lat": "RYABINKA S ZELENOGO GORODA",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
-      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
-      "total_shows": 3,
+      "id": "124663948",
+      "name_lat": "RYZHAYA MOLNIYA AMALIYA",
+      "name_ru": "РЫЖАЯ МОЛНИЯ АМАЛИЯ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -976,10 +1043,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1931966181",
+      "id": "1616685176",
       "name_lat": "RYZHYIY OKHOTNIK FAVORIT",
       "name_ru": "",
-      "breed": "НОРБОТТЕН ШПИЦ /",
+      "breed": "НОРБОТТЕН ШПИЦ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -991,15 +1058,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "87013861",
-      "name_lat": "RYZHAYA MOLNIYA IZYUMCHIK",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1030,24 +1088,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "408038730",
-      "name_lat": "RYZHAYA MOLNIYA BELISSIMO",
-      "name_ru": "",
-      "breed": "Бордер колли / BORDER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "190076901",
-      "name_lat": "RYZHAYA MOLNIYA PANDORA",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "778898420",
       "name_lat": "RYZHAYA MOLNIYA OSTIN POWER",
       "name_ru": "",
@@ -1075,6 +1115,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1069042870",
+      "name_lat": "RYZHAYA MOLNIYA KRAFT",
+      "name_ru": "РЫЖАЯ МОЛНИЯ КРАФТ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "405536299",
       "name_lat": "RYZHAYA MOLNIYA GENRIH",
       "name_ru": "",
@@ -1084,30 +1133,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1446502307",
-      "name_lat": "RYUUTENSOU EITAR",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "25119912",
+      "id": "106772557",
       "name_lat": "RYZHYIY OHOTNIK PLUTA",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1099203732",
+      "id": "1961042738",
       "name_lat": "RYSSKIYE VIKINGI RUNOLV",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "302138035",
+      "name_lat": "RYZHAYA MOLNIYA BAROCCO",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1120,30 +1168,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "124663948",
-      "name_lat": "RYZHAYA MOLNIYA AMALIYA",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1704447864",
       "name_lat": "RYZHEE CHUDO BREE VAN DE KAMP",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "565824339",
-      "name_lat": "RYUUTENSOU YUTAKI",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1201,15 +1231,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1069042870",
-      "name_lat": "RYZHAYA MOLNIYA KRAFT",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "645261127",
       "name_lat": "RYZHAYA MOLNYA TEA ROSE TIFFANY",
       "name_ru": "",
@@ -1219,10 +1240,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1666074802",
+      "id": "23734323",
       "name_lat": "RYZHYIY OKHOTNIK PRIMA-EVA",
       "name_ru": "",
-      "breed": "НОРБОТТЕН ШПИЦ /",
+      "breed": "НОРБОТТЕН ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1243,6 +1264,23 @@
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "SCOTTISH TERRIER",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1451187180",
+      "name_lat": "RYUUTEN SOU YUTAKI",
+      "name_ru": "",
+      "breed": "АКИТА /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1790482191",
+      "name_lat": "RYZHAYA MOLNIYA ZHUZHANNA",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЖУЖАННА",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1273,29 +1311,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "302138035",
-      "name_lat": "RYZHAYA MOLNIYA BAROCCO",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "864113235",
       "name_lat": "RYZHYIY OKHOTNIK BUYAN",
       "name_ru": "",
       "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "FINNISH SPITZ",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1940537218",
-      "name_lat": "RYAZANSKAYA BABOCHKA GAYDE",
-      "name_ru": "",
-      "breed": "КЛАМБЕР СПАНИЕЛЬ",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1327,10 +1347,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "203879862",
+      "id": "1329234607",
       "name_lat": "RYZHYIY OKHOTNIK RAYTA",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1372,15 +1392,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "92454840",
-      "name_lat": "RYZHAYA MOLNIYA ZHUZHANNA",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ / BORDER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "275738165",
       "name_lat": "RYZHAYA MOLNIYA ELAY",
       "name_ru": "",
@@ -1390,10 +1401,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "612887595",
+      "id": "2796322",
       "name_lat": "RYZHEE SCHASTYE OLIVER SKY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1408,10 +1419,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "391699347",
+      "id": "885978346",
       "name_lat": "RYABINKA",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1430,6 +1441,15 @@
       "name_lat": "RYZHYI OKHOTNIK EREMEY",
       "name_ru": "",
       "breed": "НОРРБОТТЕН ШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1509943200",
+      "name_lat": "R.YTH'S AURORA MAJESTIC",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ / BICHON",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1516,10 +1536,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1427261870",
-      "name_lat": "RYZHYIY OKHOTNIK URAY- PATRIOT",
+      "id": "1351114095",
+      "name_lat": "RYZHYIY OKHOTNIK URAY-PATRIOT",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1561,21 +1581,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "700460152",
+      "name_lat": "RYAZAN YAKSHI ZHENGIZ",
+      "name_ru": "РЯЗАНЬ ЯКШИ ЖЕНГИЗ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1364271233",
+      "name_lat": "RYBKA ZOLOTAYA",
+      "name_ru": "РЫБКА ЗОЛОТАЯ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "417722372",
       "name_lat": "RYUUHOU GO SHUN'YOU KENSHA",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "700460152",
-      "name_lat": "RYAZAN YAKSHI ZHENGIZ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1642,15 +1671,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1690117608",
-      "name_lat": "RYZHAYA MOLNIYA YUMI",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1728690674",
       "name_lat": "RYZHAYA MOLNIYA NIGHT WOLF",
       "name_ru": "",
@@ -1678,10 +1698,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1786064219",
+      "id": "253608892",
       "name_lat": "RYBINSKIY STRAZH VALLI VEYMAN",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1705,10 +1725,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "109956108",
+      "id": "1774970369",
       "name_lat": "RYURIK",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1718,15 +1738,6 @@
       "name_lat": "RYURIK",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДРАТХААР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1144557464",
-      "name_lat": "RYURIK",
-      "name_ru": "",
-      "breed": "СПИНОНЕ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1764,15 +1775,6 @@
       "name_ru": "",
       "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "FINNISH SPITZ",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1351642970",
-      "name_lat": "RYZHAYA PASTUSHKA IZ DOMA INFANTY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1831,10 +1833,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1186641149",
+      "id": "608106784",
       "name_lat": "RYZHYIY OKHOTNIK DAKOTA",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1885,19 +1887,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1997969105",
+      "id": "13762924",
       "name_lat": "RYZHAYA MOLNIYA SHERRI-LADY",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "904617885",
+      "id": "1404561728",
       "name_lat": "RYZHAYA BESTIYA ZHELANNIY ANGEL",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1917,6 +1919,22 @@
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "82610851",
+      "name_lat": "RYZHAYA MOLNIYA HALF LIFE",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1869052013",
+      "name_lat": "RYZHIY MORTI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1948,10 +1966,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1743234110",
+      "id": "256748616",
       "name_lat": "RYZHAYA BESTIYA SHKODA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2002,15 +2020,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1364271233",
-      "name_lat": "RYBKA ZOLOTAYA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1049319921",
       "name_lat": "RYUKYU URUMA HANDZIME MESITE VAYOLET",
       "name_ru": "",
@@ -2020,10 +2029,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1889683500",
+      "id": "980329836",
       "name_lat": "RYZHIH KHOZYAYKA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЁРНЫЕ, ЧЁРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-ПОДПАЛЫЕ",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЕРНЫЕ, ЧЕРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-ПОДПАЛЫЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

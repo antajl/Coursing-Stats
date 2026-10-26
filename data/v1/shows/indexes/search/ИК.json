@@ -1,40 +1,58 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ИК",
-  "count": 113,
+  "count": 121,
   "dogs": [
     {
-      "id": "968201762",
+      "id": "621578275",
       "name_lat": "ИКАР ЭЙЕР БАДИ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР /",
+      "name_ru": "ИКАР ЭЙЕР БАДИ",
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 37,
       "competition_dog_id": null
     },
     {
+      "id": "549130493",
+      "name_lat": "И-КАНТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "91840202",
+      "name_lat": "ИКСАЙТ ПЫЛАЮЩИЙ ФЕНИКС",
+      "name_ru": "ИКСАЙТ ПЫЛАЮЩИЙ ФЕНИКС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1637961076",
       "name_lat": "ИКИЛИАН'С САМУРАЙ ОФ ХАРТ",
-      "name_ru": "",
+      "name_ru": "ИКИЛИАН'С САМУРАЙ ОФ ХАРТ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1323397230",
+      "id": "276592429",
       "name_lat": "ИКАР ФОН ФОРЕСТХОФФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1203688355",
+      "id": "1756456586",
       "name_lat": "ИКС-МАС ВИШ НОН ЛАСКАРЛА АНДАРЕ ЛАМОР",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "name_ru": "ИКС-МАС ВИШ НОН ЛАСКАРЛА АНДАРЕ ЛАМОР",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -42,7 +60,7 @@
     {
       "id": "1076796908",
       "name_lat": "ИКАР СТРАЖ СИБИРИ",
-      "name_ru": "",
+      "name_ru": "ИКАР СТРАЖ СИБИРИ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -67,15 +85,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1777322929",
-      "name_lat": "ИКСАЙТ ПЫЛАЮЩИЙ ФЕНИКС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "10380627",
       "name_lat": "ИКСКОР ФРОМ АМБЕР ФОРГЕ",
       "name_ru": "",
@@ -87,7 +96,7 @@
     {
       "id": "1345755258",
       "name_lat": "ИКСОРА ОФ ЭКО-СТИЛЬ",
-      "name_ru": "",
+      "name_ru": "ИКСОРА ОФ ЭКО-СТИЛЬ",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
       "breed_en": "",
       "total_shows": 6,
@@ -105,7 +114,7 @@
     {
       "id": "545570148",
       "name_lat": "ИКС-МАКС ВИШ УЛЬТРА ШИК",
-      "name_ru": "",
+      "name_ru": "ИКС-МАКС ВИШ УЛЬТРА ШИК",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -157,6 +166,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "308983049",
+      "name_lat": "ИКЭРУ НОРОСИ",
+      "name_ru": "ИКЭРУ НОРОСИ",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "519317599",
+      "name_lat": "ИКИ-ТЕК ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
+      "name_ru": "ИКИ-ТЕК ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "1928090896",
       "name_lat": "ИКС",
       "name_ru": "",
@@ -166,12 +193,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "308983049",
-      "name_lat": "ИКЭРУ НОРОСИ",
+      "id": "1052466476",
+      "name_lat": "ИКИГАЙ ОФ МАЙ ЛАЙФ КАОРИ",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -184,28 +211,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1177156014",
-      "name_lat": "ИКАР ДЖАБО ДЖО",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "519317599",
-      "name_lat": "ИКИ-ТЕК ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1052466476",
-      "name_lat": "ИКИГАЙ ОФ МАЙ ЛАЙФ КАОРИ",
-      "name_ru": "",
-      "breed": "АКИТА",
+      "id": "233708077",
+      "name_lat": "ИКС-МАС ВИШ ШЕДОУ ОФ ЗЕ МУН",
+      "name_ru": "ИКС-МАС ВИШ ШЕДОУ ОФ ЗЕ МУН",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -222,7 +231,7 @@
     {
       "id": "368540717",
       "name_lat": "ИКОН ОФ СТАЙЛ ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
-      "name_ru": "",
+      "name_ru": "ИКОН ОФ СТАЙЛ ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 5,
@@ -247,10 +256,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1617558829",
+      "id": "212623912",
       "name_lat": "ИКАР ФРИДРИХ ФЛАТЕР",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -258,17 +267,17 @@
     {
       "id": "1673466766",
       "name_lat": "ИКУВВАТ ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
-      "name_ru": "",
+      "name_ru": "ИКУВВАТ ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "233708077",
-      "name_lat": "ИКС-МАС ВИШ ШЕДОУ ОФ ЗЕ МУН",
+      "id": "137767027",
+      "name_lat": "ИКАРИ ИККЕН",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -276,7 +285,7 @@
     {
       "id": "1304300813",
       "name_lat": "ИКС-МАС ВИШ ИМПЕРИАЛ ХАЙНЕСС",
-      "name_ru": "",
+      "name_ru": "ИКС-МАС ВИШ ИМПЕРИАЛ ХАЙНЕСС",
       "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 2,
@@ -285,7 +294,7 @@
     {
       "id": "269963678",
       "name_lat": "ИКИГАЙ ОФ МАЙ ЛАЙФ ЮМИКО",
-      "name_ru": "",
+      "name_ru": "ИКИГАЙ ОФ МАЙ ЛАЙФ ЮМИКО",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
@@ -330,19 +339,10 @@
     {
       "id": "653573845",
       "name_lat": "ИКИ ФРОМ ХАУСС ОФ МАЗЗЕР ОФ ДРЭГОН",
-      "name_ru": "",
+      "name_ru": "ИКИ ФРОМ ХАУСС ОФ МАЗЗЕР ОФ ДРЭГОН",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1449356964",
-      "name_lat": "ИКИ-ТЕК IZ ALEKSANDROVOI SLOBODY",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -364,10 +364,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1302426989",
+      "id": "710261712",
       "name_lat": "ИКС-МАС ВИШ МИДНАЙТ ДЕМОН",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -391,21 +391,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1407636201",
-      "name_lat": "ИКЕР БРАВО ВИСТА ЛЕАЛ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1079174108",
       "name_lat": "ИКС-МАС ВИШ ИНСОЛЕНС",
-      "name_ru": "",
+      "name_ru": "ИКС-МАС ВИШ ИНСОЛЕНС",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1271850851",
+      "name_lat": "ИККЕРИЯ МОНТ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -420,7 +419,7 @@
     {
       "id": "1602615920",
       "name_lat": "ИКЛИПС ОФ МАЙ ХАРТ ОФ САННИ ГЛЕН",
-      "name_ru": "",
+      "name_ru": "ИКЛИПС ОФ МАЙ ХАРТ ОФ САННИ ГЛЕН",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 3,
@@ -436,6 +435,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1019484842",
+      "name_lat": "И-КАНТ",
+      "name_ru": "",
+      "breed": "GERMAN WIRE-HAIRED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1341714875",
       "name_lat": "ИКС",
       "name_ru": "",
@@ -445,10 +453,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "936075975",
+      "id": "1156941402",
+      "name_lat": "И-КАНТ",
+      "name_ru": "",
+      "breed": "ФАРАОНОВА НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1042021683",
       "name_lat": "ИКАР БЕССМЕРТНЫЙ ПОЛЕТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -458,15 +475,14 @@
       "name_lat": "ИКОНА СТИЛЯ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1988833386",
+      "id": "71217210",
       "name_lat": "ИКАР С ДОЛИНЫ БЕЛЫХ КАМНЕЙ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ИКАР С ДОЛИНЫ БЕЛЫХ КАМНЕЙ",
+      "breed": "ШАР ПЕЙ ШНАУЦЕР ШНАУЦЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -481,10 +497,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "448012954",
+      "id": "1207763307",
       "name_lat": "ИКАРО НЕРО",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -492,19 +508,10 @@
     {
       "id": "1603179494",
       "name_lat": "ИКС-МАС ВИШ МАСТ ГОУ ОН",
-      "name_ru": "",
+      "name_ru": "ИКС-МАС ВИШ МАСТ ГОУ ОН",
       "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "137767027",
-      "name_lat": "ИКАРИ ИККЕН",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -513,6 +520,14 @@
       "name_ru": "",
       "breed": "АКИТА / AKITA",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "624257287",
+      "name_lat": "ИКОНА СТИЛЯ С ГОРНОГО АЛТАЯ",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -559,6 +574,15 @@
       "breed": "АКИТА / AKITA",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1208006070",
+      "name_lat": "И-КАНТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -609,7 +633,7 @@
     {
       "id": "1932918837",
       "name_lat": "ИКС-МАС ВИШ ВЬЮ МИ ЭЗ Э ВИННЕР",
-      "name_ru": "",
+      "name_ru": "ИКС-МАС ВИШ ВЬЮ МИ ЭЗ Э ВИННЕР",
       "breed": "ЧИХУАХУА Г-Ш",
       "breed_en": "",
       "total_shows": 3,
@@ -618,7 +642,7 @@
     {
       "id": "263116562",
       "name_lat": "ИКИГАЙ ИНУ ВАКАМОНО",
-      "name_ru": "",
+      "name_ru": "ИКИГАЙ ИНУ ВАКАМОНО",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -643,10 +667,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "842963977",
+      "id": "1657521300",
       "name_lat": "ИКС-ИКС-ЭЛЬ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -717,17 +741,17 @@
     {
       "id": "150682587",
       "name_lat": "ИКСАРДО МИСТЕР КРАСАВЧИК",
-      "name_ru": "",
+      "name_ru": "ИКСАРДО МИСТЕР КРАСАВЧИК",
       "breed": "BIEWER TERRIER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1759982165",
+      "id": "1926166233",
       "name_lat": "ИКС-ИКС ЭЛЬФ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ИКС-ИКС ЭЛЬФ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -735,10 +759,19 @@
     {
       "id": "292846542",
       "name_lat": "ИКС-МАС ВИШ ТУРМАЛИНЕ С СТОРИ",
-      "name_ru": "",
+      "name_ru": "ИКС-МАС ВИШ ТУРМАЛИНЕ С СТОРИ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1196732218",
+      "name_lat": "И-КАНТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
+      "breed_en": "GERMAN WIRE-HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -765,6 +798,14 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1507784732",
+      "name_lat": "ИКАР",
+      "name_ru": "",
+      "breed": "МАЛЫЙ (ОРАНЖЕВЫЙ, НЕМЕЦКИЙ ШПИЦ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -877,10 +918,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1333525203",
+      "id": "512136506",
       "name_lat": "ИКСАЙТ ИЗ УСАДЬБЫ КЛИМОВЫХ",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -904,11 +945,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "372933446",
+      "id": "205293274",
       "name_lat": "ИКС МИСТЕР ИКС ИЗ ИМПЕРИИ ЛАРИЭЛ",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1419727580",
+      "name_lat": "ИКИГАИ ОФ МАЙ ЛАЙФ МЕГАМИ",
+      "name_ru": "",
+      "breed": "АКИТА /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -922,10 +971,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "199537935",
+      "id": "1748913028",
+      "name_lat": "ИКАР СЫН СОЛНЦА",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "831468984",
       "name_lat": "ИКО ANGELINA GOLDENE",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -967,6 +1024,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "292804084",
+      "name_lat": "И-КВАДРА ФОН АРГУС-ХАУС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "962172500",
       "name_lat": "ИКЭДЗУМИ ЕСЕЙ",
       "name_ru": "",
@@ -1003,10 +1069,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "355914594",
+      "id": "200201702",
       "name_lat": "ИКС ИДАЛЬГО ФАЕР",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

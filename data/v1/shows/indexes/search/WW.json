@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "WW",
-  "count": 4,
+  "count": 6,
   "dogs": [
     {
       "id": "708655582",
@@ -13,12 +13,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1097277589",
+      "id": "287344277",
+      "name_lat": "W-WISDOM FOR LADY OF WINNERS VALLEY",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1907667439",
       "name_lat": "WW. GENTLY BORN DEVOTED FRIEND",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ / GIANT SCHNAUZERR BLACK",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1582787765",
+      "name_lat": "WW GENTLY BORN DEVOTED FRIEND",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

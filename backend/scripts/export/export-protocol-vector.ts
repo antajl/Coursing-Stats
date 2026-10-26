@@ -70,6 +70,7 @@ export function normalizeBreed(b: string): string {
   if (s.includes('ирландский терьер')) return 'Ирландский терьер';
   if (s.includes('малая') || s.includes('итальянская') || s.includes('левретка')) return 'Малая итальянская борзая';
   if (s.includes('поденко')) return 'Поденко Ибиценко (к-ш, г-ш)';
+  if (s.includes('тайский')) return 'Тайский риджбек';
   if (s.includes('родезийский') || s.includes('риджбек')) return 'Родезийский риджбек';
   if (s.includes('русская') || s.includes('псовая')) return 'Русская псовая борзая';
   if (s.includes('салюки')) return 'Салюки';
@@ -136,9 +137,15 @@ export function formatDogName(dog?: DogInfo): string {
   return escapeHtml(ru || en);
 }
 
-export function isGenericJudgePlaceholder(j?: string | null): boolean {
+export function getJudgeString(j?: any): string {
+  if (!j) return '';
+  if (Array.isArray(j)) return j.join(', ');
+  return String(j);
+}
+
+export function isGenericJudgePlaceholder(j?: any): boolean {
   if (!j) return true;
-  const s = j.trim().toLowerCase();
+  const s = getJudgeString(j).trim().toLowerCase();
   if (!s) return true;
   if (s === 'главный судья/судья' || s === 'главный судья' || s === 'судья' || s === 'судьи') return true;
   return false;
@@ -188,7 +195,7 @@ export function buildMetaRowsHtml(comp: CompetitionData, colspan: number): strin
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Организатор:</b> ${escapeHtml(comp.event.host_club)}</td>\r\n    </tr>`;
   }
   if (comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges)) {
-    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Судьи:</b> ${escapeHtml(comp.event.judges)}</td>\r\n    </tr>`;
+    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Судьи:</b> ${escapeHtml(getJudgeString(comp.event.judges))}</td>\r\n    </tr>`;
   }
   return html;
 }
@@ -273,7 +280,7 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
   const dnsList: CompetitionResult[] = [];
 
   for (const r of comp.results) {
-    if (r.status === 'dns') {
+    if (r.status === 'dns' || r.status === 'absent') {
       dnsList.push(r);
       continue;
     }
@@ -729,19 +736,23 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
 // ----------------------------------------------------
 
 export function getCoursingBibStyle(heat?: Heat | null): { bg: string; color: string } {
-  if (!heat || heat.bib_number == null) {
+  const bibNum = heat?.bib_number ?? heat?.heat_number;
+  if (!heat || (bibNum == null && !heat.bib_color)) {
     return { bg: '#ffffff', color: '#000000' };
   }
-  const rawColor = (heat.bib_color || '').toLowerCase().trim();
+  const rawColor = String(heat.bib_color || '').toLowerCase().trim();
   let bg = '#ffffff';
-  const color = '#000000';
+  let color = '#000000';
 
   if (rawColor === 'red' || rawColor === '#ff0000') {
     bg = '#ff0000';
+    color = '#ffffff';
   } else if (rawColor === 'blue' || rawColor === '#00a2e8' || rawColor === '#00ccff') {
     bg = '#00a2e8';
+    color = '#ffffff';
   } else if (rawColor === 'yellow' || rawColor === '#ffff00' || rawColor === '#ebe1b0' || rawColor === '#f7f6f0') {
     bg = '#f7f6f0'; // Нежный тёплый оттенок белого (off-white)
+    color = '#000000';
   } else if (rawColor.startsWith('#') && (rawColor.length === 7 || rawColor.length === 4)) {
     bg = rawColor;
   }
@@ -749,19 +760,21 @@ export function getCoursingBibStyle(heat?: Heat | null): { bg: string; color: st
 }
 
 export function renderBibCellRowspan(heat?: Heat | null, rowspan: number = 2): string {
-  if (!heat || heat.bib_number == null) {
+  const bibNum = heat?.bib_number ?? heat?.heat_number;
+  if (!heat || bibNum == null) {
     return `<td rowspan="${rowspan}"></td>`;
   }
   const { bg, color } = getCoursingBibStyle(heat);
-  return `<td rowspan="${rowspan}" style="background-color: ${bg} !important; color: ${color}; font-style: italic;">${heat.bib_number}</td>`;
+  return `<td rowspan="${rowspan}" style="background-color: ${bg} !important; color: ${color}; font-style: italic;">${bibNum}</td>`;
 }
 
 export function renderBibCellSingle(heat?: Heat | null): string {
-  if (!heat || heat.bib_number == null) {
+  const bibNum = heat?.bib_number ?? heat?.heat_number;
+  if (!heat || bibNum == null) {
     return '<td></td>';
   }
   const { bg, color } = getCoursingBibStyle(heat);
-  return `<td style="background-color: ${bg} !important; color: ${color}; font-style: italic;">${heat.bib_number}</td>`;
+  return `<td style="background-color: ${bg} !important; color: ${color}; font-style: italic;">${bibNum}</td>`;
 }
 
 export function renderScores(judge?: JudgeScore | null): string {
@@ -779,7 +792,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
   const dnsList: CompetitionResult[] = [];
 
   for (const r of comp.results) {
-    if (r.status === 'dns') {
+    if (r.status === 'dns' || r.status === 'absent') {
       dnsList.push(r);
       continue;
     }
@@ -834,7 +847,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       <td rowspan="2">Пол</td>
       <td rowspan="2">Кличка</td>
       <td rowspan="2">Забег</td>
-      <td colspan="6">${comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges) ? escapeHtml(comp.event.judges) : 'Оценки по критериям'}</td>
+      <td colspan="6">${comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges) ? escapeHtml(getJudgeString(comp.event.judges)) : 'Оценки по критериям'}</td>
       <td rowspan="2">Итого<br>баллов</td>
       <td rowspan="2">СС</td>
       <td rowspan="2">Титул</td>
@@ -857,10 +870,10 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       <td rowspan="2">Пол</td>
       <td rowspan="2">Кличка</td>
       <td rowspan="2">Забег<br>1</td>
-      <td colspan="6">${comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges) ? escapeHtml(comp.event.judges) : 'Оценки по критериям'}</td>
+      <td colspan="6">${comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges) ? escapeHtml(getJudgeString(comp.event.judges)) : 'Оценки по критериям'}</td>
       <td rowspan="2">Сумма<br>1</td>
       <td rowspan="2">Забег<br>2</td>
-      <td colspan="6">${comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges) ? escapeHtml(comp.event.judges) : 'Оценки по критериям'}</td>
+      <td colspan="6">${comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges) ? escapeHtml(getJudgeString(comp.event.judges)) : 'Оценки по критериям'}</td>
       <td rowspan="2">Сумма<br>2</td>
       <td rowspan="2">Общая<br>сумма</td>
       <td rowspan="2">СС</td>
@@ -949,7 +962,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
               <td rowspan="${maxJudges}" class="dog-name-cell">${dogName}</td>
               ${renderBibCellRowspan(heat1, maxJudges)}
               ${renderScores(j1_h1)}
-              <td rowspan="${maxJudges}">${totalScore || (heat1 ? heat1.total : '')}</td>
+              <td rowspan="${maxJudges}">${totalScore || (heat1?.total != null ? heat1.total : '')}</td>
               <td rowspan="${maxJudges}">${vc}</td>
               <td rowspan="${maxJudges}">${qual}</td>
             </tr>
@@ -966,10 +979,10 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
         continue;
       }
 
-      // Case 1: Eliminated/Disqualified in Heat 1 (single row)
-      if ((res.status === 'disqualified' || res.status === 'eliminated') && heats.length <= 1) {
-        const prefix = res.status === 'disqualified' ? 'Снятие' : 'Отстранение';
-        const reason = res.status_reason ? `${prefix} (${res.status_reason})` : prefix;
+      // Case 1: Eliminated/Disqualified/Withdrawn/Injured in Heat 1 (single row)
+      const isFailedInHeat1 = (res.status === 'disqualified' || res.status === 'eliminated' || res.status === 'withdrawn' || res.status === 'injured') && heats.length <= 1;
+      if (isFailedInHeat1) {
+        const reason = res.status_reason || (res.status === 'injured' ? 'Травма' : (res.status === 'withdrawn' ? 'Снят' : 'Дисквалификация'));
         tableRowsHtml += `
           <tr class="participant-row">
             <td>${place}</td>
@@ -985,9 +998,10 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
         continue;
       }
 
-      // Case 2: Eliminated in Heat 2
-      if (res.status === 'eliminated' && heats.length > 1) {
-        const reason = res.status_reason ? `Отстранение (${res.status_reason})` : 'Отстранение';
+      // Case 2: Eliminated/Disqualified/Withdrawn/Injured in Heat 2
+      const isFailedInHeat2 = (res.status === 'eliminated' || res.status === 'disqualified' || res.status === 'withdrawn' || res.status === 'injured') && heats.length > 1;
+      if (isFailedInHeat2) {
+        const reason = res.status_reason || (res.status === 'injured' ? 'Травма' : (res.status === 'withdrawn' ? 'Снят' : 'Дисквалификация'));
         tableRowsHtml += `
           <tr class="participant-row">
             <td rowspan="${maxJudges}">${place}</td>
@@ -998,7 +1012,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
             <td rowspan="${maxJudges}" class="dog-name-cell">${dogName}</td>
             ${renderBibCellRowspan(heat1, maxJudges)}
             ${renderScores(j1_h1)}
-            <td rowspan="${maxJudges}">${heat1 ? heat1.total : ''}</td>
+            <td rowspan="${maxJudges}">${heat1?.total != null ? heat1.total : ''}</td>
             ${renderBibCellRowspan(heat2, maxJudges)}
             <td colspan="7" rowspan="${maxJudges}" class="status-cell">${escapeHtml(reason)}</td>
             <td rowspan="${maxJudges}">${totalScore}</td>
@@ -1027,10 +1041,10 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
           <td rowspan="${maxJudges}" class="dog-name-cell">${dogName}</td>
           ${renderBibCellRowspan(heat1, maxJudges)}
           ${renderScores(j1_h1)}
-          <td rowspan="${maxJudges}">${heat1 ? heat1.total : ''}</td>
+          <td rowspan="${maxJudges}">${heat1?.total != null ? heat1.total : ''}</td>
           ${renderBibCellRowspan(heat2, maxJudges)}
           ${renderScores(j1_h2)}
-          <td rowspan="${maxJudges}">${heat2 ? heat2.total : ''}</td>
+          <td rowspan="${maxJudges}">${heat2?.total != null ? heat2.total : ''}</td>
           <td rowspan="${maxJudges}">${totalScore}</td>
           <td rowspan="${maxJudges}">${vc}</td>
           <td rowspan="${maxJudges}">${qual}</td>
@@ -1282,6 +1296,7 @@ export function buildTeamCoursingProtocolHtml(comp: CompetitionData): string {
   const teamMap = new Map<number, {
     catalog_no: number;
     team_name: string;
+    category?: string;
     placement: number | null;
     total_score: number | null;
     dns: boolean;
@@ -1297,11 +1312,16 @@ export function buildTeamCoursingProtocolHtml(comp: CompetitionData): string {
 
   for (const r of comp.results) {
     const teamNo = r.catalog_no;
+    const cat = (r.raw_scores_json as any)?.category || r.breed_class;
+    const rawTName = (r.raw_scores_json as any)?.team_name;
+    const tName = rawTName || (r.breed_class && !r.breed_class.startsWith('Команда') && r.breed_class !== 'Борзые' && r.breed_class !== 'НеБорзые' ? r.breed_class : `Команда № ${teamNo}`);
+
     if (!teamMap.has(teamNo)) {
       const isDns = (r.status === 'dns' || r.raw_scores_json?.ran === false) && !r.total_score && !r.placement;
       teamMap.set(teamNo, {
         catalog_no: teamNo,
-        team_name: r.breed_class || `Команда № ${teamNo}`,
+        team_name: tName,
+        category: cat,
         placement: r.placement ?? null,
         total_score: r.total_score ?? null,
         dns: isDns,
@@ -1315,24 +1335,24 @@ export function buildTeamCoursingProtocolHtml(comp: CompetitionData): string {
     const dogName = formatDogName(r.dog);
     const breed = normalizeBreed(r.dog?.breed || '');
     const sex = normalizeSex(r.dog?.sex || '');
+    const ranExplicit = (r.raw_scores_json as any)?.ran;
     const ranMembers = (r.raw_scores_json as any)?.team_members as string[] | undefined;
-    const ran = ranMembers
-      ? ranMembers.some(m => m.toLowerCase().trim() === (r.dog?.name || '').toLowerCase().trim())
-      : !t.dns;
+    const ran = typeof ranExplicit === 'boolean'
+      ? ranExplicit
+      : ranMembers
+        ? ranMembers.some(m => {
+            const mNorm = m.toLowerCase().trim();
+            const dName = (r.dog?.name || '').toLowerCase().trim();
+            const ru = (r.dog?.name_ru || '').toLowerCase().trim();
+            const lat = (r.dog?.name_lat || '').toLowerCase().trim();
+            return mNorm === dName || mNorm === ru || mNorm === lat;
+          })
+        : !t.dns;
 
     t.dogs.push({ name: dogName, breed, sex, ran });
   }
 
   const allTeams = [...teamMap.values()];
-  const activeTeams = allTeams.filter(t => !t.dns).sort((a, b) => {
-    const pa = a.placement ?? 999;
-    const pb = b.placement ?? 999;
-    if (pa !== pb) return pa - pb;
-    return a.catalog_no - b.catalog_no;
-  });
-
-  const dnsTeams = allTeams.filter(t => t.dns).sort((a, b) => a.catalog_no - b.catalog_no);
-
   const totalCols = 24;
   const metaRowsHtml = buildMetaRowsHtml(comp, totalCols);
 
@@ -1343,37 +1363,40 @@ export function buildTeamCoursingProtocolHtml(comp: CompetitionData): string {
     <tr class="col-header">
       <td rowspan="2" style="width: 3.5%;">Место</td>
       <td rowspan="2" style="width: 3.0%;">№</td>
-      <td rowspan="2" style="width: 27.5%;">Состав команды</td>
-      <td colspan="10" style="width: 30.5%;">1-й Забег</td>
-      <td colspan="10" style="width: 30.5%;">2-й Забег</td>
+      <td rowspan="2" style="width: 27.5%;">Название команды</td>
+      <td colspan="10" style="width: 30.5%;">1-й заезд</td>
+      <td colspan="10" style="width: 30.5%;">2-й заезд</td>
       <td rowspan="2" style="width: 5.0%;">Общая<br>сумма</td>
     </tr>
     <tr class="col-header sub-header">
       <td>Забег</td>
-      <td>Ск</td>
-      <td>Эн</td>
-      <td>Лв</td>
-      <td>Пм</td>
-      <td>Вз</td>
-      <td>НП</td>
-      <td>БП</td>
-      <td>Сумма</td>
-      <td>Итог 1</td>
+      <td>Скор.</td>
+      <td>Энт.</td>
+      <td>Ловк.</td>
+      <td>Поим.</td>
+      <td>Взаим.</td>
+      <td>НаПов.</td>
+      <td>БезПов.</td>
+      <td>Судья</td>
+      <td>Сумма 1</td>
       <td>Забег</td>
-      <td>Ск</td>
-      <td>Эн</td>
-      <td>Лв</td>
-      <td>Пм</td>
-      <td>Вз</td>
-      <td>НП</td>
-      <td>БП</td>
-      <td>Сумма</td>
-      <td>Итог 2</td>
+      <td>Скор.</td>
+      <td>Энт.</td>
+      <td>Ловк.</td>
+      <td>Поим.</td>
+      <td>Взаим.</td>
+      <td>НаПов.</td>
+      <td>БезПов.</td>
+      <td>Судья</td>
+      <td>Сумма 2</td>
     </tr>
   `;
 
-  // Active teams
-  for (const t of activeTeams) {
+  // Check if multiple categories exist
+  const categories = [...new Set(allTeams.map(t => t.category).filter(Boolean))] as string[];
+  const hasCategories = categories.length > 1;
+
+  const renderTeam = (t: typeof allTeams[0]) => {
     const heat1 = t.heats[0] || null;
     const heat2 = t.heats[1] || null;
 
@@ -1383,7 +1406,13 @@ export function buildTeamCoursingProtocolHtml(comp: CompetitionData): string {
     const j1_h2 = heat2?.judges?.[0] || null;
     const j2_h2 = heat2?.judges?.[1] || null;
 
-    const rosterHtml = t.dogs.map((d, i) => `
+    const hasDistinctTeamName = t.team_name && !t.team_name.startsWith('Команда №');
+    const teamHeaderHtml = hasDistinctTeamName
+      ? `<div style="font-weight: bold; font-size: 9.5pt; margin-bottom: 2px; color: #111;">${escapeHtml(t.team_name)}</div>` +
+        `<div style="font-size: 7.5pt; color: #555; margin-bottom: 2px;">Состав команды:</div>`
+      : '';
+
+    const rosterHtml = teamHeaderHtml + t.dogs.map((d, i) => `
       <div class="team-dog-entry ${d.ran ? '' : 'is-reserve'}">
         <span class="dog-idx">${i + 1}.</span>
         <span class="dog-title">${d.name}</span>
@@ -1409,7 +1438,7 @@ export function buildTeamCoursingProtocolHtml(comp: CompetitionData): string {
       `;
     };
 
-    tableRowsHtml += `
+    return `
       <tr class="participant-row">
         <td rowspan="2" style="font-weight: bold; font-size: 11pt;">${t.placement ?? ''}</td>
         <td rowspan="2" style="font-weight: bold;">${t.catalog_no}</td>
@@ -1427,13 +1456,46 @@ export function buildTeamCoursingProtocolHtml(comp: CompetitionData): string {
         ${renderJudgeScores(j2_h2)}
       </tr>
     `;
+  };
+
+  if (hasCategories) {
+    for (const cat of categories) {
+      const catTeams = allTeams.filter(t => t.category === cat && !t.dns).sort((a, b) => {
+        const pa = a.placement ?? 999;
+        const pb = b.placement ?? 999;
+        if (pa !== pb) return pa - pb;
+        return a.catalog_no - b.catalog_no;
+      });
+
+      tableRowsHtml += `
+        <tr class="group-row">
+          <td colspan="${totalCols}" class="group-header">${escapeHtml(cat)}</td>
+        </tr>
+      `;
+
+      for (const t of catTeams) {
+        tableRowsHtml += renderTeam(t);
+      }
+    }
+  } else {
+    const activeTeams = allTeams.filter(t => !t.dns).sort((a, b) => {
+      const pa = a.placement ?? 999;
+      const pb = b.placement ?? 999;
+      if (pa !== pb) return pa - pb;
+      return a.catalog_no - b.catalog_no;
+    });
+
+    for (const t of activeTeams) {
+      tableRowsHtml += renderTeam(t);
+    }
   }
 
   // DNS teams
+  const dnsTeams = allTeams.filter(t => t.dns).sort((a, b) => a.catalog_no - b.catalog_no);
   if (dnsTeams.length > 0) {
     tableRowsHtml += `
-      <tr class="dns-row">
-        <td colspan="${totalCols}" class="group-header">Неявившиеся команды</td>
+      <tr class="group-row">
+        <td colspan="${totalCols}" class="group-header">Не стартовавшие команды (DNS)</td>
       </tr>
     `;
     for (const t of dnsTeams) {
@@ -1448,9 +1510,9 @@ export function buildTeamCoursingProtocolHtml(comp: CompetitionData): string {
       tableRowsHtml += `
         <tr class="participant-row dns-row">
           <td>—</td>
-          <td>${t.catalog_no}</td>
+          <td style="font-weight: bold;">${t.catalog_no}</td>
           <td class="team-roster-cell">${rosterHtml}</td>
-          <td colspan="21" class="status-cell">Неявка (DNS)</td>
+          <td colspan="21" class="status-cell">DNS (Не стартовали)</td>
         </tr>
       `;
     }
@@ -1710,9 +1772,13 @@ export function buildProtocolHtml(comp: CompetitionData): string {
     return buildCombinedMarathonProtocolHtml(comp);
   }
 
+  if (hasCoursing) {
+    return buildCoursingProtocolHtml(comp);
+  }
+
   const isRacing = comp.event.event_type === 'racing' || 
-    (comp.event.competition_type && comp.event.competition_type.toLowerCase().includes('бег')) ||
-    comp.results.some(r => r.raw_scores_json?.format === 'racing');
+    hasRacing ||
+    (comp.event.competition_type && (comp.event.competition_type.toLowerCase().includes('рейсинг') || comp.event.competition_type.toLowerCase().includes('круг')));
 
   if (isRacing) {
     return buildRacingProtocolHtml(comp);

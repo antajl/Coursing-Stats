@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EF",
-  "count": 84,
+  "count": 88,
   "dogs": [
     {
-      "id": "468338159",
+      "id": "1949262568",
       "name_lat": "EFFI BLECK PEARL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17097049",
+      "name_lat": "EFFI BRAUNI KEYK S PRAVOGO BEREGA",
+      "name_ru": "ЕФФИ БРАУНИ КЕЙК С ПРАВОГО БЕРЕГА",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -22,12 +31,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "17097049",
-      "name_lat": "EFFI BRAUNI KEYK S PRAVOGO BEREGA",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "id": "1020514218",
+      "name_lat": "EFLORES DAYANA ROZ",
+      "name_ru": "ЭФЛОРЕС ДАЯНА РОЗ",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -36,7 +45,16 @@
       "name_ru": "",
       "breed": "ХОВАВАРТ",
       "breed_en": "HOVAWART",
-      "total_shows": 31,
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1785136207",
+      "name_lat": "EFLORES ORKHIDEYA",
+      "name_ru": "ЭФЛОРЕС ОРХИДЕЯ",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -49,24 +67,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1785136207",
-      "name_lat": "EFLORES ORKHIDEYA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1020514218",
-      "name_lat": "EFLORES DAYANA ROZ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1987902849",
       "name_lat": "EFFECT SPARTAK",
       "name_ru": "",
@@ -76,21 +76,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "461035569",
+      "id": "1459292786",
       "name_lat": "EFA VOM FROSTEN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1035626842",
+      "id": "614409771",
       "name_lat": "EFIM TAILER",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -99,7 +99,7 @@
       "name_ru": "",
       "breed": "ХОВАВАРТ / HOVAWART",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -121,6 +121,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1214508653",
+      "name_lat": "EFECTO RICO IZ DOMA FIRAN'S",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "576137584",
       "name_lat": "EFLORES KAVALER GALANTNII",
       "name_ru": "",
@@ -139,12 +148,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "162721977",
-      "name_lat": "EFECTO RICO IZ DOMA FIRAN'S",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "1076059915",
+      "name_lat": "EFA IZ RODNOGO KRAYA",
+      "name_ru": "ЭФА ИЗ РОДНОГО КРАЯ",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -166,12 +175,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1076059915",
-      "name_lat": "EFA IZ RODNOGO KRAYA",
+      "id": "982151388",
+      "name_lat": "EFRAT",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "БИГЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "223422974",
+      "name_lat": "EFFA FINE CHOCOLATE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -202,15 +219,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "223422974",
-      "name_lat": "EFFA FINE CHOCOLATE",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1372577583",
       "name_lat": "EFEKT ELIOT LENELI",
       "name_ru": "",
@@ -238,10 +246,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "265268770",
+      "id": "1211509516",
       "name_lat": "EFRAT VON RETTIICH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -256,12 +264,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1765097573",
-      "name_lat": "EFREN MANIE",
+      "id": "421761801",
+      "name_lat": "EFFIE IZ DOMA LEVSHOVOY",
       "name_ru": "",
-      "breed": "GERMAN SPITZ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -270,7 +278,16 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1765097573",
+      "name_lat": "EFREN MANIE",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -301,15 +318,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "421761801",
-      "name_lat": "EFFIE IZ DOMA LEVSHOVOY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1799104194",
       "name_lat": "EFFENDY LIZO TARUR",
       "name_ru": "",
@@ -328,12 +336,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "637635923",
+      "id": "605321795",
       "name_lat": "EFRAT DZHASTIN",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЕФРАТ ДЖАСТИН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -364,12 +372,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "298260737",
+      "id": "114585225",
       "name_lat": "EFRAT VON RETTICH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1820804392",
+      "name_lat": "EFFECT ISKUSHENIYA MALTA",
+      "name_ru": "",
+      "breed": "POODLE ГЛАДКОШЕРСТНЫЙ / RUSSIAN TOY",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "82156008",
+      "name_lat": "EFFI IZ DOMA LEVSHOVOI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -472,10 +496,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1885151949",
+      "id": "1402030188",
       "name_lat": "Effect Iz Lesnogo Gorodka",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -553,6 +577,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "86279003",
+      "name_lat": "E FUDZIYAMY SHANEL",
+      "name_ru": "",
+      "breed": "ЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1978022747",
       "name_lat": "EFRAT S SAMOGO CHJORNOGO MORJA",
       "name_ru": "",
@@ -589,19 +622,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "462922577",
-      "name_lat": "EFROSINYA ART ELEN",
+      "id": "1134398046",
+      "name_lat": "EFROSINIYA YAROSLAVNA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1134398046",
-      "name_lat": "EFROSINIYA YAROSLAVNA",
+      "id": "462922577",
+      "name_lat": "EFROSINYA ART ELEN",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -643,10 +676,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "471461205",
+      "id": "491013480",
       "name_lat": "EFROSINYA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -670,10 +703,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "701311329",
+      "id": "601241360",
       "name_lat": "EFFECTO",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ /",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -751,10 +784,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "582402695",
+      "id": "1445750784",
       "name_lat": "EFFEKT DE RAZH AELITA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

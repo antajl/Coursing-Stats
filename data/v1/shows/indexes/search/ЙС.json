@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ЙС",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "867966139",
+      "name_lat": "Й СТРАЖ АМАЛЬГА",
+      "name_ru": "",
+      "breed": "ДОБЕРМА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1417415368",
+      "name_lat": "Й'СЕЙКОМАРУ ДЗИПАНГУ",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "790199500",
+      "name_lat": "Й СТРАЖ ДУША МОЯ",
+      "name_ru": "",
+      "breed": "Н",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

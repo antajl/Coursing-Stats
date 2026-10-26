@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ZI",
-  "count": 490,
+  "count": 507,
   "dogs": [
     {
-      "id": "1826930535",
+      "id": "648609830",
       "name_lat": "ZINEDINE ZIDANE IZ OZHERELIA",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "ITALIAN SIGHTHOUND",
-      "total_shows": 102,
+      "total_shows": 109,
+      "competition_dog_id": null
+    },
+    {
+      "id": "162817069",
+      "name_lat": "ZIKHA ZABRINA IZ DINASTII GOTIKI",
+      "name_ru": "",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "breed_en": "RHODESIAN RIDGEBACK",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -22,12 +31,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "162817069",
-      "name_lat": "ZIKHA ZABRINA IZ DINASTII GOTIKI",
+      "id": "496655994",
+      "name_lat": "ZIGER VON WEISSNACHTE",
       "name_ru": "",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "breed_en": "RHODESIAN RIDGEBACK",
-      "total_shows": 10,
+      "breed": "Шнауцер перец с солью",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -40,28 +49,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "496655994",
-      "name_lat": "ZIGER VON WEISSNACHTE",
-      "name_ru": "",
-      "breed": "Шнауцер перец с солью",
-      "breed_en": "SCHNAUZER P-S",
-      "total_shows": 36,
-      "competition_dog_id": null
-    },
-    {
       "id": "769790171",
       "name_lat": "Ziggy Deimanto Dulke",
       "name_ru": "",
       "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "40115666",
+      "id": "1757140307",
       "name_lat": "ZIGZAG VOM LES HOF",
       "name_ru": "",
-      "breed": "ХОВАВАРТ /",
+      "breed": "ХОВАВАРТ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -85,10 +85,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1635471246",
+      "id": "1150103284",
       "name_lat": "ZIGGI THREE LITTLE BIRDS",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -103,12 +103,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1549203148",
+      "name_lat": "ZIMA ZAGADKA VEKA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "1106679192",
       "name_lat": "ZIGFRID OF MELENHOUSE",
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1942249171",
+      "name_lat": "ZIMNYAYA SKAZKA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
+      "breed_en": "DACHSHUND KANINCHEN LONG HAIRED",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -121,6 +139,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "617678749",
+      "name_lat": "ZIMERBUDE GRETTA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "537441944",
+      "name_lat": "ZIMERBUDE ANZHELIKA MARKIZA ANGELOV",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "673684984",
       "name_lat": "ZIG ZAG GOOD LUCK",
       "name_ru": "",
@@ -130,28 +166,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "15603858",
+      "id": "1451304124",
       "name_lat": "ZIGMUNDDORF KETRIN KEYTILIN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1942249171",
-      "name_lat": "ZIMNYAYA SKAZKA",
+      "id": "741979557",
+      "name_lat": "ZIMERBUDE MARUSYA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
-      "breed_en": "DACHSHUND KANINCHEN LONG HAIRED",
-      "total_shows": 16,
+      "breed": "DACHSHUND ZWERG",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1754217913",
+      "id": "1521323162",
       "name_lat": "ZIMBA VOM HUHNEGRAB",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -166,15 +202,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1402755317",
-      "name_lat": "ZIMERBUDE GRETTA",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "63714835",
       "name_lat": "ZIK SANDERS BOURBON LOUIS",
       "name_ru": "",
@@ -184,46 +211,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "1549203148",
-      "name_lat": "ZIMA ZAGADKA VEKA",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 13,
+      "id": "42043986",
+      "name_lat": "ZIGMUNDDORF ZAYKA MOYA",
+      "name_ru": "ЗИГМУНДДОРФ ЗАЙКА МОЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1051523905",
+      "id": "1959980105",
+      "name_lat": "ZIMNYAYA SKAZKA ASKA",
+      "name_ru": "ЗИМНЯЯ СКАЗКА АСКА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1080230160",
+      "name_lat": "ZINGARELLA IZ ALENUSHKINOY SKAZKI",
+      "name_ru": "ЗИНГАРЕЛЛА ИЗ АЛЁНУШКИНОЙ СКАЗКИ",
+      "breed": "СИЛИХЕМ ТЕРЬЕР",
+      "breed_en": "SEALYHAM TERRIER",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "890062289",
       "name_lat": "ZIGMUNDDORF DIVA BELISSIMA STAR",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "516136934",
-      "name_lat": "ZIMERBUDE MARUSYA",
-      "name_ru": "",
-      "breed": "Такса миниатюрная гладкошерстная",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "446673033",
+      "id": "1302899017",
       "name_lat": "ZIMERBUDE ZHEGLOV",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1320455676",
+      "id": "1848078130",
       "name_lat": "ZIDANE ROYCE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -247,21 +283,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "249737209",
+      "id": "1850130777",
       "name_lat": "ZIMERBUDE TUCHA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "319736790",
-      "name_lat": "ZIMERBUDE ANZHELIKA MARKIZA ANGELOV",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -283,10 +310,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1558824786",
+      "id": "213936611",
+      "name_lat": "ZILBER WALD ADYANA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "863461628",
       "name_lat": "ZIMERBUDE ELVIN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -301,10 +337,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1817147992",
+      "id": "1923838126",
       "name_lat": "ZILBERLINE SAMSON",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -319,12 +355,47 @@
       "competition_dog_id": null
     },
     {
+      "id": "344442587",
+      "name_lat": "ZIZI TOP CRIMEAN KHAN",
+      "name_ru": "",
+      "breed": "ХАВАНЕЗ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1236743881",
+      "name_lat": "ZIMALETTO EVDOKSIA ARDALIONOVNA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1472392459",
+      "name_lat": "ZIMNYAYA GORDOST YA PELAGEYA",
+      "name_ru": "ЗИМНЯЯ ГОРДОСТЬ Я ПЕЛАГЕЯ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
       "id": "1133277763",
       "name_lat": "ZILBERTA IZ CHISTOGO ZOLOTA",
       "name_ru": "",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "798372006",
+      "name_lat": "ZIMNYAYA SKAZKA IZ YAROSLAVSKOY RATI",
+      "name_ru": "ЗИМНЯЯ СКАЗКА ИЗ ЯРОСЛАВСКОЙ РАТИ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "AMERICAN BULLDOG",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -337,21 +408,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1472392459",
-      "name_lat": "ZIMNYAYA GORDOST YA PELAGEYA",
+      "id": "1497892340",
+      "name_lat": "ZIMERBUDE HONORATA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 14,
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1883534458",
-      "name_lat": "ZIMERBUDE HONORATA",
+      "id": "1519169224",
+      "name_lat": "ZIBERT VON DEUTSCHEM BODEM",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -360,16 +430,7 @@
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "344442587",
-      "name_lat": "ZIZI TOP CRIMEAN KHAN",
-      "name_ru": "",
-      "breed": "ХАВАНЕЗ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -378,7 +439,7 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -409,21 +470,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "369737362",
+      "id": "256422635",
+      "name_lat": "ZIK SANDERS ASTARTA DIAMANTE",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "88351198",
       "name_lat": "ZIG ZAG UDACHI VON HAUS NOKS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1562968135",
+      "id": "424373179",
       "name_lat": "ZIMNYAYA SKAZKA ZVEZDA ZLATAMIRA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "name_ru": "ЗИМНЯЯ СКАЗКА ЗВЕЗДА ЗЛАТАМИРА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -436,15 +506,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "256422635",
-      "name_lat": "ZIK SANDERS ASTARTA DIAMANTE",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 23,
-      "competition_dog_id": null
-    },
-    {
       "id": "274542027",
       "name_lat": "ZINNAT BEAUTI NIGHT",
       "name_ru": "",
@@ -454,10 +515,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1911078983",
+      "id": "1742868928",
       "name_lat": "ZIDAN VOM FROSTEN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -465,10 +526,10 @@
     {
       "id": "958696181",
       "name_lat": "ZIK SANDERS BAROKKO BRAVO",
-      "name_ru": "",
+      "name_ru": "ЗИК САНДЭРС БАРОККО БРАВО",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -481,10 +542,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1345561841",
+      "id": "1120335625",
       "name_lat": "ZIG-ZAG PARFE",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -508,19 +569,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "647146998",
+      "id": "13980088",
       "name_lat": "ZIGMUNDDORF BELEZA TCELEGER",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1790348015",
-      "name_lat": "ZICKE VON DER FORTUNA- RANCH",
+      "id": "163050334",
+      "name_lat": "ZIGMUND FREYD",
       "name_ru": "",
-      "breed": "ЧУНЦИН ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1439518025",
+      "name_lat": "ZICKE VON DER FORTUNA-RANCH",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -535,10 +604,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "184855179",
+      "id": "1852994527",
       "name_lat": "ZIDAN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -571,10 +640,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1167118949",
+      "id": "766429101",
       "name_lat": "ZIMERBUDE JANTARNAYA TAKSA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -607,10 +676,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1753620056",
+      "id": "175540818",
       "name_lat": "Zimerbude Charlotte",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -630,14 +699,14 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1518995187",
+      "id": "1892220955",
       "name_lat": "ZIMERBUDE AMAZING STRIPES (Изм. реш. ВК 12.02.26 в.31)",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 17,
       "competition_dog_id": null
@@ -661,11 +730,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1035955193",
+      "name_lat": "ZIK SANDERS AURORA AURUM",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР П-С",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
       "id": "843546306",
       "name_lat": "ZIPPER DOS SETE MOINHOS",
       "name_ru": "",
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "BASSET HOUND",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "419856611",
+      "name_lat": "ZIRAEL DART",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
@@ -679,19 +766,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "530272366",
+      "id": "1594105952",
       "name_lat": "ZIMERBUDE YAKUT",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "626214595",
+      "id": "333504700",
       "name_lat": "ZIMNIY BALOVEN SUDBY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -711,34 +798,7 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1035955193",
-      "name_lat": "ZIK SANDERS AURORA AURUM",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР П-С",
-      "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "933617392",
-      "name_lat": "ZIRAEL DART",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "798372006",
-      "name_lat": "ZIMNYAYA SKAZKA IZ YAROSLAVSKOY RATI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
-      "breed_en": "AMERICAN BULLDOG",
-      "total_shows": 4,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -751,12 +811,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "580947680",
+      "id": "1686805615",
       "name_lat": "ZIGER IZ DOMA ZEVSA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1186540829",
+      "name_lat": "ZILBA IZ CHERTOVA RVA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -769,11 +838,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "146239294",
-      "name_lat": "ZILBA IZ CHERTOVA RVA",
+      "id": "1958500845",
+      "name_lat": "ZIDAN MY LOVE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1334483189",
+      "name_lat": "ZIMALETTO GRUSHENKA SVETLOVA",
+      "name_ru": "ЗИМАЛЕТТО ГРУШЕНЬКА СВЕТЛОВА",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "total_shows": 15,
       "competition_dog_id": null
     },
@@ -787,10 +864,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1461747037",
+      "id": "1246146993",
+      "name_lat": "ZIDAN FROM NOCHNOY DOZOR",
+      "name_ru": "ЗИДАН ФРОМ НОЧНОЙ ДОЗОР",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1113852533",
       "name_lat": "ZIMERBUDE ALL OVER AGAIN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -814,6 +900,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1290912906",
+      "name_lat": "ZIMERON HLOY OF FLOKISH FEST",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "313726293",
       "name_lat": "ZIMA",
       "name_ru": "",
@@ -823,19 +918,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "422830025",
-      "name_lat": "ZIMERON HLOY OF FLOKISH FEST",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1024262586",
+      "id": "1755390388",
       "name_lat": "ZIMERBUDE CEL`",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -850,6 +936,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1540061425",
+      "name_lat": "ZIMNYAYA VISHNYA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "930562755",
       "name_lat": "ZILBERLUX ANNI",
       "name_ru": "",
@@ -859,10 +954,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "425210994",
+      "id": "277505289",
       "name_lat": "ZIKA S FAMILY'S FRIVER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -877,11 +972,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "811726675",
+      "id": "1463952487",
+      "name_lat": "ZINGARA ZORA IZ DOMA KUNETS",
+      "name_ru": "ЗИНГАРА ЗОРА ИЗ ДОМА КУНЕЦ",
+      "breed": "АФФЕНПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "678326523",
       "name_lat": "ZIGMUNDDORF BOURBON BONBON",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "297063038",
+      "name_lat": "ZIPPI DLYA CHESVET LINE BY TKACHEVA",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -904,21 +1016,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "230273855",
-      "name_lat": "ZILBER WALD ADYANA",
+      "id": "1514231974",
+      "name_lat": "ZIGMUNDDORF KAYROS KRIS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 11,
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1958500845",
-      "name_lat": "ZIDAN MY LOVE",
+      "id": "126797212",
+      "name_lat": "ZIGMUND FREYD IZ CHERNOI DRUZHINY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -949,10 +1060,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "842933401",
+      "id": "1300063029",
       "name_lat": "ZIDAN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -967,10 +1078,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "227371210",
+      "id": "543481828",
       "name_lat": "ZIMERBUDE TSEZAR'",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -985,10 +1096,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "279111609",
+      "id": "4808849",
       "name_lat": "Zimerbude Alla Pugacheva",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1021,10 +1132,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "329247068",
+      "id": "61150835",
       "name_lat": "ZINKA BIG HAUS ARLETT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1048,6 +1159,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "266366853",
+      "name_lat": "ZIDAN IZ DOMA SANDRO",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "208657031",
       "name_lat": "ZIMUSHKA",
       "name_ru": "",
@@ -1057,12 +1176,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "59568994",
+      "name_lat": "ZIRA BELOSNEZHNAYA KRASAVITSA",
+      "name_ru": "ЗИРА БЕЛОСНЕЖНАЯ КРАСАВИЦА",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "217531932",
       "name_lat": "ZIK SANDERS AURELIYA EDELWEIS",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "973801619",
+      "name_lat": "ZINAGI NOBORU FUMAYO",
+      "name_ru": "ЗИНАГИ НОБОРУ ФУМАЙО",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1846365883",
+      "name_lat": "ZITO TARIM",
+      "name_ru": "",
+      "breed": "ПРАЖСКИЙ КРЫСАРИК",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1084,28 +1230,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1597617920",
+      "id": "1904518535",
       "name_lat": "ZIBEN VIND RONI LIRIKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "312203407",
+      "id": "1059205919",
       "name_lat": "ZIMERBUDE AKULA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1334483189",
-      "name_lat": "ZIMALETTO GRUSHENKA SVETLOVA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ГЛ/Ш ТАКСА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1117,15 +1254,6 @@
       "breed": "ПЕКИНЕС",
       "breed_en": "PEKINGESE",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "973801619",
-      "name_lat": "ZINAGI NOBORU FUMAYO",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1165,6 +1293,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1513135648",
+      "name_lat": "ZIGVARD IZ SAGI O GARDARIKE",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "675131951",
+      "name_lat": "ZIGZAG UDACHI",
+      "name_ru": "ЗИГЗАГ УДАЧИ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "1810991467",
       "name_lat": "ZILANT AURELIYA",
       "name_ru": "",
@@ -1174,8 +1320,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1499897641",
-      "name_lat": "ZIEGERWALD BIEN VENYU- BATAR MONTRACHE",
+      "id": "129464735",
+      "name_lat": "ZIEGERWALD BIEN VENYU-BATAR MONTRACHE",
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
@@ -1183,12 +1329,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "204974097",
+      "id": "301920449",
       "name_lat": "ZIGMUNDDORF ELVIS",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ЗИГМУНДДОРФ ЭЛВИС",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1210,39 +1356,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1513135648",
-      "name_lat": "ZIGVARD IZ SAGI O GARDARIKE",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "161873796",
+      "id": "1118716886",
       "name_lat": "ZIMERBUDE ADEL",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1533077967",
+      "id": "767182991",
       "name_lat": "ZIG ZAG WINNER OF THE RING",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "1846365883",
-      "name_lat": "ZITO TARIM",
+      "id": "1036674425",
+      "name_lat": "ZIMUSHKA",
       "name_ru": "",
-      "breed": "ПРАЖСКИЙ КРЫСАРИК",
+      "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1315613545",
+      "name_lat": "ZI ZI TOP IZ SOLNECHNOGO DOMA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -1255,6 +1400,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1448819277",
+      "name_lat": "ZIVA MOSCOW STAR IZ TERLETSKOY DUBRAVY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "186301422",
       "name_lat": "ZIMNYAYA GORDOST I PELAGEYA",
       "name_ru": "",
@@ -1264,19 +1418,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1059158375",
+      "id": "428015907",
       "name_lat": "ZIMALETTO VERA VEROCHKA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1325117999",
+      "id": "1111899455",
       "name_lat": "ZIMERBUDE IORDAN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1300,12 +1454,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "465396295",
+      "name_lat": "ZIGZAG UDACHI IZ DOMA PRONINYKH",
+      "name_ru": "ЗИГЗАГ УДАЧИ ИЗ ДОМА ПРОНИНЫХ",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1545160575",
+      "name_lat": "ZIDAN METEOR STAR",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "797612120",
       "name_lat": "ZINNAT DAILY PARADIZE",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1315,6 +1486,15 @@
       "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "SCHNAUZER P-S",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "514894707",
+      "name_lat": "ZILANT ARGUS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1345,21 +1525,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "595676062",
+      "id": "1354312359",
       "name_lat": "ZIGZAG UDACHI S LISYEY NORY",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1448819277",
-      "name_lat": "ZIVA MOSCOW STAR IZ TERLETSKOY DUBRAVY",
+      "id": "454381036",
+      "name_lat": "ZIG ZAG PRIME TOUCH",
       "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "DALMATIAN",
-      "total_shows": 6,
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1381,15 +1561,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1036674425",
-      "name_lat": "ZIMUSHKA",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "177355757",
       "name_lat": "ZIGMUNDDORF LAGERTA",
       "name_ru": "",
@@ -1399,21 +1570,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1701275114",
+      "id": "1064614660",
       "name_lat": "ZIMERBUDE BUCH",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1545160575",
-      "name_lat": "ZIDAN METEOR STAR",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1435,10 +1597,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "454381036",
-      "name_lat": "ZIG ZAG PRIME TOUCH",
+      "id": "1939661858",
+      "name_lat": "ZIGRIF PUT VOINA",
+      "name_ru": "ЗИГРИФ ПУТЬ ВОИНА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1867884652",
+      "name_lat": "ZIMALETTO GRAFINYA ROSTOVA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1462,28 +1632,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1013887485",
+      "id": "1730192405",
       "name_lat": "ZIMERBUDE BANDA",
       "name_ru": "",
-      "breed": "Такса стандартная гладкошерстная",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1315613545",
-      "name_lat": "ZI ZI TOP IZ SOLNECHNOGO DOMA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "890285665",
+      "id": "1260546050",
       "name_lat": "ZILBERLINE IMPERATOR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1507,10 +1668,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "249189047",
+      "id": "370866881",
+      "name_lat": "ZIMALETTO GALINA ERMOLAEVNA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "591129495",
       "name_lat": "ZICAN'S ONE ON TOP",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 14,
       "competition_dog_id": null
@@ -1522,6 +1691,15 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259870695",
+      "name_lat": "ZIMNIY MISHKA",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1552,15 +1730,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1375509357",
-      "name_lat": "ZIGZAG UDACHI IZ DOMA PRONINYKH",
-      "name_ru": "",
-      "breed": "УИППЕТ / WHIPPET",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1829446405",
       "name_lat": "ZIKIMO ENIGMATIC EMERALD",
       "name_ru": "",
@@ -1576,15 +1745,6 @@
       "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1867884652",
-      "name_lat": "ZIMALETTO GRAFINYA ROSTOVA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1606,10 +1766,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1172201096",
+      "id": "481935074",
       "name_lat": "ZIMERBUDE SALSA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1624,37 +1784,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "116709052",
+      "id": "1244286322",
       "name_lat": "ZILBER WALD AVRORA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1716157232",
+      "id": "67051610",
       "name_lat": "ZIMERBUDE AND LET OTHERS WAIT",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "788496094",
-      "name_lat": "ZIMNIY MISHKA",
+      "id": "651741248",
+      "name_lat": "ZIGER VOM ALEKS BIRKENSTRASSE (L-H)",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1737151975",
+      "id": "174506656",
       "name_lat": "ZILBER VASSERFAL YULAISS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1678,37 +1838,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "68428178",
+      "id": "1929506844",
       "name_lat": "ZIMERBUDE REVOLUTION",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1879205901",
+      "id": "1502555438",
       "name_lat": "ZIRIUS DENIS",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "407643932",
+      "id": "1328117636",
+      "name_lat": "ZIDAN DE KASTELAN",
+      "name_ru": "ЗИДАН ДЕ КАСТЕЛАНЬ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "63623806",
       "name_lat": "Zimerbude Tsezar’",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "527015517",
+      "id": "945082880",
       "name_lat": "ZILBERLUX LANA",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1723,10 +1892,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "27032968",
+      "id": "394226366",
       "name_lat": "ZIKA HUBERT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1759,20 +1928,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "252774898",
-      "name_lat": "ZILANT ARGUS",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1795984905",
       "name_lat": "ZIDAN ZINEDIN IZ SCHNEIDER RICH",
       "name_ru": "",
       "breed": "ФАРАОНОВА СОБАКА",
       "breed_en": "PHARAOH HOUND",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1871319107",
+      "name_lat": "ZIMALETTO GRIGORIJ GANZHA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
@@ -1831,28 +2000,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "873838681",
+      "id": "1212634276",
       "name_lat": "ZIGIC CATCH ME IF YOU CAN",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "210664905",
+      "id": "915434580",
       "name_lat": "ZITO TARIM",
       "name_ru": "",
-      "breed": "КРЫСАРИК /",
+      "breed": "КРЫСАРИК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "649377442",
+      "id": "289350103",
       "name_lat": "ZIMERBUDE CEL`",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1881,7 +2050,7 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1894,10 +2063,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1188400281",
+      "id": "1982598998",
       "name_lat": "ZIDAN GOLD MATISS",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ITALIAN POINTING DOG",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1907,6 +2076,15 @@
       "name_lat": "ZIDAN IZ OLIMPIC SITY",
       "name_ru": "",
       "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "409304989",
+      "name_lat": "ZIKIMO ENIGMATIK EMERALD",
+      "name_ru": "ЗИКИМО ЭНИГМАТИК ЕМЕРАЛЬД",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1930,10 +2108,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1335240943",
+      "id": "1485851411",
       "name_lat": "ZIPPY",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1957,12 +2135,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "367430653",
+      "name_lat": "ZITO TARIM",
+      "name_ru": "",
+      "breed": "ПРАЖСКИЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "295883941",
       "name_lat": "ZIZI",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2002,10 +2188,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1065572999",
+      "id": "753435462",
       "name_lat": "ZIMERBUDE BUCH MAGIC RAINBOW BLACK STAR FOR",
       "name_ru": "",
-      "breed": "DACHSHUND ZWERG KURZHAAR ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "DACHSHUND ZWERG KURZHAAR ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2017,15 +2203,6 @@
       "breed": "АКИТА / AKITA",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1540061425",
-      "name_lat": "ZIMNYAYA VISHNYA",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2065,24 +2242,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1939661858",
-      "name_lat": "ZIGRIF PUT VOINA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1871319107",
-      "name_lat": "ZIMALETTO GRIGORIJ GANZHA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1797720709",
       "name_lat": "ZINDAR",
       "name_ru": "",
@@ -2092,10 +2251,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1944127598",
+      "id": "1837975648",
       "name_lat": "ZIMERBUDE GAECHKA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2110,21 +2269,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1384353318",
+      "name_lat": "ZILBER VASSERFAL ZHASMINAL",
+      "name_ru": "",
+      "breed": "немецкая овчарка немецкая овчарка д-ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1497637507",
       "name_lat": "ZILBER VASSERFAL ZLATOVLASKA",
       "name_ru": "",
       "breed": "ДЛИННАЯ ОСТЕВАЯ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1681846534",
-      "name_lat": "ZIGER VOM ALEKS BIRKENSTRASSE (L-H)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2155,10 +2314,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "276338155",
+      "id": "659029731",
       "name_lat": "ZIMERBUDE RODION",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2173,28 +2332,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1425845033",
+      "id": "1443986657",
       "name_lat": "ZIMON VOM FRANKENGOLD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1080230160",
-      "name_lat": "ZINGARELLA IZ ALENUSHKINOY SKAZKI",
-      "name_ru": "",
-      "breed": "СИЛИХЕМ ТЕРЬЕР",
-      "breed_en": "SEALYHAM TERRIER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1001256033",
+      "id": "700506737",
       "name_lat": "ZIMERBUDE BARRIKADA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2209,19 +2359,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "912397131",
+      "id": "1252302967",
+      "name_lat": "ZING ZING ZIPPER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ПЯТНИСТЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "137833820",
       "name_lat": "ZIGFRID",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "929818479",
+      "id": "1119201764",
       "name_lat": "ZITA DELL AMORE",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2254,15 +2412,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "269913484",
-      "name_lat": "ZIRAEL DART",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "599417032",
       "name_lat": "ZIRAEL DART",
       "name_ru": "",
@@ -2290,21 +2439,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "404609331",
+      "id": "600567194",
       "name_lat": "ZIMA IZ KITAISKOGO KVARTALAWHITE",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ БЕЛЫЙ /",
+      "breed": "МАЛЫЙ ШПИЦ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1092465562",
+      "id": "685904660",
       "name_lat": "ZIMERBUDE RADOST",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1988914272",
+      "name_lat": "ZICAN’S ONE ON TOP",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -2317,10 +2474,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "321581741",
+      "id": "976043627",
       "name_lat": "ZINGARA HEAVENLY BEAUTIFUL",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "SPRINGER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2335,10 +2492,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1668695054",
+      "id": "296380343",
+      "name_lat": "ZIGMUND",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1451711360",
       "name_lat": "ZIMERBUDE FANNY",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2398,15 +2564,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "163050334",
-      "name_lat": "ZIGMUND FREYD",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "914788873",
       "name_lat": "ZIMBO",
       "name_ru": "",
@@ -2452,10 +2609,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "476571372",
+      "id": "103622243",
       "name_lat": "ZIKA 2 S FAMILY'S FRIVER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2515,24 +2672,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "492063664",
-      "name_lat": "ZIGMUND",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "675131951",
-      "name_lat": "ZIGZAG UDACHI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1334543789",
       "name_lat": "ZING WENT MY HEART",
       "name_ru": "",
@@ -2542,10 +2681,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "926327803",
+      "id": "778288052",
       "name_lat": "ZI ZI TOP S TIGROVOI SOPKI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2578,10 +2717,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "70113644",
+      "id": "1512605341",
       "name_lat": "ZIMA LUYTAYA IZ RUSICHEI",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР /",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2632,19 +2771,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "566823132",
-      "name_lat": "ZI – ZI TOP TRIUMPHZUG",
+      "id": "1246502800",
+      "name_lat": "ZIMERBUDE TUCA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "512066158",
+      "id": "641390866",
+      "name_lat": "ZI – ZI TOP TRIUMPHZUG",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "123695405",
       "name_lat": "ZILBER VASSERFAL YANVAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2677,10 +2825,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1288176166",
+      "id": "1713472543",
       "name_lat": "ZIMNYAYA VISHYA",
       "name_ru": "",
-      "breed": "СОБАКА /",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2704,28 +2852,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1482844166",
+      "id": "151516136",
       "name_lat": "ZIMERBUDE ZEVS",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "861574654",
-      "name_lat": "ZIMERBUDE TUCA",
-      "name_ru": "",
-      "breed": "ТАКСА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "468068500",
+      "id": "532926470",
       "name_lat": "ZIMERBUDE YAKUT ЦИМЕРБУДЕ АНЖЕЛИКА МАРКИЗА",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2758,10 +2897,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "210394791",
+      "id": "1301134176",
       "name_lat": "ZILBER VASSERFAL EFRAT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "833537273",
+      "name_lat": "ZIMBO",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2772,6 +2920,14 @@
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "578483580",
+      "name_lat": "ZIK-ZAG AIRON MEN",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД / BERNESE",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2803,21 +2959,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1393298612",
-      "name_lat": "ZIGMUNDDORF KAYROS KRIS",
+      "id": "559628072",
+      "name_lat": "ZICAN S ONE ON TOP",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1529205910",
-      "name_lat": "ZIMBO",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2830,11 +2976,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1839485185",
+      "id": "1324549285",
       "name_lat": "ZITO TARIM",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1965771778",
+      "name_lat": "ZIMERBUDE ELF",
+      "name_ru": "",
+      "breed": "ТАКСА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2866,19 +3020,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1913122384",
+      "id": "550392229",
       "name_lat": "ZI ZI TOP",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "409304989",
-      "name_lat": "ZIKIMO ENIGMATIK EMERALD",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2902,15 +3047,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1081793136",
-      "name_lat": "ZIGMUND FREYD IZ CHERNOI DRUZHINY",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1766692314",
       "name_lat": "ZINDAR",
       "name_ru": "",
@@ -2929,15 +3065,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1126281354",
-      "name_lat": "ZILBER VASSERFAL ZHASMINAL",
-      "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1144895503",
       "name_lat": "ZIMA",
       "name_ru": "",
@@ -2947,21 +3074,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "179396582",
+      "id": "22939615",
       "name_lat": "ZILANT ARIZONA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "Зилант Аризона",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1274663798",
-      "name_lat": "ZIMALETTO GALINA ERMOLAEVNA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ СЕРЫЙ /",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2983,21 +3101,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "75430952",
+      "id": "1228730317",
       "name_lat": "ZICO VOM HAUS HELEN",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "419856611",
-      "name_lat": "ZIRAEL DART",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3028,21 +3137,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1512602455",
+      "id": "1515087859",
       "name_lat": "ZIMERBUDE GALYA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ ГЛ/Ш",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1327243314",
-      "name_lat": "ZIGMUND",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3055,19 +3155,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1092081807",
+      "id": "1310123198",
       "name_lat": "ZILBERLUX LOTTA",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "202966412",
+      "id": "896577979",
       "name_lat": "ZIMERBUDE YUSTI",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ГЛ/Ш ТАКСА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3100,10 +3200,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1983873491",
+      "id": "688015442",
+      "name_lat": "ZIG ZAG WINNER OF THE RING DIKIJ SOBLAZN IZ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1464787067",
       "name_lat": "ZIMERBUDE NORD",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3136,10 +3244,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "556318238",
+      "id": "1974131847",
       "name_lat": "ZILBER VASSERFAL MATADOR",
       "name_ru": "",
-      "breed": "немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка",
+      "breed": "немецкая овчарка",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3190,15 +3298,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "151556025",
-      "name_lat": "ZIDAN DE KASTELAN",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "861816895",
       "name_lat": "ZIMERBUDE HIT",
       "name_ru": "",
@@ -3244,19 +3343,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "834995320",
+      "id": "10959",
       "name_lat": "ZIDANE",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
+      "total_shows": 4,
+      "competition_dog_id": 10959
     },
     {
-      "id": "809181269",
+      "id": "1235339005",
       "name_lat": "ZIGMUNDDORF VENERA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3267,6 +3366,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1558874265",
+      "name_lat": "ZINDAR",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3289,10 +3396,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1478622294",
+      "id": "1777094680",
       "name_lat": "ZIMERBUDE ANTONINA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3304,15 +3411,6 @@
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "751831349",
-      "name_lat": "ZICAN’S ONE ON TOP",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3334,10 +3432,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1519169224",
-      "name_lat": "ZIBERT VON DEUTSCHEM BODEM",
+      "id": "238807229",
+      "name_lat": "ZINEDIN ZIDAN SUPER STAR",
+      "name_ru": "ЗИНЕДИН ЗИДАН СУПЕР СТАР",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1047293259",
+      "name_lat": "ZIMERBUDE RASTISLAV",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3348,6 +3455,23 @@
       "name_ru": "",
       "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1590787201",
+      "name_lat": "ZIGGI",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1923324748",
+      "name_lat": "ZIPPY TUTTI FRUTTI IZ DOLINY SOLNCA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -3370,15 +3494,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1923324748",
-      "name_lat": "ZIPPY TUTTI FRUTTI IZ DOLINY SOLNCA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "916198790",
       "name_lat": "ZITA ILERIYA",
       "name_ru": "",
@@ -3388,29 +3503,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "505062486",
+      "id": "1565577651",
+      "name_lat": "ZIBERDOLCHEVITA TSEYRI GOLD MONTANA",
+      "name_ru": "ЗИБЕРДОЛЬЧЕВИТА ЦЕЙРИ ГОЛД МОНТАНА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "327988026",
       "name_lat": "ZINNUR IZ KAZANSKOGO HANSTVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1353706179",
-      "name_lat": "ZIMERBUDE RASTISLAV",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "id": "727321703",
+      "name_lat": "ZIZI TOP SHTORM IZ DINASTII KANTEMIROVYKH",
+      "name_ru": "ЗИЗИ ТОП ШТОРМ ИЗ ДИНАСТИИ КАНТЕМИРОВЫХ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "235922321",
-      "name_lat": "ZIMBO",
+      "id": "1429307664",
+      "name_lat": "ZIMBRO ZVON",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3523,10 +3646,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "241904593",
+      "id": "1411470956",
       "name_lat": "ZILE GELEZINIS VILKAS",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3541,15 +3664,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1565577651",
-      "name_lat": "ZIBERDOLCHEVITA TSEYRI GOLD MONTANA",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "601098914",
       "name_lat": "ZIBERDOLCEVITA URUS OFF DASE",
       "name_ru": "",
@@ -3559,20 +3673,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "97164564",
+      "id": "527942081",
       "name_lat": "ZILBERLINE ANNIES SONG FOR QUEEN DANCING",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "20701256",
+      "id": "92327970",
       "name_lat": "ZIGMUNDDORF ERALASH",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1423334541",
+      "name_lat": "ZILBERLINE FAVORITKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "198442009",
+      "name_lat": "ZIBERDOLCEVITA TSEYRI GOLD MONTANA",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3586,11 +3716,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "824788154",
+      "id": "1406166252",
       "name_lat": "ZIZA NASLEDIYA LILIT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1094967052",
+      "name_lat": "ZIS OF PIETRA PREZIOSA",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3622,10 +3760,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "238807229",
-      "name_lat": "ZINEDIN ZIDAN SUPER STAR",
+      "id": "474077840",
+      "name_lat": "ZINWUR OGER SCHLOSS",
       "name_ru": "",
-      "breed": "МОПС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "105964350",
+      "name_lat": "ZIGGI LILI CHUPS",
+      "name_ru": "ЗИГГИ ЛИЛИ ЧУПС",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3640,28 +3786,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "127757144",
+      "id": "887964807",
       "name_lat": "ZIGLINDE GELEZINIS VILKAS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "342513403",
+      "id": "1064231839",
       "name_lat": "ZIBERDOLCEVITA IDEAL",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "713841161",
+      "id": "252605169",
       "name_lat": "ZIZA EDMAYR MI",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3676,10 +3822,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "97367786",
+      "id": "563499006",
       "name_lat": "ZIGZAG GOOD LUCK",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3689,6 +3835,15 @@
       "name_lat": "ZIBERDOLCEVITA BEJLIZ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1195646545",
+      "name_lat": "ZINEDIN CRONOS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3757,15 +3912,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "536098944",
-      "name_lat": "ZIZI",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "702875863",
       "name_lat": "ZINDAR",
       "name_ru": "",
@@ -3779,15 +3925,6 @@
       "name_lat": "ZIGMUND",
       "name_ru": "",
       "breed": "КАНЕ ИТАЛЬЯНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "296380343",
-      "name_lat": "ZIGMUND",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3811,6 +3948,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1040290294",
+      "name_lat": "ZIK SANDERS SAYMON GRAND",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР П-С",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1277262432",
+      "name_lat": "ZIGMUNDDORF LORAN",
+      "name_ru": "",
+      "breed": "ТАКСА ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1580856483",
+      "name_lat": "Zimushka Iz Lesnogo Gorodka",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1889574901",
       "name_lat": "ZIRI DLYA BORZOMIR",
       "name_ru": "",
@@ -3825,15 +3989,6 @@
       "name_ru": "",
       "breed": "БОЛЬШОЙ ШВЕЙЦАРСКИЙ ЗЕННЕНХУНД",
       "breed_en": "GREAT SWISS MOUNTAIN DOG",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1040290294",
-      "name_lat": "ZIK SANDERS SAYMON GRAND",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР П-С",
-      "breed_en": "SCHNAUZER P-S",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3856,24 +4011,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1246146993",
-      "name_lat": "ZIDAN FROM NOCHNOY DOZOR",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "42043986",
-      "name_lat": "ZIGMUNDDORF ZAYKA MOYA",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ  Г-Ш",
-      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "631689114",
       "name_lat": "ZINA LE BLEU CARDINALIS",
       "name_ru": "",
@@ -3892,28 +4029,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "85099953",
+      "id": "1592078873",
       "name_lat": "ZILBER VASSERFAL DALLAS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1277262432",
-      "name_lat": "ZIGMUNDDORF LORAN",
-      "name_ru": "",
-      "breed": "ТАКСА ТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1272873044",
+      "id": "110471587",
       "name_lat": "ZIGMUNDDORF LORETTA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3937,10 +4065,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1430105001",
+      "id": "1119845993",
       "name_lat": "ZIPPY BOY IZ KRYMSKOY STOLITSY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3982,20 +4110,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "105964350",
-      "name_lat": "ZIGGI LILI CHUPS",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "728634076",
       "name_lat": "ZIGGY STARDUST BY AHMED",
       "name_ru": "",
       "breed": "СХИПЕРКЕ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "408315286",
+      "name_lat": "ZIBERDOLCEVITA VILYA DOLORES",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4009,19 +4136,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "211190664",
-      "name_lat": "ZINGER ROTWAL VESTA",
+      "id": "1021981242",
+      "name_lat": "ZIBERDOLCEVITAYAN GUAN",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА / EAST EUROPEN",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК)",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1580856483",
-      "name_lat": "Zimushka Iz Lesnogo Gorodka",
+      "id": "416075062",
+      "name_lat": "Zisko vom Duwelsbarg",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "211190664",
+      "name_lat": "ZINGER ROTWAL VESTA",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА / EAST EUROPEN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4036,11 +4170,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1423334541",
-      "name_lat": "ZILBERLINE FAVORITKA",
+      "id": "1974928738",
+      "name_lat": "ZIRAEL ELEN TSIRI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "МОПС ЧЁРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1813665940",
+      "name_lat": "ZILBERLINE FORTUNA (д/ш)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Длинношерстная",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4072,19 +4213,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "59568994",
-      "name_lat": "ZIRA BELOSNEZHNAYA KRASAVITSA",
+      "id": "402296844",
+      "name_lat": "ZIBERDOLCEVITA GREJTA BELLA DONNA",
       "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1291957529",
+      "id": "200183289",
       "name_lat": "ZIMERBUDE ZHAT-PTITSA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4234,15 +4374,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "706895607",
-      "name_lat": "ZINWUR OGER SCHLOSS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1927073646",
       "name_lat": "ZIBERDOLCEVITA TAKESHA OMA",
       "name_ru": "",
@@ -4252,28 +4383,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1195646545",
-      "name_lat": "ZINEDIN CRONOS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "464780443",
+      "id": "1931253388",
       "name_lat": "ZIDAN OPTIMUS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1608389045",
-      "name_lat": "ZIMNYAYA SKAZKA ASKA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4342,10 +4455,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "719374883",
+      "id": "46764676",
       "name_lat": "ZIGGY MARLEY",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4360,15 +4473,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1277863552",
-      "name_lat": "ZIZI TOP SHTORM IZ DINASTII KANTEMIROVYKH",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "450111897",
       "name_lat": "ZIBERDOLCEVITA FANTOM",
       "name_ru": "",
@@ -4378,11 +4482,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1556172542",
+      "id": "717165789",
       "name_lat": "ZIPPER AIZA VOM HARZ PARSIFAL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "450877764",
+      "name_lat": "Z’INVER LOVE IZ IMPERII ADAMANT",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4396,11 +4508,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1094967052",
-      "name_lat": "ZIS OF PIETRA PREZIOSA",
+      "id": "160380934",
+      "name_lat": "ZIMA ART OF BULS",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
+      "breed": "БОРДОСКИЙ МИНИАТЮРНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1221405524",
+      "name_lat": "ZINNIA GRACEFUL FLOWER",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
       "total_shows": 1,
       "competition_dog_id": null
     },

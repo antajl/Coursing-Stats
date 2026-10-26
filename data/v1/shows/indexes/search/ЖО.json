@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЖО",
-  "count": 570,
+  "count": 583,
   "dogs": [
     {
       "id": "1992772148",
       "name_lat": "ЖОЗЕФИНА ЖАРКАЯ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ЖАРКАЯ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1590173521",
+      "name_lat": "ЖОЗЕФИНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -40,18 +49,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "790439021",
-      "name_lat": "ЖОЗЕФИНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "977642647",
       "name_lat": "Жозефина Эмперорс Лове",
-      "name_ru": "",
+      "name_ru": "Жозефина Эмперорс Лове",
       "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ, РЫЖИЙ",
       "breed_en": "POODLE TOY FAWN, GREY",
       "total_shows": 9,
@@ -60,7 +60,7 @@
     {
       "id": "1535500544",
       "name_lat": "ЖОФФРЕЙ СВЕТОНОСНЫЙ ЛУЧ",
-      "name_ru": "",
+      "name_ru": "ЖОФФРЕЙ СВЕТОНОСНЫЙ ЛУЧ",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -69,17 +69,17 @@
     {
       "id": "649500821",
       "name_lat": "ЖОЛИ ОТ ШАРЛЬ ДЕ ВАЛУА",
-      "name_ru": "",
+      "name_ru": "ЖОЛИ ОТ ШАРЛЬ ДЕ ВАЛУА",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "94782485",
+      "id": "227104044",
       "name_lat": "ЖОЗЕФИНА ЛЮБОВЬ ИМПЕРАТОРА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "name_ru": "ЖОЗЕФИНА ЛЮБОВЬ ИМПЕРАТОРА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 27,
       "competition_dog_id": null
@@ -87,7 +87,7 @@
     {
       "id": "1200141621",
       "name_lat": "ЖОШУА ТАЙСКИЙ ПРИНЦ",
-      "name_ru": "",
+      "name_ru": "ЖОШУА ТАЙСКИЙ ПРИНЦ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 19,
@@ -105,7 +105,7 @@
     {
       "id": "1868156872",
       "name_lat": "ЖОЗЕФИНА МОНОХАН",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА МОНОХАН",
       "breed": "ЧИХУАХУА ИРЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -114,7 +114,7 @@
     {
       "id": "50195917",
       "name_lat": "ЖОВАННИ ДОМЕНИКО",
-      "name_ru": "",
+      "name_ru": "ЖОВАННИ ДОМЕНИКО",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 14,
@@ -123,17 +123,17 @@
     {
       "id": "252057395",
       "name_lat": "ЖОЗЕЛЬ ИЗ АГЛИЦКОГО САДА",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕЛЬ ИЗ АГЛИЦКОГО САДА",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1163028351",
+      "id": "752636919",
       "name_lat": "ЖОФФРЕЙ ИЗ ДОМА МАДАМИ",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "name_ru": "ЖОФФРЕЙ ИЗ ДОМА МАДАМИ",
+      "breed": "БЕРНСКИЙ ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -150,7 +150,7 @@
     {
       "id": "1899595650",
       "name_lat": "ЖОЗЕЛИ РУБИНОВАЯ ПРИНЦЕССА",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕЛИ РУБИНОВАЯ ПРИНЦЕССА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -159,7 +159,7 @@
     {
       "id": "1172413988",
       "name_lat": "Жозефина Линда Малкат Клавим",
-      "name_ru": "",
+      "name_ru": "Жозефина Линда Малкат Клавим",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 12,
@@ -168,7 +168,7 @@
     {
       "id": "1321429373",
       "name_lat": "ЖОРЖ БЭННИ ПРОСПЕРО",
-      "name_ru": "",
+      "name_ru": "ЖОРЖ БЭННИ ПРОСПЕРО",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
@@ -184,10 +184,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "162693331",
+      "id": "232650741",
+      "name_lat": "ЖОРИК ВАРТАНОВ",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1945337340",
       "name_lat": "ЖОЗЗЕ ФИНА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -204,7 +213,7 @@
     {
       "id": "920987636",
       "name_lat": "ЖОРЖ ВАНКУВЕРИ ФОН ГРИЗЗЛИ СТАЙЛ",
-      "name_ru": "",
+      "name_ru": "ЖОРЖ ВАНКУВЕРИ ФОН ГРИЗЗЛИ СТАЙЛ",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 13,
@@ -213,7 +222,7 @@
     {
       "id": "983628865",
       "name_lat": "ЖОККЕЙ ЗВЕЗДЫ УДАЧИ",
-      "name_ru": "",
+      "name_ru": "ЖОККЕЙ ЗВЕЗДЫ УДАЧИ",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 9,
@@ -229,10 +238,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "216292852",
+      "id": "402045527",
       "name_lat": "ЖОЗЕФ АЙРОН ФРЕНД ОФ МАЙ ХАРТ",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "name_ru": "ЖОЗЕФ АЙРОН ФРЕНД ОФ МАЙ ХАРТ",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -243,23 +252,14 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА длинношерстная",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "207826265",
+      "id": "150749627",
       "name_lat": "ЖОЛИ МОМЭ СОЛЯРИС",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "232650741",
-      "name_lat": "ЖОРИК ВАРТАНОВ",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "name_ru": "ЖОЛИ МОМЭ СОЛЯРИС",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -274,10 +274,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "437660395",
+      "id": "1174000135",
       "name_lat": "ЖОЙС ФОМ АДЛЕРХЮГЕЛЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -294,7 +294,7 @@
     {
       "id": "455943094",
       "name_lat": "ЖОЛЕСК РЕПРИЗА",
-      "name_ru": "",
+      "name_ru": "ЖОЛЕСК РЕПРИЗА",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
@@ -312,7 +312,7 @@
     {
       "id": "1279199402",
       "name_lat": "ЖОФФРЕЙ ВАЛЬДЕМАРОВИЧ ИЗ ДОМА КУНЕЦ",
-      "name_ru": "",
+      "name_ru": "ЖОФФРЕЙ ВАЛЬДЕМАРОВИЧ ИЗ ДОМА КУНЕЦ",
       "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 14,
@@ -321,7 +321,7 @@
     {
       "id": "1701741605",
       "name_lat": "ЖОЗЕФИНА ИЗ ЗАМКА ШАРБУЛЕ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ИЗ ЗАМКА ШАРБУЛЕ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 14,
@@ -330,17 +330,17 @@
     {
       "id": "810551850",
       "name_lat": "ЖОФРЕЙ ДЕ ПЕЙРАК",
-      "name_ru": "",
+      "name_ru": "ЖОФРЕЙ ДЕ ПЕЙРАК",
       "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
       "breed_en": "SOUTH AFRICAN BOERBOEL",
       "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "1809217968",
+      "id": "1973383519",
       "name_lat": "ЖОЗЕФИНА ФОН ШТЕРН ИЗ СИБИРСКОЙ ГЛУБИНКИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -357,7 +357,7 @@
     {
       "id": "903287676",
       "name_lat": "ЖОЗЕФИНА РЫЖАЯ БЕСТИЯ ИЭ ООДОМАРИ ШИНКОРИ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА РЫЖАЯ БЕСТИЯ ИЭ ООДОМАРИ ШИНКОРИ",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 6,
@@ -366,35 +366,17 @@
     {
       "id": "822217622",
       "name_lat": "ЖОЗЕФИНА ОТ КОМОГОРЦЕВЫХ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ОТ КОМОГОРЦЕВЫХ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "3390262",
-      "name_lat": "ЖОРЖИ МАРТИН СКАУТ СТАЙЛ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1079447255",
-      "name_lat": "ЖОЗЕФИНА АНТУАНЕТТА ПИКАНТО",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "274450492",
+      "id": "1433623591",
       "name_lat": "ЖОЗЕФЕР МОЁ ВОСХИЩЕНИЕ",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "name_ru": "ЖОЗЕФЕР МОЁ ВОСХИЩЕНИЕ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -402,7 +384,7 @@
     {
       "id": "1960026226",
       "name_lat": "ЖОЗЕФИНА БЕЛАЯ МЕЧТА",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА БЕЛАЯ МЕЧТА",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 3,
@@ -411,7 +393,7 @@
     {
       "id": "530882265",
       "name_lat": "ЖОЗЕФИНА МАРКИЗА АНГЕЛОВ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА МАРКИЗА АНГЕЛОВ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -420,7 +402,7 @@
     {
       "id": "1391542800",
       "name_lat": "ЖОСЕЛИН ЗВЕЗДНАЯ ДОЧЬ",
-      "name_ru": "",
+      "name_ru": "ЖОСЕЛИН ЗВЕЗДНАЯ ДОЧЬ",
       "breed": "ПЕКИНЕС КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
@@ -438,7 +420,7 @@
     {
       "id": "727920601",
       "name_lat": "ЖОФРЕЙ ЭКСЛИБРИС",
-      "name_ru": "",
+      "name_ru": "ЖОФРЕЙ ЭКСЛИБРИС",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 5,
@@ -456,7 +438,7 @@
     {
       "id": "1373471710",
       "name_lat": "ЖОНГЛИРУЯ УДАЧЕЙ ИЗ СТРАНЫ ГРЕЗ",
-      "name_ru": "",
+      "name_ru": "ЖОНГЛИРУЯ УДАЧЕЙ ИЗ СТРАНЫ ГРЕЗ",
       "breed": "STANDARD SMOOTH-HAIRED ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -465,26 +447,26 @@
     {
       "id": "819986682",
       "name_lat": "ЖОРЖ ПОМПИДУ",
-      "name_ru": "",
+      "name_ru": "ЖОРЖ ПОМПИДУ",
       "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1639173304",
+      "id": "145005957",
       "name_lat": "ЖОРЖЕТТА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1838545467",
+      "id": "1335194726",
       "name_lat": "ЖОККЕЙ ЗВЕЗДЫ УДАЧИ (НБТ)",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
+      "breed": "МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -492,7 +474,7 @@
     {
       "id": "1431554906",
       "name_lat": "ЖОЗЕТТА ИЗ МУРАНОВО",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕТТА ИЗ МУРАНОВО",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -553,6 +535,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1013476634",
+      "name_lat": "Жозефина",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1372377857",
       "name_lat": "ЖОЗЕФИ НА ЛЮБОВЬ ИМПЕРАТ ОРА",
       "name_ru": "",
@@ -609,7 +599,7 @@
     {
       "id": "30439678",
       "name_lat": "ЖОКЕР ФОЛИЕ ДЕЛЮКС",
-      "name_ru": "",
+      "name_ru": "ЖОКЕР ФОЛИЕ ДЕЛЮКС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -625,54 +615,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588639381",
+      "id": "1788548264",
       "name_lat": "ЖОФРЕЙ СО СТАНИЦЫ МАГНИТНАЯ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "name_ru": "ЖОФРЕЙ СО СТАНИЦЫ МАГНИТНАЯ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1951763943",
+      "name_lat": "ЖОРЖ ДЕЛАКРУА С ТЕПЛОГО ДОМА",
+      "name_ru": "ЖОРЖ ДЕЛАКРУА С ТЕПЛОГО ДОМА",
+      "breed": "ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1653468631",
+      "name_lat": "ЖОЗЕФИНА БОН СОНИ",
+      "name_ru": "ЖОЗЕФИНА БОН СОНИ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
       "id": "247793264",
       "name_lat": "ЖОУР ДЕ НЕЙЧ ДАЙДЗИН",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ ДАЙДЗИН",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "291351694",
-      "name_lat": "ЖОЗЕФИНА БОН СОНИ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "548579181",
       "name_lat": "ЖОФФРЕЙ ИЗ БАНДЫ ГАРРИ",
-      "name_ru": "",
+      "name_ru": "ЖОФФРЕЙ ИЗ БАНДЫ ГАРРИ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "142976222",
-      "name_lat": "ЖОРЖ ДЕЛАКРУА С ТЕПЛОГО ДОМА",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
       "id": "409610626",
       "name_lat": "ЖОЗЕФИНА РАКША БОГАРНЕ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА РАКША БОГАРНЕ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "CHOW CHOW",
       "total_shows": 5,
@@ -681,7 +671,7 @@
     {
       "id": "60508937",
       "name_lat": "ЖОЛЕСК ФАДИШТА",
-      "name_ru": "",
+      "name_ru": "ЖОЛЕСК ФАДИШТА",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
       "total_shows": 2,
@@ -699,7 +689,7 @@
     {
       "id": "1619596207",
       "name_lat": "ЖОЗЕФИНА ПРЕКРАСНАЯ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ПРЕКРАСНАЯ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 16,
@@ -715,27 +705,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "594687969",
-      "name_lat": "ЖОКЛИН ОТ АСТИ",
+      "id": "22700104",
+      "name_lat": "Жорж Дюмезиль Персей Непобедимый",
       "name_ru": "",
-      "breed": "ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ СОБАКА",
-      "breed_en": "CZECHOSLOVAKIAN WOLFDOG",
+      "breed": "Мопс",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "887894291",
       "name_lat": "ЖОУР ДЕ НЕЙЧ АКАДАМА",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ АКАДАМА",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
       "id": "173152054",
       "name_lat": "ЖОЙСЕН ЖАК С БЕРЕГА ТУРЫ",
-      "name_ru": "",
+      "name_ru": "ЖОЙСЕН ЖАК С БЕРЕГА ТУРЫ",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -753,28 +743,54 @@
     {
       "id": "506848499",
       "name_lat": "ЖОРЕС УИЛЛЕР АМАТИ",
-      "name_ru": "",
+      "name_ru": "ЖОРЕС УИЛЛЕР АМАТИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "359560150",
       "name_lat": "ЖОЗЕФИНА ЛЮБОВЬ ИМПЕРАТОРА ИЗ ХРАМА АМОНА",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ЛЮБОВЬ ИМПЕРАТОРА ИЗ ХРАМА АМОНА",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
+      "id": "280926495",
+      "name_lat": "ЖОРЖЕТТА ИЗ ИПАТЬЕВСКОЙ СЛОБОДЫ",
+      "name_ru": "ЖОРЖЕТТА ИЗ ИПАТЬЕВСКОЙ СЛОБОДЫ",
+      "breed": "DACHSHUND",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1156148888",
       "name_lat": "ЖОУР ДЕ НЕЙЧ КЭЗУМИ",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ КЭЗУМИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "791819065",
+      "name_lat": "ЖОЗЕФ МАРЕ ЖАККАР ДЕ БУТЧ",
+      "name_ru": "ЖОЗЕФ МАРЕ ЖАККАР ДЕ БУТЧ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "610771330",
+      "name_lat": "ЖОФРЕЙ БРИЛЛИАНТ ЛУЧЕЗАРНЫЙ",
+      "name_ru": "ЖОФРЕЙ БРИЛЛИАНТ ЛУЧЕЗАРНЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -789,19 +805,10 @@
     {
       "id": "437968981",
       "name_lat": "ЖОЗЕФ ИЗ ЛЕГИОНА ЧЕРНЫХ ПСОВ (Изменено по Решению ВК от",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФ ИЗ ЛЕГИОНА ЧЕРНЫХ ПСОВ (Изменено по Решению ВК от",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1724205721",
-      "name_lat": "ЖОЗЕФИНА ДОРОГАЯ ЖЕМЧУЖИНА",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -816,43 +823,25 @@
     {
       "id": "1170964981",
       "name_lat": "ЖОЗЕФИНА ТИТЛЕД",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ТИТЛЕД",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "791819065",
-      "name_lat": "ЖОЗЕФ МАРЕ ЖАККАР ДЕ БУТЧ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "id": "1583637724",
+      "name_lat": "ЖОЗЕФИНА С ЕГЕРСКОЙ СЛОБОДЫ",
+      "name_ru": "ЖОЗЕФИНА С ЕГЕРСКОЙ СЛОБОДЫ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1938246795",
-      "name_lat": "ЖОФРЕЙ БРИЛЛИАНТ ЛУЧЕЗАРНЫЙ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1111663706",
-      "name_lat": "ЖОЛЕСК МАНИФЕСТ",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "754552548",
       "name_lat": "ЖОЗЕФИНА ИЗ ЧУДНОЙ ДОЛИНЫ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ИЗ ЧУДНОЙ ДОЛИНЫ",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 6,
@@ -861,7 +850,7 @@
     {
       "id": "1897376327",
       "name_lat": "ЖОЗЕ АРМАНДО ГОНСАЛЕС",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕ АРМАНДО ГОНСАЛЕС",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
@@ -879,73 +868,63 @@
     {
       "id": "1362444071",
       "name_lat": "ЖОФРЕЙ ФЛАИНГ БАЙКЕР ФО БОНА БОЛЛАРС",
-      "name_ru": "",
+      "name_ru": "ЖОФРЕЙ ФЛАИНГ БАЙКЕР ФО БОНА БОЛЛАРС",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "203508229",
+      "id": "262039203",
+      "name_lat": "ЖОФФРЕЙ ДАРК КИНГ",
+      "name_ru": "ЖОФФРЕЙ ДАРК КИНГ",
+      "breed": "SHEPHERD DOG DOUBLE",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1925568792",
       "name_lat": "ЖОФФРЕЙ ДЕ ПЕЙРАК",
-      "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН /",
+      "name_ru": "ЖОФФРЕЙ ДЕ ПЕЙРАК",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "223635781",
-      "name_lat": "ЖОНКИЛИЯ БИЛАВД",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "id": "1472273440",
+      "name_lat": "ЖОРДАН ГРЕЙТ СТАР",
+      "name_ru": "ЖОРДАН ГРЕЙТ СТАР",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1583637724",
-      "name_lat": "ЖОЗЕФИНА С ЕГЕРСКОЙ СЛОБОДЫ",
+      "id": "1665152603",
+      "name_lat": "ЖОРЖЕТТА ЕЖКИНА ДОЧЬ / JORJETTA ESKINA DOCH",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ)",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "111458312",
+      "id": "758669174",
       "name_lat": "ЖОЗЕФ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "920104611",
       "name_lat": "ЖОНАССОН ОФ МАГИКАЛ ЛАНД",
-      "name_ru": "",
+      "name_ru": "ЖОНАССОН ОФ МАГИКАЛ ЛАНД",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "262039203",
-      "name_lat": "ЖОФФРЕЙ ДАРК КИНГ",
-      "name_ru": "",
-      "breed": "SHEPHERD DOG DOUBLE",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "183061273",
-      "name_lat": "ЖОФФРЕЙ ПЕЙРАК ИЗ ЛИКИНСКИХ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -960,26 +939,17 @@
     {
       "id": "461144646",
       "name_lat": "ЖОЗЕФ ГЕНРИХ ЛОРЕН",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФ ГЕНРИХ ЛОРЕН",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1159623524",
-      "name_lat": "ЖОЗЕФИНА ДЕЛЬ САН",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1926109144",
+      "id": "763200253",
       "name_lat": "ЖОРИК КРУТОЙ ПАРЕНЕК",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "name_ru": "ЖОРИК КРУТОЙ ПАРЕНЕК",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -987,7 +957,7 @@
     {
       "id": "124623699",
       "name_lat": "ЖОЗЕФИНА ДЕ БОГАРНЕ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ДЕ БОГАРНЕ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 5,
@@ -996,7 +966,7 @@
     {
       "id": "1729613703",
       "name_lat": "ЖОРЖ ИЗ ДИЗЕРЛЭНД",
-      "name_ru": "",
+      "name_ru": "ЖОРЖ ИЗ ДИЗЕРЛЭНД",
       "breed": "GERMAN SHORT-HAIRED",
       "breed_en": "",
       "total_shows": 5,
@@ -1012,21 +982,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1584396202",
-      "name_lat": "ЖОРЖ ИЗ САГИ О ГАРДАРИКЕ",
+      "id": "1987617417",
+      "name_lat": "ЖОФФРЕЙ-ПАЙРАК",
       "name_ru": "",
-      "breed": "УИППЕТ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "957087404",
-      "name_lat": "ЖОФФРЕЙ-ПАЙРАК",
+      "id": "1907414936",
+      "name_lat": "ЖОФРЕ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "Кавалер кинг чарльз спаниель",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "242810789",
+      "name_lat": "ЖОЗЕФИНА ИЗ ИМПЕРИИ ОЛЬГИ",
+      "name_ru": "ЖОЗЕФИНА ИЗ ИМПЕРИИ ОЛЬГИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1039,9 +1017,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "819590150",
+      "name_lat": "ЖОФРЕЙ ФРОМ ХОУСЕ ВАЙСИНГ",
+      "name_ru": "ЖОФРЕЙ ФРОМ ХОУСЕ ВАЙСИНГ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1402298483",
       "name_lat": "ЖОЛЕСК ТОТЕМ",
-      "name_ru": "",
+      "name_ru": "ЖОЛЕСК ТОТЕМ",
       "breed": "КАВАЛЕР ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -1050,7 +1037,7 @@
     {
       "id": "1941476153",
       "name_lat": "ЖОРЖ СЕВЕРНЫЙ МЕДВЕДЬ",
-      "name_ru": "",
+      "name_ru": "ЖОРЖ СЕВЕРНЫЙ МЕДВЕДЬ",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 4,
@@ -1068,7 +1055,7 @@
     {
       "id": "308461702",
       "name_lat": "ЖОУР ДЕ НЕЙЧ МАРИОНА",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ МАРИОНА",
       "breed": "LOBAKIN, VIKTOR ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -1077,7 +1064,7 @@
     {
       "id": "1751243264",
       "name_lat": "ЖОЗЕЛИНА С БЕРЕГА ТУРЫ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕЛИНА С БЕРЕГА ТУРЫ",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -1093,19 +1080,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1472273440",
-      "name_lat": "ЖОРДАН ГРЕЙТ СТАР",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1208840032",
+      "id": "1628766261",
       "name_lat": "ЖОФФРЕЙ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1129,28 +1107,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "82196482",
+      "id": "1237932391",
       "name_lat": "ЖОКЕР С КАЗАНСКОЙ СТОРОНЫ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ЖОКЕР С КАЗАНСКОЙ СТОРОНЫ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "265421375",
+      "id": "945314726",
       "name_lat": "ЖОРЖ ЖИГАН ЛИМОН",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "name_ru": "ЖОРЖ ЖИГАН ЛИМОН",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "369073675",
+      "id": "733765989",
       "name_lat": "ЖОСМТЬЕН МИТЧЕЛ",
-      "name_ru": "",
-      "breed": "ЕВРОПЕЙСКАЯ БУЛЬДОГ",
+      "name_ru": "ЖОСМТЬЕН МИТЧЕЛ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1192,15 +1170,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1152342963",
-      "name_lat": "ЖОРЖЕТТА ИЗ ИПАТЬЕВСКОЙ СЛОБОДЫ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "642434322",
       "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
@@ -1219,19 +1188,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1125167238",
+      "id": "1840647423",
       "name_lat": "ЖОРЖ ДЕЛАКРУ А С ТЕПЛОГО ДОМА",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1603557475",
+      "id": "1763254602",
       "name_lat": "ЖОФРЕЙ ЛЬВИНОЕ СЕРДЦЕ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "name_ru": "ЖОФРЕЙ ЛЬВИНОЕ СЕРДЦЕ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1246,9 +1215,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "941378001",
-      "name_lat": "ЖОВЕЛЛАНА ОФ ЭКО- СТИЛЬ",
-      "name_ru": "",
+      "id": "1633555299",
+      "name_lat": "ЖОВЕЛЛАНА ОФ ЭКО-СТИЛЬ",
+      "name_ru": "ЖОВЕЛЛАНА ОФ ЭКО-СТИЛЬ",
       "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
       "breed_en": "",
       "total_shows": 3,
@@ -1257,7 +1226,7 @@
     {
       "id": "918777682",
       "name_lat": "ЖОШУА СОЗВЕЗДИЕ ГОНЧИХ ПСОВ",
-      "name_ru": "",
+      "name_ru": "ЖОШУА СОЗВЕЗДИЕ ГОНЧИХ ПСОВ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -1273,19 +1242,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "897635132",
+      "id": "947636057",
       "name_lat": "ЖОРЖ",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "176798274",
+      "id": "1207985580",
       "name_lat": "ЖОЗИ ФЛЕР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1311,7 +1280,7 @@
     {
       "id": "468238828",
       "name_lat": "ЖОРЖ ВЕЛИКОЛЕПНЫЙ",
-      "name_ru": "",
+      "name_ru": "ЖОРЖ ВЕЛИКОЛЕПНЫЙ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
@@ -1329,10 +1298,10 @@
     {
       "id": "1217163096",
       "name_lat": "ЖОФРЕЙ ДЕ ЛЮКС ФОР АННАПОЛИС",
-      "name_ru": "",
+      "name_ru": "ЖОФРЕЙ ДЕ ЛЮКС ФОР АННАПОЛИС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1356,7 +1325,7 @@
     {
       "id": "1179420957",
       "name_lat": "ЖОУР ДЕ НЕЙЧ ИСТИНА",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ ИСТИНА",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
@@ -1401,7 +1370,7 @@
     {
       "id": "835436827",
       "name_lat": "ЖОУР ДЕ НЕЙЧ САДЗУКАРИМОНО",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ САДЗУКАРИМОНО",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
@@ -1417,18 +1386,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "56071931",
-      "name_lat": "ЖОЗЕФИНА ПОЛЯРНАЯ ЗВЕЗДА",
+      "id": "1350921238",
+      "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "44673714",
+      "name_lat": "ЖОЗЕФИНА ПОЛЯРНАЯ ЗВЕЗДА",
+      "name_ru": "ЖОЗЕФИНА ПОЛЯРНАЯ ЗВЕЗДА",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1833978746",
+      "name_lat": "ЖОЗЕФИНА",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1351513740",
       "name_lat": "ЖОЛИ ФОМ ШВАРЦЕНБЕРГ",
-      "name_ru": "",
+      "name_ru": "ЖОЛИ ФОМ ШВАРЦЕНБЕРГ",
       "breed": "GERMAN WIRE-HAIRED",
       "breed_en": "",
       "total_shows": 3,
@@ -1525,37 +1512,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "294475794",
+      "id": "583651214",
       "name_lat": "ЖОРДАН ДЕЛЬ МЕТРОВ ВЕЙ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1734062838",
-      "name_lat": "ЖОЗЕФИНА ИЗ ИМПЕРИИ ОЛЬГИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ -",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "574995612",
+      "id": "217632179",
       "name_lat": "ЖОЗЕФИНА БЕРХАРД АДАЛХАРД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "956287823",
-      "name_lat": "ЖОРЖЕТТА ЕЖКИНА ДОЧЬ / JORJETTA ESKINA DOCH",
-      "name_ru": "",
-      "breed": "ОХОТНИЧИЙ ТЕРЬЕР)",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1590,7 +1559,7 @@
     {
       "id": "322662334",
       "name_lat": "ЖОУР ДЕ НЕЙЧ ДЖЕЙМС",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ ДЖЕЙМС",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 9,
@@ -1606,18 +1575,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "861002686",
-      "name_lat": "ЖОФФРУА ФАВОРИТ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "951948251",
       "name_lat": "ЖОЗЕФИНА ПРЕКРАСНОЕ СОЛНЦЕ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ПРЕКРАСНОЕ СОЛНЦЕ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 12,
@@ -1629,32 +1589,23 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "820074645",
       "name_lat": "ЖОЗЕФИНА КОРОЛЕВА НОЧИ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА КОРОЛЕВА НОЧИ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1907414936",
-      "name_lat": "ЖОФРЕ",
-      "name_ru": "",
-      "breed": "Кавалер кинг чарльз спаниель",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1983031455",
+      "id": "1718489039",
       "name_lat": "ЖОЗЕФИНА ДЖУС",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ЖОЗЕФИНА ДЖУС",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1664,24 +1615,6 @@
       "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1833978746",
-      "name_lat": "ЖОЗЕФИНА",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1394115496",
-      "name_lat": "ЖОРИК МАЖОРИК ИЗ ЗАЛЕССКОГО ГРАДА",
-      "name_ru": "",
-      "breed": "КОТОН ДЕ ТУЛЕАР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1743,17 +1676,8 @@
     {
       "id": "1258210310",
       "name_lat": "ЖОЗЕФИНА ИЗ ЮЖНОЙ ЛЕГЕНДЫ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ИЗ ЮЖНОЙ ЛЕГЕНДЫ",
       "breed": "МОПС БЕЖЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1683941690",
-      "name_lat": "ЖОРДАНИЯ ИЗ СОЛНЕЧНОГО ДОМА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1786,10 +1710,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "78854395",
+      "id": "1722127660",
       "name_lat": "ЖОРДИНА ФОН ХАУС ЭНЖЕЛ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЖОРДИНА ФОН ХАУС ЭНЖЕЛ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1822,9 +1746,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "443142698",
+      "name_lat": "ЖОЙ БОЙ ФАРТОВЫЙ",
+      "name_ru": "ЖОЙ БОЙ ФАРТОВЫЙ",
+      "breed": "WELSH CORGI PEMBROKE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1754134485",
       "name_lat": "ЖОРЖЕТА СОЛНЕЧНЫЙ ЛУЧ VANESSA PARFAIT RAY",
-      "name_ru": "",
+      "name_ru": "ЖОРЖЕТА СОЛНЕЧНЫЙ ЛУЧ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -1885,10 +1817,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1000912156",
+      "id": "629495737",
       "name_lat": "ЖОРЖ",
       "name_ru": "",
-      "breed": "КИНГ ФАЛЕН) ПАПИЙОН /",
+      "breed": "КИНГ ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1903,11 +1835,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1510773947",
+      "id": "1719726994",
       "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1551397699",
+      "name_lat": "ЖОННИ МАЛЕК",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1895854542",
+      "name_lat": "ЖОЗЕФИНА",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1921,28 +1868,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1007702916",
-      "name_lat": "ЖОРДАН С ВИШНЕВОЙ РОЩИ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1999837855",
-      "name_lat": "ЖОУР ДЕ НЕЙЧ АДЕНАЛИ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "263375446",
+      "id": "758552925",
       "name_lat": "ЖОЗЕФ-ДИМОН ОТ МАРИНЫ КУРАНОВОЙ",
       "name_ru": "",
-      "breed": "ТАКСА Миниатюрная Жесткошерстная",
+      "breed": "ТАКСА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1694921866",
+      "name_lat": "ЖОРДАН С ВИШНЕВОЙ РОЩИ",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "742599694",
+      "name_lat": "ЖОУР ДЕ НЕЙЧ АДЕНАЛИ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2016,7 +1963,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2049,7 +1996,7 @@
     {
       "id": "1581922871",
       "name_lat": "ЖОЗЕ ДУША МОЯ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕ ДУША МОЯ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -2067,16 +2014,25 @@
     {
       "id": "431375689",
       "name_lat": "ЖОЛЕСК КРАСНО СОЛНЫШКО",
-      "name_ru": "",
+      "name_ru": "ЖОЛЕСК КРАСНО СОЛНЫШКО",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "565784724",
+      "name_lat": "ЖОЗЕФИНА - ЖАНЕТТА",
+      "name_ru": "ЖОЗЕФИНА - ЖАНЕТТА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "140650594",
       "name_lat": "ЖОЗЕФИНА СВЕТСКАЯ ЛЬВИЦА",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА СВЕТСКАЯ ЛЬВИЦА",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 4,
@@ -2087,15 +2043,6 @@
       "name_lat": "Жозефина Роз-Клер",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "565784724",
-      "name_lat": "ЖОЗЕФИНА - ЖАНЕТТА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2191,6 +2138,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1524492974",
+      "name_lat": "ЖОРЖЕТТА",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "629595688",
       "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
@@ -2213,15 +2168,6 @@
       "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "256294165",
-      "name_lat": "ЖОЗЕФИНА",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2335,10 +2281,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "664347373",
+      "id": "89493789",
       "name_lat": "ЖОЛИ ДЭ ЛА ВИ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2362,11 +2308,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "639144485",
+      "name_lat": "ЖОЗЕФИНА ВИНСЕН БЕСТИ",
+      "name_ru": "ЖОЗЕФИНА ВИНСЕН БЕСТИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "817169914",
       "name_lat": "ЖОЗЕФИНА ЛЯМУРКА ЛАНИТА (г/ш)",
       "name_ru": "",
       "breed": "чихуахуа г.ш.",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "826731133",
+      "name_lat": "ЖОЛИ ТЭТ-АН-ЛЕР",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2380,10 +2342,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "20239502",
+      "id": "1783595479",
       "name_lat": "ЖОЗЕФИНАБОН СОНИ",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2391,7 +2353,7 @@
     {
       "id": "709672195",
       "name_lat": "ЖОЛИ ОТ СТРЕЛЬЦА",
-      "name_ru": "",
+      "name_ru": "ЖОЛИ ОТ СТРЕЛЬЦА",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА ОСТЕВАЯ ШЕРСТЬ С ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 4,
@@ -2409,16 +2371,16 @@
     {
       "id": "672296196",
       "name_lat": "ЖОЗЕФИНА БОНАПАРТ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА БОНАПАРТ",
       "breed": "ЦВЕТНОЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "274148833",
-      "name_lat": "ЖОАН- МАРСЕЛЛО",
-      "name_ru": "",
+      "id": "1552775419",
+      "name_lat": "ЖОАН-МАРСЕЛЛО",
+      "name_ru": "ЖОАН-МАРСЕЛЛО",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
@@ -2427,10 +2389,19 @@
     {
       "id": "384804065",
       "name_lat": "ЖОЗЕФИНА СОЛНЕЧНЫЙ ЗАЙЧИК",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА СОЛНЕЧНЫЙ ЗАЙЧИК",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1141270641",
+      "name_lat": "ЖОУР ДЕ НЕЙЧ МИЛАШКА СЬЮ",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ МИЛАШКА СЬЮ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2443,11 +2414,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1141270641",
-      "name_lat": "ЖОУР ДЕ НЕЙЧ МИЛАШКА СЬЮ",
+      "id": "612895817",
+      "name_lat": "ЖОСЛЕН БРЮНЕЛЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2470,10 +2440,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1378328347",
+      "id": "551802287",
       "name_lat": "ЖОРЖЕТТА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "698402722",
+      "name_lat": "ЖОРДАН ДЮ МОНДЕ ГЛОРИЯ СТЕФАНИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2506,15 +2485,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "222633614",
-      "name_lat": "ЖОРДАН ДЮ МОНДЕ ГЛОРИЯ СТЕФАНИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "754275122",
       "name_lat": "ЖОУР ДЕ НЕЙЧ МАРМЕЛАД",
       "name_ru": "",
@@ -2526,7 +2496,7 @@
     {
       "id": "1200805718",
       "name_lat": "ЖОЛЕСК КРАСНО СОЛНЫШКО (ПУХ)",
-      "name_ru": "",
+      "name_ru": "ЖОЛЕСК КРАСНО СОЛНЫШКО (ПУХ)",
       "breed": "ЧАРЛЬЗ КИТАЙСКАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -2551,9 +2521,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "777778602",
+      "name_lat": "ЖОЗЕФИНА",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "640307463",
+      "name_lat": "ЖОЗЕФИНА БОГАРНЕ",
+      "name_ru": "ЖОЗЕФИНА БОГАРНЭ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1417738936",
       "name_lat": "ЖОРДАН АЛЕКСИС",
-      "name_ru": "",
+      "name_ru": "ЖОРДАН АЛЕКСИС",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
@@ -2562,19 +2550,10 @@
     {
       "id": "1097981719",
       "name_lat": "ЖОЗИ БЛЭК ШАРК",
-      "name_ru": "",
+      "name_ru": "ЖОЗИ БЛЭК ШАРК",
       "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "777778602",
-      "name_lat": "ЖОЗЕФИНА",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2583,15 +2562,6 @@
       "name_ru": "",
       "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1993179775",
-      "name_lat": "ЖОЗЕФИНА БОГАРНЭ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2614,15 +2584,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1865222908",
-      "name_lat": "ЖОФРЕЙ ФРОМ ХОУСЕ ВАЙСИНГ",
-      "name_ru": "",
-      "breed": "С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "911900876",
       "name_lat": "ЖОЛИ ЛА МОН",
       "name_ru": "",
@@ -2634,7 +2595,7 @@
     {
       "id": "300159326",
       "name_lat": "ЖОЗЕФИНА АВГУСТА",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА АВГУСТА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -2643,26 +2604,42 @@
     {
       "id": "758918608",
       "name_lat": "ЖОЛЛИ МЕРВЕИЛ ЛЮКС ИЗ ГОРОДА МОПСОВ",
-      "name_ru": "",
+      "name_ru": "ЖОЛЛИ МЕРВЕИЛ ЛЮКС ИЗ ГОРОДА МОПСОВ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1984066551",
+      "name_lat": "ЖОЗЕФИНА ЧЕРНАЯ ЖЕМЧУЖИНА",
+      "name_ru": "ЖОЗЕФИНА ЧЕРНАЯ ЖЕМЧУЖИНА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "197907384",
       "name_lat": "ЖОРЖЕТТА БУОНАСЬЕ",
-      "name_ru": "",
+      "name_ru": "ЖОРЖЕТТА БУОНАСЬЕ",
       "breed": "ЦВЕТНОЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1089569711",
-      "name_lat": "ЖОНИ БЛЭК КРИСТАЛЛ",
+      "id": "270542334",
+      "name_lat": "ЖОЗЕФИНА ИЗ КОРОЛЕВСТВА СТАФФ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "230094814",
+      "name_lat": "ЖОНИ БЛЭК КРИСТАЛЛ",
+      "name_ru": "ЖОНИ БЛЭК КРИСТАЛЛ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2670,26 +2647,34 @@
     {
       "id": "1981302151",
       "name_lat": "ЖОЛЕСК РАТИБОР",
-      "name_ru": "",
+      "name_ru": "ЖОЛЕСК РАТИБОР",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "523433804",
+      "id": "264647480",
+      "name_lat": "ЖОЕЛЬ АЛЬДА ДЕЙ ЭЛИТ БРАНКО",
+      "name_ru": "ЖОЕЛЬ АЛЬДА ДЕЙ ЭЛИТ БРАНКО",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "23298045",
       "name_lat": "ЖОФРЕЙ ИЗ ХВОСТАТОГО БАЛАГАНА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "name_ru": "ЖОФРЕЙ ИЗ ХВОСТАТОГО БАЛАГАНА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "522045652",
+      "id": "997314447",
       "name_lat": "ЖОРДАН ЛЕОН ИЗ ДОМА МАЛЬХЕРТ'С",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "name_ru": "ЖОРДАН ЛЕОН ИЗ ДОМА МАЛЬХЕРТ'С",
+      "breed": "АНГЛИЙСКИЙ СОБАКА) СРЕДНЯЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2704,6 +2689,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "802793415",
+      "name_lat": "ЖОНГ ДЕШИНГ",
+      "name_ru": "",
+      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1045999424",
       "name_lat": "ЖОЭЛЬ АЙВИ",
       "name_ru": "",
@@ -2713,10 +2706,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1046797448",
+      "id": "710292140",
       "name_lat": "ЖОФРЕЙ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2731,10 +2724,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "214458582",
+      "id": "740403097",
+      "name_lat": "ЖОРДАН ЭНМОН КАМИЛЬ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1679407093",
       "name_lat": "ЖОЛИ ЖЮЛИ ДЕ ЗАУБЕР ХОФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2758,19 +2759,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1347575768",
+      "id": "916507346",
       "name_lat": "ЖОЗЕФИНА ОТ КОМОГОРЦЕВ ЫХ",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "423394372",
-      "name_lat": "ЖОКЕЙ ГРАНД ПРИ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "id": "981856367",
+      "name_lat": "ЖОЗЕФИНА ФЕДЕРИКА ДОЛИ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1442698715",
+      "name_lat": "ЖОКЕЙ ГРАНД ПРИ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "name_ru": "ЖОКЕЙ ГРАНД ПРИ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2778,8 +2787,25 @@
     {
       "id": "79093394",
       "name_lat": "ЖОРЖИО АР МАНИЯ",
-      "name_ru": "",
+      "name_ru": "ЖОРЖИО АР МАНИЯ",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104270280",
+      "name_lat": "ЖОФРЕЙ ОТ ШАРЛЬ ДЕ ВАЛУА",
+      "name_ru": "ЖОФРЕЙ ОТ ШАРЛЬ ДЕ ВАЛУА",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1329477833",
+      "name_lat": "ЖОУР ДЕ НЕЙЧ БЕККИ",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ БЕККИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2787,7 +2813,7 @@
     {
       "id": "316716851",
       "name_lat": "ЖОФФРЕЙ ДА ПАЙРАК",
-      "name_ru": "",
+      "name_ru": "ЖОФФРЕЙ ДА ПАЙРАК",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -2796,26 +2822,17 @@
     {
       "id": "308487256",
       "name_lat": "ЖОЗЕФИНА ИМПЕРИЯ ВЛАСТИ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ИМПЕРИЯ ВЛАСТИ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1984066551",
-      "name_lat": "ЖОЗЕФИНА ЧЕРНАЯ ЖЕМЧУЖИНА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1509982414",
+      "id": "1124610071",
       "name_lat": "ЖОСИЕ ШУГАР ЧЕРРИ",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "name_ru": "ЖОСИЕ ШУГАР ЧЕРРИ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2823,17 +2840,17 @@
     {
       "id": "1878742948",
       "name_lat": "ЖОУР ДЕ ТРИУМФ ДАРХАН",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ ТРИУМФ ДАРХАН",
       "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "246368450",
+      "id": "283159235",
       "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2848,19 +2865,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "487211316",
+      "id": "107857505",
       "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1751636518",
+      "id": "387159071",
       "name_lat": "ЖОНИ СОФИЯ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2965,10 +2982,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "105495687",
+      "id": "220440931",
       "name_lat": "ЖОЛЛИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2983,10 +3000,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "760906885",
+      "id": "104835358",
       "name_lat": "ЖОРДАНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3005,6 +3022,33 @@
       "name_lat": "ЖО ЖО БА",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207599689",
+      "name_lat": "ЖОЗЕФИНА ШЕРЕТТА МОНТИЛЬЕ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1179234422",
+      "name_lat": "ЖОРЖ ЖОЗЕФ БЕНТЛИ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "285939460",
+      "name_lat": "ЖОУР ДЕ НЕЙЧ ЛЕКС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3091,10 +3135,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "750298455",
+      "id": "1019816012",
+      "name_lat": "ЖОНИ ША ДЕН ПРЕМЬЕР ДАМ",
+      "name_ru": "",
+      "breed": "KANINCHEN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1294541360",
       "name_lat": "ЖОРДАН ЛЕРОЙ РЕМАРК",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3172,15 +3224,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1329477833",
-      "name_lat": "ЖОУР ДЕ НЕЙЧ БЕККИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "957113909",
       "name_lat": "ЖОРДАНО - РИЧАРД",
       "name_ru": "",
@@ -3194,15 +3237,6 @@
       "name_lat": "ЖОФФРЕЙ ИЗ СОКРОВИЩ ВИНДЗОРА",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "266189216",
-      "name_lat": "ЖОУР ДЕ НЕЙЧ ЛЕКС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3235,28 +3269,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "58683778",
-      "name_lat": "ЖОЗЕФИНА ШЕРЕТТА МОНТИЛЬЕ",
+      "id": "1577185516",
+      "name_lat": "ЖОЗЕФИНА БЛАГОРОДНАЯ ЛЕДИ",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "854960953",
       "name_lat": "ЖОУР ДЕ НЕЙЧ ТЭЙСИ",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ ТЭЙСИ",
       "breed": "GERMAN SPITZ TOY (POMERANIAN) ORANGE, GREY, OTHER COLOURS",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1326823994",
-      "name_lat": "ЖОРЖ ЖОЗЕФ БЕНТЛИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3264,7 +3288,7 @@
     {
       "id": "595528377",
       "name_lat": "ЖОЛЛИ ФОРТУНА СЕТТИ",
-      "name_ru": "",
+      "name_ru": "ЖОЛЛИ ФОРТУНА СЕТТИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -3273,7 +3297,7 @@
     {
       "id": "651344106",
       "name_lat": "ЖОЗЕФИНА РОКСИ ХАРТ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА РОКСИ ХАРТ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3282,17 +3306,17 @@
     {
       "id": "883236579",
       "name_lat": "ЖОЗЕФИНА ЗВЕЗДА УРАЛА",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ЗВЕЗДА УРАЛА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "449158023",
+      "id": "475225344",
       "name_lat": "ЖОЗЕФИНА ИЗ БЕЛОГО ЯРА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЖОЗЕФИНА ИЗ БЕЛОГО ЯРА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3300,26 +3324,17 @@
     {
       "id": "62619461",
       "name_lat": "ЖОЛИ АМОР ОТ ТАЛИСМАНА НА УДАЧУ",
-      "name_ru": "",
+      "name_ru": "ЖОЛИ АМОР ОТ ТАЛИСМАНА НА УДАЧУ",
       "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "100848106",
+      "id": "58564993",
       "name_lat": "ЖОЗЕФИНА ЖЕСА ШОКОЛАДКА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "640307463",
-      "name_lat": "ЖОЗЕФИНА БОГАРНЕ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЖОЗЕФИНА ЖЕСА ШОКОЛАДКА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3327,7 +3342,7 @@
     {
       "id": "42558675",
       "name_lat": "ЖОУР ДЕ НЕЙЧ КАТАЛИНА",
-      "name_ru": "",
+      "name_ru": "ЖОУР ДЕ НЕЙЧ КАТАЛИНА",
       "breed": "*НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3336,17 +3351,17 @@
     {
       "id": "243292271",
       "name_lat": "ЖОЗЕФИНА ФАЕРБЬЮТИ",
-      "name_ru": "",
+      "name_ru": "ЖОЗЕФИНА ФАЕРБЬЮТИ",
       "breed": "НЕМ.ШПИЦ той шпиц немецкий",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1743261026",
+      "id": "1089759046",
       "name_lat": "ЖОКЕЙ ЯРКИЙ ОБРАЗ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ЖОКЕЙ ЯРКИЙ ОБРАЗ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3354,7 +3369,7 @@
     {
       "id": "1042802656",
       "name_lat": "ЖОЙСЭМ ИЗЕЛЬТВАЛЬД",
-      "name_ru": "",
+      "name_ru": "ЖОЙСЭМ ИЗЕЛЬТВАЛЬД",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -3363,7 +3378,7 @@
     {
       "id": "66245151",
       "name_lat": "ЖОКЕР ИН ХЕНД ИЗ ДОНСКОЙ ЛИБЕРИИ",
-      "name_ru": "",
+      "name_ru": "ЖОКЕР ИН ХЕНД ИЗ ДОНСКОЙ ЛИБЕРИИ",
       "breed": "AMERICAN AKITA",
       "breed_en": "",
       "total_shows": 2,
@@ -3372,7 +3387,7 @@
     {
       "id": "1704436155",
       "name_lat": "ЖОРЖ БРАУН БАРНИ",
-      "name_ru": "",
+      "name_ru": "ЖОРЖ БРАУН БАРНИ",
       "breed": "РУССКАЯ САЛОННАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -3381,7 +3396,7 @@
     {
       "id": "1541673731",
       "name_lat": "ЖОРЖЕТ КАЛИЛ",
-      "name_ru": "",
+      "name_ru": "ЖОРЖЕТ КАЛИЛ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3514,19 +3529,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "74620978",
+      "id": "1886270173",
       "name_lat": "ЖОРЖ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "681605290",
+      "id": "497296635",
       "name_lat": "ЖОЗЕ ДИОР",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3595,15 +3610,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1519802790",
-      "name_lat": "ЖОЗЕФИНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "458834035",
       "name_lat": "ЖОЗЕФ ДЕССЕ",
       "name_ru": "",
@@ -3613,19 +3619,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "450673002",
+      "id": "214512571",
       "name_lat": "ЖОЗИ ФЛЕР",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1279363317",
+      "id": "1932555912",
       "name_lat": "ЖОМЕЛЬ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3721,10 +3727,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "649024783",
+      "id": "206592318",
       "name_lat": "ЖОРЖ",
       "name_ru": "",
-      "breed": "KING ФАЛЕН) ПАПИЙОН /",
+      "breed": "KING ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3739,10 +3745,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1964630683",
+      "id": "1795031065",
+      "name_lat": "ЖОЗЕФ",
+      "name_ru": "",
+      "breed": "JACK RUSSELL TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1857258333",
+      "name_lat": "ЖОРЖЕТТА",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ / SHIH TZU",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1044232146",
       "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3793,28 +3815,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "13063149",
+      "id": "1389251152",
       "name_lat": "ЖОРЖЕТТА",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "802793415",
-      "name_lat": "ЖОНГ ДЕШИНГ",
-      "name_ru": "",
-      "breed": "Китайский чунцин",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1861720756",
+      "id": "1762477025",
       "name_lat": "ЖОРЖ-БИМ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3829,10 +3842,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "207250051",
+      "id": "1207659311",
       "name_lat": "ЖОЗЕ-ИРЕН",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3946,10 +3959,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974675982",
+      "id": "634308274",
       "name_lat": "ЖОЗИ",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3968,15 +3981,6 @@
       "name_lat": "ЖОЗЗИ",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "758669174",
-      "name_lat": "ЖОЗЕФ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4004,15 +4008,6 @@
       "name_lat": "ЖОЗЗЕ ФИНА",
       "name_ru": "",
       "breed": "РУССКИЙ ОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "535786826",
-      "name_lat": "ЖОЗЕФИНА",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4090,15 +4085,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "724078709",
-      "name_lat": "ЖОЭЛЬ",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1202265537",
       "name_lat": "ЖОЗЕФИНА",
       "name_ru": "",
@@ -4153,6 +4139,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1875852315",
+      "name_lat": "Жоффрей",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "570442453",
+      "name_lat": "Жоффрей",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "373612347",
       "name_lat": "ЖОФРЕЙ РЕД",
       "name_ru": "",
@@ -4162,10 +4164,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "112284010",
+      "id": "1580045707",
       "name_lat": "ЖОНГ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4180,10 +4182,62 @@
       "competition_dog_id": null
     },
     {
+      "id": "43857471",
+      "name_lat": "ЖОЗЕФИНА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "251825107",
+      "name_lat": "ЖОЗЕФ",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "395198398",
       "name_lat": "ЖОРДАНА",
       "name_ru": "",
       "breed": "КОРОТКОШЕРС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "681914101",
+      "name_lat": "ЖОФРЕЙ ПРАНС ДЕ САМЕЛИ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "755619585",
+      "name_lat": "ЖОЛИ ПОЛАР БЭА ФРОМ РАША",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1068647245",
+      "name_lat": "ЖОЗЕФИНА ФЕЯ ИЗ ДОНСКОЙ ЛИБЕРИИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ/ МАЛЫЙ(ОРАН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1938244714",
+      "name_lat": "ЖОРЖЕТТА ИЗ ИМПЕРИИ ПОМОВ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4225,19 +4279,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "135649327",
+      "id": "1838734891",
       "name_lat": "ЖОУР ДЕ НЕЙЧ БЕАТРИЧИ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "619669207",
+      "id": "1600255766",
       "name_lat": "ЖОУР ДЕ НЕЙЧ БЕВЕРЛИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4351,8 +4405,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "171331674",
-      "name_lat": "ЖОФРЕЙ С ВЕРШИНЫ ИНЬ- ЯНЬ",
+      "id": "191201768",
+      "name_lat": "ЖОФРЕЙ С ВЕРШИНЫ ИНЬ-ЯНЬ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ (ЧЕРН И МРАМ)",
       "breed_en": "",
@@ -4373,15 +4427,6 @@
       "name_lat": "ЖОУР ДЕ НЕЙЧ ТКСЕНГИ",
       "name_ru": "",
       "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1888435039",
-      "name_lat": "ЖОЙ БОЙ ФАРТОВЫЙ",
-      "name_ru": "",
-      "breed": "ПЕМБРОК / WELSH",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4441,15 +4486,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "994457553",
-      "name_lat": "ЖОФРЕЙ ПРАНС ДЕ САМЕЛИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "945437064",
       "name_lat": "ЖОУР ДЕ НЕЙЧ ВАЛИАНТ",
       "name_ru": "",
@@ -4477,15 +4513,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "22700104",
-      "name_lat": "Жорж Дюмезиль Персей Непобедимый",
-      "name_ru": "",
-      "breed": "Мопс",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "617316584",
       "name_lat": "ЖОЛЛИ ЛОНГ КИСС",
       "name_ru": "",
@@ -4504,10 +4531,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "539296252",
+      "id": "742628377",
       "name_lat": "ЖОУР ДЕ НЕЙЧ ДИЕГО",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4585,19 +4612,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "314778558",
+      "id": "766059591",
       "name_lat": "ЖОРЖАН ОРИОН'С МЭН",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "755619585",
-      "name_lat": "ЖОЛИ ПОЛАР БЭА ФРОМ РАША",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4621,15 +4639,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1068647245",
-      "name_lat": "ЖОЗЕФИНА ФЕЯ ИЗ ДОНСКОЙ ЛИБЕРИИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ/ МАЛЫЙ(ОРАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1035123377",
       "name_lat": "ЖОРИС ГУУЛ КИД",
       "name_ru": "",
@@ -4648,6 +4657,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "770129397",
+      "name_lat": "ЖОЗЕФИНА ЖЕРАЛЬ ДИНА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1668631773",
+      "name_lat": "ЖОРЖЕТТА ЛУКАВАЯ БЕСТИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275087968",
+      "name_lat": "ЖОСЕЛИН ХИКАРУ РУТА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1991780775",
       "name_lat": "ЖОЗЕФИНА ВОПЛОЩЕНИЕ МЕЧТЫ",
       "name_ru": "",
@@ -4657,11 +4690,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1156043777",
-      "name_lat": "Жоур Де Нейч Бэкки",
+      "id": "321052652",
+      "name_lat": "ЖОРИК РЕАЛЬНЫЙ ПАЦАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4684,11 +4716,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1281660741",
+      "id": "1761619068",
+      "name_lat": "ЖОУР ДЕ НЕЙЧ РАМИНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "171816121",
       "name_lat": "ЖОЗЕФИНА ПРЕКРАСНАЯ РОЗА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "235474716",
+      "name_lat": "ЖОУР ДЕ НЕЙЧ ВАЛЕРИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4702,10 +4750,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "524102163",
+      "id": "298503639",
+      "name_lat": "ЖОФРЕЙ НИКОЛЯ ВЕРО",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "35745402",
       "name_lat": "ЖОЗЕФИНА ЮДЖЕНИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4716,6 +4772,14 @@
       "name_ru": "",
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "813869741",
+      "name_lat": "ЖОСТЕН ИЗ ДОМА КАЛЕРИИ",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4765,20 +4829,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "823843260",
-      "name_lat": "ЖОРА ПИЖОН С НЕВСКОГО БЕРЕГА",
+      "id": "1243235044",
+      "name_lat": "ЖОЗЕФИЯ БОЛЕРО",
       "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР / CAIRN",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "104270280",
-      "name_lat": "ЖОФРЕЙ ОТ ШАРЛЬ ДЕ ВАЛУА",
+      "id": "1435218233",
+      "name_lat": "ЖОЗЕФИНА БИ МАЙ ЛАВ",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4792,6 +4854,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1905254783",
+      "name_lat": "ЖОЛИ ПЕРЛ ШЕРОН ИЗ КОРОЛЕВСТВА СТАФФ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1037709188",
+      "name_lat": ":ЖОЗЕФИНА БУТИ ФАТАЛЬ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1486786557",
       "name_lat": "ЖОФФРЕЙ ИЗ СТАИ ИГЭЛС",
       "name_ru": "",
@@ -4801,19 +4879,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1157656038",
+      "id": "523755552",
       "name_lat": "ЖОРДАН НЕМОРАРИУС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1703227207",
+      "id": "564869952",
       "name_lat": "ЖОЗЕФИНА АМИНА ГАЛАНТ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4855,10 +4933,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1894409074",
+      "id": "695802110",
       "name_lat": "ЖОУР ДЕ НЕЙЧ МИККИ МАУС",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4900,10 +4978,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1281455259",
+      "id": "1180792610",
       "name_lat": "ЖОВАННА АНТОНЕЛЛИ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4922,6 +5000,15 @@
       "name_lat": "ЖОАНН МИРО ВИНСЕНТ",
       "name_ru": "",
       "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "392015641",
+      "name_lat": "Ж`ОДОР ФОМ ГРЮНЕН ШТАДТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4990,10 +5077,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "475149449",
+      "id": "110040394",
       "name_lat": "ЖОКЕЙ ФОН КАЙМАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5017,10 +5104,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1111349253",
+      "id": "278408745",
       "name_lat": "ЖОФФРЕЙ ПЕЙРАК",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5044,10 +5131,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "82035355",
+      "id": "1404161424",
       "name_lat": "ЖОРЖИ МАРТИН СКАУТ ТАЙЛ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5089,15 +5176,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "875994678",
-      "name_lat": "ЖОРЖЕТТА ИЗ ИМПЕРИИ ПОМОВ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "822370928",
       "name_lat": "ЖОФРЕЙ КЬЯНТИ",
       "name_ru": "",
@@ -5125,10 +5203,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "783118624",
+      "id": "70612981",
       "name_lat": "ЖОЗЕФИН ИМПЕРИАЛ ПРИНЦ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

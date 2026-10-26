@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "LG",
-  "count": 1,
+  "count": 4,
   "dogs": [
     {
       "id": "156935178",
@@ -10,6 +10,33 @@
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1081626378",
+      "name_lat": "L-GAYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1208202770",
+      "name_lat": "L' GARDY OF WOLF POINT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1356858090",
+      "name_lat": "L'GARDY OF WOLF POINT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     }
   ]

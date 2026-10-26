@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "АА",
-  "count": 21,
+  "count": 22,
   "dogs": [
+    {
+      "id": "777784292",
+      "name_lat": "ААРОН ПОЛ",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
     {
       "id": "540817072",
       "name_lat": "ААРОН МЭН",
@@ -13,21 +22,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1617519001",
-      "name_lat": "ААРОН ПОЛ",
+      "id": "1842353630",
+      "name_lat": "А",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "82148146",
       "name_lat": "ААНГ ПОВЕЛИТЕЛЬ СТИХИЙ",
-      "name_ru": "",
+      "name_ru": "ААНГ ПОВЕЛИТЕЛЬ СТИХИЙ",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "386038592",
+      "name_lat": "А",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "RUSSKIY OHOTNICHIY SPANIEL (RUSSIAN HUNTING SPANIEL)",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -45,7 +63,7 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ / SCHIPPERKE",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -55,6 +73,15 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1645709994",
+      "name_lat": "ААНГ ВИНД РАЙДЕР",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -72,7 +99,7 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -80,15 +107,6 @@
       "name_lat": "ААРОН ПОЛ",
       "name_ru": "",
       "breed": "SCHIPPERKE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1570553357",
-      "name_lat": "ААРОН ИЗ ДОМА АЛЛЕНС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -103,10 +121,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1799712310",
+      "id": "1096167962",
       "name_lat": "ААРОН",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -121,27 +139,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1235695983",
+      "id": "1442897129",
       "name_lat": "ААРОН ГРЕЙТ СКАИЛ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
+      "name_ru": "ААРОН ГРЕЙТ СКАИЛ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1645709994",
-      "name_lat": "ААНГ ВИНД РАЙДЕР",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1417727181",
       "name_lat": "ААЯША ГОЛД АНГЕЛ",
-      "name_ru": "",
+      "name_ru": "ААЯША ГОЛД АНГЕЛ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 4,
@@ -150,7 +159,7 @@
     {
       "id": "1662349632",
       "name_lat": "ААРОН ЛИ ПАУЭР ОФ ГОДС",
-      "name_ru": "",
+      "name_ru": "ААРОН ЛИ ПАУЭР ОФ ГОДС",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -159,17 +168,17 @@
     {
       "id": "1842954453",
       "name_lat": "ААРОН НОРВУД",
-      "name_ru": "",
+      "name_ru": "ААРОН НОРВУД",
       "breed": "НЬЮФАУНДЛЕНД ПИРЕНЕЙСКАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1481056767",
+      "id": "827898350",
       "name_lat": "ААРОН",
       "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР /",
+      "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

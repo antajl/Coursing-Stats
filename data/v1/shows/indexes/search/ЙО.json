@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЙО",
-  "count": 79,
+  "count": 82,
   "dogs": [
     {
       "id": "263451165",
       "name_lat": "ЙОШТА СЛАДКАЯ ЯГОДКА",
-      "name_ru": "",
+      "name_ru": "ЙОШТА СЛАДКАЯ ЯГОДКА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 7,
@@ -18,16 +18,16 @@
       "name_ru": "",
       "breed": "ЧУНЦИН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1566348839",
       "name_lat": "ЙОРХЕ ИЗ БЕЛОЙ БРИГАДЫ",
-      "name_ru": "",
+      "name_ru": "ЙОРХЕ ИЗ БЕЛОЙ БРИГАДЫ",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -40,21 +40,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "815768368",
-      "name_lat": "ЙОРКАМАНИЯ МАКС",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "id": "1185814708",
+      "name_lat": "ЙОРК ФОН ЗАНДЕР МОНИКА",
+      "name_ru": "ЙОРК ФОН ЗАНДЕР МОНИКА",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1919215568",
-      "name_lat": "ЙОНГШЕНГ",
-      "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "id": "815768368",
+      "name_lat": "ЙОРКАМАНИЯ МАКС",
+      "name_ru": "ЙОРКАМАНИЯ МАКС",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -67,39 +67,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1070719190",
+      "id": "240655183",
       "name_lat": "ЙОШИ ВАН ДАР ВУН",
-      "name_ru": "",
-      "breed": "БУЛЬМАСТИФ /",
+      "name_ru": "ЙОШИ ВАН ДАР ВУН",
+      "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "768302633",
-      "name_lat": "ЙОРК ФОН ЗАНДЕР МОНИКА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1954458968",
       "name_lat": "ЙОКО НИ-ЦУ КИКУ ДЕ ИМПЕРИУМ АУРИ",
-      "name_ru": "",
+      "name_ru": "ЙОКО НИ-ЦУ КИКУ ДЕ ИМПЕРИУМ АУРИ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "JAPANESE CHIN",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1420622116",
-      "name_lat": "ЙОШИКО СО ЗВЕЗДНОГО ПУТИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -114,7 +96,7 @@
     {
       "id": "598471111",
       "name_lat": "ЙОКО ОНО - ЗВЕЗДА СЕЗОНА",
-      "name_ru": "",
+      "name_ru": "ЙОКО ОНО - ЗВЕЗДА СЕЗОНА",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
@@ -132,7 +114,7 @@
     {
       "id": "1677763907",
       "name_lat": "ЙОТА ИЗ ЗЛАТОГЛАВОЙ",
-      "name_ru": "",
+      "name_ru": "ЙОТА ИЗ ЗЛАТОГЛАВОЙ",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -148,12 +130,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "770628040",
+      "id": "925198067",
       "name_lat": "ЙОРКАМАНИЯ ВЕЛЬВЕТ",
-      "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "name_ru": "ЙОРКАМАНИЯ ВЕЛЬВЕТ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -195,7 +177,7 @@
     {
       "id": "1184081548",
       "name_lat": "ЙОГИ МЕН КЛАУС",
-      "name_ru": "",
+      "name_ru": "ЙОГИ МЕН КЛАУС",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
@@ -265,6 +247,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1748878247",
+      "name_lat": "ЙОКА ИЗ ФРАНЦУЗСКОГО ЛЕГИОНА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "400487647",
       "name_lat": "ЙОЛАНТА",
       "name_ru": "",
@@ -274,10 +264,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "142210345",
+      "id": "1930914565",
       "name_lat": "ЙОКО РИОКО",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -287,6 +277,15 @@
       "name_lat": "ЙОХАН ШИМИ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605505646",
+      "name_lat": "ЙОКО ХЭППИ ДЭЙ",
+      "name_ru": "ЙОКО ХЭППИ ДЭЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -310,19 +309,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "954277937",
+      "id": "1434450546",
       "name_lat": "ЙОЛИКА ФОМ МАИР ХОФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "924162316",
+      "id": "608421187",
       "name_lat": "ЙОТТА ФОМ МАИР ХОФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -330,17 +329,8 @@
     {
       "id": "40511933",
       "name_lat": "ЙОШИРО ИЗ ИМПЕРИИ ФАВОРИТОВ",
-      "name_ru": "",
+      "name_ru": "ЙОШИРО ИЗ ИМПЕРИИ ФАВОРИТОВ",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1834176642",
-      "name_lat": "ЙОКО ХЭППИ ДЭЙ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -348,17 +338,17 @@
     {
       "id": "550155704",
       "name_lat": "ЙОТА ИСТ ВИНД",
-      "name_ru": "",
+      "name_ru": "ЙОТА ИСТ ВИНД",
       "breed": "ГЛАДКОШЕРС той шпиц немецкий",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1730336890",
+      "id": "990387915",
       "name_lat": "ЙОНДУ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -400,10 +390,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "438615012",
+      "id": "1728541071",
       "name_lat": "ЙОЛАНТА",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ ПУДЕЛЬ МИНИАТЮРНЫЙ (серебристый, ПУДЕЛЬ МИНИАТЮРНЫЙ (серебристый, ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -427,20 +417,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1363675579",
+      "id": "1419049807",
       "name_lat": "ЙОХАН ШИМИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1213198166",
-      "name_lat": "ЙОНАТАН СО ЗВЕЗДНОГО ПУТИ",
+      "id": "95753016",
+      "name_lat": "ЙОЛАНТА",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "185244805",
+      "name_lat": "ЙОТА",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "425003810",
+      "name_lat": "ЙОРКАМАНИЯ СТЕЛЛА ФЕСТ ЛЕДИ",
+      "name_ru": "",
+      "breed": "ШПИЦ Й) / GERMAN",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -508,10 +514,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "427027318",
+      "id": "313073263",
       "name_lat": "ЙОРКАМАНИЯ ГОРДЕЛИЯ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -589,19 +595,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1447059709",
+      "id": "267661600",
       "name_lat": "ЙОРКАМАНИЯ ЯРОШКА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "425003810",
-      "name_lat": "ЙОРКАМАНИЯ СТЕЛЛА ФЕСТ ЛЕДИ",
-      "name_ru": "",
-      "breed": "ШПИЦ Й) / GERMAN",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -625,10 +622,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "163172988",
+      "id": "947670717",
       "name_lat": "ЙОРКАМАНИЯ НИЛЬС",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ МИНИАТЮРНЫЙ ШПИЦ",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -652,11 +649,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "520200057",
+      "id": "184091972",
       "name_lat": "ЙОРКАМАНИЯ ШУФИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1077500089",
+      "name_lat": "ЙОРКАМАНИЯ О'ХАРА СКАРЛЕТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -666,6 +671,22 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "304689542",
+      "name_lat": "ЙОРКАМАНИЯ НАТТИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "826701529",
+      "name_lat": "ЙОРКОМАНИЯ ЯРОШКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "NU",
-  "count": 216,
+  "count": 218,
   "dogs": [
     {
       "id": "638497216",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "KERRY BLUE TERRIER",
-      "total_shows": 82,
+      "total_shows": 89,
       "competition_dog_id": null
     },
     {
@@ -18,7 +18,16 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 95,
+      "total_shows": 99,
+      "competition_dog_id": null
+    },
+    {
+      "id": "22362576",
+      "name_lat": "NUOZHMIOS RUDAS",
+      "name_ru": "НУОЖМИОС РУДАС",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "GERMAN PINSCHER",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -31,10 +40,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1109572207",
+      "id": "632460446",
       "name_lat": "NUMBER ONE CEOLIN CORCO",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -46,6 +55,15 @@
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "87099966",
+      "name_lat": "NUOSTABUS VARNAS",
+      "name_ru": "НУОСТАБУС ВАРНАС",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "GERMAN PINSCHER",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -67,21 +85,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "251145657",
+      "name_lat": "NUTLEE GHEOS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "POODLE MEDIUM BLACK, WHITE, BROWN",
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
       "id": "1457935361",
       "name_lat": "NUGUSH",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "251145657",
-      "name_lat": "NUTLEE GHEOS",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "POODLE MEDIUM BLACK, WHITE, BROWN",
-      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -94,10 +112,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974660188",
+      "id": "960754264",
       "name_lat": "NUMENOR'S SYLLADRIMME",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -126,7 +144,7 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -166,10 +184,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1571595402",
+      "id": "329942278",
       "name_lat": "NUMEROR'S SULCOROLLAE",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -184,6 +202,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "129859704",
+      "name_lat": "NUSHA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1694400342",
       "name_lat": "NUGGET GOLDEN TRIANGLE",
       "name_ru": "",
@@ -193,10 +220,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1727724616",
+      "id": "1878208620",
       "name_lat": "NUMEROR'S OROFEN",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -238,6 +265,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "854325228",
+      "name_lat": "NUWARA ELIYA WELSH PRINCE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "922367473",
       "name_lat": "NUWARA ELIYA VAILANGI LALA",
       "name_ru": "",
@@ -247,12 +283,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "814319478",
+      "id": "1295509103",
       "name_lat": "NUMBER ONE DES ETOILES D'ARTEMIS",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "CHIHUAHUA LONG-HAIRED",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "967543964",
+      "name_lat": "N-UCHAR",
+      "name_ru": "",
+      "breed": "ТАЙГАН",
+      "breed_en": "TAYGAN",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -283,28 +328,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "761795800",
+      "id": "253034874",
+      "name_lat": "NUBE DE AMOR MATEO",
+      "name_ru": "НУБЕ ДЕ АМОР МАТЕО",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "301231101",
       "name_lat": "NUMEROR'S YAHALL",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР /",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1112938581",
+      "id": "1624098097",
       "name_lat": "NURME BARBAR BORG",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "588526812",
+      "id": "1574620888",
       "name_lat": "NUMENOR'S SYLLADRIMME FOR FORMULA AZARTA",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -319,21 +373,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "929853002",
+      "name_lat": "NUWARA ELIYA EILANDO",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "10397117",
       "name_lat": "NUTELLA SLABOST SLADKOEZHKI",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "253034874",
-      "name_lat": "NUBE DE AMOR MATEO",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -346,10 +399,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1693923526",
+      "id": "229827164",
+      "name_lat": "NURAGUS OVELENDGE",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "130623578",
       "name_lat": "NURME BARBAR BARRACUDA",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -373,15 +435,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1191507655",
-      "name_lat": "NUSHA",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "449909675",
       "name_lat": "NUR-BERRY INSULIN",
       "name_ru": "",
@@ -391,55 +444,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "117325878",
-      "name_lat": "NUSHA",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "972437228",
-      "name_lat": "NUSHA",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "498337240",
+      "id": "522179548",
       "name_lat": "NUMEROR'S SULMELDIR",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "299905811",
+      "id": "830535508",
       "name_lat": "NUWARA ELIYA OLIMPIYA",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "207662518",
+      "id": "53543625",
       "name_lat": "NUWARA ELIYA IRISH",
       "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1552037995",
-      "name_lat": "NUWARA ELIYA WELSH PRINCE",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -463,10 +489,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1403332276",
-      "name_lat": "NUVARA ELIA SHOTOKAN",
+      "id": "1893350651",
+      "name_lat": "Nuvara Elia Shotokan",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -478,15 +504,6 @@
       "breed": "РУССКО-ЕВРОПЕЙСКАЯ ЛАЙКА",
       "breed_en": "RUSSKO-EVROPEISKAYA LAIKA (RUSSIAN-EUROPEAN LAIKA)",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "229827164",
-      "name_lat": "NURAGUS OVELENDGE",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -517,12 +534,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "600358699",
+      "id": "1213153863",
       "name_lat": "NUMEROR'S YULLARIEL' AT MELODY HAUS",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1064965578",
+      "name_lat": "NUALA DE'LALUNA ( )",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -544,12 +570,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1675943180",
+      "id": "997009067",
+      "name_lat": "NUAR BILGO LILU",
+      "name_ru": "НУАР БИЛГО ЛИЛУ",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "breed_en": "ENGLISH SETTER",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "224041192",
       "name_lat": "NUMEROR'S GALADRIELL",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "134497605",
+      "name_lat": "NUWARA ELIYA AMAZONIAN KAIMAN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -571,10 +615,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974021465",
+      "id": "1195808605",
       "name_lat": "NURME BARBAR ARGUS",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -589,19 +633,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "582248427",
+      "id": "337218311",
       "name_lat": "NUMEROR'S YUTRO FO OHOTY POISKA",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "986750428",
+      "id": "1972844504",
       "name_lat": "NUMEROR’S NELLAS",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -616,19 +660,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "134497605",
-      "name_lat": "NUWARA ELIYA AMAZONIAN KAIMAN",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "45024644",
+      "id": "367409408",
       "name_lat": "NUMEROR'S FINGOL'FIN",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -692,8 +727,7 @@
       "name_lat": "NU ART ISTORIYA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -747,16 +781,25 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1476231888",
+      "id": "498980276",
       "name_lat": "NUMEROR'S AMDIR",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "649553036",
+      "name_lat": "NUTELLA SO SWEET",
+      "name_ru": "",
+      "breed": "МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -823,15 +866,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "997009067",
-      "name_lat": "NUAR BILGO LILU",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
-      "breed_en": "ENGLISH SETTER",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "892987361",
       "name_lat": "NUALA DE'LALUNA",
       "name_ru": "",
@@ -886,12 +920,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "34475852",
+      "id": "275245353",
       "name_lat": "NUMEROR'S YAVAN",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР /",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -931,19 +965,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1179390863",
-      "name_lat": "NUMEROR’S YAHALL",
+      "id": "1715462479",
+      "name_lat": "NUMEROR'S BEYNTARY",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
+      "breed": "ЛЕГАВАЯ / HUNGARIAN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1715462479",
-      "name_lat": "NUMEROR'S BEYNTARY",
+      "id": "1179390863",
+      "name_lat": "NUMEROR’S YAHALL",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ / HUNGARIAN",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -985,6 +1019,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1780792738",
+      "name_lat": "NUVARA ELIYA VAILANGI LALA",
+      "name_ru": "НУВАРА ЭЛИЯ ВАИЛАНГИ ЛАЛА",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "769109490",
       "name_lat": "NUR-BERRY AVRORA",
       "name_ru": "",
@@ -1012,6 +1054,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1302551027",
+      "name_lat": "NUR-BERRI TSATSA",
+      "name_ru": "НУР-БЕРРИ ЦАЦА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "6710111",
       "name_lat": "NUBIRA STAR",
       "name_ru": "",
@@ -1030,10 +1081,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1347722592",
+      "id": "751861887",
       "name_lat": "NUWARA RLIYA AYSTRALIA",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1045,15 +1096,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "649553036",
-      "name_lat": "NUTELLA SO SWEET",
-      "name_ru": "",
-      "breed": "МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1084,6 +1126,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1660909396",
+      "name_lat": "NURGUSH EMSHAN",
+      "name_ru": "НУРГУШ ЕМШАН",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1188876012",
       "name_lat": "NUMEROR’S ARVEN",
       "name_ru": "",
@@ -1093,20 +1144,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "556275452",
+      "name_lat": "NUGA V SHOKOLADE S EGERSKOY SLOBODY",
+      "name_ru": "НУГА В ШОКОЛАДЕ С ЕГЕРСКОЙ СЛОБОДЫ",
+      "breed": "ШЕЛТИ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "599989249",
       "name_lat": "NUWARA ELIYA VELYA LAVELYA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "556275452",
-      "name_lat": "NUGA V SHOKOLADE S EGERSKOY SLOBODY",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1147,10 +1197,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "233503347",
+      "id": "431870170",
       "name_lat": "NUWARA ELIYA AMERIKA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1183,6 +1233,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "611763562",
+      "name_lat": "NUMEROR’S AMDIR",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ / HUNGARIAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "610202122",
       "name_lat": "NUMEROR'S ORTORIEN",
       "name_ru": "",
@@ -1192,10 +1251,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "249624398",
+      "id": "1249863954",
       "name_lat": "NUMEROR'S LITTLE ELF",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1210,19 +1269,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1980461379",
+      "id": "692005418",
       "name_lat": "NUBIAD LOVERLY TRUSSARDI",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "611763562",
-      "name_lat": "NUMEROR’S AMDIR",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ / HUNGARIAN",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1246,11 +1296,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1695695134",
+      "id": "830099970",
       "name_lat": "NUMEROR'S NELLAS",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1562909835",
+      "name_lat": "NUESTRA SENORA DEL ROSARIO",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН / DOBERMANN",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1291,10 +1349,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "2332423",
+      "id": "274161467",
       "name_lat": "NUMEROR’S NERDANEL’",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1318,20 +1376,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "68147051",
+      "id": "1272067922",
       "name_lat": "NUMBER ONE",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "87099966",
-      "name_lat": "NUOSTABUS VARNAS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "GERMAN PINSCHER",
+      "id": "1099944445",
+      "name_lat": "NUESTRA ESTRELLA",
+      "name_ru": "НУЭСТРА ЭСТРЕЛЛА",
+      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1363,10 +1421,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1998042803",
+      "id": "1785905204",
       "name_lat": "NUVARA ELIYA JACQUES-YVES COUSTEAU",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1399,15 +1457,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1099944445",
-      "name_lat": "NUESTRA ESTRELLA",
-      "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "596765897",
       "name_lat": "NUR TURAN KURABULUT",
       "name_ru": "",
@@ -1421,6 +1470,15 @@
       "name_lat": "NUR-AL-AIN BELITA MARIA HALLE",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1961548100",
+      "name_lat": "NUR-BERRI VASILIY",
+      "name_ru": "нур-берри василий",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1444,15 +1502,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1302551027",
-      "name_lat": "NUR-BERRI TSATSA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1409664112",
       "name_lat": "NUBUK",
       "name_ru": "",
@@ -1471,19 +1520,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "174556305",
-      "name_lat": "NUBIRA GOLD SUPER MISHKA",
+      "id": "1123326670",
+      "name_lat": "NUMBER ONE CEOLIN CORSO",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1961548100",
-      "name_lat": "NUR-BERRI VASILIY",
+      "id": "914220332",
+      "name_lat": "NUBIRA GOLD SUPER MISHKA",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1498,12 +1547,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1123326670",
-      "name_lat": "NUMBER ONE CEOLIN CORSO",
+      "id": "771536057",
+      "name_lat": "NUAR LEDI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 3,
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1512,15 +1560,6 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "22362576",
-      "name_lat": "NUOZHMIOS RUDAS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "GERMAN PINSCHER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1547,15 +1586,6 @@
       "name_lat": "NUR-BERRY VASILIY",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1660909396",
-      "name_lat": "NURGUSH EMSHAN",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1606,10 +1636,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "833264424",
+      "id": "240287564",
       "name_lat": "NUMEROR’S OLLARIEL’",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1619,15 +1649,6 @@
       "name_lat": "NUMEROR’S MAYBELLIEN",
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "929853002",
-      "name_lat": "NUWARA ELIYA EILANDO",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1669,10 +1690,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "209639409",
+      "id": "1217129838",
       "name_lat": "NUSHA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1700,6 +1721,15 @@
       "name_lat": "NUMBER ONE",
       "name_ru": "",
       "breed": "DOBERMANN BLACK & TAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1104774195",
+      "name_lat": "NUZHNAYA SHTUCHKA V",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1741,10 +1771,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1796257276",
+      "id": "1907233545",
       "name_lat": "NUNSHUAN NAIENGO XUTANG",
       "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "breed": "ЧУНЦИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1759,10 +1789,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1247746364",
+      "id": "1826041272",
       "name_lat": "NUMEROR'S FENDULIAS",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1840,19 +1870,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1564635549",
-      "name_lat": "NUVARA ELIYA VAILANGI LALA",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "291291846",
+      "id": "1281110602",
       "name_lat": "NUMEROR'S LARIEL' FOR MELODYHOUSE",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1921,19 +1942,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810190805",
+      "id": "632580922",
       "name_lat": "Nuwara Eliya Uelskiy Prints",
       "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1104774195",
-      "name_lat": "NUZHNAYA SHTUCHKA V",
-      "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

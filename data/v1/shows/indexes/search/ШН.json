@@ -1,31 +1,30 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ШН",
-  "count": 9,
+  "count": 12,
   "dogs": [
     {
-      "id": "1039978403",
+      "id": "920849843",
       "name_lat": "ШНАЙДЕР ФЭСТ ГЕФЕСТ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ШНАЙДЕР ФЭСТ ГЕФЕСТ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "413120073",
-      "name_lat": "ШНАЙДЕР ФЭСТ ГАРДИАН ЭНДЖЕЛ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
+      "id": "63955283",
+      "name_lat": "ШНАЙДЕР ФЭСТ БЛИЦЗИГ АНАБЭЛЬ",
+      "name_ru": "ШНАЙДЕР ФЭСТ БЛИЦЗИГ АНАБЭЛЬ",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "581692346",
-      "name_lat": "ШНАЙДЕР ФЭСТ БЛИЦЗИГ АНАБЭЛЬ",
+      "id": "1958584605",
+      "name_lat": "ШНАЙДЕР ФЭСТ ГАРДИАН ЭНДЖЕЛ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -33,17 +32,17 @@
     {
       "id": "1590593093",
       "name_lat": "ШНАЙДЕР ФЭСТ БЛИЦЗИ АНАБЭЛЬ",
-      "name_ru": "",
+      "name_ru": "ШНАЙДЕР ФЭСТ БЛИЦЗИ АНАБЭЛЬ",
       "breed": "БУЛЬТЕРЬЕР БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "600183097",
+      "id": "317773805",
       "name_lat": "ШНАЙДЕР ФЭСТ АФРИКА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ШНАЙДЕР ФЭСТ АФРИКА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -58,6 +57,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "807630464",
+      "name_lat": "ШНАПСЕР Х4",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "383433532",
       "name_lat": "ШНАПИ",
       "name_ru": "",
@@ -67,19 +74,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "70622844",
-      "name_lat": "ШНАЙДЕР ФЭСТ АРИЯ",
+      "id": "160275149",
+      "name_lat": "Ш-НАОМИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "429164594",
+      "id": "1070373837",
+      "name_lat": "ШНАПС",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "985535642",
+      "name_lat": "ШНАЙДЕР ФЭСТ АРИЯ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "639220937",
       "name_lat": "ШНАЙДЕР ХАЙ ВОЛТИДЖ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

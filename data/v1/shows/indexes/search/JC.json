@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "JC",
-  "count": 7,
+  "count": 11,
   "dogs": [
     {
       "id": "157882005",
@@ -10,6 +10,15 @@
       "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "729503453",
+      "name_lat": "J'COUPS DE COER FOM VAVULIN HOF",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -40,6 +49,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1019203676",
+      "name_lat": "JCAC ETTAR-MENEL ТАЙСКИЙ РИДЖБЕК NADZEYA 25.07..2026 ЮДЖИНА С ФЛЭЙМ",
+      "name_ru": "",
+      "breed": "MELNIKAVA",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "802394954",
+      "name_lat": "J*COUPS DE COER FOM VAVULIN HOF",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "707728332",
       "name_lat": "JCH. RUDOLFINA MADAME CHIC VITORAZ",
       "name_ru": "",
@@ -58,12 +84,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "766485688",
+      "id": "831578950",
       "name_lat": "JC RING ANGELS DJANGAR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "300422815",
+      "name_lat": "JCAC АТЛАНТ ЕВРОПЕЙСКАЯ ОВЧАРКА NADZEYA 25.07..2026 MELNIKAVA",
+      "name_ru": "",
+      "breed": "ВОСТОЧНО-",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

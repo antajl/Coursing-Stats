@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "MF",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "240677490",
+      "name_lat": "MFSTIFWAY NUYING BAO",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "962714628",
+      "name_lat": "MFGNETIC MAGIC ONLY YOU",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

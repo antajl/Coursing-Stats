@@ -1,24 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЯШ",
-  "count": 111,
+  "count": 113,
   "dogs": [
     {
-      "id": "214972959",
-      "name_lat": "ЯШМА ЗОЛОТАЯ С БЕРЕГА ДОНА",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "id": "258351721",
+      "name_lat": "ЯША ИЗ ДОМА КАРМАНОВОЙ",
+      "name_ru": "ЯША ИЗ ДОМА КАРМАНОВОЙ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "258351721",
-      "name_lat": "ЯША ИЗ ДОМА КАРМАНОВОЙ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "214972959",
+      "name_lat": "ЯШМА ЗОЛОТАЯ С БЕРЕГА ДОНА",
+      "name_ru": "ЯШМА ЗОЛОТАЯ С БЕРЕГА ДОНА",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "1319885980",
       "name_lat": "ЯШМА ЗОЛОТАЯ С ЦЕМЕССКОЙ ДОЛИНЫ",
-      "name_ru": "",
+      "name_ru": "ЯШМА ЗОЛОТАЯ С ЦЕМЕССКОЙ ДОЛИНЫ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 19,
@@ -60,17 +60,17 @@
     {
       "id": "511473560",
       "name_lat": "ЯШМА ЗОЛОТАЯ",
-      "name_ru": "",
+      "name_ru": "ЯШМА ЗОЛОТАЯ",
       "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "715599466",
+      "id": "31329412",
       "name_lat": "ЯШМА ИЗ СЛАВЯНСКОЙ НАДЕЖДЫ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ЯШМА ИЗ СЛАВЯНСКОЙ НАДЕЖДЫ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -94,12 +94,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1521498753",
+      "id": "119461829",
       "name_lat": "ЯШМА",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1488706172",
+      "name_lat": "ЯШМА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -112,27 +121,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "957372463",
+      "id": "420976734",
       "name_lat": "ЯШМА ИЗ СТАИ ИГЭЛС",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1781208615",
-      "name_lat": "ЯША ГОРДОСТЬ НАША",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "257118454",
       "name_lat": "ЯШМА ЗОЛОТАЯ ИЗ ЭЛИСГРАДА",
-      "name_ru": "",
+      "name_ru": "ЯШМА ЗОЛОТАЯ ИЗ ЭЛИСГРАДА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
@@ -141,7 +141,7 @@
     {
       "id": "1494407855",
       "name_lat": "ЯШМА БЬЮТИ ПИКАСО",
-      "name_ru": "",
+      "name_ru": "ЯШМА БЬЮТИ ПИКАСО",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 6,
@@ -157,27 +157,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810000994",
-      "name_lat": "ЯШМА ЗОЛОТКО",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "88658380",
       "name_lat": "ЯШКИНО НАСЛЕДИЕ МАРКИЗА АНГЕЛОВ",
-      "name_ru": "",
+      "name_ru": "ЯШКИНО НАСЛЕДИЕ МАРКИЗА АНГЕЛОВ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "89142477",
+      "name_lat": "Яшма Из Идилии Контрастов",
+      "name_ru": "Яшма Из Идилии Контрастов",
+      "breed": "СЕРЕБРОМШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "412493986",
       "name_lat": "ЯШЕР ЭНТОНИ МАГНУС",
-      "name_ru": "",
+      "name_ru": "ЯШЕР ЭНТОНИ МАГНУС",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
@@ -193,19 +193,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "59223234",
+      "id": "692087912",
+      "name_lat": "ЯШКА САН РЕЙ",
+      "name_ru": "ЯШКА САН РЕЙ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "298695097",
       "name_lat": "ЯШМА ЗОЛОТАЯ ИЗ БЕРЕЗОВОГО ЛОГА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЯШМА ЗОЛОТАЯ ИЗ БЕРЕЗОВОГО ЛОГА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "520473711",
+      "id": "1736304611",
       "name_lat": "ЯШМА ИЗ КАЗАНСКОГО ХАНСТВА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -213,7 +222,7 @@
     {
       "id": "17340836",
       "name_lat": "ЯШМА УНИКАЛЬНАЯ МАГИЧЕСКАЯ СИЛА",
-      "name_ru": "",
+      "name_ru": "ЯШМА УНИКАЛЬНАЯ МАГИЧЕСКАЯ СИЛА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 7,
@@ -222,17 +231,17 @@
     {
       "id": "574166690",
       "name_lat": "ЯША ФОМ ХАУС ШИРАН",
-      "name_ru": "",
+      "name_ru": "ЯША ФОМ ХАУС ШИРАН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "98461101",
+      "id": "509256208",
       "name_lat": "ЯШМА 2 ИЗ ГАРЕМА БЕЛЫХ ДИВ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "name_ru": "ЯШМА 2 ИЗ ГАРЕМА БЕЛЫХ ДИВ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -247,28 +256,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "89142477",
-      "name_lat": "Яшма Из Идилии Контрастов",
-      "name_ru": "",
-      "breed": "СЕРЕБРОМШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "754882978",
       "name_lat": "ЯШМА ЧЕРНАЯ ФРОМ СТОУНХЭНДЖ",
-      "name_ru": "",
+      "name_ru": "ЯШМА ЧЕРНАЯ ФРОМ СТОУНХЭНДЖ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "30274575",
+      "id": "237032632",
       "name_lat": "ЯШМА ТАЙГЕР СТАР",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "ЯШМА ТАЙГЕР СТАР",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -276,19 +276,10 @@
     {
       "id": "1541827387",
       "name_lat": "ЯШМА ИЗ ВЕРЛИНА ЛЕСА",
-      "name_ru": "",
+      "name_ru": "ЯШМА ИЗ ВЕРЛИНА ЛЕСА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "132536405",
-      "name_lat": "ЯШКА САН РЕЙ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -301,10 +292,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "772712227",
+      "id": "414963401",
       "name_lat": "ЯШМА ВАНДЕФУЛ ЛАЙФ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -339,7 +330,7 @@
     {
       "id": "1081507285",
       "name_lat": "ЯШМА ШЕЙК ЙОР ХЭНДС КВИН ОФ ЗЕ РИНГС",
-      "name_ru": "",
+      "name_ru": "ЯШМА ШЕЙК ЙОР ХЭНДС КВИН ОФ ЗЕ РИНГС",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -348,7 +339,7 @@
     {
       "id": "173334907",
       "name_lat": "ЯШКИНО НАСЛЕДИЕ СЮЗАННА",
-      "name_ru": "",
+      "name_ru": "ЯШКИНО НАСЛЕДИЕ СЮЗАННА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -364,10 +355,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1490763790",
+      "id": "444736352",
       "name_lat": "ЯШМА РЕДА",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -400,10 +391,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "102398665",
+      "id": "1486771057",
       "name_lat": "ЯШМА",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "СЕТТЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1659194708",
+      "name_lat": "ЯШМА",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -445,19 +444,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "804884409",
+      "name_lat": "ЯШЕЙЛА БОН ТУ ВИН ВИННЕС",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1064118016",
       "name_lat": "ЯШМА",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1715812976",
-      "name_lat": "ЯШКА САН РЭЙ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -490,6 +488,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "159056305",
+      "name_lat": "ЯШМА ВАНДЕРФУЛ ЛАЙФ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1611861678",
+      "name_lat": "Я ШОКОБОЙ МЕЧТЫ СБЫВАЮТСЯ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "563916623",
       "name_lat": "ЯШКИНО НАСЛЕДИЕ САМАНТА",
       "name_ru": "",
@@ -508,19 +524,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "788590251",
-      "name_lat": "ЯШМА ВАНДЕРФУЛ ЛАЙФ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "71342173",
+      "id": "727658496",
       "name_lat": "ЯША ГОРОДСКОЙ ПИЖОН",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -528,7 +535,7 @@
     {
       "id": "252837729",
       "name_lat": "ЯШМА 1 ИЗ ДОМА АЛЛЕНС",
-      "name_ru": "",
+      "name_ru": "ЯШМА 1 ИЗ ДОМА АЛЛЕНС",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 3,
@@ -544,10 +551,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "526014019",
+      "id": "1667995383",
       "name_lat": "ЯШКА БАЛОВНИЦА",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -580,10 +587,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "195276546",
+      "id": "664181841",
       "name_lat": "ЯШКА ВЕСЁЛЫЙ БАЛАГУР",
-      "name_ru": "",
-      "breed": "СЕРЕБРОМШАР АМЕРИКАНСКИЙ",
+      "name_ru": "ЯШКА ВЕСЁЛЫЙ БАЛАГУР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -643,19 +650,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "244394958",
+      "name_lat": "ЯШМА ВОСТОЧНАЯ СКАЗКА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "735250821",
       "name_lat": "ЯШМА",
       "name_ru": "",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1488706172",
-      "name_lat": "ЯШМА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -715,6 +721,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "564242747",
+      "name_lat": "ЯШМА (К.Ш.)",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1174193749",
       "name_lat": "ЯШИН АСКАР ХАННА",
       "name_ru": "",
@@ -733,19 +747,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "56642207",
+      "id": "292662712",
       "name_lat": "ЯШМА ФОМ ХАУС ДЕМИРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1786716643",
+      "id": "1771400906",
       "name_lat": "ЯШЕРРИ ЗЛАТА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -769,10 +783,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1490906296",
+      "id": "1060905437",
       "name_lat": "ЯШКИНО НАСЛЕДИЕ УРСА ВЕЛИКОЛЕПНЫЙ",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -841,10 +855,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "818969053",
+      "id": "1522849152",
       "name_lat": "ЯШМА С ПРИМОРСКОГО БАСТИОНА",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -895,6 +909,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "805583592",
+      "name_lat": "ЯШКИНО НАСЛЕДИЕ РИЯ ДЕ БЕРИ БЛЮЗ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "352643657",
       "name_lat": "ЯШКИНО НАСЛЕДИЕ ФОРТУНА",
       "name_ru": "",
@@ -931,10 +953,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "503544429",
+      "id": "164491205",
       "name_lat": "ЯШМА АУС ШОГЕР ХОФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -958,10 +980,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1168150865",
+      "id": "1253172178",
       "name_lat": "ЯШЕР ФОМ ФРОСТЕН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -978,15 +1000,6 @@
     {
       "id": "1026131138",
       "name_lat": "Яшка Очаровашка YASHKA OCHAROVASHKA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "527619405",
-      "name_lat": "ЯШМА ОГНЕННАЯ ДОКСИ",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",

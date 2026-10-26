@@ -1,0 +1,42 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ДК",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1557288104",
+      "name_lat": "ДК ОРСЕ МАК ФЛАЙ ФЕЕЧКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "229928516",
+      "name_lat": "Д-КЕРРИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1800991576",
+      "name_lat": "Д-КХРИСТМАС НИГХТ ИЗ СТРАНЫ ГРЕЗ",
+      "name_ru": "Д-КХРИСТМАС НИГХТ ИЗ СТРАНЫ ГРЕЗ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127418306",
+      "name_lat": "Д-КУПЕР ХАМЕР 2 ИЗ ЛАДА ПОМ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    }
+  ]
+}

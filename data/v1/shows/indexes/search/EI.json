@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EI",
-  "count": 133,
+  "count": 145,
   "dogs": [
     {
       "id": "935306248",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "IRISH RED SETTER",
-      "total_shows": 51,
+      "total_shows": 58,
       "competition_dog_id": null
     },
     {
@@ -18,7 +18,7 @@
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -49,19 +49,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1645460806",
+      "id": "463261765",
       "name_lat": "EIDOS GALAKSI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "25041965",
+      "id": "215229186",
       "name_lat": "EIGAN THE KEEPER OF HAPPENESS",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКИЙ АНГЛИЙСКИЙ",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -103,19 +103,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1004384068",
+      "id": "33825738",
       "name_lat": "EIGENSCHAFT VIKTORIANA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "815578187",
+      "id": "1005831772",
       "name_lat": "EIGENSCHAFT ZLATA FOR OREL LAND",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -126,7 +126,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -144,14 +144,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "760826916",
+      "id": "245689979",
       "name_lat": "EIGENSCHAFT STING",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -171,7 +171,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -211,10 +211,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1514449754",
+      "id": "1519226481",
       "name_lat": "EIDOS ABRAKADABRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -283,20 +283,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1889149933",
-      "name_lat": "EIFORIYA NE DLYA VSEH",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "1661663738",
       "name_lat": "EIGENSCHAFT AYS KRIM",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1889149933",
+      "name_lat": "EIFORIYA NE DLYA VSEH",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
     },
@@ -324,7 +324,7 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -337,10 +337,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "678779904",
+      "id": "772727381",
       "name_lat": "EINSTEIN IZ TSVETNIKA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -352,6 +352,15 @@
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "848319755",
+      "name_lat": "EIGENSCHAFT ZHARA ( ) ЭЙГЕНСШАФТ ВИВА БАРХАТНОЕ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -370,6 +379,49 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1488535572",
+      "name_lat": "EIGENSCHAFT SHARMEL' ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1529717429",
+      "name_lat": "EITARO MAMORU IZ LADOZHSKOGO DOMA",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "592470194",
+      "name_lat": "EINSTEIN",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "867176293",
+      "name_lat": "EIRA'S HOWL ATREUS LIGHT AT NIGHT",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1051451537",
+      "name_lat": "EIGENSCHAFT NILSON",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -409,15 +461,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1130526486",
-      "name_lat": "EIGENSCHAFT ZHARA ( )",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "59020881",
       "name_lat": "EIGENSCHAFT ZONE OF FIRE",
       "name_ru": "",
@@ -427,10 +470,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "914080964",
+      "id": "1233841371",
       "name_lat": "EIGENSCHAFT GABRIELA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -451,15 +494,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1488535572",
-      "name_lat": "EIGENSCHAFT SHARMEL' ( )",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -517,15 +551,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1051451537",
-      "name_lat": "EIGENSCHAFT NILSON",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "357433303",
       "name_lat": "EISENFEST CONTINENTAL",
       "name_ru": "",
@@ -535,28 +560,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1529717429",
-      "name_lat": "EITARO MAMORU IZ LADOZHSKOGO DOMA",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1301710922",
+      "id": "1654060566",
       "name_lat": "EIS VENTURA",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1488702906",
+      "id": "735830161",
       "name_lat": "EIGOS KURAZH 2",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -571,10 +587,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "673717499",
+      "id": "163489843",
       "name_lat": "EINSTEIN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -589,21 +605,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1416857467",
+      "id": "871032748",
       "name_lat": "EIDOS TAMARINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "543564343",
+      "id": "880294699",
       "name_lat": "Eigenschaft Konan",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -625,21 +641,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588112974",
+      "id": "1795469005",
       "name_lat": "EIDOS BASTINDA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "848319755",
-      "name_lat": "EIGENSCHAFT ZHARA ( ) ЭЙГЕНСШАФТ ВИВА БАРХАТНОЕ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -652,19 +659,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1410916900",
+      "id": "6704896",
       "name_lat": "EIS VENTURA",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ / PUG BLACK",
+      "breed": "МОПС ЧЕРНЫЙ / PUG BLACK",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "201883097",
+      "id": "1237176698",
       "name_lat": "EISENWILLE VASABI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -674,6 +681,15 @@
       "name_lat": "EIGENSCHAFT HAPPY ( )",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40342204",
+      "name_lat": "ÇEŞIDA NAMIRA'S HEPPYNESS",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -706,19 +722,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1389921645",
+      "id": "1858379270",
       "name_lat": "EIGENSCHAFT AKIRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1730824186",
-      "name_lat": "EIDOS ELLA",
+      "id": "541679753",
+      "name_lat": "EIGENSCHAFT HUGO",
+      "name_ru": "",
+      "breed": "WELSH CORGI PEMBROKE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "178882654",
+      "name_lat": "EIGENSHAFT ZHAKERIYA",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "396752593",
+      "name_lat": "EIDOS ELLA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -733,28 +765,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "803487610",
+      "id": "1909258833",
       "name_lat": "EIDOS GRENLANDIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1723653732",
+      "id": "100541627",
       "name_lat": "EIDOS DINASTIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "178882654",
-      "name_lat": "EIGENSHAFT ZHAKERIYA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -769,11 +792,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "34820049",
+      "id": "1415570028",
       "name_lat": "EIGENSCHAFT BAFFI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103170239",
+      "name_lat": "EIGENSCHAFT PEPPER MINT",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -805,6 +836,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1315636678",
+      "name_lat": "EIGENSCHAFT DAYSI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "12182771",
       "name_lat": "EIGENSCHAFT SHKIPER",
       "name_ru": "",
@@ -814,19 +854,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1259051215",
+      "id": "41433747",
       "name_lat": "EI-DZHEI",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1668693658",
+      "id": "1620381105",
       "name_lat": "EIDOS VANZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -850,10 +890,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "793970629",
+      "id": "211316952",
       "name_lat": "EIGENSCHAFT EMMY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -868,10 +908,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "200004367",
+      "id": "231378504",
       "name_lat": "EIDOS TIMUR 2",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -895,20 +935,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "893116679",
-      "name_lat": "EIGENSCHAFT DAYSI",
+      "id": "1709780035",
+      "name_lat": "EIGENSCHAFT BRAYNA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1809956870",
-      "name_lat": "EIGENSCHAFT BRAYNA",
+      "id": "940594048",
+      "name_lat": "EI NET RAVNYH DLYA FIRE LYNX",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -922,10 +961,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "165400391",
+      "id": "1484709780",
       "name_lat": "EIN NOLA",
       "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -985,6 +1024,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "245815384",
+      "name_lat": "EIGENSCHAFT YUNITI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "486449637",
+      "name_lat": "EIGENSCHAFT YULIANA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1046138845",
       "name_lat": "EIGENSCHAFT VIVA BARKHATNOE USHKO",
       "name_ru": "",
@@ -1012,6 +1067,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1641677537",
+      "name_lat": "E-IZABEL VOM HAUSE BRIZZARD",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1686238623",
       "name_lat": "EIFORIYA NE DLYA VSEH (Д.Ш)",
       "name_ru": "",
@@ -1021,19 +1085,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "80642077",
+      "id": "1160667093",
       "name_lat": "EIDOS CHILITA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1673731938",
+      "id": "563537305",
       "name_lat": "EIDOS USLADA 2",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1048,19 +1112,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "134496336",
+      "id": "742518079",
       "name_lat": "EISENWILLE HELMA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "277183107",
+      "id": "1775464231",
       "name_lat": "EIDOS YURAN DLYA KAZANSKOY STORONY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1075,19 +1139,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1087536393",
+      "id": "612692426",
       "name_lat": "EIDOS KHILDA II",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1056641355",
+      "id": "1066937180",
       "name_lat": "EIDOS RASHEL II",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1102,10 +1166,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "189841485",
+      "id": "553577894",
       "name_lat": "EIDOS AKUNA-MATATA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1129,28 +1193,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1293040341",
+      "id": "1010190478",
       "name_lat": "EIDOS KURAZH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1605663826",
+      "id": "1471539241",
       "name_lat": "EIDOS INTRIGA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1689267363",
+      "id": "250470452",
       "name_lat": "EISENWILLE KARNEL' ZHARRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1165,28 +1229,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "336605476",
+      "id": "986454963",
+      "name_lat": "EIRO DRIM BRIZ",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1537553275",
       "name_lat": "EIDOS KORONA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "614207972",
+      "id": "413002811",
       "name_lat": "EIDOS ILLYUZIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1366466807",
+      "id": "575102096",
       "name_lat": "EIDOS ZAMBIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1197,6 +1269,30 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1630863261",
+      "name_lat": "EIGON IZ BELOGO JARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "775742419",
+      "name_lat": "EIGENSCHAFT PERSIAN BEAYTY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1880747168",
+      "name_lat": "EIGENSCHAFT ZHERIKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     }

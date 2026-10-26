@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЖЭ",
-  "count": 27,
+  "count": 29,
   "dogs": [
     {
       "id": "1908208457",
       "name_lat": "ЖЭТЭМ СЛАДКАЯ НОЧЬ",
-      "name_ru": "",
+      "name_ru": "ЖЭТЭМ СЛАДКАЯ НОЧЬ",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 18,
@@ -22,6 +22,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "689847806",
+      "name_lat": "ЖЭС",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1251118618",
       "name_lat": "ЖЭБАРРА МИЛЛЯ",
       "name_ru": "",
@@ -31,28 +40,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1267671517",
-      "name_lat": "ЖЭС",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "id": "166889926",
+      "name_lat": "Ж'ЭСТИ БЕРЕНИС ФРОМ УАЙТ НАЙТ",
+      "name_ru": "Ж'ЭСТИ БЕРЕНИС ФРОМ УАЙТ НАЙТ",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1482563468",
-      "name_lat": "ЖЭС",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "829819023",
+      "id": "245891262",
       "name_lat": "ЖЭТЕМ ИЗ ЗОЛОТЫХ ГРЕЗ",
-      "name_ru": "",
-      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР /",
+      "name_ru": "ЖЭТЕМ ИЗ ЗОЛОТЫХ ГРЕЗ",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -69,7 +69,7 @@
     {
       "id": "1015068469",
       "name_lat": "ЖЭЙК-ЖЭС ИЗ СИЛЬНОЙ СТАИ",
-      "name_ru": "",
+      "name_ru": "ЖЭЙК-ЖЭС ИЗ СИЛЬНОЙ СТАИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
@@ -90,7 +90,7 @@
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -139,10 +139,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "210935468",
+      "id": "1905205897",
       "name_lat": "ЖЭ ТЭМ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -166,10 +166,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "250324633",
+      "id": "309041412",
       "name_lat": "ЖЭЙ ДИ БИГ БОЙ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ЖЭЙ ДИ БИГ БОЙ",
+      "breed": "BULL TERRIER STANDART",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -202,10 +202,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1828308786",
+      "id": "454172595",
       "name_lat": "ЖЭДОР ЛЕ ЖАСМИН ОФ ГОЛД КОЛЛЕКШН",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "512136981",
+      "name_lat": "Ж*ЭСТИ БЕРЕНИС ФРОМ УАЙТ НАЙТ",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -229,10 +238,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "566425358",
+      "id": "923644386",
       "name_lat": "ЖЭЙЗИ ШЕЙЛИН",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -243,6 +252,14 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "939443528",
+      "name_lat": "ЖЭН БРЕНДОН ВЕЛЛИКОЛЕПНЫЙ",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 1,
       "competition_dog_id": null
     }

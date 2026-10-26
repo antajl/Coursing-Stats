@@ -1,22 +1,22 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ВС",
-  "count": 39,
+  "count": 50,
   "dogs": [
     {
       "id": "584162279",
       "name_lat": "ВСЕЛЕННАЯ КРАСОТЫ ЭВРИДИКА",
-      "name_ru": "",
+      "name_ru": "ВСЕЛЕННАЯ КРАСОТЫ ЭВРИДИКА",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1257700202",
+      "id": "1713393083",
       "name_lat": "ВСЕЛЕННАЯ СОЛЕЙЛ А ЛЯ РУС",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "name_ru": "ВСЕЛЕННАЯ СОЛЕЙЛ А ЛЯ РУС",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -24,7 +24,7 @@
     {
       "id": "18827571",
       "name_lat": "ВСЕЛЕННАЯ КРАСОТЫ",
-      "name_ru": "",
+      "name_ru": "ВСЕЛЕННАЯ КРАСОТЫ",
       "breed": "GOLDEN",
       "breed_en": "",
       "total_shows": 15,
@@ -33,17 +33,17 @@
     {
       "id": "269717322",
       "name_lat": "ВСЕЛЕННАЯ КРАСОТЫ ВЕРЕДА",
-      "name_ru": "",
+      "name_ru": "ВСЕЛЕННАЯ КРАСОТЫ ВЕРЕДА",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "51312757",
+      "id": "118534142",
       "name_lat": "ВСЕЛЕННОЙ",
       "name_ru": "",
-      "breed": "БИГЛЬ РЫЖИЙ БРЕТОНСКИЙ БАССЕТ РЫЖИЙ БРЕТОНСКИЙ БАССЕТ",
+      "breed": "БИГЛЬ РЫЖИЙ БРЕТОНСКИЙ БАССЕТ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -51,19 +51,10 @@
     {
       "id": "321034942",
       "name_lat": "ВСЕЛЕННАЯ КРАСОТЫ КАТРИН",
-      "name_ru": "",
+      "name_ru": "ВСЕЛЕННАЯ КРАСОТЫ КАТРИН",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "606062729",
-      "name_lat": "ВСЕСЛАВА СЛАВНАЯ",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -78,17 +69,8 @@
     {
       "id": "515195747",
       "name_lat": "ВСЕГДА ВАШ ШЕРЛОК",
-      "name_ru": "",
+      "name_ru": "ВСЕГДА ВАШ ШЕРЛОК",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1056154788",
-      "name_lat": "ВСЕСЛАВА ИЗ СТРАНЫ ЦВЕТОВ",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -96,19 +78,27 @@
     {
       "id": "1167599263",
       "name_lat": "ВСЕМИЛА ИЗ СВИТЫ ЕКАТЕРИНЫ",
-      "name_ru": "",
+      "name_ru": "ВСЕМИЛА ИЗ СВИТЫ ЕКАТЕРИНЫ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1086755610",
-      "name_lat": "ВСЯ ТАКАЯ ТАИНСТВЕННАЯ ФИБИ БУФФЕ",
+      "id": "529264916",
+      "name_lat": "В'СТИЛЕ ОЛЕАНЫ МИЛЛЕНИУМ",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "943954394",
+      "name_lat": "ВСЕГДА ЛУЧШАЯ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -121,21 +111,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1725130814",
+      "id": "1021424839",
       "name_lat": "ВСЕНЕЖА ЖЕМЧУЖИНА",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1573519219",
-      "name_lat": "ВСЕГДА ЛУЧШАЯ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 3,
+      "id": "353689928",
+      "name_lat": "ВСЕЛЕННАЯ ИЗ ДОМА БЕННЕТЫ",
+      "name_ru": "ВСЕЛЕННАЯ ИЗ ДОМА БЕННЕТЫ",
+      "breed": "СЕНБЕРНАР короткошерстный",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -143,15 +132,6 @@
       "name_lat": "ВСЕСЛАВ С КРАСНОГО ЯРА",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1015426984",
-      "name_lat": "ВСЕСЛАВА ИЗ ВЬЮГИ ТЕНЕЙ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -193,10 +173,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "894625985",
+      "id": "1910372917",
       "name_lat": "ВСЕЛЕННАЯ СТАФФ ГРЕЙСИ УЛЬМАН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -207,6 +187,23 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1827907886",
+      "name_lat": "В'СТИЛЕ ОЛЕАНЫ ОПТИМА ЛИЗ КОРОН ДЖОН RUS DOMINATUS",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1950855490",
+      "name_lat": "ВСЕ ВРЕМЕНА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -229,12 +226,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1427430206",
+      "id": "1723334656",
       "name_lat": "ВСЕМОГУЩИЙ АРГОН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1342332016",
+      "name_lat": "В'САТУ",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -244,6 +250,23 @@
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1039883615",
+      "name_lat": "В-СКОЛЬ",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "36853474",
+      "name_lat": "ВСЕЛЮБЯЩАЯ ЛАДА",
+      "name_ru": "ВСЕЛЮБЯЩАЯ ЛАДА",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -258,17 +281,8 @@
     {
       "id": "47432591",
       "name_lat": "ВСЕМОГУЩИЙ БЕЛЫЙ ПРИЗРАК КАРАКСЕС",
-      "name_ru": "",
+      "name_ru": "ВСЕМОГУЩИЙ БЕЛЫЙ ПРИЗРАК КАРАКСЕС",
       "breed": "AMERICAN STAFFORDSHIRE",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1207786949",
-      "name_lat": "ВСЕЛЮБЯЩАЯ ЛАДА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -283,10 +297,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "171319063",
+      "id": "358345865",
+      "name_lat": "ВСЕСЛАВА",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1175272797",
+      "name_lat": "В'СЕН ЛОРАН",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1390183408",
       "name_lat": "ВСЕЛЕННАЯ С ВЯТСКИХ ХОЛМОВ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "199834115",
+      "name_lat": "В СТИЛЕ ОЛЕАНЫ АРИСТОКРАТ",
+      "name_ru": "",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / KING CHARLES SPANIEL",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "220607115",
+      "name_lat": "В-СЕВЕРНОЕ СИЯНИЕ АГАТ",
+      "name_ru": "",
+      "breed": "SIBERIAN HUSKY",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -310,10 +359,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "151528401",
+      "id": "613810796",
       "name_lat": "ВСЕМ НА ЗАГЛЯДЕНИЕ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -324,6 +373,30 @@
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1342581684",
+      "name_lat": "ВСЕМИ ВСЕМ МИЛ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "175715103",
+      "name_lat": "ВСЕМ НА ЗАГЛЯДЕНЬЕ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "755413951",
+      "name_lat": "ВСЕЛЕНСКАЯ ЛЮБОВЬ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -351,6 +424,22 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "194200661",
+      "name_lat": "ВСЕЛЕННАЯ СТАФФОВ И БУЛЛИ ПЭРИС",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "972797622",
+      "name_lat": "ВСЕЛЕННАЯ СТАФОВ И БУЛЛИ ПУМА",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

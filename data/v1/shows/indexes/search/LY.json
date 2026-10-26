@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "LY",
-  "count": 495,
+  "count": 541,
   "dogs": [
     {
       "id": "1060877480",
@@ -9,7 +9,16 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
-      "total_shows": 57,
+      "total_shows": 62,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1088966179",
+      "name_lat": "LYUMEN MUNDI NAZAR",
+      "name_ru": "ЛЮМЕН МУНДИ НАЗАР",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -22,12 +31,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1088966179",
-      "name_lat": "LYUMEN MUNDI NAZAR",
+      "id": "163175831",
+      "name_lat": "LYUDZHEN BRIGHT WINNER",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 27,
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -36,16 +45,7 @@
       "name_ru": "",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "BULLMASTIFF",
-      "total_shows": 44,
-      "competition_dog_id": null
-    },
-    {
-      "id": "163175831",
-      "name_lat": "LYUDZHEN BRIGHT WINNER",
-      "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "BULLMASTIFF",
-      "total_shows": 27,
+      "total_shows": 45,
       "competition_dog_id": null
     },
     {
@@ -54,7 +54,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -81,7 +81,7 @@
       "name_ru": "",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "BULLMASTIFF",
-      "total_shows": 57,
+      "total_shows": 58,
       "competition_dog_id": null
     },
     {
@@ -94,12 +94,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1320978646",
+      "name_lat": "L'YANA DE VISTA TSUKIMI",
+      "name_ru": "Л'ЯНА ДЭ ВИСТА ЦУКИМИ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 46,
+      "competition_dog_id": null
+    },
+    {
       "id": "1493968437",
       "name_lat": "LYUDZHEN NAVIGATOR",
-      "name_ru": "",
+      "name_ru": "ЛЮДЖЕН НАВИГАТОР",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "BULLMASTIFF",
-      "total_shows": 29,
+      "total_shows": 43,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1075104608",
+      "name_lat": "LYURUA DYURING MASK OF ZORRO",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -112,6 +130,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "545193398",
+      "name_lat": "LYUDZHEN BEST OF ALL",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "438159687",
       "name_lat": "LYUPRI CYCLONE FROM THE SKY",
       "name_ru": "",
@@ -121,21 +148,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1075104608",
-      "name_lat": "LYURUA DYURING MASK OF ZORRO",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 12,
+      "id": "470224518",
+      "name_lat": "LYURUA DYURING MAMORU",
+      "name_ru": "ЛЮРУА ДЮРИНГ МАМОРУ",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "470224518",
-      "name_lat": "LYURUA DYURING MAMORU",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 15,
+      "id": "602573278",
+      "name_lat": "LYUBAVA VIKULISHNA S NEVSKOGO BEREGA",
+      "name_ru": "ЛЮБАВА ВИКУЛИШНА С НЕВСКОГО БЕРЕГА",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -150,10 +177,28 @@
     {
       "id": "1025251285",
       "name_lat": "LYURUA DYURING IO",
-      "name_ru": "",
+      "name_ru": "ЛЮРУА ДЮРИНГ ИО",
       "breed": "АКИТА",
       "breed_en": "AKITA",
-      "total_shows": 24,
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "986626464",
+      "name_lat": "LYURUA DYURING MASK OF ZORO",
+      "name_ru": "ЛЮРУА ДЮРИНГ МАСК ОФ ЗОРО",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1310918251",
+      "name_lat": "LYUKS DITTER FROM FORT OGIR",
+      "name_ru": "ЛЮКС ДИТТЕР ФРОМ ФОРТ ОГИР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -184,30 +229,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1454534056",
+      "name_lat": "LYURUA DYURING ORIHIME INOUE FOR IRON SPIRIT",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "32364124",
       "name_lat": "LYURUA DYURING OZEMU RYUU",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "545193398",
-      "name_lat": "LYUDZHEN BEST OF ALL",
+      "id": "447555042",
+      "name_lat": "LYA-LYA FAM IZ GRADA KATERINY",
       "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "BULLMASTIFF",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1770571060",
-      "name_lat": "LYUKS DITTER FROM FORT OGIR",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -229,12 +273,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1297080550",
-      "name_lat": "LYA-LYA FAM IZ GRADA KATERINY",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
+      "id": "1847721971",
+      "name_lat": "LYANKHUA BURAKKU",
+      "name_ru": "ЛЯНХУА БУРАККУ",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 42,
       "competition_dog_id": null
     },
     {
@@ -265,12 +309,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1454534056",
-      "name_lat": "LYURUA DYURING ORIHIME INOUE FOR IRON SPIRIT",
+      "id": "20483618",
+      "name_lat": "LYURUA DYURING D'ANCING QUEEN",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1016506915",
+      "name_lat": "LYURUA DYURING DAENERYS BURE BORN",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "920011868",
+      "name_lat": "LYUDZHEN SCARLET O'HARA",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1669247491",
+      "name_lat": "LYUBAVA DARUYUSHCHAYA SLAVU",
+      "name_ru": "ЛЮБАВА ДАРУЮЩАЯ СЛАВУ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -283,21 +353,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "206199594",
+      "name_lat": "LYURUA DYURING MORIARTI",
+      "name_ru": "ЛЮРУА ДЮРИНГ МОРИАРТИ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1431214948",
+      "name_lat": "L'YANA DE VISTA YARCHI",
+      "name_ru": "Л'ЯНА ДЭ ВИСТА ЯРЧИ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1625576373",
       "name_lat": "LYURUA DYURING PRIMROSE PATH",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1669247491",
-      "name_lat": "LYUBAVA DARUYUSHCHAYA SLAVU",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -310,6 +389,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1136208838",
+      "name_lat": "LYUPRI VOX VERITAS VITA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1533498591",
+      "name_lat": "LYUPRI YUVENTUS II",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1172643863",
       "name_lat": "LYURUA DYURING MIDNIGHT FLASH OF STARS (Изменено по решению ВК от 17.07.2025 В. 37)",
       "name_ru": "",
@@ -319,30 +415,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "1533498591",
-      "name_lat": "LYUPRI YUVENTUS II",
+      "id": "33353786",
+      "name_lat": "LYUMATE SANDO MAGNOLIYA ROYAL SHARM",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1390219613",
+      "id": "1398081266",
+      "name_lat": "L'YANA DE VISTA MISS MACARENA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1771795785",
       "name_lat": "LYA LYA BLEK STAR",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "920011868",
-      "name_lat": "LYUDZHEN SCARLET O'HARA",
+      "id": "310626952",
+      "name_lat": "LYA MUR BLEK",
       "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "BULLMASTIFF",
-      "total_shows": 12,
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1012744423",
+      "name_lat": "L'YANA DE VISTA YUNONA-II",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -352,6 +465,15 @@
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "170903479",
+      "name_lat": "LYUBIMII LAKI",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -373,21 +495,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "206199594",
-      "name_lat": "LYURUA DYURING MORIARTI",
+      "id": "1594132620",
+      "name_lat": "L'YANA DE VISTA YUHANNA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "986626464",
-      "name_lat": "LYURUA DYURING MASK OF ZORO",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -427,12 +540,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "33353786",
-      "name_lat": "LYUMATE SANDO MAGNOLIYA ROYAL SHARM",
+      "id": "1859188708",
+      "name_lat": "LYURUA DYURING MOON PRIDE",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -445,12 +558,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1837987225",
-      "name_lat": "LYURUA DYURING MOON PRIDE",
+      "id": "1400951338",
+      "name_lat": "L'YANA DE VISTA CECILIA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "856837072",
+      "name_lat": "LYUBIMA IZ SAGI O GARDARIKE",
+      "name_ru": "ЛЮБИМА ИЗ САГИ О ГАРДАРИКЕ",
+      "breed": "УИППЕТ",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -463,21 +585,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "856837072",
-      "name_lat": "LYUBIMA IZ SAGI O GARDARIKE",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "643891069",
       "name_lat": "LYU-RO SEYSSHIN MAYA",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1433921376",
+      "name_lat": "LYONYA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -490,10 +612,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1598744983",
+      "id": "643954710",
+      "name_lat": "LYUMEN MUNDI FARAON",
+      "name_ru": "ЛЮМЕН МУНДИ ФАРАОН",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1959494275",
       "name_lat": "LYSE ROSS PATHFINDER",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -526,6 +657,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1105577016",
+      "name_lat": "LYANA",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1635346767",
+      "name_lat": "LYADER AEVIDON KHRANITEL SHOTLANDII",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "148533848",
       "name_lat": "LYUBOV-MORKOV S NEVSKOGO BEREGA",
       "name_ru": "",
@@ -544,15 +693,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1105577016",
-      "name_lat": "LYANA",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "111867772",
       "name_lat": "LYURUA DYURING MISSIS SMIT",
       "name_ru": "",
@@ -562,10 +702,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1136208838",
-      "name_lat": "LYUPRI VOX VERITAS VITA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "id": "1687497799",
+      "name_lat": "LYUMATE SANDO SAMBUKA",
+      "name_ru": "ЛЮМАТЕ САНДО САМБУКА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1368180490",
+      "name_lat": "LYUK BESSON IZ ZAMKA PRIORA",
+      "name_ru": "ЛЮК БЕССОН ИЗ ЗАМКА ПРИОРА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -585,16 +733,16 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
       "id": "1595198780",
       "name_lat": "Lyumen Mundi Monblan",
-      "name_ru": "",
+      "name_ru": "ЛЮМЕН МУНДИ МОНБЛАН",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -622,15 +770,6 @@
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1687497799",
-      "name_lat": "LYUMATE SANDO SAMBUKA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -666,14 +805,23 @@
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "764273196",
+      "name_lat": "LYALYA OGNENNAYA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
+      "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "169112514",
-      "name_lat": "LYALYA OGNENNAYA",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "id": "706981639",
+      "name_lat": "LYUK SKAYUOKER MISTER DZHIDAY",
+      "name_ru": "ЛЮК СКАЙУОКЕР МИСТЕР ДЖИДАЙ",
+      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -688,12 +836,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "160416153",
+      "name_lat": "LYMATE SANDO PRADA CASUAL",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "588834413",
       "name_lat": "LYUMEN MUNDI PLAISIR",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1380532613",
+      "name_lat": "LYURUA DYURING KATO ROSA",
+      "name_ru": "ЛЮРУА ДЮРИНГ КАТО РОСА",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -721,6 +887,15 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "894741001",
+      "name_lat": "LYU-RO SEYSSHIN KABIK",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -769,19 +944,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "40836548",
-      "name_lat": "LYU DOG IMAGINATION RULES THE WORLD(N\\B)",
+      "id": "931140894",
+      "name_lat": "L'Yana De Vista De Vista Tsukimi",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1104664155",
-      "name_lat": "LYUTIK IZ DON- GRADA",
+      "id": "789915827",
+      "name_lat": "LYUTIK IZ DON-GRADA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40836548",
+      "name_lat": "LYU DOG IMAGINATION RULES THE WORLD(N\\B)",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -805,12 +989,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "643954710",
-      "name_lat": "LYUMEN MUNDI FARAON",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 2,
+      "id": "83630045",
+      "name_lat": "LYUDZHEN IDEAL",
+      "name_ru": "ЛЮДЖЕН ИДЕАЛ",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -841,12 +1025,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "83630045",
-      "name_lat": "LYUDZHEN IDEAL",
+      "id": "1913545762",
+      "name_lat": "LYON LUCIOUS ROKOKO",
       "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "BULLMASTIFF",
-      "total_shows": 12,
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "572311944",
+      "name_lat": "LYUPRI FANTASTIKA",
+      "name_ru": "ЛЮПРИ ФАНТАСТИКА",
+      "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "464988263",
+      "name_lat": "LYUPRI LEGION",
+      "name_ru": "ЛЮПРИ ЛЕГИОН",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1461072710",
+      "name_lat": "LYURUA DYURING IKI - TOGO",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -886,21 +1097,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1461072710",
-      "name_lat": "LYURUA DYURING IKI - TOGO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 14,
+      "id": "37748399",
+      "name_lat": "LYUMEN IZ SAGI O GARDARIKE",
+      "name_ru": "ЛЮМЕН ИЗ САГИ О ГАРДАРИКЕ",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "464988263",
-      "name_lat": "LYUPRI LEGION",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 9,
+      "id": "292578242",
+      "name_lat": "LYUMEN MUNDI FALKON",
+      "name_ru": "ЛЮМЕН МУНДИ ФАЛЬКОН",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -922,15 +1133,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "20483618",
-      "name_lat": "LYURUA DYURING D'ANCING QUEEN",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "903901170",
       "name_lat": "LYUPRI YUSTICZIYA",
       "name_ru": "",
@@ -946,15 +1148,6 @@
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "572311944",
-      "name_lat": "LYUPRI FANTASTIKA",
-      "name_ru": "",
-      "breed": "ДЛИННОШЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -985,6 +1178,50 @@
       "competition_dog_id": null
     },
     {
+      "id": "1215729672",
+      "name_lat": "LYUK BLEK MEDZHIK",
+      "name_ru": "ЛЮК БЛЭК МЭДЖИК",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "182782119",
+      "name_lat": "LYUPRI SYUZANA MON AMI",
+      "name_ru": "ЛЮПРИ СЮЗАНА МОН АМИ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "330315575",
+      "name_lat": "LYADER AEVIDON GENERAL PESCHANYKH KARYEROV",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1084397378",
+      "name_lat": "L'YANA DE VISTA RUBI SLIPPERS",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1128735530",
+      "name_lat": "L'YANA DE VISTA MAFIOSO",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "751759321",
       "name_lat": "LYUBAVA VALLOTTA",
       "name_ru": "",
@@ -1009,15 +1246,6 @@
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "170903479",
-      "name_lat": "LYUBIMII LAKI",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1048,21 +1276,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "20366119",
+      "name_lat": "L'YASASHII TAIYOU NOKA",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "514975385",
       "name_lat": "LYUMATE SANDO TAJNA SANDORY",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1016506915",
-      "name_lat": "LYURUA DYURING DAENERYS BURE BORN",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1102,6 +1330,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1258193885",
+      "name_lat": "LYUBAVA DIANA",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1193231762",
       "name_lat": "LYNA",
       "name_ru": "",
@@ -1111,20 +1347,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1433921376",
-      "name_lat": "LYONYA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "886139138",
       "name_lat": "LYURUA DYURING FARFOROVOE SERDTSE",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "402335843",
+      "name_lat": "LYA MURA IZ SIBIRSKOGO PRAIDA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1138,39 +1373,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "602573278",
-      "name_lat": "LYUBAVA VIKULISHNA S NEVSKOGO BEREGA",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "846697662",
       "name_lat": "LYUBIMY BULLDOG DZHANIR",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1215729672",
-      "name_lat": "LYUK BLEK MEDZHIK",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "706981639",
-      "name_lat": "LYUK SKAYUOKER MISTER DZHIDAY",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1189,6 +1397,14 @@
       "breed": "ЛЕОНБЕРГЕР СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "676693298",
+      "name_lat": "LYUBEN LAND VOSTORG",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1228,10 +1444,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "968327658",
+      "id": "542379197",
       "name_lat": "LYNA",
       "name_ru": "",
-      "breed": "БУЛЛИ КЛАССИК БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1241,15 +1457,6 @@
       "name_lat": "LYALYA-II IZ ALEKSANDROVOI SLOBODY",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1368180490",
-      "name_lat": "LYUK BESSON IZ ZAMKA PRIORA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1268,15 +1475,6 @@
       "name_lat": "LYNA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ КЛАССИК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "182782119",
-      "name_lat": "LYUPRI SYUZANA MON AMI",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1309,12 +1507,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1913545762",
-      "name_lat": "LYON LUCIOUS ROKOKO",
-      "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 12,
+      "id": "1855421651",
+      "name_lat": "LYUMATE SANDO BEATRIS VINNER",
+      "name_ru": "ЛЮМАТЕ САНДО БЕАТРИС ВИННЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
@@ -1327,6 +1525,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1519328468",
+      "name_lat": "LYURUA DYURING DZHIRO SATOSHI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "1616587600",
       "name_lat": "LYU DOG PRETTY CLEOPATRA",
       "name_ru": "",
@@ -1336,21 +1543,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1519328468",
-      "name_lat": "LYURUA DYURING DZHIRO SATOSHI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 20,
+      "id": "1695394872",
+      "name_lat": "LYUMATE SANDO LADA LADUSHKA",
+      "name_ru": "ЛЮМАТЕ САНДО ЛАДА ЛАДУШКА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "1203049754",
+      "id": "1632141147",
+      "name_lat": "LYUMATE SANDO SMUGLYANKA",
+      "name_ru": "ЛЮМАТЭ САНДО СМУГЛЯНКА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1749910507",
       "name_lat": "LYUBOMIR RUSSKIY BOGATYR",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1828207380",
+      "name_lat": "L’YANA DE VISTA EURYDICE",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1363,21 +1588,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1695394872",
-      "name_lat": "LYUMATE SANDO LADA LADUSHKA",
+      "id": "716069650",
+      "name_lat": "LYURUA DYURING READ IN MY EYES",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 15,
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1311354896",
+      "name_lat": "LYUBA DAVAY IZ DOMA GRYOZ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "1312935285",
       "name_lat": "LYUMATE SANDO OMICHKA",
-      "name_ru": "",
+      "name_ru": "ЛЮМАТЕ САНДО ОМИЧКА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1390,21 +1624,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "716069650",
-      "name_lat": "LYURUA DYURING READ IN MY EYES",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "id": "119685640",
+      "name_lat": "LYURUA DYURING RUMIKO",
+      "name_ru": "ЛЮРУА ДЮРИНГ РУМИКО",
+      "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1311354896",
-      "name_lat": "LYUBA DAVAY IZ DOMA GRYOZ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1413,7 +1638,42 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "676986950",
+      "name_lat": "LYUBOMIRA S RUSSKOY DUSHOY",
+      "name_ru": "ЛЮБОМИРА С РУССКОЙ ДУШОЙ",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "153435559",
+      "name_lat": "L'YANA DE VISTA BELLISSIMA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "19132927",
+      "name_lat": "LYU-RO SEYSSHIN YUMIKO",
+      "name_ru": "ЛЮ-РО СЭЙСШИН ЮМИКО",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1382394370",
+      "name_lat": "LYUMATE SANDO ELISEY",
+      "name_ru": "ЛЮМАТЕ САНДО ЕЛИСЕЙ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -1423,6 +1683,41 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "649710120",
+      "name_lat": "LYUTIK LABUTEN FON KEKS",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "832506352",
+      "name_lat": "LYSE ROSS ROSE ROUGE",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1646837074",
+      "name_lat": "LYUBUSHKA GOLUBUSHKA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1864938637",
+      "name_lat": "LYUMEN MUNDI NERA PERLA",
+      "name_ru": "ЛЮМЕН МУНДИ НЕРА ПЕРЛА",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -1444,29 +1739,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1864938637",
-      "name_lat": "LYUMEN MUNDI NERA PERLA",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "119685640",
-      "name_lat": "LYURUA DYURING RUMIKO",
-      "name_ru": "",
-      "breed": "АКИТА",
+      "id": "1044752128",
+      "name_lat": "LYULLI DE BIRS",
+      "name_ru": "ЛЮЛЛИ ДЕ БИРС",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "649710120",
-      "name_lat": "LYUTIK LABUTEN FON KEKS",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
+      "id": "457815789",
+      "name_lat": "LYURUA DYURING GINZA NO KAORI",
+      "name_ru": "ЛЮРУА ДЮРИНГ ГИНЗА НО КАОРИ",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
       "total_shows": 12,
       "competition_dog_id": null
     },
@@ -1480,12 +1766,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "676986950",
-      "name_lat": "LYUBOMIRA S RUSSKOY DUSHOY",
+      "id": "771100766",
+      "name_lat": "LYUMATE SANDO ZABAVA PUTYATISHNA",
+      "name_ru": "ЛЮМАТЕ САНДО ЗАБАВА ПУТЯТИШНА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1900099004",
+      "name_lat": "LYUPRI GOOD LUCK",
       "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
-      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
-      "total_shows": 18,
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1498,21 +1792,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "482409028",
+      "name_lat": "LYUVIR KUPIDON LONFERANSE",
+      "name_ru": "ЛЮВИР КУПИДОН ЛОНФЕРАНСЬЕ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
       "id": "620559332",
       "name_lat": "LYUVIR CHARUYUSCHAYA FEYA MOEY MECHTY",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "832506352",
-      "name_lat": "LYSE ROSS ROSE ROUGE",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1525,12 +1819,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "771100766",
-      "name_lat": "LYUMATE SANDO ZABAVA PUTYATISHNA",
-      "name_ru": "",
+      "id": "1488361069",
+      "name_lat": "LYUMATE SANDO TASTE OF VIKTORI",
+      "name_ru": "ЛЮМАТЕ САНДО ТАСТЕ ОФ ВИКТОРИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1777402333",
+      "name_lat": "LYUMATE SANDO VENDI DESPASITO",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1540,6 +1843,23 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1544405022",
+      "name_lat": "LYUMATE SANDO ADAM",
+      "name_ru": "ЛЮМАТЕ САНДО АДАМ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1394396438",
+      "name_lat": "LYUMER RAJSKIJ OAZIS",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1561,15 +1881,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1900099004",
-      "name_lat": "LYUPRI GOOD LUCK",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1583395139",
       "name_lat": "LYUBITEL PRIKLYUCHENIY",
       "name_ru": "",
@@ -1581,10 +1892,10 @@
     {
       "id": "262352885",
       "name_lat": "LYUMATE SANDO UMILA KASSANDRA",
-      "name_ru": "",
+      "name_ru": "ЛЮМАТЕ САНДО УМИЛА КАССАНДРА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1594,6 +1905,15 @@
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "526811256",
+      "name_lat": "LYUMATE SANDO DYUNA DARK",
+      "name_ru": "ЛЮМАТЕ САНДО ДЮНА ДАРК",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1617,10 +1937,10 @@
     {
       "id": "1137853201",
       "name_lat": "LYU-RO SEYSSHIN YUKIKO",
-      "name_ru": "",
+      "name_ru": "ЛЮ-РО СЭЙСШИН ЮКИКО",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1633,26 +1953,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1632141147",
-      "name_lat": "LYUMATE SANDO SMUGLYANKA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1457258687",
+      "id": "1653033646",
       "name_lat": "LYUPRI TIARA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "827099448",
-      "name_lat": "LYUMATE SANDO UHTI- TUHTI",
+      "id": "503918540",
+      "name_lat": "LYUMATE SANDO UHTI-TUHTI",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
@@ -1669,30 +1980,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "545113773",
+      "id": "1762188048",
       "name_lat": "LYUPRI ZHIGOLO",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1635346767",
-      "name_lat": "LYADER AEVIDON KHRANITEL SHOTLANDII",
+      "id": "191348869",
+      "name_lat": "L’YANA DE VISTA LOVELACE",
       "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1533958944",
-      "name_lat": "LYUBUSHKA- GOLUBUSHKA",
+      "id": "750307574",
+      "name_lat": "L'YANA DE VISTA KARMELINA",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН)",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1714,15 +2025,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1855421651",
-      "name_lat": "LYUMATE SANDO BEATRIS VINNER",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1115367603",
       "name_lat": "LYURUA DYURING SHORI VA HIDZHO HI CHIKAI",
       "name_ru": "",
@@ -1732,21 +2034,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "19132927",
-      "name_lat": "LYU-RO SEYSSHIN YUMIKO",
+      "id": "644292597",
+      "name_lat": "LYUBOMIR IZ DOMA MARLEN",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 22,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ОСТЕВАЯ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1269497876",
-      "name_lat": "LYUBOMIR IZ DOMA MARLEN",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "id": "32679165",
+      "name_lat": "LYURUA DYURING NAMIE AMURO",
+      "name_ru": "ЛЮРУА ДЮРИНГ НАМИЭ АМУРО",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1786,21 +2088,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "526811256",
-      "name_lat": "LYUMATE SANDO DYUNA DARK",
+      "id": "1314778337",
+      "name_lat": "L’YANA DE VISTA CARAMBA",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "368881785",
-      "name_lat": "LYUVIR KUPIDON LONFERANSE",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1810,15 +2103,6 @@
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1394396438",
-      "name_lat": "LYUMER RAJSKIJ OAZIS",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1849,19 +2133,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1365110041",
-      "name_lat": "LYUKS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "528603185",
       "name_lat": "LYUTSIY VON WESPEN HAUS",
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1365110041",
+      "name_lat": "LYUKS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1873,6 +2157,24 @@
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1436401649",
+      "name_lat": "L'YANA DE VISTA TEQUILA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331142886",
+      "name_lat": "LYURUA DYURING PERIAPT ON LUCK",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1912,12 +2214,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1391152265",
+      "name_lat": "LYURUA DYURING WISHTOBE WINNER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "281425835",
       "name_lat": "LYUSI SAKURA IZ OTCHEGO DOMA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1930,21 +2241,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "118384664",
+      "id": "1335529296",
       "name_lat": "LYUBIMY DRUG CHINGIZ",
       "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
+      "breed": "MOSKOVSKAYA",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1391152265",
-      "name_lat": "LYURUA DYURING WISHTOBE WINNER",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1966,6 +2268,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1801809255",
+      "name_lat": "LYUVIR MARSEL DE SEZAR",
+      "name_ru": "ЛЮВИР МАРСЕЛЬ ДЕ СЕЗАР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225762819",
+      "name_lat": "LYURUA DYURING NAOMI BLOSSOM CHERRY",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1475818306",
       "name_lat": "LYUMATE SANDO NORDIC STAR",
       "name_ru": "",
@@ -1977,19 +2296,10 @@
     {
       "id": "1170750439",
       "name_lat": "LYUBIMKA OT SHE MING",
-      "name_ru": "",
+      "name_ru": "ЛЮБИМКА ОТ ШЕ МИНГ",
       "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "225762819",
-      "name_lat": "LYURUA DYURING NAOMI BLOSSOM CHERRY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2056,12 +2366,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "963464887",
+      "name_lat": "LYURUA DYURING MUSIC IN MY HEAD",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1308175166",
+      "name_lat": "L'YANA DE VISTA PENELOPA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "448277039",
       "name_lat": "LYUPRI FOR ME",
       "name_ru": "",
       "breed": "ДЛИННОШЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "338451051",
+      "name_lat": "L'YANA DE VISTA BETTY WONDER",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -2110,12 +2447,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1037421773",
+      "name_lat": "L'YANA DE VISTA KAROLINA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "938472939",
       "name_lat": "LYA-LYA-FA OT VEDERNIKOVA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "870220920",
+      "name_lat": "LYUMATE SANDO TROFIM",
+      "name_ru": "ЛЮМАТЕ САНДО ТРОФИМ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2146,12 +2501,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "292578242",
-      "name_lat": "LYUMEN MUNDI FALKON",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 2,
+      "id": "910848027",
+      "name_lat": "LYURUA DYURING SHINMA MIYA",
+      "name_ru": "ЛЮРУА ДЮРИНГ ШИНМА МИЯ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2164,10 +2519,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "752946180",
+      "id": "164572337",
       "name_lat": "LYUPRI ZIRCON",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2227,10 +2582,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "832472460",
+      "id": "1038676329",
       "name_lat": "LYORI GIGOLO",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2254,19 +2609,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1207525579",
+      "id": "985983938",
       "name_lat": "LYUBIMY BULLDOG DEYSI",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "959073041",
+      "id": "1894819756",
       "name_lat": "LYUCZIJ UTRENNYAYA ZVEZDA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2299,30 +2654,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1618201067",
+      "name_lat": "LYUDVIG",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1054508959",
       "name_lat": "LyumateSandoIndigo",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "457815789",
-      "name_lat": "LYURUA DYURING GINZA NO KAORI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "963464887",
-      "name_lat": "LYURUA DYURING MUSIC IN MY HEAD",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2344,24 +2689,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "910848027",
-      "name_lat": "LYURUA DYURING SHINMA MIYA",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1847721971",
-      "name_lat": "LYANKHUA BURAKKU",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1059253294",
       "name_lat": "LYUBOV POKHOZHAYA NA SON",
       "name_ru": "",
@@ -2371,12 +2698,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1777402333",
-      "name_lat": "LYUMATE SANDO VENDI DESPASITO",
+      "id": "603100096",
+      "name_lat": "LYUKS SOLIS GRETKA SLADKAYA KONFETKA",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 9,
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2425,6 +2752,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "608893294",
+      "name_lat": "L'YAHACHI GO FROM HACHIMANTAI",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "155261129",
       "name_lat": "Lyumen Mundi Plush Puppy",
       "name_ru": "",
@@ -2434,19 +2770,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "268538978",
+      "name_lat": "L’YANA DE VISTA TEKERA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1407473766",
       "name_lat": "LYUTAR YUNGER",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1801809255",
-      "name_lat": "LYUVIR MARSEL DE SEZAR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2461,6 +2797,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "34809753",
+      "name_lat": "LYURUA DYURING MATADOR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "155604205",
       "name_lat": "LYURUA DYURING AHIRO SATO",
       "name_ru": "",
@@ -2470,21 +2814,63 @@
       "competition_dog_id": null
     },
     {
-      "id": "1101114889",
+      "id": "194122266",
+      "name_lat": "LYMA",
+      "name_ru": "",
+      "breed": "AMERICAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1118680894",
+      "name_lat": "LYUBIMYI BORODACH LOLITA",
+      "name_ru": "",
+      "breed": "СЕРЕБРОМ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1434629139",
+      "name_lat": "LYURUA DYURING WISH TO BE WINNER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1373972945",
+      "name_lat": "LYUBOV NEZEMNAYA S RUSSKOY DUSHOY",
+      "name_ru": "ЛЮБОВЬ НЕЗЕМНАЯ С РУССКОЙ ДУШОЙ",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1263852854",
       "name_lat": "LYUTIK DETKA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "32679165",
-      "name_lat": "LYURUA DYURING NAMIE AMURO",
+      "id": "885358292",
+      "name_lat": "LYUMATE SANDO NARNIA IN SNOW",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "620074377",
+      "name_lat": "LYUTAR SOLDA",
+      "name_ru": "ЛЮТАР СОЛЬДА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2506,15 +2892,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "186781748",
-      "name_lat": "LYUKS SOLIS GRETKA SLADKAYA KONFETKA",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "84183806",
       "name_lat": "LYU-RO SEYSSHIN NORA TO EKATO KADZUKEMONO",
       "name_ru": "",
@@ -2524,10 +2901,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "260220245",
+      "id": "871016808",
       "name_lat": "LYUBIMAYA KUKLA DLYA LEGATIO ET EGO",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2539,15 +2916,6 @@
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "870220920",
-      "name_lat": "LYUMATE SANDO TROFIM",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2582,6 +2950,15 @@
       "name_lat": "LYURUA DYURING HINMEI CHOKO",
       "name_ru": "",
       "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "183262070",
+      "name_lat": "L YANA DE VISTA TEQUILA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2627,8 +3004,7 @@
       "name_lat": "LYUBOV ANGELA GRATSIYA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2638,6 +3014,15 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1451575339",
+      "name_lat": "LYURUA DYURING CHOOSE THE RIGHT PUFF",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2672,15 +3057,6 @@
       "name_lat": "LYUVIR CARDINAL RICHELIEU",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "773637978",
-      "name_lat": "LYURUA DYURING CHOOSE THE RIGHT PUFF",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2776,11 +3152,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "620074377",
-      "name_lat": "LYUTAR SOLDA",
+      "id": "728254516",
+      "name_lat": "L'YANA DE VISTA TEQUILA NORDCAIRN'S UNDER THE",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "breed": "YORKSHIRE TERRIER",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2848,15 +3224,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1044752128",
-      "name_lat": "LYULLI DE BIRS",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "150185322",
       "name_lat": "LYUVIR PERSIFONA DE LA FER",
       "name_ru": "",
@@ -2879,15 +3246,6 @@
       "name_lat": "LYA MURA IZ SIBIRSKOGO PRAYDA",
       "name_ru": "",
       "breed": "CHIHUAHUA SMOOTH",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "402335843",
-      "name_lat": "LYA MURA IZ SIBIRSKOGO PRAIDA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2947,6 +3305,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1595582707",
+      "name_lat": "LYUKSI'N OT PANDY SHARM",
+      "name_ru": "ЛЮКСИ'Н ОТ ПАНДЫ ШАРМ",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1011764969",
       "name_lat": "LYUBAVA KRASA",
       "name_ru": "",
@@ -2971,6 +3338,15 @@
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "643564204",
+      "name_lat": "L'YANADE VISTA EURYDICE",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3109,15 +3485,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "885358292",
-      "name_lat": "LYUMATE SANDO NARNIA IN SNOW",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1158585947",
       "name_lat": "LYDGATE LIVING ON THE EDGE",
       "name_ru": "",
@@ -3141,6 +3508,14 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "600937319",
+      "name_lat": "LYUMATE SANDO ORANZHINA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3190,6 +3565,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "700535166",
+      "name_lat": "LYUMATE SANDO NARNIA IN SHOW",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "382676735",
       "name_lat": "LYUSIA VANILA ICE",
       "name_ru": "",
@@ -3205,15 +3588,6 @@
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1380532613",
-      "name_lat": "LYURUA DYURING KATO ROSA",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3235,19 +3609,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1986957576",
-      "name_lat": "LYUBVI KRASOTY DLYA",
+      "id": "1969488866",
+      "name_lat": "L'YANA DE VISTA RUMBA SOLO",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "37748399",
-      "name_lat": "LYUMEN IZ SAGI O GARDARIKE",
+      "id": "1986957576",
+      "name_lat": "LYUBVI KRASOTY DLYA",
       "name_ru": "",
-      "breed": "УИППЕТ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3280,19 +3654,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "141580029",
+      "id": "1807969868",
+      "name_lat": "LYUMATE SANDO APPOLON",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "291376657",
       "name_lat": "LYBIMAYA MELODIYA DUSHI BETTI",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "980490054",
+      "id": "244234687",
       "name_lat": "LYUBIMOE CHUDO VALENCIA BEAUTY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3307,15 +3689,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1382394370",
-      "name_lat": "LYUMATE SANDO ELISEY",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1922185809",
       "name_lat": "LYUPRI YUSTAS",
       "name_ru": "",
@@ -3325,19 +3698,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1544405022",
-      "name_lat": "LYUMATE SANDO ADAM",
+      "id": "222549035",
+      "name_lat": "LYURUA DYURING SOICHIRO HONDA",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "503310250",
+      "name_lat": "LYURUA DYURING IZENEMI",
+      "name_ru": "ЛЮРУА ДЮРИНГ ИЗЭНЭМИ",
+      "breed": "АКИТА",
+      "breed_en": "AKITA",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "139396794",
+      "id": "975421138",
+      "name_lat": "LYUMATE SANDO PRASKEVI",
+      "name_ru": "ЛЮМАТЕ САНДО ПРАСКЕВИ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "851894732",
       "name_lat": "LYUKSOR S KRYMSKOY ZEMLY DIANY",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3352,20 +3743,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "298960489",
+      "id": "52175604",
       "name_lat": "LYAMUR-TUZHUR GOLDEN ANIK'S",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "503310250",
-      "name_lat": "LYURUA DYURING IZENEMI",
+      "id": "333341492",
+      "name_lat": "LYUPUS",
       "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "AKITA",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -3385,6 +3776,24 @@
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1955141936",
+      "name_lat": "LYUKSOR",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "480729363",
+      "name_lat": "L'YANA DE VISTA MERRY CHRISTMAS",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3415,19 +3824,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1564836880",
-      "name_lat": "LYNCH IZ KLANA LEGATO",
-      "name_ru": "",
-      "breed": "ШЕЛТИ БЕРНСКИЙ",
+      "id": "262144857",
+      "name_lat": "LYUTAR EVETTA",
+      "name_ru": "ЛЮТАР ЭВЕТТА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "331142886",
-      "name_lat": "LYURUA DYURING PERIAPT ON LUCK",
+      "id": "1564836880",
+      "name_lat": "LYNCH IZ KLANA LEGATO",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed": "ШЕЛТИ БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3442,10 +3851,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1955141936",
+      "id": "1207454115",
       "name_lat": "LYUKSOR",
       "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
+      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3460,11 +3869,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "333341492",
-      "name_lat": "LYUPUS",
+      "id": "1244350212",
+      "name_lat": "LYBAVA",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "290922794",
+      "name_lat": "LYMA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3501,15 +3917,6 @@
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1373972945",
-      "name_lat": "LYUBOV NEZEMNAYA S RUSSKOY DUSHOY",
-      "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
-      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3622,6 +4029,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "293767859",
+      "name_lat": "L'YANA DE VISTA BEYONCE",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1708789057",
       "name_lat": "LYUBIMAYA MOYA",
       "name_ru": "",
@@ -3658,10 +4074,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "69192070",
+      "id": "303635589",
       "name_lat": "LYUBIMAYA CHARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3676,35 +4092,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "262144857",
-      "name_lat": "LYUTAR EVETTA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1804865090",
       "name_lat": "LYURUA DYURING MEZEHIRO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "160416153",
-      "name_lat": "LYMATE SANDO PRADA CASUAL",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "222549035",
-      "name_lat": "LYURUA DYURING SOICHIRO HONDA",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
@@ -3730,10 +4119,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "453940525",
+      "id": "1417897749",
       "name_lat": "LYUMATE SANDO NAIDA STAIL",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3743,6 +4132,15 @@
       "name_lat": "LYUMATE SANDO LOLLIPOP",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "582477806",
+      "name_lat": "LYA LYA FA ETI NOTY",
+      "name_ru": "ЛЯ-ЛЯ-ФА ЭТИ НОТЫ",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3784,10 +4182,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1490222823",
+      "id": "1144933286",
       "name_lat": "LYUBIMY BULLDOG ZARA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3802,19 +4200,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1397165954",
+      "name_lat": "LYUKSERI VEZUCHAYA KRASOTKA",
+      "name_ru": "",
+      "breed": "ПЕЙСКАЯ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1538508449",
+      "name_lat": "LYUBAVA IZ CORPORACII ZVEZD",
+      "name_ru": "",
+      "breed": "ПРАЖСКИЙ КРЫСАРИК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1668148746",
       "name_lat": "LYUTAR DJAM",
       "name_ru": "",
       "breed": "ВОСТОЧНО-",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1207454115",
-      "name_lat": "LYUKSOR",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3937,6 +4343,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1855504933",
+      "name_lat": "LYPHARD ZET 777",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "950523475",
+      "name_lat": "LYUMEN MUNDI KLASS",
+      "name_ru": "",
+      "breed": "МАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "228210512",
+      "name_lat": "LYUMEN MUNDI KLAAMEL",
+      "name_ru": "",
+      "breed": "МАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1975148405",
       "name_lat": "LYUTAR HAZQA",
       "name_ru": "",
@@ -4027,15 +4460,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1855504933",
-      "name_lat": "LYPHARD ZET 777",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ / BULLDOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1581814065",
       "name_lat": "LYCKE KALLARNS JENNY",
       "name_ru": "",
@@ -4090,15 +4514,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1860788820",
-      "name_lat": "LYURUA DYURING WISH TO BE WINNER",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "350246243",
       "name_lat": "LYNTOPPENS AMAZING FOR INFINIYLOVE",
       "name_ru": "",
@@ -4117,20 +4532,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "136226823",
-      "name_lat": "LYUMEN MUNDI KLASS",
+      "id": "1374898055",
+      "name_lat": "L'YANA DE VISTA LOVELACE",
       "name_ru": "",
-      "breed": "ТИБЕТ. МАСТИФ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1132204746",
-      "name_lat": "LYUMEN MUNDI KLAAMEL",
+      "id": "297141989",
+      "name_lat": "LYALKIN PRESTIGE LUCIEN BLUE DIAMOND (LONG COAT)",
       "name_ru": "",
-      "breed": "ТИБЕТ. МАСТИФ",
-      "breed_en": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4153,11 +4567,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1597771646",
+      "id": "1495107409",
+      "name_lat": "L'YANA DE VISTA SANSARA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1621637431",
       "name_lat": "LY'ROMASHKI GAMMA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1793033159",
+      "name_lat": "LYURUA DYURING GORIKI AYAME",
+      "name_ru": "",
+      "breed": "СИБА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4180,19 +4611,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "869757541",
-      "name_lat": "LYUMATE SANDO TASTE OF VIKTORI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1636459264",
+      "id": "738492461",
       "name_lat": "LY'ROMASHKI GALACTICA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4216,10 +4638,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1621210663",
+      "id": "1875634406",
       "name_lat": "LYKA HEART FOREVER",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4288,15 +4710,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "975421138",
-      "name_lat": "LYUMATE SANDO PRASKEVI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "482792477",
       "name_lat": "LYURUA DYURING LIVE TO RISE",
       "name_ru": "",
@@ -4319,24 +4732,6 @@
       "name_lat": "LYBIMAYA MELODIYA DUSHI VASELINA",
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "582477806",
-      "name_lat": "LYA LYA FA ETI NOTY",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1595582707",
-      "name_lat": "LYUKSI'N OT PANDY SHARM",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4396,24 +4791,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1375362875",
-      "name_lat": "LYUKSERI VEZUCHAYA KRASOTKA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "894741001",
-      "name_lat": "LYU-RO SEYSSHIN KABIK",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "377500977",
       "name_lat": "LYURUA DYURING FUDZI",
       "name_ru": "",
@@ -4428,6 +4805,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1178560511",
+      "name_lat": "LYURUA DYURING LETS GAT HAPPY",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
       "total_shows": 1,
       "competition_dog_id": null
     },

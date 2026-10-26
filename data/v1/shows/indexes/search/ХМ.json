@@ -1,15 +1,42 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ХМ",
-  "count": 5,
+  "count": 6,
   "dogs": [
     {
-      "id": "176444362",
+      "id": "274748651",
       "name_lat": "ХМЕЛЬНАЯ ВИШНЯ ИЗ ГРАДА БЕЛЫХ БЕРЁЗ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ХМЕЛЬНАЯ ВИШНЯ ИЗ ГРАДА БЕЛЫХ БЕРЁЗ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1577491483",
+      "name_lat": "Х МИЛОНА БЕЛЫЙ СНЕГ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1766174422",
+      "name_lat": "ХМЕЛЬ ИЗ СОКОЛИНОГО ГНЕЗДА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1425641646",
+      "name_lat": "ХМЕЛЬ ФОН ВАЙСНЭХТЕ",
+      "name_ru": "",
+      "breed": "СЕРЕБРОМ СОБАКА)",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -26,24 +53,6 @@
       "name_lat": "ХМАРА МАРИОКА С ОСТРОВА ЛЮБВИ",
       "name_ru": "",
       "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "254768090",
-      "name_lat": "ХМЕЛЬ ИЗ СОКОЛИНОГО ГНЕЗДА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1425641646",
-      "name_lat": "ХМЕЛЬ ФОН ВАЙСНЭХТЕ",
-      "name_ru": "",
-      "breed": "СЕРЕБРОМ СОБАКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

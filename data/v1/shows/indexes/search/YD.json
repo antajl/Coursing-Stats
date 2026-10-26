@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "YD",
-  "count": 14,
+  "count": 15,
   "dogs": [
     {
       "id": "1141938588",
@@ -22,21 +22,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1297577566",
-      "name_lat": "YDGINA'S FLAME MANZO",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "154318668",
       "name_lat": "YDGINA'S FLAME NOYA NEW STAR",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1297577566",
+      "name_lat": "YDGINA'S FLAME MANZO",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -73,6 +73,14 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1354814835",
+      "name_lat": "Y'DIAMOND'TIMON ZIPANGU",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {

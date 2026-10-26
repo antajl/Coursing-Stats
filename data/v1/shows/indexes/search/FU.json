@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "FU",
-  "count": 529,
+  "count": 549,
   "dogs": [
     {
       "id": "135645748",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "MINIATURE AMERICAN SHEPHERD",
-      "total_shows": 83,
+      "total_shows": 87,
       "competition_dog_id": null
     },
     {
@@ -18,7 +18,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 62,
+      "total_shows": 65,
       "competition_dog_id": null
     },
     {
@@ -36,7 +36,7 @@
       "name_ru": "",
       "breed": "СОЛЬЮ",
       "breed_en": "SCHNAUZER P-S",
-      "total_shows": 45,
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -54,16 +54,16 @@
       "name_ru": "",
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 83,
+      "total_shows": 86,
       "competition_dog_id": null
     },
     {
       "id": "1411279893",
       "name_lat": "FUDZISAN GAKUO ISAMASHI",
-      "name_ru": "",
+      "name_ru": "ФУДЗИСАН ГАКУО ИСАМАШИ",
       "breed": "СИКОКУ",
       "breed_en": "SHIKOKU",
-      "total_shows": 47,
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
@@ -72,7 +72,7 @@
       "name_ru": "",
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 97,
+      "total_shows": 100,
       "competition_dog_id": null
     },
     {
@@ -90,7 +90,7 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
-      "total_shows": 45,
+      "total_shows": 62,
       "competition_dog_id": null
     },
     {
@@ -103,12 +103,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "314320068",
+      "id": "1405598666",
+      "name_lat": "FUNTIK SCHASTYA",
+      "name_ru": "ФУНТИК СЧАСТЬЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 66,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1247577893",
       "name_lat": "FUDO YOSHIRO",
       "name_ru": "",
-      "breed": "ГРИФФОН",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1770310566",
+      "name_lat": "FUN CHOCOLATES WITCHERY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1844888482",
+      "name_lat": "FUDZISAN BENIKA TSUDA",
+      "name_ru": "ФУДЗИСАН БЕНИКА ЦУДА",
+      "breed": "СИКОКУ",
+      "breed_en": "SHIKOKU",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -130,30 +157,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1770310566",
-      "name_lat": "FUN CHOCOLATES WITCHERY",
+      "id": "1929507876",
+      "name_lat": "FURRY MIRACLE ZIGZAG ZOOMER",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 18,
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "OLD ENGLISH SHEEPDOG",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "863757700",
+      "id": "172537243",
       "name_lat": "FUTURE BY US MODENA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1405598666",
-      "name_lat": "FUNTIK SCHASTYA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 42,
       "competition_dog_id": null
     },
     {
@@ -163,6 +181,15 @@
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "332138268",
+      "name_lat": "FUDZISAN TERUHIME",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -180,7 +207,7 @@
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -247,15 +274,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1929507876",
-      "name_lat": "FURRY MIRACLE ZIGZAG ZOOMER",
-      "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "OLD ENGLISH SHEEPDOG",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "805976575",
       "name_lat": "FULL THROTTLE ERIKA",
       "name_ru": "",
@@ -265,12 +283,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "867174104",
+      "name_lat": "FUTURE IS ALREADY HERE",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1919103537",
       "name_lat": "FUDZISAN MICHIKO",
-      "name_ru": "",
+      "name_ru": "ФУДЗИСАН МИЧИКО",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 52,
+      "total_shows": 53,
       "competition_dog_id": null
     },
     {
@@ -301,6 +328,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1005169063",
+      "name_lat": "FUNNY GIRL",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "166777233",
       "name_lat": "FUNNY PONITAIL SPOTLESS STYLE",
       "name_ru": "",
@@ -310,21 +346,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1005169063",
-      "name_lat": "FUNNY GIRL",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "276607981",
+      "id": "182180998",
       "name_lat": "FUTURE BY US CHESLAVA",
       "name_ru": "",
-      "breed": "Немецкая овчарка стандартная",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -337,10 +364,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1351534352",
+      "id": "853682175",
       "name_lat": "FUTURE BY US RIMINI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -355,21 +382,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "68336926",
+      "name_lat": "FUN NORD'S MARSHAL",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "571752322",
       "name_lat": "FUSION OF JOY BETTY",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "332138268",
-      "name_lat": "FUDZISAN TERUHIME",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -382,15 +409,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "68336926",
-      "name_lat": "FUN NORD'S MARSHAL",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1109739373",
       "name_lat": "FUDZISAN ATAMA NO OKAMI",
       "name_ru": "",
@@ -400,21 +418,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "684087158",
+      "name_lat": "FUSION OF JOY KENZAS",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
       "id": "721696140",
       "name_lat": "FUOCO AMORE MELAS SALIMA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "684087158",
-      "name_lat": "FUSION OF JOY KENZAS",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -436,12 +454,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "801623756",
-      "name_lat": "FURIYA IZ DVURECHYA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "412892855",
+      "name_lat": "FUDZISAN BUDOU MITSURU",
+      "name_ru": "ФУДЗИСАН БУДОУ МИТСУРУ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1218224714",
+      "name_lat": "FURIYA IZ DVURECHYA",
+      "name_ru": "ФУРИЯ ИЗ ДВУРЕЧЬЯ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -454,10 +481,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "40073329",
+      "id": "936115438",
+      "name_lat": "FUNNY BIRTHMARK PIKOLINA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "527416201",
+      "name_lat": "FULORIA SKY LAVANDER",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1941513820",
+      "name_lat": "FULORIA ERGO PROXY",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "375700146",
       "name_lat": "FUTURE BY US SAPANCA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -481,15 +534,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "936115438",
-      "name_lat": "FUNNY BIRTHMARK PIKOLINA",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "245514794",
       "name_lat": "FULORIA DARLING MY LITTLE STAR ELZA N\\B",
       "name_ru": "",
@@ -504,7 +548,7 @@
       "name_ru": "",
       "breed": "ТОСА",
       "breed_en": "TOSA",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -513,14 +557,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 53,
+      "total_shows": 57,
       "competition_dog_id": null
     },
     {
-      "id": "1889099147",
+      "id": "7861130",
       "name_lat": "FUENTE FELIZ DE LORDSHIP'S",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -532,6 +576,15 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1114571628",
+      "name_lat": "FUSION OF JOY HARDCORE АЛМАЗЫ АНАБАРА ЗОЛОТОЙ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -553,19 +606,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1114571628",
-      "name_lat": "FUSION OF JOY HARDCORE АЛМАЗЫ АНАБАРА ЗОЛОТОЙ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "id": "1579719835",
+      "name_lat": "FUDZISAN DAICHI NO KURO",
+      "name_ru": "ФУДЗИСАН ДАИЧИ НО КУРО",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "174742880",
+      "id": "528815855",
       "name_lat": "FUTURE BY US TERRA VIVA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -621,7 +674,34 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "102671142",
+      "name_lat": "FUKUTOKU SHIBANASHI UMI",
+      "name_ru": "ФУКУТОКУ ШИБАНАШИ УМИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "326556048",
+      "name_lat": "FUROR FAVORIT",
+      "name_ru": "ФУРОР ФАВОРИТ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "AMERICAN BULLDOG",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "570861199",
+      "name_lat": "FUKSIYA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -634,12 +714,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "570861199",
-      "name_lat": "FUKSIYA",
+      "id": "185299285",
+      "name_lat": "FUDZISAN BYAKUDAN TAKASHI",
+      "name_ru": "ФУДЗИСАН БЯКУДАН ТАКАШИ",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1172064391",
+      "name_lat": "FURIOUS VALKYRIE OF AMOVIK'S",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 12,
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "breed_en": "AMERICAN BULLY POCKET",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -647,8 +736,7 @@
       "name_lat": "FUN NORD'S OKTYABRINA",
       "name_ru": "",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -670,12 +758,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "102671142",
-      "name_lat": "FUKUTOKU SHIBANASHI UMI",
+      "id": "1350400000",
+      "name_lat": "FUDZISAN WAEMI OTOME",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "СИКОКУ",
+      "breed_en": "SHIKOKU",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -697,24 +785,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1941513820",
-      "name_lat": "FULORIA ERGO PROXY",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1844888482",
-      "name_lat": "FUDZISAN BENIKA TSUDA",
-      "name_ru": "",
-      "breed": "СИКОКУ",
-      "breed_en": "SHIKOKU",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1422819658",
       "name_lat": "FULORIA BIG CITY LIFE",
       "name_ru": "",
@@ -730,6 +800,15 @@
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1237206085",
+      "name_lat": "FUROR ZEVS",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -769,39 +848,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "158596335",
+      "name_lat": "FURIYA IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
       "id": "343180986",
       "name_lat": "FUNNY FIONA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
       "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "158596335",
-      "name_lat": "FURIYA IZ GRADA KATERINY",
-      "name_ru": "",
-      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "SCHNAUZER P-S",
-      "total_shows": 28,
-      "competition_dog_id": null
-    },
-    {
-      "id": "185299285",
-      "name_lat": "FUDZISAN BYAKUDAN TAKASHI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1350400000",
-      "name_lat": "FUDZISAN WAEMI OTOME",
-      "name_ru": "",
-      "breed": "СИКОКУ",
-      "breed_en": "SHIKOKU",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -823,21 +884,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "240258120",
+      "id": "845230132",
       "name_lat": "FUN NORD'S PEPPILOTTA",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 15,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
       "id": "1716472971",
       "name_lat": "FUDZISAN ARASHI",
-      "name_ru": "",
+      "name_ru": "ФУДЗИСАН АРАШИ",
       "breed": "СИКОКУ",
       "breed_en": "SHIKOKU",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -864,7 +925,7 @@
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -877,12 +938,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "258799881",
+      "id": "466961866",
       "name_lat": "FUTURE BY US PROMO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -895,10 +956,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "547945246",
+      "id": "786957099",
       "name_lat": "FUN CHOCOLATES HONEY CHEEKS",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -936,7 +997,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -949,10 +1010,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "695177937",
+      "id": "751366482",
       "name_lat": "FUN TASTIK DIVINE LADY",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -964,6 +1025,15 @@
       "breed": "ПОРТУГАЛЬСКАЯ ОВЧАРКА",
       "breed_en": "PORTUGUESE SHEEPDOG",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1677117721",
+      "name_lat": "FUNNY PLANET ORANGE PANNA COTTA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -990,16 +1060,16 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1677117721",
-      "name_lat": "FUNNY PLANET ORANGE PANNA COTTA",
+      "id": "1583547741",
+      "name_lat": "FURIYA",
       "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1012,10 +1082,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "662975539",
+      "id": "1722842266",
       "name_lat": "FULL KISS MINIS FATRANSKY SEN",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА /",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1044,7 +1114,7 @@
       "name_ru": "",
       "breed": "СИКОКУ",
       "breed_en": "SHIKOKU",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1053,7 +1123,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1066,21 +1136,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "527416201",
-      "name_lat": "FULORIA SKY LAVANDER",
+      "id": "1097138073",
+      "name_lat": "FURRY MIRACLE ZEST OF CAKE",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "OLD ENGLISH SHEEPDOG",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "867174104",
-      "name_lat": "FUTURE IS ALREADY HERE",
+      "id": "1078940653",
+      "name_lat": "FUTURE BY US UVO",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1090,6 +1159,15 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "774583892",
+      "name_lat": "FURIA FIRE",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1129,10 +1207,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "57133552",
+      "id": "333235484",
       "name_lat": "FUN NORD'S PEPITA DIABLO",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1144,6 +1222,15 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1968794622",
+      "name_lat": "FUN NORD'S NAYADA MOYA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1180,24 +1267,6 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1695284914",
-      "name_lat": "FURIYA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1968794622",
-      "name_lat": "FUN NORD'S NAYADA MOYA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1255,21 +1324,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1237206085",
-      "name_lat": "FUROR ZEVS",
+      "id": "1415821397",
+      "name_lat": "FUDZISAN AIKO MASAHARA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "СИКОКУ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "412892855",
-      "name_lat": "FUDZISAN BUDOU MITSURU",
+      "id": "619325469",
+      "name_lat": "FUERTE АИР",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "БЕРНСКИЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1300,39 +1367,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "908698655",
-      "name_lat": "FURIA FIRE",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1735240376",
-      "name_lat": "FUROR ZEVS",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1195987293",
       "name_lat": "FUNNEWF ARKTIKA",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "NEWFOUNDLAND",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1097138073",
-      "name_lat": "FURRY MIRACLE ZEST OF CAKE",
-      "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "OLD ENGLISH SHEEPDOG",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1354,21 +1394,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "326556048",
-      "name_lat": "FUROR FAVORIT",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
-      "breed_en": "AMERICAN BULLDOG",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "714435057",
       "name_lat": "FUNNEWF ATLANTIKA",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "NEWFOUNDLAND",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1417,6 +1448,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1726495285",
+      "name_lat": "FUN CHOCOLATES ONIXIA QUEEN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
       "id": "846590666",
       "name_lat": "FURRY LOAF APOLLO THE MUSICIAN",
       "name_ru": "",
@@ -1426,12 +1466,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1726495285",
-      "name_lat": "FUN CHOCOLATES ONIXIA QUEEN",
+      "id": "1414872206",
+      "name_lat": "FUSION OF JOY DANCE OF FIRE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1476,7 +1516,16 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1053371675",
+      "name_lat": "FUDZISAN TAKARA",
+      "name_ru": "ФУДЗИСАН ТАКАРА",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1498,6 +1547,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "167031088",
+      "name_lat": "FURIYA IZ KURGAN GRADA",
+      "name_ru": "ФУРИЯ ИЗ КУРГАН ГРАДА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
       "id": "991413242",
       "name_lat": "FUKUDA DJUN",
       "name_ru": "",
@@ -1516,21 +1574,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1151599130",
+      "id": "287400171",
       "name_lat": "FUNNY LADIES WINNING STAR",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1053371675",
-      "name_lat": "FUDZISAN TAKARA",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1543,12 +1592,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "245321460",
+      "id": "823695112",
       "name_lat": "FUN NORDS OR DE LA FLYER",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "919564695",
+      "name_lat": "FUN CHOCOLATES ERMITAGE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1602650325",
+      "name_lat": "FUKUSHUUGEN GO SAPPORO KAGASSOU",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1561,21 +1628,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "34186741",
+      "name_lat": "FUNNEWF BOOTSMAN",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "829919739",
       "name_lat": "FUNTIK SEA BREEZE",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
       "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "34186741",
-      "name_lat": "FUNNEWF BOOTSMAN",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1597,10 +1664,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "924899702",
+      "id": "1859168192",
+      "name_lat": "FURPAU GIVENCHY DE MARSEILLE",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "530353877",
       "name_lat": "FUTURE BY US LYUTSIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
@@ -1612,15 +1688,6 @@
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1306696526",
-      "name_lat": "FURIYA IZ KURGAN GRADA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1651,12 +1718,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1141610977",
-      "name_lat": "FUN TASTIK KENDI",
+      "id": "1384879075",
+      "name_lat": "FUDZISAN SAUME TAKEMI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "916021378",
+      "name_lat": "FUN CHOCOLATES ELEGANT FALCON",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "683959618",
+      "name_lat": "FUN TASTIK KENDI",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1317687554",
+      "name_lat": "FUKIMI GO MINAMI RINKAN",
+      "name_ru": "ФУКИМИ ГО МИНАМИ РИНКАН",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1669,12 +1763,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "916021378",
-      "name_lat": "FUN CHOCOLATES ELEGANT FALCON",
+      "id": "498845200",
+      "name_lat": "FUDZISAN ZAIKEN KURO",
+      "name_ru": "ФУДЗИСАН ЗАИКЕН КУРО",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "28494701",
+      "name_lat": "FUN CHOCOLATES EXPLOSION STELLAR",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1684,15 +1787,6 @@
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1414872206",
-      "name_lat": "FUSION OF JOY DANCE OF FIRE",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1714,12 +1808,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1859168192",
-      "name_lat": "FURPAU GIVENCHY DE MARSEILLE",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 28,
+      "id": "1195213717",
+      "name_lat": "Fudzisan Unabara Shingon",
+      "name_ru": "ФУДЗИСАН УНАБАРА ШИНГОН",
+      "breed": "СИБА",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1747,6 +1840,15 @@
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1066208053",
+      "name_lat": "FUN CHOCOLATES EXTRA CLASS",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1795,8 +1897,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1584509162",
-      "name_lat": "FUN NORD'S KAPITOLINA",
+      "id": "809698592",
+      "name_lat": "FUDZISAN AKOS BYAKUDAN",
+      "name_ru": "ФУДЗИСАН АКОС БЯКУДАН",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1250250231",
+      "name_lat": "FUN NORD`S KAPITOLINA",
       "name_ru": "",
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
@@ -1804,10 +1915,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "961620592",
+      "id": "729926044",
       "name_lat": "FUN NORD’S MARSHAL",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1872,16 +1983,7 @@
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "809698592",
-      "name_lat": "FUDZISAN AKOS BYAKUDAN",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1891,24 +1993,6 @@
       "breed": "Сибирский хаски",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1602650325",
-      "name_lat": "FUKUSHUUGEN GO SAPPORO KAGASSOU",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "498845200",
-      "name_lat": "FUDZISAN ZAIKEN KURO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1948,15 +2032,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1384879075",
-      "name_lat": "FUDZISAN SAUME TAKEMI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1566027247",
       "name_lat": "FUDZISAN NARIKO",
       "name_ru": "",
@@ -1975,10 +2050,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1905175196",
+      "id": "15938483",
       "name_lat": "FUTURE BY US LUCHANO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1999,15 +2074,6 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "919564695",
-      "name_lat": "FUN CHOCOLATES ERMITAGE",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2056,15 +2122,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "28494701",
-      "name_lat": "FUN CHOCOLATES EXPLOSION STELLAR",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "594989338",
       "name_lat": "FUN CHOCOLATES ROLLS - ROYSE",
       "name_ru": "",
@@ -2074,21 +2131,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "760261263",
+      "id": "1031200446",
       "name_lat": "FURI UNDO EIFORIYA",
       "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН /",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1066208053",
-      "name_lat": "FUN CHOCOLATES EXTRA CLASS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "id": "1106865758",
+      "name_lat": "FURLA IZ FORTUNA MERDI",
+      "name_ru": "ФУРЛА ИЗ ФОРТУНА МЕРДИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2101,10 +2158,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1511146957",
+      "id": "1934686256",
       "name_lat": "FUDZITA TOOK TENDERNESS PETAL OF LOTUS",
       "name_ru": "",
-      "breed": "ТАЙСКИЙ БАНГКЭУ /",
+      "breed": "ТАЙСКИЙ БАНГКЭУ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2128,10 +2185,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "467826022",
+      "id": "1331872416",
       "name_lat": "FUKSHOUSE FRANCHESKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2146,10 +2203,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1832358362",
+      "id": "1049793823",
       "name_lat": "FUNGO",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2161,6 +2218,23 @@
       "breed": "СИБА",
       "breed_en": "SHIBA",
       "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1359377174",
+      "name_lat": "FUKUSHUUGEN GO SAPPORO KAGASOU",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1882150784",
+      "name_lat": "FUSION OF JOY SOFIA START OF THE NIGHT",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2206,6 +2280,15 @@
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "451999711",
+      "name_lat": "FURPAU INGVAR",
+      "name_ru": "ФУРПАУ ИНГВАР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2317,10 +2400,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "288698832",
+      "id": "1728851769",
+      "name_lat": "FUDZISAN IZUMIKO",
+      "name_ru": "ФУДЗИСАН ИЗУМИКО",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "371111164",
       "name_lat": "FUN NORD’S NAYADA MOYA",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2335,10 +2427,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1745712718",
+      "id": "1137532311",
       "name_lat": "FUCHI MY FANTASEE",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2380,6 +2472,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "716461198",
+      "name_lat": "FUDZISAN AKI KUROYURI",
+      "name_ru": "ФУДЗИСАН АКИ КУРОЮРИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1950461012",
       "name_lat": "FUSION OF JOY SOFIA START OR THE NIGHT",
       "name_ru": "",
@@ -2389,10 +2490,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1842688654",
+      "id": "445458936",
       "name_lat": "FUTURE BY US RITSA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2407,29 +2508,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "1419454192",
+      "id": "463333916",
       "name_lat": "FUN NORD’S KAPITOLINA",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1471195847",
+      "id": "1228320143",
+      "name_lat": "FUNNY POINTAIL SPOTLESS STYLE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1133467712",
       "name_lat": "FUTURE BY US ERAMIRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1831795607",
-      "name_lat": "FUJI DAIJINA HANA GO SHANGRI- LA",
+      "id": "577972243",
+      "name_lat": "FUJI DAIJINA HANA GO SHANGRI-LA",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1127070675",
+      "name_lat": "FUNDI SILENT WHISPER",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -2443,21 +2560,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1882150784",
-      "name_lat": "FUSION OF JOY SOFIA START OF THE NIGHT",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1734261198",
+      "id": "920562253",
       "name_lat": "FURST FRONAN LIHTENSHTEIN-OST",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -2479,24 +2587,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "774583892",
-      "name_lat": "FURIA FIRE",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1450807328",
-      "name_lat": "FURIYA",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "832126706",
       "name_lat": "FUNNY PONITAIL UINGAS AV HOPE",
       "name_ru": "",
@@ -2510,6 +2600,15 @@
       "name_lat": "FUNNY HOOLIGAN EDZAKARI",
       "name_ru": "",
       "breed": "СИБА/SHIBA",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1749565680",
+      "name_lat": "FUDZHI DOCH SAMURAYA",
+      "name_ru": "ФУДЖИ ДОЧЬ САМУРАЯ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2533,10 +2632,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1892294598",
+      "id": "1306517903",
       "name_lat": "FUNNY PONITAIL GOLDEN KING",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2569,11 +2668,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1317687554",
-      "name_lat": "FUKIMI GO MINAMI RINKAN",
+      "id": "153277637",
+      "name_lat": "FULLHOUSE BULL'S EN JOYTHE MATH",
       "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
+      "breed": "БУЛЬМАСТИФ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2584,6 +2682,15 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "134022693",
+      "name_lat": "FUNNY BIRTHMARK HONEY DROP",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2659,19 +2766,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "441689579",
+      "id": "772718012",
       "name_lat": "FUKSHOUSE HANNA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "936636690",
+      "id": "259265769",
       "name_lat": "FUKSHOUSE NORD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2686,10 +2793,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810278319",
+      "id": "1880158067",
       "name_lat": "FURSHOUSE FRANCHESKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2731,11 +2838,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1728851769",
-      "name_lat": "FUDZISAN IZUMIKO",
+      "id": "117271157",
+      "name_lat": "FUTURE BY US KALABRIA",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -2758,6 +2864,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "350948297",
+      "name_lat": "FUNNY-FACE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1452369547",
       "name_lat": "FUNNY PONITAIL UINGAS AV HOPE ГЮШЕН АС-САМАР ВАЛЕНТАЙН",
       "name_ru": "",
@@ -2776,6 +2890,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1970899474",
+      "name_lat": "FUDZISAN MAORI TSUTSUGO",
+      "name_ru": "",
+      "breed": "СИКОКУ / SHIKOKU",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "228649911",
       "name_lat": "FUMAKOTO MIKO",
       "name_ru": "",
@@ -2785,10 +2907,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "697137211",
+      "id": "326405618",
       "name_lat": "FUNNY PONITAIL GARRY POTER",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2812,6 +2934,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1940624194",
+      "name_lat": "FUNNY BUNNY",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1018138227",
       "name_lat": "FUKURI-KIMI",
       "name_ru": "",
@@ -2821,12 +2951,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "47044064",
+      "name_lat": "FUDZISAN AKEMI",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1413488849",
       "name_lat": "FUDZISAN ZAKI ITOU",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "155157762",
+      "name_lat": "FUKSIYA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2857,11 +3005,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1970992362",
+      "name_lat": "FUNNY-FACE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1242746459",
       "name_lat": "FURRY LOVE IVORY DEVIL (LONG)",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "226028142",
+      "name_lat": "FUDZISAN IENAGA TAKAMATSU",
+      "name_ru": "",
+      "breed": "СИКОКУ / SHIKOKU",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2884,21 +3048,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "451999711",
-      "name_lat": "FURPAU INGVAR",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1704915355",
+      "id": "931797673",
       "name_lat": "FUDZISAN AIMI NO GOMAGARA",
-      "name_ru": "",
-      "breed": "СИБА / SHIBA",
+      "name_ru": "ФУДЗИСАН АИМИ НО ГОМАГАРА",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2908,24 +3063,6 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "439901904",
-      "name_lat": "FUNNY BIRTHMARK HONEY DROP",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1583547741",
-      "name_lat": "FURIYA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2965,28 +3102,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "887107725",
-      "name_lat": "FUDZHI DOCH SAMURAYA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1059305564",
       "name_lat": "FUKURI SATI",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "47044064",
-      "name_lat": "FUDZISAN AKEMI",
-      "name_ru": "",
-      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3014,15 +3133,6 @@
       "name_lat": "FUKURI SATI",
       "name_ru": "",
       "breed": "СИБА / SHIBA",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "155157762",
-      "name_lat": "FUKSIYA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3118,10 +3228,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "808222858",
+      "id": "166653019",
       "name_lat": "FUNNY BIRTHMARK YUNI DZHI",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3172,11 +3282,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "153277637",
-      "name_lat": "FULLHOUSE BULL'S EN JOYTHE MATH",
+      "id": "136677368",
+      "name_lat": "FUNKY FRIENDS YA MIKKI",
       "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3190,6 +3299,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1700508479",
+      "name_lat": "FURIE VON DER SIGISLIEBE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1176725105",
       "name_lat": "FUTURUM HESIMI PRIMA",
       "name_ru": "",
@@ -3199,10 +3316,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "180929554",
+      "id": "593766045",
       "name_lat": "FUNNY",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3244,6 +3361,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1100810963",
+      "name_lat": "FUTURE DY US KALABRIA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1675243629",
       "name_lat": "FURI UNDO EJFORIYA",
       "name_ru": "",
@@ -3262,15 +3387,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1579719835",
-      "name_lat": "FUDZISAN DAICHI NO KURO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1392987231",
       "name_lat": "FURRY LOVE JAGUAR",
       "name_ru": "",
@@ -3280,10 +3396,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1456565757",
+      "id": "1674859062",
       "name_lat": "FUTST FRONAN LICHTENSTEIN-OST",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3307,6 +3423,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "743123507",
+      "name_lat": "FUN CHOCOLATES ELITE CHOICE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1277301293",
+      "name_lat": "FUERTE АИР",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "15055840",
       "name_lat": "FUROR ETYEN",
       "name_ru": "",
@@ -3318,19 +3450,19 @@
     {
       "id": "1321850996",
       "name_lat": "FURPAU DINASTIYA",
-      "name_ru": "",
+      "name_ru": "ФУРПАУ ДИНАСТИЯ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "1015751582",
       "name_lat": "FUDZISAN NARUTO",
-      "name_ru": "",
+      "name_ru": "ФУДЗИСАН НАРУТО",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3451,6 +3583,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1484841622",
+      "name_lat": "FUNGO",
+      "name_ru": "",
+      "breed": "СТАНДАРТНЫЙ ЦВЕТНОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1344747378",
       "name_lat": "FUNGO",
       "name_ru": "",
@@ -3460,11 +3600,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1480011205",
-      "name_lat": "FURLA IZ FORTUNA MERDI",
+      "id": "1598791930",
+      "name_lat": "FUROR ETYEN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3496,6 +3635,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "253935905",
+      "name_lat": "FUDZEY TSUYUDZIMO FROM FORT OGIR",
+      "name_ru": "ФУДЗЕЙ ЦУЮДЗИМО ФРОМ ФОРТ ОГИР",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "533406101",
       "name_lat": "FUROR NON-STOP KAREGLAZAYA BRYUNETKA IZ ODESSI",
       "name_ru": "",
@@ -3523,10 +3671,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "879900914",
+      "id": "1681788531",
       "name_lat": "FUMIKO ITI",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН /",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3559,10 +3707,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1461175968",
+      "id": "1916699076",
       "name_lat": "FUMIKO ITI",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЁРНЫЙ / JAPANESE",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЕРНЫЙ / JAPANESE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3586,20 +3734,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1069535422",
-      "name_lat": "FUUKA MIKAMISOU MIRYOKU KAT",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "422834752",
       "name_lat": "FUNNY PONITAIL SWEET CANDY",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1069535422",
+      "name_lat": "FUUKA MIKAMISOU MIRYOKU KAT",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -3622,10 +3770,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "977429322",
+      "id": "1102822423",
       "name_lat": "FURRYDREAM PRESENT OF FORTUNA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3667,19 +3815,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1078940653",
-      "name_lat": "FUTURE BY US UVO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "92221948",
+      "id": "207766553",
       "name_lat": "FUSION OF JOY ARPI SPRING SUN",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3694,10 +3833,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "379774944",
+      "id": "163909813",
       "name_lat": "FURRYDREAM BLACK PEARL",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3718,6 +3857,14 @@
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1832358362",
+      "name_lat": "FUNGO",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3771,15 +3918,6 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1172064391",
-      "name_lat": "FURIOUS VALKYRIE OF AMOVIK'S",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
-      "breed_en": "AMERICAN BULLY POCKET",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3865,10 +4003,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1060868559",
+      "id": "1369675774",
       "name_lat": "FUSION OF JOY MAXIMUS",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3973,10 +4111,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "89732137",
-      "name_lat": "FUTURE BY US KALABRIA",
+      "id": "886603784",
+      "name_lat": "FUNNYPLANET ZUKO MULTIFRUIT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "БИГЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "871098862",
+      "name_lat": "FUKKATSUMI SHIN NO RYU",
+      "name_ru": "ФУККАЦУМИ ШИН НО РЮ",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3991,10 +4137,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "903107227",
+      "id": "1403324479",
       "name_lat": "FUTURE KING",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4009,19 +4155,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1977912211",
-      "name_lat": "FUNT IZYUMA",
+      "id": "1733990869",
+      "name_lat": "FUNNY BUNNY",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "JACK RUSSELL TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1940624194",
-      "name_lat": "FUNNY BUNNY",
+      "id": "1977912211",
+      "name_lat": "FUNT IZYUMA",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4045,15 +4190,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "586866762",
-      "name_lat": "FUROR ZEVS",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1034997886",
       "name_lat": "FURPAU UMMA",
       "name_ru": "",
@@ -4063,19 +4199,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "65678459",
-      "name_lat": "FURIA FIRE",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1044347167",
+      "id": "656820991",
       "name_lat": "FUTURE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4099,10 +4226,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "58936452",
+      "id": "1441745051",
       "name_lat": "FURA NOKAFI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4131,6 +4258,23 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "339106801",
+      "name_lat": "FUNNYLINE FIELDQUEST RED KISS",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "509877112",
+      "name_lat": "FUN CHOCOLATES EMPIRE LUXURY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4252,19 +4396,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1199363463",
+      "id": "540124742",
       "name_lat": "FULDZHIDO STEKKA (MINI)",
       "name_ru": "",
-      "breed": "ЛАЙКА ГОЛАЯ СОБАКА) МИНИАТЮРНАЯ /",
+      "breed": "ЛАЙКА ГОЛАЯ СОБАКА) МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1467053346",
+      "id": "750910243",
       "name_lat": "FULL HOUSEDOM TIKET PRO",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4351,6 +4495,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "601107552",
+      "name_lat": "FUKSIYA IZ KSARO- CHESTNAYA IGRA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1159046346",
       "name_lat": "FUN CHOCOLATES IDAHO",
       "name_ru": "",
@@ -4369,20 +4521,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "886603784",
-      "name_lat": "FUNNYPLANET ZUKO MULTIFRUIT",
+      "id": "1406769770",
+      "name_lat": "FUN NORD’S OKTYABRINA",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "253935905",
-      "name_lat": "FUDZEY TSUYUDZIMO FROM FORT OGIR",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
+      "breed": "ЧЕРНЫЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4405,6 +4547,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "496129846",
+      "name_lat": "FUNNI PONITAIL SWEET KANDI",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1215173786",
+      "name_lat": "FUNNY POINTAIL ZHJURI V VOSTORGE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1529723496",
       "name_lat": "FUDZISAN DETSUYA KIOTO",
       "name_ru": "",
@@ -4423,10 +4581,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1575185361",
+      "id": "888991314",
       "name_lat": "FUCHSHAUSEN ZHERAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4477,15 +4635,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1195213717",
-      "name_lat": "Fudzisan Unabara Shingon",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "456152330",
       "name_lat": "FURST5 FRONAN LIHTENSHTEN-OST",
       "name_ru": "",
@@ -4495,10 +4644,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "866542434",
+      "id": "1210856782",
       "name_lat": "FUN NORD’S OMBUDSMAN",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4509,7 +4658,7 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4522,19 +4671,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "438708075",
-      "name_lat": "FUNNYLINE FIELDQUEST RED KISS",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "477174723",
+      "id": "560512044",
       "name_lat": "FULVO DELLA CAMBIANELLA NEW NAME’S FLAMING",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4648,15 +4788,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "871098862",
-      "name_lat": "FUKKATSUMI SHIN NO RYU",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1519722983",
       "name_lat": "FUDZISAN DEMI YUZUKI",
       "name_ru": "",
@@ -4747,20 +4878,34 @@
       "competition_dog_id": null
     },
     {
-      "id": "1136054586",
-      "name_lat": "FUDZISAN AIKO MASAHARA",
+      "id": "1484727405",
+      "name_lat": "FULORIA SCARLETT O'HARA",
       "name_ru": "",
-      "breed": "ФАРАОНОВА СОБАКА",
-      "breed_en": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "716461198",
-      "name_lat": "FUDZISAN AKI KUROYURI",
+      "id": "1403968161",
+      "name_lat": "FUTURUM HESIMI BENYR",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС / PEKINGESE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "817672864",
+      "name_lat": "FUNN NORD ZODIAC",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "136798296",
+      "name_lat": "FUSAE DAYSUKI DESU YO",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     }

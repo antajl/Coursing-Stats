@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОП",
-  "count": 173,
+  "count": 175,
   "dogs": [
     {
       "id": "317541364",
       "name_lat": "ОПТИМУС ИН ТЕРРА ЕНЖОЙ",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ЕНЖОЙ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 13,
@@ -15,7 +15,7 @@
     {
       "id": "155133854",
       "name_lat": "Оптимус Ин Терра Чарлес Роккет",
-      "name_ru": "",
+      "name_ru": "Оптимус Ин Терра Чарлес Роккет",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 9,
@@ -24,7 +24,7 @@
     {
       "id": "1749412663",
       "name_lat": "ОПЕН ХАРТ ТЕТ-А-ТЕТ",
-      "name_ru": "",
+      "name_ru": "ОПЕН ХАРТ ТЕТ-А-ТЕТ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 15,
@@ -33,7 +33,7 @@
     {
       "id": "1301261065",
       "name_lat": "ОПРА ДАР ПРИРОДЫ",
-      "name_ru": "",
+      "name_ru": "ОПРА ДАР ПРИРОДЫ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -42,7 +42,7 @@
     {
       "id": "1956711304",
       "name_lat": "ОПТИМУС ИН ТЕРРА ФАЛЬКОН",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ФАЛЬКОН",
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -51,37 +51,36 @@
     {
       "id": "1206119001",
       "name_lat": "ОПТИМУС ПРАЙМ",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ПРАЙМ",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1105235657",
-      "name_lat": "ОПИУМ С ВЕРШИНЫ ИНЬ ЯНЬ",
+      "id": "130965058",
+      "name_lat": "ОПЕР ОТВАЖНЫЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "КСОЛОИТЦКУИНТЛИ СРЕДНЯЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1059033253",
+      "name_lat": "ОПИУМ С ВЕРШИНЫ ИНЬ ЯНЬ",
+      "name_ru": "ОПИУМ С ВЕРШИНЫ ИНЬ ЯНЬ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
-      "total_shows": 23,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
       "id": "1690059244",
       "name_lat": "ОПТИМУС ИН ТЕРРА ФРЕЯ",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ФРЕЯ",
       "breed": "ЙОРКШИРСКИЙ СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "709474916",
-      "name_lat": "ОПИУМ ИЗ МИРА ГАРМОНИИ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -94,28 +93,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "904630902",
+      "id": "1792683279",
       "name_lat": "ОПТИМИСТ ИЗ ДОМА ГРЕЗ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "381779311",
+      "id": "1908616151",
       "name_lat": "ОПТИМУС ИН ТЕРРА САРБОНА",
-      "name_ru": "",
-      "breed": "континентальный той спаниель",
+      "name_ru": "ОПТИМУС ИН ТЕРРА САРБОНА",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1473572747",
+      "id": "1087748187",
       "name_lat": "ОПТИМУС ИН ТЕРРА ФЕНДИ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ФЕНДИ",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -130,84 +129,91 @@
       "competition_dog_id": null
     },
     {
-      "id": "1141807189",
-      "name_lat": "ОПТИМА ПРИМА ИЗ МАРИАЛГРАДА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "90141942",
+      "id": "919413072",
       "name_lat": "Опен Соул Келебриан",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "Опен Соул Келебриан",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1772426191",
-      "name_lat": "ОПИУМ ИЗ ОТЧЕГО ДОМА",
+      "id": "1706746192",
+      "name_lat": "ОПИУМ НАЙТ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1977899184",
       "name_lat": "ОПИУМ ИЗ СНЕЖНОЙ ГУБЕРНИИ",
-      "name_ru": "",
+      "name_ru": "ОПИУМ ИЗ СНЕЖНОЙ ГУБЕРНИИ",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
+      "id": "166550314",
+      "name_lat": "ОПУС МАГНУМ ДЕИ ТЕРРИ",
+      "name_ru": "ОПУС МАГНУМ ДЕИ ТЕРРИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1752970395",
       "name_lat": "Оптимус Ин Терра Симба",
-      "name_ru": "",
+      "name_ru": "Оптимус Ин Терра Симба",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1996697775",
+      "id": "158377587",
       "name_lat": "ОПЕН СОУЛ КАЛЕБРИАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1936765635",
+      "id": "415343947",
       "name_lat": "ОПАЛ ИЗ СТРАНЫ ГРЕЗ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ОПАЛ ИЗ СТРАНЫ ГРЕЗ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "289702264",
+      "id": "1447400178",
       "name_lat": "ОПТИМИСТ В ТЕЛЬНЯШКЕ ИЗ МЫШКИНОГО ДОМА",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ОПТИМИСТ В ТЕЛЬНЯШКЕ ИЗ МЫШКИНОГО ДОМА",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1147631880",
-      "name_lat": "ОПИУМ НАЙТ",
+      "id": "299864155",
+      "name_lat": "О ПРЕКРАСНАЯ АВРОРА",
       "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЭРДЕЛЬТЕРЬЕР АЛЯСКИНСКИЙ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1340834936",
+      "name_lat": "ОПТИМИСТКА ИЗ ХВОСТАТОГО БАЛАГАНА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -231,46 +237,37 @@
     {
       "id": "198126855",
       "name_lat": "ОПЕН ХАРТ ФЛАВЕР ПАШИОН",
-      "name_ru": "",
+      "name_ru": "ОПЕН ХАРТ ФЛАВЕР ПАШИОН",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "447830994",
-      "name_lat": "ОПУС МАГНУМ ДЕИ АЛЬТЕР ЭГО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "203593976",
-      "name_lat": "ОПАЛ ФОМ БАЙКАЛ ХАУС Д-Ш",
-      "name_ru": "",
+      "id": "1569017541",
+      "name_lat": "ОПАЛ ФОМ БАЙКАЛ ХАУС",
+      "name_ru": "ОПАЛ ФОМ БАЙКАЛ ХАУС",
       "breed": "SHEPHERD DOG LONG AND",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1754173919",
-      "name_lat": "ОП А ВОТ И Я",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "ST. BERNARD LONG HAIRED",
-      "total_shows": 3,
+      "id": "738318696",
+      "name_lat": "ОПИУМ ИЗ ФОРЦАБЕЛЛО",
+      "name_ru": "ОПИУМ ИЗ ФОРЦАБЕЛЛО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "104834079",
-      "name_lat": "ОПИУМ ИЗ ФОРЦАБЕЛЛО",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "id": "1365835408",
+      "name_lat": "ОПЕНХАРТИД ВИННИ ЗЕ ПУХ",
+      "name_ru": "ОПЕНХАРТИД ВИННИ ЗЕ ПУХ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -283,37 +280,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1365835408",
-      "name_lat": "ОПЕНХАРТИД ВИННИ ЗЕ ПУХ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "492323006",
+      "id": "1824869703",
       "name_lat": "ОПЕРА ДИВА ОТ НЕВСКОГО ДУЭТА",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "name_ru": "ОПЕРА ДИВА ОТ НЕВСКОГО ДУЭТА",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1603343615",
-      "name_lat": "ОПРА ДИ ФИАММА ВИВО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1583744886",
+      "id": "846292266",
       "name_lat": "ОПЕН ХАРТ РУССИАН ЦТАР",
-      "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "name_ru": "ОПЕН ХАРТ РУССИАН ЦТАР",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -321,7 +300,7 @@
     {
       "id": "696630895",
       "name_lat": "ОПТИМУС ИН ТЕРРА ГУЧЧИ БАМБОО",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ГУЧЧИ БАМБОО",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 8,
@@ -330,7 +309,7 @@
     {
       "id": "811354262",
       "name_lat": "ОПУС ДЕИ САН СЕБАСТЬЯН",
-      "name_ru": "",
+      "name_ru": "ОПУС ДЕИ САН СЕБАСТЬЯН",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 10,
@@ -339,7 +318,7 @@
     {
       "id": "1404443588",
       "name_lat": "ОПТИМИСТ ФРЕДИ ИЗ НОВОЙ ИМПЕРИИ",
-      "name_ru": "",
+      "name_ru": "ОПТИМИСТ ФРЕДИ ИЗ НОВОЙ ИМПЕРИИ",
       "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
       "breed_en": "",
       "total_shows": 6,
@@ -357,10 +336,19 @@
     {
       "id": "273163930",
       "name_lat": "ОПЕН ХАРТ РУБИ СЛИПЕРЗ",
-      "name_ru": "",
+      "name_ru": "ОПЕН ХАРТ РУБИ СЛИПЕРЗ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1783679528",
+      "name_lat": "ОПРА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -370,6 +358,15 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "423371599",
+      "name_lat": "О ПРИТТИ ВУМЕН МИШЕЛЬ",
+      "name_ru": "О ПРИТТИ ВУМЕН МИШЕЛЬ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -384,7 +381,7 @@
     {
       "id": "297951613",
       "name_lat": "ОПТИМУС ИН ТЕРРА ЛИЛУ",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ЛИЛУ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -409,19 +406,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "887378796",
+      "id": "1335332579",
       "name_lat": "ОПЕН СОУЛ ИЛИАНО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1308490301",
-      "name_lat": "ОПЕРА АННА РИТА",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -429,7 +417,7 @@
     {
       "id": "381923489",
       "name_lat": "ОПТИМУС ФОМ АЛЕКС БИРКЕНДОРФ",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ФОМ АЛЕКС БИРКЕНДОРФ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -438,17 +426,17 @@
     {
       "id": "684017904",
       "name_lat": "ОПТИМУС ИН ТЕРРА ДЭНСИНГ ФО Ю",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ДЭНСИНГ ФО Ю",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1834757088",
+      "id": "1139195096",
       "name_lat": "ОПТИМУС ИН ТЕРРА ЗЕВС",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ЗЕВС",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -463,21 +451,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "69711349",
+      "id": "28049902",
       "name_lat": "ОПИУМ ОФ ФЛОКИШ ФЕСТ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ОПИУМ ОФ ФЛОКИШ ФЕСТ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "735282195",
-      "name_lat": "ОПРА",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -501,7 +480,7 @@
     {
       "id": "1306984929",
       "name_lat": "ОПУС МАГНУМ ДЕИ ЦАЦА РОЯЛ ТОЙ",
-      "name_ru": "",
+      "name_ru": "ОПУС МАГНУМ ДЕИ ЦАЦА РОЯЛ ТОЙ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
@@ -510,7 +489,7 @@
     {
       "id": "1607168029",
       "name_lat": "ОПИУМ ИЗ ПОМЕСТЬЯ БЕРНОВ",
-      "name_ru": "",
+      "name_ru": "ОПИУМ ИЗ ПОМЕСТЬЯ БЕРНОВ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
@@ -519,17 +498,17 @@
     {
       "id": "567950753",
       "name_lat": "ОПАСНАЯ КРАСОТКА ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ОПАСНАЯ КРАСОТКА ЛЕДИ",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1537820986",
+      "id": "326728075",
       "name_lat": "ОПТИМИСТИК ТОФФИ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "name_ru": "ОПТИМИСТИК ТОФФИ",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -546,7 +525,7 @@
     {
       "id": "349811145",
       "name_lat": "ОПТИМУС ИН ТЕРРА ЗАФФИРО",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ЗАФФИРО",
       "breed": "Континентальный той спаниель",
       "breed_en": "",
       "total_shows": 4,
@@ -562,19 +541,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "79339754",
+      "id": "1443916356",
       "name_lat": "ОПЕН СОУЛ ДИАМОНД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1041096401",
+      "id": "1036804460",
       "name_lat": "ОПИУМ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -607,10 +586,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1823219588",
+      "id": "1173436464",
       "name_lat": "ОПА НА ДИВА ДИВНАЯ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -625,18 +604,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "328611555",
+      "id": "807541364",
       "name_lat": "ОПЕН СОУЛ ЗАР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ОПЕН СОУЛ ЗАР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1506110384",
+      "name_lat": "ОПТИМУС ИН ТЕРРА ЛА ПЕРЛА",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ЛА ПЕРЛА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "421847598",
       "name_lat": "ОПТИМУС ИН ТЕРРА ГЕРМИОНА",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ГЕРМИОНА",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ-ПАПИЙОН",
       "breed_en": "",
       "total_shows": 3,
@@ -645,46 +633,35 @@
     {
       "id": "1657132016",
       "name_lat": "ОПЕРА ПОЛИС СТАР",
-      "name_ru": "",
+      "name_ru": "ОПЕРА ПОЛИС СТАР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1506110384",
-      "name_lat": "ОПТИМУС ИН ТЕРРА ЛА ПЕРЛА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
+      "id": "1871743030",
+      "name_lat": "ОПЕН ХАРТ КАМА СУТРА",
+      "name_ru": "ОПЕН ХАРТ КАМА СУТРА",
+      "breed": "МОПС/PUG",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1366804456",
-      "name_lat": "ОПРА",
-      "name_ru": "",
-      "breed": "КАРДИГАН БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1706746192",
-      "name_lat": "ОПИУМ НАЙТ",
+      "id": "1459826306",
+      "name_lat": "ОПТИМУС ПРАЙМ ТАЙМ",
       "name_ru": "",
       "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "120282682",
-      "name_lat": "ОПТИМУС ПРАЙМ ТАЙМ",
+      "id": "251551718",
+      "name_lat": "ОПОЧТЛИ",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -706,12 +683,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "211837330",
+      "id": "997855265",
       "name_lat": "ОПТИМУС ИН ТЕРРА ОДРИ ТОТУ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ОПТИМУС ИН ТЕРРА ОДРИ ТОТУ",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -724,15 +701,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1836074813",
-      "name_lat": "ОПИУМ НАЙТ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "524386793",
       "name_lat": "ОПИУМ НАЙТ",
       "name_ru": "",
@@ -742,10 +710,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1669340258",
-      "name_lat": "ОПИУМ НАЙТ",
+      "id": "501326725",
+      "name_lat": "О ПРИТТИ ВУМЕН МИШЕЛЬ ОЧАРОВАНИЕ ИРЭН НЕРЕАЛЬНЫЙ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -760,15 +728,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "500248390",
-      "name_lat": "ОПИУМ БАЛМ ФОР СОУЛ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1247594955",
       "name_lat": "ОПРА УИНФРИ",
       "name_ru": "",
@@ -778,19 +737,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "94311241",
+      "id": "1580137437",
       "name_lat": "ОПАЛИН ПЕТАЛЬ БЛОССОМ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "210234789",
+      "id": "1731241298",
       "name_lat": "ОПИУМ ХЕВЕН'С ГЕЙТ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "ОПИУМ ХЕВЕН'С ГЕЙТ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -823,10 +782,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "147989656",
+      "id": "1341406309",
       "name_lat": "ОПТИМУС ИН ТЕРРА БАУНТИ БЬЮТИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -868,10 +827,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "543963818",
-      "name_lat": "ОПАЛ ГЛАНСЕ ДИ РОССО КОРНО",
+      "id": "997271044",
+      "name_lat": "ОПЕН ТХЕ ДАРКНЕСС РОТХАРТ ЕВИЛ ГЕНИУС",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "930676837",
+      "name_lat": "ОПАЛ ГЛАНСЕ ДИ РОССО КОРНО",
+      "name_ru": "ОПАЛ ГЛАНСЕ ДИ РОССО КОРНО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -886,19 +853,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1752002492",
-      "name_lat": "ОПИУМ НАЙТ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "435677632",
+      "id": "362314151",
       "name_lat": "ОПРА БЕЛЛИСИМО ПАНДОРА",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -906,7 +864,7 @@
     {
       "id": "1110352442",
       "name_lat": "ОПТИМУС ПРАЙМ ИЗ ПОМЕСТЬЯ БЕРНОВ",
-      "name_ru": "",
+      "name_ru": "ОПТИМУС ПРАЙМ ИЗ ПОМЕСТЬЯ БЕРНОВ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
@@ -922,10 +880,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1571428288",
+      "id": "516633621",
       "name_lat": "ОПТИМУС ПРАЙМ ГОЛДЕН ЛАЙН",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -933,26 +891,26 @@
     {
       "id": "200862215",
       "name_lat": "ОПИУМ ДЛЯ НАРОДА",
-      "name_ru": "",
+      "name_ru": "ОПИУМ ДЛЯ НАРОДА",
       "breed": "Американский стаффордширский терьер",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "106583475",
+      "id": "147259255",
       "name_lat": "ОПЕН СОУЛ ДРИМ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1169889381",
+      "id": "48655789",
       "name_lat": "ОПТИМУС ПРАЙД Я'САМАЯ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -967,10 +925,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "219040468",
-      "name_lat": "ОПЕРА ПРИМА ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "id": "722088831",
+      "name_lat": "ОПИУМ КАТАРОВ С ЗОЛОТОГО ГРАДА",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "405498945",
+      "name_lat": "ОПЕРА ПРИМА ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "name_ru": "ОПЕРА ПРИМА ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1057,10 +1023,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1649147201",
+      "id": "185820085",
       "name_lat": "ОПИУМ ГЛАМУРНЫЙ ВОИН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1068,7 +1034,7 @@
     {
       "id": "101808563",
       "name_lat": "ОПАСНАЯ КРАСОТКА ИЗ ЗАМКА ПРИОРА",
-      "name_ru": "",
+      "name_ru": "ОПАСНАЯ КРАСОТКА ИЗ ЗАМКА ПРИОРА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -1077,7 +1043,7 @@
     {
       "id": "1491623010",
       "name_lat": "ОПЕРЕТТА МАДОННА",
-      "name_ru": "",
+      "name_ru": "ОПЕРЕТТА МАДОННА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -1129,6 +1095,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "220653209",
+      "name_lat": "ОПРА",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256821955",
+      "name_lat": "ОПРА",
+      "name_ru": "",
+      "breed": "ВОЛЧЬЯ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "695845496",
       "name_lat": "ОПРА",
       "name_ru": "",
@@ -1169,6 +1151,23 @@
       "name_lat": "ОПАЛ",
       "name_ru": "",
       "breed": "ЗАПАДНОСИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1289185017",
+      "name_lat": "ОПЕР",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1788543971",
+      "name_lat": "ОПЕРНАЯ ДИВА ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1237,10 +1236,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1459729178",
+      "id": "748132913",
       "name_lat": "ОПРЕДЕЛЕНИЕ ПОРОДЫ БЬЮТИФУЛ МИСТЕРИЕС СМОУК",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1381,6 +1380,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "5550448",
+      "name_lat": "ОПИЯ С ВЕРШИНЫ ИНЬ ЯНЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ / GREAT DANE BLACK,",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "51658280",
+      "name_lat": "ОПУС МАГНУМ ДЕИ ЧЕЛСИ ВИЖН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "137837869",
       "name_lat": "ОПТИМУС ИН ТЕРРА ЛИЛУ (Д-Ш)",
       "name_ru": "",
@@ -1408,10 +1423,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "439516982",
+      "id": "1211826200",
       "name_lat": "ОПТИМУС ИЗ ДОМА ЗИДАНА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1426,10 +1441,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "193647300",
+      "id": "158590683",
       "name_lat": "ОПЕН СОУЛ КАЛЕОРИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1444,10 +1459,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "576976602",
+      "id": "1247513333",
       "name_lat": "Опасная Игра Теней от Нэл'З Юссэн",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1457,15 +1472,6 @@
       "name_lat": "ОПТИМУС ИН ТЕРРА ЖАКЛИН",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1112300969",
-      "name_lat": "ОПЕРНАЯ ДИВА ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1489,10 +1495,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "14445373",
+      "id": "457874784",
       "name_lat": "ОПТИМУС ИН ТЕРРА ЖЕРОНИМО",
       "name_ru": "",
-      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН /",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1516,10 +1522,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "998556830",
+      "id": "1776286201",
       "name_lat": "ОПИУМ БЛЕК ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1543,10 +1549,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1658314183",
+      "id": "1415233479",
       "name_lat": "ОПИУМ ГЛАМУРН ЫЙ ВОИН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

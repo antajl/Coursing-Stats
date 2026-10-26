@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЕА",
-  "count": 18,
+  "count": 22,
   "dogs": [
     {
       "id": "841846851",
       "name_lat": "ЕАСТ МАРК ШИ-РА ПРИНЦЕСС ОФ ПАУЭР",
-      "name_ru": "",
+      "name_ru": "ЕАСТ МАРК ШИ-РА ПРИНЦЕСС ОФ ПАУЭР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "725183506",
+      "name_lat": "Е-АЙЛАНА",
+      "name_ru": "",
+      "breed": "ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -22,9 +31,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "812027233",
+      "name_lat": "Е-АЙЛАНА",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ ЗАПАДНОСИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "130235147",
       "name_lat": "ЕАКАГАРАСУ ТАКАТОРИ",
-      "name_ru": "",
+      "name_ru": "ЕАКАГАРАСУ ТАКАТОРИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 13,
@@ -51,28 +69,19 @@
     {
       "id": "1629482073",
       "name_lat": "ЕАРСИК ЖАРДИН ЧЕРИ Э ФЛЁР",
-      "name_ru": "",
+      "name_ru": "ЕАРСИК ЖАРДИН ЧЕРИ Э ФЛЁР",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1334275005",
-      "name_lat": "ЕАСТ МАРК ФРЕНК ЗАППА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1064909024",
       "name_lat": "ЕАХ АЙМ РЕВОЛЮТИОН ОФ СИЛЬВЕР ВЭЙ",
-      "name_ru": "",
+      "name_ru": "ЕАХ АЙМ РЕВОЛЮТИОН ОФ СИЛЬВЕР ВЭЙ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -103,10 +112,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "481239685",
+      "id": "604400024",
       "name_lat": "ЕАСТ МАРК ХЭЛЕН ОФ ТРОЙ",
+      "name_ru": "ЕАСТ МАРК ХЭЛЕН ОФ ТРОЙ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1772374989",
+      "name_lat": "Е'АМИГО ЯРС ОТ ШАТО БУЛГАР (М)",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА (МАЛИНУА)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "216783528",
+      "name_lat": "Е' АЛИОТ",
+      "name_ru": "",
+      "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -136,6 +163,15 @@
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "265612074",
+      "name_lat": "Е'Алиот",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

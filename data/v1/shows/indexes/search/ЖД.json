@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЖД",
-  "count": 22,
+  "count": 23,
   "dogs": [
     {
       "id": "1688032983",
@@ -27,22 +27,13 @@
       "name_ru": "",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1549027566",
-      "name_lat": "ЖДАНА ИЗ ДРУЖИНЫ ПЕРЕСВЕТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "574873787",
       "name_lat": "ЖДАРА ИЗ ИМПЕРИИ ДРЕВНИХ ВОИНОВ",
-      "name_ru": "",
+      "name_ru": "ЖДАРА ИЗ ИМПЕРИИ ДРЕВНИХ ВОИНОВ",
       "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
       "breed_en": "",
       "total_shows": 10,
@@ -51,7 +42,7 @@
     {
       "id": "683246381",
       "name_lat": "ЖДАНА ИЗ ЯНТАРНОГО ДВОРЦА",
-      "name_ru": "",
+      "name_ru": "ЖДАНА ИЗ ЯНТАРНОГО ДВОРЦА",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 7,
@@ -60,7 +51,7 @@
     {
       "id": "102160139",
       "name_lat": "ЖДАННАЯ МЕЧТА ИЗ МУРОМСКОЙ ВАТАГИ",
-      "name_ru": "",
+      "name_ru": "ЖДАННАЯ МЕЧТА ИЗ МУРОМСКОЙ ВАТАГИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -78,7 +69,7 @@
     {
       "id": "1311784069",
       "name_lat": "ЖДАНА ИЗ ДОМА САВИНЫХ",
-      "name_ru": "",
+      "name_ru": "ЖДАНА ИЗ ДОМА САВИНЫХ",
       "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -103,10 +94,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1864833264",
+      "id": "450768676",
       "name_lat": "ЖДАНА",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1327006289",
+      "name_lat": "Ж-ДАКИ",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -157,10 +157,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "729409712",
+      "id": "1532454628",
       "name_lat": "ЖДАН",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1931622074",
+      "name_lat": "ЖДАНА СИЯНИЕ СОЛНЦА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1979533539",
+      "name_lat": "Ж ДЖИМ ХОКИНС",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -179,15 +197,6 @@
       "name_lat": "ЖДАРА ИЗ ИМПЕРИИ ДРЕВНИХ",
       "name_ru": "",
       "breed": "ВОСТОЧНО-",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1525636504",
-      "name_lat": "ЖДАНА СИЯНИЕ СОЛНЦА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

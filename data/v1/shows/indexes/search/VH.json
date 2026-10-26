@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "VH",
-  "count": 3,
+  "count": 5,
   "dogs": [
+    {
+      "id": "1461351594",
+      "name_lat": "V'HOKUSHOUME MIRYOKU KAT",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
     {
       "id": "1785010680",
       "name_lat": "VHOOPI GOLDBERG",
@@ -10,6 +19,15 @@
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "142213314",
+      "name_lat": "V'HOKUS HOUME MIRYOKU KAT",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

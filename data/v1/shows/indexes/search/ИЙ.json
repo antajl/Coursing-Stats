@@ -1,21 +1,21 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ИЙ",
-  "count": 14,
+  "count": 15,
   "dogs": [
     {
       "id": "1030322251",
       "name_lat": "ИЙЯ ЛАПУШКА ОТ БЕЛЯЕВЫХ",
-      "name_ru": "",
+      "name_ru": "ИЙЯ ЛАПУШКА ОТ БЕЛЯЕВЫХ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "1064014416",
       "name_lat": "ИЙ-АЮ ГАЙТАНА",
-      "name_ru": "",
+      "name_ru": "ИЙ-АЮ ГАЙТАНА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 21,
@@ -24,7 +24,7 @@
     {
       "id": "777152515",
       "name_lat": "ИЙ-АЮ КАМИЛЯ",
-      "name_ru": "",
+      "name_ru": "ИЙ-АЮ КАМИЛЯ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 22,
@@ -33,7 +33,7 @@
     {
       "id": "585226613",
       "name_lat": "ИЙ-АЮ ЕДИНСТВЕННЫЙ ХАН",
-      "name_ru": "",
+      "name_ru": "ИЙ-АЮ ЕДИНСТВЕННЫЙ ХАН",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 12,
@@ -90,6 +90,14 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "568762575",
+      "name_lat": "ИЙЯ ЛАПУШКА",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },

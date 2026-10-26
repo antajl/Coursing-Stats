@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EA",
-  "count": 68,
+  "count": 74,
   "dogs": [
     {
       "id": "1769449690",
@@ -9,16 +9,7 @@
       "name_ru": "",
       "breed": "СУССЕКС СПАНИЕЛЬ",
       "breed_en": "SUSSEX SPANIEL",
-      "total_shows": 56,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1037861648",
-      "name_lat": "EASY LIVING IZ DOMA ELIV'S",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 27,
+      "total_shows": 58,
       "competition_dog_id": null
     },
     {
@@ -27,7 +18,16 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "ENGLISH SPRINGER SPANIEL",
-      "total_shows": 44,
+      "total_shows": 49,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1037861648",
+      "name_lat": "EASY LIVING IZ DOMA ELIV'S",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -40,6 +40,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1991959834",
+      "name_lat": "EAST BREEZE NIAGARA",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1172970531",
       "name_lat": "EAKAGARASU TAKATORY",
       "name_ru": "",
@@ -49,10 +58,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "250391977",
+      "id": "928307238",
       "name_lat": "EARL'S MAID MAXEL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -76,10 +85,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1236328337",
+      "id": "179077614",
       "name_lat": "EARL'S MADE GALATEA STAR",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -130,6 +139,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1505852262",
+      "name_lat": "EAST WIND",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "432712906",
       "name_lat": "EASTLAND BULLY MICHELLE",
       "name_ru": "",
@@ -166,10 +184,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1598631828",
+      "id": "886897672",
       "name_lat": "EAGER FOR FAME IZ CHERNOI DRUZHINY",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -184,10 +202,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "49615149",
+      "id": "646428722",
       "name_lat": "EARL'S MADE MAKSEL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -202,15 +220,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1991959834",
-      "name_lat": "EAST BREEZE NIAGARA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "239067515",
       "name_lat": "EARLHEART BOSTON BRUIN",
       "name_ru": "",
@@ -220,8 +229,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1186956592",
-      "name_lat": "EAST NAMI BULL'S VA- LEVSKI",
+      "id": "1462769484",
+      "name_lat": "EAST NAMI BULL'S VA-LEVSKI",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
@@ -238,6 +247,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "88449837",
+      "name_lat": "E'ANGEL EYES IZ USADBY VORONOVO",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "683528291",
+      "name_lat": "EASY WAY TO WIN",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "547910639",
       "name_lat": "EASY TOUCH LUNA YORK",
       "name_ru": "",
@@ -247,21 +274,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "347824046",
+      "id": "1443510007",
       "name_lat": "EALD TINKERBELL",
       "name_ru": "",
-      "breed": "САССЕКС СПАНИЕЛЬ /",
+      "breed": "САССЕКС СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1465695852",
+      "id": "604790857",
       "name_lat": "EAST MARK PERI PERENIKE",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1137428503",
+      "name_lat": "EARL ELIZAR S MYSA HERSONES",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -283,19 +319,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1137428503",
-      "name_lat": "EARL ELIZAR S MYSA HERSONES",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "id": "867038218",
+      "name_lat": "EAKENOMIODZE V SOLNECHNOM GORODE",
+      "name_ru": "ЁАКЕНОМИОДЗЁ В СОЛНЕЧНОМ ГОРОДЕ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1706517922",
+      "id": "1702657311",
       "name_lat": "EAST DREAM COMET LOVEJOY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -310,12 +346,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "867038218",
-      "name_lat": "EAKENOMIODZE V SOLNECHNOM GORODE",
+      "id": "796295293",
+      "name_lat": "E'ANGEL EYES IZ USADBY VOBONOVO",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1414402769",
+      "name_lat": "EAST BEAUTY OT NEVSKOGO DUETA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ – ПАПИЙОН",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1095647986",
+      "name_lat": "EAST MARK FRENK ZAPPA",
+      "name_ru": "ЕАСТ МАРК ФРЕНК ЗАППА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -346,6 +399,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1454100814",
+      "name_lat": "E'ABLE TO WIN",
+      "name_ru": "",
+      "breed": "RETRIEVER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "65600023",
       "name_lat": "EASY LOVER DU CHATEAU",
       "name_ru": "",
@@ -364,30 +426,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1431983097",
+      "id": "160625092",
       "name_lat": "EATON AMAREX",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "755684265",
+      "id": "169937460",
       "name_lat": "EAST MARK PERSIA ARABIAN NIGHT",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "683528291",
-      "name_lat": "EASY WAY TO WIN",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -445,10 +498,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1414402769",
-      "name_lat": "EAST BEAUTY OT NEVSKOGO DUETA",
+      "id": "1974352595",
+      "name_lat": "E’ANGEL EYES IZ USADBY VORONOVO",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ – ПАПИЙОН",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -472,11 +525,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1548807627",
+      "name_lat": "EARTH ANGEL JUST FOR YOU",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "41539130",
       "name_lat": "EAUTIFUL FLOWER VOPLOSCHENIE MECHTY",
       "name_ru": "",
       "breed": "ПАПИЙОН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1036484646",
+      "name_lat": "EASY LIVING IZ DOMA ELIV’S",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -487,15 +556,6 @@
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1505852262",
-      "name_lat": "EAST WIND",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -521,15 +581,6 @@
       "name_lat": "EARL'S MADE INFARICA MAGIC DOLL",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1548807627",
-      "name_lat": "EARTH ANGEL JUST FOR YOU",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -589,19 +640,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1000386358",
+      "id": "12895808",
       "name_lat": "EARL MAID MAXEL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1095647986",
-      "name_lat": "EAST MARK FRENK ZAPPA",
+      "id": "28171190",
+      "name_lat": "E ARETRAT O UNICO SALVATOR",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed": "АБРУЦЦК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

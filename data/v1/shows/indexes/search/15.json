@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "15",
-  "count": 5,
+  "count": 6,
   "dogs": [
     {
       "id": "702223749",
@@ -9,6 +9,14 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1041216152",
+      "name_lat": "15) ГВАРДЕФЕНДЕР ГЕРОЙ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА / EAST",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -22,28 +30,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "331794393",
+      "id": "326827898",
       "name_lat": "15.01.2026 В. 31) RUDI VOM TEAM VALTENBERG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1115102710",
+      "id": "1644940368",
       "name_lat": "15.01.2026 В. 31) РЕГУЛ ЛАЙТ РАМЗЕС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "88427446",
+      "id": "6566288",
       "name_lat": "15.01.2026 В. 31) ЭДЕЛЬВЕЙС КУБАНИ ПАЛЬМИРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

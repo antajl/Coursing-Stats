@@ -1,0 +1,42 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "XC",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1926260886",
+      "name_lat": "XCELLENTE REY MAGNOLIA PASSCO",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1693888073",
+      "name_lat": "Xcellente Rey Magnolia Passco, ch RUS",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1296199171",
+      "name_lat": "XCELLENT REY MAGNOLIA PASSCO",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1169404731",
+      "name_lat": "XCLUSIVE VOM HAUSE NEUBRAND",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "ROTTWEILER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ВХ",
-  "count": 50,
+  "count": 60,
   "dogs": [
     {
       "id": "679101310",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ПАЛОМА",
-      "name_ru": "",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ ПАЛОМА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 16,
@@ -15,10 +15,19 @@
     {
       "id": "165933187",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ АГАТА",
-      "name_ru": "",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ АГАТА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1157808689",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ОТИС",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ ОТИС",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -33,19 +42,18 @@
     {
       "id": "781749884",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ПЕНЕЛОПА",
-      "name_ru": "",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ ПЕНЕЛОПА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "172291460",
-      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ОТИС",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
-      "breed_en": "",
-      "total_shows": 7,
+      "id": "1373670729",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ РОМЕРО",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ РОМЕРО",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -87,10 +95,18 @@
     {
       "id": "1110910943",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ РОЗАННА",
-      "name_ru": "",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ РОЗАННА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "MALTESE",
-      "total_shows": 10,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225532599",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ЦЕНТР ОФ ЗЕ ЮНИВЭРС",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -112,12 +128,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "164174769",
+      "id": "1794863180",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ИМАГЕ ПЕРФЕКТИОН",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ ИМАГЕ ПЕРФЕКТИОН",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -126,16 +142,16 @@
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "320230278",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ЕУПХОРИА",
-      "name_ru": "",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ ЕУПХОРИА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -157,12 +173,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1823148585",
-      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ РОМЕРО",
-      "name_ru": "",
+      "id": "1745646586",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ДЕНДИ",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ ДЕНДИ",
       "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -184,19 +199,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "225532599",
-      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ЦЕНТР ОФ ЗЕ ЮНИВЭРС",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1075750716",
+      "id": "388528985",
       "name_lat": "ВХИТЕ ФАЙРИ ХАННА МОНТАНА",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -206,6 +212,15 @@
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ РИО РИТА",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "466944319",
+      "name_lat": "В'ХАММЕР ФОР АЙС ШЕРАМИ",
+      "name_ru": "",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -247,9 +262,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1534243944",
+      "name_lat": "Вхите Файри Ангел Ювента",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1875584291",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ БРИАННА",
-      "name_ru": "",
+      "name_ru": "ВХИТЕ ФАЙРИ АНГЕЛ БРИАННА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 2,
@@ -328,55 +351,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "1592151798",
+      "id": "1575649775",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ КАРОЛИНЕ",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1740906809",
+      "id": "132132100",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ КАССИЕ ВЕНТУРА",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "500687697",
+      "id": "1195111916",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ КХРИСТИНЕ",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1565809216",
+      "id": "974364309",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ КХЛОЕ",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "853353449",
+      "id": "1459684468",
       "name_lat": "ВХИТЕ ФАЙРИ ХОНЕЙ",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1937751624",
+      "id": "1483001837",
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ КАТЕ",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -386,6 +409,55 @@
       "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ МИЛА",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1721607480",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ БИГ БОС",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1756650016",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ВИКИНГ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1740173645",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ВАЛЕРИЯ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1709426412",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ВЕРОНИКА",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1696638704",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ЮНОНА",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "243683510",
+      "name_lat": "В'ХОКУШАУМИ МИРИОКУ КАТ",
+      "name_ru": "",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -450,6 +522,14 @@
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "223260855",
+      "name_lat": "ВХИТЕ ФАЙРИ АНГЕЛ ФАЙЕР ШОУ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     }

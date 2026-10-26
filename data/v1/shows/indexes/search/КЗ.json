@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "КЗ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1030819875",
+      "name_lat": "КЗОЛО",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1935027783",
+      "name_lat": "К’ЗИЛМА ВАЙТ ГОЛД ДЕ АФИНА",
+      "name_ru": "",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1528512214",
+      "name_lat": "К ЗОРРО",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

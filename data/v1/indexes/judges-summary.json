@@ -1,17 +1,17 @@
 {
   "schema": "coursing-stats/index-judges-summary-v1",
-  "count": 31,
+  "count": 35,
   "judges": [
     {
       "id": "Вронская О.В.",
       "name": "Вронская О.В.",
-      "total_evaluations": 10858,
-      "total_evaluations_count": 2172,
-      "avg_score": 17.08040154724627,
-      "unique_breeds": 39,
+      "total_evaluations": 12028,
+      "total_evaluations_count": 2406,
+      "avg_score": 17.10325906218823,
+      "unique_breeds": 41,
       "unique_disciplines": 3,
-      "unique_events": 20,
-      "unique_dogs": 747
+      "unique_events": 22,
+      "unique_dogs": 806
     },
     {
       "id": "Козлова И.В.",
@@ -38,13 +38,13 @@
     {
       "id": "Иванова Г.С.",
       "name": "Иванова Г.С.",
-      "total_evaluations": 8043,
-      "total_evaluations_count": 1609,
-      "avg_score": 16.73591943304737,
+      "total_evaluations": 8033,
+      "total_evaluations_count": 1607,
+      "avg_score": 16.738702850740694,
       "unique_breeds": 45,
       "unique_disciplines": 3,
       "unique_events": 16,
-      "unique_dogs": 596
+      "unique_dogs": 595
     },
     {
       "id": "Лукина Д.М.",
@@ -113,6 +113,17 @@
       "unique_dogs": 265
     },
     {
+      "id": "Корепанова Т.В.",
+      "name": "Корепанова Т.В.",
+      "total_evaluations": 2855,
+      "total_evaluations_count": 571,
+      "avg_score": 16.457793345008756,
+      "unique_breeds": 28,
+      "unique_disciplines": 2,
+      "unique_events": 5,
+      "unique_dogs": 267
+    },
+    {
       "id": "Егорова М.А.",
       "name": "Егорова М.А.",
       "total_evaluations": 2625,
@@ -155,17 +166,6 @@
       "unique_disciplines": 3,
       "unique_events": 5,
       "unique_dogs": 283
-    },
-    {
-      "id": "Корепанова Т.В.",
-      "name": "Корепанова Т.В.",
-      "total_evaluations": 1685,
-      "total_evaluations_count": 337,
-      "avg_score": 16.033234421364984,
-      "unique_breeds": 25,
-      "unique_disciplines": 2,
-      "unique_events": 3,
-      "unique_dogs": 168
     },
     {
       "id": "Видус Г.С.",
@@ -249,11 +249,33 @@
       "name": "Куликова Г.В.",
       "total_evaluations": 1290,
       "total_evaluations_count": 258,
-      "avg_score": 17.377519379844962,
+      "avg_score": 17.41860465116279,
       "unique_breeds": 17,
       "unique_disciplines": 1,
       "unique_events": 3,
       "unique_dogs": 207
+    },
+    {
+      "id": "[\"Кудрявцева Н.Г.\"",
+      "name": "[\"Кудрявцева Н.Г.\"",
+      "total_evaluations": 1230,
+      "total_evaluations_count": 246,
+      "avg_score": 16.427642276422763,
+      "unique_breeds": 11,
+      "unique_disciplines": 1,
+      "unique_events": 1,
+      "unique_dogs": 123
+    },
+    {
+      "id": "\"Гольдинова Л.М.\"]",
+      "name": "\"Гольдинова Л.М.\"]",
+      "total_evaluations": 1230,
+      "total_evaluations_count": 246,
+      "avg_score": 17.239837398373982,
+      "unique_breeds": 11,
+      "unique_disciplines": 1,
+      "unique_events": 1,
+      "unique_dogs": 123
     },
     {
       "id": "Евграфова О.Н.",
@@ -333,6 +355,28 @@
       "unique_dogs": 54
     },
     {
+      "id": "[\"Орлова М.О.\"",
+      "name": "[\"Орлова М.О.\"",
+      "total_evaluations": 460,
+      "total_evaluations_count": 92,
+      "avg_score": 17.502173913043478,
+      "unique_breeds": 8,
+      "unique_disciplines": 2,
+      "unique_events": 2,
+      "unique_dogs": 46
+    },
+    {
+      "id": "\"Крылова Е.В.\"]",
+      "name": "\"Крылова Е.В.\"]",
+      "total_evaluations": 460,
+      "total_evaluations_count": 92,
+      "avg_score": 16.56086956521739,
+      "unique_breeds": 8,
+      "unique_disciplines": 2,
+      "unique_events": 2,
+      "unique_dogs": 46
+    },
+    {
       "id": "Табуева Т.А.",
       "name": "Табуева Т.А.",
       "total_evaluations": 380,
@@ -349,6 +393,7 @@
     "АЗАВАК",
     "АКИТА",
     "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+    "АМЕРИКАНСКИЙ ПИТ-БУЛЬТЕРЬЕР",
     "АМЕРИКАНСКИЙ ПИТБУЛЬТЕРЬЕР",
     "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
     "АНГЛИЙСКИЙ СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
@@ -374,6 +419,7 @@
     "ДОБЕРМАН ПИНЧЕР",
     "ДРУЖЕСТВЕННЫЕ-МАКСИ",
     "ДРУЖЕСТВЕННЫЕ-МИНИ",
+    "ЗОЛОТИСТЫЙ РЕТРИВЕР",
     "ИРЛАНДСКИЙ ВОЛКОДАВ",
     "ИРЛАНДСКИЙ ТЕРЬЕР",
     "ИСПАНСКАЯ БОРЗАЯ",
@@ -387,6 +433,7 @@
     "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
     "НЕМЕЦКАЯ ОВЧАРКА (Д-Ш, К-Ш)",
     "НЕМЕЦКАЯ ОВЧАРКА (ТИП НЕ УКАЗАН)",
+    "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
     "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
     "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
     "НЕМЕЦКИЙ ДОГ",

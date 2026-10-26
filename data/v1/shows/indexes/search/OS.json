@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OS",
-  "count": 622,
+  "count": 660,
   "dogs": [
     {
       "id": "57469015",
@@ -9,7 +9,16 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
-      "total_shows": 62,
+      "total_shows": 65,
+      "competition_dog_id": null
+    },
+    {
+      "id": "981260913",
+      "name_lat": "OST GRAZIA ESTERA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -18,25 +27,16 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 54,
-      "competition_dog_id": null
-    },
-    {
-      "id": "105369434",
-      "name_lat": "OST GRAZIA ESTERA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 28,
+      "total_shows": 59,
       "competition_dog_id": null
     },
     {
       "id": "1563605768",
       "name_lat": "OSENNIY BLYUZ ESTEL MON SHER MISHEL",
-      "name_ru": "",
+      "name_ru": "ОСЕННИЙ БЛЮЗ ЭСТЕЛЬ МОН ШЕР МИШЕЛЬ",
       "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "FLAT COATED RETRIEVER",
-      "total_shows": 58,
+      "total_shows": 64,
       "competition_dog_id": null
     },
     {
@@ -46,6 +46,15 @@
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
       "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1077143788",
+      "name_lat": "OSO DE MIEL ZUGL",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЗУГЛЬ",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 64,
       "competition_dog_id": null
     },
     {
@@ -69,19 +78,10 @@
     {
       "id": "576172756",
       "name_lat": "OSENNIY VALS IZ TSVETNOY AKVARELI",
-      "name_ru": "",
+      "name_ru": "Осенний Вальс из Цветной Акварели",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1077143788",
-      "name_lat": "OSO DE MIEL ZUGL",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "SCHIPPERKE",
-      "total_shows": 46,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -90,7 +90,16 @@
       "name_ru": "",
       "breed": "ФАРАОНОВА СОБАКА",
       "breed_en": "",
-      "total_shows": 37,
+      "total_shows": 39,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1699324320",
+      "name_lat": "OSTROV NA NEVE ZEFIR",
+      "name_ru": "ОСТРОВ НА НЕВЕ ЗЕФИР",
+      "breed": "КОЙКЕРХОНДЬЕ",
+      "breed_en": "NEDERLANDSE KOOIKERHONDJE",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -123,19 +132,19 @@
     {
       "id": "1402872359",
       "name_lat": "OSMAR'SZEUS KETIKU",
-      "name_ru": "",
+      "name_ru": "ОСМАР'СЗЕУС КЕТИКУ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 21,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "293529261",
-      "name_lat": "OSCAR DI CASA BEGGIATO",
+      "id": "882747069",
+      "name_lat": "OSCAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
-      "total_shows": 10,
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -144,12 +153,21 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "MINIATURE AMERICAN SHEPHERD",
-      "total_shows": 26,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "286812150",
-      "name_lat": "OSO DE MIEL YARA-VI- GRANDI",
+      "id": "1801654086",
+      "name_lat": "OSCAR DI CASA BEGGIATO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "378876446",
+      "name_lat": "OSO DE MIEL YARA-VI-GRANDI",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "MINIATURE AMERICAN SHEPHERD",
@@ -157,19 +175,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "865488271",
+      "id": "1183478019",
       "name_lat": "OSKAR LYUBIMEC FORTUNY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "771281001",
+      "id": "505048938",
       "name_lat": "OST GRAZIA ESMINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
@@ -181,6 +199,15 @@
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1793440440",
+      "name_lat": "OSO DE MIEL APELSIN",
+      "name_ru": "ОСО ДЕ МИЕЛЬ АПЕЛЬСИН",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -211,21 +238,47 @@
       "competition_dog_id": null
     },
     {
+      "id": "1855354108",
+      "name_lat": "OSENNIY JAZZ VIS-A-VIS",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "399059426",
+      "name_lat": "OST VOM ADLERHUGEL",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "228280776",
       "name_lat": "OSMAR'SZEUS YOU QUEEN OF MY HEART",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "1793440440",
-      "name_lat": "OSO DE MIEL APELSIN",
+      "id": "762087497",
+      "name_lat": "OSO DE MIEL JAR-OGON",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1852412890",
+      "name_lat": "OSENNIY BLYUZ PEPPILOTTA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -283,21 +336,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "485145395",
+      "id": "1182793719",
       "name_lat": "Osiana Team Carrera",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "762087497",
-      "name_lat": "OSO DE MIEL JAR-OGON",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "SCHIPPERKE",
-      "total_shows": 27,
+      "id": "1104335670",
+      "name_lat": "OSENNIY BLYUZ ETUAL SEN KLER",
+      "name_ru": "ОСЕННИЙ БЛЮЗ ЭТУАЛЬ СЕН КЛЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
+      "breed_en": "FLAT COATED RETRIEVER",
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -319,6 +372,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "771245320",
+      "name_lat": "OSKAR ROMANOFF PERFEKT BOY",
+      "name_ru": "ОСКАР РОМАНОФФ ПЕРФЕКТ БОЙ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1422652811",
+      "name_lat": "OSENNIY JAZZ BLACK POWER",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "224559838",
       "name_lat": "OSTROV NA NEVE BRIGANTINA",
       "name_ru": "",
@@ -328,12 +399,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "882747069",
-      "name_lat": "OSCAR",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 13,
+      "id": "741960261",
+      "name_lat": "OSO DE MIEL BAKKARDI",
+      "name_ru": "ОСО ДЕ МИЕЛЬ БАККАРДИ",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -355,21 +426,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1104335670",
-      "name_lat": "OSENNIY BLYUZ ETUAL SEN KLER",
-      "name_ru": "",
-      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
-      "breed_en": "FLAT COATED RETRIEVER",
-      "total_shows": 33,
-      "competition_dog_id": null
-    },
-    {
       "id": "471708963",
       "name_lat": "OSTVIND SHOLOM ALEIHEM",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "656150608",
+      "name_lat": "OSO DE MIEL ARETTE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -391,12 +461,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "656150608",
-      "name_lat": "OSO DE MIEL ARETTE",
+      "id": "1793481775",
+      "name_lat": "OSIRIS",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
+      "breed_en": "SOUTH AFRICAN BOERBOEL",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -427,12 +497,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1422652811",
-      "name_lat": "OSENNIY JAZZ BLACK POWER",
+      "id": "1146945531",
+      "name_lat": "OSVALD BOZHESTVENNYY PRAVITEL",
       "name_ru": "",
-      "breed": "МОПС",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "68340044",
+      "name_lat": "OSMAR'S ZEUS SUVOROV",
+      "name_ru": "ОСМАР'С ЗЕУС СУВОРОВ",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -454,15 +533,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "771245320",
-      "name_lat": "OSKAR ROMANOFF PERFEKT BOY",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
       "id": "925420959",
       "name_lat": "OSKOLD IS ALEKONA",
       "name_ru": "",
@@ -481,10 +551,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "68312325",
+      "id": "367201677",
       "name_lat": "OSIN HAUS SHCHERBET",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -499,21 +569,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1257455531",
-      "name_lat": "OSO DE MIEL DALERA",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "903829788",
       "name_lat": "Oso De Miel Hevi",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "494712749",
+      "name_lat": "OSCAR RICO DEI VIGNAZZI (Изм. ВК 16.10.25 в.33)",
+      "name_ru": "",
+      "breed": "ЧИРНЕКО ДЕЛЬ'ЭТНА",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -544,10 +614,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "229844674",
+      "id": "1200322856",
       "name_lat": "OSTROV NA NEVE DIVA",
       "name_ru": "",
-      "breed": "КОЙКЕРХОНДЬЕ НИДЕРЛАНДСКИЙ",
+      "breed": "ЛАБРАДОР КОЙКЕРХОНДЬЕ (ГОЛЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -557,6 +627,15 @@
       "name_lat": "OSO DE MIEL NO COMMENTS ( )",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "188709340",
+      "name_lat": "O'SINEL DE' JA-VU",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -625,6 +704,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "755331471",
+      "name_lat": "OSCAR WILDE",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "336060937",
       "name_lat": "OSO DE MIEL YACHIN",
       "name_ru": "",
@@ -643,21 +731,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1125608993",
+      "id": "1715367421",
       "name_lat": "OSNELDO STAR RIO RITTA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "ШОТЛАНДСКИЙ Й) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "399059426",
-      "name_lat": "OST VOM ADLERHUGEL",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ КУРЦХААР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -670,6 +749,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1319861393",
+      "name_lat": "OSIRIS",
+      "name_ru": "",
+      "breed": "SOUTH AFRICAN",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1308872559",
       "name_lat": "OSO DE MIEL LAKOSTA ( N/B )",
       "name_ru": "",
@@ -679,21 +766,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "768064443",
-      "name_lat": "OSMAR'S ZEUS LOTOS",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 28,
-      "competition_dog_id": null
-    },
-    {
       "id": "19909105",
       "name_lat": "OSMAR'SZEUS EDANA PASSIONATE BLOND",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 8,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "768064443",
+      "name_lat": "OSMAR'S ZEUS LOTOS",
+      "name_ru": "ОСМАР'С ЗЕУС ЛОТОС",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -712,24 +799,6 @@
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "BELGIAN SHEPHERD DOG MALINOIS",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1146945531",
-      "name_lat": "OSVALD BOZHESTVENNYY PRAVITEL",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1699324320",
-      "name_lat": "OSTROV NA NEVE ZEFIR",
-      "name_ru": "",
-      "breed": "КОЙКЕРХОНДЬЕ",
-      "breed_en": "NEDERLANDSE KOOIKERHONDJE",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -757,6 +826,24 @@
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "881880462",
+      "name_lat": "OSO DE MIEL MODESTAS",
+      "name_ru": "ОСО ДЕ МИЕЛЬ МОДЕСТАС",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "315264798",
+      "name_lat": "OSWALD PENDRAGON",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -814,37 +901,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "795576766",
-      "name_lat": "OSO DE MIEL BAKKARDI ( )",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1852412890",
-      "name_lat": "OSENNIY BLYUZ PEPPILOTTA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "948232261",
       "name_lat": "OSO DE MIEL MEET THE MAFIA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "98660243",
-      "name_lat": "OSTAN SAMARONI DOMINO'S",
-      "name_ru": "",
-      "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -868,39 +928,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "1793481775",
-      "name_lat": "OSIRIS",
+      "id": "1417113699",
+      "name_lat": "O SCHASTLIVCHIK OT BUMAGE",
       "name_ru": "",
-      "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
-      "breed_en": "SOUTH AFRICAN BOERBOEL",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1375849708",
-      "name_lat": "OSENNIY JAZZ VIS-A- VIS",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
+      "breed": "ЙОРКШИРСКИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "591117890",
+      "id": "53142595",
       "name_lat": "OSTI SKALLI S BEREGA TURI",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "673168464",
+      "id": "657240222",
+      "name_lat": "OSO DE MIEL KARDINAL",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "63399388",
       "name_lat": "OSTRAYA PERCHINKA S BUHTY APPOLONA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1428427555",
+      "name_lat": "OSIM HAIM ARIA STARK",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -913,10 +981,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "154069096",
+      "id": "139055164",
       "name_lat": "Oskar",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -940,10 +1008,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "317271904",
+      "id": "1713931244",
       "name_lat": "OSKAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ / MINIATURE",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ / MINIATURE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -972,16 +1040,16 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 20,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
-      "id": "1121994687",
-      "name_lat": "OSMAR'SZEUS EMERY LORD BYRON",
+      "id": "484703398",
+      "name_lat": "OSTIN IZ CHERNOY RATI",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "BICHON FRISE",
-      "total_shows": 15,
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -990,7 +1058,43 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 11,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1121994687",
+      "name_lat": "OSMAR'SZEUS EMERY LORD BYRON",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "BICHON FRISE",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1641602166",
+      "name_lat": "OSO DE MIEL TUCHKA",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ТУЧКА",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1711670339",
+      "name_lat": "OSTAN SAMARONI KRUSTY",
+      "name_ru": "",
+      "breed": "БАССЕТ ХАУНД",
+      "breed_en": "BASSET HOUND",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "117796145",
+      "name_lat": "OSMAR'SZEUS LOTOS",
+      "name_ru": "ОСМАР`СЗЕУС ЛОТОС",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "BICHON FRISE",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1003,48 +1107,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1904581760",
+      "id": "1381058127",
       "name_lat": "OSTEN STERN OLESYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "117796145",
-      "name_lat": "OSMAR'SZEUS LOTOS",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "BICHON FRISE",
+      "id": "646294917",
+      "name_lat": "OSO DE MIEL ZABALA",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЗАБАЛА",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1745804635",
-      "name_lat": "OSO DE MIEL ZABALA ЧУДЕСНЫЙ БРИЛЛИАНТ ИЗ СТАРОЙ",
+      "id": "226634390",
+      "name_lat": "OSO DE MIEL LAKOSTA( )",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1711670339",
-      "name_lat": "OSTAN SAMARONI KRUSTY",
+      "id": "973398337",
+      "name_lat": "OSMAR'S ZEUS KETIKU",
       "name_ru": "",
-      "breed": "БАССЕТ ХАУНД",
-      "breed_en": "BASSET HOUND",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "484703398",
-      "name_lat": "OSTIN IZ CHERNOY RATI",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1057,15 +1152,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1773111444",
-      "name_lat": "OSMAR'S ZEUS KETIKU",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ /",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "722605510",
       "name_lat": "OSKAR PLJUS LUBAVA",
       "name_ru": "",
@@ -1075,19 +1161,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "898902661",
+      "id": "602374830",
+      "name_lat": "OSO DE MIEL FINGER",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ФИНГЕР",
+      "breed": "СХИПЕРКЕ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1070799646",
       "name_lat": "OSTEN STERN VALENSIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1342636350",
+      "id": "1803535934",
       "name_lat": "OSKAR VSEMOGUSHCHIY",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КИНГ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1120,15 +1215,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "602374830",
-      "name_lat": "OSO DE MIEL FINGER",
-      "name_ru": "",
-      "breed": "СХИПЕРКЕ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "476707787",
       "name_lat": "OSKAR",
       "name_ru": "",
@@ -1147,39 +1233,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "226634390",
-      "name_lat": "OSO DE MIEL LAKOSTA( )",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "657327608",
+      "id": "1047653991",
       "name_lat": "OSKAR BLEK STAR VON ARMENIKUM",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1642991617",
-      "name_lat": "OSWALD PENDRAGON",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "494712749",
-      "name_lat": "OSCAR RICO DEI VIGNAZZI (Изм. ВК 16.10.25 в.33)",
-      "name_ru": "",
-      "breed": "ЧИРНЕКО ДЕЛЬ'ЭТНА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1206,7 +1265,7 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1228,30 +1287,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "881880462",
-      "name_lat": "OSO DE MIEL MODESTAS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "143555026",
       "name_lat": "OSO DE MIEL TOTILAS (N/B)",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1641602166",
-      "name_lat": "OSO DE MIEL TUCHKA",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1282,19 +1323,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "68340044",
-      "name_lat": "OSMAR'S ZEUS SUVOROV",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "191898717",
+      "id": "1487461376",
       "name_lat": "OSTROV NA NEVE VIVA VIKTORIYA",
       "name_ru": "",
-      "breed": "КОЙКЕРХОНДЬЕ /",
+      "breed": "КОЙКЕРХОНДЬЕ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1309,10 +1341,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1032174242",
+      "id": "942418906",
       "name_lat": "OSKAR GOLDEN DREAM",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СЕТТЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1336,10 +1368,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "814639192",
+      "id": "1999936903",
       "name_lat": "OSTEN STERN KAMELOT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1359,23 +1391,23 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
-      "total_shows": 3,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1479485227",
+      "id": "1699549695",
       "name_lat": "OSEN IZ DINASTII KONOL'S",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "555617889",
+      "id": "1894447656",
       "name_lat": "OSTROV NA NEVE BAIKAL",
       "name_ru": "",
-      "breed": "ГОЛЛАНДСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed": "ЛАГОТТО КОЙКЕРХОНДЬЕ (ГОЛЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1399,10 +1431,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1909543339",
+      "id": "1019118746",
       "name_lat": "OSO DE MIEL SMITH AND WESSON",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1426,11 +1458,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1527149245",
+      "id": "1818376785",
+      "name_lat": "OSKAR BEAUTIFUL CHAMPION",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1009141049",
       "name_lat": "OSKAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1687553048",
+      "name_lat": "OSIRIS",
+      "name_ru": "",
+      "breed": "ЮЖНОАФРИКАНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1409793659",
+      "name_lat": "OSIRIS",
+      "name_ru": "",
+      "breed": "БУРБУЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1441,15 +1497,6 @@
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "755331471",
-      "name_lat": "OSCAR WILDE",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1468,6 +1515,14 @@
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1422064037",
+      "name_lat": "OSTEN STERN USUBI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1498,19 +1553,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1086263882",
-      "name_lat": "OSO DE MIEL GLORIA",
+      "id": "1793531918",
+      "name_lat": "OSKAR2 IZ VLADENIY POPOVIH",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1573279094",
-      "name_lat": "OSKAR2 IZ VLADENIY POPOVIH",
+      "id": "1086263882",
+      "name_lat": "OSO DE MIEL GLORIA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1525,12 +1580,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1400207528",
+      "id": "400587853",
       "name_lat": "OSO DE MIEL SMUGLYANKA ( )",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1558,6 +1613,15 @@
       "breed": "СКИЙ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1515808277",
+      "name_lat": "OSO DE MIEL ZARE NAVSTRECHU",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЗАРЕ НАВСТРЕЧУ",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1606,6 +1670,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "663721036",
+      "name_lat": "OSTAP IZ KOROLEVSTVA ANNY",
+      "name_ru": "ОСТАП ИЗ КОРОЛЕВСТВА АННЫ",
+      "breed": "DACHSHUND ZWERG",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1636414520",
       "name_lat": "OSMAR’SZEUS JAKIE BEWEISE BEST",
       "name_ru": "",
@@ -1615,10 +1688,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "702286077",
+      "id": "536649183",
+      "name_lat": "OSO DE MIEL LAMBRA",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЛАМБРА",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "212703520",
       "name_lat": "OSMAR’SZEUS FORREST GAMP",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ /",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1638,7 +1720,7 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1651,12 +1733,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "565831423",
+      "id": "1237554926",
       "name_lat": "OSMAN SULTAN BATUR",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1737829175",
+      "name_lat": "OSCAR BENTON IZ SHEL'VIT",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1678,21 +1769,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1737829175",
-      "name_lat": "OSCAR BENTON IZ SHEL'VIT",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
-      "total_shows": 12,
+      "id": "1966158196",
+      "name_lat": "OSO DE MIEL CHE GEVARA",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЧЕ ГЕВАРА",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
       "id": "784114918",
       "name_lat": "OSKAR BIG BOSS",
-      "name_ru": "",
+      "name_ru": "ОСКАР БИГ БОСС",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1705,6 +1796,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "620112149",
+      "name_lat": "OSMAR'SZEUS KOUN",
+      "name_ru": "ОСМАР'СЗЕУС КОУН",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "301005777",
       "name_lat": "OSO DE MIEL SHAGAYU PO MOSKVE ( )",
       "name_ru": "",
@@ -1714,30 +1814,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1093267671",
+      "id": "492657942",
       "name_lat": "OSO DE MIEL SHAGAYU PO MOSKVE",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "615519517",
+      "id": "1249255879",
+      "name_lat": "OSTIN VLASTELIN DARDANELL",
+      "name_ru": "",
+      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "621787429",
+      "name_lat": "OSMAR'SZEUS NORWAY STORY NAZAR",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "BICHON FRISE",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1967151831",
       "name_lat": "OSCAR ANGEL EYES",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "НОРВИЧ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1565451712",
-      "name_lat": "OSO DE MIEL ZARE NAVSTRECHU",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1768,6 +1877,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "408179311",
+      "name_lat": "OSENNIY JAZZ MEYFLOWER",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "1743523470",
       "name_lat": "OSKAR HAMMER STRIKE",
       "name_ru": "",
@@ -1783,15 +1901,6 @@
       "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1237772212",
-      "name_lat": "OSTIN VLASTELIN DARDANELL",
-      "name_ru": "",
-      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1813,12 +1922,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1250521793",
+      "name_lat": "OSEN ZOLOTAYA IZ STAROY SHUI",
+      "name_ru": "ОСЕНЬ ЗОЛОТАЯ ИЗ СТАРОЙ ШУИ",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "198537660",
+      "name_lat": "OSO DE MIEL ZHOZEFINA",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЖОЗЕФИНА",
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "109667421",
       "name_lat": "OSKAR PLJUS RAPID FIRE",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "800228216",
+      "name_lat": "OSMAN FROM SOUS AFRIKA",
+      "name_ru": "ОСМАН ФРОМ СОУС АФРИКА",
+      "breed": "БУРБУЛЬ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1831,12 +1966,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "621787429",
-      "name_lat": "OSMAR'SZEUS NORWAY STORY NAZAR",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "BICHON FRISE",
-      "total_shows": 13,
+      "id": "1454254135",
+      "name_lat": "OSO DE MIEL YUSIPEKA",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЮСИПЕКА",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1858,6 +1993,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "473587169",
+      "name_lat": "OSO DE MIEL IRISH DARK",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1939584487",
+      "name_lat": "OSWALD BRILLIANT BLACK CONSUL",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1034116285",
       "name_lat": "OSTROV NA NEVE GREAT",
       "name_ru": "",
@@ -1867,10 +2020,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1582802552",
+      "id": "1538475695",
       "name_lat": "OSKAR VIKTORIOS DE VINKO",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1903,10 +2056,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "654482863",
+      "id": "1671853534",
       "name_lat": "OSO DE MIEL SCHERBET NB",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1921,12 +2074,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1315979636",
+      "id": "1452358817",
       "name_lat": "OSKAR ROYAL DIGNITY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1090546992",
+      "name_lat": "O'SINEL DE'JA-VU",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1936,15 +2098,6 @@
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "408179311",
-      "name_lat": "OSENNIY JAZZ MEYFLOWER",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1975,6 +2128,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "495982883",
+      "name_lat": "OSTIN LITTL BOY",
+      "name_ru": "ОСТИН ЛИТТЛ БОЙ",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1237543072",
       "name_lat": "OSKAR PLJUS DA'YANA",
       "name_ru": "",
@@ -1993,12 +2155,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1826358505",
-      "name_lat": "OSO DE MIEL CHE GEVARA",
+      "id": "1196013885",
+      "name_lat": "OSTROV NA NEVE VLADIMIR",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "ЛАБРАДОР НИДЕРЛАНДСКИЙ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2011,12 +2173,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1813713031",
+      "id": "1643787590",
       "name_lat": "OSO DE MIEL SMUGLYANKA",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1551316809",
+      "name_lat": "OSCAR S BELOGO OLIMPA",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "905627645",
+      "name_lat": "OSTROV NA NEVE BRILLIANT",
+      "name_ru": "",
+      "breed": "NEDERLANDSE",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2056,21 +2236,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "473587169",
-      "name_lat": "OSO DE MIEL IRISH DARK",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "id": "1001042413",
+      "name_lat": "O SULTAN SULEYMAN",
+      "name_ru": "О СУЛТАН СУЛЕЙМАН",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1939584487",
-      "name_lat": "OSWALD BRILLIANT BLACK CONSUL",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2078,6 +2249,15 @@
       "name_lat": "OSVAN ZLATA",
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE NAIN GREY, APRICOT, RED FAWN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "201801263",
+      "name_lat": "OSTROVSKY WILLBELUCKY SHARM DEWELT",
+      "name_ru": "",
+      "breed": "ФАРАОНОВА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2092,10 +2272,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1536711642",
+      "id": "1784455094",
+      "name_lat": "OSENNIY BLYUZ ITAKA HAPPY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "679099563",
       "name_lat": "OSTAP BENDER IZ LAPLANDII KANIS",
       "name_ru": "",
-      "breed": "БЕДЛИНГТОН ТЕРЬЕР /",
+      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2110,21 +2299,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "884635664",
+      "id": "1372440637",
+      "name_lat": "OSKAR BESKONECHNAYA LYUBOV",
+      "name_ru": "ОСКАР БЕСКОНЕЧНАЯ ЛЮБОВЬ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1090216293",
       "name_lat": "OSMAR'SZEUS FAIRY OF SUN FELICITA",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ /",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "536649183",
-      "name_lat": "OSO DE MIEL LAMBRA",
+      "id": "1885049083",
+      "name_lat": "OSTIN OBERON HAPPY ORANGE",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "SCHIPPERKE",
-      "total_shows": 9,
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "228075466",
+      "name_lat": "OSMAR'SZEUS KATSUMI",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1567075206",
+      "name_lat": "OSKAR SUPER STAR",
+      "name_ru": "ОСКАР СУПЕР СТАР",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2137,15 +2352,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "865787480",
-      "name_lat": "OSTROV NA NEVE BRILLIANT",
-      "name_ru": "",
-      "breed": "КОКЕРХОНДЕ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1444306915",
       "name_lat": "OSENNIY JAZZ MAYFLOWER",
       "name_ru": "",
@@ -2155,19 +2361,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1902886335",
+      "id": "1742233518",
       "name_lat": "OSTAP LE-VINS",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1839053179",
+      "id": "405215098",
+      "name_lat": "OSKAR VICTORIOS DE VINCO",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "848958770",
       "name_lat": "OSCAR",
       "name_ru": "",
-      "breed": "КАНЕ КОРСО /",
+      "breed": "КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2191,19 +2405,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1393093226",
+      "id": "225942780",
       "name_lat": "OSKAR BENNET EDWARD TEACH",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "907113492",
+      "id": "1408285194",
+      "name_lat": "OSO DE MIEL YASEN",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЯСЕНЬ",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed_en": "MINIATURE AMERICAN SHEPHERD",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "253111838",
+      "name_lat": "OSTI",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "440596673",
       "name_lat": "OSKAR",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2227,8 +2458,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1643801861",
-      "name_lat": "OSO DE MIE JAR- OGON",
+      "id": "213459969",
+      "name_lat": "OSO DE MIE JAR-OGON",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
@@ -2263,15 +2494,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "201801263",
-      "name_lat": "OSTROVSKY WILLBELUCKY SHARM DEWELT",
-      "name_ru": "",
-      "breed": "ФАРАОНОВА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "826158447",
       "name_lat": "OSMAR'S SZEUS ENDIESS CHARM",
       "name_ru": "",
@@ -2281,10 +2503,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "896796255",
+      "id": "434425898",
+      "name_lat": "Osmar' Szeus Forrest Gamp",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1031389646",
       "name_lat": "OSO DE MIEL URALOCHKA",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2305,15 +2535,6 @@
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "542913900",
-      "name_lat": "OSCAR S BELOGO OLIMPA",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ /",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2344,39 +2565,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1250521793",
-      "name_lat": "OSEN ZOLOTAYA IZ STAROY SHUI",
+      "id": "499151292",
+      "name_lat": "OSKAR IZ DOMA KONFAEL",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1885049083",
-      "name_lat": "OSTIN OBERON HAPPY ORANGE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1567075206",
-      "name_lat": "OSKAR SUPER STAR",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "228075466",
-      "name_lat": "OSMAR'SZEUS KATSUMI",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2384,8 +2578,16 @@
       "name_lat": "OSMAR'S ZEUS JAKIE BEWEISE BEST",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1569344968",
+      "name_lat": "OSTIN",
+      "name_ru": "",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2395,24 +2597,6 @@
       "breed": "МОПС / PUG",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1784455094",
-      "name_lat": "OSENNIY BLYUZ ITAKA HAPPY",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1196013885",
-      "name_lat": "OSTROV NA NEVE VLADIMIR",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР НИДЕРЛАНДСКИЙ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2434,10 +2618,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1447935977",
+      "id": "10669395",
+      "name_lat": "OSENDI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1542119146",
       "name_lat": "OST GRAZIA ESKITA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2461,21 +2654,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1252431928",
+      "id": "1411016871",
       "name_lat": "OSBORN IZ BELOGO JARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1454254135",
-      "name_lat": "OSO DE MIEL YUSIPEKA",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -2488,12 +2672,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "120489869",
+      "name_lat": "OSTIN",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1601879346",
       "name_lat": "OSO DE MIEL SHUMAKHER ( N/B )",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "71545650",
+      "name_lat": "OSO DE MIEL INDY",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2506,21 +2707,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1939764415",
+      "id": "1632464635",
       "name_lat": "OSBORNE IS A MAGNIFICENT KNIGHT",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1569344968",
-      "name_lat": "OSTIN",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2533,12 +2725,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "711318984",
+      "id": "168633528",
+      "name_lat": "OSTVIKS TOSHIRO RURI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1352356652",
       "name_lat": "OSTROV NA NEVE VASILEVSKIJ",
       "name_ru": "",
-      "breed": "ГОЛЛАНДСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛАБРАДОР КОЙКЕРХОНДЬЕ (Голландский Кокер",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1951893134",
+      "name_lat": "OSTEN STERN CHEKHIYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1049969482",
+      "name_lat": "OSAKA S VOSTOCHNOGO VETRA",
+      "name_ru": "ОСАКА С ВОСТОЧНОГО ВЕТРА",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2553,19 +2772,10 @@
     {
       "id": "471935017",
       "name_lat": "OSTAN SAMARONI DUSHECHKA",
-      "name_ru": "",
+      "name_ru": "ОСТАН САМАРОНИ ДУШЕЧКА",
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "10669395",
-      "name_lat": "OSENDI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2578,21 +2788,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "259505356",
+      "id": "1446585603",
       "name_lat": "OSMAN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "495982883",
-      "name_lat": "OSTIN LITTL BOY",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2605,21 +2806,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "242546887",
+      "id": "1610759046",
       "name_lat": "OSO DE MIEL LUIGI VAMPA( )",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "120489869",
-      "name_lat": "OSTIN",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "JACK RUSSELL TERRIER",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2641,15 +2833,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1285611733",
-      "name_lat": "OSTEN STERN CHEKHIYA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1088564146",
       "name_lat": "OSTVIKS ORANGE HANA",
       "name_ru": "",
@@ -2659,19 +2842,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1523956574",
+      "id": "1875932283",
       "name_lat": "OSVAN CHAK NORIS",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "62014381",
+      "id": "1215559750",
       "name_lat": "OSKAR VON GOLD SIEG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2740,12 +2923,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "478611886",
+      "id": "1404580087",
       "name_lat": "OSKAR IZ DOMA KUNETS",
       "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР /",
+      "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1638144999",
+      "name_lat": "OSMAR'S ZEUS LIONETT",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2758,30 +2949,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1752936420",
+      "id": "194157585",
       "name_lat": "OSO DE MIEL ZHGUCHAYA BRYUNETKA",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "71545650",
-      "name_lat": "OSO DE MIEL INDY",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "499151292",
-      "name_lat": "OSKAR IZ DOMA KONFAEL",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2803,28 +2976,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "234602787",
+      "id": "425664522",
       "name_lat": "OSO DE MIEL UDACHNAYA ZATEYA",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1395385761",
-      "name_lat": "OSENNIY JAZZ CHINESE WARRIOR",
+      "id": "1706243601",
+      "name_lat": "OSBOURNE KIEV CELEBRITY",
       "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "216572020",
+      "id": "1575837594",
+      "name_lat": "OSENNIY JAZZ CHINESE WARRIOR",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1539621793",
       "name_lat": "OSCAR ASPIRING TO THE STARTS",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2839,28 +3021,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "1909428558",
+      "name_lat": "OSO DE MIEL ROKMETTELER",
+      "name_ru": "ОСО ДЕ МИЕЛЬ РОКМЕТТЕЛЕР",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1217774593",
       "name_lat": "OSKAR PLJUS FLY-DON'T STOP ME NOW",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "872769601",
-      "name_lat": "OSMAN FROM SOUS AFRIKA",
-      "name_ru": "",
-      "breed": "БУРБУЛЬ / BOERBOEL",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "198537660",
-      "name_lat": "OSO DE MIEL ZHOZEFINA",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2893,10 +3066,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "478195942",
+      "id": "1838908140",
+      "name_lat": "OSO DE MIEL UNZIYA CHERNOGO ZOLOTA",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "157808282",
       "name_lat": "OSCAR BLAKE OCTAVE",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2906,24 +3087,6 @@
       "name_lat": "OSENNIY JAZZ QRISTAL SKY",
       "name_ru": "",
       "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "663721036",
-      "name_lat": "OSTAP IZ KOROLEVSTVA ANNY",
-      "name_ru": "",
-      "breed": "DACHSHUND ZWERG",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1638144999",
-      "name_lat": "OSMAR'S ZEUS LIONETT",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2947,10 +3110,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "405215098",
-      "name_lat": "OSKAR VICTORIOS DE VINCO",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "id": "603731748",
+      "name_lat": "OSKAR CHESTER",
+      "name_ru": "ОСКАР ЧЕСТЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2965,12 +3128,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "603731748",
-      "name_lat": "OSKAR CHESTER",
+      "id": "1124972935",
+      "name_lat": "O'SINEL SHOW DJOVANNI",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2983,19 +3145,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "127358632",
-      "name_lat": "OSCAR BLACK DIAMOND",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "id": "58889434",
+      "name_lat": "OSO DE MIEL YAGO-FON-RICHARD",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЯГО-ФОН-РИЧАРД",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "708849668",
-      "name_lat": "OSO DE MIEL YAGO-FON- RICHARD",
+      "id": "467117148",
+      "name_lat": "OSCAR BLACK DIAMOND",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3019,19 +3181,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1517862647",
+      "id": "144238059",
       "name_lat": "OSENNIY BLYUZ ONYX AMULET",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1779232712",
+      "id": "331212309",
       "name_lat": "OSKARAS BALTIJOS GAURUOCIAI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3055,10 +3217,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "497167767",
+      "id": "786880948",
+      "name_lat": "OSNELDO STAR VAYS",
+      "name_ru": "ОСНЕЛДО СТАР ВАЙС",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "707339888",
       "name_lat": "OSKAR BLACK STAR VON ARMENIKUM",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -3100,10 +3271,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "718687691",
+      "id": "1019789276",
       "name_lat": "OST GRAZIA ZARINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3118,6 +3289,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "639236543",
+      "name_lat": "OSTIN",
+      "name_ru": "",
+      "breed": "МОПС ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1028550845",
+      "name_lat": "OST GRAZIA OLIVIA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1186218233",
       "name_lat": "OSTIN SKAY FOKS",
       "name_ru": "",
@@ -3127,21 +3316,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "168633528",
-      "name_lat": "OSTVIKS TOSHIRO RURI",
+      "id": "1779405641",
+      "name_lat": "/ OSTAN SAMARONI JOKER",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1408285194",
-      "name_lat": "OSO DE MIEL YASEN",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
-      "breed_en": "MINIATURE AMERICAN SHEPHERD",
-      "total_shows": 6,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3163,21 +3343,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1943323422",
-      "name_lat": "OST GRAZIA OLIVIA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1739849836",
-      "name_lat": "OSO DE MIEL FLESH- ROYAL",
-      "name_ru": "",
+      "id": "30627838",
+      "name_lat": "OSO DE MIEL FLESH-ROYAL",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ФЛЕШ-РОЯЛЬ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -3217,19 +3388,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "850414818",
+      "name_lat": "O'SHEA UNFAILING CHARM",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "266303185",
       "name_lat": "OSKAR PLJUS SASHA FOR DOMA GLAN",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "786880948",
-      "name_lat": "OSNELDO STAR VAYS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3241,6 +3412,14 @@
       "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1210885977",
+      "name_lat": "OSCAR",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3280,21 +3459,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1756474077",
+      "name_lat": "OSTIN",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1668998309",
       "name_lat": "OSTWIND SHAMAN",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "714509363",
-      "name_lat": "OSTIN",
-      "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3316,10 +3495,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1279853925",
+      "id": "1611211258",
+      "name_lat": "OSEN",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "325568545",
       "name_lat": "OSCAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3334,37 +3522,62 @@
       "competition_dog_id": null
     },
     {
-      "id": "216237854",
+      "id": "122088129",
+      "name_lat": "OSMAN IZ TSVETNOY SKAZKI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1165410009",
+      "name_lat": "OSO DE MIEL SCHERBET ( )",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1544709241",
       "name_lat": "OSCAR",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1994096142",
+      "id": "635997304",
       "name_lat": "OST GRAZIA ZAYRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1269043441",
+      "id": "1589615500",
       "name_lat": "OSTIN SKY FOX",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "847465380",
+      "id": "1255770177",
+      "name_lat": "O'SHREK",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1509264891",
       "name_lat": "OSTIN MARTIN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3379,10 +3592,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1864058792",
+      "id": "877033645",
       "name_lat": "OSEN EVAN DE MARKO",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3469,10 +3682,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1873842684",
+      "id": "1725071130",
       "name_lat": "OSCAR BLUE OCEAN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -3483,7 +3696,7 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3520,6 +3733,14 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1447883551",
+      "name_lat": "OSTVIKS CITRON",
+      "name_ru": "",
+      "breed": "СИБА/SHIBA",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3595,15 +3816,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1049969482",
-      "name_lat": "OSAKA S VOSTOCHNOGO VETRA",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1775642630",
       "name_lat": "OSO DE MIEL CARES (N/B)",
       "name_ru": "",
@@ -3622,24 +3834,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1756474077",
-      "name_lat": "OSTIN",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1706243601",
-      "name_lat": "OSBOURNE KIEV CELEBRITY",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1189410624",
       "name_lat": "OSIN HAUS EVA",
       "name_ru": "",
@@ -3653,15 +3847,6 @@
       "name_lat": "OSO DE MIEL ISTIKLYAL",
       "name_ru": "",
       "breed": "СХИПЕРКЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "620112149",
-      "name_lat": "OSMAR'SZEUS KOUN",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3685,10 +3870,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1164154947",
+      "id": "13233556",
       "name_lat": "OSTEN STERN OREGON",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3721,10 +3906,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1611278462",
+      "id": "79162119",
       "name_lat": "OSTIN LIFE VOLF",
       "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3766,10 +3951,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "427579706",
+      "id": "508446431",
       "name_lat": "OSVAN ZLATA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE NAIN GREY, APRICOT, RED FAWN ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ /",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE NAIN GREY, APRICOT, RED FAWN ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3829,6 +4014,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1934233211",
+      "name_lat": "OSTIN",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1313455400",
       "name_lat": "OSENDI",
       "name_ru": "",
@@ -3856,10 +4049,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1805038565",
+      "id": "1264594",
       "name_lat": "OSHEYNIKA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3901,10 +4094,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1525146096",
+      "id": "1233895541",
       "name_lat": "OSEN EVITA ORANZHEY",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3955,17 +4148,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1372440637",
-      "name_lat": "OSKAR BESKONECHNAYA LYUBOV",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "708431624",
-      "name_lat": "OSO DE MIEL YULALI- EVRIKA",
+      "id": "424881146",
+      "name_lat": "OSO DE MIEL YULALI-EVRIKA",
       "name_ru": "",
       "breed": "СХИППЕРКЕ / SCHIPPERKE",
       "breed_en": "",
@@ -3982,6 +4166,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "70821200",
+      "name_lat": "OSO DE MIEL ZABALA ЧУДЕСНЫЙ БРИЛЛИАНТ ИЗ СТАРОЙ",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ / SCHIPPERKE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1244400811",
+      "name_lat": "O STAR FACCETTE DI UN DIAMANT",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИ Й ШПИЦ ТОЙ (ПОМЕРА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1727049323",
       "name_lat": "OSVAN SKY RIDER",
       "name_ru": "",
@@ -3991,10 +4193,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1642633535",
+      "id": "986727743",
       "name_lat": "OSENNII VETER NESSY",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4018,15 +4220,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "657240222",
-      "name_lat": "OSO DE MIEL KARDINAL",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1520535003",
       "name_lat": "OSMAR'SZEUS ROCK'N ROLL",
       "name_ru": "",
@@ -4036,11 +4229,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "212181761",
+      "name_lat": "OSMAR’S ZEUS LOTOS",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
       "id": "1379532112",
       "name_lat": "OSTIN",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "807000381",
+      "name_lat": "OSKAR INFINITE LOVE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -4063,10 +4273,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "313668395",
+      "id": "1134673226",
       "name_lat": "OSIN HAUS KUROSAVA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4090,10 +4300,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "202563910",
+      "id": "92072468",
       "name_lat": "OSKAR OZZI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ БРАКК ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4117,11 +4327,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1165410009",
-      "name_lat": "OSO DE MIEL SCHERBET ( )",
+      "id": "1066176094",
+      "name_lat": "OSCAR WILDE",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
+      "breed": "ПОЙНТЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "253414013",
+      "name_lat": "OSCAR WILDE",
+      "name_ru": "",
+      "breed": "ГАСКОНСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4162,10 +4379,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "69366765",
+      "id": "1022674054",
       "name_lat": "OSTEN STERN YLIANA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4180,10 +4397,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1015014356",
+      "id": "1900335376",
       "name_lat": "OSKAR",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ / PUG BLACK",
+      "breed": "МОПС ЧЕРНЫЙ / PUG BLACK",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4252,19 +4469,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "905565143",
+      "id": "795576766",
+      "name_lat": "OSO DE MIEL BAKKARDI ( )",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1033783833",
       "name_lat": "OSKAR",
       "name_ru": "",
-      "breed": "БУЛЛИ СТАНДАРТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "994669748",
+      "name_lat": "OSTIN",
+      "name_ru": "",
+      "breed": "РАССЕЛ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "897924191",
+      "id": "632447864",
       "name_lat": "OSIN HAUS CHARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4303,6 +4537,15 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "289193535",
+      "name_lat": "O’SHREK",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4378,10 +4621,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1363369949",
+      "id": "1886191497",
       "name_lat": "OSTIN",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ / PUG BLACK",
+      "breed": "МОПС ЧЕРНЫЙ / PUG BLACK",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4396,10 +4639,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1129880634",
+      "id": "672392230",
       "name_lat": "OSKAR",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "963157345",
+      "name_lat": "O STAR NOSTALGI A FLYING",
+      "name_ru": "",
+      "breed": "ОРАНЖЕВ НСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4410,6 +4662,14 @@
       "name_ru": "",
       "breed": "BICHON FRISE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "214056781",
+      "name_lat": "OSMAR’SZEUS JAСKIE BEWEISE BEST",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4459,21 +4719,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1274528100",
+      "name_lat": "OST GRAZIA ESSARI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "786091379",
       "name_lat": "OSHELAMITELNAYA",
       "name_ru": "",
       "breed": "ЗЕННЕНХУНД БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1278182259",
-      "name_lat": "OST GRAZIA ESSARI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -4486,15 +4746,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "212181761",
-      "name_lat": "OSMAR’S ZEUS LOTOS",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1882372425",
       "name_lat": "OSKARDO O'DOMANI FOR RUS BEST LINE",
       "name_ru": "",
@@ -4504,12 +4755,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "951788541",
+      "id": "783640630",
       "name_lat": "OSMAN IZ FORTUNA MERDI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ОСМАН ИЗ ФОРТУНА МЕРДИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -4522,46 +4773,63 @@
       "competition_dog_id": null
     },
     {
-      "id": "968331044",
-      "name_lat": "OSTEN STERN SHRI LANKA",
-      "name_ru": "",
-      "breed": "Немецкая овчарка стандартная",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "972410280",
-      "name_lat": "OSKAR WILD DEINE ARCTOS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1175838840",
-      "name_lat": "OSMAR'S ZEUS KATIKU",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1480451959",
       "name_lat": "OSKAR DAENERYS",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1069336955",
+      "name_lat": "OSTEN STERN SHRI LANKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "403917142",
+      "name_lat": "OSTVIN LITL FOKS",
+      "name_ru": "ОСТВИН ЛИТЛ ФОКС",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1375767390",
+      "name_lat": "OSKAR WILD DEINE ARCTOS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1465858331",
+      "id": "398778876",
+      "name_lat": "OSKAR AUS DEM STERNENHAUS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1936523165",
+      "name_lat": "OSMAR'S ZEUS KATIKU",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1211825746",
       "name_lat": "OSCAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4603,10 +4871,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1948722619",
+      "id": "108424684",
       "name_lat": "OST GRAZIA CHEZARIA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4630,6 +4898,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1092288396",
+      "name_lat": "OSKAR LE ROYAL",
+      "name_ru": "ОСКАР ЛЕ РОЯЛ",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1990910744",
       "name_lat": "OSENNIJ VAL'S BLAGOVEST'",
       "name_ru": "",
@@ -4645,6 +4922,15 @@
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "219218326",
+      "name_lat": "OSENDI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4729,6 +5015,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1513467128",
+      "name_lat": "O-SHA PRANA ZHEMCHUZHINA PRIDVINJA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1751341726",
       "name_lat": "OST GRAZIA PARKER",
       "name_ru": "",
@@ -4765,10 +5060,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1338899999",
+      "id": "480446776",
       "name_lat": "OSTEN STERN CHAVES",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4837,28 +5132,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1428427555",
-      "name_lat": "OSIM HAIM ARIA STARK",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "542332186",
+      "id": "1211089969",
       "name_lat": "OST GRAZIA ORIANA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "796933388",
+      "id": "513092898",
       "name_lat": "OST GRAZIA CHELENTANO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4869,15 +5155,6 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1920928278",
-      "name_lat": "OSKAR INFINITE LOVE",
-      "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4918,6 +5195,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "496196223",
+      "name_lat": "OSO DE MIEL ENIGMA",
+      "name_ru": "ОСО ДЕ МИЕЛЬ ЕНИГМА",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1232568372",
       "name_lat": "OSTROVOV MBIRNY EL S KRASNOGO",
       "name_ru": "",
@@ -4927,10 +5213,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "697846119",
+      "id": "1170077149",
       "name_lat": "OSTROV NA NEVE ZHEMCHUZHENKA",
       "name_ru": "",
-      "breed": "КОЙКЕРХОНДЬЕ НИДЕРЛАНДСКИЙ",
+      "breed": "ЛАБРАДОР КОЙКЕРХОНДЬЕ (ГОЛЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4942,15 +5228,6 @@
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "219218326",
-      "name_lat": "OSENDI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -4981,6 +5258,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1674671411",
+      "name_lat": "OSKAR LINK",
+      "name_ru": "",
+      "breed": "JACK RUSSELL TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "101984064",
       "name_lat": "OSVAN UGRA",
       "name_ru": "",
@@ -4994,15 +5279,6 @@
       "name_lat": "OSTIN",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "329848290",
-      "name_lat": "OSKAR",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5026,28 +5302,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "841398193",
+      "id": "1624653900",
       "name_lat": "OSTROVA",
       "name_ru": "",
-      "breed": "КОРИЧНЕВО- ПОДПАЛЫЙ /",
+      "breed": "КОРИЧНЕВО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "763126285",
+      "id": "665029081",
       "name_lat": "OSKAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1611211258",
-      "name_lat": "OSEN",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5071,15 +5338,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1594184325",
-      "name_lat": "OSO DE MIEL GRETEL GRAND",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "SCHIPPERKE",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "755362743",
       "name_lat": "OSO DE MIEL LIGOVKA",
       "name_ru": "",
@@ -5089,8 +5347,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1909428558",
-      "name_lat": "OSO DE MIEL ROKMETTELER",
+      "id": "1594184325",
+      "name_lat": "OSO DE MIEL GRETEL GRAND",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
@@ -5121,6 +5379,15 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "672726216",
+      "name_lat": "O'SHANTER TEM IZ DOMA ELIV'S",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "CAIRN TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5179,19 +5446,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "388205961",
+      "id": "526804500",
       "name_lat": "OST KIANU CHUK",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "992399815",
+      "id": "86096006",
       "name_lat": "OSCAR LIOTTA BROWN ALSHTADT",
       "name_ru": "",
-      "breed": "DACHSHUND NORMALGRUSSE KURZHAAR ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "DACHSHUND NORMALGRUSSE KURZHAAR ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5215,6 +5482,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "25274467",
+      "name_lat": "O'SHEA UNFAILIN G CHARM",
+      "name_ru": "",
+      "breed": "LABRADO",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "65918665",
       "name_lat": "OSTERGAARD'S 'DUNYA'",
       "name_ru": "",
@@ -5233,19 +5509,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "290438503",
-      "name_lat": "OSKAR RAYSKY SAD",
+      "id": "1913150106",
+      "name_lat": "O'SOLE MIO SOLAR CITY",
       "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "403917142",
-      "name_lat": "OSTVIN LITL FOKS",
+      "id": "290438503",
+      "name_lat": "OSKAR RAYSKY SAD",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5314,6 +5590,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1069311072",
+      "name_lat": "OSCAR FROM HOUSE OF BLACKS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "311501415",
+      "name_lat": "OSKAR FIRE LINE",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "547778515",
       "name_lat": "OSTVIKS CHIKO KABI",
       "name_ru": "",
@@ -5350,10 +5642,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1090681154",
+      "id": "1441996460",
       "name_lat": "OSIN HAUS HAGRID",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5395,10 +5687,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "473778125",
+      "id": "232884518",
       "name_lat": "OSTEN STERN PORSH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5431,8 +5723,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1189894129",
-      "name_lat": "OSTROV NA NEVE ZHAR- PTITSA",
+      "id": "140556603",
+      "name_lat": "OSTROV NA NEVE ZHAR-PTITSA",
       "name_ru": "",
       "breed": "ЛАГОТТО КОЙКЕРХОНДЬЕ (ГОЛЛАНДСКИЙ",
       "breed_en": "",
@@ -5444,15 +5736,6 @@
       "name_lat": "OSMAR'SZEUS XAVIER HONEY WATER",
       "name_ru": "",
       "breed": "FRISE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1092288396",
-      "name_lat": "OSKAR LE ROYAL",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5476,10 +5759,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "26891285",
+      "id": "572128808",
       "name_lat": "OSWALD PENDRAG ON",
       "name_ru": "",
-      "breed": "Н /",
+      "breed": "Н",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5494,10 +5777,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1935258562",
+      "id": "319081100",
       "name_lat": "OSEN ZOLOTAYA IZ STRANI CREZ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5521,15 +5804,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1422064037",
-      "name_lat": "OSTEN STERN USUBI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "575555078",
       "name_lat": "OSENNIY JAZZ VICTORIA'S SEKRET",
       "name_ru": "",
@@ -5548,11 +5822,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1347603623",
+      "name_lat": "OSOBAYA TAKTIKA IZ TRETYAKOVSKOY GALEREI",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "255599339",
       "name_lat": "OSO DE MIEL KLEVER",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1229075573",
+      "name_lat": "OSTIN OSLEPITEL'NY BRILLIANT",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5575,19 +5865,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "496196223",
-      "name_lat": "OSO DE MIEL ENIGMA",
+      "id": "1385373403",
+      "name_lat": "OST GRAZIA HAIDAR",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
+      "breed": "GERMAN SHEPHERD DOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1777133175",
+      "id": "420543575",
       "name_lat": "OSOBYI SLUCHAY YULIANA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5598,6 +5887,22 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "465508905",
+      "name_lat": "OST GRAZIA YUJI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "48890780",
+      "name_lat": "OST GRAZIA YUNORA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     }

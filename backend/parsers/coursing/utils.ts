@@ -159,8 +159,8 @@ export function detectStatusFromText(text, hasScore = true, hasValidJudgeData = 
   }
 
   // Все остальные случаи дисквалификации/снятия/не финиша - один статус disqualified
-  if (/дисквал|снят|снята|снятие|ветеринар|владельц|не\s*финиш|сош[еелла]*|сход\s+с\s+трасс|уход\s+с\s+трасс|отстран/.test(normalized)) {
-    return { status: "disqualified", reason: extractReasonText(text, /дисквал|снят|снята|снятие|ветеринар|владельц|не\s*финиш|сош[еелла]*|сход|уход|отстран/) };
+  if (/дисквал|снят|снята|снятие|ветеринар|владельц|не\s*финиш|сош[еелла]*|\bсход\b|сход\s+с\s+трасс|\bуход\b|уход\s+с\s+трасс|отстран|не\s*прош[еелла]/.test(normalized)) {
+    return { status: "disqualified", reason: extractReasonText(text, /дисквал|снят|снята|снятие|ветеринар|владельц|не\s*финиш|сош[еелла]*|\bсход\b|сход|уход|отстран|не\s*прош[еелла]/) };
   }
 
   // Consider finished if either hasScore OR hasValidJudgeData

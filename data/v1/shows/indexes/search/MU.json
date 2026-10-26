@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "MU",
-  "count": 265,
+  "count": 277,
   "dogs": [
     {
       "id": "1189926741",
@@ -9,25 +9,25 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "FRENCH BULLDOG",
-      "total_shows": 81,
+      "total_shows": 87,
       "competition_dog_id": null
     },
     {
-      "id": "1068733975",
+      "id": "912306262",
       "name_lat": "MUDROST OLIMPA MOPASSAN",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1787982746",
+      "id": "494868075",
       "name_lat": "MUST HAVE BEEN LOVE",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
-      "total_shows": 28,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -63,7 +63,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -72,23 +72,23 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "FRENCH BULLDOG",
-      "total_shows": 50,
+      "total_shows": 51,
       "competition_dog_id": null
     },
     {
       "id": "103940548",
       "name_lat": "MUSSON OT V.K. KANGAL TURK KAN",
-      "name_ru": "",
+      "name_ru": "МУССОН ОТ В.К. КАНГАЛ ТУРК КАН",
       "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "213284714",
+      "id": "1021520156",
       "name_lat": "MUSTAFA MECHTA DETSTVA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
       "total_shows": 27,
       "competition_dog_id": null
@@ -108,7 +108,7 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -130,12 +130,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1123104032",
+      "id": "434675837",
       "name_lat": "MUHTESEM TROPICANA",
       "name_ru": "",
-      "breed": "ГРИФФОН",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1965243832",
+      "name_lat": "MUDROST OLIMPA URAN OTETS TITANOV",
+      "name_ru": "МУДРОСТЬ ОЛИМПА УРАН ОТЕЦ ТИТАНОВ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 47,
       "competition_dog_id": null
     },
     {
@@ -162,7 +171,16 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "456002684",
+      "name_lat": "MUSTANG BOSS",
+      "name_ru": "МУСТАНГ БОСС",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -211,12 +229,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1619244160",
+      "id": "293145806",
       "name_lat": "MUCHACHA BONITA IZ ZIMNIH GREZ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ /",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
-      "total_shows": 23,
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1427343001",
+      "name_lat": "MUDROST OLIMPA LYUCHIYA DI LAMMERMUR",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -238,21 +265,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1379399975",
+      "id": "997108769",
       "name_lat": "MURMAN GOLD ORLANDO",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "DOGUE DE BORDEAUX БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1965243832",
-      "name_lat": "MUDROST OLIMPA URAN OTETS TITANOV",
+      "id": "214184302",
+      "name_lat": "MUSTANG SKOROST' VETRA",
+      "name_ru": "МУСТАНГ СКОРОСТЬ ВЕТРА",
+      "breed": "БУЛЬМАСТИФ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1919751613",
+      "name_lat": "MULTIBRAND GAYSON",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 12,
+      "breed": "ШИ ТЦУ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -265,12 +299,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1271261287",
+      "name_lat": "MUDROST OLIMPA MIKELANDZHELO",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 42,
+      "competition_dog_id": null
+    },
+    {
       "id": "1419957410",
       "name_lat": "MUSKETEER SNEH TATIER",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 25,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -319,12 +362,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1704430304",
+      "name_lat": "MUFLON",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1687435121",
       "name_lat": "MULTATULI TOSCANA",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "276455190",
+      "name_lat": "MULTATULI YULAY",
+      "name_ru": "МУЛЬТАТУЛИ ЮЛАЙ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -337,6 +398,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "298209991",
+      "name_lat": "MULTATULI IZMIR",
+      "name_ru": "МУЛЬТАТУЛИ ИЗМИР",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "769378147",
       "name_lat": "MUHTESEM RUSLANA",
       "name_ru": "",
@@ -346,39 +416,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "765336628",
+      "id": "189237466",
       "name_lat": "MUSTANG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "698916702",
-      "name_lat": "MUDROST OLIMPA MIKELANDZHELO",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 40,
-      "competition_dog_id": null
-    },
-    {
-      "id": "424300865",
+      "id": "1247139356",
       "name_lat": "MUTEKI NO PAWA FOR EVGENIKA",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН /",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "658791760",
-      "name_lat": "MUSTANG BOSS",
+      "id": "1870552029",
+      "name_lat": "MUCH BETTER KILNIOJI SIRDIS",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -391,12 +452,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1870552029",
-      "name_lat": "MUCH BETTER KILNIOJI SIRDIS",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "id": "1140103873",
+      "name_lat": "MULTATULI TENERIF",
+      "name_ru": "МУЛЬТАТУЛИ ТЕНЕРИФ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -418,12 +479,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "812026347",
+      "id": "1471254242",
       "name_lat": "MUDROST OLIMPA NERO MAKSIMUS",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -433,15 +494,6 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1140103873",
-      "name_lat": "MULTATULI TENERIF",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -459,7 +511,16 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "917893471",
+      "name_lat": "MUKHAZHUK",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -468,16 +529,7 @@
       "name_ru": "",
       "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "276455190",
-      "name_lat": "MULTATULI YULAY",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -490,46 +542,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "917893471",
-      "name_lat": "MUKHAZHUK",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "298209991",
-      "name_lat": "MULTATULI IZMIR",
-      "name_ru": "",
+      "id": "1289321920",
+      "name_lat": "MULTATULI VOLGA CHAMP",
+      "name_ru": "МУЛЬТАТУЛИ ВОЛГА ЧАМП",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1704430304",
-      "name_lat": "MUFLON",
+      "id": "18078922",
+      "name_lat": "MURIMAH FUNNY VALENTINE",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "АФФЕНПИНЧЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "774764203",
-      "name_lat": "MUFLON",
+      "id": "1337534481",
+      "name_lat": "MUZA КРИШТИАНУ РОНАЛЬДО",
       "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1503272773",
-      "name_lat": "Mushmula Molly Coodle",
+      "id": "1709398669",
+      "name_lat": "MUSHMULA MOLLY COODLE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -571,20 +612,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1858934248",
-      "name_lat": "MU PRECIOUS HERR COMES THE SUN",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА Д-Ш",
-      "breed_en": "CHIHUAHUA LONG-HAIRED",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1558143372",
       "name_lat": "MURMANSI GAUS COMSUMOTTO",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1858934248",
+      "name_lat": "MU PRECIOUS HERR COMES THE SUN",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА Д-Ш",
+      "breed_en": "CHIHUAHUA LONG-HAIRED",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -607,19 +648,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "142911999",
+      "id": "370573528",
       "name_lat": "MUDRYY IZ BEREZOVOGO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1289321920",
-      "name_lat": "MULTATULI VOLGA CHAMP",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -636,10 +668,19 @@
     {
       "id": "1421557150",
       "name_lat": "MULTATULI POMPILIUS",
-      "name_ru": "",
+      "name_ru": "МУЛЬТАТУЛИ ПОМПИЛИУС",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "8412987",
+      "name_lat": "MULTATULI ELBRUS",
+      "name_ru": "МУЛЬТАТУЛИ ЭЛЬБРУС",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -648,7 +689,16 @@
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 41,
+      "competition_dog_id": null
+    },
+    {
+      "id": "883287192",
+      "name_lat": "MULTATULI SHAMAN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -661,12 +711,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "885879497",
+      "id": "1597345108",
       "name_lat": "MURIMAH CALVIN KLEIN",
       "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР /",
+      "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "453339671",
+      "name_lat": "MURMANSKAYA IGRUSHKA IZI KYUB",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА длинношерстная",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -679,24 +738,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1328865669",
-      "name_lat": "MULTATULI SHAMAN",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 31,
-      "competition_dog_id": null
-    },
-    {
-      "id": "453339671",
-      "name_lat": "MURMANSKAYA IGRUSHKA IZI KYUB",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА длинношерстная",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "470668080",
       "name_lat": "MURMAN GOLD JUSTEN",
       "name_ru": "",
@@ -706,7 +747,7 @@
       "competition_dog_id": null
     },
     {
-      "id": "640283046",
+      "id": "640283045",
       "name_lat": "MUZA LUNNAYA SONATA",
       "name_ru": "",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
@@ -717,19 +758,64 @@
     {
       "id": "1641134480",
       "name_lat": "MULTATULI DE VOLT",
-      "name_ru": "",
+      "name_ru": "МУЛЬТАТУЛИ ДЕ ВОЛЬТ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1427343001",
-      "name_lat": "MUDROST OLIMPA LYUCHIYA DI LAMMERMUR",
+      "id": "805218744",
+      "name_lat": "MULTATULI FURIYA",
+      "name_ru": "МУЛЬТАТУЛИ ФУРИЯ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "732667257",
+      "name_lat": "MURMAN LACROIX BARKLAJ",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "324012854",
+      "name_lat": "MULTATULI SHOPENIANA",
+      "name_ru": "МУЛЬТАТУЛИ ШОПЕНИАНА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1886100352",
+      "name_lat": "MULTATULI GRAND SMASH",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "887685773",
+      "name_lat": "MULTATULI FILARMONIYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "211561859",
+      "name_lat": "MULTATULI RITMIKA",
+      "name_ru": "МУЛЬТАТУЛИ РИТМИКА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -742,30 +828,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1631155432",
-      "name_lat": "MULTATULI FILARMONIYA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "547015646",
+      "id": "415025931",
       "name_lat": "MURMAN GOLD JEMCHUZHINA",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "SWISS MOUNTAIN DOG БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1956060380",
-      "name_lat": "MURMAN LACROIX BARKLAJ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -778,12 +846,48 @@
       "competition_dog_id": null
     },
     {
+      "id": "373061955",
+      "name_lat": "MULTATULI PRIMADONNA",
+      "name_ru": "МУЛЬТАТУЛИ ПРИМАДОННА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "878045562",
+      "name_lat": "MURMAN GOLD JASMIN NOIR",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1388124736",
       "name_lat": "MULTATULI TSEZARIA EVORA",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "323099767",
+      "name_lat": "MULTATULI BANKIR",
+      "name_ru": "МУЛЬТАТУЛИ БАНКИР",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1439331831",
+      "name_lat": "MUDROST OLIMPA YUKSHIN GARDAN-SAR",
+      "name_ru": "МУДРОСТЬ ОЛИМПА ЮКШИН ГАРДАН-САР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -796,12 +900,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1002154978",
+      "name_lat": "MUSTA KORELA VUOKSA",
+      "name_ru": "МУСТА КОРЕЛА ВУОКСА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1546218857",
+      "name_lat": "MUL'TIK IZ YAROSLAVSKOGO KNIAJESTVA",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1997457995",
+      "name_lat": "MULTI SMILE ENISEY",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "485481599",
       "name_lat": "MUZA ODARENNAYA",
-      "name_ru": "",
+      "name_ru": "МУЗА ОДАРЕННАЯ",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -852,19 +982,19 @@
     {
       "id": "631727073",
       "name_lat": "MUDROST OLIMPA NIKA",
-      "name_ru": "",
+      "name_ru": "МУДРОСТЬ ОЛИМПА НИКА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "316554148",
-      "name_lat": "MUL'TIK IZ YAROSLAVSKOGO KNIAJESTVA",
+      "id": "181924588",
+      "name_lat": "MUSCLETONE'S PERRI",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ПОКЕТ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -877,15 +1007,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "8412987",
-      "name_lat": "MULTATULI ELBRUS",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "802398897",
       "name_lat": "MUSCLUTONE'S JACKSON",
       "name_ru": "",
@@ -895,48 +1016,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1002154978",
-      "name_lat": "MUSTA KORELA VUOKSA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "373061955",
-      "name_lat": "MULTATULI PRIMADONNA",
-      "name_ru": "",
+      "id": "209417623",
+      "name_lat": "MULTATULI BOGEMA",
+      "name_ru": "МУЛЬТАТУЛИ БОГЕМА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1886100352",
-      "name_lat": "MULTATULI GRAND SMASH",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1570143258",
+      "id": "1646419691",
       "name_lat": "MUSIC JAZZ LIFE",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "323099767",
-      "name_lat": "MULTATULI BANKIR",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -958,24 +1052,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "771931578",
-      "name_lat": "MURMAN GOLD JASMIN NOIR",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "211561859",
-      "name_lat": "MULTATULI RITMIKA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "103667696",
       "name_lat": "MULATULI YULAY",
       "name_ru": "",
@@ -991,6 +1067,15 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1751246333",
+      "name_lat": "MURMAN GOLD RUSLANA",
+      "name_ru": "МУРМАН ГОЛД РУСЛАНА",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1012,12 +1097,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1627542905",
+      "name_lat": "MURMANSI BLOIS",
+      "name_ru": "Мурманси БЛОИС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "8256720",
       "name_lat": "MULTATULI GRAND SMACH",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1057,30 +1151,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "798567009",
+      "id": "1303530299",
+      "name_lat": "MUFFIN CHERRY MELODY",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1908871919",
+      "name_lat": "MULBU UNBREAKABLE SOUL",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1849670046",
       "name_lat": "MUZYKA DUSHI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1751246333",
-      "name_lat": "MURMAN GOLD RUSLANA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1255224162",
-      "name_lat": "MUSCLETONE'S PERRI",
-      "name_ru": "",
-      "breed": "Американский булли покет",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1129,11 +1221,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "500689616",
+      "name_lat": "MURMANSI AURUM",
+      "name_ru": "МУРМАНСИ АУРУМ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "151623181",
       "name_lat": "MURMANSI AYSIKORA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1625923470",
+      "name_lat": "MULBERRY MYSTERY MASCOT",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -1183,15 +1292,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1627542905",
-      "name_lat": "MURMANSI BLOIS",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1912896467",
       "name_lat": "MUHEEB AL-HAIBA KENNEL",
       "name_ru": "",
@@ -1210,10 +1310,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "976469265",
+      "id": "728487220",
+      "name_lat": "MUSCELETONE'S ANGEL'S KISS",
+      "name_ru": "",
+      "breed": "БУЛЛИ ПОКЕТ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "86057388",
       "name_lat": "MUFUNI HOUSE CHIHOV SID MAGNIFICENT",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1234,6 +1342,15 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1715625782",
+      "name_lat": "MULTATULI CHIOLA",
+      "name_ru": "МУЛЬТАТУЛИ ЧИОЛА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1260,25 +1377,25 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1983277519",
-      "name_lat": "MULTATULI FURIYA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР / MINIATURE PINSCHER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1228339317",
+      "id": "1709907894",
       "name_lat": "MURMAN GOLD JETEM",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1044191034",
+      "name_lat": "MUL'TIK IZ YAROSLASKOGO KNIAJESTVA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1291,19 +1408,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "140760633",
-      "name_lat": "MUL'TIK IZ YAROSLASKOGO KNIAJESTVA",
-      "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "757091684",
+      "id": "1289368850",
       "name_lat": "MUL TIK IZ YAROSLAVSKOGO KNIAJESTVA",
       "name_ru": "",
-      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1333,15 +1441,6 @@
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "500689616",
-      "name_lat": "MURMANSI AURUM",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1381,19 +1480,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1183423783",
-      "name_lat": "MUFLON",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "276829359",
+      "id": "1599107929",
       "name_lat": "MURMANSKAYA IGRUSHKA IZI",
       "name_ru": "",
-      "breed": "ЧИХУАХУА длинношерст ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1431,6 +1521,14 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1487785265",
+      "name_lat": "MULBU QUEST FOR DREAM SWEET FELICITY",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1476,7 +1574,16 @@
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "875696347",
+      "name_lat": "MURMANSI BRUMA",
+      "name_ru": "Мурманси БРУМА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1502,15 +1609,6 @@
       "name_lat": "MUZA DLYA MOKKO",
       "name_ru": "",
       "breed": "КРОЛИЧЬЯ ТАКСА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "209417623",
-      "name_lat": "MULTATULI BOGEMA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1552,10 +1650,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "237542044",
+      "id": "1712271964",
       "name_lat": "MUN SONATA MISHEL",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЁРНЫЕ, ЧЁРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЕРНЫЕ, ЧЕРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1579,24 +1677,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1715625782",
-      "name_lat": "MULTATULI CHIOLA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1908871919",
-      "name_lat": "MULBU UNBREAKABLE SOUL",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "445410304",
       "name_lat": "MUKKALO",
       "name_ru": "",
@@ -1612,6 +1692,15 @@
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "ALASKAN MALAMUTE",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "670439924",
+      "name_lat": "MUSTHARIN ISO-IIVARI",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1633,15 +1722,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "511048933",
-      "name_lat": "MUSTHARIN ISO-IIVARI",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1921033611",
       "name_lat": "MULTIBRAND OLIMPIA",
       "name_ru": "",
@@ -1656,6 +1736,14 @@
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1671630891",
+      "name_lat": "MURKA IZ SOLNECHNOGO SEVASTOPOLYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1696,10 +1784,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "960984620",
+      "id": "208157101",
+      "name_lat": "MUSTA KORELA GARGI",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1210636809",
       "name_lat": "MULTATULI ANTUAN",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1714,10 +1810,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "448968322",
+      "id": "273926458",
+      "name_lat": "MUDRYY IZ BEREZOVO",
+      "name_ru": "",
+      "breed": "СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "796283773",
       "name_lat": "MUMMY IS MOULIN ROUGE ЛЮКСБЕРРИ",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1727,15 +1832,6 @@
       "name_lat": "MUDROST OLIMPA ORLANDINA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "273926458",
-      "name_lat": "MUDRYY IZ BEREZOVO",
-      "name_ru": "",
-      "breed": "СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1759,10 +1855,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "477070264",
+      "id": "1837774045",
       "name_lat": "MUMM DU VAL D'ANZIN",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1867,10 +1963,36 @@
       "competition_dog_id": null
     },
     {
+      "id": "93064970",
+      "name_lat": "MULTATULI PEYRAK",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "5872133",
       "name_lat": "MUSKAT KARA DENIZ",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023530710",
+      "name_lat": "Mucho Mas Tinto",
+      "name_ru": "МУЧО МАС ТИНТО",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "112065044",
+      "name_lat": "MULTATULI KAVALERGARD",
+      "name_ru": "МУЛЬТАТУЛИ КАВАЛЕРГАРД",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1908,6 +2030,15 @@
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1561639645",
+      "name_lat": "MUN SIYANIE NOCHI",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1966,15 +2097,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "875696347",
-      "name_lat": "MURMANSI BRUMA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1566787644",
       "name_lat": "MULTIVYORS-BOZHENA KASTROPULO",
       "name_ru": "",
@@ -1993,19 +2115,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "93064970",
-      "name_lat": "MULTATULI PEYRAK",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "13095641",
+      "id": "292934810",
       "name_lat": "MULTI KHIT LEVUSHKA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2015,15 +2128,6 @@
       "name_lat": "MULTIBRAND ELVIS PRESLEY",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1561639645",
-      "name_lat": "MUN SIYANIE NOCHI",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2083,10 +2187,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1289891574",
+      "id": "1977715566",
       "name_lat": "MUSTANG",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2119,20 +2223,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "405",
+      "name_lat": "MULAT",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 1,
+      "competition_dog_id": 405
+    },
+    {
+      "id": "870976781",
+      "name_lat": "MUSCLETONE'S MARTIN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1295068500",
       "name_lat": "MUZA DLYA MOKKO MAXIMUM",
       "name_ru": "",
       "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "DACHSHUND KANINCHEN LONG HAIRED",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1439331831",
-      "name_lat": "MUDROST OLIMPA YUKSHIN GARDAN-SAR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2209,10 +2321,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1726004899",
+      "id": "1326802484",
       "name_lat": "MURENA LAST HATH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2231,15 +2343,6 @@
       "name_lat": "MUST GO ON ВЕЙТ ЭНД СИ ВОТ Э ДЖОЙ ОПТУМ ДЛЯ НАРОДА",
       "name_ru": "",
       "breed": "СТАФ АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "324012854",
-      "name_lat": "MULTATULI SHOPENIANA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2299,24 +2402,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "870976781",
-      "name_lat": "MUSCLETONE'S MARTIN",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1023530710",
-      "name_lat": "Mucho Mas Tinto",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1438242415",
       "name_lat": "Muzyka Serdtsa Kassandra",
       "name_ru": "",
@@ -2344,19 +2429,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "112065044",
-      "name_lat": "MULTATULI KAVALERGARD",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "9397495",
+      "id": "766103679",
       "name_lat": "MUFFIN BEST CHOICE",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2380,11 +2456,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1598228034",
-      "name_lat": "MUFFIN CHERRY MELODY",
+      "id": "1416013486",
+      "name_lat": "MUSE CHERNAIALEGENDA VON GOLD SIEG",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1544202424",
+      "name_lat": "MURENA CUORE DEL DRAGO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15329605",
+      "name_lat": "MURMETROLL PRISCILLA",
+      "name_ru": "",
+      "breed": "ХОХЛАТАЯ СОБАКА",
       "total_shows": 1,
       "competition_dog_id": null
     }

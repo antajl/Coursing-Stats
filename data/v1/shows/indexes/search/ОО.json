@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОО",
-  "count": 18,
+  "count": 20,
   "dogs": [
     {
       "id": "1986080228",
@@ -13,9 +13,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "836419150",
+      "name_lat": "О",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "908663038",
       "name_lat": "ООКАМИ ИЧИОТАТСУМАШИ",
-      "name_ru": "",
+      "name_ru": "ООКАМИ ИЧИОТАТСУМАШИ",
       "breed": "АКИТА",
       "breed_en": "AKITA",
       "total_shows": 9,
@@ -24,10 +33,18 @@
     {
       "id": "256821592",
       "name_lat": "ООКАМИ РАШМОН",
-      "name_ru": "",
+      "name_ru": "ООКАМИ РАШМОН",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "140419165",
+      "name_lat": "ООКАМИ ИОЛАНТА",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -40,18 +57,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "140419165",
-      "name_lat": "ООКАМИ ИОЛАНТА",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "590663775",
       "name_lat": "ООКАМИ МИЦУРУ",
-      "name_ru": "",
+      "name_ru": "ООКАМИ МИЦУРУ",
       "breed": "АКИТА",
       "breed_en": "AKITA",
       "total_shows": 6,
@@ -105,7 +113,7 @@
     {
       "id": "856885602",
       "name_lat": "ООКАМИ ДЗЮСИ",
-      "name_ru": "",
+      "name_ru": "ООКАМИ ДЗЮСИ",
       "breed": "АКИТА-ИНУ",
       "breed_en": "",
       "total_shows": 2,
@@ -162,6 +170,14 @@
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1962426297",
+      "name_lat": "ООКАМИ БИАТРИС",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
       "total_shows": 1,
       "competition_dog_id": null
     }

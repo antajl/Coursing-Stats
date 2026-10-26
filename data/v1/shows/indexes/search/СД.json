@@ -1,15 +1,51 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "СД",
-  "count": 3,
+  "count": 12,
   "dogs": [
     {
       "id": "1766134488",
       "name_lat": "СДОБНАЯ БУЛОЧКА",
-      "name_ru": "",
+      "name_ru": "СДОБНАЯ БУЛОЧКА",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1094122507",
+      "name_lat": "С ДИРЕКТ ХИТ DRAGONJO Y TRIBAL",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1630864212",
+      "name_lat": "С-ДОН",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "465185477",
+      "name_lat": "С-ДЕЙМОН",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "319461389",
+      "name_lat": "С-ДЕЙМОН",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -17,6 +53,50 @@
       "name_lat": "сда ШУИ ЛЕГЕНДА РОЖДЕСТВА ИЗ СТАРОЙ ШУИ",
       "name_ru": "",
       "breed": "ШЕЛТИ / SHETLAND SHEEPDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1781145325",
+      "name_lat": "С-ДЕЙМОН",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ / RUSSIAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "419567507",
+      "name_lat": "С-ДОН",
+      "name_ru": "",
+      "breed": "БЫЧКОВА ЕЛЕНА ИВАНОВНА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "824073225",
+      "name_lat": "СДОБНАЯ ВАТРУШКА СИНДИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "793372030",
+      "name_lat": "С-ДОН",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1003007502",
+      "name_lat": "С-ДЕЙМОН",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ / RUSSIAN HUNTING",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

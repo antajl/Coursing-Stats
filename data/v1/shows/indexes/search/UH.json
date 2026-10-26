@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UH",
-  "count": 6,
+  "count": 12,
   "dogs": [
     {
       "id": "1943473905",
@@ -13,12 +13,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "606140296",
+      "name_lat": "U'HOKKIOKUGUMA",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "622456763",
       "name_lat": "UHLAN IZ TERLETSKOY DUBRAVY",
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "DALMATIAN",
-      "total_shows": 8,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1844210618",
+      "name_lat": "U' HOKKYOKUGUMA",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9632468",
+      "name_lat": "U'HOSHI RISING STAR ALKADAR",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -28,6 +55,32 @@
       "breed": "DACHSHUND ZWERG",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "26873965",
+      "name_lat": "U'HIROSHI RISING STAR ALKADAR",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1084651047",
+      "name_lat": "U' HOKKYOKUGUMA",
+      "name_ru": "",
+      "breed": "АКИТА / AKITA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1086772142",
+      "name_lat": "UHLAN IZ TERLRTSKOY DUBRAVY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

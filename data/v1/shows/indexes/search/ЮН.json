@@ -1,57 +1,39 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЮН",
-  "count": 903,
+  "count": 916,
   "dogs": [
-    {
-      "id": "422077611",
-      "name_lat": "ЮНОНА ФРОМ ФОРТ ОГИР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
     {
       "id": "1029230795",
       "name_lat": "ЮНОНА ЮНАЯ БОГИНЯ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ЮНАЯ БОГИНЯ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 38,
       "competition_dog_id": null
     },
     {
-      "id": "673197332",
-      "name_lat": "ЮНОКСИ НАСЛЕДНИК ПРЕСТОЛА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1839580766",
-      "name_lat": "ЮН МАРССОН ЕСТЕРРА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 41,
-      "competition_dog_id": null
-    },
-    {
       "id": "116925062",
       "name_lat": "ЮН МАРССОН АМЕЛИЯ",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН АМЕЛИЯ",
       "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
+      "id": "660485114",
+      "name_lat": "ЮНЕСКО",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
       "id": "1314327458",
       "name_lat": "ЮНОНА ЯРКАЯ ЗВЕЗДА",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ЯРКАЯ ЗВЕЗДА",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 11,
@@ -60,44 +42,8 @@
     {
       "id": "435301245",
       "name_lat": "ЮНАЯ ЗВЕЗДА ИЗ ДОМА КАРМАНОВОЙ",
-      "name_ru": "",
+      "name_ru": "ЮНАЯ ЗВЕЗДА ИЗ ДОМА КАРМАНОВОЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1699708682",
-      "name_lat": "ЮНИОН ГРИФ ЗЕ СКАЙ ИН ДАЙМОНДС",
-      "name_ru": "",
-      "breed": "ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1055071267",
-      "name_lat": "ЮНИТИ ДРИМС ФРИДЕНС-2",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1868809162",
-      "name_lat": "ЮНИТИВИЛС УИННИ ГОЛДЕН РОУЗ",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "660485114",
-      "name_lat": "ЮНЕСКО",
-      "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -108,13 +54,40 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1699708682",
+      "name_lat": "ЮНИОН ГРИФ ЗЕ СКАЙ ИН ДАЙМОНДС",
+      "name_ru": "ЮНИОН ГРИФ ЗЕ СКАЙ ИН ДАЙМОНДС",
+      "breed": "ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1055071267",
+      "name_lat": "ЮНИТИ ДРИМС ФРИДЕНС-2",
+      "name_ru": "ЮНИТИ ДРИМС ФРИДЕНС-2",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1868809162",
+      "name_lat": "ЮНИТИВИЛС УИННИ ГОЛДЕН РОУЗ",
+      "name_ru": "ЮНИТИВИЛС УИННИ ГОЛДЕН РОУЗ",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "335102019",
       "name_lat": "ЮНИОН ГРИФ МЕДЖИК СТАР",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ МЕДЖИК СТАР",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 13,
@@ -123,7 +96,7 @@
     {
       "id": "263450634",
       "name_lat": "ЮНОКСИ ЛАККИ",
-      "name_ru": "",
+      "name_ru": "ЮНОКСИ ЛАККИ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 13,
@@ -139,9 +112,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1170637099",
+      "name_lat": "ЮНИКА БАРБЕРРИ",
+      "name_ru": "ЮНИКА БАРБЕРРИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "1686970937",
       "name_lat": "ЮНЫЙ ЛОРД-ЛЬВИННОЕ СЕРДЦЕ ИЗ ДОМА РЕЙЧЕЛ",
-      "name_ru": "",
+      "name_ru": "ЮНЫЙ ЛОРД-ЛЬВИННОЕ СЕРДЦЕ ИЗ ДОМА РЕЙЧЕЛ",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
@@ -150,7 +132,7 @@
     {
       "id": "1287733972",
       "name_lat": "ЮНИОН ГРИФ ЛОУ' ОФ АТРАКТИОН",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ ЛОУ' ОФ АТРАКТИОН",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 10,
@@ -159,34 +141,34 @@
     {
       "id": "285087917",
       "name_lat": "ЮНАЯ ЛЕДИ С БЕЛОГО ОЛИМПА",
-      "name_ru": "",
+      "name_ru": "ЮНАЯ ЛЕДИ С БЕЛОГО ОЛИМПА",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "930067317",
+      "id": "1987625337",
       "name_lat": "ЮНА ФАЕР ГЕРЛ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ЮНА ФАЕР ГЕРЛ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1837687958",
-      "name_lat": "ЮНИКА БАРБЕРРИ",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "id": "160514554",
+      "name_lat": "ЮНЫЙ БАРАБАНЩИК ИЗ ЗИМНИХ ГРЕЗ",
+      "name_ru": "ЮНЫЙ БАРАБАНЩИК ИЗ ЗИМНИХ ГРЕЗ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1371947376",
       "name_lat": "ЮНИОН ГРИФ АЙ ВЕ ГОТ ВАТ ИФ ТЭЙКС",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ АЙ ВЕ ГОТ ВАТ ИФ ТЭЙКС",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 8,
@@ -195,17 +177,17 @@
     {
       "id": "104368837",
       "name_lat": "ЮНОКСИ ИМПЕРАТОР",
-      "name_ru": "",
+      "name_ru": "ЮНОКСИ ИМПЕРАТОР",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "988977848",
+      "id": "648053076",
       "name_lat": "ЮНЬ С ЛИПЕЦКОЙ СЛОБОДЫ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ЮНЬ С ЛИПЕЦКОЙ СЛОБОДЫ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -213,7 +195,7 @@
     {
       "id": "1492987",
       "name_lat": "ЮНАЛ ФЛАЙ Ц,БОКС ИТАЛИЯ МОЯ КРАСОТА БЭЛЬ",
-      "name_ru": "",
+      "name_ru": "ЮНАЛ ФЛАЙ Ц,БОКС ИТАЛИЯ МОЯ КРАСОТА БЭЛЬ",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -222,7 +204,7 @@
     {
       "id": "1122094491",
       "name_lat": "ЮНОНА ОТ КУФАНИ CODY IMPRESSIVE",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ОТ КУФАНИ",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 10,
@@ -231,7 +213,7 @@
     {
       "id": "762230788",
       "name_lat": "ЮНИТА РОЗА МИРА",
-      "name_ru": "",
+      "name_ru": "ЮНИТА РОЗА МИРА",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 8,
@@ -240,35 +222,35 @@
     {
       "id": "619761708",
       "name_lat": "ЮНОНА МАРТИНИКА",
-      "name_ru": "",
+      "name_ru": "ЮНОНА МАРТИНИКА",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1190400624",
+      "id": "402797942",
       "name_lat": "ЮНАЙТ ИЗ ОБСКОЙ ДОЛИНЫ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЮНАЙТ ИЗ ОБСКОЙ ДОЛИНЫ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
       "id": "1750334024",
       "name_lat": "ЮНИТИВИЛС СКАЗОЧНАЯ КРАСАВИЦА",
-      "name_ru": "",
+      "name_ru": "ЮНИТИВИЛС СКАЗОЧНАЯ КРАСАВИЦА",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "71743691",
+      "id": "720735745",
       "name_lat": "ЮНГЕ ВАЙС ИЗ СТОЛИЦЫ УРАЛА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЮНГЕ ВАЙС ИЗ СТОЛИЦЫ УРАЛА",
+      "breed": "СПРИНГЕР ВЕНГЕРСКАЯ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -276,7 +258,7 @@
     {
       "id": "1239013998",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ АСТОРИЯ",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ АСТОРИЯ",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 7,
@@ -285,7 +267,7 @@
     {
       "id": "1692853266",
       "name_lat": "ЮНИ СОЛДЖЕР ОДРИ",
-      "name_ru": "",
+      "name_ru": "ЮНИ СОЛДЖЕР ОДРИ",
       "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 9,
@@ -303,17 +285,17 @@
     {
       "id": "1799477183",
       "name_lat": "ЮНГ МЭН ФО МИ",
-      "name_ru": "",
+      "name_ru": "ЮНГ МЭН ФО МИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "115430502",
+      "id": "521181442",
       "name_lat": "ЮНИТИ ФЕНОМЕН КОКО ШАНЕЛЬ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ЮНИТИ ФЕНОМЕН КОКО ШАНЕЛЬ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -337,18 +319,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "556315019",
-      "name_lat": "ЮН МАРССОН ЕКТЕНИЯ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "id": "1821750823",
+      "name_lat": "ЮНОНА ЛУННАЯ НОЧЬ",
+      "name_ru": "ЮНОНА ЛУННАЯ НОЧЬ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "697523638",
       "name_lat": "ЮН МАРССОН ОФЕЛИЯ",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН ОФЕЛИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 14,
@@ -357,7 +339,7 @@
     {
       "id": "38153690",
       "name_lat": "ЮНОНА ИЛИФИЯ ХОРИЗОН",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ИЛИФИЯ ХОРИЗОН",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 14,
@@ -366,19 +348,28 @@
     {
       "id": "1392543919",
       "name_lat": "ЮНИТИВИЛС СЛАДКАЯ БУЛОЧКА",
-      "name_ru": "",
+      "name_ru": "ЮНИТИВИЛС СЛАДКАЯ БУЛОЧКА",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1821750823",
-      "name_lat": "ЮНОНА ЛУННАЯ НОЧЬ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "id": "1150893767",
+      "name_lat": "Ю НОУ МИ ИЗ ДОМА РЕЙЧЕЛ",
+      "name_ru": "Ю НОУ МИ ИЗ ДОМА РЕЙЧЕЛ",
+      "breed": "HIGHLAND WHITE",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "268927342",
+      "name_lat": "ЮНИТИ ДРИМС КАРТАХЕНА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -391,18 +382,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "1419791027",
+      "name_lat": "ЮНОКСИ БЕАТРИС",
+      "name_ru": "ЮНОКСИ БЕАТРИС",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "952478744",
       "name_lat": "Юнона из Империи Древних Воинов",
-      "name_ru": "",
+      "name_ru": "Юнона из Империи Древних Воинов",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1562363258",
-      "name_lat": "ЮНИОН ГРИФ ФЕММЕ- БОМБЕ",
-      "name_ru": "",
+      "id": "753562408",
+      "name_lat": "ЮНИОН ГРИФ ФЕММЕ-БОМБЕ",
+      "name_ru": "ЮНИОН ГРИФ ФЕММЕ-БОМБЕ",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 6,
@@ -411,7 +410,7 @@
     {
       "id": "609335028",
       "name_lat": "ЮНИТИВИЛС УРСЕЛЬ БИЗИ БИ",
-      "name_ru": "",
+      "name_ru": "ЮНИТИВИЛС УРСЕЛЬ БИЗИ БИ",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -427,15 +426,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "268927342",
-      "name_lat": "ЮНИТИ ДРИМС КАРТАХЕНА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1293795104",
       "name_lat": "ЮНИВЕРСАЛ СТАЙЛ ФО ТАЦИТА'С",
       "name_ru": "",
@@ -445,18 +435,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "172417534",
-      "name_lat": "ЮНЫЙ БАРАБАНЩИК ИЗ ЗИМНИХ ГРЕЗ",
+      "id": "42482951",
+      "name_lat": "ЮНИТИВИЛС ФЕРГУС РЕПИД ФАЕР",
+      "name_ru": "ЮНИТИВИЛС ФЕРГУС РЕПИД ФАЕР",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181232450",
+      "name_lat": "ЮННА БЭБИ ЧЕРРИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "1331364255",
       "name_lat": "Юнайтед Адамант",
-      "name_ru": "",
+      "name_ru": "Юнайтед Адамант",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -472,10 +470,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "437341965",
+      "id": "1184984385",
       "name_lat": "Юнита Санни Смайл из Дома Ланкастер DEMON DREAMS",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЮНИТА САННИ СМАЙЛ ИЗ ДОМА ЛАНКАСТЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
@@ -483,7 +481,7 @@
     {
       "id": "1816083078",
       "name_lat": "ЮНЕРИКА ЗВЕЗДА ПЛЕНИТЕЛЬНОГО СЧАСТЬЯ",
-      "name_ru": "",
+      "name_ru": "ЮНЕРИКА ЗВЕЗДА ПЛЕНИТЕЛЬНОГО СЧАСТЬЯ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 16,
@@ -492,7 +490,7 @@
     {
       "id": "662157421",
       "name_lat": "ЮНИК-КИВИ ИЗ СТАИ ИГЭЛС",
-      "name_ru": "",
+      "name_ru": "ЮНИК-КИВИ ИЗ СТАИ ИГЭЛС",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 14,
@@ -501,26 +499,26 @@
     {
       "id": "1252240776",
       "name_lat": "ЮНИКА КОРОЛЕВСКИЙ БРИЛЛИАНТ",
-      "name_ru": "",
+      "name_ru": "ЮНИКА КОРОЛЕВСКИЙ БРИЛЛИАНТ",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "666637656",
+      "id": "1965811620",
       "name_lat": "ЮНОНА ПУТЕВОДНАЯ ЗВЕЗДА",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "843073372",
+      "id": "190443635",
       "name_lat": "ЮНИС ИЗ ДОМА ФЕНИКС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЮНИС ИЗ ДОМА ФЕНИКС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -528,7 +526,7 @@
     {
       "id": "120487726",
       "name_lat": "ЮН МАРССОН УСЛАДА",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН УСЛАДА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 13,
@@ -546,16 +544,25 @@
     {
       "id": "643488030",
       "name_lat": "ЮНИОН ГРИФ Л'АМОР НЕВСКИЙ КРИСТАЛЛ",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ Л'АМОР НЕВСКИЙ КРИСТАЛЛ",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "725230471",
+      "name_lat": "ЮНГИЯ ИЗ НОВО-ПЕРЕДЕЛКИНО",
+      "name_ru": "ЮНГИЯ ИЗ НОВО-ПЕРЕДЕЛКИНО",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "949615621",
       "name_lat": "ЮНИОН ГРИФ АЙ ЭМ ЗЕ БЕСТ",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ АЙ ЭМ ЗЕ БЕСТ",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 9,
@@ -564,7 +571,7 @@
     {
       "id": "1235486984",
       "name_lat": "ЮНГА СТРОНГ-ВИЛЕД",
-      "name_ru": "",
+      "name_ru": "ЮНГА СТРОНГ-ВИЛЕД",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА, МАЛИНУА",
       "breed_en": "",
       "total_shows": 10,
@@ -573,7 +580,7 @@
     {
       "id": "773305684",
       "name_lat": "Юнона Янг Трэвелер",
-      "name_ru": "",
+      "name_ru": "Юнона Янг Трэвелер",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 13,
@@ -582,7 +589,7 @@
     {
       "id": "381076846",
       "name_lat": "ЮНАЛ ФЛАЙ Ц'БОКС ЖЕЛАННА НА СЧАСТЬЕ",
-      "name_ru": "",
+      "name_ru": "ЮНАЛ ФЛАЙ Ц'БОКС ЖЕЛАННА НА СЧАСТЬЕ",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -598,18 +605,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "873461537",
-      "name_lat": "ЮНЭЛЛИС ЗВЕЗДА УРАЛА",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "941553189",
       "name_lat": "ЮНИОН ГРИФ РЕД КУИН",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ РЕД КУИН",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 8,
@@ -618,7 +616,7 @@
     {
       "id": "1590600333",
       "name_lat": "ЮНГСТАУН ИЗ ВОРОБЬИНОГО ГНЕЗДА",
-      "name_ru": "",
+      "name_ru": "ЮНГСТАУН ИЗ ВОРОБЬИНОГО ГНЕЗДА",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -645,37 +643,52 @@
     {
       "id": "1855697423",
       "name_lat": "ЮНИОН ГРИФ МАЗУРКА ЛЕС КОУЛЕУРС ДЕ МА ВИК БР. ГР.",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ МАЗУРКА ЛЕС КОУЛЕУРС ДЕ МА ВИК БР. ГР.",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "104925233",
+      "name_lat": "ЮН МАРССОН БАВАРИЯ",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1601573970",
+      "name_lat": "ЮНА II С НЕВСКИХ ОСТРОВОВ",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "91826813",
       "name_lat": "ЮНОСТЬ ИЗ ЗООСФЕРЫ",
-      "name_ru": "",
+      "name_ru": "ЮНОСТЬ ИЗ ЗООСФЕРЫ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "181232450",
-      "name_lat": "ЮННА БЭБИ ЧЕРРИ",
+      "id": "970348163",
+      "name_lat": "ЮН МАРССОН ЕЛИЗАР",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1532005052",
-      "name_lat": "ЮНОКСИ БЕАТРИС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "id": "1695367652",
+      "name_lat": "ЮНАЯ ПРИНЦЕССА ЮНОНА",
+      "name_ru": "ЮНАЯ ПРИНЦЕССА ЮНОНА",
+      "breed": "ГРИФФОН",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -699,25 +712,24 @@
     {
       "id": "269111594",
       "name_lat": "ЮНОНА КЭНДИ КИСС",
-      "name_ru": "",
+      "name_ru": "ЮНОНА КЭНДИ КИСС",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 29,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
       "id": "192861549",
       "name_lat": "ЮН МАРССОН ВАНИЛЛА ФАЕР",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН ВАНИЛЛА ФАЕР",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 24,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
       "id": "901844528",
       "name_lat": "ЮН МАРССОН ФОРГЕТ МИ НОТ",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН ФОРГЕТ МИ НОТ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 18,
@@ -744,10 +756,18 @@
     {
       "id": "433850576",
       "name_lat": "ЮН МАРССОН ЯСМИНА",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН ЯСМИНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "112046450",
+      "name_lat": "ЮНОКСИ ВЕРНИСАЖ",
+      "name_ru": "ЮНОКСИ ВЕРНИСАЖ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -769,15 +789,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "832644177",
-      "name_lat": "ЮНОКСИ ВЕРНИСАЖ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "251013591",
       "name_lat": "ЮНОНА ЖЕМЧУЖ ИНА ИЗ ДОМА ТАШИ",
       "name_ru": "",
@@ -787,10 +798,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "549706418",
+      "id": "1910999690",
       "name_lat": "ЮНОНА ОБАЯТЕЛЬНАЯ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ЮНОНА ОБАЯТЕЛЬНАЯ",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -832,9 +843,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1695595199",
+      "name_lat": "ЮНИКА СОУЛ БЛЭК РОУЗ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1677347845",
       "name_lat": "ЮННАЯ БОГИНЯ ЮМИ",
-      "name_ru": "",
+      "name_ru": "ЮННАЯ БОГИНЯ ЮМИ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 6,
@@ -852,7 +871,7 @@
     {
       "id": "1146153220",
       "name_lat": "ЮНЫЙ ЛОРД-ЛЬВИНОЕ СЕРДЦЕ ИЗ ДОМА РЕЙЧЕЛ",
-      "name_ru": "",
+      "name_ru": "ЮНЫЙ ЛОРД-ЛЬВИНОЕ СЕРДЦЕ ИЗ ДОМА РЕЙЧЕЛ",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -868,19 +887,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "66991492",
-      "name_lat": "ЮНГИЯ ИЗ НОВО- ПЕРЕДЕЛКИНО",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "650407587",
+      "id": "183671341",
       "name_lat": "ЮНАЛ ФЛАЙ Ц,БОКС ЕРЕМЕЯ ВЕСНА ЛЮБВИ",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "name_ru": "ЮНАЛ ФЛАЙ Ц,БОКС ЕРЕМЕЯ ВЕСНА ЛЮБВИ",
+      "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -888,7 +898,7 @@
     {
       "id": "305054086",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ СОНЯ",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ СОНЯ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 4,
@@ -897,7 +907,7 @@
     {
       "id": "825463207",
       "name_lat": "ЮНОКСИ ТИФФАНИ",
-      "name_ru": "",
+      "name_ru": "ЮНОКСИ ТИФФАНИ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 8,
@@ -922,10 +932,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "302220092",
+      "id": "699859052",
       "name_lat": "ЮННА ЛЯ КАТЭЛЬ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -940,28 +950,36 @@
       "competition_dog_id": null
     },
     {
+      "id": "209533644",
+      "name_lat": "ЮНИОН ГРИФ МОНТЕ КРИСТО",
+      "name_ru": "ЮНИОН ГРИФ МОНТЕ КРИСТО",
+      "breed": "ГРИФФОН /",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "586325800",
       "name_lat": "Юн Марссон Евиста РИА ЛАДА С КОСТРОМСКОГО",
-      "name_ru": "",
+      "name_ru": "Юн Марссон Евиста РИА ЛАДА С КОСТРОМСКОГО",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1225160143",
+      "id": "1896378366",
       "name_lat": "ЮНАЯ ЗВЕЗДА АЛМАЗ ВОСТОКА",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "ЮНАЯ ЗВЕЗДА АЛМАЗ ВОСТОКА",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "273166731",
+      "id": "1795098213",
       "name_lat": "ЮНА ЗВЕЗДА МОРЕЙ",
-      "name_ru": "",
-      "breed": "ПТИ МИНИАТЮРНЫЙ РЫЖИЙ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ ), СЕРЫЙ",
+      "name_ru": "ЮНА ЗВЕЗДА МОРЕЙ",
+      "breed": "БРАБАНСОН МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -976,19 +994,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1317658652",
+      "id": "934518067",
       "name_lat": "ЮНИКА БЬЮТИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1091227515",
+      "id": "960257967",
       "name_lat": "ЮНАЛ ФЛАЙ Ц'БОКС ОЧЕЙ ОЧАРОВАНИЕ ФОРТУНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "name_ru": "ЮНАЛ ФЛАЙ Ц'БОКС ОЧЕЙ ОЧАРОВАНИЕ ФОРТУНА",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1003,9 +1021,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "111405175",
+      "name_lat": "ЮНИКО ИЗ СТЕПНОГО АЛТАЯ",
+      "name_ru": "ЮНИКО ИЗ СТЕПНОГО АЛТАЯ",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1544827303",
       "name_lat": "ЮНА ИЗ АГЛИЦКОГО САДА",
-      "name_ru": "",
+      "name_ru": "ЮНА ИЗ АГЛИЦКОГО САДА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -1059,10 +1086,18 @@
     {
       "id": "573457095",
       "name_lat": "ЮНОКСИ ФАВОРИТ",
-      "name_ru": "",
+      "name_ru": "ЮНОКСИ ФАВОРИТ",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1178236981",
+      "name_lat": "ЮНИВЕРС ФАНТАЗМ БАРРИ",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ БАРРИ",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1079,15 +1114,6 @@
       "name_lat": "ЮНИВЕРС ФАНТАЗМ МИКО",
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "518797005",
-      "name_lat": "ЮНИКО ИЗ СТЕПНОГО АЛТАЯ",
-      "name_ru": "",
-      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1113,8 +1139,17 @@
     {
       "id": "1685823041",
       "name_lat": "ЮНОНА ИЗ ДОМА МАДАМИ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ИЗ ДОМА МАДАМИ",
       "breed": "БОЛЬШОЙ ШВЕЙЦАРСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1273367176",
+      "name_lat": "ЮНА ДРИМ ИЗ ДОМА МАДАМИ",
+      "name_ru": "ЮНА ДРИМ ИЗ ДОМА МАДАМИ",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1138,15 +1173,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1886137771",
-      "name_lat": "ЮНА ДРИМ ИЗ ДОМА МАДАМИ",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД / GREAT SWISS",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1440427480",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ АТАРИ",
       "name_ru": "",
@@ -1165,6 +1191,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1701802252",
+      "name_lat": "ЮНИВЕРС ПРИМАДОННА ЛЮКС",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1213169833",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ АРЧИ",
       "name_ru": "",
@@ -1176,7 +1210,7 @@
     {
       "id": "226152804",
       "name_lat": "ЮН МАРССОН ОМАЛИЯ",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН ОМАЛИЯ",
       "breed": "ЦВЕРГПИНЧЕР ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 2,
@@ -1196,6 +1230,15 @@
       "name_lat": "ЮНЕССА",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1822403121",
+      "name_lat": "Юнеско Всемирное Наследие",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1228,18 +1271,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1837289715",
-      "name_lat": "Юнеско Всемирное Наследие",
+      "id": "628228905",
+      "name_lat": "ЮНИКВЕСТ ФЭБЬЮЛАС ОЗЗИ",
       "name_ru": "",
-      "breed": "СЛОВАЦКИЙ ЧУВАЧ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "1196010676",
       "name_lat": "ЮНЫЙ БЛЮЗ ИЗ КРЫМСКОЙ СТОЛИЦЫ",
-      "name_ru": "",
+      "name_ru": "ЮНЫЙ БЛЮЗ ИЗ КРЫМСКОЙ СТОЛИЦЫ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
@@ -1248,7 +1290,7 @@
     {
       "id": "1154660117",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ РИЧАРД",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ РИЧАРД",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "JAPANESE SPITZ",
       "total_shows": 5,
@@ -1257,7 +1299,7 @@
     {
       "id": "958708117",
       "name_lat": "ЮНИОН ГРИФФ ЛА БАМБА",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФФ ЛА БАМБА",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 28,
@@ -1266,25 +1308,25 @@
     {
       "id": "7398695",
       "name_lat": "ЮН МАРССОН ЛАКИ НАМБЕР",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН ЛАКИ НАМБЕР",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 23,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
-      "id": "61229147",
+      "id": "902076779",
       "name_lat": "ЮНИВЕРСУМ МИРРОР ИРИСС ДЕЛЮКС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЮНИВЕРСУМ МИРРОР ИРИСС ДЕЛЮКС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
       "id": "435114454",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ ДЖЕССИКА",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ ДЖЕССИКА",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 9,
@@ -1293,10 +1335,10 @@
     {
       "id": "1925952691",
       "name_lat": "ЮНАЙТЕД ДРИМС ЦЕЦИЛИЯ ЭТ НЕАРДАМО",
-      "name_ru": "",
+      "name_ru": "ЮНАЙТЕД ДРИМС ЦЕЦИЛИЯ ЭТ НЕАРДАМО",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1311,7 +1353,7 @@
     {
       "id": "1702258306",
       "name_lat": "ЮН ДА ХОРОШ ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
-      "name_ru": "",
+      "name_ru": "ЮН ДА ХОРОШ ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
       "breed": "DACHSHUND",
       "breed_en": "",
       "total_shows": 16,
@@ -1320,26 +1362,17 @@
     {
       "id": "1462988653",
       "name_lat": "ЮНИТИВИЛС МОНТЭЙН ДЬЮ",
-      "name_ru": "",
+      "name_ru": "ЮНИТИВИЛС МОНТЭЙН ДЬЮ",
       "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "491152998",
-      "name_lat": "ЮН МАРССОН ЭКСПРЕССИЯ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1010987345",
+      "id": "1492631704",
       "name_lat": "ЮНЕЛЛА ЛЕ ГАРНЭТ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ЮНЕЛЛА ЛЕ ГАРНЭТ",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1347,37 +1380,27 @@
     {
       "id": "99162003",
       "name_lat": "ЮНИТИ ДРИМС ФЛЕР ДЕ САНТЕ",
-      "name_ru": "",
+      "name_ru": "ЮНИТИ ДРИМС ФЛЕР ДЕ САНТЕ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1941717700",
-      "name_lat": "ЮН МАРССОН АРТЕМИДА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 7,
+      "id": "587426044",
+      "name_lat": "ЮНИВЕРС ОФ МАДЖИК ЛОЛИТА",
+      "name_ru": "ЮНИВЕРС ОФ МАДЖИК ЛОЛИТА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "1159809607",
       "name_lat": "ЮНАЯ АССОЛЬ ИЗ ЗИМНИХ ГРЕЗ",
-      "name_ru": "",
+      "name_ru": "ЮНАЯ АССОЛЬ ИЗ ЗИМНИХ ГРЕЗ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1161239272",
-      "name_lat": "ЮН МАРССОН ЭРВИН ЭФРАТ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1392,19 +1415,36 @@
     {
       "id": "1315103381",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ ЛАЙФ",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ ЛАЙФ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
+      "id": "1439746236",
+      "name_lat": "ЮНА ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
+      "name_ru": "ЮНА ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
+      "breed": "ШЕЛТИ",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1670548179",
       "name_lat": "ЮНГАР БРЕЙТ ХААТ",
-      "name_ru": "",
+      "name_ru": "ЮНГАР БРЕЙТ ХААТ",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "253869391",
+      "name_lat": "ЮНОНА БЭЙБИ ФОКС",
+      "name_ru": "ЮНОНА БЭЙБИ ФОКС",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1413,7 +1453,7 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1435,28 +1475,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1764456125",
+      "id": "1199933664",
       "name_lat": "ЮНГСВИЛ С КРАСНОГО ЯРА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ЮНГСВИЛ С КРАСНОГО ЯРА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "1011787491",
       "name_lat": "ЮНИКА МЭРИЦА ДОННА",
-      "name_ru": "",
+      "name_ru": "ЮНИКА МЭРИЦА ДОННА",
       "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "310149054",
+      "id": "1306694727",
       "name_lat": "ЮНИСЛАВА ЧЕРНАЯ ЖЕМЧУЖИНА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР /",
+      "name_ru": "ЮНИСЛАВА ЧЕРНАЯ ЖЕМЧУЖИНА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1464,7 +1504,7 @@
     {
       "id": "172831130",
       "name_lat": "ЮНИТЕЛЛА ДОЛЬЧЕ БАМБОЛ",
-      "name_ru": "",
+      "name_ru": "ЮНИТЕЛЛА ДОЛЬЧЕ БАМБОЛ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 12,
@@ -1476,25 +1516,33 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 13,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1743438650",
+      "id": "1345154955",
       "name_lat": "ЮНИТИ ДРИМС ТЕКИЛА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "ЮНИТИ ДРИМС ТЕКИЛА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1505785239",
+      "id": "152702934",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ КЕЙТАРО",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ КЕЙТАРО",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173892671",
+      "name_lat": "ЮНАЙТ СВИТ ОРАНЖ MIRABELLA",
+      "name_ru": "ЮНАЙТ СВИТ ОРАНЖ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1507,12 +1555,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1416452291",
-      "name_lat": "ЮНОНА БЭЙБИ ФОКС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "id": "280691065",
+      "name_lat": "ЮНЭНИМУСЛИ ЗЕ ФЁСТ ИЗ СОЗВЕЗДИЯ СТАФФ",
+      "name_ru": "ЮНЭНИМУСЛИ ЗЕ ФЁСТ ИЗ СОЗВЕЗДИЯ СТАФФ",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1525,21 +1573,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1163974040",
+      "id": "1310880418",
       "name_lat": "ЮНОНА ДАЙМОНТ КРОУН",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1377324843",
-      "name_lat": "ЮНИВЕРС ОФ МАДЖИК ЛОЛИТА",
-      "name_ru": "",
-      "breed": "ITALIAN CANE CORSO",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1554,16 +1593,24 @@
     {
       "id": "1712184718",
       "name_lat": "ЮНИТА МАРРОУН",
-      "name_ru": "",
+      "name_ru": "ЮНИТА МАРРОУН",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
+      "id": "1494267426",
+      "name_lat": "ЮНАЙТЕД БАЙ Э СТРОНГ СПИРИТ ФОР ФРОЛАНД",
+      "name_ru": "ЮНАЙТЕД БАЙ Э СТРОНГ СПИРИТ ФОР ФРОЛАНД",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "723429602",
       "name_lat": "ЮН МАРССОН ВИКТОРИЯ БЛЭК КВИН",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН ВИКТОРИЯ БЛЭК КВИН",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 16,
@@ -1572,28 +1619,54 @@
     {
       "id": "1885193293",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ ЧАРОТТИ",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ ЧАРОТТИ",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "JAPANESE SPITZ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1839109861",
+      "name_lat": "ЮНАЯ ЛЕДИ ДНЯ",
+      "name_ru": "ЮНАЯ ЛЕДИ ДНЯ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1763112808",
+      "name_lat": "ЮНА ФОРТУНА ИЗ ЕНИСЕЙСКОЙ ГУБЕРНИИ",
+      "name_ru": "ЮНА ФОРТУНА ИЗ ЕНИСЕЙСКОЙ ГУБЕРНИИ",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "280691065",
-      "name_lat": "ЮНЭНИМУСЛИ ЗЕ ФЁСТ ИЗ СОЗВЕЗДИЯ СТАФФ",
+      "id": "818241263",
+      "name_lat": "ЮНАТАН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1620199120",
+      "name_lat": "ЮННЕЛЬ САЛЬЕРИ",
+      "name_ru": "ЮННЕЛЬ САЛЬЕРИ",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1791451126",
-      "name_lat": "ЮНАТАН",
+      "id": "1497847799",
+      "name_lat": "ЮНИС",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1608,52 +1681,43 @@
     {
       "id": "1297902634",
       "name_lat": "ЮНИОН ГРИФ ЛА БАМБА",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ ЛА БАМБА",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1439746236",
-      "name_lat": "ЮНА ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "id": "1279271963",
+      "name_lat": "ЮНИВЕРС ФАНТАЗМ СЕКРЕТ УСПЕХА",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ СЕКРЕТ УСПЕХА",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1056232848",
-      "name_lat": "ЮНАЯ ЛЕДИ ДНЯ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "id": "1341949282",
+      "name_lat": "ЮНИВЕРСАЛ СТАР ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
+      "name_ru": "ЮНИВЕРСАЛ СТАР ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "1122139975",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ ЛЕКСУС",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ ЛЕКСУС",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1908906183",
-      "name_lat": "ЮНАЙТ СВИТ ОРАНЖ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "318141551",
       "name_lat": "ЮН МАРССОН СПИРИТ ОФ ВИКТОРИ",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН СПИРИТ ОФ ВИКТОРИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 21,
@@ -1662,37 +1726,46 @@
     {
       "id": "784380602",
       "name_lat": "ЮНГА КЕЙН ФЛАМИНГО",
-      "name_ru": "",
+      "name_ru": "ЮНГА КЕЙН ФЛАМИНГО",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "843852966",
-      "name_lat": "ЮНИРИКА ПЕРЛА ДИ САГГЕЗЗА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "id": "238009173",
+      "name_lat": "ЮНАЛ ФЛАЙ Ц'БОКС ВСЕЯ РУССИЯ ВЛАСТЕЛИНА",
+      "name_ru": "ЮНАЛ ФЛАЙ Ц'БОКС ВСЕЯ РУССИЯ ВЛАСТЕЛИНА",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1760853316",
+      "name_lat": "ЮНИВЕРСАЛ ШОУ МИТСУО",
+      "name_ru": "ЮНИВЕРСАЛ ШОУ МИТСУО",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "594850056",
+      "id": "775293599",
+      "name_lat": "ЮНИРИКА ПЕРЛА ДИ САГГЕЗЗА",
+      "name_ru": "ЮНИРИКА ПЕРЛА ДИ САГГЕЗЗА",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1826901165",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ МАКСИМИЛИАН",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1364092834",
-      "name_lat": "ЮН МАРССОН ШАДЕ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1705,9 +1778,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "241608905",
+      "name_lat": "ЮНАЯ ЧАРОВНИЦА",
+      "name_ru": "ЮНАЯ ЧАРОВНИЦА",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "719802551",
+      "name_lat": "ЮНОКСИ БАРБАРИС",
+      "name_ru": "ЮНОКСИ БАРБАРИС",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "56241904",
       "name_lat": "ЮНИОН ГРИФ АБСОЛЮТ МАРВЕЛ",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ АБСОЛЮТ МАРВЕЛ",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 5,
@@ -1723,39 +1813,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1122248115",
+      "id": "1147956387",
       "name_lat": "ЮНАЙТ ЭНД РУЛ ИЗ СОЗВЕЗДИЯ СТАФФ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЮНАЙТ ЭНД РУЛ ИЗ СОЗВЕЗДИЯ СТАФФ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1593821465",
+      "id": "970414184",
       "name_lat": "ЮНБЭКХЕМ БЕЙЛИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЮНБЭКХЕМ БЕЙЛИ",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1339392029",
-      "name_lat": "ЮННЕЛЬ САЛЬЕРИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1559791391",
       "name_lat": "ЮНИ СОЛДЖЕР ГРАФ",
-      "name_ru": "",
+      "name_ru": "ЮНИ СОЛДЖЕР ГРАФ",
       "breed": "GERMAN HUNTING",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1770,7 +1851,7 @@
     {
       "id": "613288601",
       "name_lat": "ЮН МАРССОН НАЙТ РЕД СТАР",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН НАЙТ РЕД СТАР",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -1779,43 +1860,51 @@
     {
       "id": "661828041",
       "name_lat": "ЮНИВЕРСАЛ ШОУ ХИРОМИ",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРСАЛ ШОУ ХИРОМИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "126737994",
-      "name_lat": "ЮНИВЕРС ФАНТАЗМ СЕКРЕТ УСПЕХА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "287125032",
       "name_lat": "ЮНИ СОЛДЖЕР ОСА",
-      "name_ru": "",
+      "name_ru": "ЮНИ СОЛДЖЕР ОСА",
       "breed": "GERMAN HUNTING TERRIER (GERMAN JAGDTERRIER)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1341949282",
-      "name_lat": "ЮНИВЕРСАЛ СТАР ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "id": "137868018",
+      "name_lat": "ЮНОКСИ ЛАВР ДЖЕНИВЕЛ СТАЙЛ",
+      "name_ru": "ЮНОКСИ ЛАВР ДЖЕНИВЕЛ СТАЙЛ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "656568161",
+      "name_lat": "ЮНОНА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1931628434",
+      "name_lat": "ЮНИВЕРСЕ ФОР МИ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "name_ru": "ЮНИВЕРСЕ ФОР МИ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "1823304139",
       "name_lat": "ЮНИ СОЛДЖЕР ЕДРЁНЫЙ БЕС",
-      "name_ru": "",
+      "name_ru": "ЮНИ СОЛДЖЕР ЕДРЁНЫЙ БЕС",
       "breed": "HUNTING TERRIER (GERMAN JAGDTERRIER)",
       "breed_en": "",
       "total_shows": 3,
@@ -1824,17 +1913,17 @@
     {
       "id": "386851750",
       "name_lat": "ЮНОНА НЕЖНОЕ ОЧАРОВАНИЕ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА НЕЖНОЕ ОЧАРОВАНИЕ",
       "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1889384909",
+      "id": "202420272",
       "name_lat": "ЮНИТИ ДРИМС ШАЙЕН",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "ЮНИТИ ДРИМС ШАЙЕН",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -1842,10 +1931,19 @@
     {
       "id": "1365955744",
       "name_lat": "ЮНРУ ОЧАРОВАШКА ОТ БАРИНА МОСКОВСКОГО (Изменено по Решению ВК от 25.01.23 вопрос 19)",
-      "name_ru": "",
+      "name_ru": "ЮНРУ ОЧАРОВАШКА ОТ БАРИНА МОСКОВСКОГО (Изменено по Решению ВК от 25.01.23 вопрос 19)",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1238147013",
+      "name_lat": "ЮНИВЕРСАЛ ШОУ ЮТЕКО",
+      "name_ru": "ЮНИВЕРСАЛ ШОУ ЮТЕКО",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1860,7 +1958,7 @@
     {
       "id": "1580264819",
       "name_lat": "ЮНАТА ЗОЛОТО МАРКИЗЫ",
-      "name_ru": "",
+      "name_ru": "ЮНАТА ЗОЛОТО МАРКИЗЫ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 4,
@@ -1878,73 +1976,46 @@
     {
       "id": "1759895038",
       "name_lat": "ЮНЕТТА НЕБЕСНАЯ ЛАСТОЧКА",
-      "name_ru": "",
+      "name_ru": "ЮНЕТТА НЕБЕСНАЯ ЛАСТОЧКА",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "584744305",
+      "id": "1384988640",
       "name_lat": "ЮНОНА БЕСТ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "210736866",
+      "id": "1711002339",
       "name_lat": "ЮНИТИВИЛС НЬЮ ГЭЛЭКСИ",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР /",
+      "name_ru": "ЮНИТИВИЛС НЬЮ ГЭЛЭКСИ",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "151837671",
+      "id": "1732183253",
       "name_lat": "ЮНКЕР ИЗ ОЖЕРЕЛЬЯ",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ ЛЕВРЕТКА ЛЕВРЕТКА",
+      "name_ru": "ЮНКЕР ИЗ ОЖЕРЕЛЬЯ",
+      "breed": "ТИБЕТСКИЙ ЛЕВРЕТКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1431458990",
-      "name_lat": "ЮНИС",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1776608239",
+      "id": "1031028987",
       "name_lat": "ЮНКЕР С ИСАЕВСКОГО ПОДВОРЬЯ",
-      "name_ru": "",
-      "breed": "НОРВИЧ СТАФФОРДШИРСКИЙ",
+      "name_ru": "ЮНКЕР С ИСАЕВСКОГО ПОДВОРЬЯ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "80960285",
-      "name_lat": "ЮНОНА ЭСПОИР КРИСБОРИ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "960091561",
-      "name_lat": "ЮН МАРССОН ЮППИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1966,21 +2037,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "238009173",
-      "name_lat": "ЮНАЛ ФЛАЙ Ц'БОКС ВСЕЯ РУССИЯ ВЛАСТЕЛИНА",
-      "name_ru": "",
-      "breed": "БОКСЕР",
+      "id": "120060315",
+      "name_lat": "ЮНИКЬЮ МИРАКЛЕ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "name_ru": "ЮНИКЬЮ МИРАКЛЕ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "222152896",
-      "name_lat": "ЮНИЯ БЬЮТИ ДАЙМОНД",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1993,30 +2055,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "180402287",
+      "id": "935230492",
       "name_lat": "ЮНОНА МИЛА БОГИНЯ МИРА",
-      "name_ru": "",
-      "breed": "COCKER SPANIEL",
+      "name_ru": "ЮНОНА МИЛА БОГИНЯ МИРА",
+      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "573820503",
-      "name_lat": "ЮНА ДЖЕССИКА БЛЭЙК",
+      "id": "1265747911",
+      "name_lat": "Ю - НА КОЛЛЕКШИОН БЭЛЛА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "545046166",
+      "name_lat": "ЮНА ДЖЕССИКА БЛЭЙК",
+      "name_ru": "ЮНА ДЖЕССИКА БЛЭЙК",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1494267426",
-      "name_lat": "ЮНАЙТЕД БАЙ Э СТРОНГ СПИРИТ ФОР ФРОЛАНД",
+      "id": "123156856",
+      "name_lat": "ЮНГАЙ",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2031,26 +2102,17 @@
     {
       "id": "1671553780",
       "name_lat": "ЮНИКА ФРАЙДОР ТЕЙСОН",
-      "name_ru": "",
+      "name_ru": "ЮНИКА ФРАЙДОР ТЕЙСОН",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1547684303",
+      "id": "953722489",
       "name_lat": "ЮНИК ДИСКАВЕРИ ВИНЧЕСТА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "682674550",
-      "name_lat": "ЮНОКСИ ЛАВР ДЖЕНИВЕЛ СТАЙЛ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ЮНИК ДИСКАВЕРИ ВИНЧЕСТА",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2074,18 +2136,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "611441826",
-      "name_lat": "ЮН МАРССОН ЮТЕЛЬ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "558258526",
       "name_lat": "ЮНИГМА ЗАГАДОЧНАЯ",
-      "name_ru": "",
+      "name_ru": "ЮНИГМА ЗАГАДОЧНАЯ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 6,
@@ -2101,37 +2154,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "966275928",
-      "name_lat": "ЮН МАРССОН ДОМИНИКА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1238147013",
-      "name_lat": "ЮНИВЕРСАЛ ШОУ ЮТЕКО",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1545746291",
       "name_lat": "ЮНОНА ФРОМ МЭКЕР КЛАБ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ФРОМ МЭКЕР КЛАБ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "267951119",
+      "id": "782541853",
+      "name_lat": "ЮНИВЕРСАЛ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "547391550",
       "name_lat": "ЮНЫЙ ФИНИСТ ЯСНЫЙ СОКОЛ",
       "name_ru": "",
-      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР /",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2157,7 +2200,7 @@
     {
       "id": "1755925660",
       "name_lat": "ЮНИКА МИСТИКА ИЗ МИРАШЕЛА",
-      "name_ru": "",
+      "name_ru": "ЮНИКА МИСТИКА ИЗ МИРАШЕЛА",
       "breed": "ВОЛЬФШПИЦ",
       "breed_en": "",
       "total_shows": 3,
@@ -2166,7 +2209,7 @@
     {
       "id": "710199485",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ РУССКИЙ СТИЛЬ",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ РУССКИЙ СТИЛЬ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 3,
@@ -2175,17 +2218,17 @@
     {
       "id": "199973473",
       "name_lat": "ЮНЫЙ ПРИНЦ ОСКАР",
-      "name_ru": "",
+      "name_ru": "ЮНЫЙ ПРИНЦ ОСКАР",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "964294987",
+      "id": "851431490",
       "name_lat": "ЮНИВЕРСАЛ СОЛДЖЕР НАЙК",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2209,30 +2252,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1760853316",
-      "name_lat": "ЮНИВЕРСАЛ ШОУ МИТСУО",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1845465492",
       "name_lat": "ЮНИКА БЬЮТИФУЛ ФЛАУЭР",
-      "name_ru": "",
+      "name_ru": "ЮНИКА БЬЮТИФУЛ ФЛАУЭР",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1587933815",
-      "name_lat": "ЮНА ФОРТУНА ИЗ ЕНИСЕЙСКОЙ ГУБЕРНИИ",
-      "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2247,7 +2272,7 @@
     {
       "id": "1138300278",
       "name_lat": "ЮНИОН ОФ ФАЙР ЭНД НАЙТ",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ОФ ФАЙР ЭНД НАЙТ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
@@ -2259,7 +2284,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2272,28 +2297,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "241608905",
-      "name_lat": "ЮНАЯ ЧАРОВНИЦА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "id": "268378288",
+      "name_lat": "ЮНЕТТА НЕБЕСНАЯ ЗВЕЗДОЧКА",
+      "name_ru": "ЮНЕТТА НЕБЕСНАЯ ЗВЕЗДОЧКА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "589891404",
       "name_lat": "ЮНИ СОЛДЖЕЙ ДРЕД",
-      "name_ru": "",
+      "name_ru": "ЮНИ СОЛДЖЕЙ ДРЕД",
       "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "268378288",
-      "name_lat": "ЮНЕТТА НЕБЕСНАЯ ЗВЕЗДОЧКА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2301,19 +2317,10 @@
     {
       "id": "1877194924",
       "name_lat": "ЮНОНА-ЮЖНАЯ НОЧЬ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА-ЮЖНАЯ НОЧЬ",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "988066728",
-      "name_lat": "ЮНЕССА СТАР",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2326,18 +2333,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1139837016",
-      "name_lat": "ЮН МАРССОН ИМПЕРАТОР ДЛЯ СЕРДЦА ЧЁРНОГО МОРЯ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1483813133",
       "name_lat": "ЮНАЛ ФЛАЙ Ц'БОКС ВИВАТ ИМПЕРАТРИЦА ВИВАТ",
-      "name_ru": "",
+      "name_ru": "ЮНАЛ ФЛАЙ Ц'БОКС ВИВАТ ИМПЕРАТРИЦА ВИВАТ",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2362,10 +2360,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1896898468",
+      "id": "1141444266",
       "name_lat": "ЮНАЯ БОГИНЯ ИЗ СТРАНЫ ГРЕЗ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2377,15 +2375,6 @@
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "656568161",
-      "name_lat": "ЮНОНА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2407,12 +2396,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "923428139",
+      "id": "876726306",
       "name_lat": "ЮНА СМОЛЛИ КВИН",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ЮНА СМОЛЛИ КВИН",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "21039564",
+      "name_lat": "ЮНИВЕРС ФАНТАЗМ ИЗАНАМИ",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ ИЗАНАМИ",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1993586450",
+      "name_lat": "ЮНИОН ГРИФ МАДАМ ФИГАРО",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2434,18 +2439,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "229769288",
-      "name_lat": "ЮНОКСИ БАРБАРИС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "104753076",
       "name_lat": "ЮНАЙТА ДЕ МОН E-БАКЕ СО ДВОРА",
-      "name_ru": "",
+      "name_ru": "ЮНАЙТА ДЕ МОН",
       "breed": "СЕНБЕРНАР",
       "breed_en": "",
       "total_shows": 2,
@@ -2454,26 +2450,26 @@
     {
       "id": "1589376772",
       "name_lat": "ЮНИТА ДОЛЬЧЕ",
-      "name_ru": "",
+      "name_ru": "ЮНИТА ДОЛЬЧЕ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1477621481",
+      "id": "134015860",
       "name_lat": "ЮНАЯ ЛЕДИ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1957812885",
+      "id": "1020618830",
       "name_lat": "ЮНИЙ ЮВЕНАЛ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2481,7 +2477,7 @@
     {
       "id": "1121643513",
       "name_lat": "ЮНАЯ МОНИКА БЕЛЛУЧИ",
-      "name_ru": "",
+      "name_ru": "ЮНАЯ МОНИКА БЕЛЛУЧИ",
       "breed": "DOGUE DE BORDEAUX БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -2551,18 +2547,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1998674380",
+      "id": "1736945368",
       "name_lat": "ЮНИТИ ИН ДОНО ДИ ГЛОРИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ЮНИТИ ИН ДОНО ДИ ГЛОРИЯ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "1278147093",
+      "name_lat": "ЮНТЭРИ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1435387526",
       "name_lat": "ЮНУСУАЛ СОУ БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "ЮНУСУАЛ СОУ БЬЮТИ",
       "breed": "СОБАКА ГОЛАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -2571,7 +2576,7 @@
     {
       "id": "175163388",
       "name_lat": "ЮНОНА ТАЛИСМАН СЕМЬИ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ТАЛИСМАН СЕМЬИ",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -2587,12 +2592,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1326592002",
+      "id": "755314691",
       "name_lat": "ЮНИВЁРСАЛ ИЗ ДИНАСТИИ КОНОЛ'С",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "name_ru": "ЮНИВЁРСАЛ ИЗ ДИНАСТИИ КОНОЛ'С",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1917274641",
+      "name_lat": "Юнона Претти Аведо Ри",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2605,28 +2619,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1971965965",
+      "id": "1235247216",
       "name_lat": "ЮНИТИВИЛС НЕКСТ РЕФЛЕКШИОН",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР /",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "259306343",
+      "id": "1110627366",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ ИМПУЛЬС",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1657539656",
-      "name_lat": "Юнона Претти Аведо Ри",
-      "name_ru": "",
-      "breed": "БИГЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2643,17 +2648,17 @@
     {
       "id": "251876634",
       "name_lat": "ЮНОНА ЯСНОЕ СОЛНЫШКО",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ЯСНОЕ СОЛНЫШКО",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "712562434",
+      "id": "1766357558",
       "name_lat": "ЮНОНА БРИАННА ЛЕКСИ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ЮНОНА БРИАННА ЛЕКСИ",
+      "breed": "LABRADOR RETRIEVER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2679,19 +2684,28 @@
     {
       "id": "1862507879",
       "name_lat": "Юнона с Покровской Слободы",
-      "name_ru": "",
+      "name_ru": "Юнона с Покровской Слободы",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1491304829",
+      "id": "472927953",
       "name_lat": "ЮНОНА ИЗ КОРОЛЕВСТВА СТАФФ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЮНОНА ИЗ КОРОЛЕВСТВА СТАФФ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1874531497",
+      "name_lat": "ЮНАЯ БОГИНЯ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2704,46 +2718,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1025069153",
+      "id": "309689920",
       "name_lat": "ЮНИК СИЛЬВЕР СТАР",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "name_ru": "ЮНИК СИЛЬВЕР СТАР",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "64309494",
-      "name_lat": "ЮНИОН СТАР ИЗ ИМПЕРИИ АДАМАНТ",
+      "id": "724485518",
+      "name_lat": "ЮНИС",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "401211393",
-      "name_lat": "ЮНТЭРИ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "САМОЕД /",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "1318828740",
       "name_lat": "ЮНОНА ИЗ СНЕЖНОЙ СТАИ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ИЗ СНЕЖНОЙ СТАИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1815057693",
+      "id": "1461238464",
       "name_lat": "ЮНИТИ ДРИМС ЛУНА РОССА",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2758,6 +2762,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1718951008",
+      "name_lat": "ЮНИ СОЛДЖЕР АЛЬБА- ГЕРМИОНА",
+      "name_ru": "",
+      "breed": "БОРДЕР ТЕРЬЕР /",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "486952084",
       "name_lat": "ЮНОНА МОЯ НАГРАДА ШОЛОМ АЛЕЙХЕМ",
       "name_ru": "",
@@ -2767,18 +2779,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "363901395",
-      "name_lat": "ЮНИК ИЗ ХВОСТАТОГО БАЛАГАНА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "345134369",
       "name_lat": "ЮНИТА ТАУ КИТА САН ЛАЙК СТАР",
-      "name_ru": "",
+      "name_ru": "ЮНИТА ТАУ КИТА САН ЛАЙК СТАР",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -2803,10 +2806,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1242160444",
+      "id": "652277033",
       "name_lat": "ЮНОНА",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ ШНАУЦЕР ШНАУЦЕР",
+      "breed": "ШАР ПЕЙ ШНАУЦЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2866,11 +2869,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "566181041",
+      "id": "2000056652",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ АСЕМИ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "236618566",
+      "name_lat": "ЮНИ СОЛДЖЕР ЕВРАЗИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ЯГДТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2911,28 +2922,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1772292144",
-      "name_lat": "ЮНОНА ИЗ ЗВЕЗДНОГО ГРАФСТВА",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1961573167",
       "name_lat": "ЮНОНА БЛЕНХЕЙМ ХИЛЛ ХОУСЕ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА БЛЕНХЕЙМ ХИЛЛ ХОУСЕ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "46442772",
+      "id": "146897921",
+      "name_lat": "ЮНИКА КРИСТАЛ МЕЛОДИ",
+      "name_ru": "ЮНИКА КРИСТАЛ МЕЛОДИ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1407547570",
       "name_lat": "ЮНИКС ЗЕ ПРАЙД ВАРРИОР",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЮНИКС ЗЕ ПРАЙД ВАРРИОР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2956,10 +2967,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1628200720",
+      "id": "1260309124",
       "name_lat": "ЮНОКСИ ПАОЛИНА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2983,10 +2994,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1816662217",
-      "name_lat": "ЮНОНА МЭДЖИК (БЕЛЬГ)",
+      "id": "32711420",
+      "name_lat": "ЮНИВЕРС ФАНТАЗМ ЯРКИЙ ПАРЕНЬ",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ БЕЛЬГИЙСКИЙ",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "467562963",
+      "name_lat": "ЮНИТИ ВТОРАЯ",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1582751981",
+      "name_lat": "ЮНОНА МЭДЖИК (БЕЛЬГ)",
+      "name_ru": "ЮНОНА МЭДЖИК (БЕЛЬГ)",
+      "breed": "ПРЯМОШЕРСТНЫЙ БЕЛЬГИЙСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3001,10 +3028,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "405030401",
+      "id": "1787190242",
       "name_lat": "ЮНИТА ИЗ ДОМА ИНФАНТЫ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЮНИТА ИЗ ДОМА ИНФАНТЫ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3012,7 +3039,7 @@
     {
       "id": "232341183",
       "name_lat": "ЮНИВЕРСАЛ ШОУ АГАТ",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРСАЛ ШОУ АГАТ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
@@ -3028,10 +3055,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1744378046",
-      "name_lat": "ЮНИОН ГРИФ БИГ ШОУ- ОФФ",
+      "id": "1986083422",
+      "name_lat": "ЮНИОН ГРИФ БИГ ШОУ-ОФФ",
       "name_ru": "",
       "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1063106747",
+      "name_lat": "ЮНИКА СНЕЖНОЕ УТРО",
+      "name_ru": "ЮНИКА СНЕЖНОЕ УТРО",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3075,10 +3111,19 @@
     {
       "id": "1261618230",
       "name_lat": "ЮННА УТРЕННЯЯ ЗВЕЗДА",
-      "name_ru": "",
+      "name_ru": "ЮННА УТРЕННЯЯ ЗВЕЗДА",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1177565041",
+      "name_lat": "ЮНОНА",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3100,21 +3145,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1966646684",
-      "name_lat": "ЮНОНА ХАЙДИ ЛАН",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "id": "1684487050",
+      "name_lat": "ЮНИВЕРС ФАНТАЗМ ВАЛДО ТРОЙ",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ ВАЛДО ТРОЙ",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1177565041",
-      "name_lat": "ЮНОНА",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3172,19 +3208,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "782541853",
-      "name_lat": "ЮНИВЕРСАЛ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1375116178",
+      "id": "802593641",
       "name_lat": "ЮНТЕР КРАФТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3208,10 +3235,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "229155509",
+      "id": "1599173432",
       "name_lat": "ЮНИК ПРИНЦЕСС",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3219,15 +3246,6 @@
     {
       "id": "277385747",
       "name_lat": "ЮН МАРССОН ШЕДЕВР",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "664020120",
-      "name_lat": "ЮНАЯ ДУША ИЗ ПИТЕРСКОГО ДОЗОРА",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
@@ -3264,17 +3282,17 @@
     {
       "id": "173387900",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ КИАРА",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ КИАРА",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1124638733",
+      "id": "1127133296",
       "name_lat": "ЮНИОН ГРИФ НЕЗ А НЕЗ",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3286,6 +3304,14 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1253862558",
+      "name_lat": "ЮНИ СОЛДЖЕР ДЕЙЕНЕРИС",
+      "name_ru": "ЮНИ СОЛДЖЕР ДЕЙЕНЕРИС",
+      "breed": "GERMAN HUNTING",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3325,18 +3351,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "660666222",
-      "name_lat": "ЮНАЯ БОГИНЯ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 5,
+      "id": "861124621",
+      "name_lat": "ЮНОНА ИЗ КРАСНОЙ ДОЛИНЫ",
+      "name_ru": "ЮНОНА ИЗ КРАСНОЙ ДОЛИНЫ",
+      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1386306344",
       "name_lat": "ЮНЕССА ГЛАМУРНАЯ ДИВА",
-      "name_ru": "",
+      "name_ru": "ЮНЕССА ГЛАМУРНАЯ ДИВА",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -3345,7 +3370,7 @@
     {
       "id": "120921964",
       "name_lat": "ЮНИОН ГРИФ ЛА РУССЕ РУЖ",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ ЛА РУССЕ РУЖ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 4,
@@ -3354,7 +3379,7 @@
     {
       "id": "140842913",
       "name_lat": "ЮНАТА ТОТАЛ ВИКТОРИ",
-      "name_ru": "",
+      "name_ru": "ЮНАТА ТОТАЛ ВИКТОРИ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 4,
@@ -3379,10 +3404,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "647263724",
+      "id": "1480330595",
       "name_lat": "ЮНЕССА МАЙ СВИТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3406,6 +3431,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "444775316",
+      "name_lat": "ЮНАЯ ЛЕДИ МИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1822989297",
       "name_lat": "ЮНЫЙ АРЧИ ИЗ ЗИМНИХ ГРЕЗ",
       "name_ru": "",
@@ -3415,19 +3449,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "149965418",
-      "name_lat": "ЮНИКА СНЕЖНОЕ УТРО",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "789229701",
+      "id": "823540632",
       "name_lat": "ЮН МАРССОН ХОРТ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3469,19 +3494,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "77074896",
-      "name_lat": "ЮНАЯ ЛЕДИ МИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1976582067",
+      "id": "277487275",
       "name_lat": "ЮНИ СОЛДЖЕР ВЕНСИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР) ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "ЮНИ СОЛДЖЕР ВЕНСИ",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3518,15 +3534,6 @@
       "name_lat": "ЮНИС",
       "name_ru": "",
       "breed": "САМОЕД / SAMOYED",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1620167383",
-      "name_lat": "ЮНИС",
-      "name_ru": "",
-      "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3577,10 +3584,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "429867052",
+      "id": "366883712",
       "name_lat": "ЮНОНА БЕСТ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3631,10 +3638,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "396275496",
+      "id": "67312235",
       "name_lat": "ЮНИЯ МУЗА НОЧИ",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3658,10 +3665,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1461979880",
+      "id": "717337741",
       "name_lat": "ЮНИТИВ ИЛС НЬЮ ГЭЛЭКСИ",
       "name_ru": "",
-      "breed": "СЕТТЕР /",
+      "breed": "СЕТТЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3703,6 +3710,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1183027855",
+      "name_lat": "Ю - НА КОЛЛЕКШИ ОН АДЕЛИНА",
+      "name_ru": "",
+      "breed": "KLEINSPITZ ORANGE, GREY, OTHER COLOURS",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1581595323",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ НОРТОН",
       "name_ru": "",
@@ -3721,10 +3737,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "899382929",
+      "id": "591420204",
       "name_lat": "ЮНИТИВИЛС НАЙС НЬЮС",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР /",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3753,7 +3769,7 @@
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3761,15 +3777,6 @@
       "name_lat": "ЮНКЕР ВОМ ХОНЕВЕРГ",
       "name_ru": "",
       "breed": "GERMAN WIRE-HAIRED",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "173892671",
-      "name_lat": "ЮНАЙТ СВИТ ОРАНЖ MIRABELLA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3820,9 +3827,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1048032087",
+      "name_lat": "ЮНИВЕРС ФАНТАЗМ ЧАРМИНГ",
+      "name_ru": "",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "216058938",
       "name_lat": "ЮНИОН ГРИФ Л'АВЕНТУРЕ",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ Л'АВЕНТУРЕ",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 5,
@@ -3838,27 +3854,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "146897921",
-      "name_lat": "ЮНИКА КРИСТАЛ МЕЛОДИ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1048032087",
-      "name_lat": "ЮНИВЕРС ФАНТАЗМ ЧАРМИНГ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1533446734",
       "name_lat": "ЮНИКВЕ ЦАРИНА С НЕВСКИХ ОСТРОВОВ",
-      "name_ru": "",
+      "name_ru": "ЮНИКВЕ ЦАРИНА С НЕВСКИХ ОСТРОВОВ",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 4,
@@ -3867,17 +3865,17 @@
     {
       "id": "1821133802",
       "name_lat": "ЮНИК БЛЭК СИ ПЕРЛ ИЗ ОРДЕНА ЕКАТЕ-РИНЫ",
-      "name_ru": "",
+      "name_ru": "ЮНИК БЛЭК СИ ПЕРЛ ИЗ ОРДЕНА ЕКАТЕ-РИНЫ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1847518009",
+      "id": "1901200245",
       "name_lat": "ЮНОНА ДОЧЬ ЮПИТЕРА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "name_ru": "ЮНОНА ДОЧЬ ЮПИТЕРА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3903,17 +3901,8 @@
     {
       "id": "1625596983",
       "name_lat": "ЮНИВЕРС ФОР МИ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФОР МИ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1619183108",
-      "name_lat": "ЮНИКЬЮ МИРАКЛЕ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3964,20 +3953,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1530987372",
-      "name_lat": "ЮНАЯ БОГИНЯ",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "42007203",
       "name_lat": "ЮНАЯ ЛЕДИ",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56451554",
+      "name_lat": "ЮНХЕЛИКА ЧЕРНЫЙ БАРХАТ",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4002,17 +3990,17 @@
     {
       "id": "1443717066",
       "name_lat": "ЮНИК СТАЙЛ ЖЕНЕВЬЕВАВ",
-      "name_ru": "",
+      "name_ru": "ЮНИК СТАЙЛ ЖЕНЕВЬЕВАВ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1214131716",
+      "id": "1695686321",
       "name_lat": "ЮНИТИВИЛС РУБИ РОУЗ",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР /",
+      "name_ru": "ЮНИТИВИЛС РУБИ РОУЗ",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4072,10 +4060,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "598953295",
+      "id": "1437796222",
       "name_lat": "ЮНА",
       "name_ru": "",
-      "breed": "СИБИРСКАЯ ЛАЙКА /",
+      "breed": "СИБИРСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4090,19 +4078,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "811458588",
+      "id": "154044008",
       "name_lat": "ЮНТЭРИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "32088302",
+      "id": "853657143",
       "name_lat": "ЮНИВЕРС",
       "name_ru": "",
-      "breed": "БИГЛЬ /",
+      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4117,10 +4105,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "412175285",
+      "id": "1952622929",
       "name_lat": "ЮНТЭРИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ / GERMAN SPITZ KLEINSPITZ BLACK, BROWN",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ / GERMAN SPITZ KLEINSPITZ BLACK, BROWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4198,10 +4186,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1278710759",
+      "id": "773525179",
       "name_lat": "ЮНОНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1877409877",
+      "name_lat": "ЮНОНА БРИДЖЕТ АННАБЕЛЬ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1846740694",
+      "name_lat": "Юнит Вершина Белых Гор",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1326527833",
+      "name_lat": "ЮНОНА МИЛИССА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4261,11 +4276,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1015315414",
+      "id": "1145525889",
       "name_lat": "ЮННВЕРСЕ ФОР МИ ИЗ ДИНАСТИИ ЧЕМ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1763585480",
+      "name_lat": "ЮНИВЕРС ОФ МАДЖИК ЛОЛИТТА",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4279,20 +4302,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "467562963",
-      "name_lat": "ЮНИТИ ВТОРАЯ",
+      "id": "1752065780",
+      "name_lat": "ЮНАЙТЕД ДРИМС БЕРРИ МЕРИ",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "603619903",
-      "name_lat": "ЮНОНА БРИДЖЕТ АННАБЕЛЬ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4306,10 +4319,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "632919208",
+      "id": "178113613",
       "name_lat": "ЮНИТИ ДРИМС РИАННА",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4324,10 +4337,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1730070892",
+      "id": "1961640937",
       "name_lat": "ЮНОСТИ ЗВОН СЕРЕБРЯНЫХ КОЛОКОЛЬЧИКОВ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4351,15 +4364,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "100698509",
-      "name_lat": "ЮНИВЕРСАЛ ШОУ ЮТЭКО",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "708043414",
       "name_lat": "ЮНИОН СВЕТЛЫЙ",
       "name_ru": "",
@@ -4369,36 +4373,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "74411160",
-      "name_lat": "Юнит Вершина Белых Гор",
-      "name_ru": "",
-      "breed": "СЛОВАЦКИЙ ЧУВАЧ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "663633022",
-      "name_lat": "ЮНОНА МИЛИССА",
-      "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "215183646",
+      "id": "203840842",
       "name_lat": "ЮНАЛ ФЛАЙ Ц'БОКС ОТЕЛЛО МАЙ ЛАВ МАВР",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "249071124",
+      "name_lat": "ЮНЕССА СТАР",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1946440032",
       "name_lat": "ЮНАТЕЛЬ ЭЕР МАХТ ИЗ ДОМА АКМЫ",
-      "name_ru": "",
+      "name_ru": "ЮНАТЕЛЬ ЭЕР МАХТ ИЗ ДОМА АКМЫ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -4418,17 +4412,15 @@
       "name_lat": "ЮНОНА ДЕ МОНА ИЗ МАКСИМКОВО (К/Х)",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1685213422",
       "name_lat": "ЮНИТА МЕЛИССА ДЕ ЛАКРУЗ",
-      "name_ru": "",
+      "name_ru": "ЮНИТА МЕЛИССА ДЕ ЛАКРУЗ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -4461,7 +4453,7 @@
     {
       "id": "1122834293",
       "name_lat": "ЮНИТА БЬЮТИ НАЙТ",
-      "name_ru": "",
+      "name_ru": "ЮНИТА БЬЮТИ НАЙТ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 5,
@@ -4477,12 +4469,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1684487050",
-      "name_lat": "ЮНИВЕРС ФАНТАЗМ ВАЛДО ТРОЙ",
+      "id": "1310290995",
+      "name_lat": "ЮНИК БОЙ ФРОМ МЭРИ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4506,10 +4498,19 @@
     {
       "id": "661711714",
       "name_lat": "ЮННА УЛЫБКА ФОРТУНЫ",
-      "name_ru": "",
+      "name_ru": "ЮННА УЛЫБКА ФОРТУНЫ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1256643552",
+      "name_lat": "ЮНИТИ ЭСТЕРА КВИН",
+      "name_ru": "ЮНИТИ ЭСТЕРА КВИН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -4522,10 +4523,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "88154519",
+      "id": "563497997",
       "name_lat": "ЮНИКС АРЧИ БАЛЬД НАЙТИНГЕЙЛ ЛЭНД",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4533,17 +4534,17 @@
     {
       "id": "424838891",
       "name_lat": "ЮНИТОС ВАТАН АНТАРЕС",
-      "name_ru": "",
+      "name_ru": "ЮНИТОС ВАТАН АНТАРЕС",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1326585035",
+      "id": "1782861673",
       "name_lat": "ЮНОНА II ИЗ КОРОЛЕВСТВА СТАФФ",
       "name_ru": "",
-      "breed": "СТАФФ.ТЕРЬЕР АМЕРИКАНСКИЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4589,6 +4590,15 @@
       "name_lat": "ЮНИВЕРСАЛ ШОУ КЕССИ",
       "name_ru": "",
       "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1379001535",
+      "name_lat": "Ю-НА КОЛЛЕКШИОН АГАША",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4657,6 +4667,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "109708875",
+      "name_lat": "ЮНИТИ ДРИМС ФАНТАСТИК МЭН",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "455970095",
       "name_lat": "ЮНАЯ КИРА",
       "name_ru": "",
@@ -4681,6 +4699,15 @@
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1722723884",
+      "name_lat": ".ЮНГАЙ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4747,6 +4774,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "494402010",
+      "name_lat": "ЮНА ИЗ СИБИРСКОЙ ГЛУБИНКИ",
+      "name_ru": "ЮНА ИЗ СИБИРСКОЙ ГЛУБИНКИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "463644775",
       "name_lat": "ЮНАЛЬТ СЕН",
       "name_ru": "",
@@ -4765,28 +4801,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1256643552",
-      "name_lat": "ЮНИТИ ЭСТЕРА КВИН",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1189248602",
+      "id": "1349645099",
       "name_lat": "ЮНИКА ЯРКАЯ",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1342857197",
+      "id": "5606218",
       "name_lat": "ЮНАЙТЕТ БОЙ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4801,18 +4828,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "494402010",
-      "name_lat": "ЮНА ИЗ СИБИРСКОЙ ГЛУБИНКИ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1535281296",
       "name_lat": "ЮН МАРССОН ЦАРГУН ЮН МАРССОН СПИРИТ ОФ",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН ЦАРГУН ЮН МАРССОН СПИРИТ ОФ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -4828,8 +4846,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1916756142",
-      "name_lat": "ЮНИТИВИЛС ТУТТИ- ФРУТТИ",
+      "id": "604379134",
+      "name_lat": "ЮН МАРССОН КЭЙД",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24451398",
+      "name_lat": "ЮНИТИВИЛС ТУТТИ-ФРУТТИ",
       "name_ru": "",
       "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
@@ -4846,19 +4873,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "286204339",
-      "name_lat": "ЮНОНА БЕЛОСНЕЖКА",
+      "id": "47010725",
+      "name_lat": "ЮНИВЕРСАЛ ШОУ НЮША",
       "name_ru": "",
-      "breed": "ХАВАНЕЗ",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1830070908",
+      "id": "176943257",
       "name_lat": "ЮНИ СОЛДЖЕР ЖУДИ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "name_ru": "ЮНИ СОЛДЖЕР ЖУДИ",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4866,17 +4893,17 @@
     {
       "id": "1670617622",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ НОРМАН",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРС ФАНТАЗМ НОРМАН",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "272875061",
+      "id": "168074210",
       "name_lat": "ЮНИС БОГИНЯ СОЛНЦА",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "name_ru": "ЮНИС БОГИНЯ СОЛНЦА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4909,6 +4936,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1397170145",
+      "name_lat": "ЮНИКА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "819274489",
       "name_lat": "ЮНАЯ БОГИНЯ",
       "name_ru": "",
@@ -4936,11 +4971,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "747671058",
+      "name_lat": "ЮНОНА ШИК",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275370493",
+      "name_lat": "ЮНЫЙ МИСТЕР БЕН",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1764755987",
       "name_lat": "ЮН МАРССОН ЭКСКЛЮЗИВ",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1568587766",
+      "name_lat": "ЮНИОР БАДДИ БОЙ",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -4963,10 +5024,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1117295790",
+      "id": "1698716525",
       "name_lat": "ЮНИАНА ФОМ ГРЮНЕНШТАДТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4999,9 +5060,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1049589530",
+      "name_lat": "ЮНИТИ ДРИМС СЮЮМБИКЕ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "646314227",
       "name_lat": "ЮНОНА ТАКАРА",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ТАКАРА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -5010,7 +5080,7 @@
     {
       "id": "577785344",
       "name_lat": "ЮНДИНА ОТ ФОРЕСТ ГИРЦ",
-      "name_ru": "",
+      "name_ru": "ЮНДИНА ОТ ФОРЕСТ ГИРЦ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -5019,17 +5089,8 @@
     {
       "id": "1664541482",
       "name_lat": "ЮНТЕР КЕНАФ РОЙС",
-      "name_ru": "",
+      "name_ru": "ЮНТЕР КЕНАФ РОЙС",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1973465739",
-      "name_lat": "ЮНИКА ЗАВЕТНАЯ МЕЧТА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5037,7 +5098,7 @@
     {
       "id": "1068613257",
       "name_lat": "ЮН МАРССОН БИСКОТТИ",
-      "name_ru": "",
+      "name_ru": "ЮН МАРССОН БИСКОТТИ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -5046,7 +5107,7 @@
     {
       "id": "584112583",
       "name_lat": "ЮНИКОРН ИЗ ДОМА ДЕНДИ",
-      "name_ru": "",
+      "name_ru": "ЮНИКОРН ИЗ ДОМА ДЕНДИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -5055,7 +5116,7 @@
     {
       "id": "739828017",
       "name_lat": "ЮНА МАЙ СТАР",
-      "name_ru": "",
+      "name_ru": "ЮНА МАЙ СТАР",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -5064,17 +5125,8 @@
     {
       "id": "1247076382",
       "name_lat": "ЮНОНА ПРЕКРАСНАЯ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ПРЕКРАСНАЯ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "179903245",
-      "name_lat": "ЮНИКА ПАРАДАЙЗ ДЕЛАЙТ",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5082,26 +5134,25 @@
     {
       "id": "1032895992",
       "name_lat": "ЮННЕР БАРТЕН ИЗ ИМПЕРИИ ПОМОВ",
-      "name_ru": "",
+      "name_ru": "ЮННЕР БАРТЕН ИЗ ИМПЕРИИ ПОМОВ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "322327238",
-      "name_lat": "ЮНОСТЬ ПРЕКРАСНАЯ С ТЕПЛОГО ДОМА",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
+      "id": "202669017",
+      "name_lat": "ЮННЭЛЬ БИ ЛИТЛ",
+      "name_ru": "ЮННЭЛЬ БИ ЛИТЛ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "248974834",
-      "name_lat": "ЮНЫЙ МИСТЕР БЕН",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "id": "1952606351",
+      "name_lat": "ЮНОСТЬ ПРЕКРАСНАЯ С ТЕПЛОГО ДОМА",
+      "name_ru": "ЮНОСТЬ ПРЕКРАСНАЯ С ТЕПЛОГО ДОМА",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5143,6 +5194,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1999717063",
+      "name_lat": "ЮНОНА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1440404285",
+      "name_lat": "ЮНОНА",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1341146082",
       "name_lat": "ЮНА АФРОДИТА",
       "name_ru": "",
@@ -5161,10 +5228,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "294043387",
+      "id": "1730160306",
       "name_lat": "ЮНЕССА МУУН",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5179,10 +5246,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "626664906",
+      "id": "103658798",
       "name_lat": "ЮННА",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1405757133",
+      "name_lat": "ЮНИ АРТ СВЕТСКАЯ ЛЬВИЦА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5233,15 +5309,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "604379134",
-      "name_lat": "ЮН МАРССОН КЭЙД",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "258636227",
       "name_lat": "ЮНИВЕРСУМ МИРРОР",
       "name_ru": "",
@@ -5283,6 +5350,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1032304877",
+      "name_lat": "ЮННА ГОЛД ИЗ ЛЕВАНДЖИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5337,6 +5412,14 @@
       "name_ru": "",
       "breed": "Малый брабансон",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1018733488",
+      "name_lat": "ЮНИКА ВИКТОРИЯ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5431,10 +5514,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1977382127",
+      "id": "1933470184",
       "name_lat": "ЮНАРУ ФОМ ХАУС ТЕРСЕЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5453,15 +5536,6 @@
       "name_lat": "ЮНИТА ФЕЛИЦИЯ ШАРМЕЛЬ",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1695367652",
-      "name_lat": "ЮНАЯ ПРИНЦЕССА ЮНОНА",
-      "name_ru": "",
-      "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5503,15 +5577,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "98163353",
-      "name_lat": "ЮНИ АРТ СВЕТСКАЯ ЛЬВИЦА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1730958211",
       "name_lat": "ЮНИВЕРСАЛ ШОУ НИКИТА",
       "name_ru": "",
@@ -5530,6 +5595,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1933663332",
+      "name_lat": "ЮН МАРССОН ЮКСИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "823195899",
       "name_lat": "ЮНИОН ГРИФ ЛУКСУРИ ГЕЛ",
       "name_ru": "",
@@ -5539,28 +5613,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "47010725",
-      "name_lat": "ЮНИВЕРСАЛ ШОУ НЮША",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1918712216",
       "name_lat": "ЮНАЯ ЛУНА ЮСЯ",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1310290995",
-      "name_lat": "ЮНИК БОЙ ФРОМ МЭРИ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5586,7 +5642,7 @@
     {
       "id": "1655334971",
       "name_lat": "ЮНА ЦАРИЦА СНЕГОВ С БЕРЕГОВ БЕЛОЙ ПЕЧОРЫ",
-      "name_ru": "",
+      "name_ru": "ЮНА ЦАРИЦА СНЕГОВ С БЕРЕГОВ БЕЛОЙ ПЕЧОРЫ",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "SAMOYED",
       "total_shows": 2,
@@ -5595,7 +5651,7 @@
     {
       "id": "614775584",
       "name_lat": "ЮНОНА ЦАРИЦА НОЧИ Д/Ш",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ЦАРИЦА НОЧИ Д/Ш",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -5604,7 +5660,7 @@
     {
       "id": "317199275",
       "name_lat": "ЮНИ СОЛДЖЕР ВЕГА",
-      "name_ru": "",
+      "name_ru": "ЮНИ СОЛДЖЕР ВЕГА",
       "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -5613,7 +5669,7 @@
     {
       "id": "1528890512",
       "name_lat": "ЮНИОС БЬЮТИ НАЙТ",
-      "name_ru": "",
+      "name_ru": "ЮНИОС БЬЮТИ НАЙТ",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -5622,17 +5678,17 @@
     {
       "id": "586990107",
       "name_lat": "ЮНАРУ ИЗ ПУШКИНО",
-      "name_ru": "",
+      "name_ru": "ЮНАРУ ИЗ ПУШКИНО",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1437872281",
+      "id": "1050423644",
       "name_lat": "ЮНГА БАЛТИКИ ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ЮНГА БАЛТИКИ ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
+      "breed": "КРОЛИЧЬЯ СТАНДАРТНАЯ ТАКСА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5649,7 +5705,7 @@
     {
       "id": "1423270026",
       "name_lat": "ЮНЕССА БЛЕСК ИЗУМРУДА",
-      "name_ru": "",
+      "name_ru": "ЮНЕССА БЛЕСК ИЗУМРУДА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -5658,8 +5714,17 @@
     {
       "id": "1460476422",
       "name_lat": "ЮНАЛ ФЛАЙ Ц’БОКС ЕВИЛИЯ ФЭРР ОРХИДЕЯ",
-      "name_ru": "",
+      "name_ru": "ЮНАЛ ФЛАЙ Ц’БОКС ЕВИЛИЯ ФЭРР ОРХИДЕЯ",
       "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "416432131",
+      "name_lat": "ЮНОНА ИЗ СИБИРСКОЙ ГЛУБИНКИ",
+      "name_ru": "ЮНОНА ИЗ СИБИРСКОЙ ГЛУБИНКИ",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5667,17 +5732,8 @@
     {
       "id": "534191776",
       "name_lat": "ЮНИОН ГРИФ ДУКАТИ МОНСТЕР",
-      "name_ru": "",
+      "name_ru": "ЮНИОН ГРИФ ДУКАТИ МОНСТЕР",
       "breed": "GRIFFON BRUXELLOIS",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1359945866",
-      "name_lat": "ЮННЭЛЬ БИ ЛИТЛ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5685,16 +5741,24 @@
     {
       "id": "1735902345",
       "name_lat": "ЮНАЯ БОГИНЯ НЕЖНОСТИ И КРАСОТЫ",
-      "name_ru": "",
+      "name_ru": "ЮНАЯ БОГИНЯ НЕЖНОСТИ И КРАСОТЫ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "1512278345",
+      "name_lat": "ЮНЕТТА БЬЮТИФУЛ",
+      "name_ru": "ЮНЕТТА БЬЮТИФУЛ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1994418736",
       "name_lat": "ЮНОНА АВОСЬ САНТА СЭЙ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА АВОСЬ САНТА СЭЙ",
       "breed": "ПУДЕЛЬ ТОЙ (белый, черный, коричневый)",
       "breed_en": "",
       "total_shows": 2,
@@ -5703,16 +5767,16 @@
     {
       "id": "698908105",
       "name_lat": "ЮНОНА КАТРИНА ФОН ДЕР ВЕЛПЕН ПАРАДИЗ",
-      "name_ru": "",
+      "name_ru": "ЮНОНА КАТРИНА ФОН ДЕР ВЕЛПЕН ПАРАДИЗ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1018573742",
-      "name_lat": "ЮНОНА ИЗ КОРОЛЕВСТВА ДО- МИ-НО",
-      "name_ru": "",
+      "id": "566795022",
+      "name_lat": "ЮНОНА ИЗ КОРОЛЕВСТВА ДО-МИ-НО",
+      "name_ru": "ЮНОНА ИЗ КОРОЛЕВСТВА ДО-МИ-НО",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -5721,7 +5785,7 @@
     {
       "id": "1155917029",
       "name_lat": "ЮНОНА КАРА ДЭНС",
-      "name_ru": "",
+      "name_ru": "ЮНОНА КАРА ДЭНС",
       "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -5730,7 +5794,7 @@
     {
       "id": "9072201",
       "name_lat": "ЮНОНА ЗОУИ КВИН",
-      "name_ru": "",
+      "name_ru": "ЮНОНА ЗОУИ КВИН",
       "breed": "НЕМ.ШПИЦ той шпиц немецкий",
       "breed_en": "",
       "total_shows": 2,
@@ -5739,28 +5803,18 @@
     {
       "id": "1882522914",
       "name_lat": "ЮНИВЕРСЕ ЕМБЕР",
-      "name_ru": "",
+      "name_ru": "ЮНИВЕРСЕ ЕМБЕР",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "58965290",
-      "name_lat": "ЮНИВЕРС ФАНТАЗМ БАРРИ",
-      "name_ru": "",
-      "breed": "JAPANESE SPITZ",
-      "breed_en": "",
+      "id": "390628957",
+      "name_lat": "ЮНОКСИ ВЕЛЕС",
+      "name_ru": "ЮНОКСИ ВЕЛЕС",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "934518067",
-      "name_lat": "ЮНИКА БЬЮТИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -5791,10 +5845,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "803641084",
+      "id": "1532877132",
       "name_lat": "ЮНИКА СКАЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5813,15 +5867,6 @@
       "name_lat": "ЮНОНА",
       "name_ru": "",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "945858705",
-      "name_lat": "ЮНОНА",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5854,10 +5899,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "278793702",
+      "id": "148081562",
       "name_lat": "ЮННА НОЧЬ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5917,10 +5962,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1837456310",
+      "id": "1041808106",
       "name_lat": "ЮНТЭРИ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ / GERMAN",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ / GERMAN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5962,10 +6007,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1999410984",
+      "id": "665441997",
       "name_lat": "ЮНБЭКХЕМ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6196,10 +6241,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1614925625",
+      "id": "1980735512",
+      "name_lat": "ЮНЬ-СИ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "476067588",
       "name_lat": "ЮНГАР",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ /",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6210,6 +6263,14 @@
       "name_ru": "",
       "breed": "СОБАКА ГОЛАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1009977989",
+      "name_lat": "ЮНАЯ ЛЕДИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6322,10 +6383,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1540366813",
+      "id": "1958390242",
       "name_lat": "ЮНОНА",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6340,15 +6401,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1359529792",
-      "name_lat": "ЮНОНА",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "409996411",
       "name_lat": "ЮНАЯ БОГИНЯ",
       "name_ru": "",
@@ -6358,10 +6410,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "783084078",
+      "id": "713976461",
       "name_lat": "ЮНОНА",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6457,15 +6509,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "433764645",
-      "name_lat": "ЮНЕССА",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "71490182",
       "name_lat": "ЮНЕССА",
       "name_ru": "",
@@ -6511,15 +6554,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1999717063",
-      "name_lat": "ЮНОНА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "7180965",
       "name_lat": "ЮНА",
       "name_ru": "",
@@ -6542,15 +6576,6 @@
       "name_lat": "ЮНИКА",
       "name_ru": "",
       "breed": "АКИТА АМЕРИКАНСКАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1874531497",
-      "name_lat": "ЮНАЯ БОГИНЯ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6583,10 +6608,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "491775267",
+      "id": "569181639",
       "name_lat": "ЮНОНА",
       "name_ru": "",
-      "breed": "ТАКСА ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6641,6 +6666,41 @@
       "name_lat": "ЮНЕССА",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "988066728",
+      "name_lat": "ЮНЕССА СТАР",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "555632223",
+      "name_lat": "ЮНОНА МАЙ ДИЛАЙТ",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "467373655",
+      "name_lat": "ЮНОНА ЭЛЬФИЙСКАЯ ЗВЕЗДА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1624192152",
+      "name_lat": "ЮНАЛ ФЛАЙ Ц*БОКС МАЛЕФИСЕНТА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6862,10 +6922,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1191034336",
+      "id": "176004789",
       "name_lat": "ЮНИКА ЧОКОЛЭЙТ ДЖОЙ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6880,10 +6940,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "967476339",
+      "id": "1573033930",
       "name_lat": "ЮНАТА ПОКОРЯЮЩАЯ СТРАСТЬЮ",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6943,10 +7003,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "876835671",
+      "id": "828939158",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ ГРЕГУАР",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6997,10 +7057,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1088471248",
+      "id": "476921893",
       "name_lat": "ЮНОНА АРАБИКА ЖАСМИН",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7015,10 +7075,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "449538261",
+      "id": "210622696",
       "name_lat": "ЮНИТИ ЛАВЛИ ПРИНЦЕСС",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7132,10 +7192,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1669669696",
+      "id": "83732269",
       "name_lat": "ЮНБЕКХЕМ ПАППИ ЛАВ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7150,10 +7210,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1678358088",
+      "id": "1282146285",
       "name_lat": "ЮНОНА ОТ ФИДЕЛИС ЭТ ФОРТИС",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7186,10 +7246,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "677453778",
+      "id": "1366648659",
       "name_lat": "ЮНА ФОМ РУССИШЕН ХОФ",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7222,10 +7282,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "464653894",
+      "id": "1228460223",
       "name_lat": "ЮНИВАНГ ДАР ВИВИЕН ДИВНАЯ ИГРУШКА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7280,15 +7340,6 @@
       "name_lat": "ЮНИВАНГ ДАР ЗВЕЗДА УДАЧИ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МИНИАТЮРНЫЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "416432131",
-      "name_lat": "ЮНОНА ИЗ СИБИРСКОЙ ГЛУБИНКИ",
-      "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7393,11 +7444,34 @@
       "competition_dog_id": null
     },
     {
-      "id": "1568587766",
-      "name_lat": "ЮНИОР БАДДИ БОЙ",
+      "id": "1226277283",
+      "name_lat": "ЮНГВУД С КРАСНОГО ЯРА",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "827980494",
+      "name_lat": "ЮНОНА МАКСБОРД АКУПУНКТУРА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "860405901",
+      "name_lat": "ЮНОННА ЛАЙТ ИЗ ДИНАСТИИ КОРОЛЕЙ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "587013286",
+      "name_lat": "ЮНИКА КАЛЛИСТА САРИ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7411,6 +7485,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "95170541",
+      "name_lat": "ЮНГСВИЛЛ С КРАСНОГО ЯРА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "626612518",
       "name_lat": "ЮНИТА ЭНДЖЕЛ АЙС",
       "name_ru": "",
@@ -7420,10 +7502,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1881038067",
+      "id": "1675097953",
+      "name_lat": "ЮНИВЕРСЕЛ ИЗ КОРОЛЕВСТВА СТАФФ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "7811930",
       "name_lat": "ЮНАЯ ИМПЕРАТРИЦА ОФ ХАУС НАТАЛИ",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7465,10 +7555,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "448066607",
+      "id": "1622556766",
       "name_lat": "ЮНИКА ИЗ ДОМА МИЛАВЕР",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7483,11 +7573,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1512278345",
-      "name_lat": "ЮНЕТТА БЬЮТИФУЛ",
+      "id": "135966378",
+      "name_lat": "ЮНОЕ СЕРДЦЕ КОМПАНИИ ДЖЕСИКА",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7510,19 +7599,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "555632223",
-      "name_lat": "ЮНОНА МАЙ ДИЛАЙТ",
-      "name_ru": "",
-      "breed": "МОСКОВСКАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "164963144",
+      "id": "736912621",
       "name_lat": "ЮНГЕР ПАСТОРАЛЬ",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7618,19 +7698,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "928423727",
+      "id": "1638347614",
       "name_lat": "ЮНИВЕРС ФАНТАЗМ ХОШИ МЕГУМИ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1018733488",
-      "name_lat": "ЮНИКА ВИКТОРИЯ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7640,15 +7711,6 @@
       "name_lat": "ЮНХЕЛИКА ИЗ СОЕДИНЕННОГО КОРОЛЕВСТВА",
       "name_ru": "",
       "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1253862558",
-      "name_lat": "ЮНИ СОЛДЖЕР ДЕЙЕНЕРИС",
-      "name_ru": "",
-      "breed": "GERMAN HUNTING",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7753,10 +7815,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1589502006",
+      "id": "383650538",
       "name_lat": "ЮНАЙТЕД ДРИМС ХЮРРЕМ СУЛТАН",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7888,10 +7950,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "969416020",
+      "id": "101992072",
       "name_lat": "ЮНИОН МАЙ ЛАВ",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЁРСТНЫЙ",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7906,28 +7968,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1170110689",
+      "id": "1373019778",
       "name_lat": "ЮНКЕР 2 САМАРА ЛАНД УРАЛ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1238125587",
-      "name_lat": "ЮНОНА ЭЛЬФИЙСКАЯ ЗВЕЗДА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "34658726",
+      "id": "1301211714",
       "name_lat": "ЮНИКА ДЕ ДИАМОНД КВИН",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8023,29 +8076,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1933663332",
-      "name_lat": "ЮН МАРССОН ЮКСИ",
+      "id": "1309538321",
+      "name_lat": "ЮНХЕН СМЕЛЫЙ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1701802252",
-      "name_lat": "ЮНИВЕРС ПРИМАДОННА ЛЮКС",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1654168359",
-      "name_lat": "ЮНАЛ ФЛАЙ Ц*БОКС МАЛЕФИСЕНТА",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "ШИ ТЦУ / SHIH TZU",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8068,10 +8102,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "263103191",
+      "id": "394072739",
       "name_lat": "ЮНАЛ ФЛАЙ Ц'БОКС ОЧЕЙ ОТЕЛЛО МАЙ ЛАВ МАВР",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8086,29 +8120,34 @@
       "competition_dog_id": null
     },
     {
-      "id": "104925233",
-      "name_lat": "ЮН МАРССОН БАВАРИЯ",
+      "id": "865179400",
+      "name_lat": "ЮННОНА БИГ СТАР",
       "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "390628957",
-      "name_lat": "ЮНОКСИ ВЕЛЕС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1049589530",
-      "name_lat": "ЮНИТИ ДРИМС СЮЮМБИКЕ",
+      "id": "237874011",
+      "name_lat": "ЮН МАРССОН ЭЛЕВЕЙШН ОФ ЗЕ БЕСТ СТАЙЛ",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023948120",
+      "name_lat": "ЮНИВАНГ ДАР ДАЙМОНД",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "966073066",
+      "name_lat": "ЮНАЛ ФЛАЙ Ц'БОКС ЛУКРЕЦИЯ",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8122,11 +8161,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1578406606",
-      "name_lat": "ЮНГАР ИЗ ДОМА КАПАЛАК",
+      "id": "1169969458",
+      "name_lat": "ЮНОНА ЛАЙОНЕЗ",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1731339451",
+      "name_lat": "ЮНИТА БОГИНЯ СОЛНЦА",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "511399488",
+      "name_lat": "ЮНДУС ЗВЕЗДНЫЙ МАЛЬЧИК ИЗ ТИХОГО ОМУТА",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "total_shows": 1,
       "competition_dog_id": null
     }

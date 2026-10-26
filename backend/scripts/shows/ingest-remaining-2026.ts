@@ -30,9 +30,7 @@ import { formatShowGradeDisplay } from '../../lib/show-grades'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../../..')
-const CAL_PATH = path.join(ROOT, 'data/v1/shows/calendar-rkf/2026.json')
 const DB_PATH = path.join(ROOT, 'data/local/exhibitions-rkf-archive.sqlite')
-const TEMP_PDF_DIR = path.join(ROOT, 'data/local/rkf-reports/2026')
 
 interface CalendarEntry {
   id: number
@@ -49,11 +47,13 @@ interface CalendarEntry {
 }
 
 function parseArgs(argv: string[]) {
+  let year = 2026
   let limit = 0
   let pauseMs = 80
   let onlyId = 0
   let concurrency = 2
   for (const arg of argv) {
+    if (arg.startsWith('--year=')) year = Number(arg.slice('--year='.length)) || 2026
     if (arg.startsWith('--limit=')) limit = Number(arg.slice('--limit='.length)) || 0
     if (arg.startsWith('--pause-ms=')) pauseMs = Number(arg.slice('--pause-ms='.length)) || 0
     if (arg.startsWith('--id=')) onlyId = Number(arg.slice('--id='.length)) || 0
@@ -61,7 +61,7 @@ function parseArgs(argv: string[]) {
       concurrency = Math.max(1, Math.min(4, Number(arg.slice('--concurrency='.length)) || 2))
     }
   }
-  return { limit, pauseMs, onlyId, concurrency }
+  return { year, limit, pauseMs, onlyId, concurrency }
 }
 
 function sleep(ms: number) {
@@ -171,10 +171,12 @@ async function downloadFile(url: string, destPath: string): Promise<boolean> {
 }
 
 async function main() {
-  const { limit, pauseMs, onlyId, concurrency } = parseArgs(process.argv.slice(2))
+  const { year, limit, pauseMs, onlyId, concurrency } = parseArgs(process.argv.slice(2))
+  const calPath = path.join(ROOT, `data/v1/shows/calendar-rkf/${year}.json`)
+  const tempPdfDir = path.join(ROOT, `data/local/rkf-reports/${year}`)
 
-  if (!fs.existsSync(CAL_PATH)) {
-    console.error(`Calendar file not found: ${CAL_PATH}`)
+  if (!fs.existsSync(calPath)) {
+    console.error(`Calendar file not found: ${calPath}`)
     process.exit(1)
   }
   if (!fs.existsSync(DB_PATH)) {
@@ -182,18 +184,18 @@ async function main() {
     process.exit(1)
   }
 
-  fs.mkdirSync(TEMP_PDF_DIR, { recursive: true })
+  fs.mkdirSync(tempPdfDir, { recursive: true })
 
   const db = new Database(DB_PATH)
   db.pragma('journal_mode = WAL')
   db.pragma('synchronous = NORMAL')
 
   const existingIds = new Set(
-    db.prepare('SELECT id FROM exhibitions_rkf WHERE year = 2026').all().map((r: any) => Number(r.id)),
+    db.prepare('SELECT id FROM exhibitions_rkf WHERE year = ?').all(year).map((r: any) => Number(r.id)),
   )
-  console.log(`Existing 2026 exhibitions in SQLite archive: ${existingIds.size}`)
+  console.log(`Existing ${year} exhibitions in SQLite archive: ${existingIds.size}`)
 
-  const calData = JSON.parse(fs.readFileSync(CAL_PATH, 'utf8')) as { exhibitions: CalendarEntry[] }
+  const calData = JSON.parse(fs.readFileSync(calPath, 'utf8')) as { exhibitions: CalendarEntry[] }
   let candidates = calData.exhibitions.filter(
     (e) => (e.reports_link || e.bis_reports_link) && !existingIds.has(e.id),
   )
@@ -202,7 +204,7 @@ async function main() {
     candidates = candidates.filter((e) => e.id === onlyId)
   }
 
-  console.log(`Remaining unparsed 2026 exhibitions with report links: ${candidates.length}`)
+  console.log(`Remaining unparsed ${year} exhibitions with report links: ${candidates.length}`)
 
   if (candidates.length === 0) {
     console.log('No remaining exhibitions to process.')
@@ -213,7 +215,7 @@ async function main() {
   const selected = limit > 0 ? candidates.slice(0, limit) : candidates
   console.log(`Starting processing for ${selected.length} exhibitions (concurrency: ${concurrency})...`)
 
-  const insertStmt = db.prepare('INSERT OR REPLACE INTO exhibitions_rkf (id, year, data) VALUES (?, 2026, ?)')
+  const insertStmt = db.prepare('INSERT OR REPLACE INTO exhibitions_rkf (id, year, data) VALUES (?, ?, ?)')
 
   let okCount = 0
   let failCount = 0
@@ -227,8 +229,8 @@ async function main() {
       if (idx >= selected.length) break
 
       const entry = selected[idx]
-      const tempCertPath = path.join(TEMP_PDF_DIR, `temp-${entry.id}-type1.pdf`)
-      const tempBisPath = path.join(TEMP_PDF_DIR, `temp-${entry.id}-type3.pdf`)
+      const tempCertPath = path.join(tempPdfDir, `temp-${entry.id}-type1.pdf`)
+      const tempBisPath = path.join(tempPdfDir, `temp-${entry.id}-type3.pdf`)
 
       try {
         if (!entry.reports_link) {
@@ -253,7 +255,7 @@ async function main() {
         // 3. Parse certificate PDF
         const parsedCert = await parseCertificatePdf(tempCertPath)
 
-        // 4. Parse main ring PDF if downloaded
+        // 4. Parse main ring PDF if downloaded, OR from combined certificate PDF
         let mainRing: MainRingRow[] = []
         if (hasBis && fs.existsSync(tempBisPath)) {
           try {
@@ -262,6 +264,9 @@ async function main() {
             // ignore main ring parse errors
           }
         }
+        if (mainRing.length === 0 && parsedCert.main_ring && parsedCert.main_ring.length > 0) {
+          mainRing = parsedCert.main_ring
+        }
 
         // 5. Convert to standardized exhibition JSON
         const exhibition = toExhibitionJson(entry, parsedCert.dogs, mainRing)
@@ -269,7 +274,7 @@ async function main() {
         // 6. Compress with gzip level 9 and save directly into SQLite
         const jsonBuffer = Buffer.from(JSON.stringify(exhibition))
         const compressed = gzipSync(jsonBuffer, { level: 9 })
-        insertStmt.run(String(entry.id), compressed)
+        insertStmt.run(String(entry.id), year, compressed)
 
         okCount++
         totalDogs += parsedCert.dogs.length

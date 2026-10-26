@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OV",
-  "count": 57,
+  "count": 69,
   "dogs": [
     {
       "id": "255828884",
@@ -22,12 +22,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "726968527",
+      "id": "538747646",
       "name_lat": "OVEJN NOBLE RIDER",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "719506424",
+      "name_lat": "O'VILEN ZHANARVI ILONA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -40,10 +49,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1111244714",
+      "id": "985736815",
       "name_lat": "OV MISTER PUTIN",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -58,10 +67,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "841733080",
+      "id": "790750973",
       "name_lat": "OVACIA VIVAT BARHATNIY ANGEL",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -81,7 +90,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 22,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -94,10 +103,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1818642871",
+      "id": "1025284084",
+      "name_lat": "OVATSIJA HANDSOM RIZING STAR",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1467251407",
+      "name_lat": "OVI DES PRES DE GENTIANES",
+      "name_ru": "",
+      "breed": "ПИКАРДИЙСКАЯ ОВЧАРКА",
+      "breed_en": "PICARDY SHEEPDOG",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1566690806",
       "name_lat": "OVATSIYA DONA SHAMAN",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -112,21 +139,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1467251407",
-      "name_lat": "OVI DES PRES DE GENTIANES",
+      "id": "790068848",
+      "name_lat": "OVATSIJA FRESH FIORE",
       "name_ru": "",
-      "breed": "ПИКАРДИЙСКАЯ ОВЧАРКА",
-      "breed_en": "PICARDY SHEEPDOG",
-      "total_shows": 19,
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "1594854588",
       "name_lat": "OVATSIYA DONA EGOISTA",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ ДОНА ЭГОИСТА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -139,39 +166,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "242315177",
+      "id": "794545796",
       "name_lat": "OVERI IMPORTANT PERSON MATILDA",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ОВЕРИ ИМПОРТАНТ ПЕРСОН МАТИЛЬДА",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1730781440",
-      "name_lat": "OVATSIYA DONA AMON AMART",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1025284084",
-      "name_lat": "OVATSIJA HANDSOM RIZING STAR",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1400515786",
-      "name_lat": "OVATSYA 2 IZ BELOGO JARA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -180,7 +180,25 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1730781440",
+      "name_lat": "OVATSIYA DONA AMON AMART",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "43522305",
+      "name_lat": "OVATSYA 2 IZ BELOGO JARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -202,6 +220,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "158391009",
+      "name_lat": "OVATION VENTURESOME",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "771570528",
       "name_lat": "OVERTOP CHINA BE THE LEGEND",
       "name_ru": "",
@@ -211,12 +238,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "350217297",
-      "name_lat": "OVER TIME BERETTA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 25,
+      "id": "219556963",
+      "name_lat": "O'VILEN ZHANARVI ARIEL ORELI",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ АРИЭЛЬ ОРЕЛИ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "700933703",
+      "name_lat": "O'VILEN ZHANARVI DIONA ANNABEL",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ДИОНА АННАБЕЛЬ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -225,7 +261,16 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 17,
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "350217297",
+      "name_lat": "OVER TIME BERETTA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -238,30 +283,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1511294419",
+      "id": "572221498",
       "name_lat": "OVER TIME ATMOSPHERE",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "790068848",
-      "name_lat": "OVATSIJA FRESH FIORE",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "YORKSHIRE TERRIER",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "507536274",
+      "id": "330559498",
       "name_lat": "OVATION SUPER AGENT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА КОРОТКОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -274,21 +310,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "158391009",
-      "name_lat": "OVATION VENTURESOME",
+      "id": "195642300",
+      "name_lat": "OVER THE MOON MOYA SVITA IZ SOZVEZDIYA STAFF",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "482674858",
-      "name_lat": "OVER THE MOON MOYA SVITA IZ SOZVEZDIYA STAFF",
+      "id": "1420781499",
+      "name_lat": "O'VILEN ZHANARVI XXL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 9,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -301,10 +337,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "198243273",
+      "id": "869773725",
       "name_lat": "OVER THE TOP BY GOLD BLACK MOUNTAIN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -314,8 +350,7 @@
       "name_lat": "OVER TIME AKASHI",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -346,10 +381,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1070642354",
+      "id": "1271434210",
+      "name_lat": "O'VILEN ZHANARVI FIRE FORTINA",
+      "name_ru": "",
+      "breed": "Французский бульдог",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1684094733",
       "name_lat": "OVACIA PREMIUM GOLD",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -359,8 +403,16 @@
       "name_lat": "OVACIA JULIT KLEO",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "447728143",
+      "name_lat": "O'VILEN ZHANARVI AMAJYA LORANS",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -400,12 +452,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "779661494",
+      "id": "683076713",
       "name_lat": "OVER TIME BALANCE",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -418,12 +470,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "134493282",
+      "id": "112024578",
+      "name_lat": "O-VIRTUOZ NOSTALGIE DE FRANCE",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "933752473",
       "name_lat": "OVATSIYA AUS DEM KEFERGEHOLC",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "879604810",
+      "name_lat": "OVATSIJA UDACHLIVYY KUPIDON",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -499,20 +568,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "185783941",
-      "name_lat": "OVER TIME AKKASHI",
+      "id": "1092579034",
+      "name_lat": "O'VILEN ZHANARVI IXXL",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1584670222",
+      "id": "686482840",
+      "name_lat": "OVER TIME AKKASHI",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "460897826",
       "name_lat": "OVER TIME VINCI",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР ЧЁРНЫЙ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР ЧЕРНЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1433948661",
+      "name_lat": "O'VILEN ZHANARVI DASTIN VINSENT",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "325869003",
+      "name_lat": "OVER TIME GODDESS OF HARMONY",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР ЧЁРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "948730520",
+      "name_lat": "OVER TIME VILLATA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР ЧЁРНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     }

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "IW",
-  "count": 12,
+  "count": 18,
   "dogs": [
     {
       "id": "1967921012",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 22,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -18,16 +18,43 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "719803828",
+      "id": "106393367",
+      "name_lat": "I WILL BE IN YOUR HEART",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "ENGLISH COCKER SPANIEL",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1917813603",
+      "name_lat": "I WILL BE A WINNER CANIS VENATOR",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1795015403",
       "name_lat": "IWAN TEAM CARRERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1994811569",
+      "name_lat": "I WAS MADE FORLOVENG YOU",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -40,12 +67,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1952663267",
+      "id": "524109428",
       "name_lat": "IWO VON DER KWAST",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "95223766",
+      "name_lat": "I WILL BE A LIVING LEGACY",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -76,6 +111,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "228104338",
+      "name_lat": "I-WANT-IT-ALL DES PORTES DE HANAU",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "BICHON FRISE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "453499392",
       "name_lat": "IWONA ENERGY DES PORTES DE HANAU",
       "name_ru": "",
@@ -85,19 +129,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1262276881",
+      "id": "1780364716",
       "name_lat": "IWARSHOHE ALONSO",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1203668969",
+      "id": "926247658",
       "name_lat": "IWANOWITSCH VOM FRANKENGOLD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -108,6 +152,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1776642320",
+      "name_lat": "IWINTER NILDA FERNANDEZ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     }

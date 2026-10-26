@@ -1,15 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "VR",
-  "count": 81,
+  "count": 89,
   "dogs": [
     {
       "id": "262712201",
       "name_lat": "VREMYA MECHTY EDEL",
-      "name_ru": "",
+      "name_ru": "ВРЕМЯ МЕЧТЫ ЭДЕЛЬ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 24,
+      "total_shows": 70,
       "competition_dog_id": null
     },
     {
@@ -27,7 +27,16 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1681585206",
+      "name_lat": "V RITME SCHASTIYA ARKHAN",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -54,16 +63,16 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "726734673",
+      "id": "1824328172",
       "name_lat": "VREMEA MECHTY PATRICIA II",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -72,7 +81,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 27,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -81,7 +90,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 27,
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -94,10 +103,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1035118994",
+      "id": "313360147",
       "name_lat": "VREMEA MECHTY RADOMIR",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
@@ -105,10 +114,10 @@
     {
       "id": "183044500",
       "name_lat": "VREMYA MECHTY MARS",
-      "name_ru": "",
+      "name_ru": "ВРЕМЯ МЕЧТЫ МАРС",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -121,10 +130,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "953780518",
+      "id": "895581983",
       "name_lat": "VREMYA MECHTY HERA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -145,6 +154,24 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1700054962",
+      "name_lat": "V RITME SCHASTIYA ASTI",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1731434941",
+      "name_lat": "VREMYA MECHTY ELDORADO",
+      "name_ru": "ВРЕМЯ МЕЧТЫ ЭЛЬДОРАДО",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -175,12 +202,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "304391717",
-      "name_lat": "VREMYA MECHTY MARSHAL",
+      "id": "354466045",
+      "name_lat": "VREMEA MECHTY TALISMAN FRANZ",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1479752785",
+      "name_lat": "VREMYA MECHTY DE LUNA PLATINUM FOR LABRILION'S",
+      "name_ru": "Время Мечты Де Луна Платинум Фор Лабрилион`С",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "304391717",
+      "name_lat": "VREMYA MECHTY MARSHAL",
+      "name_ru": "ВРЕМЯ МЕЧТЫ МАРШАЛ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -198,7 +243,7 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -229,15 +274,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "354466045",
-      "name_lat": "VREMEA MECHTY TALISMAN FRANZ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "904871330",
       "name_lat": "VREMEA MECHTY THEODORE AUGUST",
       "name_ru": "",
@@ -247,12 +283,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1479752785",
-      "name_lat": "VREMYA MECHTY DE LUNA PLATINUM FOR LABRILION'S",
+      "id": "1822958577",
+      "name_lat": "VREMEA MECHTY JAMATO SAMURAI",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -262,6 +297,14 @@
       "breed": "GERMAN HUNTING TERRIER (GERMAN JAGDTERRIER)",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "205677383",
+      "name_lat": "Vremea Mechty Yamal",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -288,25 +331,16 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "221367600",
+      "id": "734017541",
       "name_lat": "VREMYA MECHTY LORI",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ВРЕМЯ МЕЧТЫ ЛОРИ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1703730532",
-      "name_lat": "VREMYA NE ZHDYOT ERAGON",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 13,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -315,7 +349,25 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "10428",
+      "name_lat": "VREMYA NE ZHDYOT ERAGON",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 13,
+      "competition_dog_id": 10428
+    },
+    {
+      "id": "1800707756",
+      "name_lat": "V'ROMEO MY LITTLE GIANT",
+      "name_ru": "",
+      "breed": "МОПС БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -324,6 +376,14 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "589919818",
+      "name_lat": "VREMEA MECHTY YAVA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 13,
       "competition_dog_id": null
     },
@@ -337,6 +397,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "485882700",
+      "name_lat": "VREMEA MECHTY MR. X",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1853175500",
+      "name_lat": "VREMYA MECHTY DAN",
+      "name_ru": "ВРЕМЯ МЕЧТЫ ДАН",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1294004928",
       "name_lat": "VREMEA MECHTY YASMIN",
       "name_ru": "",
@@ -346,12 +423,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1731434941",
-      "name_lat": "VREMYA MECHTY ELDORADO",
+      "id": "366540282",
+      "name_lat": "V RITME SCHASTYA ETSARIYA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 2,
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -382,10 +459,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "216537556",
+      "id": "251863169",
       "name_lat": "VREMEA MECHTY PERFECTA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -400,21 +477,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1370423808",
+      "name_lat": "VRAZOVSKIH LEDYANOY SAPFIR",
+      "name_ru": "",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "276157359",
       "name_lat": "VREMYA NE ZHDYOT VALKYRIE",
       "name_ru": "",
       "breed": "УИППЕТ / WHIPPET",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "76669670",
-      "name_lat": "VREMEA MECHTY PATRICIA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -436,21 +513,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1853175500",
-      "name_lat": "VREMYA MECHTY DAN",
+      "id": "222913453",
+      "name_lat": "VREMEA MECHTY ROSEMARY",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1370423808",
-      "name_lat": "VRAZOVSKIH LEDYANOY SAPFIR",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -490,12 +558,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "222913453",
-      "name_lat": "VREMEA MECHTY ROSEMARY",
+      "id": "1470896279",
+      "name_lat": "VREMEY MECHTY BELLE",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 4,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -526,21 +593,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "238983135",
+      "id": "132609870",
       "name_lat": "VREMYA MECHTY SHERLOCK",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1698155968",
+      "id": "554681324",
       "name_lat": "VREMENI IZ AMALGAMY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1729852670",
+      "name_lat": "V RITME SCHASTIYA ARCHAN",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -553,21 +629,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1822958577",
-      "name_lat": "VREMEA MECHTY JAMATO SAMURAI",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1844315891",
       "name_lat": "VREMEA MECHTY YURGEN",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "139907513",
+      "name_lat": "VREMYA MECHTY RASPUTIN",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -585,6 +660,14 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "401039496",
+      "name_lat": "VRN BULLY TEYA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ АМЕРИКАНСКИЙ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -625,15 +708,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "139907513",
-      "name_lat": "VREMYA MECHTY RASPUTIN",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1715859492",
       "name_lat": "VREMYA PERVOY IN TERRA VERITAS",
       "name_ru": "",
@@ -643,20 +717,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "589919818",
-      "name_lat": "VREMEA MECHTY YAVA",
+      "id": "1227214080",
+      "name_lat": "VREMYA MECHTY KRUASAN",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "401039496",
-      "name_lat": "VRN BULLY TEYA",
-      "name_ru": "",
-      "breed": "ШЕЛТИ АМЕРИКАНСКИЙ",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -724,10 +788,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1303436239",
+      "id": "1056411400",
       "name_lat": "VREMYA PERVYH VOSTOK КЛИМЕНТИН ФРОМ ХАУС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,8 +1,16 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "HL",
-  "count": 63,
+  "count": 66,
   "dogs": [
+    {
+      "id": "630498686",
+      "name_lat": "HLOYA GREIS IZ KANEKSO",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
     {
       "id": "1333254261",
       "name_lat": "HLOPOTUNYA EVVOCHKA IZ STRANY NINOLII",
@@ -22,12 +30,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "630498686",
-      "name_lat": "HLOYA GREIS IZ KANEKSO",
+      "id": "1805951034",
+      "name_lat": "HLOYA VOM MAIR HOF",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -40,12 +48,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "832161945",
-      "name_lat": "HLOYA VOM MAIR HOF",
+      "id": "49790284",
+      "name_lat": "HLOYA SIEGERS HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
-      "total_shows": 15,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -76,11 +84,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "49790284",
-      "name_lat": "HLOYA SIEGERS HOF",
+      "id": "198909658",
+      "name_lat": "HLOYA IZ STRANY TSVETOV",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -166,19 +173,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1295184097",
+      "id": "1364565065",
       "name_lat": "Hloya Naturel el Sol",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЕР ПИНЧЕР",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1219887977",
+      "id": "1588326358",
       "name_lat": "HLOYA ANGOLO CELESTE DELLANIMA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -229,21 +236,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1089911504",
+      "id": "393825402",
       "name_lat": "HLOPCHIK UDALOY",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1336033570",
-      "name_lat": "HLOYA MILOND",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -251,8 +249,24 @@
       "name_lat": "HLOYA",
       "name_ru": "",
       "breed": "МОПС",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "106620707",
+      "name_lat": "HLOYA MILOND",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1329152999",
+      "name_lat": "HLOYA",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -262,15 +276,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1329152999",
-      "name_lat": "HLOYA",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -301,19 +306,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "810632068",
+      "id": "243821617",
       "name_lat": "HLOI",
       "name_ru": "",
-      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН /",
+      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1180218851",
+      "id": "370790891",
       "name_lat": "HLOYA HOPE IZ STAROY SHUI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -418,10 +423,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "643749920",
+      "id": "1779836594",
       "name_lat": "HLOY IZ ALTAYSKOY DINASTII",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -433,6 +438,14 @@
       "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1606870421",
+      "name_lat": "HLOJA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -454,10 +467,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "663715236",
+      "id": "733998033",
       "name_lat": "HLOE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -499,28 +512,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "166517075",
+      "id": "1491981798",
       "name_lat": "HLOYA GRACE",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "475731806",
-      "name_lat": "HLOYA POM BERSERK",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1924941493",
-      "name_lat": "HLOYA IZ SOZVEZDIYA",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -535,11 +530,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "1528509543",
+      "name_lat": "HLOYA POM BERSERK",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1924941493",
+      "name_lat": "HLOYA IZ SOZVEZDIYA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "830498982",
       "name_lat": "HLOYA S YSAD'BY MANSHETOVYH",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225720240",
+      "name_lat": "HLOYA GRATSIYA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -553,10 +574,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1617793056",
+      "id": "1138105693",
       "name_lat": "HLOYA IZ ALTAYSKOY DINASTII",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

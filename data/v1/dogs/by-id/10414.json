@@ -6,18 +6,22 @@
   "name_lat": "GRINCH NOCHNOI POLET",
   "name_ru": "GRINCH NOCHNOI POLET",
   "breed": "УИППЕТ",
-  "sex": null,
+  "sex": "Кобель",
   "owner": null,
   "competition_ids": [
     1570,
     1582,
     1584,
+    20211010,
+    20211024,
     20230903
   ],
   "competition_files": [
     "competitions/2020/08-август/1570-бега-за-механическои-приманкои.json",
     "competitions/2021/09-сентябрь/1582-кубок-россии-курсинг-борзых.json",
     "competitions/2020/08-август/1584-состязания-по-бегам-борзых-курсинг-чркф.json",
-    "competitions/2023/09-сентябрь/20230903--cacl-03092023-.json"
+    "competitions/2023/09-сентябрь/20230903--cacl-03092023-.json",
+    "competitions/2021/10-октябрь/20211010-международные-состязания-по-бегам-борзых-круг-ca.json",
+    "competitions/2021/10-октябрь/20211024-троика-просто-птица-2021.json"
   ]
 }

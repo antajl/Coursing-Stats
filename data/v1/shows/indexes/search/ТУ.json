@@ -1,21 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ТУ",
-  "count": 610,
+  "count": 609,
   "dogs": [
-    {
-      "id": "15018832",
-      "name_lat": "ТУРУК ДРАКОН",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
     {
       "id": "1970517155",
       "name_lat": "ТУТСИ ДЖАН ОЛИВИЯ II",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ОЛИВИЯ",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 20,
@@ -24,10 +15,19 @@
     {
       "id": "465946672",
       "name_lat": "ТУТСИ ДЖАН ОЛАФ",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ОЛАФ",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1445335262",
+      "name_lat": "ТУ БИ ЛАКИ КАМЕЛИЯ",
+      "name_ru": "ТУ БИ ЛАКИ КАМЕЛИЯ",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -40,28 +40,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1445335262",
-      "name_lat": "ТУ БИ ЛАКИ КАМЕЛИЯ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "1606825617",
       "name_lat": "ТУ БИ ЛАКИ ЗАЯ",
-      "name_ru": "",
+      "name_ru": "ТУ БИ ЛАКИ ЗАЯ",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1690817425",
+      "id": "1949108613",
       "name_lat": "ТУТТИ ФРУТТИ С БОСФОРА ВОСТОЧНОГО",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -69,19 +60,10 @@
     {
       "id": "8488827",
       "name_lat": "ТУТСИ ДЖАН ОСТИН",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ОСТИН",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "173911312",
-      "name_lat": "ТУ ВИН ЭГЕЙН С ГОРЫ МЕЗМАЙ",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -90,13 +72,22 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173911312",
+      "name_lat": "ТУ ВИН ЭГЕЙН С ГОРЫ МЕЗМАЙ",
+      "name_ru": "ТУ ВИН ЭГЕЙН С ГОРЫ МЕЗМАЙ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1518446517",
       "name_lat": "Ту Би Лаки Джет Айр Крафт",
-      "name_ru": "",
+      "name_ru": "ТУ БИ ЛАКИ ДЖЕТ АЙР КРАФТ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -105,7 +96,7 @@
     {
       "id": "757801208",
       "name_lat": "ТУРУНЖУ ДЖОННИ",
-      "name_ru": "",
+      "name_ru": "Турунжу Джонни",
       "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 15,
@@ -130,21 +121,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1806240371",
+      "name_lat": "ТУРБО БЕНТЛИ",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "524440980",
       "name_lat": "ТУЛ-ПОМ-ЧИХ ЛЮТИК ЛЯМУР",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "357319121",
-      "name_lat": "ТУМАН ИЗ РОДНОГО КРАЯ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -159,16 +150,25 @@
     {
       "id": "1963342435",
       "name_lat": "ТУТСИ ДЖАН ФАРАОН ЗОЛОТЫХ ПЕСКОВ",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ФАРАОН ЗОЛОТЫХ ПЕСКОВ",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
       "total_shows": 34,
       "competition_dog_id": null
     },
     {
+      "id": "374128668",
+      "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ВАСИЛИНА A PESO DE OURO YARA EMERALD",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ВАСИЛИНА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
       "id": "169604892",
       "name_lat": "ТУРЕЦКИЕ ШТУЧКИ ЭЛЛИСОН ЭЙМЗ",
-      "name_ru": "",
+      "name_ru": "ТУРЕЦКИЕ ШТУЧКИ ЭЛЛИСОН ЭЙМЗ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 21,
@@ -177,7 +177,7 @@
     {
       "id": "1826436967",
       "name_lat": "ТУТСИ ИЗ ДОМА ЧЕКМАНОВЫХ",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ИЗ ДОМА ЧЕКМАНОВЫХ",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
@@ -188,14 +188,13 @@
       "name_lat": "ТУДЕЙ АЙМ Э ЧЕМПИОН ИЗ ИМПЕРИИ ЛАРИЭЛ",
       "name_ru": "",
       "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "365412225",
       "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ИВОРИ БЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ИВОРИ БЕЛЬ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 16,
@@ -213,16 +212,16 @@
     {
       "id": "736409918",
       "name_lat": "ТУЛЬСКИЙ САМУРАЙ ПЭНГА",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САМУРАЙ ПЭНГА",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1514931233",
-      "name_lat": "ТУСОВЩИК ТЕКИЛА- ДЖОЙ",
-      "name_ru": "",
+      "id": "757068559",
+      "name_lat": "ТУСОВЩИК ТЕКИЛА-ДЖОЙ",
+      "name_ru": "ТУСОВЩИК ТЕКИЛА-ДЖОЙ",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 5,
@@ -234,13 +233,13 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1668884674",
       "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ЕСМИРА",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ЕСМИРА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -274,10 +273,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1276993711",
+      "id": "451884659",
       "name_lat": "ТУРУНЖУ ЛОВЕЛИ МИ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ТУРУНЖУ ЛОВЕЛИ МИ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -301,28 +300,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "910980421",
+      "name_lat": "ТУГАН ЯК МАТУР МЕЛЕК",
+      "name_ru": "ТУГАН ЯК МАТУР МЕЛЕК",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "61865665",
       "name_lat": "ТУЛЕ АМАГУК'С ТРИУМФ БАУНТИ ОФ ХЕВЕНС",
-      "name_ru": "",
+      "name_ru": "ТУЛЕ АМАГУК'С ТРИУМФ БАУНТИ ОФ ХЕВЕНС",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1176043846",
-      "name_lat": "ТУГАРИН ИЗ СКАЗКИ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "id": "1864059036",
+      "name_lat": "ТУЛЬСКИЙ САМУРАЙ ЯСЭЙ",
+      "name_ru": "ТУЛЬСКИЙ САМУРАЙ ЯСЭЙ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1864059036",
-      "name_lat": "ТУЛЬСКИЙ САМУРАЙ ЯСЭЙ",
+      "id": "893895226",
+      "name_lat": "ТУГАРИН ИЗ СКАЗКИ",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -330,7 +338,7 @@
     {
       "id": "753841118",
       "name_lat": "ТУЛЕ АМАГУК'С ТРИУМФ АСТРИД",
-      "name_ru": "",
+      "name_ru": "ТУЛЕ АМАГУК'С ТРИУМФ АСТРИД",
       "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 11,
@@ -373,15 +381,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1466365537",
-      "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ БОБ ДЕЛ ТОРО",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1455910920",
       "name_lat": "ТУРУНЖУ ЖАРА",
       "name_ru": "",
@@ -402,26 +401,26 @@
     {
       "id": "1598325568",
       "name_lat": "ТУШЕ ПАР Л'АМУР",
-      "name_ru": "",
+      "name_ru": "ТУШЕ ПАР Л'АМУР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1990584681",
+      "id": "1257977761",
       "name_lat": "ТУГАМИ ХОВ ЦАРИНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ТУГАМИ ХОВ ЦАРИНА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "362533798",
+      "id": "440214880",
       "name_lat": "ТУМАН СО СВЕТЛЫХ ГОР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -429,7 +428,7 @@
     {
       "id": "965239933",
       "name_lat": "ТУЛЬСКАЯ ЛЕГЕНДА ЛИГА",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ ЛЕГЕНДА ЛИГА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -445,10 +444,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1127592386",
+      "id": "828989379",
       "name_lat": "ТУЛЕ АМАГУК'С ТРИУМФ АЛЬБУС",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "name_ru": "ТУЛЕ АМАГУК'С ТРИУМФ АЛЬБУС",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -472,12 +471,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1550326996",
-      "name_lat": "ТУРМАЛИНОВОЕ СОЛНЦЕ ТАЛИЯ",
+      "id": "166945286",
+      "name_lat": "ТУЛЕ АМАГУК'С ТРИУМФ ФАРЕНГЕЙТ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1331602358",
+      "name_lat": "ТУРМАЛИНОВОЕ СОЛНЦЕ ТАЛИЯ",
+      "name_ru": "ТУРМАЛИНОВОЕ СОЛНЦЕ ТАЛИЯ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -517,10 +525,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1339951341",
+      "id": "777714097",
       "name_lat": "ТУТТА ЛАРСЕН",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "name_ru": "ТУТТА ЛАРСЕН",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -540,6 +548,14 @@
       "name_ru": "",
       "breed": "БАССЕТ ГРИФФОН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1857866423",
+      "name_lat": "ТУТСИ ДЖАН СТЕЛЛА",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -580,10 +596,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1402171793",
+      "id": "223791368",
       "name_lat": "ТУТСИ ФРОМ ИНЖИНИРИНГБЭЙ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ТУТСИ ФРОМ ИНЖИНИРИНГБЭЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -600,16 +616,16 @@
     {
       "id": "320190560",
       "name_lat": "ТУГАН ЯК РЕЙНЕР РИХ",
-      "name_ru": "",
+      "name_ru": "ТУГАН ЯК РЕЙНЕР РИХ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "762683704",
       "name_lat": "ТУАДАШ СОЛЛИ",
-      "name_ru": "",
+      "name_ru": "ТУАДАШ СОЛЛИ",
       "breed": "GERMAN SHEPHERD",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 5,
@@ -618,7 +634,7 @@
     {
       "id": "882220026",
       "name_lat": "ТУЛЕ АМАГУК'С ТРИУМФ АНТАРЕС",
-      "name_ru": "",
+      "name_ru": "ТУЛЕ АМАГУК'С ТРИУМФ АНТАРЕС",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "ALASKAN MALAMUTE",
       "total_shows": 3,
@@ -634,28 +650,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "910980421",
-      "name_lat": "ТУГАН ЯК МАТУР МЕЛЕК",
-      "name_ru": "",
+      "id": "540518096",
+      "name_lat": "ТУГАН ЯК САГДАНА ЕНЫЛЬМЕЗ",
+      "name_ru": "ТУГАН ЯК САГДАНА ЕНЫЛЬМЕЗ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "504958165",
+      "id": "1313384957",
       "name_lat": "ТУАДАШ ОЙТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1533537486",
+      "id": "1258061421",
       "name_lat": "ТУСКАН ДЕРЗКИЙ ОБЛИК ИЗ КОТМАРИАН",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "name_ru": "ТУСКАН ДЕРЗКИЙ ОБЛИК ИЗ КОТМАРИАН",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -663,25 +679,43 @@
     {
       "id": "1853706050",
       "name_lat": "ТУТСИ БЕЛАЯ ЗВЕЗДА",
-      "name_ru": "",
+      "name_ru": "ТУТСИ БЕЛАЯ ЗВЕЗДА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "540518096",
-      "name_lat": "ТУГАН ЯК САГДАНА ЕНЫЛЬМЕЗ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "id": "1508176716",
+      "name_lat": "ТУ БИ ЛАКИ ШОУ ГЭЛАКСИ",
+      "name_ru": "ТУ БИ ЛАКИ ШОУ ГЭЛАКСИ",
+      "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1882706250",
+      "name_lat": "ТУРУНЖУ ХАММЕР",
+      "name_ru": "ТУРУНЖУ ХАММЕР",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1521185016",
+      "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ВЛАДЛЕНА",
+      "name_ru": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ВЛАДЛЕНА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "1133177624",
       "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ УРБАНО ОФ ДЖОЙ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ УРБАНО ОФ ДЖОЙ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 15,
@@ -690,7 +724,7 @@
     {
       "id": "28937292",
       "name_lat": "ТУТТИ ФРУТТИ ДАРНЕЛЛА",
-      "name_ru": "",
+      "name_ru": "ТУТТИ ФРУТТИ ДАРНЕЛЛА",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 20,
@@ -699,7 +733,7 @@
     {
       "id": "248422126",
       "name_lat": "ТУ БИ ЛАКИ УЛЬРИКЕ",
-      "name_ru": "",
+      "name_ru": "ТУ БИ ЛАКИ УЛЬРИКЕ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 8,
@@ -708,25 +742,16 @@
     {
       "id": "1622715398",
       "name_lat": "ТУТСИ МИЛАШКА",
-      "name_ru": "",
+      "name_ru": "ТУТСИ МИЛАШКА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1882706250",
-      "name_lat": "ТУРУНЖУ ХАММЕР",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "605212416",
       "name_lat": "ТУТСИ ДЖАН АВРОРА",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН АВРОРА",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 8,
@@ -735,26 +760,43 @@
     {
       "id": "1893287183",
       "name_lat": "ТУТА ЛУ ФРОМ АМИГО",
-      "name_ru": "",
+      "name_ru": "ТУТА ЛУ ФРОМ АМИГО",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1477958607",
+      "id": "765219592",
       "name_lat": "ТУАДАШ МЕЛИССА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ТУАДАШ МЕЛИССА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1154656112",
+      "id": "1282065917",
+      "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ФАНТОМ",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ФАНТОМ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "162298508",
+      "name_lat": "ТУЛЬСКИЙ САМУРАЙ ЙОШИ КАДЗАРИ",
+      "name_ru": "ТУЛЬСКИЙ САМУРАЙ ЙОШИ КАДЗАРИ",
+      "breed": "СИБА",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "727609723",
       "name_lat": "ТУАДАШ ВИЛЬСОН",
-      "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG",
+      "name_ru": "ТУАДАШ ВИЛЬСОН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
       "total_shows": 12,
       "competition_dog_id": null
@@ -762,53 +804,8 @@
     {
       "id": "189135273",
       "name_lat": "ТУДЕЙ ОНЛИ Ю БАЙ АХМЕД БОЗИЕВ К/Х",
-      "name_ru": "",
+      "name_ru": "ТУДЕЙ ОНЛИ Ю БАЙ АХМЕД БОЗИЕВ К/Х",
       "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1508176716",
-      "name_lat": "ТУ БИ ЛАКИ ШОУ ГЭЛАКСИ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "973850223",
-      "name_lat": "ТУ БИ ЛАКИ ЮММИ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1955695432",
-      "name_lat": "ТУРЕЦКИЕ ШТУЧКИ ШОУ ФО ЛАВ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1282065917",
-      "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ФАНТОМ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "5378550",
-      "name_lat": "ТУАДАШ ОЛИВИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -816,8 +813,53 @@
     {
       "id": "1197653855",
       "name_lat": "ТУГАН ЯК РУНИ РУН",
-      "name_ru": "",
+      "name_ru": "ТУГАН ЯК РУНИ РУН",
       "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "973850223",
+      "name_lat": "ТУ БИ ЛАКИ ЮММИ",
+      "name_ru": "ТУ БИ ЛАКИ ЮММИ",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "409769197",
+      "name_lat": "ТУРЕЦКИЕ ШТУЧКИ ШОУ ФО ЛАВ",
+      "name_ru": "ТУРЕЦКИЕ ШТУЧКИ ШОУ ФО ЛАВ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "661747406",
+      "name_lat": "ТУТСИ ДЖАН УИЛФРЕД",
+      "name_ru": "ТУТСИ ДЖАН УИЛФРЕД",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1767691344",
+      "name_lat": "ТУАДАШ ОЛИВИЯ",
+      "name_ru": "ТУАДАШ ОЛИВИЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "41958333",
+      "name_lat": "ТУ ИНКАНТО ДАЛЛАС СЕНТ ЛУИС",
+      "name_ru": "ТУ ИНКАНТО ДАЛЛАС СЕНТ ЛУИС",
+      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -832,39 +874,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "830171433",
-      "name_lat": "ТУМАН ИЗ ЛАДОЖСКОГО ДОМА",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1521185016",
-      "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ВЛАДЛЕНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1252591357",
       "name_lat": "ТУ БИ ЛАКИ ЭВЕРИ МОМЕНТ",
-      "name_ru": "",
+      "name_ru": "ТУ БИ ЛАКИ ЭВЕРИ МОМЕНТ",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1928778601",
-      "name_lat": "ТУТТИ-ФРУТТИ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -879,7 +894,7 @@
     {
       "id": "1892449758",
       "name_lat": "ТУЛЬСКИЙ САМУРАЙ КЭЙКО",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САМУРАЙ КЭЙКО",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 6,
@@ -888,7 +903,7 @@
     {
       "id": "159239231",
       "name_lat": "ТУЛЬСИНЕЯ ФЛЕР ДЕ ЛУНА",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСИНЕЯ ФЛЕР ДЕ ЛУНА",
       "breed": "СOCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -897,7 +912,7 @@
     {
       "id": "188723574",
       "name_lat": "ТУЛЬСКАЯ ЛЕГЕНДА ЛЕВША",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ ЛЕГЕНДА ЛЕВША",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
@@ -906,34 +921,41 @@
     {
       "id": "429714360",
       "name_lat": "ТУНДРА ИЗ НОЧНЫХ СНАЙПЕРОВ",
-      "name_ru": "",
+      "name_ru": "ТУНДРА ИЗ НОЧНЫХ СНАЙПЕРОВ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "661747406",
-      "name_lat": "ТУТСИ ДЖАН УИЛФРЕД",
-      "name_ru": "",
+      "id": "1085781925",
+      "name_lat": "ТУТСИ ДЖАН ВИЛЬЯМ",
+      "name_ru": "ТУТСИ ДЖАН ВИЛЬЯМ",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "41958333",
-      "name_lat": "ТУ ИНКАНТО ДАЛЛАС СЕНТ ЛУИС",
-      "name_ru": "",
-      "breed": "МОПС",
+      "id": "1847375168",
+      "name_lat": "ТУЛЬСКИЙ СУВЕНИР МЕЛОН",
+      "name_ru": "ТУЛЬСКИЙ СУВЕНИР МЕЛОН",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1027076301",
+      "name_lat": "ТУЛЬСКИЙ СУВЕНИР ГРАЦИЯ",
+      "name_ru": "ТУЛЬСКИЙ СУВЕНИР ГРАЦИЯ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1778190298",
       "name_lat": "ТУРУНЖУ ВАНЕССА БАТЕРФЛЯЙ",
-      "name_ru": "",
+      "name_ru": "ТУРУНЖУ ВАНЕССА БАТЕРФЛЯЙ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 6,
@@ -942,19 +964,10 @@
     {
       "id": "1736391475",
       "name_lat": "ТУ МЕЙДЖЕР ПАРА МИ",
-      "name_ru": "",
+      "name_ru": "ТУ МЕЙДЖЕР ПАРА МИ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "162298508",
-      "name_lat": "ТУЛЬСКИЙ САМУРАЙ ЙОШИ КАДЗАРИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -976,10 +989,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1315871671",
+      "id": "1919666046",
       "name_lat": "ТУТТИС ФРУТТИ С СОБЕРБАШ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ФОКСТЕРЬЕР",
+      "name_ru": "ТУТТИС ФРУТТИ С СОБЕРБАШ",
+      "breed": "ПРАЖСКИЙТОЙ ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -996,7 +1009,7 @@
     {
       "id": "1517801819",
       "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ АСТЕРИЯ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ АСТЕРИЯ",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 6,
@@ -1005,52 +1018,61 @@
     {
       "id": "999259762",
       "name_lat": "ТУТТИ ФРУТТИ ОТ КОВАЛЬНИЦКОЙ",
-      "name_ru": "",
+      "name_ru": "ТУТТИ ФРУТТИ ОТ КОВАЛЬНИЦКОЙ",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "784430673",
+      "name_lat": "ТУЛ-ПОМ-ЧИХ САКУРА МУН",
+      "name_ru": "ТУЛ-ПОМ-ЧИХ САКУРА МУН",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "205087541",
       "name_lat": "ТУТСИ ДЖАН ЗУКО",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ЗУКО",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1847375168",
-      "name_lat": "ТУЛЬСКИЙ СУВЕНИР МЕЛОН",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
       "id": "666253451",
       "name_lat": "ТУЛЬСКИЙ СУВЕНИР ЖАНЕТТ МИШЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ СУВЕНИР ЖАНЕТТ МИШЕЛЬ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1920037468",
+      "id": "1996292173",
       "name_lat": "ТУРМАЛИНОВАЯ МАГИЯ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ /",
+      "name_ru": "ТУРМАЛИНОВАЯ МАГИЯ",
+      "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "225767198",
+      "name_lat": "ТУЛЬСКИЙ САМУРАЙ Ж-САЙКО НО ШО",
+      "name_ru": "ТУЛЬСКИЙ САМУРАЙ Ж-САЙКО НО ШО",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "758476171",
       "name_lat": "ТУЛЬСКИЙ СУВЕНИР ЗОУИ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ СУВЕНИР ЗОУИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -1059,7 +1081,7 @@
     {
       "id": "486123080",
       "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ АКИРА",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ АКИРА",
       "breed": "ВОЛЬФШПИЦ",
       "breed_en": "",
       "total_shows": 4,
@@ -1068,7 +1090,7 @@
     {
       "id": "38837912",
       "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ОЛИССИЯ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ОЛИССИЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
@@ -1086,25 +1108,16 @@
     {
       "id": "1668647499",
       "name_lat": "ТУАДАШ ГЕРДА",
-      "name_ru": "",
+      "name_ru": "ТУАДАШ ГЕРДА",
       "breed": "GERMAN SHEPHERD",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1085781925",
-      "name_lat": "ТУТСИ ДЖАН ВИЛЬЯМ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "176129436",
       "name_lat": "ТУТСИ ДЖАН ЦЕНТУРИЯ",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ЦЕНТУРИЯ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
@@ -1113,7 +1126,7 @@
     {
       "id": "1509704321",
       "name_lat": "ТУЗ БУБНОВЫЙ ИЗ ЛЕГЕНДЫ ЮГА РОССИИ",
-      "name_ru": "",
+      "name_ru": "ТУЗ БУБНОВЫЙ ИЗ ЛЕГЕНДЫ ЮГА РОССИИ",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 5,
@@ -1122,7 +1135,7 @@
     {
       "id": "1113976096",
       "name_lat": "ТУАДАШ СТИНГ",
-      "name_ru": "",
+      "name_ru": "ТУАДАШ СТИНГ",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 7,
@@ -1138,10 +1151,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "288431077",
+      "id": "532736616",
       "name_lat": "ТУЛУНБЕК СО ЗВЕЗДЫ ЗИЛАНТА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "ТУЛУНБЕК СО ЗВЕЗДЫ ЗИЛАНТА",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1149,10 +1162,19 @@
     {
       "id": "1028702881",
       "name_lat": "ТУЛЬСКИЙ САМУРАЙ ЛИЕН",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САМУРАЙ ЛИЕН",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1492728331",
+      "name_lat": "ТУЛЬСКАЯ ЛЕГЕНДА РАТИБОР",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1174,45 +1196,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1883442400",
+      "id": "1312836207",
       "name_lat": "ТУГАМИ-ХОВ УРСУЛА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1997592763",
+      "id": "1147962604",
       "name_lat": "ТУАДАШ ОМАР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1027076301",
-      "name_lat": "ТУЛЬСКИЙ СУВЕНИР ГРАЦИЯ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "27311275",
       "name_lat": "ТУТСИ ДЖАН ГЕРДА",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ГЕРДА",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "57533810",
       "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ МИРОСЛАВ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ МИРОСЛАВ",
       "breed": "НЕМЕЦКИЙ ПОМЕРАНСКИЙ ШПИЦ (ЦВЕРГШПИЦ)",
       "breed_en": "",
       "total_shows": 4,
@@ -1228,15 +1240,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "48122935",
-      "name_lat": "ТУР ДОГ ПОИНТ БОДЖИНГ ВАН ВЕЙМИН",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1240023274",
       "name_lat": "ТУТСИ ДЖАН ФАРАОН",
       "name_ru": "",
@@ -1248,35 +1251,25 @@
     {
       "id": "941534456",
       "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ЮНИКС",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ЮНИКС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1720409551",
+      "id": "523030792",
       "name_lat": "ТУАДАШ АЛМАЗ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "939274164",
-      "name_lat": "ТУЛЬСКИЙ САМУРАЙ Ж- САЙКО НО ШО",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "415275457",
+      "id": "1972534910",
       "name_lat": "ТУНБЕРГИЯ С ЛАДОНИ АНГЕЛА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ТУНБЕРГИЯ С ЛАДОНИ АНГЕЛА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1293,10 +1286,18 @@
     {
       "id": "274252326",
       "name_lat": "ТУТСИ ДЖАН ЕСЕНИЯ",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ЕСЕНИЯ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1742305329",
+      "name_lat": "ТУЛЬСКАЯ КОЛЛЕКЦИЯ ХИРОШИ",
+      "name_ru": "ТУЛЬСКАЯ КОЛЛЕКЦИЯ ХИРОШИ",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1306,6 +1307,14 @@
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207649452",
+      "name_lat": "ТУРУНЖУ ЦАРЬ ПРОСТО ЦАРЬ",
+      "name_ru": "ТУРУНЖУ ЦАРЬ ПРОСТО ЦАРЬ",
+      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1320,10 +1329,19 @@
     {
       "id": "1931316048",
       "name_lat": "ТУАДАШ ДЕНВЕР",
-      "name_ru": "",
+      "name_ru": "ТУАДАШ ДЕНВЕР",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "177538762",
+      "name_lat": "ТУРАНДОТ ИЗ СОКОЛИННОГО ГНЕЗДА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1332,6 +1350,14 @@
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1300207662",
+      "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ОЛИВИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1354,15 +1380,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "145175150",
-      "name_lat": "ТУРАНДОТ ИЗ СОКОЛИННОГО ГНЕЗДА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1559243443",
       "name_lat": "ТУСОН РИНО",
       "name_ru": "",
@@ -1372,18 +1389,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1960973884",
-      "name_lat": "ТУРАНДОТ ИЗ ДОМА ВЕНГРЕ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "748512471",
       "name_lat": "ТУНГУЗ БАДАРХАН ИЗ РУССКОЙ ЗВЕЗДЫ",
-      "name_ru": "",
+      "name_ru": "ТУНГУЗ БАДАРХАН ИЗ РУССКОЙ ЗВЕЗДЫ",
       "breed": "ХОТОШО (БУРЯТСКАЯ СОБАКА)",
       "breed_en": "HOTOSHO (BURYATIAN DOG)",
       "total_shows": 4,
@@ -1408,6 +1416,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "995834844",
+      "name_lat": "ТУРУНЖУ ЧУПА-ЧУПСА",
+      "name_ru": "ТУРУНЖУ ЧУПА-ЧУПСА",
+      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "2925495",
       "name_lat": "ТУЛЬСКИЙ СУВЕНИР ЯШМА МОЯ ГАЛАКТИКА",
       "name_ru": "",
@@ -1419,7 +1436,7 @@
     {
       "id": "947650346",
       "name_lat": "ТУМАН ПОВЕЛИТЕЛЬ ГРЕЗ",
-      "name_ru": "",
+      "name_ru": "ТУМАН ПОВЕЛИТЕЛЬ ГРЕЗ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -1428,7 +1445,7 @@
     {
       "id": "1943364815",
       "name_lat": "ТУЛЬСКАЯ КАРУСЕЛЬ ВЕРСАЛЬ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ КАРУСЕЛЬ ВЕРСАЛЬ",
       "breed": "НЕМЕЦКИЙ МАЛЫЙ ШПИЦ (черный, коричневый)",
       "breed_en": "",
       "total_shows": 3,
@@ -1437,7 +1454,7 @@
     {
       "id": "1555333741",
       "name_lat": "ТУТАНХАМОН С БЕРЕГОВ НИЛА",
-      "name_ru": "",
+      "name_ru": "ТУТАНХАМОН С БЕРЕГОВ НИЛА",
       "breed": "AUSTRALIAN CATTLE DOG",
       "breed_en": "",
       "total_shows": 3,
@@ -1446,10 +1463,28 @@
     {
       "id": "1320230742",
       "name_lat": "ТУРЕЦКИЕ ШТУЧКИ ИОЛАНТА ФИАЛКА ВОСТОКА",
-      "name_ru": "",
+      "name_ru": "ТУРЕЦКИЕ ШТУЧКИ ИОЛАНТА ФИАЛКА ВОСТОКА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "685148831",
+      "name_lat": "ТУАН ТУ МИЕКО",
+      "name_ru": "ТУАН ТУ МИЕКО",
+      "breed": "ШИ - ТЦУ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1908263058",
+      "name_lat": "ТУТСИ",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1464,7 +1499,7 @@
     {
       "id": "1774722336",
       "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ДИОРА",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ДИОРА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -1480,10 +1515,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "609594210",
+      "id": "1347632995",
       "name_lat": "ТУЛЬСКАЯ КОЛЛЕКЦИЯ ВИСТ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН /",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1500,7 +1535,7 @@
     {
       "id": "755897474",
       "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ЮСТИНА",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ЮСТИНА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -1516,19 +1551,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "617364179",
+      "id": "849227415",
       "name_lat": "ТУМАН ИЗ ФОРТУНА МЕРДИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "875711524",
-      "name_lat": "ТУЛ-ПОМ-ЧИХ САКУРА МУН",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1563,44 +1589,26 @@
     {
       "id": "1048579638",
       "name_lat": "ТУЛ - ПОМ - ЧИХ ШАНТАЛЬ",
-      "name_ru": "",
+      "name_ru": "ТУЛ - ПОМ - ЧИХ ШАНТАЛЬ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "443797154",
-      "name_lat": "ТУЛЬСКАЯ КОЛЛЕКЦИЯ ХИРОШИ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "685148831",
-      "name_lat": "ТУАН ТУ МИЕКО",
-      "name_ru": "",
-      "breed": "ШИ - ТЦУ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "80715215",
       "name_lat": "ТУТСИ ВАЙТ ПЕРЛ",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ВАЙТ ПЕРЛ",
       "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1493913976",
+      "id": "798252189",
       "name_lat": "ТУЛЬСКИЙ АЛМАЗ ХАРЛИ-ДЭВИДСОН",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "ТУЛЬСКИЙ АЛМАЗ ХАРЛИ-ДЭВИДСОН",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1608,19 +1616,10 @@
     {
       "id": "158553117",
       "name_lat": "ТУТСИ ДЖАН ЖОРИК",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ЖОРИК",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1492728331",
-      "name_lat": "ТУЛЬСКАЯ ЛЕГЕНДА РАТИБОР",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1635,7 +1634,7 @@
     {
       "id": "1610340475",
       "name_lat": "ТУЛУК - БЕК ДАНАЗА",
-      "name_ru": "",
+      "name_ru": "ТУЛУК - БЕК ДАНАЗА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -1653,7 +1652,7 @@
     {
       "id": "1527792598",
       "name_lat": "ТУГАМИ ХОВ САРБОНА",
-      "name_ru": "",
+      "name_ru": "ТУГАМИ ХОВ САРБОНА",
       "breed": "немецкая овчарка",
       "breed_en": "",
       "total_shows": 4,
@@ -1662,7 +1661,7 @@
     {
       "id": "975107137",
       "name_lat": "ТУР ДОГ ПОИНТ ГАРДИ",
-      "name_ru": "",
+      "name_ru": "ТУР ДОГ ПОИНТ ГАРДИ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 7,
@@ -1716,7 +1715,7 @@
     {
       "id": "583011855",
       "name_lat": "ТУРУНЖУ ЗЛАТА МАУ",
-      "name_ru": "",
+      "name_ru": "ТУРУНЖУ ЗЛАТА МАУ",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
@@ -1725,7 +1724,7 @@
     {
       "id": "1029573192",
       "name_lat": "ТУМАННАЯ ЛЕГЕНДА АЗИИ ЛИЛИ",
-      "name_ru": "",
+      "name_ru": "ТУМАННАЯ ЛЕГЕНДА АЗИИ ЛИЛИ",
       "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ (ВЫЖЛА)",
       "breed_en": "",
       "total_shows": 2,
@@ -1768,10 +1767,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "285645874",
+      "id": "122264777",
       "name_lat": "ТУГАМИ ХОВ ТАИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1788,7 +1787,7 @@
     {
       "id": "989809301",
       "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ БРИДЖИТ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ БРИДЖИТ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
@@ -1806,7 +1805,7 @@
     {
       "id": "137412126",
       "name_lat": "ТУЛЬСКИЙ САМУРАЙ НЭККА ШИНЬ-Ю СЕЙ АПСАРИ БЭЙНЕ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САМУРАЙ НЭККА ШИНЬ-Ю СЕЙ АПСАРИ БЭЙНЕ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
@@ -1824,7 +1823,7 @@
     {
       "id": "1014766135",
       "name_lat": "ТУРУНЖУ СПЕЙС СПИИД",
-      "name_ru": "",
+      "name_ru": "ТУРУНЖУ СПЕЙС СПИИД",
       "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1833,7 +1832,7 @@
     {
       "id": "258216822",
       "name_lat": "ТУ ИНКАНТО ЕНИСЕЙ ФИЕРО",
-      "name_ru": "",
+      "name_ru": "ТУ ИНКАНТО ЕНИСЕЙ ФИЕРО",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
@@ -1842,7 +1841,7 @@
     {
       "id": "1143234344",
       "name_lat": "ТУ БИ ЛАКИ АБСОЛЮТ",
-      "name_ru": "",
+      "name_ru": "ТУ БИ ЛАКИ АБСОЛЮТ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -1876,19 +1875,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1118880821",
-      "name_lat": "ТУРАНДОТ ИЗ ОТЧЕГО ДОМА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1677681399",
+      "id": "1400111414",
       "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ЭСМИ ЭРРАЙ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ЭСМИ ЭРРАЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1905,10 +1895,19 @@
     {
       "id": "140996527",
       "name_lat": "ТУЯРА ОТ БАЙАНАЯ",
-      "name_ru": "",
+      "name_ru": "ТУЯРА ОТ БАЙАНАЯ",
       "breed": "ЛАЙКА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "868131934",
+      "name_lat": "ТУЧКА",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1921,18 +1920,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "166945286",
-      "name_lat": "ТУЛЕ АМАГУК'С ТРИУМФ ФАРЕНГЕЙТ",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1817122948",
       "name_lat": "ТУЛЬСКАЯ КОЛЛЕКЦИЯ ЮМАЗУКИ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ КОЛЛЕКЦИЯ ЮМАЗУКИ",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 2,
@@ -1957,10 +1947,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "145338852",
+      "id": "643367441",
       "name_lat": "ТУНЕЛИ СНОУ СТОРМ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1975,10 +1965,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "27817126",
+      "id": "617188035",
       "name_lat": "Тус Той Тутси Эйфория Чувств",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1989,6 +1979,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1831678814",
+      "name_lat": "ТУ-ГРЭН СИЛЬВЕР САМУРАЙ ОДАВАРО",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2004,10 +2002,9 @@
     {
       "id": "104012814",
       "name_lat": "ТУРУНЖУ ЮНИКУМ",
-      "name_ru": "",
+      "name_ru": "ТУРУНЖУ ЮНИКУМ",
       "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2031,7 +2028,7 @@
     {
       "id": "514359165",
       "name_lat": "ТУАДАШ ЛИНДА-2",
-      "name_ru": "",
+      "name_ru": "ТУАДАШ ЛИНДА-2",
       "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
       "total_shows": 3,
@@ -2042,15 +2039,6 @@
       "name_lat": "Туадаш Омар",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1583310284",
-      "name_lat": "ТУТСИ ХАСА ВЛАДА",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2101,10 +2089,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "806306753",
+      "id": "1115151516",
       "name_lat": "ТУМА",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2133,6 +2121,14 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1565318948",
+      "name_lat": "ТУТСИ",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2209,8 +2205,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "654124895",
-      "name_lat": "ТУРКМЕН-КАЛА Л- НАРГИЗ",
+      "id": "721126599",
+      "name_lat": "ТУРКМЕН-КАЛА Л-НАРГИЗ",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -2272,15 +2268,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1300207662",
-      "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ОЛИВИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "79173809",
       "name_lat": "ТУТСИ СТАРС ЦИАНИТА",
       "name_ru": "",
@@ -2290,19 +2277,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1358000350",
-      "name_lat": "ТУРКМЕН АДАТ ЗАРБА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "912949279",
+      "id": "1900002702",
       "name_lat": "ТУИЛЬ БУЛЬ КВИНСИ",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2317,19 +2295,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1917823388",
+      "id": "91179699",
       "name_lat": "ТУАДАШ СКАРЛЕТТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "148311357",
-      "name_lat": "ТУРКМЕН КАЛА КЕНАР",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2344,18 +2313,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1806240371",
-      "name_lat": "ТУРБО БЕНТЛИ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1425183184",
       "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ЦИРИ БЛЕК КВИН",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ЦИРИ БЛЕК КВИН",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -2364,26 +2324,25 @@
     {
       "id": "621133699",
       "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ЧАРУТТИ БЭЛЬ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКАЯ АКВАРЕЛЬ ЧАРУТТИ БЭЛЬ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "470904351",
-      "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ЯШМА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
+      "id": "968142532",
+      "name_lat": "ТУГУР ИЗ СТАИ СЕРЫХ",
+      "name_ru": "ТУГУР ИЗ СТАИ СЕРЫХ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "995834844",
-      "name_lat": "ТУРУНЖУ ЧУПА-ЧУПСА",
-      "name_ru": "",
-      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
+      "id": "252751223",
+      "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ЗЛАТОЗАР",
+      "name_ru": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ЗЛАТОЗАР",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2391,10 +2350,19 @@
     {
       "id": "1194117473",
       "name_lat": "ТУРАНДОТ ИЗ ДОМА ВЕНГРЭ",
-      "name_ru": "",
+      "name_ru": "ТУРАНДОТ ИЗ ДОМА ВЕНГРЭ",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "863117022",
+      "name_lat": "ТУРГАЙ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2434,19 +2402,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "252751223",
-      "name_lat": "ТУЛЬСКИЙ САПФИР ТАТЬЯНЫ ЗЛАТОЗАР",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "750770850",
+      "id": "238209158",
       "name_lat": "ТУЛЬСКАЯ КАРУСЕЛЬ ПИКСЕЛЬ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ТУЛЬСКАЯ КАРУСЕЛЬ ПИКСЕЛЬ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2456,15 +2415,6 @@
       "name_lat": "ТУСОН РИНО",
       "name_ru": "",
       "breed": "АКИТА АЛЯСКИНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "863117022",
-      "name_lat": "ТУРГАЙ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2506,6 +2456,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1795227070",
+      "name_lat": "ТУ-ГРЭН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1098311367",
       "name_lat": "ТУРУНЖУ О'ОРБИТА",
       "name_ru": "",
@@ -2515,10 +2473,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "757128903",
+      "id": "1886313862",
       "name_lat": "ТУЛЬСКИЙ АЛМАЗ ФЕХУ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2596,10 +2554,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "565547388",
+      "id": "197731225",
       "name_lat": "ТУЧА ИЗ ЧЕРНОГО САДА",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2679,7 +2637,7 @@
     {
       "id": "1221555137",
       "name_lat": "ТУТСИ ДЖАН ЮНКЕР",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ЮНКЕР",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
       "total_shows": 4,
@@ -2695,10 +2653,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1359199743",
+      "id": "108686552",
       "name_lat": "ТУГАМИ ХОВ УНИТА",
-      "name_ru": "",
-      "breed": "Немецкая овчарка стандартная",
+      "name_ru": "ТУГАМИ ХОВ УНИТА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2706,7 +2664,7 @@
     {
       "id": "139339707",
       "name_lat": "ТУТСИ ОРАНЖ ФОКС",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ОРАНЖ ФОКС",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
@@ -2731,10 +2689,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "613204584",
+      "id": "1157025904",
       "name_lat": "ТУАНА ФО ЗВЕЗДА ТАВРИДЫ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ТУАНА ФО ЗВЕЗДА ТАВРИДЫ",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2742,7 +2700,7 @@
     {
       "id": "349171457",
       "name_lat": "ТУТСИ ДЖАН ЦЕРОН",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ЦЕРОН",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -2760,7 +2718,7 @@
     {
       "id": "792614240",
       "name_lat": "ТУТИ ФРУТИ ОФ ЗЕ ФЭМИЛИ ОФ ГОЛД ЭЛВЕС",
-      "name_ru": "",
+      "name_ru": "ТУТИ ФРУТИ ОФ ЗЕ ФЭМИЛИ ОФ ГОЛД ЭЛВЕС",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -2776,30 +2734,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "633157044",
-      "name_lat": "ТУТАНХАМОН ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "209380409",
-      "name_lat": "ТУАДАШ ЕСАУЛ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "157206937",
       "name_lat": "ТУЛЬСКИЙ САМУРАЙ ИНАДЗУМА",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САМУРАЙ ИНАДЗУМА",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2807,6 +2746,32 @@
       "name_lat": "ТУЛКА",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "658777882",
+      "name_lat": "ТУАДАШ ЕСАУЛ",
+      "name_ru": "ТУАДАШ ЕСАУЛ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1211220298",
+      "name_lat": "Тутси Бьюти",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1620044944",
+      "name_lat": "ТУРТОН ЛИРА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2839,20 +2804,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1211220298",
-      "name_lat": "Тутси Бьюти",
+      "id": "230376904",
+      "name_lat": "ТУТСИ",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1503468781",
-      "name_lat": "ТУРТОН ЛИРА",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
+      "breed": "МОПС / PUG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2902,20 +2857,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "491696260",
+      "id": "980728706",
       "name_lat": "ТУЧА СЕВЕРА ОТ КАРЕЛЬСКИХ МЕДВЕДЕЙ",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД ПИНЧЕР",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "506919244",
+      "id": "236574886",
       "name_lat": "ТУТИ ФРУТТИ КЭНДИ КИСС",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "930247346",
+      "name_lat": "ТУ БИ ЛАКИ ПЕСНЯ",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2934,7 +2897,7 @@
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2967,17 +2930,17 @@
     {
       "id": "69444746",
       "name_lat": "ТУЛЬСКИЙ СУВЕНИР ЧЕНДЖ МАЙ УОРЛД КНОУ ПИ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ СУВЕНИР ЧЕНДЖ МАЙ УОРЛД КНОУ ПИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "432085855",
+      "id": "248771192",
       "name_lat": "ТУГАМИ ХОВ ФАРТУНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2985,17 +2948,8 @@
     {
       "id": "873830871",
       "name_lat": "ТУНДЖЕР ИРЕМ",
-      "name_ru": "",
+      "name_ru": "ТУНДЖЕР ИРЕМ",
       "breed": "ШИ - ТЦУ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "374128668",
-      "name_lat": "ТУЛЬСКАЯ АКВАРЕЛЬ ВАСИЛИНА A PESO DE OURO YARA EMERALD",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3012,7 +2966,7 @@
     {
       "id": "100976681",
       "name_lat": "ТУРУНЖУ ЩЕВВИ ВАН ПЕРСИ",
-      "name_ru": "",
+      "name_ru": "ТУРУНЖУ ЩЕВВИ ВАН ПЕРСИ",
       "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
       "total_shows": 5,
@@ -3021,7 +2975,7 @@
     {
       "id": "695122805",
       "name_lat": "ТУРАНДОТ ОТ НЭЛ'З ЮССЭН",
-      "name_ru": "",
+      "name_ru": "ТУРАНДОТ ОТ НЭЛ'З ЮССЭН",
       "breed": "КОРСО",
       "breed_en": "",
       "total_shows": 4,
@@ -3030,7 +2984,7 @@
     {
       "id": "48943565",
       "name_lat": "ТУЛ-ПОМ-ЧИХ АДАМ ФИРРЕ",
-      "name_ru": "",
+      "name_ru": "ТУЛ-ПОМ-ЧИХ АДАМ ФИРРЕ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -3039,7 +2993,7 @@
     {
       "id": "437217694",
       "name_lat": "ТУРЕЦКИЕ ШТУЧКИ ЧЕЛСИ",
-      "name_ru": "",
+      "name_ru": "ТУРЕЦКИЕ ШТУЧКИ ЧЕЛСИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
@@ -3055,20 +3009,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1908263058",
-      "name_lat": "ТУТСИ",
+      "id": "1994809093",
+      "name_lat": "ТУТТЕЛЛА",
       "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1255732272",
-      "name_lat": "ТУТТЕЛЛА",
+      "id": "695354207",
+      "name_lat": "ТУРАН",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
-      "breed_en": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -3100,10 +3053,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "712701415",
+      "id": "653666395",
       "name_lat": "ТУРУНЖУ ЖЕННИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3127,18 +3080,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "824863327",
-      "name_lat": "ТУРМАЛИН ИЗ СОЗВЕЗДИЯ ЧЕРНОГО ПСА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1834244637",
       "name_lat": "ТУТСИ ДЖАН УРМАС",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН УРМАС",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -3147,17 +3091,34 @@
     {
       "id": "1184070416",
       "name_lat": "ТУР С ВЕЛИКОГО ДОНА",
-      "name_ru": "",
+      "name_ru": "ТУР С ВЕЛИКОГО ДОНА",
       "breed": "СКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1472850638",
+      "id": "729311775",
+      "name_lat": "ТУТТИ ФРУТТИ ЛИЛЛИ БЕЛЬ",
+      "name_ru": "ТУТТИ ФРУТТИ ЛИЛЛИ БЕЛЬ",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "944926065",
+      "name_lat": "ТУТСИ ДЖАН ГРЕТТА",
+      "name_ru": "ТУТСИ ДЖАН ГРЕТТА",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1368592056",
       "name_lat": "ТУТСИ ФОН НОРД ТРАУМ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ТУТСИ ФОН НОРД ТРАУМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3165,7 +3126,7 @@
     {
       "id": "165621275",
       "name_lat": "ТУРКМЕН-КАЛА НУРАНА",
-      "name_ru": "",
+      "name_ru": "ТУРКМЕН-КАЛА НУРАНА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -3199,19 +3160,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "363559082",
-      "name_lat": "ТУАДАШ ЗОСЯ",
+      "id": "594362558",
+      "name_lat": "ТУРАЛ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "CAUCASIAN SHEPHERD",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "880474044",
+      "id": "1003208225",
+      "name_lat": "ТУАДАШ ЗОСЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1954377495",
       "name_lat": "ТУ ШЭНЛИ",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3226,10 +3196,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "724485915",
+      "id": "768959756",
       "name_lat": "ТУГИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3253,10 +3223,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "35667342",
+      "id": "1005675223",
       "name_lat": "ТУЛЬСКИЙ АЛМАЗ ЧИВАС РИГАЛ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3267,6 +3237,14 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "118489492",
+      "name_lat": "ТУТТИ ФРУТТИ ТЕЯ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3307,19 +3285,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1203009671",
+      "id": "24590043",
       "name_lat": "ТУАДАШ ЗЕНТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "944926065",
-      "name_lat": "ТУТСИ ДЖАН ГРЕТТА",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3370,10 +3339,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "323140840",
+      "id": "140773540",
       "name_lat": "ТУНИКА СЧАСТЬЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3401,6 +3370,15 @@
       "name_lat": "ТУНАЙ ЛУНА В НОЧИ",
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56087318",
+      "name_lat": "ТУТТИ-ФРУТТИ ИЗ СЛАВЯНСКОЙ НАДЕЖДЫ",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3469,9 +3447,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "14189496",
+      "name_lat": "ТУЧКА-II ИЗ ЗАПОЛЯРЬЯ",
+      "name_ru": "",
+      "breed": "BORDER COLLIE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "541730638",
       "name_lat": "ТУРУНЖУ САНГРИЯ",
-      "name_ru": "",
+      "name_ru": "ТУРУНЖУ САНГРИЯ",
       "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
       "breed_en": "PARSON RUSSELL TERRIER",
       "total_shows": 2,
@@ -3480,7 +3466,7 @@
     {
       "id": "753058406",
       "name_lat": "ТУНХЭН ФЕРУЗЭ",
-      "name_ru": "",
+      "name_ru": "ТУНХЭН ФЕРУЗЭ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3489,17 +3475,17 @@
     {
       "id": "721794112",
       "name_lat": "ТУТСИ КУКОЛКА",
-      "name_ru": "",
+      "name_ru": "ТУТСИ КУКОЛКА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "919865241",
+      "id": "618445284",
       "name_lat": "ТУРЕЦКИЕ ШТУЧКИ ХЛОЯ ЛАВ СТОРИ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "ТУРЕЦКИЕ ШТУЧКИ ХЛОЯ ЛАВ СТОРИ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3507,8 +3493,17 @@
     {
       "id": "1309434683",
       "name_lat": "ТУЛУК-БЕК ШАЙТАН",
-      "name_ru": "",
+      "name_ru": "ТУЛУК-БЕК ШАЙТАН",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "576277907",
+      "name_lat": "ТУТСИ ДЖАН ГВИДОН",
+      "name_ru": "ТУТСИ ДЖАН ГВИДОН",
+      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3516,7 +3511,7 @@
     {
       "id": "113144012",
       "name_lat": "ТУЛУК-БЕК УРМА",
-      "name_ru": "",
+      "name_ru": "ТУЛУК-БЕК УРМА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3525,7 +3520,7 @@
     {
       "id": "935253199",
       "name_lat": "ТУТСИ СТАРС ШАНЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ТУТСИ СТАРС ШАНЕЛЬ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -3534,7 +3529,7 @@
     {
       "id": "1835223671",
       "name_lat": "ТУТСИ ДЖАН ГАМИЛЬТОН",
-      "name_ru": "",
+      "name_ru": "ТУТСИ ДЖАН ГАМИЛЬТОН",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
@@ -3543,7 +3538,7 @@
     {
       "id": "440999390",
       "name_lat": "ТУМАН ИЗ СЕРЕБРЯНЫХ РОССОВ",
-      "name_ru": "",
+      "name_ru": "ТУМАН ИЗ СЕРЕБРЯНЫХ РОССОВ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3552,17 +3547,17 @@
     {
       "id": "15686859",
       "name_lat": "ТУ БИ ЛАКИ АДМИРА Ю",
-      "name_ru": "",
+      "name_ru": "ТУ БИ ЛАКИ АДМИРА Ю",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "65265112",
+      "id": "1123341591",
       "name_lat": "ТУЛ-ПОМ-ЧИХ ЮВЕЛИНА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ТУЛ-ПОМ-ЧИХ ЮВЕЛИНА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3570,16 +3565,16 @@
     {
       "id": "801772805",
       "name_lat": "ТУЛЬСКИЙ САМУРАЙ ЛАВИНА КАГАМИ",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ САМУРАЙ ЛАВИНА КАГАМИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1078902485",
-      "name_lat": "ТУЛ-ПОМ-ЧИХ- ЯНТАРНАЯ",
-      "name_ru": "",
+      "id": "1740803563",
+      "name_lat": "ТУЛ-ПОМ-ЧИХ-ЯНТАРНАЯ",
+      "name_ru": "ТУЛ-ПОМ-ЧИХ-ЯНТАРНАЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -3588,34 +3583,25 @@
     {
       "id": "1094083037",
       "name_lat": "ТУРЕЦКИЕ ШТУЧКИ РОКСАНА РОНА ВАЛЕНТИНО",
-      "name_ru": "",
+      "name_ru": "ТУРЕЦКИЕ ШТУЧКИ РОКСАНА РОНА ВАЛЕНТИНО",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "633838388",
+      "id": "347615329",
       "name_lat": "ТУЛЕ АМАГУК'С ТРИУМФ БИКОЗ АЙ ЛАВ Ю",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "name_ru": "ТУЛЕ АМАГУК'С ТРИУМФ БИКОЗ АЙ ЛАВ Ю",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "729311775",
-      "name_lat": "ТУТТИ ФРУТТИ ЛИЛЛИ БЕЛЬ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "631938281",
-      "name_lat": "ТУЛУК- БЕК ЗАУР",
-      "name_ru": "",
+      "id": "1808972131",
+      "name_lat": "ТУЛУК-БЕК ЗАУР",
+      "name_ru": "ТУЛУК-БЕК ЗАУР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3624,17 +3610,8 @@
     {
       "id": "1833734527",
       "name_lat": "ТУР ДОГ ПОИНТ ГРЭЙ",
-      "name_ru": "",
+      "name_ru": "ТУР ДОГ ПОИНТ ГРЭЙ",
       "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1904903054",
-      "name_lat": "ТУТТИ-ФРУТТИ ИЗ СЛАВЯНСКОЙ НАДЕЖДЫ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3642,7 +3619,7 @@
     {
       "id": "68206217",
       "name_lat": "ТУЛЬСКИЙ БРИЛЛИАНТ АРИКА",
-      "name_ru": "",
+      "name_ru": "ТУЛЬСКИЙ БРИЛЛИАНТ АРИКА",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3721,10 +3698,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "9347906",
+      "id": "1817706819",
       "name_lat": "ТУСОН РИНО",
       "name_ru": "",
-      "breed": "МАЛАМУТ /",
+      "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3734,15 +3711,6 @@
       "name_lat": "ТУЖУР БЕЛЬ",
       "name_ru": "",
       "breed": "YORKSHIRE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1892546607",
-      "name_lat": "ТУЧКА",
-      "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3766,28 +3734,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "594362558",
-      "name_lat": "ТУРАЛ",
-      "name_ru": "",
-      "breed": "CAUCASIAN SHEPHERD",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "146481337",
       "name_lat": "ТУРМАЛИН",
       "name_ru": "",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "695354207",
-      "name_lat": "туран",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3820,6 +3770,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "70207350",
+      "name_lat": "ТУЗ КОЗЫРНЫЙ",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "531921661",
       "name_lat": "ТУЛАНА",
       "name_ru": "",
@@ -3829,28 +3787,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "408456312",
+      "id": "1288278247",
       "name_lat": "ТУАДАШ ЛАДА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1147962604",
-      "name_lat": "ТУАДАШ ОМАР",
-      "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1620044944",
-      "name_lat": "ТУРТОН ЛИРА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3883,10 +3823,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "445209360",
+      "id": "1137790975",
       "name_lat": "ТУАДАШ ИРИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3928,10 +3868,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "846041941",
+      "id": "1578675220",
       "name_lat": "ТУТСИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР) / GERMAN WIRE-HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3941,15 +3881,6 @@
       "name_lat": "ТУРМАЛИН",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "136537065",
-      "name_lat": "ТУРМАЛИН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3973,6 +3904,67 @@
       "competition_dog_id": null
     },
     {
+      "id": "372279543",
+      "name_lat": "ТУРМАЛИН",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1814654190",
+      "name_lat": "ТУМАН",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1881391597",
+      "name_lat": "ТУЛЬСКИЙ АЛМАЗ ЗУЛЬФИЯ",
+      "name_ru": "",
+      "breed": "MINIATURE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "180188466",
+      "name_lat": "ТУТСИ ФЕРСТ БЬЮТИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "297999522",
+      "name_lat": "ТУТТА ЛАРСЕН ОТ ЭН Т'АИРИС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1133012902",
+      "name_lat": "Тутти-Фрутти Лоллипоп",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "779426044",
+      "name_lat": "ТУЛ-ПОМ-ЧИХ КАТАЛЕЯ ТЕТЧЕР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "135972479",
       "name_lat": "ТУЛЬСКИЙ САМУРАЙ ВАКИН",
       "name_ru": "",
@@ -3982,28 +3974,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1747138664",
+      "id": "947071223",
       "name_lat": "ТУАДАШ ХАССО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1574883104",
+      "id": "862047407",
       "name_lat": "ТУАДАШ ЖАННЕТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "661122325",
+      "id": "100950734",
       "name_lat": "ТУАДАШ ЗЛАТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4040,15 +4032,6 @@
       "name_lat": "ТУТСИ ДЖАН РАФАЭЛЬ",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "185982382",
-      "name_lat": "ТУЛЬСКИЙ СУВЕНИР АФИНА",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4171,10 +4154,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "171466524",
+      "id": "740492510",
       "name_lat": "ТУЛЬСКИЙ СУВЕНИР ШАНГРИ ЛА",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4225,8 +4208,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1643118405",
-      "name_lat": "ТУРКМЕН-КАЛА ОВАЗА- III",
+      "id": "19995017",
+      "name_lat": "ТУРКМЕН-КАЛА ОВАЗА-III",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -4243,10 +4226,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1293469851",
+      "id": "1214774379",
       "name_lat": "ТУЛЬСКИЙ СУВЕНИР ЭКСЕЛЕНТ",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4306,8 +4289,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1371386338",
-      "name_lat": "ТУРКМЕН КАЛА Р- ПЭХИМ",
+      "id": "1547887238",
+      "name_lat": "ТУРКМЕН КАЛА Р-ПЭХИМ",
       "name_ru": "",
       "breed": "CENTRAL ASIA",
       "breed_en": "",
@@ -4315,19 +4298,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1881391597",
-      "name_lat": "ТУЛЬСКИЙ АЛМАЗ ЗУЛЬФИЯ",
-      "name_ru": "",
-      "breed": "MINIATURE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1033459267",
+      "id": "275578479",
       "name_lat": "ТУРУНЖУ ИДЕАЛ БОЙ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4423,15 +4397,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "576277907",
-      "name_lat": "ТУТСИ ДЖАН ГВИДОН",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "948994978",
       "name_lat": "ТУРКМЕН-КАЛА ОРАК",
       "name_ru": "",
@@ -4477,10 +4442,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1266442851",
-      "name_lat": "ТУРКМЕН КАЛА Н- ГАЛЛА",
+      "id": "1812416148",
+      "name_lat": "ТУРКМЕН КАЛА Н-ГАЛЛА",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4567,15 +4532,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "552512267",
-      "name_lat": "ТУГУР ИЗ СТАИ СЕРЫХ",
-      "name_ru": "",
-      "breed": "МАЛАМУТ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1254244184",
       "name_lat": "ТУЛУК-БЕК ЗУХРА",
       "name_ru": "",
@@ -4585,10 +4541,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "29104351",
+      "id": "1642723406",
       "name_lat": "ТУУ БЬЮТИФУЛ ИЗ КСАРО ЧЕСТНАЯ ИГРА",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4612,11 +4568,43 @@
       "competition_dog_id": null
     },
     {
+      "id": "222847701",
+      "name_lat": "ТУСКАНИ ЛАЙТ",
+      "name_ru": "",
+      "breed": "RUSSELL TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "280636247",
+      "name_lat": "ТУТСИ ДЖАН БИНА",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1136359003",
+      "name_lat": "ТУРУНЖУ ИГНАЙТ МАЙ СТАР",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1433939347",
       "name_lat": "ТУР ДОГ ПОИНТ БИЮ ЙОНГРИ ДЖИНГУА",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "299111139",
+      "name_lat": "ТУНДРА ПЛАТИНУМ ШЕГГИ ХАППИНЕС",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4630,11 +4618,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "117707533",
+      "id": "1772235632",
       "name_lat": "ТУЛ-ПОМ-ЧИХ РЕЯ ПАТИ",
       "name_ru": "",
-      "breed": "И ДРУГИЕ ОКРАСЫ /",
+      "breed": "И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1648347401",
+      "name_lat": "ТУЛ-ПОМ-ЧИХ ТЕКИЛА ФЛАЙ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4675,10 +4671,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1449828766",
+      "id": "1672154024",
       "name_lat": "ТУАДАШ ЗАБАВА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "880658924",
+      "name_lat": ".ТУЛЬСКАЯ КАРУСЕЛЬ ШВЕЙК",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4720,10 +4725,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1816099302",
+      "id": "1885024735",
       "name_lat": "ТУ ИНКАНТО ЕФИМ ЛА ФОРТУНА",
       "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ /",
+      "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4738,10 +4743,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1653718505",
+      "id": "227436148",
       "name_lat": "ТУРКМЕН-КАЛА ДАКШИ",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4819,8 +4824,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "211807779",
-      "name_lat": "ТУРКМЕН- КАЛА ЛАКАМ",
+      "id": "764933801",
+      "name_lat": "ТУРКМЕН-КАЛА ЛАКАМ",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -4891,19 +4896,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "154884647",
+      "id": "420110566",
       "name_lat": "ТУТТА ЛА РЕЙН",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "836762402",
+      "id": "1871236943",
       "name_lat": "ТУЛЬСКАЯ КАРУСЕЛЬ ЕЙ НЕТ РАВНЫХ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4936,8 +4941,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "761343302",
-      "name_lat": "ТУРКМЕН-КАЛА УЧГУН- II",
+      "id": "1478888954",
+      "name_lat": "ТУРКМЕН-КАЛА УЧГУН-II",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
       "breed_en": "",
@@ -4954,10 +4959,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "913383007",
+      "id": "645762619",
       "name_lat": "ТУМАННОСТЬ АНДРОМЕДЫ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5008,15 +5013,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "207649452",
-      "name_lat": "ТУРУНЖУ ЦАРЬ ПРОСТО ЦАРЬ",
-      "name_ru": "",
-      "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1927102150",
       "name_lat": "ТУРКМЕН АДАТ В-АЙКА",
       "name_ru": "",
@@ -5026,10 +5022,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1112578707",
+      "id": "949033279",
       "name_lat": "ТУЛЬСКАЯ КАРУСЕЛЬ ПРОСТО ПРЕЛЕСТЬ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5071,10 +5067,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "942973282",
+      "id": "1896493411",
       "name_lat": "ТУТТА ЛАРСЕН ФОМ МАИР ХОФ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5089,10 +5085,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "304879311",
+      "id": "381872382",
       "name_lat": "ТУРКМЕН-КАЛА МЕЛИМ",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5107,19 +5103,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1068925786",
+      "id": "254933617",
       "name_lat": "ТУАДАШ ТРЕССИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "215267902",
-      "name_lat": "ТУТСИ ФЕРСТ БЬЮТИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5134,8 +5121,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "195754381",
-      "name_lat": "ТУРКМЕН-КАЛА ВЕПАЛЫ- II",
+      "id": "1974712487",
+      "name_lat": "ТУРКМЕН-КАЛА ВЕПАЛЫ-II",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -5143,19 +5130,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1393290936",
+      "id": "360507175",
       "name_lat": "ТУАДАШ МАРТИНИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1726936285",
+      "id": "816317270",
       "name_lat": "ТУРБО ОФ ФЛОКИШ ФЕСТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5165,15 +5152,6 @@
       "name_lat": "ТУРМАЛИН ИЗ УНИКАЛЬНОЙ КОЛЛЕКЦИИ",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "618678815",
-      "name_lat": "ТУТТА ЛАРСЕН ОТ ЭН Т'АИРИС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5197,8 +5175,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1983500289",
-      "name_lat": "ТУТТИ-ФРУТТИ- ЛАПАТАТУТИ",
+      "id": "1479463483",
+      "name_lat": "ТУТТИ-ФРУТТИ-ЛАПАТАТУТИ",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
@@ -5215,10 +5193,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "990952487",
+      "id": "54050119",
       "name_lat": "ТУЛ-ПОМ ЧИХ РОМЕО",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5296,10 +5274,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1368191301",
+      "id": "13033048",
       "name_lat": "ТУМБА-ЮМБА ОТ СИБИРСКОГО МЕДВЕДЯ",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5314,26 +5292,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1133012902",
-      "name_lat": "Тутти-Фрутти Лоллипоп",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1816117144",
+      "id": "979203271",
       "name_lat": "ТУАДАШ АЛЬФА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1023549834",
-      "name_lat": "ТУЛУЗА- СКАЛЛИ",
+      "id": "1530696710",
+      "name_lat": "ТУЛУЗА-СКАЛЛИ",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
@@ -5363,15 +5332,6 @@
       "name_lat": "ТУЛЬСКАЯ КАРУСЕЛЬ АЗАРТ",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1419465458",
-      "name_lat": "ТУТТИ-ФРУТТИ СНЕЖНАЯ КАРАМЕЛЬ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5458,19 +5418,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1232902756",
-      "name_lat": "ТУЛЬСКИЙ САМУРАЙ ЯТАКЭСИН",
+      "id": "743075809",
+      "name_lat": "ТУАДАШ ЕЖЕНКА",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "23611896",
-      "name_lat": "ТУЛ-ПОМ-ЧИХ КАТАЛЕЯ ТЕТЧЕР",
+      "id": "1232902756",
+      "name_lat": "ТУЛЬСКИЙ САМУРАЙ ЯТАКЭСИН",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

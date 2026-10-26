@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "BT",
-  "count": 3,
+  "count": 11,
   "dogs": [
+    {
+      "id": "572373370",
+      "name_lat": "B'T'S'C' BULLY KENNEL SKARO",
+      "name_ru": "",
+      "breed": "XL",
+      "breed_en": "",
+      "total_shows": 42,
+      "competition_dog_id": null
+    },
     {
       "id": "1246437036",
       "name_lat": "BTOP GUN CUORE DI ALIANTE",
@@ -22,12 +31,74 @@
       "competition_dog_id": null
     },
     {
-      "id": "1932783047",
+      "id": "1303955112",
+      "name_lat": "B TOP GUN CUORE DI ALIANTE",
+      "name_ru": "",
+      "breed": "WEIMARANER",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "731896640",
       "name_lat": "BTR IZ KUZNETSKGRADA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1025697003",
+      "name_lat": "B-TUGAY",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ/НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "680332320",
+      "name_lat": "B-TUGAY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "453406528",
+      "name_lat": "B-TUGAY",
+      "name_ru": "",
+      "breed": "КУРЦХААР НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1179278425",
+      "name_lat": "B-TUGAY",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ/НЕМЕЦКИЙ КУРЦХААР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259164251",
+      "name_lat": "B-TUGAY",
+      "name_ru": "",
+      "breed": "СОЛОВЬЕВА ТАТЬЯНА АНАТОЛЬЕВНА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1828326095",
+      "name_lat": "B'TORAKUMO FUJIYAMA KENSHA",
+      "name_ru": "",
+      "breed": "АКИТА / AKITA",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

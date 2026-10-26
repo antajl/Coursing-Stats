@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "FF",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "45548993",
+      "name_lat": "FFLASH OF JOY SHAI",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1722720621",
+      "name_lat": "F-FELIX VON SHENG TAI'S KENNEL",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "ROTTWEILER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "325763409",
+      "name_lat": "F'FOREVER MY SREBRNY KIET",
+      "name_ru": "",
+      "breed": "МАЛАМУТ / ALASKAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

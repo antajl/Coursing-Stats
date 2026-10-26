@@ -1,13 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "YM",
-  "count": 4,
+  "count": 7,
   "dogs": [
     {
-      "id": "1434175248",
+      "id": "1736262132",
       "name_lat": "YMAHA FOREVER GAME",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -22,12 +22,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1784386112",
+      "id": "29999647",
       "name_lat": "YMA HAPPY MESSEDY",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "119950256",
+      "name_lat": "Y*MANUCHELLA",
+      "name_ru": "",
+      "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1763093633",
+      "name_lat": "Y-MUKHA",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -37,6 +55,14 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "625508088",
+      "name_lat": "YMPERATORE VOM HOF PEKRAHN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

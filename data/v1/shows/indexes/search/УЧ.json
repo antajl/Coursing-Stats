@@ -1,21 +1,30 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "УЧ",
-  "count": 7,
+  "count": 8,
   "dogs": [
     {
       "id": "1513870208",
       "name_lat": "УЧЕНИК ЧАРОДЕЯ",
-      "name_ru": "",
+      "name_ru": "УЧЕНИК ЧАРОДЕЯ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "609991235",
+      "name_lat": "УЧИКАЦУ ГОУ КАДЗЕКАОРУ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1803396674",
       "name_lat": "УЧЁНЫЙ МУЖ ИЗ ЛОКХАЙМА",
-      "name_ru": "",
+      "name_ru": "УЧЁНЫЙ МУЖ ИЗ ЛОКХАЙМА",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 5,
@@ -31,19 +40,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1577330860",
-      "name_lat": "УЧЕНИК ЧАРОДЕЯ ИЗ КСАРО ЧЕСТНАЯ ИГРА",
+      "id": "155362060",
+      "name_lat": "у ЧЕРНЫЙ ДЕМОН ИЗ ПЕРМСКОЙ ГУБЕРНИИ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "ВОСТОЧНОЕВРОП",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "609991235",
-      "name_lat": "УЧИКАЦУ ГОУ КАДЗЕКАОРУ",
+      "id": "1577330860",
+      "name_lat": "УЧЕНИК ЧАРОДЕЯ ИЗ КСАРО ЧЕСТНАЯ ИГРА",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

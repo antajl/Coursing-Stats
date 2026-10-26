@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ДД",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1563763024",
+      "name_lat": "ДДИЗАЕР ДЕ РИВО БИАНКО",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ / CHOW",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "192917569",
+      "name_lat": "Д-ДРАЙВ СЕРИА МАРРЕС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "348992966",
+      "name_lat": "ДДИНДЖЕРСНАП ИОАХИМ МЮРАТ",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

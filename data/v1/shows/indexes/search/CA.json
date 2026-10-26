@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "CA",
-  "count": 1280,
+  "count": 1315,
   "dogs": [
     {
       "id": "1004851411",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ЛАПЛАНДСКАЯ СОБАКА (ФИНСКИЙ ЛАПХУНД)",
       "breed_en": "FINNISH LAPPONIAN DOG",
-      "total_shows": 85,
+      "total_shows": 89,
       "competition_dog_id": null
     },
     {
@@ -22,21 +22,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "972059974",
+      "id": "1114888194",
       "name_lat": "CADMO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 41,
       "competition_dog_id": null
     },
     {
-      "id": "900361620",
+      "id": "1578667701",
       "name_lat": "CANS JUANSA PHILADELPHIA FOR ZIKOFF TARGET",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 84,
+      "total_shows": 91,
       "competition_dog_id": null
     },
     {
@@ -45,16 +45,16 @@
       "name_ru": "",
       "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
       "breed_en": "CIRNECO DELL’ETNA",
-      "total_shows": 53,
+      "total_shows": 55,
       "competition_dog_id": 283
     },
     {
-      "id": "1576843490",
+      "id": "629331788",
       "name_lat": "CARNERA DEL TOCAI",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
-      "total_shows": 46,
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
@@ -72,7 +72,7 @@
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "AFGHAN HOUND",
-      "total_shows": 115,
+      "total_shows": 120,
       "competition_dog_id": null
     },
     {
@@ -81,14 +81,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 86,
+      "total_shows": 91,
       "competition_dog_id": null
     },
     {
-      "id": "1916186074",
+      "id": "1600404086",
       "name_lat": "CASPIAN LINES QUANTUM OF COOLNESS",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 41,
       "competition_dog_id": null
@@ -99,7 +99,7 @@
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ БРАКК",
       "breed_en": "ITALIAN POINTING DOG (BRACCO ITALIANO)",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -108,7 +108,16 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
-      "total_shows": 60,
+      "total_shows": 73,
+      "competition_dog_id": null
+    },
+    {
+      "id": "601461009",
+      "name_lat": "CAYMAN DEL DANAR KENNEL",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "breed_en": "DOGO ARGENTINO",
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
@@ -130,10 +139,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1581472478",
+      "id": "1323469658",
       "name_lat": "CAZADOR DE PATOS ILLUSION OF DECEPTION",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -148,12 +157,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1984738975",
+      "id": "335827059",
       "name_lat": "CANDY CARAMEL BITTER CAMPARI",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "КЕРРИ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1940420007",
+      "name_lat": "CASA DE GUNARIS GOLDEN KUB",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1105942061",
+      "name_lat": "CAOS COSMICO HIGH IN THE SKY",
+      "name_ru": "",
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -162,7 +188,7 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 54,
+      "total_shows": 58,
       "competition_dog_id": null
     },
     {
@@ -171,25 +197,16 @@
       "name_ru": "",
       "breed": "ФЛАНДРСКИЙ БУВЬЕ",
       "breed_en": "BOUVIER DES FLANDRES",
-      "total_shows": 28,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "601461009",
-      "name_lat": "CAYMAN DEL DANAR KENNEL",
+      "id": "664669813",
+      "name_lat": "CAVALIERDOG SOLFEGGIO",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "DOGO ARGENTINO",
-      "total_shows": 32,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1940420007",
-      "name_lat": "CASA DE GUNARIS GOLDEN KUB",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
@@ -202,6 +219,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1157701054",
+      "name_lat": "CAESAR BLACK AND TAN FROM RED CASTLE",
+      "name_ru": "",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД",
+      "breed_en": "BLACK AND TAN COONHOUND",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "623773349",
+      "name_lat": "CANE CAVALCADO MERCURY",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1685699273",
+      "name_lat": "CALLISTO LINES DEEP SPACE",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "ITALIAN SIGHTHOUND",
+      "total_shows": 58,
+      "competition_dog_id": null
+    },
+    {
       "id": "70409836",
       "name_lat": "CAPRICCIO DI LENA JAKLIN",
       "name_ru": "",
@@ -211,29 +255,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1685699273",
-      "name_lat": "CALLISTO LINES DEEP SPACE",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "ITALIAN SIGHTHOUND",
-      "total_shows": 56,
-      "competition_dog_id": null
-    },
-    {
       "id": "1586233106",
       "name_lat": "CANE MAESTRO FLIPPER",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1679386150",
-      "name_lat": "CALIGULA CHAMPION BULLY DINASTY",
-      "name_ru": "",
-      "breed": "СТАНДАРТ",
-      "breed_en": "AMERICAN BULLY STANDARD",
       "total_shows": 12,
       "competition_dog_id": null
     },
@@ -247,11 +273,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1157701054",
-      "name_lat": "CAESAR BLACK AND TAN FROM RED CASTLE",
+      "id": "1679386150",
+      "name_lat": "CALIGULA CHAMPION BULLY DINASTY",
       "name_ru": "",
-      "breed": "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД",
-      "breed_en": "BLACK AND TAN COONHOUND",
+      "breed": "СТАНДАРТ",
+      "breed_en": "AMERICAN BULLY STANDARD",
       "total_shows": 12,
       "competition_dog_id": null
     },
@@ -265,15 +291,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "664669813",
-      "name_lat": "CAVALIERDOG SOLFEGGIO",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 38,
-      "competition_dog_id": null
-    },
-    {
       "id": "1498127338",
       "name_lat": "CASA DE BM BERLIN OYO BULL (FCI)",
       "name_ru": "",
@@ -283,30 +300,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1944880551",
-      "name_lat": "CALLISTO LINES AHEAD OF ONE'S TIME",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
-      "breed_en": "ITALIAN SIGHTHOUND",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1362544691",
-      "name_lat": "CAOS COSMICO HIGH IN THE SKY",
-      "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1487833737",
       "name_lat": "CAPUT ORBI SISU-DATU",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 61,
+      "total_shows": 70,
+      "competition_dog_id": null
+    },
+    {
+      "id": "703286374",
+      "name_lat": "CALLISTO LINES AHEAD OF ONE'S TIME",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "ITALIAN SIGHTHOUND",
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -319,12 +327,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1524022906",
+      "name_lat": "CALAMUS COSMOPOLITAN",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "AFGHAN HOUND",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "1569897300",
       "name_lat": "CALM REVOLUTION IN TIME BY AHMED BOZIEV",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
-      "total_shows": 18,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -337,15 +354,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "623773349",
-      "name_lat": "CANE CAVALCADO MERCURY",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1165766700",
       "name_lat": "CANE MAESTRO HARLEY-DAVIDSON",
       "name_ru": "",
@@ -355,12 +363,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1524022906",
-      "name_lat": "CALAMUS COSMOPOLITAN",
+      "id": "472049693",
+      "name_lat": "CAVACORNS CALL ME BABY VOM HAUS MUFASA",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "AFGHAN HOUND",
-      "total_shows": 19,
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -382,15 +390,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "472049693",
-      "name_lat": "CAVACORNS CALL ME BABY VOM HAUS MUFASA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "785872548",
       "name_lat": "CAESAR ROYAL MOLOSS KENNEL",
       "name_ru": "",
@@ -400,12 +399,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1029809438",
+      "name_lat": "CALEDO SMIRNOWOW",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
       "id": "1545143357",
       "name_lat": "CAPTOR SOUL LEGENDA",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1512890521",
+      "name_lat": "CAPTOR SOUL NARUTO",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -427,10 +444,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "988530631",
-      "name_lat": "CAPRICE IZ NOVO- PEREDELKINO",
+      "id": "647533560",
+      "name_lat": "CAPRICE IZ NOVO-PEREDELKINO",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -454,6 +471,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1218799687",
+      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA EGOZA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 100,
+      "competition_dog_id": null
+    },
+    {
       "id": "1991761427",
       "name_lat": "CARELESS WHISPER",
       "name_ru": "",
@@ -463,30 +489,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "901271859",
+      "id": "498400036",
       "name_lat": "CATALUNYA DE LA NICIO CATALANA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 25,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1218799687",
-      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA EGOZA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 93,
-      "competition_dog_id": null
-    },
-    {
-      "id": "94105893",
-      "name_lat": "CAPTOR SOUL NARUTO",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -499,6 +507,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "102137235",
+      "name_lat": "CAZADOR DE PATOS NOBLE KNIGHT",
+      "name_ru": "",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
+      "breed_en": "FLAT COATED RETRIEVER",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "613067119",
       "name_lat": "CAZADOR DE PATOS IN MY MIND",
       "name_ru": "",
@@ -508,28 +525,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "102137235",
-      "name_lat": "CAZADOR DE PATOS NOBLE KNIGHT",
-      "name_ru": "",
-      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
-      "breed_en": "FLAT COATED RETRIEVER",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1963567036",
-      "name_lat": "CARCASSONNE MIST EVER- READY",
+      "id": "1427725390",
+      "name_lat": "CARCASSONNE MIST EVER-READY",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "208646942",
+      "id": "731779042",
       "name_lat": "Cazador De Patos Ideal Man",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -544,10 +551,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1280584383",
+      "id": "1591904894",
+      "name_lat": "CARAMEL KISS AIREDOGS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1498774681",
+      "name_lat": "CAVACORNS KLEVER BLOSSOM",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "451051423",
       "name_lat": "CAPTOR SOUL DRAGON FIRE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -562,21 +586,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1029809438",
-      "name_lat": "CALEDO SMIRNOWOW",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
       "id": "1344049346",
       "name_lat": "CAVALIERDOG SONATA",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 34,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
@@ -585,7 +600,7 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 29,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -670,12 +685,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1322060198",
+      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA TSELERINA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "139230225",
       "name_lat": "CAVALIERDOG SYMPHONY",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
       "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1025567550",
+      "name_lat": "CAC-KA ZOLOTAYA OT BUMAGE",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -693,16 +725,16 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
       "breed_en": "DEUTSCHE DOGGE BLUE",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "633742581",
+      "id": "14157321",
       "name_lat": "CANIS WOLF TORS KHAMMER",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 27,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -742,39 +774,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "482759503",
+      "id": "1059827595",
       "name_lat": "CAZADOR DE PATOS UNITE SUNSHINE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "653787448",
-      "name_lat": "CANE CAVALCADO JE SUIS NOIR",
+      "id": "1474018101",
+      "name_lat": "CANDY SHINE",
       "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1564039344",
-      "name_lat": "CANIS WOLF TAKER GREY",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1425744319",
-      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA REIN",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -783,7 +797,34 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "575318981",
+      "name_lat": "CANE CAVALCADO JE SUIS NOIR",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1425744319",
+      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA REIN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "258049438",
+      "name_lat": "CANIS WOLF TAKER GREY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -796,10 +837,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1026641305",
+      "id": "1032275173",
       "name_lat": "CAZADOR DE PATOS NYMPHADORA",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -814,6 +855,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1490301469",
+      "name_lat": "CANICE DE COUTURE KRISTALL ROSE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1881782057",
       "name_lat": "CAMSTER CAIRN'S THUNDERSTRUCK",
       "name_ru": "",
@@ -823,10 +872,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "703249380",
+      "id": "549426119",
+      "name_lat": "CADMO",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "772049890",
       "name_lat": "CAPTOR SOUL IMINA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -850,17 +907,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "746392755",
+      "id": "1115561720",
       "name_lat": "CANE CAVALCADO IPPON",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "240346583",
-      "name_lat": "CASA DE GUNARIS SHARP- SHOOTER",
+      "id": "1036363687",
+      "name_lat": "CASA DE GUNARIS SHARP-SHOOTER",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
@@ -877,10 +934,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "368333931",
+      "id": "1863050550",
       "name_lat": "CAYETANO",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР /",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -891,7 +948,25 @@
       "name_ru": "",
       "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "LEONBERGER",
-      "total_shows": 20,
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "490310733",
+      "name_lat": "CASIAN VARVARIUS",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1883895733",
+      "name_lat": "CANOPUS CARINA FOR LAROUS LINE",
+      "name_ru": "",
+      "breed": "НОРМАНДСКИЙ БАССЕТ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -922,6 +997,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1504568421",
+      "name_lat": "CASPER GROS LOT",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 38,
+      "competition_dog_id": null
+    },
+    {
       "id": "517303875",
       "name_lat": "CAMILLA PARKER BOWLES",
       "name_ru": "",
@@ -931,37 +1015,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1780536188",
-      "name_lat": "CAC-KA ZOLOTAYA OT BUMAGE",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1937293257",
       "name_lat": "CANDY PRADA KIDDY WIN'S",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1504568421",
-      "name_lat": "CASPER GROS LOT",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 34,
-      "competition_dog_id": null
-    },
-    {
-      "id": "8016422",
+      "id": "1678812066",
       "name_lat": "CARMA MAXIMUS HOUSE KAZAK",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -976,12 +1042,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "52950267",
+      "id": "1758066116",
       "name_lat": "CANDY CLUB LEGIONER",
       "name_ru": "",
-      "breed": "RUSSIAN TOY SMOOTH-",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1003,10 +1069,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1859329936",
+      "id": "1248344318",
       "name_lat": "CANIS WOLF BRIDGIT BAKO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -1021,10 +1087,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1676101466",
+      "id": "107293986",
+      "name_lat": "CAVACORNS CREAM CHEESE",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1979199596",
       "name_lat": "CAMRY HIGH START",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
@@ -1066,10 +1141,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1783175410",
+      "id": "256397939",
       "name_lat": "CARAMEL DOUX BAISER",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -1093,15 +1168,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1453114587",
-      "name_lat": "CANDY SHINE",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "163988313",
       "name_lat": "CARRERA ALSANI GIANTS",
       "name_ru": "",
@@ -1120,10 +1186,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "907374147",
+      "id": "336455908",
       "name_lat": "CARDIGANIUM CHELSY",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1156,10 +1222,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "793632621",
+      "id": "1925515908",
+      "name_lat": "CAROLINE",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "254322753",
       "name_lat": "CANSTANTA DU'PERY",
       "name_ru": "",
-      "breed": "ПОДГАЛЯНСКАЯ БУЛЬДОГ",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "BULLDOG",
       "total_shows": 16,
       "competition_dog_id": null
@@ -1174,17 +1249,33 @@
       "competition_dog_id": null
     },
     {
-      "id": "1941221301",
+      "id": "935012398",
+      "name_lat": "CANAVERAL -STAFF CAMPARI",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ БУЛЬДОГ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273393762",
       "name_lat": "CANE CAVALCADO BOGDANA LIFE",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1063150201",
-      "name_lat": "CAPTAIN MORGAN SMART- BERNER",
+      "id": "1723923911",
+      "name_lat": "CAZADOR DE PATOS UNO EN UN MILLON",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "364268215",
+      "name_lat": "CAPTAIN MORGAN SMART-BERNER",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
@@ -1210,21 +1301,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "793209794",
-      "name_lat": "CASSANDRA PRINCHESSA PROROCHESTVA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1424375913",
       "name_lat": "CANIS ARGENTUM BRAMS",
       "name_ru": "",
       "breed": "ВЕЙМАРАНЕР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "WEIMARANER LONG-HARIED",
-      "total_shows": 5,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1185663004",
+      "name_lat": "CARSTVENNAYA OSOBA IZ ZIMNIH GREZ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "524410798",
+      "name_lat": "CASSANDRA PRINCHESSA PROROCHESTVA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1246,12 +1345,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "938702966",
-      "name_lat": "CANAVERAL-STAFF CAMPARI",
+      "id": "1030005755",
+      "name_lat": "CAMPARIS JERRARI",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1679184687",
+      "name_lat": "CANDY CLUB WONDER (LONG COAT)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1246195457",
+      "name_lat": "CATCH ME IF YOU CAN BY AHMED BOZIEV ( N/B )",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1282,19 +1398,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1498774681",
-      "name_lat": "CAVACORNS KLEVER BLOSSOM",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1073495414",
+      "id": "579292888",
       "name_lat": "CANIS WOLF BASKA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1327,10 +1434,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1037736388",
+      "id": "1496855665",
       "name_lat": "CASPIAN BREEZE TOR GORGEOS",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 28,
       "competition_dog_id": null
@@ -1368,7 +1475,7 @@
       "name_ru": "",
       "breed": "АППЕНЦЕЛЛЕР ЗЕННЕНХУНД",
       "breed_en": "APPENZELL CATTLE DOG",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1381,12 +1488,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "794572541",
-      "name_lat": "CANDY CLUB ILLYUZIYA (MEDIA)",
+      "id": "348298147",
+      "name_lat": "CARRYLOVE FAYBALA FOR AVALANCHE",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
-      "breed_en": "XOLOITZCUINTLE (INTERMEDIATE)",
-      "total_shows": 17,
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed_en": "KERRY BLUE TERRIER",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1422,7 +1529,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1444,21 +1551,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "437389790",
-      "name_lat": "CANDY CLUB WONDER",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1821699336",
       "name_lat": "CAVALLIERIK APHRODIZIAC",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1468,6 +1566,24 @@
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1815488392",
+      "name_lat": "CAR ROMUL",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1363807131",
+      "name_lat": "CANDY CLUB ILLYUZIYA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1494,14 +1610,14 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1666293370",
+      "id": "1286337739",
       "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA ZHENEYRA",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -1516,6 +1632,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "862839996",
+      "name_lat": "CARSKIJ DAR NADEZNY DRUG",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "169999570",
+      "name_lat": "CAESAR",
+      "name_ru": "",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1742901673",
       "name_lat": "CAVALRIINA'S DINO DANDINO",
       "name_ru": "",
@@ -1525,10 +1659,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "822338789",
+      "id": "490014681",
       "name_lat": "CAPTOR SOUL ONA ODNA TAKAYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1539,7 +1673,16 @@
       "name_ru": "",
       "breed": "КОРСО",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1546839781",
+      "name_lat": "CATHERINE'S LIFESTYLE GRAND STAYL",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1549,15 +1692,6 @@
       "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
       "breed_en": "NEAPOLITAN MASTIFF",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "844390460",
-      "name_lat": "CATCH ME IF YOU CAN BY AHMED BOZIEV",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1588,8 +1722,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1524575711",
-      "name_lat": "CAPITAN MORGAN SMART- BERNER",
+      "id": "1190146857",
+      "name_lat": "CAPITAN MORGAN SMART-BERNER",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
@@ -1602,7 +1736,7 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": 293
     },
     {
@@ -1624,10 +1758,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1200826139",
+      "id": "1284020043",
       "name_lat": "CALIX AURIS AURORA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1651,6 +1785,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "254573723",
+      "name_lat": "CADMO",
+      "name_ru": "",
+      "breed": "POODLE MEDIUM BLACK, WHITE,",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "79272155",
       "name_lat": "CADMO",
       "name_ru": "",
@@ -1669,30 +1811,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "166052008",
-      "name_lat": "CASIAN VARVARIUS",
+      "id": "758599693",
+      "name_lat": "CANIS ARGENTUM ALHENA AVILA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "770711877",
-      "name_lat": "CARAMEL KISS AIREDOGS",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1883895733",
-      "name_lat": "CANOPUS CARINA FOR LAROUS LINE",
-      "name_ru": "",
-      "breed": "НОРМАНДСКИЙ БАССЕТ",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "WEIMARANER SHORT-HAIRED",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -1702,6 +1826,24 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "222785090",
+      "name_lat": "CATCH DAY DANCING STAR",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКИЙ КЕЛПИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1956963777",
+      "name_lat": "CANDY CLUB BONDIANA",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "SHIH TZU",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1732,10 +1874,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "87758581",
+      "id": "1156202632",
       "name_lat": "CASTLE ROCK",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1746,6 +1888,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1712459136",
+      "name_lat": "Caniche A La Mode Beyliz",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1768,6 +1918,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "428099483",
+      "name_lat": "CASSIOPEA ASTRA KAF",
+      "name_ru": "",
+      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "969823936",
       "name_lat": "CASABLANCA",
       "name_ru": "",
@@ -1777,21 +1936,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "408526068",
+      "id": "45832609",
       "name_lat": "CANE CAVALCADO DOFINA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "428099483",
-      "name_lat": "CASSIOPEA ASTRA KAF",
-      "name_ru": "",
-      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1804,21 +1954,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "122477881",
+      "id": "927282037",
       "name_lat": "CANTRYGOLD MISTER BRUS",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "KOOIKERHONDJE ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "94071588",
+      "id": "1883488944",
       "name_lat": "CAZADOR DE PATOS OLIVIA'S",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1080175286",
+      "name_lat": "CASA BONITA IVANNA",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1828,15 +1986,6 @@
       "breed": "САМОЕД",
       "breed_en": "SAMOYED",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "758599693",
-      "name_lat": "CANIS ARGENTUM ALHENA AVILA",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "WEIMARANER SHORT-HAIRED",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1872,7 +2021,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1881,7 +2030,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -1903,12 +2052,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1907451167",
-      "name_lat": "CANIS ARGENTUM BAALTIS",
+      "id": "1833726020",
+      "name_lat": "CAECULUS IZ SOZVEZDIYA STAFF",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР Д-Ш",
-      "breed_en": "WEIMARANER LONG-HARIED",
-      "total_shows": 2,
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 58,
       "competition_dog_id": null
     },
     {
@@ -1917,25 +2066,16 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 33,
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
-      "id": "1833726020",
-      "name_lat": "CAECULUS IZ SOZVEZDIYA STAFF",
+      "id": "1907451167",
+      "name_lat": "CANIS ARGENTUM BAALTIS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 52,
-      "competition_dog_id": null
-    },
-    {
-      "id": "348298147",
-      "name_lat": "CARRYLOVE FAYBALA FOR AVALANCHE",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "KERRY BLUE TERRIER",
-      "total_shows": 9,
+      "breed": "ВЕЙМАРАНЕР Д-Ш",
+      "breed_en": "WEIMARANER LONG-HARIED",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1948,6 +2088,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "520326571",
+      "name_lat": "CAVALIERDOG SERENADA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "884254301",
       "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA MELINA",
       "name_ru": "",
@@ -1957,21 +2106,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "520326571",
-      "name_lat": "CAVALIERDOG SERENADA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1814098129",
       "name_lat": "CABERTON PRIDE OF JUSTIN",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "BERNESE MOUNTAIN DOG",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "700365265",
+      "name_lat": "CANIS ARGENTUM ANSGARD",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "WEIMARANER SHORT-HAIRED",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -1990,15 +2139,6 @@
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1811235748",
-      "name_lat": "CANIS ARGENTUM ANSGARD",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ /",
-      "breed_en": "WEIMARANER SHORT-HAIRED",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -2026,6 +2166,15 @@
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "156855465",
+      "name_lat": "CANDY BOSS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -2110,15 +2259,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1815488392",
-      "name_lat": "CAR ROMUL",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "1572516017",
       "name_lat": "CACI'S MISS UNIVERSE",
       "name_ru": "",
@@ -2128,10 +2268,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "540579079",
+      "id": "1891400134",
       "name_lat": "CALATHEA QUIMERA",
       "name_ru": "",
-      "breed": "ИСПАНСКАЯ БОРЗАЯ /",
+      "breed": "ИСПАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2209,10 +2349,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "762388220",
+      "id": "1510665343",
       "name_lat": "CASAMORATI MODUS MAXIMUS HOUSE KAZAK",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2236,10 +2376,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "288136468",
+      "id": "222381910",
+      "name_lat": "CAVALIER DANCE MARIUS",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1671136434",
       "name_lat": "CAPTOR SOUL NAOMI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2263,6 +2412,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "869200640",
+      "name_lat": "CALAMUS FATE TO BE QUEEN",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "291216393",
       "name_lat": "CASA DE LA COSTA LANDYSH",
       "name_ru": "",
@@ -2272,48 +2430,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "869200640",
-      "name_lat": "CALAMUS FATE TO BE QUEEN",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "187300846",
-      "name_lat": "CAESAR",
-      "name_ru": "",
-      "breed": "ЧЁРНО-ПОДПАЛЫЙ КУНХАУНД",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "113584773",
       "name_lat": "CATTLEYA DOWIANA JOYFUL FORTUNE",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1490301469",
-      "name_lat": "CANICE DE COUTURE KRISTALL ROSE",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1546839781",
-      "name_lat": "CATHERINE'S LIFESTYLE GRAND STAYL",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2335,12 +2457,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "265753577",
+      "id": "1539418685",
       "name_lat": "CANIS WOLF SIRIUS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 18,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -2353,15 +2475,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1925515908",
-      "name_lat": "CAROLINE",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "787022596",
       "name_lat": "CA'DEL CORSI CECILIA",
       "name_ru": "",
@@ -2371,21 +2484,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "156855465",
-      "name_lat": "CANDY BOSS",
+      "id": "101790424",
+      "name_lat": "CAUSING CHAOS AGAINST ALL AUTHORITY",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "862839996",
-      "name_lat": "CARSKIJ DAR NADEZNY DRUG",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2398,12 +2501,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "990248653",
+      "name_lat": "CALVADOS PYANYASCHIY",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "299089092",
       "name_lat": "CAPPUCCINO II IZ DINASTII CHEMPIONOV",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1881113260",
+      "name_lat": "CARSKIJ KAPRIZ OT ZHEMCHUZHNOY KORONY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1174949884",
+      "name_lat": "CANTI ASTI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "WELSH CORGI CARDIGAN",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2434,30 +2564,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1217735810",
+      "id": "1057699606",
       "name_lat": "CAZADOR DE PATOS GUSKA STEPAN",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "866276884",
-      "name_lat": "CAZADOR DE PATOS UNO EN UN MILLON",
+      "id": "261572869",
+      "name_lat": "CANDY CARAMEL FOLLOW SUIT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed": "НОРВИЧ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1938889170",
-      "name_lat": "CANDY CARAMEL FOLLOW SUIT",
+      "id": "1983739435",
+      "name_lat": "CARRYING LOYALTYFIRE STORMY BELLIS",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2470,12 +2599,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "881722483",
+      "id": "1055821305",
       "name_lat": "CAESAR IZ SOKOLINOGO GNEZDA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР АНГЛИЙСКИЙ",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1792914778",
+      "name_lat": "CASSIOPEIA IZ ZOLOTYH GRYOZ",
+      "name_ru": "",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1362189797",
+      "name_lat": "CAESAR FAIER STALKER",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2493,6 +2639,24 @@
       "name_ru": "",
       "breed": "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
       "breed_en": "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "170568803",
+      "name_lat": "CANE MAESTRO ILANG-ILANG",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "408698922",
+      "name_lat": "CANE CAVALCADO DOLPHIN",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -2524,15 +2688,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1322060198",
-      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA TSELERINA",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1165659072",
       "name_lat": "CANDY SHINE",
       "name_ru": "",
@@ -2548,6 +2703,15 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1102267598",
+      "name_lat": "CANIS WOLF OBERT LI KEY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2569,15 +2733,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "45051264",
-      "name_lat": "CANIS WOLF OBERT LI KEY",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "526338363",
       "name_lat": "CAMILLO DI COLLE MANZU",
       "name_ru": "",
@@ -2587,21 +2742,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1490647088",
-      "name_lat": "CADMO",
+      "id": "1077337858",
+      "name_lat": "CASITA’S MASTER OF THE UNIVERSE BY BAUER (Измененно по решению ВК от 26.04.23, в.37)",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "1211810203",
-      "name_lat": "CANTI ASTI",
+      "id": "1612804708",
+      "name_lat": "CADMO",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2614,10 +2769,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "556284266",
+      "id": "998131643",
       "name_lat": "CAPTOR SOUL ALA VEYOU",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2628,16 +2783,7 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "974153553",
-      "name_lat": "CAESAR",
-      "name_ru": "",
-      "breed": "ЧЁРНО-ПОДПАЛЫЙ КУНХАУНД / BLACK AND TAN COONHOUND",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2645,6 +2791,14 @@
       "name_lat": "CAVALLIERIK INDIANA",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1857026253",
+      "name_lat": "CAESAR",
+      "name_ru": "",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД / BLACK AND TAN COONHOUND",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2659,20 +2813,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1239614281",
-      "name_lat": "CARSTVENNAYA OSOBA IZ ZIMNIH GREZ",
+      "id": "123166460",
+      "name_lat": "CARPEN DIAZ SENATOR",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "170568803",
-      "name_lat": "CANE MAESTRO ILANG-ILANG",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "JACK RUSSELL TERRIER",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2692,24 +2836,6 @@
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 32,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1792914778",
-      "name_lat": "CASSIOPEIA IZ ZOLOTYH GRYOZ",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "408698922",
-      "name_lat": "CANE CAVALCADO DOLPHIN",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2749,19 +2875,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "248919659",
+      "id": "1150330063",
       "name_lat": "CALLISTO LINES GUT FEELING",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "ITALIAN SIGHTHOUND",
       "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "86177453",
+      "id": "1846575329",
       "name_lat": "CANIS WOLF SNIKERS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2830,10 +2956,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1344937047",
+      "id": "1154598939",
       "name_lat": "CAPO VOM HIRSCHACKER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2893,10 +3019,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1215098824",
+      "id": "1276205368",
       "name_lat": "CAESAR",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2956,10 +3082,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1402764165",
+      "id": "51903144",
       "name_lat": "CARNIVAL ROW GALATEYA FLER",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3001,12 +3127,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1128795549",
-      "name_lat": "CANDY SHINE",
+      "id": "307369625",
+      "name_lat": "CARAMEL CANDY VOM FORST EICHENHORST",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -3028,30 +3154,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "384921797",
+      "name_lat": "CANIS AMICUS VICTORIA",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
       "id": "34037293",
       "name_lat": "CAZADOR DE PATOS BRAVE DARWIN FOR TOTORO",
       "name_ru": "",
       "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "FLAT COATED RETRIEVER",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "383342235",
-      "name_lat": "CASITA’S MASTER OF THE UNIVERSE BY BAUER",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "384921797",
-      "name_lat": "CANIS AMICUS VICTORIA",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -3073,39 +3190,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "754649824",
-      "name_lat": "CALVADOS PYANYASCHIY",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "307369625",
-      "name_lat": "CARAMEL CANDY VOM FORST EICHENHORST",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "DALMATIAN",
-      "total_shows": 25,
-      "competition_dog_id": null
-    },
-    {
       "id": "1105793612",
       "name_lat": "CALIPSO ROXIBAD",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1246195457",
-      "name_lat": "CATCH ME IF YOU CAN BY AHMED BOZIEV ( N/B )",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "SCHIPPERKE",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3127,10 +3217,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1794074862",
+      "id": "712835819",
       "name_lat": "CANDY CLUB LIDER",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
       "total_shows": 9,
       "competition_dog_id": null
@@ -3145,10 +3235,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1786560629",
+      "id": "1331427848",
       "name_lat": "CADDY VOM MANSALEN",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 22,
       "competition_dog_id": null
@@ -3172,12 +3262,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "947190969",
+      "id": "1664176260",
       "name_lat": "CA'DEL CORSI GREAT GATSBY CHANCE",
       "name_ru": "",
-      "breed": "ЛАГОТТО РОМАНЬОЛО /",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1702981591",
+      "name_lat": "CALIFORNIA OT BASTINDY",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3208,24 +3307,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "137070443",
-      "name_lat": "CALIFORNIA OT BASTINDY",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1679184687",
-      "name_lat": "CANDY CLUB WONDER (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1325532945",
       "name_lat": "CASPER EFFULGENT SUN",
       "name_ru": "",
@@ -3244,10 +3325,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "167345896",
+      "id": "884279437",
       "name_lat": "CAMILI VIOLETTA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3280,10 +3361,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "649553201",
+      "id": "1146825925",
       "name_lat": "CAESAR INSIDE MYHEART",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3298,12 +3379,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "322389588",
-      "name_lat": "CARTIER DE AKRA- LEUKA",
+      "id": "406365740",
+      "name_lat": "CARTIER DE AKRA-LEUKA",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР Окрас чёрный с серебром",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1164909121",
+      "name_lat": "CANIS WOLF ZIVERT SKY COOPER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
@@ -3325,6 +3415,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1813154822",
+      "name_lat": "CASPIAN BREEZE TIARA FORTUNY",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1951794779",
       "name_lat": "CANE CAVALCADO TAIGA",
       "name_ru": "",
@@ -3334,21 +3433,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1605666267",
+      "id": "243425554",
       "name_lat": "CARMEL DE BELGE ENAMOUR",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1408146957",
-      "name_lat": "CANIS WOLF ZIVERT SKY COOPER",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -3358,6 +3448,15 @@
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "165556779",
+      "name_lat": "CARPENNY DAISY SUN LAURIE",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -3376,6 +3475,15 @@
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1947513594",
+      "name_lat": "CARAMILK ANRUS HOUSE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -3415,30 +3523,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1403601555",
-      "name_lat": "CARAMILK ANRUS HOUSE",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1772933567",
+      "id": "545045300",
       "name_lat": "CANE MYGLORY ATLANTA MOY LEGIONER",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "165556779",
-      "name_lat": "CARPENNY DAISY SUN LAURIE",
+      "id": "178061315",
+      "name_lat": "CARTIER SWEET ADDICT",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 13,
+      "breed": "ШИ ТЦУ",
+      "breed_en": "SHIH TZU",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -3460,21 +3559,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "734637603",
+      "id": "1607828787",
       "name_lat": "CAPTOR SOUL WOLF OF WINTERFELL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "107293986",
-      "name_lat": "CAVACORNS CREAM CHEESE",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 12,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -3484,6 +3574,15 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "764260220",
+      "name_lat": "Captain Candyman Black",
+      "name_ru": "",
+      "breed": "СХИПЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3514,21 +3613,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "269106492",
+      "id": "1359123176",
       "name_lat": "CAZADOR DE PATOS BARCELONA EL CORAZON",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "178061315",
-      "name_lat": "CARTIER SWEET ADDICT",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "SHIH TZU",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -3538,6 +3628,15 @@
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "687319307",
+      "name_lat": "CAZADOR DE PATOS GOOSE",
+      "name_ru": "",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3555,7 +3654,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -3568,19 +3667,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "562262190",
+      "id": "1424938272",
       "name_lat": "CANBRIZA THE BLACK MAMBA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1606917964",
+      "id": "1191021152",
+      "name_lat": "CANE ANTICHI DEL MONDO MANUCHELA",
+      "name_ru": "",
+      "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
+      "breed_en": "NEAPOLITAN MASTIFF",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1915780393",
       "name_lat": "CAMILI JOLIE DOLL",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -3591,7 +3699,16 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1447900783",
+      "name_lat": "CANE MYGLORY FIDELIS",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3622,10 +3739,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "22852384",
+      "id": "126996031",
       "name_lat": "CARDIGARDEN'S TRUDELUTT",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "WELSH CORGI CARDIGAN",
       "total_shows": 10,
       "competition_dog_id": null
@@ -3649,39 +3766,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "683738168",
-      "name_lat": "CANE MYGLORY FIDELIS",
+      "id": "1192675315",
+      "name_lat": "CAMELOT KNIGHT IZ ANGARII",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 8,
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "269515728",
+      "id": "63393050",
       "name_lat": "CAMERON DIAZ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ-",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "215320259",
-      "name_lat": "CASA ALLEVAMENTO RUSSO BEATRICHE",
+      "id": "248729505",
+      "name_lat": "CAZADOR DE PATOS GRACIA EN MOVIMIENTO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 12,
+      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "877864758",
-      "name_lat": "CAMELOT KNIGHT IZ ANGARII",
+      "id": "1738767380",
+      "name_lat": "CASA ALLEVAMENTO RUSSO BEATRICHE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -3703,6 +3819,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1418360197",
+      "name_lat": "C'ARC LEE OF LUCKY STARS",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "975608385",
       "name_lat": "CAESAR KING OF MY HEART",
       "name_ru": "",
@@ -3721,10 +3846,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "819729841",
+      "id": "953375308",
       "name_lat": "CA'DEL CORSI CHLOE",
       "name_ru": "",
-      "breed": "ЛАГОТТО РОМАНЬОЛО /",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -3735,7 +3860,7 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -3766,12 +3891,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1191021152",
-      "name_lat": "CANE ANTICHI DEL MONDO MANUCHELA",
+      "id": "1155888972",
+      "name_lat": "CANE MAESTRO KENT",
       "name_ru": "",
-      "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
-      "breed_en": "NEAPOLITAN MASTIFF",
-      "total_shows": 5,
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1869038788",
+      "name_lat": "CANS JUANSA BLUEMAGICSTAR",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3789,7 +3922,7 @@
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -3802,10 +3935,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "57395750",
+      "id": "491755551",
       "name_lat": "CANIS NOBILITAS CANDY",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3829,10 +3962,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1790768192",
+      "id": "278931605",
       "name_lat": "CASABLANKA IMPERIUM STAR",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ /",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3865,21 +3998,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "248729505",
-      "name_lat": "CAZADOR DE PATOS GRACIA EN MOVIMIENTO",
-      "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1683812681",
       "name_lat": "CASPER JOLLY JEM",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 22,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -3892,21 +4016,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "835022743",
-      "name_lat": "CAZADOR DE PATOS GOOSE",
+      "id": "1938237215",
+      "name_lat": "CANIS ARGENTUM AYRIS",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1155888972",
-      "name_lat": "CANE MAESTRO KENT",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -3919,10 +4034,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "883531696",
+      "id": "852240311",
       "name_lat": "CANE CAVALCADO SPARTA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -3946,15 +4061,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1678066839",
-      "name_lat": "CAZADOR DE PATOS DEMMY MOOR",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ КУРЦХААР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "98797482",
       "name_lat": "CAITLIN GRACE IZ POMESTYA BERNOV",
       "name_ru": "",
@@ -3973,19 +4079,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1813154822",
-      "name_lat": "CASPIAN BREEZE TIARA FORTUNY",
+      "id": "314514327",
+      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA CHESTER",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1842960311",
+      "id": "1187002358",
       "name_lat": "CAERPHILLY KNYAGINYA DUSHI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -4000,19 +4106,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "764260220",
-      "name_lat": "CAPTAIN CANDYMAN BLACK",
+      "id": "1740865550",
+      "name_lat": "CAPRICE SOPHIE VASILISA NERLI",
       "name_ru": "",
-      "breed": "СХИПЕРКЕ",
-      "breed_en": "SCHIPPERKE",
-      "total_shows": 5,
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1496598119",
+      "id": "1367522315",
       "name_lat": "CANTRYGOLD ISTIA JIVE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ITALIAN POINTING DOG ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -4045,10 +4151,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "853048885",
+      "id": "1373046216",
       "name_lat": "CARMEN KINGDOM NAVJORD",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -4095,7 +4201,7 @@
       "name_ru": "",
       "breed": "АППЕНЦЕЛЛЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -4103,6 +4209,24 @@
       "name_lat": "CANE ANTICHI DEL MONDO BERNARDINA",
       "name_ru": "",
       "breed": "НЕАПОЛИТАНСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "63196769",
+      "name_lat": "CARUSO FOR KARO DE GRAND KRON VEKAR",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1790871176",
+      "name_lat": "CARBO STELLA LUCK CATCHER",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -4117,10 +4241,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "6385222",
+      "id": "1770757311",
       "name_lat": "CAPTOR SOUL EGOZA",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -4135,28 +4259,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1889659429",
+      "id": "389221816",
       "name_lat": "CASSIOPEIA FROM KEEPERS OF MYSTERY",
       "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК /",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1262080097",
+      "id": "60602051",
+      "name_lat": "CAROLINA STARS GABRIEL",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "895131068",
       "name_lat": "CAPTAIN CLOT S TEPLPGO DOMA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "752571708",
+      "id": "1278532637",
       "name_lat": "CANDY SWEET YAMMIR",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -4168,6 +4301,15 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "627395949",
+      "name_lat": "CANDY BRIGHT",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -4189,10 +4331,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1163504782",
+      "id": "450410736",
       "name_lat": "CAPITAN AMERICA TJOMNYJ RYTSAR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -4225,17 +4367,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1938237215",
-      "name_lat": "CANIS ARGENTUM AYRIS",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1070914144",
-      "name_lat": "CAESARION IZ NOVO- PEREDELKINO",
+      "id": "77240712",
+      "name_lat": "CAESARION IZ NOVO-PEREDELKINO",
       "name_ru": "",
       "breed": "DACHSHUND",
       "breed_en": "",
@@ -4249,6 +4382,15 @@
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "587566911",
+      "name_lat": "CAPTOR SOUL WONDERFUL VICTORIA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -4266,7 +4408,16 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "381651836",
+      "name_lat": "CACTUS AMANS KYNOS",
+      "name_ru": "",
+      "breed": "БОГЕМСКАЯ ОВЧАРКА",
+      "breed_en": "BOHEMIAN SHEPHERD DOG",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -4279,10 +4430,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "441219635",
+      "id": "638865333",
       "name_lat": "CAHPPES AMAZING ACE AKINO",
       "name_ru": "",
-      "breed": "МАЛАМУТ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4293,7 +4444,7 @@
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 11,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -4306,10 +4457,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "792961156",
+      "id": "753872176",
       "name_lat": "CAPLY NEKTARA RADOST'",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -4324,10 +4475,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1272609805",
+      "id": "752074864",
       "name_lat": "CAMELIYA VANITI FAIR IZ POMESTYA BERNOV",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4342,10 +4493,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "545426552",
+      "id": "689797912",
+      "name_lat": "CAPTOR SOUL AMAZONKA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "656853917",
       "name_lat": "CASABLANCA BE HAPPY",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -4360,10 +4520,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "205920607",
+      "id": "527906231",
       "name_lat": "CALIX AURIS AMADEUS",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ENGLISH SETTER",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -4375,6 +4535,15 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1194256100",
+      "name_lat": "CARMEN BOUVIERY Z REGLA",
+      "name_ru": "",
+      "breed": "ФЛАНДРСКИЙ БУВЬЕ",
+      "breed_en": "BOUVIER DES FLANDRES",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4405,15 +4574,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1790871176",
-      "name_lat": "CARBO STELLA LUCK CATCHER",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "662686777",
       "name_lat": "CACHAREL KIDDY WIN'S",
       "name_ru": "",
@@ -4432,15 +4592,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "314514327",
-      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA CHESTER",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1623796184",
       "name_lat": "CASPIAN LINE'S TELL THE TRUTH",
       "name_ru": "",
@@ -4450,19 +4601,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "60602051",
-      "name_lat": "CAROLINA STARS GABRIEL",
+      "id": "356956064",
+      "name_lat": "CADOK S PRIDNIVSKOY IMPERII",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "ДОБЕРМАН",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1883059914",
+      "id": "1634088091",
       "name_lat": "CAPTOR SOUL APRIORI",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4504,19 +4654,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "995049059",
+      "id": "1647456460",
       "name_lat": "CANDY CLUB VANDER",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "19298937",
+      "id": "625021830",
       "name_lat": "CANE GLAMOUR YEDINSTVENNAYA KOROLEVA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -4527,6 +4677,14 @@
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1699493803",
+      "name_lat": "CARDIGANIUM TSERA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -4567,12 +4725,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "794572541",
+      "name_lat": "CANDY CLUB ILLYUZIYA (MEDIA)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
+      "breed_en": "XOLOITZCUINTLE (INTERMEDIATE)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "526523300",
       "name_lat": "CAESAR",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1919822869",
+      "name_lat": "CASSIOPEYA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4594,10 +4769,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "905139532",
+      "id": "302510656",
+      "name_lat": "CAZADOR DE PATOS HYPNOSIS BURNOUT",
+      "name_ru": "",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "750714177",
+      "name_lat": "CAVALIER DANCE OLIVIA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1618694933",
       "name_lat": "CASSIOPEIA GARZOWSKA PANORAMA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -4666,6 +4858,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "589643534",
+      "name_lat": "CASA BONITA SHINY SNOW",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1421624425",
+      "name_lat": "CAZADOR DE PATOS DEMMY",
+      "name_ru": "",
+      "breed": "GERMAN SHORT-HAIRED",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1481161865",
       "name_lat": "CAESAR MAXIMUS (SMALL)",
       "name_ru": "",
@@ -4681,6 +4890,15 @@
       "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "ROMAGNA WATER DOG (LAGOTTO ROMAGNOLO)",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "3856161",
+      "name_lat": "CAESAR",
+      "name_ru": "",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -4747,20 +4965,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "63196769",
-      "name_lat": "CARUSO FOR KARO DE GRAND KRON VEKAR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1471347415",
       "name_lat": "CAGIRA STACE IZ MERRY HOME",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207691854",
+      "name_lat": "CAVALER GOLD ANTOINETTE BUTTON",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -4810,33 +5027,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "222381910",
-      "name_lat": "CAVALIER DANCE MARIUS",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1541206239",
-      "name_lat": "CAPTOR SOUL WONDERFUL VICTORIA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1881113260",
-      "name_lat": "CARSKIJ KAPRIZ OT ZHEMCHUZHNOY KORONY",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "658951616",
       "name_lat": "CANTI ASTI",
       "name_ru": "",
@@ -4846,8 +5036,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1559162549",
-      "name_lat": "CALYPO ALTAN- CORGO",
+      "id": "1929125089",
+      "name_lat": "CALYPO ALTAN-CORGO",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
@@ -4864,10 +5054,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "156108292",
+      "id": "1800260273",
       "name_lat": "CASSIOPEYA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4909,12 +5099,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1194256100",
-      "name_lat": "CARMEN BOUVIERY Z REGLA",
+      "id": "1471125977",
+      "name_lat": "CASA DE GUNARIS ZHIGER",
       "name_ru": "",
-      "breed": "ФЛАНДРСКИЙ БУВЬЕ",
-      "breed_en": "BOUVIER DES FLANDRES",
-      "total_shows": 3,
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "841931381",
+      "name_lat": "CASPER JUST LADI MI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4936,21 +5135,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "289088338",
+      "name_lat": "CARONLEA HOT CELTIC CHARM",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1260358867",
       "name_lat": "CASA BONITA CHE GUEVARA",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "918014920",
-      "name_lat": "CANDY BRIGHT",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -4981,10 +5180,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "562216715",
+      "id": "1046024194",
       "name_lat": "CALLISTO MOON DEL MARE NERO",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5013,7 +5212,24 @@
       "name_ru": "",
       "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1897535665",
+      "name_lat": "CAZADOR DE PATOS EFIM FAVORITO",
+      "name_ru": "",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1518721953",
+      "name_lat": "CANE MAESTRO LUXURY",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -5023,24 +5239,6 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "101790424",
-      "name_lat": "CAUSING CHAOS AGAINST ALL AUTHORITY",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1183995293",
-      "name_lat": "CAZADOR DE PATOS EFIM FAVORITO",
-      "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -5062,30 +5260,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1285119599",
+      "id": "217960770",
+      "name_lat": "CAMELIYA S SAMOGO CHJORNOGO MORJA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1484845656",
       "name_lat": "CANE MYGLORY CHAMBERLIN",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1860520888",
+      "id": "893413959",
+      "name_lat": "CALYPSO DI CAPRI",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1189166220",
       "name_lat": "CANIS GRATA RACHEL",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1978358838",
-      "name_lat": "CAPTOR SOUL AMAZONKA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -5098,10 +5303,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "503986449",
+      "id": "1603897234",
       "name_lat": "CARMA VON HAUS BOCCIA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -5125,10 +5330,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "989396979",
+      "id": "1794318800",
       "name_lat": "CATCH DAY ROSOVAYA MARMELADKA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5152,38 +5357,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "1465831385",
+      "id": "1096065318",
       "name_lat": "CANE MYGLORY CHE GUIVARA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "416578429",
+      "id": "1980474577",
       "name_lat": "CANS JUANSA GENNADI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1882120789",
+      "id": "1973163988",
+      "name_lat": "CANON GOLDEN RON",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1345486440",
       "name_lat": "CALL ME SINNER STRIBRNE PRANI",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "381651836",
-      "name_lat": "CACTUS AMANS KYNOS",
+      "id": "765194331",
+      "name_lat": "CAESARION VOM HAUS SCHIRAN",
       "name_ru": "",
-      "breed": "БОГЕМСКАЯ ОВЧАРКА",
-      "breed_en": "BOHEMIAN SHEPHERD DOG",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -5224,6 +5438,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "293271896",
+      "name_lat": "CARPENTER DIAZ BRILLIANT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256172315",
+      "name_lat": "CARPEN DIAZ BRILLIANT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "599960412",
       "name_lat": "CADAMOSTOS FAVORIT",
       "name_ru": "",
@@ -5233,21 +5463,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "359043992",
-      "name_lat": "CA`DEL CORSI HELGA",
+      "id": "1254101234",
+      "name_lat": "CAZADOR DE PATOS DEMMY MOOR",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1557349832",
+      "id": "1681547195",
+      "name_lat": "CA`DEL CORSI HELGA",
+      "name_ru": "",
+      "breed": "АППЕНЦЕЛЛЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "545744870",
       "name_lat": "CANDRA IVELLA HOUSE",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БОКСЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -5260,12 +5499,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "229215318",
+      "id": "1185809103",
       "name_lat": "CAROLINE KINGDOM NAVJORD",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -5287,10 +5526,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1846378969",
+      "id": "680070437",
       "name_lat": "CAZADOR DE PATOS ZUMBA",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5332,10 +5571,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "284095622",
+      "id": "1463880597",
+      "name_lat": "CAVALIER GOLD ANTOINETTE BUTTON",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "346798687",
       "name_lat": "CANS JUANSA BLUEMAGISTAR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -5368,10 +5615,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "222616238",
+      "id": "1974665872",
       "name_lat": "CAESAR IZ SOZVEZDIYA STAFF",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5395,10 +5642,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1378605319",
+      "id": "1884752512",
       "name_lat": "CACA CACKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5422,28 +5669,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "794867838",
-      "name_lat": "CAZADOR DE PATOS MACINTOSH",
-      "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР / FLAT COATED",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "367836813",
+      "id": "383915094",
       "name_lat": "CASEY BRIGHT STAR",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "729026690",
+      "name_lat": "CAZADOR DE PATOS MACINTOSH",
+      "name_ru": "",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР / FLAT COATED",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1895307383",
+      "id": "20025660",
       "name_lat": "CANE MELODY AFONYA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -5476,19 +5722,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1186630717",
+      "id": "968323910",
       "name_lat": "CANTRYGOLD LASTI KIND OF MAGIC",
       "name_ru": "",
-      "breed": "БАССЕТ-ГРИФФОН ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "132478632",
+      "id": "1574361524",
+      "name_lat": "CAVALLIERIK TIGER FROM MY DREAM",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "807074879",
       "name_lat": "CANE MYGLORY URSULA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5521,15 +5776,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1174949884",
-      "name_lat": "CANTI ASTI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1228198472",
       "name_lat": "CANIS WOLF DANNING SIBIL",
       "name_ru": "",
@@ -5539,10 +5785,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1372429870",
+      "id": "1726925402",
       "name_lat": "CALIX AURIS BELLADA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -5557,38 +5803,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1338075715",
+      "id": "414407466",
       "name_lat": "CASSANDRA ALWAYS VERY PERSISTENT",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ /",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "WEIMARANER SHORT-HAIRED",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1734056091",
+      "id": "1697787644",
       "name_lat": "CAREVICH SEVERNOJ ZEMLI",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1513825467",
-      "name_lat": "CANEK (CERNAS)",
+      "id": "234690327",
+      "name_lat": "CANIS WOLF BRIDZHIT BAKO",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ СОБАКА) МИНИАТЮРНАЯ /",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "249289015",
-      "name_lat": "CANIS WOLF BRIDZHIT BAKO",
+      "id": "124564082",
+      "name_lat": "CANEK (CERNAS)",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "breed": "БАСЕНДЖИ СОБАКА) МИНИАТЮРНАЯ",
+      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -5602,10 +5848,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1982530233",
+      "id": "549086852",
       "name_lat": "CAGE HAMMER IZ POMESTYA BERNOV",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5656,19 +5902,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "2733500",
-      "name_lat": "CASA DE GUNARIS ZHIGER",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1638160120",
+      "id": "472095535",
       "name_lat": "CANE MYGLORY FIJI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5679,14 +5916,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1947242037",
+      "id": "1127512395",
       "name_lat": "CARPATHIAN DREEM U MY MUSA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5706,15 +5943,6 @@
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "841931381",
-      "name_lat": "CASPER JUST LADI MI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -5764,10 +5992,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "573902920",
+      "id": "701319661",
       "name_lat": "CAMPBELL CLAN'S SMOOTH CRIMINAL",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР /",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5778,6 +6006,14 @@
       "name_ru": "",
       "breed": "Кавалер кинг чарльз спаниель",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "366233077",
+      "name_lat": "CATHERINE QUEEN AIRDOGS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5863,48 +6099,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1119210527",
+      "id": "1444555007",
       "name_lat": "CACHAREL SCFRLETT FROM SKYTOWN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1574361524",
-      "name_lat": "CAVALLIERIK TIGER FROM MY DREAM",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "176134868",
-      "name_lat": "CAZADOR DE PATOS HYPNOSIS BURNOUT",
-      "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "750714177",
-      "name_lat": "CAVALIER DANCE OLIVIA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1809450059",
+      "id": "226818882",
       "name_lat": "CANDY SWEET LIS",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "421799084",
+      "name_lat": "CAERPHILLY ADA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -5935,19 +6152,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1306538339",
+      "id": "156250732",
       "name_lat": "CANE CAVALCADO SHARON DEN ADEL",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "361131117",
+      "id": "1991656728",
       "name_lat": "CARAMEL ESMERALDA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЯПОНСКИЙ СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5980,10 +6197,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1542194510",
+      "id": "1654524055",
       "name_lat": "CALARMUS FLAMING SPIRIT",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5991,15 +6208,6 @@
     {
       "id": "324941090",
       "name_lat": "CAVALIERDOG ALFA DONA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1463880597",
-      "name_lat": "CAVALIER GOLD ANTOINETTE BUTTON",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
@@ -6052,8 +6260,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1510572240",
-      "name_lat": "CARMEN CLAIRE IZ KSARO- CHESTNAYA IGRA",
+      "id": "1186139050",
+      "name_lat": "CARMEN CLAIRE IZ KSARO-CHESTNAYA IGRA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -6065,15 +6273,6 @@
       "name_lat": "CANDY SIPOLY",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "207691854",
-      "name_lat": "CAVALER GOLD ANTOINETTE BUTTON",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6160,19 +6359,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1518721953",
-      "name_lat": "CANE MAESTRO LUXURY",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "435020442",
+      "id": "411309222",
       "name_lat": "CAZADOR DE PATOS JETTA",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР / FLAT COATED RETRIEVER",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР / FLAT COATED RETRIEVER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6187,15 +6377,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "971754663",
-      "name_lat": "CASITA’S MASTER OF THE UNIVERSE BY BAUER (Измененно по решению ВК от 26.04.23, в.37)",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА / MINIATURE AMERICAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1461490589",
       "name_lat": "CANE MYGLORY ZHARDEN",
       "name_ru": "",
@@ -6205,10 +6386,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1333670529",
+      "id": "835429494",
       "name_lat": "CARTE BLANCHE IZ STOLITSY URALA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -6256,15 +6437,6 @@
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "BULL TERRIER STANDART",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "421799084",
-      "name_lat": "CAERPHILLY ADA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -6367,21 +6539,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1993190549",
+      "name_lat": "CANE CAVALCADO ZEUS",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1858291600",
       "name_lat": "CANIS RABIOSA AMBASSADOR",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1132365896",
-      "name_lat": "CANE CAVALCADO ZEUS",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -6412,11 +6584,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "913745361",
+      "id": "1587269821",
       "name_lat": "CAZADOR DE PATOS OLIVER",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1913300627",
+      "name_lat": "CAMINO DE SEDA EVANGELINA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6511,15 +6691,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "356956064",
-      "name_lat": "CADOK S PRIDNIVSKOY IMPERII",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1566487466",
       "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA TSEZAR-II",
       "name_ru": "",
@@ -6529,19 +6700,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "939529710",
+      "id": "540219620",
       "name_lat": "CASPER EL CIELO INSPIRACION",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER Золотистый ретривер /",
+      "breed": "POINTING DOG ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1348345650",
+      "id": "810149555",
       "name_lat": "CAYENAS INFINITI TRUE LOVE BARBY",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6571,15 +6742,6 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1269368418",
-      "name_lat": "CAROLINE",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -6628,15 +6790,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1740865550",
-      "name_lat": "CAPRICE SOPHIE VASILISA NERLI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "756046577",
       "name_lat": "CAESAR",
       "name_ru": "",
@@ -6673,10 +6826,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1234127260",
+      "id": "282469562",
       "name_lat": "CANTUS CYCNEUS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6718,10 +6871,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1786995352",
+      "id": "165553190",
       "name_lat": "CAPTOR SOUL NIKOL'",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6808,15 +6961,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1048758995",
-      "name_lat": "CARONLEA HOT CELTIC CHARM",
-      "name_ru": "",
-      "breed": "КОЛЛИ Д-Ш",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1593959338",
       "name_lat": "CAPLY NEKTARA ARIZONA",
       "name_ru": "",
@@ -6880,10 +7024,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1901087115",
+      "id": "158433922",
       "name_lat": "CANIS NOBILITAS CAVALLI",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6925,8 +7069,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "921746303",
-      "name_lat": "CANIS MAJOR MERI- STUART",
+      "id": "1955860763",
+      "name_lat": "CANIS MAJOR MERI-STUART",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
@@ -6979,10 +7123,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "622330976",
+      "id": "1281772853",
       "name_lat": "CAPTAIN JACK SPARROW",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6993,6 +7137,22 @@
       "name_ru": "",
       "breed": "AFGHAN HOUND",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "748116497",
+      "name_lat": "CAFSARION VOM HAUS SHIRAN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "339099241",
+      "name_lat": "CARAMEL SUITE CARSTVENNAYA FEBA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7051,11 +7211,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1054703577",
+      "id": "903201062",
       "name_lat": "CANE CAVALCADO",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1881777610",
+      "name_lat": "CAVALLIERIK TAMERLAN",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7096,10 +7264,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1217064753",
+      "id": "209982493",
       "name_lat": "CAZADOR DE PATOS NOSTRADAMUS",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7132,15 +7300,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "438333021",
-      "name_lat": "CANDY SHINE",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1466019033",
       "name_lat": "CACHAREL LOU-LOU FROM IRONGUARD",
       "name_ru": "",
@@ -7159,10 +7318,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "288853074",
+      "id": "1939770221",
       "name_lat": "CANE FOREVO PAULINA ELISABETH VIOLET",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ-",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -7173,7 +7332,7 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -7204,19 +7363,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1507163383",
+      "id": "1348501302",
       "name_lat": "CAMILI GREEN STAR",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1414513674",
+      "id": "1077168156",
       "name_lat": "CAPTOR SOUL AFINA PALLADA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7276,6 +7435,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1887096739",
+      "name_lat": "CANDY HONEY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259506268",
+      "name_lat": "CAPTAIN BLOOD РЕВАЗ ИЗ ЛИГИ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "850384829",
       "name_lat": "CASA BONITA DISCOVERY THE CENTURY",
       "name_ru": "",
@@ -7303,15 +7479,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "259506268",
-      "name_lat": "CAPTAIN BLOOD РЕВАЗ ИЗ ЛИГИ",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ / BULLDOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "644313203",
       "name_lat": "CAPITAN AMERICA SERENADA",
       "name_ru": "",
@@ -7330,10 +7497,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "728890402",
+      "id": "1185376803",
       "name_lat": "CANS JUANSA PHILADEL PHIA FOR ZIKOFF TARGET",
       "name_ru": "",
-      "breed": "ИЙ ТЕРЬЕР /",
+      "breed": "ИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7352,15 +7519,6 @@
       "name_lat": "CANE MYGLORI TIBERIUS",
       "name_ru": "",
       "breed": "КОРСО / ITALIAN CANE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1406958335",
-      "name_lat": "CALYPSO DI CAPRI",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7420,15 +7578,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1956963777",
-      "name_lat": "CANDY CLUB BONDIANA",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "SHIH TZU",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1928388656",
       "name_lat": "CANDY CLUB CANDY CLUB TE QUIERO",
       "name_ru": "",
@@ -7465,10 +7614,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1328989386",
+      "id": "57509870",
       "name_lat": "CANICHE GRAND",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7483,8 +7632,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "330159976",
-      "name_lat": "CAGAN-DABAN BAYAZ- BURY",
+      "id": "461993284",
+      "name_lat": "CAGAN-DABAN BAYAZ-BURY",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -7498,15 +7647,6 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1904137218",
-      "name_lat": "CANDY SHINE",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -7546,10 +7686,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1333539094",
+      "id": "975938219",
       "name_lat": "CANE CAVALKADO LAZURIT КАНЕ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7573,12 +7713,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1518665483",
-      "name_lat": "CANDY SHINE",
+      "id": "307446668",
+      "name_lat": "CARAXES EL GRANDE DEL MARE NERO",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1621752066",
+      "name_lat": "CANE MAESTRO STIMOROL ISE",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -7587,15 +7735,6 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1988115552",
-      "name_lat": "CANE MAESTRO STIMOROL IСE",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "JACK RUSSELL TERRIER",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -7645,10 +7784,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1102696952",
+      "id": "1032242527",
       "name_lat": "CANIS GRATA ZATEINITSA",
       "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7708,20 +7847,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "746810900",
-      "name_lat": "CABAKA'S HAPPY GO LUCKY",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "SAMOYED",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1448828300",
       "name_lat": "CAESAR GREY KING IZ DINASTII CHEMPIONOV",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "746810900",
+      "name_lat": "CABAKA'S HAPPY GO LUCKY",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -7744,10 +7883,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "29197029",
+      "id": "182563960",
       "name_lat": "CAREVNA NESMEYANA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -7758,6 +7897,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1174669794",
+      "name_lat": "CAPRICE SOPHIE VALENSIYA ARLEN",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -7807,10 +7954,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "857987690",
+      "id": "1459132272",
+      "name_lat": "CANELA FINA ISABEL SKAZKA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "802619524",
       "name_lat": "CASSIOPEIA CLARA DIFINO FOR MDL",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7888,10 +8043,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "246268655",
+      "id": "141043998",
       "name_lat": "CAMRY COURAGE BRENDA",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7902,6 +8057,14 @@
       "name_ru": "",
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1271007652",
+      "name_lat": "CATHERINE’S JOY A’FEEL THE REVOLUTION",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7924,19 +8087,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "445846970",
+      "id": "274464913",
       "name_lat": "CADOC VOM WELLENTAL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "739340163",
+      "id": "621965524",
       "name_lat": "CARRERA ВОЛЬФЕНК",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7960,19 +8123,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "381675169",
-      "name_lat": "CAPAS SPIRIT BUTTERSKOTCH MAGGIE",
+      "id": "882500019",
+      "name_lat": "CALVIN KLEIN",
       "name_ru": "",
-      "breed": "ЛАБРАДОРРЕТРИВЕР/",
+      "breed": "Бульдог",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "135553212",
-      "name_lat": "CALVIN KLEIN",
+      "id": "1905457364",
+      "name_lat": "CAPAS SPIRIT BUTTERSKOTCH MAGGIE",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed": "ЛАБРАДОРРЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -8014,10 +8177,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1003211470",
+      "id": "206615063",
+      "name_lat": "CARISMA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1054965271",
       "name_lat": "CA DEL CORSI CICILIA",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8056,6 +8227,15 @@
       "breed": "АЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "255709615",
+      "name_lat": "CAMINO DE SEDA BONSAI ТЭЙСТ ОФ ВИКТОРИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -8185,10 +8365,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "563056721",
+      "id": "1472176357",
       "name_lat": "CANIS WOLF BUMER",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -8203,10 +8383,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "590583009",
+      "id": "911658572",
       "name_lat": "CASPER NORTH REY IZ ANGARII",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8216,15 +8396,6 @@
       "name_lat": "CAPITAN AMERICA",
       "name_ru": "",
       "breed": "SAMOYED",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "217960770",
-      "name_lat": "CAMELIYA S SAMOGO CHJORNOGO MORJA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8266,6 +8437,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "723381860",
+      "name_lat": "CAMBO IZ BELOGO JARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "54145423",
       "name_lat": "CARPATHIAN",
       "name_ru": "",
@@ -8284,21 +8463,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "89539005",
-      "name_lat": "CANDRA LIHTENSHTEIN- OST",
+      "id": "209347768",
+      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA PAYMONA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1714680569",
-      "name_lat": "CANS JUANSA BLUEMAGICSTAR",
+      "id": "1836062926",
+      "name_lat": "CANDRA LIHTENSHTEIN-OST",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -8347,12 +8525,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1298391165",
+      "id": "1273098193",
       "name_lat": "CAPTOR SOUL TANYUSHA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -8383,10 +8561,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1657931297",
+      "id": "645587269",
       "name_lat": "CAZADOR DE PATOS UNIQUE BLACK DIAMOND",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269520547",
+      "name_lat": "CAMEE GOLD BEST BLOOD",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -8446,11 +8633,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "723381860",
-      "name_lat": "CAMBO IZ BELOGO JARA",
+      "id": "1503971853",
+      "name_lat": "CAVACORNS WALDEMAR WIZARD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -8482,6 +8668,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1672091862",
+      "name_lat": "CANTRYGOLD MAYBACH",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1478498627",
+      "name_lat": "CANTRYGOLD NOBERT NOBILIS",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "922580798",
+      "name_lat": "CAMEE GOLD ABIGAIL",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "996304152",
       "name_lat": "CANE MYGLORY NICE",
       "name_ru": "",
@@ -8496,15 +8709,6 @@
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1672091862",
-      "name_lat": "CANTRYGOLD MAYBACH",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -8545,15 +8749,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1478498627",
-      "name_lat": "CANTRYGOLD NOBERT NOBILIS",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "549310914",
       "name_lat": "CAVALIER DANCE ZADORINKA",
       "name_ru": "",
@@ -8572,11 +8767,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1075286758",
+      "id": "395631863",
+      "name_lat": "CAMELIA LU LYOVA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "622150440",
       "name_lat": "CAPTOR SOUL MISTER MORIS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "900668314",
+      "name_lat": "CARA MIA DEL MARE NERO",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -8590,15 +8802,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "395631863",
-      "name_lat": "CAMELIA LU LYOVA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "161602707",
       "name_lat": "CAMPION MOYEGO SERDTSA IZYUM OTBORNYJ",
       "name_ru": "",
@@ -8608,38 +8811,64 @@
       "competition_dog_id": null
     },
     {
-      "id": "1081384258",
+      "id": "955094804",
       "name_lat": "CANS JUANSA FADEI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1387206413",
+      "id": "285855461",
       "name_lat": "CAMILIA KUSTA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "255709615",
-      "name_lat": "CAMINO DE SEDA BONSAI ТЭЙСТ ОФ ВИКТОРИ",
+      "id": "555137110",
+      "name_lat": "CAVACORNS NOCTURNE QUINTESSENCE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1735105525",
-      "name_lat": "CAESAR",
+      "id": "1956535253",
+      "name_lat": "CANIS GRATA AMADEUS",
       "name_ru": "",
-      "breed": "ЧЁРНО-ПОДПАЛЫЙ",
-      "breed_en": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1005908439",
+      "name_lat": "CANTRYGOLD ES I'M THE BEST",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "516290198",
+      "name_lat": "CANIS GRATA ARTEMIDA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "999712459",
+      "name_lat": "CALISTA LA CREACCION PERFECTA DE VALEO KOSTA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -8698,42 +8927,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1956535253",
-      "name_lat": "CANIS GRATA AMADEUS",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1005908439",
-      "name_lat": "CANTRYGOLD ES I'M THE BEST",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "516290198",
-      "name_lat": "CANIS GRATA ARTEMIDA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "999712459",
-      "name_lat": "CALISTA LA CREACCION PERFECTA DE VALEO KOSTA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1785687572",
       "name_lat": "CATTLEYA DOWIANA ESCADA",
       "name_ru": "",
@@ -8788,10 +8981,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "509718624",
+      "id": "777551578",
       "name_lat": "CAESAR VAGNER LAW",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -8815,10 +9008,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "556209073",
+      "id": "1812396509",
       "name_lat": "CAZADOR DE PATOS TRINITY",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР / FLAT COATED",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР / FLAT COATED",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -8851,10 +9044,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "732250190",
+      "id": "612405242",
+      "name_lat": "CAVACORNS WINDSOR'S KING",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1309934487",
       "name_lat": "CAMIRA FROM HOUSE OF BLACKS",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -8869,10 +9070,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1979165334",
+      "id": "183591747",
+      "name_lat": "CANE FOREVO YUKKA SEREBRISTAYA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ-КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "206190665",
+      "name_lat": "CAVALIER OF THE ORDER BONIFACE",
+      "name_ru": "",
+      "breed": "КОКЕР СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116524613",
+      "name_lat": "CAVALIERE DELL'ONORE DREAM OF DELIGHT FICO FORTE",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1644067599",
       "name_lat": "CANDY SWEET PRINTSESSA LUKERYA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -8905,19 +9131,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1687456073",
-      "name_lat": "CANON GOLDEN RON",
+      "id": "1219836982",
+      "name_lat": "CANE GLAMOUR EMILI",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1219836982",
-      "name_lat": "CANE GLAMOUR EMILI",
+      "id": "644445866",
+      "name_lat": "CAVALIER DANCE NOVELLA DA CAPO",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "883983134",
+      "name_lat": "CASPER DAISY WREATH",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -8932,20 +9167,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1832589971",
+      "id": "1110360298",
+      "name_lat": "CAPRICE SOPHIE GIDEON FRIDERIK",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29321932",
+      "name_lat": "CAROLINA S SAMOGO CHJORNOGO MORJA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1685798650",
       "name_lat": "CANE CAVALCADO TRISS FOR OLIMPIUS PRIDE",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "183591747",
-      "name_lat": "CANE FOREVO YUKKA SEREBRISTAYA",
+      "id": "424721233",
+      "name_lat": "CAVALIERIK SOFISTA TWISTA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ-КОРСО",
-      "breed_en": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -8963,15 +9213,6 @@
       "name_lat": "CANDY CLUB VAVILON",
       "name_ru": "",
       "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "883983134",
-      "name_lat": "CASPER DAISY WREATH",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -9000,6 +9241,40 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1228108498",
+      "name_lat": "CARLOTITA DE OS TOLINOS DO FERROL",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "121398815",
+      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA RIHANNA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1210731757",
+      "name_lat": "CALIX AURIS ASCANIO",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1268162236",
+      "name_lat": "CAMEE GOLD BRIGHT BULLET",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -9099,15 +9374,6 @@
       "name_ru": "",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "DOGO ARGENTINO",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1228108498",
-      "name_lat": "CARLOTITA DE OS TOLINOS DO FERROL",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -9229,17 +9495,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1300306980",
-      "name_lat": "CASEY FOXY LADY",
+      "id": "952777156",
+      "name_lat": "CARDIGANIUM PELAGEYA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "765194331",
-      "name_lat": "CAESARION VOM HAUS SCHIRAN",
+      "id": "1300306980",
+      "name_lat": "CASEY FOXY LADY",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -9274,10 +9540,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "302081258",
+      "id": "39167803",
       "name_lat": "CAMILI EGOISTA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9292,37 +9558,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "884593459",
+      "id": "782088090",
       "name_lat": "CANDY SWEET KAMELIA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "291455362",
+      "id": "1029564798",
       "name_lat": "CAZADOR DE PATOS MAXWELL",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР / FLAT COATED",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР / FLAT COATED",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1894495264",
+      "id": "1298931054",
       "name_lat": "CANIS WOLF TANPTING GEYZ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1713336858",
+      "id": "709024049",
       "name_lat": "CARGO VOM MAIR HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9332,6 +9598,15 @@
       "name_lat": "CANDY SWEET VIVA VICTORIA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1902515840",
+      "name_lat": "CANDY SWEET V’VIVA LA VITA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9355,10 +9630,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "533223125",
+      "id": "944597097",
       "name_lat": "CAPTOR SOUL IRBIS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9382,19 +9657,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "105342972",
+      "id": "153756954",
       "name_lat": "CARICA DIKOGO SOBLAZNA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1293249151",
-      "name_lat": "CALIX AURIS ASCANIO",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9418,15 +9684,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "644445866",
-      "name_lat": "CAVALIER DANCE NOVELLA DA CAPO",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1531409582",
       "name_lat": "CANE MAESTRO HARIZMA",
       "name_ru": "",
@@ -9436,11 +9693,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "222785090",
-      "name_lat": "CATCH DAY DANCING STAR",
+      "id": "222757614",
+      "name_lat": "CANDY SWEET GAVANNA",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ КЕЛПИ",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -9454,20 +9710,44 @@
       "competition_dog_id": null
     },
     {
-      "id": "900668314",
-      "name_lat": "CARA MIA DEL MARE NERO",
+      "id": "58722359",
+      "name_lat": "CAPTOR SOUL MICHELLE",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1017599959",
-      "name_lat": "CAPTOR SOUL MICHELLE",
+      "id": "1535264995",
+      "name_lat": "CAFFEINE OF BIG EYES LOVE",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275314201",
+      "name_lat": "CANIS WOLF SIRIUS STAR",
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "609681947",
+      "name_lat": "CAPTOR SOUL TOR",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1443354713",
+      "name_lat": "CALIGULA TORRE PEDRERA DI ROSSO CORNO",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -9481,20 +9761,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "275528276",
+      "id": "1699913920",
       "name_lat": "CAELESTIS DONUM",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "952777156",
-      "name_lat": "CARDIGANIUM PELAGEYA",
+      "id": "467188072",
+      "name_lat": "CARPEN DIAZ UNA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -9508,28 +9787,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "388309748",
+      "id": "445167506",
       "name_lat": "CAPTOR SOUL BANDIT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1816735731",
+      "id": "6049156",
       "name_lat": "CAVALIERE DELL'ONORE AMBICIA",
       "name_ru": "",
-      "breed": "ITALIAN CANE CORSO",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1884829621",
+      "id": "1258322730",
+      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA SHELLI",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "708071240",
       "name_lat": "CANEAS INFINITI DANCING QUEEN",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9544,10 +9832,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1596413039",
+      "id": "154741572",
       "name_lat": "CANE GLAMOUR VELSI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9564,15 +9852,6 @@
     {
       "id": "335554333",
       "name_lat": "CANDY SWEET YARLABERTA BRIGHT STAR",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1902515840",
-      "name_lat": "CANDY SWEET V’VIVA LA VITA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -9598,19 +9877,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1900667053",
+      "id": "1174650593",
       "name_lat": "CAPTOR SOUL INFANTA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1155871069",
+      "id": "439077033",
       "name_lat": "CAELESTINE LETICIA IZ KOROLEVSTVA STAFF",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР АМЕРИКАНСКИЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9634,10 +9913,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "16780746",
+      "id": "1592235356",
       "name_lat": "CANIS WOLF LEONARDO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -9652,11 +9931,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1252868137",
-      "name_lat": "CAMEE GOLD BEST BLOOD",
+      "id": "1938549288",
+      "name_lat": "CAESARION S BUHTY APPOLONA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -9697,10 +9975,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "558462333",
+      "id": "812194208",
       "name_lat": "CASSIOPEA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9715,10 +9993,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "307403552",
+      "id": "965096598",
       "name_lat": "CANDY BOSS",
       "name_ru": "",
-      "breed": "ЛАБРАДОРРЕТРИВЕР/",
+      "breed": "LABRADOR",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "330444239",
+      "name_lat": "CANDY BOSS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОРРЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9796,42 +10082,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1522154341",
-      "name_lat": "CANDY SHINE",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1864314710",
-      "name_lat": "CANDY SHINE",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1060438611",
-      "name_lat": "CANDY SHINE",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "187250333",
-      "name_lat": "CANDY SHINE",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "64555032",
       "name_lat": "CASTLE ROCK",
       "name_ru": "",
@@ -9845,15 +10095,6 @@
       "name_lat": "CASTLE ROCK",
       "name_ru": "",
       "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1541482489",
-      "name_lat": "CANDY SHINE",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9913,10 +10154,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "790168058",
+      "id": "1643296348",
       "name_lat": "CALEB OSCAR",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9927,6 +10168,39 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1300663277",
+      "name_lat": "CAESAR THE GREAT ALVITAL GENMAX",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1356911667",
+      "name_lat": "CAMEE GOLD AGNESSA FIDO",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1473319880",
+      "name_lat": "CAMEE GOLD BLIZZARD FOR AKSELPRIDE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736790538",
+      "name_lat": "CAMEE GOLD BRIZZARD FOR AKCELPRIDE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -10255,10 +10529,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1632910282",
+      "id": "1689193473",
       "name_lat": "CARBON VOM BERGMANNS-WEG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10273,19 +10547,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1300663277",
-      "name_lat": "CAESAR THE GREAT ALVITAL GENMAX",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ / BULLDOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "946921159",
+      "id": "537479558",
       "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA DINARA",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10309,10 +10574,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1181968673",
+      "id": "1061759628",
       "name_lat": "CANDY SWEET ANTUAN DE BENDZHAMIN",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10336,10 +10601,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "439213244",
+      "id": "1347822371",
       "name_lat": "CANE MYGLORY FREEDOM",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10480,10 +10745,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "262133256",
+      "id": "1018991021",
       "name_lat": "CASSIDY KISS ME BABY",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10543,46 +10808,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1757528720",
-      "name_lat": "CARLIN BRIGHT IZ TSARSKOGO SELA SHELLI",
-      "name_ru": "",
-      "breed": "BERNESE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "140058087",
+      "id": "266574962",
       "name_lat": "CARPENNY DAISY SUN LAURIE,",
       "name_ru": "",
-      "breed": "ИВЕР/",
+      "breed": "ИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1906796170",
+      "id": "950632225",
       "name_lat": "CAPAS SPIRIT HONESTY BEST POLICY",
       "name_ru": "",
-      "breed": "ИВЕР/",
+      "breed": "ИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1642381973",
+      "id": "1208022424",
       "name_lat": "CAPAS SPIRIT ANTANTA, .",
       "name_ru": "",
-      "breed": "ИВЕР/",
+      "breed": "ИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "945783128",
+      "id": "711320701",
       "name_lat": "CALLISTO LINES BLUE BLOOD",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10606,10 +10862,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "157539171",
+      "id": "20120650",
       "name_lat": "CAMPARIS BREAKFAST AT TIFFANY S",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10651,6 +10907,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "18646366",
+      "name_lat": "CASPER VOM HAUS TAURUS",
+      "name_ru": "",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1495438612",
       "name_lat": "CANDYLINEPOM FABULA BAI-BAI",
       "name_ru": "",
@@ -10687,19 +10951,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1274041373",
+      "id": "122686912",
       "name_lat": "CANUS LUPUS VITA UNAR",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1323339246",
+      "id": "575535595",
       "name_lat": "CANDY'S CHOCOLATE IZ MARIALGRADA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10759,11 +11023,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "93323148",
-      "name_lat": "CAVALIER OF THE ORDER BONIFACE",
+      "id": "1447343802",
+      "name_lat": "CARMEN CRYSTALL BELL",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЕРНЫЙ, ЧЕР- ПОДП, ШОКОЛАДНЫЙ, ШОК-ПОДП",
-      "breed_en": "",
+      "breed": "БИШОН ФРИЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -10777,6 +11040,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "435096361",
+      "name_lat": "CANE MAESTRO VIEW POINT",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1116705078",
       "name_lat": "CANDY RULES ADELAINE HOPE",
       "name_ru": "",
@@ -10786,19 +11057,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1431634275",
+      "id": "415774952",
       "name_lat": "CASANDRA ALEKTA АИША АВИОР БЛЭЙЗ ИЗ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "203352600",
+      "id": "262155666",
       "name_lat": "CAVALIER DANCE DZHAZ LAKKI",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10813,10 +11084,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "744282779",
+      "id": "1260164708",
       "name_lat": "CANDY CLUB WOUNDER",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -10957,10 +11228,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "492946391",
+      "id": "229614443",
       "name_lat": "CAZADOR DE PATOS IMPULSE OF MY HEART",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11011,10 +11282,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "957119862",
+      "id": "479870023",
       "name_lat": "CANDY SWEET DEBORA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11101,10 +11372,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1414266398",
+      "id": "860921866",
       "name_lat": "CAZADOR DE PATOS NEW STAR",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11137,10 +11408,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "920800531",
+      "id": "1580459032",
       "name_lat": "CANE MYGLORY ZHEROM",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11173,26 +11444,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1640773404",
+      "id": "1984055250",
       "name_lat": "CAISER STASI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1769744030",
+      "id": "1295240615",
       "name_lat": "CANE MAESTRO FAIRYTALE",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1621752066",
-      "name_lat": "CANE MAESTRO STIMOROL ISE",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
@@ -11218,10 +11480,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "667223004",
+      "id": "1897726265",
       "name_lat": "CANE GLAMOUR JAKKO",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11254,10 +11516,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "825549500",
+      "id": "485182169",
       "name_lat": "CANE MAESTRO OLIVA",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11299,10 +11561,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1420653221",
+      "id": "928921170",
       "name_lat": "CANE MELODY AKULA LUNA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11398,10 +11660,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "708790662",
+      "id": "287089088",
       "name_lat": "CARDINAL S SAMOGO CHJORNOGO MORJA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11425,10 +11687,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "839883266",
+      "id": "938937854",
       "name_lat": "CAZADOR DE PATOS HANNA",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР / FLAT COATED",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР / FLAT COATED",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11452,11 +11714,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1535264995",
-      "name_lat": "CAFFEINE OF BIG EYES LOVE",
+      "id": "776376869",
+      "name_lat": "CALLIPSO QUEEN DEL MARE NERO",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -11488,28 +11749,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "922580798",
-      "name_lat": "CAMEE GOLD ABIGAIL",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1740515483",
       "name_lat": "CAREVICH IZ GOLUBOI LEGENDY",
       "name_ru": "",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "29321932",
-      "name_lat": "CAROLINA S SAMOGO CHJORNOGO MORJA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

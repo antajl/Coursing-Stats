@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OK",
-  "count": 384,
+  "count": 400,
   "dogs": [
     {
       "id": "1711074431",
@@ -18,16 +18,43 @@
       "name_ru": "",
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455293110",
+      "name_lat": "OKEAN MECHTY GORBACHEV",
+      "name_ru": "ОКЕАН МЕЧТЫ ГОРБАЧЕВ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "1079008770",
       "name_lat": "OKSI DOG ALTAIR",
-      "name_ru": "",
+      "name_ru": "ОКСИ ДОГ АЛЬТАИР",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "ROTTWEILER",
-      "total_shows": 27,
+      "total_shows": 38,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1006903377",
+      "name_lat": "O-KAERI IZ IMPERII LARIEL",
+      "name_ru": "О-КАЭРИ ИЗ ИМПЕРИИ ЛАРИЭЛ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "GIANT SCHNAUZER BLACK",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "572460474",
+      "name_lat": "OKSITAILS FLEUR DE LYS",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -37,15 +64,6 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "572460474",
-      "name_lat": "OKSITAILS FLEUR DE LYS",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -67,12 +85,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "434045595",
+      "id": "1745488484",
       "name_lat": "OKSI WAY NASLEDNITSA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "749500329",
+      "name_lat": "OKTYABRINKA ROZHDENNAYA BYT ZVEZDOY",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -94,48 +121,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "749500329",
-      "name_lat": "OKTYABRINKA ROZHDENNAYA BYT ZVEZDOY",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "100714729",
       "name_lat": "OKHOTNIK SEVERA YUSUP",
-      "name_ru": "",
+      "name_ru": "ОХОТНИК СЕВЕРА ЮСУП",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
-      "total_shows": 16,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "372606143",
+      "id": "629802542",
+      "name_lat": "OKHOTNICHYA AKADEMIYA ZHETI DAR UIS",
+      "name_ru": "",
+      "breed": "GERMAN SHORT-HAIRED",
+      "breed_en": "GERMAN SHORT-HAIRED POINTING DOG (DEUTSCH KURZHAAR)",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1039761731",
       "name_lat": "OKHOTNICHYA AKADEMIYA LORD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1223426569",
+      "id": "1713068229",
       "name_lat": "OKHOTA POISKA LAVANDA",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "134672786",
-      "name_lat": "OKSITAILS GZHEL' FOR GLORIANDUS",
+      "id": "48653319",
+      "name_lat": "OKTAVIA IZ SOLNECHNOGO DOMA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 29,
+      "total_shows": 43,
       "competition_dog_id": null
     },
     {
@@ -144,14 +171,23 @@
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
-      "id": "1608460473",
+      "id": "211509011",
+      "name_lat": "OKSITAILS GZHEL' FOR GLORIANDUS",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "504825988",
       "name_lat": "OKEAN MECHTY VIN DIESEL",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -202,15 +238,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "117231036",
-      "name_lat": "OKHOTNICHYA AKADEMIYA ZHETI DAR UIS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
-      "breed_en": "GERMAN SHORT-HAIRED POINTING DOG (DEUTSCH KURZHAAR)",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "699445726",
       "name_lat": "OKSITAILS IVETTA",
       "name_ru": "",
@@ -229,12 +256,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "4475916",
-      "name_lat": "OKSI WAY TVIKS",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "id": "1695550736",
+      "name_lat": "OKTALES EYFORIYA",
+      "name_ru": "ОКТАЛЕС ЭЙФОРИЯ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1273220053",
+      "name_lat": "OKSI WAY TVIKS (LONG COAT)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -242,6 +278,15 @@
       "name_lat": "OKEAN MECHTY ALEKSA",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1649617767",
+      "name_lat": "OKTAVIANNA BAND BAKSTER",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -256,30 +301,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "48653319",
-      "name_lat": "OKTAVIA IZ SOLNECHNOGO DOMA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 38,
-      "competition_dog_id": null
-    },
-    {
-      "id": "455293110",
-      "name_lat": "OKEAN MECHTY GORBACHEV",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "827455850",
       "name_lat": "OKKERVIL CHARODEYKA",
       "name_ru": "",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
-      "total_shows": 18,
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1624208937",
+      "name_lat": "OKEANSKIY VETER BYT DOBRU",
+      "name_ru": "ОКЕАНСКИЙ ВЕТЕР БЫТЬ ДОБРУ",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -294,19 +330,28 @@
     {
       "id": "723114827",
       "name_lat": "OKSA BELLOLUNA ZHETEM",
-      "name_ru": "",
+      "name_ru": "ОКСА БЭЛЛОЛУНА ЖЭТЕМ",
       "breed": "ЛХАССКИЙ АПСО",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "1131973983",
       "name_lat": "OKSI DOG GRAF",
-      "name_ru": "",
+      "name_ru": "ОКСИ ДОГ ГРАФ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "662492866",
+      "name_lat": "OKSI WAY FANTASTIKA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -319,21 +364,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1695550736",
-      "name_lat": "OKTALES EYFORIYA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1276565534",
       "name_lat": "OKTALES TSITSERON",
       "name_ru": "",
       "breed": "ЧАУ- ЧАУ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "182316017",
+      "name_lat": "OKVISION GALAXY HOPE",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -346,10 +391,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "19761463",
+      "id": "982791459",
       "name_lat": "OKSANA VOM GOLDENEN STEINCHEN",
       "name_ru": "",
-      "breed": "ФРИЗЕ БОЛЬШОЙ ЧЁРНО- БЕЛЫЙ",
+      "breed": "ФРИЗЕ БОЛЬШОЙ ЧЕРНО- БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -364,39 +409,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1733296277",
+      "id": "1929462440",
       "name_lat": "OKVISION BARRAKUDA",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "574218390",
+      "id": "1365890963",
       "name_lat": "OKSITAILS OXFORD",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "79433660",
+      "id": "199022648",
       "name_lat": "OKHOTNICHYA AKADEMIYA VENDI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1369833949",
-      "name_lat": "OKSI WAY FANTASTIKA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -406,6 +442,23 @@
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "320425509",
+      "name_lat": "OKHOTNICHYA AKADEMIYA BERTRAM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1962928870",
+      "name_lat": "OKA IZ DOMA PRONINYKH",
+      "name_ru": "ОКА ИЗ ДОМА ПРОНИНЫХ",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -454,12 +507,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "182316017",
-      "name_lat": "OKVISION GALAXY HOPE",
+      "id": "116458221",
+      "name_lat": "O-KTAJ VOM HOUSE BLIZZARD",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1591566997",
+      "name_lat": "OKSIGOR HOUSE INDIGO",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -472,12 +533,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1647445825",
+      "id": "968661370",
       "name_lat": "OKSFORD OT DREVALLEY",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ ШНАУЦЕР ЧЁРНЫЙ ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1360528585",
+      "name_lat": "OKHOTA POISKA BULAT",
+      "name_ru": "",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
+      "breed_en": "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "435346605",
+      "name_lat": "OKTALES ENIGMA",
+      "name_ru": "ОКТАЛЕС ЭНИГМА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -490,28 +569,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1628104570",
+      "id": "1297112059",
       "name_lat": "OKSI WAY FARTOVYY KRYL'YA ANGELA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1360528585",
-      "name_lat": "OKHOTA POISKA BULAT",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
-      "breed_en": "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1854844382",
+      "id": "1112880699",
       "name_lat": "OKSITAILS EUPHEMIA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -526,12 +596,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "836486795",
+      "id": "1539496489",
+      "name_lat": "OKEANSKIY VETER EKSKLYUZIV",
+      "name_ru": "ОКЕАНСКИЙ ВЕТЕР ЭКСКЛЮЗИВ",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "BOSTON TERRIER",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1810550650",
       "name_lat": "OKSITAILS ENAY",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -553,12 +632,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1153398701",
-      "name_lat": "OKHOTNICHYA AKADEMIYA BERTRAM",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
+      "id": "974765588",
+      "name_lat": "OKSI DOG IMPERATOR",
+      "name_ru": "ОКСИ ДОГ ИМПЕРАТОР",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "ROTTWEILER",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -589,21 +668,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "185732055",
+      "id": "1982123030",
       "name_lat": "OKSITAILS RED PEPPER",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "468032149",
+      "id": "1949789578",
       "name_lat": "OKHOTNIK SEVERA LAURA",
       "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СПРИНГЕР АНГЛИЙСКИЙ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "386289552",
+      "name_lat": "OKTAVIANNA BAND GRAPPA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -616,15 +704,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1962928870",
-      "name_lat": "OKA IZ DOMA PRONINYKH",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1397681991",
       "name_lat": "OKKERVIL KADRIL",
       "name_ru": "",
@@ -634,21 +713,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1741393866",
+      "id": "691170532",
       "name_lat": "OKTAVIYA IZ STRANI GREZ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1649617767",
-      "name_lat": "OKTAVIANNA BAND BAKSTER",
+      "id": "388889633",
+      "name_lat": "OK SHE IS BEAUTIFUL ALISINA ZVEZDOCHKA NASLEDIYE ETERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -661,10 +740,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1673310709",
+      "id": "564066137",
       "name_lat": "OKHOTNICHYA AKADEMIYA GARDI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -675,25 +754,25 @@
       "name_ru": "",
       "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "388889633",
-      "name_lat": "OK SHE IS BEAUTIFUL ALISINA ZVEZDOCHKA NASLEDIYE ETERA",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1906964877",
+      "id": "1793372016",
       "name_lat": "OKSITAILS EUTHENIA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1208805775",
+      "name_lat": "OKEAN MECHTY ANDERSEN",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -715,30 +794,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1208805775",
-      "name_lat": "OKEAN MECHTY ANDERSEN",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
       "id": "228507193",
       "name_lat": "OKKERVIL SINICHKA",
       "name_ru": "",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "974765588",
-      "name_lat": "OKSI DOG IMPERATOR",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "ROTTWEILER",
-      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -751,12 +812,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "861550182",
+      "name_lat": "OKHOTNIK SEVERA ILONA",
+      "name_ru": "Охотник Севера Илона",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "529626654",
       "name_lat": "OKEAN MECHTY EVERYWHERE AND ALWAYS THE BEST",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1684614913",
+      "name_lat": "OKSI DOG ZHASMIN II",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -769,10 +848,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1669525396",
+      "id": "1056096306",
       "name_lat": "OKTAVIYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "198420348",
+      "name_lat": "OKEANSKIY VETER VOZDUSHNIY POCELUY",
+      "name_ru": "",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "BOSTON TERRIER",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1119916569",
+      "name_lat": "OKTAVIANNA BAND DESERT ROSE",
+      "name_ru": "",
+      "breed": "ЛЬНЫЙ МАЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -787,21 +884,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1684614913",
-      "name_lat": "OKSI DOG ZHASMIN II",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "788783529",
       "name_lat": "OKTAVIYA GOLD",
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "SHETLAND SHEEPDOG",
-      "total_shows": 7,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -814,28 +902,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "435346605",
-      "name_lat": "OKTALES ENIGMA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "421980369",
+      "id": "636314957",
       "name_lat": "OKHOTNICHYA AKADEMIYA VAYZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "627060204",
+      "id": "1989529545",
       "name_lat": "OKTAVA ERATO SELENE VAN EDELSIEGER",
       "name_ru": "",
-      "breed": "СОБАКА СРЕДНЯЯ /",
+      "breed": "СОБАКА СРЕДНЯЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -850,12 +929,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "823886511",
+      "id": "144383710",
       "name_lat": "OKEANSKIY VETER ZNAKOVY STIL",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР /",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1159151863",
+      "name_lat": "OK FLOCK ALMAZ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -877,10 +965,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1481691622",
+      "id": "570321503",
       "name_lat": "OKSI WAY OGON I LED",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -895,21 +983,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "630725361",
+      "id": "43933262",
       "name_lat": "OKSI TAKTIKA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "22687150",
-      "name_lat": "OK FLOCK ALMAZ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "id": "1993879404",
+      "name_lat": "OKHOTNICHYA AKADEMIYA VALTER",
+      "name_ru": "ОХОТНИЧЬЯ АКАДЕМИЯ ВАЛЬТЕР",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -922,10 +1010,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1715852917",
+      "id": "156380121",
       "name_lat": "OKHOTNICHYA AKADEMIYA TEYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -958,10 +1046,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "143656187",
+      "id": "263196850",
       "name_lat": "OKSI WAY NASLEDNITS A",
       "name_ru": "",
-      "breed": "РСТНЫЙ /",
+      "breed": "РСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -985,28 +1073,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1849555784",
-      "name_lat": "OKHOTNICHYA AKADEMIYA VALTER",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1591566997",
-      "name_lat": "OKSIGOR HOUSE INDIGO",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "441251459",
+      "id": "1585078439",
       "name_lat": "OKSI BRIGHT",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1057,10 +1127,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "816958787",
+      "id": "151516351",
       "name_lat": "OKHOTNICHYA AKADEMIYA AFINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1084,21 +1154,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "481964116",
+      "name_lat": "OKEAN MECHTY AMBASSADOR",
+      "name_ru": "ОКЕАН МЕЧТЫ АМБАССАДОР",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1362540377",
+      "name_lat": "OKSI MAGDALINA",
+      "name_ru": "ОКСИ МАГДАЛИНА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "1304651013",
       "name_lat": "OKHOTNICHIY AZART FANTASTIKA",
       "name_ru": "",
       "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "198420348",
-      "name_lat": "OKEANSKIY VETER VOZDUSHNIY POCELUY",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "BOSTON TERRIER",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1111,30 +1190,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "23331273",
-      "name_lat": "OKEAN MECHTY AMBASSADOR",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "277430709",
-      "name_lat": "OKHOTNICHIY GLADIATOR MARKOU REIMO",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1621883080",
+      "id": "1529901677",
       "name_lat": "OKAMI MAMURO",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "name_ru": "ОКАМИ МАМУРО",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1437458239",
+      "name_lat": "OKSA BELLOLUNA ALFA ROMEO",
+      "name_ru": "ОКСА БЕЛЛОЛУНА АЛЬФА РОМЕО",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "180018578",
+      "name_lat": "OKHOTNICHIY GLADIATOR MARKOU REIMO",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1165,6 +1244,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "680453154",
+      "name_lat": "OKEANSKIY VETER YUVELIRNAYA RABOTA",
+      "name_ru": "ОКЕАНСКИЙ ВЕТЕР ЮВЕЛИРНАЯ РАБОТА",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "BOSTON TERRIER",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "826180470",
       "name_lat": "OKHRA IZ LEGENDY ROKHA",
       "name_ru": "",
@@ -1180,6 +1268,24 @@
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "ROTTWEILER",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1899711433",
+      "name_lat": "OK FLOCK ADULARIA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "644896140",
+      "name_lat": "OKKERVIL BETSI - II",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1210,10 +1316,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "916100446",
+      "id": "724528201",
+      "name_lat": "OKKERVIL EVLAMPIYA",
+      "name_ru": "",
+      "breed": "РУССКАЯ ЦВЕТНАЯ",
+      "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "449381954",
       "name_lat": "OKHOTA POISKA ZHETON",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1246,10 +1361,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "928752974",
+      "id": "1630875410",
       "name_lat": "OKHOTA POISKA INTERES",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1264,6 +1379,42 @@
       "competition_dog_id": null
     },
     {
+      "id": "275721258",
+      "name_lat": "OKEANSKIY VETER EMBLEMA MASTERA",
+      "name_ru": "ОКЕАНСКИЙ ВЕТЕР ЭМБЛЕМА МАСТЕРА",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "BOSTON TERRIER",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "645870944",
+      "name_lat": "OKVISION ARISTOCRATIC CHARM",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "DOGUE DE BORDEAUX",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "129672955",
+      "name_lat": "OKKERVIL BONITA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1469788167",
+      "name_lat": "Okeanskiy Veter Lyubuyus Toboy",
+      "name_ru": "ОКЕАНСКИЙ ВЕТЕР ЛЮБУЮСЬ ТОБОЙ",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "BOSTON TERRIER",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1529016839",
       "name_lat": "OKSI DOG FAYBERG",
       "name_ru": "",
@@ -1273,30 +1424,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1899711433",
-      "name_lat": "OK FLOCK ADULARIA",
+      "id": "733028180",
+      "name_lat": "OKTYABRINA IZ SADA BABOCHEK",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "227041061",
-      "name_lat": "OKHOTA POISKA ZOV",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1362540377",
-      "name_lat": "OKSI MAGDALINA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "id": "562181887",
+      "name_lat": "OKSI DOG YUNI ASTRUMI",
+      "name_ru": "ОКСИ ДОГ ЮНИ АСТРУМИ",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "589519364",
+      "name_lat": "OKEAN MECHTY ANABEL",
+      "name_ru": "ОКЕАН МЕЧТЫ АНАБЕЛЬ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1918048105",
+      "name_lat": "OKHOTA POISKA ZOV",
+      "name_ru": "",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1306,24 +1466,6 @@
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "645870944",
-      "name_lat": "OKVISION ARISTOCRATIC CHARM",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
-      "breed_en": "DOGUE DE BORDEAUX",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1093714586",
-      "name_lat": "OKKERVIL EVLAMPIYA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
-      "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1345,21 +1487,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "7628290",
+      "id": "794380025",
       "name_lat": "OKRIS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "1676321308",
+      "name_lat": "OKUSAMA YUKI",
+      "name_ru": "",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1832824293",
+      "name_lat": "OKSKIEDALI BESTIAN",
+      "name_ru": "ОКСКИЕДАЛИ БЕСТИАН",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "563671063",
       "name_lat": "OKHOTNICHYA AKADEMIYA ARES",
-      "name_ru": "",
+      "name_ru": "ОХОТНИЧЬЯ АКАДЕМИЯ АРЕС",
       "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1372,21 +1532,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "702140158",
+      "id": "1458279480",
+      "name_lat": "Ok Flok Almaz",
+      "name_ru": "ОК ФЛОК АЛМАЗ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1031995783",
       "name_lat": "OKSITAILS BUFFALO BILL AT BULLTER EGO",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1676321308",
-      "name_lat": "OKUSAMA YUKI",
+      "id": "197287163",
+      "name_lat": "OK FLOCK VASHINGTON",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1426,21 +1595,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1779042040",
+      "name_lat": "OKEANSKIY VETER LAMBORGINI",
+      "name_ru": "",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "159352186",
       "name_lat": "OKI",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "454055113",
-      "name_lat": "OKTYABRINA IZ SADA BABOCHEK",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1458,7 +1627,7 @@
       "name_ru": "",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1467,7 +1636,7 @@
       "name_ru": "",
       "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
-      "total_shows": 6,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1476,7 +1645,16 @@
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1502839237",
+      "name_lat": "OKTAVIA S KNJAZHESKOGO DVORA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1516,12 +1694,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1671129512",
+      "id": "1900728884",
+      "name_lat": "OKSI WAY MACHO MEN (LONG COAT)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1924320589",
       "name_lat": "OKSLAND ASTRID SUNLAIGHT",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "79617396",
+      "name_lat": "OKAIDO VOM FICHTENSHLAG",
+      "name_ru": "",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1557,7 +1752,7 @@
       "name_ru": "",
       "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1584,7 +1779,7 @@
       "name_ru": "",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1597,15 +1792,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1779042040",
-      "name_lat": "OKEANSKIY VETER LAMBORGINI",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1087699168",
       "name_lat": "OKSITAILS INGRIYA",
       "name_ru": "",
@@ -1615,12 +1801,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "275721258",
-      "name_lat": "OKEANSKIY VETER EMBLEMA MASTERA",
+      "id": "1392695286",
+      "name_lat": "OKTAVIAN AVGUST S KRASNOGO JARA",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "BOSTON TERRIER",
-      "total_shows": 2,
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1633,30 +1818,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1532712364",
+      "id": "152387977",
       "name_lat": "OKHOTNIK SEVERA SANDRA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "197287163",
-      "name_lat": "OK FLOCK VASHINGTON",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1469788167",
-      "name_lat": "Okeanskiy Veter Lyubuyus Toboy",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1702,24 +1869,6 @@
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1119916569",
-      "name_lat": "OKTAVIANNA BAND DESERT ROSE",
-      "name_ru": "",
-      "breed": "ЛЬНЫЙ МАЛЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1832824293",
-      "name_lat": "OKSKIEDALI BESTIAN",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1777,12 +1926,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "129672955",
-      "name_lat": "OKKERVIL BONITA",
+      "id": "814348129",
+      "name_lat": "OKSITAILS AMBASSADOR BRIGHT STAR",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1804,6 +1952,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "597746429",
+      "name_lat": "OKSIGOR HOUSE GAUDI",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "733125092",
+      "name_lat": "OKKERVIL YANTARIK",
+      "name_ru": "",
+      "breed": "РУССКАЯ ЦВЕТНАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "841145492",
       "name_lat": "OKTAY GREAT STAR",
       "name_ru": "",
@@ -1813,10 +1977,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "226128795",
+      "id": "272148876",
       "name_lat": "OKIDOKI FOM HAUS WOLFSHUND",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1876,28 +2040,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "881899895",
-      "name_lat": "OKSI WAY MACHO MEN",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "597746429",
-      "name_lat": "OKSIGOR HOUSE GAUDI",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "376587569",
+      "id": "1429366642",
       "name_lat": "OKHARA IZ SIBIRSKOY GLUBINKI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1912,19 +2058,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1539496489",
-      "name_lat": "OKEANSKIY VETER EKSKLYUZIV",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "BOSTON TERRIER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "95367490",
+      "id": "1284240195",
       "name_lat": "OKEANSKIY VETER KARAMEL",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР /",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1948,10 +2085,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "911853216",
+      "id": "282334581",
       "name_lat": "OKVISION BURAN ENERDGY",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1975,10 +2112,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1989947254",
+      "id": "1534551624",
+      "name_lat": "OKHOTNICHYA AKADEMIYA ALFA",
+      "name_ru": "ОХОТНИЧЬЯ АКАДЕМИЯ АЛЬФА",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1202672853",
       "name_lat": "OKKI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1993,15 +2139,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1534551624",
-      "name_lat": "OKHOTNICHYA AKADEMIYA ALFA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ КУРЦХААР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1138967543",
       "name_lat": "OKTAVIA SHKODA IZ MARIALGRADA",
       "name_ru": "",
@@ -2011,20 +2148,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1062321227",
-      "name_lat": "OKAIDO VOM FICHTENSHLAG",
+      "id": "1980997292",
+      "name_lat": "OKS KOMPANI NEW GENERATION",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1459220209",
-      "name_lat": "OKKERVIL BETSI - II",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
-      "breed_en": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2038,15 +2165,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1900728884",
-      "name_lat": "OKSI WAY MACHO MEN (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "505092369",
       "name_lat": "OKEANSKIY VETER FLIBUSTIER",
       "name_ru": "",
@@ -2056,21 +2174,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "851703351",
+      "id": "10517855",
       "name_lat": "OKTAVIAN AVGUST S KRASNOGO YARA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "SPRINGER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1458279480",
-      "name_lat": "Ok Flok Almaz",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2083,10 +2192,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "19531868",
+      "id": "77694256",
       "name_lat": "OKTYABRINA МУЛЬТАТУЛИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2110,21 +2219,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "639283274",
+      "id": "1221860891",
       "name_lat": "OKSIM BEST OF PANDY SHARM",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1502839237",
-      "name_lat": "OKTAVIA S KNJAZHESKOGO DVORA",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2134,6 +2234,14 @@
       "breed": "BOSTON",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29226644",
+      "name_lat": "OKTALES INKOGNITO",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2152,6 +2260,15 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1474489174",
+      "name_lat": "OKEANSKIY VETER BELAYA NOCH",
+      "name_ru": "ОКЕАНСКИЙ ВЕТЕР БЕЛАЯ НОЧЬ",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2182,19 +2299,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "123373726",
+      "id": "1647199622",
       "name_lat": "OKSITAILS MURAVEY",
       "name_ru": "",
-      "breed": "ЛЕЙКЛЕНД МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "14838176",
+      "id": "607936876",
       "name_lat": "OKHOTA POISKA ESAUL",
       "name_ru": "",
-      "breed": "ДАЛМАТИН КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "breed": "ДАЛМАТИН КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2218,19 +2335,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1611321726",
+      "id": "84930091",
       "name_lat": "OKHOTNICHIY GLADIATOR STAVR",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "276879263",
-      "name_lat": "OKSA BELLOLUNA ALFA ROMEO",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ / MALTESE",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2263,15 +2371,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "814348129",
-      "name_lat": "OKSITAILS AMBASSADOR BRIGHT STAR",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "721851729",
       "name_lat": "OKCHAR",
       "name_ru": "",
@@ -2287,6 +2386,15 @@
       "breed": "СИБА / SHIBA",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1558684088",
+      "name_lat": "OKHOTNIK SEVERA SAMURAI",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2317,10 +2425,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1632908238",
+      "id": "1858246202",
       "name_lat": "OKTAVA VON HAUS DEVARTIS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2330,6 +2438,15 @@
       "name_lat": "OKEAN ELZY",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "108284626",
+      "name_lat": "OKEANA BELLADONNA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2416,11 +2533,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "108284626",
-      "name_lat": "OKEANA BELLADONNA",
+      "id": "605534703",
+      "name_lat": "OK PHENOMENON RUNNING ON THE WAYS",
       "name_ru": "",
-      "breed": "БУЛЬДОГ / BULLDOG",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2434,10 +2550,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1959606867",
+      "id": "693904092",
       "name_lat": "OKSI WAY ZEFIRKA (LONG COAT)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2452,12 +2568,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1543444916",
+      "id": "989960939",
       "name_lat": "OKAY VOM HAUS LICHER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2479,10 +2595,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "128684525",
+      "id": "1611829745",
       "name_lat": "OKHOTA POISKA ZADIRA",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2497,10 +2613,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1047679726",
+      "id": "678496017",
       "name_lat": "OKEAN MECHTY ARMINA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "NEWFOUNDLАND",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2524,15 +2640,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1980997292",
-      "name_lat": "OKS KOMPANI NEW GENERATION",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "427796755",
       "name_lat": "OKSY CHELSY OKSFORD",
       "name_ru": "",
@@ -2551,21 +2658,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "861550182",
-      "name_lat": "OKHOTNIK SEVERA ILONA",
+      "id": "1604385062",
+      "name_lat": "OK PHENOMENON RUNNING ON THE WAVES",
       "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
-      "total_shows": 1,
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "488750896",
+      "id": "360117364",
       "name_lat": "OKSI RAINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1703374216",
+      "name_lat": "OKTAVIYA ZOLOTAYA ZVEZDA",
+      "name_ru": "",
+      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "955585201",
+      "name_lat": "OKFLOCKALMAZ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2578,10 +2701,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1696262468",
-      "name_lat": "OKKERVIL YANTARIK",
+      "id": "618985526",
+      "name_lat": "OKEANA BALTAZAR S TIHOGO",
       "name_ru": "",
-      "breed": "БОЛОНКА / RUSSKAYA",
+      "breed": "БУЛЬДОГ / BULLDOG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2591,15 +2714,6 @@
       "name_lat": "OKS NORD YAKUDZA BLACK MAMBA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "618985526",
-      "name_lat": "OKEANA BALTAZAR S TIHOGO",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ / BULLDOG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2627,17 +2741,7 @@
       "name_lat": "OKSITAILS ARLECCHINO DELL'ARTE",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "91922887",
-      "name_lat": "OK PHENOMENON RUNNING ON THE WAVES",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2659,19 +2763,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "386289552",
-      "name_lat": "OKTAVIANNA BAND GRAPPA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1187827987",
+      "id": "325374295",
       "name_lat": "OKSI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2686,10 +2781,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "340504944",
+      "id": "851077873",
       "name_lat": "OKTAVE OCCHI DI",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2700,6 +2795,14 @@
       "name_ru": "",
       "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1912695423",
+      "name_lat": "OKHOTNICHYA AKADEMIYA MONA- SHTEFFI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2731,15 +2834,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "859379986",
-      "name_lat": "OKTAVIAN AVGUST S KRASNOGO JARA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1586872892",
       "name_lat": "OKHOTNICZA RICZA",
       "name_ru": "",
@@ -2758,15 +2852,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "589519364",
-      "name_lat": "OKEAN MECHTY ANABEL",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1054751465",
       "name_lat": "OKSITAILS ZHAZIRA (Изменено по решению ВК от 11.12.2024 В. 26)",
       "name_ru": "",
@@ -2776,20 +2861,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "471121083",
+      "id": "439826818",
       "name_lat": "OKSFORD ВАЙВИД СПРИНГ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1558684088",
-      "name_lat": "OKHOTNIK SEVERA SAMURAI",
+      "id": "421489436",
+      "name_lat": "OKSLAND JAMAIKA JAZZ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "237039247",
+      "name_lat": "OKINAVA DE RIVO BIANKO",
+      "name_ru": "ОКИНАВА ДЕ РИВО БИАНКО",
+      "breed": "ЧАУ ЧАУ",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -2821,15 +2914,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "421489436",
-      "name_lat": "OKSLAND JAMAIKA JAZZ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1386893689",
       "name_lat": "OKSI IZ ZAPOLARIA",
       "name_ru": "",
@@ -2839,10 +2923,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "93324032",
+      "id": "766861357",
       "name_lat": "OKSI WINNER ALENKIY TSVETOCHEK",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2871,6 +2955,14 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "822536441",
+      "name_lat": "OKTAVIANNA BAND JANSAYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2911,6 +3003,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "197465267",
+      "name_lat": "OKTARIN VOLSHEBNY TSVET",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "120543956",
       "name_lat": "OKS'STYLE FREZI",
       "name_ru": "",
@@ -2925,24 +3026,6 @@
       "name_ru": "",
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "BOSTON TERRIER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "680453154",
-      "name_lat": "OKEANSKIY VETER YUVELIRNAYA RABOTA",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "BOSTON TERRIER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "197465267",
-      "name_lat": "OKTARIN VOLSHEBNY TSVET",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2974,15 +3057,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1273220053",
-      "name_lat": "OKSI WAY TVIKS (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "947738841",
       "name_lat": "OK FLOCK BASTA",
       "name_ru": "",
@@ -2992,10 +3066,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1991835696",
+      "id": "1046150917",
       "name_lat": "OKS NORD ARENK VIHO",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3010,19 +3084,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1630459284",
+      "id": "877084488",
       "name_lat": "OKHOTA POISKA ZHASMIN",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "562181887",
-      "name_lat": "OKSI DOG YUNI ASTRUMI",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3055,11 +3120,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1323556772",
+      "id": "1207312891",
       "name_lat": "OKTAVIANNA BAND BOUNTY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1249833447",
+      "name_lat": "OKEAN LYUBVI OLIVER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3073,10 +3146,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "173886797",
+      "name_lat": "OKSITAILS ARLECCHINO DEL'ARTE",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1503868311",
+      "name_lat": "OKA NATSUMI",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "933255019",
       "name_lat": "OKИ",
       "name_ru": "",
       "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "755286647",
+      "name_lat": "O-Kami",
+      "name_ru": "",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3109,19 +3207,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1558641625",
+      "id": "34787365",
       "name_lat": "OKSI BRIGHT",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ / GERMAN SPITZ TOY (POMERANIAN) WHITE, BLACK, BROWN, ORANGE, GREY, OTHER COLOURS",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ / GERMAN SPITZ TOY (POMERANIAN) WHITE, BLACK, BROWN, ORANGE, GREY, OTHER COLOURS",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1689352362",
+      "id": "1459532027",
       "name_lat": "OKSI BRIGHT",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3163,6 +3261,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1887504887",
+      "name_lat": "O'KIRA IZ BANDY CHERNYH",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "GIANT SCHNAUZER BLACK",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "473824672",
       "name_lat": "OKHOTNICHIY GLADIATOR AIRIK AGVID ULYF",
       "name_ru": "",
@@ -3181,10 +3288,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1284558010",
+      "id": "825418918",
       "name_lat": "OKSANDRA GRIS IZ BANDY CHERNYH",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3226,6 +3333,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "829583155",
+      "name_lat": "OKSMONT FROM HOUSE OF BLACKS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "930943625",
       "name_lat": "OK PHENOMENON TIME TO SHOW",
       "name_ru": "",
@@ -3235,10 +3350,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "659622921",
+      "id": "291971220",
       "name_lat": "OKEANOS POSEIDONOS VAN EDELSIEGE",
       "name_ru": "",
-      "breed": "СОБАКА МАЛАЯ /",
+      "breed": "СОБАКА МАЛАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3253,10 +3368,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1758940077",
+      "id": "252719098",
+      "name_lat": "O KONNOR NOTORIUS",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46007312",
       "name_lat": "OKTAVIA BLAKE IZ ZOOSFERY",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3271,10 +3395,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1420017599",
+      "id": "800854446",
       "name_lat": "OK GLORIA SWEET",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3289,19 +3413,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1474489174",
-      "name_lat": "OKEANSKIY VETER BELAYA NOCH",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1700467814",
+      "id": "276495850",
       "name_lat": "OKHOTA POISKA MECHTA",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3334,10 +3449,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "154047784",
+      "id": "389910004",
       "name_lat": "OKHOTA POISKA ILLYUZIYA",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3379,15 +3494,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "801364905",
-      "name_lat": "OKTAVIYA ZOLOTAYA ZVEZDA",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1065069146",
       "name_lat": "OKEANA AL'BUM MARGARITA",
       "name_ru": "",
@@ -3415,20 +3521,43 @@
       "competition_dog_id": null
     },
     {
-      "id": "1624208937",
-      "name_lat": "OKEANSKIY VETER BYT DOBRU",
+      "id": "1856373511",
+      "name_lat": "OKS NORD BERTA-BEAUTIFUL",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1120038851",
-      "name_lat": "OKS NORD BERTA- BEAUTIFUL",
+      "id": "13251010",
+      "name_lat": "OKHOTNICHYA AKADEMIYA BAVARIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1305061651",
+      "name_lat": "OKSI WAY AGENT",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1589707815",
+      "name_lat": "OKSI WINNER GARDEMARIN",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1940045987",
+      "name_lat": "OKSI WINNER GAY GERZA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3446,15 +3575,6 @@
       "name_lat": "OKS EDINSTVENNAYA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "822536441",
-      "name_lat": "OKTAVIANNA BAND JANSAYA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "PT",
-  "count": 17,
+  "count": 19,
   "dogs": [
     {
       "id": "111201346",
@@ -28,6 +28,14 @@
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "10813685",
+      "name_lat": "PTICHKA PEVCHAYA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -58,12 +66,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "777914910",
+      "id": "1456155943",
       "name_lat": "PTI BOMOND PERFECTA",
       "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "АФФЕНПИНЧЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -94,17 +101,25 @@
       "competition_dog_id": null
     },
     {
-      "id": "434532923",
+      "id": "1167328242",
       "name_lat": "PTI PITER DANCING STEPS (P.BR.)",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1674479705",
-      "name_lat": "PTICHKA- NEVELICHKA IZ",
+      "id": "1161755715",
+      "name_lat": "PTI PITER YOU AND ME",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1731829541",
+      "name_lat": "PTICHKA-NEVELICHKA IZ",
       "name_ru": "",
       "breed": "ПУДЕЛЬ",
       "breed_en": "",
@@ -112,8 +127,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1524334927",
-      "name_lat": "PTI PYTER YUH- HEY-HO",
+      "id": "302332697",
+      "name_lat": "PTI PYTER YUH-HEY-HO",
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
@@ -139,21 +154,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "231333346",
+      "name_lat": "P-TANAKA S AKULOVOY GORI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "993986950",
       "name_lat": "PTASHKA PEVCHAYA IZ OZHERELIA",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
       "breed_en": "ITALIAN SIGHTHOUND",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "10813685",
-      "name_lat": "PTICHKA PEVCHAYA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

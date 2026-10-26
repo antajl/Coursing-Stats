@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "HR",
-  "count": 99,
+  "count": 110,
   "dogs": [
     {
       "id": "1475336557",
@@ -22,12 +22,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1630925010",
+      "name_lat": "HRUSTALNOE SERDECHKO DEMON",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "902267569",
       "name_lat": "HRUSTALNYI SENBERNAR GUSTAV KING (KURZ.)",
       "name_ru": "",
       "breed": "СЕНБЕРНАР К-Ш",
       "breed_en": "ST. BERNARD SHORT HAIRED",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1730712177",
+      "name_lat": "HRABROE SERDTSE ZEFIRKA",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -40,21 +58,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1739086669",
+      "name_lat": "HRUSTALNOE SERDECHKO AKULA",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "252764145",
       "name_lat": "HRONOS DI CASA KALINAS",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 30,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1234872265",
-      "name_lat": "HRUSTALNOE SERDECHKO AKULA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -76,28 +94,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1730712177",
-      "name_lat": "HRABROE SERDTSE ZEFIRKA",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "825606374",
+      "id": "1446698025",
       "name_lat": "HRANITEL SNOV IZ PRYANICHNOGO DOMIKA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СOCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 37,
       "competition_dog_id": null
     },
     {
-      "id": "451125809",
+      "id": "970193612",
       "name_lat": "HRUSTALNAYA KAPEL IZ ZHEMCHUZHNOI ROSSYPI",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -126,11 +135,19 @@
       "name_ru": "",
       "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "544833822",
+      "id": "1131003810",
+      "name_lat": "HRUSTALNAYA MECHTA EPIC SUNLIGHT",
+      "name_ru": "",
+      "breed": "КАРДИГАН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "544833823",
       "name_lat": "HROME DELL' ALBALLEGRA",
       "name_ru": "",
       "breed": "АППЕНЦЕЛЛЕР ЗЕННЕНХУНД",
@@ -166,6 +183,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "57602174",
+      "name_lat": "HRUSTALNYI SENBERNAR ETT EDISON",
+      "name_ru": "",
+      "breed": "КОРОТКОШЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "1506845267",
       "name_lat": "HRUSTALNAYA MECHTA YARA PUMA",
       "name_ru": "",
@@ -175,21 +201,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "57602174",
-      "name_lat": "HRUSTALNYI SENBERNAR ETT EDISON",
+      "id": "650600451",
+      "name_lat": "HRABRAYA SPASITELNITSA IZ DOMA YU-TI",
       "name_ru": "",
-      "breed": "КОРОТКОШЕР",
-      "breed_en": "",
-      "total_shows": 11,
+      "breed": "ПУДЕЛЬ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1449533938",
+      "id": "1611424824",
       "name_lat": "HRUSTALNYI SENBERNAR JORJETTA",
       "name_ru": "",
-      "breed": "КОРОТКОШЕР",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -198,7 +222,7 @@
       "name_ru": "",
       "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -220,10 +244,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "325895894",
+      "id": "1538144591",
       "name_lat": "HRABROE SERDTSE ZOLTAN",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -238,10 +262,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "343833286",
+      "id": "971187240",
       "name_lat": "HRIZANTEMA HLOYA SOKROVISHCHE BERMANA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -274,10 +298,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "236545481",
+      "id": "1411481684",
       "name_lat": "HRODGAR",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -297,14 +321,14 @@
       "name_ru": "",
       "breed": "ST. BERNARD LONG-",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "221667915",
+      "id": "1035063618",
       "name_lat": "HRANITELNIZA OCHAGA IZ RUSSKOI DINASTII",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР /",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -328,10 +352,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "160613425",
+      "id": "860998860",
       "name_lat": "HRUSTALNOE SERDECHKO PANTERA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -346,12 +370,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "954619427",
+      "id": "168662452",
       "name_lat": "HREIDMAR PRIMO MIO GRANDE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1094150649",
+      "name_lat": "HRUSTALNAYA MECHTA IZ GRAFSKOGO POMESTIJA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -373,12 +405,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1254071382",
+      "id": "250432138",
       "name_lat": "HRISTOFOR KOLUMB S BEREGA AVACHI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -508,15 +540,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1630925010",
-      "name_lat": "HRUSTALNOE SERDECHKO DEMON",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "288722154",
       "name_lat": "HROME DELL'ALBALLEGRA",
       "name_ru": "",
@@ -580,19 +603,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "89309656",
+      "id": "863377661",
       "name_lat": "HRUSTALNAYA MECHTA OPA",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "370610342",
-      "name_lat": "HRABRAYA SPASITELNITSA IZ DOMA YU-TI",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -607,10 +621,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "125553632",
+      "id": "242370959",
       "name_lat": "HRANITEL SNOV IZ GRADA BELYKH BEREZ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -697,10 +711,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "104910811",
+      "id": "236428267",
       "name_lat": "HRANITEL YARKAYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -711,6 +725,22 @@
       "name_ru": "",
       "breed": "ПОЛЬСКАЯ ПОДГАЛЯНСКАЯ ОВЧАРКА",
       "breed_en": "TATRA SHEPHERD DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1030744103",
+      "name_lat": "HRUSTALNYI SENBERNAR IRISH SAPFIR",
+      "name_ru": "",
+      "breed": "КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1976525349",
+      "name_lat": "HRUSTALNYI SENBERNAR INFINITI INDI STAR",
+      "name_ru": "",
+      "breed": "КОРОТКОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -751,19 +781,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1508594892",
+      "id": "360599334",
+      "name_lat": "HRISTICHSAN MODISTA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1013124898",
+      "name_lat": "HRUSTALNYI SENBERNAR IRWIN",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1127418088",
       "name_lat": "HRUSTALYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "241069720",
+      "id": "728594149",
       "name_lat": "HRISTIAN",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -774,6 +820,48 @@
       "name_ru": "",
       "breed": "КАНЕ КОРСО",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "618218494",
+      "name_lat": "HRISANTA VOLSHEBNITSA IZ SOKOLINOGO GNEZDA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1780309514",
+      "name_lat": "HRUSTALNYI SENBERNAR INDIANA",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1506475955",
+      "name_lat": "HRUSTALNYI SENBERNAR IOGAN ROBERT",
+      "name_ru": "",
+      "breed": "КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1145294582",
+      "name_lat": "HRUSTALNYI SENBERNAR INSIGNIYA",
+      "name_ru": "",
+      "breed": "КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "537431833",
+      "name_lat": "H RENEGADA DEL PULMAHUE",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "breed_en": "DOGO ARGENTINO",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -841,10 +929,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "651887924",
+      "id": "1545538145",
       "name_lat": "HRISTICHSAN PUHKENIK BONYA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -868,15 +956,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "618218494",
-      "name_lat": "HRISANTA VOLSHEBNITSA IZ SOKOLINOGO GNEZDA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "636391186",
       "name_lat": "HRANITELNITSA OCHAGA",
       "name_ru": "",
@@ -891,6 +970,14 @@
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1589041143",
+      "name_lat": "HRIZANTEMA IZ IMPERII FAVORITOV",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
       "total_shows": 1,
       "competition_dog_id": null
     }

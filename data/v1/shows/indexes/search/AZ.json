@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AZ",
-  "count": 384,
+  "count": 398,
   "dogs": [
     {
       "id": "1456455060",
@@ -15,10 +15,10 @@
     {
       "id": "120279227",
       "name_lat": "AZANBEKK GANGSTER LEON",
-      "name_ru": "",
+      "name_ru": "АЗАНБЕКК ГАНГСТЕР ЛЕОН",
       "breed": "ИТАЛЬЯНСКИЙ БРАКК",
       "breed_en": "ITALIAN POINTING DOG (BRACCO ITALIANO)",
-      "total_shows": 27,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -27,7 +27,7 @@
       "name_ru": "",
       "breed": "АЗАВАК",
       "breed_en": "AZAWAKH",
-      "total_shows": 23,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -37,6 +37,14 @@
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1693281359",
+      "name_lat": "AZIMUT VOLGA VINTIK",
+      "name_ru": "АЗИМУТ ВОЛГА ВИНТИК",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -58,12 +66,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "282177170",
+      "name_lat": "AZANBEKK LIVERPUL ENFILD",
+      "name_ru": "АЗАНБЕКК ЛИВЕРПУЛЬ ЭНФИЛД",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "350245274",
       "name_lat": "AZAMOUR GV ALEJANDRA",
       "name_ru": "",
       "breed": "АЗАВАК",
       "breed_en": "AZAWAKH",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "215471914",
+      "name_lat": "AZARI SNOW EMPIRE VACZUKI",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -76,10 +102,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "980163486",
+      "id": "264535434",
       "name_lat": "AZZARO ORANGE TONIC",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -94,29 +120,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1918617004",
+      "id": "353244264",
       "name_lat": "AZHANA TEMDEG",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ СОБАКА)",
+      "breed": "ТИБЕТСКИЙ ХОТОШО (БУРЯТСКАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "215471914",
-      "name_lat": "AZARI SNOW EMPIRE VACZUKI",
-      "name_ru": "",
-      "breed": "АКИТА",
+      "id": "72186440",
+      "name_lat": "AZART POGONI USLADA",
+      "name_ru": "АЗАРТ ПОГОНИ УСЛАДА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "282177170",
-      "name_lat": "AZANBEKK LIVERPUL ENFILD",
+      "id": "940796422",
+      "name_lat": "AZART POGONI DIZZY DISKOVERY",
       "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 41,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1781583579",
+      "name_lat": "AZHUR YANTARYA DLYA ROSSYPI BISERA",
+      "name_ru": "",
+      "breed": "ХАВАНЕЗ",
+      "breed_en": "HAVANESE",
       "total_shows": 7,
       "competition_dog_id": null
     },
@@ -130,12 +165,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "297709891",
+      "name_lat": "AZART POGONI DANTES",
+      "name_ru": "АЗАРТ ПОГОНИ ДАНТЕС",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "9473",
       "name_lat": "AZARTNAYA OKHOTA BARGUZIN BORZIE CENAVIAN",
-      "name_ru": "",
+      "name_ru": "АЗАРТНАЯ ОХОТА БАРГУЗИН",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 30,
+      "total_shows": 34,
       "competition_dog_id": 9473
     },
     {
@@ -157,30 +200,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "940796422",
-      "name_lat": "AZART POGONI DIZZY DISKOVERY",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 38,
-      "competition_dog_id": null
-    },
-    {
-      "id": "72186440",
-      "name_lat": "AZART POGONI USLADA",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "1969926512",
       "name_lat": "AZALEA XCEPTIONAL",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -193,10 +217,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1829889357",
+      "id": "1770296389",
       "name_lat": "AZARTNAYA OKHOTNITSA ANTONIYA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -208,6 +232,23 @@
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1637884936",
+      "name_lat": "AZGARD FILA O CASTELO",
+      "name_ru": "",
+      "breed": "БРАЗИЛЬСКИЙ ФИЛА БУЛЬДОГ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179367791",
+      "name_lat": "AZBUKA USPEKHA DVOYNOY VYIGRYSH",
+      "name_ru": "АЗБУКА УСПЕХА ДВОЙНОЙ ВЫИГРЫШ",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -244,6 +285,15 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1087191287",
+      "name_lat": "AZ-MARAL ENSA",
+      "name_ru": "АЗ-МАРАЛ ЕНСА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -285,10 +335,10 @@
     {
       "id": "1894350343",
       "name_lat": "AZART OKHOTY VELIMIRA",
-      "name_ru": "",
+      "name_ru": "АЗАРТ ОХОТЫ ВЕЛИМИРА",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -310,30 +360,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "805615020",
+      "id": "1153250697",
       "name_lat": "AZURE DRAGON EREMEY",
       "name_ru": "",
-      "breed": "ПЕКИНЕС /",
+      "breed": "ПЕКИНЕС",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1781583579",
-      "name_lat": "AZHUR YANTARYA DLYA ROSSYPI BISERA",
-      "name_ru": "",
-      "breed": "ХАВАНЕЗ",
-      "breed_en": "HAVANESE",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1087191287",
-      "name_lat": "AZ-MARAL ENSA",
-      "name_ru": "",
+      "id": "103262869",
+      "name_lat": "AZIM DLYA DOMA CHAGREMAR",
+      "name_ru": "АЗИМ ДЛЯ ДОМА ЧАГРЕМАР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -346,21 +387,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1734617415",
+      "id": "1078015531",
       "name_lat": "AZZO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "297709891",
-      "name_lat": "AZART POGONI DANTES",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -382,6 +414,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1544198546",
+      "name_lat": "AZANBEKK GOLUBIKA RUMBA",
+      "name_ru": "АЗАНБЕКК ГОЛУБИКА РУМБА",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "295123678",
       "name_lat": "AZAMOUR BAHIRA",
       "name_ru": "",
@@ -397,6 +438,15 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "27667180",
+      "name_lat": "AZART POGONI ULTRA",
+      "name_ru": "АЗАРТ ПОГОНИ УЛЬТРА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -436,21 +486,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "27667180",
-      "name_lat": "AZART POGONI ULTRA",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "JACK RUSSELL TERRIER",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "1303812632",
       "name_lat": "Azia Land Agata",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ ДРУГИХ ОКРАСОВ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9487",
+      "name_lat": "AZARTNAYA OKHOTA DERZHAVA",
+      "name_ru": "АЗАРТНАЯ ОХОТА ДЕРЖАВА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": 9487
+    },
+    {
+      "id": "1827151564",
+      "name_lat": "AZHURNOE KRUZHEVO OT KOKO SHANEL",
+      "name_ru": "АЖУРНОЕ КРУЖЕВО ОТ КОКО ШАНЕЛЬ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "507762384",
+      "name_lat": "AZALIYA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -463,39 +531,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "812698675",
-      "name_lat": "AZARTNAYA OKHOTA DERZHAVA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "833299978",
-      "name_lat": "AZHURNOE KRUZHEVO OT KOKO SHANEL",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "397751618",
       "name_lat": "AZARY SNOW EMPARE VACZUKI",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1693281359",
-      "name_lat": "AZIMUT VOLGA VINTIK",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -517,21 +558,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "507762384",
-      "name_lat": "AZALIYA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1279830334",
       "name_lat": "AZARI SNOW EMPERE SHEENA TAKA",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181904923",
+      "name_lat": "AZ-MARAL TAKER",
+      "name_ru": "АЗ-МАРАЛ ТАКЕР",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -546,10 +586,10 @@
     {
       "id": "1561725890",
       "name_lat": "AZGILEANT ARINA-RIKARDA MEDZHIK",
-      "name_ru": "",
+      "name_ru": "АЗГИЛЕАНТ АРИНА-РИКАРДА МЭДЖИК",
       "breed": "ЦВЕРГШНАУЦЕР П-С",
       "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -580,6 +620,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "619099706",
+      "name_lat": "AZBUKA USPEKHA MALINKA",
+      "name_ru": "АЗБУКА УСПЕХА МАЛИНКА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
       "id": "21974710",
       "name_lat": "AZALIYA ZVEZDA NOCHNOGO NEBA",
       "name_ru": "",
@@ -589,12 +638,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1544198546",
-      "name_lat": "AZANBEKK GOLUBIKA RUMBA",
+      "id": "636118691",
+      "name_lat": "AZUREKERRY AXEL FOR AVE FRAER",
       "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed_en": "KERRY BLUE TERRIER",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "698372465",
+      "name_lat": "AZANBEKK DASTI ARGENTO",
+      "name_ru": "АЗАНБЕКК ДАСТИ АРГЕНТО",
+      "breed": "ИТАЛЬЯНСКИЙ БРАКК",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "698389234",
+      "name_lat": "AZART POGONI OSKAR",
+      "name_ru": "АЗАРТ ПОГОНИ ОСКАР",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1719403541",
+      "name_lat": "AZARTIS WEASEL TAYRA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -616,30 +692,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1719403541",
-      "name_lat": "AZARTIS WEASEL TAYRA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "266087344",
       "name_lat": "AZART POGONI TSEIA",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "636118691",
-      "name_lat": "AZUREKERRY AXEL FOR AVE FRAER",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "KERRY BLUE TERRIER",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -679,15 +737,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "698389234",
-      "name_lat": "AZART POGONI OSKAR",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1292608900",
       "name_lat": "AZURKERRY AXEL FOR AVE FRAER",
       "name_ru": "",
@@ -697,10 +746,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1266159128",
+      "id": "77143770",
       "name_lat": "AZZARO ZVEZDA TAVRIDY",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -712,6 +761,15 @@
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1962663820",
+      "name_lat": "AZALEA CELEBRATED",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -744,19 +802,27 @@
     {
       "id": "1845043946",
       "name_lat": "AZARTIS RAVISANTA",
-      "name_ru": "",
+      "name_ru": "АЗАРТИС РАВИСАНТА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "103262869",
-      "name_lat": "AZIM DLYA DOMA CHAGREMAR",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "id": "122234426",
+      "name_lat": "AZBUKA ZHIZNI IZ STRANY GREZ",
+      "name_ru": "АЗБУКА ЖИЗНИ ИЗ СТРАНЫ ГРЕЗ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46147024",
+      "name_lat": "AZIMUT VOLGA VENETSIYA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -771,10 +837,18 @@
     {
       "id": "930031021",
       "name_lat": "AZART POGONI TSARA",
-      "name_ru": "",
+      "name_ru": "АЗАРТ ПОГОНИ ЦАРА",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1939387218",
+      "name_lat": "AZALIYA NEZHNYY TSVETOK IZ BEREZOVOGO LOGA ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -823,15 +897,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "208904900",
-      "name_lat": "AZANBEKK DASTI ARGENTO",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ БРАКК /",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1154164202",
       "name_lat": "AZANBEKK VERONA OLIVIYA",
       "name_ru": "",
@@ -859,10 +924,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1906655346",
+      "id": "1165554862",
       "name_lat": "AZIZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -886,10 +951,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "491355255",
+      "id": "187343063",
       "name_lat": "AZOR BENTSA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -913,21 +978,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1525304224",
+      "name_lat": "AZGILEANT TEO DOYCH",
+      "name_ru": "АЗГИЛЕАНТ ТЕО ДОЙЧ",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "320882840",
       "name_lat": "AZ-MARAL GLORIA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "542090747",
-      "name_lat": "AZGILEANT TEO DOYCH",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
+      "id": "1366130064",
+      "name_lat": "AZRIELSTAR ERMAK",
+      "name_ru": "АЗРИЭЛЬСТАР ЕРМАК",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "936513925",
+      "name_lat": "AZIMUT VOLGA AVIATOR",
+      "name_ru": "АЗИМУТ ВОЛГА АВИАТОР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -951,10 +1033,10 @@
     {
       "id": "214586890",
       "name_lat": "AZARTIS ISKUSITEL",
-      "name_ru": "",
+      "name_ru": "АЗАРТИС ИСКУСИТЕЛЬ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 6,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -967,6 +1049,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "564803441",
+      "name_lat": "AZART POGONI LOVELACE",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
       "id": "66396120",
       "name_lat": "AZURDYUSIEL KVINTO",
       "name_ru": "",
@@ -976,12 +1067,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "254039525",
+      "name_lat": "AZRIELSTAR AFINA POKORITELNITSA SERDETS",
+      "name_ru": "АЗРИЭЛЬСТАР АФИНА ПОКОРИТЕЛЬНИЦА СЕРДЕЦ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "20354253",
+      "name_lat": "AZARTIS KLARK GEYBL",
+      "name_ru": "АЗАРТИС КЛАРК ГЕЙБЛ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "1237980223",
       "name_lat": "AZHUR RODOM IZ SIBIRI",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1125909035",
+      "name_lat": "AZUR ETELKOEZI UGOR",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ ПУЛИ ЧЕРНЫЙ, СЕРЫЙ, РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1017,34 +1135,24 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1024002430",
-      "name_lat": "AZUR ETELKOEZI UGOR",
-      "name_ru": "",
-      "breed": "ПУЛИ ЧЁРНЫЙ, ЧЁРНЫЙ С РЖАВЫМ ИЛИ СЕРЫМ, ОЛЕНИЙ, СЕРЫЙ ЛЮБОГО ОТТЕНКА",
-      "breed_en": "",
-      "total_shows": 13,
+      "id": "850867606",
+      "name_lat": "AZARTIS GALILEO",
+      "name_ru": "АЗАРТИС ГАЛИЛЕО",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "936513925",
-      "name_lat": "AZIMUT VOLGA AVIATOR",
+      "id": "80111805",
+      "name_lat": "AZARTNY IGROK",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1490436292",
-      "name_lat": "AZART POGONI LOVELACE",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1111,6 +1219,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1541405497",
+      "name_lat": "AZARTIS KAORIKAZARI",
+      "name_ru": "АЗАРТИС КАОРИКАЗАРИ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1594691405",
+      "name_lat": "AZARTIS LA-ROCHELLE",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1033669342",
       "name_lat": "AZGARD PRAYD HAUT TSOUTURE FOR IVIS",
       "name_ru": "",
@@ -1120,12 +1246,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "56262407",
+      "id": "768722377",
+      "name_lat": "AZGILEANT PIA-PEREGRINA TIME TRAVELLER",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР ЦВЕРГШНАУЦЕР (ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1807374376",
+      "name_lat": "AZUR STOUN IZ ZAMKA PRIORA",
+      "name_ru": "АЗУР СТОУН ИЗ ЗАМКА ПРИОРА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1762941398",
+      "name_lat": "AZARI SNOW EMPIRE D'ZHANKO TOSHIKO",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1126554881",
       "name_lat": "AZGARD PRAYDE HAUTE COUTURE FOR IVI'S",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1097001764",
+      "name_lat": "AZNIYA",
+      "name_ru": "",
+      "breed": "GERMAN WIRE-HAIRED",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1138,10 +1299,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "41379492",
+      "id": "873822125",
+      "name_lat": "AZ-MARAL PONDORA",
+      "name_ru": "АЗ-МАРАЛ ПОНДОРА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1443035345",
       "name_lat": "AZARIA DOG VENYAN",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1165,19 +1335,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1594691405",
-      "name_lat": "AZARTIS LA-ROCHELLE",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "id": "1682292218",
+      "name_lat": "AZIZA IZ GRAD VLADIMIRA",
+      "name_ru": "АЗИЗА ИЗ ГРАД ВЛАДИМИРА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1332465668",
+      "id": "74348721",
       "name_lat": "AZIIA DZHAY DZHAHAN",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1192,21 +1362,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "80111805",
-      "name_lat": "AZARTNY IGROK",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "id": "1890620944",
+      "name_lat": "AZARTIS AZUMA MAKOTO",
+      "name_ru": "АЗАРТИС АЗУМА МАКОТО",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1727247763",
-      "name_lat": "AZARI SNOW EMPIRE D'ZHANKO TOSHIKO",
+      "id": "526113844",
+      "name_lat": "AZAT KABIR",
       "name_ru": "",
-      "breed": "АКИТА / AKITA",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1219,8 +1389,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "199036815",
-      "name_lat": "AZANBEKK EL- DZHEM",
+      "id": "1843259451",
+      "name_lat": "AZANBEKK EL-DZHEM",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
@@ -1255,6 +1425,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1048672421",
+      "name_lat": "AZARI SNOW EMPIRE MIKAYO",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "986449537",
       "name_lat": "AZGILEANT OLIVER-GANGSTER",
       "name_ru": "",
@@ -1266,10 +1445,10 @@
     {
       "id": "980439163",
       "name_lat": "AZARTNAYA OKHOTA ARTEMIDA",
-      "name_ru": "",
+      "name_ru": "АЗАРТНАЯ ОХОТА АРТЕМИДА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1278,50 +1457,31 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "867417332",
-      "name_lat": "AZGILEANT PIA-PEREGRINA TIME TRAVELLER",
+      "id": "1749346461",
+      "name_lat": "AZARI SNOW EMPIRE ICKY BONNY",
       "name_ru": "",
-      "breed": "SCHNAUZER PEPPER AND",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1890620944",
-      "name_lat": "AZARTIS AZUMA MAKOTO",
+      "id": "1763889853",
+      "name_lat": "AZARTIS TOP OF HIP HOP",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "878839785",
+      "id": "870890612",
       "name_lat": "AZIYA-YUG ANGEL CHARLY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "961344348",
-      "name_lat": "AZARI SNOW EMPIRE MIKAYO",
-      "name_ru": "",
-      "breed": "АКИТА / AKITA",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "94085128",
-      "name_lat": "AZ-MARAL PONDORA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1333,6 +1493,24 @@
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1420038074",
+      "name_lat": "AZARTIS LANTANA",
+      "name_ru": "АЗАРТИС ЛАНТАНА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "61333203",
+      "name_lat": "AZ-MARAL MARTA",
+      "name_ru": "АЗ-МАРАЛ МАРТА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1359,7 +1537,7 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1376,6 +1554,15 @@
       "name_lat": "AZARI SNOW EMPIRE SHINICHI KAZUKI",
       "name_ru": "",
       "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "868823232",
+      "name_lat": "AZARTNAYA OKHOTNITSA",
+      "name_ru": "АЗАРТНАЯ ОХОТНИЦА",
+      "breed": "ЛАГОТО РОМАНЬОЛО",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1413,7 +1600,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1444,12 +1631,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "599220828",
-      "name_lat": "AZALIYA PREKRASNAYA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "id": "1990013275",
+      "name_lat": "AZIYA-YUG CHIO CHIO",
+      "name_ru": "АЗИЯ-ЮГ ЧИО ЧИО",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "229050417",
+      "name_lat": "AZALIYA PREKRASNAYA",
+      "name_ru": "АЗАЛИЯ ПРЕКРАСНАЯ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1459,6 +1655,15 @@
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "406058181",
+      "name_lat": "AZIMUT VOLGA ADMIRAL",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1480,21 +1685,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1238065599",
+      "id": "395874005",
       "name_lat": "AZARTNYI IGROK S KRASNOGO JARA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "20354253",
-      "name_lat": "AZARTIS KLARK GEYBL",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1525,6 +1721,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "683449816",
+      "name_lat": "AZGILEANT SIMON JOHN",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1096439052",
       "name_lat": "AZBUKA ZHIZNI IZ STRANI GREZ",
       "name_ru": "",
@@ -1534,10 +1738,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1859356393",
+      "id": "1513606752",
       "name_lat": "AZBUKA USPEKHA PAOLA DLYA RUSSKOGO OPOLJYA",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1552,12 +1756,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "822853776",
-      "name_lat": "AZRIELSTAR AFINA POKORITELNITSA SERDETS",
+      "id": "209197698",
+      "name_lat": "AZARTIS DEVONSHIRE CREAM",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "358112715",
+      "name_lat": "AZARA CANDY",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1581,10 +1794,10 @@
     {
       "id": "1924591806",
       "name_lat": "AZ-MARAL LACHINA",
-      "name_ru": "",
+      "name_ru": "АЗ МАРАЛ ЛАЧИНА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1597,19 +1810,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1950019491",
+      "id": "1839772812",
       "name_lat": "AZUR TALE VODEVIL LEGENDA ELTIGENA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1763889853",
-      "name_lat": "AZARTIS TOP OF HIP HOP",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1621,6 +1825,15 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1859081985",
+      "name_lat": "AZARTNAYA OKHOTA AFINA",
+      "name_ru": "АЗАРТНАЯ ОХОТА АФИНА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1637,15 +1850,6 @@
       "name_lat": "AZIA DOG ALATAU DZHAKARTA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1859081985",
-      "name_lat": "AZARTNAYA OKHOTA AFINA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1678,15 +1882,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "526113844",
-      "name_lat": "AZAT KABIR",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1440793639",
       "name_lat": "AZANBEKK SIRIUS BART",
       "name_ru": "",
@@ -1698,9 +1893,27 @@
     {
       "id": "1007009952",
       "name_lat": "AZUM SPARKLING ISE",
-      "name_ru": "",
+      "name_ru": "АЗУМ СПАРКЛИНГ ИСЕ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "762569224",
+      "name_lat": "AZARTIS KOKO LOKO",
+      "name_ru": "АЗАРТИС КОКО ЛОКО",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "105401363",
+      "name_lat": "AZALIYA ALAYA ROZA",
+      "name_ru": "АЗАЛИЯ АЛАЯ РОЗА",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "AFGHAN HOUND",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -1723,8 +1936,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "356377032",
-      "name_lat": "AZIAT NEFTEGRADA L- KUPCHIHA OSTAPOVNA",
+      "id": "521213784",
+      "name_lat": "AZIAT NEFTEGRADA L-KUPCHIHA OSTAPOVNA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -1741,28 +1954,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1990013275",
-      "name_lat": "AZIYA-YUG CHIO CHIO",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "53290389",
       "name_lat": "AZOF BLEK",
       "name_ru": "",
       "breed": "SHEPHERD DOG DOUBLE",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1749346461",
-      "name_lat": "AZARI SNOW EMPIRE ICKY BONNY",
-      "name_ru": "",
-      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1773,15 +1968,6 @@
       "name_ru": "",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "209197698",
-      "name_lat": "AZARTIS DEVONSHIRE CREAM",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1800,15 +1986,6 @@
       "name_ru": "",
       "breed": "ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "619099706",
-      "name_lat": "AZBUKA USPEKHA MALINKA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1921,10 +2098,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1277414127",
+      "id": "789478686",
       "name_lat": "AZANBEKK VIRDZHINIYA SOLO",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1957,28 +2134,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "868823232",
-      "name_lat": "AZARTNAYA OKHOTNITSA",
+      "id": "603972048",
+      "name_lat": "AZAT-ASKER LARHAN",
       "name_ru": "",
-      "breed": "ЛАГОТО РОМАНЬОЛО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1420038074",
-      "name_lat": "AZARTIS LANTANA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "358112715",
-      "name_lat": "AZARA CANDY",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2002,6 +2161,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "215538466",
+      "name_lat": "AZRIEL",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1519943372",
       "name_lat": "AZARTIS BARBELVI",
       "name_ru": "",
@@ -2015,6 +2183,15 @@
       "name_lat": "AZZO SIKORSKIPROFFI",
       "name_ru": "",
       "breed": "SHEPHERD DOG DOUBLE",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1976272796",
+      "name_lat": "AZ-MARAL VELAR",
+      "name_ru": "АЗ-МАРАЛ ВЭЛАР",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2074,10 +2251,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "924379949",
-      "name_lat": "AZALIYA",
+      "id": "1436427299",
+      "name_lat": "AZHURNAYA LEDI",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2092,10 +2269,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1628869551",
+      "id": "184813736",
       "name_lat": "AZAT VOM MANSALEN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2146,15 +2323,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "114045373",
-      "name_lat": "AZARTIS LA-ROCHELLЕ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1509169298",
       "name_lat": "AZUR TALE ZAUREL",
       "name_ru": "",
@@ -2164,11 +2332,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1772602001",
-      "name_lat": "AZHURNAYA LEDI",
+      "id": "1550454956",
+      "name_lat": "AZARTIS MORGAN FOREVA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2191,39 +2358,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1682292218",
-      "name_lat": "AZIZA IZ GRAD VLADIMIRA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "199471024",
       "name_lat": "AZZO",
       "name_ru": "",
       "breed": "СОЛОВЬЕВА ТАТЬЯНА АНАТОЛЬЕВНА",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "603972048",
-      "name_lat": "AZAT-ASKER LARHAN",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1962663820",
-      "name_lat": "AZALEA CELEBRATED",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2281,30 +2421,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "762569224",
-      "name_lat": "AZARTIS KOKO LOKO",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "840250891",
       "name_lat": "AZALIAY BRIGHT (Изменено по решению",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1541405497",
-      "name_lat": "AZARTIS KAORIKAZARI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2332,15 +2454,6 @@
       "breed": "САМОЕД",
       "breed_en": "SAMOYED",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "215538466",
-      "name_lat": "AZRIEL",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2380,6 +2493,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "690860212",
+      "name_lat": "AZARNAYA DEVOCHKA SOFI",
+      "name_ru": "АЗАРНАЯ ДЕВОЧКА СОФИ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1584434244",
       "name_lat": "AZNIYA",
       "name_ru": "",
@@ -2395,15 +2517,6 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1704739995",
-      "name_lat": "AZRIEL",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2430,7 +2543,7 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2440,6 +2553,15 @@
       "breed": "НЕМЕЦКИЙ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468108861",
+      "name_lat": "AZARA CANDY",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2457,6 +2579,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1514791283",
+      "name_lat": "AZON IZ ZVEZDNOY LINII",
+      "name_ru": "АЗОН ИЗ ЗВЕЗДНОЙ ЛИНИИ",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2506,29 +2636,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1124080461",
+      "name_lat": "AZIZ YAALA AT SALGREY'S",
+      "name_ru": "",
+      "breed": "САЛЮКИ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1927004585",
       "name_lat": "AZARTIS HONEYMILK",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "334050611",
-      "name_lat": "AZIZ YAALA AT SALGREY'S",
-      "name_ru": "",
-      "breed": "САЛЮКИ / SALUKI",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1543953093",
-      "name_lat": "AZIMUT VOLGA ADMIRAL",
-      "name_ru": "",
-      "breed": "FRENCH BULLDOG FAWN, BRINDLE",
-      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -2551,6 +2672,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "504505237",
+      "name_lat": "AZRIELSTAR LISA",
+      "name_ru": "АЗРИЭЛЬСТАР ЛИСА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "620786664",
       "name_lat": "AZARI SNOYW EMPIRE SHO TANI",
       "name_ru": "",
@@ -2560,20 +2690,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "685708411",
-      "name_lat": "AZARA CANDY",
+      "id": "637316647",
+      "name_lat": "AZIYA",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "698608114",
-      "name_lat": "AZART IZ DINASTIYI GALYANZH",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2587,10 +2707,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "709418815",
+      "id": "698608114",
+      "name_lat": "AZART IZ DINASTIYI GALYANZH",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1244507544",
       "name_lat": "AZARTNYI IGROK",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2614,19 +2743,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "504505237",
-      "name_lat": "AZRIELSTAR LISA",
+      "id": "290445025",
+      "name_lat": "AZARI SNOW EMPIRE ERIKA MASAMI",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "290445025",
-      "name_lat": "AZARI SNOW EMPIRE ERIKA MASAMI",
-      "name_ru": "",
-      "breed": "АКИТА",
+      "id": "724806660",
+      "name_lat": "AZOVSKAYA DIKOVINKA YA DLYA SNEGIZI STAR",
+      "name_ru": "АЗОВСКАЯ ДИКОВИНКА Я ДЛЯ СНЕГИЗИ СТАР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "881582578",
+      "name_lat": "AZ-MARAL LEEKA",
+      "name_ru": "АЗ-МАРАЛ ЛЕЕКА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2641,10 +2779,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1122549723",
+      "id": "497572185",
+      "name_lat": "AZANBEKK BRAYTON HIT",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1059984281",
       "name_lat": "AZGILEANT PATRIZIO CONQUERER OF RINGS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР",
+      "breed": "ЦВЕРГПИНЧЕР ЦВЕРГШНАУЦЕР (ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2681,6 +2827,23 @@
       "name_lat": "AZALIA LIKA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "271787349",
+      "name_lat": "AZA",
+      "name_ru": "",
+      "breed": "НОРВЕЖСКИЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "69896752",
+      "name_lat": "AZANAT ARS SIMBA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2785,15 +2948,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "724806660",
-      "name_lat": "AZOVSKAYA DIKOVINKA YA DLYA SNEGIZI STAR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "510588126",
       "name_lat": "AZART POGONI LEDI GAGA",
       "name_ru": "",
@@ -2839,15 +2993,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "690860212",
-      "name_lat": "AZARNAYA DEVOCHKA SOFI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "152692549",
       "name_lat": "AZARI SNOW EMPIRE KENTA UCHY",
       "name_ru": "",
@@ -2875,11 +3020,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "28410740",
-      "name_lat": "AZANAT ARS SIMBA",
+      "id": "210595846",
+      "name_lat": "AZURE TAIL EGOZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2893,19 +3037,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "497572185",
-      "name_lat": "AZANBEKK BRAYTON HIT",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
+      "id": "997128992",
+      "name_lat": "AZARTNAYA OKHOTA GEROY",
+      "name_ru": "АЗАРТНАЯ ОХОТА ГЕРОЙ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "334235816",
+      "id": "1715404877",
       "name_lat": "AZA FREYA",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2956,10 +3100,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1882906305",
+      "id": "1835884304",
       "name_lat": "AZZO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР)",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2983,15 +3127,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1468108861",
-      "name_lat": "AZARA CANDY",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "249205236",
       "name_lat": "AZART ATTIS",
       "name_ru": "",
@@ -3010,20 +3145,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "850867606",
-      "name_lat": "AZARTIS GALILEO",
+      "id": "1452968465",
+      "name_lat": "AZIZ DEAR KEEPER",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "breed": "АМЕРИКАНСКИЙ",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "105401363",
-      "name_lat": "AZALIYA ALAYA ROZA",
+      "id": "1174668408",
+      "name_lat": "AZIMUTH ZERO GARRY POTTER",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "AFGHAN HOUND",
+      "breed": "АЛЯСКИНСКИЙ",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3059,15 +3194,6 @@
       "name_lat": "AZGILEANT PATRIZO CONQUERER OF RINGS",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР перец с солью (Германия)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "61333203",
-      "name_lat": "AZ-MARAL MARTA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3109,6 +3235,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1275870289",
+      "name_lat": "AZANBEKK EYFORIYA MERIDA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "791861941",
       "name_lat": "AZARTIS LANDSKRONA",
       "name_ru": "",
@@ -3136,15 +3270,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1819749904",
-      "name_lat": "AZBUKA ZHIZNI IZ STRANY GREZ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1921382840",
       "name_lat": "AZALIYA PIKSI HAYA",
       "name_ru": "",
@@ -3154,20 +3279,34 @@
       "competition_dog_id": null
     },
     {
-      "id": "1514791283",
-      "name_lat": "AZON IZ ZVEZDNOY LINII",
+      "id": "1639673752",
+      "name_lat": "AZIAT NEFTEGRADA LINDA OSTAPOVNA",
       "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1145347116",
-      "name_lat": "AZURE TAIL EGOZA",
+      "id": "1146086458",
+      "name_lat": "AZURE DRAGON BAGIRA",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА / AUSTRALIAN SHEPHERD",
-      "breed_en": "",
+      "breed": "ПЕКИНЕС",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "557177494",
+      "name_lat": "AZOVSKIY BREEZE BETI",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "115141723",
+      "name_lat": "AZOVSKIY BREEZE BRISS",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3190,28 +3329,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1976272796",
-      "name_lat": "AZ-MARAL VELAR",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "605129820",
       "name_lat": "AZIYA-YUG LONDA МЕЛЛИС ГВЕНД",
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "881582578",
-      "name_lat": "AZ-MARAL LEEKA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3244,10 +3365,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1168704032",
+      "id": "1735332429",
       "name_lat": "AZALIA IN GOLD",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3257,15 +3378,6 @@
       "name_lat": "AZIATKLAN OK ERKANA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1452968465",
-      "name_lat": "AZIZ DEAR KEEPER",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3343,15 +3455,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1366130064",
-      "name_lat": "AZRIELSTAR ERMAK",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "960253837",
       "name_lat": "AZALEA ARABIAN JASMINE",
       "name_ru": "",
@@ -3379,15 +3482,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1909562918",
-      "name_lat": "AZGARD FILA O CASTELO",
-      "name_ru": "",
-      "breed": "БРАЗИЛЬСКИЙ ФИЛА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "510657647",
       "name_lat": "AZALEA XCTPTIONAL",
       "name_ru": "",
@@ -3406,20 +3500,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1174668408",
-      "name_lat": "AZIMUTH ZERO GARRY POTTER",
+      "id": "1466773004",
+      "name_lat": "AZANBEKK BETANI HOLIDEY",
       "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "181904923",
-      "name_lat": "AZ-MARAL TAKER",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "БИГЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3433,11 +3517,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1513102059",
+      "id": "923190751",
       "name_lat": "AZIA LAND ANGEL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1776485269",
+      "name_lat": "AZART LITL KING",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1928284940",
+      "name_lat": "AZART LIFE AMBITION",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },

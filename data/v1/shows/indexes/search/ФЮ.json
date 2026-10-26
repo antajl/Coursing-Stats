@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ФЮ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "915693650",
+      "name_lat": "ФЮТЧЕ БАЙ АС ФЛОРЕНТИ",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "72514785",
+      "name_lat": "ФЮРСИТ ФЛЁР",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "272953177",
+      "name_lat": "ФЮНГА ВАЛД БЬЮТИФУЛ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ / MALTESE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

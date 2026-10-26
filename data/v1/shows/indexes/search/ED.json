@@ -1,41 +1,32 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ED",
-  "count": 399,
+  "count": 406,
   "dogs": [
     {
-      "id": "1203017146",
+      "id": "1371040820",
       "name_lat": "EDISON S VISHNEVOY ROSHI",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
-      "total_shows": 75,
+      "total_shows": 82,
       "competition_dog_id": null
     },
     {
       "id": "1868055043",
       "name_lat": "EDISON TOMAS ALVA",
-      "name_ru": "",
+      "name_ru": "ЭДИСОН ТОМАС АЛВА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 39,
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
-      "id": "1666242238",
+      "id": "172053506",
       "name_lat": "EDIVETTE TAMBOTI WILD CAMP",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1350170582",
-      "name_lat": "EDELVEYS",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
@@ -45,7 +36,16 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
-      "total_shows": 20,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1350170582",
+      "name_lat": "EDELVEYS",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -58,12 +58,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1153800938",
+      "id": "873328242",
       "name_lat": "EDVA NAIDETE LUCHSHE S VISHNEVOY ROSHI",
       "name_ru": "",
-      "breed": "DACHSHUND",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
-      "total_shows": 33,
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -78,10 +78,19 @@
     {
       "id": "395439203",
       "name_lat": "EDELEN KONSTANTA ALBA TIGRIS",
-      "name_ru": "",
+      "name_ru": "ЭДЕЛЕН КОНСТАНТА АЛЬБА ТИГРИС",
       "breed": "УИППЕТ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "442628285",
+      "name_lat": "EDELVEIS KUBANI IF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -90,7 +99,7 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -166,15 +175,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1134278430",
-      "name_lat": "EDELVEIS KUBANI IF",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "403885848",
       "name_lat": "EDENAS KIDS VAN CLEEF",
       "name_ru": "",
@@ -193,10 +193,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1097072662",
+      "id": "1110345987",
       "name_lat": "EDICT VIKTOR IZ STOLITSY URALA",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ (КУРЦХААР) ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ БРЕТОНСКИЙ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -238,12 +238,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1610143712",
+      "name_lat": "EDELWEISS CRYSTAL",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "1521907698",
-      "name_lat": "EDIRS NEW LIVE KEIRA KNIGHTLEY",
+      "name_lat": "Edirs New Live Keira Knightley",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -256,10 +265,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "166057655",
+      "id": "1768323664",
       "name_lat": "EDGAR DER BESTE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -274,10 +283,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1643032875",
+      "id": "1814524255",
+      "name_lat": "EDELWEISS BELLE FLEUR BLANCHE D AMOUR",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "795313773",
+      "name_lat": "EDLEN HOUSE AMBER ROSE",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "811275298",
       "name_lat": "EDELVEYS PYERFEKT BOY",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -301,15 +328,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1610143712",
-      "name_lat": "EDELWEISS CRYSTAL",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "1302330410",
       "name_lat": "EDELENY KERTI ZAPOR",
       "name_ru": "",
@@ -319,10 +337,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "138832669",
+      "id": "1829774549",
       "name_lat": "Edison S Vishnevoy Roshi, ch RUS",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -337,12 +355,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1426794198",
+      "id": "95793617",
       "name_lat": "EDMAIR VEGAS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "864575074",
+      "name_lat": "EDINSTVENNAYA MOYA IZ DOMA CHAGREMAR",
+      "name_ru": "ЕДИНСТВЕННАЯ МОЯ ИЗ ДОМА ЧАГРЕМАР",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -351,25 +378,33 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1813522838",
+      "id": "987173880",
       "name_lat": "EDIRS NEW LIVE GRIMALDI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "119261884",
+      "id": "60520851",
       "name_lat": "EDELWEISS IZ DINASTII KONOL'S",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "717740207",
+      "name_lat": "EDEN SPACE SKARLETT",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -379,6 +414,24 @@
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "959673569",
+      "name_lat": "EDEL ZHASMIN",
+      "name_ru": "",
+      "breed": "КАЗАХСКИЙ ТАЗЫ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "31401578",
+      "name_lat": "EDDI",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -400,10 +453,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "89568139",
+      "id": "1653583983",
+      "name_lat": "E'DAJTI",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1472035228",
       "name_lat": "EDWIN VON AUSGELASSEN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -427,6 +489,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1822246797",
+      "name_lat": "EDEN SPACE DONATELLA",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "241194800",
       "name_lat": "EDLEN HOUSE MAGIC OSCAR",
       "name_ru": "",
@@ -440,15 +510,6 @@
       "name_lat": "EDZHERII ROM",
       "name_ru": "",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "717740207",
-      "name_lat": "EDEN SPACE SKARLETT",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -472,10 +533,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1883397672",
+      "id": "111559960",
       "name_lat": "EDEL PARIS FLO",
       "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -496,6 +557,15 @@
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1000005249",
+      "name_lat": "ED DZHOY",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
+      "breed_en": "FOX TERRIER (SMOOTH)",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -526,10 +596,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "445118295",
+      "id": "967401366",
       "name_lat": "EDLEN HOUSE YAROSLAVL",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 75,
       "competition_dog_id": null
@@ -544,19 +614,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1000005249",
-      "name_lat": "ED DZHOY",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР Г-Ш",
-      "breed_en": "FOX TERRIER (SMOOTH)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1086180312",
+      "id": "459943175",
       "name_lat": "EDGAR-H VON ADUCHT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 35,
       "competition_dog_id": null
@@ -571,12 +632,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "697282299",
+      "name_lat": "E-DIONIS OYUN",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "658158842",
       "name_lat": "EDINSTVENNAYA KRASOTKA",
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "SAMOYED",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1647504478",
+      "name_lat": "EDUARD KOLONE PLUS DELUXE",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -589,10 +668,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "108126936",
+      "id": "1271382181",
       "name_lat": "EDMAIR NUMBER ONE",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -607,19 +686,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "111817613",
+      "id": "1871968077",
       "name_lat": "EDVIN MOONBEAMS",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СЕТТЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1105254714",
+      "id": "1800672651",
       "name_lat": "EDGAR IZ MEDVEJYEGO YARA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -634,37 +713,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1647504478",
-      "name_lat": "EDUARD KOLONE PLUS DELUXE",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "347274090",
+      "id": "381283814",
       "name_lat": "EDEN IZ OHOTNICHIEGO DVORA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "519646073",
+      "id": "787470297",
       "name_lat": "EDELWEISS SIBIRI LANSELOT",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "518352520",
+      "id": "1115611693",
       "name_lat": "EDLEN HOUSE YONGDINGHE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -679,55 +749,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1814524255",
-      "name_lat": "EDELWEISS BELLE FLEUR BLANCHE D AMOUR",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "42035453",
       "name_lat": "EDERMEN ARISTOKRAT",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "608346634",
+      "name_lat": "EDEL BELGISH",
+      "name_ru": "ЭДЕЛЬ БЕЛЬГИШ",
+      "breed": "ЛАБРАДОР БЕЛЬГИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "246686105",
+      "name_lat": "EDMAIR OVERSEA STYLE",
+      "name_ru": "",
+      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
+      "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "477608945",
-      "name_lat": "EDDI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "795313773",
-      "name_lat": "EDLEN HOUSE AMBER ROSE",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1703298646",
+      "id": "53838095",
       "name_lat": "EDELWEISS MIDNIGHT MIRACLE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "715152821",
+      "id": "1228984888",
       "name_lat": "EDIRS NEW LIVE RICKY TIKI TAVI",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -769,12 +830,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "864575074",
-      "name_lat": "EDINSTVENNAYA MOYA IZ DOMA CHAGREMAR",
+      "id": "1080983725",
+      "name_lat": "EDELWEISS SIBIRI KARMEN",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -787,30 +848,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1578264248",
-      "name_lat": "EDDI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "523087822",
       "name_lat": "EDWIN HUNT FOR BLOOD",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "246686105",
-      "name_lat": "EDMAIR OVERSEA STYLE",
-      "name_ru": "",
-      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -823,10 +866,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "462846502",
+      "id": "283581672",
       "name_lat": "EDIRS NEW LIVE ESENIA SHELLY MON AMI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -868,6 +911,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1380140327",
+      "name_lat": "E'DAJTI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "820328273",
       "name_lat": "EDVARD",
       "name_ru": "",
@@ -886,10 +938,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1279146985",
+      "id": "1398626763",
       "name_lat": "EDINSTVENNAYA LYUBOV EGIANA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -900,7 +952,7 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -918,6 +970,14 @@
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1247061833",
+      "name_lat": "EDA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -963,7 +1023,16 @@
       "name_ru": "",
       "breed": "КОРСО",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "30551892",
+      "name_lat": "EDGY EDDY VINNI POOH OT VLADLEI ARISH",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "MINIATURE BULL TERRIER",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -976,21 +1045,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "30551892",
-      "name_lat": "EDGY EDDY VINNI POOH OT VLADLEI ARISH",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "MINIATURE BULL TERRIER",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1601400579",
       "name_lat": "EDBRIOS UNITED COLORS",
       "name_ru": "",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "KERRY BLUE TERRIER",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1008,7 +1068,7 @@
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1048,6 +1108,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1769792370",
+      "name_lat": "EDELEN ZANI FLIPPENSI",
+      "name_ru": "ЭДЕЛЕН ЗАНИ ФЛИППЭНСИ",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1876204489",
       "name_lat": "EDELVEJS ENZO",
       "name_ru": "",
@@ -1075,12 +1144,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "767288356",
-      "name_lat": "ED DZHOY",
+      "id": "1878505630",
+      "name_lat": "EDMAIR PIXEL",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1093,12 +1162,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1436764781",
-      "name_lat": "EDMAIR PIXEL",
+      "id": "21416229",
+      "name_lat": "EDMAIR MONTANA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "443657228",
+      "name_lat": "EDELWEISS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1111,21 +1188,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "21416229",
-      "name_lat": "EDMAIR MONTANA",
-      "name_ru": "",
-      "breed": "RUSSIAN TOY LONG-",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "228479866",
       "name_lat": "EDGAR RICH",
       "name_ru": "",
       "breed": "GERMAN SPITZ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "243437196",
+      "name_lat": "EDITH NESBIT",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1174,12 +1251,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1769792370",
-      "name_lat": "EDELEN ZANI FLIPPENSI",
+      "id": "770597504",
+      "name_lat": "EDDISON SPRING WIND KISS",
       "name_ru": "",
-      "breed": "УИППЕТ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1192,12 +1269,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "977516149",
+      "id": "938091933",
       "name_lat": "EDELVEIS KUBANI GUCCI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1210,10 +1287,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1460574666",
+      "id": "1614967076",
       "name_lat": "EDELVEIS KUBANI NIKKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1264,10 +1341,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1627153701",
+      "id": "577195437",
       "name_lat": "EDON ROB KRUAN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1282,8 +1359,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "243437196",
-      "name_lat": "EDITH NESBIT",
+      "id": "285768557",
+      "name_lat": "EDLEN HOUSE GLANMOR",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -1291,21 +1368,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1311460794",
+      "id": "1849972699",
+      "name_lat": "EDVANDA`S LARAND DELVIN",
+      "name_ru": "ЭДВАНДА'С ЛАРАНД ДЕЛВИН",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "815383051",
       "name_lat": "EDINSTVENNY MOY IZ VOLSHEBNOGO LESA",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД /",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "927523773",
+      "id": "1042294774",
       "name_lat": "EDZHI IZ SIBIRSKOY GLUBINKI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "39250142",
+      "name_lat": "EDEN DE SOL FORZITSIYA",
+      "name_ru": "ЭДЕН ДЕ СОЛЬ ФОРЗИЦИЯ",
+      "breed": "БРАЗИЛЬСКИЙ ФИЛА",
+      "breed_en": "FILA BRASILEIRO",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1372,15 +1467,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "443657228",
-      "name_lat": "EDELWEISS",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "104240121",
       "name_lat": "EDEL'",
       "name_ru": "",
@@ -1399,21 +1485,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "770597504",
-      "name_lat": "EDDISON SPRING WIND KISS",
+      "id": "496171556",
+      "name_lat": "EDMONDO TEMPERAMETNE STAFF (FCI)",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1349905799",
-      "name_lat": "EDMONDO TEMPERAMETNE STAFF",
-      "name_ru": "",
-      "breed": "СТАФФОРДШ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1435,10 +1512,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "285768557",
-      "name_lat": "EDLEN HOUSE GLANMOR",
+      "id": "930853646",
+      "name_lat": "EDITION DELUX INDIGOBULL",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1480,10 +1557,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "13681683",
+      "id": "725020700",
       "name_lat": "EDMAIR SHAHMIRA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1495,6 +1572,15 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "180315980",
+      "name_lat": "EDLEN HOUSE DEESSE DE L'AMOUR",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1512,7 +1598,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1552,30 +1638,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "930853646",
-      "name_lat": "EDITION DELUX INDIGOBULL",
+      "id": "1346992539",
+      "name_lat": "EDINYI STANDART OT GOSPOJI PANINOI",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
+      "breed": "ПУДЕЛЬ МАЛЫЙ (Бел.Черн.Корич.)",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "472670198",
+      "id": "10279",
       "name_lat": "EDELEN ZABRISKIE POINT",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
       "total_shows": 3,
+      "competition_dog_id": 10279
+    },
+    {
+      "id": "784165077",
+      "name_lat": "EDMAIR OPRAH GAIL",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "221184025",
-      "name_lat": "EDMAIR OPRAH GAIL",
+      "id": "92990335",
+      "name_lat": "EDIRS NEW LIVE IZUMRUD MOEY DUSHI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1687,30 +1781,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1052252257",
+      "id": "248078109",
       "name_lat": "EDINSTVENNYY BANDIT",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "288391795",
+      "id": "1243770980",
       "name_lat": "EDELVEIS KUBANI PETRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1346992539",
-      "name_lat": "EDINYI STANDART OT GOSPOJI PANINOI",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ (Бел.Черн.Корич.)",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1732,28 +1817,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1108592953",
+      "id": "765909241",
+      "name_lat": "EDLEN HOUSE JAMBOOREE",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1092559108",
       "name_lat": "EDLEN HOUSE FERRARI",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1469643431",
+      "id": "1889396070",
       "name_lat": "EDEL",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1806292657",
-      "name_lat": "EDLEN HOUSE DEESSE DE L'AMOUR",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1768,30 +1852,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "959673569",
-      "name_lat": "EDEL ZHASMIN",
-      "name_ru": "",
-      "breed": "КАЗАХСКИЙ ТАЗЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1023010675",
       "name_lat": "EDZHERRI",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "FRENCH BULLDOG",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "677572462",
-      "name_lat": "EDIRS NEW LIVE IZUMRUD MOEY DUSHI",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1804,10 +1870,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1635564162",
+      "id": "1548716675",
       "name_lat": "EDGAR DI LUCE BIANCA STELLA",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1822,6 +1888,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "271597063",
+      "name_lat": "EDVANDA'S LARAND DARRIL",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИ Й)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1549270488",
       "name_lat": "EDLEN HOUSE YOGUSOMINEBARI",
       "name_ru": "",
@@ -1831,12 +1906,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "271597063",
-      "name_lat": "EDVANDA'S LARAND DARRIL",
+      "id": "222771497",
+      "name_lat": "EDLINA EMPIRE LACONIC DEL'T",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИ Й)",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1867,10 +1942,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1438498510",
-      "name_lat": "EDELVEIS KUBANI TORI (L- H)",
+      "id": "1814737730",
+      "name_lat": "EDELVEIS KUBANI TORI (L-H)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1885,12 +1960,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "123040549",
+      "id": "1066613780",
       "name_lat": "EDEL GLANZ STEFI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1190850803",
+      "name_lat": "EDIRS NEW LIVE PORSCH PANAMERA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1930,6 +2014,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1696838295",
+      "name_lat": "EDELWEISS",
+      "name_ru": "",
+      "breed": "LABRADOR RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1778417345",
+      "name_lat": "ED LIB SIMPLI DASHING",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "107118235",
       "name_lat": "EDMON DANTES",
       "name_ru": "",
@@ -1939,30 +2040,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1088438765",
+      "id": "1862809249",
       "name_lat": "EDIRS NEW LIVE MAVERICK",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1190850803",
-      "name_lat": "EDIRS NEW LIVE PORSCH PANAMERA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "608346634",
-      "name_lat": "EDEL BELGISH",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР БЕЛЬГИЙСКИЙ",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1975,19 +2058,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1979548764",
-      "name_lat": "EDLEN HOUSE JAMBOOREE",
+      "id": "1944414169",
+      "name_lat": "EDLEN HOUSE S'AI VARYAG",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "221694299",
-      "name_lat": "EDLEN HOUSE SAI VARYAG",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2020,10 +2094,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1504254808",
+      "id": "212535214",
       "name_lat": "EDIT IZ DOMA INFANTY (L-H)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2074,10 +2148,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1077005958",
+      "id": "1592788735",
       "name_lat": "EDGAR RICH",
       "name_ru": "",
-      "breed": "И ДРУГИЕ ОКРАСЫ /",
+      "breed": "И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2114,6 +2188,15 @@
       "name_lat": "EDELVEYS",
       "name_ru": "",
       "breed": "BORZOI - RUSSIAN HUNTING",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "449948736",
+      "name_lat": "EDMAIR FEMENINE",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2164,10 +2247,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "602857297",
+      "id": "1537182188",
       "name_lat": "EDLEN HOUSE STARLET",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2200,37 +2283,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "561364651",
-      "name_lat": "EDMAIR FEMENINE",
-      "name_ru": "",
-      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER ШНАУЦЕР ЧЁРНЫЙ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "174607701",
+      "id": "255258984",
       "name_lat": "EDLEN HOUSE KOHAKU",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1306043749",
-      "name_lat": "EDELWEISS SIBIRI KARMEN",
+      "id": "62212011",
+      "name_lat": "EDLEN HOUS JAMBOOREE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "LABRADOR",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1042337117",
+      "id": "300227840",
       "name_lat": "EDEL'",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2263,15 +2336,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "222771497",
-      "name_lat": "EDLINA EMPIRE LACONIC DEL'T",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1196463853",
       "name_lat": "EDEL FAVORIT SHARM",
       "name_ru": "",
@@ -2290,19 +2354,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "8985353",
-      "name_lat": "EDDI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "355261511",
+      "id": "463445675",
       "name_lat": "EDEL",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ БЕЛЬГИЙСКИЙ",
+      "breed": "ПРЯМОШЕРСТНЫЙ БЕЛЬГИЙСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2344,10 +2399,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1303795593",
+      "id": "443487402",
       "name_lat": "EDITA IZ LUCHIKA LYUBVI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2380,6 +2435,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1006389051",
+      "name_lat": "EDELVEIS KUBANI MAYKL 2",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1817064110",
       "name_lat": "EDEN DE SOL CUPIDON",
       "name_ru": "",
@@ -2389,28 +2452,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "765864114",
+      "id": "1248792603",
       "name_lat": "EDVANDA'S LARAND PRIWAYNA SIMRICH",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed": "ОРАНЖ., НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "267765666",
+      "id": "84596131",
       "name_lat": "EDINSTVENNAYA EPOVTORIMAYA",
       "name_ru": "",
-      "breed": "С СОЛЬЮ /",
+      "breed": "С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1480704768",
+      "id": "384517873",
       "name_lat": "ED DZHOY",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ / FOX",
+      "breed": "ФОКСТЕРЬЕР Г-Ш / FOX",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2425,10 +2488,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "159812623",
+      "id": "1956023496",
       "name_lat": "EDMAIR PIKSEL",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2452,15 +2515,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1778417345",
-      "name_lat": "ED LIB SIMPLI DASHING",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1648058017",
       "name_lat": "EDDY VOM REINENBACH",
       "name_ru": "",
@@ -2470,12 +2524,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1056437094",
+      "id": "1078379201",
       "name_lat": "EDMAIR YOU'RE MY DREAM",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2497,10 +2551,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "293720439",
+      "id": "1818680206",
+      "name_lat": "EDELVEIS KUBANI ZEYRA",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1601462940",
+      "name_lat": "EDLEN HOUSE AMATERASU",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "232050923",
       "name_lat": "EDELVEIS KUBANI SPARTA II (L-H)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2510,15 +2581,6 @@
       "name_lat": "EDZHINA SOKROVISHCHE VOSTOKA",
       "name_ru": "",
       "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1791422913",
-      "name_lat": "EDLEN HOUSE AMATERASU",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2569,19 +2631,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "582985941",
+      "id": "1390723913",
+      "name_lat": "EDZHINA PANI VALEVSKAYA",
+      "name_ru": "ЕДЖИНА ПАНИ ВАЛЕВСКАЯ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1930276072",
       "name_lat": "EDLEN HOUSE YOGAN (К/Х)",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "92117880",
+      "id": "360192902",
       "name_lat": "EDIRS NEW LIVE EURO BUCKS VON VISA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2596,10 +2667,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "178377458",
+      "id": "1018208868",
       "name_lat": "EDINOVLASTNYY GASUDAR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2620,6 +2691,14 @@
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1631235068",
+      "name_lat": "EDITA DEBOSHIR",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2686,19 +2765,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1484198287",
+      "id": "1944428990",
       "name_lat": "EDRIS NEW LIVE IZYUMINKA NA TORTE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1396327242",
+      "id": "1614354703",
       "name_lat": "EDZUMI DON'T LOOK DOWN",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2740,15 +2819,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1390723913",
-      "name_lat": "EDZHINA PANI VALEVSKAYA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1283341068",
       "name_lat": "EDWARD BEJBY BORDO",
       "name_ru": "",
@@ -2776,20 +2846,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1872127683",
-      "name_lat": "EDINSTVENNYI HRANITEL SUDVY",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "BASENJI",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "610086392",
       "name_lat": "EDDISON THOMAS ALVA OT BOR KING PRAID",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1872127683",
+      "name_lat": "EDINSTVENNYI HRANITEL SUDVY",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "BASENJI",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2857,8 +2927,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "168464984",
-      "name_lat": "EDLEN HOUSE WILLY- WILLY",
+      "id": "1462012650",
+      "name_lat": "EDLEN HOUSE WILLY-WILLY",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -2866,19 +2936,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "828193497",
+      "id": "203095844",
       "name_lat": "EDZHINA DELOREAN SHUGA BEBI",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1027875627",
+      "id": "1914550012",
       "name_lat": "EDGAR ROKET BOJ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2924,6 +2994,15 @@
       "name_lat": "EDLEN HOUSE LEBRON",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1362150941",
+      "name_lat": "EDRIAN ALFA ROMEO",
+      "name_ru": "ЭДРИАН АЛЬФА РОМЭО",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3001,10 +3080,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "441621864",
+      "id": "1597395007",
       "name_lat": "ED DZHOY",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3055,10 +3134,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1497569983",
+      "id": "683495327",
       "name_lat": "EDMON",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3078,24 +3157,6 @@
       "name_ru": "",
       "breed": "МАЙОРКСКИЙ МАСТИФ",
       "breed_en": "MAJORCA MASTIFF",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "496171556",
-      "name_lat": "EDMONDO TEMPERAMETNE STAFF (FCI)",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "39250142",
-      "name_lat": "EDEN DE SOL FORZITSIYA",
-      "name_ru": "",
-      "breed": "БРАЗИЛЬСКИЙ ФИЛА",
-      "breed_en": "FILA BRASILEIRO",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3190,10 +3251,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "267826122",
+      "id": "32079259",
       "name_lat": "EDGAR IZ SMOLENSKOI KREPOSTI",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3203,15 +3264,6 @@
       "name_lat": "EDISSON SPRING WIND KISS",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "72385604",
-      "name_lat": "EDELVEIS KUBANI ZEYRA",
-      "name_ru": "",
-      "breed": "КОРСО / ITALIAN CANE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3244,15 +3296,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1362150941",
-      "name_lat": "EDRIAN ALFA ROMEO",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "112155324",
       "name_lat": "EDLEN HOUSE UDELLA ( )",
       "name_ru": "",
@@ -3266,15 +3309,6 @@
       "name_lat": "EDWIN VOM PENDLER",
       "name_ru": "",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "79635382",
-      "name_lat": "EDLEN HOUS JAMBOOREE",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3307,6 +3341,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1239844970",
+      "name_lat": "EDELEN IDILLIA IGNIS",
+      "name_ru": "",
+      "breed": "УИППЕТ / WHIPPET",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1497026724",
       "name_lat": "EDELVEIS KUBANI HART",
       "name_ru": "",
@@ -3325,10 +3367,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "462495886",
+      "id": "232572375",
       "name_lat": "EDITION DELUX TEDDY",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3343,10 +3385,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "149564556",
+      "id": "226288513",
       "name_lat": "EDMAIR MONTANA дш",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3424,19 +3466,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1775905826",
+      "id": "1983699212",
       "name_lat": "EDELVEIS KUBANI ROMANTIKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1335407667",
+      "id": "1518829092",
       "name_lat": "EDELVEIS KUBANI EMMI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3469,10 +3511,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "54423241",
+      "id": "765311252",
       "name_lat": "EDLEN HOUSE YOSHINA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3532,28 +3574,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1796197476",
+      "id": "466531519",
       "name_lat": "EDELVEIS SIBIRI LANSELOT",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1135645212",
+      "id": "1410844218",
       "name_lat": "EDGAR STELLAR ALTITUDE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "861352185",
+      "id": "20960045",
       "name_lat": "EDGAR ZVEZDNAYA VYSOTA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3577,11 +3619,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1631235068",
-      "name_lat": "EDITA DEBOSHIR",
+      "id": "630457217",
+      "name_lat": "EDIT GOLUBAYA MECHTA",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
+      "breed": "ЧАУ ЧАУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3591,6 +3632,14 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1568551048",
+      "name_lat": "EDMAIR WOMBRA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "total_shows": 1,
       "competition_dog_id": null
     }

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AY",
-  "count": 587,
+  "count": 615,
   "dogs": [
     {
       "id": "825605414",
@@ -9,7 +9,25 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "388510851",
+      "name_lat": "AYREK-DART IMPERIAL RED",
+      "name_ru": "АЙРЕК-ДАРТ ИМПЕРИАЛ РЭД",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 38,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1285776777",
+      "name_lat": "A YA ZHEMCHUZHINA S POLYARNOY DINASTII",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -22,30 +40,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "254650751",
+      "name_lat": "Ayron Rozhdennyy V Sibiri",
+      "name_ru": "АЙРОН РОЖДЕННЫЙ В СИБИРИ",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 46,
+      "competition_dog_id": null
+    },
+    {
       "id": "1271810666",
       "name_lat": "AY DA YA LAKOMYJ KUSOCHEK",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 40,
+      "total_shows": 42,
       "competition_dog_id": null
     },
     {
-      "id": "1187753305",
-      "name_lat": "AYK VON YUNES HAUS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "id": "1717743864",
+      "name_lat": "AYNO LEGENDARNAYA",
+      "name_ru": "АЙНО ЛЕГЕНДАРНАЯ",
+      "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "275694076",
-      "name_lat": "AYREI VELLERIS TAMBLIER",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -54,7 +72,34 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "502969136",
+      "name_lat": "AYREI VELLERIS TAMBLIER",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "839071994",
+      "name_lat": "AYK VON YUNES HAUS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56788835",
+      "name_lat": "AYAKS BALTIJSKIJ IZ DOMA KUNETS",
+      "name_ru": "",
+      "breed": "АФФЕНПИНЧЕР",
+      "breed_en": "AFFENPINSCHER",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -76,12 +121,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "56788835",
-      "name_lat": "AYAKS BALTIJSKIJ IZ DOMA KUNETS",
-      "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР",
-      "breed_en": "AFFENPINSCHER",
-      "total_shows": 18,
+      "id": "495418814",
+      "name_lat": "AYRIS KREMOVAYA ROZA",
+      "name_ru": "АЙРИС КРЕМОВАЯ РОЗА",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "CHOW CHOW",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -90,16 +135,25 @@
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "418931139",
+      "id": "1281612564",
       "name_lat": "AYVA IZ CHERTOVA RVA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "51840066",
+      "name_lat": "AYU-DAG DLYA GOLDEN ANIK`S",
+      "name_ru": "АЮ-ДАГ ДЛЯ ГОЛДЕН АНИКС",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -121,12 +175,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "495418814",
-      "name_lat": "AYRIS KREMOVAYA ROZA",
+      "id": "756964657",
+      "name_lat": "A YA TVOYA MYATNAYA MECHTA",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "CHOW CHOW",
-      "total_shows": 24,
+      "breed": "МАЛЫЙ ВАНДЕЙСКИЙ",
+      "breed_en": "PETIT BASSET GRIFFON VENDEEN",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -157,10 +211,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "46023170",
+      "id": "1385188755",
       "name_lat": "AY-LING TEFIDA ELITE HOME",
       "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "breed": "ЧУНЦИН",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -184,6 +238,42 @@
       "competition_dog_id": null
     },
     {
+      "id": "1512432071",
+      "name_lat": "AYKHITO TOMODASHI GLORIANNA",
+      "name_ru": "АЙХИТО ТОМОДАШИ ГЛОРИАННА",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "151848859",
+      "name_lat": "AYMI KISS MI",
+      "name_ru": "АЙМИ КИСС МИ",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "JAPANESE SPITZ",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "573855703",
+      "name_lat": "AYKHITO TOMODASHI SHANTI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1484742765",
+      "name_lat": "AYK VOM HAUS ERFULLUNGEN VUNSCHEN",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1523680608",
       "name_lat": "AYTON BLACK",
       "name_ru": "",
@@ -193,21 +283,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "1610781156",
-      "name_lat": "AYBA SONYA ERIKA",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "559452126",
       "name_lat": "AYS",
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 15,
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "465698154",
+      "name_lat": "AYBA SONYA ERIKA",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1305275349",
+      "name_lat": "AYKHAL",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1529591155",
+      "name_lat": "AY DA YA NYUSHA",
+      "name_ru": "",
+      "breed": "МОПС БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 53,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1685495739",
+      "name_lat": "AYS-KRIM KHANNI",
+      "name_ru": "АЙС-КРИМ ХАННИ",
+      "breed": "ХАВАНЕЗ",
+      "breed_en": "HAVANESE",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -238,6 +355,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "275877639",
+      "name_lat": "AYS",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "19205140",
       "name_lat": "AYISHA OT NEVSKOGO HOBBITA",
       "name_ru": "",
@@ -247,21 +373,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "275877639",
-      "name_lat": "AYS",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1544560502",
+      "id": "759065399",
       "name_lat": "AYNA",
       "name_ru": "",
-      "breed": "ЛАЙКА",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "ЛАЙКА /",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -274,21 +390,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1944004673",
+      "name_lat": "AYVILINA",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "232388167",
       "name_lat": "AYVA FROM SOCHIFORNIA",
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1305275349",
-      "name_lat": "AYKHAL",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
-      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
-      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -307,24 +423,6 @@
       "breed": "БУЛЛИ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "573855703",
-      "name_lat": "AYKHITO TOMODASHI SHANTI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1484742765",
-      "name_lat": "AYK VOM HAUS ERFULLUNGEN VUNSCHEN",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -355,20 +453,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1512432071",
-      "name_lat": "AYKHITO TOMODASHI GLORIANNA",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1529591155",
-      "name_lat": "AY DA YA NYUSHA",
-      "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
-      "breed_en": "",
+      "id": "1022583817",
+      "name_lat": "AYREK-DART VILLI VONK",
+      "name_ru": "АЙРЕК-ДАРТ ВИЛЛИ ВОНК",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
       "total_shows": 49,
       "competition_dog_id": null
     },
@@ -400,19 +489,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1022583817",
-      "name_lat": "AYREK-DART VILLI VONK",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 38,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1633359347",
+      "id": "571759879",
       "name_lat": "AYA-GANGA TSVETOK BURYATII",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -463,12 +543,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "151848859",
-      "name_lat": "AYMI KISS MI",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
-      "breed_en": "JAPANESE SPITZ",
-      "total_shows": 5,
+      "id": "1344419410",
+      "name_lat": "AYREK-DART UNION STAR",
+      "name_ru": "АЙРЕК-ДАРТ УНИОН СТАР",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -478,6 +558,15 @@
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1038394562",
+      "name_lat": "AY DA YA EVDOKIYA",
+      "name_ru": "АЙ ДА Я ЕВДОКИЯ",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -499,6 +588,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1706530404",
+      "name_lat": "AYZA THE QUEEN OF THE PRIDE",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1494212641",
       "name_lat": "AYLA BA-MI-GO",
       "name_ru": "",
@@ -508,10 +606,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1557825911",
+      "id": "145775045",
       "name_lat": "AYLIN ZOLOTAYA AURA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СИБИРСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -589,10 +687,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "484597915",
+      "id": "1085549356",
       "name_lat": "AYU-DAG KRYMSKIY STRAZH",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -629,15 +727,6 @@
       "name_lat": "AYHEN FUNTI-FEST IZ DOMA ANLI",
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1717743864",
-      "name_lat": "AYNO LEGENDARNAYA",
-      "name_ru": "",
-      "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -688,6 +777,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "669407502",
+      "name_lat": "AYA-AZANA",
+      "name_ru": "",
+      "breed": "МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "594258680",
       "name_lat": "AY DA TASHI TAMAKO",
       "name_ru": "",
@@ -708,10 +806,28 @@
     {
       "id": "487888160",
       "name_lat": "AYLU IZ DOMA ELIV'S",
-      "name_ru": "",
+      "name_ru": "АЙЛУ ИЗ ДОМА ЕЛИВ'С",
       "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "CAIRN TERRIER",
-      "total_shows": 11,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1861265001",
+      "name_lat": "AYREK-DART GRINDEVALD",
+      "name_ru": "АЙРЕК-ДАРТ ГРИНДЕВАЛЬД",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "453428401",
+      "name_lat": "AY DA YA EZHEVIKA",
+      "name_ru": "АЙ ДА Я ЕЖЕВИКА",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -724,30 +840,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1861265001",
-      "name_lat": "AYREK-DART GRINDEVALD",
+      "id": "1422414921",
+      "name_lat": "AYLA SKY TOTEM (к/х)",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "312155877",
-      "name_lat": "AYLA SKY TOTEM",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
-      "id": "453428401",
-      "name_lat": "AY DA YA EZHEVIKA",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "PUG",
-      "total_shows": 17,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -760,10 +858,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "219541740",
+      "id": "430042152",
       "name_lat": "AYKO GOLDEN DREAM",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БОЛЬШОЙ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -778,12 +876,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "741275920",
-      "name_lat": "AYMIN HON SE",
+      "id": "1181094476",
+      "name_lat": "A'YA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ВОСТОЧНОСИБИРСКАЯ ЛАЙКА",
+      "breed_en": "VOSTOCHNOSIBIRSKAYA LAIKA (EAST-SIBERIAN LAIKA)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1200460856",
+      "name_lat": "AYREK-DART YOU LIFE MY KAIF AT EXELLENT WAY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -792,7 +899,43 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1307043819",
+      "name_lat": "AYREK-DART ZENIT OF FAME",
+      "name_ru": "АЙРЕК-ДАРТ ЗЕНИТ ОФ ФАМЭ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "884745829",
+      "name_lat": "AYMIN HON SE",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1551710380",
+      "name_lat": "AYRA VELIKAYA",
+      "name_ru": "АЙРА ВЕЛИКАЯ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "NEWFOUNDLAND",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1258957665",
+      "name_lat": "A YA PRIMA LOVE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -805,39 +948,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "491262536",
-      "name_lat": "AYVENGO",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1706530404",
-      "name_lat": "AYZA THE QUEEN OF THE PRIDE",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "405569245",
+      "id": "282790338",
       "name_lat": "AYLADERSI LIFE GLADWYN IRZHI LIGHT OF DON",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 29,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "1818046324",
-      "name_lat": "Ayvari Hills Money Shake",
+      "id": "1031534685",
+      "name_lat": "AYRO SMIT",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ-ПАПИЙОН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1369168492",
+      "name_lat": "AYVENGO",
+      "name_ru": "",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -846,7 +980,42 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269483249",
+      "name_lat": "AYSTI S'YUZAN LI",
+      "name_ru": "АЙСТИ СЬЮЗАН ЛИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "372764104",
+      "name_lat": "Ayvari Hills Money Shake",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "646845764",
+      "name_lat": "AYREK-DART DRIVE ME CRAZY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1540947368",
+      "name_lat": "AY CHING LILU PYATYY ELEMENT",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -886,21 +1055,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "80927606",
+      "name_lat": "AYZA MINELLI",
+      "name_ru": "АЙЗА МИНЕЛЛИ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "814341813",
       "name_lat": "AYDA",
       "name_ru": "",
       "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "946506308",
-      "name_lat": "AYSTI S'YUZAN LI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -913,28 +1082,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1283334905",
+      "id": "1869580484",
       "name_lat": "AYANA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "646845764",
-      "name_lat": "AYREK-DART DRIVE ME CRAZY",
+      "id": "696108114",
+      "name_lat": "AYNA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 7,
+      "breed": "РУССКО-ЕВРОПЕЙСКАЯ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1388782257",
+      "id": "1418857813",
       "name_lat": "AYVENGO",
       "name_ru": "",
-      "breed": "РОДЕЗИЙСКИЙ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "breed": "РОДЕЗИЙСКИЙ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -958,21 +1127,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1200460856",
-      "name_lat": "AYREK-DART YOU LIFE MY KAIF AT EXELLENT WAY",
+      "id": "1613357959",
+      "name_lat": "AYS",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed": "СТАФФОРДШИРСКИЙ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "380518366",
       "name_lat": "AY TO VATASHI IOSHIKO II",
-      "name_ru": "",
+      "name_ru": "АЙ ТО ВАТАШИ ИОШИКО",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -982,6 +1151,23 @@
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1914353129",
+      "name_lat": "AYKHITO TOMODASHI TEDDI RED BEAR",
+      "name_ru": "АЙХИТО ТОМОДАШИ ТЕДДИ РЕД БЕАР",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "2165543",
+      "name_lat": "AYSA BLEK ROUZ",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1016,8 +1202,7 @@
       "name_lat": "AYSIDORA ARIS",
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1036,15 +1221,6 @@
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "ROTTWEILER",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1540947368",
-      "name_lat": "AY CHING LILU PYATYY ELEMENT",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1084,55 +1260,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1914353129",
-      "name_lat": "AYKHITO TOMODASHI TEDDI RED BEAR",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1307043819",
-      "name_lat": "AYREK-DART ZENIT OF FAME",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "696108114",
-      "name_lat": "AYNA",
-      "name_ru": "",
-      "breed": "РУССКО-ЕВРОПЕЙСКАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1685495739",
-      "name_lat": "AYS-KRIM KHANNI",
-      "name_ru": "",
-      "breed": "ХАВАНЕЗ",
-      "breed_en": "HAVANESE",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1324707386",
-      "name_lat": "Ayron Rozhdennyy V Sibiri",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1578412613",
+      "id": "1673768297",
       "name_lat": "AYDAN DE LAVERNE",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1165,15 +1296,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1944004673",
-      "name_lat": "AYVILINA",
-      "name_ru": "",
-      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "342226114",
       "name_lat": "AYA",
       "name_ru": "",
@@ -1192,11 +1314,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1437633720",
-      "name_lat": "AYRO SMIT",
+      "id": "1309013976",
+      "name_lat": "AYKO",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
+      "breed": "БРЕТОНСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1219,10 +1340,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "33423281",
+      "id": "30211570",
       "name_lat": "AYZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1300,19 +1421,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1775498156",
+      "id": "914452236",
       "name_lat": "AYKHON YUAN SHIKAYA",
       "name_ru": "",
-      "breed": "ЧУНЦИН",
+      "breed": "ЦВЕРГШНАУЦЕР ЧУНЦИН ШНАУЦЕР (ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "592941723",
+      "id": "274761487",
       "name_lat": "AYS",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1363,6 +1484,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "131810756",
+      "name_lat": "AYURIKA JANGIR JEAN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "120370918",
       "name_lat": "AYUNA IZ ORDENA YUMODO N",
       "name_ru": "",
@@ -1372,19 +1502,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1079824480",
-      "name_lat": "AYURIKA JANGIR JEAN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "68656805",
+      "id": "52337197",
       "name_lat": "AYVEL FROM HAUS KOBZEVA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1394,24 +1515,6 @@
       "name_lat": "AYS",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ СТАФФОРДШИРСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "52333780",
-      "name_lat": "AYA-AZANA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "734959202",
-      "name_lat": "AYA-AZANA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1450,6 +1553,15 @@
       "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "125832315",
+      "name_lat": "AYRIS ADRIAN",
+      "name_ru": "АЙРИС АДРИАН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -1498,12 +1610,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "463442081",
+      "name_lat": "AY TAU TSIRKON",
+      "name_ru": "АЙ ТАУ ЦИРКОН",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179169895",
+      "name_lat": "AYSI BELISSIMO",
+      "name_ru": "АЙСИ БЕЛИССИМО",
+      "breed": "ПРАЖСКИЙ КРЫСАРИК",
+      "breed_en": "PRAGUE RATTER",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "236271872",
       "name_lat": "AYKHITO TOMODASHI TANSEY",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1126878591",
+      "name_lat": "AYASHI DZYUMBI DZEKO",
+      "name_ru": "АЙАШИ ДЗЮМБИ ДЗЕКО",
+      "breed": "СИБА",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1525,12 +1663,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1316942347",
-      "name_lat": "AYRIS ADRIAN",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "1743198583",
+      "name_lat": "AY DA YA YURKAYA EGOZA",
+      "name_ru": "АЙ ДА Я ЮРКАЯ ЕГОЗА",
+      "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "941640721",
+      "name_lat": "AY-TADOR SHAGANE (Изменено по Решению ВК от 13.07.22 вопрос 21)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -1561,6 +1708,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1225857403",
+      "name_lat": "AYREK-DART ELVIS HOT PEPPER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 38,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1323444693",
+      "name_lat": "AYMAKO DUSHANGDI",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1903874554",
       "name_lat": "AYHI SOLO",
       "name_ru": "",
@@ -1575,25 +1739,16 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1225857403",
-      "name_lat": "AYREK-DART ELVIS HOT PEPPER",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 33,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1323444693",
-      "name_lat": "AYMAKO DUSHANGDI",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 4,
+      "id": "616511372",
+      "name_lat": "AYREN VALDI ALEGRO AVGUSTIN",
+      "name_ru": "АЙРЭН ВАЛЬДИ АЛЕГРО АВГУСТИН",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1615,6 +1770,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1788924308",
+      "name_lat": "AYKIBO EUKUGAN",
+      "name_ru": "АЙКИБО ЕУКУГАН",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "942055771",
+      "name_lat": "AY TAU YUNONA",
+      "name_ru": "АЙ ТАУ ЮНОНА",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "944987429",
       "name_lat": "AY-TADOR SHARLI",
       "name_ru": "",
@@ -1633,12 +1806,57 @@
       "competition_dog_id": null
     },
     {
+      "id": "587122818",
+      "name_lat": "AYKEMONO KUMA",
+      "name_ru": "АЙКЕМОНО КУМА",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "967527917",
       "name_lat": "AYKI DZHINDZHA",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "748981140",
+      "name_lat": "AYZA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "721209682",
+      "name_lat": "A YA SUPER KLAVA SHIFER IZ SVITY EKATERINY",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1376625464",
+      "name_lat": "AYREK-DART VALENSIA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1731748608",
+      "name_lat": "AYVEN BRIV TAYGER",
+      "name_ru": "АЙВЕН БРИВ ТАЙГЕР",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1678,12 +1896,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1743198583",
-      "name_lat": "AY DA YA YURKAYA EGOZA",
-      "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
+      "id": "125172445",
+      "name_lat": "AYDANA BAO SHERIDAN DLYA ZAOZERYA",
+      "name_ru": "АЙДАНА БАО ШЕРИДАН ДЛЯ ЗАОЗЕРЬЯ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1696,37 +1914,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "577301137",
+      "id": "133482745",
       "name_lat": "AYKO GOLDEN DRIM",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "СOCKER SPANIEL",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "941640721",
-      "name_lat": "AY-TADOR SHAGANE (Изменено по Решению ВК от 13.07.22 вопрос 21)",
-      "name_ru": "",
+      "id": "541033437",
+      "name_lat": "AYAN SMARAGDEN OT BARBATSUTSY",
+      "name_ru": "АЯН СМАРАГДЕН ОТ БАРБАЦУЦЫ",
+      "breed": "SCHNAUZER BLACK",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "60626901",
+      "name_lat": "AY-TADOR SHELBI",
+      "name_ru": "АЙ-ТАДОР ШЕЛБИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
-      "id": "1788924308",
-      "name_lat": "AYKIBO EUKUGAN",
-      "name_ru": "",
-      "breed": "АКИТА",
+      "id": "798510384",
+      "name_lat": "AYKHITO TOMADASHI OSKAR",
+      "name_ru": "АЙХИТО ТОМАДАШИ ОСКАР",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1302447104",
+      "id": "200813560",
+      "name_lat": "AYA VISHENKA NA TORTE",
+      "name_ru": "АЯ ВИШЕНКА НА ТОРТЕ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1346628917",
       "name_lat": "AYTACH ELCIELO INSPIRACION",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1759,39 +1995,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "748981140",
-      "name_lat": "AYZA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
       "id": "91371284",
       "name_lat": "AYKHITO TOMODASHI VATARU KENZHI",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "388510851",
-      "name_lat": "AYREK-DART IMPERIAL RED",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "179169895",
-      "name_lat": "AYSI BELISSIMO",
-      "name_ru": "",
-      "breed": "ПРАЖСКИЙ КРЫСАРИК",
-      "breed_en": "PRAGUE RATTER",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1804,30 +2013,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "500878382",
+      "name_lat": "AYMAKO EKZARKH",
+      "name_ru": "АЙМАКО ЕКЗАРХ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1876381009",
+      "name_lat": "AY DA YA SVOYA IGRA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "139213875",
+      "name_lat": "AYKHITO TOMODASHI UMMEY",
+      "name_ru": "АЙХИТО ТОМОДАШИ УММЭЙ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1673527525",
       "name_lat": "AYREK-DART YUSTIN YOUNG PRINS",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1031534685",
-      "name_lat": "AYRO SMIT",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "541033437",
-      "name_lat": "AYAN SMARAGDEN OT BARBATSUTSY",
-      "name_ru": "",
-      "breed": "SCHNAUZER BLACK",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1844,24 +2061,6 @@
       "name_lat": "AYA ETERNAL LOVE FOR BAYKAL TRICOLOR",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "587122818",
-      "name_lat": "AYKEMONO KUMA",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1376625464",
-      "name_lat": "AYREK-DART VALENSIA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1885,21 +2084,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "573781374",
+      "id": "1639247879",
       "name_lat": "AYKO",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1507664031",
-      "name_lat": "AY TAU YUNONA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД ПИНЧЕР",
+      "id": "372199007",
+      "name_lat": "AYRIS S MOSKOVSKOY GORKI",
+      "name_ru": "АЙРИС С МОСКОВСКОЙ ГОРКИ",
+      "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "523857084",
+      "name_lat": "A YA TUCHKA CHERNAYA IZ SOZVEZDIYA MECHTY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1921,10 +2129,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1248772952",
+      "id": "405141117",
       "name_lat": "AYMAKO ZSHENSHEG DI MEY",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1957,21 +2165,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1497602151",
-      "name_lat": "AYRIS S MOSKOVSKOY GORKI",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "888676600",
       "name_lat": "AYRA SPIRIT THE WIND",
       "name_ru": "",
       "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "CAIRN TERRIER",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "22000467",
+      "name_lat": "AYLEN S PRAVOGO BEREGA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1984,39 +2191,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1731748608",
-      "name_lat": "AYVEN BRIV TAYGER",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1126878591",
-      "name_lat": "AYASHI DZYUMBI DZEKO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "8608253",
       "name_lat": "AYLENDBERG FROM VELIKIY PRIDE",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "139213875",
-      "name_lat": "AYKHITO TOMODASHI UMMEY",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2038,15 +2218,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588550114",
-      "name_lat": "AY DA YA SVOYA IGRA",
-      "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "473819680",
       "name_lat": "AY-TADOR YU'R ZE BEST",
       "name_ru": "",
@@ -2061,7 +2232,16 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "246353074",
+      "name_lat": "AY-TADOR SHAYNI STAR",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2074,30 +2254,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1038394562",
-      "name_lat": "AY DA YA EVDOKIYA",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "PUG",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "9528790",
       "name_lat": "AYLU IZ DOMA ELIV’S",
-      "name_ru": "",
+      "name_ru": "АЙЛУ ИЗ ДОМА ЕЛИВ’С",
       "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1602616488",
+      "id": "125778817",
+      "name_lat": "AYRIN IZ DOLINY SOLNCA",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1370909663",
+      "name_lat": "AYVENGO KOROL NOCHNOY VERONY",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1994845388",
       "name_lat": "AYVENGO",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "219371750",
+      "name_lat": "AYVORI SANTI",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2110,21 +2306,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "502416082",
-      "name_lat": "AYKHITO TOMADASHI OSKAR",
-      "name_ru": "",
-      "breed": "СИБА / SHIBA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "7490691",
       "name_lat": "AYMAKO ZHIKSIN YONGUAN",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2191,21 +2378,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "234192276",
+      "id": "550213395",
       "name_lat": "AYLANTA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "60626901",
-      "name_lat": "AY-TADOR SHELBI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2263,10 +2441,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1256831453",
+      "id": "30127443",
       "name_lat": "Ayrek-Dart Oskar Only For You",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ АКИТА",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2398,6 +2576,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "106174107",
+      "name_lat": "A'YA SUPERZVEZDA IZ CHERNOI SHLIAKHTY",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "759926881",
       "name_lat": "AYNA",
       "name_ru": "",
@@ -2434,19 +2621,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "72075131",
+      "name_lat": "AYREK-DART IDEAL FOR ALTER REAL",
+      "name_ru": "АЙРЕК-ДАРТ ИДЕАЛ ФОР АЛЬТЕР РЕАЛ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "101731470",
       "name_lat": "AYS",
       "name_ru": "",
       "breed": "GERMAN SHORT-HAIRED",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "72075131",
-      "name_lat": "AYREK-DART IDEAL FOR ALTER REAL",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2461,10 +2648,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1445316457",
+      "id": "493588325",
       "name_lat": "AYRIN ALEKSANDRIYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ФАНТОМ) ЧЁРНЫЙ С ПОДПАЛОМ",
+      "breed": "ПУДЕЛЬ ФАНТОМ) ЧЕРНЫЙ С ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2476,15 +2663,6 @@
       "breed": "GERMAN WIRE-HAIRED",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "125778817",
-      "name_lat": "AYRIN IZ DOLINY SOLNCA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2542,10 +2720,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1985778687",
+      "id": "488060940",
+      "name_lat": "AYNOR ZNATNOGO RODA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1498200688",
       "name_lat": "AYZEK",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2569,10 +2755,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1094830899",
+      "id": "1997316032",
+      "name_lat": "AYZA VELIKOLEPNAYA",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1304728439",
       "name_lat": "AYRIS BLEKI",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2605,6 +2800,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "37466967",
+      "name_lat": "AYKA IZ DOMA ODINA",
+      "name_ru": "АЙКА ИЗ ДОМА ОДИНА",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "935934677",
       "name_lat": "AYAKS",
       "name_ru": "",
@@ -2614,10 +2818,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1529005045",
+      "id": "859962943",
       "name_lat": "AYNA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ КУРЦХААР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2641,19 +2845,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "37466967",
-      "name_lat": "AYKA IZ DOMA ODINA",
+      "id": "1281155496",
+      "name_lat": "AYRIS ANGELSKIE GLAZA",
       "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "723124005",
-      "name_lat": "AYRIS ANGELSKIE GLAZA",
+      "id": "89976072",
+      "name_lat": "A Ya Tovya Myatnaya Mechta",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "МАЛЫЙ ВАНДЕЙСКИЙ БАССЕТ-ГРИФФОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2665,6 +2869,23 @@
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1065676553",
+      "name_lat": "AYUSHA DZHI LI",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "936602535",
+      "name_lat": "AYAKO GAMI",
+      "name_ru": "",
+      "breed": "АКИТА /",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2713,10 +2934,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "643716414",
+      "id": "323624146",
       "name_lat": "AYVENGO",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2740,10 +2961,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "605928331",
+      "id": "176288820",
       "name_lat": "AYLANDERSI LIFE GLADWYN IRZHI LIGHT OF DON",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2821,19 +3042,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "246353074",
-      "name_lat": "AY-TADOR SHAYNI STAR",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1458875015",
+      "id": "287874886",
       "name_lat": "AYSAN",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ /",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2875,6 +3087,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1624316582",
+      "name_lat": "AYS",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1352866747",
       "name_lat": "AYRIS",
       "name_ru": "",
@@ -2893,28 +3113,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1052078750",
+      "id": "1276842464",
       "name_lat": "AYDAR SCHASTLIVYY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1137882742",
+      "id": "1907446127",
       "name_lat": "AYSI TOLMA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "68098050",
+      "id": "1900588182",
+      "name_lat": "AY TAU CHILI",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "904542910",
       "name_lat": "AYREI VELLERIS TAMPLIER",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2929,12 +3158,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1871573732",
+      "id": "159751416",
       "name_lat": "AYA HEYSE",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЁРНЫЙ",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1863498988",
+      "name_lat": "AYVA",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2956,8 +3193,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1469546764",
-      "name_lat": "AYS QUEEN STAR OF ECO- STYLE",
+      "id": "663458042",
+      "name_lat": "AYS QUEEN STAR OF ECO-STYLE",
       "name_ru": "",
       "breed": "БУРБУЛЬ / BOERBOEL",
       "breed_en": "",
@@ -2983,10 +3220,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "250838370",
+      "id": "39759203",
       "name_lat": "AYZI LUCKY HUNTER",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3016,6 +3253,15 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "745390746",
+      "name_lat": "AYSAN",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3055,28 +3301,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1480476971",
+      "id": "810216482",
       "name_lat": "AYDA GOLDEN HOSHI",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "745390746",
+      "id": "810084083",
       "name_lat": "AYSAN",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "178435193",
-      "name_lat": "AYSAN",
-      "name_ru": "",
-      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3145,10 +3382,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "571038426",
+      "id": "105717030",
       "name_lat": "AYRIS BLEKI",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3172,10 +3409,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "859242936",
-      "name_lat": "AYDANA BAO SHERIDAN DLYA ZAOZERYA",
+      "id": "164487719",
+      "name_lat": "A YREK-DART STARLAIT",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3235,10 +3472,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "914950699",
+      "id": "1109230882",
       "name_lat": "AY-TADOR ELIOT ESHTON",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -3248,24 +3485,6 @@
       "name_lat": "AYKO YUKI",
       "name_ru": "",
       "breed": "АКИТА / AKITA",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1065676553",
-      "name_lat": "AYUSHA DZHI LI",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "852266982",
-      "name_lat": "AYVENGO KOROL NOCHNOY VERONY",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3352,15 +3571,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "114760294",
-      "name_lat": "AYAKO GAMI",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1213599240",
       "name_lat": "AYKEN EMI",
       "name_ru": "",
@@ -3392,6 +3602,15 @@
       "name_lat": "AYA ZVEZDA RUS EKAN ZHANIKA",
       "name_ru": "",
       "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1045435744",
+      "name_lat": "A YA VISHENKA NA TORTE",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3442,15 +3661,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1613357959",
-      "name_lat": "AYS",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "831581238",
       "name_lat": "AYAKA S VERSHIN SAYAN",
       "name_ru": "",
@@ -3498,10 +3708,10 @@
     {
       "id": "1113096511",
       "name_lat": "AY DA YA ISTINA",
-      "name_ru": "",
+      "name_ru": "АЙ ДА Я ИСТИНА",
       "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3550,12 +3760,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1551710380",
-      "name_lat": "AYRA VELIKAYA",
+      "id": "46404537",
+      "name_lat": "AYA SOFIA IRISS DELUX",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "NEWFOUNDLAND",
-      "total_shows": 1,
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3572,15 +3781,6 @@
       "name_lat": "AYA PRETTY BEBY",
       "name_ru": "",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "51840066",
-      "name_lat": "AYU-DAG DLYA GOLDEN ANIK`S",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3631,15 +3831,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "421477951",
-      "name_lat": "AYMAKO EKZARKH",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1464972513",
       "name_lat": "AYKA KEYKO EKO SAKURA",
       "name_ru": "",
@@ -3649,10 +3840,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1900588182",
-      "name_lat": "AY TAU CHILI",
+      "id": "1513536496",
+      "name_lat": "A YUADA RADUYUS",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "СТАФФОР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3676,15 +3867,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1571897021",
-      "name_lat": "AY DA YA YUDASHKIN WHITE MITYAY",
-      "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "805017866",
       "name_lat": "AYM LITTLE BOSS",
       "name_ru": "",
@@ -3694,10 +3876,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1422414921",
-      "name_lat": "AYLA SKY TOTEM (к/х)",
+      "id": "1571897021",
+      "name_lat": "AY DA YA YUDASHKIN WHITE MITYAY",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3780,6 +3962,14 @@
       "name_ru": "",
       "breed": "SHORT-HAIRED POINTER (VIZSLA)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "499062898",
+      "name_lat": "AYS KRIM",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3892,12 +4082,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1849485377",
-      "name_lat": "AYA SOFIA IRISS DELUX",
+      "id": "1620340144",
+      "name_lat": "AYDAN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИ",
+      "breed": "СИБА / SHIBA",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3928,21 +4118,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1344419410",
-      "name_lat": "AYREK-DART UNION STAR",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "282251807",
       "name_lat": "AYREK-DART UNEARTHLY BEAUTY",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -3991,6 +4172,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "96310421",
+      "name_lat": "AYKHITO TOMODASHI TAKARA",
+      "name_ru": "",
+      "breed": "АКИТА /",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1594384627",
       "name_lat": "AYGUL",
       "name_ru": "",
@@ -4009,6 +4198,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "799169927",
+      "name_lat": "A YA TAKOY EDINSTVENNY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "194146689",
       "name_lat": "AY-TADOR THOR BLACK PRINCE",
       "name_ru": "",
@@ -4022,24 +4220,6 @@
       "name_lat": "AYASHI DZYUMBI KHIROSHI",
       "name_ru": "",
       "breed": "СИБА / SHIBA",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "219371750",
-      "name_lat": "AYVORI SANTI",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1992116904",
-      "name_lat": "AYKHITO TOMODASHI TAKARA",
-      "name_ru": "",
-      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4063,6 +4243,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "979106590",
+      "name_lat": "AYZA ISKRA RADOSTI",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "180273778",
+      "name_lat": "AYLEN LUCH SOLNTSA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1892791204",
       "name_lat": "AYREK-DART ZINGER FOR BLISSLIFE",
       "name_ru": "",
@@ -4081,10 +4279,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "144331271",
-      "name_lat": "AYA VISHENKA NA TORTE",
+      "id": "132592194",
+      "name_lat": "A'YUNA VITA VAN DAMME",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "707909672",
+      "name_lat": "AYSARA SAFURA",
+      "name_ru": "АЙСАРА САФУРА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "310090269",
+      "name_lat": "AYTALIN'S SHANGRI-LA",
+      "name_ru": "АЙТАЛИН'С ШАНГРИ-ЛА",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1837305470",
+      "name_lat": "AYRIS STAR LINES",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4108,10 +4333,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "424784094",
-      "name_lat": "AYZA ISKRA RADOSTI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ БУЛЬДОГ",
+      "id": "1377439321",
+      "name_lat": "AYVAZOVSKIY IZ MIRA CHEMPIONOV",
+      "name_ru": "АЙВАЗОВСКИЙ ИЗ МИРА ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4189,29 +4414,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1620340144",
-      "name_lat": "AYDAN",
-      "name_ru": "",
-      "breed": "СИБА / SHIBA",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "847004107",
       "name_lat": "AYRONKHAYD",
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "616511372",
-      "name_lat": "AYREN VALDI ALEGRO AVGUSTIN",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "JACK RUSSELL TERRIER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4252,15 +4459,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "180273778",
-      "name_lat": "AYLEN LUCH SOLNTSA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1669072785",
       "name_lat": "AYSBULLYES BLANCHE",
       "name_ru": "",
@@ -4297,11 +4495,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "310090269",
-      "name_lat": "AYTALIN'S SHANGRI-LA",
+      "id": "385059830",
+      "name_lat": "AYURI GO YOU DJENIMA",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
+      "breed": "АКИТА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4342,6 +4539,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "897873133",
+      "name_lat": "AYVENGO S PREDGORIY URALA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "213853451",
       "name_lat": "AYSEL YARKAYA KRASOTKA",
       "name_ru": "",
@@ -4351,19 +4556,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "212132943",
-      "name_lat": "AYRIS STAR LINES",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "97103079",
+      "id": "1971657568",
       "name_lat": "AYSBERG BOLI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ /",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4414,15 +4610,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1006718290",
-      "name_lat": "AYVAZOVSKIY IZ MIRA CHEMPIONOV",
-      "name_ru": "",
-      "breed": "КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "74995683",
       "name_lat": "AYKA",
       "name_ru": "",
@@ -4454,15 +4641,6 @@
       "name_lat": "Aysan",
       "name_ru": "",
       "breed": "СЕТТЕР НЕМЕЦКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1237491355",
-      "name_lat": "AYSAN",
-      "name_ru": "",
-      "breed": "ГОЛЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4522,6 +4700,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "677022249",
+      "name_lat": "AY-KYS ADEL",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "146233538",
       "name_lat": "AY PETRI",
       "name_ru": "",
@@ -4558,28 +4744,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "203116101",
+      "id": "1706224988",
+      "name_lat": "AY-KYS ADEL",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1851511640",
       "name_lat": "AY TODOR",
       "name_ru": "",
-      "breed": "Золотистый ретривер /",
+      "breed": "Золотистый ретривер",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "206229690",
+      "id": "286690127",
       "name_lat": "AYS GERA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "954711184",
+      "id": "1487000037",
       "name_lat": "AYRI",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4657,10 +4851,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1842129758",
+      "id": "895885810",
       "name_lat": "AYVENGO",
       "name_ru": "",
-      "breed": "ДАЛМАТИН КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "breed": "ДАЛМАТИН КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4684,10 +4878,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "645537769",
+      "id": "1665995892",
       "name_lat": "AYSVITORIYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КРАСНЫЙ /",
+      "breed": "ПУДЕЛЬ ТОЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4819,6 +5013,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1363935923",
+      "name_lat": "AYVORI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "873014873",
       "name_lat": "AYAKS",
       "name_ru": "",
@@ -4833,6 +5035,14 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ СОБАКА)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "208408167",
+      "name_lat": "AYVORI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4864,11 +5074,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "80927606",
-      "name_lat": "AYZA MINELLI",
+      "id": "1785810620",
+      "name_lat": "AYORON BENVINGUT OT BARBATSUTSY",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "SCHNAUZER BLACK",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1990441366",
+      "name_lat": "AYS DEY CHI TEYN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4909,15 +5127,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1785810620",
-      "name_lat": "AYORON BENVINGUT OT BARBATSUTSY",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
-      "breed_en": "SCHNAUZER BLACK",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "869757995",
       "name_lat": "AYMAKO ERTONGAI",
       "name_ru": "",
@@ -4927,10 +5136,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1371537615",
+      "id": "865485566",
       "name_lat": "AYUMI BRIANNA LOIS",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4967,15 +5176,6 @@
       "name_lat": "AYRON MEN SEVERNY VIHR",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "376398052",
-      "name_lat": "AYSARA SAFURA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5035,6 +5235,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1504085604",
+      "name_lat": "AYSFAIR PEMUYA VILMA",
+      "name_ru": "",
+      "breed": "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА средняя",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1677547388",
+      "name_lat": "AYMAKOE- KVIKSING BEYDOU",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "141945524",
       "name_lat": "AYTALIN'S GRAF DE LA FER",
       "name_ru": "",
@@ -5049,6 +5265,14 @@
       "name_ru": "",
       "breed": "СИБА / SHIBA",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "101322989",
+      "name_lat": "AYVARI HILLES MONEY SHEIK",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5080,19 +5304,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1816997456",
+      "id": "1165567738",
       "name_lat": "AYYANGADOO DIAMOND DYNASY NEWLEGEND",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "463442081",
-      "name_lat": "AY TAU TSIRKON",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5188,10 +5403,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "598416610",
+      "id": "1253829859",
       "name_lat": "AYRI VELIKOLEPNAYA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5219,15 +5434,6 @@
       "name_lat": "AYASHI DZYUMBI YASU",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1997316032",
-      "name_lat": "AYZA VELIKOLEPNAYA",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5269,6 +5475,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "94593277",
+      "name_lat": "AYRIS VANIL GABRIELA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "812646678",
       "name_lat": "AYRIS STRADA DE SOLE",
       "name_ru": "",
@@ -5278,11 +5492,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "897873133",
-      "name_lat": "AYVENGO S PREDGORIY URALA",
+      "id": "656995278",
+      "name_lat": "AYS SHTORM IZ BEREZOVOGO LOGA ( )",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1106116970",
+      "name_lat": "AYSHA LUNNOE SIYANIE",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     }

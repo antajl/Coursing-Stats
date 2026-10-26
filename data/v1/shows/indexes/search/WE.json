@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "WE",
-  "count": 443,
+  "count": 460,
   "dogs": [
     {
       "id": "1544532589",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "DOGUE DE BORDEAUX",
-      "total_shows": 49,
+      "total_shows": 62,
       "competition_dog_id": null
     },
     {
@@ -18,16 +18,16 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 128,
+      "total_shows": 153,
       "competition_dog_id": null
     },
     {
-      "id": "439763129",
-      "name_lat": "WELMARTEY DOMEDZHE- DI - KADORE",
+      "id": "535470121",
+      "name_lat": "WELMARTEY DOMEDZHE-DI - KADORE",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 110,
+      "total_shows": 122,
       "competition_dog_id": null
     },
     {
@@ -45,14 +45,14 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "410540965",
+      "id": "266816766",
       "name_lat": "WERT HOF HOPPE RENI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
@@ -63,7 +63,7 @@
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 44,
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -72,14 +72,23 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 53,
+      "total_shows": 59,
       "competition_dog_id": null
     },
     {
-      "id": "965206863",
+      "id": "1427327923",
+      "name_lat": "WELKAR CELEB",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1987584648",
       "name_lat": "WESTFALDING UNIVERSUM LIBERTY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 32,
       "competition_dog_id": null
@@ -112,10 +121,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "895352380",
+      "id": "657791577",
       "name_lat": "WEITENSHOF DIAMOND BLITZ GETTER",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
@@ -130,12 +139,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1427327923",
-      "name_lat": "WELKAR CELEB",
+      "id": "1720528194",
+      "name_lat": "WEIMBERRY BUONO TITAN",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 32,
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "breed_en": "",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -175,6 +184,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "3241049",
+      "name_lat": "WELKAR SKITTLES",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
       "id": "1869109324",
       "name_lat": "WESTERLY WIND SAROS",
       "name_ru": "",
@@ -189,7 +207,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 29,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -202,15 +220,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "285679179",
-      "name_lat": "WEIMBERRY BUONO TITAN",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР /",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "1377046910",
       "name_lat": "WELFREND ELISEY",
       "name_ru": "",
@@ -220,21 +229,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "596475960",
-      "name_lat": "WELKAR FIRST RATE",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "1688945877",
       "name_lat": "WEST SIB STORY FIFA",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 47,
+      "total_shows": 48,
+      "competition_dog_id": null
+    },
+    {
+      "id": "596475960",
+      "name_lat": "WELKAR FIRST RATE",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -288,7 +297,16 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 39,
+      "total_shows": 47,
+      "competition_dog_id": null
+    },
+    {
+      "id": "914462969",
+      "name_lat": "WESTERN COMMAND SOLOMON CHAR",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -319,6 +337,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "915192284",
+      "name_lat": "WELKAR CHATMAN",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
       "id": "1735275577",
       "name_lat": "WELLDAN AMARETTO",
       "name_ru": "",
@@ -337,8 +364,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "855197771",
-      "name_lat": "WEST-EAST AYAKA KAMI- SATO",
+      "id": "1502216467",
+      "name_lat": "WEST-EAST AYAKA KAMI-SATO",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
@@ -360,14 +387,23 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1296370566",
+      "id": "121529407",
+      "name_lat": "WENDI FLAFFI CHARM",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46204872",
       "name_lat": "WERT HOF PRAYM",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -382,21 +418,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "775973429",
+      "id": "623048238",
       "name_lat": "WERT HOF FABI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "3241049",
-      "name_lat": "WELKAR SKITTLES",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -409,30 +436,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "915192284",
-      "name_lat": "WELKAR CHATMAN",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
       "id": "4914574",
       "name_lat": "WEST SIB STORY SHOPEN",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "914462969",
-      "name_lat": "WESTERN COMMAND SOLOMON CHAR",
+      "id": "279471121",
+      "name_lat": "WESTERN COMMAND EXCLUZIV ALMAZ",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -454,10 +471,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "729046495",
+      "id": "1877848312",
       "name_lat": "WESTFALDING UNIVERSUM KONNOR BRAVE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -486,7 +503,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 39,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -499,21 +516,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1104066051",
+      "name_lat": "WEST-EAST CHIE KUROHIME",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "189536636",
       "name_lat": "WELL KNOWN ASCELLA",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1104066051",
-      "name_lat": "WEST-EAST CHIE KUROHIME",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -544,19 +561,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "121529407",
-      "name_lat": "WENDI FLAFFI CHARM",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1969866521",
+      "id": "1403554490",
       "name_lat": "WERT HOF MORRIS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -568,6 +576,15 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1945329892",
+      "name_lat": "WEST SIB STORY SANTA FOR MARY",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -603,7 +620,16 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1185374287",
+      "name_lat": "WEST SIB STORY CHICAGO",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -613,15 +639,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1945329892",
-      "name_lat": "WEST SIB STORY SANTA FOR MARY",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -657,7 +674,7 @@
       "name_ru": "",
       "breed": "МАЛАМУТ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -670,21 +687,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "656768357",
+      "name_lat": "WESTERN PRINCESS OF JOY VALYRIA NBT",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "104388249",
       "name_lat": "WESTERN COMMAND ROKEL CHERNY BRILLIANT",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1185374287",
-      "name_lat": "WEST SIB STORY CHICAGO",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -706,10 +723,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1493107420",
+      "id": "55385977",
       "name_lat": "WESTFALDING UNIVERSUM PANDORA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -730,6 +747,14 @@
       "breed": "ЦВЕРГШНАУЦЕР П-С",
       "breed_en": "MINIATURE SCHNAUZER P-S",
       "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "842005839",
+      "name_lat": "WERMAX",
+      "name_ru": "",
+      "breed": "ГОНЧАЯ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -766,15 +791,6 @@
       "breed": "ЦВЕРГШНАУЦЕР П-С",
       "breed_en": "MINIATURE SCHNAUZER P-S",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "656768357",
-      "name_lat": "WESTERN PRINCESS OF JOY VALYRIA NBT",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -823,6 +839,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1876510008",
+      "name_lat": "WESNA IZ BELOY BRIGADY",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "347043842",
       "name_lat": "WESTERN COMMAND LUCHSHAYA IZ VSEKH",
       "name_ru": "",
@@ -838,15 +863,6 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1876510008",
-      "name_lat": "WESNA IZ BELOY BRIGADY",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -877,10 +893,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1255423682",
+      "id": "664413167",
       "name_lat": "WERSACHE DIVA FAMIL'NAYA DRAGOTSENNOST'",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
       "total_shows": 8,
       "competition_dog_id": null
@@ -891,7 +907,7 @@
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -936,7 +952,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 31,
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -949,10 +965,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1387163017",
+      "id": "483736138",
       "name_lat": "WERT HOF KHLOYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -976,10 +992,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1545528241",
+      "id": "750715462",
+      "name_lat": "WE STAR'S TOP HIGH PERFOMANCE GOLD",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1646816332",
       "name_lat": "WELL-BRED POUZ ARSELLA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1012,15 +1036,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "279471121",
-      "name_lat": "WESTERN COMMAND EXCLUZIV ALMAZ",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1736964998",
       "name_lat": "WESTERN COMMAND BAAL HAMON",
       "name_ru": "",
@@ -1039,11 +1054,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1411312841",
+      "id": "863109514",
       "name_lat": "WERT HOF HITRI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1675847041",
+      "name_lat": "WERMAX",
+      "name_ru": "",
+      "breed": "БАВАРСКАЯ ГОРНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1057,10 +1080,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "68555710",
+      "id": "1457435",
       "name_lat": "WEDNESDAY ADDAMS FOR",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1075,10 +1098,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1680840943",
+      "id": "1314564915",
       "name_lat": "WESTFALDING UNIVERSUM LUXOR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1099,6 +1122,15 @@
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1101295380",
+      "name_lat": "WESTERN COMMAND GOSUDAR IMPERATOR",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -1129,15 +1161,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1101295380",
-      "name_lat": "WESTERN COMMAND GOSUDAR IMPERATOR",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1381779612",
       "name_lat": "WELLDAN ANGEL OF VICTORY",
       "name_ru": "",
@@ -1165,6 +1188,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1115510501",
+      "name_lat": "WELKAR INIGO MONTOYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1454545387",
       "name_lat": "WELKAR EASY GOING",
       "name_ru": "",
@@ -1174,12 +1206,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "292503319",
-      "name_lat": "WECKO VOM HUHNEGRAB",
+      "id": "170328655",
+      "name_lat": "WEST SIB STORY IBERIKOS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "261447664",
+      "name_lat": "Wecko vom Huhnegrab",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "233782449",
+      "name_lat": "WELARY PERFECT JOY",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1201,12 +1251,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "999491226",
+      "id": "795705781",
+      "name_lat": "WEST SIB STORY DANIYA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "67163569",
       "name_lat": "WERT HOF LUKAS MARSELLA VOM",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 27,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -1219,15 +1278,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "233782449",
-      "name_lat": "WELARY PERFECT JOY",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "286717296",
       "name_lat": "WEST-EAST DREAMY GIRL",
       "name_ru": "",
@@ -1237,19 +1287,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "170328655",
-      "name_lat": "WEST SIB STORY IBERIKOS",
+      "id": "284064791",
+      "name_lat": "WERT HOF ULF",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "588350250",
+      "id": "1020633901",
+      "name_lat": "WESTERN COMMAND GOSUDAREVA FAVORITKA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1410867067",
       "name_lat": "WEST SIB STORY LONDON",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1264,19 +1322,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "795705781",
-      "name_lat": "WEST SIB STORY DANIYA",
+      "id": "762281918",
+      "name_lat": "WEIMPOINT SMOKIN' HOT",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1710377750",
+      "id": "1857385359",
       "name_lat": "WEST SIB STORY DEVICE",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -1291,12 +1349,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "80264308",
+      "name_lat": "WESTMINSTER FROM LABS FAMILY",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1811394630",
       "name_lat": "WEST-EAST DIAMOND QUEEN",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "292053153",
+      "name_lat": "WESTERN URAL ZEVS",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -1318,12 +1394,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1115510501",
-      "name_lat": "WELKAR INIGO MONTOYA",
+      "id": "91560324",
+      "name_lat": "WELL-BRED POUZ MORTY LA VINS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1345,12 +1421,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1510437342",
+      "name_lat": "WELL-BRED POUZ ZIHAO LIN",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1828159802",
       "name_lat": "WE STAR'S HIGHLIGHT STUNNIG DREAM",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "37430219",
+      "name_lat": "WERA IN MY VERDANA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "266493863",
+      "name_lat": "WEST SIB STORY DERBENT",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1462,15 +1565,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "762281918",
-      "name_lat": "WEIMPOINT SMOKIN' HOT",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1176020184",
       "name_lat": "WEISS WIND VERDI",
       "name_ru": "",
@@ -1498,10 +1592,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1857528742",
+      "id": "274888095",
       "name_lat": "WESTERN COMMAND ZIMUSHKA ZIMA",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1516,15 +1610,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1510437342",
-      "name_lat": "WELL-BRED POUZ ZIHAO LIN",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1843441059",
       "name_lat": "WEST-EAST FAIRY TAIL",
       "name_ru": "",
@@ -1534,57 +1619,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "284064791",
-      "name_lat": "WERT HOF ULF",
+      "id": "1662979679",
+      "name_lat": "WEST SIB STORY KAPKEIK",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 13,
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "837493821",
+      "id": "1421446752",
       "name_lat": "WE STAR’S LUCKY SWEET BOY",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "91560324",
-      "name_lat": "WELL-BRED POUZ MORTY LA VINS",
+      "id": "1102354026",
+      "name_lat": "WERT HOF MAFIYA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Короткошерстная",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1495385101",
+      "id": "1513503856",
       "name_lat": "WENDY MY WINTER MIRACLE",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "393714665",
-      "name_lat": "WESTMINSTER FROM LABS FAMILY",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "266493863",
-      "name_lat": "WEST SIB STORY DERBENT",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1790849317",
+      "name_lat": "WELARY HERITAGE",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1624,24 +1698,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "292053153",
-      "name_lat": "WESTERN URAL ZEVS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "37430219",
-      "name_lat": "WERA IN MY VERDANA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "918466192",
       "name_lat": "WELMARTEY ERON",
       "name_ru": "",
@@ -1651,12 +1707,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1102354026",
-      "name_lat": "WERT HOF MAFIYA",
+      "id": "287059247",
+      "name_lat": "WESTIS PLANET HARISMA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Короткошерстная",
+      "breed": "HIGHLAND WHITE",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1674,14 +1730,14 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "67949673",
+      "id": "1845660916",
       "name_lat": "WEST SIB STORY BONITA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1705,8 +1761,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "48650760",
-      "name_lat": "WEST- EAST DAENERYS TARGARYEN",
+      "id": "154760966",
+      "name_lat": "WEST-EAST DAENERYS TARGARYEN",
       "name_ru": "",
       "breed": "сиба",
       "breed_en": "",
@@ -1741,10 +1797,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1946753261",
+      "id": "196763472",
       "name_lat": "WESTERN COMMAND AMAROK",
       "name_ru": "",
-      "breed": "ГРЕНЛАНДСКАЯ СОБАКА /",
+      "breed": "ГРЕНЛАНДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1774,15 +1830,6 @@
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1662979679",
-      "name_lat": "WEST SIB STORY KAPKEIK",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1822,10 +1869,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "543621302",
+      "id": "1578107413",
       "name_lat": "WERT HOF MARVIN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1849,10 +1896,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "710952136",
+      "id": "672284045",
       "name_lat": "WERT HOF ZOLOTOY MALCHIK",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1903,6 +1950,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "615503914",
+      "name_lat": "WELL-BRED POUZ ELLY LUCKY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1867171882",
       "name_lat": "WEAPBAS FINE DYNASTY OF KING'S",
       "name_ru": "",
@@ -1948,8 +2004,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "204257408",
-      "name_lat": "WEST SIB STORY LAS- VEGAS",
+      "id": "1315247248",
+      "name_lat": "WEST SIB STORY LAS-VEGAS",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
@@ -1993,12 +2049,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1117706128",
-      "name_lat": "WESTERN COMMAND GOSUDAREVA FAVORITKA",
+      "id": "1544460320",
+      "name_lat": "WESTERN URAL ZABAVA",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2008,6 +2064,14 @@
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1933063600",
+      "name_lat": "WELL-BRED POUZ CAMELLIA OF FIRE",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2038,21 +2102,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "287059247",
-      "name_lat": "WESTIS PLANET HARISMA",
-      "name_ru": "",
-      "breed": "HIGHLAND WHITE",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1572107314",
       "name_lat": "WENDY OLAVI",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1451761300",
+      "name_lat": "WELLA FREDERICA VICTORIA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2074,10 +2138,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "226841496",
+      "id": "1211053255",
       "name_lat": "WESTFALDING UNIVERSUM KYARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -2110,10 +2174,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "446288286",
+      "id": "83712091",
       "name_lat": "WERT HOF URMA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -2173,10 +2237,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1170716435",
+      "id": "458385274",
       "name_lat": "WESTIS PLANET READY TO WIN",
       "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР /",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2218,10 +2282,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1237840056",
+      "id": "780215773",
       "name_lat": "WELLARY ALEKSANDRINA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2272,10 +2336,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "757171988",
+      "id": "1649546177",
       "name_lat": "WELFREND TEFFI",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2299,10 +2363,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "59572695",
+      "id": "207083411",
       "name_lat": "WEMBI-BLEK S RUSSKOGO BAIKALA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2322,15 +2386,6 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1451761300",
-      "name_lat": "WELLA FREDERICA VICTORIA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2362,6 +2417,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1411262400",
+      "name_lat": "WE STAR'S LIFE OF PRETY GIRL",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "725594867",
       "name_lat": "WENICE MICHELA",
       "name_ru": "",
@@ -2371,12 +2434,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1544460320",
-      "name_lat": "WESTERN URAL ZABAVA",
+      "id": "1900822315",
+      "name_lat": "WELMARTEY DUNA-VERDE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2398,10 +2461,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "133518464",
+      "id": "928161679",
       "name_lat": "WESTERLY WIND ILSE",
       "name_ru": "",
-      "breed": "КЛАМБЕР СПАНИЕЛЬ /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2452,10 +2515,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1953507326",
+      "id": "915771869",
       "name_lat": "WEST-WIND VOM HAUS LICHER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2497,6 +2560,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "850724417",
+      "name_lat": "WESTIS PLANET TEQUILA",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1689544627",
       "name_lat": "WEST SIB STORY SMESH",
       "name_ru": "",
@@ -2521,6 +2592,15 @@
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736784108",
+      "name_lat": "WEST-EAST ONIX",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2578,10 +2658,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1475325456",
+      "id": "827580844",
       "name_lat": "WEI YUAN HUAI",
       "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН /",
+      "breed": "ЧУНЦИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2596,10 +2676,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1132399065",
+      "id": "1727485476",
       "name_lat": "WE STARS LUCKY SWEET BOY",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2614,28 +2694,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1196148016",
+      "id": "496580831",
       "name_lat": "WERT HOF LYUTSEFER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "276093670",
-      "name_lat": "WEST-EAST CHIE KURОHIME",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "551026056",
+      "id": "1852239063",
       "name_lat": "WESTFALDING UNIVERSUM INTERSTAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2650,19 +2721,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "979713184",
+      "id": "1981823861",
       "name_lat": "WEST SIB STORY PRADA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1543611107",
+      "id": "1734940882",
       "name_lat": "WEDNESDAY ADDAMS",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2695,21 +2766,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "930698499",
-      "name_lat": "WELMARTEY DUNA- VERDE",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "821773427",
       "name_lat": "WESTA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "390289265",
+      "name_lat": "WESTERN COMMAND PARADIS DREAM",
+      "name_ru": "",
+      "breed": "МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2803,10 +2874,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1231986790",
+      "id": "1539369055",
       "name_lat": "WENDELIN VOM FRANKENGOLD",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2817,15 +2888,6 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1790849317",
-      "name_lat": "WELARY HERITAGE",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2844,6 +2906,15 @@
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "JAPANESE CHIN",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1690765822",
+      "name_lat": "WEST SIB STORY DUNCAN",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2911,10 +2982,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1859868864",
+      "id": "1317031189",
       "name_lat": "WEST SIB STORY SICILIA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2965,11 +3036,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1574161306",
+      "name_lat": "WEST-EAST JAKOMO CAZANOVA",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1200253390",
       "name_lat": "WESTEROS",
       "name_ru": "",
       "breed": "СОЛОВЬЕВА ТАТЬЯНА АНАТОЛЬЕВНА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116919710",
+      "name_lat": "WEY WINNER ZAVIDNYI ZHENIH",
+      "name_ru": "",
+      "breed": "МАЛАМУТ /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3028,21 +3115,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "850724417",
-      "name_lat": "WESTIS PLANET TEQUILA",
-      "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1035377201",
       "name_lat": "WEALTH FOR",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1241072017",
+      "name_lat": "WEST SIB STORY EMILY",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1977911898",
+      "name_lat": "WERT HOF KORSIKA DE ORSE MAK FLAI VILLI II",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3064,20 +3159,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1130035285",
-      "name_lat": "WEST SIB STORY TATU",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1607629702",
       "name_lat": "WERT HOF VIY",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1130035285",
+      "name_lat": "WEST SIB STORY TATU",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 6,
       "competition_dog_id": null
     },
@@ -3109,11 +3204,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1720284521",
+      "id": "343358570",
       "name_lat": "WERT HOF HOLLI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "906595628",
+      "name_lat": "WESTMYRR ALPHA RISING STAR",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -3199,10 +3302,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1112693728",
+      "id": "1519157615",
       "name_lat": "WERT HOF LUKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3217,28 +3320,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "448245752",
-      "name_lat": "WEST SIB STORY YOU",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1933063600",
-      "name_lat": "WELL-BRED POUZ CAMELLIA OF FIRE",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "6314786",
       "name_lat": "WERT HOF HRYUNYA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "448245752",
+      "name_lat": "WEST SIB STORY YOU",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3361,15 +3455,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1690765822",
-      "name_lat": "WEST SIB STORY DUNCAN",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "701799195",
       "name_lat": "WESTERLY WIND NKOZAZANA PRINCESS",
       "name_ru": "",
@@ -3383,15 +3468,6 @@
       "name_lat": "WEST-EAST MANFUL",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1736784108",
-      "name_lat": "WEST-EAST ONIX",
-      "name_ru": "",
-      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3424,29 +3500,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1483012473",
+      "id": "826096730",
       "name_lat": "WESTFALDING UNIVERSUM BRIKS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1713551368",
+      "id": "1485766518",
       "name_lat": "WERT HOF ULANA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1241072017",
-      "name_lat": "WEST SIB STORY EMILY",
+      "id": "352335325",
+      "name_lat": "WESTMYRR AURORA MORNING STAR TENDERNESS",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3473,6 +3548,15 @@
       "name_lat": "WEST-KASSI AYNA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "570261375",
+      "name_lat": "WELLARY HERITAGE",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3514,6 +3598,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "240855137",
+      "name_lat": "WENDY",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "273250820",
       "name_lat": "WENICE KIMI",
       "name_ru": "",
@@ -3527,6 +3619,24 @@
       "name_lat": "WENDY OLAVI",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "236719485",
+      "name_lat": "WESTMYRRR VYAT GALENA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "759551074",
+      "name_lat": "WENDY CHILDLIKE INNOCENCE AND DREAM",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3595,10 +3705,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "143118432",
+      "id": "426129717",
       "name_lat": "WESTERN FOXI GIRL",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3667,28 +3777,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "390289265",
-      "name_lat": "WESTERN COMMAND PARADIS DREAM",
-      "name_ru": "",
-      "breed": "МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1345011939",
+      "id": "1227956682",
       "name_lat": "WESTERN COMMAND OIA NEDGY",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "993282130",
+      "id": "593009390",
+      "name_lat": "WENDY WHITE O HARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (померанский)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "281384028",
       "name_lat": "WERT HOF NANDO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3730,10 +3839,42 @@
       "competition_dog_id": null
     },
     {
-      "id": "1654759701",
+      "id": "686463127",
+      "name_lat": "WERT HOF KHELLI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1792954142",
+      "name_lat": "WERT HOF ZAZNOBA MOEY DUSHI",
+      "name_ru": "",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "92900602",
+      "name_lat": "WERT HOF MAFIYA BALDRSENS LEXA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "687070450",
+      "name_lat": "WERT HOF GABRIELA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1192080756",
       "name_lat": "WENZEL ХАРЗА ИЗ КУЗНЕЦКГРАДА MARIS DE FLOR",
       "name_ru": "",
-      "breed": "Немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка",
+      "breed": "Немецкая овчарка немецкая овчарка",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3802,10 +3943,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1132799139",
+      "id": "83613748",
       "name_lat": "WEATHERSTOLZHUND ALAN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3856,10 +3997,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "353356743",
+      "id": "568547648",
       "name_lat": "WENDY AUKSINE PILNATIS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3874,10 +4015,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "163603453",
+      "id": "362759222",
       "name_lat": "WESTFALDING UNIVERSUM NEVADA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3896,15 +4037,6 @@
       "name_lat": "WEITENSHOF DEKER",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "116525666",
-      "name_lat": "WESTMYRRR VYAT GALENA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3946,15 +4078,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "759551074",
-      "name_lat": "WENDY CHILDLIKE INNOCENCE AND DREAM",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1595616223",
       "name_lat": "WEL-BRED POUZ CALIPH OF MY HEART",
       "name_ru": "",
@@ -3982,11 +4105,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "570261375",
-      "name_lat": "WELLARY HERITAGE",
+      "id": "1037872508",
+      "name_lat": "WELKAR CHAROVNICA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "ЦВЕРГШНАУЦЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023169143",
+      "name_lat": "WEST SIB STORY SHAMPAN",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

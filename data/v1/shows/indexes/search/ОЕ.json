@@ -1,15 +1,42 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОЕ",
-  "count": 44,
+  "count": 47,
   "dogs": [
     {
       "id": "398989187",
       "name_lat": "ОЕССЕНН СТИЛЬ ДЖОКЕР (Изменено по решению ВК от 19.03.2025 В. 23)",
+      "name_ru": "ОЕССЕНН СТИЛЬ ДЖОКЕР (Изменено по решению ВК от 19.03.2025 В. 23)",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1426318743",
+      "name_lat": "ОЕССЕНН СТИЛЬ ИВОРИ",
+      "name_ru": "ОЕССЕНН СТИЛЬ ИВОРИ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1058252887",
+      "name_lat": "О-ЕВГЕША ИЗ ТАЁЖНОЙ ДАЛИ",
+      "name_ru": "О-ЕВГЕША ИЗ ТАЁЖНОЙ ДАЛИ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "677364984",
+      "name_lat": "ОЕССЕНН СТИЛЬ КАННА НА БИС",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -22,48 +49,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1426318743",
-      "name_lat": "ОЕССЕНН СТИЛЬ ИВОРИ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "677364984",
-      "name_lat": "ОЕССЕНН СТИЛЬ КАННА НА БИС",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "641722485",
       "name_lat": "ОЕССЕНН СТИЛЬ ЦЕВЕРХАН",
-      "name_ru": "",
+      "name_ru": "ОЕССЕНН СТИЛЬ ЦЕВЕРХАН",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "215693102",
       "name_lat": "ОЕССЕНН СТИЛЬ ЮТ-ГАЙ",
-      "name_ru": "",
+      "name_ru": "ОЕССЕНН СТИЛЬ ЮТ-ГАЙ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "134961203",
-      "name_lat": "ОЕССЕНН СТИЛЬ ШАРМЕЛЬ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -78,16 +78,24 @@
     {
       "id": "1023391409",
       "name_lat": "ОЕССЕНН СТИЛЬ ФАКРИЙЯ",
-      "name_ru": "",
+      "name_ru": "ОЕССЕНН СТИЛЬ ФАКРИЙЯ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "971420599",
+      "name_lat": "ОЕССЕНН СТИЛЬ ПАЛАШ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1898417468",
       "name_lat": "ОЕССЕНН СТИЛЬ ВАЛЮТА",
-      "name_ru": "",
+      "name_ru": "ОЕССЕНН СТИЛЬ ВАЛЮТА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
@@ -99,7 +107,7 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -112,17 +120,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "651923272",
+      "id": "1053320429",
       "name_lat": "ОЕН",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "821043286",
-      "name_lat": "ОЕССЕНН СТИЛЬ ЭЛЬ- ФУДЖАЙРА",
+      "id": "215744326",
+      "name_lat": "ОЕССЕНН СТИЛЬ ЭЛЬ-ФУДЖАЙРА",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -163,6 +171,14 @@
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "788670561",
+      "name_lat": "ОЕССЕНН СТИЛЬ ГАВАНА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -238,9 +254,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1901735759",
+      "name_lat": "ОЕССЕНН СТИЛЬ ОСАННА ЭЛИРИЯ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "169977375",
       "name_lat": "ОЕССЕНН СТИЛЬ ЖАНГОВАР",
-      "name_ru": "",
+      "name_ru": "ОЕССЕНН СТИЛЬ ЖАНГОВАР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -328,15 +352,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "192776520",
-      "name_lat": "ОЕССЕНН СТИЛЬ ТОКАЙ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "730368654",
       "name_lat": "ОЕССЕНН СТИЛЬ ЦАРЛИН ШАХ",
       "name_ru": "",
@@ -396,6 +411,14 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "862798368",
+      "name_lat": "ОЕССЕНН СТИЛЬ ТЕРРА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     }

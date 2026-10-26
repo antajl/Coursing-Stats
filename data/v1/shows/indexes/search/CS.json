@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "CS",
-  "count": 2,
+  "count": 4,
   "dogs": [
     {
       "id": "731702237",
@@ -13,10 +13,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "874846377",
+      "id": "393927126",
+      "name_lat": "C'SAMRAD YUREKLI KAZANA",
+      "name_ru": "",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "breed_en": "KANGAL SHEPHERD DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1203467251",
+      "name_lat": "C-SALAZAR VICTORY OF THE GREY",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "518794365",
       "name_lat": "CSOLT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

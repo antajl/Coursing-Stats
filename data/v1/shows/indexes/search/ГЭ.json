@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ГЭ",
-  "count": 205,
+  "count": 208,
   "dogs": [
     {
       "id": "1470859595",
       "name_lat": "ГЭЛЛЭНТ ХОФ ЛЕОФРИК",
-      "name_ru": "",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ЛЕОФРИК",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -15,7 +15,7 @@
     {
       "id": "161922995",
       "name_lat": "ГЭЛАКСИ СТАР ЭММАНУЭЛЬ",
-      "name_ru": "",
+      "name_ru": "ГЭЛАКСИ СТАР ЭММАНУЭЛЬ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 26,
@@ -24,7 +24,7 @@
     {
       "id": "74457921",
       "name_lat": "ГЭЛАКСИ ДОГ СТАР ЛИЛУ ВИКТОРИЯ",
-      "name_ru": "",
+      "name_ru": "ГЭЛАКСИ ДОГ СТАР ЛИЛУ ВИКТОРИЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 14,
@@ -40,10 +40,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "824009207",
+      "id": "226332939",
       "name_lat": "ГЭЛЕКСИ АЛМАРИН ФРЕЯ",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "name_ru": "ГЭЛЕКСИ АЛМАРИН ФРЕЯ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -58,21 +58,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1699199570",
+      "id": "40645986",
       "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ВИЗУАЛ ЭФФЕКТ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ ВИЗУАЛ ЭФФЕКТ",
+      "breed": "АНГЛИЙСКИЙ ИТАЛЬЯНСКИЙ",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "99962960",
-      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ЛИНКС",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -81,16 +72,33 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "89090769",
+      "id": "351563198",
+      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ЛИНКС",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ ЛИНКС",
+      "breed": "ЛЕГАВАЯ (КУРЦХААР)",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "841334124",
       "name_lat": "ГЭЙРДНЕР БУЛЬ ДЕ НЕЖ",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "name_ru": "ГЭЙРДНЕР БУЛЬ ДЕ НЕЖ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1435416120",
+      "name_lat": "ГЭЛАКСИ ОТ ФОРЕСТ ГИРЦ",
+      "name_ru": "ГЭЛАКСИ ОТ ФОРЕСТ ГИРЦ",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -105,19 +113,10 @@
     {
       "id": "106963302",
       "name_lat": "ГЭЛЛЭНТ ХОФ ЕННИФЕР ЛАККИ СПАРК",
-      "name_ru": "",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ЕННИФЕР ЛАККИ СПАРК",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1292549112",
-      "name_lat": "ГЭЙЛЕН ПЕРВАЯ ЗВЕЗДА НАВСЕГДА",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -125,8 +124,16 @@
       "name_lat": "ГЭЛЛЭНТ ХОФ ЭТЕЛЬРЕД",
       "name_ru": "",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1292549112",
+      "name_lat": "ГЭЙЛЕН ПЕРВАЯ ЗВЕЗДА НАВСЕГДА",
+      "name_ru": "ГЭЙЛЕН ПЕРВАЯ ЗВЕЗДА НАВСЕГДА",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -150,17 +157,17 @@
     {
       "id": "537672479",
       "name_lat": "ГЭТВИНС БАНАНА",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС БАНАНА",
       "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "248835791",
+      "id": "312082686",
       "name_lat": "ГЭТСБИ МУВИ СТАР",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
@@ -168,35 +175,43 @@
     {
       "id": "1079738234",
       "name_lat": "ГЭЛЛЭНТ ХОФ ЮМЭНН",
-      "name_ru": "",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ЮМЭНН",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "437772251",
       "name_lat": "ГЭТВИНС АРХИМЕД",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС АРХИМЕД",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
+      "id": "1967801422",
+      "name_lat": "ГЭЛАКСИ ЧЕЛЛЕНДЖ ОФ СИЛЬВЕР ВЭЙ",
+      "name_ru": "ГЭЛАКСИ ЧЕЛЛЕНДЖ ОФ СИЛЬВЕР ВЭЙ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1812077534",
       "name_lat": "ГЭТВИНС ДАНСЕР",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ДАНСЕР",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1932354682",
+      "id": "1559546571",
       "name_lat": "ГЭЙРДНЕР БАРОНЕССА",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "name_ru": "ГЭЙРДНЕР БАРОНЕССА",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -204,17 +219,8 @@
     {
       "id": "316240644",
       "name_lat": "ГЭЙТ ОФ ПАРАДИЗ",
-      "name_ru": "",
+      "name_ru": "ГЭЙТ ОФ ПАРАДИЗ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1967801422",
-      "name_lat": "ГЭЛАКСИ ЧЕЛЛЕНДЖ ОФ СИЛЬВЕР ВЭЙ",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -256,45 +262,97 @@
       "competition_dog_id": null
     },
     {
+      "id": "199564548",
+      "name_lat": "ГЭТВИНС КАШЕМИР",
+      "name_ru": "ГЭТВИНС КАШЕМИР",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "34450885",
+      "name_lat": "ГЭТВИНС ХИТ ПАРАД",
+      "name_ru": "ГЭТВИНС ХИТ ПАРАД",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "962276956",
+      "name_lat": "ГЭТВИНС ЛОМОНОСОВ",
+      "name_ru": "ГЭТВИНС ЛОМОНОСОВ",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "422726541",
       "name_lat": "ГЭТВИНС ШАЛЯПИН",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ШАЛЯПИН",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
     },
     {
-      "id": "1237682183",
-      "name_lat": "ГЭТВИНС КАШЕМИР",
-      "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
+      "id": "300292031",
+      "name_lat": "ГЭТВИНС КУТЮРЬЕ",
+      "name_ru": "ГЭТВИНС КУТЮРЬЕ",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 27,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "962276956",
-      "name_lat": "ГЭТВИНС ЛОМОНОСОВ",
-      "name_ru": "",
-      "breed": "МОПС",
+      "id": "232230466",
+      "name_lat": "ГЭЛЛЭНТ ХОФ ЭШЛИ ПРАЙЗ",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ЭШЛИ ПРАЙЗ",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "915016037",
+      "name_lat": "ГЭЛАКСИ ДОГ СТАР ЗЕНШЕНГ ВЭЙМИН",
+      "name_ru": "ГЭЛАКСИ ДОГ СТАР ЗЕНШЕНГ ВЭЙМИН",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1721659116",
+      "name_lat": "ГЭЛЛЭНТ ХОФ ЧЕЙЗ БРЕННАН",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ЧЕЙЗ БРЕННАН",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "34450885",
-      "name_lat": "ГЭТВИНС ХИТ ПАРАД",
-      "name_ru": "",
+      "id": "1587832558",
+      "name_lat": "ГЭТВИНС ОСКАР",
+      "name_ru": "ГЭТВИНС ОСКАР",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "763373673",
+      "name_lat": "Г'ЭЙВА НА'ВИ С КОРАЛЛОВОГО РИФА",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "15704998",
       "name_lat": "ГЭТВИНС АГАТА",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС АГАТА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 23,
@@ -303,7 +361,7 @@
     {
       "id": "1123809484",
       "name_lat": "ГЭТВИНС ВИСКИ",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ВИСКИ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 11,
@@ -312,26 +370,26 @@
     {
       "id": "1515470440",
       "name_lat": "ГЭЛЛЭНТ ХОФ ХЕЙДИ",
-      "name_ru": "",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ХЕЙДИ",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1923340496",
-      "name_lat": "ГЭЛАКСИ ШОУ ЛЕДИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "id": "141495369",
+      "name_lat": "ГЭТВИНС ЛАВАНДА",
+      "name_ru": "ГЭТВИНС ЛАВАНДА",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "300292031",
-      "name_lat": "ГЭТВИНС КУТЮРЬЕ",
-      "name_ru": "",
-      "breed": "МОПС",
+      "id": "1923340496",
+      "name_lat": "ГЭЛАКСИ ШОУ ЛЕДИ",
+      "name_ru": "ГЭЛАКСИ ШОУ ЛЕДИ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -339,25 +397,34 @@
     {
       "id": "564469026",
       "name_lat": "ГЭТВИНС ШОПЕН",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ШОПЕН",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "463615487",
+      "id": "1057768537",
       "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ КАМИЛЛА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ КАМИЛЛА",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "1184525475",
+      "name_lat": "ГЭЛАКСИ ДОГ СТАР ПАТРИСИЯ МИНИГЁЛ",
+      "name_ru": "ГЭЛАКСИ ДОГ СТАР ПАТРИСИЯ МИНИГЕЛ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
       "id": "139964148",
       "name_lat": "ГЭТВИНС ШЕКСПИР",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ШЕКСПИР",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 7,
@@ -366,89 +433,51 @@
     {
       "id": "332454870",
       "name_lat": "ГЭЛЛЭНТ ХОФ ФЛОЙД ДИАМАНТ",
-      "name_ru": "",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ФЛОЙД ДИАМАНТ",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "141495369",
-      "name_lat": "ГЭТВИНС ЛАВАНДА",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "183142570",
       "name_lat": "ГЭРЭЛМА ЭНХЭ ИЗ ТАЕЖНОГО УРМАНА",
-      "name_ru": "",
+      "name_ru": "ГЭРЭЛМА ЭНХЭ ИЗ ТАЕЖНОГО УРМАНА",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1110501911",
+      "id": "1222055630",
       "name_lat": "ГЭЛАКСИ ЛАВ ЮДЖИНА БЬЮТИФУЛ СТАР",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1587832558",
-      "name_lat": "ГЭТВИНС ОСКАР",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1721659116",
-      "name_lat": "ГЭЛЛЭНТ ХОФ ЧЕЙЗ БРЕННАН",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "199482018",
-      "name_lat": "ГЭЛАКСИ ДОГ СТАР ПАТРИСИЯ МИНИГЁЛ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
-      "total_shows": 21,
+      "name_ru": "ГЭЛАКСИ ЛАВ ЮДЖИНА БЬЮТИФУЛ СТАР",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ /",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1003187557",
       "name_lat": "ГЭТВИНС ЛУЧАНО",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ЛУЧАНО",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "915016037",
-      "name_lat": "ГЭЛАКСИ ДОГ СТАР ЗЕНШЕНГ ВЭЙМИН",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "id": "1866724925",
+      "name_lat": "ГЭТВИНС ЭМИЛИ",
+      "name_ru": "ГЭТВИНС ЭМИЛИ",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1843880439",
+      "id": "1646717011",
       "name_lat": "ГЭНДАЛЬФ МИТРАНДИР ИЗ ДОМА АМБЕРА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "ГЭНДАЛЬФ МИТРАНДИР ИЗ ДОМА АМБЕРА",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -456,19 +485,10 @@
     {
       "id": "1957406230",
       "name_lat": "ГЭТВИНС ЮНИКА",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ЮНИКА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1866724925",
-      "name_lat": "ГЭТВИНС ЭМИЛИ",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -478,15 +498,6 @@
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "232230466",
-      "name_lat": "ГЭЛЛЭНТ ХОФ ЭШЛИ ПРАЙЗ",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -501,7 +512,7 @@
     {
       "id": "1579263455",
       "name_lat": "ГЭЛЭКСИ ОФ ЛАВ ИЗ ВОЛШЕБНЫХ СНОВ",
-      "name_ru": "",
+      "name_ru": "ГЭЛЭКСИ ОФ ЛАВ ИЗ ВОЛШЕБНЫХ СНОВ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
@@ -528,19 +539,18 @@
     {
       "id": "163614757",
       "name_lat": "ГЭТВИНС ЦУНАМИ",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ЦУНАМИ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1435416120",
-      "name_lat": "ГЭЛАКСИ ОТ ФОРЕСТ ГИРЦ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
+      "id": "1590518354",
+      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ГЕМИНИ",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ ГЕМИНИ",
+      "breed": "ВЕНГЕРСКАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -555,7 +565,7 @@
     {
       "id": "1310209105",
       "name_lat": "ГЭЛЛЭНТ ХОФ ДЖОЙ СИНДРИК ШТЕЙН",
-      "name_ru": "",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ДЖОЙ СИНДРИК ШТЕЙН",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "KERRY BLUE TERRIER",
       "total_shows": 7,
@@ -566,33 +576,41 @@
       "name_lat": "ГЭЛЛЭНТ ХОФ ВИВЬЕН ТЕЙТ ДАРЛИНГ",
       "name_ru": "",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "526553805",
+      "name_lat": "ГЭЛЕКСИ АЛМАРИН ЛАУРА",
+      "name_ru": "ГЭЛЕКСИ АЛМАРИН ЛАУРА",
+      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1030226883",
       "name_lat": "ГЭТВИНС ФИЕСТА",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ФИЕСТА",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "707622682",
+      "id": "462692843",
       "name_lat": "ГЭТСБИ",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ /",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "664190136",
+      "id": "387352029",
       "name_lat": "ГЭЛЕКСИ АЛМАРИН ШАЛУНЬЯ",
-      "name_ru": "",
-      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР /",
+      "name_ru": "ГЭЛЕКСИ АЛМАРИН ШАЛУНЬЯ",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -618,7 +636,7 @@
     {
       "id": "1500602317",
       "name_lat": "ГЭТВИНС ХАЛВА",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ХАЛВА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 5,
@@ -636,7 +654,7 @@
     {
       "id": "1200251257",
       "name_lat": "ГЭТВИНС ЧАРЛЬСТОН",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ЧАРЛЬСТОН",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
@@ -645,7 +663,7 @@
     {
       "id": "676376042",
       "name_lat": "ГЭЛЛЭНТ ХОФ АЛЕКСА (Изменено по Решению ВК от 16.02.22 вопрос 34)",
-      "name_ru": "",
+      "name_ru": "ГЭЛЛЭНТ ХОФ АЛЕКСА (Изменено по Решению ВК от 16.02.22 вопрос 34)",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -661,18 +679,43 @@
       "competition_dog_id": null
     },
     {
-      "id": "1743920679",
+      "id": "299635654",
+      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ БЕЙБИ ОФ ЮНИВЕРС",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ БЕЙБИ ОФ ЮНИВЁРС",
+      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "356941030",
       "name_lat": "ГЭЛАКСИ ДОГ СТАР КИРА",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "ГЭЛАКСИ ДОГ СТАР КИРА",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "1711353961",
+      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ПАЛЬМА ДЕ МАЙОРКА",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ ПАЛЬМА ДЕ МАЙОРКА",
+      "breed": "ЭПАНЬОЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1929195202",
+      "name_lat": "ГЭТВИНС МЯТА",
+      "name_ru": "ГЭТВИНС МЯТА",
+      "breed": "МОПС",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1356690015",
       "name_lat": "ГЭЛЕКСИ АЛМАРИН ОУШЕН ОФ ЛАВ",
-      "name_ru": "",
+      "name_ru": "ГЭЛЕКСИ АЛМАРИН ОУШЕН ОФ ЛАВ",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 4,
@@ -697,9 +740,25 @@
       "competition_dog_id": null
     },
     {
+      "id": "32724007",
+      "name_lat": "ГЭЛАКСИ АЛМАРИН ТАЙГЕР ВАЙТ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "412552346",
+      "name_lat": "ГЭТВИНС ТАЙЛЕР",
+      "name_ru": "ГЭТВИНС ТАЙЛЕР",
+      "breed": "МОПС",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "114541689",
       "name_lat": "ГЭТВИНС ЧАКОНА",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ЧАКОНА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 4,
@@ -715,19 +774,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1441398300",
+      "id": "1788893369",
       "name_lat": "ГЭЛЕКСИ АЛМАРИН ЛАКИ СТАР",
       "name_ru": "",
-      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР /",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1338692045",
+      "id": "188876848",
       "name_lat": "ГЭЛЛЭНТ ХОВ ТОРВАЛЬД",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР /",
+      "name_ru": "ГЭЛЛЭНТ ХОВ ТОРВАЛЬД",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -735,7 +794,7 @@
     {
       "id": "660031797",
       "name_lat": "ГЭЛАКСИ АЛМАРИН ТЕКИЛА ГОЛД",
-      "name_ru": "",
+      "name_ru": "ГЭЛАКСИ АЛМАРИН ТЕКИЛА ГОЛД",
       "breed": "MINIATURE SCHNAUZER WHITE",
       "breed_en": "",
       "total_shows": 3,
@@ -744,26 +803,43 @@
     {
       "id": "443767074",
       "name_lat": "ГЭЛЛЭНТ ХОФ ЮЛИАННА",
-      "name_ru": "",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ЮЛИАННА",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "706962237",
+      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ОНТАРИО",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ ОНТАРИО",
+      "breed": "МАЛЫЙ ВАНДЕЙСКИЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1827102053",
+      "name_lat": "ГЭТВИНС ОСТАП",
+      "name_ru": "ГЭТВИНС ОСТАП",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1736381222",
       "name_lat": "ГЭТВИНС ЧАРДАШ",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ЧАРДАШ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "241156779",
+      "id": "1405615522",
       "name_lat": "ГЭЛАКСИ ЛАЙТ СТАР",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -771,7 +847,7 @@
     {
       "id": "134267776",
       "name_lat": "ГЭТВИНС КОКЕТКА",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС КОКЕТКА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
@@ -780,7 +856,7 @@
     {
       "id": "1907423899",
       "name_lat": "ГЭЙРДНЕР БЕЛЛАТРИСА БЛЭК ( )",
-      "name_ru": "",
+      "name_ru": "ГЭЙРДНЕР БЕЛЛАТРИСА БЛЭК ( )",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -789,10 +865,10 @@
     {
       "id": "1242884210",
       "name_lat": "ГЭТВИНС ГОДДИВА",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ГОДДИВА",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -823,15 +899,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "412552346",
-      "name_lat": "ГЭТВИНС ТАЙЛЕР",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1081191363",
       "name_lat": "ГЭНВАДИЛЬ ЗАЖИГАЮШИЙ ЗИМНИЕ ЗВЁЗДЫ",
       "name_ru": "",
@@ -852,7 +919,7 @@
     {
       "id": "43515320",
       "name_lat": "ГЭТВИНС ФИККЕ",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ФИККЕ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
@@ -888,7 +955,7 @@
     {
       "id": "1671142670",
       "name_lat": "ГЭТВИНС АФИНА",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС АФИНА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 4,
@@ -906,7 +973,7 @@
     {
       "id": "1434440292",
       "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ГЛОРИЯ СКАЙ",
-      "name_ru": "",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ ГЛОРИЯ СКАЙ",
       "breed": "НЕНЕЦКАЯ ОЛЕНЕГОННАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -926,15 +993,6 @@
       "name_lat": "ГЭЛРЭН ОФ ВАЙЛД НЕТТЛ",
       "name_ru": "",
       "breed": "Вельш корги кардиган",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1184508053",
-      "name_lat": "ГЭТВИНС ШТРАУС",
-      "name_ru": "",
-      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -976,10 +1034,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "526553805",
-      "name_lat": "ГЭЛЕКСИ АЛМАРИН ЛАУРА",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
+      "id": "1783716993",
+      "name_lat": "ГЭЛЕКСИ АЛМАРИН САЭЛЬ",
+      "name_ru": "ГЭЛЕКСИ АЛМАРИН САЭЛЬ",
+      "breed": "SCHNAUZER PEPPER AND",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -987,17 +1045,8 @@
     {
       "id": "486666936",
       "name_lat": "ГЭТВИНС ФРЕЙЯ",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ФРЕЙЯ",
       "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1376946366",
-      "name_lat": "ГЭЛЕКСИ АЛМАРИН САЭЛЬ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1030,10 +1079,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "570964875",
+      "id": "79408258",
       "name_lat": "ГЭЛЛЭНТ ХОФ ТИАРНАК РИЧАРДСОН",
       "name_ru": "",
-      "breed": "KERRY BLUE TERRIER ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "KERRY BLUE TERRIER ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1068,7 +1117,7 @@
     {
       "id": "1323424734",
       "name_lat": "ГЭЙРДНЕР БАНОФФИ ПАЙ",
-      "name_ru": "",
+      "name_ru": "ГЭЙРДНЕР БАНОФФИ ПАЙ",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -1084,10 +1133,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1082925945",
-      "name_lat": "ГЭТВИНС ФРИДА",
-      "name_ru": "",
-      "breed": "МОПС",
+      "id": "774711315",
+      "name_lat": "ГЭЛЛЭНТ ХОФ ИГРЕЙН",
+      "name_ru": "ГЭЛЛЭНТ ХОФ ИГРЕЙН",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1102,20 +1151,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "84004066",
+      "id": "1526307043",
       "name_lat": "ГЭЛЬДАМАР ДАР СЕВЕРНЫХ ВЕТРОВ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "774711315",
-      "name_lat": "ГЭЛЛЭНТ ХОФ ИГРЕЙН",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
+      "id": "266924997",
+      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ПАМЕЛА АНДЕРСОН",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ ПАМЕЛА АНДЕРСОН",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1156,21 +1204,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "321747286",
+      "name_lat": "ГЭЛАКСИ АЛМАРИН ФРЕЯ",
+      "name_ru": "",
+      "breed": "SCHNAUZERR",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "239407702",
+      "name_lat": "ГЭЙН ОТ ВАЙСБЕРГ",
+      "name_ru": "",
+      "breed": "GERMAN SHORT-HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1838365065",
       "name_lat": "ГЭЛЕКСИ АЛМАРИН ШИКАРНАЯ ЛЕДИ",
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "79788688",
-      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ БЕЙБИ ОФ ЮНИВЕРС",
-      "name_ru": "",
-      "breed": "АРТЕЗИАНО-НОРМАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1183,12 +1238,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "56681165",
+      "id": "1138353117",
       "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ КЛЭЙ",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР короткошерст ная ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ КЛЭЙ",
+      "breed": "БОЛЬШАЯ ГАСКОНСКАЯ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "13200261",
+      "name_lat": "ГЭЛАКСИ ДОГ СТАР ПАТРИСИЯ МИНИГЕРЛ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1210,10 +1274,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1144590335",
+      "id": "924306787",
+      "name_lat": "ГЭЛЭКТИ С ЕСЕНИНСКОЙ РОЩИ",
+      "name_ru": "ГЭЛЭКТИ С ЕСЕНИНСКОЙ РОЩИ",
+      "breed": "БИШОН БРЮССЕЛЬСКИЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179402734",
       "name_lat": "ГЭЛАКСИ ДОГ СТАР ПАТРИСИЯ МИНИ ГЁЛ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1228,21 +1300,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1898555292",
+      "id": "200610928",
       "name_lat": "ГЭЛЛОУЭЙ ДЖУЛИАС",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1412812238",
-      "name_lat": "ГЭЛЛОУЭЙ ДЖУЛИАС ЛИФЕ",
-      "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1250,6 +1313,15 @@
       "name_lat": "ГЭТВИНС КУТЮРЬЕ (Изменено по Решению ВК от 24.11.21 вопрос 35)",
       "name_ru": "",
       "breed": "МОПС БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "948249411",
+      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ОЛИВЕР",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1264,33 +1336,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1788115091",
-      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ОЛИВЕР",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "13200261",
-      "name_lat": "ГЭЛАКСИ ДОГ СТАР ПАТРИСИЯ МИНИГЕРЛ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1746738287",
-      "name_lat": "ГЭТВИНС ШАНЕЖКА",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "250713489",
       "name_lat": "ГЭТВИНС ШАЛЯПИН (Изменено по Решению ВК от 19.10.22 вопрос 17)",
       "name_ru": "",
@@ -1300,19 +1345,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1827102053",
-      "name_lat": "ГЭТВИНС ОСТАП",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1418201563",
+      "id": "1243694354",
       "name_lat": "ГЭЛАКСИ ДОГ СТАР КЕФИРКА-ЗЕФИРКА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1320,17 +1356,26 @@
     {
       "id": "1821128283",
       "name_lat": "ГЭТВИНС ШАНТАЛЬ",
-      "name_ru": "",
+      "name_ru": "ГЭТВИНС ШАНТАЛЬ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1755574992",
+      "id": "1504358012",
       "name_lat": "ГЭЛАКСИ АЛМАРИН МЭРИ ДЖЕЙН",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "name_ru": "ГЭЛАКСИ АЛМАРИН МЭРИ ДЖЕЙН",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1891603782",
+      "name_lat": "ГЭЛЛЭНТ ХОФ УЛИЦИЯ УНА БЕРНЕТТА",
+      "name_ru": "ГЭЛЛЭНТ ХОФ УЛИЦИЯ УНА БЕРНЕТТА",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1354,6 +1399,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "219592001",
+      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ПЬЮР СОУЛ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "31628302",
+      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ПЕРФЕРКТ БЭЙБИ",
+      "name_ru": "ГЭЛАКСИ ЭНЕРДЖИ ПЕРФЕРКТ БЭЙБИ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1225260389",
       "name_lat": "Гэлакси от Пигаловых",
       "name_ru": "",
@@ -1372,28 +1435,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1255108743",
-      "name_lat": "ГЭЛЛЭНТ ХОФ УЛИЦИЯ УНА БЕРНЕТТА",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "142871566",
+      "id": "699600215",
       "name_lat": "ГЭЛАКСИ ДОГ СТАР ЗЛАТА АСТРА",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "115003742",
-      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ПЕРФЕРКТ БЭЙБИ",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "name_ru": "ГЭЛАКСИ ДОГ СТАР ЗЛАТА АСТРА",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1401,35 +1446,25 @@
     {
       "id": "1339697556",
       "name_lat": "ГЭЛАКСИ ДОГ СТАР МИШЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ГЭЛАКСИ ДОГ СТАР МИШЕЛЬ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1934833900",
+      "id": "798880340",
+      "name_lat": "ГЭЛЕКСИ АЛМАРИН НЭССИ",
+      "name_ru": "ГЭЛЕКСИ АЛМАРИН НЭССИ",
+      "breed": "SCHNAUZER PEPPER AND",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1559966608",
       "name_lat": "ГЭЛАКСИ СНОУ ШОУ ЛЕДИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1999783807",
-      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ПЬЮР СОУЛ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "924306787",
-      "name_lat": "ГЭЛЭКТИ С ЕСЕНИНСКОЙ РОЩИ",
-      "name_ru": "",
-      "breed": "БИШОН БРЮССЕЛЬСКИЙ",
+      "name_ru": "ГЭЛАКСИ СНОУ ШОУ ЛЕДИ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1480,6 +1515,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "609449030",
+      "name_lat": "ГЭРИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1488989073",
       "name_lat": "ГЭБРИЭЛ.",
       "name_ru": "",
@@ -1498,10 +1541,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1560593388",
+      "id": "1426414387",
+      "name_lat": "ГЭСЭР",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "249026816",
+      "name_lat": "ГЭЛЭКСИ СИЛЬВЕР",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "344230344",
+      "name_lat": "ГЭРЭЛМА НАСАН",
+      "name_ru": "",
+      "breed": "СОБАКА) / HOTOSHO (BURYATSKAYA SOBAKA)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "474879433",
       "name_lat": "ГЭЛАКСИ ДОГ СТАР ГАВАННА",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1534,15 +1602,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "19739436",
-      "name_lat": "Гэллэнт Хоф Улиция Уна",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1507783865",
       "name_lat": "ГЭСЕЙ ТАМАШИ ХИТО",
       "name_ru": "",
@@ -1561,10 +1620,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "665271356",
+      "id": "1008773209",
       "name_lat": "ГЭЛАКСИ ДОГ СТАР ЛАНА КИС",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1606,24 +1665,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "228027737",
-      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ГЕМИНИ",
-      "name_ru": "",
-      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1667261627",
-      "name_lat": "ГЭЛАКСИ ЭНЕРДЖИ ПАМЕЛА АНДЕРСОН",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1615302836",
       "name_lat": "ГЭТВИНС ЛУЧИАНО",
       "name_ru": "",
@@ -1642,10 +1683,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1787726485",
+      "id": "264068264",
       "name_lat": "ГЭНВАДИЛЬ ЗАЖИГАЮЩИЙ ЗИМНИЕ ЗВЕЗДЫ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1696,10 +1737,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "120525964",
+      "id": "258345065",
       "name_lat": "ГЭЛАКСИ ДОГ СТАР ЗЕНЗЕН МЕЙЛИ",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1709,15 +1750,6 @@
       "name_lat": "ГЭНДАЛЬФ СЕРЕБРИСТЫЙ СТРАННИК",
       "name_ru": "",
       "breed": "САМОЕД / SAMOYED",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1113595874",
-      "name_lat": "ГЭТВИНС МЯТА",
-      "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ ОКРАС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1736,15 +1768,6 @@
       "name_lat": "Гэлакси Эверидейс Мирекл",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "96512779",
-      "name_lat": "ГЭЛЛЭНТ ХОФ ИГРЭЙН",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1777,10 +1800,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1685194059",
+      "id": "229882228",
       "name_lat": "ГЭРОЛЬД АЙРИНАЙК НИКЛЕН",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1808,24 +1831,6 @@
       "name_lat": "ГЭТСБИ В ШАГЕ ДО МЕЧТЫ",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1644585399",
-      "name_lat": "ГЭТВИНС ШАМПАНЬ",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "913433332",
-      "name_lat": "ГЭЛЭКСИ СИЛЬВЕР",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

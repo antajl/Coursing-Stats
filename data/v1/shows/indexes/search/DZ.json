@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "DZ",
-  "count": 967,
+  "count": 987,
   "dogs": [
     {
       "id": "102502928",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 79,
+      "total_shows": 93,
       "competition_dog_id": null
     },
     {
@@ -18,7 +18,16 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 93,
+      "total_shows": 102,
+      "competition_dog_id": null
+    },
+    {
+      "id": "572991674",
+      "name_lat": "DZHOSLIN USSR",
+      "name_ru": "ДЖОСЛИН УССР",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed_en": "KERRY BLUE TERRIER",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -40,21 +49,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "283553323",
-      "name_lat": "DZHASSTA LA-MANSHE",
+      "id": "1851224105",
+      "name_lat": "DZHOILI RODZHERS CERRUTI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
-      "breed_en": "FOX TERRIER (WIRE)",
-      "total_shows": 29,
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 43,
       "competition_dog_id": null
     },
     {
-      "id": "572991674",
-      "name_lat": "DZHOSLIN USSR",
+      "id": "32086383",
+      "name_lat": "DZHASSTA LA-MANSHE",
       "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "KERRY BLUE TERRIER",
-      "total_shows": 22,
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
+      "breed_en": "FOX TERRIER (WIRE)",
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -67,12 +76,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "159442765",
-      "name_lat": "DZHOILI RODZHERS CERRUTI",
+      "id": "1277930056",
+      "name_lat": "DZHOZIAS LUC",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 52,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023410696",
+      "name_lat": "DZHOILI RODZHERS CHECKMATE",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 40,
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
@@ -85,21 +103,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "115175828",
-      "name_lat": "DZHOILI RODZHERS CHECKMATE",
+      "id": "204141141",
+      "name_lat": "DZHUBATUS MEDOVYJ PRYANIK",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 47,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1277930056",
-      "name_lat": "DZHOZIAS LUC",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 44,
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -112,28 +121,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "55972408",
+      "id": "522642217",
+      "name_lat": "DZHOZIAS MARCUS",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "615189341",
       "name_lat": "DZHOSLIN SENSE OF SPIRIT",
       "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР /",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 37,
       "competition_dog_id": null
     },
     {
-      "id": "204141141",
-      "name_lat": "DZHUBATUS MEDOVYJ PRYANIK",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 34,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1685995350",
+      "id": "731309233",
       "name_lat": "DZHALIS YET AGAIN ABOUT LOVE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -144,7 +153,7 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -155,15 +164,6 @@
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": 7150
-    },
-    {
-      "id": "522642217",
-      "name_lat": "DZHOZIAS MARCUS",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
     },
     {
       "id": "1710767690",
@@ -184,12 +184,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "378680621",
+      "id": "39091297",
       "name_lat": "DZHEBBERT DO-DO",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ДЖЕББЕРТ ДО-ДО",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -202,12 +202,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1316826578",
+      "id": "1437291644",
       "name_lat": "DZHURDES CHET",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "504950549",
+      "name_lat": "DZHOLLI STAR AMSTERDAM",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ, СЕРЫЙ",
+      "breed_en": "POODLE MEDIUM FAWN, GREY",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1324780357",
+      "name_lat": "DZASIKI VARASI ISAMI",
+      "name_ru": "ДЗАСИКИ ВАРАСИ ИСАМИ",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
@@ -220,30 +238,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1324780357",
-      "name_lat": "DZASIKI VARASI ISAMI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 40,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1672122944",
+      "id": "799328621",
       "name_lat": "DZHALIS YAROSLAV MUDRIY",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "БАВАРСКАЯ ГОРНАЯ",
       "breed_en": "",
       "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "504950549",
-      "name_lat": "DZHOLLI STAR AMSTERDAM",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ, СЕРЫЙ",
-      "breed_en": "POODLE MEDIUM FAWN, GREY",
-      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -256,6 +256,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1536178746",
+      "name_lat": "DZHOZIAS LOYD",
+      "name_ru": "ДЖОЗИАС ЛОЙД",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 58,
+      "competition_dog_id": null
+    },
+    {
       "id": "7500668",
       "name_lat": "DZHASPER ALBERTA",
       "name_ru": "",
@@ -265,10 +274,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1802656671",
+      "id": "806082830",
       "name_lat": "DZHEYMS BOND ONLY ONE",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
@@ -292,15 +301,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1536178746",
-      "name_lat": "DZHOZIAS LOYD",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "229538062",
       "name_lat": "DZHUTA HAUS BON RIO",
       "name_ru": "",
@@ -319,12 +319,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "222629304",
+      "id": "1245515684",
       "name_lat": "DZHOILI RODZHERS CHELSEA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1000083904",
+      "name_lat": "DZHOKER",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -384,37 +393,81 @@
     {
       "id": "1894638844",
       "name_lat": "DZHENNI VOLZHSKAYA SERENADA",
-      "name_ru": "",
+      "name_ru": "ДЖЕННИ ВОЛЖСКАЯ СЕРЕНАДА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1744714030",
+      "id": "1805076530",
+      "name_lat": "DZHALIS ZAKULISNAYA INTRIGA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1098513018",
+      "name_lat": "DZHOVIZ LAVINA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1837840536",
       "name_lat": "DZHORDANI YU-LIS",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1218922039",
+      "id": "1021061655",
       "name_lat": "DZHERMANOTTA ROYALS BORN OF FIRE",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1909697953",
-      "name_lat": "DZHINDZHER YNTARNAYA BRYUNETKA",
+      "id": "816990022",
+      "name_lat": "DZHERSVIN POBEDITEL",
+      "name_ru": "ДЖЕРСВИН ПОБЕДИТЕЛЬ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1664494396",
+      "name_lat": "DZASTIN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023830213",
+      "name_lat": "DZHINDZHER YNTARNAYA BRYUNETKA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "426631774",
+      "name_lat": "DZHERNEL PANDORA RED FOKS",
+      "name_ru": "ДЖЕРНЕЛ ПАНДОРА РЭД ФОКС",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -436,12 +489,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "543964631",
+      "id": "1184439385",
+      "name_lat": "DZHENTLI BORN ZHUET EN PLYUSH",
+      "name_ru": "ДЖЕНТЛИ БОРН ЖУЭТ ЭН ПЛЮШ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНО-ПОДПАЛЫЙ",
+      "breed_en": "POODLE MINIATURE BLACK & TAN",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "356561463",
       "name_lat": "DZHAZ ALVARES VICTORY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1863931651",
+      "name_lat": "DZHEYN DU DALLAS",
+      "name_ru": "ДЖЕЙН ДУ ДАЛЛАС",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -451,6 +522,15 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "135757196",
+      "name_lat": "DZHIRAZOL SOLNECHNAYA",
+      "name_ru": "ДЖИРАЗОЛЬ СОЛНЕЧНАЯ",
+      "breed": "С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -472,15 +552,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "816990022",
-      "name_lat": "DZHERSVIN POBEDITEL",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "133904245",
       "name_lat": "DZHAYA",
       "name_ru": "",
@@ -490,12 +561,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1000083904",
-      "name_lat": "DZHOKER",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "id": "642203371",
+      "name_lat": "DZHULETTA PIKKOLA PERLA",
+      "name_ru": "ДЖУЛЬЕТТА ПИККОЛА ПЕРЛА",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1828835714",
+      "name_lat": "DZHUTA HAUS SHEF BIT-BOX",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1150976665",
+      "name_lat": "DZHENTLI BORN TSUKAT",
+      "name_ru": "ДЖЕНТЛИ БОРН ЦУКАТ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНО-ПОДПАЛЫЙ",
+      "breed_en": "POODLE MINIATURE BLACK & TAN",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -517,6 +606,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "702899318",
+      "name_lat": "DZHERNEL KORNELIYA POVELITELNITSA OGNYA",
+      "name_ru": "ДЖЕРНЕЛ КОРНЕЛИЯ ПОВЕЛИТЕЛЬНИЦА ОГНЯ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1291896939",
+      "name_lat": "DZHORZH-MERILIN IVAN FOR VIVA ESTRELLA",
+      "name_ru": "ДЖОРЖ-МЕРИЛИН ИВАН ФОР ВИВА ЭСТРЕЛЛА",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
       "id": "553799549",
       "name_lat": "DZHA DIVISION CONTRASTO ELEVATO",
       "name_ru": "",
@@ -535,12 +642,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1291896939",
-      "name_lat": "DZHORZH-MERILIN IVAN FOR VIVA ESTRELLA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 21,
+      "id": "269761383",
+      "name_lat": "DZHOZIAS VANESSA",
+      "name_ru": "ДЖОЗИАС ВАНЕССА",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -553,21 +660,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "269761383",
-      "name_lat": "DZHOZIAS VANESSA",
+      "id": "1390682944",
+      "name_lat": "DZHOZIAS CHEGET",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 15,
+      "breed_en": "",
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
-      "id": "1470371367",
+      "id": "747810455",
+      "name_lat": "DZHANIKO ZHAZIRA",
+      "name_ru": "ДЖАНИКО ЖАЗИРА",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1915494191",
+      "name_lat": "DZASTIN",
+      "name_ru": "",
+      "breed": "КЛАССИК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1336439320",
       "name_lat": "DZHIMIS FOR MY HAPPY DAYS",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1563910166",
+      "name_lat": "DZHILLI BLEK CHERRI",
+      "name_ru": "ДЖИЛЛИ БЛЕК ЧЕРРИ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -580,6 +714,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "557172036",
+      "name_lat": "DZHASSTA SEN SEY",
+      "name_ru": "ДЖАССТА СЕН СЕЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1564347083",
       "name_lat": "DZHOLLI STAR RED REVOLUTION",
       "name_ru": "",
@@ -589,12 +732,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "35216714",
+      "id": "288258020",
       "name_lat": "DZHENIVEL STYLE ZLATAN KHONI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "973278857",
+      "name_lat": "DZHANIKO VIVERNA",
+      "name_ru": "ДЖАНИКО ВИВЕРНА",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -607,30 +759,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "746651033",
+      "id": "1593968599",
+      "name_lat": "DZHESSI",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "216963172",
       "name_lat": "DZHALIS GVOZD PROGRAMMY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "683257395",
-      "name_lat": "DZHALIS ZAKULISNAYA INTRIGA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "64720290",
-      "name_lat": "DZHASSTA SEN SEY",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
+      "id": "385510756",
+      "name_lat": "DZHANIKO LILU",
+      "name_ru": "ДЖАНИКО ЛИЛУ",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "BELGIAN SHEPHERD DOG MALINOIS",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -649,24 +801,6 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "385510756",
-      "name_lat": "DZHANIKO LILU",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "135757196",
-      "name_lat": "DZHIRAZOL SOLNECHNAYA",
-      "name_ru": "",
-      "breed": "С СОЛЬЮ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -697,20 +831,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "973278857",
-      "name_lat": "DZHANIKO VIVERNA",
+      "id": "1488120561",
+      "name_lat": "DZENSAI RADOST ZHIZNI",
       "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1098513018",
-      "name_lat": "DZHOVIZ LAVINA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "breed": "ЯПОНСКИЙ ХИН",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -735,28 +859,19 @@
     {
       "id": "197254246",
       "name_lat": "DZHERNEL ROKSET CHEYZ",
-      "name_ru": "",
+      "name_ru": "ДЖЕРНЕЛ РОКСЕТ ЧЕЙЗ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "426631774",
-      "name_lat": "DZHERNEL PANDORA RED FOKS",
-      "name_ru": "",
+      "id": "1169270341",
+      "name_lat": "DZHERNEL CHER'NIKA",
+      "name_ru": "ДЖЕРНЕЛ ЧЕРНИКА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1723017629",
-      "name_lat": "DZHOZIAS CHEGET",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -778,10 +893,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "194223740",
+      "id": "346805502",
+      "name_lat": "DZHERNEL RONDO KING",
+      "name_ru": "ДЖЕРНЕЛ РОНДО КИНГ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "156800225",
+      "name_lat": "DZHOILI RODZHERS SKARLETT",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100647488",
+      "name_lat": "DZHERNEL FREDERIK MARLEN",
+      "name_ru": "ДЖЕРНЕЛ ФРЕДЕРИК МАРЛЕН",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "113004287",
       "name_lat": "DZHALIS SINDERELLA CRYSTAL SLIPPER",
       "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -796,12 +938,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "702899318",
-      "name_lat": "DZHERNEL KORNELIYA POVELITELNITSA OGNYA",
+      "id": "1610157569",
+      "name_lat": "DZHOZIAS BLACKBERRY",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 15,
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "832879355",
+      "name_lat": "DZHAST MI VINNER IZ IMPERII LARIEL",
+      "name_ru": "ДЖАСТ МИ ВИННЕР ИЗ ИМПЕРИИ ЛАРИЭЛ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -814,21 +965,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "100647488",
-      "name_lat": "DZHERNEL FREDERIK MARLEN",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 21,
+      "id": "817352848",
+      "name_lat": "DZHI FU GLAVNYY",
+      "name_ru": "Джи фу Главный",
+      "breed": "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
+      "breed_en": "AUSTRALIAN TERRIER",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1052874144",
+      "id": "603457157",
       "name_lat": "DZHOILI RODZHERS TSZVETANA",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "НОРВИЧ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1290070366",
+      "name_lat": "DZHOZIAS MARSHAL",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -841,30 +1001,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1290070366",
-      "name_lat": "DZHOZIAS MARSHAL",
+      "id": "458528140",
+      "name_lat": "DZHEMINI RICH AND FAMOS",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 61,
       "competition_dog_id": null
     },
     {
-      "id": "1610157569",
-      "name_lat": "DZHOZIAS BLACKBERRY",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 3,
+      "id": "412193394",
+      "name_lat": "DZEMBI BEKKET",
+      "name_ru": "ДЗЕМБИ БЕККЕТ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "1915494191",
-      "name_lat": "DZASTIN",
+      "id": "1061993796",
+      "name_lat": "DZHOKER YUZHNIY ANGEL",
       "name_ru": "",
-      "breed": "КЛАССИК",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1486789289",
+      "name_lat": "DZHUTA HAUS SHAMEL",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -877,48 +1046,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "922718680",
+      "id": "1945605060",
       "name_lat": "DZHORZH-MERILIN RADIANT STAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "459796005",
-      "name_lat": "DZHOILI RODZHERS SKARLETT",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1620156300",
+      "id": "272804399",
       "name_lat": "DZHALIS YARKIY METEOR",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "747810455",
-      "name_lat": "DZHANIKO ZHAZIRA",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "817352848",
-      "name_lat": "DZHI FU GLAVNYY",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
-      "breed_en": "AUSTRALIAN TERRIER",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -928,15 +1070,6 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "547902233",
-      "name_lat": "DZHEMINI RICH AND FAMOS",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 54,
       "competition_dog_id": null
     },
     {
@@ -958,19 +1091,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "194917255",
-      "name_lat": "DZHAST MI VINNER IZ IMPERII LARIEL",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "125301572",
+      "id": "80040280",
       "name_lat": "DZHORZH-MERILIN CHARLIZE MY DREAM",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1021,15 +1145,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "412193394",
-      "name_lat": "DZEMBI BEKKET",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "319833557",
       "name_lat": "DZEMBI FELISSA",
       "name_ru": "",
@@ -1048,6 +1163,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "949631656",
+      "name_lat": "DZHEFFRI KEYN",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "249963217",
+      "name_lat": "DZHORDANI ZHAKLIN",
+      "name_ru": "",
+      "breed": "КРОЛИЧЬЯ МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "126364724",
       "name_lat": "DZHASTIN YASASHI OOKAMI",
       "name_ru": "",
@@ -1059,10 +1192,10 @@
     {
       "id": "946455918",
       "name_lat": "DZHERNEL CHERRI BRENDI",
-      "name_ru": "",
+      "name_ru": "ДЖЕРНЕЛ ЧЕРРИ БРЕНДИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1075,10 +1208,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "491619449",
+      "id": "1671343362",
+      "name_lat": "DZERNEL FREDERIK MARLEN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "292279097",
       "name_lat": "DZHAMILA KRASIVAYA IZ SEREBRYANOGO OZERA",
       "name_ru": "",
-      "breed": "СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1093,19 +1235,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1671343362",
-      "name_lat": "DZERNEL FREDERIK MARLEN",
+      "id": "1222469881",
+      "name_lat": "DZHOKONDA DREAMS COME TRUE",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "740347930",
-      "name_lat": "DZHORZH-MERILIN CHIO- CHIO-SAN",
+      "id": "1065780344",
+      "name_lat": "DZHORZH-MERILIN CHIO-CHIO-SAN",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ / MINIATURE",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ / MINIATURE",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1120,10 +1262,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "445757835",
+      "id": "137721607",
       "name_lat": "DZHOILI RODZHERS FIGHTER",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "ЙОРКШИРСКИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1138,21 +1280,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1486789289",
-      "name_lat": "DZHUTA HAUS SHAMEL",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1658362003",
       "name_lat": "DZHERNEL CHYERNAYA KOROL’EVA",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1467063400",
+      "name_lat": "DZHEYNA LIVES ELIZABETH",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1165,11 +1306,54 @@
       "competition_dog_id": null
     },
     {
+      "id": "166971807",
+      "name_lat": "DZHOSLIN UNA MATTINA",
+      "name_ru": "ДЖОСЛИН УНА МАТТИНА",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "959752506",
       "name_lat": "DZHORDAN",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "793194771",
+      "name_lat": "DZHERNEL UOTSON SHERLOK",
+      "name_ru": "",
+      "breed": "MINIATURE PINSCHER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "856924415",
+      "name_lat": "DZHAZ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1977804553",
+      "name_lat": "DZHERNEL RAYDER RAYNER",
+      "name_ru": "ДЖЕРНЕЛ РАЙДЕР РАЙНЕР",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "723349082",
+      "name_lat": "DZHERNEL YUKI SIA INZHI",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -1187,24 +1371,6 @@
       "name_lat": "DZHERNEL CHYERNAYA MAFIYA",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "931874818",
-      "name_lat": "DZHUTA HAUS SHEF BIT- BOX",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "249963217",
-      "name_lat": "DZHORDANI ZHAKLIN",
-      "name_ru": "",
-      "breed": "КРОЛИЧЬЯ МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1228,39 +1394,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "642203371",
-      "name_lat": "DZHULETTA PIKKOLA PERLA",
+      "id": "1223716938",
+      "name_lat": "DZHUTA HAUS TRIUMF",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "166971807",
-      "name_lat": "DZHOSLIN UNA MATTINA",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
+      "id": "1535572030",
+      "name_lat": "DZHUNA-GERDA IZ BELOY BRIGADY",
+      "name_ru": "ДЖУНА-ГЕРДА ИЗ БЕЛОЙ БРИГАДЫ",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "346805502",
-      "name_lat": "DZHERNEL RONDO KING",
+      "id": "1878984568",
+      "name_lat": "DZHOZIAS LUCKY",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1184439385",
-      "name_lat": "DZHENTLI BORN ZHUET EN PLYUSH",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНО-ПОДПАЛЫЙ",
-      "breed_en": "POODLE MINIATURE BLACK & TAN",
-      "total_shows": 2,
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -1273,15 +1430,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1878984568",
-      "name_lat": "DZHOZIAS LUCKY",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
       "id": "498435638",
       "name_lat": "DZHASSTA TOP TYPE",
       "name_ru": "",
@@ -1291,10 +1439,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1639530664",
+      "id": "5086690",
       "name_lat": "DZHALIS GOST IZ BUDUSCHEGO",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "GOLDEN",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
@@ -1318,12 +1466,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "533636701",
+      "name_lat": "DZHOVIZ NIAPOLI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "189968603",
+      "name_lat": "DZHESIKA CHEROLI",
+      "name_ru": "ДЖЕСИКА ЧЕРОЛИ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "989808553",
       "name_lat": "DZHUTA HAUS LOVELAS",
       "name_ru": "",
       "breed": "французский бульдог",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -1336,12 +1502,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1537382942",
+      "id": "430623015",
       "name_lat": "DZHOZIAS ASTERIA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "323603161",
+      "name_lat": "DZHUTA HAUS USTIN BON SHARMAN",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1354,19 +1529,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "533636701",
-      "name_lat": "DZHOVIZ NIAPOLI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "191147324",
+      "id": "1506805081",
       "name_lat": "DZHERMANOTTA ROYALS POKEMON CHOSEN ONE",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 30,
       "competition_dog_id": null
@@ -1387,15 +1553,6 @@
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "BULL TERRIER STANDART",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "29393162",
-      "name_lat": "DZHESIKA CHEROLI",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1435,12 +1592,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "68495557",
+      "id": "1236915485",
+      "name_lat": "DZHEMMARI NIKOLETTA",
+      "name_ru": "ДЖЕММАРИ НИКОЛЕТТА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1203544938",
       "name_lat": "DZHASSTA HIT PARAD",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "834830962",
+      "name_lat": "DZHOZIAS SAMUEL-VARDE",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1772272303",
+      "name_lat": "DZHOZIAS CHIRO",
+      "name_ru": "ДЖОЗИАС ЧИРО",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1549688169",
+      "name_lat": "DZHAZ S MEDNOGO OZERA",
+      "name_ru": "ДЖАЗ С МЕДНОГО ОЗЕРА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1471,21 +1664,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1772272303",
-      "name_lat": "DZHOZIAS CHIRO",
+      "id": "1988219460",
+      "name_lat": "DZEMBI OZZI",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1134422552",
-      "name_lat": "DZHOKER YUZHNIY ANGEL",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1495,6 +1679,15 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1323468184",
+      "name_lat": "DZHOILI RODZHERS TUTSI",
+      "name_ru": "",
+      "breed": "НОРВИЧ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1525,15 +1718,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1323468184",
-      "name_lat": "DZHOILI RODZHERS TUTSI",
-      "name_ru": "",
-      "breed": "НОРВИЧ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "777664033",
       "name_lat": "DZHOJ",
       "name_ru": "",
@@ -1543,30 +1727,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "834830962",
-      "name_lat": "DZHOZIAS SAMUEL-VARDE",
+      "id": "193418383",
+      "name_lat": "DZAYHO DZETEY",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 25,
-      "competition_dog_id": null
-    },
-    {
-      "id": "28057451",
-      "name_lat": "DZHESSI",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1236915485",
-      "name_lat": "DZHEMMARI NIKOLETTA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1606,48 +1772,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1756600342",
+      "id": "422346616",
       "name_lat": "DZHEMMA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1988219460",
-      "name_lat": "DZEMBI OZZI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "1799965381",
       "name_lat": "DZHERNEL MARTI MAKFLAY",
-      "name_ru": "",
+      "name_ru": "Джернел Марти Макфлай",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "577045554",
+      "id": "1154901683",
       "name_lat": "DZHIMIS SHAKESPEARE IN LOVE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1863931651",
-      "name_lat": "DZHEYN DU DALLAS",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1660,6 +1808,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1145368036",
+      "name_lat": "DZHOLLI VOLIDOG FERRARI II",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "148635826",
       "name_lat": "DZEMBI TSUNEMORE AKANE",
       "name_ru": "",
@@ -1669,10 +1826,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1159041422",
+      "id": "1428516169",
       "name_lat": "DZHENIVERA",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1687,6 +1844,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "283821316",
+      "name_lat": "DZHERAN KERIM EL",
+      "name_ru": "ДЖЕРАН КЕРИМ ЭЛЬ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 39,
+      "competition_dog_id": null
+    },
+    {
+      "id": "247532497",
+      "name_lat": "DZHERNEL FREDERICK MARLEN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "719939727",
       "name_lat": "DZHAMOKKA LINE ROZI MEY",
       "name_ru": "",
@@ -1696,12 +1871,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1145368036",
-      "name_lat": "DZHOLLI VOLIDOG FERRARI II",
+      "id": "528582447",
+      "name_lat": "DZHERMANOTTA ROYALS E-GAIY EGOIST LIT GUY",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -1723,12 +1898,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1549688169",
-      "name_lat": "DZHAZ S MEDNOGO OZERA",
+      "id": "1347239401",
+      "name_lat": "DZHERMANOTTA ROYALS NEW IN FASHION",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -1759,6 +1934,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "17557790",
+      "name_lat": "DZHERNEL CHARODEY-II",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕРШАР ПЕЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1850708577",
       "name_lat": "DZHUTA HAUS FOR SHAMOUR ET LE BOHEUR",
       "name_ru": "",
@@ -1768,21 +1951,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "528582447",
-      "name_lat": "DZHERMANOTTA ROYALS E-GAIY EGOIST LIT GUY",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1129512122",
+      "id": "1696509118",
       "name_lat": "DZHORZH MERILIN VALKYRIE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -1795,12 +1969,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "787361292",
-      "name_lat": "DZHERMANOTTA ROYALS NEW IN FASHION",
+      "id": "641554955",
+      "name_lat": "DZHOHNNY DEPP",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 21,
+      "breed": "БОСТОН ТЕРЬЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1813,21 +1986,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "220254850",
+      "name_lat": "DZHOANA LAMOND LUMLEY",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "95238916",
+      "name_lat": "DZHEFRI NOVARRO",
+      "name_ru": "ДЖЕФРИ НОВАРРО",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "250870343",
       "name_lat": "DZHONNI IZ DOMA KIRILLOVYH",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1137056341",
       "name_lat": "DZHERNEL CHERNAYA MAFIYA",
-      "name_ru": "",
+      "name_ru": "ДЖЕРНЕЛ ЧЕРНАЯ МАФИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1849,10 +2038,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1302787740",
+      "id": "288881816",
       "name_lat": "DZHUSI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1867,10 +2056,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "619778173",
+      "id": "800502793",
       "name_lat": "DZHENIVEL STYLE MANGO MANGO",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- БЕЛЫЙ",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1885,10 +2074,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1447717341",
+      "id": "926872853",
       "name_lat": "DZHORDANI YA-MAHA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1909,6 +2098,15 @@
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "758429576",
+      "name_lat": "DZHENTLI BORN ENDLESS SHARM",
+      "name_ru": "ДЖЕНТЛИ БОРН ЭНДЛЕСС ШАРМ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "GIANT SCHNAUZER BLACK",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1957,10 +2155,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "833254262",
+      "id": "1124177144",
       "name_lat": "DZHOLLI STAR MY BEAUTIFUL LADY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ) ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1984,6 +2182,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1397271096",
+      "name_lat": "DZHORDANI MLADA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "285898576",
       "name_lat": "DZHOKER DIAMOND DUST",
       "name_ru": "",
@@ -2002,10 +2208,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "714557402",
+      "id": "1566430379",
       "name_lat": "DZHANDZHI BEJ",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2020,24 +2226,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "211155305",
-      "name_lat": "DZHAZ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1191579978",
-      "name_lat": "DZHAZ",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ (ДРАТХААР) ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1304728998",
       "name_lat": "DZHEY TI ROCKEFELLER HAPPY COIN",
       "name_ru": "",
@@ -2047,21 +2235,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1671373748",
-      "name_lat": "DZHOZIAS LUKLA",
+      "id": "1065198042",
+      "name_lat": "DZHEYN MILLEN KHYU",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 23,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1169270341",
-      "name_lat": "DZHERNEL CHER'NIKA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "id": "398869729",
+      "name_lat": "DZHOZIAS LUKLA",
+      "name_ru": "ДЖОЗИАС ЛУКЛА",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -2074,10 +2261,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1961566629",
+      "id": "97217087",
       "name_lat": "DZHASTI SVIT",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2101,10 +2288,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "439002987",
+      "id": "400389147",
       "name_lat": "DZHUMANDZHIIZ KITAISKOGO KVARTALA",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2119,19 +2306,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1065495712",
+      "id": "1778035548",
       "name_lat": "DZHIL",
       "name_ru": "",
-      "breed": "КОРОТКОШЁРС",
+      "breed": "КОРОТКОШЕРС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1569554258",
+      "id": "678946286",
       "name_lat": "DZHESSI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ / MINIATURE",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ / MINIATURE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2164,19 +2351,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "636620371",
-      "name_lat": "DZHEFRI NOVARRO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1464808712",
+      "id": "280086396",
       "name_lat": "DZHINDZHER YANTARNAYA BRYUNETKA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2200,28 +2378,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1664494396",
-      "name_lat": "DZASTIN",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "420544769",
+      "id": "189776668",
       "name_lat": "DZHUSI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ (КУРЦХААР)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1223716938",
-      "name_lat": "DZHUTA HAUS TRIUMF",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2232,33 +2392,6 @@
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1977804553",
-      "name_lat": "DZHERNEL RAYDER RAYNER",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "758429576",
-      "name_lat": "DZHENTLI BORN ENDLESS SHARM",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
-      "breed_en": "GIANT SCHNAUZER BLACK",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1150976665",
-      "name_lat": "DZHENTLI BORN TSUKAT",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНО-ПОДПАЛЫЙ",
-      "breed_en": "POODLE MINIATURE BLACK & TAN",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2281,19 +2414,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "283821316",
-      "name_lat": "DZHERAN KERIM EL",
+      "id": "193131880",
+      "name_lat": "DZHOILI RODZHERS ULENSPIEGEL",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 28,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "66523437",
+      "id": "1851352337",
       "name_lat": "DZHORZH-MERILIN U2",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2308,21 +2441,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "694494452",
-      "name_lat": "DZHOILI RODZHERS ULENSPIEGEL",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "1901069688",
       "name_lat": "DZHAST ZO AMI MIGNONE",
-      "name_ru": "",
+      "name_ru": "ДЖАСТ ЗО АМИ МИГНОНЕ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2335,6 +2459,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "83324222",
+      "name_lat": "DZHU LIDZHUAN ASYA",
+      "name_ru": "ДЖУ ЛИДЖУАН АСЯ",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1852610141",
       "name_lat": "DZHASSTA FAYR FLAY",
       "name_ru": "",
@@ -2344,21 +2477,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1323792398",
+      "id": "654179599",
+      "name_lat": "DZHOZIAS LAVR",
+      "name_ru": "ДЖОЗИАС ЛАВР",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "241838464",
       "name_lat": "DZHASSTA IRJI IRIS",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "418821995",
+      "id": "232687917",
       "name_lat": "DZHALIS CINDERELLA CRYSTAL SLIPPER",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2389,12 +2531,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "83324222",
-      "name_lat": "DZHU LIDZHUAN ASYA",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
+      "id": "1488096310",
+      "name_lat": "DZHEKKI ZHEMCHUZHNAYA",
+      "name_ru": "ДЖЕККИ ЖЕМЧУЖНАЯ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "31851522",
+      "name_lat": "DZHERNEL RA-GORAKHTI KHRAMA SOLNTSA",
+      "name_ru": "ДЖЕРНЕЛ РА-ГОРАХТИ ХРАМА СОЛНЦА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1130239967",
+      "name_lat": "DZHUTA HAUS CHARLESTON HOT WELL",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2416,57 +2576,83 @@
       "competition_dog_id": null
     },
     {
-      "id": "1488096310",
-      "name_lat": "DZHEKKI ZHEMCHUZHNAYA",
+      "id": "1925627764",
+      "name_lat": "DZHULIYA THINK IN THE NIGHT",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "БИГЛЬ",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "359462763",
+      "id": "1747111215",
       "name_lat": "DZHASSTA LANCASTER LORD",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1130239967",
-      "name_lat": "DZHUTA HAUS CHARLESTON HOT WELL",
+      "id": "5735",
+      "name_lat": "DZHANA-DZHAN GENRI MORGAN",
+      "name_ru": "ДЖАНА-ДЖАН ГЕНРИ МОРГАН",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": 5735
+    },
+    {
+      "id": "1039305497",
+      "name_lat": "DZHAGO ROMAN S NADEZHDOY",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
-      "total_shows": 10,
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1535572030",
-      "name_lat": "DZHUNA-GERDA IZ BELOY BRIGADY",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "WHITE SWISS SHEPHERD DOG",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "637517034",
+      "id": "893771484",
       "name_lat": "DZHASSTA QUIRKY CURL",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1925627764",
-      "name_lat": "DZHULIYA THINK IN THE NIGHT",
+      "id": "1389748801",
+      "name_lat": "DZHOZIAS BLACKBERY",
       "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1316104320",
+      "name_lat": "DZHERNEL IMPERATRITSA",
+      "name_ru": "ДЖЕРНЕЛ ИМПЕРАТРИЦА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "451992407",
+      "name_lat": "DZHALILYA BANU",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1313284250",
+      "name_lat": "DZHOLIN MISATO KUDZHO MOERE",
+      "name_ru": "ДЖОЛИН МИСАТО КУДЖО МОЭРЕ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2479,39 +2665,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "138294234",
+      "id": "376331482",
       "name_lat": "DZHENTELMEN NEVSKIY HOBBIT IS DOMA HA",
       "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "175557369",
+      "id": "1286135372",
       "name_lat": "DZHALIS INFINITY OF NATURE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ВЕНГЕРСКАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1629396868",
+      "id": "1971341361",
       "name_lat": "DZHEK DENIELS",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "602594446",
+      "id": "795606008",
       "name_lat": "DZHESSIKA IZ BELOGO JARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1889062339",
+      "name_lat": "DZEMBI VAKIN YUMIKO",
+      "name_ru": "ДЗЕМБИ ВАКИН ЮМИКО",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2524,12 +2719,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "28860961",
+      "id": "974667132",
       "name_lat": "DZHERMANOTTA ROYALS RONALD RESPECTABLE MAN",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269311154",
+      "name_lat": "DZHOVIZ MISTER TVISTER",
+      "name_ru": "ДЖОВИЗ МИСТЕР ТВИСТЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -2551,30 +2755,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "1270616954",
+      "id": "583274491",
       "name_lat": "DZHIMIS SUNSHINE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "323603161",
-      "name_lat": "DZHUTA HAUS USTIN BON SHARMAN",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
+      "id": "1278169330",
+      "name_lat": "DZHOSLIN FANTAGIRO",
+      "name_ru": "ДЖОСЛИН ФАНТАГИРО",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed_en": "KERRY BLUE TERRIER",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "421821454",
+      "id": "283245911",
       "name_lat": "DZHUS S FABRIKI GRYOZ",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1381047139",
+      "name_lat": "DZHU LIDZHUAN STEFFI",
+      "name_ru": "ДЖУ ЛИДЖУАН СТЕФФИ",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1447326244",
+      "name_lat": "DZHERNEL WILHELM TELL",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1201755859",
+      "name_lat": "DZHERNEL CHELESTA DZHIN",
+      "name_ru": "ДЖЕРНЕЛ ЧЕЛЕСТА ДЖИН",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2601,14 +2832,14 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1481295529",
+      "id": "1933474998",
       "name_lat": "DZHALIS ISAAC NEWTON",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -2623,10 +2854,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "5648227",
+      "id": "1766825134",
+      "name_lat": "DZEMBI BERTI",
+      "name_ru": "ДЗЕМБИ БЕРТИ",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1325064081",
+      "name_lat": "DZHALLI IZ ZAMKA MELVIN",
+      "name_ru": "ДЖАЛЛИ ИЗ ЗАМКА МЕЛВИН",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1855342426",
+      "name_lat": "DZHOTARO OMARO",
+      "name_ru": "ДЖОТАРО ОМАРО",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1765133386",
       "name_lat": "DZHOZIAZ ASTERIA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2659,19 +2917,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "5735",
-      "name_lat": "DZHANA-DZHAN GENRI MORGAN",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": 5735
-    },
-    {
-      "id": "1491116312",
+      "id": "1170066493",
       "name_lat": "DZHALIS BE MY LUCKY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -2695,6 +2944,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "375542048",
+      "name_lat": "DZHENIVEL STYLE RIANA",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС НЕПРИЗНАННЫХFCI ОКРАСОВ (АРЛЕКИН И",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1301088549",
+      "name_lat": "DZHONNI RYZHEE VELIKOLEPIE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "434557296",
       "name_lat": "DZHORZH-MERILIN ROXETTE",
       "name_ru": "",
@@ -2713,6 +2980,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "758316450",
+      "name_lat": "DZHERMANOTTA ROYALS ILLA QUEEN'S INAUGURATION",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1967778093",
       "name_lat": "DZHEUS PAPARAZZI",
       "name_ru": "",
@@ -2722,37 +2998,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "442955620",
-      "name_lat": "DZHALLI IZ ZAMKA MELVIN",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "id": "1067272600",
+      "name_lat": "DZHERNEL TSEYS STRONG",
+      "name_ru": "ДЖЕРНЕЛ ЦЕЙС СТРОНГ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1889062339",
-      "name_lat": "DZEMBI VAKIN YUMIKO",
+      "id": "1312341914",
+      "name_lat": "DZHENIVEL STYLE ZHIGAN-LIMON",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "451992407",
-      "name_lat": "DZHALILYA BANU",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1646679279",
-      "name_lat": "DZHENIVEL STYLE ZHIGAN- LIMON",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2767,21 +3025,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1039305497",
-      "name_lat": "DZHAGO ROMAN S NADEZHDOY",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "403045989",
       "name_lat": "DZHESSAMINA BLUM FREYA GODDES OF LOVE",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1051879551",
+      "name_lat": "DZHEM IZ IMPERATORSKOY GAVANI",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1868658823",
+      "name_lat": "DZHEKKI",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2805,10 +3072,10 @@
     {
       "id": "1338577949",
       "name_lat": "DZHERNEL POL ANRI LE ROY NUAR",
-      "name_ru": "",
+      "name_ru": "ДЖЕРНЕЛ ПОЛЬ АНРИ ЛЕ РОЙ НУАР",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -2827,15 +3094,6 @@
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "188478343",
-      "name_lat": "DZHERMANOTTA ROYALS ILLA QUEEN'S INAUGURATION",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2902,39 +3160,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "175263666",
-      "name_lat": "DZHENIVEL STYLE RIANA",
-      "name_ru": "",
-      "breed": "ФАНТОМ ТОЙ",
+      "id": "1630846199",
+      "name_lat": "DZHEUS'S TARANTINO",
+      "name_ru": "ДЖЕУС'С ТАРАНТИНО",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1977432355",
+      "id": "1577278474",
       "name_lat": "DZHERMANOTTA ROYALS ILLA QUEEN’S INAUGURATION",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1240367940",
+      "id": "1936821295",
+      "name_lat": "DZHU LIDZHUAN STEYSI",
+      "name_ru": "ДЖУ ЛИДЖУАН СТЕЙСИ",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "543569393",
       "name_lat": "DZHULIANA LA MURR IZ PAVLOVSKOGO GRAFSTVA",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "654179599",
-      "name_lat": "DZHOZIAS LAVR",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2947,12 +3205,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "547485741",
+      "id": "1693181072",
       "name_lat": "DZHOZIAS LANA",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 6,
+      "name_ru": "ДЖОЗИАС ЛАНА",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2965,19 +3223,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1313284250",
-      "name_lat": "DZHOLIN MISATO KUDZHO MOERE",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1639054095",
+      "id": "920558398",
       "name_lat": "DZEMMARI RENIKS FAYER",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -3010,19 +3259,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1301088549",
-      "name_lat": "DZHONNI RYZHEE VELIKOLEPIE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "120104668",
+      "id": "1596585393",
       "name_lat": "DZHIMIS GIFT OF DESTINY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3046,12 +3286,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1635223001",
-      "name_lat": "DZHERNEL WILHELM TELL",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "id": "1621223246",
+      "name_lat": "DZKHEUS' VALETTA",
+      "name_ru": "ДЗХЕУС' ВАЛЕТТА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1311449806",
+      "name_lat": "DZHAIANTI TO SAISHN",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "796240558",
+      "name_lat": "DZHERNEL EDVARD ROCHESTER",
+      "name_ru": "ДЖЕРНЕЛ ЭДВАРД РОЧЕСТЕР",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -3064,8 +3322,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "663544917",
-      "name_lat": "DZHAGA- DEY",
+      "id": "1994840455",
+      "name_lat": "DZHAGA-DEY",
       "name_ru": "",
       "breed": "восточноевропейская овчарка",
       "breed_en": "",
@@ -3082,15 +3340,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1855342426",
-      "name_lat": "DZHOTARO OMARO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1218138000",
       "name_lat": "DZHESSIKA S BERG SHTROM",
       "name_ru": "",
@@ -3100,10 +3349,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "232913709",
+      "id": "1393820057",
       "name_lat": "DZHASSTA SIBUR SAJK",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
       "total_shows": 10,
       "competition_dog_id": null
@@ -3145,19 +3394,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1201755859",
-      "name_lat": "DZHERNEL CHELESTA DZHIN",
+      "id": "344638425",
+      "name_lat": "DZHEYN",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
+      "breed": "БИШОН ФРИЗЕ",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "569534669",
+      "id": "1291468972",
       "name_lat": "DZHALIS YANTARNAYA ROZA",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "СOCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -3172,15 +3420,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1051879551",
-      "name_lat": "DZHEM IZ IMPERATORSKOY GAVANI",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1874862900",
       "name_lat": "DZHALIS VAREZHKA UZORNAYA IRAVADI KINGDOM",
       "name_ru": "",
@@ -3190,12 +3429,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1868658823",
-      "name_lat": "DZHEKKI",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
+      "id": "930894959",
+      "name_lat": "DZHERNEL BONNI EM",
+      "name_ru": "ДЖЕРНЕЛ БОННИ ЭМ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -3208,37 +3447,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1067272600",
-      "name_lat": "DZHERNEL TSEYS STRONG",
+      "id": "1309502816",
+      "name_lat": "DZHIMARA S OSINOVTSA",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "901931123",
+      "id": "1383735586",
       "name_lat": "DZHORZH-MERILIN UMANITE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1548032636",
+      "id": "1015470233",
       "name_lat": "DZHERMANOTTA ROYALS LOLLIPOP LADY",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "809087248",
+      "id": "1568386706",
       "name_lat": "DZHASSTA ZURBAGAN ZIP",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
       "total_shows": 9,
       "competition_dog_id": null
@@ -3253,10 +3492,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1671025837",
+      "id": "1574429789",
       "name_lat": "DZHIMIS STAR TRAVELLER",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -3271,15 +3510,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1563910166",
-      "name_lat": "DZHILLI BLEK CHERRI",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "850561097",
       "name_lat": "DZHUTA HAUS BRENDI",
       "name_ru": "",
@@ -3289,10 +3519,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "739108181",
+      "id": "1636093215",
       "name_lat": "DZHORDANI ZHDISLAVA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "STAFFORDSHIRE ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3316,12 +3546,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "641815216",
+      "id": "1640277441",
       "name_lat": "DZHASSTA BARRO",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "name_ru": "ДЖАССТА БАРРО",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3352,28 +3582,64 @@
       "competition_dog_id": null
     },
     {
-      "id": "97170337",
-      "name_lat": "DZHOUI TRIBBIANI",
+      "id": "1859885225",
+      "name_lat": "DZHUNIOR REIDZHER TERRA INCOGNITO",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1258797926",
-      "name_lat": "DZHORDZHIYA-'' IZ GRADA KATERINY",
+      "id": "58405359",
+      "name_lat": "DZHUTA HAUS LOTSO TAN",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1111484887",
+      "name_lat": "DZHIYA",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "11793241",
+      "id": "280773162",
+      "name_lat": "DZHOUI TRIBBIANI",
+      "name_ru": "",
+      "breed": "РУССКО-ЕВРОПЕЙСКАЯ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1456085697",
+      "name_lat": "DZHORDZHIYA-'' IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1344308626",
+      "name_lat": "DZHALIS TOUR EN L”AIR",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1356106102",
       "name_lat": "DZHIMIS CROWNED MEGASTAR",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 8,
       "competition_dog_id": null
@@ -3388,10 +3654,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "205899398",
+      "id": "1762533119",
       "name_lat": "DZHERNEL BRIGITTE BARDOT",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3406,19 +3672,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1316104320",
-      "name_lat": "DZHERNEL IMPERATRITSA",
+      "id": "1669391530",
+      "name_lat": "DZHULAR MELANGE VESTA",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "988151266",
+      "id": "1243433804",
       "name_lat": "DZHENIVEL STYLE UDACHNYY VYBOR",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3433,12 +3699,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "944694077",
-      "name_lat": "DZHIMARA S OSINOVTSA",
+      "id": "1564792436",
+      "name_lat": "DZHERMANOTTA ROYALS JENNEJ TALISMAN OF A MILLIONAIRE",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3469,15 +3734,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1630846199",
-      "name_lat": "DZHEUS'S TARANTINO",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1640376594",
       "name_lat": "DZHON UIK ROSKOSHNY",
       "name_ru": "",
@@ -3489,10 +3745,10 @@
     {
       "id": "1819866038",
       "name_lat": "DZYUBA AYKEN BITEKI",
-      "name_ru": "",
+      "name_ru": "ДЗЮБА АЙКЭН БИТЕКИ",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3505,28 +3761,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1669391530",
-      "name_lat": "DZHULAR MELANGE VESTA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "696578422",
-      "name_lat": "DZHERNEL BONNI EM",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1519271564",
+      "id": "184647050",
       "name_lat": "DZHENTLMEN UDACHI IZ NOVOY DINASTII",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "39028976",
+      "name_lat": "DZEMBI FUDZIKO",
+      "name_ru": "ДЗЕМБИ ФУДЗИКО",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3541,28 +3788,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "344638425",
-      "name_lat": "DZHEYN",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
+      "id": "237392723",
+      "name_lat": "DZHESS MAY DRINS",
+      "name_ru": "ДЖЕСС МАЙ ДРИНС",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1433890950",
+      "id": "1988122879",
       "name_lat": "DZHERNEL USLADA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "ДЖЕРНЕЛ УСЛАДА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "319233001",
+      "id": "1086747261",
+      "name_lat": "DZHEMMARI CHIP TAYUR",
+      "name_ru": "ДЖЕММАРИ ЧИП ТАЮР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1806177002",
       "name_lat": "DZHOYS VON WESPEN HAUS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -3586,12 +3841,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1890060034",
+      "id": "1154865923",
       "name_lat": "DZHUL'BARS AVRORA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -3604,10 +3859,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "169206699",
+      "id": "750983535",
+      "name_lat": "DZHIEYI LANFEN IZ DOMA USHKOVOY",
+      "name_ru": "ДЖИЭЙИ ЛАНФЕН ИЗ ДОМА УШКОВОЙ",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "800044415",
+      "name_lat": "DZHALIS HAPPY-GO-LUCKY",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "276571715",
       "name_lat": "DZHIMIS STARS IN HER EYES",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3622,15 +3895,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1045921513",
-      "name_lat": "DZHALIS HAPPY-GO-LUCKY",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "890678473",
       "name_lat": "DZHOAZIAS LUC",
       "name_ru": "",
@@ -3640,10 +3904,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "100827624",
+      "id": "752374644",
       "name_lat": "DZHORZH-MERILIN L’HUMANITE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -3699,50 +3963,77 @@
       "name_ru": "",
       "breed": "БИГЛЬ / BEAGLE",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1579804365",
+      "id": "1862980914",
       "name_lat": "DZHASSTA DON JUAN",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "7726",
+      "id": "1774049035",
+      "name_lat": "DZHOZIAS ELEU",
+      "name_ru": "ДЖОЗИАС ЕЛЕУ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1169009723",
+      "name_lat": "DZHANGO NIK MORTON",
+      "name_ru": "Джанго Ник Мортон",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1942594970",
       "name_lat": "DZHANIKO EXTRA (M)",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "BELGIAN SHEPHERD DOG MALINOIS",
       "total_shows": 6,
-      "competition_dog_id": 7726
+      "competition_dog_id": null
     },
     {
-      "id": "193418383",
-      "name_lat": "DZAYHO DZETEY",
-      "name_ru": "",
+      "id": "1939607418",
+      "name_lat": "DZEMBI TSUNADE",
+      "name_ru": "ДЗЕМБИ ЦУНАДЭ",
       "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1294971419",
+      "name_lat": "DZHERNEL CHERNYY LEKSUS-II",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1177711356",
+      "id": "1103065976",
       "name_lat": "DZHIL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1640500323",
+      "id": "861831183",
       "name_lat": "DZHOILI RODZHERS STEFANY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3757,6 +4048,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "257319723",
+      "name_lat": "DZHERMANOTTA ROYALS TIME IS MONEY",
+      "name_ru": "",
+      "breed": "ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "218145872",
       "name_lat": "DZHERMANOTTA ROYALS ERIKA YARKAYA BABOCHKA",
       "name_ru": "",
@@ -3766,19 +4066,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1621223246",
-      "name_lat": "DZKHEUS' VALETTA",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1124637599",
+      "id": "1635708435",
       "name_lat": "DZHOILI RODZHERS SARABI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3793,10 +4084,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "273249542",
+      "id": "711600282",
       "name_lat": "DZHORZH-MERILIN ALWAYS WITH ME",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3811,10 +4102,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1877954742",
+      "id": "1277055509",
       "name_lat": "DZHOKER VON DEUTSCHEM BODEM (Изменено по решению ВК от 27.02.2024 В. 57)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -3838,12 +4129,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "781136588",
-      "name_lat": "DZHUNIOR REIDZHER TERRA INCOGNITO",
+      "id": "74284302",
+      "name_lat": "DZEMBI OZZI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "СИБА / SHIBA",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3856,19 +4147,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1668768735",
+      "id": "770524223",
       "name_lat": "DZHEKSON REMI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "800728991",
+      "id": "1937670599",
       "name_lat": "DZHODI STELLA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "ЦВЕРГШНАУЦЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3892,15 +4183,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "31851522",
-      "name_lat": "DZHERNEL RA-GORAKHTI KHRAMA SOLNTSA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "623913708",
       "name_lat": "DZHULIYA MECHTA KAVALEROV",
       "name_ru": "",
@@ -3910,12 +4192,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "313236622",
-      "name_lat": "DZHIYA",
+      "id": "649056628",
+      "name_lat": "DZHUMANJI GOSPOZHA UDACHA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3928,12 +4209,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "734804831",
+      "id": "887964366",
       "name_lat": "DZERMANOTTA ROYALS ITRIS IMAGE MAKER",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "274097255",
+      "name_lat": "DZHUNI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3946,19 +4236,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1730941531",
-      "name_lat": "DZHALIS TOUR EN L”AIR",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1070315742",
+      "id": "102257306",
       "name_lat": "DZHENIVEL STYLE INNAMORATO BEBI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3966,19 +4247,19 @@
     {
       "id": "409256731",
       "name_lat": "DZHANA-DZHAN YASMINA KATERI",
-      "name_ru": "",
+      "name_ru": "ДЖАНА-ДЖАН ЯСМИНА КАТЕРИ",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1774049035",
-      "name_lat": "DZHOZIAS ELEU",
+      "id": "950774377",
+      "name_lat": "DZHERMANOTTA ROYALS JENNEJ TALISMAN OF A MILLIONARE",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 8,
+      "breed": "ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3991,10 +4272,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "252011720",
+      "id": "1053785111",
       "name_lat": "DZHERSI IZ SIBIRSKOY GLUBINKI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -4009,10 +4290,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1908490626",
+      "id": "583603649",
       "name_lat": "DZHASSTA PILLAR",
       "name_ru": "",
-      "breed": "TERRIER WIRE ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4027,15 +4308,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1381047139",
-      "name_lat": "DZHU LIDZHUAN STEFFI",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "49119270",
       "name_lat": "DZHERNEL ZHELANNYY PRIZ",
       "name_ru": "",
@@ -4045,10 +4317,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "696585445",
+      "id": "226540217",
       "name_lat": "DZHENIVEL STYLE UNGARO PATI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ФАНТОМ) ЧЁРНЫЙ С ПОДПАЛОМ той",
+      "breed": "ПУДЕЛЬ ФАНТОМ) ЧЕРНЫЙ С ПОДПАЛОМ той",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4072,15 +4344,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "870510996",
-      "name_lat": "DZHOZIAS BLACKBERY",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "51683059",
       "name_lat": "DZHONI",
       "name_ru": "",
@@ -4090,21 +4353,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1919015945",
+      "id": "1465545037",
       "name_lat": "DZHIMIS KNIGHT OF MY HEART FO IST WIND",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "ПЕМБРОК ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1849724506",
-      "name_lat": "DZHERMANOTTA ROYALS TIME IS MONEY",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "id": "1329996638",
+      "name_lat": "DZHALIKA MONRO",
+      "name_ru": "ДЖАЛИКА МОНРО",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -4117,19 +4380,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "601228148",
-      "name_lat": "DZHORZH-MERILIN ONE MORE LIGHT",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "id": "275704093",
+      "name_lat": "DZHOZIAS IGNAT",
+      "name_ru": "ДЖОЗИАС ИГНАТ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1169009723",
-      "name_lat": "DZHANGO NIK MORTON",
+      "id": "788801512",
+      "name_lat": "DZHORZH-MERILIN ONE MORE LIGHT",
       "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -4144,6 +4407,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "569323981",
+      "name_lat": "DZHUNA VOSKHODYASHCHAYA ZVEZDA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1153112931",
       "name_lat": "DZHESSI DENTA SPABERLEND",
       "name_ru": "",
@@ -4153,19 +4425,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1035142359",
-      "name_lat": "DZHUNA VOSKHODYASHCHAYA ZVEZDA",
+      "id": "36053955",
+      "name_lat": "DZEO EVATORI",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "768560865",
+      "id": "9314988",
+      "name_lat": "DZHORDANI KURAZH",
+      "name_ru": "ДЖОРДАНИ КУРАЖ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "609019044",
       "name_lat": "DZHERMANOTTA ROYALS EXOTIC EMPEROR",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4189,6 +4470,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "823704851",
+      "name_lat": "DZHOVIZ DAKOTA",
+      "name_ru": "ДЖОВИЗ ДАКОТА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "192431116",
+      "name_lat": "DZHERNEL MALEFISENTA",
+      "name_ru": "ДЖЕРНЕЛ МАЛЕФИСЕНТА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146951930",
+      "name_lat": "DZINDZER ALE OT NEVSKOGO DUETA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1217714344",
       "name_lat": "DZHASTIN",
       "name_ru": "",
@@ -4202,6 +4510,15 @@
       "name_lat": "DZHENIVEL STYLE DZHORDZHIO ARMANI AYS FRESH",
       "name_ru": "",
       "breed": "ПУДЕЛЬ FCI ОКРАСОВ (АРЛЕКИН И",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "188552026",
+      "name_lat": "DZHERNEL ZABAVNAYA KRASOTKA",
+      "name_ru": "ДЖЕРНЕЛ ЗАБАВНАЯ КРАСОТКА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4270,6 +4587,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1316952698",
+      "name_lat": "DZHESSAMINA BLUM SHINY LORA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1910838807",
       "name_lat": "DZEMBI GOLDI",
       "name_ru": "",
@@ -4279,21 +4605,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1311449806",
-      "name_lat": "DZHAIANTI TO SAISHN",
+      "id": "1411964807",
+      "name_lat": "DZHORGE CLOONEY YANGER",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "628849442",
-      "name_lat": "DZHERMANOTTA ROYALS JENNEJ TALISMAN OF A MILLIONARE",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -4306,10 +4623,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "283552415",
-      "name_lat": "DZHOILI RODZHERS NICE- LOOKING PRINCESS",
+      "id": "938539745",
+      "name_lat": "DZHOILI RODZHERS NICE-LOOKING PRINCESS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4324,10 +4641,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1445085918",
+      "id": "55026219",
       "name_lat": "DZHERMANOTTA ROYALS MONA LISA MASTERPIECE",
       "name_ru": "",
-      "breed": "СПАНИЕЛЬ-ПАПИЙОН",
+      "breed": "ХОХЛАТАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4342,21 +4659,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1739555697",
+      "name_lat": "DZHERNEL IV SEN-LORAN",
+      "name_ru": "ДЖЕРНЕЛ ИВ СЕН-ЛОРАН",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1142915808",
       "name_lat": "DZHERNEL HAIK",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1134021298",
-      "name_lat": "DZHUTA HAUS LOTSO TAN",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4396,15 +4713,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "949631656",
-      "name_lat": "DZHEFFRI KEYN",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1050259817",
       "name_lat": "DZEMBI DAION",
       "name_ru": "",
@@ -4414,10 +4722,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "401756004",
+      "id": "1314446830",
       "name_lat": "DZHIMIS HAIL NEW STAR AT SHOU TAUN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4450,28 +4758,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1316952698",
-      "name_lat": "DZHESSAMINA BLUM SHINY LORA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "735995238",
+      "id": "1778712264",
       "name_lat": "DZHASSTA MORTIMER",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "193964913",
+      "id": "1000440007",
       "name_lat": "DZHENTELMEN UDACHI",
       "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4486,10 +4785,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "643736597",
+      "id": "393821882",
       "name_lat": "DZHENIVEL STYLE PATRISSIYA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4522,19 +4821,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1791375495",
+      "id": "1109651734",
       "name_lat": "DZHESSIKA MALENKAIA PRINTSESSA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "796240558",
-      "name_lat": "DZHERNEL EDVARD ROCHESTER",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4558,19 +4848,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "503814308",
-      "name_lat": "DZUTA HAUS VITO CORLEONE",
+      "id": "1730721777",
+      "name_lat": "DZHOILI RODZHERS ROMANTIK",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH BULLDOG",
+      "breed": "СИЛИХЕМ ТЕРЬЕР) / SCOTTISH",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1730721777",
-      "name_lat": "DZHOILI RODZHERS ROMANTIK",
+      "id": "503814308",
+      "name_lat": "DZUTA HAUS VITO CORLEONE",
       "name_ru": "",
-      "breed": "СИЛИХЕМ ТЕРЬЕР) / SCOTTISH",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH BULLDOG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4639,15 +4929,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "275704093",
-      "name_lat": "DZHOZIAS IGNAT",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "265527450",
       "name_lat": "DZHINKO SMOLLIS-SAN",
       "name_ru": "",
@@ -4684,10 +4965,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1285288599",
+      "id": "1824443176",
       "name_lat": "DZHENIVEL STYLE ORIENTAL PRINTSESS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4702,30 +4983,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1299654116",
+      "id": "1482153336",
       "name_lat": "DZHORZH-MERILIN SHOW TIME",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "253439587",
+      "id": "512332015",
       "name_lat": "DZHENIVEL STYLE IV SENT LORAN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1999680352",
+      "name_lat": "DZHEYN MORTON SAMANTA",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "147213376",
       "name_lat": "DZHOZEFINA IMPERATRITSA",
-      "name_ru": "",
+      "name_ru": "ДЖОЗЕФИНА ИМПЕРАТРИЦА",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -4743,7 +5032,7 @@
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
-      "total_shows": 2,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -4756,19 +5045,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "29431960",
-      "name_lat": "DZHERNEL ANITA VONG",
+      "id": "549358783",
+      "name_lat": "DZHINDZHER LAV LAV MI OT KRISTALLA ARIANY",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1930434715",
-      "name_lat": "DZHINDZHER LAV LAV MI OT KRISTALLA ARIANY",
+      "id": "29431960",
+      "name_lat": "DZHERNEL ANITA VONG",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4783,10 +5072,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "394788123",
+      "id": "172949159",
       "name_lat": "DZHENIVEL STYLE ADRIAN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4796,6 +5085,15 @@
       "name_lat": "DZHENA FRONT OVERLI",
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1830560289",
+      "name_lat": "DZHERNEL YULANA STAR",
+      "name_ru": "ДЖЕРНЕЛ ЮЛАНА СТАР",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4828,12 +5126,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "959679820",
+      "id": "121062185",
       "name_lat": "DZHERMANOTTA ROYALS JAGUSS WISE",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1930597020",
+      "name_lat": "DZHOILI RODZHERS ANGEL",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -4842,6 +5148,23 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146983970",
+      "name_lat": "DZHERNEL PITER BLEK KING",
+      "name_ru": "ДЖЕРНЕЛ ПИТЕР БЛЭК КИНГ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "824197914",
+      "name_lat": "DZHERMANOTTA ROYALS ZIRCON ADMIRAL",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -4864,19 +5187,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "146983970",
-      "name_lat": "DZHERNEL PITER BLEK KING",
+      "id": "1177546023",
+      "name_lat": "DZHEN",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "79231733",
+      "id": "178684850",
       "name_lat": "DZHERMANOTTA ROYALS JE T’AIME",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4891,10 +5213,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "448330821",
+      "id": "414540616",
       "name_lat": "DZHOKONDA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4909,10 +5231,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "676601312",
+      "id": "1889982642",
       "name_lat": "DZHERI LI",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4936,10 +5258,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "743111037",
+      "id": "626133730",
       "name_lat": "DZHIMIS MYSTERIOUS STAR",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4959,6 +5281,14 @@
       "name_ru": "",
       "breed": "PINSCHER",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "786950766",
+      "name_lat": "DZHOZIAS BANDERAS LUCKY",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4990,19 +5320,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "220254850",
-      "name_lat": "DZHOANA LAMOND LUMLEY",
-      "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "683973019",
+      "id": "769388863",
       "name_lat": "DZHASSTA GRACE GIPSY",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5017,19 +5338,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "465331693",
+      "id": "397294687",
       "name_lat": "DZASSTA SEN SIMONA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1862242273",
+      "id": "314077841",
       "name_lat": "DZHIMIS KROWNPRINCESS FOR DEVALENS",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5044,6 +5365,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "986778907",
+      "name_lat": "DZHEUS MY LOVE",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "359961852",
       "name_lat": "DZHAGA-DEY",
       "name_ru": "",
@@ -5053,28 +5383,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "146951930",
-      "name_lat": "DZINDZER ALE OT NEVSKOGO DUETA",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "195804553",
+      "id": "273576817",
       "name_lat": "DZHOLLI BLEIZ ORIENTAL PRINCESS",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "738719652",
+      "id": "1479070486",
       "name_lat": "DZHASSTA YUNITI YUNIT",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5089,10 +5410,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "11678866",
+      "id": "806316659",
       "name_lat": "DZHAKOBA RIKO DZHULIO",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5116,15 +5437,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "247532497",
-      "name_lat": "DZHERNEL FREDERICK MARLEN",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "454883376",
       "name_lat": "DZHUTA HAUS ROSE L'AIMANTE",
       "name_ru": "",
@@ -5134,10 +5446,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "516581413",
+      "id": "1885626057",
       "name_lat": "DZHORZH-MERILIN TEMPTATION",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5161,21 +5473,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1411964807",
-      "name_lat": "DZHORGE CLOONEY YANGER",
+      "id": "97219353",
+      "name_lat": "DZHILOLA VON ZALEVSKI",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1881801404",
-      "name_lat": "DZHILOLA VON ZALEVSKI",
+      "id": "1496551930",
+      "name_lat": "DZHASTIN",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -5215,37 +5527,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "347871674",
-      "name_lat": "DZHIEYI LANFEN IZ DOMA USHKOVOY",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1125299318",
+      "id": "555681813",
       "name_lat": "DZHALIS SIRIN LYRA BELACQUA",
       "name_ru": "",
-      "breed": "КОКЕР ЛЕГАВАЯ",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1801620742",
+      "id": "1103815039",
       "name_lat": "DZHUDI AYKEN",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "911712836",
+      "id": "1009691656",
       "name_lat": "DZHENIVEL STYLE ANZHELIS",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "379926837",
+      "name_lat": "DZHERNEL YARA SOLAR",
+      "name_ru": "ДЖЕРНЕЛ ЯРА СОЛАР",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5273,15 +5585,6 @@
       "name_lat": "DZHEIK",
       "name_ru": "",
       "breed": "БУЛЬДОГ / BULLDOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1250871677",
-      "name_lat": "DZHASTIN",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5332,10 +5635,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1464884878",
+      "id": "1807328096",
       "name_lat": "DZHEK",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ КУРЦХААР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5377,10 +5680,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1834853679",
+      "id": "80202280",
       "name_lat": "DZHEKPOT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5512,10 +5815,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1159866361",
+      "id": "1635234541",
       "name_lat": "DZHENIVEL STYLE IMPERATRITSA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5530,10 +5833,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "17901827",
+      "id": "96763147",
       "name_lat": "DZHIMIS FIERY QUEEN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5566,8 +5869,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1730512111",
-      "name_lat": "DZHALILYA EMIL- BAY",
+      "id": "968995493",
+      "name_lat": "DZHALILYA EMIL-BAY",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -5575,10 +5878,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1565073001",
+      "id": "1135824628",
       "name_lat": "DZHUBATUS LEONI LIMBA",
       "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР /",
+      "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5620,15 +5923,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1739555697",
-      "name_lat": "DZHERNEL IV SEN-LORAN",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "60987507",
       "name_lat": "DZHZHENIFER ABSOLYUT MARVEL",
       "name_ru": "",
@@ -5653,6 +5947,15 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "145286977",
+      "name_lat": "DZHIMIS CASKAD OF STARS",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "COLLIE ROUGH",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -5692,15 +5995,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "986778907",
-      "name_lat": "DZHEUS MY LOVE",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1421269121",
       "name_lat": "DZHEMMARII FIRE FLASH",
       "name_ru": "",
@@ -5716,6 +6010,14 @@
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1207383100",
+      "name_lat": "DZHERMANOTTA ROYALS FRENCH CHIC",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -5746,12 +6048,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "237392723",
-      "name_lat": "DZHESS MAY DRINS",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "id": "342090757",
+      "name_lat": "DZHERNEL POLLI PRINTSESS KOLOR NAYT",
+      "name_ru": "ДЖЕРНЕЛ ПОЛЛИ ПРИНЦЕСС КОЛОР НАЙТ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1692725627",
+      "name_lat": "DZHANA-DZHAN YAFFA ROBERTA VI GRANDI",
+      "name_ru": "ДЖАНА-ДЖАН ЯФФА РОБЕРТА ВИ ГРАНДИ",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -5773,10 +6083,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1141780069",
+      "id": "1992475154",
+      "name_lat": "DZINRAY",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "514569208",
       "name_lat": "DZHERMANOTTA ROYALS PRADA VIP STYLE",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5784,24 +6102,6 @@
     {
       "id": "968970671",
       "name_lat": "DZHANA-DZHAN YAPPI JARKIJ",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1199631664",
-      "name_lat": "DZHERNEL POLLI PRINTSESS KOLOR NAYT",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1692725627",
-      "name_lat": "DZHANA-DZHAN YAFFA ROBERTA VI GRANDI",
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
@@ -5827,10 +6127,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1755739310",
+      "id": "319367835",
       "name_lat": "DZANIKO BIBIKING DLYA OSO DE MIEL",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "SCHIPPERKE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5863,28 +6163,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "498878411",
-      "name_lat": "DZHORZH- MERILIN MY DREAM",
+      "id": "187303465",
+      "name_lat": "DZHORZH-MERILIN MY DREAM",
       "name_ru": "",
       "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "36053955",
-      "name_lat": "DZEO EVATORI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1830341335",
-      "name_lat": "DZHORDANI KURAZH",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5926,33 +6208,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1939607418",
-      "name_lat": "DZEMBI TSUNADE",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "39028976",
-      "name_lat": "DZEMBI FUDZIKO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "274097255",
-      "name_lat": "DZHUNI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1685753869",
       "name_lat": "DZHASSTA ZIMNYAYA ZVEZDA",
       "name_ru": "",
@@ -5962,37 +6217,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1102035347",
+      "id": "1495927498",
       "name_lat": "DZHON SO IZ STAROY SHUI",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "940999856",
+      "id": "146375617",
       "name_lat": "DZASSTA RUSSIAN RUMBA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1675253859",
-      "name_lat": "DZHASSTA LARRY LARS",
+      "id": "1269129681",
+      "name_lat": "DZHEYSON SHARK",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1326266369",
-      "name_lat": "DZHEYSON SHARK",
+      "id": "1946758167",
+      "name_lat": "DZHASSTA LARRY LARS",
       "name_ru": "",
-      "breed": "СПРИНГЕР- ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6025,12 +6280,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "192431116",
-      "name_lat": "DZHERNEL MALEFISENTA",
-      "name_ru": "",
+      "id": "215109498",
+      "name_lat": "DZHERNEL CHERNAYA STAL",
+      "name_ru": "ДЖЕРНЕЛ ЧЕРНАЯ СТАЛЬ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -6039,15 +6294,6 @@
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "IRISH RED SETTER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1086747261",
-      "name_lat": "DZHEMMARI CHIP TAYUR",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -6085,6 +6331,32 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1634905447",
+      "name_lat": "DZHOVIZ HADSON",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1278351745",
+      "name_lat": "DZEMBI ANKAN",
+      "name_ru": "ДЗЕМБИ АНКАН",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1343421481",
+      "name_lat": "DZEMBI KERUMI",
+      "name_ru": "ДЗЕМБИ КЕРУМИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -6133,19 +6405,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1278351745",
-      "name_lat": "DZEMBI ANKAN",
+      "id": "454527199",
+      "name_lat": "DZHEKI AJVORI-BLEJZBEST",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "43601010",
-      "name_lat": "DZHEKI AJVORI- BLEJZBEST",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ (КУРЦХААР)",
+      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6214,39 +6477,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1830560289",
-      "name_lat": "DZHERNEL YULANA STAR",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "823704851",
-      "name_lat": "DZHOVIZ DAKOTA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "77269358",
       "name_lat": "DZHUTA HAUS ZHUMI DE CHRIS",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "269311154",
-      "name_lat": "DZHOVIZ MISTER TVISTER",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -6286,6 +6522,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1624707615",
+      "name_lat": "DZHEY TI PANSY PARKINSON",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "703310460",
+      "name_lat": "D ZHAKKARD ERBEN",
+      "name_ru": "",
+      "breed": "РСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "57280477",
       "name_lat": "DZHERMANOTTA ROYALS GREATEST THING",
       "name_ru": "",
@@ -6295,10 +6549,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1674677083",
+      "id": "527433343",
       "name_lat": "DZHASSTA TSERTSEYA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6313,12 +6567,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1624707615",
-      "name_lat": "DZHEY TI PANSY PARKINSON",
+      "id": "981728362",
+      "name_lat": "DZHOKONDA DAR KRASOTY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ",
-      "breed_en": "",
+      "breed": "DOGUE DE",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "449610983",
+      "name_lat": "DZHOKER IZ BELOGO JARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -6331,12 +6593,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "295278712",
-      "name_lat": "DZHOKER IZ BELOGO JARA",
+      "id": "865823404",
+      "name_lat": "DZHALIS GENIALNIY GROSSMEISTER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -6349,21 +6611,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1771020980",
-      "name_lat": "DZHALIS GENIALNIY GROSSMEISTER",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "id": "1823104418",
+      "name_lat": "DZHOVIZ ZHGUCHIY PERCHIK",
+      "name_ru": "ДЖОВИЗ ЖГУЧИЙ ПЕРЧИК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1823104418",
-      "name_lat": "DZHOVIZ ZHGUCHIY PERCHIK",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "1325634732",
+      "name_lat": "DZHUNA IZ DOMA LIDZHUAN",
+      "name_ru": "ДЖУНА ИЗ ДОМА ЛИДЖУАН",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -6373,15 +6635,6 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "74284302",
-      "name_lat": "DZEMBI OZZI",
-      "name_ru": "",
-      "breed": "СИБА / SHIBA",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -6421,10 +6674,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "442992615",
+      "id": "788162070",
       "name_lat": "DZHOVIZ KORITSA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6439,21 +6692,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "395910836",
-      "name_lat": "DZHIMIS ONLY FOR MY SOUL",
+      "id": "666778079",
+      "name_lat": "DZHIMIS HAPPY MELODY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "145286977",
-      "name_lat": "DZHIMIS CASKAD OF STARS",
+      "id": "119748126",
+      "name_lat": "DZHIMIS ONLY FOR MY SOUL",
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
-      "breed_en": "COLLIE ROUGH",
-      "total_shows": 5,
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -6461,15 +6713,6 @@
       "name_lat": "DZHEM",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "215735011",
-      "name_lat": "DZHOZIAS SAINA",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6484,6 +6727,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1559022538",
+      "name_lat": "DZHOZIAS SAINA",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1139601656",
       "name_lat": "DZHERNEL CHER NIKA",
       "name_ru": "",
@@ -6493,19 +6745,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1329996638",
-      "name_lat": "DZHALIKA MONRO",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "467357824",
+      "id": "101565222",
       "name_lat": "DZHUDI FOM GRUNEN STADT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6520,10 +6763,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1551607990",
-      "name_lat": "DZHERMANOTTA ROYALS FRENCH CHIC",
+      "id": "948639270",
+      "name_lat": "DZHUTA HAUS YALTA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -6547,10 +6790,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "948639270",
-      "name_lat": "DZHUTA HAUS YALTA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "id": "24929343",
+      "name_lat": "DZHERNEL PAKO PERVYY",
+      "name_ru": "ДЖЕРНЕЛ ПАКО ПЕРВЫЙ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "106216471",
+      "name_lat": "DZEMBI KIMMI",
+      "name_ru": "ДЗЕМБИ КИММИ",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -6610,10 +6862,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1602637390",
-      "name_lat": "DZHOKONDA S SEVERNOY ZEMLI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "id": "37652743",
+      "name_lat": "DZHANI TOM FORD VERSACHE",
+      "name_ru": "ДЖАНИ ТОМ ФОРД ВЕРСАЧЕ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -6664,37 +6916,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1598093625",
+      "id": "238399748",
       "name_lat": "DZHOKONDA POLYARNAYA SKAZKA",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1343421481",
-      "name_lat": "DZEMBI KERUMI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "550730220",
+      "id": "1221008224",
       "name_lat": "DZHOILI RODZHERS SHOW MUST GO ON",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "24929343",
-      "name_lat": "DZHERNEL PAKO PERVYY",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6709,10 +6943,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "106216471",
-      "name_lat": "DZEMBI KIMMI",
+      "id": "1138972238",
+      "name_lat": "DZHUL'YETTA IZ MOYEY MECHTY",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6727,19 +6961,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "233176264",
+      "id": "1580324461",
       "name_lat": "DZHORDZH ORUELL",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1517758627",
+      "id": "1855556492",
       "name_lat": "DZHIMIS INFINITY EMPIRE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6763,10 +6997,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1544257984",
+      "id": "634999182",
       "name_lat": "DZHADA BESSTRASHNAYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6776,24 +7010,6 @@
       "name_lat": "DZHUTA HAUS AYVA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1861821201",
-      "name_lat": "DZHUL'YETTA IZ MOYEY MECHTY",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1222469881",
-      "name_lat": "DZHOKONDA DREAMS COME TRUE",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6817,10 +7033,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "427831130",
+      "id": "1392349157",
+      "name_lat": "DZHAKONDA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "836928559",
       "name_lat": "DZHERALD",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6862,10 +7087,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "615205599",
+      "id": "841666227",
       "name_lat": "DZHEY LO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6925,11 +7150,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1766825134",
-      "name_lat": "DZEMBI BERTI",
+      "id": "1729081041",
+      "name_lat": "DZHOKONDA IZ LIGI CHEMPIONOV",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "81420350",
+      "name_lat": "DZHALIS CHEZA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6939,15 +7173,6 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1729081041",
-      "name_lat": "DZHOKONDA IZ LIGI CHEMPIONOV",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -7051,10 +7276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1784874665",
+      "id": "1548745012",
       "name_lat": "DZHENIVEL STYLE ZIGZAG UDACHI",
       "name_ru": "",
-      "breed": "ФАНТОМ МИНИАТЮРНЫЙ /",
+      "breed": "ФАНТОМ МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7083,6 +7308,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "992336561",
+      "name_lat": "DZHAMILYA GULI",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -7132,10 +7365,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1368343729",
+      "id": "748879829",
       "name_lat": "DZHOILI RODZHERS CHERRUTI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7168,10 +7401,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "214120468",
+      "id": "1903975858",
       "name_lat": "DZHULETTA KAPULETTI NEZHNAYA DEVA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7204,10 +7437,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1325634732",
-      "name_lat": "DZHUNA IZ DOMA LIDZHUAN",
+      "id": "720747093",
+      "name_lat": "DZHUDI BLACK MAGIC",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7231,15 +7464,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "723349082",
-      "name_lat": "DZHERNEL YUKI SIA INZHI",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "651792980",
       "name_lat": "DZHALIS RENESMEE ANGEL",
       "name_ru": "",
@@ -7249,19 +7473,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "720186725",
+      "id": "1598087928",
       "name_lat": "DZHERNEL VIKING NEUSTRASHIMYY",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1865796810",
-      "name_lat": "DZHERMANOTTA ROYALS ZIRCON ADMIRAL",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ – ПАПИЙОН",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7271,15 +7486,6 @@
       "name_lat": "DZHERALDINA IZ POMESTIYA ROMANOVYKH",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1752870670",
-      "name_lat": "DZHALIS CHEZA",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7303,10 +7509,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "3294895",
+      "id": "941941886",
       "name_lat": "DZHORZH-MERILIN DEPECHE MODE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "425451704",
+      "name_lat": "DZHESIKA BLEK MEDZHIK",
+      "name_ru": "ДЖЕСИКА БЛЕК МЕДЖИК",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "213471004",
+      "name_lat": "DZHI DZHI KLASS GOSPOZHA UDACHI",
+      "name_ru": "ДЖИ ДЖИ КЛАСС ГОСПОЖА УДАЧИ",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7321,19 +7545,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "303888062",
+      "id": "39355622",
       "name_lat": "DZHOKONDA DLYA RADUZHNOJ PALITRY",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1828507258",
-      "name_lat": "DZHUDI BLACK MAGIC",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7375,37 +7590,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1392349157",
-      "name_lat": "DZHAKONDA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "154067498",
-      "name_lat": "DZHAKONDA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1101916656",
       "name_lat": "DZHAMAL",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "250846809",
-      "name_lat": "DZHASTIN",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙДОГ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7447,10 +7635,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "563990285",
+      "id": "550200609",
       "name_lat": "DZHEDAJ",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ / FOX",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш / FOX",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7506,6 +7694,22 @@
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ / TIBETAN",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "817672329",
+      "name_lat": "DZHIN FENG",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1485731686",
+      "name_lat": "DZHESIKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7681,10 +7885,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1946869212",
+      "id": "687550073",
       "name_lat": "DZHERI LI",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7735,10 +7939,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1069285960",
+      "id": "1371790453",
       "name_lat": "DZHORDZH",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7780,10 +7984,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "469063618",
+      "id": "48865086",
       "name_lat": "DZHINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7802,6 +8006,24 @@
       "name_lat": "DZHEKPOT",
       "name_ru": "",
       "breed": "RUSSIAN TOY LONG-",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1682577580",
+      "name_lat": "DZHOY LOKKI SHAYN",
+      "name_ru": "",
+      "breed": "ТАКСА ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "791054945",
+      "name_lat": "DZHALIS GRANDIOSNIY USPEH",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8176,10 +8398,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1018423039",
+      "id": "1625500398",
       "name_lat": "DZHESIKA BEAUTY",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8221,11 +8443,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "330446885",
+      "name_lat": "DZHULIANA TAN CHRISTE",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1983513929",
       "name_lat": "DZHEMMA KEMAZ",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1230803111",
+      "name_lat": "DZHAN DANIELLA VELIKAYA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1920219699",
+      "name_lat": "DZHIMIS FLOWER OF BLACKE",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8239,37 +8485,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1723765745",
-      "name_lat": "DZHERNEL CHERNYY LEKSUS- II",
+      "id": "406191204",
+      "name_lat": "DZERNEL MAY'KRIKS CHEMPION KAPUI",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1682577580",
-      "name_lat": "DZHOY LOKKI SHAYN",
-      "name_ru": "",
-      "breed": "ТАКСА ТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "715081263",
+      "id": "822166592",
       "name_lat": "DZHENIVEL STYLE TIANA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "505948663",
-      "name_lat": "DZHERNEL ZABAVNAYA KRASOTKA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР / MINIATURE",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8293,28 +8520,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "426897867",
-      "name_lat": "DZHALIS GRANDIOSNIY USPEH",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1607199703",
       "name_lat": "DZHOVIZ ROUZ TIME OF LOVE",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "425451704",
-      "name_lat": "DZHESIKA BLEK MEDZHIK",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8329,19 +8538,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1737418551",
+      "id": "419851984",
       "name_lat": "DZHOY VOM HAUS KOGOR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "213471004",
-      "name_lat": "DZHI DZHI KLASS GOSPOZHA UDACHI",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8365,15 +8565,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "379926837",
-      "name_lat": "DZHERNEL YARA SOLAR",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "267978179",
       "name_lat": "DZHOKONDA DA VINCI IZ GORODA 312",
       "name_ru": "",
@@ -8392,15 +8583,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "215109498",
-      "name_lat": "DZHERNEL CHERNAYA STAL",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "562052858",
       "name_lat": "DZHERNEL CHYERNAYA KOROLEVA",
       "name_ru": "",
@@ -8410,19 +8592,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1398023615",
+      "id": "486049587",
       "name_lat": "DZHORDANI EVRIKA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "366034560",
+      "id": "1186772433",
       "name_lat": "DZHANA DZHSN",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8464,10 +8646,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1338758624",
+      "id": "485262860",
       "name_lat": "DZHORDZHIYA-II IZ GRADA KATERINY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8536,15 +8718,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "135174846",
-      "name_lat": "DZHANI TOM FORD VERSACHE",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР / MINIATURE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1706065906",
       "name_lat": "DZHULYETTA IZ DOMA KARMANOVOI",
       "name_ru": "",
@@ -8608,10 +8781,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1054596075",
+      "id": "1329729170",
       "name_lat": "DZEMINI RICH AND FAMOS",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8635,11 +8808,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1930597020",
-      "name_lat": "DZHOILI RODZHERS ANGEL",
+      "id": "915035878",
+      "name_lat": "DZHOKONDA FEYA OZERO",
       "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "ENGLISH POINTER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8662,37 +8834,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1488120561",
-      "name_lat": "DZENSAI RADOST ZHIZNI",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1278169330",
-      "name_lat": "DZHOSLIN FANTAGIRO",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "212849977",
       "name_lat": "DZHENIFER PODAROK SUDBY",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "317372653",
-      "name_lat": "DZHORDANI MLADA",
-      "name_ru": "",
-      "breed": "ТАКСА ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "BB",
-  "count": 41,
+  "count": 74,
   "dogs": [
     {
       "id": "407015229",
@@ -10,6 +10,23 @@
       "breed": "КЛАССИК",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "334360961",
+      "name_lat": "B. B. ZHIRINOVSKY",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1781717261",
+      "name_lat": "BB GEORGE VICTORIOUS",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -22,12 +39,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "1781717261",
-      "name_lat": "BB GEORGE VICTORIOUS",
+      "id": "1838395439",
+      "name_lat": "BB. OSCAR",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed": "ПОКЕТ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "60341559",
+      "name_lat": "B.B OSCAR",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1878347683",
+      "name_lat": "B.B WAGNER",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1482079863",
+      "name_lat": "BB WAGNER",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1598797073",
+      "name_lat": "B.B. SICILIAN-MAFIA",
+      "name_ru": "",
+      "breed": "КЛАССИК",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -49,6 +102,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "198109717",
+      "name_lat": "BB. OSCAR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "96058169",
       "name_lat": "BB SHAMAN-GRAY",
       "name_ru": "",
@@ -58,12 +120,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1379243699",
+      "name_lat": "B.B. HANNIBAL LECTER",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1801827774",
       "name_lat": "BB TEGUILA",
       "name_ru": "",
       "breed": "ПОКЕТ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1257565762",
+      "name_lat": "B. B. CRAB",
+      "name_ru": "",
+      "breed": "ПОКЕТ / AMERICAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1491824472",
+      "name_lat": "B.B. DEL SOCCORSO",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР К-Ш",
+      "breed_en": "ST. BERNARD SHORT HAIRED",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -72,7 +161,16 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "307636925",
+      "name_lat": "BB WAGNER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -82,6 +180,14 @@
       "breed": "ПОКЕТ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "287559082",
+      "name_lat": "BB FINIK",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -121,6 +227,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "953179799",
+      "name_lat": "BB MARSEL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1830997377",
+      "name_lat": "BB ZEFIR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1967533087",
       "name_lat": "BB WAGNER",
       "name_ru": "",
@@ -130,12 +253,63 @@
       "competition_dog_id": null
     },
     {
-      "id": "1933673172",
+      "id": "1637432015",
+      "name_lat": "B. B. CRAB",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1507865627",
+      "name_lat": "BB GREY WALL CONCRETE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "624641639",
+      "name_lat": "BB CASPER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1564087761",
+      "name_lat": "B.B. JESSIE PARKET",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1147842350",
+      "name_lat": "BB SEVER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1882771791",
       "name_lat": "BB ZEFIR",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ /",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1065108370",
+      "name_lat": "BB BONAPART",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -148,6 +322,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "158727114",
+      "name_lat": "BB TEGUILA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "125749306",
       "name_lat": "BB SMOKY",
       "name_ru": "",
@@ -157,12 +340,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "287559082",
-      "name_lat": "BB FINIK",
+      "id": "1619997275",
+      "name_lat": "BB TUNDRA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1479478392",
+      "name_lat": "BB SEVER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1003002709",
+      "name_lat": "BB TUNDRA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -175,17 +374,33 @@
       "competition_dog_id": null
     },
     {
-      "id": "1882771791",
-      "name_lat": "BB ZEFIR",
+      "id": "1754534324",
+      "name_lat": "B.B OSCAR",
+      "name_ru": "",
+      "breed": "ПОКЕТ / AMERICAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "571662546",
+      "name_lat": "BB MARSEL",
+      "name_ru": "",
+      "breed": "КЛАССИК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1269795303",
+      "name_lat": "BB SAMBUCA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "158727114",
-      "name_lat": "BB TEGUILA",
+      "id": "1866798845",
+      "name_lat": "B.B OSCAR",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
@@ -193,10 +408,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "953179799",
-      "name_lat": "BB MARSEL",
+      "id": "490674157",
+      "name_lat": "BB WADDLES",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "73143820",
+      "name_lat": "BB TEGUILA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1320550601",
+      "name_lat": "BB ZHIRINOVSKY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1149342001",
+      "name_lat": "B.B WAGNER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1544174316",
+      "name_lat": "B-BELLA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -217,6 +467,24 @@
       "breed": "AMERICAN BULLY POCKET",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1159275934",
+      "name_lat": "B.B.LOKI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "430822488",
+      "name_lat": "B.B WAGNER",
+      "name_ru": "",
+      "breed": "ПОКЕТ / AMERICAN",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -274,15 +542,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1320550601",
-      "name_lat": "BB ZHIRINOVSKY",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "647257237",
       "name_lat": "BB.BUZA",
       "name_ru": "",
@@ -292,29 +551,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "490674157",
+      "id": "1600438991",
       "name_lat": "BB WADDLES",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1619997275",
-      "name_lat": "BB TUNDRA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1065108370",
-      "name_lat": "BB BONAPART",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -337,6 +577,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1999445429",
+      "name_lat": "B.B.AIKA",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "66604105",
       "name_lat": "BB CASPER",
       "name_ru": "",
@@ -355,19 +603,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "166764074",
-      "name_lat": "BB ROKY AIKE",
+      "id": "1009469506",
+      "name_lat": "B.B. MATILDA A.",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1507865627",
-      "name_lat": "BB GREY WALL CONCRETE",
+      "id": "795663706",
+      "name_lat": "BB BREAKFAST AT TIFFANY'S",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "443114048",
+      "name_lat": "B. B. BELLATRIX LESTRANGE",
+      "name_ru": "",
+      "breed": "ПОКЕТ / AMERICAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1122552546",
+      "name_lat": "B. B. TAISEA BLUMM",
+      "name_ru": "",
+      "breed": "ПОКЕТ / AMERICAN BULLY",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "682528746",
+      "name_lat": "B.B. LOUIS VUITTON",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "166764074",
+      "name_lat": "BB ROKY AIKE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

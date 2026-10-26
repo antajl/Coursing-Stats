@@ -1,33 +1,33 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "VL",
-  "count": 430,
+  "count": 431,
   "dogs": [
     {
-      "id": "89325463",
+      "id": "1035421360",
       "name_lat": "VLYUBIT'SYA RAZ I NAVSEGDA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
-      "total_shows": 48,
+      "total_shows": 62,
       "competition_dog_id": null
     },
     {
-      "id": "1427038859",
-      "name_lat": "VLAST' OGNIA I AM CRAZY",
+      "id": "1719667888",
+      "name_lat": "VLAST' OGNIA I AM CRAZY (LONG COAT)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 46,
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 58,
       "competition_dog_id": null
     },
     {
-      "id": "317291717",
-      "name_lat": "VLAST' OGNIA OSOBO OPASEN",
+      "id": "214918786",
+      "name_lat": "VLAST' OGNIA OSOBO OPASEN (LONG COAT)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 29,
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
@@ -36,7 +36,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 20,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -49,19 +49,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "199578498",
+      "id": "1627465172",
       "name_lat": "VLA'STORS MY BLACK QUEEN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 48,
       "competition_dog_id": null
     },
     {
-      "id": "1147004170",
+      "id": "900959004",
       "name_lat": "VLASTOR'S ESTER",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 27,
       "competition_dog_id": null
@@ -69,28 +69,37 @@
     {
       "id": "1951967698",
       "name_lat": "VLAST DLYA SOKROVISHCHA ROSSII",
-      "name_ru": "",
+      "name_ru": "ВЛАСТЬ ДЛЯ СОКРОВИЩА РОССИИ",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "BULLMASTIFF",
-      "total_shows": 20,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
-      "id": "1112855539",
-      "name_lat": "VLAST'OGNIA STAR TREK",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1978991374",
+      "id": "373460778",
       "name_lat": "VLARIS LINE DZHENSON",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1899160956",
+      "name_lat": "VLAST'OGNIA STAR TREK",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "264411317",
+      "name_lat": "VLADISVET BRILLIANT",
+      "name_ru": "",
+      "breed": "БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -112,10 +121,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "108748785",
+      "id": "755887438",
       "name_lat": "VLAST'OGNIA ONE LOVE",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -130,12 +139,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "264411317",
-      "name_lat": "VLADISVET BRILLIANT",
+      "id": "1533455415",
+      "name_lat": "VLADIMIRSKIY TSENTRAL IZ RUSSKOI DINASTII",
       "name_ru": "",
-      "breed": "БОЛОНКА",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1296023185",
+      "name_lat": "VLAST' OGNIA Y TVOY KYMIR",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -148,12 +166,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1533455415",
-      "name_lat": "VLADIMIRSKIY TSENTRAL IZ RUSSKOI DINASTII",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 15,
+      "id": "34082025",
+      "name_lat": "VLASTELIN UDACHI VAGNER",
+      "name_ru": "ВЛАСТЕЛИН УДАЧИ ВАГНЕР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -162,25 +180,25 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "504655308",
+      "id": "217598794",
       "name_lat": "VLASTOR'S JASMINE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 23,
       "competition_dog_id": null
     },
     {
-      "id": "34082025",
-      "name_lat": "VLASTELIN UDACHI VAGNER",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 27,
+      "id": "1170894475",
+      "name_lat": "VLASTOR'S BIRGITTA",
+      "name_ru": "ВЛАСТОР'С БИРГИТТА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 85,
       "competition_dog_id": null
     },
     {
@@ -207,16 +225,33 @@
       "name_ru": "",
       "breed": "КЛАССИК",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "786200537",
+      "name_lat": "VLADBAGHOUSE ELVIS PRESLEY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1734714768",
       "name_lat": "VLATERFOLG NONNA ASTRID",
-      "name_ru": "",
+      "name_ru": "ВЛАТЕРФОЛЬГ НОННА АСТРИД",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1162645421",
+      "name_lat": "VLASTORS ZHANZHAK",
+      "name_ru": "ВЛАСТОРС ЖАНЖАК",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -238,15 +273,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1719667888",
-      "name_lat": "VLAST' OGNIA I AM CRAZY (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1610441449",
       "name_lat": "VLADIOS VIOL ESMIRALDA",
       "name_ru": "",
@@ -256,37 +282,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "422402364",
-      "name_lat": "VLAST' OGNIA Y TVOY KYMIR",
+      "id": "591482976",
+      "name_lat": "VLASTELINA VASHEGO SERDCA ORNELLA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 14,
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "214918786",
-      "name_lat": "VLAST' OGNIA OSOBO OPASEN (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "487055091",
+      "id": "941320727",
       "name_lat": "VLARIS LINE AYGAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1330675456",
+      "id": "1092312041",
+      "name_lat": "VLASTELIN SERDEC",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "847183146",
+      "name_lat": "VLADBAGHOUSE SIMUANG KHAN",
+      "name_ru": "",
+      "breed": "XL",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56016206",
       "name_lat": "VLASTOR' S ZHARGAL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -301,21 +335,47 @@
       "competition_dog_id": null
     },
     {
+      "id": "1425936361",
+      "name_lat": "VLARIS LINE ZEALOUS FOR LIBERTY",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "941667868",
+      "name_lat": "VLATERFOLG ETTI KHEPPI STAR",
+      "name_ru": "ВЛАТЕРФОЛЬГ ЕТТИ ХЭППИ СТАР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "1028578749",
       "name_lat": "VLATERFOLG DRAGON HEART ( )",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "525858268",
-      "name_lat": "VLASTORS ZHANZHAK",
+      "id": "502503193",
+      "name_lat": "VLAST' OGNIA ARMAGEDDON (LONG COAT)",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1892727325",
+      "name_lat": "VLADI'S MANOR GRETEL",
+      "name_ru": "ВЛАДИ'С МАНОР ГРЕТЭЛЬ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -328,10 +388,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "1160758096",
+      "name_lat": "VLAST' OGNIA YANTARNIY BLESK",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "732595654",
       "name_lat": "VLATERFOLG USE OF VAPONS (к",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "635413139",
+      "name_lat": "VLADBAGHOUSE TAHOE",
+      "name_ru": "",
+      "breed": "XL",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -364,15 +442,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "847183146",
-      "name_lat": "VLADBAGHOUSE SIMUANG KHAN",
-      "name_ru": "",
-      "breed": "XL",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1874794237",
       "name_lat": "VLASTA WHITE STAL ARAGON",
       "name_ru": "",
@@ -387,7 +456,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 45,
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -400,28 +469,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1394236124",
+      "id": "1705725918",
+      "name_lat": "VLATERFOLG AKSIOMA ASKLAND VITA",
+      "name_ru": "ВЛАТЕРФОЛЬГ АКСИОМА АСКЛАНД ВИТА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 45,
+      "competition_dog_id": null
+    },
+    {
+      "id": "183762454",
       "name_lat": "VLAST'OGNIA OSOBO OPASEN",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1981389743",
-      "name_lat": "VLATERFOLG AKSIOMA ASKLAND VITA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 32,
-      "competition_dog_id": null
-    },
-    {
-      "id": "391357843",
+      "id": "1860740252",
       "name_lat": "VLAST' OGNIA ANGEL HRANITEL",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -436,21 +505,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1733329677",
-      "name_lat": "VLARIS LINE ZEALOUS FOR LIBERTY",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "960651317",
       "name_lat": "VLASTELIN UDACHI ELISEY",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 28,
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1878966670",
+      "name_lat": "VLAST' OGNIA BELIEVE IN MAGIK",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -463,19 +532,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "291575159",
+      "id": "82772107",
       "name_lat": "VLARIS LINE DELUXE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "621792432",
+      "id": "1789923710",
       "name_lat": "VLADBOX VIVAT NOCTURNE",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -499,15 +568,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1092312041",
-      "name_lat": "VLASTELIN SERDEC",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1887530499",
       "name_lat": "VLADLENA SUVENIR IRIS NEBESNYJ CVETOK",
       "name_ru": "",
@@ -517,10 +577,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "746353067",
+      "id": "1492077677",
+      "name_lat": "VLADISVET VESTA",
+      "name_ru": "",
+      "breed": "РУССКАЯ ЦВЕТНАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "99995522",
+      "name_lat": "Vlast' Ot Filippovoy",
+      "name_ru": "ВЛАСТЬ ОТ ФИЛИППОВОЙ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "50652628",
       "name_lat": "VLASTELINA / LONG COAT",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -544,15 +621,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "635413139",
-      "name_lat": "VLADBAGHOUSE TAHOE",
-      "name_ru": "",
-      "breed": "XL",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "110130897",
       "name_lat": "VLADIELI NEVER GIVE UP",
       "name_ru": "",
@@ -562,30 +630,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "13212528",
+      "id": "1977968701",
       "name_lat": "VLAST' OGNIA CHERRI KISSLILAC ELF",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "294797048",
-      "name_lat": "VLADI'S MANOR GRETEL",
+      "id": "1405258692",
+      "name_lat": "VLASTELIN MOEGO SERDTSA ANSELMO (D-SH)",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "36565561",
-      "name_lat": "VLASTELIN MOEGO SERDTSA ANSELMO (D- SH)",
+      "id": "1921008677",
+      "name_lat": "VLATERFOLG KARTE BLANCHE (N/B)",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 50,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1307883096",
+      "name_lat": "VLATERFOLG BELLA VITA ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -607,12 +684,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "185922885",
-      "name_lat": "VLATERFOLG BELLA VITA ( )",
+      "id": "981174256",
+      "name_lat": "VLAST' OGNIA VOSTORG (LONG COAT)",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 32,
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -625,6 +702,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1866621140",
+      "name_lat": "VLADIDOGS KRISTABEL",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
       "id": "1677100083",
       "name_lat": "VLADLIDER EPARKHIYA",
       "name_ru": "",
@@ -634,19 +720,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "593290825",
-      "name_lat": "VLADIDOGS KRISTABEL",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
-      "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "834822952",
+      "id": "1415328436",
       "name_lat": "VLADYCHITSA GREZ IZ CHERNOI DRUZHINY",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -662,7 +739,7 @@
     },
     {
       "id": "1617238434",
-      "name_lat": "VLARIS LINE ELIDEA",
+      "name_lat": "Vlaris Line Elidea",
       "name_ru": "",
       "breed": "СЕРЕБРОМ",
       "breed_en": "",
@@ -670,48 +747,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "1481958065",
-      "name_lat": "VLAST' OGNIA BELIEVE IN MAGIK",
+      "id": "1790150019",
+      "name_lat": "VLAST' OGNIA CASEY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1303029789",
-      "name_lat": "Vlastor’s Birgitta",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1025881467",
-      "name_lat": "VLAD DIAMOND GALATEYA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "981174256",
-      "name_lat": "VLAST' OGNIA VOSTORG (LONG COAT)",
+      "id": "931244017",
+      "name_lat": "Vlastor’s Birgitta",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 4,
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1566535153",
       "name_lat": "VLATERFOLG KARDANO FABIANO",
-      "name_ru": "",
+      "name_ru": "ВЛАТЕРФОЛЬГ КАРДАНО ФАБИАНО",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "436908338",
+      "name_lat": "VLAD DIAMOND GALATEYA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1369747423",
+      "name_lat": "VLADYKA MOSKOVII FORTUNA MOE SOVERSHENSTVO",
+      "name_ru": "ВЛАДЫКА МОСКОВИИ ФОРТУНА МОЕ СОВЕРШЕНСТВО",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -733,6 +810,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1667851684",
+      "name_lat": "VLATERFOLG MIYA",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1592047414",
       "name_lat": "VLASTA WHITE STAL KLEOPATRA",
       "name_ru": "",
@@ -742,19 +828,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1786512639",
+      "id": "730078544",
       "name_lat": "VLASTOR'S DELSON",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1083379285",
+      "id": "273087904",
+      "name_lat": "VLATERFOLG FEHU FEERIYA FORTUNA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1461078394",
       "name_lat": "VLAST' OGNIA RUSH RAKETA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -769,15 +864,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "92219548",
-      "name_lat": "VLAST' OGNIA CASEY",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "298710838",
       "name_lat": "VLADBAGHOUSE NALA",
       "name_ru": "",
@@ -789,10 +875,10 @@
     {
       "id": "1779476163",
       "name_lat": "VLADYKA MIRA OT DREVALLEY",
-      "name_ru": "",
+      "name_ru": "ВЛАДЫКА МИРА ОТ ДРЕВАЛЛЕЙ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -805,15 +891,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "273087904",
-      "name_lat": "VLATERFOLG FEHU FEERIYA FORTUNA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1619876182",
       "name_lat": "VLASTELIN UDACHI JAMAICA",
       "name_ru": "",
@@ -823,12 +900,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "586588669",
+      "id": "949215504",
       "name_lat": "VLATERFOLG EJFELIYA PRADA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1830866414",
+      "name_lat": "VLATERFOLG EMERALD FOX",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -850,24 +936,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1988129631",
-      "name_lat": "VLADISVET VESTA",
-      "name_ru": "",
-      "breed": "БОЛОНКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "130739935",
-      "name_lat": "VLAST' OGNIA YANTARNIY BLESK",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1420099909",
       "name_lat": "VLATERFOLG CHIROKKO VESTA (к/х)",
       "name_ru": "",
@@ -877,10 +945,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "449010236",
+      "id": "51635670",
+      "name_lat": "VLATERFOLG FLAGMAN DE NORD STAR",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "961519578",
       "name_lat": "VLASTOR”S VALENCIA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -895,10 +972,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "648799274",
+      "id": "724212171",
       "name_lat": "VLAST’ OGNYA YUNA (LONG COAT)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -913,10 +990,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "140945128",
+      "id": "1385325709",
       "name_lat": "VLAD DIAMOND IKS",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -949,10 +1026,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "327293152",
+      "id": "1152343982",
       "name_lat": "VLASTOR’S DELSON",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -976,24 +1053,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1170894475",
-      "name_lat": "VLASTOR'S BIRGITTA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "99995522",
-      "name_lat": "Vlast' Ot Filippovoy",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "498670628",
       "name_lat": "VLAD DAIMOND X",
       "name_ru": "",
@@ -1003,12 +1062,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1137000555",
+      "id": "32031226",
       "name_lat": "VLAST OGNIA KANTOR",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "432967063",
+      "name_lat": "VLYUBIT'SYARAZ I NAVSEGDA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1021,30 +1088,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "710821209",
-      "name_lat": "VLATERFOLG MIYA",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1110450977",
       "name_lat": "VLADYKA MOSKOVII ORCHID BLACK FLOWER",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "AUSTRALIAN SHEPHERD",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1588770538",
-      "name_lat": "VLATERFOLG KARTE BLANCHE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 47,
       "competition_dog_id": null
     },
     {
@@ -1089,7 +1138,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 43,
+      "total_shows": 63,
       "competition_dog_id": null
     },
     {
@@ -1102,12 +1151,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "329758312",
+      "id": "1323539469",
       "name_lat": "VLATERFOLG VALLI DEL PASUBIO",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 53,
+      "total_shows": 54,
       "competition_dog_id": null
     },
     {
@@ -1138,11 +1187,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "584563364",
+      "id": "696803713",
       "name_lat": "VLATERFOLG EX ORIENTE LUX",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1974178520",
+      "name_lat": "VLAST' OGNIA SHERIDAN (LONG COAT)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -1174,21 +1232,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "95864374",
+      "id": "46137624",
       "name_lat": "VLASTOR'S VIRGINIA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "478284695",
+      "id": "1395744296",
       "name_lat": "VLAST'OGNIA I AM CRAZY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1201,6 +1259,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "201112889",
+      "name_lat": "VLATERFOLG ZEMLYANIKA YAGODA",
+      "name_ru": "ВЛАТЕРФОЛЬГ ЗЕМЛЯНИКА ЯГОДА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1803557853",
+      "name_lat": "VLADYKA GOR APRIORI ASTERA",
+      "name_ru": "ВЛАДЫКА ГОР АПРИОРИ АСТЕРА",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1824709615",
       "name_lat": "VLASTA WHITE STAL IVAN",
       "name_ru": "",
@@ -1210,39 +1286,48 @@
       "competition_dog_id": null
     },
     {
+      "id": "1318147450",
+      "name_lat": "VLADIMIRA IZ SVITY EKATERINY",
+      "name_ru": "ВЛАДИМИРА ИЗ СВИТЫ ЕКАТЕРИНЫ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "99150844",
+      "name_lat": "VLATERFOLG FOSTERI KING",
+      "name_ru": "ВЛАТЕРФОЛЬГ ФОСТЕРИ КИНГ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
       "id": "677443923",
       "name_lat": "VLATERFOLG VILLAFRANCA TIRRENA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "578457722",
-      "name_lat": "VLASTELIN",
-      "name_ru": "",
-      "breed": "СПРИНГЕР СПАНИЕЛЬ /",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1147224760",
-      "name_lat": "VLADYKA GOR APRIORI ASTERA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "978898035",
+      "id": "12059388",
       "name_lat": "VLAST' OGNIA RIVER DANS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1031476939",
+      "name_lat": "VLASTELIN",
+      "name_ru": "",
+      "breed": "СПРИНГЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1251,14 +1336,22 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1329766112",
+      "id": "877733404",
+      "name_lat": "VLADLIDER NELSON FOR LOVE",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1388299189",
       "name_lat": "VLADYKA MOSKOVII PALOTTA GRACE",
       "name_ru": "",
-      "breed": "БУЛЬМАСТИФ /",
+      "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1300,15 +1393,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "219675987",
-      "name_lat": "VLAST' OGNIA SHERIDAN",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1763588380",
       "name_lat": "VLASTA VALKERIYA VEY",
       "name_ru": "",
@@ -1327,10 +1411,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1659880555",
+      "id": "1585956194",
       "name_lat": "VLAYKA MOSKOVII DRIM OF MY SOUL",
       "name_ru": "",
-      "breed": "БУЛЬМАСТИФ /",
+      "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1345,10 +1429,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "728135145",
+      "id": "1830333673",
+      "name_lat": "VLAST' OGNIA HRABROE SERDTSE (LONG COAT)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "375473828",
+      "name_lat": "VLADYKA IZ DOMA ZENKOVYKH",
+      "name_ru": "ВЛАДЫКА ИЗ ДОМА ЗЕНКОВЫХ",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1797743644",
       "name_lat": "VLATERFOLG TIFFANI LOVE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1363,10 +1465,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1751741586",
+      "id": "858165779",
       "name_lat": "VLATERFOLG FUNNY GIRL",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
@@ -1390,6 +1492,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1371293035",
+      "name_lat": "VLADYKA MIRA IZ TRETYAKOVSKOY GALEREI",
+      "name_ru": "ВЛАДЫКА МИРА ИЗ ТРЕТЬЯКОВСКОЙ ГАЛЕРЕИ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "794567590",
       "name_lat": "VLASTOR’S AVRORA",
       "name_ru": "",
@@ -1408,19 +1519,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1278006433",
-      "name_lat": "VLATERFOLG FOSTERI KING",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "id": "1193555997",
+      "name_lat": "VLADYKA MOSKOVII PRESTON",
+      "name_ru": "ВЛАДЫКА МОСКОВИИ ПРЭСТОН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1491418386",
+      "id": "249740446",
       "name_lat": "VLAD LINE IRMA WELD FOR YOU",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1435,10 +1546,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1221504306",
+      "id": "1871669191",
+      "name_lat": "VLATERFOLG NENSI ALTER EGO",
+      "name_ru": "ВЛАТЕРФОЛЬГ НЕНСИ АЛЬТЕР ЕГО",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "430982588",
       "name_lat": "VLATERFOLG SEVILYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1453,12 +1573,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1830333673",
-      "name_lat": "VLAST' OGNIA HRABROE SERDTSE (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 5,
+      "id": "297379255",
+      "name_lat": "VLATERFOLG UGO SANCHES",
+      "name_ru": "ВЛАТЕРФОЛЬГ УГО САНЧЕС",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1471,21 +1591,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "934543691",
-      "name_lat": "VLAST' OGNIA VOSTORG",
+      "id": "472684197",
+      "name_lat": "VLASTELIN MOYEGO SERDTSA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1871669191",
-      "name_lat": "VLATERFOLG NENSI ALTER EGO",
+      "id": "260730288",
+      "name_lat": "VLAST' OGNIA KARMEN (LONG COAT)",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 10,
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1516,10 +1635,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "799856285",
+      "id": "1983544828",
+      "name_lat": "VLATERFOLG FOREST ROW",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1868426416",
       "name_lat": "VLATERFOLG ARMANI HIT",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 33,
       "competition_dog_id": null
@@ -1534,15 +1662,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "133647470",
-      "name_lat": "VLATERFOLG UGO SANCHES",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "804298253",
       "name_lat": "VLATERFOLG CHATEAUNEUF SUR LOIRE",
       "name_ru": "",
@@ -1552,21 +1671,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "934769870",
+      "id": "362873879",
       "name_lat": "VLAD DIAMOND VALENCIA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1369747423",
-      "name_lat": "VLADYKA MOSKOVII FORTUNA MOE SOVERSHENSTVO",
+      "id": "261634043",
+      "name_lat": "VLADISVET PETRUSHA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed": "Русская цветная болонка",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1576,15 +1695,6 @@
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "877733404",
-      "name_lat": "VLADLIDER NELSON FOR LOVE",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1606,21 +1716,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974178520",
-      "name_lat": "VLAST' OGNIA SHERIDAN (LONG COAT)",
+      "id": "61873954",
+      "name_lat": "VLADISVET GORISLAVA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "breed": "РУССКАЯ ЦВЕТНАЯ",
+      "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1318147450",
-      "name_lat": "VLADIMIRA IZ SVITY EKATERINY",
+      "id": "763244021",
+      "name_lat": "VLASTELIN MIRA IZ CHERNOI DRUZHINY",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1651,21 +1761,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "261634043",
-      "name_lat": "VLADISVET PETRUSHA",
-      "name_ru": "",
-      "breed": "Русская цветная болонка",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "248266093",
       "name_lat": "VLATERFOLG TEODOR CHARMING PRINCE ( )",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "866212933",
+      "name_lat": "VLATERFOLG NIGEL KILIAN (к/х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1678,15 +1788,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "375473828",
-      "name_lat": "VLADYKA IZ DOMA ZENKOVYKH",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "727042315",
       "name_lat": "VLASTELIN",
       "name_ru": "",
@@ -1696,10 +1797,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1633937995",
+      "id": "292244010",
       "name_lat": "VLADERIKA DAR SIBIRI OT DIALL",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1714,12 +1815,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "472684197",
-      "name_lat": "VLASTELIN MOYEGO SERDTSA",
+      "id": "936249024",
+      "name_lat": "VLADYKA GOR UNONA",
       "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1533134432",
+      "name_lat": "VLATERFOLG TESTA MAURA",
+      "name_ru": "ВЛАТЕРФОЛЬГ ТЕСТА МАУРА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1729,15 +1838,6 @@
       "breed": "американский стаффтерьер",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "202004176",
-      "name_lat": "VLAST OGNIA KARMEN",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1777,10 +1877,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1472517782",
+      "id": "494442575",
       "name_lat": "VLASTOR’S BRENDAN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1795,10 +1895,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "190614414",
+      "id": "343085552",
       "name_lat": "VLASTOR’S EVERTON",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1813,12 +1913,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1337509271",
+      "id": "663816150",
       "name_lat": "VLATERFOLG CASA DEL ORO",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179542013",
+      "name_lat": "VLATERFOLG YOU MOST LOVE MU",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1171304126",
+      "name_lat": "VLADLIDER OCEAN SOVEREN CALYPSO",
+      "name_ru": "",
+      "breed": "СТАФФОРДШ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1827,7 +1945,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1849,10 +1967,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "195849859",
+      "id": "372190663",
       "name_lat": "VLASTELIN SERDETS PAVLOV DIOL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1867,19 +1985,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1218926840",
-      "name_lat": "VLADYKA MOSKOVII PRESTON",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "710668440",
+      "id": "447733191",
       "name_lat": "VLATERFOLG ARMANI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1903,21 +2012,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1319036998",
+      "id": "297283080",
       "name_lat": "VLASTOR'S VALENCIA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "179542013",
-      "name_lat": "VLATERFOLG YOU MOST LOVE MU",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1939,10 +2039,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1703050141",
+      "id": "436720241",
       "name_lat": "VLADLIDER OSEAN SOVEREIN CALYPSO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1957,15 +2057,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1983544828",
-      "name_lat": "VLATERFOLG FOREST ROW",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "378060012",
       "name_lat": "VLADISTAR NERTERA",
       "name_ru": "",
@@ -1975,19 +2066,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1341274741",
-      "name_lat": "VLATERFOLG NIGEL KILIAN",
+      "id": "112309530",
+      "name_lat": "VLASTELIN",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1366771421",
+      "id": "1916726614",
       "name_lat": "VLATERFOLG SHANEL 2",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2002,15 +2093,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "887261009",
-      "name_lat": "VLASTELIN MIRA IZ CHERNOI DRUZHINY",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "280251908",
       "name_lat": "VLASTELIN UDACHI NINA RICCI",
       "name_ru": "",
@@ -2020,10 +2102,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "143029479",
+      "id": "523631192",
       "name_lat": "VLAST' OGNIA REKETEER SEMITSVETIK (Д.Ш)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2047,10 +2129,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1667397848",
+      "id": "232307709",
       "name_lat": "VLATERFOLG TRICIA ROYAL DREAM",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2065,46 +2147,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "440775564",
+      "id": "37586664",
+      "name_lat": "VLADLENA VELIKOLEPNAYA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1939406857",
+      "name_lat": "VLADYKA GOR VEZUVIY",
+      "name_ru": "ВЛАДЫКА ГОР ВЕЗУВИЙ",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "610873482",
       "name_lat": "VLASTOR’S VIRGINIA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "204282799",
+      "id": "1520051166",
       "name_lat": "VLATERFOLG UOTSEN ELINOR MOD",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "260730288",
-      "name_lat": "VLAST' OGNIA KARMEN (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1171304126",
-      "name_lat": "VLADLIDER OCEAN SOVEREN CALYPSO",
-      "name_ru": "",
-      "breed": "СТАФФОРДШ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1111012825",
+      "id": "1684675830",
       "name_lat": "VLAST'OGNIA LOVELY DIABLO",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2119,10 +2200,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "135346141",
+      "id": "1852367637",
       "name_lat": "VLADIOS VIOL SHOLZ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2132,15 +2213,6 @@
       "name_lat": "VLATERFOLG TRISHA ROYAL DRIM (к/х)",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "191298903",
-      "name_lat": "VLASTELINA VASHEGO SERDCA ORNELLA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2164,15 +2236,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1830866414",
-      "name_lat": "VLATERFOLG EMERALD FOX",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "139050739",
       "name_lat": "VLATERFOLG MIYA (д/ш)",
       "name_ru": "",
@@ -2182,12 +2245,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1863985043",
+      "name_lat": "VLADIOS VIOL CHESTER",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "996056169",
       "name_lat": "VLATERFOLG CHIELLA FROM STAJL VELLI",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1829100711",
+      "name_lat": "VLATERFOLG FOREVER ROYAL",
+      "name_ru": "ВЛАТЕРФОЛЬГ ФОРЕВЕР РОЯЛ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2236,6 +2317,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "13971440",
+      "name_lat": "V. LILU LAND VESTA ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "811996589",
       "name_lat": "VLADLIDER BARSELONA",
       "name_ru": "",
@@ -2245,38 +2335,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "866212933",
-      "name_lat": "VLATERFOLG NIGEL KILIAN (к/х)",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "428863275",
-      "name_lat": "VLAST` OGNIA HRABROE SERDTSE",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1677462031",
+      "id": "857541024",
       "name_lat": "VLAST' OGNYA YASNO SOLNYSHKO",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "229135765",
-      "name_lat": "VLADISVET GORISLAVA",
+      "id": "1079748012",
+      "name_lat": "VLADISVET GARDENIYA",
       "name_ru": "",
-      "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
-      "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
+      "breed": "БОЛОНКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2299,24 +2370,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1829100711",
-      "name_lat": "VLATERFOLG FOREVER ROYAL",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "437351829",
-      "name_lat": "VLADYKA GOR VEZUVIY",
-      "name_ru": "",
-      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА / KANGAL SHEPHERD",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "350441133",
       "name_lat": "VLAST' OGNIA KANTOR (LONG COAT)",
       "name_ru": "",
@@ -2326,10 +2379,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1176184605",
+      "id": "222818946",
       "name_lat": "VLAST' OGNIA LOVELY DIABLO",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2344,10 +2397,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1234972543",
+      "id": "1753060750",
       "name_lat": "VLATERFOLG PORSHE DESIGN",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2371,15 +2424,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1371293035",
-      "name_lat": "VLADYKA MIRA IZ TRETYAKOVSKOY GALEREI",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "161487194",
       "name_lat": "VLADYKA MOSKOVII OLL MY PASSION",
       "name_ru": "",
@@ -2389,10 +2433,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1280123756",
+      "id": "64743139",
       "name_lat": "VLADI VOM ALIHEL HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2425,8 +2469,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "763380137",
-      "name_lat": "VLATERFOLG SAN- SEBASTYAN",
+      "id": "781445321",
+      "name_lat": "VLATERFOLG SAN-SEBASTYAN",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -2434,10 +2478,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1927433158",
+      "id": "1235674687",
       "name_lat": "VLATERGOLF TSUKTSIMA SUKURO",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2479,6 +2523,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "260814247",
+      "name_lat": "VLASTELIN UDACHI RUDBEKIA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "922316882",
       "name_lat": "VLADIMIR СКАЗКА ИМАНДРЫ",
       "name_ru": "",
@@ -2493,7 +2545,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2506,10 +2558,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1688179414",
+      "id": "301540687",
       "name_lat": "VLADA VALENSIYA MORSKAYA BABOCHKA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2542,6 +2594,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1588420563",
+      "name_lat": "VLATERFOLG ZATEYA VESELAYA",
+      "name_ru": "ВЛАТЕРФОЛЬГ ЗАТЕЯ ВЕСЁЛАЯ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1430088526",
       "name_lat": "VLATERFOLGYOU MOST LOVE MU",
       "name_ru": "",
@@ -2560,15 +2621,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "51635670",
-      "name_lat": "VLATERFOLG FLAGMAN DE NORD STAR",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "174753684",
       "name_lat": "VLATERFOLG LANDLADY TOFFY",
       "name_ru": "",
@@ -2578,11 +2630,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1984917692",
-      "name_lat": "VLADIOS VIOL CHESTER",
+      "id": "1372582269",
+      "name_lat": "VLADIELI WINNER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2596,28 +2647,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1892669134",
-      "name_lat": "VLASTELIN",
+      "id": "1705485457",
+      "name_lat": "V.LILU LAND VESTA(H/B)",
       "name_ru": "",
-      "breed": "СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1890956270",
-      "name_lat": "VLASTELIN",
-      "name_ru": "",
-      "breed": "СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1191062214",
+      "id": "1490603286",
       "name_lat": "Vlastelin",
       "name_ru": "",
-      "breed": "Английский спрингер- Золотистый ретривер Золотистый ретривер Золотистый ретривер",
+      "breed": "Английский спрингер- Золотистый ретривер",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2632,19 +2674,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1571985818",
-      "name_lat": "VLASTELIN",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "245640554",
+      "id": "1557552467",
       "name_lat": "VLATERFOLG CHEYZ PIKS KHOLLOU",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2659,10 +2692,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "391134984",
+      "id": "1768270509",
       "name_lat": "VLASTELIN KOLECZ IZ RADUZHNOY PALITRY",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2686,11 +2719,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "941667868",
-      "name_lat": "VLATERFOLG ETTI KHEPPI STAR",
+      "id": "266947123",
+      "name_lat": "VLADISVET TSITRIN",
+      "name_ru": "",
+      "breed": "БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "347586917",
+      "name_lat": "VLATERFOLG ESSE A VIDERI",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
+      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2731,10 +2773,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "515160875",
+      "id": "1732057634",
       "name_lat": "VLATERFOLG ROZALI HEYL",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2767,8 +2809,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "939842641",
-      "name_lat": "VLATERFOLG SAN- MARINA",
+      "id": "882357297",
+      "name_lat": "VLATERFOLG SAN-MARINA",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
@@ -2776,19 +2818,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1669090261",
+      "id": "646911152",
       "name_lat": "VLAST'OGNIA KISS ME",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1157112249",
+      "id": "948367660",
       "name_lat": "VLATERFOLG KLASSIC HARTBREAKER",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2857,12 +2899,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1012826802",
-      "name_lat": "VLADISVET TSITRIN",
+      "id": "1851387418",
+      "name_lat": "VLADISVET YASNOTKA",
       "name_ru": "",
-      "breed": "БОЛОНКА /",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "РУССКАЯ ЦВЕТНАЯ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2884,10 +2925,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "691194312",
+      "id": "1377036272",
+      "name_lat": "VLADYKA MOSKOVII FANNI",
+      "name_ru": "ВЛАДЫКА МОСКОВИИ ФАННИ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "292232471",
       "name_lat": "VLADIOS VIOL JANYCHAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2929,15 +2979,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1377036272",
-      "name_lat": "VLADYKA MOSKOVII FANNI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "844165112",
       "name_lat": "VLATERFOLG IMITIA SUITE",
       "name_ru": "",
@@ -2956,19 +2997,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "347586917",
-      "name_lat": "VLATERFOLG ESSE A VIDERI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "838492252",
+      "id": "813359353",
       "name_lat": "VLADA S TANAISA",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3010,37 +3042,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "1533134432",
-      "name_lat": "VLATERFOLG TESTA MAURA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "1453967593",
+      "name_lat": "VLADI'S MANOR GERDA",
+      "name_ru": "ВЛАДИ'С МАНОР ГЕРДА",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1718161122",
+      "id": "829100141",
+      "name_lat": "VLADIMIR IZ DOMA NIZHARADZE",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "111189350",
       "name_lat": "VLARIS LINE EPICA MAGIC FLOWER FO LOVE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "415730111",
+      "id": "275896240",
       "name_lat": "VLAST' OGNIA BOY S TENIU",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "155219457",
+      "id": "533553453",
+      "name_lat": "VLASTELIN VETROV",
+      "name_ru": "Властелин Ветров",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1951897077",
       "name_lat": "VLAS'TORS DIVA COPY SKY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3051,7 +3100,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 4,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -3059,15 +3108,6 @@
       "name_lat": "VLATERFOLGUGO SANCHES",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "533553453",
-      "name_lat": "VLASTELIN VETROV",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3100,10 +3140,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1307931320",
+      "id": "1947755846",
       "name_lat": "VLASTOR'S MASTER OF HIS CRAFT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3136,15 +3176,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588420563",
-      "name_lat": "VLATERFOLG ZATEYA VESELAYA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1676776549",
       "name_lat": "VLADILAR ELITA TSELLI",
       "name_ru": "",
@@ -3154,19 +3185,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "936249024",
-      "name_lat": "VLADYKA GOR UNONA",
+      "id": "447855415",
+      "name_lat": "VLADIOS VIOL CHEROKEE",
       "name_ru": "",
-      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1383999763",
-      "name_lat": "VLATERFOLG NIVEN MORGAN",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3181,11 +3203,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "811584238",
-      "name_lat": "VLADIAND VA-VA- SPRINGS",
+      "id": "1139389290",
+      "name_lat": "VLADIAND VA-VA-SPRINGS",
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1957172447",
+      "name_lat": "VLADLIDER V.V.P",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ КЛАССИК",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -3195,15 +3225,6 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ПАСТУШЬЯ СОБАКА",
       "breed_en": "AUSTRALIAN CATTLE DOG",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1921008677",
-      "name_lat": "VLATERFOLG KARTE BLANCHE (N/B)",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3289,28 +3310,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "94940840",
-      "name_lat": "VLADIOS VIOL CHEROKEE",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1966596479",
+      "id": "1419442542",
       "name_lat": "VLAST'OGNIA BLACKMORE",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1644144357",
+      "id": "179441726",
       "name_lat": "VLADIOS VIOL JA TA SAMAJA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3352,19 +3364,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1196767791",
+      "id": "15234654",
       "name_lat": "VLADLIDER ASHERA BARTONS",
       "name_ru": "",
-      "breed": "БУЛЛИ КЛАССИК /",
+      "breed": "БУЛЛИ КЛАССИК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "17416907",
+      "id": "49413570",
       "name_lat": "VLADLIDER VELIKIY BRUNO",
       "name_ru": "",
-      "breed": "БУЛЛИ КЛАССИК /",
+      "breed": "БУЛЛИ КЛАССИК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3388,19 +3400,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "811174689",
+      "id": "1884435596",
       "name_lat": "VLADIDOGS ADEL 2",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "85339209",
-      "name_lat": "VLATERFOLG EIFFEL PRADA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "id": "1030915015",
+      "name_lat": "VLASTELIN UDACHI BASHAR",
+      "name_ru": "ВЛАСТЕЛИН УДАЧИ БАШАР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3411,6 +3423,15 @@
       "name_ru": "",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "KERRY BLUE TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1655347529",
+      "name_lat": "VLADBAGHOUSE MONAKO",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3487,10 +3508,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "49600926",
+      "id": "1145091695",
       "name_lat": "VLATERFOLG CHAMBERY DE LA SAVOITE",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3631,10 +3652,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "314797174",
+      "id": "759398159",
       "name_lat": "VLAST'OGNIA SYRIUS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3694,10 +3715,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "89781147",
+      "id": "188547468",
       "name_lat": "VLATERFOLG SHANEL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3712,28 +3733,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1453967593",
-      "name_lat": "VLADI'S MANOR GERDA",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "177646295",
       "name_lat": "VLADIOS VIOL YUGORIYA",
       "name_ru": "",
       "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1030915015",
-      "name_lat": "VLASTELIN UDACHI BASHAR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3748,10 +3751,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "449994774",
+      "id": "1318532592",
       "name_lat": "VLATERFOLG RASHEL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3784,10 +3787,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1129360786",
+      "id": "1060982547",
       "name_lat": "VLAD DIAMOND PROGRESS",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3811,20 +3814,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "956931460",
-      "name_lat": "VLYUBIT'SYARAZ I NAVSEGDA",
-      "name_ru": "",
-      "breed": "ГЛАДКОШЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1433130776",
       "name_lat": "VLATERFOLG GLEN SPIRO",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455086658",
+      "name_lat": "VLASTELIN SERDETS",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3860,15 +3862,6 @@
       "name_lat": "VLAST'OGNIA ANGEL HRANITEL",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1655347529",
-      "name_lat": "VLADBAGHOUSE MONAKO",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

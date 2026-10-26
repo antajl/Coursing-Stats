@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EP",
-  "count": 100,
+  "count": 104,
   "dogs": [
     {
-      "id": "1496368695",
+      "id": "1836480124",
       "name_lat": "EPIGRAPH DIFENSORI DEL BOSS",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 7,
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1215948313",
+      "name_lat": "EPIK EKSKLYUZIV",
+      "name_ru": "ЭПИК ЭКСКЛЮЗИВ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -28,15 +37,6 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1215948313",
-      "name_lat": "EPIK EKSKLYUZIV",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -67,10 +67,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1185462940",
+      "id": "178459961",
       "name_lat": "EPOHA VIKTOPII OLYMPIA",
       "name_ru": "",
-      "breed": "ВОЛЧЬЯ СОБАКА /",
+      "breed": "ВОЛЧЬЯ СОБАКА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -130,12 +130,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "553639981",
+      "id": "1937709200",
       "name_lat": "EPOHA VIKTORII ELSAVA",
       "name_ru": "",
-      "breed": "ВОЛЧЬЯ СОБАКА /",
+      "breed": "ВОЛЧЬЯ СОБАКА",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "582311822",
+      "name_lat": "EPOS",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -166,12 +175,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1354050488",
+      "id": "857603229",
+      "name_lat": "EPOHA KURABO MASSANDRA",
+      "name_ru": "",
+      "breed": "SCHNAUZER BLACK ШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "975883404",
       "name_lat": "EP'PLAZA IZ DOLINY SOLNCA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -190,15 +208,6 @@
       "breed": "ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ СОБАКА",
       "breed_en": "CZECHOSLOVAKIAN WOLFDOG",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1452531537",
-      "name_lat": "EPOHA KURABO MASSANDRA",
-      "name_ru": "",
-      "breed": "SCHNAUZER BLACK ШНАУЦЕР ЧЁРНЫЙ /",
-      "breed_en": "",
-      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -242,8 +251,7 @@
       "name_lat": "EPIC EMPIRE PASSION QUINTESSENCE",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -256,39 +264,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1298476301",
+      "id": "1028863344",
       "name_lat": "EPOHA VIKTOPII OLIMPIA",
       "name_ru": "",
-      "breed": "СОБАКА /",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "582311822",
-      "name_lat": "EPOS",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "907372657",
-      "name_lat": "EPOS",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "352431313",
-      "name_lat": "EPOS",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -296,6 +277,15 @@
       "name_lat": "EPOHA VIKTORII MLECHNY Y PUT'",
       "name_ru": "",
       "breed": "ВОЛЧЬЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1942571186",
+      "name_lat": "E PEPPER RED",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -328,21 +318,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "975823639",
+      "name_lat": "EPICA OMEGA USMIECH WANDALA",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР",
+      "breed_en": "LEONBERGER",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "561508227",
       "name_lat": "EPIC EMPIRE PRINCESS M ONE AND ONLY",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "527016910",
-      "name_lat": "EPICA OMEGA USMIECH WANDALA",
+      "id": "871202799",
+      "name_lat": "EPOHA VIKTORII MAGICHESKAYA ALFA",
       "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР /",
-      "breed_en": "",
-      "total_shows": 12,
+      "breed": "ВОЛЧЬЯ СОБАКА",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -391,6 +388,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1470273177",
+      "name_lat": "EPOHA VIKTORII MIFICHESKIY ZEVS",
+      "name_ru": "",
+      "breed": "ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "25985794",
       "name_lat": "EPOHA VIKTORII SAMMI ZHO",
       "name_ru": "",
@@ -436,19 +442,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1470273177",
-      "name_lat": "EPOHA VIKTORII MIFICHESKIY ZEVS",
-      "name_ru": "",
-      "breed": "ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1013195557",
+      "id": "1714366162",
       "name_lat": "EPIC HULK IZ DINASTII CHEMPIONOV",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -467,8 +464,7 @@
       "name_lat": "EPIFAN",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -553,6 +549,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "337409394",
+      "name_lat": "EPL FROM EN EPL AROMATNYJ BUBLIK",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "327472127",
       "name_lat": "EPOKHA STEVIA TUARA POIRIER",
       "name_ru": "",
@@ -589,11 +593,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1310892567",
+      "name_lat": "EPOHA VIKTORII RIONA ZHADE",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1598556815",
       "name_lat": "EPIFFANIA IZ TSVETNIKA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1844678717",
+      "name_lat": "EPIKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -661,10 +681,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1904081884",
+      "id": "109613152",
       "name_lat": "EPATAZHNAYA FIFA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -787,6 +807,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1506031573",
+      "name_lat": "EPOHA KURABO EUROVISION NETTL GREIT",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР П-С",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "528719024",
+      "name_lat": "EPOHA KURABO KAZANSKIY TAISMAN",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "SCHNAUZER BLACK",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "50972218",
+      "name_lat": "Ep'Laza Iz Doliny Solnca",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "506384011",
       "name_lat": "EPOHA VIKTORII INFINITI RED STAR",
       "name_ru": "",
@@ -810,24 +857,6 @@
       "name_ru": "",
       "breed": "ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ СОБАКА",
       "breed_en": "CZECHOSLOVAKIAN WOLFDOG",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1506031573",
-      "name_lat": "EPOHA KURABO EUROVISION NETTL GREIT",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР П-С",
-      "breed_en": "SCHNAUZER P-S",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "528719024",
-      "name_lat": "EPOHA KURABO KAZANSKIY TAISMAN",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
-      "breed_en": "SCHNAUZER BLACK",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -877,19 +906,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "208379770",
-      "name_lat": "EPOHA VIKTORII HEPPY",
+      "id": "105950824",
+      "name_lat": "EPIC EMPIRE PURE OXYGEN",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1639726942",
-      "name_lat": "Ep'Laza Iz Doliny Solnca",
+      "id": "208379770",
+      "name_lat": "EPOHA VIKTORII HEPPY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

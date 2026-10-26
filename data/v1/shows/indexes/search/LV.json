@@ -1,24 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "LV",
-  "count": 20,
+  "count": 21,
   "dogs": [
     {
-      "id": "211781791",
+      "id": "1598029171",
       "name_lat": "LVI BALTIKI CHARODEY PONEVOLE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 32,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1248889177",
-      "name_lat": "LVI BALTIKI SHELLA ISKRA SCHASTYA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -27,7 +18,16 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "441568829",
+      "name_lat": "LVI BALTIKI SHELLA ISKRA SCHASTYA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -58,19 +58,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "674189182",
+      "id": "1815639234",
       "name_lat": "LVI BALTIKI ULIBKA RADYGI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "750985911",
+      "id": "346063123",
       "name_lat": "LVI BALTIKI SAMUEL SHOKOLADNYY TALISMAN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -85,19 +85,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1111498212",
+      "id": "169805075",
+      "name_lat": "LVINOE SERDTSE HARVI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1394394296",
       "name_lat": "LVI BALTIKI CICERO THE BIG DIAMOND",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1906141492",
+      "id": "1868637288",
       "name_lat": "LVI BALTIKI CETINIA BLACK FURY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -109,15 +118,6 @@
       "breed": "БОЛЬШОЙ БЕЛЫЙ, КОРИЧНЕВЫЙ, ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "169805075",
-      "name_lat": "LVINOE SERDTSE HARVI",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -157,28 +157,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1514957332",
+      "id": "1379529409",
       "name_lat": "LVI BALTIKI SAMUEL SHOKOLA DNYY TALISMAN",
       "name_ru": "",
-      "breed": "ВЫЙ /",
+      "breed": "ВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1204659611",
+      "id": "1333592786",
       "name_lat": "LVINOE SERDTSE",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "348732267",
+      "id": "1274683927",
       "name_lat": "LVI BALTIKI CELESTINA KOROLEVA SHOLNCHA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "66201080",
+      "name_lat": "L V CHERNO M IZ GRADA BELYKH",
+      "name_ru": "",
+      "breed": "ГЛАДКО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

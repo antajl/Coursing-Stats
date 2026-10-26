@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AE",
-  "count": 122,
+  "count": 125,
   "dogs": [
     {
       "id": "1188162978",
@@ -9,14 +9,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 67,
+      "total_shows": 73,
       "competition_dog_id": null
     },
     {
-      "id": "765520502",
+      "id": "334267273",
       "name_lat": "AELITA IZ DOMA KIRILLOVYH",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -31,30 +31,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1667191393",
+      "id": "1981474558",
       "name_lat": "AETHWY WALK THE EARTH",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
       "id": "1491565052",
       "name_lat": "AERIS OKEAN MECHTY",
-      "name_ru": "",
+      "name_ru": "АЭРИС ОКЕАН МЕЧТЫ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "700026011",
+      "id": "341490741",
+      "name_lat": "AERONAUCA MILITARE",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "927810131",
       "name_lat": "AELLE EVENSTAR DREAMY STARLIGHT",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -67,12 +76,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "921648625",
+      "id": "234592129",
       "name_lat": "AELLE EVENSTAR CELEBRATION",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 46,
+      "total_shows": 50,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1253906482",
+      "name_lat": "AENEUS AEDES MIZUKI",
+      "name_ru": "АЕНЕУС АЕДЕС МИЗУКИ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -85,21 +103,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1253906482",
-      "name_lat": "AENEUS AEDES MIZUKI",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "407073659",
       "name_lat": "AETHWY SAVOJ TRUFFLE",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 24,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -130,6 +139,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "918263751",
+      "name_lat": "A-ELITA IZ BELOY BRIGADY",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "414480425",
       "name_lat": "AELLE",
       "name_ru": "",
@@ -139,20 +156,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1966656462",
-      "name_lat": "AELEENA",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "403830567",
       "name_lat": "AELITA CHOCOLADNAYA MECHTA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "AMERICAN COCKER SPANIEL",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1966656462",
+      "name_lat": "AELEENA",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
@@ -189,7 +206,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -211,6 +228,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "846576233",
+      "name_lat": "AETHWY HOLYGRAIL",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "900136224",
       "name_lat": "AEROSMITH IZ YULVIGRADA",
       "name_ru": "",
@@ -226,15 +252,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "838680796",
-      "name_lat": "AETHWY HOLYGRAIL",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -265,6 +282,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1717146234",
+      "name_lat": "AELFA ANIMA MEA",
+      "name_ru": "АЭЛЬФА АНИМА МЕА",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1328923386",
       "name_lat": "AETHWY NIGHT FEVER",
       "name_ru": "",
@@ -292,19 +318,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "205008766",
+      "id": "338843424",
+      "name_lat": "AELLE EVENSTAR CELEBRITY",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "216217592",
       "name_lat": "AELLE EVENSTAR DAZZLING DREAMS",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1948729607",
+      "id": "79513085",
+      "name_lat": "AETHWY LOVE ME DO",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100571933",
       "name_lat": "AETHWY JULIA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -328,30 +372,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1345109526",
-      "name_lat": "AELLE EVENSTAR CELEBRITY",
+      "id": "1494951752",
+      "name_lat": "AETHWY ORANGE COLORED SKY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1871918338",
-      "name_lat": "AETHWY LOVE ME DO",
+      "id": "1156675331",
+      "name_lat": "AETHWY REMEMBER THE DAYS",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1995146915",
+      "id": "1949472138",
       "name_lat": "AELITA ELEGIJA LUBVI",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "ПАПИЙОН",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -364,10 +407,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "481246122",
+      "id": "1562559813",
       "name_lat": "AETHWY UNIVERSAL MIND",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "WELSH CORGI CARDIGAN",
       "total_shows": 6,
       "competition_dog_id": null
@@ -382,10 +425,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1554002405",
+      "id": "868123208",
       "name_lat": "AETHWY OPEN YOUR HEART",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -409,21 +452,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1945180584",
+      "id": "1598796039",
       "name_lat": "AETHWY LOOK AT YOURSELF",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1494951752",
-      "name_lat": "AETHWY ORANGE COLORED SKY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -454,12 +488,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1926017491",
-      "name_lat": "AETHWY WALK THE EАRTH",
+      "id": "202881922",
+      "name_lat": "AELITA DE LAY-LA IZ TSARSTVA SVAROGA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -490,10 +524,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "884497672",
+      "id": "387099821",
       "name_lat": "AENEUS AEDES GENETRIX",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -505,15 +539,6 @@
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1717146234",
-      "name_lat": "AELFA ANIMA MEA",
-      "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -544,10 +569,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1949480860",
-      "name_lat": "AETHWY REMEMBER THE DAYS",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "id": "416644702",
+      "name_lat": "AEN SOF ZU-ZU LOLA",
+      "name_ru": "АЭН СОФ ЗУ-ЗУ ЛОЛА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -568,15 +593,6 @@
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "202881922",
-      "name_lat": "AELITA DE LAY-LA IZ TSARSTVA SVAROGA",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -616,10 +632,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1910289162",
+      "id": "934949595",
       "name_lat": "AENEUS AEDES HELIX",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -688,6 +704,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "400027327",
+      "name_lat": "AENEUS AEDES HEKATE",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "137676467",
+      "name_lat": "AETHWY RUN TO YOU",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "303325305",
       "name_lat": "AESTHETICS NAVIGATOR",
       "name_ru": "",
@@ -742,10 +774,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "424653184",
+      "id": "1562698079",
       "name_lat": "AETHWY GOOD FEELING",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -769,28 +801,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "341490741",
-      "name_lat": "AERONAUCA MILITARE",
-      "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "95277681",
       "name_lat": "AEN SOF LOT OF LUCK",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) / GERMAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "582002963",
-      "name_lat": "AETHWY ITON",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -877,11 +891,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "527825995",
+      "name_lat": "AELLE",
+      "name_ru": "",
+      "breed": "БОКСЕР РЫЖИЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "486390794",
       "name_lat": "AELIT FANNI VALENTAYN",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
       "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15381151",
+      "name_lat": "AETHWY CAN'T BUY ME LOVE",
+      "name_ru": "",
+      "breed": "Вельш корги кардиган",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -913,12 +944,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "15381151",
-      "name_lat": "AETHWY CAN'T BUY ME LOVE",
+      "id": "1382301193",
+      "name_lat": "A-EFA",
       "name_ru": "",
-      "breed": "Вельш корги кардиган",
+      "breed": "НЕМЕЦКИЙ ЯГДТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -926,15 +957,6 @@
       "name_lat": "AELLE",
       "name_ru": "",
       "breed": "БОКСЕР РЫЖИЙ / BOXER RED",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "784445946",
-      "name_lat": "AELLE",
-      "name_ru": "",
-      "breed": "БОКСЕР РЫЖИЙ /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1048,11 +1070,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "416644702",
-      "name_lat": "AEN SOF ZU-ZU LOLA",
+      "id": "201130554",
+      "name_lat": "AESTHETICS PERSIMMONA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1075,10 +1096,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "668697825",
+      "id": "205132222",
       "name_lat": "AETHWY LOVERMAN",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1093,10 +1114,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1042354525",
+      "id": "1471141846",
       "name_lat": "AEGON IZ BELOGO JARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "16",
-  "count": 6,
+  "count": 7,
   "dogs": [
     {
       "id": "468883500",
@@ -18,6 +18,14 @@
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1774938737",
+      "name_lat": "16.02.22 вопрос 33) RED HOT CHILI PEPPERS",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
       "total_shows": 1,
       "competition_dog_id": null
     },

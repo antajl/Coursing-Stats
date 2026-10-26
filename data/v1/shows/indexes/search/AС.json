@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AС",
-  "count": 4,
+  "count": 5,
   "dogs": [
     {
       "id": "104965924",
       "name_lat": "AСТРА БРАМА БРИЛЛИАНТ",
-      "name_ru": "",
+      "name_ru": "АСТРА БРАМА БРИЛЛИАНТ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "523973518",
+      "name_lat": "A'СОЛАР ВЭЙ МАВР ИНКОСИ ЧАКА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -22,10 +31,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1802802162",
+      "id": "60703228",
       "name_lat": "AСТИ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

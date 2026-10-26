@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ДЯ",
-  "count": 4,
+  "count": 5,
   "dogs": [
     {
       "id": "2159443",
@@ -17,6 +17,15 @@
       "name_lat": "ДЯДЯ СЭМА",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127089762",
+      "name_lat": "Д'ЯРА СО СТАНИЦЫ МАГНИТНАЯ",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "RZ",
-  "count": 2,
+  "count": 3,
   "dogs": [
     {
       "id": "1357624507",
@@ -10,6 +10,15 @@
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "49203634",
+      "name_lat": "RĪZENMUIŽA NAKLI GALAKTIKA WIN",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ / MINIATURE SCHNAUZER BLACK",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

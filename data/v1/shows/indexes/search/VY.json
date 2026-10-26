@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "VY",
-  "count": 184,
+  "count": 192,
   "dogs": [
     {
-      "id": "592144532",
+      "id": "1159851147",
       "name_lat": "VYBOR IMPERATORA OGNI BOLSHOGO GORODA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 42,
+      "competition_dog_id": null
+    },
+    {
+      "id": "567342338",
+      "name_lat": "VYAT GALENA GELIOS 2",
+      "name_ru": "ВЯТ ГАЛЕНА ГЕЛИОС",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "breed_en": "ENGLISH SPRINGER SPANIEL",
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
@@ -22,21 +31,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "567342338",
-      "name_lat": "VYAT GALENA GELIOS 2",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
-      "breed_en": "ENGLISH SPRINGER SPANIEL",
-      "total_shows": 35,
+      "id": "1025056127",
+      "name_lat": "VYBOR IMPERATORA LINIYA ZHIZNI",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА ЛИНИЯ ЖИЗНИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "489033192",
-      "name_lat": "VYBOR IMPERATORA LINIYA ZHIZNI",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "id": "525440890",
+      "name_lat": "VYBOR IMPERATORA ROZOVYY ZAKAT",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА РОЗОВЫЙ ЗАКАТ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1271290753",
+      "name_lat": "VYBOR IMPERATORA AKUNA MATATA",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА АКУНА МАТАТА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
@@ -58,39 +76,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "528721757",
-      "name_lat": "VYBOR IMPERATORA ROZOVYY ZAKAT",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 25,
-      "competition_dog_id": null
-    },
-    {
-      "id": "472807060",
-      "name_lat": "VYBOR IMPERATORA AKUNA MATATA",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "687834546",
       "name_lat": "VYAT GALENA REMINGTON",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "83516968",
-      "name_lat": "VYAT GALENA ESTIMA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
-      "breed_en": "ENGLISH SPRINGER SPANIEL",
-      "total_shows": 33,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -99,16 +90,34 @@
       "name_ru": "",
       "breed": "ЛАЙКА",
       "breed_en": "ZAPADNOSIBIRSKAYA LAIKA (WEST-SIBERIAN LAIKA)",
-      "total_shows": 16,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "93880847",
+      "id": "83516968",
+      "name_lat": "VYAT GALENA ESTIMA",
+      "name_ru": "ВЯТ ГАЛЕНА ЕСТИМА",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "breed_en": "ENGLISH SPRINGER SPANIEL",
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1698303044",
       "name_lat": "VYBOR IMPERATORA BARCLAY DE TOLLY",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1436473661",
+      "name_lat": "VYBOR IMPERATORA RIKKI TIKKI TAVI",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -139,39 +148,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "393424211",
-      "name_lat": "VYBOR IMPERATORA FACE- CONTROL",
+      "id": "562154043",
+      "name_lat": "VYAT GALENA ROMANTICA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "391612298",
+      "name_lat": "VYBOR IMPERATORA FACE-CONTROL",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1160146386",
-      "name_lat": "VYBOR IMPERATORA RIKKI TIKKI TAVI",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "689879910",
-      "name_lat": "VYBOR IMPERATORA OBYKNOVENNOE CHUDO",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "613258507",
-      "name_lat": "VYBOR IMPERATORA RIKKI TIKI TAVI",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -179,62 +170,104 @@
       "name_lat": "VYATSKIY MEDVED PROHOR",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1142922424",
-      "name_lat": "VYAZEMSKII ANGEL-HRANITEL SHAKIRA",
+      "id": "1957650737",
+      "name_lat": "VYBOR IMPERATORA OBYKNOVENNOE CHUDO",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1727040946",
       "name_lat": "VYATSKIY VOLK VIOLETTA",
-      "name_ru": "",
+      "name_ru": "ВЯТСКИЙ ВОЛК ВИОЛЕТТА",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "870689594",
-      "name_lat": "VYBOR IMPERATORA NAGRADA POBEDITELYU",
+      "id": "862649586",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL SHAKIRA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "972610496",
-      "name_lat": "VYBOR IMPERATORA AKUNAMATATA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "737623797",
-      "name_lat": "VYUGA ZIMNYAYA KRASA",
+      "id": "918403840",
+      "name_lat": "VYBOR IMPERATORA RIKKI TIKI TAVI",
       "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1391634118",
-      "name_lat": "VYBOR IMPERATORA TIGROVAYA AKULA",
+      "id": "596439431",
+      "name_lat": "VYAT GALENA PANK",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1720369429",
+      "name_lat": "VYBOR IMPERATORA NAGRADA POBEDITELYU",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА НАГРАДА ПОБЕДИТЕЛЮ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1799215082",
+      "name_lat": "VYAT GALENA PLEASURE",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1969101735",
+      "name_lat": "VYBOR IMPERATORA AKUNAMATATA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1798790683",
+      "name_lat": "VYBOR IMPERATORA TIGROVAYA AKULA",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА ТИГРОВАЯ АКУЛА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "737623797",
+      "name_lat": "VYUGA ZIMNYAYA KRASA",
+      "name_ru": "ВЬЮГА ЗИМНЯЯ КРАСА",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "539754240",
+      "name_lat": "VYUGA MELODIYA ZIMY",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -247,15 +280,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "539754240",
-      "name_lat": "VYUGA MELODIYA ZIMY",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "698308584",
       "name_lat": "VYAZEMSKII ANGEL-HRANITEL STILLE",
       "name_ru": "",
@@ -265,28 +289,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1269608675",
+      "id": "648560488",
       "name_lat": "VYBOR IMPERATORA LVINOE SERDCZE",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1112387499",
+      "id": "1455685041",
+      "name_lat": "VYSSHIY SVET VERSAL P'OTVAZHNYY VOIN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56179354",
       "name_lat": "VYAT STYLE ELITA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "259522968",
+      "id": "898901286",
       "name_lat": "VYAT GALENA DOBRINYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -294,28 +327,54 @@
     {
       "id": "1582215717",
       "name_lat": "VYATSKIY MEDVED ADELIYA MORSKAYA NIMFA",
-      "name_ru": "",
+      "name_ru": "ВЯТСКИЙ МЕДВЕДЬ АДЕЛИЯ МОРСКАЯ НИМФА",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100265472",
+      "name_lat": "VYBOR IMPERATORA RUSSKAYA RULETKA",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА РУССКАЯ РУЛЕТКА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "195639199",
+      "name_lat": "VYBOR IMPERATORA NA GREBNE VOLNY",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА НА ГРЕБНЕ ВОЛНЫ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1670855774",
+      "name_lat": "VYBOR IMPERATORA SHELKOVYY LIS",
+      "name_ru": "",
+      "breed": "КОРСО",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "438048576",
+      "id": "436458389",
       "name_lat": "VYBOR IMPERATORA OBRATNAYA STORONA LUNY",
       "name_ru": "",
-      "breed": "КАНЕ КОРСО /",
+      "breed": "КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1448199240",
-      "name_lat": "VYBOR IMPERATORA NA GREBNE VOLNY",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "id": "47341188",
+      "name_lat": "VYBOR IMPERATORA LAVINA SCHASTYA",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА ЛАВИНА СЧАСТЬЯ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -328,39 +387,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "562154043",
-      "name_lat": "VYAT GALENA ROMANTICA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1436447829",
+      "id": "205690089",
       "name_lat": "VYAT GALENA BYLINA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1602944007",
-      "name_lat": "VYBOR IMPERATORA RUSSKAYA RULETKA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1770629534",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL CHECKMATE",
+      "id": "485299508",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL CHECKMATE",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -373,21 +414,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "561992029",
+      "id": "1160565467",
       "name_lat": "VYAT GALENA PREFERANSE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1172395178",
+      "id": "1962820959",
+      "name_lat": "VYBOR IMPERATORA GOLUBAYA LUNA",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА ГОЛУБАЯ ЛУНА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "510734911",
       "name_lat": "VYBOR IMPERATORA BEZUPRECHNAYA REPUTACZIYA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1997667598",
+      "name_lat": "VYAT GALENA DREVOSLAV",
+      "name_ru": "ВЯТ ГАЛЕНА ДРЕВОСЛАВ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -397,6 +456,15 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1166392382",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL YARKAI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -418,6 +486,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1429518901",
+      "name_lat": "VYATSKIY MEDVED ADAM NYU",
+      "name_ru": "ВЯТСКИЙ МЕДВЕДЬ АДАМ НЬЮ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "136861587",
+      "name_lat": "VYATSKAYA GRATSIYA GALIAF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "1831745472",
       "name_lat": "VYAT STYLE ZILANT",
       "name_ru": "",
@@ -427,19 +513,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "1718304100",
+      "name_lat": "VYATSKIY MEDVED NEYA VELIKOLEPNAYA NIMFA",
+      "name_ru": "ВЯТСКИЙ МЕДВЕДЬ НЕЯ ВЕЛИКОЛЕПНАЯ НИМФА",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
       "id": "330094677",
       "name_lat": "VYATKIN'S JOHN WICK (M)",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1949809357",
-      "name_lat": "VYSSHIY SVET VERSAL P'OTVAZHNYY VOIN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -454,15 +540,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1429518901",
-      "name_lat": "VYATSKIY MEDVED ADAM NYU",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "897801789",
       "name_lat": "VYAT STYLE SHERIF",
       "name_ru": "",
@@ -472,12 +549,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "428997600",
+      "id": "81390766",
       "name_lat": "VYAT GALENA MILAVA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
+      "name_ru": "ВЯТ ГАЛЕНА МИЛАВА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -490,15 +567,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1538050343",
-      "name_lat": "VYATSKAYA GRATSIYA GALIAF",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
       "id": "117431774",
       "name_lat": "VYBORGSKIJ PRESTIZH ZVONKAYA MONETKA",
       "name_ru": "",
@@ -508,21 +576,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "456994462",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL HOLMOGOR",
+      "id": "1078340160",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL HOLMOGOR",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "200472345",
-      "name_lat": "VYATSKIY MEDVED NEYA VELIKOLEPNAYA NIMFA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -544,8 +603,43 @@
       "competition_dog_id": null
     },
     {
-      "id": "1353578078",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL FREIYA",
+      "id": "1056747250",
+      "name_lat": "VYAT GALENA RUSLANA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1516040200",
+      "name_lat": "VYAT GALENA ROGNEDA",
+      "name_ru": "ВЯТ ГАЛЕНА РОГНЕДА",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "326883555",
+      "name_lat": "VYATSKIY MEDVED ROZBERRI NORM",
+      "name_ru": "Вятский Медведь Розберри Норм",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "922979676",
+      "name_lat": "VYBERIMENYA DAENERYS TARGARYEN",
+      "name_ru": "",
+      "breed": "МАЛАЯ ЛЬВИНАЯ СОБАЧКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "439637164",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL FREIYA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
       "breed_en": "",
@@ -553,57 +647,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "609898239",
+      "id": "1762615632",
       "name_lat": "VYSHEN TAL S ZOLOTOGO PLESA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "голден ретривер",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "326883555",
-      "name_lat": "VYATSKIY MEDVED ROZBERRI NORM",
+      "id": "128280656",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL HARITA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1056747250",
-      "name_lat": "VYAT GALENA RUSLANA",
+      "id": "457694963",
+      "name_lat": "VYAT GALENA SKIF",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "430148326",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL HARITA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1413350019",
+      "id": "1376461512",
       "name_lat": "VYBOR IMPERATORA CODE DA VINCI",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "583154266",
-      "name_lat": "VYBOR IMPERATORA ROСK- N-ROLL",
+      "id": "262338719",
+      "name_lat": "VYBOR IMPERATORA ROСK-N-ROLL",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "827440088",
+      "name_lat": "VYAT GALENA MATVEY",
+      "name_ru": "ВЯТ ГАЛЕНА МАТВЕЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -616,19 +710,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1225738166",
+      "id": "1556313483",
       "name_lat": "VYBOR IMPERATORA RIMSKIE KANIKULY",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "234492529",
+      "id": "663698609",
+      "name_lat": "VYBOR IMPERATORA ZOLOTOY OBEREG",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА ЗОЛОТОЙ ОБЕРЕГ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1180697800",
+      "name_lat": "VYATSKIY MEDVED SHARMA GRATSIOZNAYA",
+      "name_ru": "ВЯТСКИЙ МЕДВЕДЬ ШАРМА ГРАЦИОЗНАЯ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1559862670",
       "name_lat": "VYBOR IMPERATORA BOLSHAYA UDACHA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -643,15 +754,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1481669987",
-      "name_lat": "VYAT GALENA SKIF",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1540414051",
       "name_lat": "VYAT GALENA HANNA",
       "name_ru": "",
@@ -661,12 +763,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1370075622",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL HECTOR",
+      "id": "1399584048",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL HECTOR",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1079421744",
+      "name_lat": "VYBERIMENYA MORNING STAR",
+      "name_ru": "ВЫБЕРИМЕНЯ МОРНИНГ СТАР",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -693,34 +804,7 @@
       "name_ru": "",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1670855774",
-      "name_lat": "VYBOR IMPERATORA SHELKOVYY LIS",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1079421744",
-      "name_lat": "VYBERIMENYA MORNING STAR",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1519931851",
-      "name_lat": "VYATSKIY MEDVED NEOTRAZIMIY FAVORIT",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -729,34 +813,69 @@
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1442399484",
+      "id": "1473626306",
+      "name_lat": "VYATSKIY MEDVED NEOTRAZIMIY FAVORIT",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "636577818",
       "name_lat": "VYAT GALENA TALISHA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "279951395",
+      "id": "75141054",
+      "name_lat": "VYATSKIY MEDVED POTAP",
+      "name_ru": "ВЯТСКИЙ МЕДВЕДЬ ПОТАП",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "732588851",
       "name_lat": "VYAT GALENA ZIPPI VIL FO STAR'S UNION",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1516040200",
-      "name_lat": "VYAT GALENA ROGNEDA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "1345486725",
+      "name_lat": "VYBOR IMPERATORA VLASTELIN KOLETS",
+      "name_ru": "ВЫБОР ИМПЕРАТОРА ВЛАСТЕЛИН КОЛЕЦ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "65272333",
+      "name_lat": "VYATSKIY VOLK VALTURI",
+      "name_ru": "ВЯТСКИЙ ВОЛК ВАЛЬТУРИ",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "330351750",
+      "name_lat": "VYATSKIY MEDVED SABRINA",
+      "name_ru": "ВЯТСКИЙ МЕДВЕДЬ САБРИНА",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -778,12 +897,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "330351750",
-      "name_lat": "VYATSKIY MEDVED SABRINA",
+      "id": "624988227",
+      "name_lat": "V YUJNOE SOZVEZDIE MAFIA IZ BETKIN HOLLA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -792,7 +911,7 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -814,28 +933,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1327364490",
-      "name_lat": "VYBOR IMPERATORA VLASTELIN KOLETS",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1582400064",
+      "id": "1409350293",
       "name_lat": "VYATSKIY MEDVED ADELIYA MORSKAYANIMFA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "86432197",
+      "id": "500520889",
       "name_lat": "VYAT GALENA BLAJENA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 8,
       "competition_dog_id": null
@@ -847,6 +957,15 @@
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1486035256",
+      "name_lat": "V'YAMAZAKI GO FROM HACHIMANTAI",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -886,19 +1005,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "75141054",
-      "name_lat": "VYATSKIY MEDVED POTAP",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "337025542",
+      "id": "1479890065",
       "name_lat": "VYBOR IMPERATORA ROCK-N-ROLL",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -913,17 +1023,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "769919198",
-      "name_lat": "VYATSKIY VOLK VALTURI",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА / WHITE SWISS",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1406865563",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL TSARIDA",
+      "id": "1641764729",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL TSARIDA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "",
@@ -958,12 +1059,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1883611024",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL YUMASH",
+      "id": "1141220594",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL YUMASH",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "708594334",
+      "name_lat": "VYAZEMSKII ANGEL- HRANITEL YAREL",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1021,21 +1130,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1577754645",
+      "id": "620230184",
       "name_lat": "VYATKINS KOMBRIG",
       "name_ru": "",
-      "breed": "ОПРЕДЕЛЕНИЕ ПОРОДЫ /",
+      "breed": "ОПРЕДЕЛЕНИЕ ПОРОДЫ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1244750856",
-      "name_lat": "VYBOR IMPERATORA GOLUBAYA LUNA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1057,8 +1157,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "578421061",
-      "name_lat": "VYAZEMMSKII ANGEL- HRANITEL HARITA",
+      "id": "2000997029",
+      "name_lat": "VYAZEMMSKII ANGEL-HRANITEL HARITA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
@@ -1093,17 +1193,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1180697800",
-      "name_lat": "VYATSKIY MEDVED SHARMA GRATSIOZNAYA",
+      "id": "836272864",
+      "name_lat": "V'YAMAZAKI GO FROM HACHIMA NTAI",
       "name_ru": "",
-      "breed": "Ньюфаундленд",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "537528660",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL EMPYRAY",
+      "id": "152487266",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL EMPYRAY",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
@@ -1129,8 +1229,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "264523982",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL HEKTOR",
+      "id": "1395435032",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL HEKTOR",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
@@ -1147,8 +1247,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810955059",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL HEСKTOR",
+      "id": "193042013",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL HEСKTOR",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH BULLDOG",
       "breed_en": "",
@@ -1180,15 +1280,6 @@
       "breed": "CORSO",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1290216566",
-      "name_lat": "VYAT GALENA MATVEY",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1273,10 +1364,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1246397911",
-      "name_lat": "VYATSKIY MEDVED NEYA VELIKOLEPNAYA",
+      "id": "126187304",
+      "name_lat": "V`YUGA NADEZHDA CRIMA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1300,10 +1391,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1106779502",
+      "id": "586996731",
       "name_lat": "VYAT GALENA ZARA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1354,10 +1445,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "320729744",
+      "id": "95607043",
+      "name_lat": "VYATSKIY MEDVED IUZHNAIA NOCH",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "195532286",
       "name_lat": "VYAT GALENA DENISIYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1367,15 +1466,6 @@
       "name_lat": "VYATSKIY MEDVED YANTARNAYA MECHTA YANDA",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1166392382",
-      "name_lat": "VYAZEMSKII ANGEL-HRANITEL YARKAI",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1399,24 +1489,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "663698609",
-      "name_lat": "VYBOR IMPERATORA ZOLOTOY OBEREG",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1162936384",
-      "name_lat": "VYAT GALENA DREVOSLAV",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1854075947",
       "name_lat": "VYAT STYLE BONY CHERIE CLYDE",
       "name_ru": "",
@@ -1426,10 +1498,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "552956092",
+      "id": "1697254179",
       "name_lat": "VYBOR IMPERATORA UPRAVLYAJ MECHTOJ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1498,6 +1570,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1813357887",
+      "name_lat": "VYAT GALENA BELOGOR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1710300137",
       "name_lat": "VYAT GALENA VELINA",
       "name_ru": "",
@@ -1516,19 +1597,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1257292963",
+      "id": "1578065075",
       "name_lat": "VYAT GALENA POLADA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "20432734",
+      "id": "1315235564",
       "name_lat": "VYBOR IMPERAT ORA BOLSHAYA UDACHA",
       "name_ru": "",
-      "breed": "КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1552,19 +1633,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "774373153",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL CHERNOMOR",
+      "id": "1967978782",
+      "name_lat": "VYAZEMSKII ANGEL-HRANITEL CHERNOMOR",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1813357887",
-      "name_lat": "VYAT GALENA BELOGOR",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1583,15 +1655,6 @@
       "name_lat": "VYUGA NA SEMI HOLMAH",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1048643748",
-      "name_lat": "VYBOR IMPERATORA LAVINA SCHASTYA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО / ITALIAN CANE CORSO",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1642,20 +1705,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "708594334",
-      "name_lat": "VYAZEMSKII ANGEL- HRANITEL YAREL",
+      "id": "1002973231",
+      "name_lat": "VYAT GALENA TWIX",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "МОПС",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1799215082",
-      "name_lat": "VYAT GALENA PLEASURE",
+      "id": "1342054995",
+      "name_lat": "VYATSKIY MEDVED YARKAYA KOMETA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
-      "breed_en": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "total_shows": 1,
       "competition_dog_id": null
     }

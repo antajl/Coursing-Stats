@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ЛК",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1243685106",
+      "name_lat": "Л-КАЛИФ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "459904650",
+      "name_lat": "Л-КАЛИФ",
+      "name_ru": "",
+      "breed": "ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1707890009",
+      "name_lat": "Л-КАЙ",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

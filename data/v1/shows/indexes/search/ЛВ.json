@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ЛВ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1070230392",
+      "name_lat": "Л ВЕТЕР",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1875212457",
+      "name_lat": "ЛВАЛИ ФРОМ БОРДО ШУ ЛЯН",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

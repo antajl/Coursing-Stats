@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "GS",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "541612673",
+      "name_lat": "G-SHINE AI SHIBALV",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1071841793",
+      "name_lat": "GSHIHA ADSKAYA GONCHAYA",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

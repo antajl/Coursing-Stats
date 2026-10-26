@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "IC",
-  "count": 239,
+  "count": 255,
   "dogs": [
+    {
+      "id": "1173882443",
+      "name_lat": "ICE FANTASY DRAGON HEART",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
     {
       "id": "1231912130",
       "name_lat": "ICE GUARD MON BLANCK",
@@ -13,21 +22,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1173882443",
-      "name_lat": "ICE FANTASY DRAGON HEART",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 23,
-      "competition_dog_id": null
-    },
-    {
-      "id": "23663362",
+      "id": "1032861091",
       "name_lat": "ICE HELL ROZALINA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 27,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -45,7 +45,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 40,
+      "total_shows": 54,
       "competition_dog_id": null
     },
     {
@@ -76,12 +76,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "38403838",
+      "id": "506999735",
       "name_lat": "ICE HELL ROMANTIKA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -121,6 +121,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1363668188",
+      "name_lat": "ICE GUARD GLORIFYING GUY",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "303678006",
       "name_lat": "ICE LION SENATOR",
       "name_ru": "",
@@ -148,6 +157,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "127949190",
+      "name_lat": "ICE FANTASY LEGEND OF ELF'S",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "WELSH CORGI CARDIGAN",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "453902682",
+      "name_lat": "ICHIRO GRAND AIREDOGS",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "1590165343",
       "name_lat": "ICE GUARD REIGN KNIGHT",
       "name_ru": "",
@@ -157,21 +184,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "127949190",
-      "name_lat": "ICE FANTASY LEGEND OF ELF'S",
+      "id": "906174467",
+      "name_lat": "ICEBERG PLUS ESMIN",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "453902682",
-      "name_lat": "ICHIRO GRAND AIREDOGS",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -189,16 +207,7 @@
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "SAMOYED",
-      "total_shows": 33,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1363668188",
-      "name_lat": "ICE GUARD GLORIFYING GUY",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -229,10 +238,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1895167845",
+      "id": "561652714",
       "name_lat": "ICE HELL ZEUS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -256,10 +265,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "667421802",
+      "id": "489196592",
+      "name_lat": "ICONIC RUSSIAN FATA MORGANA",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "278825775",
       "name_lat": "ICE COURT STAINLESS STEEL",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "BULL TERRIER STANDART",
       "total_shows": 20,
       "competition_dog_id": null
@@ -292,6 +310,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1425081596",
+      "name_lat": "ICE FANTASY LAGER BEER",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1754875805",
       "name_lat": "ICE GUARD FLAME OF GOLD",
       "name_ru": "",
@@ -310,12 +337,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "422984780",
+      "name_lat": "ICE GUARD FRANCE ICE TIME",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "591480305",
       "name_lat": "ICE CREAM VANILLA OF CAVALIERS SUN RAYS",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -328,30 +364,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "489196592",
-      "name_lat": "ICONIC RUSSIAN FATA MORGANA",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "906174467",
-      "name_lat": "ICEBERG PLUS ESMIN",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "857073577",
       "name_lat": "ICE GUARD TIMBER BACK",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
-      "total_shows": 8,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "386975590",
+      "name_lat": "ICONIC LOVE ME",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 37,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1757022204",
+      "name_lat": "ICE BRILLIANT PANDORA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -382,15 +418,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1967473307",
-      "name_lat": "ICE FANTASY LAGER BEER",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1210426158",
       "name_lat": "ICE GUARD KAROLINS CHOCOLATE PEARL",
       "name_ru": "",
@@ -400,30 +427,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "802239893",
+      "id": "70035479",
       "name_lat": "ICE FANTASY LIKE FATHER LIKE DAUGHTER",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "422984780",
-      "name_lat": "ICE GUARD FRANCE ICE TIME",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "386975590",
-      "name_lat": "ICONIC LOVE ME",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 22,
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -463,21 +471,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "294053828",
+      "id": "825109163",
       "name_lat": "ICE FANTASY INSPIRATION FROM ME",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1757022204",
-      "name_lat": "ICE BRILLIANT PANDORA",
-      "name_ru": "",
+      "id": "793040196",
+      "name_lat": "ICHI MIO TEZORO",
+      "name_ru": "ИЧИ МИО ТЕЗОРО",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "802185841",
+      "name_lat": "ICE CREAM",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "MINIATURE BULL TERRIER",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -487,15 +504,6 @@
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "WHITE SWISS SHEPHERD DOG",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "802185841",
-      "name_lat": "ICE CREAM",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "MINIATURE BULL TERRIER",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -517,10 +525,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1328114961",
+      "id": "1398083534",
       "name_lat": "ICE FANTASY VICTORIA'S SECRET",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -541,6 +549,15 @@
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "WELSH CORGI CARDIGAN",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "154357872",
+      "name_lat": "ICE GUARD DE ORE COMTACTA",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -571,15 +588,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "12785677",
-      "name_lat": "ICE GUARD DE ORE COMTACTA",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1543261804",
       "name_lat": "Ice Fantasy Aivazovsky",
       "name_ru": "",
@@ -598,19 +606,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "55346659",
-      "name_lat": "ICE GUARD PRINCESS SPRING",
+      "id": "1543302443",
+      "name_lat": "ICE TANGO ATLANTA BERKANA",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "181339093",
-      "name_lat": "ICE TANGO ATLANTA BERKANA",
+      "id": "55346659",
+      "name_lat": "ICE GUARD PRINCESS SPRING",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -625,21 +633,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1166576054",
+      "id": "1282936495",
       "name_lat": "ICE GUARD JOZEFINE PLEASE",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "165859913",
+      "id": "702223468",
       "name_lat": "ICHIRO TAKEO KHIDEO",
       "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "АКИТА /",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -648,7 +655,7 @@
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -670,12 +677,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "373642127",
+      "name_lat": "ICE FANTASY DAENERYS",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1018073193",
       "name_lat": "ICE GUARD CHICAGO NIGHT",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "307854212",
+      "name_lat": "ICE FANTASY CATCH ME IF YOU CAN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -688,21 +713,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1802128314",
+      "name_lat": "ICE FANTASY RAY OF SUNSHINE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "178160336",
+      "name_lat": "ICE JAWS O'MITSA",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА, МАЛИНУА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1289051773",
       "name_lat": "ICI INDY V.D,VIERSENHOEVE",
       "name_ru": "",
       "breed": "БОЛЬШОЙ ВАНДЕЙСКИЙ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "373642127",
-      "name_lat": "ICE FANTASY DAENERYS",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -733,28 +766,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1802128314",
-      "name_lat": "ICE FANTASY RAY OF SUNSHINE",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1711574414",
       "name_lat": "ICEBERG PLUS KESSI",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1268478755",
-      "name_lat": "ICE FANTASY CATCH ME IF YOU CAN",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -766,6 +781,15 @@
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256922446",
+      "name_lat": "ICHIRO KAZUO IZ ARKAIMA",
+      "name_ru": "ИЧИРО КАЗУО ИЗ АРКАИМА",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -787,6 +811,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1575070947",
+      "name_lat": "ICE GUARD TERN RIVER BACK",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1969450064",
       "name_lat": "ICE FANTASY MISTER GRUMBLER",
       "name_ru": "",
@@ -796,19 +829,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1137667282",
+      "id": "381916090",
       "name_lat": "ICEBERG PLUS BOGEMA",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КИНГ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1278267741",
+      "id": "18279680",
       "name_lat": "ICE GUARD LION O'LEARY",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -823,10 +856,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1884144467",
+      "id": "940308172",
+      "name_lat": "ICE AND FIRE OF SILVER WAY",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "793877946",
       "name_lat": "ICE LEDY",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -847,6 +889,15 @@
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1584455114",
+      "name_lat": "ICE GUARD CHARMING ME RUS GLAMUR REALIZE",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -877,21 +928,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "207924352",
+      "id": "1117381805",
       "name_lat": "ICE HELL GRAND STAR",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "99745329",
-      "name_lat": "ICE AND FIRE OF SILVER WAY",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -901,6 +943,14 @@
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1563673887",
+      "name_lat": "ICEBEAR PRIDE OF JUSTIN",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -922,21 +972,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "25394010",
+      "name_lat": "ICE GUARD MILA KATRIN DALIDA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1376198817",
       "name_lat": "ICE CREAM VANILLA OF KAVALTRS SUN RAYS",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "838510056",
-      "name_lat": "ICE GUARD CHARMING ME",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -949,10 +999,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1803957442",
+      "id": "1567791549",
       "name_lat": "ICE FANTASY LIMITED EDITION",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -964,6 +1014,14 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1787512009",
+      "name_lat": "ICE SHERAMI CZAREVNA FOR STEFFTIAM",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1030,6 +1088,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "819021560",
+      "name_lat": "ICHI BRAVE CORAL",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "555600047",
       "name_lat": "ICE GUARD PURPLE RAIN",
       "name_ru": "",
@@ -1048,10 +1114,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "893076060",
+      "id": "642020089",
       "name_lat": "ICEBERG PLUS KRISTIAN",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1061,15 +1127,6 @@
       "name_lat": "Ice",
       "name_ru": "",
       "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "25394010",
-      "name_lat": "ICE GUARD MILA KATRIN DALIDA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1102,10 +1159,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1877035823",
+      "id": "212295092",
       "name_lat": "ICE SUN DANCE",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР АМЕРИКАНСКИЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1120,10 +1177,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "408095071",
+      "id": "396512462",
       "name_lat": "ICE GUARD RASCIO DILLE",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1165,10 +1222,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "832194654",
+      "id": "1948884327",
       "name_lat": "ICE GUARD ROYAL FLAME",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1189,15 +1246,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "793040196",
-      "name_lat": "ICHI MIO TEZORO",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1233,7 +1281,7 @@
       "name_ru": "",
       "breed": "МАЛАМУТ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1264,10 +1312,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "170867202",
+      "id": "195822727",
       "name_lat": "ICEBERG PLUS BLACK FORTUNES",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1288,15 +1336,6 @@
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1575070947",
-      "name_lat": "ICE GUARD TERN RIVER BACK",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1390,6 +1429,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1909327326",
+      "name_lat": "ICE JAWS SERPENT’A",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "522112199",
       "name_lat": "ICE GUARD DESERT ROSE",
       "name_ru": "",
@@ -1399,10 +1446,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1699919475",
+      "id": "869112072",
+      "name_lat": "ICILY'S FELICITY",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "713668826",
       "name_lat": "ICE GUARD MATIAS",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1444,19 +1499,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1444737251",
-      "name_lat": "ICE GUARD CHARMING ME RUS GLAMUR REALIZE",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "46594480",
+      "id": "1030218782",
       "name_lat": "ICY SLAYER DES BRUMES DE KALHAN",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "DOBERMANN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1489,20 +1535,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "256922446",
-      "name_lat": "ICHIRO KAZUO IZ ARKAIMA",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1095591123",
       "name_lat": "ICE",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "380678420",
+      "name_lat": "ICOS VOM HOLTKAMPER HOF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1531,6 +1576,14 @@
       "breed": "СИБА / SHIBA",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40471851",
+      "name_lat": "ICHIRO",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1570,10 +1623,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1428572136",
+      "id": "1375953931",
+      "name_lat": "ICE GUARD ZENA QUEEN OF WARRIORS",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "687734157",
       "name_lat": "ICE GUARD MUSKAY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "125670712",
+      "name_lat": "ICE BRILLIANT YOU MAY SOUL",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1615,21 +1685,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "94023173",
+      "id": "1248952370",
       "name_lat": "ICEBERG BLACK ICE",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "40471851",
-      "name_lat": "ICHIRO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1642,11 +1703,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "125670712",
-      "name_lat": "ICE BRILLIANT YOU MAY SOUL",
+      "id": "54104738",
+      "name_lat": "ICE STAR SYLENA",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -1660,10 +1720,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1500631145",
+      "id": "1464110806",
       "name_lat": "ICEBERG IZ DINASTII CHEMPIONOV",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "610251823",
+      "name_lat": "ICE BRILLIANT YUNONA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1687,10 +1756,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1552404844",
+      "id": "847696454",
       "name_lat": "ICEEDGEVUL AVER'EVA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1768,6 +1837,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1903904064",
+      "name_lat": "I CALL YOU PRECIOUS VALENTINA’S MAGIC",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "287050306",
       "name_lat": "ICE GUARD CRANBERRY JUICE",
       "name_ru": "",
@@ -1795,10 +1873,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1390260874",
+      "id": "1756548182",
       "name_lat": "ICE BLACK DRAGON GOLD",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1813,11 +1891,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1851683852",
+      "name_lat": "ICE BRILLIANT ANABEL",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "191428633",
       "name_lat": "ICO VOM BARONENWALD",
       "name_ru": "",
       "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1556078854",
+      "name_lat": "ICE FANTASY SIMPLE THE BEST",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1849,11 +1943,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1566933138",
+      "id": "890280148",
       "name_lat": "ICE BRILLIANT SUNRISE",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1593239816",
+      "name_lat": "ICE STAR Z JASNE HVEZDY",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "278071940",
+      "name_lat": "ICE BRILLIANT YUDZHIN",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1975,11 +2085,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1853246219",
+      "id": "1162374000",
+      "name_lat": "ICE VAN VINKL ASSANG",
+      "name_ru": "",
+      "breed": "БОКСЕР /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "483571130",
+      "name_lat": "ICE GUARD GANDALF",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "583449602",
       "name_lat": "ICEBERG PLUS BELL",
       "name_ru": "",
-      "breed": "Континентальный той спаниель (папийон - фален) папийон /",
+      "breed": "Континентальный той спаниель (папийон - фален) папийон",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "320396103",
+      "name_lat": "ICE GUARD BRIDGE OF CONFIDENCE",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1993,10 +2127,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "736463996",
+      "id": "1445981849",
       "name_lat": "ICE FANTASY VALLEY OF LOVE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2011,19 +2145,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "352487910",
+      "id": "1291920991",
       "name_lat": "ICE HELL ZAN SULTAN",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "624273068",
+      "id": "54412403",
       "name_lat": "ICE FANTASY AQUARELLE AT PRIORI INKANTATUM",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2056,10 +2190,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1623947479",
+      "id": "626460255",
       "name_lat": "ICE BRILLIANT USLADA",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2083,19 +2217,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1711070866",
+      "id": "67241577",
       "name_lat": "ICHAR KHAN TAGIR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1560261558",
+      "id": "1522936009",
       "name_lat": "ICE FANTASY LIGHTING STAR",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2123,15 +2257,6 @@
       "name_lat": "ICELAND FOR CRISTY FRIENDS",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "610251823",
-      "name_lat": "ICE BRILLIANT YUNONA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

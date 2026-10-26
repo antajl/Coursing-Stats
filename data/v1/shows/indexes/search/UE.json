@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UE",
-  "count": 46,
+  "count": 53,
   "dogs": [
     {
       "id": "1016876319",
@@ -13,12 +13,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "851490158",
+      "name_lat": "UELSKIY PRINCE",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1688749609",
       "name_lat": "UENDER-HAN",
       "name_ru": "",
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 50,
+      "total_shows": 55,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1848032585",
+      "name_lat": "UELSI SYUAN LUN",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -28,6 +44,24 @@
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1831083923",
+      "name_lat": "UELSI IZ HANSKOY RATI",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "837332467",
+      "name_lat": "UELSKIY PRAZDNIK ESTER",
+      "name_ru": "УЭЛЬСКИЙ ПРАЗДНИК ЭСТЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -49,28 +83,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "116281955",
-      "name_lat": "UELSKIY PRAZDNIK ESTER",
-      "name_ru": "",
-      "breed": "ПЕМБРОК /",
+      "id": "103193018",
+      "name_lat": "UENDEL SPLENDID PERL",
+      "name_ru": "УЭНДЕЛ СПЛЕНДИД ПЕРЛ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1831083923",
-      "name_lat": "UELSI IZ HANSKOY RATI",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 15,
+      "id": "8305403",
+      "name_lat": "UEMATSU IZ IMPERII FAVORITOV",
+      "name_ru": "УЭМАЦУ ИЗ ИМПЕРИИ ФАВОРИТОВ",
+      "breed": "СИБА",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1041783326",
+      "id": "1465010272",
       "name_lat": "UELS CHARLZ ZVEZDA POLESYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -82,6 +115,15 @@
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР / RUSSIAN BLACK",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "438072691",
+      "name_lat": "UENDER-HAN",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР / RUSSIAN BLACK TERRIER",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -103,15 +145,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "438072691",
-      "name_lat": "UENDER-HAN",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР / RUSSIAN BLACK TERRIER",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1198051281",
       "name_lat": "UELSI",
       "name_ru": "",
@@ -121,28 +154,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "509792788",
+      "id": "151679922",
       "name_lat": "UESLI TIMSON",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "УЭСЛИ ТИМСОН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1300913735",
+      "id": "1456710575",
       "name_lat": "UESLEY SUN DELIGHT",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1136961263",
+      "id": "1777662238",
       "name_lat": "UELSI",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ СОБАКА) СТАНДАРТНАЯ /",
+      "breed": "АМЕРИКАНСКАЯ СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -157,12 +190,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "103193018",
-      "name_lat": "UENDEL SPLENDID PERL",
+      "id": "1401843037",
+      "name_lat": "UESLI IZ ZHUKOVKI",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -175,21 +208,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1401843037",
-      "name_lat": "UESLI IZ ZHUKOVKI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "715490283",
       "name_lat": "UELSI MILOE OCHAROVANIE",
-      "name_ru": "",
+      "name_ru": "УЭЛСИ МИЛОЕ ОЧАРОВАНИЕ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -211,6 +235,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "291615682",
+      "name_lat": "UELSKIY PRINCZ RICHARD",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1727764628",
       "name_lat": "UENDY",
       "name_ru": "",
@@ -220,12 +253,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "8305403",
-      "name_lat": "UEMATSU IZ IMPERII FAVORITOV",
+      "id": "493697248",
+      "name_lat": "UENDER - HAN",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "734232821",
+      "name_lat": "UENDER-HAN",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР / RUSSIAN",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -283,10 +323,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "923925617",
+      "id": "1978653317",
       "name_lat": "UELS CHARIZ ZVEZDA POLEAYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -346,15 +386,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "98104858",
-      "name_lat": "UELSKIY PRINCZ RICHARD",
-      "name_ru": "",
-      "breed": "BRABANSONПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "376686153",
       "name_lat": "UELSI K.SH",
       "name_ru": "",
@@ -364,19 +395,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "98103873",
+      "id": "1877618460",
       "name_lat": "UELSI",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ /",
+      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1770795396",
+      "id": "1906051128",
       "name_lat": "UELS IF",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -391,11 +422,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "82349869",
+      "name_lat": "UENSDEJ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "237979004",
       "name_lat": "UESLI S ZHUKOVKI",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1399535199",
+      "name_lat": "UELSI NEMEZIDA GEJLISS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -414,6 +461,14 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "542028278",
+      "name_lat": "UENO DEL ALMA NUT JAM",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     }

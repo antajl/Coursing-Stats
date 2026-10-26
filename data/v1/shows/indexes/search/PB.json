@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "PB",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "224396368",
+      "name_lat": "PBJ'S BLACK-IN-STYLE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "AMERICAN COCKER SPANIEL",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1522737358",
+      "name_lat": "PBJ'S CAJUN THUNDERBALL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ / AMERICAN",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1519660269",
+      "name_lat": "PBJ'S YOUNG GUN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "AMERICAN COCKER SPANIEL",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

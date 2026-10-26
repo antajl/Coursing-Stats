@@ -1,15 +1,23 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EE",
-  "count": 34,
+  "count": 35,
   "dogs": [
     {
       "id": "129747540",
       "name_lat": "EESTILESS POLAR STAR",
-      "name_ru": "",
+      "name_ru": "ЭЭСТИЛЕСС ПОЛАР СТАР",
       "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173568521",
+      "name_lat": "EESTILESS PITER PEN",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -35,8 +43,7 @@
       "name_lat": "EEVEE NELL'S D.A.",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -184,6 +191,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "619505439",
+      "name_lat": "EE VELICHESTVO IZ DOMA KHALIF",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "AIREDALE TERRIER",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1684642810",
       "name_lat": "EESTILESS LET IT WELL ALONE",
       "name_ru": "",
@@ -238,15 +254,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "619505439",
-      "name_lat": "EE VELICHESTVO IZ DOMA KHALIF",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "AIREDALE TERRIER",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "301269225",
       "name_lat": "EE VYSOCHESTVO PLYUSHKA V RYUSHKAH",
       "name_ru": "",
@@ -274,10 +281,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1704340515",
+      "id": "1235667722",
       "name_lat": "EE VELICHESTVO MARGARITA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null

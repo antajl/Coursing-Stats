@@ -1,24 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "KY",
-  "count": 64,
+  "count": 73,
   "dogs": [
     {
-      "id": "1709941776",
-      "name_lat": "KYARA IZ NOVO- PEREDELKINO",
+      "id": "981254326",
+      "name_lat": "KYARA VOM HAUS DEMIRA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "827050376",
-      "name_lat": "KYU DE MARY GARRYDZH",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 37,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 55,
       "competition_dog_id": null
     },
     {
@@ -27,7 +18,33 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 35,
+      "total_shows": 41,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1308924022",
+      "name_lat": "KYLIE KEEPER OF WIN IZ JANTARNOY STRANY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1665319907",
+      "name_lat": "KYARA IZ NOVO-PEREDELKINO",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "827050376",
+      "name_lat": "KYU DE MARY GARRYDZH",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -40,12 +57,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "669914695",
+      "id": "253981966",
       "name_lat": "KYU DE MARY MICHAEL",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -76,21 +93,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588479655",
-      "name_lat": "KYLIE KEEPER OF WIN IZ JANTARNOY STRANY",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1172842319",
       "name_lat": "KYUNEFE DOR DE MAISON DES LYS MOLOSOS GRATZI",
       "name_ru": "",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "CHINESE CRESTED DOG",
-      "total_shows": 45,
+      "total_shows": 46,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1635524853",
+      "name_lat": "K'YUBI POKORITEL' SERDEC",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -103,10 +120,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1984698167",
+      "id": "578322294",
       "name_lat": "KYVVAT",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -121,10 +138,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1857899731",
+      "id": "277915474",
       "name_lat": "KYAJESTVA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -166,21 +183,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1173678568",
-      "name_lat": "KYNAGON MRS. MONEYPENNY",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "385093526",
       "name_lat": "KYANTI-KODA SOFICHE",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -189,6 +197,15 @@
       "name_ru": "",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1173678568",
+      "name_lat": "KYNAGON MRS. MONEYPENNY",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -206,8 +223,7 @@
       "name_lat": "KYULAOTS HOUSE BISMARK",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -220,10 +236,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1498791637",
+      "id": "268477582",
       "name_lat": "KYRON VOM MAIR HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 6,
       "competition_dog_id": null
@@ -238,30 +254,65 @@
       "competition_dog_id": null
     },
     {
+      "id": "1514547441",
+      "name_lat": "K'YURISITI SO STANITSY MAGNITNAJA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1286619929",
       "name_lat": "KYUNEFE FOR DE MAISON DES LYS MOLOSOS GRATZI",
       "name_ru": "",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1347794566",
-      "name_lat": "KYARA AYRIN LIFE S LIPETSKOY SLOBODY",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
+      "id": "1874564608",
+      "name_lat": "KYARA ADRIANA BRUNOVA",
+      "name_ru": "КЬЯРА АДРИАНА БРУНОВА",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "1307034389",
       "name_lat": "KYARA KVIN FOR GOLD VIKTORI",
-      "name_ru": "",
+      "name_ru": "КЬЯРА КВИН ФОР ГОЛД ВИКТОРИ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1086561602",
+      "name_lat": "KYARA AYRIN LIFE S LIPETSKOY SLOBODY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "704598810",
+      "name_lat": "KYNAGON MRS MONEYPENNY",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1491016927",
+      "name_lat": "K'YARA TSARITSA NOCHI",
+      "name_ru": "КЬЯРА ЦАРИЦА НОЧИ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -274,12 +325,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1483496123",
+      "id": "1083369738",
+      "name_lat": "KYVVAT",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "73027690",
       "name_lat": "KYARA",
       "name_ru": "",
-      "breed": "ПОКЕТ",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "ПОКЕТ /",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -307,15 +365,6 @@
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1083369738",
-      "name_lat": "KYVVAT",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -391,15 +440,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1874564608",
-      "name_lat": "KYARA ADRIANA BRUNOVA",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "764486524",
       "name_lat": "KYARA KVIN FOR GOLD VIKTORY",
       "name_ru": "",
@@ -445,6 +485,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "414724046",
+      "name_lat": "K'YA TVOYA OTRADA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "730168427",
       "name_lat": "KYULAOTS HOUSE DIZEL",
       "name_ru": "",
@@ -454,11 +503,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "916373774",
+      "name_lat": "K-YORK",
+      "name_ru": "",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА / KANGAL SHEPHERD",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1579323510",
       "name_lat": "KYTUR'E",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1455821111",
+      "name_lat": "KYARA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -499,10 +565,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "110433546",
+      "id": "1060315391",
       "name_lat": "KYARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1484778472",
+      "name_lat": "KYLIE MY LOVE SHAH",
+      "name_ru": "",
+      "breed": "HAIRED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1402052828",
+      "name_lat": "KYE DE MARY GARRYDZH",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -526,28 +610,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1484778472",
-      "name_lat": "KYLIE MY LOVE SHAH",
-      "name_ru": "",
-      "breed": "HAIRED",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "6300186",
       "name_lat": "KYULAOTS HOUSE BUBBLE GUM",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1402052828",
-      "name_lat": "KYE DE MARY GARRYDZH",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -562,20 +628,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1341856746",
+      "id": "397985334",
       "name_lat": "KYARA VON DEMIURG",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "121511135",
+      "id": "1483270975",
       "name_lat": "KYMIR MILLIONOV DOCTOR ZLO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "480581401",
+      "name_lat": "KYULAOTS HOUSE LEON",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
       "total_shows": 1,
       "competition_dog_id": null
     }

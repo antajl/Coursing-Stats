@@ -1,39 +1,38 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЭГ",
-  "count": 60,
+  "count": 64,
   "dogs": [
+    {
+      "id": "1509793604",
+      "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ ЧЕРЧИЛЛЬ",
+      "name_ru": "ЭГО ВИНЦЕРЕ МУНДУМ ЧЕРЧИЛЛЬ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
     {
       "id": "442521761",
       "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ ЖЕМЧУЖИНА КАВКАЗА",
-      "name_ru": "",
+      "name_ru": "ЭГО ВИНЦЕРЕ МУНДУМ ЖЕМЧУЖИНА КАВКАЗА",
       "breed": "БУРБУЛЬ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "211100969",
       "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ РУНА ФЕХУ",
-      "name_ru": "",
+      "name_ru": "ЭГО ВИНЦЕРЕ МУНДУМ РУНА ФЕХУ",
       "breed": "БУРБУЛЬ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1509793604",
-      "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ ЧЕРЧИЛЛЬ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1446964252",
       "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ ПРИМА",
-      "name_ru": "",
+      "name_ru": "ЭГО ВИНЦЕРЕ МУНДУМ ПРИМА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 12,
@@ -42,7 +41,7 @@
     {
       "id": "1426991232",
       "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ РОССИЯ ВЕЛИКАЯ",
-      "name_ru": "",
+      "name_ru": "ЭГО ВИНЦЕРЕ МУНДУМ РОССИЯ ВЕЛИКАЯ",
       "breed": "БУРБУЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -76,12 +75,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "433592568",
+      "id": "303523047",
+      "name_lat": "ЭГО ХАЛТ ЭНД КАТЧ ФАЙЕР",
+      "name_ru": "ЭГО ХАЛТ ЭНД КАТЧ ФАЙЕР",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "436298781",
       "name_lat": "ЭГРИН ЭНВОЙ СЫН ТАЙГИ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "name_ru": "ЭГРИН ЭНВОЙ СЫН ТАЙГИ",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1339116546",
+      "name_lat": "Эго Винцере Мундум Велес",
+      "name_ru": "",
+      "breed": "БУРБУЛЬ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -91,6 +107,15 @@
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1226859843",
+      "name_lat": "ЭГЛЕРИА ДИ'ВЕНДИС",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ (Бел.Черн.Корич.)",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -114,19 +139,18 @@
     {
       "id": "1284829767",
       "name_lat": "Эгоистка из Казанского Ханства АНКОР ДРИМ ГАЛАКТИК",
-      "name_ru": "",
+      "name_ru": "Эгоистка из Казанского Ханства АНКОР ДРИМ ГАЛАКТИК",
       "breed": "ПУДЕЛЬ МАЛЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1226859843",
-      "name_lat": "ЭГЛЕРИА ДИ'ВЕНДИС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ (Бел.Черн.Корич.)",
-      "breed_en": "",
-      "total_shows": 3,
+      "id": "1828024869",
+      "name_lat": "ЭГЛЕРИА МЭННЕРС",
+      "name_ru": "ЭГЛЕРИА МЭННЕРС",
+      "breed": "КИНГ ЧАРЛЬЗ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -141,7 +165,7 @@
     {
       "id": "561234198",
       "name_lat": "ЭГОИСТ ПЛАТИНУМ СВАРОВСКИ",
-      "name_ru": "",
+      "name_ru": "ЭГОИСТ ПЛАТИНУМ СВАРОВСКИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 8,
@@ -150,7 +174,7 @@
     {
       "id": "99761441",
       "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ УМИ УДАЧА",
-      "name_ru": "",
+      "name_ru": "ЭГО ВИНЦЕРЕ МУНДУМ УМИ УДАЧА",
       "breed": "БУРБУЛЬ",
       "breed_en": "",
       "total_shows": 6,
@@ -159,17 +183,25 @@
     {
       "id": "70361789",
       "name_lat": "ЭГИДА ДЖУЛИ ЗВЕЗДА УДАЧИ",
-      "name_ru": "",
+      "name_ru": "ЭГИДА ДЖУЛИ ЗВЕЗДА УДАЧИ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1235938985",
+      "id": "1922886384",
+      "name_lat": "ЭГЛЕРИА МЭННЕРС МЭКЕТ МЭН",
+      "name_ru": "ЭГЛЕРИА МЭННЕРС МЭКЕТ МЭН",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1876914582",
       "name_lat": "ЭГО ГРЭЙ ЗЕВС ИЗ ЗВЕЗДНОЙ СТАИ",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "name_ru": "ЭГО ГРЭЙ ЗЕВС ИЗ ЗВЕЗДНОЙ СТАИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -202,24 +234,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1339116546",
-      "name_lat": "Эго Винцере Мундум Велес",
-      "name_ru": "",
-      "breed": "БУРБУЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "303523047",
-      "name_lat": "ЭГО ХАЛТ ЭНД КАТЧ ФАЙЕР",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "605521986",
       "name_lat": "ЭГОИСТ ПЛАТИНУМ ОНЕГИН",
       "name_ru": "",
@@ -240,8 +254,17 @@
     {
       "id": "1609849498",
       "name_lat": "Эго Винцере Мундум иримэ",
-      "name_ru": "",
+      "name_ru": "Эго Винцере Мундум иримэ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "558353013",
+      "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ ЭКСКАЛИБУР",
+      "name_ru": "",
+      "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -249,7 +272,7 @@
     {
       "id": "1506989056",
       "name_lat": "ЭГОИСТ ИЗ ГАРЕМА БЕЛЫХ ДИВ",
-      "name_ru": "",
+      "name_ru": "ЭГОИСТ ИЗ ГАРЕМА БЕЛЫХ ДИВ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -278,15 +301,6 @@
       "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ ОФЕЛИЯ",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "827662210",
-      "name_lat": "ЭГОИСТ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -328,28 +342,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "64081413",
+      "id": "425866361",
       "name_lat": "ЭГИДА ЗАЩИТНИЦА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1649870468",
-      "name_lat": "ЭГОИСТ ПЛАТИНУМ БОС ЛЕДИ ДРАГОН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "558353013",
-      "name_lat": "ЭГО ВИНЦЕРЕ МУНДУМ ЭКСКАЛИБУР",
-      "name_ru": "",
-      "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -357,19 +353,28 @@
     {
       "id": "876973713",
       "name_lat": "ЭГОИСТ ПЛАТИНУМ РЕВАНШ ИМПЕРАТОРА",
-      "name_ru": "",
+      "name_ru": "ЭГОИСТ ПЛАТИНУМ РЕВАНШ ИМПЕРАТОРА",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1402978153",
-      "name_lat": "ЭГОИСТ ПЛАТИНУМ ШАУ- ВАУ ПАРАМАРИБА",
-      "name_ru": "",
+      "id": "348977641",
+      "name_lat": "ЭГОИСТ ПЛАТИНУМ ШАУ-ВАУ ПАРАМАРИБА",
+      "name_ru": "ЭГОИСТ ПЛАТИНУМ ШАУ-ВАУ ПАРАМАРИБА",
       "breed": "НЕМЕЦКИЙ ШПИЦ -",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "219638263",
+      "name_lat": "Э-ГЕРДА",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -378,6 +383,14 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "244998981",
+      "name_lat": "ЭГОН",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -391,11 +404,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1039483058",
+      "name_lat": "Эгир Покоритель Моря",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "154296448",
       "name_lat": "ЭГЕЙНСШАФТ ЛЕГЕНДА",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "362193875",
+      "name_lat": "ЭГОИСТ ИЗ ДИНАСТИИ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -427,6 +458,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1071780276",
+      "name_lat": "ЭГОИСТ ПЛАТИНУМ ВАМ И НЕ СНИЛОСЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1564965954",
       "name_lat": "Эго Винцере Мундум Иллиам тирон",
       "name_ru": "",
@@ -440,15 +479,6 @@
       "name_lat": "ЭГЕЯ ГАЙКА ИЗ СВИТЫ ЕКАТЕРИНЫ",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1039483058",
-      "name_lat": "Эгир Покоритель Моря",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

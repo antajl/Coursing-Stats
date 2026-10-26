@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "LR",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "165102110",
+      "name_lat": "L'RUUTAHAIME TOKUGAWA MIRYOKU KAT",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "AKITA",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "193126578",
+      "name_lat": "L'RUUTAHIME TOKUGAWA MIRYOKU KAT",
+      "name_ru": "",
+      "breed": "АКИТА / AKITA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "117057902",
+      "name_lat": "LRYO TOKIMITSU",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

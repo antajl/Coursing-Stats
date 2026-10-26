@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "GV",
-  "count": 44,
+  "count": 48,
   "dogs": [
     {
       "id": "1388092103",
@@ -27,7 +27,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -49,19 +49,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "126544174",
+      "id": "101762299",
       "name_lat": "GVILENNA S ZELENOGO GORODA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "478739345",
+      "id": "857779730",
       "name_lat": "GVINET VOM OLSTER HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -85,12 +85,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "902541971",
+      "id": "958653592",
       "name_lat": "GVENDELIN IZ ALTAYSKOY DINASTII",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "name_ru": "ГВЕНДЕЛИН ИЗ АЛТАЙСКОЙ ДИНАСТИИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -103,21 +103,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "364550621",
-      "name_lat": "GVENDALIN FIRST STAR",
+      "id": "625657471",
+      "name_lat": "GVINEY",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "12838406",
-      "name_lat": "GVINEY",
+      "id": "427701577",
+      "name_lat": "GVENDALIN FIRST STAR",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -139,19 +139,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1615245452",
+      "id": "517760105",
       "name_lat": "GVENDOLIN WILD",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "827068001",
+      "id": "264060405",
       "name_lat": "GVARDEETS IZ RUSSKOI DINASTII",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -184,10 +184,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1728458268",
+      "id": "176242543",
       "name_lat": "GVENLAND VIVA VERSACHE RED BULL",
       "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -211,6 +211,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1877134142",
+      "name_lat": "GVIDON KNYAZ BLEK STAR",
+      "name_ru": "ГВИДОН КНЯЗЬ БЛЕК СТАР",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "15498392",
       "name_lat": "GVENET",
       "name_ru": "",
@@ -225,6 +234,22 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259545410",
+      "name_lat": "GVOZDIKA S VOZNESENSKOGO POSADA",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ / CHOW",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1380339816",
+      "name_lat": "GVOZDIKA S VOZNESENSKO GO POSADA",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -247,21 +272,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "601111210",
+      "name_lat": "GVIDON",
+      "name_ru": "",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ СОБАКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1383218433",
       "name_lat": "GVEN VENDI",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "601111210",
-      "name_lat": "GVIDON",
-      "name_ru": "",
-      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -315,6 +339,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "313814035",
+      "name_lat": "GVINEVRA MOKKA RUSSIAN BULLS",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -373,15 +405,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1877134142",
-      "name_lat": "GVIDON KNYAZ BLEK STAR",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1766850827",
       "name_lat": "GVINET KEYT PELTROU",
       "name_ru": "",
@@ -396,6 +419,14 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1826489481",
+      "name_lat": "GVIDON IZ MIMOLETNOGO VIDENIJA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     }

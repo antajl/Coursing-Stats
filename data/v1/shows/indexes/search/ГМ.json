@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ГМ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1443571433",
+      "name_lat": "Г-Мейзекен",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1728975679",
+      "name_lat": "Г-МЕЙЗЕКИН",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1552513588",
+      "name_lat": "Г-МЕЙЗЕКИН",
+      "name_ru": "",
+      "breed": "GERMAN SHORT-HAIRED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

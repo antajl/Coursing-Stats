@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ET",
-  "count": 218,
+  "count": 229,
   "dogs": [
     {
       "id": "1069678071",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 69,
+      "total_shows": 78,
       "competition_dog_id": null
     },
     {
@@ -36,7 +36,7 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "CHIHUAHUA LONG-HAIRED",
-      "total_shows": 30,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -49,30 +49,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "1834130020",
-      "name_lat": "ETUAL DEL EST FANAT RINGA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "POODLE TOY FAWN, GREY",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1577229167",
-      "name_lat": "ETERNAL HOLIDAY",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "645592934",
+      "id": "595858271",
       "name_lat": "ETALON RADOSTI URFIN JUCE",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1834130020",
+      "name_lat": "ETUAL DEL EST FANAT RINGA",
+      "name_ru": "ЭТУАЛЬ ДЕЛЬ ЭСТ ФАНАТ РИНГА",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "POODLE TOY FAWN, GREY",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1025930750",
+      "name_lat": "ETERNAL HOLIDAY",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1166135004",
+      "name_lat": "ETERNITY SOLAR",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1811710129",
+      "name_lat": "ETNA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
+      "breed_en": "GERMAN SHORT-HAIRED POINTING DOG (DEUTSCH KURZHAAR)",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -80,6 +98,24 @@
       "name_lat": "ETUAL DEL EST TEODOR",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "987419799",
+      "name_lat": "ETO GOSHA LORETTY PUPPY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1869941733",
+      "name_lat": "ETANIA DUARTE DE CHANTREZE",
+      "name_ru": "",
+      "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -99,25 +135,25 @@
       "name_ru": "",
       "breed": "СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1811710129",
-      "name_lat": "ETNA",
+      "id": "45391790",
+      "name_lat": "ETNA TEAM CARRERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
-      "breed_en": "GERMAN SHORT-HAIRED POINTING DOG (DEUTSCH KURZHAAR)",
-      "total_shows": 5,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1869941733",
-      "name_lat": "ETANIA DUARTE DE CHANTREZE",
+      "id": "1357685666",
+      "name_lat": "ETUAL DEL EST GEORG",
       "name_ru": "",
-      "breed": "СОЛЬЮ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -130,30 +166,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1166135004",
-      "name_lat": "ETERNITY SOLAR",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "987419799",
-      "name_lat": "ETO GOSHA LORETTY PUPPY",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "107299419",
+      "id": "1099765611",
       "name_lat": "ETALON ROLS ROJS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1533958075",
+      "name_lat": "ETUAL DEL EST PARMEZAN",
+      "name_ru": "ЭТУАЛ ДЕЛЬ ЭСТ ПАРМЕЗАН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -193,15 +220,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1533958075",
-      "name_lat": "ETUAL DEL EST PARMEZAN",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "132078545",
       "name_lat": "ETALON RADOSTI IVELINA",
       "name_ru": "",
@@ -220,17 +238,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1357685666",
-      "name_lat": "ETUAL DEL EST GEORG",
+      "id": "1968235223",
+      "name_lat": "ETALON RADOSTI OBI-VAN-LINDA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1981884538",
-      "name_lat": "ETALON RADOSTI ZHANI- SHA-DEN",
+      "id": "205011842",
+      "name_lat": "E-TYUR S KURGANOV",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1984916576",
+      "name_lat": "ETALON RADOSTI ZHANI-SHA-DEN",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
@@ -238,19 +265,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1175676223",
+      "id": "596326107",
       "name_lat": "ETALON STILYA OT GOSPOJI PANINOI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1049457772",
+      "id": "1970817344",
+      "name_lat": "E.T ALIEN FROM VALVASOR'S LAND",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
+      "breed_en": "DEUTSCHE DOGGE BLUE",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1928737353",
       "name_lat": "ETUAL DEL EST AYSBERRI",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
       "total_shows": 10,
       "competition_dog_id": null
@@ -265,6 +301,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "75517735",
+      "name_lat": "ETTURNER CALYPSO",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "1895928950",
       "name_lat": "ETALON RADOSTI ESENIYA",
       "name_ru": "",
@@ -274,21 +318,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "762438904",
+      "id": "1223735877",
       "name_lat": "ETERIYA DLYA RUSSKIY SHANSONIE",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "64814110",
-      "name_lat": "ETTURNER CALYPSO",
+      "id": "1851365751",
+      "name_lat": "ETNA INCREDIBLE DOG",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1461563379",
+      "name_lat": "ETUAL DEL EST GAYANA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -328,19 +380,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1851365751",
-      "name_lat": "ETNA INCREDIBLE DOG",
+      "id": "1824101714",
+      "name_lat": "ETALON RADOSTI NIKOLE KIDMAN",
       "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "WHITE SWISS SHEPHERD DOG",
-      "total_shows": 17,
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "649348867",
+      "id": "451847658",
       "name_lat": "ETHERY IZ DOMA DARCY'S",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -373,12 +425,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "742365389",
-      "name_lat": "ETNA",
+      "id": "155496923",
+      "name_lat": "ETUAL DEL EST PITERSKIY MAJEUR",
       "name_ru": "",
-      "breed": "БИГЛЬ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ (КУРЦХААР)",
-      "breed_en": "",
-      "total_shows": 1,
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -391,10 +442,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "579139206",
+      "name_lat": "E TALISMAN FOR VICTORY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (померанский )",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "143179321",
+      "name_lat": "E TSIURI SLAVNYY BARON S RUSSKOY",
+      "name_ru": "",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "247903863",
       "name_lat": "ETUNKHEYM IZ VELIKOGO ASGARDA",
       "name_ru": "",
       "breed": "МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736469851",
+      "name_lat": "E TSIURI МЕЦХВАРЕ ЖЕЛЕЗНАЯ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -427,6 +505,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1557116687",
+      "name_lat": "E TO THE BLACK",
+      "name_ru": "",
+      "breed": "КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1745394141",
       "name_lat": "ETUAL DEL EST GAVANA",
       "name_ru": "",
@@ -436,10 +523,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "785797313",
+      "id": "1836144028",
       "name_lat": "ETUAL MARI VIVAT KOROL",
       "name_ru": "",
-      "breed": "МАЛЫЙ БЕЛЫЙ /",
+      "breed": "МАЛЫЙ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -454,6 +541,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "830734581",
+      "name_lat": "ETUAL DEL EST A VAM I NE SNILOS'",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "10248263",
       "name_lat": "ETALON IZ SLAVJANSKOI NADEZHDY",
       "name_ru": "",
@@ -463,29 +559,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "149369899",
+      "id": "560101935",
       "name_lat": "ETUAL NUAR SMAILIK",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "45391790",
-      "name_lat": "ETNA TEAM CARRERA",
+      "id": "282811992",
+      "name_lat": "ETALON RADOSTI ORLANDO BLOOM",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "830734581",
-      "name_lat": "ETUAL DEL EST A VAM I NE SNILOS'",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
@@ -499,39 +586,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "408327502",
+      "id": "281155735",
       "name_lat": "ETERNAL DELIGHT BANDEYRA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "441243915",
-      "name_lat": "ETERNAL EARL TIMAR",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "BULL TERRIER STANDART",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1579061407",
-      "name_lat": "ETNA BROWN SHINE",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "id": "127254263",
+      "name_lat": "ETALON KRASOTY IZ GORODA TAKS",
+      "name_ru": "ЭТАЛОН КРАСОТЫ ИЗ ГОРОДА ТАКС",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "282811992",
-      "name_lat": "ETALON RADOSTI ORLANDO BLOOM",
+      "id": "399535278",
+      "name_lat": "ETTURNER CAN I HAVE THIS DANCE",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "NEWFOUNDLAND",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "31809018",
+      "name_lat": "ETERNAL EARL TIMAR",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "BULL TERRIER STANDART",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "670341491",
+      "name_lat": "ETNA BROWN SHINE",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -544,19 +640,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "399535278",
-      "name_lat": "ETTURNER CAN I HAVE THIS DANCE",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "NEWFOUNDLAND",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1155807383",
+      "id": "21584598",
       "name_lat": "ETALON IZ IMPERII INES",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -571,12 +658,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "250010119",
+      "name_lat": "ETERNAL DELIGHT OVERALL LAMBORGHINI",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "78639985",
       "name_lat": "ETUAL MARI ZHARKIY MACHO",
-      "name_ru": "",
+      "name_ru": "ЭТУАЛЬ МАРИ ЖАРКИЙ МАЧО",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -589,10 +685,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1598892338",
+      "id": "77649285",
       "name_lat": "ETALON VEKA RUSSKAIA DUSHA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -607,12 +703,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "412391791",
+      "name_lat": "ETOILE OL'LANT BLACK MAGIC",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "360479410",
       "name_lat": "ETERNAL ENIGMA FERRARI",
-      "name_ru": "",
+      "name_ru": "ЭТЕРНАЛ ЭНИГМА ФЕРРАРИ",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -643,19 +747,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1601739585",
+      "id": "1856961564",
       "name_lat": "ETALON RADOSTI ADELINA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1333974303",
+      "id": "532569973",
       "name_lat": "ETALON OT LEDYYULI",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -697,15 +801,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1763689699",
-      "name_lat": "ETOILE OL'LANT BLACK MAGIC",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "80620411",
       "name_lat": "ETI",
       "name_ru": "",
@@ -721,6 +816,23 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1141208211",
+      "name_lat": "ETNA BRIGHT SAH",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1101184399",
+      "name_lat": "ETIENNE VESELIY GREMLIN",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "SHIH TZU",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -778,6 +890,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "697643720",
+      "name_lat": "ETERNAL JOY",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "946165260",
       "name_lat": "ETTA IZ ZVEZDNOGA DESANTA",
       "name_ru": "",
@@ -796,12 +917,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "866854912",
+      "name_lat": "ETERNAL ENIGMA TITANIT",
+      "name_ru": "ЭТЕРНАЛ ЭНИГМА ТИТАНИТ",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1194660469",
       "name_lat": "ETERNITY LOVE EMIL OF LEOHEARTS",
       "name_ru": "",
       "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "766952446",
+      "name_lat": "ETUAL GOLD TSAREVNA",
+      "name_ru": "ЭТУАЛЬ ГОЛД ЦАРЕВНА",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "44848194",
+      "name_lat": "ETUAL GOLD PABLO PICASSO",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -823,30 +971,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "465947799",
-      "name_lat": "ETALON KRASOTY IZ GORODA TAKS",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1798462678",
       "name_lat": "ETALON BLACK SUEDE TOUCH",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "697643720",
-      "name_lat": "ETERNAL JOY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -859,19 +989,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "656703462",
+      "id": "1814297213",
       "name_lat": "ETALON RADOSTI NATURAL BEAUTY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1941062517",
-      "name_lat": "ETUAL DEL EST GAYANA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -895,10 +1016,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "710163957",
+      "id": "1059397102",
       "name_lat": "ETLLIN LAN AYOVA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 7,
       "competition_dog_id": null
@@ -922,15 +1043,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1889623884",
-      "name_lat": "ETALON RADOSTI NIKOLE KIDMAN",
-      "name_ru": "",
-      "breed": "ДЛИННОШЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1321218308",
       "name_lat": "ETUAL NUAR SMAILK",
       "name_ru": "",
@@ -940,10 +1052,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1672901728",
+      "id": "64363461",
       "name_lat": "ETNA KUJUMDJIEV",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ)",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -958,15 +1070,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1080302923",
-      "name_lat": "ETUAL GOLD PABLO PICASSO",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1157837647",
       "name_lat": "ETERNAL DELIGHT BIG WOOD",
       "name_ru": "",
@@ -976,12 +1079,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "519931954",
-      "name_lat": "ETUAL NUAR MISHEL",
+      "id": "857387737",
+      "name_lat": "ETUAL DEL EST ZLATAN",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1573370212",
+      "name_lat": "ETUAL NUAR MISHEL",
+      "name_ru": "ЭТУАЛЬ НУАР МИШЕЛЬ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1012,30 +1123,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "181531516",
-      "name_lat": "ETNA BRIGHT SAH",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1505047582",
       "name_lat": "Eternal Delight Nice",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1101184399",
-      "name_lat": "ETIENNE VESELIY GREMLIN",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "SHIH TZU",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1111,28 +1204,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "866854912",
-      "name_lat": "ETERNAL ENIGMA TITANIT",
+      "id": "945291362",
+      "name_lat": "ETTURNER COUNTING STARS",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "250010119",
-      "name_lat": "ETERNAL DELIGHT OVERALL LAMBORGHINI",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "360255333",
+      "id": "1021475777",
       "name_lat": "ETOILE OL'LANT ZLATA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1165,10 +1248,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1427097376",
+      "id": "1524640245",
       "name_lat": "ETERNALLY LOVING FLORIANA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1205,8 +1288,7 @@
       "name_lat": "ETUAL GOLD PRIMA PETTY",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1237,6 +1319,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1384972313",
+      "name_lat": "ETTMAR'G AVALANSH",
+      "name_ru": "",
+      "breed": "БОКСЕР РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "657973016",
       "name_lat": "ETERI IZ DOMA DARSI",
       "name_ru": "",
@@ -1252,15 +1343,6 @@
       "breed": "ЧИХУАХУА Д-Ш",
       "breed_en": "CHIHUAHUA LONG-HAIRED",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "129370725",
-      "name_lat": "ETERNAL JOY",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1354,11 +1436,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1459928808",
+      "id": "56350133",
       "name_lat": "ETINNE LE COURONNE LE BONHEUR DE MAXXIME",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273226916",
+      "name_lat": "ETTURNER DESTINY",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1381,12 +1471,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1384972313",
-      "name_lat": "ETTMAR'G AVALANSH",
+      "id": "1930155722",
+      "name_lat": "ETIENNE ELITE IMPERIYA",
       "name_ru": "",
-      "breed": "БОКСЕР РЫЖИЙ",
-      "breed_en": "",
-      "total_shows": 1,
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1424630883",
+      "name_lat": "ETERNAL DELIGHT ONLY BENTLEY INTENSE",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1403,15 +1500,6 @@
       "name_lat": "ETERNAL WARDEN FOR BLAZE OF VICTORY",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "857387737",
-      "name_lat": "ETUAL DEL EST ZLATAN",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1444,11 +1532,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "128329389",
+      "id": "1906681057",
       "name_lat": "ETERNAL ENGINE ARIZONA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "688680155",
+      "name_lat": "ETERNALIS IZ BELOGO YARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -1471,11 +1567,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "766952446",
-      "name_lat": "ETUAL GOLD TSAREVNA",
+      "id": "331710061",
+      "name_lat": "ETALON IZ LESNOGO GORODKA",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
+      "breed": "КОРОТКОШЕРС",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1543,6 +1639,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1496438062",
+      "name_lat": "ETUAL GOLD POLIANNA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "384881631",
       "name_lat": "ETEL IZ SOCHI SITI",
       "name_ru": "",
@@ -1579,38 +1683,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "331710061",
-      "name_lat": "ETALON IZ LESNOGO GORODKA",
-      "name_ru": "",
-      "breed": "КОРОТКОШЕРС",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1574891906",
+      "id": "1700250862",
       "name_lat": "ETERNAL LOVE FOR MARGARITA",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "711693269",
-      "name_lat": "ETALON RADOSTI OBI-VAN- LINDA",
+      "id": "389782163",
+      "name_lat": "Ethereal Milagres Aju Sweetheart",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1647364618",
-      "name_lat": "ETUAL DEL EST PITERSKIY MAJEUR",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ /",
-      "breed_en": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНОГО ОКРАСА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1660,10 +1745,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "631503064",
+      "id": "1196805226",
       "name_lat": "ETERI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1683,6 +1768,14 @@
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "631503064",
+      "name_lat": "ETERI",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1732,10 +1825,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1393834757",
+      "id": "85533208",
       "name_lat": "ETUAL MARI BUTLER",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1786,10 +1879,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "555103802",
+      "id": "66336395",
       "name_lat": "ETNO SPIRIT BREAK POINT",
       "name_ru": "",
-      "breed": "СОБАКА /",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1813,28 +1906,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "16108614",
+      "id": "1709322943",
       "name_lat": "ETO KOSMOS S BOLSHOGO SAMPSONIJA",
       "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН /",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1930155722",
-      "name_lat": "ETIENNE ELITE IMPERIYA",
+      "id": "137282581",
+      "name_lat": "ETIENNEVESELIY GREMLIN",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
+      "breed": "ШИ ТЦУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1728423629",
+      "id": "335387952",
       "name_lat": "ETUAL SOLNECHNAYA DINASTIYA ZENBOX",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КРАСНЫЙ /",
+      "breed": "ПУДЕЛЬ ТОЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1849,10 +1941,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1300940925",
+      "id": "728301728",
       "name_lat": "ETHEL ETERNAL LOVE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1876,8 +1968,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1303864076",
-      "name_lat": "ETUAL DEL EST MUMIY- TROLL",
+      "id": "939173594",
+      "name_lat": "ETUAL DEL EST MUMIY-TROLL",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -1930,8 +2022,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "112040444",
-      "name_lat": "ETTAR- MENEL THAI",
+      "id": "949112584",
+      "name_lat": "ETTAR-MENEL THAI",
       "name_ru": "",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
@@ -1939,19 +2031,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1620390326",
+      "id": "1929964207",
       "name_lat": "ETTURNER DARLING",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "688680155",
-      "name_lat": "ETERNALIS IZ BELOGO YARA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "TZ",
-  "count": 2,
+  "count": 4,
   "dogs": [
     {
       "id": "423241178",
@@ -13,12 +13,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1331633280",
+      "name_lat": "T’ZORRO KING Z RANCE MONTARA",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА / WHITE SWISS",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1931282735",
       "name_lat": "TZEZARIYA DEL TORO",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1589589238",
+      "name_lat": "T'ZENERIFE NATALIE",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
+      "total_shows": 3,
       "competition_dog_id": null
     }
   ]

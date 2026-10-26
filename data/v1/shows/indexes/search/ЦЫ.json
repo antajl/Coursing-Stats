@@ -1,17 +1,8 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЦЫ",
-  "count": 27,
+  "count": 26,
   "dogs": [
-    {
-      "id": "176488304",
-      "name_lat": "ЦЫГАНСКИЙ БАРОН С БЕРЕГА ЛЕНЫ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ гладкошерстная",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
     {
       "id": "1876726951",
       "name_lat": "ЦЫПА",
@@ -22,21 +13,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "99503116",
-      "name_lat": "ЦЫГАНКА ИЗ СКАЗОЧНОГО ЛЕСА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "id": "999630106",
+      "name_lat": "ЦЫГАНСКИЙ БАРОН С БЕРЕГА ЛЕНЫ",
+      "name_ru": "ЦЫГАНСКИЙ БАРОН С БЕРЕГА ЛЕНЫ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "172714509",
-      "name_lat": "ЦЫГАНОЧКА- СМУГЛЯНОЧКА РАДА",
-      "name_ru": "",
+      "id": "570302538",
+      "name_lat": "ЦЫГАНСКИЙ БАРОН С БЕРЕГА",
+      "name_ru": "ЦЫГАНСКИЙ БАРОН С БЕРЕГА",
+      "breed": "ТАКСА СТАНДАРТНАЯ гладкошерстная",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179585632",
+      "name_lat": "ЦЫГАНКА ИЗ СКАЗОЧНОГО ЛЕСА",
+      "name_ru": "ЦЫГАНКА ИЗ СКАЗОЧНОГО ЛЕСА",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "728774269",
+      "name_lat": "ЦЫГАНОЧКА-СМУГЛЯНОЧКА РАДА",
+      "name_ru": "ЦЫГАНОЧКА-СМУГЛЯНОЧКА РАДА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -49,19 +58,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1708272956",
-      "name_lat": "ЦЫГАНОЧЬКА СМУГЛЯНОЧЬКА РАДА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "592539767",
+      "id": "1801992088",
       "name_lat": "ЦЫНДЭБЭ ДЛЯ ДРБ",
-      "name_ru": "",
-      "breed": "МОНГОЛЬСКАЯ СОБАКА)",
+      "name_ru": "ЦЫНДЭБЭ ДЛЯ ДРБ",
+      "breed": "ШНАУЦЕР ХОТОШО (БУРЯТСКАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -105,16 +105,25 @@
     {
       "id": "1322696826",
       "name_lat": "ЦЫГАНОЧКА ЦВЕТТА ИЗ ЗВЕЗДНОГО ЭКСПРЕССА",
-      "name_ru": "",
+      "name_ru": "ЦЫГАНОЧКА ЦВЕТТА ИЗ ЗВЕЗДНОГО ЭКСПРЕССА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1670543913",
+      "name_lat": "ЦЫГАН БЛЭКИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "723860833",
       "name_lat": "ЦЫ ФРОМ ХАУС ИРЕН",
-      "name_ru": "",
+      "name_ru": "ЦЫ ФРОМ ХАУС ИРЕН",
       "breed": "КАНЕ-КОРСОКА ДЕ БО",
       "breed_en": "",
       "total_shows": 2,
@@ -123,17 +132,17 @@
     {
       "id": "581511526",
       "name_lat": "ЦЫЛЯ КРАСАВИЦА",
-      "name_ru": "",
+      "name_ru": "ЦЫЛЯ КРАСАВИЦА",
       "breed": "ПУДЕЛЬ Миниатюрный серебрист , абрикос",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1678949514",
+      "id": "1920291931",
       "name_lat": "ЦЫГАНКА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -170,24 +179,6 @@
       "name_lat": "ЦЫПА МОЯ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "645359788",
-      "name_lat": "ЦЫГАН БЛЭКИ",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1670543913",
-      "name_lat": "ЦЫГАН БЛЭКИ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

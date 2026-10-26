@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "TC",
-  "count": 117,
+  "count": 118,
   "dogs": [
     {
       "id": "1234022757",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "POODLE MEDIUM FAWN, GREY",
-      "total_shows": 17,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -22,10 +22,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1670123288",
+      "id": "963709029",
       "name_lat": "TCHERNIY BRILLIANT OMON",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -40,21 +40,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "197843884",
+      "name_lat": "TCELEGER YULBARS ESTELAR",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "815439112",
       "name_lat": "TCHI STYLE ZEMFIRA ZHIZEL REWIE",
       "name_ru": "",
       "breed": "ДЛИННОШЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "892228066",
-      "name_lat": "TCELEGER YULBARS ESTELAR",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -72,7 +72,7 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ СРЕДНИЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "POODLE MEDIUM FAWN, GREY",
-      "total_shows": 10,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -81,14 +81,14 @@
       "name_ru": "",
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1443664690",
+      "id": "423085404",
       "name_lat": "TCELEGER TODO PARA MI",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -103,10 +103,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "82511920",
+      "id": "478259034",
       "name_lat": "TCELEGER SHAMPAGNE CREMANT DE LOIRE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 6,
       "competition_dog_id": null
@@ -117,14 +117,14 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "518998719",
+      "id": "1781063535",
       "name_lat": "TCELEGER HOLA RAYO DE LUZ",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
       "total_shows": 13,
       "competition_dog_id": null
@@ -139,12 +139,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "952043214",
+      "id": "1695069104",
       "name_lat": "TCENNIY PRIZE FORTUNES SWEET KISS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -162,7 +162,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 47,
+      "total_shows": 48,
       "competition_dog_id": 743
     },
     {
@@ -175,12 +175,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1293703594",
+      "id": "460797628",
       "name_lat": "TCENNIY PRIZE PETRA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -193,12 +193,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "184998104",
+      "id": "416323026",
       "name_lat": "TCELEGER FLORIZEL SHEKSPIR",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "783022209",
+      "name_lat": "TCHERNAJA KALITVA CELYI MIR",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -220,21 +228,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1842908782",
+      "id": "275446368",
       "name_lat": "TCELEGER TSVETOSLAVA LA BELLA DE MARMOL",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1884895408",
+      "id": "1105695134",
       "name_lat": "TCENNIY PRIZE IDILLIA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 49,
+      "total_shows": 55,
       "competition_dog_id": null
     },
     {
@@ -247,10 +255,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1612773592",
+      "id": "426114564",
       "name_lat": "TCHEELEPEPPER'S VEGAS NIGHT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -265,10 +273,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "791675700",
+      "id": "385058854",
       "name_lat": "TCELEGER HELENA HERMOSA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ Гладкошерстная",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -283,12 +291,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "434547356",
+      "id": "1713284350",
       "name_lat": "TCELEGER YURTCAVA YULIKA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "134195689",
+      "name_lat": "TCHERNAJA KALITVA SAYONARA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -319,28 +335,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "302799849",
+      "id": "1835537981",
       "name_lat": "TCENNIY PRIZE DIVINE BEAUTY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "843580536",
+      "id": "1085319814",
       "name_lat": "TCENNIY PRIZE Z'MONARH",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "680819870",
+      "id": "898935776",
       "name_lat": "TCENNIY PRIZE LAMBORGHINI AVENTADOR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -373,10 +389,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1394649081",
+      "id": "868864045",
       "name_lat": "TCENNIY PRIZE EYES TO EYES",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -391,19 +407,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "376888444",
-      "name_lat": "TCHERNAJA KALITVA SAYONARA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР / MINIATURE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "439573920",
+      "id": "691906677",
       "name_lat": "TCHERNAJA KALITVA URAN",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -414,7 +421,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 47,
+      "total_shows": 52,
       "competition_dog_id": 7445
     },
     {
@@ -436,37 +443,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "374682394",
+      "id": "172166348",
       "name_lat": "TCENNIY PRIZE DOMINIKA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 35,
       "competition_dog_id": null
     },
     {
-      "id": "803006880",
+      "id": "314618350",
       "name_lat": "TCENNIY PRIZE DANAYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "496515878",
+      "id": "548945896",
       "name_lat": "TCENNIY PRIZE GENERAL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1901630809",
+      "id": "1572810774",
       "name_lat": "TCELEGER TEA TEODORA",
       "name_ru": "",
-      "breed": "КРОЛИЧЬЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -481,21 +488,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "945216271",
+      "id": "1810467840",
       "name_lat": "TCENNIY PRIZE GENTLE MIRACLE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1781805864",
+      "id": "994493590",
       "name_lat": "TCENNIY PRIZE FLORET SCARLET",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1235886241",
+      "name_lat": "TCHI STYLE H'EKSTRIM PASSION",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -508,19 +523,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "943648876",
+      "id": "955592810",
       "name_lat": "TCENNIY PRIZE EL QUINTO ELEMENTO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "734274945",
+      "id": "266990709",
       "name_lat": "TCENNIY PRIZE EMPRESS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -553,30 +568,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "665356501",
+      "id": "1325476457",
       "name_lat": "TCENNIY PRIZE RARITET",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "231432049",
-      "name_lat": "TCENNIY PRIZE INFANT",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "823785325",
-      "name_lat": "TCENNIY PRIZE ETERNO SPLENDORE",
+      "id": "274913290",
+      "name_lat": "TCENNIY PRIZE INFANT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -585,7 +591,16 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ СРЕДНИЙ КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "294662945",
+      "name_lat": "TCENNIY PRIZE ETERNO SPLENDORE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -598,46 +613,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "1237390071",
-      "name_lat": "TCHI STYLE ROKKOKO",
+      "id": "1359644659",
+      "name_lat": "TCHI STYLE COOL BABY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "142655978",
+      "id": "1859951926",
+      "name_lat": "TCHI STYLE ROKKOKO",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "36051836",
       "name_lat": "TCENNIY PRIZE NOEMI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "300269781",
+      "id": "1852595325",
       "name_lat": "TCELEGER ULTIMA LA BELLA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1184281674",
+      "id": "1702697180",
       "name_lat": "TCENNIY PRIZE ERSUS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "318827730",
+      "id": "521915716",
       "name_lat": "TCENNIY PRIZE NORA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -652,10 +675,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "510789707",
+      "id": "1081632578",
       "name_lat": "TCHI STYLE YANKKO",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
       "total_shows": 6,
       "competition_dog_id": null
@@ -670,10 +693,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1815994493",
+      "id": "1024927697",
       "name_lat": "TCENNIY PRIZE IZIDA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -796,10 +819,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1754614086",
+      "id": "1361046792",
       "name_lat": "Tcenniy Prize Power Of Origin",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -814,10 +837,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "329620308",
+      "id": "1159233025",
       "name_lat": "TCHERNAJA KALITVA EFRAT",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -832,19 +855,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "783022209",
-      "name_lat": "TCHERNAJA KALITVA CELYI MIR",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "521510465",
+      "id": "15723189",
       "name_lat": "TCENNIY PRIZE LEL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -859,10 +873,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1251768018",
+      "id": "3052356",
       "name_lat": "TCENNIY PRIZE LOLLOBRIGIDA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -895,10 +909,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "519114126",
+      "id": "1213941744",
       "name_lat": "TCENNIY PRIZE WHEN DREAMS COME TRUE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -908,6 +922,24 @@
       "name_lat": "TCATCA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1384452852",
+      "name_lat": "TCELEGER UYRSULINE YUMIMAYA",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "843794449",
+      "name_lat": "TCELOGO MIRA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -931,10 +963,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "254442804",
+      "id": "1428556966",
+      "name_lat": "T-CНЕЖНЫЙ АНГЕЛ",
+      "name_ru": "",
+      "breed": "Г/Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1218173522",
       "name_lat": "TCENNIY PRIZE AURUM RAY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -949,10 +990,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1997683079",
+      "id": "358574855",
       "name_lat": "TCENNIY PRIZE JET SET",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -985,37 +1026,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1320942851",
+      "id": "562236719",
       "name_lat": "TCAREVICH IZ SKAZOCHNOGO LESA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "586236558",
+      "id": "34335472",
       "name_lat": "TCENNIY PRIZE DAZZLE MACHO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1212190527",
+      "id": "236888351",
       "name_lat": "TCENNIY PRIZE BOGEMA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "962539780",
-      "name_lat": "TCHI STYLE COOL BABY",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1025,33 +1057,6 @@
       "name_lat": "TCENNIY PRIZE NIKA",
       "name_ru": "",
       "breed": "AMERICAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1384452852",
-      "name_lat": "TCELEGER UYRSULINE YUMIMAYA",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "843794449",
-      "name_lat": "TCELOGO MIRA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1235886241",
-      "name_lat": "TCHI STYLE H'EKSTRIM PASSION",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

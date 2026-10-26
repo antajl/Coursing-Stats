@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "CL",
-  "count": 287,
+  "count": 298,
   "dogs": [
     {
       "id": "267298899",
@@ -9,7 +9,25 @@
       "name_ru": "",
       "breed": "КЛАМБЕР СПАНИЕЛЬ",
       "breed_en": "CLUMBER SPANIEL",
-      "total_shows": 100,
+      "total_shows": 106,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146309725",
+      "name_lat": "CLOS ERASMUS PANASONIC",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "breed_en": "",
+      "total_shows": 39,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1653464623",
+      "name_lat": "CLOS ERASMUS ABSOLUTELY UNIQUE",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "breed_en": "ENGLISH SPRINGER SPANIEL",
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
@@ -18,7 +36,7 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -31,48 +49,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1309231849",
-      "name_lat": "CLIFFORD S DVINY",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 61,
-      "competition_dog_id": null
-    },
-    {
-      "id": "146309725",
-      "name_lat": "CLOS ERASMUS PANASONIC",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
-      "breed_en": "",
-      "total_shows": 30,
-      "competition_dog_id": null
-    },
-    {
       "id": "98727010",
       "name_lat": "CLOS ERASMUS SO SCANDALOUS",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "ENGLISH SETTER",
-      "total_shows": 29,
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
-      "id": "1653464623",
-      "name_lat": "CLOS ERASMUS ABSOLUTELY UNIQUE",
+      "id": "578559785",
+      "name_lat": "CLIFFORD S DVINY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
-      "breed_en": "ENGLISH SPRINGER SPANIEL",
-      "total_shows": 37,
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 62,
       "competition_dog_id": null
     },
     {
-      "id": "109485646",
-      "name_lat": "Clansmann Brass Neck",
+      "id": "1138269931",
+      "name_lat": "CLANSMANN BRASS NECK",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "BULL TERRIER STANDART",
-      "total_shows": 56,
+      "total_shows": 57,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1863561147",
+      "name_lat": "CLOS ERASMUS SPIKY MUSE",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "breed_en": "",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -85,6 +94,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "821395124",
+      "name_lat": "CLAIRE BON CHANCE KAYF TO LOVE ME",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 76,
+      "competition_dog_id": null
+    },
+    {
       "id": "38473314",
       "name_lat": "CLASSY NUCLEAR POWER",
       "name_ru": "",
@@ -94,21 +112,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "821395124",
-      "name_lat": "CLAIRE BON CHANCE KAYF TO LOVE ME",
+      "id": "1591101140",
+      "name_lat": "CLASSY TOO GOOD TO BE TRUE",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 65,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1863561147",
-      "name_lat": "CLOS ERASMUS SPIKY MUSE",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "breed": "ПУДЕЛЬ ТОЙ (Бел.Черн.Корич.)",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -117,14 +126,23 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "ENGLISH SETTER",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1297019496",
+      "id": "616594058",
+      "name_lat": "CLUB SUOMEN NARI",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1573162620",
       "name_lat": "CLYDE AIR FORCE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БАССЕТ-ГРИФФОН ЛЕГАВАЯ",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 32,
       "competition_dog_id": null
@@ -135,25 +153,24 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 51,
+      "total_shows": 52,
       "competition_dog_id": null
     },
     {
-      "id": "1591101140",
-      "name_lat": "CLASSY TOO GOOD TO BE TRUE",
+      "id": "1799683257",
+      "name_lat": "CLYDE FORTUNATE MILLER",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ (Бел.Черн.Корич.)",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "616594058",
-      "name_lat": "CLUB SUOMEN NARI",
+      "id": "1425330031",
+      "name_lat": "CLOS ERASMUS INFINITY STARLIGHT",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -175,12 +192,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1425330031",
-      "name_lat": "CLOS ERASMUS INFINITY STARLIGHT",
+      "id": "176732122",
+      "name_lat": "CLOS ERASMUS STEREO HEARTS",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СЕТТЕР",
-      "breed_en": "",
-      "total_shows": 11,
+      "breed_en": "ENGLISH SETTER",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -190,15 +207,6 @@
       "breed": "ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "176732122",
-      "name_lat": "CLOS ERASMUS STEREO HEARTS",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
-      "breed_en": "ENGLISH SETTER",
-      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -229,10 +237,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "102595648",
+      "id": "195683477",
       "name_lat": "CLEMENS ANIMA IMANI",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -244,6 +252,15 @@
       "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "FINNISH SPITZ",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "633132509",
+      "name_lat": "CLOS ERASMUS MY FRIEND TARANTINO",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "breed_en": "ENGLISH SETTER",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -301,21 +318,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1592504320",
+      "id": "1356688954",
       "name_lat": "CLINGSTONE'S ALL I NEED",
       "name_ru": "",
-      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ К-Ш",
       "breed_en": "COLLIE SMOOTH",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "633132509",
-      "name_lat": "CLOS ERASMUS MY FRIEND TARANTINO",
+      "id": "1407264843",
+      "name_lat": "CLAIRE BON CHANCE NIKITA VIVAT VICTORIA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "831909985",
+      "name_lat": "CLOS ERASMUS PRINCE CHARMING",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СЕТТЕР",
-      "breed_en": "ENGLISH SETTER",
-      "total_shows": 9,
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -337,6 +363,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "730218227",
+      "name_lat": "CLASSY NUCLEAR ENERGY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "148577367",
       "name_lat": "CLOS ERASMUS DEVILS ADVOCATE",
       "name_ru": "",
@@ -355,15 +390,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1137142559",
-      "name_lat": "CLASSY NUCLEAR ENERGY",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "335279869",
       "name_lat": "CLOS ERASMUS PHANTOM SUPERSONIC",
       "name_ru": "",
@@ -373,10 +399,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "944787221",
+      "id": "1320540456",
       "name_lat": "CLUB'ERTA ORHAN",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -388,6 +414,14 @@
       "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "585746762",
+      "name_lat": "CLOS ERASMUS RENDOM RHYTHM",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -409,12 +443,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1005736145",
+      "id": "200236838",
       "name_lat": "CLINGSTONE'S FORECASTED",
       "name_ru": "",
-      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ К-Ш",
       "breed_en": "COLLIE SMOOTH",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -436,19 +470,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "290613556",
+      "id": "268002556",
       "name_lat": "CLANSMANN PUNCH MONKEY",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1648096263",
+      "id": "360016067",
       "name_lat": "CLASSY ROCKET IN THE POKET",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -463,21 +497,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "672221759",
+      "id": "1669527598",
       "name_lat": "CLOS ERASMUS GLAMOROUS NIGHTLIFE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР /",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1823710160",
-      "name_lat": "CLYDE FORTUNATE MILLER",
+      "id": "819672357",
+      "name_lat": "CLASSY MARKET MAKER",
       "name_ru": "",
-      "breed": "КЛАССИК",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -517,13 +551,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "819672357",
-      "name_lat": "CLASSY MARKET MAKER",
+      "id": "10807",
+      "name_lat": "CLASSIC N TAHARI LIRA FOR RESTLESS WHIP",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
-      "total_shows": 27,
-      "competition_dog_id": null
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 18,
+      "competition_dog_id": 10807
     },
     {
       "id": "251289862",
@@ -535,21 +569,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1585408213",
+      "name_lat": "CLASSIC N TAHARI PERSEUS FOR RESTLESS WHIP",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1106819368",
       "name_lat": "CLOS ERASMUS CELINE FOR CHER DELIGHT",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1407264843",
-      "name_lat": "CLAIRE BON CHANCE NIKITA VIVAT VICTORIA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -571,10 +605,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1449140721",
+      "id": "677264613",
       "name_lat": "CLAUDIA SCHIFFER IZ SERDTSA MOEGO",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -631,6 +665,15 @@
       "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "FINNISH SPITZ",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "303702439",
+      "name_lat": "CLAN IRONHORN GERMIONA ROSE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -697,6 +740,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "184836504",
+      "name_lat": "CLASSIC MOMENT COSA NOSTRA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "1914584844",
       "name_lat": "CLUB SUOMEN LYCHEE",
       "name_ru": "",
@@ -706,21 +758,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "184836504",
-      "name_lat": "CLASSIC MOMENT COSA NOSTRA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "154725822",
       "name_lat": "CLUSSEXX PADDINGTON OF FLIVVERWAY",
       "name_ru": "",
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "KING CHARLES SPANIEL",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -747,7 +790,7 @@
       "name_ru": "",
       "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -766,24 +809,6 @@
       "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "FINNISH SPITZ",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1585408213",
-      "name_lat": "CLASSIC N TAHARI PERSEUS FOR RESTLESS WHIP",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "831909985",
-      "name_lat": "CLOS ERASMUS PRINCE CHARMING",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -855,7 +880,7 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "ENGLISH SETTER",
-      "total_shows": 10,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -886,6 +911,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1310588814",
+      "name_lat": "CLOS ERASMUS REASON TO BELIEVE BLOSSOM IMPRESSIVE",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "653886899",
       "name_lat": "CLOS ERASMUS ELLAGIO",
       "name_ru": "",
@@ -904,28 +937,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "729259147",
+      "id": "500574521",
+      "name_lat": "CLOUD DANCER JUMPING DUMPLING",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1463608855",
       "name_lat": "CLASSY PLAYGIRL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "585746762",
-      "name_lat": "CLOS ERASMUS RENDOM RHYTHM",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "79953577",
+      "id": "590448022",
       "name_lat": "CLUB DELLA CORSO BEATRICE",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -945,6 +977,14 @@
       "name_ru": "",
       "breed": "ХОВАВАРТ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1473314605",
+      "name_lat": "CLUB SUOMEN MAJOR",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1030,12 +1070,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1242464776",
+      "name_lat": "CLUSSEXX I HAVE SEEN THE COMING OF A NEW DAY",
+      "name_ru": "",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1351991293",
       "name_lat": "CLARICE SIMONA IS NOVELES",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "ITALIAN SIGHTHOUND",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "345010254",
+      "name_lat": "CLUB ERTA JAZZ FUSION",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -1053,7 +1111,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 27,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -1066,21 +1124,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "345010254",
-      "name_lat": "CLUB ERTA JAZZ FUSION",
+      "id": "1495471433",
+      "name_lat": "CLETO DELLA METAURENSE",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1242464776",
-      "name_lat": "CLUSSEXX I HAVE SEEN THE COMING OF A NEW DAY",
-      "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1090,15 +1139,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1508834156",
-      "name_lat": "CLETO DELLA METAURENSE",
-      "name_ru": "",
-      "breed": "ЛАГОТТО РОМАНЬОЛО /",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1129,6 +1169,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1812145058",
+      "name_lat": "CLEVER EYES JOFREY",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "874191541",
       "name_lat": "CLASS RUS IRENE'S",
       "name_ru": "",
@@ -1156,10 +1205,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "831338741",
+      "id": "70039654",
       "name_lat": "CLASSICA STILYA BAKKARDI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1170,16 +1219,7 @@
       "name_ru": "",
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "KING CHARLES SPANIEL",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "24499102",
-      "name_lat": "CLASSIC N TAHARI LIRA FOR RESTLESS WHIP",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 14,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1201,10 +1241,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "646880804",
+      "id": "1380894766",
       "name_lat": "CLEVER EYES JUST IN TIME FRIDENS",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1219,19 +1259,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "677187077",
+      "id": "1258487064",
       "name_lat": "CLUB'ERTA GOLFSTREAM",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1750880408",
-      "name_lat": "CLEVER EYES JOFREY",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1282,10 +1313,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1879424426",
+      "id": "669114477",
+      "name_lat": "CLAUDIE FROM MINITZ",
+      "name_ru": "",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "16816635",
       "name_lat": "CLOS ERASMUS CELEBRATION",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР /",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1336,6 +1376,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "876635652",
+      "name_lat": "CLOSE TO PERFECT FROM HOUSE ON VICTORY",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1862486740",
       "name_lat": "CLOUD ELITESLOVAKIANK9",
       "name_ru": "",
@@ -1354,10 +1402,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "820743407",
+      "id": "1821110046",
       "name_lat": "CLUB SUOMEN VELDA",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1435,15 +1483,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "669114477",
-      "name_lat": "CLAUDIE FROM MINITZ",
-      "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "145187527",
       "name_lat": "CLOS ERASMUS BELSHAZZAR",
       "name_ru": "",
@@ -1453,10 +1492,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "613083068",
+      "id": "625076989",
       "name_lat": "CLEVER EYES J'ADORE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЁРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1468,6 +1507,14 @@
       "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "245018413",
+      "name_lat": "CLASSIC’S MARJANI CHRISTIAN GREY",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1525,6 +1572,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "467666512",
+      "name_lat": "CLOS ERASMUS BLOSSOM IMPRESSIVE",
+      "name_ru": "",
+      "breed": "GORDON SETTER",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "410488513",
+      "name_lat": "CLARISSA DELL ESPINOSOLO",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1359155259",
       "name_lat": "CLASSICA STILYA HRANITEL VREMENI",
       "name_ru": "",
@@ -1534,19 +1599,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "282185434",
-      "name_lat": "CLARISSA DELL ESPINOSOLO",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1161360740",
+      "id": "1008320505",
       "name_lat": "CLEVER EYES CREME DE LA CREME",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1566,7 +1622,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1642,12 +1698,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1310588814",
-      "name_lat": "CLOS ERASMUS REASON TO BELIEVE BLOSSOM IMPRESSIVE",
+      "id": "139560017",
+      "name_lat": "CLASSIC MOMENT STENLEY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1750,10 +1806,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1056729428",
-      "name_lat": "CLASSIC MOMENT C- CWEET SERIAL KILLER",
+      "id": "692015223",
+      "name_lat": "CLASSIC MOMENT C-CWEET SERIAL KILLER",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1777,30 +1833,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1853147836",
+      "name_lat": "CLUB SUOMEN UMKA",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ШПИЦ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1273028316",
       "name_lat": "CLOS ERASMUS FRASER",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "528417589",
-      "name_lat": "CLOS ERASMUS BLOSSOM IMPRESSIVE",
-      "name_ru": "",
-      "breed": "СЕТТЕР ГОРДОН",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "303702439",
-      "name_lat": "CLAN IRONHORN GERMIONA ROSE",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1840,10 +1886,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "730908052",
+      "id": "1187941953",
       "name_lat": "CLEAN DIAMOND",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1876,6 +1922,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1933863716",
+      "name_lat": "CLOUD WHITE KING",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1680196241",
       "name_lat": "CLAMOURKENNEL YUZHAHA",
       "name_ru": "",
@@ -1899,7 +1953,7 @@
       "name_ru": "",
       "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1948,19 +2002,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1303896177",
+      "id": "1895560972",
       "name_lat": "CLOS ERASMUS ARIZONA PHOENIX",
       "name_ru": "",
-      "breed": "СЕТТЕР ГОРДОН /",
+      "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "803352162",
+      "id": "1359825507",
       "name_lat": "CLUB'ERTA JAZZ FUSION",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1984,11 +2038,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "394416767",
-      "name_lat": "CLARK BELOSNEZHNOJE CHUDO GLAMURNYI DRUZHOCHEK",
+      "id": "1853375516",
+      "name_lat": "CLOS ERASMUS KISSMETT",
       "name_ru": "",
-      "breed": "САМОЕД / SAMOYED",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1997,6 +2050,15 @@
       "name_lat": "CLUB TERRA NIK LOVE MY ANGEL",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "394416767",
+      "name_lat": "CLARK BELOSNEZHNOJE CHUDO GLAMURNYI DRUZHOCHEK",
+      "name_ru": "",
+      "breed": "САМОЕД / SAMOYED",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2029,6 +2091,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1822686224",
+      "name_lat": "CLOS ERASMUS REVOLVER",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "224096311",
       "name_lat": "CLASSIC MOMENT LAST SAMURAI",
       "name_ru": "",
@@ -2047,10 +2117,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "44261766",
+      "id": "1749125631",
       "name_lat": "CLOS ERASMUS PARADISE FOR DIRTY TALKING",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР /",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2083,6 +2153,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "763821797",
+      "name_lat": "CLUB'ERTA REAL SNOW PARADIS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1748295281",
       "name_lat": "CLASSIC MOMENT D'QUEEN OF CONFIDENCE",
       "name_ru": "",
@@ -2110,10 +2189,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1839547485",
+      "id": "1023258413",
       "name_lat": "CLEOPATRA VALENTINO",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2128,10 +2207,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "42046161",
-      "name_lat": "CLUB'ERTA REAL SNOW PARADIS",
+      "id": "257217441",
+      "name_lat": "CLOS ERASMUS ROCK IT MAN",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "474425667",
+      "name_lat": "CLOS ERASMUS KITTY CAT",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2152,6 +2239,24 @@
       "breed": "КАВАЛЕР КИНГ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1648296670",
+      "name_lat": "CLASSIC MOMENT MURZILKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "64136478",
+      "name_lat": "CLOS ERASMUS ALL STAR",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2218,37 +2323,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "1035390333",
+      "name_lat": "CLOS ERASMUS DONT BELIEVE ME JUST WATCH",
+      "name_ru": "",
+      "breed": "ENGLISH SETTER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1369803881",
+      "name_lat": "CLARA ARYA MAXIIEV",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "146293474",
       "name_lat": "CLEO CHRISTA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "384346578",
-      "name_lat": "CLASSIC MOMENT MURZILKA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "846929277",
-      "name_lat": "CLASSIC MOMENT STENLEY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "498923878",
-      "name_lat": "CLOS ERASMUS ALL STAR",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2281,19 +2375,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "474425667",
-      "name_lat": "CLOS ERASMUS KITTY CAT",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1555881790",
       "name_lat": "Clark",
       "name_ru": "",
       "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1568700204",
+      "name_lat": "CLADESTONE GONZA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "950922885",
+      "name_lat": "CLEOPATRA NEWSUNNY MECHTA DETSTVA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2398,10 +2501,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1368706124",
+      "id": "79105577",
       "name_lat": "CLASSIC MOMENT BABY DOLL ADEL",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2416,19 +2519,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "244615938",
-      "name_lat": "CLADESTONE GONZA",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "20690744",
+      "id": "1680263878",
       "name_lat": "CLORIUS DRILL FO GOOD LIVE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2461,10 +2555,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1583071891",
+      "id": "10032280",
       "name_lat": "CLYDE ALEKTA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2492,15 +2586,6 @@
       "name_lat": "CLAIRE BON CHANCE ONLY IN THE WORLD",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "64963439",
-      "name_lat": "CLEOPATRA NEWSUNNY MECHTA DETSTVA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2542,19 +2627,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "280679273",
-      "name_lat": "CLAN DYKE GOLD NIGHT DZHIKSER",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "908181276",
+      "id": "55561267",
       "name_lat": "CLIFFORD S SAMOGO CHJORNOGO MORJA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2565,6 +2641,14 @@
       "name_ru": "",
       "breed": "POODLE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "581440184",
+      "name_lat": "CLOS ERASMUS RUSSIAN MAFIA",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },

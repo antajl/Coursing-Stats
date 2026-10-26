@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "XE",
-  "count": 37,
+  "count": 38,
   "dogs": [
     {
       "id": "414923961",
@@ -9,14 +9,14 @@
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
-      "id": "714122105",
+      "id": "487024964",
       "name_lat": "XENOFANES PODSKALSKE DOLEJSI",
       "name_ru": "",
-      "breed": "ПРАЖСКИЙ КРЫСАРИК /",
+      "breed": "ПРАЖСКИЙ КРЫСАРИК",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -72,7 +72,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 29,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -117,7 +117,15 @@
       "name_ru": "",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1532231330",
+      "name_lat": "XEBEC PINOT NOIR",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -175,15 +183,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1532231330",
-      "name_lat": "XEBEC PINOT NOIR",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1291190908",
       "name_lat": "XENON DEL CUORE GRANDE",
       "name_ru": "",
@@ -193,20 +192,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1210958154",
-      "name_lat": "XENA VON RAUHENSTEIN",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
-      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "616834715",
       "name_lat": "XENIE CORSO Z MACHOVA KRAJE",
       "name_ru": "",
       "breed": "КОРСО",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1210958154",
+      "name_lat": "XENA VON RAUHENSTEIN",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -265,10 +264,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "933441254",
+      "id": "180240677",
       "name_lat": "XELMA VOM FRANKENGOLD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -292,10 +291,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "479208478",
+      "id": "799356711",
       "name_lat": "XENOFANES PODSKALSKE DOLEISHE",
       "name_ru": "",
-      "breed": "ПРАЖСКИЙ КРЫСАРИК /",
+      "breed": "ПРАЖСКИЙ КРЫСАРИК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -333,6 +332,14 @@
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО / ITALIAN CANE CORSO",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269531882",
+      "name_lat": "XERXES CAVALIERLANDI A EL POLACO NORSŁAW RAMOTTO",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     }

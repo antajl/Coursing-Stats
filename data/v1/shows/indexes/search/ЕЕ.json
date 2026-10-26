@@ -1,13 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЕЕ",
-  "count": 19,
+  "count": 22,
   "dogs": [
     {
-      "id": "1527464512",
+      "id": "1674228980",
       "name_lat": "ЕЕ ВЕЛИЧЕСТВО АБИГАЛЬ",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "name_ru": "ЕЕ ВЕЛИЧЕСТВО АБИГАЛЬ",
+      "breed": "ЙОРКШИРСКИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -15,7 +15,7 @@
     {
       "id": "606432079",
       "name_lat": "ЕЕ ВЕЛИЧЕСТВО ТИФФАНИ",
-      "name_ru": "",
+      "name_ru": "ЕЕ ВЕЛИЧЕСТВО ТИФФАНИ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 12,
@@ -24,17 +24,17 @@
     {
       "id": "258132088",
       "name_lat": "ЕЕ ВЫСОЧЕСТВО ИЗ БОЯРСКОГО РОДА",
-      "name_ru": "",
+      "name_ru": "ЕЕ ВЫСОЧЕСТВО ИЗ БОЯРСКОГО РОДА",
       "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ РЫЖИЙ, СЕРЫЙ",
       "breed_en": "POODLE STANDARD FAWN, GREY",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "870635482",
+      "id": "1093191879",
       "name_lat": "ЕЕ ВЕЛИЧЕСТВО МИШЕЛЬ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "name_ru": "ЕЕ ВЕЛИЧЕСТВО МИШЕЛЬ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -42,10 +42,9 @@
     {
       "id": "38600935",
       "name_lat": "ЕЕ ВЕЛИЧЕТВО УДАЧА ИЗ ДОМА САМИГУЛИНЫХ",
-      "name_ru": "",
+      "name_ru": "ЕЕ ВЕЛИЧЕТВО УДАЧА ИЗ ДОМА САМИГУЛИНЫХ",
       "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -58,12 +57,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "10970",
+      "name_lat": "ЕЕ ВЕЛИЧЕСТВО УДАЧА ИЗ ВОЛШЕБНОГО ЛЕСА",
+      "name_ru": "ЕЕ ВЕЛИЧЕСТВО УДАЧА ИЗ ВОЛШЕБНОГО ЛЕСА",
+      "breed": "Ирландский волкодав",
+      "breed_en": "",
+      "total_shows": 76,
+      "competition_dog_id": 10970
+    },
+    {
       "id": "9492",
-      "name_lat": "ЕЕ ВЕЛИЧЕСТВО УДАЧА ИЗ ДОМА САМИГУЛИНЫХ",
-      "name_ru": "",
+      "name_lat": "ЕЕ ВЕЛИЧЕСТВО УДАЧА",
+      "name_ru": "ЕЕ ВЕЛИЧЕСТВО УДАЧА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 12,
       "competition_dog_id": 9492
     },
     {
@@ -74,6 +82,15 @@
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
+    },
+    {
+      "id": "9492",
+      "name_lat": "ЕЕ ВЕЛИЧЕСТВО УДАЧА/EYO VELICHESTVO UDACHA",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": 9492
     },
     {
       "id": "224442751",
@@ -94,6 +111,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "9492",
+      "name_lat": "ЕЕ ВЕЛИЧЕСТВО УДАЧА ИЗ ДОМА САМИГУЛИНЫХ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": 9492
+    },
+    {
       "id": "1320744077",
       "name_lat": "ЕЕ ВЕЛИЧЕСТВО ЕСИНКА",
       "name_ru": "",
@@ -105,7 +131,7 @@
     {
       "id": "1037298277",
       "name_lat": "ЕЕ ВЕЛИЧЕСТВО ФИШИЛИЯ",
-      "name_ru": "",
+      "name_ru": "ЕЕ ВЕЛИЧЕСТВО ФИШИЛИЯ",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -130,10 +156,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588660538",
+      "id": "446608423",
       "name_lat": "ЕЕ ВЫСОЧЕСТВО УДАЧА",
+      "name_ru": "ЕЕ ВЫСОЧЕСТВО УДАЧА",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "37078641",
+      "name_lat": "ЕЕНЖИН ТРИКИ ВЭЙ/ ENGINE TRICKY WAY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -143,15 +178,6 @@
       "name_lat": "ЕЕ ПРЕКРАСНЫЕ ГЛАЗА ЭТО СЧАСТЬЕ",
       "name_ru": "",
       "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "299948591",
-      "name_lat": "ЕЕНЖИН ТРИКИ ВЭЙ/ ENGINE TRICKY WAY",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

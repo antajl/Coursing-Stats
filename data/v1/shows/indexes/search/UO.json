@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UO",
-  "count": 31,
+  "count": 34,
   "dogs": [
     {
       "id": "851604484",
@@ -40,12 +40,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1696766543",
+      "name_lat": "UORNER BROTHERS FOR LUIZADOR",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1304557900",
       "name_lat": "UORREN BAFFETT",
-      "name_ru": "",
+      "name_ru": "УОРРЕН БАФФЕТТ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 49,
+      "total_shows": 54,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1368066145",
+      "name_lat": "U ONLY FOR LOVE",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -76,6 +93,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1584370698",
+      "name_lat": "UOLTER IZ DOMA PRONINYKH",
+      "name_ru": "УОЛТЕР ИЗ ДОМА ПРОНИНЫХ",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1653466607",
+      "name_lat": "UOLLIS STAR LAJK INFINITI SHARM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1261815342",
       "name_lat": "UOKER TEKHASSKIY REINDZHER",
       "name_ru": "",
@@ -85,30 +119,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "338690195",
+      "id": "1043202231",
       "name_lat": "UOLTER",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "35020830",
-      "name_lat": "UOLLIS STAR LAJK INFINITI SHARM",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1900860958",
       "name_lat": "UOKER BED BOY",
-      "name_ru": "",
+      "name_ru": "УОКЕР БЭД БОЙ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -118,15 +143,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1584370698",
-      "name_lat": "UOLTER IZ DOMA PRONINYKH",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -153,7 +169,7 @@
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -211,12 +227,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "876576792",
+      "id": "826347774",
       "name_lat": "UOTERFALL IZ DINASTII RUTTS",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1237968373",
+      "name_lat": "UOKER VOM HAUS DEMIRA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "736860123",
+      "name_lat": "UOLT MILA ROUZ",
+      "name_ru": "УОЛТ МИЛА РОУЗ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -238,10 +271,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "136436852",
+      "id": "1009318450",
       "name_lat": "UOLTER",
       "name_ru": "",
-      "breed": "СЕРЕБРОМ ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -260,15 +293,6 @@
       "name_lat": "UOLTER MITTI",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1488940042",
-      "name_lat": "UOLT MILA ROUZ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

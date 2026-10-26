@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "GC",
-  "count": 17,
+  "count": 20,
   "dogs": [
     {
       "id": "1134381882",
@@ -27,7 +27,7 @@
       "name_ru": "",
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -103,10 +103,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "103290277",
+      "name_lat": "GCRBULLY NAOMI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "804568361",
       "name_lat": "GCRBULLY UNO",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "229935050",
+      "name_lat": "G-CHARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -136,6 +153,15 @@
       "breed": "ПОКЕТ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "20277056",
+      "name_lat": "G-CHARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
+      "breed_en": "GERMAN SHORT-HAIRED POINTING DOG (DEUTSCH KURZHAAR)",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

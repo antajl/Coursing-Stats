@@ -1,33 +1,42 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЭР",
-  "count": 742,
+  "count": 744,
   "dogs": [
-    {
-      "id": "1751123022",
-      "name_lat": "ЭРИА ПРО УНА УРСЕЛА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 49,
-      "competition_dog_id": null
-    },
     {
       "id": "496083453",
       "name_lat": "Эрик Ринг Виннер",
-      "name_ru": "",
+      "name_ru": "Эрик Ринг Виннер",
       "breed": "РЫЖЕГО ОКРАСА",
       "breed_en": "",
       "total_shows": 55,
       "competition_dog_id": null
     },
     {
-      "id": "533066854",
+      "id": "1852457907",
       "name_lat": "ЭР ТАШ КОЛДОВСКАЯ ЛЮБОВЬ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "ЭР ТАШ КОЛДОВСКАЯ ЛЮБОВЬ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "787677673",
+      "name_lat": "ЭРА ВЕЛИКОЙ ДЕРЖАВЫ ИЗ СТАИ ФРАЙБОР",
+      "name_ru": "ЭРА ВЕЛИКОЙ ДЕРЖАВЫ ИЗ СТАИ ФРАЙБОР",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "305434097",
+      "name_lat": "ЭРИА ПРО УКАЛИНА",
+      "name_ru": "ЭРИА ПРО УКАЛИНА",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -40,27 +49,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "318918468",
-      "name_lat": "ЭРИА ПРО УКАЛИНА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "787677673",
-      "name_lat": "ЭРА ВЕЛИКОЙ ДЕРЖАВЫ ИЗ СТАИ ФРАЙБОР",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "731936203",
       "name_lat": "ЭРИА ПРО ХАН ТЕОДОР",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ХАН ТЕОДОР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 31,
@@ -76,10 +67,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "24053202",
+      "id": "1685348007",
       "name_lat": "ЭРТАШ КАПЕЛЬКА РОСЫ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "ЭРТАШ КАПЕЛЬКА РОСЫ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -96,7 +87,7 @@
     {
       "id": "1591003726",
       "name_lat": "ЭРА МИЛОСЕРДИЯ ИЗ ТИХОГО ОМУТА",
-      "name_ru": "",
+      "name_ru": "ЭРА МИЛОСЕРДИЯ ИЗ ТИХОГО ОМУТА",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 16,
@@ -114,7 +105,7 @@
     {
       "id": "1546146866",
       "name_lat": "ЭРРЕВЕЙ БУЛОЧКА С КОРИЦЕЙ",
-      "name_ru": "",
+      "name_ru": "ЭРРЕВЕЙ БУЛОЧКА С КОРИЦЕЙ",
       "breed": "ПОДЕНКО ИБИЦЕНКО КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -123,43 +114,60 @@
     {
       "id": "1163683039",
       "name_lat": "ЭРИК ПОКОРИТЕЛЬ БАЙКАЛА",
-      "name_ru": "",
+      "name_ru": "ЭРИК ПОКОРИТЕЛЬ БАЙКАЛА",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1345165881",
-      "name_lat": "ЭРМИНАЛЬ КЛЕНОВЫЙ БАГРЯНЕЦ",
-      "name_ru": "",
+      "id": "237623480",
+      "name_lat": "ЭРМИНАЛЬ ИСКОРКА СЧАСТЬЯ",
+      "name_ru": "ЭРМИНАЛЬ ИСКОРКА СЧАСТЬЯ",
       "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1130474018",
+      "name_lat": "ЭРДИГАН БАРОН МЮНХГАУЗЕН",
+      "name_ru": "ЭРДИГАН БАРОН МЮНХГАУЗЕН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1282738774",
+      "name_lat": "ЭРМИНАЛЬ КЛЕНОВЫЙ БАГРЯНЕЦ",
+      "name_ru": "ЭРМИНАЛЬ КЛЕНОВЫЙ БАГРЯНЕЦ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "138002958",
+      "id": "1909758130",
       "name_lat": "ЭРОС ИЗ КАЗАНСКОГО ХАНСТВА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "name_ru": "ЭРОС ИЗ КАЗАНСКОГО ХАНСТВА",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "628670404",
-      "name_lat": "ЭРА НОВА ДЕРБИ",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "id": "885673063",
+      "name_lat": "ЭРИК РОМЕР ИЗ КАНЕКСО",
+      "name_ru": "ЭРИК РОМЕР ИЗ КАНЕКСО",
+      "breed": "КСОЛОИТЦКУИНТЛИ МИНИАТЮРНАЯ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "1984289336",
       "name_lat": "ЭРМАН ФРОМ КАРМЕЛЬ ХОУМЛЕНД",
-      "name_ru": "",
+      "name_ru": "ЭРМАН ФРОМ КАРМЕЛЬ ХОУМЛЕНД",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 8,
@@ -186,10 +194,10 @@
     {
       "id": "885083394",
       "name_lat": "ЭРИА ПРО МИШЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО МИШЕЛЬ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -202,12 +210,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1624381227",
-      "name_lat": "ЭРДИГАН БАРОН МЮНХГАУЗЕН",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "id": "1433727329",
+      "name_lat": "Эриа Про Пэрри Эллис Zhemchuzhina Chernozemija",
+      "name_ru": "Эриа Про Пэрри Эллис",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -220,55 +228,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1433727329",
-      "name_lat": "Эриа Про Пэрри Эллис Zhemchuzhina Chernozemija",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1470177457",
       "name_lat": "ЭРИА ПРО УСЛАДА",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО УСЛАДА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "86797889",
+      "id": "865066780",
       "name_lat": "ЭРА ЭЙРИН ДЭ РИКА",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР /",
+      "name_ru": "ЭРА ЭЙРИН ДЭ РИКА",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "885673063",
-      "name_lat": "ЭРИК РОМЕР ИЗ КАНЕКСО",
-      "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "441660869",
       "name_lat": "ЭРИК ХАУС НИКОЛЬ",
-      "name_ru": "",
+      "name_ru": "ЭРИК ХАУС НИКОЛЬ",
       "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1476676673",
+      "id": "913446526",
+      "name_lat": "ЭРЗУЛИ ФРЕДА ЕФЕРО",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ЕФЕРО",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "420265073",
       "name_lat": "ЭРМИНАЛЬ ХЛОЯ ЧАРОВНИЦА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "ЭРМИНАЛЬ ХЛОЯ ЧАРОВНИЦА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -276,10 +275,19 @@
     {
       "id": "628364912",
       "name_lat": "ЭРИА ПРО КЕТЧЕР ДРЕАМ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО КЕТЧЕР ДРЕАМ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1691642475",
+      "name_lat": "ЭРВИН ИЗ ДИНАСТИИ СТЮАРТОВ",
+      "name_ru": "ЭРВИН ИЗ ДИНАСТИИ СТЮАРТОВ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -310,10 +318,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "140096898",
+      "id": "722109487",
       "name_lat": "ЭРМИНАЛЬ АЛЛЕГРА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -321,7 +329,7 @@
     {
       "id": "964933085",
       "name_lat": "ЭРМИНГЕМ УЛЬТИМА РАТИО",
-      "name_ru": "",
+      "name_ru": "ЭРМИНГЕМ УЛЬТИМА РАТИО",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 14,
@@ -339,7 +347,7 @@
     {
       "id": "413446212",
       "name_lat": "ЭРА ВОДОЛЕЯ БРИЗА",
-      "name_ru": "",
+      "name_ru": "ЭРА ВОДОЛЕЯ БРИЗА",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
@@ -355,28 +363,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "186433921",
+      "id": "451678992",
       "name_lat": "ЭРИДАН РОСС УМА ТУРМАН",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "237623480",
-      "name_lat": "ЭРМИНАЛЬ ИСКОРКА СЧАСТЬЯ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "913446526",
-      "name_lat": "ЭРЗУЛИ ФРЕДА ЕФЕРО",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "name_ru": "ЭРИДАН РОСС УМА ТУРМАН",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -384,26 +374,26 @@
     {
       "id": "1601631603",
       "name_lat": "ЭРИА ПРО ОДРИ КЭТЛИН",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ОДРИ КЭТЛИН",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1171203066",
+      "id": "570148967",
       "name_lat": "ЭРМИНАЛЬ ХВАЛЕНКА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ХВАЛЕНКА",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "263882813",
+      "id": "1367085837",
       "name_lat": "ЭРМИНАЛЬ ЧАРОДЕЙ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "ЭРМИНАЛЬ ЧАРОДЕЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -411,17 +401,17 @@
     {
       "id": "1057475615",
       "name_lat": "ЭРИА ПРО БАВАРИЯ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО БАВАРИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "107682861",
+      "id": "143961394",
       "name_lat": "ЭРМИНАЛЬ УЛАН ЛИХОЙ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ УЛАН ЛИХОЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -429,7 +419,7 @@
     {
       "id": "320174109",
       "name_lat": "ЭРИА ПРО ДАВИД ДЛЯ ВОЛЖСКОЙ ЗВЕЗДЫ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ДАВИД ДЛЯ ВОЛЖСКОЙ ЗВЕЗДЫ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 13,
@@ -438,26 +428,26 @@
     {
       "id": "255057161",
       "name_lat": "ЭРИА ПРО ВРОНСКИЙ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ВРОНСКИЙ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1560421913",
+      "id": "1432393329",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН БУРЖУЙ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН БУРЖУЙ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "946744408",
+      "id": "1303208829",
       "name_lat": "ЭРА ЭЙРИН ДАРРЭЛ",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР /",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -465,17 +455,17 @@
     {
       "id": "953946403",
       "name_lat": "ЭРИА ПРО ЗОРИЦА (Изменено по Решению ВК от 20.07.23 вопрос 58) ГОР",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ЗОРИЦА (Изменено по Решению ВК от 20.07.23 вопрос 58) ГОР",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1709984703",
+      "id": "1331200612",
       "name_lat": "ЭР'ТАШ КОЛДОВСКАЯ ЛЮБОВЬ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "ЭР'ТАШ КОЛДОВСКАЯ ЛЮБОВЬ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -490,10 +480,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1466001166",
+      "id": "1071858087",
       "name_lat": "ЭРМИНАЛЬ ЕСЕНИЯ НЕЖНЫЙ ЦВЕТОК",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ЕСЕНИЯ НЕЖНЫЙ ЦВЕТОК",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 6,
       "competition_dog_id": null
@@ -526,28 +516,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "630851010",
-      "name_lat": "ЭРИА ПРО ФЕРГУС",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1220959488",
+      "id": "186919078",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ГЕРМИОНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "91302804",
+      "id": "252336193",
       "name_lat": "ЭРИДАН ЕСТ ОПТИМУС",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА /",
+      "name_ru": "ЭРИДАН ЕСТ ОПТИМУС",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -564,7 +545,7 @@
     {
       "id": "890509019",
       "name_lat": "ЭРЗУЛИ ФРЕДА ЗЗ ТОП",
-      "name_ru": "",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ЗЗ ТОП",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 8,
@@ -589,9 +570,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "299381957",
+      "name_lat": "ЭРЗУЛИ ФРЕДА НАЙЯ",
+      "name_ru": "ЭРЗУЛИ ФРЕДА НАЙЯ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "33449000",
       "name_lat": "ЭРИА ПРО КСАНТИМИРА",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО КСАНТИМИРА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
@@ -609,7 +598,7 @@
     {
       "id": "1046921959",
       "name_lat": "ЭРИА ПРО УНГАРО",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО УНГАРО",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 22,
@@ -618,7 +607,7 @@
     {
       "id": "234710490",
       "name_lat": "ЭРИК ФОМ ХАУС ШИРАН",
-      "name_ru": "",
+      "name_ru": "ЭРИК ФОМ ХАУС ШИРАН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 14,
@@ -645,7 +634,7 @@
     {
       "id": "608286190",
       "name_lat": "ЭРИА ПРО ЗИАН",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ЗИАН",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 12,
@@ -654,26 +643,26 @@
     {
       "id": "66686227",
       "name_lat": "ЭРИДАН РОСС ЛЛОЙД КРИСТОФЕР",
-      "name_ru": "",
+      "name_ru": "ЭРИДАН РОСС ЛЛОЙД КРИСТОФЕР",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1677030424",
+      "id": "978411847",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН СЬЕННА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН СЬЕННА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "923065772",
+      "id": "1237021472",
       "name_lat": "ЭРИДАН РОСС ПРИЧУДА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "name_ru": "ЭРИДАН РОСС ПРИЧУДА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -681,7 +670,7 @@
     {
       "id": "34729298",
       "name_lat": "ЭРА КРАСОТЫ ИЗ ЕНИСЕЙСКОЙ ГУБЕРНИИ",
-      "name_ru": "",
+      "name_ru": "ЭРА КРАСОТЫ ИЗ ЕНИСЕЙСКОЙ ГУБЕРНИИ",
       "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -690,26 +679,26 @@
     {
       "id": "1606683573",
       "name_lat": "ЭРИКА РОЯЛ СПАНИЕЛЬ (Изменено по Решению ВК от 22.03.23 вопрос 31)",
-      "name_ru": "",
+      "name_ru": "ЭРИКА РОЯЛ СПАНИЕЛЬ (Изменено по Решению ВК от 22.03.23 вопрос 31)",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1899660864",
+      "id": "1129930389",
       "name_lat": "ЭРИА ПРО КЕТЧЕР ДРИМ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "name_ru": "ЭРИА ПРО КЕТЧЕР ДРИМ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "628513180",
+      "id": "160714225",
       "name_lat": "ЭРЛ'С МЭЙД ХАСЯ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -726,7 +715,7 @@
     {
       "id": "771713596",
       "name_lat": "ЭРИА ПРО ФЕДЕРИКО ФЕЛЛИНИ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ФЕДЕРИКО ФЕЛЛИНИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
@@ -751,10 +740,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1461770993",
+      "id": "1999516238",
       "name_lat": "ЭРМИНАЛЬ ШАКИРА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ШАКИРА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -762,28 +751,19 @@
     {
       "id": "837227341",
       "name_lat": "Эрато Шах Дарт HURREM CASA DELLA",
-      "name_ru": "",
+      "name_ru": "Эрато Шах Дарт",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "124720439",
+      "id": "628344182",
       "name_lat": "ЭРА ЭЙРИН ДЕН ФРЭД",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР /",
+      "name_ru": "ЭРА ЭЙРИН ДЕН ФРЭД",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1691642475",
-      "name_lat": "ЭРВИН ИЗ ДИНАСТИИ СТЮАРТОВ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -805,10 +785,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1472109109",
+      "id": "1607149102",
       "name_lat": "ЭРИКА ИЗ ДОМА ФЕНИКС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРИКА ИЗ ДОМА ФЕНИКС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -816,17 +796,17 @@
     {
       "id": "1164746848",
       "name_lat": "ЭРИК ХАУС ЗИГРИД",
-      "name_ru": "",
+      "name_ru": "ЭРИК ХАУС ЗИГРИД",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "867598403",
+      "id": "636700499",
       "name_lat": "ЭРМИС АЛЬТАИР",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЭРМИС АЛЬТАИР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -850,19 +830,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "825872257",
+      "id": "52444514",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ЖЕНЕВА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ЖЕНЕВА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1279085789",
+      "id": "286292501",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ВЕНДИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -870,10 +850,19 @@
     {
       "id": "294443869",
       "name_lat": "ЭРИКА МЭРИСОН",
-      "name_ru": "",
+      "name_ru": "ЭРИКА МЭРИСОН",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "479671111",
+      "name_lat": "ЭРЗУЛИ ФРЕДА ЗЕСТФУЛ",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ЗЕСТФУЛ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -895,19 +884,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "419867374",
+      "name_lat": "ЭРЗУЛИ ФРЕДА ЭФЛОРЕСКО",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ЭФЛОРЕСКО",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "341613285",
       "name_lat": "ЭРМИНАЛЬ ОФЕЛИЯ",
-      "name_ru": "",
+      "name_ru": "ЭРМИНАЛЬ ОФЕЛИЯ",
       "breed": "РУССКИЙ ТОЙ (ДЛИННОШЕРСТНЫЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1174025723",
+      "id": "1825179887",
       "name_lat": "ЭРА КХАЛИСИ ДЛЯ ДОМА ЯХОНТОВЫХ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ЭРА КХАЛИСИ ДЛЯ ДОМА ЯХОНТОВЫХ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -958,10 +955,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "521258043",
+      "id": "1011380292",
       "name_lat": "ЭРМИНАЛЬ ТАЙНА ЛЕТНЕЙ НОЧИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -985,10 +982,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "982926015",
+      "id": "1193338544",
       "name_lat": "ЭРИКА ИЛЭЙТ ХОЛИДЭЙ",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРИКА ИЛЭЙТ ХОЛИДЭЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1003,19 +1000,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "934818109",
+      "id": "1482641909",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ДЕВИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1513279842",
+      "id": "567726284",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ГЛОРИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ГЛОРИЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1039,28 +1036,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "580130871",
+      "id": "1814953936",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ХЛОЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "547731778",
+      "id": "793932460",
       "name_lat": "ЭРИКА АУС ВИКВЕЛЬТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "57993190",
-      "name_lat": "ЭРЗУЛИ ФРЕДА ЭФЕРО",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1084,10 +1072,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "831158252",
+      "id": "281053641",
       "name_lat": "ЭРЭНЖИ ХЭППИ МИЛ",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1106,15 +1094,6 @@
       "name_lat": "ЭРИКА С ЕЙСКОГО ЛИМАНА",
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "189520647",
-      "name_lat": "ЭРЗУЛИ ФРЕДА НАЙЯ",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1140,10 +1119,19 @@
     {
       "id": "345679027",
       "name_lat": "ЭРЗУЛИ ФРЕДА НОРА НАЙТ",
-      "name_ru": "",
+      "name_ru": "ЭРЗУЛИ ФРЕДА НОРА НАЙТ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273910613",
+      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ГАЛАКТИКА",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ГАЛАКТИКА",
+      "breed": "НЕМ.ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1156,55 +1144,82 @@
       "competition_dog_id": null
     },
     {
-      "id": "1930481902",
+      "id": "1783083630",
+      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН КАЙЗЕР",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН КАЙЗЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "986964535",
       "name_lat": "ЭРИА ПРО ЛЕГЕНДА",
-      "name_ru": "",
-      "breed": "Доберман /",
+      "name_ru": "ЭРИА ПРО ЛЕГЕНДА",
+      "breed": "Доберман",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1172665752",
-      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН КАЙЗЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "id": "1719876172",
+      "name_lat": "ЭРМИНАЛЬ ПАТРИССИЯ",
+      "name_ru": "ЭРМИНАЛЬ ПАТРИССИЯ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "87913304",
+      "id": "1457054092",
+      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН КРИСТАЛЛ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН КРИСТАЛЛ",
+      "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "76988037",
       "name_lat": "ЭРМИНАЛЬ ХАН ХАСАН (Д/Ш)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ХАН ХАСАН (Д/Ш)",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1463851747",
-      "name_lat": "ЭРМИНАЛЬ ПАТРИССИЯ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "id": "1028057445",
+      "name_lat": "ЭРИА ПРО БАЗИЛЕВС",
+      "name_ru": "ЭРИА ПРО БАЗИЛЕВС",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "159576859",
       "name_lat": "ЭРТОНГ ТМ ЖОНГ",
-      "name_ru": "",
+      "name_ru": "ЭРТОНГ ТМ ЖОНГ",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "157324131",
+      "id": "1323199653",
+      "name_lat": "ЭРА ВОДОЛЕЯ ЭЛТОН",
+      "name_ru": "ЭРА ВОДОЛЕЯ ЭЛТОН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "164037706",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН МОНТАНА",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН МОНТАНА",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -1212,7 +1227,7 @@
     {
       "id": "1695850683",
       "name_lat": "ЭРИА ПРО АЛИТА ФУРИЯ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО АЛИТА ФУРИЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 13,
@@ -1228,10 +1243,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1463687048",
+      "id": "648816981",
       "name_lat": "ЭРМИНАЛЬ ЗВЁЗДНЫЙ ВОИН",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ЗВЁЗДНЫЙ ВОИН",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -1246,91 +1261,100 @@
       "competition_dog_id": null
     },
     {
-      "id": "1630005649",
-      "name_lat": "ЭРА ВОДОЛЕЯ ЭЛТОН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1074827221",
       "name_lat": "ЭРИА ПРО ГВЕНДОЛИН",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ГВЕНДОЛИН",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "1369843501",
+      "name_lat": "Эрбен Вельт Штерн Киара",
+      "name_ru": "Эрбен Вельт Штерн Киара",
+      "breed": "Нем.овчарка длинношерст ная",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1951058127",
       "name_lat": "ЭРИА ПРО ПЕРС СТИЧ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ПЕРС СТИЧ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
+      "id": "396466014",
+      "name_lat": "ЭРРАДО ДИСНИМУС",
+      "name_ru": "ЭРРАДО ДИСНИМУС",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "52987620",
       "name_lat": "ЭРИК ВЕНТИ ФОРТЕС",
-      "name_ru": "",
+      "name_ru": "ЭРИК ВЕНТИ ФОРТЕС",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "592373804",
+      "id": "134636833",
       "name_lat": "ЭРМИНАЛЬ РЭП ДЭНС",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ РЭП ДЭНС",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1248976519",
+      "id": "1495231488",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ОСКАР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ОСКАР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
+      "id": "1274321701",
+      "name_lat": "ЭРМИНАЛЬ ИЗУМРУДНАЯ ФЕЯ",
+      "name_ru": "ЭРМИНАЛЬ ИЗУМРУДНАЯ ФЕЯ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1310627539",
       "name_lat": "ЭРИКА АНДЖЕЛ АЙЗ",
-      "name_ru": "",
+      "name_ru": "ЭРИКА АНДЖЕЛ АЙЗ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1486644581",
+      "id": "218191021",
       "name_lat": "ЭРХАБЕН ДОЛЦЕ ВИТА",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ЭРХАБЕН ДОЛЦЕ ВИТА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1028057445",
-      "name_lat": "ЭРИА ПРО БАЗИЛЕВС",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1598613720",
+      "id": "1486045181",
       "name_lat": "ЭРИК ИНДИА ДЖОН",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "ЭРИК ИНДИА ДЖОН",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1338,16 +1362,15 @@
     {
       "id": "220451980",
       "name_lat": "ЭРИДАН ДОН ИДЖИ",
-      "name_ru": "",
+      "name_ru": "ЭРИДАН ДОН ИДЖИ",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "1688678325",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ОБЕРОНА",
-      "name_ru": "",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ОБЕРОНА",
       "breed": "ДЛИННАЯ ОСТЕВАЯ",
       "breed_en": "",
       "total_shows": 15,
@@ -1357,87 +1380,103 @@
       "id": "1449940271",
       "name_lat": "ЭРИА ПРО АМБИЦИЯ",
       "name_ru": "",
+      "breed": "Цвергпинчер",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "109315086",
+      "name_lat": "ЭРАС БЭСТ ПАТ ОФ МИ",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1574502865",
+      "name_lat": "ЭРРОЛ ФЛИНН ДЕ МИКАЛАНИРА",
+      "name_ru": "ЭРРОЛ ФЛИНН ДЕ МИКАЛАНИРА",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "BIEWER TERRIER",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1976042216",
+      "name_lat": "ЭРИА ПРО ТЕРЕНТИЙ МАРИНКИНА РАДОСТЬ",
+      "name_ru": "ЭРИА ПРО ТЕРЕНТИЙ МАРИНКИНА РАДОСТЬ",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "396466014",
-      "name_lat": "ЭРРАДО ДИСНИМУС",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "id": "195598579",
+      "name_lat": "ЭРИА ПРО МАРШАЛ",
+      "name_ru": "ЭРИА ПРО МАРШАЛ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "110029150",
+      "id": "600073981",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН СОРБОННА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН СОРБОННА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1488512322",
+      "id": "1631950703",
       "name_lat": "ЭРМИНАЛЬ ЦИГЕЙКОВАЯ ШУБКА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ЦИГЕЙКОВАЯ ШУБКА",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "963354175",
-      "name_lat": "ЭРИКА ЛИНН ИЗ ПОМЕСТЬЯ БЕРНОВ",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "id": "1632078105",
+      "name_lat": "ЭРОС ФОМ ХАУС ХЕЛЕН",
+      "name_ru": "ЭРОС ФОМ ХАУС ХЕЛЕН",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1991655211",
+      "id": "357118140",
+      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН СОКРАТ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН СОКРАТ",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1263667964",
       "name_lat": "ЭРСТЕШРИТ ПАВЛА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРСТЕШРИТ ПАВЛА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "829552504",
-      "name_lat": "ЭРМИНАЛЬ ИЗУМРУДНАЯ ФЕЯ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1032731625",
       "name_lat": "Эригона Верность Предкам",
-      "name_ru": "",
+      "name_ru": "Эригона Верность Предкам",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "195598579",
-      "name_lat": "ЭРИА ПРО МАРШАЛ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1432822069",
       "name_lat": "ЭРДИС ТОЙЛЭНД ЕЛЛИЙ",
-      "name_ru": "",
+      "name_ru": "ЭРДИС ТОЙЛЭНД ЕЛЛИЙ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -1446,26 +1485,44 @@
     {
       "id": "903740823",
       "name_lat": "ЭРИА ПРО ПРЕСТО",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ПРЕСТО",
       "breed": "Доберман",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "241653508",
+      "id": "1716634120",
+      "name_lat": "ЭРМИНА ДАМГЛАР",
+      "name_ru": "ЭРМИНА ДАМГЛАР",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "682182427",
       "name_lat": "ЭРАТО ШАХ КУНО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРАТО ШАХ КУНО",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "642105348",
+      "id": "1216262729",
+      "name_lat": "ЭРОС ВЕЛИКИЙ",
+      "name_ru": "ЭРОС ВЕЛИКИЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173632865",
       "name_lat": "ЭРМИНАЛЬ ЦВЕТ НОЧНОГО НЕБА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1482,34 +1539,51 @@
     {
       "id": "876936035",
       "name_lat": "ЭРМИНАЛЬ ЯНТАРНЫЙ БЛЕСК",
-      "name_ru": "",
+      "name_ru": "ЭРМИНАЛЬ ЯНТАРНЫЙ БЛЕСК",
       "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1746604899",
-      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН СОКРАТ",
+      "id": "254050266",
+      "name_lat": "ЭРИА ПРО ХОСАННА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1006428891",
+      "id": "704708490",
       "name_lat": "ЭРМИНАЛЬ ЮПИТЕР",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ЮПИТЕР",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "305694795",
+      "name_lat": "ЭРИА ПРО ОПТИМА",
+      "name_ru": "ЭРИА ПРО ОПТИМА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1122287693",
+      "name_lat": "ЭРЗУЛИ ФРЕДА ЭВРИФИНГ ЭТ ОНСЕ",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ЭВРИФИНГ ЭТ ОНСЕ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1307720601",
       "name_lat": "ЭРИА ПРО ФЕРРАРИ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ФЕРРАРИ",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
       "total_shows": 10,
@@ -1518,7 +1592,7 @@
     {
       "id": "883551109",
       "name_lat": "ЭРИА ПРО ЗАХАР",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ЗАХАР",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -1527,19 +1601,10 @@
     {
       "id": "261688812",
       "name_lat": "ЭРМИНАЛЬ ИНДИЙСКАЯ ТАНЦОВЩИЦА",
-      "name_ru": "",
+      "name_ru": "ЭРМИНАЛЬ ИНДИЙСКАЯ ТАНЦОВЩИЦА",
       "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "305694795",
-      "name_lat": "ЭРИА ПРО ОПТИМА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1554,17 +1619,17 @@
     {
       "id": "575494507",
       "name_lat": "ЭРИК ХАУС ЕСТЕР",
-      "name_ru": "",
+      "name_ru": "ЭРИК ХАУС ЕСТЕР",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1332713333",
+      "id": "1929319278",
       "name_lat": "ЭРИКА ИЗ БЕЛОГО ЯРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 28,
       "competition_dog_id": null
@@ -1572,46 +1637,45 @@
     {
       "id": "1641374991",
       "name_lat": "ЭРИА ПРО ЛАРА КРОФТ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ЛАРА КРОФТ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "250137340",
-      "name_lat": "ЭРОС ФОМ ХАУС ХЕЛЕН",
+      "id": "1326515059",
+      "name_lat": "Эриа Про Микаэлла",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
-      "breed_en": "",
-      "total_shows": 10,
+      "breed": "ДОБЕРМАН",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "31881692",
       "name_lat": "Эриа Про Аразелис",
-      "name_ru": "",
+      "name_ru": "Эриа Про Аразелис",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "759571931",
-      "name_lat": "ЭРИА ПРО МОРРИС",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "id": "1885371755",
+      "name_lat": "ЭРИК ИЗ СКАЗОЧНОГО ЛЕСА",
+      "name_ru": "ЭРИК ИЗ СКАЗОЧНОГО ЛЕСА",
+      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1359513519",
-      "name_lat": "ЭРИК ИЗ СКАЗОЧНОГО ЛЕСА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "id": "1766223048",
+      "name_lat": "ЭРИА ПРО МЮРРЕЙ",
+      "name_ru": "ЭРИА ПРО МЮРРЕЙ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1624,12 +1688,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1216262729",
-      "name_lat": "ЭРОС ВЕЛИКИЙ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "id": "395394475",
+      "name_lat": "ЭРИКА ИЗ КЛАНА ТАЛИСМАНА",
+      "name_ru": "ЭРИКА ИЗ КЛАНА ТАЛИСМАНА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1644,116 +1708,62 @@
     {
       "id": "1449097630",
       "name_lat": "ЭРИА ПРО ВЕНДИ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ВЕНДИ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "974980202",
-      "name_lat": "Эриа Про Ирегард",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1976042216",
-      "name_lat": "ЭРИА ПРО ТЕРЕНТИЙ МАРИНКИНА РАДОСТЬ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "502507754",
-      "name_lat": "ЭРИА ПРО БАРСЕЛОНА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "425980908",
       "name_lat": "ЭРНЕСА БРАУН",
-      "name_ru": "",
+      "name_ru": "ЭРНЕСА БРАУН",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1072280379",
-      "name_lat": "ЭРИА ПРО АНКЕЛЬ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "543441113",
+      "id": "1976449849",
       "name_lat": "ЭРМИНАЛЬ ЧУВСТВЕННЫЙ ПОЦЕЛУЙ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "ЭРМИНАЛЬ ЧУВСТВЕННЫЙ ПОЦЕЛУЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1716634120",
-      "name_lat": "ЭРМИНА ДАМГЛАР",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1585750676",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН КИМБЕРЛИ",
-      "name_ru": "",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН КИМБЕРЛИ",
       "breed": "Немецкая овчарка длинношерстная",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "514724981",
+      "id": "62005358",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ВИЛЬМА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ВИЛЬМА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1950839874",
+      "id": "594840596",
       "name_lat": "ЭРИКА ИЗ ДОМА ЛАНКАСТЕР",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЭРИКА ИЗ ДОМА ЛАНКАСТЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "109315086",
-      "name_lat": "ЭРАС БЭСТ ПАТ ОФ МИ",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1667285553",
+      "id": "1143621646",
       "name_lat": "ЭРМИНАЛЬ ТРЕНД СЕЗОНА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ТРЕНД СЕЗОНА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1770,7 +1780,7 @@
     {
       "id": "1816021137",
       "name_lat": "ЭРИН ФРОМ ХАУС ИРЕН",
-      "name_ru": "",
+      "name_ru": "ЭРИН ФРОМ ХАУС ИРЕН",
       "breed": "МАЙОРКСКИЙ МАСТИФ (КА ДЕ БО)",
       "breed_en": "",
       "total_shows": 4,
@@ -1779,10 +1789,19 @@
     {
       "id": "1910397313",
       "name_lat": "ЭРИА ПРО КСИЛИНА",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО КСИЛИНА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "52345170",
+      "name_lat": "ЭРИ АГЕЙН",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1797,7 +1816,7 @@
     {
       "id": "869665429",
       "name_lat": "ЭРСТЕШРИТ ДЕМЕТРА",
-      "name_ru": "",
+      "name_ru": "ЭРСТЕШРИТ ДЕМЕТРА",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 14,
@@ -1806,7 +1825,7 @@
     {
       "id": "1886603226",
       "name_lat": "ЭРИК ИЗ СОСНОВОГО РАЯ",
-      "name_ru": "",
+      "name_ru": "ЭРИК ИЗ СОСНОВОГО РАЯ",
       "breed": "Вельш корги пемброк",
       "breed_en": "",
       "total_shows": 11,
@@ -1815,35 +1834,59 @@
     {
       "id": "1301663235",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ХЕЛЕН",
-      "name_ru": "",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ХЕЛЕН",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1555256320",
+      "id": "140969280",
+      "name_lat": "ЭРМИНАЛЬ ЮНЕСКА",
+      "name_ru": "ЭРМИНАЛЬ ЮНЕСКА",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "142799445",
       "name_lat": "ЭРЛ'С МЭЙД ЖАСМИН УАН ГОЛД",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "ЭРЛ'С МЭЙД ЖАСМИН УАН ГОЛД",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1865665575",
       "name_lat": "ЭРИА ПРО ЛИОНЕЛЛА (Изменено по Решению ВК от 24.11.21 вопрос 29)",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ЛИОНЕЛЛА (Изменено по Решению ВК от 24.11.21 вопрос 29)",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1206246173",
-      "name_lat": "ЭРМИНАЛЬ ШАМАХАНСКАЯ ЦАРИЦА",
-      "name_ru": "",
+      "id": "1246471454",
+      "name_lat": "ЭРИА ПРО ЖЕКСОН ДЖУТА ХАУС ФЕСТИВАЛЬ ФОР",
+      "name_ru": "ЭРИА ПРО ЖЕКСОН ДЖУТА ХАУС ФЕСТИВАЛЬ ФОР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "138019320",
+      "name_lat": "ЭРМИНАЛЬ КНЯЖНА ПЕТЕРБУРГСКАЯ",
+      "name_ru": "ЭРМИНАЛЬ КНЯЖНА ПЕТЕРБУРГСКАЯ",
       "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "589479554",
+      "name_lat": "ЭРМИНАЛЬ ШАМАХАНСКАЯ ЦАРИЦА",
+      "name_ru": "ЭРМИНАЛЬ ШАМАХАНСКАЯ ЦАРИЦА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1867,19 +1910,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "1554080494",
+      "name_lat": "ЭРМИНАЛЬ ЯНВАРСКАЯ ВЬЮГА",
+      "name_ru": "ЭРМИНАЛЬ ЯНВАРСКАЯ ВЬЮГА",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "393183314",
+      "name_lat": "ЭРЛ'С МЭЙД ГОРТЕНЗИЯ ДАСТ",
+      "name_ru": "ЭРЛ'С МЭЙД ГОРТЕНЗИЯ ДАСТ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "590493773",
       "name_lat": "ЭРОС ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
-      "name_ru": "",
+      "name_ru": "ЭРОС ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "breed": "КОРСО",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1351941925",
-      "name_lat": "ЭРИДАН РОСС ФЛО- РИДА ДОБТЛЕСС СМЭШИНГ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "id": "42794555",
+      "name_lat": "ЭРИДАН РОСС ФЛО-РИДА ДОБТЛЕСС СМЭШИНГ",
+      "name_ru": "ЭРИДАН РОСС ФЛО-РИДА ДОБТЛЕСС СМЭШИНГ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1894,28 +1955,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "957133940",
+      "id": "1264740779",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ИЛОНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ИЛОНА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "44800128",
+      "id": "1496322854",
       "name_lat": "ЭРБАН ВЕЛТ ШТЕРН ЦЕЗАРЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1203295651",
-      "name_lat": "ЭРИДАН РОСС ВЕЛИЧАВАЯ ПАВА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1930,36 +1982,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1466040324",
+      "id": "1020761265",
       "name_lat": "ЭРИА ПРО ВАР КРАФТ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1031801952",
+      "id": "358063373",
       "name_lat": "ЭРЛ'С МЭЙД ГАЛАТЕЯ СТАР",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "254050266",
-      "name_lat": "ЭРИА ПРО ХОСАННА",
+      "id": "268914508",
+      "name_lat": "ЭРЗУЛИ ФРЕДА ПЕРЛ АРКТИК ФОКС",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "656615881",
       "name_lat": "ЭРМИНАЛЬ НЕВСКАЯ НОЧЬ АНГЕЛИНА",
-      "name_ru": "",
+      "name_ru": "ЭРМИНАЛЬ НЕВСКАЯ НОЧЬ АНГЕЛИНА",
       "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 8,
@@ -1968,53 +2020,8 @@
     {
       "id": "1798530995",
       "name_lat": "ЭРА БЬЮТИФУЛ ЧАРА",
-      "name_ru": "",
+      "name_ru": "ЭРА БЬЮТИФУЛ ЧАРА",
       "breed": "SHEPHERD DOG",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "501603679",
-      "name_lat": "Эра Звездных Побед",
-      "name_ru": "",
-      "breed": "Вельш Корги Пемброк",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1862066065",
-      "name_lat": "ЭРМИТАЖ ОТ ЛОМОНОСОВОЙ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1688976155",
-      "name_lat": "ЭРИКА ИЗ КЛАНА ТАЛИСМАНА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "923393385",
-      "name_lat": "Эриа Про Менелай",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "23465813",
-      "name_lat": "ЭРМИНАЛЬ СОЛНЕЧНАЯ ЯШМА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2022,35 +2029,78 @@
     {
       "id": "1574664299",
       "name_lat": "ЭРИА ПРО АРЧИ МАРШАЛЛ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО АРЧИ МАРШАЛЛ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1849489819",
+      "name_lat": "ЭРИДАН РОСС САНШАЙН",
+      "name_ru": "ЭРИДАН РОСС САНШАЙН",
+      "breed": "ЦВЕРГШНАУЦЕР (ЧЕРНЫЙ С СЕРЕБРОМ)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "501603679",
+      "name_lat": "Эра Звездных Побед",
+      "name_ru": "ЭРА ЗВЁЗДНЫХ ПОБЕД",
+      "breed": "Вельш Корги Пемброк",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1819926815",
+      "name_lat": "ЭРМИНАЛЬ ЯНВАРЬСКАЯ ВЬЮГА",
+      "name_ru": "ЭРМИНАЛЬ ЯНВАРЬСКАЯ ВЬЮГА",
+      "breed": "ПУДЕЛЬ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1862066065",
+      "name_lat": "ЭРМИТАЖ ОТ ЛОМОНОСОВОЙ",
+      "name_ru": "ЭРМИТАЖ ОТ ЛОМОНОСОВОЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1466033274",
+      "name_lat": "ЭРМИНАЛЬ СОЛНЕЧНАЯ ЯШМА",
+      "name_ru": "ЭРМИНАЛЬ СОЛНЕЧНАЯ ЯШМА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "1764859906",
       "name_lat": "ЭРИА ПРО ВЕЛЕС",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ВЕЛЕС",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1382553493",
+      "id": "796529978",
       "name_lat": "ЭРМИНАЛЬ РОМАНТИКА ЗВЕЗД",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ РОМАНТИКА ЗВЕЗД",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "142137572",
+      "id": "1774388875",
       "name_lat": "ЭРДИГАН БАРОН МЮНХАУЗЕН",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "name_ru": "ЭРДИГАН БАРОН МЮНХАУЗЕН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2058,17 +2108,17 @@
     {
       "id": "1254550438",
       "name_lat": "ЭРФИ ДЖОЙ НЕФЕРТИТИ",
-      "name_ru": "",
+      "name_ru": "ЭРФИ ДЖОЙ НЕФЕРТИТИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1506427526",
+      "id": "1663982335",
       "name_lat": "ЭРАЛЬДА ФОН ВЭСПЭН ХАУС",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2085,52 +2135,43 @@
     {
       "id": "114294206",
       "name_lat": "ЭРИА ПРО ЗАБАВА",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ЗАБАВА",
       "breed": "французский бульдог",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "491531350",
+      "id": "190160705",
+      "name_lat": "ЭРНА ЭЛЬ-ФАЛЛУДЖА",
+      "name_ru": "ЭРНА ЭЛЬ-ФАЛЛУДЖА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "970798799",
       "name_lat": "ЭРМИНГЕМ УНА-ЛУНА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "name_ru": "ЭРМИНГЕМ УНА-ЛУНА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "618683035",
+      "id": "1717965412",
       "name_lat": "ЭРМИНАЛЬ ЖЕНЕВЬЕР",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ЖЕНЕВЬЕР",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "445365575",
-      "name_lat": "ЭРИА ПРО ЛЕОПОЛЬДО",
-      "name_ru": "",
-      "breed": "Доберман чёрно- подпалый",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "78676136",
-      "name_lat": "ЭРЗУЛИ ФРЕДА ЭВРИФИНГ ЭТ ОНСЕ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "169871068",
       "name_lat": "ЭРИА ПРО МЕЛЛИСА",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО МЕЛЛИСА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
@@ -2139,26 +2180,17 @@
     {
       "id": "1460729306",
       "name_lat": "ЭРДИС ТОЙЛЭНД ЗИ-ДАН",
-      "name_ru": "",
+      "name_ru": "ЭРДИС ТОЙЛЭНД ЗИ-ДАН",
       "breed": "кавалер кинг чарльз спаниель",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1457054092",
-      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН КРИСТАЛЛ",
-      "name_ru": "",
-      "breed": "ДЛИННОШЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "128707055",
+      "id": "1379334707",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ИДАЛЬГО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2173,19 +2205,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "144414860",
+      "id": "1383549664",
       "name_lat": "ЭРОС ИЗ КАЗАНСКОГО ЦАРСТВА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "626233478",
+      "id": "1202787752",
       "name_lat": "ЭРМОССО КАНИС УОРНЕР",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "name_ru": "ЭРМОССО КАНИС УОРНЕР",
+      "breed": "ROTTWEILER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2193,17 +2225,17 @@
     {
       "id": "1548173072",
       "name_lat": "Эрбен Вельт Штерн Кайрос",
-      "name_ru": "",
+      "name_ru": "Эрбен Вельт Штерн Кайрос",
       "breed": "Немецк.овч.длинношерст",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "339802062",
+      "id": "288169291",
       "name_lat": "ЭРМИНАЛЬ ОБЛАЧНАЯ ФАНТАЗИЯ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2211,19 +2243,10 @@
     {
       "id": "74458928",
       "name_lat": "ЭРАТО ШАХ ВИРТУС",
-      "name_ru": "",
+      "name_ru": "ЭРАТО ШАХ ВИРТУС",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1882013573",
-      "name_lat": "ЭРИКА ИЗ СТОЛИЦЫ УРАЛА",
-      "name_ru": "",
-      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2236,36 +2259,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1326515059",
-      "name_lat": "Эриа Про Микаэлла",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "425522312",
       "name_lat": "ЭРДИС ТОЙЛЕНД ВИВАЛЬДИ",
-      "name_ru": "",
+      "name_ru": "ЭРДИС ТОЙЛЕНД ВИВАЛЬДИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1554080494",
-      "name_lat": "ЭРМИНАЛЬ ЯНВАРСКАЯ ВЬЮГА",
+      "id": "372557655",
+      "name_lat": "ЭРИА ПРО МАЛЕФИСЕНТА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "759423207",
       "name_lat": "ЭРИА ПРО ФРИСТАЙЛ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ФРИСТАЙЛ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 6,
@@ -2274,7 +2287,7 @@
     {
       "id": "726074063",
       "name_lat": "ЭРЗУЛИ ГОДДЕС ОФ БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "ЭРЗУЛИ ГОДДЕС ОФ БЬЮТИ",
       "breed": "ВЕНГЕРСКАЯ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -2308,10 +2321,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1260947535",
+      "id": "606458158",
       "name_lat": "ЭРМИНАЛЬ НЕЗНАКОМКА В ЗЕРКАЛЕ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ НЕЗНАКОМКА В ЗЕРКАЛЕ",
+      "breed": "РУССКИЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2326,15 +2339,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1212725165",
-      "name_lat": "ЭРИА ПРО ГРАНДМАСТЕР",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1962587686",
       "name_lat": "ЭРВИН ЭНДЭЕЛ АЙС С ГОРЫ МЕЗМАЙ",
       "name_ru": "",
@@ -2344,12 +2348,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1574502865",
-      "name_lat": "ЭРРОЛ ФЛИНН ДЕ МИКАЛАНИРА",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "BIEWER TERRIER",
-      "total_shows": 4,
+      "id": "921496392",
+      "name_lat": "ЭРМИНАЛЬ ЗАВЕТНАЯ МЕЧТА",
+      "name_ru": "ЭРМИНАЛЬ ЗАВЕТНАЯ МЕЧТА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2362,19 +2366,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "599417316",
+      "id": "667622777",
       "name_lat": "ЭРЛ'С МЭЙД ЛЕКСА",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "770375179",
+      "id": "1842475520",
       "name_lat": "ЭРВИН АМУЛЕТ СЧАСТЬЯ",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "name_ru": "ЭРВИН АМУЛЕТ СЧАСТЬЯ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2407,6 +2411,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "285770004",
+      "name_lat": "ЭРМА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ЯГДТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "150779382",
       "name_lat": "Эриа Про Вива Ла Стори",
       "name_ru": "",
@@ -2418,7 +2431,7 @@
     {
       "id": "42702090",
       "name_lat": "ЭРИА ПРО ПЕЛАГЕЯ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ПЕЛАГЕЯ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 9,
@@ -2427,35 +2440,26 @@
     {
       "id": "268734215",
       "name_lat": "ЭРИА ПРО АУРУМ СТАРК",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО АУРУМ СТАРК",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1810811232",
+      "id": "599542325",
       "name_lat": "ЭРЗУЛИ ФРЕДА ВИКТОРИ КЕНДИ КИС",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ВИКТОРИ КЕНДИ КИС",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "766092641",
+      "id": "595635177",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ЛАКШЕРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1084881436",
-      "name_lat": "ЭРИА ПРО ТЕРАМОНТ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ЛАКШЕРИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2463,17 +2467,8 @@
     {
       "id": "138432482",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН КАЙРОС",
-      "name_ru": "",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН КАЙРОС",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА длинношерстнёкая",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1053673731",
-      "name_lat": "ЭРМИНГЕМ ФЕЛИЧИТА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2488,20 +2483,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1289944862",
-      "name_lat": "ЭРЗЕЙ ИМПЕРАТОР ИЗ ГРАДА ПЕТРОВА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1901660157",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ПАКРОС",
       "name_ru": "",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "522070356",
+      "name_lat": "ЭРИА ПРО ЛАЙТ КРИСТАЛ",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2524,37 +2518,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1819926815",
-      "name_lat": "ЭРМИНАЛЬ ЯНВАРЬСКАЯ ВЬЮГА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1951440792",
       "name_lat": "ЭРЗУЛИ ФРЕДА АРИЗОНА",
-      "name_ru": "",
+      "name_ru": "ЭРЗУЛИ ФРЕДА АРИЗОНА",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "841784024",
+      "id": "1029322947",
       "name_lat": "ЭРИДАН РОСС ШАНС",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "name_ru": "ЭРИДАН РОСС ШАНС",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1510713949",
+      "id": "933007426",
       "name_lat": "ЭРМИНАЛЬ ФИРМЕННАЯ ШТУЧКА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2569,18 +2554,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "215693453",
+      "id": "493394406",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН БУДУР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН БУДУР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "817482539",
       "name_lat": "ЭРИА ПРО ЗАМИРА",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ЗАМИРА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -2596,46 +2581,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "745759400",
-      "name_lat": "ЭРЛ'С МЭЙД ГОРТЕНЗИЯ ДАСТ",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "27519746",
-      "name_lat": "ЭРСТЕШРИТ РЭЙЧЕЛ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
+      "id": "908530074",
+      "name_lat": "Эрато Шах Васса",
+      "name_ru": "ЭРАТО ШАХ ВАССА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "1424805797",
       "name_lat": "ЭРИДАН РОСС ВАКСА",
-      "name_ru": "",
+      "name_ru": "ЭРИДАН РОСС ВАКСА",
       "breed": "SCHNAUZER BLACK AND",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1854761818",
-      "name_lat": "ЭРАТО ШАХ ВАССА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1310209531",
+      "id": "185636055",
       "name_lat": "ЭРАСТ ФАНДОРИН ГЕРСТАЛЬ АДЖЕНТ",
-      "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЭРАСТ ФАНДОРИН ГЕРСТАЛЬ АДЖЕНТ",
+      "breed": "КУРЦХААР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2652,25 +2618,16 @@
     {
       "id": "779941344",
       "name_lat": "ЭРИА ПРО ЛОРД АРТУР",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ЛОРД АРТУР",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "152406583",
-      "name_lat": "ЭРМИНАЛЬ ЗАВЕТНАЯ МЕЧТА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "53563672",
       "name_lat": "ЭРАТО ШАХ ВЕСТ",
-      "name_ru": "",
+      "name_ru": "ЭРАТО ШАХ ВЕСТ",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 5,
@@ -2695,6 +2652,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1454276562",
+      "name_lat": "Эриа Про Джефферсон",
+      "name_ru": "Эриа Про Джефферсон",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "72807873",
       "name_lat": "ЭРЗУЛИ ФРЕДА РЕВЕАЛС А СЕКРЕТ",
       "name_ru": "",
@@ -2713,19 +2678,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1571651671",
+      "id": "1683153103",
       "name_lat": "ЭРМИНАЛЬ ЮНОНА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ЮНОНА",
+      "breed": "ПУДЕЛЬ РУССКИЙ ТОЙ (ДЛИННОШЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1102039956",
+      "id": "1374458781",
+      "name_lat": "ЭРЗУЛИ ФРЕДА ЭВЕН",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ЭВЕН",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1233965498",
       "name_lat": "ЭРЛИ ЭЛИНОР ИЗ ДОМА ДЖОКЕРА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭРЛИ ЭЛИНОР ИЗ ДОМА ДЖОКЕРА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2758,15 +2732,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1374458781",
-      "name_lat": "ЭРЗУЛИ ФРЕДА ЭВЕН",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "914639393",
       "name_lat": "ЭРРАДО ДИСНИМУС МАГИСТР УДАЧИ ИЗ ДОМА",
       "name_ru": "",
@@ -2785,10 +2750,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "89895023",
+      "id": "48831134",
       "name_lat": "ЭРИКА МОН АМУР ИЗ ЧЕРНОЙ ДРУЖИНЫ",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2803,19 +2768,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "291199930",
-      "name_lat": "Эриа Про Тото",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1666065371",
+      "id": "7607844",
       "name_lat": "ЭРМИНАЛЬ ПАНДОРА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ ПАНДОРА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2823,19 +2779,10 @@
     {
       "id": "220259827",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН АРНЭ",
-      "name_ru": "",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН АРНЭ",
       "breed": "ДЛИННОШЕР",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "138019320",
-      "name_lat": "ЭРМИНАЛЬ КНЯЖНА ПЕТЕРБУРГСКАЯ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2866,10 +2813,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "72439757",
+      "id": "788207910",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ХАРД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2877,7 +2824,7 @@
     {
       "id": "210609782",
       "name_lat": "ЭРА ДАЙМОНД ОФ МАЙ ХАРТ",
-      "name_ru": "",
+      "name_ru": "ЭРА ДАЙМОНД ОФ МАЙ ХАРТ",
       "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -2886,7 +2833,7 @@
     {
       "id": "874032056",
       "name_lat": "ЭРЗУЛИ ФРЕДА ЕФФЕРО",
-      "name_ru": "",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ЕФФЕРО",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
@@ -2895,7 +2842,7 @@
     {
       "id": "1003288001",
       "name_lat": "ЭРИТО ХАРУМИ БИШУЙО",
-      "name_ru": "",
+      "name_ru": "ЭРИТО ХАРУМИ БИШУЙО",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 5,
@@ -2904,17 +2851,26 @@
     {
       "id": "95667531",
       "name_lat": "ЭРТОНГ ТМ МИНХО",
-      "name_ru": "",
+      "name_ru": "ЭРТОНГ ТМ МИНХО",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "879094269",
+      "id": "1207701215",
+      "name_lat": "ЭРАГОН ИЗ ДОМА КАПАЛАК",
+      "name_ru": "ЭРАГОН ИЗ ДОМА КАПАЛАК",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1714714677",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ИМПЕРАТОР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ИМПЕРАТОР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2922,17 +2878,17 @@
     {
       "id": "375673435",
       "name_lat": "ЭРСТЕШРИТ ЖЕННИ",
-      "name_ru": "",
+      "name_ru": "ЭРСТЕШРИТ ЖЕННИ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА ОСТЕВАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1639484105",
+      "id": "1831918932",
       "name_lat": "ЭРИКА",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2956,10 +2912,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1827776444",
+      "id": "83850899",
       "name_lat": "ЭРКАН ФОМ ОЛЬСТЕР ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРКАН ФОМ ОЛЬСТЕР ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2994,17 +2950,17 @@
     {
       "id": "461679186",
       "name_lat": "ЭРБИНА ИЗ ФОРТУНА МЕРДИ",
-      "name_ru": "",
+      "name_ru": "ЭРБИНА ИЗ ФОРТУНА МЕРДИ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "406211544",
+      "id": "177233159",
       "name_lat": "ЭРМА ИЗ АЛЬМЕТЬЕВСКА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРМА ИЗ АЛЬМЕТЬЕВСКА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3037,10 +2993,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1504507248",
+      "id": "1202428714",
       "name_lat": "ЭРДИС ТОЙЛЭНД ВАНЕССА ПАРАДИ",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3091,6 +3047,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1887193714",
+      "name_lat": "ЭРИА ПРО ИНДИАНА ДЖОНС",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1677292295",
+      "name_lat": "ЭРИК (Изменено по решению ВК от",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "988779722",
       "name_lat": "ЭРИА ПРО ПРЕСТО AMORE DEL MARIS",
       "name_ru": "",
@@ -3118,10 +3090,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "977601069",
+      "id": "1933801266",
       "name_lat": "ЭРМИНАЛЬ ИЗЫСКАНАЯ МОДНИЦА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3183,27 +3155,27 @@
     {
       "id": "1839397527",
       "name_lat": "ЭРДИС ТОЙЛЭНД КАРОЛИНА",
-      "name_ru": "",
+      "name_ru": "ЭРДИС ТОЙЛЭНД КАРОЛИНА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1604884680",
-      "name_lat": "ЭРЗУЛИ ФРЕДА ЭМИЛИЯ БРАЙТИСТ",
+      "id": "334482890",
+      "name_lat": "ЭРДИГАН БАРСЕЛОНА",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "416684259",
-      "name_lat": "ЭРДИГАН БАРСЕЛОНА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
-      "breed_en": "",
+      "id": "1604884680",
+      "name_lat": "ЭРЗУЛИ ФРЕДА ЭМИЛИЯ БРАЙТИСТ",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ЭМИЛИЯ БРАЙТИСТ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -3226,10 +3198,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "244857628",
+      "id": "898627001",
       "name_lat": "ЭРЗУЛИ ФРЕДА АЛИХАРТ ХАР ОФ СКАЙ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "name_ru": "ЭРЗУЛИ ФРЕДА АЛИХАРТ ХАР ОФ СКАЙ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3237,8 +3209,26 @@
     {
       "id": "321008294",
       "name_lat": "ЭРМИНГЕМ ЛАМБОРДЖИНИ",
-      "name_ru": "",
+      "name_ru": "ЭРМИНГЕМ ЛАМБОРДЖИНИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "234981688",
+      "name_lat": "ЭРМИНАЛЬ МЕЧТА ПОЭТА",
+      "name_ru": "ЭРМИНАЛЬ МЕЧТА ПОЭТА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1559911116",
+      "name_lat": "ЭРИА ПРО ТОФФИФИ",
+      "name_ru": "ЭРИА ПРО ТОФФИФИ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3246,53 +3236,52 @@
     {
       "id": "1025509830",
       "name_lat": "ЭРФИ ДЖОЙ БРАНД",
-      "name_ru": "",
+      "name_ru": "ЭРФИ ДЖОЙ БРАНД",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "178481362",
+      "id": "287261865",
       "name_lat": "ЭРИДАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1705381014",
+      "id": "1076771765",
       "name_lat": "ЭРДМАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1493862395",
+      "id": "1631943124",
       "name_lat": "ЭРОС ИЗ ДИНАСТИИ ЧЕМ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1920146395",
+      "name_lat": "ЭРАЙ ЕРУБЭ ГЕНКЕ",
+      "name_ru": "ЭРАЙ ЕРУБЭ ГЕНКЕ",
+      "breed": "СИБА",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "174112974",
       "name_lat": "ЭРМИНАЛЬ ЮСТИНА",
-      "name_ru": "",
+      "name_ru": "ЭРМИНАЛЬ ЮСТИНА",
       "breed": "РУССКИЙ ТОЙ (ДЛИННОШЕРСТНЫЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1559911116",
-      "name_lat": "ЭРИА ПРО ТОФФИФИ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3307,10 +3296,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1893701547",
+      "id": "1663854232",
+      "name_lat": "ЭРЛ'С МЭЙД ОМИЧКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "251453311",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН КИАРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3343,28 +3341,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1739465702",
+      "id": "1787879391",
       "name_lat": "ЭРБЕН ВЕЛЬТ ШТЕРН КЕЙСИ",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1456231373",
+      "id": "560446758",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ИЗИДА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1737550699",
-      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ЗЕН- ЗИДАН",
+      "id": "431939165",
+      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ЗЕН-ЗИДАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3388,15 +3386,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "132592092",
-      "name_lat": "ЭРГЕШ БЕАТРИС",
-      "name_ru": "",
-      "breed": "БРИАР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1027633297",
       "name_lat": "ЭРИКА ЛИЛИАН БЕРТА",
       "name_ru": "",
@@ -3415,15 +3404,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1207701215",
-      "name_lat": "ЭРАГОН ИЗ ДОМА КАПАЛАК",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1277132872",
       "name_lat": "ЭРИА ПРО МАЛИФИСЕНТА",
       "name_ru": "",
@@ -3437,24 +3417,6 @@
       "name_lat": "ЭРМИНАЛЬ КНЯЖНА ПЕТЕРБУРГСКАЯ(Д. Ш.)",
       "name_ru": "",
       "breed": "RUSSIAN TOY LONG-",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1445149815",
-      "name_lat": "ЭРРИНА ЭДДИНА ЭЛИС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "424407908",
-      "name_lat": "ЭРИА ПРО ПАМЕЛЛА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3496,7 +3458,7 @@
       "competition_dog_id": null
     },
     {
-      "id": "137169269",
+      "id": "137169268",
       "name_lat": "ЭРЗУЛИ ФРЕДА СЕЙФ Ю СОНГ",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
@@ -3509,15 +3471,6 @@
       "name_lat": "ЭРМИНГЕМ АРИСТОКРАТ II",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ / CHIHUAHUA LONG HAIRED",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1206566007",
-      "name_lat": "ЭРИДАН ДОН КОНАР",
-      "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР / WEST HIGHLAND WHITE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3541,15 +3494,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1674640028",
-      "name_lat": "ЭРЛ'С МЭЙД ОМИЧКА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "26909225",
       "name_lat": "ЭРИА ПРО ХИТ РОК",
       "name_ru": "",
@@ -3559,28 +3503,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "37799681",
+      "id": "78378109",
       "name_lat": "ЭРИДАН РОСС МАДЖЕСТИК ВЕРИТ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1483705910",
+      "id": "439001229",
       "name_lat": "ЭРИДАН РОСС ФЛЭШ РОЯЛ СВИТХАРД",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1308446431",
+      "id": "1160325710",
       "name_lat": "ЭРИДАН ЕСТ ОПТИМУ С",
       "name_ru": "",
-      "breed": "А /",
+      "breed": "А",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3604,6 +3548,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "125370611",
+      "name_lat": "ЭРИКА 2 ИЗ БЕЛОГО ЯРА",
+      "name_ru": "ЭРИКА 2 ИЗ БЕЛОГО ЯРА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "342523124",
       "name_lat": "ЭРСТЕШРИТ ОНИКС",
       "name_ru": "",
@@ -3613,19 +3565,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "479671111",
-      "name_lat": "ЭРЗУЛИ ФРЕДА ЗЕСТФУЛ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "350139745",
+      "id": "685939388",
       "name_lat": "ЭРИК ДЕСТЛЕР",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3640,12 +3583,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "645474544",
-      "name_lat": "ЭРСЕНТ ЭИР ДЖОРДАН",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
+      "id": "650053500",
+      "name_lat": "ЭРМИНАЛЬ ДОМИНИКА СОЛАР",
+      "name_ru": "ЭРМИНАЛЬ ДОМИНИКА СОЛАР",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3667,10 +3609,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1475596762",
+      "id": "1125485914",
       "name_lat": "ЭРМИНАЛЬ ЕВГЕНИКА СТИЛЬНАЯ ШТУЧКА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ (ДЛИННОШЕРСТНЫЙ)",
+      "name_ru": "ЭРМИНАЛЬ ЕВГЕНИКА СТИЛЬНАЯ ШТУЧКА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 15,
       "competition_dog_id": null
@@ -3712,10 +3654,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "908989211",
+      "id": "565114124",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ШЕРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ШЕРИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3732,17 +3674,17 @@
     {
       "id": "240096594",
       "name_lat": "ЭРМИТАЖ КОЛЕКЦИЯ КРАСОТЫ ИЗ КОТМАРИАН",
-      "name_ru": "",
+      "name_ru": "ЭРМИТАЖ КОЛЕКЦИЯ КРАСОТЫ ИЗ КОТМАРИАН",
       "breed": "ШАР ПЕЙ ШНАУЦЕР ЧЕРНОГО ОКРАСА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1880202911",
+      "id": "1380156430",
       "name_lat": "ЭРА БОГОВ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3766,10 +3708,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "5614665",
+      "id": "162124573",
       "name_lat": "ЭРКАСТРА НАКАЕЛЬ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3777,7 +3719,7 @@
     {
       "id": "1528778584",
       "name_lat": "ЭРИКА РЭД СТАР",
-      "name_ru": "",
+      "name_ru": "ЭРИКА РЭД СТАР",
       "breed": "МАЛЫЙ Окрас оранжевый, серый, и другие ПЕРУАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -3820,15 +3762,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "372557655",
-      "name_lat": "ЭРИА ПРО МАЛЕФИСЕНТА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "575168133",
       "name_lat": "ЭРИАЛЛА ОТ ТАЛИСМАНА НА УДАЧУ",
       "name_ru": "",
@@ -3847,10 +3780,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1985826327",
+      "id": "1981008035",
       "name_lat": "ЭРИА ПРО КИНГСЛИ",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3874,28 +3807,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "972685206",
-      "name_lat": "ЭРАСМУС ИЗ ЗВЕЗДНОГО ГРАФСТВА",
+      "id": "443339223",
+      "name_lat": "ЭРСА ДЬЮ",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА / BELGIAN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "190160705",
-      "name_lat": "ЭРНА ЭЛЬ-ФАЛЛУДЖА",
+      "id": "1743749710",
+      "name_lat": "ЭРМИНАЛЬ ПАТРИССИЯ ARTFENTEZI",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "443339223",
-      "name_lat": "ЭРСА ДЬЮ",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА / BELGIAN",
+      "breed": "РУССКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3910,15 +3834,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "803311295",
-      "name_lat": "ЭРМИНАЛЬ ПАТРИССИЯ ARTFENTEZI",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д.Ш.",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "386483043",
       "name_lat": "ЭРИК С МЕЩЕРСКОГО ОЗЕРА",
       "name_ru": "",
@@ -3928,10 +3843,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1802595330",
+      "id": "1702243052",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН АЛЕГРА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН АЛЕГРА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3939,7 +3854,7 @@
     {
       "id": "1722210351",
       "name_lat": "ЭРИН ТУАТА ДУНАНН",
-      "name_ru": "",
+      "name_ru": "ЭРИН ТУАТА ДУНАНН",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -3955,19 +3870,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1188013639",
-      "name_lat": "ЭРХАБЕН ВИТЕЛЬ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
-      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "302776120",
+      "id": "1211915357",
       "name_lat": "ЭРНИ МИР",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4027,18 +3933,25 @@
       "competition_dog_id": null
     },
     {
-      "id": "125370611",
-      "name_lat": "ЭРИКА 2 ИЗ БЕЛОГО ЯРА",
+      "id": "598002316",
+      "name_lat": "ЭРМИНАЛЬ ЯНТАРНАЯ ИРИСКА",
+      "name_ru": "ЭРМИНАЛЬ ЯНТАРНАЯ ИРИСКА",
+      "breed": "ДЛИННОШЕРС",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "70376618",
+      "name_lat": "ЭРМИНАЛЬ ОСЕННЯЯ МЕЛОДИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "990246715",
       "name_lat": "ЭРЗУЛИ ФРЕДА БЬЮТИ АРАБЕСКА СНОУ",
-      "name_ru": "",
+      "name_ru": "ЭРЗУЛИ ФРЕДА БЬЮТИ АРАБЕСКА СНОУ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 25,
@@ -4054,19 +3967,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "735400245",
-      "name_lat": "ЭРИА ПРО МЮРРЕЙ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "161368901",
+      "id": "1238771789",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ОРСОН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ОРСОН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4074,7 +3978,7 @@
     {
       "id": "182233189",
       "name_lat": "ЭРМИНАЛЬ ВЕСНА КРАСНА",
-      "name_ru": "",
+      "name_ru": "ЭРМИНАЛЬ ВЕСНА КРАСНА",
       "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 5,
@@ -4083,7 +3987,7 @@
     {
       "id": "901302722",
       "name_lat": "ЭРИА ПРО ХАНДЗОМЕ ХИЛО",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ХАНДЗОМЕ ХИЛО",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -4101,7 +4005,7 @@
     {
       "id": "1884723887",
       "name_lat": "ЭРМИН РЕЙ СОЛАР",
-      "name_ru": "",
+      "name_ru": "ЭРМИН РЕЙ СОЛАР",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -4110,17 +4014,17 @@
     {
       "id": "925356194",
       "name_lat": "ЭРСТЕШРИТ ДИНАМИКА",
-      "name_ru": "",
+      "name_ru": "ЭРСТЕШРИТ ДИНАМИКА",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1604990286",
+      "id": "402359018",
       "name_lat": "ЭРИДАН РОСС ПАВА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С",
+      "name_ru": "ЭРИДАН РОСС ПАВА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4128,7 +4032,7 @@
     {
       "id": "1041360714",
       "name_lat": "ЭРЕНА ОТ СОЛЬНИКА",
-      "name_ru": "",
+      "name_ru": "ЭРЕНА ОТ СОЛЬНИКА",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА, МАЛИНУА",
       "breed_en": "",
       "total_shows": 4,
@@ -4137,28 +4041,27 @@
     {
       "id": "1420613338",
       "name_lat": "ЭРАГОН ИЗ ДОМА МАДАМИ",
-      "name_ru": "",
+      "name_ru": "ЭРАГОН ИЗ ДОМА МАДАМИ",
       "breed": "ЗЕННЕНХУНД ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1203789309",
-      "name_lat": "ЭРДИГАН АЛЬГАМБРА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
-      "breed_en": "",
+      "id": "200486145",
+      "name_lat": "ЭРАС СТАРДАСТ БОЙ",
+      "name_ru": "ЭРАС СТАРДАСТ БОЙ",
+      "breed": "ШИ-ТЦУ",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "502165536",
-      "name_lat": "ЭРОС АМУР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "id": "164381216",
+      "name_lat": "ЭРДИГАН АЛЬГАМБРА",
+      "name_ru": "ЭРДИГАН АЛЬГАМБРА",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4180,10 +4083,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1461430425",
+      "id": "1221319758",
+      "name_lat": "ЭРАТО ШАХ ВАРТА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1460988986",
       "name_lat": "ЭРНЕСТ ИЗ ОБСКОЙ ДОЛИНЫ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4207,10 +4119,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "711145583",
+      "name_lat": "ЭРМИНАЛЬ БИСЕРНАЯ НИТОЧКА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "618823350",
       "name_lat": "ЭРИА ПРО РЕГИНА КОРДИУМ",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО РЕГИНА КОРДИУМ",
       "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "204391620",
+      "name_lat": "ЭРИКА ЖАКЛИН",
+      "name_ru": "ЭРИКА ЖАКЛИН",
+      "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4218,26 +4147,17 @@
     {
       "id": "1103074704",
       "name_lat": "ЭРЛ С МЭЙД ЗИНГЕР",
-      "name_ru": "",
+      "name_ru": "ЭРЛ С МЭЙД ЗИНГЕР",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "273910613",
-      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ГАЛАКТИКА",
-      "name_ru": "",
-      "breed": "НЕМ.ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1474772595",
+      "id": "807468471",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ГРАЦИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ГРАЦИЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4245,28 +4165,10 @@
     {
       "id": "163301498",
       "name_lat": "ЭРЗУЛИ ФРЕДА ДЕСИРАБЛ ДРИМ",
-      "name_ru": "",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ДЕСИРАБЛ ДРИМ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1369843501",
-      "name_lat": "Эрбен Вельт Штерн Киара",
-      "name_ru": "",
-      "breed": "Нем.овчарка длинношерст ная",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "52345170",
-      "name_lat": "ЭРИ АГЕЙН",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4274,6 +4176,31 @@
       "name_lat": "ЭРИАНА",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "640138557",
+      "name_lat": "ЭРИК ПРАУД",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "301186052",
+      "name_lat": "ЭРНИ МИР (К/Х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "63481798",
+      "name_lat": "ЭРОС АМУР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4292,6 +4219,15 @@
       "name_lat": "ЭРИОРИТА",
       "name_ru": "",
       "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "955554876",
+      "name_lat": "ЭРАГОН",
+      "name_ru": "",
+      "breed": "ИСПАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4324,10 +4260,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1539569140",
+      "id": "1730320784",
       "name_lat": "ЭРИК",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4342,20 +4278,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "902358948",
-      "name_lat": "ЭРИА ПРО ЕВЕРЕСТ",
+      "id": "145722103",
+      "name_lat": "ЭРИКА ПЕППЕР",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "DOBERMANN",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "650053500",
-      "name_lat": "ЭРМИНАЛЬ ДОМИНИКА СОЛАР",
+      "id": "1313987244",
+      "name_lat": "ЭРМИНАЛЬ ЭЛАЙЛА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4396,15 +4332,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "292030407",
-      "name_lat": "ЭРМИНАЛЬ МЕЧТА ПОЭТА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "595231970",
       "name_lat": "ЭРИА ПРО БИСКВИТ",
       "name_ru": "",
@@ -4414,37 +4341,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1221319758",
-      "name_lat": "ЭРАТО ШАХ ВАРТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "204391620",
-      "name_lat": "ЭРИКА ЖАКЛИН",
-      "name_ru": "",
-      "breed": "JACK RUSSELL TERRIER",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1382644768",
       "name_lat": "ЭРГЕШ ЦАРЕВНА БУДУР",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1589719161",
-      "name_lat": "ЭРИА ПРО ТОББИАС",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4504,10 +4404,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "137915180",
+      "id": "1049923105",
       "name_lat": "ЭРМИНАЛЬ ИСТИННАЯ РАДОСТЬ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4585,10 +4485,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "897750883",
+      "id": "42482420",
       "name_lat": "ЭРИДАН РОСС ИВЕТТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4603,37 +4503,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1317985732",
+      "id": "6014427",
       "name_lat": "ЭРИДАН РОСС УГРЮМ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "815650387",
+      "id": "1313842143",
       "name_lat": "ЭРИДАН РОСС МЭЙ ПЬЮСИФУЛ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "57816608",
+      "id": "1170548166",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН КАЙРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1462227340",
-      "name_lat": "ЭРИА ПРО УАЛАНТА ЛУНА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4648,28 +4539,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "613230864",
+      "id": "1167262207",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ЭНДИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "608486244",
+      "id": "1552926186",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН КВИНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "104236139",
+      "id": "1406325183",
       "name_lat": "ЭРБЕНТ ВЕЛТ ШТЕРН КАМЕЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4684,10 +4575,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1111707003",
+      "id": "1822706927",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ФРЕЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4702,15 +4593,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "268914508",
-      "name_lat": "ЭРЗУЛИ ФРЕДА ПЕРЛ АРКТИК ФОКС",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1679010418",
       "name_lat": "ЭРА НОВА КОСМОС",
       "name_ru": "",
@@ -4720,37 +4602,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "269274947",
-      "name_lat": "ЭРМИНАЛЬ ЭЛАЙЛА",
+      "id": "1471572130",
+      "name_lat": "ЭРБЕНТ ВЕЛТ ШТЕРН ДАША",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1169298917",
       "name_lat": "ЭРО ДЕ СЕШЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ЭРО ДЕ СЕШЕЛЬ",
       "breed": "СТАНДАРТ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1003098429",
+      "id": "1507202422",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ОЙРА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН ОЙРА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1858491374",
+      "id": "1895951593",
       "name_lat": "ЭРМИНАЛЬ БАЛТИЙСКИЙ ВЕТЕР",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭРМИНАЛЬ БАЛТИЙСКИЙ ВЕТЕР",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4758,7 +4639,7 @@
     {
       "id": "583486764",
       "name_lat": "Эриана с Берега Туры Спарк Гала'с",
-      "name_ru": "",
+      "name_ru": "Эриана с Берега Туры Спарк Гала'с",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -4767,17 +4648,26 @@
     {
       "id": "1426882376",
       "name_lat": "ЭРЗУЛИ ФРЕДА ВИКИНГ РИСИНГ СТАР",
-      "name_ru": "",
+      "name_ru": "ЭРЗУЛИ ФРЕДА ВИКИНГ РИСИНГ СТАР",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1352809292",
+      "id": "1629570840",
+      "name_lat": "Эрмоссо Канис Цирцея",
+      "name_ru": "Эрмоссо Канис Цирцея",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1928173443",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН НЕАПОЛЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН НЕАПОЛЬ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4785,62 +4675,79 @@
     {
       "id": "268595918",
       "name_lat": "ЭРИА ПРО ОНИКС",
-      "name_ru": "",
+      "name_ru": "ЭРИА ПРО ОНИКС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "278880966",
-      "name_lat": "ЭРИДАН РОСС ЧАРЛЬЗ ИС А СИНСЕРЕ ФРЕЙНД",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "id": "984599983",
+      "name_lat": "ЭРМИНАЛЬ ЕВРОПА ПЛЮС",
+      "name_ru": "ЭРМИНАЛЬ ЕВРОПА ПЛЮС",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1326534085",
-      "name_lat": "ЭРИДАН РОСС ФАНТАЗИЯ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "id": "1485305794",
+      "name_lat": "ЭРИДАН РОСС ЧАРЛЬЗ ИС А СИНСЕРЕ ФРЕЙНД",
+      "name_ru": "ЭРИДАН РОСС ЧАРЛЬЗ ИС А СИНСЕРЕ ФРЕЙНД",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "150246332",
+      "name_lat": "ЭРИДАН РОСС ФАНТАЗИЯ",
+      "name_ru": "ЭРИДАН РОСС ФАНТАЗИЯ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1141628081",
+      "name_lat": "ЭРСТЕШРИТ ОПАЛ",
+      "name_ru": "ЭРСТЕШРИТ ОПАЛ",
+      "breed": "GERMAN SHEPHERD DOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1117205727",
       "name_lat": "ЭРСТЕШРИТ ОЛЛИ",
-      "name_ru": "",
+      "name_ru": "ЭРСТЕШРИТ ОЛЛИ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1498395305",
+      "id": "714887173",
       "name_lat": "ЭРИДАН РОСС ГРОЗИ НЕВЕР ЛООК БЛЭК",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "name_ru": "ЭРИДАН РОСС ГРОЗИ НЕВЕР ЛООК БЛЭК",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "334079322",
+      "id": "1224277105",
       "name_lat": "ЭРОС ИЗ ДОМА ФЕНИКС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЭРОС ИЗ ДОМА ФЕНИКС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1947396364",
+      "id": "942174616",
       "name_lat": "ЭРИА ПРО ХАЙЯМИ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "name_ru": "ЭРИА ПРО ХАЙЯМИ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4848,7 +4755,7 @@
     {
       "id": "1735349573",
       "name_lat": "ЭРФЮЛЛЮНГЕН ВЮНШЕН",
-      "name_ru": "",
+      "name_ru": "ЭРФЮЛЛЮНГЕН ВЮНШЕН",
       "breed": "ДОБЕРМАН ЧЕРНЫЙ С ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
@@ -4857,26 +4764,26 @@
     {
       "id": "272091543",
       "name_lat": "ЭРИДАН РОСС КАЛИПСО",
-      "name_ru": "",
+      "name_ru": "ЭРИДАН РОСС КАЛИПСО",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1916440489",
+      "id": "1333100760",
       "name_lat": "ЭРИДАН РОСС УЗОР САММЕР ХИТ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "name_ru": "ЭРИДАН РОСС УЗОР САММЕР ХИТ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1756619638",
-      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН АГЕНТ НОЛЬ-НОЛЬ- СЕМЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "id": "1322400568",
+      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН АГЕНТ НОЛЬ-НОЛЬ-СЕМЬ",
+      "name_ru": "ЭРБЕН ВЕЛТ ШТЕРН АГЕНТ НОЛЬ-НОЛЬ-СЕМЬ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4884,27 +4791,53 @@
     {
       "id": "768700495",
       "name_lat": "ЭРИКА ДЭВИЛЬ",
-      "name_ru": "",
+      "name_ru": "ЭРИКА ДЭВИЛЬ",
       "breed": "CIRNECO DELL’ETNA",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1660826972",
-      "name_lat": "ЭРНИ ХЕЛИНГ ПОУВЕР",
-      "name_ru": "",
-      "breed": "БРАКК НЕМЕЦКАЯ",
+      "id": "231357083",
+      "name_lat": "ЭРАТО ШАХ ГЕРМИОНА ГРЕЙНДЖЕР",
+      "name_ru": "ЭРАТО ШАХ ГЕРМИОНА ГРЕЙНДЖЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "662222422",
-      "name_lat": "ЭРИДАН РОСС ЮТИК",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "id": "1426965728",
+      "name_lat": "ЭРНИ ХЕЛИНГ ПОУВЕР",
+      "name_ru": "ЭРНИ ХЕЛИНГ ПОУВЕР",
+      "breed": "ПОРСЕЛЕН ГОЛАЯ СОБАКА) МИНИАТЮРНАЯ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "43776951",
+      "name_lat": "ЭРИДАН РОСС ЮТИК",
+      "name_ru": "ЭРИДАН РОСС ЮТИК",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1529634692",
+      "name_lat": "ЭРГИ ДЕЛЕГЕЙ",
+      "name_ru": "ЭРГИ ДЕЛЕГЕЙ",
+      "breed": "ТУВИНСКАЯ СОБАКА (ТЫВА ЫТ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1364986962",
+      "name_lat": "ЭРЛ'С МЭЙД ХАНА",
+      "name_ru": "ЭРЛ'С МЭЙД ХАНА",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5017,6 +4950,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "716082064",
+      "name_lat": "ЭРНЕСТ БО",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "800088374",
       "name_lat": "ЭРИК СНОУ",
       "name_ru": "",
@@ -5035,10 +4976,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1744157960",
+      "id": "1627881645",
       "name_lat": "ЭРИКА",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1357977506",
+      "name_lat": "ЭРИК",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1477687222",
+      "name_lat": "ЭРИКА",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "502165536",
+      "name_lat": "Эрос Амур",
+      "name_ru": "",
+      "breed": "немецкая овчарка длинношерстная",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5089,19 +5055,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1827032807",
+      "id": "271391654",
       "name_lat": "ЭРХ",
       "name_ru": "",
-      "breed": "ФЛАНДРСКИЙ БУВЬЕ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "640138557",
-      "name_lat": "ЭРИК ПРАУД",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "ФЛАНДРСКИЙ БУВЬЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5179,19 +5136,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "73914327",
+      "id": "1897576470",
       "name_lat": "ЭРЛ ГРЕЙ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "955554876",
-      "name_lat": "ЭРАГОН",
-      "name_ru": "",
-      "breed": "ИСПАНСКАЯ БОРЗАЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5269,15 +5217,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "285770004",
-      "name_lat": "ЭРМА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ЯГДТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "627543606",
       "name_lat": "ЭРИКА",
       "name_ru": "",
@@ -5305,10 +5244,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1497723503",
+      "id": "450744059",
       "name_lat": "ЭРФЮЛЮНГЕН",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5341,6 +5280,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1633062472",
+      "name_lat": "ЭРИКА ЗОЛОТАЯ КОРОЛЕВА PBR 7557",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "983477454",
+      "name_lat": "ЭРУДИЦИЯ ИЗ ЛЕСНОГО ГОРОДКА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "381583730",
       "name_lat": "ЭРМИНГЕМ ОМАНДА",
       "name_ru": "",
@@ -5350,10 +5307,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "643234570",
+      "id": "1038501697",
       "name_lat": "ЭРБЕН ВЕЛТШТЕРН ОСМАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5386,28 +5343,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1935844501",
-      "name_lat": "ЭРДИГАН АНДОРРА",
-      "name_ru": "",
-      "breed": "КАРДИГАН / WELSH",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "387464176",
+      "id": "572873631",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ОСМАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "139107077",
-      "name_lat": "ЭРЗУЛИ ФРЕДА ЭВЭН",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5467,15 +5406,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1629570840",
-      "name_lat": "Эрмоссо Канис Цирцея",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "422199256",
       "name_lat": "ЭРА ИЗ СЕВЕРНОГО ДОМА",
       "name_ru": "",
@@ -5512,10 +5442,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "868975870",
+      "id": "1996870535",
       "name_lat": "ЭРИДАН РОСС ЖЕНЕВА",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5575,10 +5505,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1504408992",
+      "id": "348619567",
       "name_lat": "ЭРИДАН РОСС БАВАРИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5611,10 +5541,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "253705063",
+      "id": "1647119139",
       "name_lat": "ЭРИКА БЛЭК ЛЕО",
       "name_ru": "",
-      "breed": "МАЛЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5674,15 +5604,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "984599983",
-      "name_lat": "ЭРМИНАЛЬ ЕВРОПА ПЛЮС",
-      "name_ru": "",
-      "breed": "RUSSIAN TOY LONG-",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "16862978",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН МАУНТ-ЧЕРРИ",
       "name_ru": "",
@@ -5701,10 +5622,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1744997660",
+      "id": "1955368889",
       "name_lat": "ЭРИА ПРО МИКЕЛА НДЖЕЛА",
       "name_ru": "",
-      "breed": "Н /",
+      "breed": "Н",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5737,11 +5658,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "1487000009",
+      "name_lat": "ЭРГЕШ ВЬЮЖЕН",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275123585",
+      "name_lat": "ЭРИА ПРО БЛЭК БЬЮТИ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "182693544",
       "name_lat": "ЭРНИ МАЛЕНЬКИЙ ПРИНЦ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "425077443",
+      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ВИОЛЕНТ",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5764,19 +5709,42 @@
       "competition_dog_id": null
     },
     {
-      "id": "1782024842",
-      "name_lat": "ЭРИКА ДЕЙ ЭЛИТ БРАНКО",
+      "id": "908275537",
+      "name_lat": "ЭРИА ПРО ЛАЙТ КРИСТАЛЛ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "257543409",
-      "name_lat": "ЭРАЙ ЕРУБЭ ГЕНКЕ",
+      "id": "1639361633",
+      "name_lat": "ЭРМИНГЕМ ОФФЕЛИЯ ГРАНД ТАЛИСМАН",
       "name_ru": "",
-      "breed": "СИБА / SHIBA",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "263943794",
+      "name_lat": "ЭРИКА ОРАНЖ ШАРМ ИЗ ЗВЕЗДНОГО ЭКСПРЕССА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "186096556",
+      "name_lat": "ЭРИКА ЛУНДМОЕН",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1782024842",
+      "name_lat": "ЭРИКА ДЕЙ ЭЛИТ БРАНКО",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5809,55 +5777,61 @@
       "competition_dog_id": null
     },
     {
-      "id": "1755340254",
+      "id": "1428434",
+      "name_lat": "ЭРЗУЛИ ФРЕДА ЭВРИФИН Г ЭТ ОНСЕ",
+      "name_ru": "",
+      "breed": "SIBERIAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "282034264",
       "name_lat": "ЭРМИНАЛЬ ФИЛАДЕЛЬФИЯ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1895827973",
+      "id": "992426222",
+      "name_lat": "ЭРЛ С МЭЙД ЖАСМИН УАН ГОЛД",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1316171847",
+      "name_lat": "ЭРА ВОДОЛЕЯ КИАНТ",
+      "name_ru": "",
+      "breed": "TIBETAN MASTIFF",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1754017048",
       "name_lat": "ЭРРИКА БЛЭК СТАР",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1633062472",
-      "name_lat": "ЭРИКА ЗОЛОТАЯ КОРОЛЕВА PBR 7557",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1035444272",
+      "id": "239079037",
       "name_lat": "ЭРМИНАЛЬ ФЛОРИДА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1141628081",
-      "name_lat": "ЭРСТЕШРИТ ОПАЛ",
-      "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1654800064",
+      "id": "198571151",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ХАН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5872,19 +5846,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "798503641",
-      "name_lat": "ЭРИА ПРО ЛЕГЕНДА VERNOST",
+      "id": "692796650",
+      "name_lat": "ЭРМИНГЕМ ЖAННИК",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "363816105",
-      "name_lat": "ЭРУДИЦИЯ ИЗ ЛЕСНОГО ГОРОДКА",
+      "id": "342031580",
+      "name_lat": "ЭРМИНГЕМ ГОЛД ГРИЛЬЯЖ",
       "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1983488804",
+      "name_lat": "ЭРИА ПРО ЛЕГЕНДА VERNOST",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5953,10 +5934,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1836499673",
+      "id": "986141306",
       "name_lat": "ЭРИКА С ТИХОГО ДОНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5984,15 +5965,6 @@
       "name_lat": "ЭРИК ИЛЬ ПОЛО РИПЛ",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "574597486",
-      "name_lat": "ЭРМИНГЕМ ДИНАСТИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6052,19 +6024,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1683780393",
+      "id": "744874538",
       "name_lat": "ЭРИХ ФОМ МАИР ХОФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "612664816",
+      "id": "1619610557",
       "name_lat": "ЭРМИНАЛЬ ЯСЕНЬ КРАСЕН",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6079,73 +6051,64 @@
       "competition_dog_id": null
     },
     {
-      "id": "386779896",
+      "id": "631740366",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН АРИАДНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1341951082",
+      "id": "1624528353",
       "name_lat": "ЭРИДАН РОСС ЛЕО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1040649958",
+      "id": "1551775520",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН АРГО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "408141104",
+      "id": "882549284",
       "name_lat": "ЭРИТРЕЯ АСМЭРА С ИЗЮМИНКОЙ ЮЛИАНЫ",
       "name_ru": "",
-      "breed": "ЧЁРНО-БЕЛЫЙ / CHIEN",
+      "breed": "ЧЕРНО-БЕЛЫЙ / CHIEN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "289384764",
+      "id": "855282321",
       "name_lat": "ЭРМИНАЛЬ ЕЛЕЙ ДУШИ МОЕЙ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "440635191",
+      "id": "1321684688",
       "name_lat": "ЭРАГОН ИЗ ДОМА ФЕНИКС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1426015897",
+      "id": "1338548794",
       "name_lat": "ЭРИОНА ФОН ВЭСПЭН ХАУС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1191775413",
-      "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН БЕНТЛИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6187,10 +6150,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "616490478",
+      "id": "986797229",
       "name_lat": "ЭРИК ФОН ЮНТЕР КРАФТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6205,10 +6168,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "394631129",
+      "id": "963162573",
       "name_lat": "ЭРМИНГЕМ КАПИТОШКА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6259,10 +6222,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "561992927",
+      "id": "1661803535",
       "name_lat": "ЭРМИНГЕМ УЛЫБКА ФОРТУНЫ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6286,10 +6249,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "753020741",
+      "id": "609294413",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН ЧИЛЕСТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6313,10 +6276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1541531695",
+      "id": "953938423",
       "name_lat": "ЭРИНДЕЛЬ ТУ ВИН ФАЙЕР",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6331,19 +6294,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "89742144",
-      "name_lat": "Эриа Про Омега",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "719414618",
+      "id": "384716913",
       "name_lat": "ЭРИДАН РОСС НЕВАДА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6367,10 +6321,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1238023453",
+      "id": "338241313",
       "name_lat": "ЭРИДАН РОСС РЕБЕКА",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6439,19 +6393,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "231603119",
+      "id": "1620678848",
       "name_lat": "ЭРМИНАЛЬ СОЛНЕЧНАЯ БУРЯ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1255233580",
+      "id": "1679431224",
       "name_lat": "ЭРИЯ ПРО ПРИЯ",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6511,10 +6465,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "218201858",
+      "id": "431340537",
       "name_lat": "ЭРИДАН РОСС КАЙРИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6529,28 +6483,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "776819332",
-      "name_lat": "ЭРАТО ШАХ ГЕРМИОНА ГРЕЙНДЖЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "200020892",
-      "name_lat": "ЭРАТО ШАХ ГЕРМИОНА ГРЭЙНДЖЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "591821090",
+      "id": "88164364",
       "name_lat": "ЭРЛ'С МЭЙД ПАРТИЯ ЧЕРНЫХ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6574,19 +6510,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "811587221",
+      "id": "1273062478",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН МИРАНДА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "470608680",
+      "id": "464493489",
       "name_lat": "ЭРИДАН РОСС РОМЭО",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ /",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6610,10 +6546,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1132077769",
+      "id": "115185665",
       "name_lat": "ЭРБЕН ВЕЛТ ШТЕРН АКИМ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6628,20 +6564,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "86336877",
-      "name_lat": "ЭРМИНАЛЬ ЮНЕСКА",
+      "id": "337691862",
+      "name_lat": "Эриа Про Икон Стайл",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "909652268",
-      "name_lat": "ЭРГИ ДЕЛЕГЕЙ",
+      "id": "239163716",
+      "name_lat": "Эриа Про Гладиус",
       "name_ru": "",
-      "breed": "РУССКАЯ СОБАКА (ТЫВА",
-      "breed_en": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6655,11 +6589,42 @@
       "competition_dog_id": null
     },
     {
-      "id": "691186099",
-      "name_lat": "ЭРИКА ПЕППЕР",
+      "id": "1122405745",
+      "name_lat": "ЭРИА ПРО ФРЕДЕН",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "148232436",
+      "name_lat": "ЭРИК ДАГ БАДИН",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "208061239",
+      "name_lat": "ЭРИКА ОРАНЖ-СТОРИ ИЗ ДОМА КАЗАНОВА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1643963830",
+      "name_lat": "ЭРИК ТОРНАДО",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "612554928",
+      "name_lat": "ЭРАСТ СТАРДАСТ БОЙ",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
       "total_shows": 1,
       "competition_dog_id": null
     },

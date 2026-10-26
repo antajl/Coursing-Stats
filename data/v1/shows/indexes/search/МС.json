@@ -1,39 +1,138 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "МС",
-  "count": 8,
+  "count": 27,
   "dogs": [
     {
-      "id": "1028108916",
-      "name_lat": "МС УОРЛД ИЗ ЗАЛЕССКОГО ГРАДА",
-      "name_ru": "",
-      "breed": "КОТОН ДЕ ТУЛЕАР /",
+      "id": "3186807",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ДЖЕК-ПОТ",
+      "name_ru": "М.С.ФАИР ФОРТУНЕ ДЖЕК-ПОТ",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "232587167",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ДЖОСАЛИН",
+      "name_ru": "М.С.ФАИР ФОРТУНЕ ДЖОСАЛИН",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1322212089",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ЗОЛОТОЙ АМУЛЕТ",
+      "name_ru": "М.С.ФАИР ФОРТУНЕ ЗОЛОТОЙ АМУЛЕТ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1061853601",
+      "name_lat": "МС УОРЛД ИЗ ЗАЛЕССКОГО ГРАДА",
+      "name_ru": "МС УОРЛД ИЗ ЗАЛЕССКОГО ГРАДА",
+      "breed": "КОТОН ДЕ ТУЛЕАР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15153273",
+      "name_lat": "М.С.ФАЕР ФОРТУНЕ РИАЛ КОСМО",
+      "name_ru": "М.С.ФАЕР ФОРТУНЕ РИАЛ КОСМО",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "962880497",
       "name_lat": "МСТИЛЬ МУСКАТЕЛЬ",
-      "name_ru": "",
+      "name_ru": "МСТИЛЬ МУСКАТЕЛЬ",
       "breed": "ПУДЕЛЬ БОЛЬШОЙ БЕЛЫЙ, КОРИЧНЕВЫЙ, ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "268553492",
-      "name_lat": "МСТИЛЬ ЛЕОНТИНЕ",
+      "id": "95911203",
+      "name_lat": "М.С.FAIR FORTUNE YUMENN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "CHIHUAHUA LONG",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "984244381",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ХЮРРЕМ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА К-Ш",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1633449606",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ЦАРИНА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА К-Ш",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "282837401",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ТАЙМ ОФ МЭДЖИК",
+      "name_ru": "М.С.ФАИР ФОРТУНЕ ТАЙМ ОФ МЭДЖИК",
+      "breed": "CHIHUAHUA LONG",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269477024",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ МЕХРИМАХ",
+      "name_ru": "М.С.ФАИР ФОРТУНЕ МЕХРИМАХ",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1401268071",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ МАИН ХЕРТС",
+      "name_ru": "М.С.ФАИР ФОРТУНЕ МАИН ХЕРТС",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "437027846",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ МЭДЖИК ВОРД (Д/Ш)",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА Д-Ш",
+      "breed_en": "CHIHUAHUA LONG-HAIRED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "642062088",
+      "name_lat": "М.С.FAIR FORTUNE HURREM",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "48579563",
       "name_lat": "МСТИЛЬ ЛЕЛИА БРАУН",
-      "name_ru": "",
+      "name_ru": "МСТИЛЬ ЛЕЛИА БРАУН",
       "breed": "ПУДЕЛЬ БОЛЬШОЙ БЕЛЫЙ, КОРИЧНЕВЫЙ, ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -49,6 +148,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1663817268",
+      "name_lat": "М СТАФФ ВИРДЖИНИ",
+      "name_ru": "",
+      "breed": "СТАФФОРД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "13373819",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ЗВЕЗДНЫЙ ТАЛИСМАН",
+      "name_ru": "М.С.ФАИР ФОРТУНЕ ЗВЕЗДНЫЙ ТАЛИСМАН",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1416637519",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ВИВА ВЕНЕЦИЯ",
+      "name_ru": "М.С.ФАИР ФОРТУНЕ ВИВА ВЕНЕЦИЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "795558357",
       "name_lat": "МСТИТЕЛЬ",
       "name_ru": "",
@@ -58,12 +184,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1857860994",
+      "id": "834263750",
       "name_lat": "МСТИЛЬ ЖИВАНШИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "МСТИЛЬ ЖИВАНШИ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225419089",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ СКОРПИОН КИНГ",
+      "name_ru": "М.С.ФАИР ФОРТУНЕ СКОРПИОН КИНГ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "895550073",
+      "name_lat": "М СТАР ТЭ ФЬЮЧЕР",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1017512183",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ХОЛЛИ БЕРРИ",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -72,6 +225,23 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ БОЛЬШОЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "28478910",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ ЮНОНА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "982353947",
+      "name_lat": "М.С.ФАИР ФОРТУНЕ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА К/Ш",
       "total_shows": 1,
       "competition_dog_id": null
     }

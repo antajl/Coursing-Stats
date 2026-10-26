@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OY",
-  "count": 22,
+  "count": 24,
   "dogs": [
     {
       "id": "33555668",
@@ -27,16 +27,16 @@
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "1618395932",
       "name_lat": "OYKUMENA IZ MIRA MECHTY",
-      "name_ru": "",
+      "name_ru": "ОЙКУМЕНА ИЗ МИРА МЕЧТЫ",
       "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -49,6 +49,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "50956690",
+      "name_lat": "O YES YOU NEED LOVE IZ SOZVEZDIYA STAFF",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1706560907",
       "name_lat": "OYUN GEREL DOBLEGAR",
       "name_ru": "",
@@ -58,8 +67,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1823277870",
-      "name_lat": "OYELLA OONA- DEVIVOM OHMATALTTEUFEL",
+      "id": "223347220",
+      "name_lat": "OYELLA OONA-DEVIVOM OHMATALTTEUFEL",
       "name_ru": "",
       "breed": "КОЛЛИ Д.Ш.",
       "breed_en": "",
@@ -166,10 +175,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "65121489",
+      "id": "972083052",
       "name_lat": "OYLA",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -189,6 +198,15 @@
       "name_ru": "",
       "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1818225507",
+      "name_lat": "O YES YOU NEED LOVE IZ SOZVEZDIY A STAFF",
+      "name_ru": "",
+      "breed": "ШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },

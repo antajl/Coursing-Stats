@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ШЁ",
-  "count": 21,
+  "count": 23,
   "dogs": [
     {
       "id": "148448183",
       "name_lat": "ШЁПОТ АНГЕЛА АИША",
-      "name_ru": "",
+      "name_ru": "ШЕПОТ АНГЕЛА АИША",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 17,
@@ -15,17 +15,17 @@
     {
       "id": "959324612",
       "name_lat": "ШЁЛКОВЫЕ ОЛЬГЕРСЫ СУХАРИК",
-      "name_ru": "",
+      "name_ru": "ШЁЛКОВЫЕ ОЛЬГЕРСЫ СУХАРИК",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "567582452",
+      "id": "215086994",
       "name_lat": "ШЁПОТ АНГЕЛА ЮСТАС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ШЁПОТ АНГЕЛА ЮСТАС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -42,25 +42,25 @@
     {
       "id": "1587252918",
       "name_lat": "ШЁПОТ ЗВЁЗД ШЕРРА",
-      "name_ru": "",
+      "name_ru": "ШЁПОТ ЗВЁЗД ШЕРРА",
       "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1016750696",
+      "id": "510490198",
       "name_lat": "ШЁПОТ АНГЕЛА АППОЛОН БЛАГОРОДНЫЙ ОГОНЬ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ШЁПОТ АНГЕЛА АППОЛОН БЛАГОРОДНЫЙ ОГОНЬ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
       "id": "957330898",
       "name_lat": "ШЁПОТ КАУРИ ЛЕГЕНДА",
-      "name_ru": "",
+      "name_ru": "ШЁПОТ КАУРИ ЛЕГЕНДА",
       "breed": "РУССКИЙ ТОЙ Г/Ш",
       "breed_en": "",
       "total_shows": 8,
@@ -69,25 +69,16 @@
     {
       "id": "1059289626",
       "name_lat": "ШЁЛКОВАЯ КАПЕЛЬКА ИЗ ДОМА БАНАВИ",
-      "name_ru": "",
+      "name_ru": "ШЁЛКОВАЯ КАПЕЛЬКА ИЗ ДОМА БАНАВИ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1013296252",
-      "name_lat": "ШЁПОТ АНГЕЛА ЛИЛИТ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "258744442",
       "name_lat": "ШЁЛКОВЫЙ ВЕТЕР ДОМЕНИКО",
-      "name_ru": "",
+      "name_ru": "ШЁЛКОВЫЙ ВЕТЕР ДОМЕНИКО",
       "breed": "ЧЕХОСЛОВАЦКАЯ БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -114,25 +105,33 @@
     {
       "id": "1927257806",
       "name_lat": "ШЁЛКОВАЯ КАПЕЛЬКА",
-      "name_ru": "",
+      "name_ru": "ШЁЛКОВАЯ КАПЕЛЬКА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "711111158",
+      "id": "1878008920",
       "name_lat": "ШЁПОТ АНГЕЛА ХИМЕРА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ШЁПОТ АНГЕЛА ХИМЕРА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1406745748",
+      "name_lat": "ШЁПОТ АНГЕЛА ОПЕР",
+      "name_ru": "ШЁПОТ АНГЕЛА ОПЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1700928361",
       "name_lat": "ШЁПОТ АНГЕЛА ТАБУЛА РАССА",
-      "name_ru": "",
+      "name_ru": "ШЁПОТ АНГЕЛА ТАБУЛА РАССА",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -166,6 +165,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "151011626",
+      "name_lat": "ШЁПОТ АНГЕЛА АППОЛОН БЛАГОРОДНЫ Й ОГОНЬ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1310105717",
       "name_lat": "ШЁЛКОВЫЙ ДОЖДЬ ЕВАНДЖЕЛИН",
       "name_ru": "",
@@ -184,10 +191,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "430937835",
+      "id": "1404636818",
+      "name_lat": "Шёлковые Ольгерсы Титул",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "731302619",
       "name_lat": "ШЁПОТ АНГЕЛА ЮРМАЛА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

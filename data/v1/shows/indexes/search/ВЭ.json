@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ВЭ",
-  "count": 375,
+  "count": 380,
   "dogs": [
     {
       "id": "1874313228",
       "name_lat": "ВЭЛЛАР ПЛЮС ШЕЛТОН Императорский Каприз",
-      "name_ru": "",
+      "name_ru": "ВЭЛЛАР ПЛЮС ШЕЛТОН Императорский Каприз",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 47,
@@ -22,9 +22,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1636672159",
+      "name_lat": "ВЭЛАРИ СУВЕРЕН",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "900094576",
       "name_lat": "ВЭЛАРИ ПРИМАВЕРА",
-      "name_ru": "",
+      "name_ru": "ВЭЛАРИ ПРИМАВЕРА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -33,7 +42,7 @@
     {
       "id": "1353596681",
       "name_lat": "ВЭЛВЕТ ЛИПС ФАН БИНБИН",
-      "name_ru": "",
+      "name_ru": "ВЭЛВЕТ ЛИПС ФАН БИНБИН",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 9,
@@ -42,16 +51,16 @@
     {
       "id": "4711802",
       "name_lat": "ВЭЛ'С ГОЛД ЧЕРВОВЫЙ ТУЗ",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД ЧЕРВОВЫЙ ТУЗ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "SHAR PEI",
-      "total_shows": 35,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
       "id": "429136673",
       "name_lat": "ВЭСТА ВАЙТ РОВЕР",
-      "name_ru": "",
+      "name_ru": "ВЭСТА ВАЙТ РОВЕР",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
@@ -69,7 +78,7 @@
     {
       "id": "1948767929",
       "name_lat": "ВЭЛАРИ ФЛОРЕНА",
-      "name_ru": "",
+      "name_ru": "ВЭЛАРИ ФЛОРЕНА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 17,
@@ -78,7 +87,7 @@
     {
       "id": "481063608",
       "name_lat": "ВЭЛМИ ХАРПЕР МЭЙ",
-      "name_ru": "",
+      "name_ru": "ВЭЛМИ ХАРПЕР МЭЙ",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 13,
@@ -96,7 +105,7 @@
     {
       "id": "653420016",
       "name_lat": "ВЭЛ БРЭД ПОУЗ АРОН",
-      "name_ru": "",
+      "name_ru": "ВЭЛ БРЭД ПОУЗ АРОН",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 14,
@@ -105,7 +114,7 @@
     {
       "id": "1993747229",
       "name_lat": "ВЭЛ'С ГОЛД ВЕЛЕНИЕ СЕРДЦА",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД ВЕЛЕНИЕ СЕРДЦА",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 16,
@@ -114,7 +123,7 @@
     {
       "id": "1426166446",
       "name_lat": "ВЭЛАРИ КАЗАНОВА",
-      "name_ru": "",
+      "name_ru": "ВЭЛАРИ КАЗАНОВА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -123,7 +132,7 @@
     {
       "id": "1414598787",
       "name_lat": "ВЭЙЛИН ПЕРВЫЙ СЫН",
-      "name_ru": "",
+      "name_ru": "ВЭЙЛИН ПЕРВЫЙ СЫН",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 12,
@@ -132,37 +141,19 @@
     {
       "id": "67816443",
       "name_lat": "ВЭЙЯ БОРДЖИАН ИЗ ДОМА АНЛИ",
-      "name_ru": "",
+      "name_ru": "ВЭЙЯ БОРДЖИАН ИЗ ДОМА АНЛИ",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1905977328",
+      "id": "927908692",
       "name_lat": "ВЭЛЛОРИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "612441529",
-      "name_lat": "ВЭЛЛИ ИЗ ПЕТЕРГОФА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1636672159",
-      "name_lat": "ВЭЛАРИ СУВЕРЕН",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -177,25 +168,34 @@
     {
       "id": "74628731",
       "name_lat": "ВЭЛАРИ ЭНДОРФИН",
-      "name_ru": "",
+      "name_ru": "ВЭЛАРИ ЭНДОРФИН",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "445494109",
+      "name_lat": "ВЭНДИ ЯГРЭДЖ БРИ",
+      "name_ru": "ВЭНДИ ЯГРЭДЖ БРИ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "50082249",
       "name_lat": "ВЭЙ ВИННЕР ДЖОРДАН БЛЮ",
-      "name_ru": "",
+      "name_ru": "ВЭЙ ВИННЕР ДЖОРДАН БЛЮ",
       "breed": "МАЛАМУТ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "932865884",
       "name_lat": "ВЭСТА ОНЛИ ФОРВАРД",
-      "name_ru": "",
+      "name_ru": "ВЭСТА ОНЛИ ФОРВАРД",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -204,7 +204,7 @@
     {
       "id": "179003921",
       "name_lat": "ВЭНДИ ВАЙЗ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ВЭНДИ ВАЙЗ ЛЕДИ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 8,
@@ -222,7 +222,7 @@
     {
       "id": "1334765062",
       "name_lat": "ВЭЛ'С ГОЛД КАРАМЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД КАРАМЕЛЬ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -247,8 +247,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1239074069",
-      "name_lat": "ВЭЛАРИ ЭФФЕКТ- II",
+      "id": "1975620353",
+      "name_lat": "ВЭЛАРИ ЭФФЕКТ-II",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
@@ -265,36 +265,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "260922469",
+      "name_lat": "ВЭЙМАКСС ОТ ПАНДЫ ШАРМ",
+      "name_ru": "ВЭЙМАКСС ОТ ПАНДЫ ШАРМ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 59,
+      "competition_dog_id": null
+    },
+    {
       "id": "1219579074",
       "name_lat": "ВЭЛ'С ГОЛД ЧУВСТВО ПОЛЁТА",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД ЧУВСТВО ПОЛЁТА",
       "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "229852875",
       "name_lat": "ВЭЛ'С ГОЛД ИНТРИГА ГОЛУБОЙ АЛМАЗ",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД ИНТРИГА ГОЛУБОЙ АЛМАЗ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "705052432",
-      "name_lat": "ВЭЙМАКСС ОТ ПАНДЫ ШАРМ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
-      "total_shows": 50,
-      "competition_dog_id": null
-    },
-    {
       "id": "253693020",
       "name_lat": "ВЭЛАРИ МАТАДОР",
-      "name_ru": "",
+      "name_ru": "ВЭЛАРИ МАТАДОР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "YORKSHIRE TERRIER",
       "total_shows": 10,
@@ -303,7 +302,7 @@
     {
       "id": "944615466",
       "name_lat": "ВЭЛМАРТИ АНСОНГО",
-      "name_ru": "",
+      "name_ru": "ВЭЛМАРТИ АНСОНГО",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 13,
@@ -312,19 +311,10 @@
     {
       "id": "832594372",
       "name_lat": "ВЭНДИ ДАРЛИНГ",
-      "name_ru": "",
+      "name_ru": "ВЭНДИ ДАРЛИНГ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "445494109",
-      "name_lat": "ВЭНДИ ЯГРЭДЖ БРИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -337,18 +327,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1818182997",
+      "id": "672024936",
       "name_lat": "ВЭЛЛЕНС ИВА КЛОДИ БЛЮ ПЕРЛ",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР /",
+      "name_ru": "ВЭЛЛЕНС ИВА КЛОДИ БЛЮ ПЕРЛ",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "324911499",
+      "name_lat": "ВЭЛ'С ГОЛД ГОЛУБАЯ МЕЧТА",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1000216341",
       "name_lat": "ВЭНДИ-ВАЛЬКЕР",
-      "name_ru": "",
+      "name_ru": "ВЭНДИ-ВАЛЬКЕР",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -375,7 +374,7 @@
     {
       "id": "1474219643",
       "name_lat": "ВЭЙ ВИННЕР ПРИНЦЕССА ПЕННИ",
-      "name_ru": "",
+      "name_ru": "ВЭЙ ВИННЕР ПРИНЦЕССА ПЕННИ",
       "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 6,
@@ -384,10 +383,18 @@
     {
       "id": "1989658865",
       "name_lat": "ВЭЛ'С ГОЛД РОМАН С ПРОДОЛЖЕНИЕМ",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД РОМАН С ПРОДОЛЖЕНИЕМ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1322587000",
+      "name_lat": "ВЭЙС АСЛАН РОС",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -429,19 +436,10 @@
     {
       "id": "138291099",
       "name_lat": "ВЭЛЛ КАМИРЭЛЬ ЗАРТАН ПОВЕЛИТЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ВЭЛЛ КАМИРЭЛЬ ЗАРТАН ПОВЕЛИТЕЛЬ",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "625664373",
-      "name_lat": "ВЭНДИ ЯГРЕДЖ БРИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -454,9 +452,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "369312636",
+      "name_lat": "ВЭЛ-БРЭД ПОУЗ ИСАБЕЛЛА ВАЙТ",
+      "name_ru": "ВЭЛ-БРЭД ПОУЗ ИСАБЕЛЛА ВАЙТ",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1271656335",
       "name_lat": "ВЭЛОРА ЧЕРНАЯ ФЕЕРИЯ ОТ ДИАЛЬ",
-      "name_ru": "",
+      "name_ru": "ВЭЛОРА ЧЕРНАЯ ФЕЕРИЯ ОТ ДИАЛЬ",
       "breed": "Мопс",
       "breed_en": "",
       "total_shows": 3,
@@ -495,6 +502,14 @@
       "name_ru": "",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "993295768",
+      "name_lat": "ВЭССИ",
+      "name_ru": "",
+      "breed": "ПАПИЙОН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -553,27 +568,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "369312636",
-      "name_lat": "ВЭЛ-БРЭД ПОУЗ ИСАБЕЛЛА ВАЙТ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "897812873",
+      "id": "1427513876",
       "name_lat": "ВЭЛЛЕНС ИМИДЖ",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР /",
+      "name_ru": "ВЭЛЛЕНС ИМИДЖ",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
       "id": "155796650",
       "name_lat": "ВЭЛ'С ГОЛД ЛАЙК Э ФЛАИНГ БЁРД",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД ЛАЙК Э ФЛАИНГ БЁРД",
       "breed": "ШАР ПЕЙ",
       "breed_en": "SHAR PEI",
       "total_shows": 4,
@@ -589,21 +595,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "780908489",
+      "id": "1560478292",
       "name_lat": "ВЭЛЛЕНС ЖЕНЕВЬЕВА",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР /",
+      "name_ru": "ВЭЛЛЕНС ЖЕНЕВЬЕВА",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "287078926",
-      "name_lat": "ВЭРИ ВАЛЕРИ АЛЬ ШАВАТИ С БЕРЕГА ТУРЫ",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "SALUKI",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -625,27 +622,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1135776919",
+      "id": "1047033558",
       "name_lat": "ВЭЙ ВИННЕР ЛОРД ВОЛЬФ",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "name_ru": "ВЭЙ ВИННЕР ЛОРД ВОЛЬФ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "145641405",
-      "name_lat": "ВЭНСИ ЛОНД ВЕЙ",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1960625888",
       "name_lat": "ВЭНДИ ИЗ КОРОЛЕВСТВА АННЫ",
-      "name_ru": "",
+      "name_ru": "ВЭНДИ ИЗ КОРОЛЕВСТВА АННЫ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -654,7 +642,7 @@
     {
       "id": "323951773",
       "name_lat": "ВЭНДИ ВЭРРИ ВЭЛЛ",
-      "name_ru": "",
+      "name_ru": "ВЭНДИ ВЭРРИ ВЭЛЛ",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 11,
@@ -663,7 +651,7 @@
     {
       "id": "196631024",
       "name_lat": "ВЭЛЕРЭАНА ИЗ КСАРО ЧЕСТНАЯ ИГРА",
-      "name_ru": "",
+      "name_ru": "ВЭЛЕРЭАНА ИЗ КСАРО ЧЕСТНАЯ ИГРА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 15,
@@ -672,16 +660,25 @@
     {
       "id": "1514716765",
       "name_lat": "ВЭЛ-БРЭД ПОУЗ МОРТИ ЛА ВИНС",
-      "name_ru": "",
+      "name_ru": "ВЭЛ-БРЭД ПОУЗ МОРТИ ЛА ВИНС",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
+      "id": "1736829072",
+      "name_lat": "ВЭЙ ВИННЕР ЗАТАНА",
+      "name_ru": "ВЭЙ ВИННЕР ЗАТАНА",
+      "breed": "МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1207569294",
       "name_lat": "ВЭЛАРИ ЮВЕЛИНА ГРЕЙС ДЕ ЛАВЕР СТИЛЬ",
-      "name_ru": "",
+      "name_ru": "ВЭЛАРИ ЮВЕЛИНА ГРЕЙС ДЕ ЛАВЕР СТИЛЬ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -697,19 +694,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "606983508",
+      "id": "580709744",
+      "name_lat": "ВЭЛЛАР ПЛЮС АКАПЭЛЛА ДУШИ",
+      "name_ru": "ВЭЛЛАР ПЛЮС АКАПЭЛЛА ДУШИ",
+      "breed": "СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "542184818",
       "name_lat": "ВЭНДИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1443549764",
+      "id": "176726916",
       "name_lat": "ВЭЛ БРЭД ПОУЗ ЗЛАТОМИРА СИЛЬВЕР РОУЗ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ВЭЛ БРЭД ПОУЗ ЗЛАТОМИРА СИЛЬВЕР РОУЗ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -717,7 +723,7 @@
     {
       "id": "397805614",
       "name_lat": "ВЭРИ СИРИОУЗ ВАЙКИНГ",
-      "name_ru": "",
+      "name_ru": "ВЭРИ СИРИОУЗ ВАЙКИНГ",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -726,35 +732,34 @@
     {
       "id": "1368931955",
       "name_lat": "ВЭЛ'С ГОЛД ШАХ И МАТ",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД ШАХ И МАТ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1736829072",
-      "name_lat": "ВЭЙ ВИННЕР ЗАТАНА",
-      "name_ru": "",
-      "breed": "МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 9,
+      "id": "110294927",
+      "name_lat": "ВЭЛЛОРИ ВОН АУСГЕЛАССЕН",
+      "name_ru": "ВЭЛЛОРИ ВОН АУСГЕЛАССЕН",
+      "breed": "ДЛИННАЯ ОСТЕВАЯ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "697722104",
       "name_lat": "ВЭЛАРИ ПОРШ СТАР АЙЛЕНД",
-      "name_ru": "",
+      "name_ru": "ВЭЛАРИ ПОРШ СТАР АЙЛЕНД",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1225672341",
+      "id": "827074106",
       "name_lat": "ВЭННИ ИТАН БОРН ТУ ВИН",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ВЭННИ ИТАН БОРН ТУ ВИН",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -762,7 +767,7 @@
     {
       "id": "566656488",
       "name_lat": "ВЭЛЛА ГОЛДЕН РОУЗ",
-      "name_ru": "",
+      "name_ru": "ВЭЛЛА ГОЛДЕН РОУЗ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 4,
@@ -771,16 +776,24 @@
     {
       "id": "578468861",
       "name_lat": "ВЭЙМАКС ОТ ПАНДЫ ШАРМ",
-      "name_ru": "",
+      "name_ru": "ВЭЙМАКС ОТ ПАНДЫ ШАРМ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "1483143139",
+      "name_lat": "ВЭЛ'С ГОЛД ЕВРОПА",
+      "name_ru": "ВЭЛ'С ГОЛД ЕВРОПА",
+      "breed": "ШАР ПЕЙ ШНАУЦЕР ПЕРЕЦ С",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1514687180",
       "name_lat": "ВЭЛ'С ГОЛД СЧАСТЬЕ ВНУТРИ",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД СЧАСТЬЕ ВНУТРИ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 8,
@@ -789,7 +802,7 @@
     {
       "id": "935888053",
       "name_lat": "ВЭЛАРИ КАТАРИНА",
-      "name_ru": "",
+      "name_ru": "ВЭЛАРИ КАТАРИНА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
@@ -805,30 +818,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "580709744",
-      "name_lat": "ВЭЛЛАР ПЛЮС АКАПЭЛЛА ДУШИ",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "CHINESE CRESTED DOG",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "261803836",
       "name_lat": "ВЭЛС",
       "name_ru": "",
       "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1505840657",
-      "name_lat": "ВЭЛ-БРЭД ПОУЗ ЕЛЛИ ЛАКИ / WELL- BRED POUZ ELLY LUCKY",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -847,15 +842,6 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "324911499",
-      "name_lat": "ВЭЛ'С ГОЛД ГОЛУБАЯ МЕЧТА",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -888,7 +874,7 @@
     {
       "id": "911166954",
       "name_lat": "ВЭЛ-БРЕД ПОУЗ ЗОЛДЕН СНОУ АЙС КРИМ",
-      "name_ru": "",
+      "name_ru": "ВЭЛ-БРЕД ПОУЗ ЗОЛДЕН СНОУ АЙС КРИМ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
@@ -904,10 +890,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1993831382",
+      "id": "502066567",
       "name_lat": "ВЭЙ",
       "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "breed": "ЧУНЦИН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -924,10 +910,10 @@
     {
       "id": "1712367245",
       "name_lat": "ВЭЛМАРТИ АДЕНТА ИСТ",
-      "name_ru": "",
+      "name_ru": "ВЭЛМАРТИ АДЕНТА ИСТ",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -967,6 +953,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1710557349",
+      "name_lat": "ВЭЛ-БРЭД ПОУЗ ХИЛЬДА ВИНЧИТОРЕ",
+      "name_ru": "ВЭЛ-БРЭД ПОУЗ ХИЛЬДА ВИНЧИТОРЕ",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "308918625",
       "name_lat": "ВЭННИ ВАН",
       "name_ru": "",
@@ -976,18 +971,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1813199037",
-      "name_lat": "ВЭСТ МЭДЖИК ГАРРИ ПОТТЕР",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "id": "1645973220",
+      "name_lat": "ВЭЛМАРТИ БЕНТЛИ",
+      "name_ru": "ВЭЛМАРТИ БЕНТЛИ",
+      "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "918700298",
       "name_lat": "ВЭЛМАРТИ ГЭРИ",
-      "name_ru": "",
+      "name_ru": "ВЭЛМАРТИ ГЭРИ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -996,53 +991,53 @@
     {
       "id": "1712646645",
       "name_lat": "ВЭНОНА БРАЙДИ МАРГО",
-      "name_ru": "",
+      "name_ru": "ВЭНОНА БРАЙДИ МАРГО",
       "breed": "АМЕРИКАНСКАЯ КСОЛОИТСКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "237040642",
-      "name_lat": "ВЭЛ'С ГОЛД ЕВРОПА",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
+      "id": "983783647",
+      "name_lat": "ВЭЛ-БРЭД ПОУЗ ВИРДЖИНИЯ ДАРК МУН",
+      "name_ru": "ВЭЛ-БРЭД ПОУЗ ВИРДЖИНИЯ ДАРК МУН",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "60134584",
+      "id": "1162027194",
       "name_lat": "ВЭЙ ВИННЕР ЛЮК НЕЙДЖ",
-      "name_ru": "",
-      "breed": "АКИТА АЛЯСКИНСКИЙ",
+      "name_ru": "ВЭЙ ВИННЕР ЛЮК НЕЙДЖ",
+      "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "466401988",
+      "id": "1678718321",
       "name_lat": "ВЭЛЬВЕТ БЛЭК КВИН ОФ ХАРТС",
       "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК /",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "801105283",
+      "id": "1972061747",
       "name_lat": "ВЭЛЛА ИЗ ИМПЕРИИ ФАВОРИТОВ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ВЭЛЛА ИЗ ИМПЕРИИ ФАВОРИТОВ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1737902465",
+      "id": "657692136",
       "name_lat": "ВЭСТА РЕЙ ОФ ХАПИНОС ГОЛДЕНМИРЕЛЬ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ВЭСТА РЕЙ ОФ ХАПИНОС ГОЛДЕНМИРЕЛЬ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1057,10 +1052,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "799993848",
+      "id": "1423132775",
       "name_lat": "ВЭЛЬТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1086,7 +1081,7 @@
     {
       "id": "1795911511",
       "name_lat": "ВЭЛЛОРИ ИЗ ПЕТЕРГОФА",
-      "name_ru": "",
+      "name_ru": "ВЭЛЛОРИ ИЗ ПЕТЕРГОФА",
       "breed": "ВЕЛЬШ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -1095,7 +1090,7 @@
     {
       "id": "1781582282",
       "name_lat": "ВЭЛЮЭЙБЛ ПРЕЗЕНТ ОФ САЙБИРИА",
-      "name_ru": "",
+      "name_ru": "ВЭЛЮЭЙБЛ ПРЕЗЕНТ ОФ САЙБИРИА",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1104,7 +1099,7 @@
     {
       "id": "1784861622",
       "name_lat": "ВЭНДИ ТОТАЛ ВИКТОРИЯ",
-      "name_ru": "",
+      "name_ru": "ВЭНДИ ТОТАЛ ВИКТОРИЯ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 4,
@@ -1113,7 +1108,7 @@
     {
       "id": "1580947404",
       "name_lat": "ВЭЙТЛ АМАДЕЯ БЬЮТИ ИН СТАРС",
-      "name_ru": "",
+      "name_ru": "ВЭЙТЛ АМАДЕЯ БЬЮТИ ИН СТАРС",
       "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 4,
@@ -1124,8 +1119,7 @@
       "name_lat": "ВЭНДИ",
       "name_ru": "",
       "breed": "БОСЕРОН",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1149,10 +1143,10 @@
     {
       "id": "199614376",
       "name_lat": "ВЭЛМАРТИ ВАТСОН",
-      "name_ru": "",
+      "name_ru": "ВЭЛМАРТИ ВАТСОН",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1165,10 +1159,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "128120875",
+      "id": "837398226",
       "name_lat": "ВЭССИ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1192,15 +1186,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1695392474",
-      "name_lat": "ВЭЛЛАР ПЛЮС АКАПЕЛЛА ДУШИ",
-      "name_ru": "",
-      "breed": "СОБАКА / CHINESE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "70366727",
       "name_lat": "ВЭЛЛОРИ СТРЕНДЖ",
       "name_ru": "",
@@ -1210,18 +1195,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1645973220",
-      "name_lat": "ВЭЛМАРТИ БЕНТЛИ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1111156478",
       "name_lat": "ВЭЛ'С ГОЛД БРАВО БЛОНД",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД БРАВО БЛОНД",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -1264,28 +1240,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "983783647",
-      "name_lat": "ВЭЛ-БРЭД ПОУЗ ВИРДЖИНИЯ ДАРК МУН",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1710557349",
-      "name_lat": "ВЭЛ-БРЭД ПОУЗ ХИЛЬДА ВИНЧИТОРЕ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "476778855",
+      "id": "1189347923",
       "name_lat": "ВЭЙ ИЗ СОЗВЕЗДИЯ ЧЕРНОГО ПСА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "name_ru": "ВЭЙ ИЗ СОЗВЕЗДИЯ ЧЕРНОГО ПСА",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1293,7 +1251,7 @@
     {
       "id": "151315119",
       "name_lat": "ВЭЙДЖИНН ИДДИ АСГЕРД",
-      "name_ru": "",
+      "name_ru": "ВЭЙДЖИНН ИДДИ АСГЕРД",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 5,
@@ -1318,19 +1276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "746968730",
+      "id": "936182123",
       "name_lat": "ВЭЙ ТУ ДРИМ ПРОВОКАЦИЯ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "110294927",
-      "name_lat": "ВЭЛЛОРИ ВОН АУСГЕЛАССЕН",
-      "name_ru": "",
-      "breed": "ДЛИННАЯ ОСТЕВАЯ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1363,8 +1312,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1525556442",
-      "name_lat": "ВЭЛ-БРЭД ПОУЗ ЕВИАН ИЛ ПРИМО / WELL- BRED POUZ EVIAN IL PRIMO",
+      "id": "1780697576",
+      "name_lat": "ВЭЛ-БРЭД ПОУЗ ЕВИАН ИЛ ПРИМО / WELL-BRED POUZ EVIAN IL PRIMO",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
@@ -1374,7 +1323,7 @@
     {
       "id": "14075198",
       "name_lat": "ВЭЛИАНТ НАЙТ",
-      "name_ru": "",
+      "name_ru": "ВЭЛИАНТ НАЙТ",
       "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
       "breed_en": "",
       "total_shows": 7,
@@ -1390,6 +1339,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1940661166",
+      "name_lat": "ВЭЙ ВИННЕР ИНФИНИТИ СЕЛЕСТИАЛ",
+      "name_ru": "ВЭЙ ВИННЕР ИНФИНИТИ СЕЛЕСТИАЛ",
+      "breed": "МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "610422783",
       "name_lat": "ВЭНДИ",
       "name_ru": "",
@@ -1401,19 +1359,18 @@
     {
       "id": "47656325",
       "name_lat": "ВЭСТ МИРАКЛ ИЗ ИДИЛИИ КОНТРАСТОВ",
-      "name_ru": "",
+      "name_ru": "ВЭСТ МИРАКЛ ИЗ ИДИЛИИ КОНТРАСТОВ",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1940661166",
-      "name_lat": "ВЭЙ ВИННЕР ИНФИНИТИ СЕЛЕСТИАЛ",
+      "id": "1400805844",
+      "name_lat": "ВЭЛЬТА",
       "name_ru": "",
-      "breed": "МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ПОДШЕРСТКОМ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1428,7 +1385,7 @@
     {
       "id": "1212116103",
       "name_lat": "ВЭЛ БЛЭК НАЙТ",
-      "name_ru": "",
+      "name_ru": "ВЭЛ БЛЭК НАЙТ",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -1453,10 +1410,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1193002186",
+      "id": "1933377179",
       "name_lat": "ВЭЛСЕЯ",
       "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
+      "breed": "СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1489,6 +1446,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "134502454",
+      "name_lat": "ВЭССИ",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "35935342",
+      "name_lat": "ВЭЛЛДАН БРЕНД",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "999225929",
       "name_lat": "ВЭЛЛАР ПЛЮС СЕКТОР ПРИЗ",
       "name_ru": "",
@@ -1516,10 +1490,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1071398707",
+      "id": "1089967162",
       "name_lat": "ВЭСТ КОН БРИО ОТ ДИАЛЬ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1552,8 +1526,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "539364666",
-      "name_lat": "ВЭЛ-БРЭД ПОУЗ ША- МИА ШИНИ",
+      "id": "925356378",
+      "name_lat": "ВЭЛ-БРЭД ПОУЗ ША-МИА ШИНИ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
@@ -1561,19 +1535,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "726290849",
+      "id": "1464841026",
       "name_lat": "ВЭЙДЖЕРИ ФОМ КАТЕРИНА СТОЛЬЦ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1815544186",
+      "id": "458322891",
       "name_lat": "ВЭНС ДЖЕНЬЮАРИ ДРИМ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1633,6 +1607,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "414791774",
+      "name_lat": "ВЭЛЛАРИ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "865162008",
       "name_lat": "ВЭЛАРИ ЭФФЕКТ",
       "name_ru": "",
@@ -1644,19 +1627,10 @@
     {
       "id": "101542264",
       "name_lat": "ВЭСТА ИЗ МУРАНОВО",
-      "name_ru": "",
+      "name_ru": "ВЭСТА ИЗ МУРАНОВО",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "206163425",
-      "name_lat": "ВЭЛЛАРИ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1671,17 +1645,26 @@
     {
       "id": "1975139972",
       "name_lat": "ВЭНГИ ВЕЛИКОЛЕПНАЯ",
-      "name_ru": "",
+      "name_ru": "ВЭНГИ ВЕЛИКОЛЕПНАЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "329045241",
+      "id": "1939651275",
       "name_lat": "ВЭЛАРИ СОРЕЛЬ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "name_ru": "ВЭЛАРИ СОРЕЛЬ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "53403566",
+      "name_lat": "ВЭЕМЛЭН ИЗ СТРАНЫ КУТХА",
+      "name_ru": "ВЭЕМЛЭН ИЗ СТРАНЫ КУТХА",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1813,15 +1796,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "53403566",
-      "name_lat": "ВЭЕМЛЭН ИЗ СТРАНЫ КУТХА",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1213090916",
       "name_lat": "ВЭНДИ",
       "name_ru": "",
@@ -1849,10 +1823,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "44029135",
+      "id": "1615031038",
       "name_lat": "ВЭЛЛЕНС ИНФАНТА",
       "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР /",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1912,19 +1886,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1653140538",
-      "name_lat": "ВЭНД ФРОМ СОУС АФРИКА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1965143907",
+      "id": "105808115",
       "name_lat": "ВЭГГИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1948,10 +1913,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1532447053",
+      "id": "228111656",
       "name_lat": "ВЭЛЛОРИ",
       "name_ru": "",
-      "breed": "КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ (КУРЦХААР)",
+      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1968,7 +1933,7 @@
     {
       "id": "38965502",
       "name_lat": "ВЭЛЛЕРИ СВИТ ДРИМ",
-      "name_ru": "",
+      "name_ru": "ВЭЛЛЕРИ СВИТ ДРИМ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -1984,10 +1949,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1323752019",
+      "id": "1741078459",
       "name_lat": "ВЭФТ ОФ ВИКТОРИ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1995,7 +1960,7 @@
     {
       "id": "1742754535",
       "name_lat": "ВЭЛЛАР ПЛЮС МИШЕЛЬ СТАР БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "ВЭЛЛАР ПЛЮС МИШЕЛЬ СТАР БЬЮТИ",
       "breed": "СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
       "total_shows": 13,
@@ -2004,7 +1969,7 @@
     {
       "id": "245602417",
       "name_lat": "ВЭСТ ВЕЗУВИЙ",
-      "name_ru": "",
+      "name_ru": "ВЭСТ ВЕЗУВИЙ",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 7,
@@ -2020,6 +1985,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "191074919",
+      "name_lat": "ВЭЙ АПВАРД НОВИ",
+      "name_ru": "ВЭЙ АПВАРД НОВИ",
+      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1451926951",
+      "name_lat": "ВЭЛ-БРЭД ПОУЗ ВЭЙГРАНД СТРОНГ",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1372380922",
       "name_lat": "ВЭЛ-БРЭД ПОУЗ ЖОФРЕЙ ДЕ ПЕЙРАК",
       "name_ru": "",
@@ -2031,9 +2013,17 @@
     {
       "id": "952789366",
       "name_lat": "ВЭЛИАНТ ДЕ ВАИЛД",
-      "name_ru": "",
+      "name_ru": "ВЭЛИАНТ ДЕ ВАИЛД",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "739580715",
+      "name_lat": "ВЭНДИ АЛЕКСПОМ КЕННЕЛ",
+      "name_ru": "ВЭНДИ АЛЕКСПОМ КЕННЕЛ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -2065,10 +2055,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "388217957",
+      "id": "191202808",
       "name_lat": "ВЭЛАРИ АВРОРА СИЛК ШАЙН",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2112,7 +2102,7 @@
     {
       "id": "222832559",
       "name_lat": "ВЭЛ-БРЭД ПОУЗ ФЛОРИАНА МЭДЖИК",
-      "name_ru": "",
+      "name_ru": "ВЭЛ-БРЭД ПОУЗ ФЛОРИАНА МЭДЖИК",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
@@ -2121,17 +2111,17 @@
     {
       "id": "1155196247",
       "name_lat": "ВЭЛЛАР ПЛЮС ЛЮК СОР",
-      "name_ru": "",
+      "name_ru": "ВЭЛЛАР ПЛЮС ЛЮК СОР",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "898491762",
+      "id": "43463952",
       "name_lat": "ВЭРИТИ ЭЛСИ СТАР",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "name_ru": "ВЭРИТИ ЭЛСИ СТАР",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2139,17 +2129,8 @@
     {
       "id": "1783594946",
       "name_lat": "ВЭЛ'С ГОЛД ЗОЛОТО МАЙЯ",
-      "name_ru": "",
+      "name_ru": "ВЭЛ'С ГОЛД ЗОЛОТО МАЙЯ",
       "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "21815064",
-      "name_lat": "ВЭЙ АПВАРД НОВИ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2159,6 +2140,15 @@
       "name_lat": "ВЭНДИ",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "611864840",
+      "name_lat": "ВЭЛТОН",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2218,6 +2208,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1964732000",
+      "name_lat": "ВЭРЭНА КЭПРИС ОФ МАЙ ХАРТ ГОЛДЕНМИРЕЛЬ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "733717924",
       "name_lat": "ВЭЛЛАР ПЛЮС МИШЕЛЬ СТАР БЬЮТИ (ПУХ)",
       "name_ru": "",
@@ -2254,11 +2253,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1451926951",
-      "name_lat": "ВЭЛ-БРЭД ПОУЗ ВЭЙГРАНД СТРОНГ",
+      "id": "202087195",
+      "name_lat": "ВЭЛ'С ГОЛД СВЕТ ЛУНЫ МОНИКА",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
+      "breed": "ШАР ПЕЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1115449674",
+      "name_lat": "ВЭЛ-БРЭД ПОУЗ ВИВИАН БЛЭК",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2281,19 +2287,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1420684364",
-      "name_lat": "ВЭРЭНА КЭПРИС ОФ МАЙ ХАРТ ГОЛДЕНМИРЕЛЬ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1528164869",
+      "id": "887213336",
       "name_lat": "ВЭЛАРИ ДИНАСТИЯ ПЕРЛ КОЛЛЕКШН",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2400,8 +2397,17 @@
     {
       "id": "875899219",
       "name_lat": "ВЭЙ МОН АМУР",
-      "name_ru": "",
+      "name_ru": "ВЭЙ МОН АМУР",
       "breed": "JACK RUSSELL TERRIER",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "122713532",
+      "name_lat": "ВЭЛАРИ ФРУТЕЛЛА",
+      "name_ru": "ВЭЛАРИ ФРУТЕЛЛА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2409,17 +2415,8 @@
     {
       "id": "1712358716",
       "name_lat": "ВЭЛМАРТИ ВЕЛЕС",
-      "name_ru": "",
+      "name_ru": "ВЭЛМАРТИ ВЕЛЕС",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1474096674",
-      "name_lat": "ВЭНДИ АЛЕКСПОМ КЕННЕЛ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2427,7 +2424,7 @@
     {
       "id": "811886682",
       "name_lat": "ВЭЛКОМ ВИЛЛИ ДЭНС",
-      "name_ru": "",
+      "name_ru": "ВЭЛКОМ ВИЛЛИ ДЭНС",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -2436,7 +2433,7 @@
     {
       "id": "1624441550",
       "name_lat": "ВЭЛАРИ ЕВГЕНИКА",
-      "name_ru": "",
+      "name_ru": "ВЭЛАРИ ЕВГЕНИКА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2445,17 +2442,25 @@
     {
       "id": "874890940",
       "name_lat": "ВЭНДИ ЭММИ ЛУ",
-      "name_ru": "",
+      "name_ru": "ВЭНДИ ЭММИ ЛУ",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "518664068",
+      "id": "1897691981",
+      "name_lat": "ВЭТИ БЭНДИТ БЕЙРУШ",
+      "name_ru": "ВЭТИ БЭНДИТ БЕЙРУШ",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1091477613",
       "name_lat": "ВЭЙ АПВАРД НАККАР",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ВЭЙ АПВАРД НАККАР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2488,10 +2493,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "521061597",
+      "id": "110717056",
       "name_lat": "ВЭЙД",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2524,10 +2529,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1455992868",
+      "id": "1670716578",
       "name_lat": "ВЭСТ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2569,29 +2574,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "54402883",
-      "name_lat": "ВЭЛТОН",
+      "id": "1716504298",
+      "name_lat": "ВЭЛМИ",
       "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1418213759",
-      "name_lat": "ВЭЛТОН",
+      "id": "1190490974",
+      "name_lat": "ВЭСТ МИРАКЛ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1797599713",
-      "name_lat": "ВЭЛЛАРИ",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
+      "breed": "ШИ-ТЦУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2601,6 +2595,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1854434406",
+      "name_lat": "ВЭЛТОН",
+      "name_ru": "",
+      "breed": "БОСЕРОН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2672,6 +2674,15 @@
       "name_lat": "ВЭНДИ",
       "name_ru": "",
       "breed": "СОЛЬЮ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1329248010",
+      "name_lat": "В`ЭМИ",
+      "name_ru": "",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2776,10 +2787,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "529968443",
+      "id": "1866845570",
       "name_lat": "ВЭНСИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2789,6 +2800,33 @@
       "name_lat": "ВЭЙССИ",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100881562",
+      "name_lat": "ВЭЙД Э ДРИМ КАМ ТРУ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1713036314",
+      "name_lat": "ВЭЛТОН ЛАККИ БОЙ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "108155230",
+      "name_lat": "ВЭСТА РЕЙ ОВ ХАПИНОС ГОЛДЕНМИРЕЛЬ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2816,15 +2854,6 @@
       "name_lat": "ВЭЛЬФ ЭСТЕР С ТЬМАЦКОГО ПЕРЕКАТА",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "461524347",
-      "name_lat": "ВЭЙД Э ДРИМ КАМ ТРУ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2875,10 +2904,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1441057052",
+      "id": "466345913",
       "name_lat": "ВЭЛЛАРИ БЛЭК ШАРМ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2893,10 +2922,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "834872262",
+      "id": "1849634600",
       "name_lat": "ВЭЙ АПВАРД ЛЕГЕНДА",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2920,10 +2949,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "878542385",
+      "id": "321773520",
       "name_lat": "ВЭНИТИ ЛАЙН ОФ ЛАЙФ КОНСУЛ",
       "name_ru": "",
-      "breed": "ТАКСА ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2965,19 +2994,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1840601788",
-      "name_lat": "ВЭЛАРИ ФРУТЕЛЛА",
-      "name_ru": "",
-      "breed": "РСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "314802264",
+      "id": "1939549053",
       "name_lat": "ВЭЛЛА ФОМ ХАУС ДЕМИРА",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2992,28 +3012,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "253280951",
+      "id": "199415243",
       "name_lat": "ВЭНДИ БЛЭК ДАЙМОНД",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ МАЛЫЙ ШПИЦ ЧЁРНЫЙ",
+      "breed": "НЕМЕЦКИЙ МАЛЫЙ ШПИЦ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1152529438",
+      "id": "868635431",
       "name_lat": "ВЭЙМАКССОТ ПАНДЫ ШАРМ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "692630273",
+      "id": "286905820",
       "name_lat": "ВЭТТИ ВИЛС ИЗ СИЛЬНОЙ СТАИ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3055,11 +3075,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "604365682",
-      "name_lat": "ВЭЛТОН ЛАККИ БОЙ",
+      "id": "864299104",
+      "name_lat": "ВЭЛЛА ВОНДЕР ИЗ ИДИЛЛИИ КОНТРАСТОВ",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
+      "breed": "ШАР ПЕЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3068,6 +3087,31 @@
       "name_lat": "ВЭЙСА ЛАКИ СМАЙЛ",
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1629213730",
+      "name_lat": "ВЭНСИЯ ИМПРЕССИВ ЛЕДИ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "348482288",
+      "name_lat": "ВЭЛАРИ ШАНГРИ-ЛА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "298790613",
+      "name_lat": ". ВЭЛАРИ ГОЛДЕН ЛЕГЕНД",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3082,19 +3126,43 @@
       "competition_dog_id": null
     },
     {
-      "id": "558519777",
+      "id": "263772636",
+      "name_lat": "ВЭЛС ГОЛД ЛАДА НА МУЛЬЕН КОТМАРИАН",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "726419647",
+      "name_lat": "ВЭРИ КЬЮТИ АМАНИ ИЗ МАРИАЛГРАДА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "568186989",
+      "name_lat": "ВЭЛЛАРИС ХРУСТЯЩАЯ КРОШКА",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1495446402",
       "name_lat": "ВЭЛЛА ФОМ ХАУС БЛИЗАРД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "883770800",
+      "id": "854819903",
       "name_lat": "ВЭЛ'C ГОЛД ЧЕРВОВЫЙ ТУЗ МИРЭЛИТ-ЛЕНТ ШАНХАЙ БЕСТ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3154,33 +3222,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1661376143",
-      "name_lat": "ВЭСТА РЕЙ ОВ ХАПИНОС ГОЛДЕНМИРЕЛЬ",
-      "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "736238367",
-      "name_lat": "ВЭЛЛЕНС КЛЕОПАТРА",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "991963992",
-      "name_lat": "ВЭЛЛЕНС КОРОЛЬ АРТУР",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "827676704",
       "name_lat": "ВЭН ШУАНГ ЛИ",
       "name_ru": "",
@@ -3203,15 +3244,6 @@
       "name_lat": "ВЭЛЛА ИЛЛЮЗИЯ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "202087195",
-      "name_lat": "ВЭЛ'С ГОЛД СВЕТ ЛУНЫ МОНИКА",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3253,10 +3285,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "153410742",
+      "id": "1657106965",
       "name_lat": "ВЭНДИ ФОН КАЙЗЕР ШТЕРН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3365,15 +3397,6 @@
       "name_lat": "ВЭЛАРИ ЛАВЕНДЕР ДЖЕВЕЛ",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "826435286",
-      "name_lat": "ВЭЛЛДАН БРЕНД",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

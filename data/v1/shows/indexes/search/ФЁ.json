@@ -1,13 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ФЁ",
-  "count": 27,
+  "count": 29,
   "dogs": [
     {
-      "id": "209860345",
+      "id": "198819476",
       "name_lat": "ФЁДОР ЕМЕЛЬЯНЕНКО",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР стандартный",
+      "name_ru": "ФЁДОР ЕМЕЛЬЯНЕНКО",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -15,10 +15,10 @@
     {
       "id": "120769517",
       "name_lat": "ФЁСТ МЕРИДИАН ХОЛИФИЛД",
-      "name_ru": "",
+      "name_ru": "ФЁСТ МЕРИДИАН ХОЛИФИЛД",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -33,7 +33,7 @@
     {
       "id": "1263573071",
       "name_lat": "ФЁСТ ЛАВЕЛИ КИИП СТАЙЛЕ",
-      "name_ru": "",
+      "name_ru": "ФЁСТ ЛАВЕЛИ КИИП СТАЙЛЕ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "ENGLISH COCKER SPANIEL",
       "total_shows": 3,
@@ -42,19 +42,27 @@
     {
       "id": "47643427",
       "name_lat": "ФЁСТ ЛАВЕЛИ МАГНЕТИК ФЬЮЖЕН",
-      "name_ru": "",
+      "name_ru": "ФЁСТ ЛАВЕЛИ МАГНЕТИК ФЬЮЖЕН",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1584519225",
       "name_lat": "ФЁДОР МИХАЙЛОВИЧ ОТ ЛОМОНОСОВОЙ",
-      "name_ru": "",
+      "name_ru": "ФЁДОР МИХАЙЛОВИЧ ОТ ЛОМОНОСОВОЙ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1213799489",
+      "name_lat": "ФЁСТ ЛЕДИ",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -67,12 +75,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1213799489",
+      "id": "602702336",
       "name_lat": "ФЁСТ ЛЕДИ",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД / BERNESE",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -85,12 +92,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "865488370",
+      "id": "688727895",
       "name_lat": "ФЁСТ ЛАВЕЛИ МАЙ ВОЯЖ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1011943752",
+      "name_lat": "ФЁСТ ЛЕДИ",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -112,19 +127,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "223653020",
+      "id": "1114555193",
       "name_lat": "ФЁДОРА ИЗ СНЕЖНОЙ СТАИ",
       "name_ru": "",
-      "breed": "СЛОВАЦКИЙ ЧУВАЧ /",
+      "breed": "СЛОВАЦКИЙ ЧУВАЧ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "678937322",
+      "id": "1163892586",
       "name_lat": "ФЁСТ ЛАВЕЛИ НИД СВИТИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ФЁСТ ЛАВЕЛИ НИД СВИТИ",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -139,28 +154,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1541740623",
+      "id": "1864407873",
       "name_lat": "ФЁСТ ЛЕДИ",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1331601168",
+      "id": "733180005",
       "name_lat": "ФЁСТ ЛЕДИ ВОЛЬФС ТРЕИЛ",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1011943752",
-      "name_lat": "ФЁСТ ЛЕДИ",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -186,7 +192,7 @@
     {
       "id": "874835795",
       "name_lat": "ФЁСТ ЛАВЕЛИ ОНСЕ АПОН Э ТАЙМ",
-      "name_ru": "",
+      "name_ru": "ФЁСТ ЛАВЕЛИ ОНСЕ АПОН Э ТАЙМ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -198,6 +204,14 @@
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1970041548",
+      "name_lat": "ФЁСТ ЛЕДИ",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
       "total_shows": 1,
       "competition_dog_id": null
     },

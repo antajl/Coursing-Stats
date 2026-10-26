@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UZ",
-  "count": 17,
+  "count": 19,
   "dogs": [
     {
       "id": "547375476",
@@ -18,16 +18,34 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE MEDIUM BLACK, WHITE, BROWN",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "137685537",
+      "id": "30661197",
       "name_lat": "UZELOK-NA-PAMYAT IZ ZIMNIH GREZ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1103102988",
+      "name_lat": "UZOR IYULYA SO SHKODNOGO DVORA",
+      "name_ru": "УЗОР ИЮЛЯ СО ШКОДНОГО ДВОРА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "652683122",
+      "name_lat": "U ZEFIR V SHOKOLADE FOR EKSIFAVORIT",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -36,16 +54,7 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1103102988",
-      "name_lat": "UZOR IYULYA SO SHKODNOGO DVORA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -58,6 +67,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "705886692",
+      "name_lat": "UZURPATOR IZ SKAZKI O KHVOSTE FEY",
+      "name_ru": "УЗУРПАТОР ИЗ СКАЗКИ О ХВОСТЕ ФЕЙ",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "522279865",
       "name_lat": "UZOR PIKASSO OT NEVSKOGO DUETA",
       "name_ru": "",
@@ -67,10 +85,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "705886692",
-      "name_lat": "UZURPATOR IZ SKAZKI O KHVOSTE FEY",
+      "id": "1039762784",
+      "name_lat": "U-ZOR",
       "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -130,10 +148,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "68678120",
+      "id": "459752055",
       "name_lat": "UZO V BIRKEN FORSTADT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

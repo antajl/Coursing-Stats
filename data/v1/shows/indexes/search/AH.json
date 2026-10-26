@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AH",
-  "count": 82,
+  "count": 88,
   "dogs": [
     {
       "id": "1914262574",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 27,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -17,8 +17,7 @@
       "name_lat": "AHTIAR AK JAR RURIK",
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -40,19 +39,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "952380854",
+      "id": "217715375",
       "name_lat": "AHEAD OF THE GAME BY AHMED BOZIEV",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "584938161",
+      "id": "884748108",
       "name_lat": "AHTIAR AK JAR DINASTY",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -85,6 +84,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "193564910",
+      "name_lat": "AHTIAR AK JAR MADERA",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1898862718",
+      "name_lat": "AHONPAAN OGNENNIY OKHOTNIK AMUR",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1148156993",
       "name_lat": "AHTIAR AK JAR PATRIC PREMIER",
       "name_ru": "",
@@ -103,21 +119,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "979358287",
-      "name_lat": "AHONPAAN OGNENNIY OKHOTNIK AMUR",
-      "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "1636018620",
       "name_lat": "AHLEHOFF'S X-MEN THE LAST STAND",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "PUG",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -139,12 +146,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "112950373",
+      "id": "453725688",
       "name_lat": "AHTIAR AK JAR ZEITGEIST",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1650188857",
+      "name_lat": "AHTIAR AK JAR SENSEY",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -166,6 +181,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "30333832",
+      "name_lat": "AHMES",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "390125170",
       "name_lat": "AHTIAR AK JAR YAKITORIA",
       "name_ru": "",
@@ -181,6 +205,15 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "681944594",
+      "name_lat": "AHTIAR AK JAR OSKAR OPEN HEART",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -207,7 +240,7 @@
       "name_ru": "",
       "breed": "CHIEN PARTICOLORE À POIL",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -220,30 +253,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1496385140",
+      "id": "1919441313",
       "name_lat": "AHILL",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР /",
+      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1055729608",
+      "id": "582663533",
       "name_lat": "AHTIAR AK JAR AGNETTA FELSKOG",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "681944594",
-      "name_lat": "AHTIAR AK JAR OSKAR OPEN HEART",
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -274,17 +298,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "30333832",
-      "name_lat": "AHMES",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1152330676",
-      "name_lat": "AHLEHOFF’S X- MEN THE LAST STAND",
+      "id": "996262118",
+      "name_lat": "AHLEHOFF’S X-MEN THE LAST STAND",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
@@ -319,6 +334,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "384058058",
+      "name_lat": "AHTIAR AK JAR EMPRESS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "1330808309",
       "name_lat": "AHAL-TEKE PIRUZ",
       "name_ru": "",
@@ -337,12 +361,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "384058058",
-      "name_lat": "AHTIAR AK JAR EMPRESS",
+      "id": "1932543599",
+      "name_lat": "AHTIAR AK YAR YUTANA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 11,
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -364,10 +388,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "514498661",
+      "id": "723934712",
       "name_lat": "AHENU ZIPACTONAL",
       "name_ru": "",
-      "breed": "СОБАКА СРЕДНЯЯ /",
+      "breed": "СОБАКА СРЕДНЯЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -382,6 +406,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1933575536",
+      "name_lat": "A HUNDRED REASONS TO LOVE HONEY DELIGHT",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "69438097",
       "name_lat": "AHILLES AHILL",
       "name_ru": "",
@@ -391,10 +424,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1280421493",
+      "id": "354400264",
       "name_lat": "AHTIAR AK JAR AMADEUS FAVORITE OF SUCCESS",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -432,15 +465,6 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1269248886",
-      "name_lat": "AHTIAR AK YAR YUTANA",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
-      "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
@@ -517,6 +541,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1314134650",
+      "name_lat": "A HUGE SUCCESS INDITAROD",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "ALASKAN MALAMUTE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "239521849",
+      "name_lat": "A HELMIDGE HANITTA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1489191861",
       "name_lat": "AHLEHOFF'S YES SIR",
       "name_ru": "",
@@ -553,10 +595,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "108754892",
+      "id": "1718725962",
       "name_lat": "AHГЕЛ ВОРКШОП ИНТУИЦИЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -652,10 +694,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1929846766",
+      "id": "878244525",
       "name_lat": "AHILLES",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -706,6 +748,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1655129219",
+      "name_lat": "AHICE GUY TOLYAN",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1113687652",
       "name_lat": "AHTIAR AK JAR METALLIKA",
       "name_ru": "",
@@ -724,12 +774,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "593085460",
+      "id": "1264793011",
       "name_lat": "AHTIAR AK JAR URANIA ЭМИР НОРТ ЛЭНДС",
       "name_ru": "",
-      "breed": "ЛАБРАДОРРЕТРИВЕР/",
+      "breed": "ЛАБРАДОРРЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {

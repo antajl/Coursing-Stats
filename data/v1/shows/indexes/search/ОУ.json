@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОУ",
-  "count": 57,
+  "count": 55,
   "dogs": [
     {
       "id": "1977420037",
       "name_lat": "ОУТСТЕНДИНГ СТЕНЛИ БОЙ",
-      "name_ru": "",
+      "name_ru": "ОУТСТЕНДИНГ СТЕНЛИ БОЙ",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 24,
@@ -24,10 +24,19 @@
     {
       "id": "63382970",
       "name_lat": "ОУШЕН БРИС НЭНСИ ДРЮ",
-      "name_ru": "",
+      "name_ru": "ОУШЕН БРИС НЭНСИ ДРЮ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "147638041",
+      "name_lat": "ОУШЕН АКУЛОВОДОГ",
+      "name_ru": "",
+      "breed": "АМ.МИНИАТЮРНАЯОВЧ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -42,17 +51,17 @@
     {
       "id": "779260769",
       "name_lat": "ОУШЕН ДАЙМОНД ЛИНКОЛЬН",
-      "name_ru": "",
+      "name_ru": "ОУШЕН ДАЙМОНД ЛИНКОЛЬН",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "56791522",
+      "id": "1962351075",
       "name_lat": "ОУТБЕСТ ОФ ДЖОЙ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "name_ru": "ОУТБЕСТ ОФ ДЖОЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
@@ -69,7 +78,7 @@
     {
       "id": "833165764",
       "name_lat": "ОУШЕН ОФ ТАЙМ БРЭНДАН",
-      "name_ru": "",
+      "name_ru": "ОУШЕН ОФ ТАЙМ БРЭНДАН",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "POODLE TOY",
       "total_shows": 4,
@@ -85,10 +94,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "153729099",
+      "id": "1825712962",
       "name_lat": "ОУШЕН ИЗ СОЛНЕЧНОГО ДОМА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ОУШЕН ИЗ СОЛНЕЧНОГО ДОМА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -96,10 +105,19 @@
     {
       "id": "651303297",
       "name_lat": "ОУШЕН ДАЙМОНД АРНОЛЬД ДЖУНО",
-      "name_ru": "",
+      "name_ru": "ОУШЕН ДАЙМОНД АРНОЛЬД ДЖУНО",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "117322286",
+      "name_lat": "ОУЭН",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -112,10 +130,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1819438952",
+      "id": "1838485284",
       "name_lat": "ОУШЕН ОФ ТАЙМ ВИВА ЛЯ ДИВА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ОУШЕН ОФ ТАЙМ ВИВА ЛЯ ДИВА",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -123,7 +141,7 @@
     {
       "id": "962507326",
       "name_lat": "ОУШЕН БРИС ГАНГСТА БОЙ",
-      "name_ru": "",
+      "name_ru": "ОУШЕН БРИС ГАНГСТА БОЙ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -132,28 +150,19 @@
     {
       "id": "1938579929",
       "name_lat": "ОУШЕН ОФ ТАЙМ ВИВА ЛА ДИВА",
-      "name_ru": "",
+      "name_ru": "ОУШЕН ОФ ТАЙМ ВИВА ЛА ДИВА",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "117322286",
+      "id": "569245603",
       "name_lat": "ОУЭН",
       "name_ru": "",
-      "breed": "МОПС",
+      "breed": "МОПС / PUG",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "268067487",
-      "name_lat": "ОУ СПРЕАД Е УИНГС / OH SPREAD YOUR WINGS",
-      "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -170,14 +179,13 @@
       "name_lat": "ОУШЕН ДАЙМОНД МАНХЭТТЕН",
       "name_ru": "",
       "breed": "БИГЛЬ / BEAGLE",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "619187022",
       "name_lat": "ОУШЕН ДАЙМОНД КЕНДИ СВИТИ",
-      "name_ru": "",
+      "name_ru": "ОУШЕН ДАЙМОНД КЕНДИ СВИТИ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -186,7 +194,7 @@
     {
       "id": "133062998",
       "name_lat": "ОУШЕН ЭЛАРИЯ БЕРИЛЛ ИЗ УСАДЬБЫ ОХОТНИКА",
-      "name_ru": "",
+      "name_ru": "ОУШЕН ЭЛАРИЯ БЕРИЛЛ ИЗ УСАДЬБЫ ОХОТНИКА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -202,12 +210,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "147638041",
-      "name_lat": "ОУШЕН АКУЛОВОДОГ",
+      "id": "1546904044",
+      "name_lat": "ОУТСТЕНДИНГ ЛИДЕР",
       "name_ru": "",
-      "breed": "АМ.МИНИАТЮРНАЯОВЧ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "575495224",
+      "name_lat": "ОУШЕН ДАЙМОНД РОЗЗИ ГОЛД",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -238,30 +255,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "67465243",
-      "name_lat": "ОУШЕН ДАЙМОНД КИЛЛЕР СМАЙЛ",
-      "name_ru": "",
+      "id": "582585407",
+      "name_lat": "ОУШЕН ДАЙМОНД КРИСТАЛ ОФ ХЕППИНЕСС",
+      "name_ru": "ОУШЕН ДАЙМОНД КРИСТАЛ ОФ ХЕППИНЕСС",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "250496343",
-      "name_lat": "ОУШЕН ОФ ТАЙМ АБСОЛЮТ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "id": "67465243",
+      "name_lat": "ОУШЕН ДАЙМОНД КИЛЛЕР СМАЙЛ",
+      "name_ru": "ОУШЕН ДАЙМОНД КИЛЛЕР СМАЙЛ",
+      "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "582585407",
-      "name_lat": "ОУШЕН ДАЙМОНД КРИСТАЛ ОФ ХЕППИНЕСС",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
+      "id": "1942182579",
+      "name_lat": "ОУШЕН ОФ ТАЙМ АБСОЛЮТ",
+      "name_ru": "ОУШЕН ОФ ТАЙМ АБСОЛЮТ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -274,28 +291,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1367726457",
+      "id": "1151176719",
       "name_lat": "ОУШЕН ЛАВ ЯРОСЛАВ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "820618803",
+      "id": "1513506852",
       "name_lat": "ОУШЭН Ф ХАУС КСЕНИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1240943828",
+      "id": "1423513291",
       "name_lat": "ОУР ДРИМ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -319,39 +336,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1721972804",
-      "name_lat": "ОУШЕН ДАЙМОНД КРИСТАЛ ОФ ХЭППИНЕСС",
-      "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "679932702",
-      "name_lat": "ОУТСТЕНДИНГ ЛИДЕР",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "856880012",
       "name_lat": "ОУДЖЮРЕЙ КИЙОУКА",
-      "name_ru": "",
+      "name_ru": "ОУДЖЮРЕЙ КИЙОУКА",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "569245603",
-      "name_lat": "ОУЭН",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -359,6 +349,15 @@
       "name_lat": "ОУШЕН",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "408701194",
+      "name_lat": "ОУШН ОФ ФЛОКИШ ФЕСТ",
+      "name_ru": "ОУШН ОФ ФЛОКИШ ФЕСТ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -373,28 +372,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "575495224",
-      "name_lat": "ОУШЕН ДАЙМОНД РОЗЗИ ГОЛД",
-      "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "789440585",
-      "name_lat": "ОУШН ОФ ФЛОКИШ ФЕСТ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1915657503",
+      "id": "1460745411",
       "name_lat": "ОУК ДЭРРОУ ФОМ ФЕСТБУРГ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -404,6 +385,15 @@
       "name_lat": "ОУШЕН ОФ ФЭНТЕЗИ",
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "313939793",
+      "name_lat": "ОУШЭН ФОМ ХАУС КСЕНИ",
+      "name_ru": "ОУШЭН ФОМ ХАУС КСЕНИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -427,10 +417,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1640776166",
+      "id": "940197343",
       "name_lat": "ОУШЕН ФОР МЭРИ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -472,6 +462,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1086436636",
+      "name_lat": "ОУШЕН БРИС НАТАЛИ",
+      "name_ru": "",
+      "breed": "КОКЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1573465625",
       "name_lat": "ОУ-ДЖИ-ДИ ФОН ГРИЗЗЛИ СТАЙЛ",
       "name_ru": "",
@@ -490,28 +488,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "313939793",
-      "name_lat": "ОУШЭН ФОМ ХАУС КСЕНИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1344545223",
+      "id": "1942117184",
       "name_lat": "ОУЭН Ф ХАУС КСЕНИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1702787449",
-      "name_lat": "ОУШЕН ФОМ ХАУС КСЕНИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

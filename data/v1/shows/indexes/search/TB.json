@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "TB",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "681343265",
+      "name_lat": "TBQ BACCARDI GOLD",
+      "name_ru": "",
+      "breed": "ШЕЛТИ АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "949261024",
+      "name_lat": "TBH JACKPOT TCENNIY PRIZE SEMPER INVICTA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1865699450",
+      "name_lat": "TBOR",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

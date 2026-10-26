@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "РЭ",
-  "count": 677,
+  "count": 678,
   "dogs": [
     {
       "id": "162019884",
@@ -13,10 +13,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "203486099",
+      "id": "1131946652",
       "name_lat": "РЭЙДЖЕНТ АЙС ЯМАХА",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "РЭЙДЖЕНТ АЙС ЯМАХА",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -42,10 +42,19 @@
     {
       "id": "463224412",
       "name_lat": "РЭДИЭНТ АРКТИК ФОКС",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ АРКТИК ФОКС",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1810614703",
+      "name_lat": "РЭД БРИЛЛИАНТС ТАЧ МАЙ ХАРТ",
+      "name_ru": "РЭД БРИЛЛИАНТС ТАЧ МАЙ ХАРТ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -58,19 +67,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "276891887",
-      "name_lat": "РЭД БРИЛЛИАНТС ТАЧ МАЙ ХАРТ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 36,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1906517508",
+      "id": "46779931",
       "name_lat": "РЭНДОЛЛ РОЗАЛИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -81,7 +81,7 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -96,7 +96,7 @@
     {
       "id": "464710349",
       "name_lat": "РЭММИ ИЗ ДОМА ПРИНЦЕССЫ ДИАНЫ",
-      "name_ru": "",
+      "name_ru": "РЭММИ ИЗ ДОМА ПРИНЦЕССЫ ДИАНЫ",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 7,
@@ -112,10 +112,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1801222439",
+      "id": "59706342",
       "name_lat": "РЭД РАПИД СТОРМ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "name_ru": "РЭД РАПИД СТОРМ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -139,10 +139,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "123039773",
+      "id": "1478706624",
       "name_lat": "РЭЙ МАРИН ХАВАННА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "name_ru": "РЭЙ МАРИН ХАВАННА",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 33,
       "competition_dog_id": null
@@ -150,7 +150,7 @@
     {
       "id": "900938277",
       "name_lat": "РЭДИЭНТ КЕЕПИНГ СКОРЕ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ КЕЕПИНГ СКОРЕ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
       "total_shows": 22,
@@ -159,7 +159,7 @@
     {
       "id": "234652182",
       "name_lat": "РЭД МАРИ'С РОУЗ БЛЕССЕД",
-      "name_ru": "",
+      "name_ru": "РЭД МАРИ'С РОУЗ БЛЕССЕД",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 15,
@@ -184,9 +184,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1408784876",
+      "name_lat": "РЭНДОЛЛ УГРОЗА",
+      "name_ru": "РЭНДОЛЛ УГРОЗА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "960362083",
       "name_lat": "РЭЙ МАРИН ЧЕСТЕР",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН ЧЕСТЕР",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 13,
@@ -195,7 +204,7 @@
     {
       "id": "990568726",
       "name_lat": "РЭНА ИЗ ДОМА НИКОЛЬ",
-      "name_ru": "",
+      "name_ru": "РЭНА ИЗ ДОМА НИКОЛЬ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
@@ -213,7 +222,7 @@
     {
       "id": "269164043",
       "name_lat": "РЭДИЭНТ НЕТ ФОХ ФОР АМУНДСЕН ТЕАМ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ НЕТ ФОХ ФОР АМУНДСЕН ТЕАМ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 14,
@@ -229,28 +238,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "838769083",
-      "name_lat": "РЭНДОЛЛ УГРОЗА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "242843825",
       "name_lat": "РЭД ЭНД ГОЛДЕН ГЛЭМУР ГЁРЛ",
-      "name_ru": "",
+      "name_ru": "РЭД ЭНД ГОЛДЕН ГЛЭМУР ГЁРЛ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "801314382",
+      "id": "1805449161",
       "name_lat": "РЭНДЖ РОВЕР ИЗ АЛТАЙСКОЙ ДИНАСТИИ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "РЭНДЖ РОВЕР ИЗ АЛТАЙСКОЙ ДИНАСТИИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -258,26 +258,17 @@
     {
       "id": "529493896",
       "name_lat": "РЭДСТОРИ САБРИНА",
-      "name_ru": "",
+      "name_ru": "РЭДСТОРИ САБРИНА",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1793083182",
-      "name_lat": "РЭДИЭНТ МОТИОН ИН ЕМОТИОН",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1501705755",
+      "id": "864880652",
       "name_lat": "РЭЙНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -310,10 +301,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "29778026",
+      "id": "126110044",
       "name_lat": "РЭДИ СТЭДИ УИЛЛ СМИТ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "name_ru": "РЭДИ СТЭДИ УИЛЛ СМИТ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -328,10 +319,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "737079681",
+      "id": "1738173557",
       "name_lat": "РЭД БРИЛЛИАНТС ОЛЬБУРД ДЖУС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "РЭД БРИЛЛИАНТС ОЛЬБУРД ДЖУС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -348,7 +339,7 @@
     {
       "id": "710777148",
       "name_lat": "РЭД МАРИ'С МАЖИКАЛ АТТРАКТИОН",
-      "name_ru": "",
+      "name_ru": "РЭД МАРИ'С МАЖИКАЛ АТТРАКТИОН",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 13,
@@ -357,7 +348,7 @@
     {
       "id": "844364323",
       "name_lat": "РЭММИ РАПИТ ФАЙР",
-      "name_ru": "",
+      "name_ru": "РЭММИ РАПИТ ФАЙР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
@@ -366,7 +357,7 @@
     {
       "id": "176383614",
       "name_lat": "РЭДИ СТЭДИ ЗАРИНА",
-      "name_ru": "",
+      "name_ru": "РЭДИ СТЭДИ ЗАРИНА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 17,
@@ -375,7 +366,7 @@
     {
       "id": "1244310840",
       "name_lat": "РЭДИ СТЭДИ Ю А МАЙ ДРИМ",
-      "name_ru": "",
+      "name_ru": "РЭДИ СТЭДИ Ю А МАЙ ДРИМ",
       "breed": "ЦВЕРГШНАУЦЕР (ЧЕРН)",
       "breed_en": "",
       "total_shows": 7,
@@ -384,7 +375,7 @@
     {
       "id": "1336743036",
       "name_lat": "РЭД ЭМЕРАЛЬД БРИЛЛИАНТ ОФ МАЙ СОУЛ",
-      "name_ru": "",
+      "name_ru": "РЭД ЭМЕРАЛЬД БРИЛЛИАНТ ОФ МАЙ СОУЛ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 7,
@@ -400,19 +391,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1540551848",
+      "id": "1292804173",
       "name_lat": "РЭДИ СТЭДИ ТЕЙК ЗЕ ЛИД",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ /",
+      "name_ru": "РЭДИ СТЭДИ ТЕЙК ЗЕ ЛИД",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1265374024",
+      "id": "159545959",
+      "name_lat": "РЭДСТОРИ БОНД",
+      "name_ru": "РЭДСТОРИ БОНД",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1242499382",
       "name_lat": "РЭД БРИЛЛИАНТС ЛИ ОФ ЛАКИ СТАРС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "РЭД БРИЛЛИАНТС ЛИ ОФ ЛАКИ СТАРС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -420,7 +420,7 @@
     {
       "id": "1257416492",
       "name_lat": "РЭМ 2 ИЗ ДОМА ЛЕВШОВОЙ",
-      "name_ru": "",
+      "name_ru": "РЭМ 2 ИЗ ДОМА ЛЕВШОВОЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 9,
@@ -429,7 +429,7 @@
     {
       "id": "1028611308",
       "name_lat": "РЭЙВЕН ДАР ПРЕДКОВ ИЗ КАМЕЛОТА",
-      "name_ru": "",
+      "name_ru": "РЭЙВЕН ДАР ПРЕДКОВ ИЗ КАМЕЛОТА",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 6,
@@ -438,17 +438,17 @@
     {
       "id": "269266189",
       "name_lat": "РЭМИРА НЕБЕСНАЯ СИМФОНИЯ",
-      "name_ru": "",
+      "name_ru": "РЭМИРА НЕБЕСНАЯ СИМФОНИЯ",
       "breed": "МАЙОРКСКИЙ МАСТИФ (КА ДЕ БО)",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1782001645",
+      "id": "896599069",
       "name_lat": "РЭЙДЖЕНТ АЙС БРАЙТ ФОКС",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -465,7 +465,7 @@
     {
       "id": "553924300",
       "name_lat": "РЭДИАНС ОФ ГЛОРИ ИЗ РОСТОВА ПАПЫ",
-      "name_ru": "",
+      "name_ru": "РЭДИАНС ОФ ГЛОРИ ИЗ РОСТОВА ПАПЫ",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -483,7 +483,7 @@
     {
       "id": "653537650",
       "name_lat": "РЭТТУНГ ДИНСТ ПАНДОРА",
-      "name_ru": "",
+      "name_ru": "РЭТТУНГ ДИНСТ ПАНДОРА",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 7,
@@ -499,12 +499,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1102372533",
+      "name_lat": "РЭДИЭНТ КЕЕП ИТ БУРНИН",
+      "name_ru": "РЭДИЭНТ КЕЕП ИТ БУРНИН",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "818740899",
       "name_lat": "РЭДИЭНТ К АБ ИГНЕ ИГНЕМ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ К АБ ИГНЕ ИГНЕМ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1001379637",
+      "name_lat": "РЭПСОДИ ЛАВ МАКСИ",
+      "name_ru": "РЭПСОДИ ЛАВ МАКСИ",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -517,30 +535,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "2261145",
+      "name_lat": "РЭЙДЖЕНТ АЙС ШАНТАЛИ БЛЕК ФОКС",
+      "name_ru": "РЭЙДЖЕНТ АЙС ШАНТАЛИ БЛЕК ФОКС",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "609218757",
       "name_lat": "РЭДИЭНТ ЧАС ИКС",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ ЧАС ИКС",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1001379637",
-      "name_lat": "РЭПСОДИ ЛАВ МАКСИ",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "2261145",
-      "name_lat": "РЭЙДЖЕНТ АЙС ШАНТАЛИ БЛЕК ФОКС",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -555,7 +564,7 @@
     {
       "id": "1104473520",
       "name_lat": "РЭД МАРИ'С ТАНДЕР",
-      "name_ru": "",
+      "name_ru": "РЭД МАРИ'С ТАНДЕР",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 10,
@@ -564,17 +573,17 @@
     {
       "id": "1463549054",
       "name_lat": "РЭМБО ХОТ ПЕППЕР",
-      "name_ru": "",
+      "name_ru": "РЭМБО ХОТ ПЕППЕР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "142106673",
+      "id": "1631772501",
       "name_lat": "РЭЙ ФАЙЕР",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -582,10 +591,19 @@
     {
       "id": "128831093",
       "name_lat": "РЭЙ МАРИН БАУНТИ",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН БАУНТИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "603497964",
+      "name_lat": "РЭДИЭНТ ТИТАНИУМ ГОЛД",
+      "name_ru": "РЭДИЭНТ ТИТАНИУМ ГОЛД",
+      "breed": "Американская акита",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -598,28 +616,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "603497964",
-      "name_lat": "РЭДИЭНТ ТИТАНИУМ ГОЛД",
-      "name_ru": "",
-      "breed": "Американская акита",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1102372533",
-      "name_lat": "РЭДИЭНТ КЕЕП ИТ БУРНИН",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "83430268",
+      "id": "108481982",
       "name_lat": "РЭДИ СТЭДИ УСПЕШНАЯ ЛЕДИ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "name_ru": "РЭДИ СТЭДИ УСПЕШНАЯ ЛЕДИ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -634,10 +634,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "96841392",
+      "id": "1784445803",
       "name_lat": "РЭДИАНТ БЬЮТИ",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_ru": "РЭДИАНТ БЬЮТИ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -645,17 +645,8 @@
     {
       "id": "889605852",
       "name_lat": "Рэди Стэди Юзфул Стар",
-      "name_ru": "",
+      "name_ru": "Рэди Стэди Юзфул Стар",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНОГО ОКРАСА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "159545959",
-      "name_lat": "РЭДСТОРИ БОНД",
-      "name_ru": "",
-      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -672,7 +663,7 @@
     {
       "id": "1223113611",
       "name_lat": "РЭДИ ТУ РУЛ ИЗ ОЛИМПИК СИТИ",
-      "name_ru": "",
+      "name_ru": "РЭДИ ТУ РУЛ ИЗ ОЛИМПИК СИТИ",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
       "total_shows": 5,
@@ -699,7 +690,7 @@
     {
       "id": "80325106",
       "name_lat": "РЭМ ИЗ ДОМА ЛЕВШОВОЙ",
-      "name_ru": "",
+      "name_ru": "РЭМ ИЗ ДОМА ЛЕВШОВОЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 10,
@@ -717,7 +708,7 @@
     {
       "id": "920557039",
       "name_lat": "РЭЙС СТАРС ЮКАС",
-      "name_ru": "",
+      "name_ru": "РЭЙС СТАРС ЮКАС",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
@@ -726,16 +717,25 @@
     {
       "id": "186437037",
       "name_lat": "РЭД МАРИ'С КАНА АЛЬБЕРОНА",
-      "name_ru": "",
+      "name_ru": "РЭД МАРИ'С КАНА АЛЬБЕРОНА",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "295962805",
+      "name_lat": "РЭЙ МАРИН ПАПАЙЯ",
+      "name_ru": "РЭЙ МАРИН ПАПАЙЯ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
       "id": "1914877031",
       "name_lat": "РЭДИ СТЭДИ ТАЙМЛЕС БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "РЭДИ СТЭДИ ТАЙМЛЕС БЬЮТИ",
       "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -769,15 +769,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1389211382",
-      "name_lat": "РЭЙДЖЕНТ АЙС ЯКУДЗА",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1675037387",
       "name_lat": "РЭТТУНГ ДИНСТ НАВИ",
       "name_ru": "",
@@ -805,10 +796,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "511185712",
+      "id": "907219837",
       "name_lat": "РЭЙДЖЕНТ АЙС МАРГО",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -825,7 +816,7 @@
     {
       "id": "1942705507",
       "name_lat": "РЭЙ НОРТЭ АМОНЕТ",
-      "name_ru": "",
+      "name_ru": "РЭЙ НОРТЭ АМОНЕТ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
@@ -834,7 +825,7 @@
     {
       "id": "1279241077",
       "name_lat": "РЭТТ ГЕНРИ ФЭВОРИТ БИГ БОСС",
-      "name_ru": "",
+      "name_ru": "РЭТТ ГЕНРИ ФЭВОРИТ БИГ БОСС",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
@@ -906,7 +897,7 @@
     {
       "id": "1390759950",
       "name_lat": "РЭТТУНГ ДИНСТ МАЙН ШТЕРН",
-      "name_ru": "",
+      "name_ru": "РЭТТУНГ ДИНСТ МАЙН ШТЕРН",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА, МАЛИНУА",
       "breed_en": "",
       "total_shows": 2,
@@ -922,10 +913,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1308474567",
+      "id": "317259267",
       "name_lat": "РЭДИ СТЭДИ БАРБАРА ДЖЕЙН",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -940,18 +931,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "202443744",
-      "name_lat": "РЭЙ МАРИН ПАПАЙЯ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
       "id": "1290600950",
       "name_lat": "РЭДЖИ ОТ ФИЛИППОВОЙ",
-      "name_ru": "",
+      "name_ru": "РЭДЖИ ОТ ФИЛИППОВОЙ",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 4,
@@ -960,7 +942,7 @@
     {
       "id": "398764776",
       "name_lat": "РЭД РОУЗ С БОЛЬШОЙ БУКВЫ",
-      "name_ru": "",
+      "name_ru": "РЭД РОУЗ С БОЛЬШОЙ БУКВЫ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -994,15 +976,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1780171486",
-      "name_lat": "РЭДИЭНТ КРАКЕН",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "777301860",
       "name_lat": "РЭД ЭМИРАЛЬД ГЭЛАКСИ",
       "name_ru": "",
@@ -1023,7 +996,7 @@
     {
       "id": "1596013047",
       "name_lat": "РЭМ ДЖЕМ ОФ АМАТО ДИАМАНТЕ",
-      "name_ru": "",
+      "name_ru": "РЭМ ДЖЕМ ОФ АМАТО ДИАМАНТЕ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "AMERICAN HAIRLESS TERRIER",
       "total_shows": 11,
@@ -1032,7 +1005,7 @@
     {
       "id": "608461294",
       "name_lat": "РЭЙ МАРИН СИРИУС",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН СИРИУС",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 23,
@@ -1041,7 +1014,7 @@
     {
       "id": "626547688",
       "name_lat": "РЭЙ ОФ ГОЛДЕН САН ВАЛИБАЛ ЭЛЕМЕНТ",
-      "name_ru": "",
+      "name_ru": "РЭЙ ОФ ГОЛДЕН САН ВАЛИБАЛ ЭЛЕМЕНТ",
       "breed": "БИГЛЬ",
       "breed_en": "BEAGLE",
       "total_shows": 9,
@@ -1050,7 +1023,7 @@
     {
       "id": "1374013844",
       "name_lat": "РЭД КОВЕН КРИСТАЛ КЛЕАР ФОР КРИСБИСС",
-      "name_ru": "",
+      "name_ru": "РЭД КОВЕН КРИСТАЛ КЛЕАР ФОР КРИСБИСС",
       "breed": "СИБА",
       "breed_en": "SHIBA",
       "total_shows": 33,
@@ -1059,25 +1032,24 @@
     {
       "id": "320831453",
       "name_lat": "РЭЙ МАРИН УРИЯ РЕТТ БАТЛЕР",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН УРИЯ РЕТТ БАТЛЕР",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "306736405",
-      "name_lat": "РЭДИЭНТ ЯШМА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 10,
+      "id": "180899625",
+      "name_lat": "Рэд Мари'с Брэнди Брингинг Хаппинесс",
+      "name_ru": "Рэд Мари'с Брэнди Брингинг Хаппинесс",
+      "breed": "СИБА",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "1512494230",
       "name_lat": "РЭД СИТИ ШАРМ ИГРИВЫЙ НРАВ",
-      "name_ru": "",
+      "name_ru": "РЭД СИТИ ШАРМ ИГРИВЫЙ НРАВ",
       "breed": "ТОЙ-ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -1086,7 +1058,7 @@
     {
       "id": "1764268241",
       "name_lat": "РЭЙ ОФ ГОЛДЕН САН ЗОДИАК ФУЛ СЭТ",
-      "name_ru": "",
+      "name_ru": "РЭЙ ОФ ГОЛДЕН САН ЗОДИАК ФУЛ СЭТ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 19,
@@ -1095,10 +1067,19 @@
     {
       "id": "1902841750",
       "name_lat": "РЭЙ МАРИН ОТВЁРТКА",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН ОТВЁРТКА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "53977674",
+      "name_lat": "РЭЙ МАРТИН ГРЕЙС ВИКТОРИЯ",
+      "name_ru": "РЭЙ МАРТИН ГРЕЙС ВИКТОРИЯ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1131,7 +1112,7 @@
     {
       "id": "65552980",
       "name_lat": "РЭДИ СТЭДИ САМАНТА МИОЛЕТТА",
-      "name_ru": "",
+      "name_ru": "РЭДИ СТЭДИ САМАНТА МИОЛЕТТА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 12,
@@ -1140,7 +1121,7 @@
     {
       "id": "618237150",
       "name_lat": "РЭНТАЦУ ТОМО",
-      "name_ru": "",
+      "name_ru": "РЭНТАЦУ ТОМО",
       "breed": "акита",
       "breed_en": "",
       "total_shows": 9,
@@ -1149,7 +1130,7 @@
     {
       "id": "176636387",
       "name_lat": "РЭДИЭНТ ПРОМ КУЕЕН",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ ПРОМ КУЕЕН",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 8,
@@ -1158,35 +1139,44 @@
     {
       "id": "157099490",
       "name_lat": "РЭЙ МАРИН МАРТИНИ РОССО",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН МАРТИНИ РОССО",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
+      "id": "1059719936",
+      "name_lat": "РЭДИЭНТ ЛАРГЕР ТХАН ЛИФЕ",
+      "name_ru": "",
+      "breed": "ТАКСА АМЕРИКАНСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "580302147",
       "name_lat": "РЭД ЭНД ГОЛДЕН ЕРМАК",
-      "name_ru": "",
+      "name_ru": "РЭД ЭНД ГОЛДЕН ЕРМАК",
       "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "180899625",
-      "name_lat": "Рэд Мари'с Брэнди Брингинг Хаппинесс",
-      "name_ru": "",
-      "breed": "СИБА",
+      "id": "33540523",
+      "name_lat": "РЭДИЭНТ УНИВЕРСАЛ МОДЕЛ",
+      "name_ru": "РЭДИЭНТ УНИВЕРСАЛ МОДЕЛ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1271575848",
+      "id": "103501005",
       "name_lat": "РЭД ЭНД ГОЛДЕН ВИОЛА",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР /",
+      "name_ru": "РЭД ЭНД ГОЛДЕН ВИОЛА",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1194,10 +1184,19 @@
     {
       "id": "349271020",
       "name_lat": "РЭД ЭМЕРАЛЬД МЕРСЕДЕС",
-      "name_ru": "",
+      "name_ru": "РЭД ЭМЕРАЛЬД МЕРСЕДЕС",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "545319770",
+      "name_lat": "РЭЙС СТАРС МИЯ",
+      "name_ru": "РЭЙС СТАРС МИЯ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1210,10 +1209,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "79889236",
+      "id": "969548733",
       "name_lat": "РЭДИ СТЭДИ ЯСНЫЙ СОКОЛ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "name_ru": "РЭДИ СТЭДИ ЯСНЫЙ СОКОЛ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1228,9 +1227,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1427191176",
+      "name_lat": "РЭД СИТИ ДОГ ЕВГЕНИЯ",
+      "name_ru": "РЭД СИТИ ДОГ ЕВГЕНИЯ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1550013916",
       "name_lat": "РЭЯ АСТЕРА АМОР",
-      "name_ru": "",
+      "name_ru": "РЭЯ АСТЕРА АМОР",
       "breed": "DACHSHUND STANDARD",
       "breed_en": "",
       "total_shows": 7,
@@ -1255,37 +1263,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "201674482",
+      "name_lat": "РЭМБО КОРОЛЬ РИНГА",
+      "name_ru": "РЭМБО КОРОЛЬ РИНГА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1126962060",
       "name_lat": "РЭДИЭНТ ТИМЕ ТО ЧАНЖЕ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ ТИМЕ ТО ЧАНЖЕ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "545319770",
-      "name_lat": "РЭЙС СТАРС МИЯ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1261215135",
       "name_lat": "РЭД СИТИ ДОГ ЖАК ДЖОННИ",
-      "name_ru": "",
+      "name_ru": "РЭД СИТИ ДОГ ЖАК ДЖОННИ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "24940313",
+      "id": "514338902",
       "name_lat": "РЭДИ СТЭДИ ОРНЕЛЛА",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "name_ru": "РЭДИ СТЭДИ ОРНЕЛЛА",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1293,17 +1301,17 @@
     {
       "id": "618961449",
       "name_lat": "РЭМА С КОНЧУРЫ",
-      "name_ru": "",
+      "name_ru": "РЭМА С КОНЧУРЫ",
       "breed": "НЕМЕЦКИЙ МАЛЫЙ ШПИЦ (оранжевый, серый, другие окрасы)",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1023750127",
+      "id": "655215123",
       "name_lat": "РЭДИ СТЭДИ УДАЧУ ПРИНОСЯЩАЯ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "name_ru": "РЭДИ СТЭДИ УДАЧУ ПРИНОСЯЩАЯ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1311,10 +1319,10 @@
     {
       "id": "253077547",
       "name_lat": "РЭД СИТИ ДОГ ЖОРЖ",
-      "name_ru": "",
+      "name_ru": "РЭД СИТИ ДОГ ЖОРЖ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1327,46 +1335,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "977878116",
-      "name_lat": "РЭДИЭНТ ФАСТ ЛИКЕ А БУЛЛЕТ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1469632953",
       "name_lat": "РЭЙДЖЕНТ АЙС СВИТ БЕЙГЛ",
-      "name_ru": "",
+      "name_ru": "РЭЙДЖЕНТ АЙС СВИТ БЕЙГЛ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1427191176",
-      "name_lat": "РЭД СИТИ ДОГ ЕВГЕНИЯ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "476903261",
       "name_lat": "РЭД МАРИ'С ВИКТОРИЯ",
-      "name_ru": "",
+      "name_ru": "РЭД МАРИ'С ВИКТОРИЯ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "657607549",
+      "id": "625611680",
       "name_lat": "РЭД ЭНД ГОЛДЕН БРИЗИ СПАРК",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР /",
+      "name_ru": "РЭД ЭНД ГОЛДЕН БРИЗИ СПАРК",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1374,28 +1364,19 @@
     {
       "id": "101853106",
       "name_lat": "РЭД РЭНДЭЛЛ ДАРЛИНГ ЗЕ КИНГ",
-      "name_ru": "",
+      "name_ru": "РЭД РЭНДЭЛЛ ДАРЛИНГ ЗЕ КИНГ",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "100322603",
-      "name_lat": "РЭДИЭНТ ТОУЧ ОФ ГЛОРЫ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "id": "113507370",
+      "name_lat": "РЭД БРИЛЛИАНТС ЦЕЛАЯ ВСЕЛЕННАЯ",
+      "name_ru": "РЭД БРИЛЛИАНТС ЦЕЛАЯ ВСЕЛЕННАЯ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "201674482",
-      "name_lat": "РЭМБО КОРОЛЬ РИНГА",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1408,19 +1389,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "965833296",
-      "name_lat": "РЭД РЭНДЭЛЛ ВЕЛОНА",
+      "id": "165423388",
+      "name_lat": "РЭМИРА",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed": "БРАЗИЛЬСКИЙ ФИЛА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1302798524",
+      "id": "898196697",
       "name_lat": "РЭД ЭНД ГОЛДЕН АУРИКА",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР /",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1428,7 +1409,7 @@
     {
       "id": "293892334",
       "name_lat": "РЭДИЭНТ БООМ БООМ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ БООМ БООМ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 5,
@@ -1437,7 +1418,7 @@
     {
       "id": "676488733",
       "name_lat": "РЭЙ ОФ САНШАЙН",
-      "name_ru": "",
+      "name_ru": "РЭЙ ОФ САНШАЙН",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 12,
@@ -1453,8 +1434,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1399373304",
-      "name_lat": "РЭЙ МАРИН НОН- СТОП",
+      "id": "1476202326",
+      "name_lat": "РЭЙ МАРИН НОН-СТОП",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
@@ -1480,9 +1461,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1351884206",
+      "name_lat": "РЭД КОВЕН БЛООД АНД ЧОКОЛАТЕ",
+      "name_ru": "РЭД КОВЕН БЛООД АНД ЧОКОЛАТЕ",
+      "breed": "Сиба",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1964603682",
       "name_lat": "РЭЙ ОФ ГОЛДЕН САН БАЛАНС ОФ ПАУА",
-      "name_ru": "",
+      "name_ru": "РЭЙ ОФ ГОЛДЕН САН БАЛАНС ОФ ПАУА",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 6,
@@ -1507,28 +1497,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1351884206",
-      "name_lat": "РЭД КОВЕН БЛООД АНД ЧОКОЛАТЕ",
-      "name_ru": "",
-      "breed": "Сиба",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1069959057",
       "name_lat": "РЭД МАРИ'С ВУЛКАН ОНЕ",
-      "name_ru": "",
+      "name_ru": "РЭД МАРИ'С ВУЛКАН ОНЕ",
       "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "287814616",
+      "name_lat": "РЭД ЭНД ГОЛДЕН ГАЙ",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "457954902",
+      "id": "783463082",
       "name_lat": "РЭЙС СТАРС ЧЕРРИ БЕРРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "РЭЙС СТАРС ЧЕРРИ БЕРРИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1539,23 +1529,23 @@
       "name_ru": "",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "581822031",
+      "name_lat": "РЭД СИТИ ДОГ ЖЕММИ ША-ДЕН",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "841596475",
-      "name_lat": "РЭД СИТИ ДОГ ЖЕММИ ША- ДЕН",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "504816645",
+      "id": "533262104",
       "name_lat": "РЭММИ СИГУРТ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "РЭММИ СИГУРТ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1572,8 +1562,17 @@
     {
       "id": "876209528",
       "name_lat": "РЭЙ МАРИН ХАРТ",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН ХАРТ",
       "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "564774362",
+      "name_lat": "РЭД МАРИ'С АРЬЯ СТАРК ФАЙТЕР",
+      "name_ru": "РЭД МАРИ'С АРЬЯ СТАРК ФАЙТЕР",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1581,7 +1580,7 @@
     {
       "id": "89957259",
       "name_lat": "РЭЙС СТАРС ЧЕРОКИ БЛЭК",
-      "name_ru": "",
+      "name_ru": "РЭЙС СТАРС ЧЕРОКИ БЛЭК",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
@@ -1590,17 +1589,8 @@
     {
       "id": "623112995",
       "name_lat": "РЭДА ОФ ХАУС НАТАЛИ",
-      "name_ru": "",
+      "name_ru": "РЭДА ОФ ХАУС НАТАЛИ",
       "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1540488465",
-      "name_lat": "РЭД БРИЛЛИАНТС ЦЕЛАЯ ВСЕЛЕННАЯ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1608,7 +1598,7 @@
     {
       "id": "1688776242",
       "name_lat": "РЭЙ МАРИН МАММА МИЯ",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН МАММА МИЯ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 7,
@@ -1617,7 +1607,7 @@
     {
       "id": "855251256",
       "name_lat": "РЭЙ МАРИН РАПСОДИЯ",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН РАПСОДИЯ",
       "breed": "Доберман",
       "breed_en": "",
       "total_shows": 5,
@@ -1626,19 +1616,10 @@
     {
       "id": "1699947647",
       "name_lat": "РЭЙСДОГ АМОНГ СТАРС",
-      "name_ru": "",
+      "name_ru": "РЭЙСДОГ АМОНГ СТАРС",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "33540523",
-      "name_lat": "РЭДИЭНТ УНИВЕРСАЛ МОДЕЛ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1651,19 +1632,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "771018194",
+      "id": "194736467",
       "name_lat": "РЭД СИТИ ДОГ АФИНА ПАЛЛАДА",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "name_ru": "РЭД СИТИ ДОГ АФИНА ПАЛЛАДА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1191739295",
+      "id": "44668565",
       "name_lat": "РЭДИ СТЭДИ БУРЯ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "РЭДИ СТЭДИ БУРЯ",
+      "breed": "СТАФФОРДШИРСКИЙ ЖЕСТКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1678,10 +1659,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1786182826",
+      "id": "1145407004",
       "name_lat": "РЭДИ СТЭДИ ЦЕЯ БЛЮ СКАЙ",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1707,7 +1688,7 @@
     {
       "id": "1420655493",
       "name_lat": "РЭМБО ОТ ЛУГАРЫ",
-      "name_ru": "",
+      "name_ru": "РЭМБО ОТ ЛУГАРЫ",
       "breed": "РОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -1725,17 +1706,17 @@
     {
       "id": "27005788",
       "name_lat": "РЭЙДИЭНС СЕВЕРНАЯ ЗАРЯ ИЗ КАМЕЛОТА",
-      "name_ru": "",
+      "name_ru": "РЭЙДИЭНС СЕВЕРНАЯ ЗАРЯ ИЗ КАМЕЛОТА",
       "breed": "УИППЕТ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1150541516",
+      "id": "1564886185",
       "name_lat": "РЭДИЭНТ ГРЕАТЕСТ ЛАК",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "name_ru": "РЭДИЭНТ ГРЕАТЕСТ ЛАК",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1743,26 +1724,35 @@
     {
       "id": "1738200368",
       "name_lat": "РЭМЗО ЭСПАДА",
-      "name_ru": "",
+      "name_ru": "РЭМЗО ЭСПАДА",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1832002343",
+      "id": "1561479547",
       "name_lat": "РЭДИ СТЭДИ ХАННИ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "name_ru": "РЭДИ СТЭДИ ХАННИ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "394188296",
-      "name_lat": "РЭДИЭНТ НЕВ ИН ТОВН",
-      "name_ru": "",
+      "id": "1836277935",
+      "name_lat": "РЭДИЭНТ РЕД АРРОВ",
+      "name_ru": "РЭДИЭНТ РЕД АРРОВ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "220805090",
+      "name_lat": "РЭДИЭНТ НЕВ ИН ТОВН",
+      "name_ru": "РЭДИЭНТ НЕВ ИН ТОВН",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1770,7 +1760,7 @@
     {
       "id": "1767316528",
       "name_lat": "РЭТТУНГ ДИНСТ МАЛИБУ (М)",
-      "name_ru": "",
+      "name_ru": "РЭТТУНГ ДИНСТ МАЛИБУ (М)",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 5,
@@ -1788,25 +1778,16 @@
     {
       "id": "481026876",
       "name_lat": "РЭЙНБОУ ЮНИКОРН",
-      "name_ru": "",
+      "name_ru": "РЭЙНБОУ ЮНИКОРН",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1880646278",
-      "name_lat": "РЭДИЭНТ ГЛОСС ОФ ГЛОРЫ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "750080636",
       "name_lat": "РЭЙ МАРИН ОПТИМУС ПРАЙМ",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН ОПТИМУС ПРАЙМ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 8,
@@ -1815,25 +1796,16 @@
     {
       "id": "261693402",
       "name_lat": "РЭД КОВЕН БЕБИ БОСС",
-      "name_ru": "",
+      "name_ru": "РЭД КОВЕН БЕБИ БОСС",
       "breed": "Сиба",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1149357765",
-      "name_lat": "РЭД ЭНД ГОЛДЕН ГАЙ",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "119650561",
       "name_lat": "РЭД СИТИ ШАРМ ЖИЗНЬ ПРЕКРАСНА",
-      "name_ru": "",
+      "name_ru": "РЭД СИТИ ШАРМ ЖИЗНЬ ПРЕКРАСНА",
       "breed": "АМЕРИКАНСКИЙ ТОЙ-",
       "breed_en": "",
       "total_shows": 4,
@@ -1851,7 +1823,7 @@
     {
       "id": "492785126",
       "name_lat": "РЭДИЭНТ ЖЮСТ ТХЕ ВАЙ ЙОЮ АРЕ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ ЖЮСТ ТХЕ ВАЙ ЙОЮ АРЕ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 4,
@@ -1860,26 +1832,17 @@
     {
       "id": "1756131971",
       "name_lat": "РЭДКЛИФ СОЛЕЙ РОЯЛ",
-      "name_ru": "",
+      "name_ru": "РЭДКЛИФ СОЛЕЙ РОЯЛ",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1001344391",
-      "name_lat": "РЭДИЭНТ ЗОНЕ ОФ ЛОВЕ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1463186576",
+      "id": "1608308586",
       "name_lat": "РЭЙДЖЕНТ АЙС НАДЛЕР ВИКТОРИЯ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1887,7 +1850,7 @@
     {
       "id": "106690337",
       "name_lat": "РЭЙДЕН КАТСУ",
-      "name_ru": "",
+      "name_ru": "РЭЙДЕН КАТСУ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 5,
@@ -1912,36 +1875,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "254795232",
+      "id": "1931249326",
       "name_lat": "РЭД БРИЛЛИАНТС ЗЕСТ ФО ШОУ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "РЭД БРИЛЛИАНТС ЗЕСТ ФО ШОУ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "903421576",
-      "name_lat": "РЭЙ МАРИН ИРИСКА",
+      "id": "1477977112",
+      "name_lat": "РЭД ЭНД ВАЙТ СИБИРИЯ ЛАВР",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1394497797",
-      "name_lat": "РЭД ЭНД ВАЙТ СИБИРИЯ ЛАВР",
+      "id": "1555311189",
+      "name_lat": "РЭЙ МАРИН ИРИСКА",
       "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1019484117",
+      "name_lat": "РЭД ЭМЕРАЛЬД ДА ЧЕЗ БЭЛЛЬ",
+      "name_ru": "РЭД ЭМЕРАЛЬД ДА ЧЕЗ БЭЛЛЬ",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1582570507",
+      "name_lat": "РЭМ",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "91950004",
       "name_lat": "РЭД ЭНД ГОЛДЕН ЕЖЕВИКА",
-      "name_ru": "",
+      "name_ru": "РЭД ЭНД ГОЛДЕН ЕЖЕВИКА",
       "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -1950,7 +1931,7 @@
     {
       "id": "279586216",
       "name_lat": "РЭДИЭНТ ГРЕАТЕР ТХЕН ЛОВЕ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ ГРЕАТЕР ТХЕН ЛОВЕ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -1959,7 +1940,7 @@
     {
       "id": "42660993",
       "name_lat": "РЭЙ МАРИН УСТЕРИКС МОРГАН",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН УСТЕРИКС МОРГАН",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 6,
@@ -1968,7 +1949,7 @@
     {
       "id": "626871489",
       "name_lat": "РЭДИ СТЭДИ ТАЙМЛЕСС БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "РЭДИ СТЭДИ ТАЙМЛЕСС БЬЮТИ",
       "breed": "БЕЛОГО ОКРАСА",
       "breed_en": "",
       "total_shows": 4,
@@ -1977,17 +1958,17 @@
     {
       "id": "1605423258",
       "name_lat": "РЭД ПРАЙД ОЛАНА НЭКСТ",
-      "name_ru": "",
+      "name_ru": "РЭД ПРАЙД ОЛАНА НЭКСТ",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed_en": "RHODESIAN RIDGEBACK",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1586382444",
+      "id": "877587022",
       "name_lat": "РЭДИ СТЭДИ ФЕДЕРИК ЛОРАН",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "name_ru": "РЭДИ СТЭДИ ФЕДЕРИК ЛОРАН",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2002,28 +1983,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "302274925",
-      "name_lat": "РЭМИРА",
-      "name_ru": "",
-      "breed": "БРАЗИЛЬСКИЙ ФИЛА / FILA BRASILEIRO БУЛЬДОГ / BULLDOG",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "571541378",
       "name_lat": "РЭЯ ЗОЛОТО ЕНИСЕЯ",
-      "name_ru": "",
+      "name_ru": "РЭЯ ЗОЛОТО ЕНИСЕЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1338859938",
-      "name_lat": "РЭДИЭНТ ТАЙФУН",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2031,19 +1994,10 @@
     {
       "id": "852517396",
       "name_lat": "РЭМБО ИЗ ДОМА ШЕБИС",
-      "name_ru": "",
+      "name_ru": "РЭМБО ИЗ ДОМА ШЕБИС",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1571267649",
-      "name_lat": "РЭМИРА",
-      "name_ru": "",
-      "breed": "БРАЗИЛЬСКИЙ ФИЛА /",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2056,6 +2010,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1611746681",
+      "name_lat": "РЭД БРИЛЛИАНТС ЕДВАРДГОЛДЕН ДОУН",
+      "name_ru": "РЭД БРИЛЛИАНТС ЕДВАРДГОЛДЕН ДОУН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1779150966",
       "name_lat": "РЭД ЭНД ВАЙТ СИБИРИЯ УЛЬРИКА",
       "name_ru": "",
@@ -2065,18 +2028,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1034054917",
-      "name_lat": "РЭД БРИЛЛИАНТС ЕДВАРДГОЛДЕН ДОУН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1930023077",
       "name_lat": "РЭД ЭНД ГОЛДЕН ДАЙМОНД ИН ЗЕ РАФ",
-      "name_ru": "",
+      "name_ru": "РЭД ЭНД ГОЛДЕН ДАЙМОНД ИН ЗЕ РАФ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -2085,7 +2039,7 @@
     {
       "id": "109483689",
       "name_lat": "РЭД РЭНДЭЛЛ МЭГГИ КИД",
-      "name_ru": "",
+      "name_ru": "РЭД РЭНДЭЛЛ МЭГГИ КИД",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -2094,19 +2048,10 @@
     {
       "id": "271136460",
       "name_lat": "РЭДИЭНТ АРТХУР ТХЕ КИНГ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ АРТХУР ТХЕ КИНГ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1836277935",
-      "name_lat": "РЭДИЭНТ РЕД АРРОВ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2114,15 +2059,6 @@
       "name_lat": "РЭД КОВЕН БУРН ТХЕ ВИТЧ",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1582570507",
-      "name_lat": "РЭМ",
-      "name_ru": "",
-      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2137,10 +2073,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1866230043",
+      "id": "693627819",
       "name_lat": "РЭД БРИЛЛИАНТС ЗЕНИТ ОФ ФЕЙМ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "РЭД БРИЛЛИАНТС ЗЕНИТ ОФ ФЕЙМ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -2173,10 +2109,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "492490296",
+      "id": "1818547037",
       "name_lat": "РЭКС ДЭУС ПРИНЦ РИКИ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "name_ru": "РЭКС ДЭУС ПРИНЦ РИКИ",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2193,8 +2129,17 @@
     {
       "id": "1940763651",
       "name_lat": "РЭЙНБОУ СВИТ ДРИМ",
-      "name_ru": "",
+      "name_ru": "РЭЙНБОУ СВИТ ДРИМ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "212605215",
+      "name_lat": "РЭДИ СТЭДИ ИМПЕРАТОР ТЭРУХИТО",
+      "name_ru": "РЭДИ СТЭДИ ИМПЕРАТОР ТЭРУХИТО",
+      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2211,10 +2156,18 @@
     {
       "id": "725508182",
       "name_lat": "РЭДИЭНТ ГРАЦЕФУЛ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ ГРАЦЕФУЛ ЛЕДИ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "754890612",
+      "name_lat": "РЭЙ ВИНГ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2227,28 +2180,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "15763819",
-      "name_lat": "РЭЙДЖЕНТ АЙС ФАВОРИТ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1574010007",
+      "id": "1285758678",
       "name_lat": "РЭД ЭНД ГОЛДЕН ГРЕЙС",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР /",
+      "name_ru": "РЭД ЭНД ГОЛДЕН ГРЕЙС",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "102460600",
+      "id": "262760262",
       "name_lat": "РЭД БРИЛЛИАНТС ГРЕЙТ СИМФОНИ ОФ ЛАВ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "РЭД БРИЛЛИАНТС ГРЕЙТ СИМФОНИ ОФ ЛАВ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2256,19 +2200,10 @@
     {
       "id": "1849402145",
       "name_lat": "РЭДИЕНТ БЕ ФАШИОН",
-      "name_ru": "",
+      "name_ru": "РЭДИЕНТ БЕ ФАШИОН",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1164689266",
-      "name_lat": "РЭДИЭНТ В ФОР ВЕНДЕТТА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2292,7 +2227,7 @@
     {
       "id": "1750320419",
       "name_lat": "РЭЙС СТАРС ИВИ",
-      "name_ru": "",
+      "name_ru": "РЭЙС СТАРС ИВИ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -2301,7 +2236,7 @@
     {
       "id": "1555301626",
       "name_lat": "РЭТТУНГ ДИНСТ КАСТА",
-      "name_ru": "",
+      "name_ru": "РЭТТУНГ ДИНСТ КАСТА",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА - МАЛИНУА",
       "breed_en": "",
       "total_shows": 3,
@@ -2362,10 +2297,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "716516201",
+      "id": "291243436",
       "name_lat": "РЭДИ СТЭДИ ЮЛИЙ ЦЕЗАРЬ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "name_ru": "РЭДИ СТЭДИ ЮЛИЙ ЦЕЗАРЬ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2373,7 +2308,7 @@
     {
       "id": "1916045708",
       "name_lat": "РЭДИЭНТ ЧЕРРИ АЙС БОЙ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ ЧЕРРИ АЙС БОЙ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
@@ -2382,7 +2317,7 @@
     {
       "id": "406386711",
       "name_lat": "РЭМО ДЕ ША БЕАР",
-      "name_ru": "",
+      "name_ru": "РЭМО ДЕ ША БЕАР",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 3,
@@ -2400,7 +2335,7 @@
     {
       "id": "1073834683",
       "name_lat": "РЭДИ СТЭДИ МЭЙК БИЛИВ",
-      "name_ru": "",
+      "name_ru": "РЭДИ СТЭДИ МЭЙК БИЛИВ",
       "breed": "ЧЕРНОГО ОКРАСА",
       "breed_en": "",
       "total_shows": 5,
@@ -2452,24 +2387,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "61201456",
-      "name_lat": "РЭДИЭНТ ОПС И ДИД ИТ АГАИН",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1627665017",
-      "name_lat": "РЭД БРИЛЛИАНТС ПАЛЛАДА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "95722165",
       "name_lat": "РЭМПЕЙДЖ",
       "name_ru": "",
@@ -2497,10 +2414,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1368013358",
+      "id": "1175710570",
       "name_lat": "РЭЙЧЕЛ ГОЛД БЬЮТИ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2515,10 +2432,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1430955278",
+      "id": "1913016202",
+      "name_lat": "РЭДИ СТЭДИ ЯЛУНА ЯМИ",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1595976587",
       "name_lat": "РЭДИ СТЭДИ МИСТИК",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2551,15 +2477,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1996432454",
-      "name_lat": "РЭДИ СТЭДИ ЯЛУНА ЯМИ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "514071428",
       "name_lat": "РЭЙ ОФ ГОЛДЕН САН ВЭЛВЭТИ ТАЧ",
       "name_ru": "",
@@ -2571,7 +2488,7 @@
     {
       "id": "988089498",
       "name_lat": "РЭДИ СТЭДИ ГИВ МИ МАЙ ДРИМ",
-      "name_ru": "",
+      "name_ru": "РЭДИ СТЭДИ ГИВ МИ МАЙ ДРИМ",
       "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -2596,10 +2513,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1170733869",
+      "id": "1347343877",
       "name_lat": "РЭНДОЛЬФ ФОМ АЛИХЕЛЬ ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "РЭНДОЛЬФ ФОМ АЛИХЕЛЬ ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2632,10 +2549,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "303675690",
+      "id": "315676988",
       "name_lat": "РЭД БРИЛЛИАНТС ХОНИ БАРБИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2643,7 +2560,7 @@
     {
       "id": "1299488906",
       "name_lat": "РЭД БРИЛЛИАНТС АРИЗОНА",
-      "name_ru": "",
+      "name_ru": "РЭД БРИЛЛИАНТС АРИЗОНА",
       "breed": "LOBAKIN, VIKTOR",
       "breed_en": "",
       "total_shows": 2,
@@ -2652,7 +2569,7 @@
     {
       "id": "1620796003",
       "name_lat": "РЭД ЭНД ВАЙТ СИБИРИЯ МИЛАНИЯ",
-      "name_ru": "",
+      "name_ru": "РЭД ЭНД ВАЙТ СИБИРИЯ МИЛАНИЯ",
       "breed": "КАВКАЗСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -2695,8 +2612,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "563612651",
-      "name_lat": "РЭТТУНГ ДИНСТ ШЕРРИ- II",
+      "id": "1856957569",
+      "name_lat": "РЭТТУНГ ДИНСТ ШЕРРИ-II",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
@@ -2706,9 +2623,17 @@
     {
       "id": "150309315",
       "name_lat": "РЭПСОДИ ЛАВ ЗИППИ ПРЕТТИ БЕЙБИ",
-      "name_ru": "",
+      "name_ru": "РЭПСОДИ ЛАВ ЗИППИ ПРЕТТИ БЕЙБИ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1884456913",
+      "name_lat": "РЭЙ МАРИН ДОЛЬЧЕ ВИТА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2722,57 +2647,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "564774362",
-      "name_lat": "РЭД МАРИ'С АРЬЯ СТАРК ФАЙТЕР",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "2889377",
       "name_lat": "РЭДЖИ ЧЕЙТОН",
-      "name_ru": "",
+      "name_ru": "РЭДЖИ ЧЕЙТОН",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1548004362",
       "name_lat": "РЭД КОВЕН КОКО",
-      "name_ru": "",
+      "name_ru": "РЭД КОВЕН КОКО",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1252758221",
-      "name_lat": "РЭД ЭМЕРАЛЬД АРАГОРН",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1897683109",
       "name_lat": "РЭДИЭНТ ГОДДЕСС ОФ ВИНД",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ ГОДДЕСС ОФ ВИНД",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1205252902",
-      "name_lat": "РЭДИ СТЭДИ ИМПЕРАТОР ТЭРУХИТО",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2796,9 +2693,17 @@
     {
       "id": "493329496",
       "name_lat": "РЭД ГЛЭДИС ТАМЕРЛАН",
-      "name_ru": "",
+      "name_ru": "РЭД ГЛЭДИС ТАМЕРЛАН",
       "breed": "MOUNTAIN DOG БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "446893100",
+      "name_lat": "РЭДИ СТЭДИ ИШТАР",
+      "name_ru": "РЭДИ СТЭДИ ИШТАР",
+      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2893,19 +2798,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "769148197",
+      "id": "443758331",
       "name_lat": "РЭЙСИ ЛИНДА ЛУРДЕС",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "604152185",
-      "name_lat": "РЭД ИСТ ШИ ИЗ ВЭ УАН",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2931,26 +2827,26 @@
     {
       "id": "1835157281",
       "name_lat": "РЭД БУРБОН ЛА РОККА",
-      "name_ru": "",
+      "name_ru": "РЭД БУРБОН ЛА РОККА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "702875067",
+      "id": "278252292",
       "name_lat": "РЭЙДЖЕНТ АЙС ЛИОН КИНГ",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "РЭЙДЖЕНТ АЙС ЛИОН КИНГ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "310125681",
+      "id": "639570638",
       "name_lat": "РЭЙДЖЕНТ АЙС НАЙТ РОУЗ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2994,7 +2890,7 @@
     {
       "id": "486274098",
       "name_lat": "РЭМ БРЭЙВ БОЙ",
-      "name_ru": "",
+      "name_ru": "РЭМ БРЭЙВ БОЙ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -3003,7 +2899,7 @@
     {
       "id": "856362364",
       "name_lat": "Рэй Нортэ Френч Кисс",
-      "name_ru": "",
+      "name_ru": "Рэй Нортэ Френч Кисс",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
@@ -3064,19 +2960,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1293319253",
+      "id": "1376190103",
       "name_lat": "РЭВЕРИ ГРАВЕР ПЛАЙН",
       "name_ru": "",
-      "breed": "ВЕЛЬШ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "958085172",
-      "name_lat": "РЭНДОЛЛ ЛИСА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3091,6 +2978,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "599395691",
+      "name_lat": "РЭНДОЛЛ ЛИСА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "970575792",
       "name_lat": "РЭЙНА ОТ СОЛЬНИКА",
       "name_ru": "",
@@ -3100,10 +2996,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "671612750",
+      "id": "1914106519",
       "name_lat": "РЭЙ НОРТЭ НАУТИЛУС ПОМПИЛИУС",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3118,10 +3014,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1637331404",
+      "id": "1427257463",
+      "name_lat": "РЭНДОЛЛ НЕФЕРТАРИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "949344806",
       "name_lat": "РЭДИ СТЭДИ ЭМСИ",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3172,15 +3076,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "556523234",
-      "name_lat": "РЭЙ МАРТИН ГРЭЙС ВИКТОРИЯ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1494737177",
       "name_lat": "РЭЙ МАРТИН ДОЛЬЧЕ ВИТА",
       "name_ru": "",
@@ -3190,19 +3085,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1884456913",
-      "name_lat": "РЭЙ МАРИН ДОЛЬЧЕ ВИТА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "339739925",
+      "id": "1681262377",
       "name_lat": "Рэд Бриллиантс Бьютифул Лайф",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "Рэд Бриллиантс Бьютифул Лайф",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3222,7 +3108,7 @@
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3235,18 +3121,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "193076716",
+      "id": "1896904020",
+      "name_lat": "РЭД БРИЛЛИАНТС ЦИРЦЕЯ",
+      "name_ru": "РЭД БРИЛЛИАНТС ЦИРЦЕЯ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1686112807",
       "name_lat": "РЭЙНБОУ ШАЙН",
-      "name_ru": "",
-      "breed": "МОПС",
+      "name_ru": "РЭЙНБОУ ШАЙН",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "PUG",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "751535473",
+      "name_lat": "РЭГГИ БЬЮТИ НАЙТ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1668439516",
       "name_lat": "РЭДСТОРИ ШАДЭ",
-      "name_ru": "",
+      "name_ru": "РЭДСТОРИ ШАДЭ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 5,
@@ -3255,7 +3159,7 @@
     {
       "id": "1709267224",
       "name_lat": "РЭД ДАЙМОНД ВИКТОРИЯ",
-      "name_ru": "",
+      "name_ru": "РЭД ДАЙМОНД ВИКТОРИЯ",
       "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ, РЫЖИЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -3271,6 +3175,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "270085922",
+      "name_lat": "РЭМБО",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "544859241",
       "name_lat": "РЭД МАРИ'С РОККИ БАЛЬБОА",
       "name_ru": "",
@@ -3282,17 +3194,17 @@
     {
       "id": "1578415231",
       "name_lat": "РЭРИТИ ОФ БЛЭК ЭМПРЕСС",
-      "name_ru": "",
+      "name_ru": "РЭРИТИ ОФ БЛЭК ЭМПРЕСС",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ )",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1200680787",
+      "id": "1277181404",
       "name_lat": "РЭЙДЖЕНТ АЙС ЯНДЕКС",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "РЭЙДЖЕНТ АЙС ЯНДЕКС",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3316,28 +3228,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "270085922",
-      "name_lat": "РЭМБО",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1508063776",
       "name_lat": "РЭЙ",
       "name_ru": "",
       "breed": "АКИТА / AKITA",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "751535473",
-      "name_lat": "РЭГГИ БЬЮТИ НАЙТ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3370,18 +3264,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1019484117",
-      "name_lat": "РЭД ЭМЕРАЛЬД ДА ЧЕЗ БЭЛЛЬ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "852231377",
       "name_lat": "РЭНДОЛЛ РУДИ",
-      "name_ru": "",
+      "name_ru": "РЭНДОЛЛ РУДИ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -3442,10 +3327,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1805303394",
+      "id": "106753559",
       "name_lat": "РЭДИ СТЭДИ ЮЛИЙ ЦЕРАРЬ",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3496,10 +3381,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1363746332",
+      "id": "1052465337",
       "name_lat": "РЭД ЭНД ВАЙТ СИБИРИЯ УСЛАДА",
       "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ /",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3523,12 +3408,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "356092592",
+      "id": "197357470",
       "name_lat": "Рэд Бриллиантс Сноу Квин",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1943900167",
+      "name_lat": "РЭСТЛИ В ГРАФСТВО БАГИРЫ",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3538,6 +3431,14 @@
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1909721326",
+      "name_lat": "РЭММИ",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3561,7 +3462,7 @@
     {
       "id": "171269860",
       "name_lat": "РЭЙМАНДО АЛЕЙО",
-      "name_ru": "",
+      "name_ru": "РЭЙМАНДО АЛЕЙО",
       "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -3577,10 +3478,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "986991758",
+      "id": "1751297495",
       "name_lat": "РЭМ / REM",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3613,10 +3514,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "452564744",
+      "id": "643749549",
       "name_lat": "РЭКС",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3640,19 +3541,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "640301081",
-      "name_lat": "РЭЙ НОРТЭ БИСЭНТО",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1639610851",
+      "id": "1737324916",
       "name_lat": "РЭЙЧЕЛ МУНА ГОЛД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3703,10 +3595,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "460632438",
+      "id": "1732316387",
       "name_lat": "РЭЙН",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3714,35 +3606,26 @@
     {
       "id": "1564576724",
       "name_lat": "РЭДИЭНТ ЕСКАЛАДЕ",
-      "name_ru": "",
+      "name_ru": "РЭДИЭНТ ЕСКАЛАДЕ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "48302342",
-      "name_lat": "Рэдиент Мотион ин Емотион",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "544532719",
+      "id": "1747961320",
       "name_lat": "РЭЙВЕН БЛЭК ФОМ ТУАРМЕНСКИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "РЭЙВЕН БЛЭК ФОМ ТУАРМЕНСКИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1517547294",
+      "id": "1505403744",
       "name_lat": "РЭД БРИЛЛИАНТС САН РЭЙ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "РЭД БРИЛЛИАНТС САН РЭЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3750,7 +3633,7 @@
     {
       "id": "318450107",
       "name_lat": "РЭДСТОРИ БЛЭКАУТ",
-      "name_ru": "",
+      "name_ru": "РЭДСТОРИ БЛЭКАУТ",
       "breed": "СИБА",
       "breed_en": "SHIBA",
       "total_shows": 6,
@@ -3811,19 +3694,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1651404290",
-      "name_lat": "РЭД БРИЛЛИАНТС ЦИРЦЕЯ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1753170229",
+      "id": "732903864",
       "name_lat": "РЭДЖИ СЕЛЕНА РОУЗ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3831,7 +3705,7 @@
     {
       "id": "621985247",
       "name_lat": "РЭЙ МАРИН УНЕСЁННАЯ ПРИЗРАКАМИ",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН УНЕСЁННАЯ ПРИЗРАКАМИ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 8,
@@ -3840,19 +3714,37 @@
     {
       "id": "566975924",
       "name_lat": "РЭЙЧЕЛ ИЗ КОРОЛЕВСТВА АННЫ",
-      "name_ru": "",
+      "name_ru": "РЭЙЧЕЛ ИЗ КОРОЛЕВСТВА АННЫ",
       "breed": "DACHSHUND KANINCHEN",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "687663214",
+      "id": "516350391",
       "name_lat": "РЭЙ МАРИН МЭД МАКС",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "name_ru": "РЭЙ МАРИН МЭД МАКС",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1037391012",
+      "name_lat": "РЭЙСДОГ ЯМАМОТО",
+      "name_ru": "РЭЙСДОГ ЯМАМОТО",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "247181622",
+      "name_lat": "РЭЙНИ ШАЙН",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3874,19 +3766,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "102437836",
-      "name_lat": "РЭД МАРИ С ШАЙН ОН ТЭ РАНВЕЙ",
-      "name_ru": "",
-      "breed": "СИБА",
+      "id": "1896373775",
+      "name_lat": "РЭЙ МАРИН УЛЬТИМЕЙТ ВЕНОМ",
+      "name_ru": "РЭЙ МАРИН УЛЬТИМЕЙТ ВЕНОМ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1037391012",
-      "name_lat": "РЭЙСДОГ ЯМАМОТО",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "id": "102437836",
+      "name_lat": "РЭД МАРИ С ШАЙН ОН ТЭ РАНВЕЙ",
+      "name_ru": "РЭД МАРИ С ШАЙН ОН ТЭ РАНВЕЙ",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3894,17 +3786,17 @@
     {
       "id": "1167824399",
       "name_lat": "РЭМБО ОТВАЖНЫЙ БОЕЦ",
-      "name_ru": "",
+      "name_ru": "РЭМБО ОТВАЖНЫЙ БОЕЦ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "965825444",
+      "id": "915755810",
       "name_lat": "РЭД БРИЛЛИАНТС ЖЕ ТЕМ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "РЭД БРИЛЛИАНТС ЖЕ ТЕМ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3919,28 +3811,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1925471561",
-      "name_lat": "РЭЙНИ ШАЙН",
+      "id": "1242513696",
+      "name_lat": "РЭЙЧЕЛ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "874062347",
+      "name_lat": "РЭД ХОТ ЧИЛЛИ ПЕППЕР",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "563218117",
+      "id": "461319128",
       "name_lat": "РЭДИЭНТ РЕАЛ СИМБА",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "379296211",
-      "name_lat": "РЭЙДЖЕНТ АЙС СЛАЙ ФОКС",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3955,36 +3846,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1896373775",
-      "name_lat": "РЭЙ МАРИН УЛЬТИМЕЙТ ВЕНОМ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1025359399",
+      "id": "1910204666",
       "name_lat": "РЭДИ СТЭДИ ЮОРС ЛАВ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ /",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1167166765",
+      "id": "412663905",
       "name_lat": "РЭЙНБОУ ДРАЙВ ИЗ РОСТОВА ПАПЫ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "966126264",
+      "name_lat": "РЭД ДЕВИЛ ИЗ СОЗВЕЗДИЯ БЛИЗНЕЦОВ",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "993673762",
       "name_lat": "РЭЙ ОФ ГОЛДЕН САН АФФАБЛИ ШАЙН",
-      "name_ru": "",
+      "name_ru": "РЭЙ ОФ ГОЛДЕН САН АФФАБЛИ ШАЙН",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -3993,7 +3883,7 @@
     {
       "id": "1656837371",
       "name_lat": "РЭЙ МАРИН ЦЗЫНЬЛУН",
-      "name_ru": "",
+      "name_ru": "РЭЙ МАРИН ЦЗЫНЬЛУН",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 3,
@@ -4002,7 +3892,7 @@
     {
       "id": "445767241",
       "name_lat": "РЭД РЭНДЕЛЛ РИМИНИ",
-      "name_ru": "",
+      "name_ru": "РЭД РЭНДЕЛЛ РИМИНИ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -4011,17 +3901,8 @@
     {
       "id": "273218879",
       "name_lat": "РЭД ЭНД ВАЙТ СИБИРИЯ ОБСИДИАН",
-      "name_ru": "",
+      "name_ru": "РЭД ЭНД ВАЙТ СИБИРИЯ ОБСИДИАН",
       "breed": "КАВКАЗСКАЯ СТОРОЖЕВАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1720970844",
-      "name_lat": "РЭД ХОТ ЧИЛЛИ ПЕППЕР",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4058,15 +3939,6 @@
       "name_lat": "РЭНРИ ЮМИ",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "247181622",
-      "name_lat": "РЭЙНИ ШАЙН",
-      "name_ru": "",
-      "breed": "Итальянский кане корсо",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4126,15 +3998,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "180817201",
-      "name_lat": "РЭДИЭНТ ЛЕТ МЕ БЕ МЫСЕЛФ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "584671522",
       "name_lat": "РЭД КОВЕН АБОВЕ КОНТРОЛЬ",
       "name_ru": "",
@@ -4153,10 +4016,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "376562564",
+      "id": "57303886",
+      "name_lat": "РЭДИЕНТ АППЛАУСЕ ФОР АСТРО",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "587604854",
       "name_lat": "РЭДИ СТЭДИ ЧИЗКЕЙК",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4225,10 +4096,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "16186085",
+      "id": "257155804",
+      "name_lat": "РЭД ХАЙРЕД МИЛКА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1603560510",
       "name_lat": "РЭНДОЛЛ САМИРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4306,28 +4186,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1334592846",
+      "id": "608203568",
       "name_lat": "РЭД БРИЛЛИАНТ ЦВЕТ СЧАСТЬЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1291575908",
+      "id": "745531320",
       "name_lat": "РЭЙНБОУ ШАЙН Д/Ш",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "873671145",
+      "id": "1750495509",
       "name_lat": "РЭДИ СТЭДИ НИККИ РИД",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4342,19 +4222,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "464540187",
+      "id": "1284865707",
       "name_lat": "РЭД БРИЛЛИАНТС ФОНДНЕСС",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "867715151",
-      "name_lat": "РЭТТУНГ ДИНСТ НАТУС ИНВЕНИРЕ",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4387,9 +4258,25 @@
       "competition_dog_id": null
     },
     {
+      "id": "1539380979",
+      "name_lat": "РЭКСОР ЦЕЗАРЬ ПЕРВЫЙ И ЕДИНСТВЕННЫЙ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1136429080",
+      "name_lat": "РЭБАЛ РЭЙС АССОЛЬ СКАРЛЕТ СЭЙЛС",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "12336120",
       "name_lat": "РЭД РОЯЛ ФЛЭШ",
-      "name_ru": "",
+      "name_ru": "РЭД РОЯЛ ФЛЭШ",
       "breed": "БОСТОН БРЮССЕЛЬСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -4398,7 +4285,7 @@
     {
       "id": "542058882",
       "name_lat": "РЭД БРИЛЛИАНТС БОРН ХЭППИ",
-      "name_ru": "",
+      "name_ru": "РЭД БРИЛЛИАНТС БОРН ХЭППИ",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -4416,44 +4303,35 @@
     {
       "id": "1247719221",
       "name_lat": "РЭЙНА РАМИРЕС АРЕЛЛАНО",
-      "name_ru": "",
+      "name_ru": "РЭЙНА РАМИРЕС АРЕЛЛАНО",
       "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1149960200",
+      "id": "699841305",
       "name_lat": "РЭДИ СТЭДИ ИМПЕРАТОР ТЭРУХИТЬ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "name_ru": "РЭДИ СТЭДИ ИМПЕРАТОР ТЭРУХИТЬ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "170037171",
+      "id": "514588698",
       "name_lat": "РЭЙДЖЕНТ АЙС ТИФФАНИ",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "РЭЙДЖЕНТ АЙС ТИФФАНИ",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "197849155",
+      "id": "1398081828",
       "name_lat": "РЭД БРИЛЛИАНТС ОРАНЖ МИРАКЛ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "257155804",
-      "name_lat": "РЭД ХАЙРЕД МИЛКА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "name_ru": "РЭД БРИЛЛИАНТС ОРАНЖ МИРАКЛ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4461,17 +4339,17 @@
     {
       "id": "218727552",
       "name_lat": "РЭД МАРИ С Ю МАЙ ТРЕАСУРЕ",
-      "name_ru": "",
+      "name_ru": "РЭД МАРИ С Ю МАЙ ТРЕАСУРЕ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1606322168",
+      "id": "10594737",
       "name_lat": "Рэди Стэди Енигма Стар",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "name_ru": "Рэди Стэди Енигма Стар",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4479,7 +4357,7 @@
     {
       "id": "570032631",
       "name_lat": "РЭЙСДОГ АЛЛЮР ОФ ДАРКНЕСС",
-      "name_ru": "",
+      "name_ru": "РЭЙСДОГ АЛЛЮР ОФ ДАРКНЕСС",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 2,
@@ -4488,9 +4366,17 @@
     {
       "id": "397585232",
       "name_lat": "Рэди Стэди Оливия Сноу Уайт",
-      "name_ru": "",
+      "name_ru": "Рэди Стэди Оливия Сноу Уайт",
       "breed": "ЦВЕРГШНАУЦЕР БЕЛОГО",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1958267164",
+      "name_lat": "РЭД БРИЛЛИАНТС ЮРМАЛА",
+      "name_ru": "РЭД БРИЛЛИАНТС ЮРМАЛА",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4612,10 +4498,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "472151587",
+      "id": "1351029002",
       "name_lat": "РЭНДЖ РОВЕР",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4666,6 +4552,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "641405832",
+      "name_lat": "РЭДИ РУССО",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР / BIEWER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "11976760",
       "name_lat": "РЭМБО",
       "name_ru": "",
@@ -4693,11 +4587,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "292333326",
+      "id": "1695763394",
       "name_lat": "РЭЯ",
       "name_ru": "",
-      "breed": "ЭСПАНЬОЛ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "746987776",
+      "name_lat": "РЭЧЕЛ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4747,6 +4649,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "932003897",
+      "name_lat": "РЭМБО",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "320066568",
       "name_lat": "РЭЙДЕН",
       "name_ru": "",
@@ -4760,15 +4670,6 @@
       "name_lat": "Рэй Ав Хоуп",
       "name_ru": "",
       "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1242513696",
-      "name_lat": "РЭЙЧЕЛ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4828,10 +4729,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1419438752",
+      "id": "451592565",
       "name_lat": "РЭЙНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МИНИАТЮРНЫЙ /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4909,10 +4810,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1315812794",
+      "id": "843219380",
       "name_lat": "РЭЙЧЕЛ",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4927,10 +4828,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1699855647",
+      "id": "1912473599",
       "name_lat": "РЭНДЖЕР",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5044,10 +4945,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "252401372",
+      "id": "525850840",
       "name_lat": "РЭМ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5062,20 +4963,62 @@
       "competition_dog_id": null
     },
     {
+      "id": "1216934699",
+      "name_lat": "РЭЙЧЕЛ",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1897777560",
+      "name_lat": "РЭМБО",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "782109678",
+      "name_lat": "РЭД ГЛЭДИС БЕТТИ ШЕЛДИ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1168569197",
+      "name_lat": "РЭДИ СТЭДИ ДАМА ЮЛА",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1221056629",
+      "name_lat": "РЭЙС СТАРС РИАНА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ТОЙ(ПОМЕРАН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "274928153",
+      "name_lat": "РЭД БРИЛЛИАНТС ЮНОНА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1530605164",
       "name_lat": "РЭД ЭМЕРАЛЬД ЯСЕНИЯ",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "418650867",
-      "name_lat": "РЭДИЭНТ ОПИУМ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5098,28 +5041,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1497852210",
-      "name_lat": "РЭД ПРАЙД ОЛАНА НЕКСТ",
-      "name_ru": "",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "244212526",
       "name_lat": "РЭЙНБОУ ФОМ ХАУС ТЕРСЕЙ",
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1926145705",
-      "name_lat": "РЭДИЕНТ ЛЕТ МЕ БЕ МЫСЕЛФ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5179,10 +5104,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "173111439",
+      "id": "1114606839",
       "name_lat": "РЭЙДЖЕНТ АЙС ЛАНСЕЛОТ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5305,15 +5230,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "902217579",
-      "name_lat": "РЭД ГЛЭДИС БЕТТИ ШЕЛДИ",
-      "name_ru": "",
-      "breed": "БОЛЬШОЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "90765041",
       "name_lat": "РЭД СТАР ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
       "name_ru": "",
@@ -5386,19 +5302,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "811784370",
+      "id": "1268368435",
       "name_lat": "РЭБЭККА ФЛОРЕНС",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "418803673",
-      "name_lat": "РЭДИ СТЭДИ ДАМА ЮЛА",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5476,10 +5383,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "659546071",
+      "id": "1251961519",
       "name_lat": "РЭЙДЖЕНТ АЙС НОРИДЖ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5494,11 +5401,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1934129371",
+      "id": "153548523",
       "name_lat": "РЭЙЧЕЛ САНШАЙН ПАРАДИС",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1831738584",
+      "name_lat": "РЭДЕГУНДА ЦАРЕВНА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "872458145",
+      "name_lat": "РЭЙ НОРТЭ БИККУРИ",
+      "name_ru": "",
+      "breed": "Сиба",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5512,19 +5435,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "688863491",
-      "name_lat": "РЭНДОЛЛ ЛЮЧАНА",
+      "id": "526294654",
+      "name_lat": "РЭДИЕНТ ЮНИОН ЧЕРРИ АНД ФРОСТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1221056629",
-      "name_lat": "РЭЙС СТАРС РИАНА",
+      "id": "125867604",
+      "name_lat": "РЭНДОЛЛ ЛЮЧАНА",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ТОЙ(ПОМЕРАН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5557,6 +5479,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "202960595",
+      "name_lat": "РЭЙ ТАЙРА ЭМИ",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "770550533",
       "name_lat": "РЭЙ НОРТЭ ФЬЮЧА ПЭРФЕКТ",
       "name_ru": "",
@@ -5566,10 +5496,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "628527505",
+      "id": "268592110",
       "name_lat": "РЭЙДЖЕНТ АЙС ЮСТАС",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5593,11 +5523,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "365245666",
+      "id": "1467478240",
       "name_lat": "РЭДИ СТЭДИ ЕЛАНА ФОКС",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ / FOX",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш / FOX",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1552199008",
+      "name_lat": "РЭЙ МАРИН ЗАРА",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5620,6 +5558,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "706157101",
+      "name_lat": "РЭДИЭНТ АЛЛИАНЦЕ ОФ ГЛОРЫ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "270514757",
       "name_lat": "РЭД БРИЛЛИАНТС ЖЕ ТЕМ СЕВЕРНАЯ",
       "name_ru": "",
@@ -5638,11 +5584,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1641586221",
+      "name_lat": "РЭД МАРИ'С ГРЕЙС КЕЛЛИ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1312864766",
       "name_lat": "РЭЙ ВИНД ВЕСТ ДАЙМОНД",
       "name_ru": "",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46254106",
+      "name_lat": "РЭД ЭМЕРАЛЬД МЭГАН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5656,10 +5618,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "271821449",
+      "id": "153574117",
       "name_lat": "РЭД РЭНДЭЛЛ ИЛЮЗИЯ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5674,10 +5636,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1042707910",
+      "id": "1961552959",
       "name_lat": "РЭЙ НОРТЭ КРИСТАЛЛ ХРУСТАЛЬНЫЙ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5719,10 +5681,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1041458285",
+      "id": "1634401265",
       "name_lat": "РЭД ФЛАЙ ХОНДА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5764,10 +5726,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1470375547",
+      "id": "1498466055",
       "name_lat": "РЭДИ СТЭДИ ЮЗФУЛЛИ ДЭНС",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5804,15 +5766,6 @@
       "name_lat": "РЭММИ ГРЕС ГАНЕМ",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1059719936",
-      "name_lat": "РЭДИЭНТ ЛАРГЕР ТХАН ЛИФЕ",
-      "name_ru": "",
-      "breed": "ТАКСА АМЕРИКАНСКАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5908,10 +5861,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1524360418",
+      "id": "1878121241",
       "name_lat": "РЭНДОЛЛ СТЕРР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5926,19 +5879,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "502170998",
+      "id": "649042447",
       "name_lat": "РЭЙДЖЕНТ АЙС ХОГАН",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "53977674",
-      "name_lat": "РЭЙ МАРТИН ГРЕЙС ВИКТОРИЯ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5971,10 +5915,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "982717871",
+      "id": "1601253540",
       "name_lat": "РЭМОРА ОТ НЭЛ,З ЮССЕН",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5989,10 +5933,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1382186513",
+      "id": "632582364",
       "name_lat": "РЭМ ИЗ ДОМА ЛЕВШОВ ОЙ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6025,19 +5969,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1133062905",
+      "id": "742713476",
       "name_lat": "РЭЙНБОУ ВЕНСАН",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "275484367",
+      "id": "1242411155",
       "name_lat": "РЭЙНБОУ ШАЙНА",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6052,10 +5996,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "198589477",
+      "id": "520815001",
       "name_lat": "РЭД БРИЛЛИАНТС ЮКОН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6084,6 +6028,38 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1182983987",
+      "name_lat": "РЭЙ СЕРЕБРЯННЫЙ ВОЛК",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "899785711",
+      "name_lat": "РЭМБО СИЛЬВЕСТР",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1926951659",
+      "name_lat": "РЭЯ ТЕРРА РУСА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "298785211",
+      "name_lat": "РЭЙ МАРИН ЖАННА Д'АРК",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },

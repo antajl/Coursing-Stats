@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "DG",
-  "count": 67,
+  "count": 75,
   "dogs": [
     {
       "id": "445760740",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 68,
+      "total_shows": 76,
       "competition_dog_id": null
     },
     {
@@ -67,12 +67,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1498385490",
+      "name_lat": "D'GENTLYMAN IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
       "id": "821968980",
       "name_lat": "DGESS OROCHI TEKEHIRO",
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -81,7 +90,7 @@
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -91,6 +100,15 @@
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1539458385",
+      "name_lat": "D'GINGER ILLUSION OF MODESTY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "AMERICAN COCKER SPANIEL",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -112,10 +130,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1584939385",
+      "id": "299335853",
       "name_lat": "DGENNI LISA IMPERIAL ELEGANCE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -130,19 +148,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1844692139",
+      "id": "1684252578",
       "name_lat": "DGESS ILTA KATE",
       "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД) /",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "822806800",
+      "id": "153318285",
+      "name_lat": "DGULIDEIL TRIUMPHATOR",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "18777890",
       "name_lat": "DGYGI OT ANKO ZANKO",
       "name_ru": "",
-      "breed": "ШЕЛТИ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -157,17 +183,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "130572330",
-      "name_lat": "DGULIDEIL BRAVO-BRAVISSIMO",
+      "id": "775234075",
+      "name_lat": "D'GENTLYMAN IZ GRADA KATERINY SOZVEZDIE KLEOPATRY",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "CHOW CHOW",
-      "total_shows": 10,
+      "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1533659735",
-      "name_lat": "DGULIDEIL NEW FAVOURITE",
+      "id": "130572330",
+      "name_lat": "DGULIDEIL BRAVO-BRAVISSIMO",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "CHOW CHOW",
@@ -180,7 +206,16 @@
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1533659735",
+      "name_lat": "DGULIDEIL NEW FAVOURITE",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "CHOW CHOW",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -256,11 +291,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "182836094",
+      "name_lat": "DGESS IERA ISIS",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1967819110",
       "name_lat": "DGESS DUKE DUARTE",
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ – КЕЕСХУНД",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "125061064",
+      "name_lat": "DGESS EDIGAR",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ – КЕЕСХУНД",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -355,15 +406,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "439225309",
-      "name_lat": "DGESS EDIGAR",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "392633394",
       "name_lat": "DGESSE LEISE LIED",
       "name_ru": "",
@@ -391,10 +433,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "127832517",
+      "id": "785499265",
       "name_lat": "DGENTLI BON OPALIKHA",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -409,6 +451,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1251432902",
+      "name_lat": "DGESS RAGNAR ROSKOSHNYY ALMAZ",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "613385523",
       "name_lat": "DGESS LEISE LIED",
       "name_ru": "",
@@ -418,10 +468,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1452556623",
-      "name_lat": "DGESS IERA ISIS",
+      "id": "750223900",
+      "name_lat": "D GINGER ILLUSION OF MODESTY",
       "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД) /",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1729829168",
+      "name_lat": "D’GENTLYMAN IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -508,6 +567,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "561029201",
+      "name_lat": "DGESS ABIGEL LITTLE PRINCESS",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД) /",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "323409100",
       "name_lat": "DGULIDEIL STATUS",
       "name_ru": "",
@@ -535,6 +602,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "519842607",
+      "name_lat": "DGERT",
+      "name_ru": "",
+      "breed": "ШВЕЙЦАРСКИЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1935955590",
       "name_lat": "DGERT",
       "name_ru": "",
@@ -544,28 +619,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1424529983",
+      "id": "811022616",
       "name_lat": "DGETA LIKA DON KRISTEL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "169196251",
+      "id": "163206095",
       "name_lat": "DGINGER VON DER ESPENSTRASSE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1746012641",
-      "name_lat": "DGESS ABIGEL LITTLE PRINCESS",
-      "name_ru": "",
-      "breed": "ГОЛАЯ НЕМЕЦКИЙ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -589,10 +655,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "519842607",
-      "name_lat": "DGERT",
+      "id": "92438462",
+      "name_lat": "D-GRETA",
       "name_ru": "",
-      "breed": "ШВЕЙЦАРСКИЙ",
+      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

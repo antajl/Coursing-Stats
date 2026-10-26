@@ -844,14 +844,14 @@ export function buildDogProfiles(db: Database.Database) {
   const dogsIndexList = Array.from(dogsIndexMap.values())
     .filter((d) => allDogIds.has(d.id))
     .sort((a, b) => a.id - b.id);
-  for (let attempt = 0; attempt < 5; attempt++) {
+  for (let attempt = 0; attempt < 15; attempt++) {
     try {
       fs.writeFileSync(dogsIndexPath, JSON.stringify(dogsIndexList, null, 2), 'utf-8');
       break;
     } catch (err) {
       const code = (err as NodeJS.ErrnoException).code;
-      if ((code === 'UNKNOWN' || code === 'EBUSY' || code === 'EPERM') && attempt < 4) {
-        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 50 * (attempt + 1));
+      if ((code === 'UNKNOWN' || code === 'EBUSY' || code === 'EPERM') && attempt < 14) {
+        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 150 * (attempt + 1));
         continue;
       }
       throw err;

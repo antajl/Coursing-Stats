@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "MR",
-  "count": 60,
+  "count": 65,
   "dogs": [
     {
       "id": "1642997707",
@@ -10,6 +10,14 @@
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "456271140",
+      "name_lat": "MRAMARIS TYPE ZHAVILLE FOR VIVERVILLE",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -22,6 +30,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "131455096",
+      "name_lat": "MRAMARIS TYPY ZHAVILLE FOR VIVERVILLE",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Длинношерстная",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1739840717",
       "name_lat": "MR. PIN",
       "name_ru": "",
@@ -31,28 +48,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "419280406",
-      "name_lat": "MRAMARIS TYPY ELEMMAKIL EL'TON",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "515825880",
       "name_lat": "MRAMARIS TYPY AXIO AMBER AHORN",
       "name_ru": "",
       "breed": "ТАКСА МИНИАТЮРНАЯ Длинношерстная",
       "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179407105",
+      "name_lat": "MRAMARIS TYPY EZHEVYKA ELYSA",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1781774320",
+      "name_lat": "MRAMARIS TYPY ELEMMAKIL EL'TON",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
+      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "821341807",
+      "id": "997501439",
       "name_lat": "MRAMARIS TYPY LEDI LAIMA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -64,24 +89,6 @@
       "breed": "ТАКСА МИНИАТЮРНАЯ Длинношерстная",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "456271140",
-      "name_lat": "MRAMARIS TYPE ZHAVILLE FOR VIVERVILLE",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "402313817",
-      "name_lat": "MRAMARIS TYPY ZHAVILLE FOR VIVERVILLE",
-      "name_ru": "",
-      "breed": "КРОЛИЧЬЯ МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -99,7 +106,16 @@
       "name_ru": "",
       "breed": "ТАКСА МИНИАТЮРНАЯ Длинношерстная",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "801578081",
+      "name_lat": "MR.CROWLEY Helloween",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -130,10 +146,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "38387000",
+      "id": "145938013",
       "name_lat": "MR. PIN",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL /",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -145,15 +161,6 @@
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "801578081",
-      "name_lat": "MR.CROWLEY Helloween",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -193,19 +200,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "384018644",
+      "id": "373117761",
       "name_lat": "MR LUO YUSHENG DAMMAR",
       "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "breed": "ЧУНЦИН",
       "breed_en": "CHONGQING DOG",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1651030749",
-      "name_lat": "MRAMARIS TYPY FLEUR- DE-LIS",
+      "id": "549122169",
+      "name_lat": "MRAMARIS TYPY FLEUR-DE-LIS",
       "name_ru": "",
-      "breed": "DACHSHUND ZWERG",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "DACHSHUND MINIATURE LONG-HAIRED",
       "total_shows": 10,
       "competition_dog_id": null
@@ -216,7 +223,7 @@
       "name_ru": "",
       "breed": "ПОКЕТ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -229,21 +236,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "570492655",
+      "id": "1235643311",
       "name_lat": "MR.ZEUS DOMINANT STORM",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "78733958",
-      "name_lat": "MRAMARIS TYPY SATO SEMI- SVET",
+      "id": "191548438",
+      "name_lat": "MRAMARIS TYPY SATO SEMI-SVET",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "842974949",
+      "name_lat": "MRAMARIS TYPY EMISH ELAY",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -256,10 +271,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "122281354",
+      "id": "1350913371",
       "name_lat": "MR.MADDOX DEI DUE LEONI",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -292,37 +307,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "275577972",
+      "id": "200307686",
       "name_lat": "MRAMARIS TYPY LEONARDO LUCKY LAD",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1333271174",
+      "id": "1722472640",
       "name_lat": "MRAMARIS TYPY SIMPATIKA CTEFI",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1118584833",
+      "id": "1651692425",
       "name_lat": "MRAMARIS TYPY ZEL'FI",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1752954298",
+      "id": "1250204430",
+      "name_lat": "MRAMARIS TYPY YA COOL GUY",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1381791796",
       "name_lat": "MRAMARIS TYPY PER SI POVELITEL' PCHEL",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -355,10 +378,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "491306096",
+      "id": "45899077",
       "name_lat": "MR MAYBACH",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -373,10 +396,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "860666260",
+      "id": "778878350",
+      "name_lat": "MRAMARIS TYPY GATEAU GARNI",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1862878982",
       "name_lat": "MRAMARIS TYPY TETORIYA TOSSY",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -436,10 +467,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1443540038",
+      "id": "667436544",
       "name_lat": "MRAMARIS TYPY TARIEL' TEFI",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -454,10 +485,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "32645342",
+      "id": "214542876",
+      "name_lat": "MRAMARIS TYPY CHIESA CHEPI",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1999416111",
       "name_lat": "MR LUO LIJUAN DAMMAR",
       "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
+      "breed": "ЧУНЦИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -469,6 +508,15 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256127630",
+      "name_lat": "MRAMARIS TYPY MERCY",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -499,19 +547,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1917934329",
-      "name_lat": "MRAMARIS TYPY MERCY",
-      "name_ru": "",
-      "breed": "ТАКСА ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1103842069",
+      "id": "1687002301",
       "name_lat": "MRAMARIS TYPY YARDLI JAHIMEES",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -526,19 +565,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "148629320",
+      "id": "1220331518",
       "name_lat": "MRAMARIS TYPY TSEREMONIJMEJSTER",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1444061849",
+      "id": "1416914893",
       "name_lat": "MR ZEUS DOMINANT STORM",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

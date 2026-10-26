@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ЯЩ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "927005001",
+      "name_lat": "ЯЩУК МИШЕР",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1362991488",
+      "name_lat": "ЯЩЕРКА МЕДНОЙ ГОРЫ",
+      "name_ru": "ЯЩЕРКА МЕДНОЙ ГОРЫ",
+      "breed": "DACHSHUND ZWERG",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    }
+  ]
+}

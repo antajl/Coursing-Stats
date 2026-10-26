@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "FS",
-  "count": 4,
+  "count": 6,
   "dogs": [
     {
       "id": "1802586808",
@@ -22,6 +22,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "915132189",
+      "name_lat": "F'SAIJITSU-GO OF KAMINO KEN",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "AKITA",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1966142404",
       "name_lat": "FS AMURA-AUDI",
       "name_ru": "",
@@ -36,6 +45,14 @@
       "name_ru": "",
       "breed": "ПОКЕТ / AMERICAN BULLY",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1312304882",
+      "name_lat": "FSTRA VIA GERION",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

@@ -13,7 +13,12 @@ import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
 import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import type { ShowJudge } from '../../lib/staticData'
-import { matchesBreedFilter, uniqueCanonicalBreeds, formatBreedName } from '../../lib/breedMapping'
+import {
+  matchesBreedFilter,
+  uniqueCanonicalBreeds,
+  formatBreedName,
+  canonicalBreed,
+} from '../../lib/breedMapping'
 
 const SHOW_YEARS = ['2026', '2025', '2024'] as const
 const SHOW_JUDGES_ACTIVE_SEASON = resolveActiveSeason(SHOW_YEARS)
@@ -105,13 +110,20 @@ export default function ShowJudges() {
   const judgesPartial = fullJudges.length === 0 && hasPage0
 
   const availableBreeds = useMemo(() => {
-    const raw: string[] = []
+    const counts = new Map<string, number>()
     for (const judge of judges) {
       for (const breed of judge.breeds || []) {
-        if (breed) raw.push(breed)
+        if (breed) {
+          const canon = canonicalBreed(breed)
+          if (canon) counts.set(canon, (counts.get(canon) || 0) + 1)
+        }
       }
     }
-    return uniqueCanonicalBreeds(raw)
+    return Array.from(counts.keys()).sort((a, b) => {
+      const diff = (counts.get(b) || 0) - (counts.get(a) || 0)
+      if (diff !== 0) return diff
+      return a.localeCompare(b, 'ru')
+    })
   }, [judges])
 
   const filteredJudges = useMemo(() => {

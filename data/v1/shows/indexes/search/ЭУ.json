@@ -1,13 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЭУ",
-  "count": 6,
+  "count": 7,
   "dogs": [
     {
-      "id": "187122069",
+      "id": "1336004669",
       "name_lat": "ЭУСТОМА С ЯМСКОЙ СЛОБОДЫ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭУСТОМА С ЯМСКОЙ СЛОБОДЫ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -15,7 +15,7 @@
     {
       "id": "1801310282",
       "name_lat": "ЭУЛАРИС ГИМБО",
-      "name_ru": "",
+      "name_ru": "ЭУЛАРИС ГИМБО",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 7,
@@ -31,19 +31,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1977437341",
-      "name_lat": "ЭУРО ШАРМ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "id": "1717959262",
+      "name_lat": "ЭУСКАДИ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИСПАНСКАЯ БОРЗАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "183117658",
+      "name_lat": "ЭУРО ШАРМ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "name_ru": "ЭУРО ШАРМ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "508032654",
+      "id": "1797487452",
       "name_lat": "ЭУЛАЛИЯ ФЕДЕРИКА",
       "name_ru": "",
-      "breed": "КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

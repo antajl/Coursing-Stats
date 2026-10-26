@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "KF",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1877415862",
+      "name_lat": "KFANDO",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "873148973",
+      "name_lat": "K-FON GRAND MERSSEDES",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

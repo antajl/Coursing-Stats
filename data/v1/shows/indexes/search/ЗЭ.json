@@ -1,12 +1,21 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЗЭ",
-  "count": 55,
+  "count": 57,
   "dogs": [
+    {
+      "id": "1854234253",
+      "name_lat": "З`ЭГИДА ГОЛДЕН ТРЭЖЕР",
+      "name_ru": "З`ЭГИДА ГОЛДЕН ТРЭЖЕР",
+      "breed": "французский бульдог",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
     {
       "id": "1103659195",
       "name_lat": "ЗЭФИ - ДЖАБАРИ КРАЙМИАН БРАЙТ КРИСТАЛ",
-      "name_ru": "",
+      "name_ru": "ЗЭФИ - ДЖАБАРИ КРАЙМИАН БРАЙТ КРИСТАЛ",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 8,
@@ -33,10 +42,9 @@
     {
       "id": "988686561",
       "name_lat": "ЗЭОДОРА С БЕЛОГО ОЛИМПА",
-      "name_ru": "",
+      "name_ru": "ЗЭОДОРА С БЕЛОГО ОЛИМПА",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -49,10 +57,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1771197111",
+      "id": "1422364107",
       "name_lat": "ЗЭЙВЕР ИНКРЕДИБЛИ ХЭППИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -60,7 +68,7 @@
     {
       "id": "1395269863",
       "name_lat": "ЗЭРИУС ТОМ ЛИ ОТ ЗВЕЗДЫ ГЖЕССИКИ",
-      "name_ru": "",
+      "name_ru": "ЗЭРИУС ТОМ ЛИ ОТ ЗВЕЗДЫ ГЖЕССИКИ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -103,6 +111,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1410699610",
+      "name_lat": "ЗЭНИТФ ОВ ФЕЙМ",
+      "name_ru": "ЗЭНИТФ ОВ ФЕЙМ",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "266062933",
       "name_lat": "ЗЭФРАМ",
       "name_ru": "",
@@ -114,7 +131,7 @@
     {
       "id": "1583659293",
       "name_lat": "ЗЭРА ИЗ ДИЗЕРЛЭНД",
-      "name_ru": "",
+      "name_ru": "ЗЭРА ИЗ ДИЗЕРЛЭНД",
       "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
       "total_shows": 14,
@@ -141,7 +158,7 @@
     {
       "id": "177430778",
       "name_lat": "ЗЭСТ ФО ЛАЙФ ФРИДА",
-      "name_ru": "",
+      "name_ru": "ЗЭСТ ФО ЛАЙФ ФРИДА",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 7,
@@ -150,7 +167,7 @@
     {
       "id": "1548691536",
       "name_lat": "ЗЭЛА ЛОРАН АДЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ЗЭЛА ЛОРАН АДЕЛЬ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 10,
@@ -159,7 +176,7 @@
     {
       "id": "1274960050",
       "name_lat": "ЗЭТТА МИРЭЛА ЯНГ",
-      "name_ru": "",
+      "name_ru": "ЗЭТТА МИРЭЛА ЯНГ",
       "breed": "РИЗЕНШНАУЦЕР (ЧЕРН)",
       "breed_en": "",
       "total_shows": 3,
@@ -177,7 +194,7 @@
     {
       "id": "764374091",
       "name_lat": "ЗЭТТА КРАСА СЕВЕРА",
-      "name_ru": "",
+      "name_ru": "ЗЭТТА КРАСА СЕВЕРА",
       "breed": "GERMAN SPITZ",
       "breed_en": "",
       "total_shows": 4,
@@ -189,7 +206,7 @@
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -229,6 +246,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1031341950",
+      "name_lat": "ЗЭНИ ЛАУРА",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1778998607",
       "name_lat": "ЗЭОДОР ЗЕД ROSKOSH IZ",
       "name_ru": "",
@@ -247,10 +272,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "570932530",
+      "id": "1122890931",
       "name_lat": "ЗЭТ ИЗ ТВЕРСКОГО ДОМА",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -265,19 +290,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1731604350",
+      "id": "170962437",
+      "name_lat": "ЗЭСТА ИЗ НОВОЙ ИМПЕРИИ",
+      "name_ru": "ЗЭСТА ИЗ НОВОЙ ИМПЕРИИ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "991440946",
       "name_lat": "ЗЭЛЭС ДЕФЕНДЕР ШОН",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "768121062",
-      "name_lat": "ЗЭСТА ИЗ НОВОЙ ИМПЕРИИ",
-      "name_ru": "",
-      "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
+      "id": "363498425",
+      "name_lat": "ЗЭТТА ФОМ МАИР ХОФ",
+      "name_ru": "ЗЭТТА ФОМ МАИР ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -292,10 +326,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "363498425",
-      "name_lat": "ЗЭТТА ФОМ МАИР ХОФ",
+      "id": "57316235",
+      "name_lat": "ЗЭЛЛИС ФОМ ХАУС КСЕНИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -303,25 +337,24 @@
     {
       "id": "998253480",
       "name_lat": "ЗЭЯ ФРОМ МАГНИФИКОС КИНГДОМ",
-      "name_ru": "",
+      "name_ru": "ЗЭЯ ФРОМ МАГНИФИКОС КИНГДОМ",
       "breed": "LABRADOR RETRIEVER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1410699610",
-      "name_lat": "ЗЭНИТФ ОВ ФЕЙМ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "",
+      "id": "1072796650",
+      "name_lat": "ЗЭН ЗЭН ЖУ Д-ЭШИН",
+      "name_ru": "ЗЭН ЗЭН ЖУ Д-ЭШИН",
+      "breed": "КАНЕ КИТАЙСКИЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "166648337",
       "name_lat": "ЗЭНА ПОВЕЛИТЕЛЬНИЦА ВОИН",
-      "name_ru": "",
+      "name_ru": "ЗЭНА ПОВЕЛИТЕЛЬНИЦА ВОИН",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -400,10 +433,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "876396325",
+      "id": "1051019721",
       "name_lat": "ЗЭТТА ЛИТЛ КВИН",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -422,15 +455,6 @@
       "name_lat": "ЗЭЙКМЭН-СЭМЮЭЛЬ",
       "name_ru": "",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "183786298",
-      "name_lat": "ЗЭЛЛИС ФОМ ХАУС КСЕНИ",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -458,15 +482,6 @@
       "name_lat": "ЗЭ РОЯЛ ХАУЗ ОФ ТРД КРИСТАЛЛ МЕЙДЕН",
       "name_ru": "",
       "breed": "ТАЙСКИЙ РИДЖБЕК / THAI",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1395938744",
-      "name_lat": "ЗЭН ЗЭН ЖУ Д- ЭШИН",
-      "name_ru": "",
-      "breed": "КАНЕ КИТАЙСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

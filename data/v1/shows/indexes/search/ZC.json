@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ZC",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1816342981",
+      "name_lat": "Z-CHERRY BARRY BRAVE HEART",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1574385801",
+      "name_lat": "Z-CHERRY BERRY BRAVE HEART",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1867364493",
+      "name_lat": "ZCVETNAYA SIBIR JUZHIK",
+      "name_ru": "",
+      "breed": "БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

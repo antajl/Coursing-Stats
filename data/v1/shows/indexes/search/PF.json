@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "PF",
-  "count": 18,
+  "count": 20,
   "dogs": [
     {
       "id": "333676662",
@@ -40,12 +40,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1062807811",
+      "id": "325431431",
       "name_lat": "PFEFFER PERLE AQUARELL",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "317607804",
+      "name_lat": "PFEFFER PERLE SCARLETT O'HARA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1878323006",
+      "name_lat": "PFINGSTVIZE HILLARY'S SWEET DREAM",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -58,10 +75,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "695976136",
+      "id": "1288512415",
       "name_lat": "PFEFFER PERLE ARYA",
       "name_ru": "",
-      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104635994",
+      "name_lat": "PFINGSTVIZE TUTSI NEVSKIY KRISTALL",
+      "name_ru": "ПФИНГСТВИЗЕ ТУТСИ НЕВСКИЙ КРИСТАЛЛ",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -82,15 +108,6 @@
       "breed": "СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1105177587",
-      "name_lat": "PFINGSTVIZE TUTSI NEVSKIY KRISTALL",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -139,12 +156,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "487932656",
-      "name_lat": "PFEFFER PERLE SCARLETT O'HARA",
+      "id": "1564917493",
+      "name_lat": "PFEFFER PERLE SCARLETT O'KHARA",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -157,10 +173,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "250341367",
+      "id": "1882488787",
       "name_lat": "PFEFFER PERLE SILVER MELODY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

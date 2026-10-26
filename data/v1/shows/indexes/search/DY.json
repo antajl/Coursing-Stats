@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "DY",
-  "count": 154,
+  "count": 162,
   "dogs": [
     {
       "id": "457860405",
@@ -37,6 +37,14 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "37132633",
+      "name_lat": "DYNASTY STARS ESTRELLA",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -76,15 +84,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "37132633",
-      "name_lat": "DYNASTY STARS ESTRELLA",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1636606535",
       "name_lat": "DYNASTY STARS TAMARIND",
       "name_ru": "",
@@ -100,6 +99,15 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "BERNESE MOUNTAIN DOG",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1422911639",
+      "name_lat": "DYOURBAHLER KLAB LIE TO ME",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -157,12 +165,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1422911639",
-      "name_lat": "DYOURBAHLER KLAB LIE TO ME",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "id": "279583178",
+      "name_lat": "DYKHANIE LEDYANOGO DRAKONA ZENA",
+      "name_ru": "ДЫХАНИЕ ЛЕДЯНОГО ДРАКОНА ЗЕНА",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 50,
       "competition_dog_id": null
     },
     {
@@ -199,6 +207,14 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1812614048",
+      "name_lat": "DYNASTIC BRANCH MISS CHARISMA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -301,19 +317,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1725178993",
+      "id": "1106795423",
+      "name_lat": "DYNASTIC BRANCH MAGIC",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1556855433",
       "name_lat": "DYUSHALI REAL STIL",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "855072463",
+      "id": "1879005889",
       "name_lat": "DYOURBAHLER KLAB ONE AND ONLY",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -328,21 +352,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1058684857",
+      "id": "241308548",
       "name_lat": "DYUK BOND",
       "name_ru": "",
-      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР /",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "279583178",
-      "name_lat": "DYKHANIE LEDYANOGO DRAKONA ZENA",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -436,12 +451,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1447724900",
+      "name_lat": "DYURDANA ALAMMIR",
+      "name_ru": "ДЮРДАНА АЛАММИР",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
       "id": "449243198",
       "name_lat": "DYOURBAHLER KLAB СHASING RAINBOWS",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "BERNESE MOUNTAIN DOG",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -459,7 +483,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -481,15 +505,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1447724900",
-      "name_lat": "DYURDANA ALAMMIR",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "1684639716",
       "name_lat": "DYNASTY STARS CEZAR",
       "name_ru": "",
@@ -499,10 +514,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1020859449",
+      "id": "376685192",
+      "name_lat": "DYNASTY STARS VENERA BLACK MAGIK",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "732347396",
       "name_lat": "DYNASTY'S STARS AND STRIPES",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА /",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -514,15 +538,6 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "376685192",
-      "name_lat": "DYNASTY STARS VENERA BLACK MAGIK",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -580,6 +595,32 @@
       "competition_dog_id": null
     },
     {
+      "id": "1622742303",
+      "name_lat": "DYOURBAHLER KLAB HISTORY OF LOVE",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "242288929",
+      "name_lat": "DYURBAKHLER KLAB BELARDZHE",
+      "name_ru": "ДЮРБАХЛЕР КЛАБ БЕЛАРДЖЕ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "BERNESE MOUNTAIN DOG",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "63668526",
+      "name_lat": "DYNASTIC BRANCH FANTASTIC SEVEN",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "667987510",
       "name_lat": "DYSZKANT ZAMLICZE",
       "name_ru": "",
@@ -634,6 +675,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "135621833",
+      "name_lat": "DYOURBAHLER KLAB JULIA VLADIMIROVNA",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "CAIRN TERRIER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1809979036",
       "name_lat": "DYOURBAHLER KLAB MIREILLE MON SHARM",
       "name_ru": "",
@@ -645,15 +695,6 @@
     {
       "id": "87726876",
       "name_lat": "DYOURBAHLER KLAB SEN LORAN",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1622742303",
-      "name_lat": "DYOURBAHLER KLAB HISTORY OF LOVE",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
@@ -706,6 +747,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1895351893",
+      "name_lat": "DYNAMITE IZ DINASTII CHEMPIONOV",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "276515097",
       "name_lat": "DYNAMITE ANGEL & DEMON",
       "name_ru": "",
@@ -733,12 +782,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "873830954",
+      "id": "1679941089",
+      "name_lat": "DYNASTY STARS VESTA MISTICAL CHARM",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "504530848",
       "name_lat": "DYUYMI GOLD IZ YAROSLAVSKOGO KNIAJESTVA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БЛАДХАУНД",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -751,12 +808,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "135621833",
-      "name_lat": "DYOURBAHLER KLAB JULIA VLADIMIROVNA",
+      "id": "1705699029",
+      "name_lat": "DYNASTY DE LUXE OT ELEGANT LADY",
       "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "CAIRN TERRIER",
-      "total_shows": 1,
+      "breed": "RUSSIAN TOY SMOOTH-",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -765,6 +822,14 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "775550397",
+      "name_lat": "Dynasty Star's Velson Image Dream",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -778,21 +843,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "838065808",
+      "name_lat": "DYUNA ALLEGRO KON BRIO",
+      "name_ru": "ДЮНА АЛЛЕГРО КОН БРИО",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1481055100",
       "name_lat": "DYUSHALI UNKAS SULEYMAN ZLATIE KUPOLA",
       "name_ru": "",
       "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "896292801",
-      "name_lat": "DYNASTY DE LUXE OT ELEGANT LADY",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -850,15 +915,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "838065808",
-      "name_lat": "DYUNA ALLEGRO KON BRIO",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1527020534",
       "name_lat": "DYOURBAHLER KLAB JE M*APPELLE LA VICTOIRE",
       "name_ru": "",
@@ -904,12 +960,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1674227920",
+      "name_lat": "DYUSHALI GARDEMARIN DLYA STAROY SHUI",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1055374491",
       "name_lat": "DYOURBAHLER KLAB JOUR DE FETE",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "830335367",
+      "name_lat": "DYOURBAHLER KLAB ERIC FORTDOG' YAR",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -931,6 +1005,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1148986201",
+      "name_lat": "DYN FAVORIT OF FORTUNA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "384260683",
       "name_lat": "DYLAN DOG TERRADORFILI",
       "name_ru": "",
@@ -946,24 +1029,6 @@
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "830335367",
-      "name_lat": "DYOURBAHLER KLAB ERIC FORTDOG' YAR",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1674227920",
-      "name_lat": "DYUSHALI GARDEMARIN DLYA STAROY SHUI",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1003,15 +1068,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "63668526",
-      "name_lat": "DYNASTIC BRANCH FANTASTIC SEVEN",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1239974503",
       "name_lat": "DYOURBAHLER KLAB",
       "name_ru": "",
@@ -1030,19 +1086,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "242288929",
-      "name_lat": "DYURBAKHLER KLAB BELARDZHE",
+      "id": "1613249781",
+      "name_lat": "DYOURBAHLER KLAB RUSSIAN SIZE TOTAL CONTROL",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "BERNESE MOUNTAIN DOG",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "521617122",
+      "id": "681857763",
       "name_lat": "DYOURBAHLER KLAB JANTAR LOVE FOREVER",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1075,10 +1130,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "296259443",
+      "id": "881202650",
       "name_lat": "DYOURBAHLER KLAB JOIE DE MA VIE",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1093,11 +1148,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "915757950",
+      "id": "923348487",
       "name_lat": "DYLLON TROUBLE DOUBLE",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "96111230",
+      "name_lat": "DYNAMIC EQUILIBRIUM DRAGONFLY DASH",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1147,6 +1210,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "217099189",
+      "name_lat": "DYUSHALI ULTRA VITA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН) ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1227703028",
       "name_lat": "DYOURBAHLER KLAB UNIVERSITY OF LIFE",
       "name_ru": "",
@@ -1161,6 +1233,14 @@
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "534082790",
+      "name_lat": "DYOURBAHLER KLAB SOL LUCET OMNIBUS",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1187,24 +1267,6 @@
       "name_lat": "DYANKA BARHAT NOCHI",
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "217099189",
-      "name_lat": "DYUSHALI ULTRA VITA",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН) ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "600485692",
-      "name_lat": "DYN FAVORIT OF FORTUNA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1237,28 +1299,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "401757444",
+      "id": "107748949",
+      "name_lat": "DYNASTIC BRANCH FABULOUS FOXTROT",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1597648305",
       "name_lat": "DYOURBAHLER KLAB JASMIN PARADISE FLOWER",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "96111230",
-      "name_lat": "DYNAMIC EQUILIBRIUM DRAGONFLY DASH",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1473220374",
+      "id": "1188536257",
       "name_lat": "DYAVOLSKAYA NOCH",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

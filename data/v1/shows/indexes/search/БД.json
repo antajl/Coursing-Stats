@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "БД",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1766207268",
+      "name_lat": "Б-ДЖИНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1192622038",
+      "name_lat": "БДИТЕЛЬНЫЙ СТРАЖ КАРАТ",
+      "name_ru": "БДИТЕЛЬНЫЙ СТРАЖ КАРАТ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1341716505",
+      "name_lat": "Б\"ДАЙКИТИ",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

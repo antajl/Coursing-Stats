@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EO",
-  "count": 15,
+  "count": 18,
   "dogs": [
+    {
+      "id": "270469100",
+      "name_lat": "EOL POVELITEL VETRA",
+      "name_ru": "ЭОЛ ПОВЕЛИТЕЛЬ ВЕТРА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
     {
       "id": "5529151",
       "name_lat": "EONNI DES CHIBOUNE'S KYIS",
@@ -13,10 +22,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "7891645",
+      "id": "1979088142",
       "name_lat": "EOGANACHTA ARABELLA",
       "name_ru": "",
-      "breed": "ДИРХАУНД",
+      "breed": "ПУАЛЬ ДИРХАУНД (ШОТЛАНДСКАЯ",
       "breed_en": "DEERHOUND",
       "total_shows": 2,
       "competition_dog_id": null
@@ -40,6 +49,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "374041025",
+      "name_lat": "EOLIS EZHEVIKA",
+      "name_ru": "Эолис Ежевика",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "932696777",
       "name_lat": "EOLIS LEVENBURG",
       "name_ru": "",
@@ -58,19 +76,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "1863696354",
+      "name_lat": "E OSMAR'SZ EUS KETIKU",
+      "name_ru": "",
+      "breed": "БИШОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "241567754",
       "name_lat": "EOS KOMETA JASMIN NOIRE",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "974623410",
+      "id": "1478386055",
       "name_lat": "EOS KOMETA INCOGNITO IN RED",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -121,21 +148,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "374041025",
-      "name_lat": "EOLIS EZHEVIKA",
+      "id": "1587181358",
+      "name_lat": "EOLIS GERDA",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ПЕРЕЦ С",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1548327968",
-      "name_lat": "EOL POVELITEL VETRA",
+      "id": "1645634565",
+      "name_lat": "EO ТАШИРА ХАУС МЕГИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 3,
+      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

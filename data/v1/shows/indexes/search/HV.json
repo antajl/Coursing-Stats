@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "HV",
-  "count": 10,
+  "count": 12,
   "dogs": [
     {
       "id": "500739392",
@@ -13,39 +13,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "1725071089",
+      "id": "1795562981",
       "name_lat": "HVALYENA MATRYENA",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "349563351",
+      "id": "1188013848",
       "name_lat": "HVANCHKARA RUBINOVAYA KAPLYA SLADOSTL",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1985662830",
+      "id": "550890498",
       "name_lat": "HVOSTATOGO BALAGANA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1664965623",
+      "id": "1568905047",
       "name_lat": "HVATAJ MECHTU ZA HVOST",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "832451225",
+      "name_lat": "HVOZDU РЕД ПРАЙД СМАЙЛ ХАНТЕР",
+      "name_ru": "",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -58,10 +66,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1211555456",
+      "id": "750156651",
       "name_lat": "HVOSTATOGO",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -73,6 +81,15 @@
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1882598772",
+      "name_lat": "H-VULKAN",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

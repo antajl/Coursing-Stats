@@ -16,6 +16,34 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '../../..')
 const INDEXES_DIR = path.join(ROOT, 'data/v1/shows/indexes')
 
+const _sab = new SharedArrayBuffer(4)
+const _sleepArray = new Int32Array(_sab)
+function sleepMs(ms: number) {
+  Atomics.wait(_sleepArray, 0, 0, ms)
+}
+
+function safeWriteFileSync(filePath: string, content: string | Buffer, retries = 10, delayMs = 300) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const tmpPath = `${filePath}.${process.pid}.${Date.now()}.tmp`
+      fs.writeFileSync(tmpPath, content)
+      try {
+        fs.renameSync(tmpPath, filePath)
+      } catch {
+        try { if (fs.existsSync(filePath)) fs.unlinkSync(filePath) } catch {}
+        fs.renameSync(tmpPath, filePath)
+      }
+      return
+    } catch (err) {
+      if (i === retries - 1) {
+        fs.writeFileSync(filePath, content)
+        return
+      }
+      sleepMs(delayMs * (i + 1))
+    }
+  }
+}
+
 /** Visible first screen + scroll buffer; keep file ~100–200 KB. */
 export const SHOW_RANKING_PAGE0_SIZE = 400
 export const SHOW_JUDGES_PAGE0_SIZE = 300
@@ -57,7 +85,7 @@ export function writeRankingPage0(year: string, dogs: RankingDog[], pageSize = S
     count: page0.length,
     dogs: page0,
   }
-  fs.writeFileSync(path.join(INDEXES_DIR, outName), JSON.stringify(body))
+  safeWriteFileSync(path.join(INDEXES_DIR, outName), JSON.stringify(body))
   const kb = (Buffer.byteLength(JSON.stringify(body)) / 1024).toFixed(1)
   console.log(`  Saved ${outName} (${page0.length}/${dogs.length} dogs, ${kb} KB)`)
   return outName
@@ -130,7 +158,7 @@ export function writeJudgesPage0(judges: JudgeRow[], pageSize = SHOW_JUDGES_PAGE
     count: page0.length,
     judges: page0,
   }
-  fs.writeFileSync(path.join(INDEXES_DIR, outName), JSON.stringify(body))
+  safeWriteFileSync(path.join(INDEXES_DIR, outName), JSON.stringify(body))
   const kb = (Buffer.byteLength(JSON.stringify(body)) / 1024).toFixed(1)
   console.log(`  Saved ${outName} (${page0.length}/${judges.length} judges, lean breeds, ${kb} KB, sort=${season})`)
   return outName

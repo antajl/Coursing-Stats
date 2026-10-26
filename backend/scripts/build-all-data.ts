@@ -62,6 +62,8 @@ if (fs.existsSync(derivedIndexes)) {
   assertNonEmptyIndex('data/v1/indexes/judges-summary.json', 'judges', 'judges-summary');
 }
 
+run('npx tsx backend/scripts/build-data-manifest.ts', 'Data manifest and breeds build');
+
 // Show indexes need local RKF PDF exports (data/local/shows/exhibitions-rkf, gitignored).
 // Without them, rebuild uses only ~88 LC HTML shows → wipes BIS/BIG and shrinks ranking.
 // CI must ship committed data/v1/shows/indexes/* as-is.

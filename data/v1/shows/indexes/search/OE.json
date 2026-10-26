@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OE",
-  "count": 7,
+  "count": 12,
   "dogs": [
     {
-      "id": "1333956073",
-      "name_lat": "OESSENN STIL SHARMEL (Изменено по решению ВК от",
-      "name_ru": "",
+      "id": "1103343672",
+      "name_lat": "OESSENN STIL SHARMEL",
+      "name_ru": "ОЕССЕНН СТИЛЬ ШАРМЕЛЬ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -15,10 +15,19 @@
     {
       "id": "446293338",
       "name_lat": "OESSENN STIL TOKAY",
+      "name_ru": "ОЕССЕНН СТИЛЬ ТОКАЙ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1333956073",
+      "name_lat": "OESSENN STIL SHARMEL (Изменено по решению ВК от",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 33,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -49,12 +58,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "512377147",
+      "name_lat": "OESSENN STIL ZANDAU",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1047979430",
       "name_lat": "OESSENN STIL ZHANETT",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1041371390",
+      "name_lat": "OESSENN STIL ZAKARI",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269498633",
+      "name_lat": "O'EVRIKA PONOCHKA",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР / WEST HIGHLAND WHITE",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -63,6 +97,14 @@
       "name_ru": "",
       "breed": "BULLDOG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "295618159",
+      "name_lat": "O'ESMIRA STAR TREK S YSADBY MANSHETOVYH",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "total_shows": 1,
       "competition_dog_id": null
     }

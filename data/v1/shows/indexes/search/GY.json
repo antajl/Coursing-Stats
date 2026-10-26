@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "GY",
-  "count": 28,
+  "count": 32,
   "dogs": [
     {
       "id": "1344159864",
@@ -9,7 +9,16 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 28,
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "926739643",
+      "name_lat": "GYULDZHAN IZ DOMA CHAGREMAR",
+      "name_ru": "Гюльджан из Дома Чагремар",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -22,21 +31,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "55355383",
+      "id": "648713104",
       "name_lat": "GYUNTER SHTAYNER VON VISHENHOFF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "926739643",
-      "name_lat": "GYULDZHAN IZ DOMA CHAGREMAR",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -64,6 +64,15 @@
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "175543082",
+      "name_lat": "G'YOLL' SEREBRISTAYA",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -112,10 +121,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "442351796",
+      "id": "1969359848",
       "name_lat": "GYPSY QUEEN ESMERALDA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -157,6 +166,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1781865792",
+      "name_lat": "GYURZA MITHGARD",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "760215730",
+      "name_lat": "GYURZAMITHGARD",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1599489533",
       "name_lat": "GYURZA INSTANTANEOUS THROW",
       "name_ru": "",
@@ -184,6 +209,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "195876930",
+      "name_lat": "GYULLI GLEDIS",
+      "name_ru": "ГЮЛЛИ ГЛЭДИС",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "6983869",
+      "name_lat": "GYPSY STAR",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "470288045",
       "name_lat": "GYPSY'S SOUL RAMBUTAN",
       "name_ru": "",
@@ -202,29 +245,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1456365899",
-      "name_lat": "GYULLI GLEDIS",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "6983869",
-      "name_lat": "GYPSY STAR",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "165310172",
       "name_lat": "GYPSY STAR",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1313449432",
+      "name_lat": "GYPSY STAR",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     },

@@ -1,42 +1,33 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "УТ",
-  "count": 134,
+  "count": 142,
   "dogs": [
     {
       "id": "249611266",
       "name_lat": "УТРЕННИЙ БРИЗ РЕГАТА",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ РЕГАТА",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 149,
+      "total_shows": 164,
       "competition_dog_id": null
     },
     {
-      "id": "174144243",
-      "name_lat": "УТЕХА ФЕЕРИЯ УСПЕХА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1471671185",
+      "id": "825502764",
       "name_lat": "УТРЕННИЙ БРИЗ РЕВАНШ",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ РЕВАНШ",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 37,
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
       "id": "518603299",
       "name_lat": "УТРЕННЯЯ ЗВЕЗДА",
-      "name_ru": "",
+      "name_ru": "УТРЕННЯЯ ЗВЕЗДА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -46,6 +37,15 @@
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1454218786",
+      "name_lat": "УТТОРИ -СУРУ",
+      "name_ru": "",
+      "breed": "акита",
+      "breed_en": "",
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -69,25 +69,16 @@
     {
       "id": "1739110486",
       "name_lat": "УТОЛИ МОИ ПЕЧАЛИ ИЗ ОЖЕРЕЛЬЯ",
-      "name_ru": "",
+      "name_ru": "УТОЛИ МОИ ПЕЧАЛИ ИЗ ОЖЕРЕЛЬЯ",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1454218786",
-      "name_lat": "УТТОРИ -СУРУ",
-      "name_ru": "",
-      "breed": "акита",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "848912553",
       "name_lat": "УТРЕННИЙ БРИЗ ЦЕННЫЙ КАДР",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ ЦЕННЫЙ КАДР",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 8,
@@ -103,10 +94,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1693166335",
+      "id": "1618495214",
       "name_lat": "УТРЕННЯЯ ЗАРЯ ИЗ УНИКАЛЬНОЙ КОЛЛЕКЦИИ",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -114,7 +105,7 @@
     {
       "id": "471615299",
       "name_lat": "УТРЕННЯЯ ЗВЕЗДА ОСВЕЩАЮЩАЯ ПУТЬ",
-      "name_ru": "",
+      "name_ru": "УТРЕННЯЯ ЗВЕЗДА ОСВЕЩАЮЩАЯ ПУТЬ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -130,27 +121,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "307720262",
+      "id": "1405179583",
       "name_lat": "УТРЕННИЙ БРИЗ ПРИБОЙ",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ ПРИБОЙ",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
       "id": "433741947",
       "name_lat": "УТРЕННИЙ БРИЗ РИВЬЕРА",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ РИВЬЕРА",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "1540006182",
+      "name_lat": "УТОЛИ МОИ ПЕЧАЛИ ИЗ ЧУДНОЙ ДОЛИНЫ",
+      "name_ru": "УТОЛИ МОИ ПЕЧАЛИ ИЗ ЧУДНОЙ ДОЛИНЫ",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "151162349",
       "name_lat": "УТРЕННЯЯ ЗВЕЗДА СЕЛИНА",
-      "name_ru": "",
+      "name_ru": "УТРЕННЯЯ ЗВЕЗДА СЕЛИНА",
       "breed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 6,
@@ -166,10 +165,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1185326491",
+      "id": "685046059",
       "name_lat": "УТРЕННЯЯ ЗВЕЗДА МИЛАНА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "УТРЕННЯЯ ЗВЕЗДА МИЛАНА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -177,7 +176,7 @@
     {
       "id": "1702931711",
       "name_lat": "УТРЕННЯЯ ЗВЁЗДОЧКА",
-      "name_ru": "",
+      "name_ru": "УТРЕННЯЯ ЗВЁЗДОЧКА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 20,
@@ -186,7 +185,7 @@
     {
       "id": "1541904667",
       "name_lat": "УТРО СЕВЕРА ЛЕСНАЯ ФЕЯ ЛЕЯ",
-      "name_ru": "",
+      "name_ru": "УТРО СЕВЕРА ЛЕСНАЯ ФЕЯ ЛЕЯ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 21,
@@ -195,26 +194,26 @@
     {
       "id": "1467989564",
       "name_lat": "УТИ БОЖЕ МОЙ",
-      "name_ru": "",
+      "name_ru": "УТИ БОЖЕ МОЙ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "276138922",
+      "id": "1426602273",
       "name_lat": "УТАНГА ИЗ ДИНАСТИИ КОНОЛ’С",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "68297145",
+      "id": "124226948",
       "name_lat": "УТРЕННИЙ БРИЗ УЛИСС",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -247,37 +246,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "21893991",
-      "name_lat": "УТЕР СВЕТОНОСНЫЙ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1649926193",
+      "id": "824448204",
       "name_lat": "УТРЕННИЙ БРИЗ ПАНДОРА",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ ПАНДОРА",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1115188751",
+      "id": "138895934",
+      "name_lat": "УТЕР СВЕТОНОСНЫЙ",
+      "name_ru": "УТЕР СВЕТОНОСНЫЙ",
+      "breed": "RUSSIAN TOY LONG-",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455609080",
+      "name_lat": "УТРЕННИЙ БРИЗ НЕВЕР СЕРРЕНДЕР",
+      "name_ru": "УТРЕННИЙ БРИЗ НЕВЕР СЕРРЕНДЕР",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "41126462",
       "name_lat": "УТРЕННИЙ БРИЗ САНШАЙН",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ САНШАЙН",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "32755374",
+      "id": "1734036983",
       "name_lat": "УТРЕННИЙ БРИЗ РОКСОЛАНА",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ РОКСОЛАНА",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -285,142 +293,141 @@
     {
       "id": "1342907338",
       "name_lat": "УТРЕННИЙ БРИЗ СЕЙ АВРОРАС МУН",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ СЕЙ АВРОРАС МУН",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1623397381",
+      "id": "1101897496",
       "name_lat": "УТРЕННИЙ БРИЗ РАЙДЕР",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ РАЙДЕР",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1448037452",
+      "id": "762695501",
+      "name_lat": "УТРЕННИЙ БРИЗ ПОСЕЙДОН",
+      "name_ru": "УТРЕННИЙ БРИЗ ПОСЕЙДОН",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "277976617",
       "name_lat": "УТРЕННИЙ БРИЗ ПАЛЛАДА",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ ПАЛЛАДА",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "389523255",
+      "id": "1069546358",
       "name_lat": "УТРО СЕВЕРА ИСКРА СТРАСТИ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "name_ru": "УТРО СЕВЕРА ИСКРА СТРАСТИ",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "12491550",
+      "name_lat": "УТРЕННИЙ ВЕТЕРОК ИЗ СТАРОЙ ШУИ",
+      "name_ru": "УТРЕННИЙ ВЕТЕРОК ИЗ СТАРОЙ ШУИ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "1496322951",
       "name_lat": "УТАНА ГОЛДЕН БРИЗ",
-      "name_ru": "",
+      "name_ru": "УТАНА ГОЛДЕН БРИЗ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "12491550",
-      "name_lat": "УТРЕННИЙ ВЕТЕРОК ИЗ СТАРОЙ ШУИ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1740689320",
-      "name_lat": "УТРЕННИЙ БРИЗ ПОСЕЙДОН",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "355162160",
+      "id": "527508229",
       "name_lat": "УТРЕННИЙ БРИЗ РОМАНТИК",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ РОМАНТИК",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1800367061",
+      "id": "1862175720",
       "name_lat": "УТРЕННИЙ БРИЗ САМУЭЛЬ",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ САМУЭЛЬ",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
       "id": "1690871730",
       "name_lat": "УТРО СЕВЕРА ИВАН ЦАРЕВИЧ",
-      "name_ru": "",
+      "name_ru": "УТРО СЕВЕРА ИВАН ЦАРЕВИЧ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "755116389",
-      "name_lat": "УТРЕННИЙ БРИЗ НЕВЕР СЕРРЕНДЕР",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "id": "397696317",
+      "name_lat": "УТИДА ИЗ ИМПЕРИИ ФАВОРИТОВ",
+      "name_ru": "УТИДА ИЗ ИМПЕРИИ ФАВОРИТОВ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
       "id": "1761657966",
       "name_lat": "УТРЕННЯЯ ЗВЕЗДА МЕГГИ",
-      "name_ru": "",
+      "name_ru": "УТРЕННЯЯ ЗВЕЗДА МЕГГИ",
       "breed": "СЕТТЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1021241602",
+      "id": "926146819",
       "name_lat": "УТРЕННИЙ БРИЗ ТАНЕЦ ПРИБОЯ",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ ТАНЕЦ ПРИБОЯ",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "705230816",
+      "id": "855886005",
       "name_lat": "УТРЕННЯЯ ЗАРЯ ИЗ ГАЛАКУНА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "name_ru": "УТРЕННЯЯ ЗАРЯ ИЗ ГАЛАКУНА",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1093716368",
+      "id": "1039428325",
       "name_lat": "УТРЕННИЙ БРИЗ РАНДЕВУ",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ РАНДЕВУ",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
       "id": "119199342",
       "name_lat": "УТРО СЕВЕРА АСТОН МАРТИН ВАН",
-      "name_ru": "",
+      "name_ru": "УТРО СЕВЕРА АСТОН МАРТИН ВАН",
       "breed": "КЕРН СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -429,19 +436,10 @@
     {
       "id": "1016520970",
       "name_lat": "УТЁС АСГАРДА",
-      "name_ru": "",
+      "name_ru": "УТЁС АСГАРДА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "397696317",
-      "name_lat": "УТИДА ИЗ ИМПЕРИИ ФАВОРИТОВ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -454,19 +452,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "195211805",
+      "id": "679463872",
       "name_lat": "УТРЕННИЙ БРИЗ СКАЖИ МНЕ ЛЮБЛЮ",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ СКАЖИ МНЕ ЛЮБЛЮ",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "924078656",
+      "id": "1701371541",
       "name_lat": "УТРЕННИЙ БРИЗ ПРЕФЕРАНС",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "УТРЕННИЙ БРИЗ ПРЕФЕРАНС",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -474,7 +472,7 @@
     {
       "id": "909905001",
       "name_lat": "УТТОРИ СУРУ КРИМЕАН ХАН",
-      "name_ru": "",
+      "name_ru": "УТТОРИ СУРУ КРИМЕАН ХАН",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 6,
@@ -492,25 +490,24 @@
     {
       "id": "1659082230",
       "name_lat": "УТРЕННИЙ БРИЗ УЛЬЯНА",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ УЛЬЯНА",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "497893311",
-      "name_lat": "УТРЕННЯЯ ЗАРЯ ИЗ СТАРОЙ ШУИ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 4,
+      "id": "1467784271",
+      "name_lat": "УТЕНА ЗОЛОТОЙ ЦВЕТОК",
+      "name_ru": "УТЕНА ЗОЛОТОЙ ЦВЕТОК",
+      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "7817559",
       "name_lat": "УТРЕННИЙ БРИЗ РЕВОЛЮЦИЯ",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ РЕВОЛЮЦИЯ",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 5,
@@ -519,7 +516,7 @@
     {
       "id": "246566668",
       "name_lat": "УТРЕННЯЯ ЗВЕЗДА ИЗ ЖЕМЧУЖНОЙ РОССЫПИ",
-      "name_ru": "",
+      "name_ru": "УТРЕННЯЯ ЗВЕЗДА ИЗ ЖЕМЧУЖНОЙ РОССЫПИ",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 5,
@@ -528,17 +525,17 @@
     {
       "id": "1246837026",
       "name_lat": "УТРЕННЯ ЗВЕЗДА ОТ БУМАЖЕ",
-      "name_ru": "",
+      "name_ru": "УТРЕННЯ ЗВЕЗДА ОТ БУМАЖЕ",
       "breed": "ОХОТНИЧИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "704205876",
+      "id": "1561751869",
       "name_lat": "УТАРИ ФАВОРИТ ШАРМ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "УТАРИ ФАВОРИТ ШАРМ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -555,16 +552,24 @@
     {
       "id": "1334727998",
       "name_lat": "УТРЕННИЙ БРИЗ СИНДБАД",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ СИНДБАД",
       "breed": "DALMATIAN",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "1636183095",
+      "name_lat": "УТРЕННЯЯ ЗВЕЗДА ОТ БУМАЖЕ",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1230181441",
       "name_lat": "УТРО СЕВЕРА НОКС ВОЛШЕБНЫЙ ПОЦЕЛУЙ",
-      "name_ru": "",
+      "name_ru": "УТРО СЕВЕРА НОКС ВОЛШЕБНЫЙ ПОЦЕЛУЙ",
       "breed": "ГРИФФОН БЕЛЬГИЙСКИЙ",
       "breed_en": "",
       "total_shows": 13,
@@ -573,7 +578,7 @@
     {
       "id": "1160537567",
       "name_lat": "УТРЕННИЙ БРИЗ ИТАЛИЯ",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ ИТАЛИЯ",
       "breed": "DALMATIAN",
       "breed_en": "",
       "total_shows": 3,
@@ -582,17 +587,17 @@
     {
       "id": "889195256",
       "name_lat": "УТРЕННИЙ БРИЗ РИФ",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ РИФ",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1304542915",
+      "id": "1170730922",
       "name_lat": "УТИ-ПУТИ А ОНА КРАСАВИЦА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "name_ru": "УТИ-ПУТИ А ОНА КРАСАВИЦА",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -600,7 +605,7 @@
     {
       "id": "601754878",
       "name_lat": "УТРЕННЯЯ РОСА КИОТА",
-      "name_ru": "",
+      "name_ru": "УТРЕННЯЯ РОСА КИОТА",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 6,
@@ -636,7 +641,7 @@
     {
       "id": "1531162710",
       "name_lat": "УТАЙ СЫН ЗЕМЛИ МАРИЙСКОЙ",
-      "name_ru": "",
+      "name_ru": "УТАЙ СЫН ЗЕМЛИ МАРИЙСКОЙ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
@@ -645,10 +650,18 @@
     {
       "id": "182905921",
       "name_lat": "УТРЕННИЙ ЛУЧИК СОЛНЦА",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ ЛУЧИК СОЛНЦА",
       "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "719457448",
+      "name_lat": "УТАМА",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -670,10 +683,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "89750106",
+      "id": "850338603",
       "name_lat": "УТРЕННИЙ БРИЗ НАУ О НЕВЕР",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -706,19 +719,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1540006182",
-      "name_lat": "УТОЛИ МОИ ПЕЧАЛИ ИЗ ЧУДНОЙ ДОЛИНЫ",
+      "id": "1337743644",
+      "name_lat": "УТРЕННЯЯ ЗАРЯ ИЗ ДИНАСТИИ ИН",
       "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД) /",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "736624267",
+      "id": "131846018",
       "name_lat": "УТОПИЯ КАРАМЕЛЬ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -726,10 +738,18 @@
     {
       "id": "19937791",
       "name_lat": "УТТИС МАЛЕНЬКИЙ ПРИНЦ",
-      "name_ru": "",
+      "name_ru": "УТТИС МАЛЕНЬКИЙ ПРИНЦ",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "673137098",
+      "name_lat": "УТРЕННИЙ БРИЗ РЕГАТА ЕМАНГА ПРИМА",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -742,10 +762,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1722209557",
+      "id": "723513472",
       "name_lat": "УТЕР",
       "name_ru": "",
-      "breed": "СЕТТЕР ГОРДОН ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -760,10 +780,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1786175376",
+      "id": "107423412",
+      "name_lat": "УТЕХА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1843174629",
       "name_lat": "УТОНЧЁННАЯ ОСОБА КЛЕО",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -771,7 +799,7 @@
     {
       "id": "1914852120",
       "name_lat": "УТРЕННЯЯ ЗАРЯ",
-      "name_ru": "",
+      "name_ru": "УТРЕННЯЯ ЗАРЯ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -798,7 +826,7 @@
     {
       "id": "1946426795",
       "name_lat": "УТРЕННИЙ БРИЗ УЛЬТИМАТУМ ПОБЕДЫ",
-      "name_ru": "",
+      "name_ru": "УТРЕННИЙ БРИЗ УЛЬТИМАТУМ ПОБЕДЫ",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 6,
@@ -809,8 +837,7 @@
       "name_lat": "УТАРО",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -834,7 +861,7 @@
     {
       "id": "927371391",
       "name_lat": "УТАРИ ГЭЛАКСИ ШТОРМ БАРХАТНЫЙ АНГЕЛ",
-      "name_ru": "",
+      "name_ru": "УТАРИ ГЭЛАКСИ ШТОРМ БАРХАТНЫЙ АНГЕЛ",
       "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 3,
@@ -843,10 +870,19 @@
     {
       "id": "1181515867",
       "name_lat": "УТРО СЕВЕРА НЕМО ПОКОРИТЕЛЬ МОРЕЙ",
-      "name_ru": "",
+      "name_ru": "УТРО СЕВЕРА НЕМО ПОКОРИТЕЛЬ МОРЕЙ",
       "breed": "БИВЕР БРЮССЕЛЬСКИЙ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "492697636",
+      "name_lat": "У-ТИФФАНИ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -877,19 +913,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974969151",
-      "name_lat": "УТЕНА ЗОЛОТОЙ ЦВЕТОК",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "id": "1440099900",
+      "name_lat": "УТРЕННЯЯ ЗАРЯ ОЛИМПА",
+      "name_ru": "УТРЕННЯЯ ЗАРЯ ОЛИМПА",
+      "breed": "СЕНБЕРНАР короткошерстный",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "976511685",
+      "id": "546489652",
+      "name_lat": "УТРЕННИЙ БРИЗ СЕВЕРНЫЙ ВЕТЕР",
+      "name_ru": "УТРЕННИЙ БРИЗ СЕВЕРНЫЙ ВЕТЕР",
+      "breed": "ДАЛМАТИН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1613440984",
       "name_lat": "УТРО СЕВЕРА БЕЛИВ ИН ДРИМ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "name_ru": "УТРО СЕВЕРА БЕЛИВ ИН ДРИМ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -897,7 +941,7 @@
     {
       "id": "285661338",
       "name_lat": "УТОПИЯ ИЗ ГРАДА КАТЕРИНЫ",
-      "name_ru": "",
+      "name_ru": "УТОПИЯ ИЗ ГРАДА КАТЕРИНЫ",
       "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 2,
@@ -913,6 +957,31 @@
       "competition_dog_id": null
     },
     {
+      "id": "268770790",
+      "name_lat": "УТЕХА",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1144748080",
+      "name_lat": "УТЕС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "992494084",
+      "name_lat": "УТРО СЕВЕРА ЛУЧИК НАДЕЖДЫ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1392484820",
       "name_lat": "УТРЕННЯЯ ЗОРЬКА",
       "name_ru": "",
@@ -922,10 +991,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "461872915",
+      "id": "1408736122",
       "name_lat": "УТРЕННЯЯ ЗВЕЗДА ИЗ ДОМА ФИЛАТОВЫХ",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -985,15 +1054,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1797348617",
-      "name_lat": "УТРЕННЯЯ ЗАРЯ ОЛИМПА",
-      "name_ru": "",
-      "breed": "ST. BERNARD SHORT-",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1296400536",
       "name_lat": "УТАВА ИЗ КЕНЗЕННА КАЗОКУ",
       "name_ru": "",
@@ -1003,10 +1063,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "75357194",
+      "id": "284932651",
       "name_lat": "УТРЕННЯЯ ЗВЕЗДА ИЗ КИТАЙСКОГО КВАРТАЛА",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ /",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1039,37 +1099,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1010846327",
+      "id": "805215414",
       "name_lat": "УТРЕННЯЯ РОСА ИЗ ЮЖНОЙ ЛЕГЕНДЫ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "511730805",
+      "id": "246023688",
       "name_lat": "УТРО СЕВЕРА БОКО ДУ ИНФЕРНУ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1321122594",
+      "id": "1640940835",
       "name_lat": "УТРО СЕВЕРА БРАЙДЛ БУКЕЙ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "344134115",
+      "id": "946227914",
       "name_lat": "УТРЕННИЙ БРИЗ СЕВЕРИН",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1102,10 +1162,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "992494084",
-      "name_lat": "УТРО СЕВЕРА ЛУЧИК НАДЕЖДЫ",
+      "id": "1305392717",
+      "name_lat": "у ТИМ СПИРИТ БАРТИ",
       "name_ru": "",
-      "breed": "МАЛЫЙ",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1147,10 +1207,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "330662073",
+      "id": "101426717",
       "name_lat": "УТАГАН ИЗ КАЗАНСКОГО ХАНСТВА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

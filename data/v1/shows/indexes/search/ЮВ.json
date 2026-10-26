@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЮВ",
-  "count": 257,
+  "count": 261,
   "dogs": [
+    {
+      "id": "1270016044",
+      "name_lat": "ЮВЕЛИНА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
     {
       "id": "1011111953",
       "name_lat": "ЮВЕЛИР ДЛЯ АЛЕКСАНДРОВ",
@@ -13,18 +22,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1270016044",
-      "name_lat": "ЮВЕЛИНА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "1239280654",
       "name_lat": "ЮВИЗИЯ ИЗ ЛИКИНСКИХ",
-      "name_ru": "",
+      "name_ru": "ЮВИЗИЯ ИЗ ЛИКИНСКИХ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 51,
@@ -60,16 +60,24 @@
     {
       "id": "682626538",
       "name_lat": "ЮВЕНТУС С САМОГО ЧЕРНОГО МОРЯ",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТУС С САМОГО ЧЕРНОГО МОРЯ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1494013675",
+      "name_lat": "ЮВЕНИЯ СБЫВШАЯСЯ МЕЧТА ОТ УСТИНОВОЙ ЮЛИИ",
+      "name_ru": "ЮВЕНИЯ СБЫВШАЯСЯ МЕЧТА ОТ УСТИНОВОЙ ЮЛИИ",
+      "breed": "РОДЕЗИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "703915627",
       "name_lat": "ЮВЕНТА ШОКОЛАДНАЯ ПРИНЦЕССА",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТА ШОКОЛАДНАЯ ПРИНЦЕССА",
       "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE TOY BLACK, WHITE, BROWN",
       "total_shows": 18,
@@ -78,10 +86,18 @@
     {
       "id": "1645930086",
       "name_lat": "ЮВЕЛИРНАЯ ШТУЧКА",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНАЯ ШТУЧКА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1555676498",
+      "name_lat": "ЮВЕНТУС",
+      "name_ru": "",
+      "breed": "ГРИФФОН /",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -94,19 +110,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1546754963",
+      "id": "10285830",
       "name_lat": "ЮВЕНТА ГЕРА",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР /",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1242067930",
+      "id": "1835534469",
+      "name_lat": "Ю ВАРМ МАЙ ХЕРТ",
+      "name_ru": "Ю ВАРМ МАЙ ХЁРТ",
+      "breed": "ИБИЦЕНКО",
+      "breed_en": "PODENCO IBICENCO SMOOTH-HAIRED",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "426021558",
       "name_lat": "ЮВЕЛИР",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -114,17 +139,17 @@
     {
       "id": "203574444",
       "name_lat": "ЮВЕЛИНА АРТ ИЗ РОСТОВА ПАПЫ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИНА АРТ ИЗ РОСТОВА ПАПЫ",
       "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "930384576",
+      "id": "642024724",
       "name_lat": "ЮВЕЛИР",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -136,6 +161,15 @@
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "BOSTON TERRIER",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "13239584",
+      "name_lat": "ЮВЕНТА ВЭРИОР ОФ ЗЕ ГЕЛАКСИ",
+      "name_ru": "ЮВЕНТА ВЭРИОР ОФ ЗЕ ГЕЛАКСИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -157,10 +191,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "817801136",
+      "id": "1616766597",
       "name_lat": "ЮВЕЛИР",
       "name_ru": "",
-      "breed": "ГРИФФОН /",
+      "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -175,10 +209,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "225197149",
+      "id": "796759548",
       "name_lat": "ЮВЕНТУС С БУХТЫ АППОЛОНА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "name_ru": "ЮВЕНТУС С БУХТЫ АППОЛОНА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -195,19 +229,10 @@
     {
       "id": "568648541",
       "name_lat": "ЮВЕЛАЙН ИЗ ИМПЕРИИ АДАМАНТ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛАЙН ИЗ ИМПЕРИИ АДАМАНТ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "72064359",
-      "name_lat": "ЮВЕНТА ВЭРИОР ОФ ЗЕ ГЕЛАКСИ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -258,34 +283,34 @@
     {
       "id": "706156943",
       "name_lat": "ЮВЕНТА С ТАГАНЬЕГО РОГА",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТА С ТАГАНЬЕГО РОГА",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "24588946",
+      "id": "699726736",
+      "name_lat": "ЮВЕЛЬ ТАЛЬС ШАРДОНЕ Л'ИДЕ ФОЛЬ",
+      "name_ru": "ЮВЕЛЬ ТАЛЬС ШАРДОНЕ Л'ИДЕ ФОЛЬ",
+      "breed": "KOOIKERHONDJE ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1709086739",
       "name_lat": "ЮВЕЛИР РЕНЕ ЛАЛИК ФРОМ СТОУНХЕНДЖ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "name_ru": "ЮВЕЛИР РЕНЕ ЛАЛИК ФРОМ СТОУНХЕНДЖ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "728440218",
-      "name_lat": "ЮВЕЛЬ ТАЛЬС ШАРДОНЕ Л'ИДЕ ФОЛЬ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "1873428020",
       "name_lat": "ЮВЕЛИНА ИЗ ДОМА РОМАНА",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИНА ИЗ ДОМА РОМАНА",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 19,
@@ -312,26 +337,34 @@
     {
       "id": "292662791",
       "name_lat": "ЮВЕНТА ПРЕКРАСНАЯ",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТА ПРЕКРАСНАЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "1062735533",
+      "name_lat": "ЮВЕНТУС ИЗ ДОМА ЛЕВШОВОЙ",
+      "name_ru": "ЮВЕНТУС ИЗ ДОМА ЛЕВШОВОЙ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1943933537",
       "name_lat": "ЮВИАЛЬ АСТРА",
-      "name_ru": "",
+      "name_ru": "ЮВИАЛЬ АСТРА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "278356118",
+      "id": "933123370",
       "name_lat": "ЮВЕНТА ОЛИВИЯ УНА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЮВЕНТА ОЛИВИЯ УНА",
+      "breed": "НЕМЕЦКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -339,26 +372,26 @@
     {
       "id": "71875070",
       "name_lat": "ЮВЕНТА КОРОЛЕВА СОЛНЦА",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТА КОРОЛЕВА СОЛНЦА",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1788269329",
+      "id": "1455096517",
       "name_lat": "ЮВЕНТУС БЛЕК СТАР",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "ЮВЕНТУС БЛЕК СТАР",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1868072035",
+      "id": "830369098",
       "name_lat": "ЮВАДА СОЛНЕЧНАЯ",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "name_ru": "ЮВАДА СОЛНЕЧНАЯ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -366,25 +399,16 @@
     {
       "id": "1940104882",
       "name_lat": "ЮВЕЛИРНОЕ ЧУДО БЕНТЛИ ЖЕМЧУЖИНА КОЛЛЕКЦИИ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНОЕ ЧУДО БЕНТЛИ ЖЕМЧУЖИНА КОЛЛЕКЦИИ",
       "breed": "GERMAN SPITZ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1062735533",
-      "name_lat": "ЮВЕНТУС ИЗ ДОМА ЛЕВШОВОЙ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "829675441",
       "name_lat": "ЮВЕЛИЯ ПАРАДАЙЗ ДРИМ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИЯ ПАРАДАЙЗ ДРИМ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -411,7 +435,7 @@
     {
       "id": "469835951",
       "name_lat": "ЮВИТА ДЖЕССИКА",
-      "name_ru": "",
+      "name_ru": "ЮВИТА ДЖЕССИКА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
@@ -429,26 +453,17 @@
     {
       "id": "944247586",
       "name_lat": "ЮВЕЛИНА ДАРК БРИЛЛИАНТ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИНА ДАРК БРИЛЛИАНТ",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1277725623",
-      "name_lat": "ЮВЕНТА С ЕГЕРСКОЙ СЛОБОДЫ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1525795622",
+      "id": "489135172",
       "name_lat": "ЮВЕЛЬ ТАЛЬС ПИКАРДИЯ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -474,7 +489,7 @@
     {
       "id": "1901426782",
       "name_lat": "ЮВЕЛИРНАЯ ИЗ КСАРО-ЧЕСТНАЯ ИГРА",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНАЯ ИЗ КСАРО-ЧЕСТНАЯ ИГРА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 9,
@@ -490,28 +505,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "964537261",
+      "id": "1442804609",
       "name_lat": "ЮВЕЛИР ОТ ГОСПОЖИ ПАНИНОЙ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "name_ru": "ЮВЕЛИР ОТ ГОСПОЖИ ПАНИНОЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "694896564",
+      "name_lat": "ЮВЕТТА ИЗ СЕВЕРНОГО КАПРИЗА",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1789241699",
       "name_lat": "ЮВЕНТА ФЛЕР ДЕ ЛИЗ",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТА ФЛЕР ДЕ ЛИЗ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1275232196",
-      "name_lat": "ЮВЕНТОС БЛЭК СТАР",
+      "id": "245551089",
+      "name_lat": "Ю'ВАЛЬКИРИЯ С ЛАДОНИ АНГЕЛА",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1989269616",
+      "name_lat": "ЮВЕНТОС БЛЭК СТАР",
+      "name_ru": "ЮВЕНТОС БЛЭК СТАР",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -519,19 +552,10 @@
     {
       "id": "1798275334",
       "name_lat": "ЮВЕНТА МАУС ИЗ МАРИАЛГРАДА",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТА МАУС ИЗ МАРИАЛГРАДА",
       "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "347996400",
-      "name_lat": "ЮВЕЛИНА ИЗ ДИВНОГО САДА",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -544,55 +568,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "551723585",
+      "id": "531172124",
       "name_lat": "ЮВЕЛИЯ ДЕ ВИВА ЛЕГЕНДА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ЮВЕЛИЯ ДЕ ВИВА ЛЕГЕНДА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "25199610",
+      "id": "296193542",
       "name_lat": "ЮВЕЛИРНАЯ ШТУЧКА МИРТА",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "285616367",
+      "id": "1976754074",
       "name_lat": "ЮВЕЛИНА ИЗ НЕВСКОЙ ТРОЙКИ",
       "name_ru": "",
-      "breed": "SCHNAUZER BLACK ШНАУЦЕР ЧЁРНЫЙ /",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1093537878",
-      "name_lat": "ЮВЕНТУС ИЗ СОЗВЕЗДИЯ МЕЧТЫ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1431744675",
       "name_lat": "ЮВЕЛИРНАЯ КОРОЛЕВА",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНАЯ КОРОЛЕВА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "712515920",
+      "id": "314767525",
       "name_lat": "ЮВЕЛИРНАЯ БУСИНКА НА СЧАСТЬЕ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -618,7 +633,7 @@
     {
       "id": "451028715",
       "name_lat": "ЮВЕЛИЯ ДЕ АБЭРА",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИЯ ДЕ АБЭРА",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 5,
@@ -627,7 +642,7 @@
     {
       "id": "953983598",
       "name_lat": "ЮВЕЛИРНОЕ ЧУДО РИО РИТТА",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНОЕ ЧУДО РИО РИТТА",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -652,9 +667,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1940317386",
+      "name_lat": "ЮВЕНТУС ВОМ АРРИАН ХОФ",
+      "name_ru": "",
+      "breed": "немецкая овчарка",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1304776219",
       "name_lat": "ЮВАЙТ ИЗ ДОМА КУПИДОНА",
-      "name_ru": "",
+      "name_ru": "ЮВАЙТ ИЗ ДОМА КУПИДОНА",
       "breed": "джек рассел терьер",
       "breed_en": "",
       "total_shows": 2,
@@ -663,7 +687,7 @@
     {
       "id": "1509086932",
       "name_lat": "ЮВЕЛИРНЫЙ БИСЕР ИЗ МИРА АНЖЕЛИКИ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНЫЙ БИСЕР ИЗ МИРА АНЖЕЛИКИ",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -679,15 +703,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "484406812",
-      "name_lat": "ЮВЕЛИРНАЯ ШТУЧКА ИЗ ГРАДА ПЕТРОВА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "281808782",
       "name_lat": "ЮВЕЛИР",
       "name_ru": "",
@@ -697,10 +712,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1229158475",
+      "id": "1157162335",
       "name_lat": "ЮВЕНТУС ИН ДОНО ДИ ГЛОРИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ЮВЕНТУС ИН ДОНО ДИ ГЛОРИЯ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -708,7 +723,7 @@
     {
       "id": "157960777",
       "name_lat": "ЮВЕЛИРНАЯ ДИАДЕМА ДЛЯ ДАЧНОЙ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНАЯ ДИАДЕМА ДЛЯ ДАЧНОЙ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
@@ -724,19 +739,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "773710088",
+      "id": "151278679",
       "name_lat": "ЮВЕНТА С РУССКОГО БАЙКАЛА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЮВЕНТА С РУССКОГО БАЙКАЛА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "942460778",
+      "id": "784456145",
       "name_lat": "ЮВЕЛИЯ РЕД РУБИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЮВЕЛИЯ РЕД РУБИ",
+      "breed": "ТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -751,15 +766,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "238019802",
-      "name_lat": "ЮВЕНТУС ИЗ ГРАДА ПЕТРОВА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "97785340",
       "name_lat": "ЮВЕЛИССА ИН ДЕЛОРАС БЬЮТИФУЛ",
       "name_ru": "",
@@ -769,28 +775,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1940317386",
-      "name_lat": "ЮВЕНТУС ВОМ АРРИАН ХОФ",
-      "name_ru": "",
-      "breed": "немецкая овчарка",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "467021604",
+      "id": "1997313240",
       "name_lat": "ЮВЕНТА ГЕРА",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР / RUSSIAN BLACK TERRIER",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР / RUSSIAN BLACK TERRIER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1371079582",
+      "id": "172630655",
       "name_lat": "ЮВЕЛИРНЫЙ СТИЛЬ ОТ ЭЛЕГАНТ ЛЕЛИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЁРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -807,17 +804,17 @@
     {
       "id": "415427659",
       "name_lat": "ЮВЕЛИРНАЯ РАБОТА ШЕРИЛИ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНАЯ РАБОТА ШЕРИЛИ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1399510130",
+      "id": "907578633",
       "name_lat": "ЮВЕНТУС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -832,10 +829,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "830598699",
+      "id": "285165289",
       "name_lat": "ЮВЕТТА ЭНДЖЕЛ АЙС",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "name_ru": "ЮВЕТТА ЭНДЖЕЛ АЙС",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -870,7 +867,7 @@
     {
       "id": "399359160",
       "name_lat": "ЮВЕЛИРНЫХ ДЕЛ МАСТЕР ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНЫХ ДЕЛ МАСТЕР ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
       "breed": "DACHSHUND STANDARD",
       "breed_en": "",
       "total_shows": 3,
@@ -895,28 +892,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "375065753",
-      "name_lat": "ЮВЕНТА СЕВЕРНАЯ ЗВЕЗДА",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1713489037",
       "name_lat": "ЮВЕНТА ОНЛИ ИН МАЙНД",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТА ОНЛИ ИН МАЙНД",
       "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "401939829",
-      "name_lat": "ЮВЕНТУС СТАР ТРЭК",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -940,19 +919,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1619746898",
+      "id": "1003626451",
       "name_lat": "ЮВЕНА",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1680252984",
+      "id": "1343460519",
       "name_lat": "ЮВЕНТА ГОЛД",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1012,15 +991,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "694896564",
-      "name_lat": "ЮВЕТТА ИЗ СЕВЕРНОГО КАПРИЗА",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1643887637",
       "name_lat": "ЮВЕНТУС ЗЕ ВИННЕР ОФ ЗЕ ВИНД DRIM NEISHN SHMEL",
       "name_ru": "",
@@ -1039,19 +1009,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "764269444",
-      "name_lat": "ЮВЕТТА САКУРА БРАНЧ/YUVETTA SAKURA BRANCH",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "20352738",
+      "id": "229013219",
       "name_lat": "ЮВЕНТУС ИЗ СОЗВЕЗДИЯ РЫЖИХ ПСОВ",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "name_ru": "ЮВЕНТУС ИЗ СОЗВЕЗДИЯ РЫЖИХ ПСОВ",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1075,10 +1036,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1662479449",
+      "id": "1194804066",
       "name_lat": "ЮВЕТА ЭНДЖЕЛ АЙС",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1093,38 +1054,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1771860944",
+      "id": "14433188",
       "name_lat": "ЮВЕНТА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "431259537",
+      "id": "74318021",
       "name_lat": "ЮВЕНТУС ИЗ СЕРДЦА КАВКАЗА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ / GREAT DANE BLACK, HARLEKIN",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ / GREAT DANE BLACK, HARLEKIN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "100692390",
+      "id": "147687327",
       "name_lat": "ЮВЕТТА МОНТАНА БЛЮЗ",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1760745785",
+      "id": "781400294",
       "name_lat": "ЮВЕЛИЯ РЕД РУДИ",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "name_ru": "ЮВЕЛИЯ РЕД РУДИ",
+      "breed": "СОБАКА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "355035341",
+      "name_lat": "ЮВЕНТА ЗВЕЗДА СЕВЕРА",
+      "name_ru": "ЮВЕНТА ЗВЕЗДА СЕВЕРА",
+      "breed": "МОПС",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1134,6 +1103,14 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605478078",
+      "name_lat": "ЮВЕНТУС",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1174,24 +1151,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1240930109",
-      "name_lat": "ЮВЭНТУС СТАР ТРЭК",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "245909857",
-      "name_lat": "ЮВЕЛИРНАЯ ШТУЧКА ИЗ ЦВЕТНОЙ СКАЗКИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1261850322",
       "name_lat": "ЮВЕТТА",
       "name_ru": "",
@@ -1210,10 +1169,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1163255015",
+      "id": "1835397607",
       "name_lat": "ЮВЕНТУС ТАЛИСМАН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1230,7 +1189,7 @@
     {
       "id": "1267498567",
       "name_lat": "ЮВЕЛИЯ РОСКОШНЫЙ ГЕПАРД",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИЯ РОСКОШНЫЙ ГЕПАРД",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -1242,6 +1201,14 @@
       "name_ru": "",
       "breed": "STAFFORDSHIRE ДЛИННОШЕРСТНАЯ / DACHSHUND",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "913298732",
+      "name_lat": "ЮВЕЛИНА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1300,6 +1267,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "92980192",
+      "name_lat": "ЮВЕНТУС",
+      "name_ru": "",
+      "breed": "YORKSHIRE TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1619080788",
       "name_lat": "ЮВЕНТА",
       "name_ru": "",
@@ -1320,7 +1295,7 @@
     {
       "id": "1076506431",
       "name_lat": "ЮВА НАРИСА ИЗ ДОМА ОСТЕЕ",
-      "name_ru": "",
+      "name_ru": "ЮВА НАРИСА ИЗ ДОМА ОСТЕЕ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
@@ -1329,7 +1304,7 @@
     {
       "id": "1027981097",
       "name_lat": "ЮВЕЛИР РЕНЕ ЛАЛИК ФРОМ СТРОУНХЭНДЖ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИР РЕНЕ ЛАЛИК ФРОМ СТРОУНХЭНДЖ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -1363,19 +1338,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "196803569",
+      "id": "1461519009",
       "name_lat": "ЮВЕНАС ЧАРМИНГ БИСТ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1915903531",
-      "name_lat": "ЮВЕЛИРИС БРАВЕ ИЗ ИМПЕРИИ АДАМАНТ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1383,7 +1349,7 @@
     {
       "id": "1202637287",
       "name_lat": "ЮВЕНТИНО ДИАМОН",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТИНО ДИАМОН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
@@ -1392,37 +1358,45 @@
     {
       "id": "1859366403",
       "name_lat": "ЮВЕНТУС ФРОМ МЭКЕР КЛАБ",
-      "name_ru": "",
+      "name_ru": "ЮВЕНТУС ФРОМ МЭКЕР КЛАБ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "438307687",
+      "id": "136240160",
       "name_lat": "ЮВЕТТА ИЗ ДОМА ФЕНИКС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЮВЕТТА ИЗ ДОМА ФЕНИКС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1059242400",
-      "name_lat": "ЮВЕЛИРА ОРТДАИМОНД ФЭНТАЗИ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "id": "352353085",
+      "name_lat": "ЮВЕНТА ИЗ СИБИРСКОЙ ГЛУБИНКИ",
+      "name_ru": "ЮВЕНТА ИЗ СИБИРСКОЙ ГЛУБИНКИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "806981022",
-      "name_lat": "ЮВЕНТА ИЗ СИБИРСКОЙ ГЛУБИНКИ",
+      "id": "1109519158",
+      "name_lat": "ЮВЕЛИРНЫЙ СТАНДАРТ ИЗ ДОМА ТАШИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "117905788",
+      "name_lat": "ЮВЕЛИР ФАМИЛЬНАЯ ЦЕННОСТЬ",
+      "name_ru": "ЮВЕЛИР ФАМИЛЬНАЯ ЦЕННОСТЬ",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1435,19 +1409,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "176833096",
+      "id": "1108772406",
       "name_lat": "ЮВЕЛИР ВОСТОКА АЙРЭН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "466400480",
+      "id": "680525237",
       "name_lat": "ЮВЕЛИЯ БЬЮТИ НАЙТ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "ЮВЕЛИЯ БЬЮТИ НАЙТ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1455,35 +1429,34 @@
     {
       "id": "1153149901",
       "name_lat": "ЮВЕЛИР КАРАТ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИР КАРАТ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "913551259",
+      "id": "1518538962",
       "name_lat": "ЮВЕЛИРНОЕ ЧУДО ЛЕСНАЯ НИМФА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "ЮВЕЛИРНОЕ ЧУДО ЛЕСНАЯ НИМФА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "117905788",
-      "name_lat": "ЮВЕЛИР ФАМИЛЬНАЯ ЦЕННОСТЬ",
+      "id": "287774728",
+      "name_lat": "ЮВЕЛИНА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1816247686",
+      "id": "1363508735",
       "name_lat": "ЮВЕЛИРИЯ",
       "name_ru": "",
-      "breed": "И ДРУГИЕ ОКРАСЫ /",
+      "breed": "И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1493,6 +1466,15 @@
       "name_lat": "ЮВЕНТА",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "208263085",
+      "name_lat": "ЮВЕЛИЯ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1543,6 +1525,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1455893068",
+      "name_lat": "ЮВЕЛ-ЛИРА ИЗ НОВЫЙХ КОРИФЕЙ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "346409681",
       "name_lat": "Ювелирная работа из сибирского княжества",
       "name_ru": "",
@@ -1552,18 +1543,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1109519158",
-      "name_lat": "ЮВЕЛИРНЫЙ СТАНДАРТ ИЗ ДОМА ТАШИ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "922426766",
       "name_lat": "ЮВЕЛИЯ ДИАМАНТ",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИЯ ДИАМАНТ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -1572,17 +1554,34 @@
     {
       "id": "604371911",
       "name_lat": "ЮВЕЛИРНЫХ ДЕЛ МАСТЕР",
-      "name_ru": "",
+      "name_ru": "ЮВЕЛИРНЫХ ДЕЛ МАСТЕР",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1455893068",
-      "name_lat": "ЮВЕЛ-ЛИРА ИЗ НОВЫЙХ КОРИФЕЙ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "840096380",
+      "name_lat": "ЮВЕНТУС ЧЕМПИОН ИЗ РОСТОВА ПАПЫ",
+      "name_ru": "ЮВЕНТУС ЧЕМПИОН ИЗ РОСТОВА ПАПЫ",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "358207721",
+      "name_lat": "ЮВЕЛЬ ИЗ ДОМА КАРМАНОВОЙ",
+      "name_ru": "ЮВЕЛЬ ИЗ ДОМА КАРМАНОВОЙ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "265143742",
+      "name_lat": "Ю`ВАРГА С ТАВАЙЗЫ",
+      "name_ru": "Ю`ВАРГА С ТАВАЙЗЫ",
+      "breed": "немецкая овчарка остевая шерсть с подшерстком",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1597,10 +1596,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1017787457",
+      "id": "954641692",
       "name_lat": "ЮВИЛЬЕТТА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1615,10 +1614,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1160326945",
+      "id": "1260058295",
       "name_lat": "ЮВЕНТУС",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1759,28 +1758,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1701071639",
-      "name_lat": "ЮВЕЛИЯ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "404718953",
       "name_lat": "ЮВЕЛИР",
       "name_ru": "",
       "breed": "ГРИФФОН / GRIFFON",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "819603543",
-      "name_lat": "ЮВЕЛИЯ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1795,10 +1776,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "93639607",
+      "id": "23513078",
       "name_lat": "ЮВЕНТУС",
       "name_ru": "",
-      "breed": "РСТНАЯ /",
+      "breed": "РСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1831,6 +1812,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "940916841",
+      "name_lat": "ЮВЕЛЬ ТАЛЬС ШАРДОНЕ Л*ИДЕ ФОЛЬ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1080339196",
       "name_lat": "ЮВЕЛИРНАЯ ИГРУШКА",
       "name_ru": "",
@@ -1858,10 +1848,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "991623328",
+      "id": "1565404021",
       "name_lat": "ЮВЕНТУС НОРД БОСС",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1885,10 +1875,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1790199324",
+      "id": "1741278393",
       "name_lat": "ЮВЕЛИЯ ФЭМИЛИ ДЖУЭЛ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1912,19 +1902,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1706207775",
+      "id": "178502542",
       "name_lat": "ЮВЕЛИРНАЯ ШТУЧКА ХАРИЗМА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "527987071",
+      "id": "1873228888",
       "name_lat": "ЮВЕЛИЯ С ТИХОГО ДОНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1957,10 +1947,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1231341254",
+      "id": "925480255",
       "name_lat": "ЮВЕЛИРНАЯ ЛЕДИ ИЗ СОЗВЕЗДИЯ СКОРПИОНА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2002,10 +1992,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1863299466",
+      "id": "488593687",
       "name_lat": "ЮВЕНТА ШОКОЛАДКА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2022,15 +2012,6 @@
     {
       "id": "137156987",
       "name_lat": "ЮВЕЛИНА ДЕ ЛОРАНС",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "368575673",
-      "name_lat": "ЮВЕНТУС ЧЕМПИОН ИЗ РОСТОВА ПАПЫ",
       "name_ru": "",
       "breed": "МОПС / PUG",
       "breed_en": "",
@@ -2056,19 +2037,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1446322380",
+      "id": "1538198112",
       "name_lat": "ЮВЕНТУС МОРИС НИЛ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ / GREAT DANE BLACK, HARLEKIN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "355035341",
-      "name_lat": "ЮВЕНТА ЗВЕЗДА СЕВЕРА",
-      "name_ru": "",
-      "breed": "МОПС",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ / GREAT DANE BLACK, HARLEKIN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2101,11 +2073,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1017727989",
-      "name_lat": "ЮВЕЛЬ ИЗ ДОМА КАРМАНОВОЙ",
+      "id": "1637050139",
+      "name_lat": "ЮВЕНТУС СВОБОДНЫЙ ЗАЩИТНИК",
       "name_ru": "",
-      "breed": "Нем.овчарка",
-      "breed_en": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2128,6 +2099,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1491465659",
+      "name_lat": "ЮВЕЛИРНОЕ ЧУДО НЕФЕРТИТИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1662173299",
       "name_lat": "ЮВЕЛЬ СМОЛ МЭН",
       "name_ru": "",
@@ -2146,10 +2125,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "173480926",
+      "id": "221242784",
       "name_lat": "ЮВЕНТА СВИТ КЕНДИ ИЗ ДОМА ЛАНКАСТЕР",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2160,6 +2139,14 @@
       "name_ru": "",
       "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "658023644",
+      "name_lat": "ЮВЕЛИНА ЭЛИЗАБЕТ ГРЕЙ",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2186,15 +2173,6 @@
       "name_lat": "ЮВЕЛИРНАЯ ШТУЧКА ГАЕЧКА",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "230056431",
-      "name_lat": "ЮВЕЛЬ ТАЛЬС ШАРДОНЕ Л*ИДЕ ФОЛЬ",
-      "name_ru": "",
-      "breed": "РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2227,19 +2205,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1113563224",
+      "id": "1527625204",
       "name_lat": "ЮВЕЛИР РЕД МАКРЕГЕР",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1417056688",
+      "id": "1820920111",
       "name_lat": "ЮВЕНТО BE MY LUCKY MY",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2281,29 +2259,68 @@
       "competition_dog_id": null
     },
     {
-      "id": "160765105",
+      "id": "1506752398",
       "name_lat": "ЮВЕЛИРИКА МАУС И МАРИАЛРАДА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "84780672",
+      "id": "161401418",
       "name_lat": "ЮВЕНТА ГЛАССЛЕНД ХАНТЕР",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "857731954",
-      "name_lat": "ЮВЕНИЯ СБЫВШАЯСЯ МЕЧТА ОТ УСТИНОВОЙ ЮЛИИ",
+      "id": "1674776752",
+      "name_lat": "ЮВЕНТУС ИЗ СИБИРСКОГО КНЯЖЕСТВА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1582712117",
+      "name_lat": "ЮВЕНТУС НОРД НОБЛ",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1796203404",
+      "name_lat": "ЮВЕЛИР'С КЕЙ ТУ ВИКТОРИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1331664951",
+      "name_lat": "ЮВЕЛИЯ ЛАУРИТ С ТЬМАЦКОГО ПЕРЕКАТА",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1032564410",
+      "name_lat": "ЮВЕНТА ВОЛЛИ С ТЬМАЦКОГО ПЕРЕКАТА",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331051588",
+      "name_lat": "ЮВЕСТИНА ЭЛЬФИЙСКАЯ ЗВЕЗДА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },

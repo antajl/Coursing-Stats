@@ -1,22 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "УБ",
-  "count": 17,
+  "count": 23,
   "dogs": [
     {
-      "id": "1337992867",
-      "name_lat": "УБОЙНАЯ СИЛА ИЗ МАРИАЛГРАДА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1454446740",
+      "id": "145494777",
       "name_lat": "УБИ СОЛ ОРИТУР ВЕНИАМИН",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙДОГ БУЛЬДОГ",
+      "name_ru": "УБИ СОЛ ОРИТУР ВЕНИАМИН",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "BULLDOG",
       "total_shows": 6,
       "competition_dog_id": null
@@ -31,6 +22,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "693494263",
+      "name_lat": "у Барисали Лукреция",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1830722011",
       "name_lat": "УБЕРРИМА КОРДИ РЕКТРИКС",
       "name_ru": "",
@@ -42,19 +42,28 @@
     {
       "id": "1858558252",
       "name_lat": "УБОЙНАЯ СИЛА",
-      "name_ru": "",
+      "name_ru": "УБОЙНАЯ СИЛА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "99323146",
+      "id": "169059077",
       "name_lat": "УБЕРТИНА АЛЕССА",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "521042353",
+      "name_lat": "у Бамбина с горы мемзай",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -64,6 +73,22 @@
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1613095286",
+      "name_lat": "у БРАЙТТАЧ ОНС ИН ХОЛЛИВУД К/Х",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1793804153",
+      "name_lat": "УБОЙНАЯ СИЛА ТОПОЛЬ- М",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -87,7 +112,7 @@
     {
       "id": "298476275",
       "name_lat": "УБАР ЭСТЕЛЬ ДИ - АТТИКС",
-      "name_ru": "",
+      "name_ru": "УБАР ЭСТЕЛЬ ДИ - АТТИКС",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА ОСТЕВАЯ ШЕРСТЬ С ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 2,
@@ -103,10 +128,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "1095092860",
+      "name_lat": "У-БОНЯ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "729712873",
       "name_lat": "УБАЙ",
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "590183280",
+      "name_lat": "у Богмари Дестини Ти Джей",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -148,11 +191,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "554352493",
+      "id": "931728001",
       "name_lat": "УБЕЖДЕННЫЙ БАНДИТ",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ / FOX",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш / FOX",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1343952114",
+      "name_lat": "у БЛЭК ТЕРРА ИЗ ДОМА КОРОЛЕВОЙ",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     }

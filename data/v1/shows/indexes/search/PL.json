@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "PL",
-  "count": 319,
+  "count": 327,
   "dogs": [
     {
       "id": "116176032",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "ITALIAN SIGHTHOUND",
-      "total_shows": 45,
+      "total_shows": 47,
       "competition_dog_id": null
     },
     {
@@ -18,25 +18,25 @@
       "name_ru": "",
       "breed": "БОРОДАТЫЙ КОЛЛИ",
       "breed_en": "BEARDED COLLIE",
-      "total_shows": 54,
+      "total_shows": 64,
       "competition_dog_id": null
+    },
+    {
+      "id": "793",
+      "name_lat": "PLUVIUM MERSEGERA IZ DOMA PRONINYKH",
+      "name_ru": "ПЛУВИУМ МЕРСЕГЕРА ИЗ ДОМА ПРОНИНЫХ",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 38,
+      "competition_dog_id": 793
     },
     {
       "id": "155774100",
       "name_lat": "PLUTO IZ SOZVEZDIYA ADOMASA",
-      "name_ru": "",
+      "name_ru": "ПЛУТО ИЗ СОЗВЕЗДИЯ АДОМАСА",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 72,
-      "competition_dog_id": null
-    },
-    {
-      "id": "532598762",
-      "name_lat": "PLUVIUM MERSEGERA IZ DOMA PRONINYKH",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 31,
+      "total_shows": 81,
       "competition_dog_id": null
     },
     {
@@ -49,12 +49,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "121459534",
+      "id": "1240194034",
       "name_lat": "PLUTO",
       "name_ru": "",
-      "breed": "ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -63,16 +63,16 @@
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "582429663",
+      "id": "454427747",
       "name_lat": "PLENITEL'NOE PRIKOSNOVENIE PAMERO",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "name_ru": "ПЛЕНИТЕЛЬНОЕ ПРИКОСНОВЕНИЕ ПАМЕРО",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
-      "total_shows": 23,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -81,7 +81,7 @@
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "NEWFOUNDLAND",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -94,10 +94,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1015878640",
+      "id": "234602172",
       "name_lat": "PLUM BLOSSUM",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -148,30 +148,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "428732768",
+      "id": "828312561",
       "name_lat": "PLAYBOY SILVER SPIRIT",
       "name_ru": "",
-      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "breed": "ГРИФФОН",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1859570716",
+      "id": "1523025960",
       "name_lat": "PLATINA PARMA DIAMOND MARRAKECH",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "620636961",
-      "name_lat": "PLATINUM STOLZ DER FAMILLE",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -180,7 +171,16 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "BEAGLE",
-      "total_shows": 5,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "82378946",
+      "name_lat": "PLATINUM STOLZ DER FAMILLE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -198,14 +198,14 @@
       "name_ru": "",
       "breed": "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД",
       "breed_en": "BLACK AND TAN COONHOUND",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1589330680",
+      "id": "6888989",
       "name_lat": "PLUTO PRIME S BEREGA TURI",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -238,12 +238,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "158540370",
+      "name_lat": "PLATINA PARMA ZLATA",
+      "name_ru": "ПЛАТИНА ПАРМА ЗЛАТА",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "208979993",
       "name_lat": "PLAYBOY IZ OBSKOY LOGUNY",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
       "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "627218107",
+      "name_lat": "PLAMENNAYA LYUBOV ZARINIT",
+      "name_ru": "ПЛАМЕННАЯ ЛЮБОВЬ ЗАРИНИТ",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -262,6 +279,24 @@
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "75006918",
+      "name_lat": "PLAIN FUTURE BENNI",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "743680884",
+      "name_lat": "PLOMBIERES LES BAINS",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -297,7 +332,7 @@
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "JAPANESE SPITZ",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -337,12 +372,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1663609976",
+      "id": "17623712",
       "name_lat": "PLATINUM BRETANIA TALISMAN",
       "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СOCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1153364823",
+      "name_lat": "PLATON LVOVICH",
+      "name_ru": "",
+      "breed": "БАССЕТ ХАУНД",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -355,28 +399,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1275575265",
+      "id": "376389381",
       "name_lat": "PLATONOV IZ KAZANSKOGO HANSTVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "517904586",
+      "id": "846052334",
       "name_lat": "PLATINA PARMA YACHONT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1123310373",
+      "id": "1161578895",
+      "name_lat": "PLATINA PARMA RILEY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "246702849",
       "name_lat": "PLATINA PARMA ZORAN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -391,21 +443,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1634715339",
+      "name_lat": "PLUTO CAN ANYTHING",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1372631466",
       "name_lat": "PLUMY TAIL ALL THAT GLITTER IS NOT ENOUGH",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1634715339",
-      "name_lat": "PLUTO CAN ANYTHING",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -414,7 +465,7 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
       "breed_en": "DEUTSCHE DOGGE BLUE",
-      "total_shows": 25,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -441,7 +492,7 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -463,15 +514,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "743680884",
-      "name_lat": "PLOMBIERES LES BAINS",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "118326665",
       "name_lat": "PLANETA UDACHI HASHI",
       "name_ru": "",
@@ -481,19 +523,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1153364823",
-      "name_lat": "PLATON LVOVICH",
-      "name_ru": "",
-      "breed": "БАССЕТ ХАУНД",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1047639624",
+      "id": "203523477",
       "name_lat": "PLANETA ELFOV KARAMELKA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -508,19 +541,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "75006918",
-      "name_lat": "PLAIN FUTURE BENNI",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "442077628",
+      "id": "1231121069",
       "name_lat": "PLAJ & K KID NANNY",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "ОХОТНИЧИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -549,7 +573,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 42,
+      "total_shows": 45,
       "competition_dog_id": null
     },
     {
@@ -562,6 +586,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1692090722",
+      "name_lat": "PLATINUM IZ STRANY SNEGOV",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1200242304",
       "name_lat": "PLAYFUL ROCOCO SOLAR CITY",
       "name_ru": "",
@@ -571,21 +604,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1514708419",
+      "id": "426579407",
       "name_lat": "PLATINA PARMA TALISMAN UDACHI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1394052254",
-      "name_lat": "PLATINUM IZ STRANY SNEGOV",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
+      "id": "1679809849",
+      "name_lat": "PLAMENNAYA LYUBOV DIREKTIVA",
+      "name_ru": "ПЛАМЕННАЯ ЛЮБОВЬ ДИРЕКТИВА",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -607,10 +639,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "272139216",
+      "id": "39374015",
       "name_lat": "PLATON ELIZAROVICH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -679,15 +711,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1679809849",
-      "name_lat": "PLAMENNAYA LYUBOV DIREKTIVA",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1517399050",
       "name_lat": "PLEASURE",
       "name_ru": "",
@@ -742,15 +765,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "568541786",
-      "name_lat": "Planeta Elfov Ya Est Lyubov",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "288179634",
       "name_lat": "PLATINA PARMA JEAN PAUL",
       "name_ru": "",
@@ -769,12 +783,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1114981550",
+      "id": "1112588279",
       "name_lat": "PLESKOV'S ELAN BEAUTY QUEEN",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -814,21 +828,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "979720253",
-      "name_lat": "PLESKOV'S H'GREENWICH",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1322288736",
+      "id": "1883525995",
       "name_lat": "PLATINUM BRETANIA KASPER",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "SPRINGER SPANIEL",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -837,32 +842,41 @@
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023749728",
+      "name_lat": "PLESKOV'S H'GREENWICH",
+      "name_ru": "",
+      "breed": "ПАПИЙОН",
+      "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "717526759",
+      "id": "1907734438",
       "name_lat": "PLOMBER LE BEN",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "40149973",
+      "id": "962424808",
       "name_lat": "PLANETA CORGI EDELWEISS ENISEI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1586912071",
+      "id": "1277149187",
       "name_lat": "PLATINA PARMA BALLADA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -895,6 +909,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "736064734",
+      "name_lat": "PLEYADA BUYANY ZELIYA ZELLA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1564801674",
+      "name_lat": "PLATA EL VIENTO BAYADERA LIBRETTO",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1128306827",
+      "name_lat": "PLEYADA BUYANY LELYA LETNITSA",
+      "name_ru": "ПЛЕЯДА БУЯНЫ ЛЕЛЯ ЛЕТНИЦА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "1703941854",
       "name_lat": "PLUSH CLUB ETERNITI LAV",
       "name_ru": "",
@@ -904,21 +945,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1204912355",
+      "name_lat": "PLAYFUL SMILE CHERRY ON CAKE",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "848175451",
       "name_lat": "PLATINUM DELIGHT BONITAS SPIRIT",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1431668962",
-      "name_lat": "PLAYFUL SMILE CHERRY ON CAKE",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -949,21 +990,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1100020534",
+      "id": "1986096705",
+      "name_lat": "PLANETA ELFOV VAZHNAYA PERSONA",
+      "name_ru": "ПЛАНЕТА ЭЛЬФОВ ВАЖНАЯ ПЕРСОНА",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "177309707",
       "name_lat": "PLINIO DEL ROSSO MALPELLO",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1564801674",
-      "name_lat": "PLATA EL VIENTO BAYADERA LIBRETTO",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "id": "1274597838",
+      "name_lat": "PLATINA AYTACH",
+      "name_ru": "ПЛАТИНА АЙТАЧ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1320658191",
+      "name_lat": "PLATINA PARMA BOZHENA",
+      "name_ru": "ПЛАТИНА ПАРМА БОЖЕНА",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1003,10 +1062,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1821133526",
+      "id": "1471749455",
       "name_lat": "PLUSHLA NDIA AYRTON",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1017,7 +1076,16 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 14,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "599419801",
+      "name_lat": "PLATINA PARMA BOGDAN",
+      "name_ru": "ПЛАТИНА ПАРМА БОГДАН",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1027,15 +1095,6 @@
       "breed": "МАСТИФ",
       "breed_en": "MASTIFF",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "736064734",
-      "name_lat": "PLEYADA BUYANY ZELIYA ZELLA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1075,6 +1134,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "446933321",
+      "name_lat": "PLANETA CORGI EDELWEISS EVROPA ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "427212679",
       "name_lat": "PLATINUM PRIDE ERINGA",
       "name_ru": "",
@@ -1102,21 +1170,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1738231323",
-      "name_lat": "PLATINA PARMA BOZHENA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "952925769",
       "name_lat": "PLESKOV’S MADLEN",
-      "name_ru": "",
+      "name_ru": "ПЛЕСКОВ’С МАДЛЕН",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ –",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1138,39 +1197,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "151645309",
-      "name_lat": "PLATINA PARMA BOGDAN",
+      "id": "1739050016",
+      "name_lat": "PLANETA CORGI EDELWEISS BARRY ( )",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1672466788",
-      "name_lat": "PLANETA ELFOV VAZHNAYA PERSONA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "15927244",
+      "id": "1496386985",
       "name_lat": "PLUTO VON HAUS EMSING",
       "name_ru": "",
-      "breed": "МЮНСТЕРЛЕНДЕР /",
+      "breed": "МЮНСТЕРЛЕНДЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1274597838",
-      "name_lat": "PLATINA AYTACH",
+      "id": "744061487",
+      "name_lat": "PLATON IZ DOMA ROMANA",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
-      "total_shows": 12,
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1183,30 +1233,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1989741421",
+      "id": "241762768",
       "name_lat": "PLAJ&K KID NANNY",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1976965179",
-      "name_lat": "PLANETA CORGI EDELWEISS EVROPA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1739050016",
-      "name_lat": "PLANETA CORGI EDELWEISS BARRY ( )",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1219,6 +1251,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "83283727",
+      "name_lat": "PLANETA CORGI EDELWEISS BARRY",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "616188986",
       "name_lat": "PLATINA PARMA GARMOONIYA DUSHI",
       "name_ru": "",
@@ -1228,10 +1269,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1259065584",
+      "id": "661881788",
       "name_lat": "PLATINA PARMA DREAM HIGHER",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1246,10 +1287,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1245766203",
+      "id": "1232824306",
       "name_lat": "PLEYADA BUYANY MIROSLAVA METELITSA",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР /",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1273,19 +1314,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1489768168",
+      "id": "478769884",
       "name_lat": "PLATINA PARMA BYILINA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1360559010",
+      "id": "853626590",
       "name_lat": "PLATINA PARMA LOFE IS LOVE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1318,15 +1359,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "83283727",
-      "name_lat": "PLANETA CORGI EDELWEISS BARRY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1621166026",
       "name_lat": "PLATINUM PRIDE ZHOZEFINE DE BEAUHARNAIS",
       "name_ru": "",
@@ -1336,19 +1368,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "294148213",
+      "id": "456726806",
       "name_lat": "PLATINUM BRETANIA KORNELIA GOLD",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "706385544",
+      "id": "120099701",
       "name_lat": "PLATINUM BRETANIA MISTIKA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ГОРДОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1363,12 +1395,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "848858113",
-      "name_lat": "PLEYADA BUYANY ZELIYA ZELLА",
+      "id": "201457974",
+      "name_lat": "PLENITELNAYA SHINE STAR",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1381,28 +1413,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "192138035",
-      "name_lat": "PLENITELNAYA SHINE STAR",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ / SHAR PEI ШНАУЦЕР ЧЁРНЫЙ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "500586356",
+      "id": "1112665416",
       "name_lat": "PLATINA PARMA LOVE IS LOVE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1277652938",
+      "id": "1182251066",
       "name_lat": "PLATON I IZ GRAFSVA ART",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) /",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1414,6 +1437,23 @@
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1250776413",
+      "name_lat": "PLATINA PARMA UNA-FORTUNA",
+      "name_ru": "ПЛАТИНА ПАРМА УНА-ФОРТУНА",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "84901936",
+      "name_lat": "PLATINUM ICE SPARTAK",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1444,19 +1484,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1188706188",
+      "id": "18846712",
       "name_lat": "PLATINA PARMA GARMONIYA DUSHI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1509667341",
+      "id": "796094969",
       "name_lat": "PLENITEL’NOE PRIKOSNOVENIE PAMERO",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1480,30 +1520,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1296423403",
+      "id": "511568610",
       "name_lat": "PLATINA OF NE ZENA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "627218107",
-      "name_lat": "PLAMENNAYA LYUBOV ZARINIT",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1865030660",
-      "name_lat": "PLEYADA BUYANY LELYA LETNITSA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР / RUSSIAN BLACK",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1516,30 +1538,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "246944125",
+      "id": "1201020889",
+      "name_lat": "PLAY TO WIN BARSELONA",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1332468314",
       "name_lat": "PLAZMA LA FAVORITA DEL CORSO",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1587383275",
+      "id": "1354837551",
       "name_lat": "PLISETSKAYA IZ STRANY SNEGOV",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1142931924",
+      "id": "402082798",
       "name_lat": "PLATINUM KID LUCKY WHITEGOLD",
       "name_ru": "",
-      "breed": "И ДРУГИЕ ОКРАСЫ /",
+      "breed": "СОБАКА МАЛЫЙ (Оранж.Сер. И",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1174482127",
+      "name_lat": "PLATINA IZ SOZVEZDIYA SURSKIKH PSOV",
+      "name_ru": "ПЛАТИНА ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1558,6 +1597,15 @@
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "465498333",
+      "name_lat": "PLENITELNAYA INTRIGANKA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1584,7 +1632,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1615,10 +1663,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "840660154",
+      "id": "838059198",
       "name_lat": "PLAATINAA PARMA BYILINA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1651,19 +1699,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "338982869",
+      "id": "224440718",
       "name_lat": "PLATON VON DEN GRAUEN VON MONSTAB",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1967356831",
+      "id": "325276543",
       "name_lat": "PLATON PAINT ROCK MIHHECOTA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1714,12 +1762,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1350654262",
-      "name_lat": "PLATON IZ DOMA ROMANA",
+      "id": "1780991491",
+      "name_lat": "PLUSHLANDIA BJORN",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1741,28 +1788,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1117373807",
+      "id": "1985429672",
       "name_lat": "PLANETA ELFOV NEZAKONCHENNYI ROMAN",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1754335275",
+      "id": "124477218",
       "name_lat": "PLESKOV'S OLAF FROCTY",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1418075202",
+      "id": "1709264262",
       "name_lat": "PLATINA PARMA ZORINA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1804,21 +1851,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "144981486",
+      "name_lat": "PLATA EL VIENTO BACANORA VINATEROS",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "583563604",
+      "name_lat": "PLATINUM STAR VATSON",
+      "name_ru": "Платинум Стар Ватсон",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "856394773",
       "name_lat": "PLAY BOY",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО / ITALIAN CANE CORSO",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "446933321",
-      "name_lat": "PLANETA CORGI EDELWEISS EVROPA ( )",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1876,6 +1931,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "183515203",
+      "name_lat": "PLAMENNAYA SHTUCHKA OT LEDYYULI",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1445332842",
       "name_lat": "PLANETA CIRGI EDELWEISS AURIKA ( )",
       "name_ru": "",
@@ -1889,15 +1953,6 @@
       "name_lat": "PLEYADA BUYANY VOYANA VERITA",
       "name_ru": "",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "962803596",
-      "name_lat": "PLAMENNAYA SHTUCHKA OT LEDYYULI",
-      "name_ru": "",
-      "breed": "ДРАТХААР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1930,19 +1985,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "655388890",
+      "id": "1660731619",
       "name_lat": "PLANETA CORGI EDELWEISS",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "362196881",
+      "id": "333154067",
+      "name_lat": "PLAJ&K IMPOSSIBLE TO FAVORITE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "597514073",
       "name_lat": "PLATON IZ GRAFSTVA ART",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) /",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1953,6 +2016,14 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "25033871",
+      "name_lat": "PLER DE MARI RICHARD IRISH JAZZ",
+      "name_ru": "",
+      "breed": "БИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1975,19 +2046,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "713552486",
+      "name_lat": "PLATINUM BRETANIA ULTRA SONIK FOR MISTIKOR",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1357752380",
       "name_lat": "PLATON",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1967091677",
-      "name_lat": "PLATINA PARMA UNA- FORTUNA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2002,10 +2072,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "706351904",
+      "id": "1372659239",
       "name_lat": "PLATINUM KID TOTALVICTORY TENSHI",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2033,15 +2103,6 @@
       "name_lat": "PLAIGLEN MAGIC TANGO",
       "name_ru": "",
       "breed": "РОДЕЗИЙСКИЙ АНГЛИЙСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "465498333",
-      "name_lat": "PLENITELNAYA INTRIGANKA",
-      "name_ru": "",
-      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2080,15 +2141,6 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1174482127",
-      "name_lat": "PLATINA IZ SOZVEZDIYA SURSKIKH PSOV",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2137,15 +2189,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "583563604",
-      "name_lat": "PLATINUM STAR VATSON",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1541167075",
       "name_lat": "PLESKOV'S OLAF FROSTY",
       "name_ru": "",
@@ -2155,10 +2198,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "147692606",
+      "id": "212213226",
       "name_lat": "PLUTO",
       "name_ru": "",
-      "breed": "ЧЁРНО-ПОДПАЛЫЙ КУНХАУНД / BLACK AND TAN COONHOUND",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД / BLACK AND TAN COONHOUND",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2200,19 +2243,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1292203083",
-      "name_lat": "PLUSHEVAYA PANDA GIORGIO BEUERLU HILLS",
+      "id": "485753585",
+      "name_lat": "PLAYBOY COOL",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "breed": "БРЮССЕЛЬСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "485753585",
-      "name_lat": "PLAYBOY COOL",
+      "id": "1292203083",
+      "name_lat": "PLUSHEVAYA PANDA GIORGIO BEUERLU HILLS",
       "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2242,6 +2285,14 @@
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "564440101",
+      "name_lat": "PLAYBOY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2317,12 +2368,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1780991491",
-      "name_lat": "PLUSHLANDIA BJORN",
+      "id": "1760525689",
+      "name_lat": "PLANETA CORGI EDELWEISS AURIKA ( )",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2335,10 +2386,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1969722046",
+      "id": "1666775799",
       "name_lat": "PLAY BOY IZ DOMA ANGELINY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2349,15 +2400,6 @@
       "name_ru": "",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "ALASKAN MALAMUTE",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "112362082",
-      "name_lat": "PLANETA CORGI EDELWEISS AURIKA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2393,6 +2435,15 @@
       "name_lat": "PLEYBOY BEN",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "140320883",
+      "name_lat": "PLANETA SAMOTSVETOV ZARYANA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2443,10 +2494,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1819152632",
+      "id": "1560968773",
       "name_lat": "PLANETA ELFOV VESENNYAYA KAPEL",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2456,15 +2507,6 @@
       "name_lat": "PLAMYA LYUBVI",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1752189367",
-      "name_lat": "PLANETA SAMOTSVETOV ZARYANA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2587,10 +2629,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "227252682",
+      "id": "787496925",
       "name_lat": "PLENITELNOGO",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1234324517",
+      "name_lat": "PLUTON DE LA FUYE",
+      "name_ru": "",
+      "breed": "ТАКСА АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2632,10 +2683,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1225885903",
+      "id": "474566520",
       "name_lat": "PLINO DEL ROSSO MALPELO",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2659,28 +2710,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "760016924",
-      "name_lat": "PLANETA CORGI EDELWEISS AURIKA ( )",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "943666694",
       "name_lat": "PLANETA SCHASTIYA ZNOYNY MACHO",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1234324517",
-      "name_lat": "PLUTON DE LA FUYE",
-      "name_ru": "",
-      "breed": "ТАКСА АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2731,10 +2764,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "895616559",
+      "id": "155935808",
       "name_lat": "PLANETA ELFOV SCHERBET V SHOKOLADE",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2776,10 +2809,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "555516734",
+      "id": "1064873245",
       "name_lat": "PLATON IZ DOMA JOKERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2848,11 +2881,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "488809322",
+      "id": "296043406",
       "name_lat": "PLATINA PARMA GABRIELLA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "73646551",
+      "name_lat": "PLANTAROSA AURA LUXURE",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "419368364",
+      "name_lat": "PLATINUM ICE GLORIA",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2871,6 +2920,14 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "537537420",
+      "name_lat": "PLANTAROSA APHRODISIAC",
+      "name_ru": "",
+      "breed": "TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     }

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "АШ",
-  "count": 138,
+  "count": 136,
   "dogs": [
     {
       "id": "951156905",
@@ -15,7 +15,7 @@
     {
       "id": "1248090947",
       "name_lat": "АШАНТАЛЬ ШЕЙЛИН",
-      "name_ru": "",
+      "name_ru": "АШАНТАЛЬ ШЕЙЛИН",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 6,
@@ -33,7 +33,7 @@
     {
       "id": "51466291",
       "name_lat": "АШПЕНМАСТЕР АХ ФУК ЧЕН",
-      "name_ru": "",
+      "name_ru": "АШПЕНМАСТЕР АХ ФУК ЧЕН",
       "breed": "ЧУНЦИН",
       "breed_en": "",
       "total_shows": 6,
@@ -42,7 +42,7 @@
     {
       "id": "1021212886",
       "name_lat": "АШЕЛЬ ЦВЕТНОЙ РОСКОШЬ",
-      "name_ru": "",
+      "name_ru": "АШЕЛЬ ЦВЕТНОЙ РОСКОШЬ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 12,
@@ -51,7 +51,7 @@
     {
       "id": "1975022306",
       "name_lat": "АШАЛАН АГАСС ЖАСМИН",
-      "name_ru": "",
+      "name_ru": "АШАЛАН АГАСС ЖАСМИН",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 14,
@@ -60,7 +60,7 @@
     {
       "id": "1534636995",
       "name_lat": "АШАНТАЛЬ ЯНИКА",
-      "name_ru": "",
+      "name_ru": "АШАНТАЛЬ ЯНИКА",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 5,
@@ -69,7 +69,7 @@
     {
       "id": "227080053",
       "name_lat": "АШ АЗРАЕЛ БЕЛЛАРМИНА",
-      "name_ru": "",
+      "name_ru": "АШ АЗРАЕЛ БЕЛЛАРМИНА",
       "breed": "БОСЕРОН",
       "breed_en": "",
       "total_shows": 6,
@@ -78,7 +78,7 @@
     {
       "id": "414556925",
       "name_lat": "АШ-ГРЭЙ ШАРМ БОНД",
-      "name_ru": "",
+      "name_ru": "АШ-ГРЭЙ ШАРМ БОНД",
       "breed": "НЕМЕЦКИЙ ШПИЦ-ВОЛЬФШПИЦ",
       "breed_en": "",
       "total_shows": 5,
@@ -87,7 +87,7 @@
     {
       "id": "641791623",
       "name_lat": "Ашпенмастер Ан Гуо Шань",
-      "name_ru": "",
+      "name_ru": "Ашпенмастер Ан Гуо Шань",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -96,16 +96,16 @@
     {
       "id": "1691359087",
       "name_lat": "АШПЕНМАСТЕР НЕО ФЛЕШ",
-      "name_ru": "",
+      "name_ru": "АШПЕНМАСТЕР НЕО ФЛЕШ",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "1291794577",
       "name_lat": "АШ АЗРАЕЛ БЭЙЛИС",
-      "name_ru": "",
+      "name_ru": "АШ АЗРАЕЛ БЭЙЛИС",
       "breed": "БОСЕРОН",
       "breed_en": "",
       "total_shows": 7,
@@ -139,24 +139,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1125790122",
-      "name_lat": "АШПЕНМАСТЕР ЖАН ЖЕРОМ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "519813131",
-      "name_lat": "АШАЛАН АГАСС ШАМАН",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
       "id": "1578102400",
       "name_lat": "АШАЛАН АГАСС РИАРА",
       "name_ru": "",
@@ -168,52 +150,61 @@
     {
       "id": "17768925",
       "name_lat": "АШАНТАЛЬ ФЕНИКС",
-      "name_ru": "",
+      "name_ru": "АШАНТАЛЬ ФЕНИКС",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331737935",
+      "name_lat": "АШЕЛЬ ЦВЕТНОЙ ЮКАННА",
+      "name_ru": "АШЕЛЬ ЦВЕТНОЙ ЮКАННА",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "710558484",
       "name_lat": "АШАНТАЛЬ ОДЕЛИНА",
-      "name_ru": "",
+      "name_ru": "АШАНТАЛЬ ОДЕЛИНА",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
+      "id": "320235332",
+      "name_lat": "АШАЛАН АГАСС ГАБИ",
+      "name_ru": "АШАЛАН АГАСС ГАБИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "834840237",
+      "name_lat": "АШ-ГРЭЙ ШАРМ АРАХИС",
+      "name_ru": "АШ-ГРЭЙ ШАРМ АРАХИС",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "453211627",
       "name_lat": "АШАЛАН АГАСС ЕРИ",
-      "name_ru": "",
+      "name_ru": "АШАЛАН АГАСС ЕРИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "320235332",
-      "name_lat": "АШАЛАН АГАСС ГАБИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "834840237",
-      "name_lat": "АШ-ГРЭЙ ШАРМ АРАХИС",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "769129540",
       "name_lat": "АШАЛАН АГАСС ЖАСТИН",
-      "name_ru": "",
+      "name_ru": "АШАЛАН АГАСС ЖАСТИН",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 9,
@@ -222,7 +213,7 @@
     {
       "id": "1255918249",
       "name_lat": "АШПЕНМАСТЕР БЕАТРИЧЕ БАБЕТТА",
-      "name_ru": "",
+      "name_ru": "АШПЕНМАСТЕР БЕАТРИЧЕ БАБЕТТА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -231,16 +222,24 @@
     {
       "id": "1295868504",
       "name_lat": "АШПЕНМАСТЕР ЭСМИРАЛЬДА ЭММИ",
-      "name_ru": "",
+      "name_ru": "АШПЕНМАСТЕР ЭСМИРАЛЬДА ЭММИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "161675078",
+      "name_lat": "АШ-ГРЭЙ ШАРМ АРИЯ",
+      "name_ru": "АШ-ГРЭЙ ШАРМ АРИЯ",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "284136662",
       "name_lat": "АШПЕНМАСТЕР ГРАНД ЖЕРОМ",
-      "name_ru": "",
+      "name_ru": "АШПЕНМАСТЕР ГРАНД ЖЕРОМ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 6,
@@ -249,7 +248,7 @@
     {
       "id": "173443730",
       "name_lat": "АШАЛАН АГАСС ЕСИТОМО",
-      "name_ru": "",
+      "name_ru": "АШАЛАН АГАСС ЕСИТОМО",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 6,
@@ -265,15 +264,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "168448354",
-      "name_lat": "АШ-ГРЭЙ ШАРМ АРИЯ",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "983781258",
       "name_lat": "АШЕРА",
       "name_ru": "",
@@ -285,7 +275,7 @@
     {
       "id": "342786120",
       "name_lat": "АШАЛАН АГАСС ПЕРСЕЙ I",
-      "name_ru": "",
+      "name_ru": "АШАЛАН АГАСС ПЕРСЕЙ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 6,
@@ -301,9 +291,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "209876098",
+      "name_lat": "АШАЛАН АГАСС ПЕРСЕЙI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "277544827",
       "name_lat": "АШПЕНМАСТЕР ЕМИН РИО",
-      "name_ru": "",
+      "name_ru": "АШПЕНМАСТЕР ЕМИН РИО",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -337,27 +335,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "143916651",
+      "id": "450540786",
+      "name_lat": "АШПЕНМАСТЕР АЛСУ ЦЗЯО ПИ-ЧЖУН",
+      "name_ru": "АШПЕНМАСТЕР АЛСУ ЦЗЯО ПИ-ЧЖУН",
+      "breed": "ЧУНЦИН",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "814308194",
       "name_lat": "АШАЛАН АГАСС ОРДАБЕК",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1969303751",
-      "name_lat": "АШПЕНМАСТЕР АЛСУ ЦЗЯО ПИ-ЧЖУН",
-      "name_ru": "",
-      "breed": "КИТАЙСКИЙ ЧУНЦИН",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1354882191",
       "name_lat": "АШАНТАЛЬ РУФИНА",
-      "name_ru": "",
+      "name_ru": "АШАНТАЛЬ РУФИНА",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 7,
@@ -375,16 +373,24 @@
     {
       "id": "560329605",
       "name_lat": "АША БРЕЙВЕРИ ГРЕЙДЖОЙ/ASHA BRAVERY GREYJOY",
-      "name_ru": "",
+      "name_ru": "АША БРЕЙВЕРИ ГРЕЙДЖОЙ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "1579928650",
+      "name_lat": "АШТОН ВИЛД ХОНЕЙ (ASHTON WILD HONEY)",
+      "name_ru": "Аштон Вилд Хоней",
+      "breed": "БАСЕНДЖИ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "992628613",
       "name_lat": "АШАЛАН АГАСС ВЕЛИКИЙ ВЛАДЫКА",
-      "name_ru": "",
+      "name_ru": "АШАЛАН АГАСС ВЕЛИКИЙ ВЛАДЫКА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -393,7 +399,7 @@
     {
       "id": "24941807",
       "name_lat": "АШПЕНМАСТЕР ЦЕНТЕРО ГАНС",
-      "name_ru": "",
+      "name_ru": "АШПЕНМАСТЕР ЦЕНТЕРО ГАНС",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -402,7 +408,7 @@
     {
       "id": "237769613",
       "name_lat": "АШЕЛЬ ЦВЕТНОЙ БОНИТА",
-      "name_ru": "",
+      "name_ru": "АШЕЛЬ ЦВЕТНОЙ БОНИТА",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
@@ -414,16 +420,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1323860979",
-      "name_lat": "АШПЕНМАСТЕР ЭДИСОН",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -432,15 +429,14 @@
       "name_ru": "",
       "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1581158071",
-      "name_lat": "АШАЛАН АГАСС АНЗУ",
+      "id": "617652369",
+      "name_lat": "АШЭР",
       "name_ru": "",
-      "breed": "СИБА / SHIBA",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -454,18 +450,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1386637739",
-      "name_lat": "АШАЛАН АГАСС ПАЛЛАДА",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "479016780",
       "name_lat": "АШЕЛЬ ЦВЕТНОЙ ЯНТАРНЫЙ АМУЛЕТ",
-      "name_ru": "",
+      "name_ru": "АШЕЛЬ ЦВЕТНОЙ ЯНТАРНЫЙ АМУЛЕТ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -474,7 +461,7 @@
     {
       "id": "201465699",
       "name_lat": "АШПЕНМАСТЕР ХРИСТОФЕР ОКС",
-      "name_ru": "",
+      "name_ru": "АШПЕНМАСТЕР ХРИСТОФЕР ОКС",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -483,7 +470,7 @@
     {
       "id": "27761853",
       "name_lat": "АШТАЛЬ КАЕНДЕНСЕ",
-      "name_ru": "",
+      "name_ru": "АШТАЛЬ КАЕНДЕНСЕ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
@@ -508,6 +495,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "251763875",
+      "name_lat": "АШПЕНМАСТЕР ЦАНДРО КИНГ",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1552306807",
       "name_lat": "АШАНТАЛЬ ЭММАНУЭЛЬ ПОАЛЕ ЕЛЛ",
       "name_ru": "",
@@ -517,10 +513,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "544636136",
+      "id": "1031954061",
       "name_lat": "АШЕР ИЛЬ-ДЕ-ФРАНС",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -546,7 +542,7 @@
     {
       "id": "531442748",
       "name_lat": "АШАЛАН АГАСС САБИРА",
-      "name_ru": "",
+      "name_ru": "АШАЛАН АГАСС САБИРА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -555,7 +551,7 @@
     {
       "id": "389461670",
       "name_lat": "АШАЛАН АГАСС МЕШЛИ",
-      "name_ru": "",
+      "name_ru": "АШАЛАН АГАСС МЕШЛИ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -567,6 +563,14 @@
       "name_ru": "",
       "breed": "БИГЛЬ / BEAGLE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "310766838",
+      "name_lat": "Ашалан Агасс Одетта Коскай Лас Вешенг Гуй Фром Алан Итиль",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -598,21 +602,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1381049082",
-      "name_lat": "АШЕЛЬ ЦВЕТНОЙ ЗЕНА",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 5,
+      "id": "181528178",
+      "name_lat": "АШАЛАН АГАСС НАРДАЙ",
+      "name_ru": "АШАЛАН АГАСС НАРДАЙ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1780250743",
-      "name_lat": "АШАНТАЛЬ ОРЕЛИУС",
-      "name_ru": "",
-      "breed": "СОБАКА",
+      "id": "1381049082",
+      "name_lat": "АШЕЛЬ ЦВЕТНОЙ ЗЕНА",
+      "name_ru": "АШЕЛЬ ЦВЕТНОЙ ЗЕНА",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -629,15 +632,6 @@
       "name_lat": "АШПЕНМАСТЕР ЭНЖЕЛ",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "237049760",
-      "name_lat": "АШ АЗРАЕЛ ВЕНДЕЛА",
-      "name_ru": "",
-      "breed": "БОСЕРОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -679,15 +673,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "251763875",
-      "name_lat": "АШПЕНМАСТЕР ЦАНДРО КИНГ",
-      "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "266332242",
       "name_lat": "АШ АЗРАЕЛ БАЛАФАР",
       "name_ru": "",
@@ -699,7 +684,7 @@
     {
       "id": "66895121",
       "name_lat": "АШАЛАН АГАСС ИЗАБЕЛЛА",
-      "name_ru": "",
+      "name_ru": "АШАЛАН АГАСС ИЗАБЕЛЛА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
@@ -724,46 +709,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "181528178",
-      "name_lat": "АШАЛАН АГАСС НАРДАЙ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "738818728",
-      "name_lat": "АШАЛАН АГАСС АКИРА",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "965013919",
-      "name_lat": "АШПЕНМАСТЕР ПРОНЯ БОНЯ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "61357652",
       "name_lat": "АШАЛАН АГАСС ВАЙДЖАН",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1875640879",
-      "name_lat": "Аштон Вилд Хоней",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -780,19 +729,10 @@
     {
       "id": "1010553180",
       "name_lat": "АШАНТАЛЬ УОЛТЕР",
-      "name_ru": "",
+      "name_ru": "АШАНТАЛЬ УОЛТЕР",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "331737935",
-      "name_lat": "АШЕЛЬ ЦВЕТНОЙ ЮКАННА",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -816,7 +756,7 @@
     {
       "id": "365218753",
       "name_lat": "АШАНТАЛЬ УОРНЕР",
-      "name_ru": "",
+      "name_ru": "АШАНТАЛЬ УОРНЕР",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -859,19 +799,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "715484359",
-      "name_lat": "АШПЕНМАСТЕР НЕО ФЛЭШ",
+      "id": "1770087054",
+      "name_lat": "АШАЛАН АГАСС ВОЛЯ",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "692331603",
+      "id": "550006232",
       "name_lat": "АШЕРОН МЕРЛЕ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -879,9 +818,17 @@
     {
       "id": "166272636",
       "name_lat": "АШАНТАЛЬ САМБА (ПУХ)",
-      "name_ru": "",
+      "name_ru": "АШАНТАЛЬ САМБА (ПУХ)",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1485292132",
+      "name_lat": "АША ФОР ГОД’С ГИФТ",
+      "name_ru": "АША ФОР ГОД’С ГИФТ",
+      "breed": "КЕРН МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -922,11 +869,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1298463551",
-      "name_lat": "АШЕРОН",
+      "id": "1183863059",
+      "name_lat": "А-ШЕЙХ",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
+      "breed": "ГРЕЙХАУНД",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173008714",
+      "name_lat": "АШЕС",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1418585411",
+      "name_lat": "АШАБИ",
+      "name_ru": "",
+      "breed": "МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА (СТАНД)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1003,15 +965,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1144349821",
-      "name_lat": "АШАЛАН АГАСС РОЛИ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "754250049",
       "name_lat": "АШЕЛЬ ЦВЕТНОЙ ХОХЛОМА",
       "name_ru": "",
@@ -1066,11 +1019,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1152793272",
-      "name_lat": "АШАЛАН АГАСС ШАХ- ХАН",
+      "id": "174500701",
+      "name_lat": "АШАЛАН АГАСС ШАХ-ХАН",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207447272",
+      "name_lat": "АШАЛАН АГАСС МАРЖАЛ",
+      "name_ru": "",
+      "breed": "CENTRAL",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1080,6 +1041,14 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "35722724",
+      "name_lat": "АШАЛАН АГАСС ШАХИНЯ/ASHALAN AGASS SHAKHINYA",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1174,15 +1143,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1770087054",
-      "name_lat": "АШАЛАН АГАСС ВОЛЯ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "438470417",
       "name_lat": "АШПЕНМАСТЕР ЛАМБО МОРТИ",
       "name_ru": "",
@@ -1233,6 +1193,14 @@
       "name_ru": "",
       "breed": "СОБАКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1616346915",
+      "name_lat": "АШПЕНМАСТЕР ПИНОККИО КИНГ",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },

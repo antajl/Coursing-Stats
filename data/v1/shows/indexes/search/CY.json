@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "CY",
-  "count": 25,
+  "count": 24,
   "dogs": [
+    {
+      "id": "234065019",
+      "name_lat": "CYNOSURE IS GOLUBOI LEGENDY",
+      "name_ru": "",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
     {
       "id": "311477105",
       "name_lat": "CYUSAKI RICH DAD FO MALAHITOVAYA LEGENDA",
@@ -13,21 +22,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "234065019",
-      "name_lat": "CYNOSURE IS GOLUBOI LEGENDY",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "1330832794",
       "name_lat": "CYRUS BLAZE SHERWOOD",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -49,10 +49,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1024044380",
+      "id": "651173145",
       "name_lat": "CYCLONE DAI HARD",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "НОРВИЧ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -67,19 +67,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "618613990",
+      "id": "749583538",
       "name_lat": "CYPERUS NARCISO",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1637237739",
+      "id": "1288657122",
       "name_lat": "CYATHEA MEDULLARIS",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -103,21 +103,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1127904239",
+      "name_lat": "CYNIC",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1636774985",
       "name_lat": "CYRENENSIS MONGIBELLA",
       "name_ru": "",
       "breed": "ЧИРНЕКО ДЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "845018068",
-      "name_lat": "CYNIC",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -148,24 +148,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1790505520",
-      "name_lat": "CYNIC",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "896329264",
-      "name_lat": "CYNIC",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "117388452",
       "name_lat": "CYNAMONKA FIDOGS",
       "name_ru": "",
@@ -193,19 +175,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "981351053",
-      "name_lat": "CYNIC",
-      "name_ru": "",
-      "breed": "ШЕЛТИ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "453679298",
+      "id": "1916022467",
       "name_lat": "CYNTHIA IZ TERLETSKOY DUBRAVY",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -225,6 +198,22 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1079350162",
+      "name_lat": "CYTRUS RED SUN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "628377194",
+      "name_lat": "CYPRESS IZ DOMA ELIV’S",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

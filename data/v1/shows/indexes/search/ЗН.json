@@ -1,58 +1,49 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЗН",
-  "count": 123,
+  "count": 126,
   "dogs": [
     {
       "id": "1295872571",
       "name_lat": "ЗНАТНЫЙ ДЖЕНТЛЬМЕН",
-      "name_ru": "",
+      "name_ru": "ЗНАТНЫЙ ДЖЕНТЛЬМЕН",
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1439071763",
+      "id": "523864527",
+      "name_lat": "ЗНАТНЫЙ БАРИН ИЗ РОСТОВА-НА-ДОНУ",
+      "name_ru": "ЗНАТНЫЙ БАРИН ИЗ РОСТОВА-НА-ДОНУ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "997616831",
       "name_lat": "ЗНОЙНЫЙ БРЮНЕТ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "name_ru": "ЗНОЙНЫЙ БРЮНЕТ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "1290652502",
-      "name_lat": "ЗНАТНЫЙ БАРИН ИЗ РОСТОВА-НА-ДОНУ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "1852718169",
       "name_lat": "ЗНИЧКА АНГЕЛУС ВИТА",
-      "name_ru": "",
+      "name_ru": "ЗНИЧКА АНГЕЛУС ВИТА",
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "436420591",
-      "name_lat": "ЗНОЙНОЕ ЛЕТО",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "450726736",
+      "id": "647115258",
       "name_lat": "ЗНОЙНАЯ КРЕОЛКА ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ЗНОЙНАЯ КРЕОЛКА ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
       "total_shows": 6,
       "competition_dog_id": null
@@ -60,10 +51,19 @@
     {
       "id": "1277440213",
       "name_lat": "ЗНАК СУДЬБЫ УНИКА СТАР",
-      "name_ru": "",
+      "name_ru": "ЗНАК СУДЬБЫ УНИКА СТАР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1288457457",
+      "name_lat": "ЗНАК СУДЬБЫ ИВАН ЦАРЕВИЧ",
+      "name_ru": "ЗНАК СУДЬБЫ ИВАН ЦАРЕВИЧ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -78,10 +78,9 @@
     {
       "id": "16271432",
       "name_lat": "ЗНАТОК ИЗ ИМПЕРИИ ЛАРИЭЛ",
-      "name_ru": "",
-      "breed": "Ризеншнауцер чёрный",
-      "breed_en": "",
-      "total_shows": 13,
+      "name_ru": "ЗНАТОК ИЗ ИМПЕРИИ ЛАРИЭЛ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -94,19 +93,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1288457457",
-      "name_lat": "ЗНАК СУДЬБЫ ИВАН ЦАРЕВИЧ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1648675811",
+      "id": "672170186",
       "name_lat": "ЗНАТНЫЙ КАВАЛЕР УРАЛА ИЗ ДИНАСТИИ НАСТИ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "name_ru": "ЗНАТНЫЙ КАВАЛЕР УРАЛА ИЗ ДИНАСТИИ НАСТИ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -114,7 +104,7 @@
     {
       "id": "641738860",
       "name_lat": "Знамя Победы Алмазное Небо",
-      "name_ru": "",
+      "name_ru": "Знамя Победы Алмазное Небо",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -139,108 +129,126 @@
       "competition_dog_id": null
     },
     {
-      "id": "1364248436",
+      "id": "1101058721",
       "name_lat": "ЗНАК СУДЬБЫ МАРТИН",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "name_ru": "ЗНАК СУДЬБЫ МАРТИН",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1889532185",
+      "name_lat": "ЗНАТНАЯ ОСОБА ИЗ АЛТАЙСКО ДИНАСТИИ",
+      "name_ru": "ЗНАТНАЯ ОСОБА ИЗ АЛТАЙСКО ДИНАСТИИ",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "193371216",
+      "name_lat": "ЗННИМЭЛЕ СТОРИ АССИНДИЯ ФОКС",
+      "name_ru": "ЗННИМЭЛЕ СТОРИ АССИНДИЯ ФОКС",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "734746190",
       "name_lat": "ЗНАТНАЯ ГОРДЕЯ",
-      "name_ru": "",
+      "name_ru": "ЗНАТНАЯ ГОРДЕЯ",
       "breed": "RUSSIAN HUNTING",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1417097118",
+      "id": "1058727770",
       "name_lat": "ЗНАТНЫЙ БОЯРИН",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ЗНАТНЫЙ БОЯРИН",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "193371216",
-      "name_lat": "ЗННИМЭЛЕ СТОРИ АССИНДИЯ ФОКС",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1685567042",
       "name_lat": "ЗНАК СУДЬБЫ КНЯГИНЯ ВИКТОРИЯ",
-      "name_ru": "",
+      "name_ru": "ЗНАК СУДЬБЫ КНЯГИНЯ ВИКТОРИЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1993313635",
-      "name_lat": "ЗНАК СУДЬБЫ ФИШКА ДЛЯ ЗАЛОГА ЛЮБВИ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "1749169804",
       "name_lat": "ЗНАТНЫЙ ВЕЛЬМОЖА",
-      "name_ru": "",
+      "name_ru": "ЗНАТНЫЙ ВЕЛЬМОЖА",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1670494895",
-      "name_lat": "ЗНАТНЫЙ ГОСПОДИН ИЗ БОЯРСКОГО РОДА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "id": "1623514294",
+      "name_lat": "ЗНАК СУДЬБЫ ЯГОДА",
+      "name_ru": "ЗНАК СУДЬБЫ ЯГОДА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "1946549333",
       "name_lat": "ЗНАТНЫЙ МОЛОДЕЦ",
-      "name_ru": "",
+      "name_ru": "ЗНАТНЫЙ МОЛОДЕЦ",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1904396835",
+      "name_lat": "ЗНАТНЫЙ ГОСПОДИН ИЗ БОЯРСКОГО РОДА",
+      "name_ru": "ЗНАТНЫЙ ГОСПОДИН ИЗ БОЯРСКОГО РОДА",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "563408059",
       "name_lat": "ЗНАК СУДЬБЫ ЯНУШ",
-      "name_ru": "",
+      "name_ru": "ЗНАК СУДЬБЫ ЯНУШ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1242252613",
-      "name_lat": "ЗНАМЕНИТАЯ ЛИЧНОСТЬ ЗЕМФИРА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "id": "1124919857",
+      "name_lat": "ЗНАК СУДЬБЫ ВИКТОРИЯ",
+      "name_ru": "ЗНАК СУДЬБЫ ВИКТОРИЯ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "183212091",
+      "name_lat": "ЗНАК СУДЬБЫ МОЯ МУЗА",
+      "name_ru": "ЗНАК СУДЬБЫ МОЯ МУЗА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "956678142",
       "name_lat": "ЗНАТНЫЙ МАВР ИЗ ДОМА КАШТАНОВЫХ",
-      "name_ru": "",
+      "name_ru": "ЗНАТНЫЙ МАВР ИЗ ДОМА КАШТАНОВЫХ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 8,
@@ -249,16 +257,16 @@
     {
       "id": "233225946",
       "name_lat": "ЗНАК СУДЬБЫ АНДРЕ РЕНАР",
-      "name_ru": "",
+      "name_ru": "ЗНАК СУДЬБЫ АНДРЕ РЕНАР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "394492730",
       "name_lat": "ЗНАЙКА ОТ ЛЕДИЮЛИ",
-      "name_ru": "",
+      "name_ru": "ЗНАЙКА ОТ ЛЕДИЮЛИ",
       "breed": "COCKER SPANIEL",
       "breed_en": "",
       "total_shows": 8,
@@ -267,61 +275,34 @@
     {
       "id": "330354722",
       "name_lat": "ЗНАК ЛЮБВИ КУПИДОН",
-      "name_ru": "",
+      "name_ru": "ЗНАК ЛЮБВИ КУПИДОН",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1124919857",
-      "name_lat": "ЗНАК СУДЬБЫ ВИКТОРИЯ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "528625079",
       "name_lat": "ЗНАК СУДЬБЫ ЕВГЕША",
-      "name_ru": "",
+      "name_ru": "ЗНАК СУДЬБЫ ЕВГЕША",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1623514294",
-      "name_lat": "ЗНАК СУДЬБЫ ЯГОДА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1875407267",
+      "id": "1485385760",
       "name_lat": "ЗНАХАРЬ С МАГНИТНОЙ ГОРЫ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "ЗНАХАРЬ С МАГНИТНОЙ ГОРЫ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "183212091",
-      "name_lat": "ЗНАК СУДЬБЫ МОЯ МУЗА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1486655258",
       "name_lat": "ЗНАТНАЯ ОСОБА КАЗАНОВА",
-      "name_ru": "",
+      "name_ru": "ЗНАТНАЯ ОСОБА КАЗАНОВА",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -330,17 +311,17 @@
     {
       "id": "1946928343",
       "name_lat": "ЗНОЙНАЯ ПЛУТОВКА",
-      "name_ru": "",
+      "name_ru": "ЗНОЙНАЯ ПЛУТОВКА",
       "breed": "BORZOI - RUSSIAN HUNTING",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1162602514",
+      "id": "1841559955",
       "name_lat": "ЗНАК ОГНЯ ЗАККИ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "name_ru": "ЗНАК ОГНЯ ЗАККИ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -351,14 +332,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "590422875",
+      "id": "68432103",
       "name_lat": "ЗНОЙНЫЙ МАЧО",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ЗНОЙНЫЙ МАЧО",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -373,19 +354,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1541033212",
-      "name_lat": "ЗНАК СУДЬБЫ ПАРАДИЗ ДЛЯ СИБЕРИАН КИСС",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "34810614",
+      "id": "1788470767",
       "name_lat": "ЗНАК СУДЬБЫ ДАРЬЯ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "name_ru": "ЗНАК СУДЬБЫ ДАРЬЯ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -393,7 +365,7 @@
     {
       "id": "1151873740",
       "name_lat": "ЗНАМЕНИТЫЙ ЗАМОК ЧИПСОН",
-      "name_ru": "",
+      "name_ru": "ЗНАМЕНИТЫЙ ЗАМОК ЧИПСОН",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
@@ -420,17 +392,17 @@
     {
       "id": "411581668",
       "name_lat": "ЗНОЙНЫЙ ПЛАМЕНЬ ИЗ ХОРОВОДА ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ЗНОЙНЫЙ ПЛАМЕНЬ ИЗ ХОРОВОДА ЗВЕЗД",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "772772225",
+      "id": "20087900",
       "name_lat": "ЗНОЙНАЯ КРОШКА ДОННА КАРАН",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -438,7 +410,7 @@
     {
       "id": "109649268",
       "name_lat": "ЗНОЙНАЯ ДАМА ИЗ ДОМА КАШТАНОВЫХ",
-      "name_ru": "",
+      "name_ru": "ЗНОЙНАЯ ДАМА ИЗ ДОМА КАШТАНОВЫХ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -451,6 +423,22 @@
       "breed": "БОРДЕР КОЛЛИ / BORDER",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "196686665",
+      "name_lat": "ЗНАК СУДЬБЫ ИЗ ИМПЕРИИ АДАМАНТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256781210",
+      "name_lat": "ЗНАТНАЯ О ЗЛАТО ВЯТКИ ИЗ СЛАДКОГО",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -474,16 +462,16 @@
     {
       "id": "117880542",
       "name_lat": "ЗНАТНАЯ ОСОБА",
-      "name_ru": "",
+      "name_ru": "ЗНАТНАЯ ОСОБА",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "1406907036",
       "name_lat": "ЗНОЙНАЯ КРАСОТКА",
-      "name_ru": "",
+      "name_ru": "ЗНОЙНАЯ КРАСОТКА",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 5,
@@ -492,17 +480,25 @@
     {
       "id": "1503895521",
       "name_lat": "ЗНАК СУДЬБЫ АЛИСА В СТРАНЕ ЧУДЕС",
-      "name_ru": "",
+      "name_ru": "ЗНАК СУДЬБЫ АЛИСА В СТРАНЕ ЧУДЕС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1179136570",
+      "id": "756473783",
+      "name_lat": "ЗНАМЕНИТЫЙ ПРОХОР ПОД КРЫЛОМ АНГЕЛА",
+      "name_ru": "ЗНАМЕНИТЫЙ ПРОХОР ПОД КРЫЛОМ АНГЕЛА",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "74473099",
       "name_lat": "ЗНАТНАЯ ЦАРИЦА СНЕГОВ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -517,45 +513,60 @@
       "competition_dog_id": null
     },
     {
+      "id": "76435193",
+      "name_lat": "ЗНАК СУДЬБЫ ПАРАДИЗ ДЛЯ СЕБЕРИАН КИСС",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1246077562",
+      "name_lat": "ЗНАМЕНИТЫЙ ПРОХОР ПОД",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ д-ш",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1616744011",
       "name_lat": "ЗНАТНАЯ ДАМА ЭЛИЗАБЕТ",
-      "name_ru": "",
+      "name_ru": "ЗНАТНАЯ ДАМА ЭЛИЗАБЕТ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "756236678",
+      "id": "1461972479",
       "name_lat": "ЗНАТНАЯ ЯГОДКА ЧЕРНИКА",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН /",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1289937632",
-      "name_lat": "ЗНАК СУДЬБЫ СЭМ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1062320128",
+      "id": "166141044",
       "name_lat": "ЗНОЙНЫЙ БРЮНЕТ ИЗ БЕРЕЗОВОГО ЛОГА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "ЗНОЙНЫЙ БРЮНЕТ ИЗ БЕРЕЗОВОГО ЛОГА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "253319084",
+      "name_lat": "ЗНАК СУДЬБЫ ПАРАДИЗ ДЛЯ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1185915300",
       "name_lat": "ЗНАК СУДЬБЫ УДАЧА",
-      "name_ru": "",
+      "name_ru": "ЗНАК СУДЬБЫ УДАЧА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -573,7 +584,7 @@
     {
       "id": "159700805",
       "name_lat": "ЗНОЙНАЯ КОРИЦА ИЗ КАМАРИЛЛЫ",
-      "name_ru": "",
+      "name_ru": "ЗНОЙНАЯ КОРИЦА ИЗ КАМАРИЛЛЫ",
       "breed": "ЧИХУАХУА Д.Ш.",
       "breed_en": "",
       "total_shows": 3,
@@ -594,15 +605,6 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1159280018",
-      "name_lat": "ЗНАК СУДЬБЫ БРАБУС",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -634,20 +636,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1603616510",
-      "name_lat": "ЗНАК СУДЬБЫ ДАЯНА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "605760756",
       "name_lat": "ЗНАМЯ СПРАВЕДЛИВОСТИ АСТРЕЯ",
       "name_ru": "",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1911666041",
+      "name_lat": "Знойный красавчик из династии Насти",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -672,17 +673,8 @@
     {
       "id": "636919865",
       "name_lat": "ЗНОЙНАЯ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ЗНОЙНАЯ ЛЕДИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1889532185",
-      "name_lat": "ЗНАТНАЯ ОСОБА ИЗ АЛТАЙСКО ДИНАСТИИ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -690,7 +682,7 @@
     {
       "id": "613555566",
       "name_lat": "ЗНАТНАЯ ОСОБА ИЗ ДОМИКА ЛУ",
-      "name_ru": "",
+      "name_ru": "ЗНАТНАЯ ОСОБА ИЗ ДОМИКА ЛУ",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
@@ -699,7 +691,7 @@
     {
       "id": "379124024",
       "name_lat": "ЗНАМЕНИТЫЙ ЗАМОК ЧЕЛЛИ",
-      "name_ru": "",
+      "name_ru": "ЗНАМЕНИТЫЙ ЗАМОК ЧЕЛЛИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -708,7 +700,7 @@
     {
       "id": "458485185",
       "name_lat": "ЗНАМЕНИТЫЙ ЗАМОК ЧЕСИЛИЯ",
-      "name_ru": "",
+      "name_ru": "ЗНАМЕНИТЫЙ ЗАМОК ЧЕСИЛИЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -717,7 +709,7 @@
     {
       "id": "1181758803",
       "name_lat": "ЗНАК СУДЬБЫ УНА БЛЕК",
-      "name_ru": "",
+      "name_ru": "ЗНАК СУДЬБЫ УНА БЛЕК",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -726,10 +718,18 @@
     {
       "id": "1256107552",
       "name_lat": "ЗНАМЕНИТАЯ ИЗ ВОРОНЦОВСКОГО ДВОРЦА",
-      "name_ru": "",
+      "name_ru": "ЗНАМЕНИТАЯ ИЗ ВОРОНЦОВСКОГО ДВОРЦА",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "648158991",
+      "name_lat": "ЗНОЯ",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -742,10 +742,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1724959859",
+      "id": "287599964",
       "name_lat": "ЗНОЙ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -764,6 +764,15 @@
       "name_lat": "ЗНОЯ",
       "name_ru": "",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "53133646",
+      "name_lat": "ЗНАТНАЯ ОСОБА ОТ ЯВНОГО ЛИДЕРА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -814,15 +823,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1526827500",
-      "name_lat": "ЗНАТНАЯ ОСОБА ОТ ЯВНОГО ЛИДЕРА",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1338367890",
       "name_lat": "ЗНАК СУДЬБЫ КАРАМЕЛЬКА ДЛЯ ГОЛОВИНОЙ",
       "name_ru": "",
@@ -832,19 +832,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "92046708",
+      "id": "565908411",
       "name_lat": "ЗНОЙНЫЙ МАЧО САЛЬВЕ МАРИС СТЕЛЛА",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1962734819",
+      "id": "59406059",
       "name_lat": "ЗНАТНАЯ ДАМА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -904,6 +904,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "117334350",
+      "name_lat": "ЗНАТНАЯ ЛЕДИ",
+      "name_ru": "",
+      "breed": "CAUCASIAN SHEPHERD DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1388014272",
+      "name_lat": "ЗНАК СУДЬБЫ ЛУКРЕЦИЯ ДЛЯ СИБЕРИАН КИСС",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1295471311",
       "name_lat": "ЗНАМЕНИТЫЙ ЗАМОК ШАРЛИНА",
       "name_ru": "",
@@ -918,6 +934,14 @@
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "82291627",
+      "name_lat": "ЗНАК СУДЬБЫ ЯСМИНА РУЖ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1088,15 +1112,6 @@
       "name_lat": "ЗНАМЕНИТЫЙ ПРОХОР ПОД КРЫЛОМ",
       "name_ru": "",
       "breed": "РУССКИЙ ТОЙ (Д-Ш)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "756473783",
-      "name_lat": "ЗНАМЕНИТЫЙ ПРОХОР ПОД КРЫЛОМ АНГЕЛА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

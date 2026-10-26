@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "LP",
-  "count": 3,
+  "count": 5,
   "dogs": [
     {
       "id": "449744222",
@@ -10,6 +10,15 @@
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
       "total_shows": 52,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1482064533",
+      "name_lat": "L'PRINCESS IZ SEVERNOY IMPERII",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "POODLE TOY",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -26,6 +35,15 @@
       "name_lat": "LPG MISS PHATNU THAI@ET TAR MENEL",
       "name_ru": "",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1637540263",
+      "name_lat": "L PENNI",
+      "name_ru": "",
+      "breed": "БИШОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

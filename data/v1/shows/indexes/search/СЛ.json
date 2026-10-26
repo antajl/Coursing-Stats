@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "СЛ",
-  "count": 537,
+  "count": 550,
   "dogs": [
     {
       "id": "1968637759",
@@ -10,6 +10,15 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1519179177",
+      "name_lat": "СЛАВЯНКА ВСЕСЛАВА",
+      "name_ru": "СЛАВЯНКА ВСЕСЛАВА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 72,
       "competition_dog_id": null
     },
     {
@@ -22,21 +31,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1519179177",
-      "name_lat": "СЛАВЯНКА ВСЕСЛАВА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 59,
-      "competition_dog_id": null
-    },
-    {
       "id": "1962926354",
       "name_lat": "СЛАВЯНКА ГАЙ МАТТИОЛО",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ГАЙ МАТТИОЛО",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 33,
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -51,7 +51,7 @@
     {
       "id": "1970489786",
       "name_lat": "СЛАВЯНКА АИР ФЛАЙ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА АИР ФЛАЙ",
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 17,
@@ -60,7 +60,7 @@
     {
       "id": "24382442",
       "name_lat": "СЛАВЯНКА ЯСМИН",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЯСМИН",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 27,
@@ -69,19 +69,46 @@
     {
       "id": "31651267",
       "name_lat": "СЛАВЯНКА ИЗ СТАВРОПОЛЬСКОЙ ГУБЕРНИИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ИЗ СТАВРОПОЛЬСКОЙ ГУБЕРНИИ",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
+      "id": "1027922511",
+      "name_lat": "Славна Из Созвездия Сурских Псов РУССКИЙ ДЖЕКПОТ ВЕГАС",
+      "name_ru": "Славна Из Созвездия Сурских Псов РУССКИЙ ДЖЕКПОТ ВЕГАС",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "950067456",
+      "name_lat": "СЛАВНЫЙ РУСИЧ ГЕРМИОНА",
+      "name_ru": "СЛАВНЫЙ РУСИЧ ГЕРМИОНА",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "232825272",
       "name_lat": "СЛАВЯНКА ЮНИОР",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЮНИОР",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1185425268",
+      "name_lat": "СЛАВЯНКА АМИГО",
+      "name_ru": "СЛАВЯНКА АМИГО",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -96,7 +123,7 @@
     {
       "id": "1125741111",
       "name_lat": "СЛАВЯНКА ЕВКЛИД",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЕВКЛИД",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 26,
@@ -105,7 +132,7 @@
     {
       "id": "1251726322",
       "name_lat": "СЛАВЯНКА РОКЕТ БОМБ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА РОКЕТ БОМБ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 23,
@@ -114,7 +141,7 @@
     {
       "id": "142839241",
       "name_lat": "СЛАВЯНКА ФЛОРЕНЦИЯ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ФЛОРЕНЦИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 22,
@@ -123,53 +150,35 @@
     {
       "id": "1600869613",
       "name_lat": "СЛАВЯНКА БАЗЕЛИК",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА БАЗЕЛИК",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1185425268",
-      "name_lat": "СЛАВЯНКА АМИГО",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
       "id": "122244537",
       "name_lat": "СЛАВЯНКА ЧАКАРЕРА",
-      "name_ru": "",
+      "name_ru": "Славянка Чакарера",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "166368002",
-      "name_lat": "Славна Из Созвездия Сурских Псов",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
       "id": "1979370098",
       "name_lat": "СЛАВАЯР БОЯНА",
-      "name_ru": "",
+      "name_ru": "СЛАВАЯР БОЯНА",
       "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "159408338",
+      "id": "132677715",
       "name_lat": "СЛАВЯНКА БЕВЕРЛИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "СЛАВЯНКА БЕВЕРЛИ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 37,
       "competition_dog_id": null
@@ -177,26 +186,26 @@
     {
       "id": "1863715467",
       "name_lat": "СЛАВЯНКА ВАНЕССА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ВАНЕССА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "602138944",
+      "id": "367872405",
       "name_lat": "СЛИВКА ОБЩЕСТВА ИЗ ДОМА КУНЕЦ",
-      "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР /",
+      "name_ru": "СЛИВКА ОБЩЕСТВА ИЗ ДОМА КУНЕЦ",
+      "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "611334396",
+      "id": "413309484",
       "name_lat": "СЛАДКАЯ ЗЕФИРКА СЬЮ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "СЛАДКАЯ ЗЕФИРКА СЬЮ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -207,52 +216,52 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1321282424",
+      "name_lat": "СЛАВЯНКА ВИНЦЕНТ ВАН ГОГ (К/Х)",
+      "name_ru": "СЛАВЯНКА ВИНЦЕНТ ВАН ГОГ (К/Х)",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
       "id": "1765455796",
       "name_lat": "СЛАВЯНКА НАЙС ЛУКИНГ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА НАЙС ЛУКИНГ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "1645290885",
       "name_lat": "СЛАВЯНКА ДЕ ЛИР",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ДЕ ЛИР",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1754056576",
-      "name_lat": "СЛАВНЫЙ РУСИЧ ГЕРМИОНА",
+      "id": "169879405",
+      "name_lat": "СЛАВЯНКА КАРАТ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ /",
-      "breed_en": "",
-      "total_shows": 12,
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
       "id": "1904731525",
       "name_lat": "СЛАВЯНКА ГУЧЧИ БАЙ ГУЧЧИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ГУЧЧИ БАЙ ГУЧЧИ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 35,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1321282424",
-      "name_lat": "СЛАВЯНКА ВИНЦЕНТ ВАН ГОГ (К/Х)",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "SCHIPPERKE",
-      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -267,7 +276,7 @@
     {
       "id": "702725435",
       "name_lat": "СЛАВЯНКА РЕДМОНД",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА РЕДМОНД",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 51,
@@ -276,7 +285,7 @@
     {
       "id": "908422389",
       "name_lat": "СЛАДА ЗВЕЗДА ЛЮБВИ",
-      "name_ru": "",
+      "name_ru": "СЛАДА ЗВЕЗДА ЛЮБВИ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
@@ -289,6 +298,14 @@
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "906270083",
+      "name_lat": "СЛАВЯНКА ВИВА ВИКТОРИ",
+      "name_ru": "СЛАВЯНКА ВИВА ВИКТОРИ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -312,25 +329,16 @@
     {
       "id": "1712872176",
       "name_lat": "СЛАВЯНКА НУТЕЛЛА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА НУТЕЛЛА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
     },
     {
-      "id": "704161324",
-      "name_lat": "СЛАВАЯР ЖАН КЛОД",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1470300393",
       "name_lat": "СЛАВЯНКА ЕВЕЛИНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЕВЕЛИНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 23,
@@ -348,7 +356,7 @@
     {
       "id": "1042394760",
       "name_lat": "СЛАЙ АНГЕЛС ФЕЛИЦИЯ ГРИМАЛЬДИ",
-      "name_ru": "",
+      "name_ru": "СЛАЙ АНГЕЛС ФЕЛИЦИЯ ГРИМАЛЬДИ",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 9,
@@ -357,7 +365,7 @@
     {
       "id": "1137774706",
       "name_lat": "СЛАВЯНСКАЯ ЗВЕЗДА ГЕРКУЛЕС",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ЗВЕЗДА ГЕРКУЛЕС",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 22,
@@ -366,7 +374,7 @@
     {
       "id": "125870332",
       "name_lat": "СЛИВОЧНЫЙ СЫРОК МАРС",
-      "name_ru": "",
+      "name_ru": "СЛИВОЧНЫЙ СЫРОК МАРС",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 28,
@@ -384,7 +392,7 @@
     {
       "id": "218116377",
       "name_lat": "СЛАВЯНКА ШТЕФФАНИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ШТЕФФАНИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -393,17 +401,17 @@
     {
       "id": "1308723970",
       "name_lat": "Славянка Элегия",
-      "name_ru": "",
+      "name_ru": "Славянка Элегия",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "142218590",
+      "id": "1125345895",
       "name_lat": "СЛАВЯНКА ВЕРСАЧЕ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "name_ru": "СЛАВЯНКА ВЕРСАЧЕ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -411,7 +419,7 @@
     {
       "id": "1434594697",
       "name_lat": "СЛАВЯНКА ЧЕРРИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЧЕРРИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 12,
@@ -420,7 +428,7 @@
     {
       "id": "1711600716",
       "name_lat": "СЛАДКАЯ ЯГОДКА",
-      "name_ru": "",
+      "name_ru": "СЛАДКАЯ ЯГОДКА",
       "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 11,
@@ -429,10 +437,19 @@
     {
       "id": "393194220",
       "name_lat": "СЛАВЯНКА ЮВЕНТА Н/Б",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЮВЕНТА Н/Б",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 39,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1482489109",
+      "name_lat": "СЛИПИНГ БЬЮТИ РУБИ",
+      "name_ru": "СЛИПИНГ БЬЮТИ РУБИ",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -447,7 +464,7 @@
     {
       "id": "584268456",
       "name_lat": "СЛАДОСТЬ ТО КАКАЯ ИЗ ОМСКОЙ КРЕПОСТИ",
-      "name_ru": "",
+      "name_ru": "СЛАДОСТЬ ТО КАКАЯ ИЗ ОМСКОЙ КРЕПОСТИ",
       "breed": "DACHSHUND KANINCHEN",
       "breed_en": "",
       "total_shows": 3,
@@ -456,7 +473,7 @@
     {
       "id": "749297069",
       "name_lat": "СЛАВЯНКА ФОРТУНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ФОРТУНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 26,
@@ -474,17 +491,17 @@
     {
       "id": "1327234435",
       "name_lat": "СЛАВНАЯ БЕЛЛА",
-      "name_ru": "",
+      "name_ru": "СЛАВНАЯ БЕЛЛА",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1987095598",
+      "id": "1457605261",
       "name_lat": "СЛАВ ТРОУФИ БУМБАРАШ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "СЛАВ ТРОУФИ БУМБАРАШ",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -492,25 +509,16 @@
     {
       "id": "1173129468",
       "name_lat": "СЛАВЯНСКА ЭГО ФАКТО",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКА ЭГО ФАКТО",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "169879405",
-      "name_lat": "СЛАВЯНКА КАРАТ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "SCHIPPERKE",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
       "id": "1133493211",
       "name_lat": "СЛАВЯНКА ЮНАНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЮНАНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 12,
@@ -519,7 +527,7 @@
     {
       "id": "1016835620",
       "name_lat": "СЛАДКАЯ ВИШЕНКА ЧЕРИ",
-      "name_ru": "",
+      "name_ru": "СЛАДКАЯ ВИШЕНКА ЧЕРИ",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 7,
@@ -528,7 +536,7 @@
     {
       "id": "1513741479",
       "name_lat": "СЛАДИС ИРНЕСТ ЭЛИТ",
-      "name_ru": "",
+      "name_ru": "СЛАДИС ИРНЕСТ ЭЛИТ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 7,
@@ -544,9 +552,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1761483383",
+      "name_lat": "СЛАВЯНКА АСТИ МОНДОРО",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1370885890",
       "name_lat": "Славянка Порше Кайен",
-      "name_ru": "",
+      "name_ru": "Славянка Порше Кайен",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -566,8 +582,7 @@
       "name_lat": "Славянка Глорис II",
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -582,7 +597,7 @@
     {
       "id": "871040414",
       "name_lat": "СЛАВЯНКА АВРОРА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА АВРОРА",
       "breed": "СХИПЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
@@ -591,10 +606,10 @@
     {
       "id": "1996880918",
       "name_lat": "СЛАВЯНКА ТИФФАНИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ТИФФАНИ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -607,8 +622,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "669545089",
-      "name_lat": "СЛАЙ АНГЕЛС ХАНА- МОНТАНА",
+      "id": "539152709",
+      "name_lat": "СЛАЙ АНГЕЛС ХАНА-МОНТАНА",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
@@ -616,9 +631,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1275580714",
+      "name_lat": "СЛАВЯНКА ВЕРДЖИНИЯ",
+      "name_ru": "СЛАВЯНКА ВЕРДЖИНИЯ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
       "id": "573478742",
       "name_lat": "СЛАВАЯР ЗАХАР ВЕЛИКОЛЕПНЫЙ",
-      "name_ru": "",
+      "name_ru": "СЛАВАЯР ЗАХАР ВЕЛИКОЛЕПНЫЙ",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 15,
@@ -627,7 +651,7 @@
     {
       "id": "1928427927",
       "name_lat": "СЛАВЯНКА ВАЙОЛЕТ КВИН",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ВАЙОЛЕТ КВИН",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -643,18 +667,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1275580714",
-      "name_lat": "СЛАВЯНКА ВЕРДЖИНИЯ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 26,
+      "id": "1199420990",
+      "name_lat": "СЛАВЯНКА СОНЯ РИКЕЛЬ",
+      "name_ru": "СЛАВЯНКА СОНЯ РИКЕЛЬ",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
       "id": "1026722035",
       "name_lat": "СЛАЙС ОФ ЛАЙФ ЕСПЕШЕЛИ ФОР Ю",
-      "name_ru": "",
+      "name_ru": "СЛАЙС ОФ ЛАЙФ ЕСПЕШЕЛИ ФОР Ю",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "BERNESE MOUNTAIN DOG",
       "total_shows": 7,
@@ -672,10 +696,10 @@
     {
       "id": "572315265",
       "name_lat": "СЛАВАЯР ХОЛИ МОЛЛИ",
-      "name_ru": "",
+      "name_ru": "СЛАВАЯР ХОЛИ МОЛЛИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -690,7 +714,7 @@
     {
       "id": "110709117",
       "name_lat": "СЛАВЯНКА ДА ВИНЧИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ДА ВИНЧИ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 7,
@@ -699,7 +723,7 @@
     {
       "id": "815184765",
       "name_lat": "Славный Русич Владислава Величавая",
-      "name_ru": "",
+      "name_ru": "СЛАВНЫЙ РУСИЧ ВЛАДИСЛАВА ВЕЛИЧАВАЯ",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -717,7 +741,7 @@
     {
       "id": "591700941",
       "name_lat": "СЛАВЯНКА ГОГЕН",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ГОГЕН",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 11,
@@ -726,7 +750,7 @@
     {
       "id": "701619582",
       "name_lat": "СЛАВНАЯ КЕРРИ БРЕТШОУ",
-      "name_ru": "",
+      "name_ru": "СЛАВНАЯ КЕРРИ БРЕТШОУ",
       "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ, РЫЖИЙ",
       "breed_en": "",
       "total_shows": 12,
@@ -735,7 +759,7 @@
     {
       "id": "536395301",
       "name_lat": "СЛАВЯНКА ЕВЕСТИНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЕВЕСТИНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -744,7 +768,7 @@
     {
       "id": "328545751",
       "name_lat": "СЛАВАЯР МИРАНДА",
-      "name_ru": "",
+      "name_ru": "СЛАВАЯР МИРАНДА",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -753,19 +777,10 @@
     {
       "id": "1141169307",
       "name_lat": "СЛАВЯНКА САНГРИЯ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА САНГРИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "53000810",
-      "name_lat": "СЛАВАЯР КОРОЛЕВСКАЯ ВАТРУШКА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -805,10 +820,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "348616274",
+      "id": "1367628243",
       "name_lat": "СЛАВЯНКА КЛЕМА",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "name_ru": "СЛАВЯНКА КЛЕМА",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -823,11 +838,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "433798365",
+      "name_lat": "СЛАВЯНКА ГРЭММИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "892522567",
       "name_lat": "Сладкий Перец FIREROCK RACOON KING",
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "100235256",
+      "name_lat": "СЛАЙ АНГЕЛС ЮВЕНТИНА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -841,10 +873,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1843962394",
+      "id": "273015019",
       "name_lat": "СЛАВЯНКА ДОЛОРЕС-II",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -888,10 +920,19 @@
     {
       "id": "1401617790",
       "name_lat": "СЛАВЯНКА ЛАККИ БОЙ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЛАККИ БОЙ",
       "breed": "ЦВЕРГШНАУЦЕР БЕЛОГО ОКРАСА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "434310363",
+      "name_lat": "СЛАВЯНКА ГЕОРГИНА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -899,6 +940,24 @@
       "name_lat": "СЛАЙС",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1379030212",
+      "name_lat": "С ЛИПЕЦКОЙ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "274669913",
+      "name_lat": "Слав Троуфи Норвегия",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -913,21 +972,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "895746007",
-      "name_lat": "Слав Троуфи Норвегия",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "730591607",
       "name_lat": "СЛАЙС ОФ ЛАЙФ ЗУЗО",
       "name_ru": "",
       "breed": "ШЕЛТИ БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "28771597",
+      "name_lat": "СЛАВЯНКА ЛИТЛ МЭН",
+      "name_ru": "СЛАВЯНКА ЛИТЛ МЭН",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -949,39 +1008,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1652442160",
+      "id": "292416936",
       "name_lat": "СЛИВОЧНАЯ КАРАМЕЛЬКА",
-      "name_ru": "",
-      "breed": "СЕРЕБРОМ",
+      "name_ru": "СЛИВОЧНАЯ КАРАМЕЛЬКА",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "694890344",
-      "name_lat": "СЛАВЯНКА ЛИТЛ МЭН",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
       "id": "1143774585",
       "name_lat": "СЛАВЯНКА АВГУСТИНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА АВГУСТИНА",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1199420990",
-      "name_lat": "СЛАВЯНКА СОНЯ РИКЕЛЬ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "SCHIPPERKE",
-      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1005,28 +1046,28 @@
     {
       "id": "1966651400",
       "name_lat": "СЛАВЯНКА ПАЛ ЗИЛЕРИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ПАЛ ЗИЛЕРИ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "562618620",
-      "name_lat": "СЛАВЯНКА ШЕВАЛЬЕ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
+      "id": "218492062",
+      "name_lat": "СЛАВЯНКА ХАММЕР (К/Х)",
+      "name_ru": "СЛАВЯНКА ХАММЕР (К/Х)",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "549684847",
-      "name_lat": "СЛАВЯНКА ХАММЕР (К/Х)",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 5,
+      "id": "562618620",
+      "name_lat": "СЛАВЯНКА ШЕВАЛЬЕ",
+      "name_ru": "СЛАВЯНКА ШЕВАЛЬЕ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1041,34 +1082,25 @@
     {
       "id": "1171300923",
       "name_lat": "СЛАВЯНКА ПЕРСОНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ПЕРСОНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1923192787",
-      "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА БАСНЯ",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1581832830",
-      "name_lat": "СЛАДКАЯ ЖИЗНЬ ТРИСТА ТРИДЦАТЬ ТРИ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
+      "id": "519661083",
+      "name_lat": "СЛАВЯНКА ИМИР",
+      "name_ru": "СЛАВЯНКА ИМИР",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
       "id": "913198934",
       "name_lat": "СЛАВЯНКА ХАРД РОК",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ХАРД РОК",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 8,
@@ -1077,17 +1109,16 @@
     {
       "id": "203237222",
       "name_lat": "СЛАВЯНКА ЭНРИКО КОВЕРИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЭНРИКО КОВЕРИ",
       "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "650959836",
+      "id": "1140948089",
       "name_lat": "СЛАВЯНКА АЛЬЯНС",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "СЛАВЯНКА АЛЬЯНС",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1102,6 +1133,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "532615268",
+      "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА ГОРДЫЙ",
+      "name_ru": "СЛАВЯНСКАЯ ВОЛЬНИЦА ГОРДЫЙ",
+      "breed": "Южнорусская овчарка",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "870387614",
       "name_lat": "СЛАВЯНКА МИЛЛЕНИУМ",
       "name_ru": "",
@@ -1113,7 +1153,7 @@
     {
       "id": "1239550219",
       "name_lat": "СЛАВЯНКА ЭСТИ ЛАУДЕР",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЭСТИ ЛАУДЕР",
       "breed": "СХИПЕРКЕ",
       "breed_en": "",
       "total_shows": 8,
@@ -1122,7 +1162,7 @@
     {
       "id": "6089765",
       "name_lat": "СЛАВЯНКА ЮСЕНИЯ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЮСЕНИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -1185,17 +1225,26 @@
     {
       "id": "1001354091",
       "name_lat": "СЛАДКАЯ БУЛОЧКА ЭКЛЕРКА",
-      "name_ru": "",
+      "name_ru": "СЛАДКАЯ БУЛОЧКА ЭКЛЕРКА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "82148577",
+      "id": "1902192385",
+      "name_lat": "СЛАВЯНКА ИОГАН",
+      "name_ru": "СЛАВЯНКА ИОГАН",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "984799742",
       "name_lat": "СЛАЩЕ МЕДА КАРАМЕЛЬ",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "name_ru": "СЛАЩЕ МЕДА КАРАМЕЛЬ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1210,18 +1259,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "631194745",
+      "id": "406089284",
       "name_lat": "СЛАВЯНКА ШАНСОН",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "name_ru": "СЛАВЯНКА ШАНСОН",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
       "id": "1012070631",
       "name_lat": "СЛАВЯНКА КАРДИНАЛ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА КАРДИНАЛ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -1230,7 +1279,7 @@
     {
       "id": "1139143024",
       "name_lat": "СЛАВЯНСКИЙ ФАВОРИТ ГРАНЖ РОВЕР СТАР",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКИЙ ФАВОРИТ ГРАНЖ РОВЕР СТАР",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 10,
@@ -1239,28 +1288,19 @@
     {
       "id": "104307186",
       "name_lat": "СЛАВЯНКА РОССИЯ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА РОССИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "532615268",
-      "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА ГОРДЫЙ",
-      "name_ru": "",
-      "breed": "Южнорусская овчарка",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1580580121",
       "name_lat": "СЛАВАЯР ГАЛАНТНЫЙ МУЖЧИНА",
-      "name_ru": "",
+      "name_ru": "СЛАВАЯР ГАЛАНТНЫЙ МУЖЧИНА",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1275,7 +1315,7 @@
     {
       "id": "1546795480",
       "name_lat": "СЛАВЯНКА АФИНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА АФИНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 12,
@@ -1284,8 +1324,17 @@
     {
       "id": "1578061946",
       "name_lat": "СЛИПИНГ СТАР МОЛЛИ",
-      "name_ru": "",
+      "name_ru": "СЛИПИНГ СТАР МОЛЛИ",
       "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "617213666",
+      "name_lat": "СЛАВ ТРОУФИ РУС АВ ЛИККА",
+      "name_ru": "СЛАВ ТРОУФИ РУС АВ ЛИККА",
+      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -1293,10 +1342,19 @@
     {
       "id": "1460840107",
       "name_lat": "СЛАВЯНКА ВЕРБА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ВЕРБА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "559429575",
+      "name_lat": "СЛАВЯНКА КОКА-КОЛА",
+      "name_ru": "СЛАВЯНКА КОКА-КОЛА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1311,53 +1369,78 @@
     {
       "id": "892873067",
       "name_lat": "СЛАВЯНКА ЮЛОНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЮЛОНА",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
+      "id": "1601257395",
+      "name_lat": "СЛАВЯНКА СОНЯ РИКЕЛЬ (К/Х)",
+      "name_ru": "",
+      "breed": "ШИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "108332128",
       "name_lat": "СЛАВЯНКА ПЛАТИНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ПЛАТИНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
+      "id": "1937447607",
+      "name_lat": "СЛАВЯНКА МАРСЕЛЛА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1948332531",
       "name_lat": "СЛАВЯНКА КАРОЛИНА ДЛЯ САРА ТАУ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА КАРОЛИНА ДЛЯ САРА ТАУ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "559429575",
-      "name_lat": "СЛАВЯНКА КОКА-КОЛА",
-      "name_ru": "",
+      "id": "1369584872",
+      "name_lat": "СЛАВЯНКА ЖАННА Д'АРК",
+      "name_ru": "СЛАВЯНКА ЖАННА Д'АРК",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "601600539",
+      "id": "103717547",
       "name_lat": "СЛУЖЕБНЫЙ РОМАН ИЗ ВОЙСКА ТАМЕРЛАНА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "СЛУЖЕБНЫЙ РОМАН ИЗ ВОЙСКА ТАМЕРЛАНА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "994667667",
-      "name_lat": "СЛЭШИН СТРОНГ СПИРИТ ВАКУМИ",
+      "id": "970274229",
+      "name_lat": "СЛАВЯНКА БРАБУС ДЛЯ ТЕНЬ ЛУНЫ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1506694394",
+      "name_lat": "СЛЭШИН СТРОНГ СПИРИТ ВАКУМИ",
+      "name_ru": "СЛЭШИН СТРОНГ СПИРИТ ВАКУМИ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1365,7 +1448,7 @@
     {
       "id": "1969063658",
       "name_lat": "СЛАВЯНКА БЕРБЕРРИ ХИРО",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА БЕРБЕРРИ ХИРО",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -1374,17 +1457,8 @@
     {
       "id": "1002071535",
       "name_lat": "СЛАДКАЯ ЗВЁЗДОЧКА",
-      "name_ru": "",
+      "name_ru": "СЛАДКАЯ ЗВЁЗДОЧКА",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "506058855",
-      "name_lat": "СЛАВАЯР ЯНТАРЬ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1392,25 +1466,25 @@
     {
       "id": "125800971",
       "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА ЕФРОСИНЬЯ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ВОЛЬНИЦА ЕФРОСИНЬЯ",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "519661083",
-      "name_lat": "СЛАВЯНКА ИМИР",
+      "id": "796012531",
+      "name_lat": "СЛАВЯНКА ВАССАБИ ВИП",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "450852276",
       "name_lat": "СЛАЙ АНГЕЛС ЖАСЛИН БЛЮ МУН",
-      "name_ru": "",
+      "name_ru": "СЛАЙ АНГЕЛС ЖАСЛИН БЛЮ МУН",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 5,
@@ -1419,26 +1493,26 @@
     {
       "id": "1652920600",
       "name_lat": "СЛАВЯНКА ТОРРЕНТЕ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ТОРРЕНТЕ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "969156821",
-      "name_lat": "СЛАВЯНКА ЖАННА Д'АРК",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "id": "1883990145",
+      "name_lat": "Слав Троуфи Риск Нуггет",
+      "name_ru": "Слав Троуфи Риск Нуггет",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "726434387",
+      "id": "1312690362",
       "name_lat": "СЛАВЯНКА ЭМАНУЭЛЬ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "СЛАВЯНКА ЭМАНУЭЛЬ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1453,28 +1527,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1937447607",
-      "name_lat": "СЛАВЯНКА МАРСЕЛЛА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1910554331",
       "name_lat": "СЛАВЯНКА ЧАЙРА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЧАЙРА",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "244023890",
-      "name_lat": "СЛАВ ТРОУФИ РУС АВ ЛИККА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1482,7 +1538,7 @@
     {
       "id": "1684932615",
       "name_lat": "СЛАВАЯР УРСА ПАНДА",
-      "name_ru": "",
+      "name_ru": "СЛАВАЯР УРСА ПАНДА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "",
       "total_shows": 12,
@@ -1491,55 +1547,54 @@
     {
       "id": "271233294",
       "name_lat": "СЛАЙ ИЗ СОЗВЕЗДИЯ АДОМАСА",
-      "name_ru": "",
+      "name_ru": "СЛАЙ ИЗ СОЗВЕЗДИЯ АДОМАСА",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "359136398",
+      "id": "211269079",
       "name_lat": "СЛАВЯНКА АЛЕКСАНДРИТА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "СЛАВЯНКА АЛЕКСАНДРИТА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1601257395",
-      "name_lat": "СЛАВЯНКА СОНЯ РИКЕЛЬ (К/Х)",
-      "name_ru": "",
-      "breed": "ШИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1812566036",
       "name_lat": "СЛАВЯНКА ЮНИТУС",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЮНИТУС",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "1383140396",
+      "name_lat": "СЛАВЯНКА ИВ СЭН ЛОРАН",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1268559422",
       "name_lat": "СЛАДКАЯ ЖИЗНЬ ДАЙНЭМИК ФЛАЙТ",
-      "name_ru": "",
+      "name_ru": "СЛАДКАЯ ЖИЗНЬ ДАЙНЭМИК ФЛАЙТ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "892158421",
-      "name_lat": "СЛАДОСТЬ ЛИЛОВАЯ ВОСХОДЯЩАЯ ЗВЕЗДА (ГШ)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "id": "470248877",
+      "name_lat": "СЛАЙ БЛЭК ДАЙМОНД",
+      "name_ru": "СЛАЙ БЛЭК ДАЙМОНД",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1552,27 +1607,53 @@
       "competition_dog_id": null
     },
     {
-      "id": "866870233",
-      "name_lat": "СЛАВЯНКА ЧАКОННЕ",
+      "id": "676680828",
+      "name_lat": "СЛАВЯНКА ФОРСАЖ",
+      "name_ru": "СЛАВЯНКА ФОРСАЖ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1490324487",
+      "name_lat": "СЛАДКАЯ ЯГОДКА МАЛИНКА",
       "name_ru": "",
-      "breed": "ШИППЕРКЕ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1500986835",
-      "name_lat": "СЛАВЯНКА БЕЙОНСЕ",
-      "name_ru": "",
+      "id": "1314970081",
+      "name_lat": "СЛАВЯНКА ЧАКОННЕ",
+      "name_ru": "СЛАВЯНКА ЧАКОННЕ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "1500986835",
+      "name_lat": "СЛАВЯНКА БЕЙОНСЕ",
+      "name_ru": "СЛАВЯНКА БЕЙОНСЕ",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1735268668",
+      "name_lat": "СЛАВОМИРА ИЗ ДИНАСТИИ СТЮАРТОВ",
+      "name_ru": "СЛАВОМИРА ИЗ ДИНАСТИИ СТЮАРТОВ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1175233470",
       "name_lat": "СЛАВЯНКА БАРНЕТ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА БАРНЕТ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -1581,7 +1662,7 @@
     {
       "id": "914189670",
       "name_lat": "СЛАВЯН-КА РУССКИЙ СТАНДАРТ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯН-КА РУССКИЙ СТАНДАРТ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 5,
@@ -1608,17 +1689,17 @@
     {
       "id": "1764094991",
       "name_lat": "СЛАВЯНКА НАИНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА НАИНА",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "774544228",
+      "id": "1401900945",
       "name_lat": "СЛАВЯНКА БАРОНЕССА КЕННАРД",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "СЛАВЯНКА БАРОНЕССА КЕННАРД",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1635,7 +1716,7 @@
     {
       "id": "1402051863",
       "name_lat": "СЛАВЯНКА КАМАЛИЯ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА КАМАЛИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -1662,7 +1743,7 @@
     {
       "id": "244900833",
       "name_lat": "СЛАВЯНКА МАРКО",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА МАРКО",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -1687,27 +1768,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "796012531",
-      "name_lat": "СЛАВЯНКА ВАССАБИ ВИП",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1902192385",
-      "name_lat": "СЛАВЯНКА ИОГАН",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1183639384",
       "name_lat": "СЛАВЯНСКАЯ ЗВЕЗДА ЧАРУЮЩАЯ СЕНЕЖ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ЗВЕЗДА ЧАРУЮЩАЯ СЕНЕЖ",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -1716,7 +1779,7 @@
     {
       "id": "949752462",
       "name_lat": "СЛИХОБОР ЛАЙН ТИМУРА",
-      "name_ru": "",
+      "name_ru": "СЛИХОБОР ЛАЙН ТИМУРА",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -1725,7 +1788,7 @@
     {
       "id": "631967979",
       "name_lat": "СЛАВЯНКА ШЕРШЕ ЛЯ ФАМ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ШЕРШЕ ЛЯ ФАМ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
@@ -1750,27 +1813,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "28762411",
-      "name_lat": "СЛАВ ТРОУФИ РИСК НУГГЕТ",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1894904825",
       "name_lat": "СЛАВЯНКА ФИЛАДЕЛЬФИЯ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ФИЛАДЕЛЬФИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
+      "id": "592154152",
+      "name_lat": "СЛАВЯНКА ПЕАРЛ",
+      "name_ru": "СЛАВЯНКА ПЕАРЛ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "22570179",
       "name_lat": "СЛАВЯНКА ИЗБРАННИЦА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ИЗБРАННИЦА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -1788,7 +1851,7 @@
     {
       "id": "1895556326",
       "name_lat": "СЛАВЯНКА ЛЕГЕНДА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЛЕГЕНДА",
       "breed": "MINIATURE PINSCHER",
       "breed_en": "",
       "total_shows": 6,
@@ -1804,37 +1867,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1490324487",
-      "name_lat": "СЛАДКАЯ ЯГОДКА МАЛИНКА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "id": "278259765",
+      "name_lat": "СЛАДОСТЬ ЛИЛОВАЯ ВОСХОДЯЩАЯ ЗВЕЗДА",
+      "name_ru": "СЛАДОСТЬ ЛИЛОВАЯ ВОСХОДЯЩАЯ ЗВЕЗДА",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "719684519",
       "name_lat": "СЛАВЯНКА ЭЙФФЕЛЬ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЭЙФФЕЛЬ",
       "breed": "ШИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "320660732",
+      "id": "1511557385",
       "name_lat": "СЛАВЯНКА МАРЛЕН",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "СЛАВЯНКА МАРЛЕН",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "231346414",
+      "id": "1211632183",
       "name_lat": "СЛАЙ ЭНЖЕЛС ЗАТЕЙНИК",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР /",
+      "name_ru": "СЛАЙ ЭНЖЕЛС ЗАТЕЙНИК",
+      "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1842,7 +1905,7 @@
     {
       "id": "1359608122",
       "name_lat": "СЛАВЯНКА ТАЙСОН",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ТАЙСОН",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 8,
@@ -1858,10 +1921,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "304097096",
+      "id": "459619565",
       "name_lat": "СЛАВЯНКА ИНВЕСТИЦИЯ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1869,7 +1932,7 @@
     {
       "id": "1907852760",
       "name_lat": "СЛАВЯНКА ЛИЦЕНЗИЯ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЛИЦЕНЗИЯ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1878,7 +1941,7 @@
     {
       "id": "881692650",
       "name_lat": "СЛАВЯНКА ЗАДОР",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЗАДОР",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -1903,10 +1966,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1765184412",
-      "name_lat": "СЛАВЯНКА МОНТЕ- КРИСТО",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "id": "1817044913",
+      "name_lat": "СЛАВЯНКА МОНТЕ-КРИСТО",
+      "name_ru": "СЛАВЯНКА МОНТЕ-КРИСТО",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1914,7 +1977,7 @@
     {
       "id": "1952018633",
       "name_lat": "СЛАВЯНКА ЛУИ ФЕРАН",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЛУИ ФЕРАН",
       "breed": "SCHIPPERKE",
       "breed_en": "",
       "total_shows": 3,
@@ -1923,7 +1986,7 @@
     {
       "id": "1978201414",
       "name_lat": "СЛАВЯНКА НОУ-ХАУ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА НОУ-ХАУ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -1948,9 +2011,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1391468209",
+      "name_lat": "СЛАВЯНКА ЗАУРЭЛЬ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "549596263",
       "name_lat": "СЛАЙ Э ПЭТ БЛУБЕРРИ",
-      "name_ru": "",
+      "name_ru": "СЛАЙ Э ПЭТ БЛУБЕРРИ",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
@@ -1995,7 +2066,7 @@
     {
       "id": "1405959910",
       "name_lat": "СЛАВЯНСКАЯ ЗВЕЗДА ЭДЕЛЬВЕЙС",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ЗВЕЗДА ЭДЕЛЬВЕЙС",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
@@ -2011,10 +2082,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1570432965",
+      "id": "584506584",
       "name_lat": "СЛАВЯНКА ШАНТАРЕЛЬ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2022,26 +2093,35 @@
     {
       "id": "1390547583",
       "name_lat": "СЛАВЯНКА КАПРАЛ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА КАПРАЛ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1134464184",
-      "name_lat": "СЛЭШИН СТРОНГ СПИРИТ ВАЙТИ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "id": "1777607848",
+      "name_lat": "С'ЛИХОБОР ЛАЙН ПРИНЦЕССА ИЗАБЕЛЛА",
+      "name_ru": "С'ЛИХОБОР ЛАЙН ПРИНЦЕССА ИЗАБЕЛЛА",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "554131393",
-      "name_lat": "Слав Троуфи Буги-Вуги",
+      "id": "149354295",
+      "name_lat": "СЛАВ ТРОУФИ БУГИ-ВУГИ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1134464184",
+      "name_lat": "СЛЭШИН СТРОНГ СПИРИТ ВАЙТИ",
+      "name_ru": "СЛЭШИН СТРОНГ СПИРИТ ВАЙТИ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2049,7 +2129,7 @@
     {
       "id": "1351162415",
       "name_lat": "СЛЕД ЗАБАЙКАЛЬЯ ЕС ЛАККИ ЛОРД",
-      "name_ru": "",
+      "name_ru": "СЛЕД ЗАБАЙКАЛЬЯ ЕС ЛАККИ ЛОРД",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
@@ -2074,6 +2154,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1448508311",
+      "name_lat": "СЛАЙ ЭНЖЕЛС ГЕРМИОНА СВИТ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКАЯ БОРЗАЯ – ЛЕВРЕТКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1825782398",
       "name_lat": "СЛАВЯНКА ЮКОС",
       "name_ru": "",
@@ -2083,9 +2171,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "349135896",
+      "name_lat": "СЛАВЯНКА ЖЕСКАР Н/Б",
+      "name_ru": "",
+      "breed": "ШИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "397985210",
       "name_lat": "СЛАВЯНСКАЯ ЗВЕЗДА ЧЕЗАРЕ БОРДЖИА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ЗВЕЗДА ЧЕЗАРЕ БОРДЖИА",
       "breed": "MOUNTAIN DOG",
       "breed_en": "",
       "total_shows": 2,
@@ -2110,30 +2207,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "470248877",
-      "name_lat": "СЛАЙ БЛЭК ДАЙМОНД",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "228543977",
       "name_lat": "СЛИПИНГ БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "СЛИПИНГ БЬЮТИ",
       "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "976816702",
-      "name_lat": "СЛАДКАЯ ЖИЗНЬ ЯКУДЗА",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2164,21 +2243,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1827423008",
+      "id": "1106268855",
       "name_lat": "СЛАВ ТРОУФИ ХОЛИ МОЛИ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "СЛАВ ТРОУФИ ХОЛИ МОЛИ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1735268668",
-      "name_lat": "СЛАВОМИРА ИЗ ДИНАСТИИ СТЮАРТОВ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
+      "id": "1889651537",
+      "name_lat": "СЛАВЯНКА ФАНЧЕТТА ОН-ЗЕ РАЙС",
+      "name_ru": "СЛАВЯНКА ФАНЧЕТТА ОН-ЗЕ РАЙС",
+      "breed": "ЦВЕРГПИНЧЕР /",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2200,10 +2278,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "119426267",
+      "id": "429590546",
       "name_lat": "СЛАВЯНКА НОЙМАН",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2211,7 +2289,7 @@
     {
       "id": "1957112666",
       "name_lat": "СЛИХОБОР ЛАЙН ХАЙРОН",
-      "name_ru": "",
+      "name_ru": "СЛИХОБОР ЛАЙН ХАЙРОН",
       "breed": "CHIHUAHUA SMOOTH HAIRED",
       "breed_en": "",
       "total_shows": 2,
@@ -2220,19 +2298,10 @@
     {
       "id": "95850746",
       "name_lat": "СЛИХОБОР ЛАЙН ЧЕМИ ЧЕЙС",
-      "name_ru": "",
+      "name_ru": "СЛИХОБОР ЛАЙН ЧЕМИ ЧЕЙС",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "376993069",
-      "name_lat": "СЛАВАЯР ЮССИ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2245,15 +2314,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1482489109",
-      "name_lat": "СЛИПИНГ БЬЮТИ РУБИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "700276654",
       "name_lat": "Славянка Мирослава для Сары Тау",
       "name_ru": "",
@@ -2263,10 +2323,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "208179542",
+      "id": "1831908303",
       "name_lat": "СЛАВЯНКА ДИВНАЯ",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2283,26 +2343,26 @@
     {
       "id": "717616725",
       "name_lat": "СЛАВНЫЙ ИЗ ЗЛАТОГЛАВОЙ",
-      "name_ru": "",
+      "name_ru": "СЛАВНЫЙ ИЗ ЗЛАТОГЛАВОЙ",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "193478013",
-      "name_lat": "СЛАВЯНКА КЛИМА",
+      "id": "217681316",
+      "name_lat": "СЛАВ ТРОУФИ ЧЕСС КВИН",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "122263040",
-      "name_lat": "СЛАВ ТРОУФИ ЧЕСС КВИН",
+      "id": "1023028640",
+      "name_lat": "СЛАВЯНКА КЛИМА",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2353,12 +2413,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "854298441",
+      "name_lat": "СЛАВЯНКА ВИТТОРИО",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "206497548",
       "name_lat": "СЛАВЯНКА ЗОДИАК",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146495624",
+      "name_lat": "СЛАВЯНКА ВИВАЛЬДИ",
+      "name_ru": "СЛАВЯНКА ВИВАЛЬДИ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2380,6 +2458,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1687012466",
+      "name_lat": "СЛАВЯНКА ХАММЕР",
+      "name_ru": "",
+      "breed": "СХИПЕРКЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1922859007",
       "name_lat": "СЛАВАЯР УДАЛОЙ БОГАТЫРЬ",
       "name_ru": "",
@@ -2389,19 +2475,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "203873320",
+      "id": "44649606",
       "name_lat": "СЛАВЯНКА ОИДА ДЕПАССИОН",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ БУЛЬДОГ",
+      "name_ru": "СЛАВЯНКА ОИДА ДЕПАССИОН",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "561940502",
+      "id": "834021519",
       "name_lat": "СЛАВЯНКА ФОРСЕТИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "СЛАВЯНКА ФОРСЕТИ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2434,10 +2520,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1908414511",
+      "id": "665466974",
       "name_lat": "СЛАВУТИЧ",
       "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
+      "breed": "СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2452,10 +2538,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1872908863",
+      "id": "125006973",
       "name_lat": "СЛАВ ТРОУФИ ЯСНА МЯТА",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "name_ru": "СЛАВ ТРОУФИ ЯСНА МЯТА",
+      "breed": "SPRINGER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2479,9 +2565,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1219128266",
+      "name_lat": "СЛАВЯКА ЧАКОННЕ",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1303087387",
       "name_lat": "СЛАЙ АНГЕЛС СУБМАРИНА",
-      "name_ru": "",
+      "name_ru": "СЛАЙ АНГЕЛС СУБМАРИНА",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 3,
@@ -2490,10 +2584,18 @@
     {
       "id": "95027518",
       "name_lat": "СЛАВЯНСКАЯ СКАЗКА ИЗ МЫШКИНОГО ДОМА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ СКАЗКА ИЗ МЫШКИНОГО ДОМА",
       "breed": "DACHSHUND KANINCHEN",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1914535440",
+      "name_lat": "СЛАЙ ЭНЖЕЛ ГЛЕДИС КВИН",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2506,10 +2608,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "349135896",
-      "name_lat": "СЛАВЯНКА ЖЕСКАР Н/Б",
+      "id": "362426022",
+      "name_lat": "СЛАВЯНКА НАДЕЖДА-II",
       "name_ru": "",
-      "breed": "ШИППЕРКЕ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2533,37 +2635,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "761972727",
-      "name_lat": "СЛАДКАЯ ЖИЗНЬ ЯГОДКА МОЯ",
-      "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "153712485",
-      "name_lat": "СЛАЙ ЭНЖЕЛ ГЛЕДИС КВИН",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "49874659",
-      "name_lat": "СЛАВЯКА ЧАКОННЕ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1682758547",
+      "id": "1206246905",
       "name_lat": "СЛАВ ТРОУФИ ВЕСЕЛЫЙ ВЕТЕР",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2616,7 +2691,7 @@
     {
       "id": "1333944236",
       "name_lat": "СЛАВЯНКА МАРС",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА МАРС",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -2632,12 +2707,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "871998898",
+      "id": "712359241",
       "name_lat": "СЛАЙ Э ПЭТ БУГАТТИ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЕРНЫЙ С ПОДПАЛОМ",
+      "name_ru": "СЛАЙ Э ПЭТ БУГАТТИ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1842081417",
+      "name_lat": "СЛАВЯНКА САКУРА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2659,15 +2743,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1889651537",
-      "name_lat": "СЛАВЯНКА ФАНЧЕТТА ОН-ЗЕ РАЙС",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "380455361",
       "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА АВРОРА",
       "name_ru": "",
@@ -2679,7 +2754,7 @@
     {
       "id": "1433686387",
       "name_lat": "СЛАВЯНКА ЧЕМПИОН",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЧЕМПИОН",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
@@ -2688,7 +2763,7 @@
     {
       "id": "746306535",
       "name_lat": "Славянская Звезда Барыня Сударыня",
-      "name_ru": "",
+      "name_ru": "Славянская Звезда Барыня Сударыня",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
@@ -2699,6 +2774,15 @@
       "name_lat": "СЛАВА",
       "name_ru": "",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "619041426",
+      "name_lat": "СЛАВ ТРОУФИ МАССАНДРА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2749,10 +2833,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1313711623",
+      "id": "1001517894",
+      "name_lat": "СЛАДОСТЬ ЛИЛОВАЯ ВОСХОДЯЩАЯ ЗВЕЗДА (ГШ)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "972959222",
       "name_lat": "СЛАДКИЙ УРБИС ЦУКАТ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2776,11 +2869,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "544758248",
-      "name_lat": "СЛАВЯНКА ФОРСАЖ",
+      "id": "823204583",
+      "name_lat": "СЛАВЯНКАПАЛ ЗИЛЕРИ",
       "name_ru": "",
-      "breed": "PINSCHER",
-      "breed_en": "",
+      "breed": "СХИППЕРКЕ / SCHIPPERKE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1504236460",
+      "name_lat": "СЛАВЯНКА ЗВЕЗДА УДАЧИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "115713734",
+      "name_lat": "СЛАВНЫЙ КРАСАВЧИК ПАТРИК",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2807,15 +2915,6 @@
       "name_lat": "СЛАВАЯР ГАЛАНТНЫЙ",
       "name_ru": "",
       "breed": "СЕНБЕРНАР - ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "379509786",
-      "name_lat": "СЛАВ ТРОУФИ МАССАНДРА",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2850,46 +2949,37 @@
     {
       "id": "1256453596",
       "name_lat": "СЛАЙС ОФ ЛАЙФ ВАЛЬТЗИНГ ПРИНЦЕСС",
-      "name_ru": "",
+      "name_ru": "СЛАЙС ОФ ЛАЙФ ВАЛЬТЗИНГ ПРИНЦЕСС",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1902324546",
+      "name_lat": "СЛАВЯНКА ФЕЛИНИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "454717601",
       "name_lat": "СЛАВЯНКА СВАРОВСКИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА СВАРОВСКИ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "257556555",
-      "name_lat": "СЛАВЯНКА ФЕЛИНИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1410741276",
       "name_lat": "СЛАВАЯР УЭСЛИ СНАЙПС",
-      "name_ru": "",
+      "name_ru": "СЛАВАЯР УЭСЛИ СНАЙПС",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "146495624",
-      "name_lat": "СЛАВЯНКА ВИВАЛЬДИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2904,7 +2994,7 @@
     {
       "id": "1635032919",
       "name_lat": "СЛИМПИ НЕЙДЖЕЛИНА СТАЙЛ",
-      "name_ru": "",
+      "name_ru": "СЛИМПИ НЕЙДЖЕЛИНА СТАЙЛ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -2931,17 +3021,17 @@
     {
       "id": "1867141380",
       "name_lat": "СЛАДА ПРЕСТИЖ ИЗ ДОМА РАДОМИР",
-      "name_ru": "",
+      "name_ru": "СЛАДА ПРЕСТИЖ ИЗ ДОМА РАДОМИР",
       "breed": "БОКСЕР ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1274244170",
+      "id": "1626763393",
       "name_lat": "СЛЭШИН СТРОНГ СПИРИТ БИНАЗИР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "СЛЭШИН СТРОНГ СПИРИТ БИНАЗИР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2949,7 +3039,7 @@
     {
       "id": "1745739180",
       "name_lat": "СЛАВЯНКА МЕЛОДИЯ ЛЮБВИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА МЕЛОДИЯ ЛЮБВИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2965,10 +3055,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1031112276",
+      "id": "481510657",
       "name_lat": "СЛАВНАЯ ОХОТА ИЗ ДРЕВНЕГО РОДА",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3028,10 +3118,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "989088611",
+      "id": "1157174346",
       "name_lat": "СЛАВЯНКА ЛЭРИС",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3046,10 +3136,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "47752744",
+      "id": "1819281869",
       "name_lat": "СЛАЯНКА ЖЁ ТЭМ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3060,6 +3150,14 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ / SCHIPPERKE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "792507598",
+      "name_lat": "СЛАЙ ЭНЖЕЛ ГЕРМИОНА СВИТ",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3109,6 +3207,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "95141531",
+      "name_lat": "СЛАВЯНКА ЗЕГНА (Н/Б)",
+      "name_ru": "",
+      "breed": "ШИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "36089637",
       "name_lat": "СЛАВЯНКА ХИТОСАКИ",
       "name_ru": "",
@@ -3118,12 +3225,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "592972286",
+      "name_lat": "СЛАВЯНКА РЕНЕССАНС",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "330414449",
       "name_lat": "СЛАВЯНКА ЛАУРА",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1038910032",
+      "name_lat": "СЛАВЯН ВИННЕР",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3147,19 +3270,10 @@
     {
       "id": "245878616",
       "name_lat": "СЛАВЯНКА УРГАНТ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА УРГАНТ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 28,
-      "competition_dog_id": null
-    },
-    {
-      "id": "362426022",
-      "name_lat": "СЛАВЯНКА НАДЕЖДА-II",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3169,15 +3283,6 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "105264079",
-      "name_lat": "СЛАВЯНКА РЕНЕССАНС",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3192,7 +3297,7 @@
     {
       "id": "211787412",
       "name_lat": "СЛАВА ИЗ ОРДЕНА ЛЬВИНОЕ СЕРДЦЕ",
-      "name_ru": "",
+      "name_ru": "СЛАВА ИЗ ОРДЕНА ЛЬВИНОЕ СЕРДЦЕ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
@@ -3201,7 +3306,7 @@
     {
       "id": "1742658817",
       "name_lat": "СЛАВЯНКА ЕРОНА",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЕРОНА",
       "breed": "ЦВЕРГПИНЧЕР ШНАУЦЕР (ПЕРЕЦ С СОЛЬЮ)",
       "breed_en": "",
       "total_shows": 2,
@@ -3213,6 +3318,14 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1915281492",
+      "name_lat": "СЛАВЯНКА ЗВЕЗДА УДАЧА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3232,15 +3345,6 @@
       "breed": "Русский той Дл\\ш",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1842081417",
-      "name_lat": "СЛАВЯНКА САКУРА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3273,9 +3377,17 @@
     {
       "id": "1560379162",
       "name_lat": "СЛЕД ЗАБАЙКАЛЬЯ ДАЙНЕР ДИМАР",
-      "name_ru": "",
+      "name_ru": "СЛЕД ЗАБАЙКАЛЬЯ ДАЙНЕР ДИМАР",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1639377898",
+      "name_lat": "СЛАДКАЯ ЖИЗНЬ ДИФАЙЭНТ СИКСЭС",
+      "name_ru": "СЛАДКАЯ ЖИЗНЬ ДИФАЙЭНТ СИКСЭС",
+      "breed": "БИГЛЬ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3298,15 +3410,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "253808288",
-      "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА БЛАГОДАТЬ",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1574725602",
       "name_lat": "Слай Буши Тейл из Замка Гремлинов",
       "name_ru": "",
@@ -3318,10 +3421,10 @@
     {
       "id": "1486550117",
       "name_lat": "СЛАЙ Э ПЭТ БИЗЗАРРИНИ",
-      "name_ru": "",
+      "name_ru": "СЛАЙ Э ПЭТ БИЗЗАРРИНИ",
       "breed": "ДОБЕРМАН ЧЕРНЫЙ С ПОДПАЛОМ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3330,43 +3433,34 @@
       "name_ru": "",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "318827597",
       "name_lat": "СЛАВЯНКА ИЗ СТАВРОПОЛЬС КОЙ ГУБЕРНИИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ИЗ СТАВРОПОЛЬС КОЙ ГУБЕРНИИ",
       "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "116466654",
+      "id": "122905775",
       "name_lat": "СЛОБОДЫ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "919756771",
+      "id": "27759111",
       "name_lat": "СЛОБОДЫ ИМПЕРИЯ СЛАВЫ АЛЕКСА ОНИКС",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "854298441",
-      "name_lat": "СЛАВЯНКА ВИТТОРИО",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3388,6 +3482,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1939929036",
+      "name_lat": "СЛАВЯНКА КЭМПИОН",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1876239956",
       "name_lat": "СЛАВНАЯ ВИКТОРИЯ ИЗ ЛАПЛАНДИИ КАНИС",
       "name_ru": "",
@@ -3401,15 +3503,6 @@
       "name_lat": "СЛАВЯНКА КУРАЖ",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1921855436",
-      "name_lat": "СЛАВАЯР АЛАБОР/SLAVAYAR ALABOR",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3433,28 +3526,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "824232347",
-      "name_lat": "СЛАВА ИЗ ТЕРЛЕЦКОЙ ДУБРАВЫ",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1680973974",
       "name_lat": "СЛАВНАЯ СТЕФАНИ",
-      "name_ru": "",
+      "name_ru": "СЛАВНАЯ СТЕФАНИ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "409718105",
+      "id": "1289915812",
       "name_lat": "СЛАВЯНКА СОНЯ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "name_ru": "СЛАВЯНКА СОНЯ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3487,19 +3571,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "370855067",
+      "id": "24515026",
       "name_lat": "СЛАВЯНКА РОКЕТ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1215735559",
-      "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА ЕФРОСИНИЯ",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3559,10 +3634,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "641761763",
+      "id": "1397840586",
       "name_lat": "СЛАДКАЯ САРИКА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "СЛАДКАЯ САРИКА",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3570,7 +3645,7 @@
     {
       "id": "1454889887",
       "name_lat": "СЛАДКАЯ ЖИЗНЬ ДАЙНАМИК ФЛАЙТ",
-      "name_ru": "",
+      "name_ru": "СЛАДКАЯ ЖИЗНЬ ДАЙНАМИК ФЛАЙТ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -3579,7 +3654,7 @@
     {
       "id": "49790923",
       "name_lat": "СЛАВЯНКА ЭНВИ ГУЧЧИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЭНВИ ГУЧЧИ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
@@ -3588,17 +3663,17 @@
     {
       "id": "1911446185",
       "name_lat": "СЛАВЯНКА ЮНАЙТ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНКА ЮНАЙТ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "452632813",
+      "id": "1903938673",
       "name_lat": "СЛАВНАЯ ДЕВЧОНКА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "СЛАВНАЯ ДЕВЧОНКА",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3640,6 +3715,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "110764514",
+      "name_lat": "СЛАВ ТРОУФИ МИЧИГАН",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1610695889",
       "name_lat": "СЛАВЯНКА АЛЛЮР",
       "name_ru": "",
@@ -3654,15 +3738,6 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "110764514",
-      "name_lat": "СЛАВ ТРОУФИ МИЧИГАН",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3703,6 +3778,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1892011890",
+      "name_lat": "СЛАЙ Э ПЭТ БЛУББЕРИ",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "643525120",
+      "name_lat": "СЛАДКАЯ ТРЮФЕЛЬКА СЕСИЛЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1846816893",
       "name_lat": "СЛАВЯНКА ЮВЕНТУС",
       "name_ru": "",
@@ -3712,19 +3803,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1483068035",
+      "id": "205846890",
       "name_lat": "СЛАДКАЯ ЕЖЕВИКА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1451828829",
+      "id": "123446933",
       "name_lat": "СЛАВНАЯ МОЯ САРАДА (Д-Ш)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3739,19 +3830,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1962043465",
+      "id": "9148545",
       "name_lat": "СЛУЖБА-К9 ТАЙНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1570132986",
+      "id": "197852149",
       "name_lat": "СЛУЖБА-К9 БЕЛОСЛАВА",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3775,11 +3866,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "906270083",
-      "name_lat": "СЛАВЯНКА ВИВА ВИКТОРИ",
+      "id": "1379386654",
+      "name_lat": "СЛЕД ВОЛКА НУБИРУ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3793,6 +3883,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "227043479",
+      "name_lat": "СЛАВЯНКА СЛАВА",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "189716582",
       "name_lat": "СЛЕДУЙ ЗА МЕЧТОЙ РИЧАРД БРУНО",
       "name_ru": "",
@@ -3802,10 +3900,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "970274229",
-      "name_lat": "СЛАВЯНКА БРАБУС ДЛЯ ТЕНЬ ЛУНЫ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "id": "1147333834",
+      "name_lat": "СЛАДКАЯ КОНФЕТКА РАФАЭЛЬКА",
+      "name_ru": "СЛАДКАЯ КОНФЕТКА РАФАЭЛЬКА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3813,7 +3911,7 @@
     {
       "id": "1236053933",
       "name_lat": "СЛАВАЯР БЕРЕГИНЯ",
-      "name_ru": "",
+      "name_ru": "СЛАВАЯР БЕРЕГИНЯ",
       "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3822,16 +3920,24 @@
     {
       "id": "811104087",
       "name_lat": "СЛАДКАЯ МЯТА",
-      "name_ru": "",
+      "name_ru": "СЛАДКАЯ МЯТА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "206510107",
+      "name_lat": "СЛАЙ ЭНЖЕЛС ГЛЕДИС КВИН",
+      "name_ru": "СЛАЙ ЭНЖЕЛС ГЛЕДИС КВИН",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1331565228",
       "name_lat": "СЛАВЯНСКАЯ ЗВЕЗДА ВЕЛЕС",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ЗВЕЗДА ВЕЛЕС",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3840,7 +3946,7 @@
     {
       "id": "1877403525",
       "name_lat": "СЛАВЯНСКАЯ ЗВЕЗДА НАСЛЕДНИЦА ЮККИ",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ЗВЕЗДА НАСЛЕДНИЦА ЮККИ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -3849,26 +3955,26 @@
     {
       "id": "1367767578",
       "name_lat": "СЛИПЕН БЬЮТИ ЕВРА",
-      "name_ru": "",
+      "name_ru": "СЛИПЕН БЬЮТИ ЕВРА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1084295587",
+      "id": "841872951",
       "name_lat": "СЛАДКАЯ КОНФЕТКА ПИКСИ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "name_ru": "СЛАДКАЯ КОНФЕТКА ПИКСИ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "646335363",
+      "id": "30876559",
       "name_lat": "СЛАДКАЯ МАЛИНКА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "СЛАДКАЯ МАЛИНКА",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3876,7 +3982,7 @@
     {
       "id": "330795511",
       "name_lat": "СЛАДКАЯ КОНФЕТКА АНЕТ",
-      "name_ru": "",
+      "name_ru": "СЛАДКАЯ КОНФЕТКА АНЕТ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -3885,7 +3991,7 @@
     {
       "id": "315030479",
       "name_lat": "СЛАДКИЙ МЯУ ОТ ЖЕМЧУЖНОЙ КОРОНЫ",
-      "name_ru": "",
+      "name_ru": "СЛАДКИЙ МЯУ ОТ ЖЕМЧУЖНОЙ КОРОНЫ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ШОКОЛАДНЫЙ И",
       "breed_en": "",
       "total_shows": 2,
@@ -3964,6 +4070,67 @@
       "competition_dog_id": null
     },
     {
+      "id": "340651739",
+      "name_lat": "Слав Троуфи Мори Мореско",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "626571129",
+      "name_lat": "Слав Троуфи Я Из Сан Лефей",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "721181283",
+      "name_lat": "СЛАВ ТРОУФИ ЯГОДА МОРОШКА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1176933297",
+      "name_lat": "СЛОБОДЫ ОБЕРЕГ ВЕЛЕСА КАЛЬВАДОС",
+      "name_ru": "",
+      "breed": "ТАКСА ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "156610136",
+      "name_lat": "СЛАВ ТРОУФИ РЕВОЛЮЦИЯ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1714775626",
+      "name_lat": "СЛАВ ТРОУФИ КОСМИК КОННЕКШН",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1702156764",
+      "name_lat": "СЛАВ ТРОУФИ КОСМЕЯ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1911474946",
       "name_lat": "СЛАВЯНКА НАРЦИСС",
       "name_ru": "",
@@ -4036,10 +4203,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "243385694",
+      "id": "936511079",
       "name_lat": "СЛЕССИ ХОНЕЙ ОТ ПАНДЫ ШЫРМ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4054,37 +4221,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1179351110",
+      "id": "167777983",
       "name_lat": "СЛАВНЫЙ СУЛТАН С ЦАРЕВА КУРГАНА",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1696999787",
-      "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА БЫЛИНА",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1147333834",
-      "name_lat": "СЛАДКАЯ КОНФЕТКА РАФАЭЛЬКА",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1114793560",
-      "name_lat": "СЛАДКАЯ КОНФЕТКА РАФАЭЛКА",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4099,10 +4239,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "156375764",
+      "id": "45750657",
       "name_lat": "СЛЕД ТУЛКУ АЕЛЛА",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4162,10 +4302,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1232425034",
+      "id": "1264999926",
       "name_lat": "СЛИПИНГ БЬЮТИ АНАБЕЛЬ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4180,28 +4320,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1352515129",
+      "id": "525168301",
       "name_lat": "СЛАДКАЯ КОНФЕТА",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР / FLAT COATED RETRIEVER",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР / FLAT COATED RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "592154152",
-      "name_lat": "СЛАВЯНКА ПЕАРЛ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "746362465",
+      "id": "1325459388",
       "name_lat": "СЛАВЯНКА ДЕЛЮКС",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4234,10 +4365,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1300922049",
+      "id": "590417034",
       "name_lat": "СЛОБОДЫ ЯР ХЕЛЕН ХАУС ГРАЦИЯ ДЛЯ ЯР КАНИНГ ФОКС",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4247,15 +4378,6 @@
       "name_lat": "СЛИАС ОФ ЛАЙФ ВАЛЬТЗИНГ ПРИНЦЕСС",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1134902851",
-      "name_lat": "СЛАДКАЯ ЖИЗНЬ ДИФАЙЭНТ СИКСЭС",
-      "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4306,15 +4428,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "606179987",
-      "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА ДОН-БАС",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1861653678",
       "name_lat": "СЛАВЯНКА ЖУМАНЖИ",
       "name_ru": "",
@@ -4333,19 +4446,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "539384416",
+      "id": "1294282374",
       "name_lat": "СЛУЖБА К-9 ЖАНЕЙРО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1892011890",
-      "name_lat": "СЛАЙ Э ПЭТ БЛУББЕРИ",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4369,6 +4473,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1140396374",
+      "name_lat": "СЛУЖБА К-9 РЕЯ",
+      "name_ru": "",
+      "breed": "ДЛИННАЯ ОСТЕВАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "35147078",
       "name_lat": "СЛАВЯНСКАЯ ВОЛЬНИЦА ДЕРЖАВА",
       "name_ru": "",
@@ -4378,20 +4490,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "340651739",
-      "name_lat": "Слав Троуфи Мори Мореско",
+      "id": "645455709",
+      "name_lat": "СЛАВЯНКА МОЯ МЕЧТА",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1825385388",
-      "name_lat": "СЛАЙ ЭНЖЕЛС ГЛЕДИС КВИН",
-      "name_ru": "",
-      "breed": "Малая итальянская борзая",
-      "breed_en": "",
+      "breed": "RUSSIAN",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4405,19 +4507,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1374767741",
+      "id": "853548726",
       "name_lat": "СЛЕД ЗАБАЙКАЛЬЯ БЕЛЬГИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1314194578",
+      "id": "886331497",
       "name_lat": "СЛЭШИН СТРОНГ СПИРИТ БЕРКУТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4432,10 +4534,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "724212746",
-      "name_lat": "СЛАВЯНКА МОНТЕ- КРИСТА",
+      "id": "1721938147",
+      "name_lat": "СЛАВЯНКА МОНТЕ-КРИСТА",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4459,10 +4561,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "854336781",
+      "id": "46781030",
       "name_lat": "СЛЭШИН СТРОНГ СПИРИТ БРУСТЕР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4477,19 +4579,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "141257144",
+      "id": "432784398",
       "name_lat": "СЛУЖБА К-9 ТАРНАДО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "626571129",
-      "name_lat": "Слав Троуфи Я Из Сан Лефей",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4576,10 +4669,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "376763688",
+      "id": "188870861",
       "name_lat": "СЛАВЯНКА ЯНКЕЛЬ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4589,15 +4682,6 @@
       "name_lat": "СЛОУ ДЖИН ИЗ ЗАМКА ШАРБУЛЕ",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "188299629",
-      "name_lat": "СЛАВ ТРОУФИ ЯГОДА МОРОШКА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4621,19 +4705,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1255423804",
+      "id": "965944256",
       "name_lat": "СЛАЙ ФОКС МИШЕЛЬ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1176933297",
-      "name_lat": "СЛОБОДЫ ОБЕРЕГ ВЕЛЕСА КАЛЬВАДОС",
-      "name_ru": "",
-      "breed": "ТАКСА ТЕРЬЕР)",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4684,28 +4759,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "605999448",
+      "id": "101746584",
       "name_lat": "СЛЬВЕРИ РЭЙС ВАСИЛИСА ПРЕКРАСНАЯ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "434310363",
-      "name_lat": "СЛАВЯНКА ГЕОРГИНА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "433798365",
-      "name_lat": "СЛАВЯНКА ГРЭММИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4720,19 +4777,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1047000221",
+      "id": "872517794",
       "name_lat": "СЛУЖБА К-9 БЕЛОГОР",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "788410984",
+      "id": "1122959592",
       "name_lat": "СЛАДКАЯ СОНАТА ДЛЯ МОЕЙ ДУШИ КАРМЕЛИТА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4756,15 +4813,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1708940548",
-      "name_lat": "СЛАВ ТРОУФИ РЕВОЛЮЦИЯ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "363284650",
       "name_lat": "СЛАВЯНКА НОЧЕ ДЕ ЕСПАНЬЯ",
       "name_ru": "",
@@ -4779,6 +4827,14 @@
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "203593541",
+      "name_lat": "СЛАВЯНКА ДАРГО ФЕСТ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4801,11 +4857,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "95141531",
-      "name_lat": "СЛАВЯНКА ЗЕГНА (Н/Б)",
+      "id": "735903852",
+      "name_lat": "СЛАВЯНКА АСТОН МАРТИН",
       "name_ru": "",
-      "breed": "ШИППЕРКЕ",
-      "breed_en": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1000297848",
+      "name_lat": "СЛАВЯНКА ЖОЛИ ФЛЕР",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4819,20 +4882,34 @@
       "competition_dog_id": null
     },
     {
-      "id": "227043479",
-      "name_lat": "СЛАВЯНКА СЛАВА",
+      "id": "844891049",
+      "name_lat": "СЛАВЯНКА КРОНОС",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "131620258",
-      "name_lat": "СЛАВАЯР ЧАРОДЕЙ",
+      "id": "987990102",
+      "name_lat": "Слай Ангелс Жерар",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1818289600",
+      "name_lat": "СЛАВЯНКА ЕЛИСЕЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "35239566",
+      "name_lat": "СЛАЙ АНГЕЛС ЕКЛИПС БРЕРА",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ /",
       "total_shows": 1,
       "competition_dog_id": null
     }

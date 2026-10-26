@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "CА",
-  "count": 17,
+  "count": 21,
   "dogs": [
     {
       "id": "523806850",
@@ -17,8 +17,7 @@
       "name_lat": "CАНВАРД МИНОС",
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -63,6 +62,14 @@
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1645926245",
+      "name_lat": "CАМУРАЙ ОТ ЗОЛОТОГО ПРИБОЯ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -121,11 +128,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "1886166447",
+      "name_lat": "C-АПСАРА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1358042250",
+      "name_lat": "C АНГЛИЙСКИЙ КОКЕР Чайковская Флера 199. БЕЛЛА КАУДА ГАЛАДРИЕЛЬ",
+      "name_ru": "",
+      "breed": "БЭЛЛА ХАДИД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1996069537",
       "name_lat": "CАЙШАН ВИТТ БАЙД ХИППОВАЯ ДЕВЧОНКА",
       "name_ru": "",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "592555541",
+      "name_lat": "CАН СОУЛ СНОУ ДЕЙ",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -148,10 +181,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974692416",
-      "name_lat": "CААВЕДРА МАНОЛА (Д- Ш)",
+      "id": "1474067888",
+      "name_lat": "CААВЕДРА МАНОЛА (Д-Ш)",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EZ",
-  "count": 126,
+  "count": 124,
   "dogs": [
     {
       "id": "719380707",
@@ -13,12 +13,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1109095961",
+      "id": "1074181369",
       "name_lat": "EZHEVIKA V SHOKOLADE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1565006511",
+      "name_lat": "EZHI IZ STOLITSY URALA",
+      "name_ru": "ЕЖИ ИЗ СТОЛИЦЫ УРАЛА",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
+      "breed_en": "FLAT COATED RETRIEVER",
+      "total_shows": 50,
       "competition_dog_id": null
     },
     {
@@ -31,12 +40,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1565006511",
-      "name_lat": "EZHI IZ STOLITSY URALA",
-      "name_ru": "",
-      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
-      "breed_en": "FLAT COATED RETRIEVER",
-      "total_shows": 41,
+      "id": "1942543986",
+      "name_lat": "EZHIVICHKA SLADKAYA",
+      "name_ru": "ЕЖИВИЧКА СЛАДКАЯ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -76,6 +85,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1100791132",
+      "name_lat": "EZHENKA BELAYA KRASAVICZA",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "134680503",
       "name_lat": "EZHEVIKA IZ SKAZOCHNOGO LESA",
       "name_ru": "",
@@ -94,15 +111,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1100791132",
-      "name_lat": "EZHENKA BELAYA KRASAVICZA",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1885589481",
       "name_lat": "EZHGRAFTUMENBULLY VALENTINE",
       "name_ru": "",
@@ -117,16 +125,7 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "FRENCH BULLDOG",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1527633389",
-      "name_lat": "EZHIVICHKA SLADKAYA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -141,19 +140,18 @@
     {
       "id": "1143603138",
       "name_lat": "EZHEVICHNAYA BRIOSH IZ VKUSNOY BULOCHNOY",
-      "name_ru": "",
+      "name_ru": "ЕЖЕВИЧНАЯ БРИОШЬ ИЗ ВКУСНОЙ БУЛОЧНОЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
       "id": "1506597882",
       "name_lat": "EZHEVIK IZ VOLZHSKOY SERENADY",
-      "name_ru": "",
+      "name_ru": "ЕЖЕВИК ИЗ ВОЛЖСКОЙ СЕРЕНАДЫ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "POODLE MINIATURE FAWN, GREY",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -166,10 +164,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "433207320",
+      "id": "654794351",
+      "name_lat": "EZHI FENMAO LEON",
+      "name_ru": "ЕЖИ ФЭНМАО ЛЕОН",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1485419916",
       "name_lat": "EZHEN BLACK MAGIC",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (Стандартный)",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -184,12 +191,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "654794351",
-      "name_lat": "EZHI FENMAO LEON",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
+      "id": "1964828532",
+      "name_lat": "EZHENKA GRATSIOZNAYA IZ MILOVIDOVO",
+      "name_ru": "ЕЖЕНКА ГРАЦИОЗНАЯ ИЗ МИЛОВИДОВО",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -198,7 +205,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -211,28 +218,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1167271843",
-      "name_lat": "EZHENVALE ZHASMIN DE BRYUT",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "45112120",
       "name_lat": "EZERRA",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1416172979",
+      "name_lat": "EZHENVALE ZHASMIN DE BRYUT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "764368724",
+      "id": "1969105888",
       "name_lat": "EZHEVIKA DENBURG",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -247,21 +254,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1903685831",
+      "id": "693106483",
       "name_lat": "EZABELLA E' LA GRANDE REDZHINA NERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1426840432",
-      "name_lat": "EZHENKA GRATSIOZNAYA IZ MILOVIDOVO",
-      "name_ru": "",
-      "breed": "ЧЁРНО-ПОДПАЛЫЙ КУНХАУНД",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -292,10 +290,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1924040178",
+      "id": "1490356068",
       "name_lat": "EZHEDNEVNAYA GORDOST",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -310,6 +308,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "933252536",
+      "name_lat": "EZHEVIKA II IZ ELFIYSKOGO LESA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1015821592",
       "name_lat": "EZHEVIKA SLADKAYA YAGODKA",
       "name_ru": "",
@@ -319,19 +326,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "933252536",
-      "name_lat": "EZHEVIKA II IZ ELFIYSKOGO LESA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "669406868",
+      "id": "180939058",
       "name_lat": "EZHENVALE INTRIGA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -348,15 +346,15 @@
     {
       "id": "430433241",
       "name_lat": "EZHKA-MATRESHKA",
-      "name_ru": "",
+      "name_ru": "ЕЖКА-МАТРЕШКА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "490575668",
-      "name_lat": "EZHENVALE KOSTA- RIKO",
+      "id": "582250872",
+      "name_lat": "EZHENVALE KOSTA-RIKO",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
@@ -382,6 +380,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "54365714",
+      "name_lat": "EZHEDNEVNAYA GORDOST IZ DOMA YU-TI",
+      "name_ru": "ЕЖЕДНЕВНАЯ ГОРДОСТЬ ИЗ ДОМА Ю-ТИ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
       "id": "1294989706",
       "name_lat": "EZHI FENMAO BRITTANI",
       "name_ru": "",
@@ -391,21 +398,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "345808271",
+      "id": "312183759",
       "name_lat": "EZHENVALE ZHASPER DLYA LUXSTORI AST HOUSE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "1097363770",
+      "id": "1007866452",
       "name_lat": "EZHENVALE DRAGO MISS DRACARYS",
       "name_ru": "",
-      "breed": "MINIATURE BULL",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -427,21 +434,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "180786112",
+      "id": "457690520",
       "name_lat": "EZIKILL GAUXAR VEIDER",
       "name_ru": "",
-      "breed": "DACHSHUND MINIATURE",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1282845457",
-      "name_lat": "EZHEDNEVNAYA GORDOST IZ DOMA YU-TI",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -454,10 +452,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "331670987",
+      "id": "1699777271",
       "name_lat": "EZHEN SE S TIGROVOI SOPKI",
       "name_ru": "",
-      "breed": "DACHSHUND",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
       "total_shows": 7,
       "competition_dog_id": null
@@ -494,8 +492,16 @@
       "name_lat": "EZON",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ БРАКК",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1283265664",
+      "name_lat": "EZHEVICHNAYA FURIYA IZ YAR GRADA",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -508,19 +514,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1768003222",
+      "id": "1533932303",
       "name_lat": "EZHENVALE ESINBERG",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "193149955",
+      "id": "1112021031",
       "name_lat": "EZHEVICHKA VOM HAUS ERFULLUNGEN VUNSCHEN",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО-ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -544,10 +550,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "284137986",
+      "id": "527256776",
       "name_lat": "EZHI FENMAO KEY DEE",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -562,12 +568,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1283265664",
-      "name_lat": "EZHEVICHNAYA FURIYA IZ YAR GRADA",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "id": "1674644244",
+      "name_lat": "EZHINA MEDINA",
+      "name_ru": "ЕЖИНА МЕДИНА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -580,28 +586,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1500071795",
-      "name_lat": "EZERRA",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1132673673",
-      "name_lat": "EZHINA MEDINA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1595228033",
+      "id": "545910094",
       "name_lat": "EZON",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ БРАКК ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -625,10 +613,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "219600562",
+      "id": "224703908",
       "name_lat": "EZHENVALE INDIVIDUUM",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -639,6 +627,14 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1209014415",
+      "name_lat": "EZHEVICHKA SLADKAYA YAGODKA",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -697,15 +693,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "349410959",
-      "name_lat": "EZERRA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "3525796",
       "name_lat": "EZHEVIKA",
       "name_ru": "",
@@ -733,10 +720,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "88805503",
+      "id": "1893805231",
       "name_lat": "EZHEVICHKA BELISSIMO Z ZANKOVSKOGO",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -760,29 +747,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "811954746",
-      "name_lat": "EZHEVIKA",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "718034466",
       "name_lat": "EZHI FENMAO KIMBERLI",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "CHOW CHOW",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "476855046",
-      "name_lat": "EZHENVALE BLAN DE BLANA NO NA ALEKS",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -796,10 +765,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1394273313",
+      "id": "476855046",
+      "name_lat": "EZHENVALE BLAN DE BLANA NO NA ALEKS",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "270713724",
       "name_lat": "EZHEVIKA",
       "name_ru": "",
-      "breed": "АКИТА /",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -922,15 +900,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "121292801",
-      "name_lat": "EZHENVALE ВАЛЕНСИЯ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "933812857",
       "name_lat": "EZHEVIKA KRYMSKAYA YAGODKA",
       "name_ru": "",
@@ -958,10 +927,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "788293273",
+      "id": "220504013",
       "name_lat": "EZHEMINUTNYY VOSTORG",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1125,6 +1094,14 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "344784018",
+      "name_lat": "EZHEMINUTNAYA RADOST' IZ DOMA BUS",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЦО",
-  "count": 41,
+  "count": 42,
   "dogs": [
     {
       "id": "1619344562",
@@ -9,23 +9,23 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "560082710",
+      "id": "367581071",
       "name_lat": "ЦОЙ",
       "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
+      "breed": "СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1980768111",
+      "id": "1238351618",
       "name_lat": "ЦОКОТУХА МУХА ОТ ФОРЕСТ ГИРЦ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЦОКОТУХА МУХА ОТ ФОРЕСТ ГИРЦ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -42,7 +42,7 @@
     {
       "id": "1403903227",
       "name_lat": "ЦОНГ САЙБЕРИАН ВИНД",
-      "name_ru": "",
+      "name_ru": "ЦОНГ САЙБЕРИАН ВИНД",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 7,
@@ -87,7 +87,7 @@
     {
       "id": "1183146375",
       "name_lat": "ЦОЛЕЙМАН САН КОЛЕЯН",
-      "name_ru": "",
+      "name_ru": "ЦОЛЕЙМАН САН КОЛЕЯН",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
@@ -96,10 +96,10 @@
     {
       "id": "1248600720",
       "name_lat": "ЦОГТАЙ ИЗ ХОРОВОДА ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ЦОГТАЙ ИЗ ХОРОВОДА ЗВЕЗД",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -166,19 +166,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1279794672",
+      "id": "1556719900",
       "name_lat": "ЦОЙ ИЗ ХВОСТАТОГО БАЛАГАНА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "name_ru": "ЦОЙ ИЗ ХВОСТАТОГО БАЛАГАНА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1285567888",
+      "id": "5754597",
       "name_lat": "ЦОВИНАР НИКА МАЙЙОРКА СТАР",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ЦОВИНАР НИКА МАЙЙОРКА СТАР",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -220,10 +220,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "126951200",
+      "id": "1314686150",
       "name_lat": "ЦОЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -238,9 +238,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1636263269",
+      "name_lat": "ЦОЙ КАН ИЗ ФРЕДЕРИКО ПРАЙД КОМПАНИ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1481438079",
       "name_lat": "ЦОРИ ЛУННЫЙ СВЕТ",
-      "name_ru": "",
+      "name_ru": "ЦОРИ ЛУННЫЙ СВЕТ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -249,7 +257,7 @@
     {
       "id": "1954022347",
       "name_lat": "ЦОГДИАНА ВИТА",
-      "name_ru": "",
+      "name_ru": "ЦОГДИАНА ВИТА",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
@@ -346,10 +354,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "146178387",
+      "id": "1617012228",
       "name_lat": "ЦОЙ ИЗ ДОМА КОРСУНОВЫХ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,40 +1,49 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EW",
-  "count": 5,
+  "count": 8,
   "dogs": [
     {
-      "id": "1861442676",
+      "id": "103624936",
       "name_lat": "EWARD TRUE FRIEND",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "705198102",
-      "name_lat": "EWOOL ROUENS SAFRAN&SILK DE LOVELYSTYLE'",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "8219742",
+      "id": "1931781188",
       "name_lat": "EWER FAMILY MASCOT SERCE DOMU",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "930511394",
+      "id": "389115822",
+      "name_lat": "EWOOL ROUENS SAFRAN&SILK DE LOVELYSTYLE'",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "688793499",
+      "name_lat": "E-WOLT VOM MAIR HOF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1045424947",
       "name_lat": "EWELL KAYLA IZ KURGAN GRADA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -45,6 +54,24 @@
       "name_ru": "",
       "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
       "breed_en": "ENTLEBUCH CATTLE DOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "663870974",
+      "name_lat": "E-Wol Vom Mair Hof",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1297318670",
+      "name_lat": "E-Wolt Vom Mair Hof, ОКД-1, ЗКС-2, BH/VT, IGP-1 HD-B / ED-0",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     }

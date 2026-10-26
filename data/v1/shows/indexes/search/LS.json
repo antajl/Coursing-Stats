@@ -1,24 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "LS",
-  "count": 47,
+  "count": 56,
   "dogs": [
     {
       "id": "1557093202",
       "name_lat": "LSA ANGEL RISING STAR",
-      "name_ru": "",
+      "name_ru": "ЛСА АНГЕЛ РИСИНГ СТАР",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 47,
+      "total_shows": 52,
       "competition_dog_id": null
     },
     {
       "id": "633610883",
       "name_lat": "LSA GLOBAL GABI",
-      "name_ru": "",
+      "name_ru": "ЛСА ГЛОБАЛ ГАБИ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 12,
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -45,16 +45,16 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
       "id": "916163333",
       "name_lat": "LSA GOLDEN LEGEND",
-      "name_ru": "",
+      "name_ru": "ЛСА ГОЛДЕН ЛЕГЕНД",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 10,
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -64,6 +64,14 @@
       "breed": "ПОКЕТ / AMERICAN",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "561086166",
+      "name_lat": "LSB TASMAN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -85,6 +93,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "498831392",
+      "name_lat": "LSB TASMAN",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1851748391",
       "name_lat": "LSA RA",
       "name_ru": "",
@@ -99,7 +115,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -162,7 +178,15 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "206643027",
+      "name_lat": "LSA RA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -171,7 +195,16 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 17,
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1737794359",
+      "name_lat": "LSA RHAPSODY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -229,15 +262,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1737794359",
-      "name_lat": "LSA RHAPSODY",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1590342686",
       "name_lat": "LSA RA",
       "name_ru": "",
@@ -283,6 +307,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "310073311",
+      "name_lat": "LSA RHAPSODY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "263726146",
+      "name_lat": "LSA RA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1782412628",
       "name_lat": "LSA VENI VEDI VICI",
       "name_ru": "",
@@ -316,6 +356,24 @@
       "breed": "ПОКЕТ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "184355355",
+      "name_lat": "LSA ATLANTIK STAR",
+      "name_ru": "ЛСА АТЛАНТИК СТАР",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1179848759",
+      "name_lat": "L'SEIHOU MIYAGI MIRYOKU KAT",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -391,10 +449,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "174680265",
+      "id": "1880875221",
       "name_lat": "LSB TUTSI",
       "name_ru": "",
-      "breed": "БУЛЛИ ПОКЕТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -418,11 +476,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "346305610",
-      "name_lat": "LSA ATLANTIK STAR",
+      "id": "1623212152",
+      "name_lat": "L`SACHIKO BANJALOUKA OF FANTASIA LOVER LAND",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "breed_en": "JAPANESE SPITZ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "65806190",
+      "name_lat": "L”SPIRIT MOLLY VON DER ZAUBERNAFFE",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "215961456",
+      "name_lat": "LS MAKE ME HAPPY . FOXBERRYHI",
+      "name_ru": "",
+      "breed": "СПРИНГЕР СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     }

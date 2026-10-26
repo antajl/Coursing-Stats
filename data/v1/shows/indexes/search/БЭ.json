@@ -1,22 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "БЭ",
-  "count": 1008,
+  "count": 996,
   "dogs": [
     {
-      "id": "152557283",
-      "name_lat": "БЭНГ БЭНГ ДЕС ФЛАММЕС ДЕ МАРС",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 32,
-      "competition_dog_id": null
-    },
-    {
-      "id": "914785855",
+      "id": "708861998",
       "name_lat": "БЭАРМАЛС ФАН-ФАН ТЮЛЬПАН",
-      "name_ru": "",
-      "breed": "ЛАПЛАНДСКАЯ СОБАКА (ФИНСКИЙ ЛАПХУНД) /",
+      "name_ru": "БЭАРМАЛС ФАН-ФАН ТЮЛЬПАН",
+      "breed": "ЛАПЛАНДСКАЯ СОБАКА (ФИНСКИЙ ЛАПХУНД)",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -24,25 +15,34 @@
     {
       "id": "770698016",
       "name_lat": "БЭЛ ЭНД ФАЙЭР НИАЛЛ",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР НИАЛЛ",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "1892249318",
+      "id": "308297634",
       "name_lat": "БЭНДЖАМИН СМАРТ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "БЭНДЖАМИН СМАРТ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "505008368",
+      "name_lat": "БЭСТ ОФ ЗЭ БЭСТ БЕЛОНГ ТУ МИ",
+      "name_ru": "БЭСТ ОФ ЗЭ БЭСТ БЕЛОНГ ТУ МИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
       "id": "736391187",
       "name_lat": "БЭРТИГЕ ФРОЙДЭ ХЬЮЛИ ХАЙНРИКЕ",
-      "name_ru": "",
+      "name_ru": "Бэртиге Фройдэ Хьюли Хайнрике",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 18,
@@ -60,7 +60,7 @@
     {
       "id": "1038096015",
       "name_lat": "БЭРТИГЕ ФРОЙДЭ ХАННЕЛОРА КЕЙТ",
-      "name_ru": "",
+      "name_ru": "БЭРТИГЕ ФРОЙДЭ ХАННЕЛОРА КЕЙТ",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 7,
@@ -69,17 +69,17 @@
     {
       "id": "1499864045",
       "name_lat": "БЭТСИ ЗВЕЗДА БАЙКАЛА",
-      "name_ru": "",
+      "name_ru": "БЭТСИ ЗВЕЗДА БАЙКАЛА",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "912593232",
+      "id": "610525380",
       "name_lat": "БЭСТ ПЕРФОМЕНС МАТРЕШКА ФО ХЕЛСИБРЕНД",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "БЭСТ ПЕРФОМЕНС МАТРЕШКА ФО ХЕЛСИБРЕНД",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -96,26 +96,26 @@
     {
       "id": "1897424255",
       "name_lat": "БЭСТ БЬЮТИФУЛ ХЭЛСИ",
-      "name_ru": "",
+      "name_ru": "БЭСТ БЬЮТИФУЛ ХЭЛСИ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "505008368",
-      "name_lat": "БЭСТ ОФ ЗЭ БЭСТ БЕЛОНГ ТУ МИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "id": "1331881721",
+      "name_lat": "БЭСТ ВЕО ЛАЙН МИРОСЛАВ",
+      "name_ru": "БЭСТ ВЕО ЛАЙН МИРОСЛАВ",
+      "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "139121212",
+      "id": "1828712025",
       "name_lat": "БЭККИ МАДЖИК НАУ",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "name_ru": "БЭККИ МАДЖИК НАУ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -123,17 +123,17 @@
     {
       "id": "1724849387",
       "name_lat": "БЭРРИМОР ХИЛЛС ЗАБАВА",
-      "name_ru": "",
+      "name_ru": "БЭРРИМОР ХИЛЛС ЗАБАВА",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "447991590",
+      "id": "1695084823",
       "name_lat": "БЭЛЬЗА САКРАМЕНТО",
-      "name_ru": "",
-      "breed": "МЕКСИКАНСКАЯ ГОЛАЯ",
+      "name_ru": "БЭЛЬЗА САКРАМЕНТО",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -141,7 +141,7 @@
     {
       "id": "764160516",
       "name_lat": "Бэртиге Фройдэ Хайнрих Элк",
-      "name_ru": "",
+      "name_ru": "Бэртиге Фройдэ Хайнрих Элк",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 11,
@@ -157,48 +157,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "703890619",
+      "id": "1800919492",
       "name_lat": "БЭЛЛА ДЖЕЙН ИЛОН ФАНТ (Г.Ш.)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "name_ru": "БЭЛЛА ДЖЕЙН ИЛОН ФАНТ (Г.Ш.)",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
+      "id": "1796885547",
+      "name_lat": "Бэти",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "529562371",
       "name_lat": "БЭК ТУ БЛЭКПОМ ЗЕВС",
-      "name_ru": "",
+      "name_ru": "БЭК ТУ БЛЭКПОМ ЗЕВС",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1331881721",
-      "name_lat": "БЭСТ ВЕО ЛАЙН МИРОСЛАВ",
-      "name_ru": "",
-      "breed": "БАССЕТ ХАУНД",
+      "id": "598868579",
+      "name_lat": "БЭСТ МАКСИМУС",
+      "name_ru": "БЭСТ МАКСИМУС",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "892839006",
       "name_lat": "БЭСТ САРГАС БАТЫР ТХАЙ",
-      "name_ru": "",
+      "name_ru": "БЭСТ САРГАС БАТЫР ТХАЙ",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "382151362",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ЛИБЕРТАНГО",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "SALUKI",
-      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -213,46 +213,36 @@
     {
       "id": "80229601",
       "name_lat": "БЭЛ ЭНД ФАЙЭР ОРЛАНДО",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР ОРЛАНДО",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1709595000",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ НИКОЛЬ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1222205463",
       "name_lat": "БЭЛИГТЭ БУХЭ",
-      "name_ru": "",
+      "name_ru": "БЭЛИГТЭ БУХЭ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ХОТОШО (БУРЯТСКАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "404068299",
-      "name_lat": "БЭЛЛЬ ДИАМАНТ МАЛЬТА",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
+      "id": "678263803",
+      "name_lat": "БЭТТИ АЛУЧИ ЭША",
+      "name_ru": "БЭТТИ АЛУЧИ ЭША",
+      "breed": "ЧАУ ЧАУ",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1913309648",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ИЗУМРУД",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
+      "id": "404068299",
+      "name_lat": "БЭЛЛЬ ДИАМАНТ МАЛЬТА",
+      "name_ru": "БЭЛЛЬ ДИАМАНТ МАЛЬТА",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -283,12 +273,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1796885547",
-      "name_lat": "Бэти",
-      "name_ru": "",
+      "id": "1184168514",
+      "name_lat": "БЭЙЛИС МАЙ ХАРТ",
+      "name_ru": "БЭЙЛИС МАЙ ХАРТ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "282812997",
+      "name_lat": "БЭЛ ЭНД ФАЙЭР НАРДЖИНА",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР НАРДЖИНА",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -303,19 +302,10 @@
     {
       "id": "211374800",
       "name_lat": "БЭСТ И Я ЕРОФЕЙ",
-      "name_ru": "",
+      "name_ru": "БЭСТ И Я ЕРОФЕЙ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "282812997",
-      "name_lat": "БЭЛ ЭНД ФАЙЭР НАРДЖИНА",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -328,15 +318,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "598868579",
-      "name_lat": "БЭСТ МАКСИМУС",
-      "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1871318617",
       "name_lat": "БЭКС НАОКИ РИО",
       "name_ru": "",
@@ -346,19 +327,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "1037705940",
+      "name_lat": "БЭЛ ЭНД ФАЙЕР МАРСЕЛЬ",
+      "name_ru": "БЭЛ ЭНД ФАЙЕР МАРСЕЛЬ",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1851517791",
       "name_lat": "БЭРРИМОР ХИЛЛС ЕФРОСИНЬЯ",
-      "name_ru": "",
+      "name_ru": "БЭРРИМОР ХИЛЛС ЕФРОСИНЬЯ",
       "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1049160142",
+      "id": "1538933931",
       "name_lat": "БЭРРИ ОФ ЭКО СТИЛЬ",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ /",
+      "name_ru": "БЭРРИ ОФ ЭКО СТИЛЬ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -373,12 +363,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "243068010",
+      "id": "968968673",
       "name_lat": "БЭНТЛИ ФОМ ХАУС ВАСТАР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "БЭНТЛИ ФОМ ХАУС ВАСТАР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -391,37 +381,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "678263803",
-      "name_lat": "БЭТТИ АЛУЧИ ЭША",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1839030318",
       "name_lat": "Бэртиге Фройде Тедерик Шикзальс",
-      "name_ru": "",
+      "name_ru": "Бэртиге Фройде Тедерик Шикзальс",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "21768496",
+      "id": "559800164",
       "name_lat": "БЭТТА ЯРКАЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "528728494",
+      "id": "1569380384",
       "name_lat": "БЭСТ И Я ВЕЛИДАРА",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "БЭСТ И Я ВЕЛИДАРА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -429,7 +410,7 @@
     {
       "id": "75180366",
       "name_lat": "БЭЛ ЭНД ФАЙЭР ТЕКИЛЛА",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР ТЕКИЛЛА",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -447,34 +428,25 @@
     {
       "id": "1948396068",
       "name_lat": "БЭЛ ЭНД ФАЙЭР НАРНИЯ",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР НАРНИЯ",
       "breed": "SCOTIA DUCK TOLLING",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1030399691",
+      "id": "80820703",
       "name_lat": "БЭСТ ПЕРФОМЕНС ЗЛАТОМИРА",
-      "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- ПОДПАЛЫЙ",
+      "name_ru": "БЭСТ ПЕРФОМЕНС ЗЛАТОМИРА",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1037705940",
-      "name_lat": "БЭЛ ЭНД ФАЙЕР МАРСЕЛЬ",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1279396484",
       "name_lat": "БЭК ТУ БЛЭКПОМ ЖАДОР НУАР",
-      "name_ru": "",
+      "name_ru": "БЭК ТУ БЛЭКПОМ ЖАДОР НУАР",
       "breed": "НЕМЕЦКИЙ МИНИАТЮРНЫЙ (МАЛЫЙ) ШПИЦ (черный, коричневый)",
       "breed_en": "",
       "total_shows": 5,
@@ -492,34 +464,34 @@
     {
       "id": "717603958",
       "name_lat": "БЭЛ ЭНД ФАЙЭР ТИФФАНИ",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР ТИФФАНИ",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1860009624",
       "name_lat": "БЭЛ ЭНД ФАЙЭР ФОРТУНА",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР ФОРТУНА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "455244852",
+      "id": "1140814700",
       "name_lat": "БЭЙЛЬ ГОЛД ДРИМ ИЗ ДОМА МИЛЬХЕРТ'С",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "name_ru": "БЭЙЛЬ ГОЛД ДРИМ ИЗ ДОМА МИЛЬХЕРТ'С",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
       "id": "1580307027",
       "name_lat": "БЭЛЛЬ ДИАМАНТ МЕЛИСА",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ ДИАМАНТ МЕЛИСА",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 9,
@@ -528,19 +500,19 @@
     {
       "id": "10185421",
       "name_lat": "БЭЛЛЬ СПАНИЕЛЬ ЗУМ-ЗУМ",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ СПАНИЕЛЬ ЗУМ-ЗУМ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "270950735",
+      "id": "844400510",
       "name_lat": "БЭЛЬ ЭТУАЛЬ УССИМУССИ",
-      "name_ru": "",
-      "breed": "Французский бульдог /",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ УССИМУССИ",
+      "breed": "Французский бульдог",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -550,6 +522,15 @@
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1224092894",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ СЕРЖАНТ ЖАН",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ СЕРЖАНТ ЖАН",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -580,6 +561,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1973347002",
+      "name_lat": "БЭККИ ЛАДА ЗАБАВА",
+      "name_ru": "БЭККИ ЛАДА ЗАБАВА",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "299893957",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
@@ -598,15 +587,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1224092894",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ СЕРЖАНТ ЖАН",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "575170393",
       "name_lat": "БЭЛЛЬ",
       "name_ru": "",
@@ -618,19 +598,19 @@
     {
       "id": "1209081762",
       "name_lat": "БЭК ТУ БЛЭКПОМ ДУГЛАС",
-      "name_ru": "",
+      "name_ru": "БЭК ТУ БЛЭКПОМ ДУГЛАС",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "231891180",
-      "name_lat": "БЭККИ ЛАДА ЗАБАВА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ /",
+      "id": "1701916835",
+      "name_lat": "БЭАРМАЛС ВЕРИ БИГ САЙЗ",
+      "name_ru": "БЭАРМАЛС ВЕРИ БИГ САЙЗ",
+      "breed": "МАЛАМУТ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -640,6 +620,23 @@
       "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "456775766",
+      "name_lat": "БЭСИ",
+      "name_ru": "",
+      "breed": "ПРЕСА КАНАРИО",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "8247350",
+      "name_lat": "Бэти",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -663,7 +660,7 @@
     {
       "id": "1575843210",
       "name_lat": "БЭАРМАЛС ЭЛИЗАБЕЛЛА",
-      "name_ru": "",
+      "name_ru": "БЭАРМАЛС ЭЛИЗАБЕЛЛА",
       "breed": "МАЛАМУТ АЛЯСКИНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -679,9 +676,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "208732316",
+      "name_lat": "БЭСТ ПЕРФОМЕНС МАЖОР МЕЛОДИ",
+      "name_ru": "БЭСТ ПЕРФОМЕНС МАЖОР МЕЛОДИ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1339688652",
       "name_lat": "БЭЛЛА СУМЕРЕЧНАЯ ОХОТНИЦА",
-      "name_ru": "",
+      "name_ru": "БЭЛЛА СУМЕРЕЧНАЯ ОХОТНИЦА",
       "breed": "ВОСТОЧНОЕВРОПЕ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -699,26 +705,17 @@
     {
       "id": "1907859625",
       "name_lat": "БЭЙЛА БЭЙЛИС БЕСТ ИН ШОУ",
-      "name_ru": "",
+      "name_ru": "БЭЙЛА БЭЙЛИС БЕСТ ИН ШОУ",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1872407630",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ОРИОН",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1525986783",
+      "id": "1810369870",
       "name_lat": "БЭЛЬ ИЗ КИТАЙСКОГО КВАРТАЛА",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -726,7 +723,7 @@
     {
       "id": "277622568",
       "name_lat": "БЭНИХИМЕ МИЮКИ",
-      "name_ru": "",
+      "name_ru": "БЭНИХИМЕ МИЮКИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 14,
@@ -751,6 +748,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1304645802",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ ХАРИЗМА",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ ХАРИЗМА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "362155884",
       "name_lat": "БЭЛТЕС ЭКСТРА БОННИ",
       "name_ru": "",
@@ -766,24 +772,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1184168514",
-      "name_lat": "БЭЙЛИС МАЙ ХАРТ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "250004526",
-      "name_lat": "БЭЛЛА СНЕЖНАЯ КОРОЛЕВА",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -814,10 +802,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "325260126",
+      "id": "1988200194",
       "name_lat": "БЭТ РЕЙТ",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ / GIANT",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ / GIANT",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -850,10 +838,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "755042636",
+      "id": "21337813",
       "name_lat": "БЭБИ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -861,16 +849,25 @@
     {
       "id": "499878052",
       "name_lat": "БЭРТИГЕ ФРОЙДЭ ХАЙНРИК ЭЛК",
-      "name_ru": "",
+      "name_ru": "Бэртиге Фройдэ Хайнрик Элк",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
+      "id": "5628",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ МАЖОР",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ МАЖОР",
+      "breed": "САЛЮКИ",
+      "breed_en": "",
+      "total_shows": 95,
+      "competition_dog_id": 5628
+    },
+    {
       "id": "1699964927",
       "name_lat": "БЭАРМАЛС АРИША",
-      "name_ru": "",
+      "name_ru": "БЭАРМАЛС АРИША",
       "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 11,
@@ -886,12 +883,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1406013228",
+      "id": "1413793589",
       "name_lat": "БЭСТ БРАЙАР",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1562952472",
+      "name_lat": "БЭРРИМОР ХИЛЛС ГАРМОНИЯ СЕРДЦА",
+      "name_ru": "БЭРРИМОР ХИЛЛС ГАРМОНИЯ СЕРДЦА",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -904,10 +910,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "997490904",
-      "name_lat": "БЭК ТУ БЛЕКПОМ ЖАДОР НУАР",
+      "id": "1198661896",
+      "name_lat": "БЭСТ ВЕО ЛАЙ МИРОСЛАВ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "БАССЕТ ХАУНД",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1659756332",
+      "name_lat": "БЭК ТУ БЛЕКПОМ ЖАДОР НУАР",
+      "name_ru": "БЭК ТУ БЛЕКПОМ ЖАДОР НУАР",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -933,19 +948,10 @@
     {
       "id": "726758546",
       "name_lat": "БЭСТ ДЖЕК ГОССИП ЧЕЙЗ СИЯЮЩИЙ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК ГОССИП ЧЕЙЗ СИЯЮЩИЙ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1304645802",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ХАРИЗМА",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1003,10 +1009,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "175765255",
+      "id": "392046563",
       "name_lat": "БЭСТ ПОМ КОЛОР СИМФОНИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1023,7 +1029,7 @@
     {
       "id": "161270738",
       "name_lat": "БЭСТ ЧЕНС ОФ МАЙ ЛАЙФ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ЧЕНС ОФ МАЙ ЛАЙФ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -1036,15 +1042,6 @@
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "957903481",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ МАЖОР",
-      "name_ru": "",
-      "breed": "САЛЮКИ / SALUKI",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1066,15 +1063,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "846221631",
-      "name_lat": "БЭСИ",
-      "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "202630160",
       "name_lat": "Бэст Саргас Инфанта Лия",
       "name_ru": "",
@@ -1086,7 +1074,7 @@
     {
       "id": "702978479",
       "name_lat": "БЭСТ ПЕРФОМЕНС БИОНД БЕЛИВ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ПЕРФОМЕНС БИОНД БЕЛИВ",
       "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -1111,30 +1099,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1700533485",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ОМЕГА",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1701916835",
-      "name_lat": "БЭАРМАЛС ВЕРИ БИГ САЙЗ",
-      "name_ru": "",
-      "breed": "МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "911447707",
       "name_lat": "БЭСТ ШОУ КРЕМЛЁВСКИЙ САЛЮТ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ШОУ КРЕМЛЕВСКИЙ САЛЮТ",
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 30,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -1156,19 +1126,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "335987660",
+      "id": "500804225",
       "name_lat": "БЭЙБИ ГЕРЛ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "456775766",
-      "name_lat": "БЭСИ",
-      "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1183,21 +1144,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "208732316",
-      "name_lat": "БЭСТ ПЕРФОМЕНС МАЖОР МЕЛОДИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1154201585",
       "name_lat": "БЭЙБИ ГЕРЛ",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1248,16 +1200,16 @@
     {
       "id": "1658081368",
       "name_lat": "БЭЛЬС' ОРЕЙ ЖИВАНШИ",
-      "name_ru": "",
+      "name_ru": "БЭЛЬС' ОРЕЙ ЖИВАНШИ",
       "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "9754426",
       "name_lat": "БЭЛЬ ЭТУАЛЬ АМБАССАДОР",
-      "name_ru": "",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ АМБАССАДОР",
       "breed": "САЛЮКИ",
       "breed_en": "SALUKI",
       "total_shows": 8,
@@ -1300,9 +1252,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "690950313",
+      "name_lat": "БЭЛЛЬ ФАНТЭ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "301597088",
       "name_lat": "БЭЛ ЭНД ФАЙЭР САНСАРА",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР САНСАРА",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
       "total_shows": 10,
@@ -1318,27 +1279,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1562952472",
-      "name_lat": "БЭРРИМОР ХИЛЛС ГАРМОНИЯ СЕРДЦА",
+      "id": "293005175",
+      "name_lat": "БЭТ РЕЙТ",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 15,
+      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ /",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "690950313",
-      "name_lat": "БЭЛЛЬ ФАНТЭ",
-      "name_ru": "",
-      "breed": "МОПС",
+      "id": "1519905954",
+      "name_lat": "БЭСТИКРОСАНТР ЖАСМИН",
+      "name_ru": "БЭСТИКРОСАНТР ЖАСМИН",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "201325394",
       "name_lat": "БЭЛ ЭНД ФАЙЭР РУБИ АМОРЕ МИО",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР РУБИ АМОРЕ МИО",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
       "total_shows": 11,
@@ -1347,52 +1307,25 @@
     {
       "id": "833310553",
       "name_lat": "БЭСФОРД ГАРСОН",
-      "name_ru": "",
+      "name_ru": "БЭСФОРД ГАРСОН",
       "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
       "breed_en": "BULL TERRIER STANDART",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1727951721",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ИРМА",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "SALUKI",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1511532344",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ НЕАПОЛЬ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
       "id": "497538763",
       "name_lat": "БЭРРИМОР ХИЛЛС ЕЛЛОУ СУБМАРИН",
-      "name_ru": "",
+      "name_ru": "БЭРРИМОР ХИЛЛС ЕЛЛОУ СУБМАРИН",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "1519905954",
-      "name_lat": "БЭСТИКРОСАНТР ЖАСМИН",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1224138489",
       "name_lat": "БЭЛЛА ДИ НОТТЕ",
-      "name_ru": "",
+      "name_ru": "БЭЛЛА ДИ НОТТЕ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 18,
@@ -1401,7 +1334,7 @@
     {
       "id": "1521301598",
       "name_lat": "БЭСТ ДЖЕК ПРИТТИ ВУМЕН",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК ПРИТТИ ВУМЕН",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
@@ -1410,44 +1343,35 @@
     {
       "id": "1491874409",
       "name_lat": "БЭАРМАЛС ИМПЕРАТОР ФОР РОССО БОРЕАЛЕ",
-      "name_ru": "",
+      "name_ru": "БЭАРМАЛС ИМПЕРАТОР ФОР РОССО БОРЕАЛЕ",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "137409516",
+      "id": "772207049",
       "name_lat": "БЭСТ ДЖЕК ДЕВИЛ ДЭШ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "name_ru": "БЭСТ ДЖЕК ДЕВИЛ ДЭШ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "876363190",
-      "name_lat": "БЭТ РЕЙТ",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "483624354",
       "name_lat": "БЭСТ ДЖЕК УНДЕРКОВЕР",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК УНДЕРКОВЕР",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "JACK RUSSELL TERRIER",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "632347517",
+      "id": "16015353",
       "name_lat": "БЭТТИ КВИН ОФ РОУЗ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "БЭТТИ КВИН ОФ РОУЗ",
+      "breed": "SIBERIAN HUSKY",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1462,39 +1386,48 @@
       "competition_dog_id": null
     },
     {
+      "id": "199163867",
+      "name_lat": "БЭАРМАЛС ВИН ДИЗЕЛЬ РОССО БОРЕАЛЕ",
+      "name_ru": "БЭАРМАЛС ВИН ДИЗЕЛЬ РОССО БОРЕАЛЕ",
+      "breed": "МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "486516955",
+      "name_lat": "БЭТТИ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "804313630",
+      "name_lat": "БЭК ТУ БЛЕКПОМ ЖУЭТ ЖОССЛИН",
+      "name_ru": "БЭК ТУ БЛЕКПОМ ЖУЭТ ЖОССЛИН",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1894975993",
       "name_lat": "БЭРРИМОР ХИЛЛС ЕВДОКИЯ",
-      "name_ru": "",
+      "name_ru": "БЭРРИМОР ХИЛЛС ЕВДОКИЯ",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "422988978",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ АПРЕЛЬ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "459196423",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ВАЛЬКИРИЯ",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "SALUKI",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "933882054",
       "name_lat": "БЭЛЛЬ СПАНИЕЛЬ ГЛАЗУРЬ",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ СПАНИЕЛЬ ГЛАЗУРЬ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1509,34 +1442,52 @@
     {
       "id": "1534569576",
       "name_lat": "БЭЛЛА С ТИХОГО ДОНА",
-      "name_ru": "",
+      "name_ru": "БЭЛЛА С ТИХОГО ДОНА",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "739747897",
+      "name_lat": "БЭСТ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "185245292",
       "name_lat": "БЭК ТУ БЛЭКПОМ ДАРК МУН",
-      "name_ru": "",
+      "name_ru": "БЭК ТУ БЛЭКПОМ ДАРК МУН",
       "breed": "НЕМЕЦКИЙ ШПИЦ той (померанский)",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "145409377",
+      "id": "1849335484",
       "name_lat": "БЭРРИ БОРЕАЛИС",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "name_ru": "БЭРРИ БОРЕАЛИС",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
+      "id": "1058847721",
+      "name_lat": "БЭЛЖЕСС АРАБЕСКА ЗЛАТ",
+      "name_ru": "БЭЛЖЕСС АРАБЕСКА ЗЛАТ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "829865695",
       "name_lat": "БЭСТ ДЖЕК УПГРЕЙД",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК УПГРЕЙД",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -1545,61 +1496,43 @@
     {
       "id": "1695447013",
       "name_lat": "БЭЛЬ ЭТУАЛЬ ВЕНТУРА КОРТЭС",
-      "name_ru": "",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ ВЕНТУРА КОРТЭС",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "490048214",
-      "name_lat": "БЭМГУЛЬ АНУ С СОПОК МАНДЖУРИИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1440650264",
       "name_lat": "БЭРРИМОР ХИЛЛС ЖАДОР",
-      "name_ru": "",
+      "name_ru": "БЭРРИМОР ХИЛЛС ЖАДОР",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "804313630",
-      "name_lat": "БЭК ТУ БЛЕКПОМ ЖУЭТ ЖОССЛИН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "id": "218739347",
+      "name_lat": "БЭТИС ЭЛИЗАБЭТ ДЕ ЛЯ МУР",
+      "name_ru": "БЭТИС ЭЛИЗАБЭТ ДЕ ЛЯ МУР",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1535098580",
       "name_lat": "БЭТМЭН ФОР ХЕЛЕН ФРОМ РАШН ФИЛД",
-      "name_ru": "",
+      "name_ru": "БЭТМЭН ФОР ХЕЛЕН ФРОМ РАШН ФИЛД",
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "199163867",
-      "name_lat": "БЭАРМАЛС ВИН ДИЗЕЛЬ РОССО БОРЕАЛЕ",
-      "name_ru": "",
-      "breed": "МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "186220074",
       "name_lat": "БЭРТИГЕ ФРОЙДЭ ЗИЛЬБЕРГ ДЕР ГЛЮКСПИЛС",
-      "name_ru": "",
+      "name_ru": "БЭРТИГЕ ФРОЙДЭ ЗИЛЬБЕРГ ДЕР ГЛЮКСПИЛС",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 6,
@@ -1608,10 +1541,19 @@
     {
       "id": "1879886995",
       "name_lat": "БЭСТ САРГАС РУНА ОНДЛИ ФО ЛАВ",
-      "name_ru": "",
+      "name_ru": "БЭСТ САРГАС РУНА ОНДЛИ ФО ЛАВ",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1704913423",
+      "name_lat": "БЭНТЛИ ФАНТАСТИК ШОУ ОТ ДИАЛЬ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1624,39 +1566,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1704913423",
-      "name_lat": "БЭНТЛИ ФАНТАСТИК ШОУ ОТ ДИАЛЬ",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "486516955",
-      "name_lat": "БЭТТИ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1100075969",
       "name_lat": "БЭЛЛ ТАМБЕРЛИНА С ТУМАННОГО АЛЬБИОНА",
-      "name_ru": "",
+      "name_ru": "БЭЛЛ ТАМБЕРЛИНА С ТУМАННОГО АЛЬБИОНА",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "72601731",
-      "name_lat": "БЭСТ",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "id": "1270807921",
+      "name_lat": "БЭСТ ДЖЕК ДАЙКИРИ САППХАРИ",
+      "name_ru": "БЭСТ ДЖЕК ДАЙКИРИ САППХАРИ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1669,19 +1593,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "379685858",
+      "id": "987566319",
+      "name_lat": "БЭССИ СОЛАР РЭДИАНС",
+      "name_ru": "БЭССИ СОЛАР РЭДИАНС",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "886696364",
       "name_lat": "БЭСТ И Я ШЕРЛОК",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "БЭСТ И Я ШЕРЛОК",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "31040784",
+      "id": "758744677",
       "name_lat": "БЭСТ САРГАС БРИДЖИ ВЕСТА",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1689,7 +1622,7 @@
     {
       "id": "44376788",
       "name_lat": "БЭКХЕМ ЗОЛОТОЙ МАЛЬЧИК",
-      "name_ru": "",
+      "name_ru": "БЭКХЕМ ЗОЛОТОЙ МАЛЬЧИК",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -1698,16 +1631,32 @@
     {
       "id": "1982196750",
       "name_lat": "БЭСТ ПОМ КОЛОР ПРИМА ПЕРЛ ШОКО",
-      "name_ru": "",
+      "name_ru": "БЭСТ ПОМ КОЛОР ПРИМА ПЕРЛ ШОКО",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
+      "id": "1694837691",
+      "name_lat": "БЭЛЛИНИЯ БЫСТРОЕ ПЛАМЯ",
+      "name_ru": "БЭЛЛИНИЯ БЫСТРОЕ ПЛАМЯ",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1048813626",
+      "name_lat": "БЭАРМАЛС ГОГИ ГОГИТО",
+      "name_ru": "БЭАРМАЛС ГОГИ ГОГИТО",
+      "breed": "МАЛАМУТ /",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1172387884",
       "name_lat": "БЭСТ РАНДЕВУ",
-      "name_ru": "",
+      "name_ru": "БЭСТ РАНДЕВУ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -1723,39 +1672,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "1196658361",
-      "name_lat": "БЭСТ ПЕРФОМЕНС ВАНЕССА МЭЙ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
+      "id": "638503313",
+      "name_lat": "БЭАРМАЛС БАДАБУМ",
+      "name_ru": "БЭАРМАЛС БАДАБУМ",
+      "breed": "МАЛАМУТ /",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1202501772",
-      "name_lat": "БЭСТ ПЕРФОМЕНС ВАНЕССА МЕЙ",
+      "id": "415658003",
+      "name_lat": "БЭТТИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1196658361",
+      "name_lat": "БЭСТ ПЕРФОМЕНС ВАНЕССА МЭЙ",
+      "name_ru": "БЭСТ ПЕРФОМЕНС ВАНЕССА МЭЙ",
+      "breed": "ПУДЕЛЬ МАЛЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1611609824",
+      "name_lat": "БЭСТ ПЕРФОМЕНС ВАНЕССА МЕЙ",
+      "name_ru": "БЭСТ ПЕРФОМЕНС ВАНЕССА МЕЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1902595764",
-      "name_lat": "БЭЛЖЕСС АРАБЕСКА ЗЛАТ",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "id": "256328578",
+      "name_lat": "БЭСТ ПЕРФОМЕНС ДИВИ НЬЮ СТАР",
+      "name_ru": "БЭСТ ПЕРФОМЕНС ДИВИ НЬЮ СТАР",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "942373438",
-      "name_lat": "БЭСТ ПЕРФОМЕНС ДИВИ НЬЮ СТАР",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
+      "id": "120225334",
+      "name_lat": "БЭСТ ДЖЕК ПЕАРЛ ДЖОЙ",
+      "name_ru": "БЭСТ ДЖЕК ПЕАРЛ ДЖОЙ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1768,48 +1733,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "969578022",
-      "name_lat": "БЭКИНГЕМ ЛОРД ОТ БОЯРЫНИ МОРОЗОВОЙ",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "396465759",
       "name_lat": "БЭНКС",
       "name_ru": "",
       "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1866555876",
+      "name_lat": "БЭЛЛЬ ФАНТЭ",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
+      "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1357113254",
+      "id": "1153861023",
       "name_lat": "БЭЙДЖИН ПАЛАС ДОГ РУСЯ",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС /",
+      "name_ru": "БЭЙДЖИН ПАЛАС ДОГ РУСЯ",
+      "breed": "ПЕКИНЕС",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "415658003",
-      "name_lat": "БЭТТИ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "id": "744234044",
+      "name_lat": "БЭБИ ИН А МИЛЛИОН ИЗ СОЗВЕЗДИЕ СТАФ",
+      "name_ru": "БЭБИ ИН А МИЛЛИОН ИЗ СОЗВЕЗДИЕ СТАФ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "968803882",
-      "name_lat": "БЭБИ ИН А МИЛЛИОН ИЗ СОЗВЕЗДИЕ СТАФ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "848481139",
+      "name_lat": "БЭЙЛИЗ КВИН ЭКСЕЛАНС",
+      "name_ru": "БЭЙЛИЗ КВИН ЭКСЕЛАНС",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1822,15 +1787,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1270807921",
-      "name_lat": "БЭСТ ДЖЕК ДАЙКИРИ САППХАРИ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "240864260",
       "name_lat": "БЭЙЛИС",
       "name_ru": "",
@@ -1840,28 +1796,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1505420981",
+      "id": "58520797",
       "name_lat": "БЭСТ И Я ИДМОН",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1119133859",
+      "id": "210824076",
       "name_lat": "БЭЛЬС'ОРЕЙ НИКОЛЬ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "БЭЛЬС'ОРЕЙ НИКОЛЬ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1326061145",
+      "id": "100271545",
       "name_lat": "БЭСТ И Я УСТИН",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "БЭСТ И Я УСТИН",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1869,28 +1825,37 @@
     {
       "id": "1006586398",
       "name_lat": "БЭСТ САРГАС БО ЭСКАЛА",
-      "name_ru": "",
+      "name_ru": "БЭСТ САРГАС БО ЭСКАЛА",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "990324019",
+      "id": "958577371",
       "name_lat": "БЭСТ И Я ЭПОХА",
-      "name_ru": "",
-      "breed": "Такса стандартная гладкошерстная",
+      "name_ru": "БЭСТ И Я ЭПОХА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "811941173",
-      "name_lat": "БЭСТ ДЖЕК ПОР ФАВОР",
-      "name_ru": "",
+      "id": "1395521666",
+      "name_lat": "БЭСТ ДЖЕК РАССИ",
+      "name_ru": "БЭСТ ДЖЕК РАССИ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "811941173",
+      "name_lat": "БЭСТ ДЖЕК ПОР ФАВОР",
+      "name_ru": "БЭСТ ДЖЕК ПОР ФАВОР",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1905,10 +1870,27 @@
     {
       "id": "1079304291",
       "name_lat": "БЭЛЛЬ ДИАМАНТ ИЗАБЕЛЛА",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ ДИАМАНТ ИЗАБЕЛЛА",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "922150056",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ Л.ЛИРИКА",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ Л.ЛИРИКА",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1104082852",
+      "name_lat": "БЭСТ ПОМ КОЛОР ТИРАМИСУ СУРИ",
+      "name_ru": "БЭСТ ПОМ КОЛОР ТИРАМИСУ СУРИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1923,53 +1905,52 @@
     {
       "id": "1319814845",
       "name_lat": "БЭСТ ДЖЕК ЯСМИНА (BEST JACK YASMINA)",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК ЯСМИНА",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1714222409",
-      "name_lat": "БЭЛЛЬ ДИАМАНТ ИНЕЙ",
+      "id": "287719226",
+      "name_lat": "БЭЛЬ ФОКС",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ / BICHON",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "857344447",
+      "name_lat": "БЭЛЛЬ ДИАМАНТ ИНЕЙ",
+      "name_ru": "БЭЛЛЬ ДИАМАНТ ИНЕЙ",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "800037161",
       "name_lat": "БЭСТ ДЖЕК ФАВОРИТ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК ФАВОРИТ",
       "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1866555876",
-      "name_lat": "БЭЛЛЬ ФАНТЭ",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
+      "id": "448338724",
+      "name_lat": "БЭРРИ ИЗ НОВОЙ СИБИРИ",
+      "name_ru": "БЭРРИ ИЗ НОВОЙ СИБИРИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "788378249",
       "name_lat": "БЭБИ ИЗ ГРАД ВЛАДИМИРА",
-      "name_ru": "",
+      "name_ru": "БЭБИ ИЗ ГРАД ВЛАДИМИРА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1826268299",
-      "name_lat": "БЭАРМАЛС ГОГИ ГОГИТО",
-      "name_ru": "",
-      "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1984,6 +1965,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1741339087",
+      "name_lat": "БЭТТИ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1922216768",
       "name_lat": "БЭСТЕН ХЭППИ ЭСТЕЛЬ",
       "name_ru": "",
@@ -1993,28 +1982,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1615908041",
+      "id": "1412494713",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ ПОРУЧИК ГОЛИЦЫН ЭТ ЛИНКС",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ ПОРУЧИК ГОЛИЦЫН ЭТ ЛИНКС",
+      "breed": "RUSSIAN",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "607049556",
       "name_lat": "БЭСТ САРГАСБО ЭСКАЛА",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1263000988",
-      "name_lat": "БЭЛ ЭНД ФАЙЭР МАРСЕЛЬ",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1169910104",
+      "id": "1792577668",
       "name_lat": "БЭСТ ПАРТНЕР БЛЭК ЛЕГАСИ ДРАГОН'С",
-      "name_ru": "",
-      "breed": "ХАВАНЕЗ ДЛИННОШЁРСТНЫЙ",
+      "name_ru": "БЭСТ ПАРТНЕР БЛЭК ЛЕГАСИ ДРАГОН'С",
+      "breed": "ХАВАНЕЗ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2022,10 +2010,18 @@
     {
       "id": "1167275880",
       "name_lat": "БЭСТ САРГАС ИС ТЕЛИЯ ФЛЭР",
-      "name_ru": "",
+      "name_ru": "БЭСТ САРГАС ИС ТЕЛИЯ ФЛЭР",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "48252307",
+      "name_lat": "БЭЛЛА",
+      "name_ru": "",
+      "breed": "GERMAN",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2040,25 +2036,43 @@
     {
       "id": "1744618156",
       "name_lat": "БЭРРИМОР ХИЛЛС ВЕНТУРА РЭЙ",
-      "name_ru": "",
+      "name_ru": "БЭРРИМОР ХИЛЛС ВЕНТУРА РЭЙ",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "987566319",
-      "name_lat": "БЭССИ СОЛАР РЭДИАНС",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "id": "646077206",
+      "name_lat": "БЭЛЛА КИНГДОМ НАВЬОРД",
+      "name_ru": "БЭЛЛА КИНГДОМ НАВЬОРД",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "853539611",
+      "name_lat": "БЭСТ ПЕРФОМЕНС БЛЭК БАЛЕРИНА",
+      "name_ru": "БЭСТ ПЕРФОМЕНС БЛЭК БАЛЕРИНА",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1997895951",
+      "name_lat": "БЭДФОР ИЗ ДОЛИНЫ СОЛНЦА",
+      "name_ru": "БЭДФОР ИЗ ДОЛИНЫ СОЛНЦА",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "894093822",
       "name_lat": "БЭНТЕН АЛЬ-БАККАРА",
-      "name_ru": "",
+      "name_ru": "БЭНТЕН АЛЬ-БАККАРА",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 8,
@@ -2067,17 +2081,17 @@
     {
       "id": "323447308",
       "name_lat": "БЭЙЛА БРИЛЛИАНТ ИЗ СИБИРСКОГО КНЯЖЕСТВА",
-      "name_ru": "",
+      "name_ru": "БЭЙЛА БРИЛЛИАНТ ИЗ СИБИРСКОГО КНЯЖЕСТВА",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "70462673",
+      "id": "864308525",
       "name_lat": "БЭСТБЕАУТИФУЛДОГ ДЖУЛЬЕТТА",
-      "name_ru": "",
-      "breed": "DACHSHUND MINIATURE",
+      "name_ru": "БЭСТБЕАУТИФУЛДОГ ДЖУЛЬЕТТА",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2094,7 +2108,7 @@
     {
       "id": "638009956",
       "name_lat": "БЭТТИ ГОЛД ИЗ ГРАНД ЛЕОНИКИ",
-      "name_ru": "",
+      "name_ru": "БЭТТИ ГОЛД ИЗ ГРАНД ЛЕОНИКИ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 4,
@@ -2112,7 +2126,7 @@
     {
       "id": "1917987397",
       "name_lat": "БЭСТ ПОМ КОЛОР ЯППИ ШАРМ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ПОМ КОЛОР ЯППИ ШАРМ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 9,
@@ -2121,10 +2135,10 @@
     {
       "id": "1870094000",
       "name_lat": "БЭККИ БИ МАЙ ЛАКИ",
-      "name_ru": "",
+      "name_ru": "БЭККИ БИ МАЙ ЛАКИ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -2137,10 +2151,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "774656593",
+      "id": "1536210",
       "name_lat": "БЭСТЕН ХЭППИ ФЛОРЕНЦИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "БЭСТЕН ХЭППИ ФЛОРЕНЦИЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2152,6 +2166,14 @@
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1554812311",
+      "name_lat": "БЭТА БАЛКАН КЫЗЫ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2173,24 +2195,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1395521666",
-      "name_lat": "БЭСТ ДЖЕК РАССИ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1378035821",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ГОЛДЕН ВЕЙ",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "387829667",
       "name_lat": "БЭГЮЛЬ ЧАРЫ",
       "name_ru": "",
@@ -2202,7 +2206,7 @@
     {
       "id": "1150051222",
       "name_lat": "БЭСТ ЧОЙС С ГОРЫ КЛЮЧЕЙ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ЧОЙС С ГОРЫ КЛЮЧЕЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
       "total_shows": 5,
@@ -2220,7 +2224,7 @@
     {
       "id": "1141282877",
       "name_lat": "БЭЛЛЬ ДЕ ОПИУМ КЛЕОПАТРА",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ ДЕ ОПИУМ КЛЕОПАТРА",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -2229,10 +2233,19 @@
     {
       "id": "833368198",
       "name_lat": "БЭСТАЙЛ ТАТКА ЭНЕРДЖАЙЗЕР",
-      "name_ru": "",
+      "name_ru": "БЭСТАЙЛ ТАТКА ЭНЕРДЖАЙЗЕР",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "273524958",
+      "name_lat": "БЭКЕНГЕМ",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2247,7 +2260,7 @@
     {
       "id": "796318479",
       "name_lat": "БЭЛЛЬ ФАНТА КАПРИЗ",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ ФАНТА КАПРИЗ",
       "breed": "НЕМЕЦКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -2256,10 +2269,10 @@
     {
       "id": "841743675",
       "name_lat": "БЭЙБИ ЭЙВОЛЕТ ИЗ СОЛНЕЧНОГО ДОМА",
-      "name_ru": "",
+      "name_ru": "БЭЙБИ ЭЙВОЛЕТ ИЗ СОЛНЕЧНОГО ДОМА",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2272,18 +2285,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "848481139",
-      "name_lat": "БЭЙЛИЗ КВИН ЭКСЕЛАНС",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1117049732",
       "name_lat": "БЭАРМАЛС КИНГ-КОНГ",
-      "name_ru": "",
+      "name_ru": "БЭАРМАЛС КИНГ-КОНГ",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 3,
@@ -2301,17 +2305,25 @@
     {
       "id": "1969818704",
       "name_lat": "БЭСТ ДЖЕК ШЕЙН БЛЭК",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК ШЕЙН БЛЭК",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1738708402",
+      "id": "663826938",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ ВИКТОРИЯ",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ ВИКТОРИЯ",
+      "breed": "САЛЮКИ",
+      "breed_en": "SALUKI",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "303749427",
       "name_lat": "БЭСТ ДЖЕК СУПЕР СТАР",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2322,6 +2334,14 @@
       "name_ru": "",
       "breed": "LONG-HAIRED",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1853791082",
+      "name_lat": "БЭСТ",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2344,15 +2364,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1294022830",
-      "name_lat": "БЭСТ ДЖЕК ФРОДО БЕГГИНС",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "557039394",
       "name_lat": "БЭЛ ЭНД ФАЙЭР МОНРО",
       "name_ru": "",
@@ -2364,17 +2375,17 @@
     {
       "id": "356425248",
       "name_lat": "БЭТТИ БИЗЕ ОЛИВИЯ",
-      "name_ru": "",
+      "name_ru": "БЭТТИ БИЗЕ ОЛИВИЯ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1427081948",
+      "id": "39733186",
       "name_lat": "БЭККИ ХАУС СТАСЯ",
-      "name_ru": "",
-      "breed": "ТАКСА - МИНИАТЮРНАЯ - ГЛАДКОШЕРСТНАЯ ТАКСА - МИНИАТЮРНАЯ - ДЛИННОШЕРСТНАЯ",
+      "name_ru": "БЭККИ ХАУС СТАСЯ",
+      "breed": "ТАКСА - МИНИАТЮРНАЯ - Г-Ш ТАКСА - МИНИАТЮРНАЯ - Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2385,6 +2396,15 @@
       "name_ru": "",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "174663575",
+      "name_lat": "БЭСТ ДЖЕК ХОЛЛИ БЕРРИ",
+      "name_ru": "",
+      "breed": "Джек рассел терьер",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2400,34 +2420,34 @@
     {
       "id": "1962637074",
       "name_lat": "БЭАРМАЛС ЖЕРОНИ ЧИЛД ОФ ФИРЕ",
-      "name_ru": "",
+      "name_ru": "БЭАРМАЛС ЖЕРОНИ ЧИЛД ОФ ФИРЕ",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1039971539",
-      "name_lat": "БЭЛЬ ФОКС",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "105412864",
+      "id": "1843220561",
       "name_lat": "БЭБИ ЮККА АЛМОНД КУКИС",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
+      "id": "1871446567",
+      "name_lat": "БЭСТ САРГАС РУС АНТАРЕС",
+      "name_ru": "БЭСТ САРГАС РУС АНТАРЕС",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "615035487",
       "name_lat": "БЭРА ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
-      "name_ru": "",
+      "name_ru": "БЭРА ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -2436,7 +2456,7 @@
     {
       "id": "1203091562",
       "name_lat": "БЭСТЕН ХЭППИ ШАЙЛИ КВИН",
-      "name_ru": "",
+      "name_ru": "БЭСТЕН ХЭППИ ШАЙЛИ КВИН",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 7,
@@ -2445,19 +2465,19 @@
     {
       "id": "1864005867",
       "name_lat": "БЭСТ ПЕРФОМЕНС ДАЛИДА",
-      "name_ru": "",
+      "name_ru": "БЭСТ ПЕРФОМЕНС ДАЛИДА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "185210346",
-      "name_lat": "БЭАРМАЛС БАДАБУМ",
-      "name_ru": "",
-      "breed": "МАЛАМУТ АЛЯСКИНСКИЙ",
+      "id": "184840359",
+      "name_lat": "БЭРРИМОР ХИЛЛС БЕАТРИЧЕ",
+      "name_ru": "БЭРРИМОР ХИЛЛС БЕАТРИЧЕ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2470,9 +2490,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "232335597",
+      "name_lat": "БЭСТ ДЖЕК ЭЛЕКТРА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "575434388",
       "name_lat": "БЭЛЛА ДЭ ЛА РОССА ИЗ ГРАНД ЛЕОНИКИ",
-      "name_ru": "",
+      "name_ru": "БЭЛЛА ДЭ ЛА РОССА ИЗ ГРАНД ЛЕОНИКИ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
@@ -2481,7 +2510,7 @@
     {
       "id": "625917108",
       "name_lat": "БЭЛЬ ЭТУАЛЬ ИМИДЖ",
-      "name_ru": "",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ ИМИДЖ",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -2490,28 +2519,19 @@
     {
       "id": "1236288600",
       "name_lat": "БЭАРМАЛС ДОННА ПРИМАДОННА",
-      "name_ru": "",
+      "name_ru": "БЭАРМАЛС ДОННА ПРИМАДОННА",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1397626278",
-      "name_lat": "БЭРРИМОР ХИЛЛС БЕАТРИЧЕ",
-      "name_ru": "",
-      "breed": "ПЕМБРОК БУЛЬДОГ",
+      "id": "202233769",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ НЕЙА",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ НЕЙА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "104287298",
-      "name_lat": "БЭСТ САРГАС СЕЛИОНА КЕЙДЖ",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2524,10 +2544,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "661034078",
+      "id": "460870295",
       "name_lat": "БЭД ТАЙМ СТОРИ ИЗ КРЫМСКОЙ СТОЛИЦЫ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2535,37 +2555,27 @@
     {
       "id": "195306057",
       "name_lat": "БЭРРИМОР ХИЛЛС ВЕЛИМИРА",
-      "name_ru": "",
+      "name_ru": "БЭРРИМОР ХИЛЛС ВЕЛИМИРА",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "47763458",
+      "id": "894788129",
       "name_lat": "БЭСТ ДЖЕК ЛАКОСТЕ",
-      "name_ru": "",
-      "breed": "JACK RUSSELL TERRIER",
+      "name_ru": "БЭСТ ДЖЕК ЛАКОСТЕ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "202233769",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ НЕЙА",
+      "id": "560475016",
+      "name_lat": "БЭТТИ",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1606993432",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ НОКТЮРН",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "МОПС / PUG",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2578,30 +2588,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "58049098",
-      "name_lat": "БЭТМЕН ТЕМНЫЙ РЫЦАРЬ",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "415093858",
       "name_lat": "БЭЛ ЭНД ФАЙЭР ГЛИТЕР ДУСТ",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР ГЛИТЕР ДУСТ",
       "breed": "SCOTIA DUCK TOLLING",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "273524958",
-      "name_lat": "БЭКЕНГЕМ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2623,10 +2615,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "487829467",
+      "id": "1255180050",
       "name_lat": "БЭК ТУ ЗЕ ФЬЮЧЕ ИЗ ЦАРСТВА СВАРОГА",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2643,17 +2635,17 @@
     {
       "id": "1187983911",
       "name_lat": "БЭСТ ДЖЕК АСК МИ НАУ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК АСК МИ НАУ",
       "breed": "джек рассел терьер",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1765507001",
+      "id": "284871193",
       "name_lat": "БЭЛЬС'ОРЕЙ КИМБЕРЛИ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "БЭЛЬС'ОРЕЙ КИМБЕРЛИ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2670,7 +2662,7 @@
     {
       "id": "928820153",
       "name_lat": "БЭСТ ДЖЕК КЛЕОПАТРА",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК КЛЕОПАТРА",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -2679,17 +2671,17 @@
     {
       "id": "1460123877",
       "name_lat": "БЭНЯ БЕЛЫЙ ДРАКОН",
-      "name_ru": "",
+      "name_ru": "БЭНЯ БЕЛЫЙ ДРАКОН",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "84192506",
+      "id": "640370250",
       "name_lat": "БЭССИ КОРОЛЕВА",
-      "name_ru": "",
-      "breed": "БОКСЕР ШВЕЙЦАРСКИЙ",
+      "name_ru": "БЭССИ КОРОЛЕВА",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2731,18 +2723,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "175916341",
-      "name_lat": "БЭМБИ ЛОЛЛИПОП БЭБИ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "956209065",
       "name_lat": "БЭЛЛЬ СНОУ КВИН",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ СНОУ КВИН",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
@@ -2767,15 +2750,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "777214688",
-      "name_lat": "БЭНДЖАМИН БЭН-ЛАВ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1542015872",
       "name_lat": "БЭЛЬ АНИКА",
       "name_ru": "",
@@ -2787,35 +2761,35 @@
     {
       "id": "1849957551",
       "name_lat": "БЭФОРЭ ТАЙМ ЛИДЕР ТРИУМФА",
-      "name_ru": "",
+      "name_ru": "БЭФОРЭ ТАЙМ ЛИДЕР ТРИУМФА",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1517895015",
-      "name_lat": "БЭСТ ПЕРФОМЕНС БЛЭК БАЛЕРИНА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "id": "124080540",
+      "name_lat": "БЭСТ ДЖЕК ТОНИ СТАРК",
+      "name_ru": "БЭСТ ДЖЕК ТОНИ СТАРК",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "106735083",
+      "id": "1179705058",
       "name_lat": "БЭБИ ВИКТОРИЯ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "680881955",
+      "id": "764196362",
       "name_lat": "БЭЛЛА НЭЙТ МЭЙДЖИК КРИЧА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР /",
+      "name_ru": "БЭЛЛА НЭЙТ МЭЙДЖИК КРИЧА",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2823,10 +2797,10 @@
     {
       "id": "1328169477",
       "name_lat": "БЭАРМАЛС ЕМИЛИО",
-      "name_ru": "",
+      "name_ru": "БЭАРМАЛС ЕМИЛИО",
       "breed": "АКИТА АЛЯСКИНСКИЙ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2850,7 +2824,7 @@
     {
       "id": "865323291",
       "name_lat": "Бэл Энд Файэр Мэджик Стар",
-      "name_ru": "",
+      "name_ru": "Бэл Энд Файэр Мэджик Стар",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -2859,7 +2833,7 @@
     {
       "id": "1736440462",
       "name_lat": "БЭАРМАЛС КЕЙ ТО ХАППИНЕСС",
-      "name_ru": "",
+      "name_ru": "БЭАРМАЛС КЕЙ ТО ХАППИНЕСС",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 8,
@@ -2875,10 +2849,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "125756674",
+      "id": "1803070033",
       "name_lat": "БЭЛЛИССИМО СТАР ТЭРИ ОФ ЛОВЕ",
-      "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "name_ru": "БЭЛЛИССИМО СТАР ТЭРИ ОФ ЛОВЕ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2893,10 +2867,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1506578556",
+      "id": "1524465491",
       "name_lat": "БЭТТА ИЗ СИБИРСКИХ АФИН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2904,7 +2878,7 @@
     {
       "id": "1926710836",
       "name_lat": "БЭНЕДИКШАН ФРОМ ОЛ СЭИНТС",
-      "name_ru": "",
+      "name_ru": "БЭНЕДИКШАН ФРОМ ОЛ СЭИНТС",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -2947,6 +2921,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "672714895",
+      "name_lat": "БЭЛЛА СВОН",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "61090609",
+      "name_lat": "БЭЛЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1962357295",
       "name_lat": "БЭТТИ",
       "name_ru": "",
@@ -2974,19 +2964,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "293268526",
+      "id": "1543602507",
       "name_lat": "БЭЛЛА ЧАО",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "575960145",
-      "name_lat": "БЭСТ ДЖЕК ЛАНА ДЕЛ РЕЙ",
-      "name_ru": "",
-      "breed": "JACK RUSSELL TERRIER",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3001,19 +2982,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "787352583",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ФАТА МОРГАНА",
+      "id": "575960145",
+      "name_lat": "БЭСТ ДЖЕК ЛАНА ДЕЛ РЕЙ",
       "name_ru": "",
-      "breed": "САЛЮКИ",
+      "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "13075232",
+      "name_lat": "БЭСТ МАРИСТАЙЛ ПАЛОМА ПАССИОН",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1536427132",
+      "name_lat": "БЭЙСИ ФЛАФИ КЛАУД",
+      "name_ru": "БЕЙСИ ФЛАФИ КЛАУД",
+      "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40087972",
+      "name_lat": "БЭЛ ЭНД ФАЙЭР ФАНТА",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР ФАНТА",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "241340569",
-      "name_lat": "БЭКС БРЕМЕН БИР",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "id": "985707342",
+      "name_lat": "БЭЛ ЭНД ФАЙЭР МАЛЕФИСЕНТА",
+      "name_ru": "БЭЛ ЭНД ФАЙЭР МАЛЕФИСЕНТА",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3021,7 +3028,7 @@
     {
       "id": "1747618821",
       "name_lat": "БЭСТАЙЛ ЭВЕРЕСТА",
-      "name_ru": "",
+      "name_ru": "БЭСТАЙЛ ЭВЕРЕСТА",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
@@ -3055,19 +3062,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1591286743",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ЧООСЕ МЕ",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "708714853",
+      "id": "1033245121",
       "name_lat": "БЭЙБА ЛОВЕ ИЗ ЛАРЦА ВИВОН",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "БЭЙБА ЛОВЕ ИЗ ЛАРЦА ВИВОН",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3075,7 +3073,7 @@
     {
       "id": "1208154167",
       "name_lat": "БЭНТЛИ ФЛАЙ СТАР",
-      "name_ru": "",
+      "name_ru": "БЭНТЛИ ФЛАЙ СТАР",
       "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -3084,7 +3082,7 @@
     {
       "id": "1026454601",
       "name_lat": "БЭТСИ&БОРИС ПАЛОМА ПИКАССО",
-      "name_ru": "",
+      "name_ru": "БЭТСИ&БОРИС ПАЛОМА ПИКАССО",
       "breed": "BASSET HOUND",
       "breed_en": "",
       "total_shows": 3,
@@ -3127,10 +3125,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1689175950",
+      "id": "681572010",
+      "name_lat": "БЭРРОУЗ БРЕЙВ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "516140725",
+      "name_lat": "БЭАРМАЛС ЭМИЛИО",
+      "name_ru": "БЭАРМАЛС ЭМИЛИО",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1615736994",
       "name_lat": "БЭК ТУ БЛЭКПОМ ОЛИВИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -3147,28 +3161,18 @@
     {
       "id": "1237665188",
       "name_lat": "БЭЛЭД ЭБАУТ ШЕП-ДОГ ЛЕКСУС",
-      "name_ru": "",
+      "name_ru": "БЭЛЭД ЭБАУТ ШЕП-ДОГ ЛЕКСУС",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1198661896",
-      "name_lat": "БЭСТ ВЕО ЛАЙ МИРОСЛАВ",
+      "id": "1677428177",
+      "name_lat": "БЭЙБИ ДИ С ЛИПЕЦКОЙ СЛОБОДЫ",
       "name_ru": "",
-      "breed": "БАССЕТ ХАУНД",
-      "breed_en": "",
+      "breed": "БИГЛЬ",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "120225334",
-      "name_lat": "БЭСТ ДЖЕК ПЕАРЛ ДЖОЙ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3181,19 +3185,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "554972564",
-      "name_lat": "БЭСТ ВИННЕР С ЧОЙЗ",
+      "id": "1818814391",
+      "name_lat": "Бэкки Линч",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "170636850",
+      "name_lat": "БЭСТ ВИННЕР С ЧОЙЗ",
+      "name_ru": "БЭСТ ВИННЕР С ЧОЙЗ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "906092734",
+      "id": "78887234",
       "name_lat": "БЭСТ ГРОМ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3280,15 +3292,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "174663575",
-      "name_lat": "БЭСТ ДЖЕК ХОЛЛИ БЕРРИ",
-      "name_ru": "",
-      "breed": "Джек рассел терьер",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1171592542",
       "name_lat": "БЭЛ ЭНД ФАЙЕР ЛЕГЕНДА",
       "name_ru": "",
@@ -3316,19 +3319,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1600483597",
-      "name_lat": "Бэл энд Файер Нарджина",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "661515538",
+      "id": "1860120211",
       "name_lat": "БЭСИКА ДЕ СТЕФАНИЯ",
       "name_ru": "",
-      "breed": "YORKSHIRE TERRIER ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ /",
+      "breed": "YORKSHIRE TERRIER ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3343,18 +3337,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "507790422",
-      "name_lat": "БЭК ТУ БЛЭКПОМ ЖУЭТ ЖОССЛИН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "243632004",
       "name_lat": "БЭЛЛЬ ДИАМАНТ ЭДЕЛЬВЕЙС КОСМОС",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ ДИАМАНТ ЭДЕЛЬВЕЙС КОСМОС",
       "breed": "BICHON FRISE",
       "breed_en": "",
       "total_shows": 2,
@@ -3370,6 +3355,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1285991281",
+      "name_lat": "БЭЛЬ МАРИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "172991208",
+      "name_lat": "БЭСТЕН ХЭППИ БРУНО БРЭЙН КУКИ",
+      "name_ru": "БЭСТЕН ХЭППИ БРУНО БРЭЙН КУКИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ (Оранж.Сер. И Др.)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1403901250",
       "name_lat": "БЭЛЬ ЭТУАЛЬ АРТИСТ",
       "name_ru": "",
@@ -3379,12 +3382,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "438268608",
-      "name_lat": "БЭНТЭН ДАЙМОНД ОФ МАЙ СОУЛ",
+      "id": "247774325",
+      "name_lat": "БЭРИН ЗЕ ЛАЙТ ОФ ЗЕ ЛОСТ СОУЛ",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3392,17 +3395,16 @@
       "name_lat": "БЭЛЛ ТАМБЕРЛИНА СУДЬБЫ С ТУМАННОГО АЛЬБИОНА",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "278760755",
-      "name_lat": "БЭРРИ ИЗ НОВОЙ СИБИРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "id": "438268608",
+      "name_lat": "БЭНТЭН ДАЙМОНД ОФ МАЙ СОУЛ",
+      "name_ru": "БЭНТЭН ДАЙМОНД ОФ МАЙ СОУЛ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3417,26 +3419,26 @@
     {
       "id": "1172037951",
       "name_lat": "БЭСТ МАРИСТАЙЛ БАКСИ",
-      "name_ru": "",
+      "name_ru": "БЭСТ МАРИСТАЙЛ БАКСИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "432874954",
+      "id": "133669787",
       "name_lat": "БЭЙ ЛИС ИЗ ТАЕЖНОГО УРМАНА",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "name_ru": "БЭЙ ЛИС ИЗ ТАЕЖНОГО УРМАНА",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1234092439",
-      "name_lat": "БЭДФОР ИЗ ДОЛИНЫ СОЛНЦА",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "id": "217769649",
+      "name_lat": "БЭЛЬС'ОРЕЙ ЗЕМФИРА",
+      "name_ru": "БЭЛЬС'ОРЕЙ ЗЕМФИРА",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3451,9 +3453,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "885509572",
+      "name_lat": "БЭЛЛА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "969112123",
       "name_lat": "БЭЛЛА ШЕДОУ КВИН",
-      "name_ru": "",
+      "name_ru": "БЭЛЛА ШЕДОУ КВИН",
       "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -3487,10 +3498,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "987401535",
+      "id": "1324706070",
       "name_lat": "БЭНТЛИ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3525,7 +3536,7 @@
     {
       "id": "1095026655",
       "name_lat": "БЭСТ ДЖЕК НАФ НАФ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК НАФ НАФ",
       "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
       "total_shows": 2,
@@ -3534,17 +3545,8 @@
     {
       "id": "790770684",
       "name_lat": "БЭНВЕЛ КЛОУДБЕРРИ",
-      "name_ru": "",
+      "name_ru": "БЭНВЕЛ КЛОУДБЕРРИ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "217769649",
-      "name_lat": "БЭЛЬС'ОРЕЙ ЗЕМФИРА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3559,10 +3561,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "984144967",
+      "id": "495353022",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3577,19 +3579,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1695697055",
+      "id": "1563213326",
       "name_lat": "БЭЙЛИС",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1728846184",
+      "id": "34313192",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3631,10 +3633,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1070031097",
+      "id": "1566250692",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3644,15 +3646,6 @@
       "name_lat": "БЭЛЛА",
       "name_ru": "",
       "breed": "GERMAN WIRE-HAIRED",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "945850547",
-      "name_lat": "БЭСТ",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3672,6 +3665,14 @@
       "name_ru": "",
       "breed": "BORDEAUX БУЛЬДОГ / BULLDOG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "175816557",
+      "name_lat": "БЭСТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3712,15 +3713,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "885509572",
-      "name_lat": "БЭЛЛА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1178475736",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
@@ -3730,19 +3722,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1674753258",
+      "id": "1381602150",
       "name_lat": "БЭЛА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "6834050",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ПОРУЧИК ГОЛИЦЫН ЭТ ЛИНКС",
-      "name_ru": "",
-      "breed": "RUSSIAN HUNTING",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3775,15 +3758,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1694837691",
-      "name_lat": "БЭЛЛИНИЯ БЫСТРОЕ ПЛАМЯ",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1975690231",
       "name_lat": "БЭСТ ПЕРФОРМЕНС ВАНЕССА МЕЙ",
       "name_ru": "",
@@ -3802,10 +3776,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "312693081",
+      "id": "161152336",
+      "name_lat": "БЭН ФОМ ШВАРЦЕНБЕРГ",
+      "name_ru": "",
+      "breed": "GERMAN WIRE-HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "406804910",
+      "name_lat": "БЭЛЛА СНЕЖНАЯ",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1095275253",
       "name_lat": "БЭСТ ОФ РОЙС ЛЮКСОРИ ПРАЙД",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ / GREAT",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ / GREAT",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3815,15 +3805,6 @@
       "name_lat": "БЭЛЬ ФРОМ КИРЛАИДА",
       "name_ru": "",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1677428177",
-      "name_lat": "БЭЙБИ ДИ С ЛИПЕЦКОЙ СЛОБОДЫ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3847,6 +3828,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1390193403",
+      "name_lat": "БЭСТ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "740787454",
       "name_lat": "БЭРХАРД СИЛЬВЕР ФРЭД",
       "name_ru": "",
@@ -3856,45 +3846,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1975397101",
+      "id": "1897546467",
       "name_lat": "БЭЛЛА БИЛИВ ИН МИ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1926279301",
-      "name_lat": "БЭСТО ТАЙТО ТЧУКИ ТУ ТАЙО",
+      "id": "1062789330",
+      "name_lat": "БЭСТ ДЖЕК ТЕЗОРО МИО",
       "name_ru": "",
-      "breed": "АКИТА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1871446567",
-      "name_lat": "БЭСТ САРГАС РУС АНТАРЕС",
+      "id": "1650136600",
+      "name_lat": "БЭЛЛА БЭЙТ",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "40087972",
-      "name_lat": "БЭЛ ЭНД ФАЙЭР ФАНТА",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "1910671405",
       "name_lat": "БЭНИХИМ МОММО",
-      "name_ru": "",
+      "name_ru": "БЭНИХИМ МОММО",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 4,
@@ -3946,19 +3927,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1650136600",
-      "name_lat": "БЭЛЛА БЭЙТ",
+      "id": "789124656",
+      "name_lat": "БЭЛЛА БЛОССОМ ФЕЛИСИТИ",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "985707342",
-      "name_lat": "БЭЛ ЭНД ФАЙЭР МАЛЕФИСЕНТА",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3975,17 +3947,8 @@
     {
       "id": "974478402",
       "name_lat": "БЭЛЬ ЭТУАЛЬ ЖОЗЕФИНА",
-      "name_ru": "",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ ЖОЗЕФИНА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "295167750",
-      "name_lat": "БЭЛЛА БЛОССОМ ФЕЛИСИТИ",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4009,6 +3972,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "417808305",
+      "name_lat": "БЭБИ-БУМЕР",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "637316121",
       "name_lat": "БЭХА",
       "name_ru": "",
@@ -4018,10 +3989,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "487840615",
+      "id": "1848518694",
       "name_lat": "БЭСТЕН ХЭППИ ЗЕВС",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4031,24 +4002,6 @@
       "name_lat": "БЭСТ ПОМ ДЕЙЛИ КОЛОР ВИННЕР",
       "name_ru": "",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "362263255",
-      "name_lat": "БЭЛЛА КИНГДОМ НАВЬОРД",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1581725948",
-      "name_lat": "Бэль Этуаль Гай Юлий Цезарь",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4072,18 +4025,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "3433449",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ АРАГОН",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "490114382",
       "name_lat": "БЭСТ ПЕРФОМЕНС ГАЛАКТИКУС",
-      "name_ru": "",
+      "name_ru": "БЭСТ ПЕРФОМЕНС ГАЛАКТИКУС",
       "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -4092,7 +4036,7 @@
     {
       "id": "1978964685",
       "name_lat": "БЭСТАЙЛ ЭВРЕДИКА",
-      "name_ru": "",
+      "name_ru": "БЭСТАЙЛ ЭВРЕДИКА",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -4144,10 +4088,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "393460526",
+      "id": "26615415",
       "name_lat": "БЭЛЛА СТАР",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4171,11 +4115,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "417808305",
-      "name_lat": "БЭБИ-БУМЕР",
+      "id": "338939975",
+      "name_lat": "БЭКЕНГЕМ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "STAFFORDSHIRE",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4184,15 +4127,6 @@
       "name_lat": "БЭЙЛИС",
       "name_ru": "",
       "breed": "FRISE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1285991281",
-      "name_lat": "БЭЛЬ МАРИ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4216,28 +4150,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "1812246062",
+      "name_lat": "БЭСТ ЭМАНГ ОЛЛ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "118992963",
       "name_lat": "БЭЛ ЭНД ФАЙЭР ВИКТОРИ",
       "name_ru": "",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "624658494",
-      "name_lat": "БЭСТ ЭМАНГ ОЛЛ",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1240151839",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ БЛАНЧЕФЛЕР",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4261,11 +4186,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "766549143",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ АВГУСТЕЙШАЯ ОСОБА",
+      "id": "1858531595",
+      "name_lat": "БЭЛЬС'ОРЕЙ ЖЕМЧУЖИНА",
       "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "902421757",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ МОРГАНА НУАР",
+      "name_ru": "",
+      "breed": "САЛЮКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "318254236",
+      "name_lat": "БЭАРМАЛС ЕНРИКЕ",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4288,19 +4228,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "547500008",
+      "id": "914259125",
       "name_lat": "БЭЛЬЕ'ОРЕЙ КИМБЕРЛИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1738995745",
-      "name_lat": "БЭНТЛИ ИЗ БЕЛОГО КРАЯ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4315,37 +4246,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "916597914",
+      "id": "762925963",
       "name_lat": "БЭСТ ПЕРФОРМЕНС ДИВИ НЬЮ СТАР",
       "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН ПУДЕЛЬ МИНИАТЮРНЫЙ (КЛАССИЧЕСКИЙ",
+      "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1118009093",
+      "id": "1938666634",
       "name_lat": "БЭБИ ГУД ЦУНАМИ II",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1474748438",
-      "name_lat": "БЭЛ ЭНД ФАЙЕР МАЛЕФИСЕНТА",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1508146284",
+      "id": "938513889",
       "name_lat": "Бэльс\"Орей Мирабелла",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4362,10 +4284,18 @@
     {
       "id": "1327196915",
       "name_lat": "БЭЙБИ АЙ-ТАДОР",
-      "name_ru": "",
+      "name_ru": "БЭЙБИ АЙ-ТАДОР",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "242165463",
+      "name_lat": "БЭМП",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4380,19 +4310,10 @@
     {
       "id": "1013228217",
       "name_lat": "БЭРРИМОР ХИЛЛС ВАЛЬКИРИЯ",
-      "name_ru": "",
+      "name_ru": "БЭРРИМОР ХИЛЛС ВАЛЬКИРИЯ",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1364916138",
-      "name_lat": "БЭСТ ДЖЕК ЕУЕ КАНДИ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4407,35 +4328,17 @@
     {
       "id": "746679683",
       "name_lat": "БЭСТ ДЖЕК СКАЙВАЛКЕР",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК СКАЙВАЛКЕР",
       "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1536427132",
-      "name_lat": "БЭЙСИ ФЛАФИ КЛАУД",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1530300889",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ВЕРМОНТ",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "SALUKI",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "734472147",
+      "id": "1920210780",
       "name_lat": "БЭН БАЛОВЕНЬ СУДЬБЫ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4450,10 +4353,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "403529802",
+      "id": "160033845",
       "name_lat": "БЭЛА",
       "name_ru": "",
-      "breed": "ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР)",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4495,9 +4398,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "711413395",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ НЬЮ ЛЕГЕНД",
+      "name_ru": "",
+      "breed": "САЛЮКИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1125685149",
       "name_lat": "БЭК ТУ БЛЭКПОМ ПРАДА",
-      "name_ru": "",
+      "name_ru": "БЭК ТУ БЛЭКПОМ ПРАДА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ЦВЕРГШПИЦ",
       "breed_en": "",
       "total_shows": 3,
@@ -4506,7 +4418,7 @@
     {
       "id": "1534338059",
       "name_lat": "БЭСТ ПОМ КОЛОР ОПИУМ ШОКО ЛАТТЕ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ПОМ КОЛОР ОПИУМ ШОКО ЛАТТЕ",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
       "total_shows": 3,
@@ -4522,10 +4434,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1941915493",
+      "id": "65441901",
       "name_lat": "БЭЛЛИ ГРЭЙ МАРБЛ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4540,6 +4452,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "294400484",
+      "name_lat": "БЭТСИ",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "608361173",
       "name_lat": "БЭЛЬ",
       "name_ru": "",
@@ -4549,11 +4469,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1188240405",
-      "name_lat": "БЭСТ ДЖЕК ИМАНИ",
+      "id": "1728846184",
+      "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK",
-      "breed_en": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4576,19 +4495,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1390193403",
-      "name_lat": "БЭСТ",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1681995184",
+      "id": "1061515483",
       "name_lat": "БЭБИ ГУД АЛЬФА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д.Ш.",
+      "breed": "РУССКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4603,30 +4513,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1660348872",
+      "id": "1898372220",
       "name_lat": "БЭККИ РОСКОШНАЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "БЭККИ РОСКОШНАЯ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1589659092",
-      "name_lat": "БЭСТ",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "489563887",
-      "name_lat": "БЭСТ",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -4639,10 +4531,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "662080048",
+      "id": "347357124",
       "name_lat": "БЭСТ КОЛОР ПРИМА ПЕРЛ ШОКО",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ / GERMAN SPITZ TOY (POMERANIAN) BLACK, BROWN",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ / GERMAN SPITZ TOY (POMERANIAN) BLACK, BROWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4657,18 +4549,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "247774325",
-      "name_lat": "БЭРИН ЗЕ ЛАЙТ ОФ ЗЕ ЛОСТ СОУЛ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "86615216",
       "name_lat": "БЭЛЛА БЕАТРИЧЕ ФОМ МАИР ХОФ",
-      "name_ru": "",
+      "name_ru": "БЭЛЛА БЕАТРИЧЕ ФОМ МАИР ХОФ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
@@ -4677,28 +4560,19 @@
     {
       "id": "1129985262",
       "name_lat": "БЭК ТУ БЛЕКПОМ ЖОЛИ ВАРИШОН",
-      "name_ru": "",
+      "name_ru": "БЭК ТУ БЛЕКПОМ ЖОЛИ ВАРИШОН",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1085528046",
+      "id": "1261266231",
       "name_lat": "БЭХА БЬЮТИ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "560475016",
-      "name_lat": "БЭТТИ",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4722,7 +4596,7 @@
     {
       "id": "286749147",
       "name_lat": "БЭСТ ДЖЕК ТРАЦУ ВХАЙТ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК ТРАЦУ ВХАЙТ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -4731,8 +4605,17 @@
     {
       "id": "403908590",
       "name_lat": "БЭЛЛЬ ДЕ ВИЛЛЬ МЕРИБЕЛЬ",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ ДЕ ВИЛЛЬ МЕРИБЕЛЬ",
       "breed": "COCKER ИТАЛЬЯНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "269677313",
+      "name_lat": "БЭСТАЙЛ ИВЕТТА",
+      "name_ru": "БЭСТАЙЛ ИВЕТТА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4783,30 +4666,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "331909302",
-      "name_lat": "БЭСТАЙЛ ИВЕТТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) / GERMAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1341700497",
       "name_lat": "БЭДЭР БЫСТРЫЙ",
       "name_ru": "",
       "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "172991208",
-      "name_lat": "БЭСТЕН ХЭППИ БРУНО БРЭЙН КУКИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ (Оранж.Сер. И Др.)",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4819,12 +4684,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "616130152",
-      "name_lat": "Бэл Энд Файер Ниалл",
+      "id": "270756265",
+      "name_lat": "БЭСТ",
       "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -4855,15 +4719,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1104082852",
-      "name_lat": "БЭСТ ПОМ КОЛОР ТИРАМИСУ СУРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "187496591",
       "name_lat": "БЭЛЛЬ СПАНИЕЛЬ ЗЕНА",
       "name_ru": "",
@@ -4875,19 +4730,10 @@
     {
       "id": "642157676",
       "name_lat": "БЭЛЬ ЭТУАЛЬ ШЕЙП ОФ МАЙ ХАТ",
-      "name_ru": "",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ ШЕЙП ОФ МАЙ ХАТ",
       "breed": "САЛЮКИ",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "124080540",
-      "name_lat": "БЭСТ ДЖЕК ТОНИ СТАРК",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -4900,10 +4746,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1617415738",
+      "id": "1660498303",
       "name_lat": "БЭКХАМ БРЕД ФОРД",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -4920,7 +4766,7 @@
     {
       "id": "72438745",
       "name_lat": "БЭЙБИ МИЛКИ ДОЛЛ",
-      "name_ru": "",
+      "name_ru": "БЭЙБИ МИЛКИ ДОЛЛ",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
@@ -4929,7 +4775,7 @@
     {
       "id": "1621522932",
       "name_lat": "БЭСТ ДЖЕК КИСС МИ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК КИСС МИ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -4938,7 +4784,7 @@
     {
       "id": "1415280455",
       "name_lat": "БЭСТА ЗОЛОТОЕ СОЛНЦЕ",
-      "name_ru": "",
+      "name_ru": "БЭСТА ЗОЛОТОЕ СОЛНЦЕ",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 5,
@@ -4947,7 +4793,7 @@
     {
       "id": "1502914340",
       "name_lat": "БЭРТИГЕ ФРОЙДЭ ТЕДЕРИК ГЕШЕНК ШИКЗАЛЬС",
-      "name_ru": "",
+      "name_ru": "БЭРТИГЕ ФРОЙДЭ ТЕДЕРИК ГЕШЕНК ШИКЗАЛЬС",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 5,
@@ -4972,19 +4818,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "68149604",
+      "id": "514777904",
       "name_lat": "БЭСТ ДЕЛЬ МАИР ЛЕГЕНДА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1537059210",
+      "id": "740534948",
       "name_lat": "БЭЛЬ КРАСОТА АЛТАЯ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5001,26 +4847,34 @@
     {
       "id": "1267993809",
       "name_lat": "БЭССИ БРАЙТ СОУЛ",
-      "name_ru": "",
+      "name_ru": "БЭССИ БРАЙТ СОУЛ",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1606615314",
+      "id": "1109343372",
+      "name_lat": "БЭСТ ЛЕДИ АДАЛИЯ ИЗ БЕЛОГО ЯРА",
+      "name_ru": "БЭСТ ЛЕДИ АДАЛИЯ ИЗ БЕЛОГО ЯРА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1278076137",
       "name_lat": "БЭНТЛИ - ЛАМБОРДЖИНИ",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ (КУРЦХААР)",
+      "name_ru": "БЭНТЛИ - ЛАМБОРДЖИНИ",
+      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "276206838",
+      "id": "515102703",
       "name_lat": "БЭН ТВИСТЕР",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5030,6 +4884,15 @@
       "name_lat": "БЭН РИДЖ",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1200285984",
+      "name_lat": "Б ЭЛЬКА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5089,6 +4952,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "189894083",
+      "name_lat": "БЭРРИМОР ХИЛЛС ЕВЛАМПИЯ",
+      "name_ru": "БЭРРИМОР ХИЛЛС ЕВЛАМПИЯ",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "144701319",
       "name_lat": "БЭЛ ЭНД ФАЙЭР НИАЛ",
       "name_ru": "",
@@ -5116,10 +4988,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "249690665",
+      "id": "1897259188",
       "name_lat": "БЭНДЖАМИН РЕСПЕКТ ЧИФ",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5134,15 +5006,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1459398506",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ЧАРМ ТАЛЕ",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "259595149",
       "name_lat": "БЭСТЕН ХЕППИ ШЕЛДИ БОСС",
       "name_ru": "",
@@ -5152,10 +5015,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "232335597",
-      "name_lat": "БЭСТ ДЖЕК ЭЛЕКТРА",
+      "id": "591124668",
+      "name_lat": "БЭХА БРАЙТ ФЛЕШ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5163,17 +5026,8 @@
     {
       "id": "1347547589",
       "name_lat": "БЭСТ ДЖЕК МАКАРООН",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК МАКАРООН",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1880240402",
-      "name_lat": "БЭТИС ЭЛИЗАБЭТ ДЕ ЛЯ МУР",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5181,7 +5035,7 @@
     {
       "id": "1506599845",
       "name_lat": "БЭССИ АБСОЛЮТ МАРВЕЛ",
-      "name_ru": "",
+      "name_ru": "БЭССИ АБСОЛЮТ МАРВЕЛ",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -5190,44 +5044,43 @@
     {
       "id": "1493144102",
       "name_lat": "БЭЛЬ ПРЕКРАСНАЯ ПРИНЦЕССА",
-      "name_ru": "",
+      "name_ru": "БЭЛЬ ПРЕКРАСНАЯ ПРИНЦЕССА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "189894083",
-      "name_lat": "БЭРРИМОР ХИЛЛС ЕВЛАМПИЯ",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
+      "id": "340673079",
+      "name_lat": "БЭКХЕМ ЛЮПУС АЛЬБА",
+      "name_ru": "БЭКХЕМ ЛЮПУС АЛЬБА",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "1446446372",
       "name_lat": "БЭЛ ЭНД ФАЙЕР ЛОГАН",
-      "name_ru": "",
+      "name_ru": "БЭЛ ЭНД ФАЙЕР ЛОГАН",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "380808972",
+      "id": "1294079864",
       "name_lat": "БЭД БОЙ - ГУД МЭН",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "БЭД БОЙ - ГУД МЭН",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1265111881",
+      "id": "255660893",
       "name_lat": "БЭЛЛА ЗВЕЗДА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "БЭЛЛА ЗВЕЗДА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5235,9 +5088,17 @@
     {
       "id": "887548209",
       "name_lat": "БЭСТ И Я ЖРИЦА",
-      "name_ru": "",
+      "name_ru": "БЭСТ И Я ЖРИЦА",
       "breed": "ДЖЕК ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "495456184",
+      "name_lat": "БЭТМЕН ФЕЛИСИЛАЙН",
+      "name_ru": "БЭТМЕН ФЕЛИСИЛАЙН",
+      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -5255,6 +5116,15 @@
       "name_lat": "БЭТТИ",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "495943661",
+      "name_lat": "БЭЛЛА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5296,6 +5166,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1446083966",
+      "name_lat": "БЭЛЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1420694433",
       "name_lat": "БЭЛЛИ БЛАНШ",
       "name_ru": "",
@@ -5332,10 +5210,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1085373769",
+      "id": "938406868",
       "name_lat": "БЭБИ ДОЛЛ/BABI DOLL",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5386,20 +5264,55 @@
       "competition_dog_id": null
     },
     {
+      "id": "1467792883",
+      "name_lat": "БЭЛЛА",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1372450443",
+      "name_lat": "БЭРРИМОР ХИЛЛЕ БЕАТРИЧЕ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "386930732",
+      "name_lat": "Бэкхам из Долины Солнца",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1064954695",
+      "name_lat": "БЭСТАЙЛ ЭВРИДИКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1625212432",
+      "name_lat": "БЭСТАЙЛ ХЭНЕССИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1819068456",
       "name_lat": "БЭЯ ПУРА ФРОМ АРАГОН",
       "name_ru": "",
       "breed": "ПИРЕНЕЙСКИЙ МАСТИФ",
       "breed_en": "PYRENEAN MASTIFF",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1710375104",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ РИВЕНДЕЛЛ",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "PETIT BRABANCON",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5413,19 +5326,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "568801768",
+      "id": "1451097997",
       "name_lat": "БЭТТИ КРИСТАЛЛ С БЕРЕГА ТУРЫ",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1372450443",
-      "name_lat": "БЭРРИМОР ХИЛЛЕ БЕАТРИЧЕ",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5476,15 +5380,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "537947035",
-      "name_lat": "БЭСТ ДЖЕК ТЕЗОРО МИО",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "147264303",
       "name_lat": "БЭЛЬ БУЛЬ ДЕ МАРИ ОДРИ II",
       "name_ru": "",
@@ -5503,28 +5398,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "90719447",
+      "id": "242184470",
       "name_lat": "БЭЛЛА КВИН РИНГ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "428137565",
-      "name_lat": "БЭСТ ДЖЭК ПОР ФАВОР",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1554812311",
-      "name_lat": "БЭТА БАЛКАН КЫЗЫ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5539,10 +5416,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "937695054",
+      "id": "1130054295",
       "name_lat": "БЭТТИ ЭЛИЗАБЕТ АРДЕН",
       "name_ru": "",
-      "breed": "И ДРУГИЕ ОКРАСЫ /",
+      "breed": "И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5584,10 +5461,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "87233161",
+      "id": "195401492",
       "name_lat": "БЭАРМАЛС МИНИ ВИ",
       "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5615,15 +5492,6 @@
       "name_lat": "БЭБИ ХАРТ ЛЕЯ",
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "386930732",
-      "name_lat": "Бэкхам из Долины Солнца",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5710,38 +5578,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1395979299",
-      "name_lat": "БЭСТАЙЛ ЭВРИДИКА",
+      "id": "1442705709",
+      "name_lat": "БЭССИ СТЭССИ ОТ ДЯДИ СЭМА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "711413395",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ НЬЮ ЛЕГЕНД",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "591124668",
-      "name_lat": "БЭХА БРАЙТ ФЛЕШ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1119939540",
-      "name_lat": "БЭСТАЙЛ ХЭНЕССИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5757,17 +5597,17 @@
     {
       "id": "1288902341",
       "name_lat": "БЭСТ ГЕРЛ ГВЕНИВЬЕРА",
-      "name_ru": "",
+      "name_ru": "БЭСТ ГЕРЛ ГВЕНИВЬЕРА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1669812365",
+      "id": "1569874160",
       "name_lat": "БЭНТЛИ ДИАСТАР",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "БЭНТЛИ ДИАСТАР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5775,7 +5615,7 @@
     {
       "id": "514422049",
       "name_lat": "БЭБИ ШАРМ РЕДЖИНА",
-      "name_ru": "",
+      "name_ru": "БЭБИ ШАРМ РЕДЖИНА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -5784,16 +5624,57 @@
     {
       "id": "1814569024",
       "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИ ДЖИММИ",
-      "name_ru": "",
+      "name_ru": "БЭЛЬ БУЛЬ ДЭ МАРИ ДЖИММИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "1224201507",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ КАЗАНОВА",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ КАЗАНОВА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1894429016",
+      "name_lat": "БЭТТИ КЛЕО ТИГРИНА",
+      "name_ru": "БЭТТИ КЛЕО ТИГРИНА",
+      "breed": "ЧИХУАХУА Д.Ш.",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "982063609",
+      "name_lat": "БЭСТ И Я ШЕЙЛА",
+      "name_ru": "БЭСТ И Я ШЕЙЛА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "220378745",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ ВЕНДЕТТА",
+      "name_ru": "БЭЛЬ ЭТУАЛЬ ВЕНДЕТТА",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1557339075",
+      "name_lat": "БЭСТЕН ХЭППИ ДОЛЬКА ЗОЛОТАЯ",
+      "name_ru": "БЭСТЕН ХЭППИ ДОЛЬКА ЗОЛОТАЯ",
+      "breed": "НЕМЕЦКИЙ ПОМЕРАНСКИЙ ШПИЦ (ЦВЕРГШПИЦ) РЫЖИЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1745882228",
       "name_lat": "БЭЛЬ САРА ВАЙТ",
-      "name_ru": "",
+      "name_ru": "БЭЛЬ САРА ВАЙТ",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 2,
@@ -5802,7 +5683,7 @@
     {
       "id": "543164845",
       "name_lat": "БЭСТЕН ХЭППИ ЯЛАКАРИ МАРКИЗА АНГЕЛОВ",
-      "name_ru": "",
+      "name_ru": "БЭСТЕН ХЭППИ ЯЛАКАРИ МАРКИЗА АНГЕЛОВ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -5811,7 +5692,7 @@
     {
       "id": "898740018",
       "name_lat": "БЭЙЛА ПРЕКРАСНАЯ",
-      "name_ru": "",
+      "name_ru": "БЭЙЛА ПРЕКРАСНАЯ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -5820,7 +5701,7 @@
     {
       "id": "595959789",
       "name_lat": "БЭЛЛА БЕЛЬКАНТО ИЗ ЧИСТОГО ЗОЛОТА",
-      "name_ru": "",
+      "name_ru": "БЭЛЛА БЕЛЬКАНТО ИЗ ЧИСТОГО ЗОЛОТА",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -5829,7 +5710,7 @@
     {
       "id": "954890866",
       "name_lat": "БЭСТАИЛ ЛОЛИТА ЩИ ЭНДЖЕЛ",
-      "name_ru": "",
+      "name_ru": "БЭСТАИЛ ЛОЛИТА ЩИ ЭНДЖЕЛ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -5838,7 +5719,7 @@
     {
       "id": "156782440",
       "name_lat": "БЭЛЛА СНОУ КУИН",
-      "name_ru": "",
+      "name_ru": "БЭЛЛА СНОУ КУИН",
       "breed": "МАЛЬТЕЗЕПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
@@ -5847,7 +5728,7 @@
     {
       "id": "1693312583",
       "name_lat": "БЭТТИ СВИТ БЕЙГЛ",
-      "name_ru": "",
+      "name_ru": "БЭТТИ СВИТ БЕЙГЛ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
@@ -5856,7 +5737,7 @@
     {
       "id": "1246441181",
       "name_lat": "БЭСТЕН ХЭППИ ШЕЛДИ БОСС",
-      "name_ru": "",
+      "name_ru": "БЭСТЕН ХЭППИ ШЕЛДИ БОСС",
       "breed": "ПОМЕРАНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
@@ -5865,7 +5746,7 @@
     {
       "id": "1708389697",
       "name_lat": "БЭСТ ДЖЕК РЭД ЛИНЕ ЛАВАНДОВАЯ",
-      "name_ru": "",
+      "name_ru": "БЭСТ ДЖЕК РЭД ЛИНЕ ЛАВАНДОВАЯ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -5874,7 +5755,7 @@
     {
       "id": "458727611",
       "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИ ОРУЭЛЛ МАИЛУ",
-      "name_ru": "",
+      "name_ru": "БЭЛЬ БУЛЬ ДЭ МАРИ ОРУЭЛЛ МАИЛУ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -5883,9 +5764,17 @@
     {
       "id": "83629255",
       "name_lat": "БЭЛЛЬ ДИАМАНТ КЕССИ",
-      "name_ru": "",
+      "name_ru": "БЭЛЛЬ ДИАМАНТ КЕССИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1228540026",
+      "name_lat": "БЭРХИЛЬДА ЦИЦЕРОНА ЭСКОБАРО",
+      "name_ru": "БЭРХИЛЬДА ЦИЦЕРОНА ЭСКОБАРО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5926,10 +5815,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "184205709",
+      "id": "929836995",
       "name_lat": "БЭСТА ТРИША",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5944,10 +5833,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1100130388",
+      "id": "107943681",
       "name_lat": "БЭЛА",
       "name_ru": "",
-      "breed": "ЭСТОНСКАЯ ГОНЧАЯ /",
+      "breed": "ЭСТОНСКАЯ ГОНЧАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5962,10 +5851,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "246657462",
+      "id": "312016559",
       "name_lat": "БЭСТ БОЙ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5980,10 +5869,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "114128864",
+      "id": "1142180021",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6025,15 +5914,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "216359502",
-      "name_lat": "БЭЛЛА",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "495441206",
       "name_lat": "Бэбби",
       "name_ru": "",
@@ -6043,10 +5923,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "912594731",
+      "id": "1006414370",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6070,10 +5950,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "735696584",
+      "id": "179783033",
       "name_lat": "БЭЛЬ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6142,28 +6022,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1361533200",
+      "id": "147361548",
       "name_lat": "БЭСТ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1540243575",
-      "name_lat": "БЭСТ",
-      "name_ru": "",
-      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "114757249",
+      "id": "28178677",
       "name_lat": "БЭЙЛИС",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6174,6 +6045,30 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1266691092",
+      "name_lat": "БЭККИ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1786307239",
+      "name_lat": "БЭЛЛА БЬЮТИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "49940173",
+      "name_lat": "БЭЛЬ",
+      "name_ru": "",
+      "breed": "АКИТА /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6214,10 +6109,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "145811212",
+      "id": "34628329",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН /",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6250,11 +6145,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1518563626",
+      "id": "142033275",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "332938177",
+      "name_lat": "БЭРХЭ",
+      "name_ru": "",
+      "breed": "СОБАКА) / HOTOSHO (BURYATSKAYA SOBAKA)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6295,11 +6198,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1818814391",
-      "name_lat": "Бэкки Линч",
+      "id": "236524338",
+      "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "ЯПОНСКИЙ ХИН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6349,10 +6251,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922182758",
+      "id": "624838056",
       "name_lat": "БЭЙБИ ДИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6484,10 +6386,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "527350112",
+      "id": "568788270",
       "name_lat": "БЭБИ БУМЕР",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6529,10 +6431,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "745475240",
+      "id": "447426326",
       "name_lat": "БЭРОНИ",
       "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6655,15 +6557,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1971005341",
-      "name_lat": "БЭЛЛА",
-      "name_ru": "",
-      "breed": "СТАНДАРТ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1204430079",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
@@ -6727,11 +6620,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1467792883",
+      "id": "742684622",
+      "name_lat": "БЭРТИ ДАЯ",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1185610872",
       "name_lat": "БЭЛЛА",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "714386354",
+      "name_lat": "Бэлла",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6749,6 +6657,147 @@
       "name_lat": "БЭХА",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "59978574",
+      "name_lat": "БЭРРИ СЛАЙ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1252491869",
+      "name_lat": "Бэлла",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1491319627",
+      "name_lat": "БЭТТИ БОГИНЯ БЕЗУМНАЯ ЛЮБОВЬ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1225708034",
+      "name_lat": "БЭЛЛА ИЗ ЗВЁЗДНОГО РАЯ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "798136139",
+      "name_lat": "БЭСТ БОСС ЖОЗЕФ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1201690136",
+      "name_lat": "БЭРРИМОР ХИЛЛС ГЕНРИ ПЕРВЫЙ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1308805777",
+      "name_lat": "БЭД БОЙ ИЗ СОЗВЕЗДИЯ БЛИЗНЕЦОВ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1589889741",
+      "name_lat": "БЭРРИМОР ХИЛЛС ГУЧЧИ РАШ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1449080851",
+      "name_lat": "БЭРРИМОР ХИЛЛС ВЛАСТИЛИНА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1694908243",
+      "name_lat": "БЭСТ ПАРТНЕР КУБА ТУРКИНО",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1513461965",
+      "name_lat": "БЭЙЛИС ЛУННАЯ ЗАБАВА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1046320994",
+      "name_lat": "БЭЛЛИ ЭЛЬ ФАЙ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "571352003",
+      "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИЯ ЯЛИССА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "39616981",
+      "name_lat": "БЭСТЕН ХЭППИ ШЕР АНТОНИО",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "578928029",
+      "name_lat": "БЭСТАЙЛ ЦАРИЦА САВСКАЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1160937825",
+      "name_lat": "БЭСТАЙЛ ЦИВИЛЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6826,37 +6875,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1557898657",
+      "id": "566050353",
       "name_lat": "БЭСТ И Я ФЕОДОРА",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1074104364",
-      "name_lat": "БЭРОН БАРБАРОССА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1236915116",
+      "id": "325791625",
       "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИ СТЕЛЛА II",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1876441690",
-      "name_lat": "БЭЙЛИС ДЭ РИВО БИАНКО",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6889,28 +6920,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1618361665",
-      "name_lat": "БЭРФЛУС БОРА- БОРА",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1703176365",
+      "id": "827936016",
       "name_lat": "БЭСТ САРГАС ЧЕЗАРИНА",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "457766197",
+      "id": "74843336",
       "name_lat": "БЭСТ САРГАС ЧЕНЗАРА",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6934,19 +6956,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "540339134",
+      "id": "241919090",
       "name_lat": "БЭРТИГЕ ФРОЙДЭ ЕЛИКА ВИЛЛИНГ",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "533777279",
+      "id": "685827950",
       "name_lat": "БЭСТ ДЖЕК ИНБЕРГ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7006,10 +7028,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "121805777",
+      "id": "1814354540",
       "name_lat": "БЭЙСИ ЛОРА ХЬЮ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7028,15 +7050,6 @@
       "name_lat": "БЭЙСИ ЛЭЙСИ ЛУ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1225406415",
-      "name_lat": "БЭТТИ БОГИНЯ БЕЗУМНАЯ ЛЮБОВЬ",
-      "name_ru": "",
-      "breed": "BULLDOG БУЛЬДОГ /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7096,15 +7109,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "385228862",
-      "name_lat": "БЭСТ ДЖЕК ЛЕ ШОКОЛАД НОИР",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "568449339",
       "name_lat": "БЭК ТУ ЗЕ ФЬЮЧЕ ИЗ",
       "name_ru": "",
@@ -7123,10 +7127,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1902043435",
+      "id": "432421332",
       "name_lat": "БЭЙБА ШАРМ ОНЛИ Ю ИЗ ЭВЕЛЬГРИН (Г.Ш)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7141,10 +7145,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1867918693",
+      "id": "1811798776",
       "name_lat": "БЭНТАЙР'C ВАЙТ ОТ ПАНДЫ ШАРМ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7213,10 +7217,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "160447603",
+      "id": "176895706",
       "name_lat": "БЭСТ САРГАС ЧИОЛО",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7231,10 +7235,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1464617584",
+      "id": "1966354245",
       "name_lat": "БЭБИ КРОШКА МИЛИССИЯ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7244,15 +7248,6 @@
       "name_lat": "БЭСТ ДЖЕК ЛИФТ-ОФ",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1779329196",
-      "name_lat": "БЭЛЛА ИЗ ЗВЁЗДНОГО РАЯ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7276,10 +7271,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1516440746",
+      "id": "1467722372",
       "name_lat": "БЭЙБА АНГЕЛЬСКИ КРАСИВА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ /",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7303,15 +7298,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1938809445",
-      "name_lat": "БЭРФЛУС БОНИТА БРАВА",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "192701980",
       "name_lat": "БЭСТ РЕВАРД ПРЕТТИ ВУМАН",
       "name_ru": "",
@@ -7330,19 +7316,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1982168543",
-      "name_lat": "БЭСТ БОСС ЖОЗЕФ",
-      "name_ru": "",
-      "breed": "ШИППЕРКЕ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "256949611",
+      "id": "111499602",
       "name_lat": "БЭРИ АРЧИБАЛЬД",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7361,24 +7338,6 @@
       "name_lat": "БЭЙБА ГОДЖЕС",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "630908542",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ИЛЛЮЗИЯ",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1305456877",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ВИРДЖИНИЯ",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7474,10 +7433,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1021651561",
+      "id": "1848734452",
       "name_lat": "БЭТСИ ЭТЕРНАЛ ЛАВ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7532,24 +7491,6 @@
       "name_lat": "БЭСТ МАРИСТАЙЛ ШОННИ ЛАЙТ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "434445471",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ИДЕАЛ",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА / WHITE SWISS",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "912577996",
-      "name_lat": "БЭЛЬ СТАЙЛ ЛАЙФ ИЗ ДОМА ФИРАН'С",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7645,10 +7586,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "704085085",
+      "id": "61560842",
       "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИ ЧИНЗАН",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ МИНИАТЮРНЫЙ ШПИЦ",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7667,15 +7608,6 @@
       "name_lat": "БЭБИ ГУД СИЛЬВА",
       "name_ru": "",
       "breed": "RUSSIAN TOY LONG-",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1201690136",
-      "name_lat": "БЭРРИМОР ХИЛЛС ГЕНРИ ПЕРВЫЙ",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7708,19 +7640,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1711490299",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ РОК-Н- РОЛЛ",
+      "id": "1556113643",
+      "name_lat": "БЭЛЬ ЭТУАЛЬ РОК-Н-РОЛЛ",
       "name_ru": "",
       "breed": "ПУДЕЛЬ БОЛЬШОЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE GRAND GREY, APRICOT, RED FAWN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1121339149",
-      "name_lat": "БЭКХЕМ ЛЮПУС АЛЬБА",
-      "name_ru": "",
-      "breed": "SAMOYED",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7753,10 +7676,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "680428296",
+      "id": "829664213",
       "name_lat": "БЭСТ ОФ ЗЕ БЭСТ ИЗ ДОМА АНГЕЛИНЫ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7789,10 +7712,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "61196214",
+      "id": "202874031",
       "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИ ИМПЕРАТОР",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7852,15 +7775,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1224201507",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ КАЗАНОВА",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1850831792",
       "name_lat": "БЭЙЛИ ЛОСК МАШЭЛИ ОТ ДИАЛЬ",
       "name_ru": "",
@@ -7870,11 +7784,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "945877658",
+      "id": "1188576859",
+      "name_lat": "БЭЛ ЭНД ФАЙЭР ИНФАНТА",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1196670315",
       "name_lat": "БЭТТИ ЛАСКОВАЯ ДОЧЬ ОТ СТРАННИКА ТИБЕТА",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "767349813",
+      "name_lat": "БЭГИ ИЗ СОЧИ СИТИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7906,19 +7836,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "220378745",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ВЕНДЕТТА",
+      "id": "49989467",
+      "name_lat": ",БЭСТЕН ХЭППИ ОРХИДЕЯ",
       "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1019528473",
-      "name_lat": "БЭСТ И Я ШЕЙЛА",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7928,15 +7849,6 @@
       "name_lat": "БЭЛЬ ЛИ-ЛИ ДЕ ПАРИ",
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1894429016",
-      "name_lat": "БЭТТИ КЛЕО ТИГРИНА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА Д.Ш.",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7965,6 +7877,14 @@
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1266799596",
+      "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИ ДОЛЛИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8041,11 +7961,43 @@
       "competition_dog_id": null
     },
     {
+      "id": "502089340",
+      "name_lat": "БЭТТИ АНДЖЕЛ АЙЗ",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1070908633",
       "name_lat": "БЭССИ СЭВЕН ХЭВЕН",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29654778",
+      "name_lat": "БЭКХАМ В ЗОЛОТОМ ОШЕЙНИКЕ",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "137462594",
+      "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИ ДЕВИЛЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1718057278",
+      "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИ ДАРСИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8104,29 +8056,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "693854423",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ШЕРХАН",
+      "id": "786128540",
+      "name_lat": "БЭНТЛИ ДЛЯ СТОЛИЦЫ РОССИИ",
       "name_ru": "",
-      "breed": "Белая швейцарская овчарка",
-      "breed_en": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1411758705",
-      "name_lat": "БЭРРИМОР ХИЛЛС ГУЧЧИ РАШ",
+      "id": "1791340175",
+      "name_lat": "БЭЛЛА КРАСА УРАЛА",
       "name_ru": "",
-      "breed": "BULLDOG БУЛЬДОГ /",
-      "breed_en": "",
+      "breed": "ST. BERNARD",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1457900663",
-      "name_lat": "БЭРРИМОР ХИЛЛС ВЛАСТИЛИНА",
+      "id": "1958800145",
+      "name_lat": "БЭК ТУ БЛЭКПОМ БАЛУ",
       "name_ru": "",
-      "breed": "BULLDOG БУЛЬДОГ /",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8136,6 +8085,14 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА Д/Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "544546087",
+      "name_lat": "БЭК ТУ БЛЭКПОМ БЕЙЛИС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8167,10 +8124,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1035567417",
+      "id": "841632794",
       "name_lat": "БЭСТЕН ХЭППИ МИШЕЛЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8275,19 +8232,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "570051595",
+      "id": "1670785282",
       "name_lat": "БЭЛОВИД БАЙ ОЛЛ ФОР ФРОЛАНД",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1989930110",
+      "id": "1427153671",
       "name_lat": "БЭТА ОРИОНИС БЛЮ СТЭЛЛА",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8302,19 +8259,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1859979310",
+      "id": "1345095280",
       "name_lat": "БЭСТ ДЕЛЬ МАИР ЛАМБОРДЖИНИ",
       "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР НЕМЕЦКИЙ ДОГ (ЧЕРН И",
+      "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1141319451",
+      "id": "1690621359",
       "name_lat": "БЭБИ БЬЮТИ ЧИРО",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8347,28 +8304,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1411940261",
+      "id": "515754238",
       "name_lat": "БЭСТЕН ХЭППИ ЛАУРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "434964073",
+      "id": "131069397",
       "name_lat": "БЭЛЬ ЭТУАЛЬ ВЕЛИКАЯ БАННИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1103231603",
+      "id": "977015120",
       "name_lat": "БЭТТИ ФОМ ШВАРЦЕНБЕРГ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8464,24 +8421,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "177180435",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ МОРОШКА",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА / WHITE SWISS",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "239869225",
-      "name_lat": "БЭСТА НОРД ИЗ НЕВСКОГО ДЕСАНТА",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1046796582",
       "name_lat": "БЭТСИ МАЙ ПРИНЦЕСС",
       "name_ru": "",
@@ -8509,19 +8448,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "227692782",
+      "id": "9452498",
       "name_lat": "БЭСТ ДЕЛЬ МАИР ЛИБЕРТИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1476368829",
+      "id": "1602600385",
       "name_lat": "БЭСТ ДЕЛЬ МАИР ЛАВИНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8554,19 +8493,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1071631495",
-      "name_lat": "БЭСТ ПАРТНЕР КУБА ТУРКИНО",
-      "name_ru": "",
-      "breed": "ДЛИННОШЁРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "231723924",
+      "id": "1493831369",
       "name_lat": "БЭЛЬС'ОРЕЙ НЕСКВИК",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8761,19 +8691,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1614944501",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ АЛТЕР ЕГО",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1132905837",
+      "id": "393737413",
       "name_lat": "Бэйрин Нуалла",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8797,10 +8718,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "974507732",
+      "id": "1925027360",
       "name_lat": "БЭК ТУ БЛЭКПОМ ЛУНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8815,19 +8736,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "313399449",
-      "name_lat": "БЭЙЛИС ЛУННАЯ ЗАБАВА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "759388075",
+      "id": "1958441243",
       "name_lat": "БЭСТ БЛАНШ ФОР АСА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8846,15 +8758,6 @@
       "name_lat": "БЭСТ ДЖЕК ХИЗЕР",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1330634769",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ДЖЕМ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8887,64 +8790,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1977033294",
-      "name_lat": "БЭЛЛИ ЭЛЬ ФАЙ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "550516199",
-      "name_lat": "БЭЛЬ БУЛЬ ДЭ МАРИЯ ЯЛИССА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "126361948",
       "name_lat": "БЭК ТУ БЛЭКПОМ ПОРШ",
       "name_ru": "",
       "breed": "ЦВЕРГШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "265026300",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ВЕРСАЛЬ",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1502701377",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ МИСТИК АТ АЛАНСАРИ",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "727570593",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ НОРТЕН ЛАЙТС",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "295653473",
-      "name_lat": "БЭСТЕН ХЭППИ ШЕР АНТОНИО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8977,19 +8826,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1489651438",
-      "name_lat": "БЭЛ ЭНД ФАЙЕР ТИФФАНИ",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1224026101",
+      "id": "1483141112",
       "name_lat": "БЭЛЛА ИЗ ГРАДА ЛИПЕЦКА",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9004,29 +8844,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1109343372",
-      "name_lat": "БЭСТ ЛЕДИ АДАЛИЯ ИЗ БЕЛОГО ЯРА",
+      "id": "648177105",
+      "name_lat": "БЭАРМАЛС ЖУГАЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "МАЛАМУТ /",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1435911433",
-      "name_lat": "БЭСТАЙЛ ЦАРИЦА САВСКАЯ",
+      "id": "572482389",
+      "name_lat": "БЭЛЬ ДЭ БЛАНШ БЬЯНКО",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "БИШОН ФРИЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1038317269",
-      "name_lat": "БЭСТАЙЛ ЦИВИЛЬ",
+      "id": "1136936629",
+      "name_lat": "БЭЛЛА ЧЕРНАЯ ЖЕМЧУЖИНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -9049,28 +8886,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1202922075",
-      "name_lat": "БЭЛЬ ЭТУАЛЬ ПАНДА ЭЛЕГАНЗА",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "548724753",
       "name_lat": "БЭЛЬ ЭТУАЛЬ ПАРАДОКС",
       "name_ru": "",
       "breed": "САЛЮКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1741818697",
-      "name_lat": "Бэнчори Боло Легендарный",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

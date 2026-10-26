@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "VN",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "416151324",
+      "name_lat": "V'NARGIS OT V.K. KANGAL TURK KAN",
+      "name_ru": "",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "breed_en": "KANGAL SHEPHERD DOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "700863979",
+      "name_lat": "VNUKOVSKOGO",
+      "name_ru": "",
+      "breed": "АППЕНЦЕЛЛЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1764959178",
+      "name_lat": "VNUCHKA DATSKOGO KOROLYA IZ MISHKINOGO DOMA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

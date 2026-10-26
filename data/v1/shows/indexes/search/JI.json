@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "JI",
-  "count": 85,
+  "count": 90,
   "dogs": [
     {
       "id": "988590392",
@@ -9,16 +9,16 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 50,
+      "total_shows": 67,
       "competition_dog_id": null
     },
     {
-      "id": "1678329255",
+      "id": "623399655",
       "name_lat": "JITSHUBHI'S IMPACT FORCE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
-      "total_shows": 75,
+      "total_shows": 92,
       "competition_dog_id": null
     },
     {
@@ -27,14 +27,14 @@
       "name_ru": "",
       "breed": "НОРФОЛК ТЕРЬЕР",
       "breed_en": "NORFOLK TERRIER",
-      "total_shows": 46,
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
-      "id": "108390601",
+      "id": "1583539397",
       "name_lat": "JITSHUBHI’S IMPACT FORCE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "КРОЛИЧЬЯ СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -45,7 +45,7 @@
       "name_ru": "",
       "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 46,
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
@@ -54,7 +54,7 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "MINIATURE BULL TERRIER",
-      "total_shows": 19,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -76,6 +76,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "965649686",
+      "name_lat": "JIANG BAI AFRI",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "627921010",
       "name_lat": "JIZEL",
       "name_ru": "",
@@ -85,12 +93,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "1989352824",
+      "name_lat": "JIANG BAI BAI",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "874370000",
       "name_lat": "JIANNY VON SHINBASHI",
       "name_ru": "",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1968973208",
+      "name_lat": "JIVENCHY GEM MAGNOLIA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -112,6 +136,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "26859932",
+      "name_lat": "JISELLE SHOLOM ALEIHEM",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "303589189",
       "name_lat": "JITTERBOP KNEELAKE'S BRO",
       "name_ru": "",
@@ -130,6 +163,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "423353589",
+      "name_lat": "JIANG BAI CAI",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "83243976",
       "name_lat": "JIVAYA ISKRA OLIGORES",
       "name_ru": "",
@@ -139,21 +180,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922836576",
+      "id": "364899348",
       "name_lat": "JIVENCHY IZ DOLINY SOLNCA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БАССЕТ-ГРИФФОН ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "588958822",
+      "id": "47605430",
       "name_lat": "JIN SE YI ZU QUAN SHE HANNCHEN",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN) WHITE, BLACK, BROWN, ORANGE, GREY, OTHER COLOURS",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -162,7 +203,7 @@
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "CHOW CHOW",
-      "total_shows": 45,
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -184,30 +225,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "26859932",
-      "name_lat": "JISELLE SHOLOM ALEIHEM",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "552022957",
       "name_lat": "JITTERBOP TOO FABULOUS FOR YOU",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1968973208",
-      "name_lat": "JIVENCHY GEM MAGNOLIA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -229,6 +252,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1839821090",
+      "name_lat": "J'ISIDORA NIKA ISIS VAN EDELSIEGER (SMALL)",
+      "name_ru": "",
+      "breed": "ПЕРУАНСКАЯ ГОЛАЯ СОБАКА (МАЛАЯ)",
+      "breed_en": "PERUVIAN HAIRLESS DOG (SMALL)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1829071402",
       "name_lat": "JISELLE IRON HUND",
       "name_ru": "",
@@ -238,12 +270,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "422413794",
+      "id": "1807319523",
       "name_lat": "JIN SHENG DISNEY",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1316965487",
+      "name_lat": "JII-TEEN GIOVANNA",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "ST. BERNARD LONG HAIRED",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -292,19 +333,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "596485224",
+      "id": "697875542",
       "name_lat": "JISELLE FLEUR DE ROSE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "2695333",
+      "id": "1456276990",
       "name_lat": "JIMMY VON TEAM FÜRSTENRUNN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -343,15 +384,6 @@
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "MALTESE",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1316965487",
-      "name_lat": "JII-TEEN GIOVANNA",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "ST. BERNARD LONG HAIRED",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -400,10 +432,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "929732902",
+      "id": "782765855",
       "name_lat": "JITAN VI NOIR MERI",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -418,10 +450,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "92512209",
+      "id": "1225364952",
       "name_lat": "JIAISAT-SANA-PERLAERA USPEKHA",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -526,26 +558,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1264979151",
-      "name_lat": "JIMMY VOM TEAM FURSTENBRUNN",
+      "id": "591385608",
+      "name_lat": "Jimmy Vom Team Furstenbrunn",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "869065513",
+      "id": "1808482740",
       "name_lat": "JIMY DE VALDEMARIA",
       "name_ru": "",
-      "breed": "ИСПАНСКАЯ ГОНЧАЯ /",
+      "breed": "ИСПАНСКАЯ ГОНЧАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1522169018",
-      "name_lat": "JIAISAT- SANA- PERLA- YAYLA",
+      "id": "1622021354",
+      "name_lat": "JIAISAT-SANA-PERLA-YAYLA",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
@@ -568,6 +600,15 @@
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1458876637",
+      "name_lat": "JIANG BAI ACIR",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -616,10 +657,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1884572386",
+      "id": "145091911",
       "name_lat": "JILLIAN",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -634,21 +675,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "120499336",
-      "name_lat": "JILL VALENTINE",
+      "id": "1523614148",
+      "name_lat": "J’ISIDORA NIKA ISIS VAN EDELSIEGER",
       "name_ru": "",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК /",
+      "breed": "СОБАКА малая",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1458876637",
-      "name_lat": "JIANG BAI ACIR",
+      "id": "1419772973",
+      "name_lat": "JILL VALENTINE",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -658,6 +699,15 @@
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1163938999",
+      "name_lat": "J'IRIDA URANIA VAN EDELSIEGER",
+      "name_ru": "",
+      "breed": "СОБАКА МАЛАЯ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -694,15 +744,6 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1294118286",
-      "name_lat": "JIVE DANCER",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UP",
-  "count": 59,
+  "count": 63,
   "dogs": [
     {
       "id": "585351286",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 68,
+      "total_shows": 74,
       "competition_dog_id": null
     },
     {
@@ -18,16 +18,25 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 100,
+      "total_shows": 105,
+      "competition_dog_id": null
+    },
+    {
+      "id": "446664760",
+      "name_lat": "U'POWER-ELEGANCE MERCEDES DES TERRES DE NORFENDRE",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
       "id": "1098807137",
       "name_lat": "UPANGSHU SI-SHEN NEYL",
-      "name_ru": "",
+      "name_ru": "Упангшу Си-Шень Нейл",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 46,
+      "total_shows": 52,
       "competition_dog_id": null
     },
     {
@@ -36,7 +45,7 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 48,
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
@@ -45,7 +54,7 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 45,
+      "total_shows": 47,
       "competition_dog_id": null
     },
     {
@@ -67,19 +76,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1932113744",
+      "id": "1273122879",
       "name_lat": "UPRAVA ORENBURGSKOY DRUZHINY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1590195928",
+      "id": "1710325245",
       "name_lat": "UPB'S ANTAEUS",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL /",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL",
       "breed_en": "AMERICAN BULLY XL",
       "total_shows": 16,
       "competition_dog_id": null
@@ -148,10 +157,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1104774321",
+      "id": "308640076",
       "name_lat": "UPSTART FORA GUTE AS CAN BE",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -256,19 +265,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "632545028",
+      "id": "28510129",
       "name_lat": "UPSTART FORA SUPERJET",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1080932317",
+      "id": "1896579968",
       "name_lat": "UPSTART FORA TOSS FOR LUCK",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -310,10 +319,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "30918191",
+      "id": "384423518",
       "name_lat": "UPSTART FORA STERLING SILVER",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -499,10 +508,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "866839912",
+      "id": "642426637",
       "name_lat": "UPSTART FORA LITTLE OPRA",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -513,6 +522,22 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1316012592",
+      "name_lat": "UPPER CLASS IZ TAKSAGRADA",
+      "name_ru": "",
+      "breed": "DACHSHUND KANINCHEN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "506983168",
+      "name_lat": "UPOITELNAYA RADOST EYVA",
+      "name_ru": "",
+      "breed": "ПЕМБРОК /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -531,6 +556,14 @@
       "name_ru": "",
       "breed": "ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "513155470",
+      "name_lat": "UPS AND DOWNS AT REAL PEARL",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
       "total_shows": 1,
       "competition_dog_id": null
     }

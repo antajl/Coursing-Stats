@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "BS",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "407443174",
+      "name_lat": "B-SHIROYURI ZIPANGU",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1150175917",
+      "name_lat": "BSB PAC-MAN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "130573255",
+      "name_lat": "BSB PAC-MAN",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

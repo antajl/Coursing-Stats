@@ -1,21 +1,21 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЮМ",
-  "count": 230,
+  "count": 257,
   "dogs": [
     {
       "id": "629690380",
       "name_lat": "ЮМИКА ХЭППИ СТАЙЛ",
-      "name_ru": "",
+      "name_ru": "ЮМИКА ХЭППИ СТАЙЛ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "378809527",
       "name_lat": "ЮМИСЕЙ ДАВИД БЕКХАМ",
-      "name_ru": "",
+      "name_ru": "ЮМИСЕЙ ДАВИД БЕКХАМ",
       "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -24,17 +24,17 @@
     {
       "id": "111665807",
       "name_lat": "ЮМЕНН МАДЖАСТИК СЕРЖИО",
-      "name_ru": "",
+      "name_ru": "ЮМЕНН МАДЖАСТИК СЕРЖИО",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1823482876",
+      "id": "160977024",
       "name_lat": "ЮМЕРИ КОРОЛЕВА СЕРДЕЦ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -42,7 +42,7 @@
     {
       "id": "1006575218",
       "name_lat": "ЮМЕРИЯ ЖЕМЧУЖНАЯ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ЮМЕРИЯ ЖЕМЧУЖНАЯ ЛЕДИ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 10,
@@ -51,7 +51,7 @@
     {
       "id": "223789323",
       "name_lat": "ЮММИ БЕЙЛА ИЗ УРАЛЬСКОЙ ПЛЕЯДЫ ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ЮММИ БЕЙЛА ИЗ УРАЛЬСКОЙ ПЛЕЯДЫ ЗВЕЗД",
       "breed": "ТОЙ-ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -67,6 +67,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1638033826",
+      "name_lat": "Ю МАЙ САН ЭНД СТАРС",
+      "name_ru": "Ю МАЙ САН ЭНД СТАРС",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
       "id": "1768343532",
       "name_lat": "ЮММИ ВАЙТ",
       "name_ru": "",
@@ -78,10 +87,18 @@
     {
       "id": "350154304",
       "name_lat": "ЮМИКО ИЗ ЖЕМЧУЖНОЙ ИМПЕРИИ",
-      "name_ru": "",
+      "name_ru": "ЮМИКО ИЗ ЖЕМЧУЖНОЙ ИМПЕРИИ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "590814056",
+      "name_lat": "ЮМ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -95,8 +112,8 @@
     },
     {
       "id": "1460805904",
-      "name_lat": "Юмберри из Дома Марлен",
-      "name_ru": "",
+      "name_lat": "ЮМБЕРРИ ИЗ ДОМА МАРЛЕН",
+      "name_ru": "Юмберри из Дома Марлен",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 13,
@@ -114,7 +131,7 @@
     {
       "id": "1061617624",
       "name_lat": "ЮМИ ЛА ЛОНДА ЛЕ МОР ФОР ТАЙГЕР ЛАНД",
-      "name_ru": "",
+      "name_ru": "ЮМИ ЛА ЛОНДА ЛЕ МОР ФОР ТАЙГЕР ЛАНД",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 16,
@@ -139,6 +156,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "121716929",
+      "name_lat": "ЮММИ ТОР ДЕ ДЕЛАЛИНИ",
+      "name_ru": "ЮММИ ТОР ДЕ ДЕЛАЛИНИ",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1299054262",
       "name_lat": "ЮМИРА ФИАЛКОВАЯ МАГИЯ (К-Ш)",
       "name_ru": "",
@@ -153,23 +178,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1990819004",
-      "name_lat": "ЮМИ БЭБИ ЛАВ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "452990866",
+      "id": "1346261714",
       "name_lat": "ЮМБА ВЕЛИКАЯ ОХОТНИЦА ОТ ФОРЕСТ ГИРЦ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЮМБА ВЕЛИКАЯ ОХОТНИЦА ОТ ФОРЕСТ ГИРЦ",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -177,7 +193,7 @@
     {
       "id": "109442798",
       "name_lat": "ЮМИ ОФ ХАУС НАТАЛИ",
-      "name_ru": "",
+      "name_ru": "ЮМИ ОФ ХАУС НАТАЛИ",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -186,17 +202,25 @@
     {
       "id": "1802776467",
       "name_lat": "ЮМЕ ИЗ ИМПЕРИИ ФАВОРИТОВ",
-      "name_ru": "",
+      "name_ru": "ЮМЕ ИЗ ИМПЕРИИ ФАВОРИТОВ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1998644073",
+      "id": "1313864878",
+      "name_lat": "ЮМАНИ МАГНИФИЦЕНТ",
+      "name_ru": "ЮМАНИ МАГНИФИЦЕНТ",
+      "breed": "БАСЕНДЖИ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1890012778",
       "name_lat": "ЮМБА С ГЛИНЯНОЙ ГОРКИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -208,6 +232,15 @@
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1608641720",
+      "name_lat": "Ю МАЙ ДРИМ ИЗ ИМПЕРИИ АДАМАНТ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -274,6 +307,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "70137093",
+      "name_lat": "Ю МА СОУЛ С ЕЙСКОГО ЛИМАНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "277577208",
       "name_lat": "ЮМАШКА ИЗ НАДРОВИИ (Д.Ш)",
       "name_ru": "",
@@ -294,10 +336,9 @@
     {
       "id": "642510924",
       "name_lat": "ЮММИ МУН ШАЙН ГЭЛАКСИ",
-      "name_ru": "",
+      "name_ru": "ЮММИ МУН ШАЙН ГЭЛАКСИ",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -319,6 +360,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "38553866",
+      "name_lat": "Ю МИННИ МАУС ИН МАЙ ПОККЕТ",
+      "name_ru": "Ю МИННИ МАУС ИН МАЙ ПОККЕТ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1072773872",
       "name_lat": "ЮМИКО ШИК ИЗ СИБИРСКОГО КНЯЖЕСТВА",
       "name_ru": "",
@@ -330,7 +380,7 @@
     {
       "id": "1362049892",
       "name_lat": "ЮМАС С БОЛЬШОЙ БУКВЫ",
-      "name_ru": "",
+      "name_ru": "ЮМАС С БОЛЬШОЙ БУКВЫ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 14,
@@ -339,61 +389,60 @@
     {
       "id": "951923598",
       "name_lat": "ЮМИ ПУР КАПРИС ДЕ НЕЖ",
-      "name_ru": "",
+      "name_ru": "ЮМИ ПУР КАПРИС ДЕ НЕЖ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "138099725",
-      "name_lat": "ЮМ КААШ ИЗ ЗАМКА ПРИОРА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "78569405",
-      "name_lat": "ЮМИС УРСА МИНОР",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "452133100",
-      "name_lat": "ЮМЭ ГА КАНАТТА",
-      "name_ru": "",
+      "id": "743442938",
+      "name_lat": "ЮМАНН ОРЛЭЙТ ОТ ПОЛЯНСКИХ",
+      "name_ru": "ЮМАНН ОРЛЭЙТ ОТ ПОЛЯНСКИХ",
       "breed": "СИБА",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127519948",
+      "name_lat": "ЮМИКО ИЗ ДОМА КУНЕЦ",
+      "name_ru": "ЮМИКО ИЗ ДОМА КУНЕЦ",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "518178107",
       "name_lat": "ЮМИХАРИДЗУКИ ФРОМ ФОРТ ОГИР",
-      "name_ru": "",
+      "name_ru": "ЮМИХАРИДЗУКИ ФРОМ ФОРТ ОГИР",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "948664943",
       "name_lat": "ЮМИ СИЛЬВЕР ЛАГОН",
-      "name_ru": "",
+      "name_ru": "ЮМИ СИЛЬВЕР ЛАГОН",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1389187148",
+      "name_lat": "ЮМБО С ФЕМЕЛИ С ФРИВЕР",
+      "name_ru": "ЮМБО С ФЕМЕЛИ С ФРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1835692143",
       "name_lat": "ЮМИНИ МАЙЛ ИЗ МОСКОВСКОЙ МЕТЕЛИ",
-      "name_ru": "",
+      "name_ru": "ЮМИНИ МАЙЛ ИЗ МОСКОВСКОЙ МЕТЕЛИ",
       "breed": "SAMOYED",
       "breed_en": "",
       "total_shows": 5,
@@ -411,25 +460,16 @@
     {
       "id": "393793600",
       "name_lat": "ЮМОРИСТ С ЗОЛОТОГО ГРАДА",
-      "name_ru": "",
+      "name_ru": "ЮМОРИСТ С ЗОЛОТОГО ГРАДА",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "85969499",
-      "name_lat": "ЮМБО С ФЕМЕЛИ С ФРИВЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "1264076840",
       "name_lat": "ЮМИКО ПЕРСИДСКАЯ ПРИНЦЕССА",
-      "name_ru": "",
+      "name_ru": "ЮМИКО ПЕРСИДСКАЯ ПРИНЦЕССА",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 4,
@@ -438,19 +478,19 @@
     {
       "id": "1807845509",
       "name_lat": "ЮМИШ КИНГ ИЗ ЦАРСТВА ОЗЕР",
-      "name_ru": "",
+      "name_ru": "ЮМИШ КИНГ ИЗ ЦАРСТВА ОЗЕР",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "10254385",
-      "name_lat": "ЮМИКО ИЗ ДОМА КУНЕЦ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН /",
+      "id": "1276914394",
+      "name_lat": "Ю МАЙ ХЕРЦ ИЗ ДОМА МАРБО",
+      "name_ru": "Ю МАЙ ХЕРЦ ИЗ ДОМА МАРБО",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -465,7 +505,7 @@
     {
       "id": "1372592014",
       "name_lat": "ЮМБА ФОМ ХАУС ШИРАН",
-      "name_ru": "",
+      "name_ru": "ЮМБА ФОМ ХАУС ШИРАН",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 7,
@@ -492,28 +532,28 @@
     {
       "id": "1444364266",
       "name_lat": "ЮМИЛАЙМ ГРЕЙС КЕЙЛИ",
-      "name_ru": "",
+      "name_ru": "ЮМИЛАЙМ ГРЕЙС КЕЙЛИ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1700525332",
-      "name_lat": "ЮМИНА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "id": "1683964389",
+      "name_lat": "Ю МАЙ ДРИМ ИЗ ИДИЛИИ КОНТРАСТОВ",
+      "name_ru": "Ю МАЙ ДРИМ ИЗ ИДИЛИИ КОНТРАСТОВ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1558761651",
-      "name_lat": "ЮМИР БОЛЬШОЙ РОМАНТИК",
+      "id": "1424185793",
+      "name_lat": "ЮМИНА",
       "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -535,10 +575,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1274617213",
+      "id": "303658529",
       "name_lat": "ЮМИСЕЙ ДАЙМОНД ДЕЙ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -546,7 +586,7 @@
     {
       "id": "1099773725",
       "name_lat": "ЮМИ НО УРАНАЙ БАНСЭЙ ВИТЕРРА СИБЕРИА ЕНН",
-      "name_ru": "",
+      "name_ru": "ЮМИ НО УРАНАЙ БАНСЭЙ ВИТЕРРА СИБЕРИА ЕНН",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -594,7 +634,7 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -625,6 +665,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "631912965",
+      "name_lat": "Ю-МАЗДА ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1326975413",
       "name_lat": "ЮМИ КЕРОЛАЙН",
       "name_ru": "",
@@ -645,7 +694,7 @@
     {
       "id": "603314256",
       "name_lat": "ЮМИСЕЙ БРИЕННА НОУБЛ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ЮМИСЕЙ БРИЕННА НОУБЛ ЛЕДИ",
       "breed": "SIBERIAN ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -657,6 +706,14 @@
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "386860512",
+      "name_lat": "ЮМШАК С ЯМСКОЙ СЛОБОДЫ",
+      "name_ru": "ЮМШАК С ЯМСКОЙ СЛОБОДЫ",
+      "breed": "ТАКСА",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -679,6 +736,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "561808103",
+      "name_lat": "ЮМ БАТЫР",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1004094577",
       "name_lat": "ЮМЭКО ОТ ТУЛ ЛУ ЛА",
       "name_ru": "",
@@ -688,18 +754,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1186882026",
+      "id": "1638740918",
       "name_lat": "ЮМИ ПРЕКРАСНАЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "1738191855",
+      "name_lat": "Ю МАЙН ХЕРЦ ИЗ ДОМА МАРБО",
+      "name_ru": "Ю МАЙН ХЕРЦ ИЗ ДОМА МАРБО",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "290079930",
       "name_lat": "ЮМИ ТЭЙЛ ОФ ФЕЙТ",
-      "name_ru": "",
+      "name_ru": "ЮМИ ТЭЙЛ ОФ ФЕЙТ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
@@ -715,10 +789,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "758250387",
+      "id": "938066154",
       "name_lat": "ЮМАВА ВОСТОЧНАЯ ЗВЕЗДА ОКТАЛЕС (К.Ш.)",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -726,7 +800,7 @@
     {
       "id": "1317564744",
       "name_lat": "ЮМЭ ИНУ МАЙ СОУЛ ФОР ЭКСЕЛИГМОС",
-      "name_ru": "",
+      "name_ru": "ЮМЭ ИНУ МАЙ СОУЛ ФОР ЭКСЕЛИГМОС",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
@@ -738,6 +812,14 @@
       "name_ru": "",
       "breed": "DOGO ARGENTINO",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1173083899",
+      "name_lat": "ЮМЖАНА",
+      "name_ru": "",
+      "breed": "ХОТОШО (БУРЯТСКАЯ СОБАКА)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -778,19 +860,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1313864878",
-      "name_lat": "ЮМАНИ МАГНИФИЦЕНТ",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "80009023",
+      "id": "377824250",
       "name_lat": "ЮМИСЕЙ ЕВЕЛИНА",
-      "name_ru": "",
-      "breed": "БАССЕТ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЮМИСЕЙ ЕВЕЛИНА",
+      "breed": "Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -814,12 +887,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "308088033",
+      "id": "492944088",
       "name_lat": "ЮМИ ГОЛДЕН РОУЗ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ЮМИ ГОЛДЕН РОУЗ",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "5836035",
+      "name_lat": "ЮМНУДЫР УСПЕШНАЯ ДОЧЬ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -832,19 +914,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "412878733",
+      "id": "1976363473",
       "name_lat": "ЮМИ ДАЙМОН ОФ МАЙ СОЛ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1503412087",
+      "id": "1914871568",
       "name_lat": "ЮМБО С ФЭМИЛИ'С ФРИВЕР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -877,6 +959,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "133111263",
+      "name_lat": "ЮМИЛАВ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ / CHIHUAHUA LONG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "192960740",
       "name_lat": "ЮМИКО ГРАНД ЛИОНЕСС КЕРЭЛИН ИЗ",
       "name_ru": "",
@@ -890,24 +980,6 @@
       "name_lat": "ЮМИКО ИЗ ТУЛЬСКОГО АРСЕНАЛА",
       "name_ru": "",
       "breed": "АКИТА / AKITA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "244756870",
-      "name_lat": "ЮМИСЕЙ РОЙС БРЕЙФ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ / ENGLISH",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "743442938",
-      "name_lat": "ЮМАНН ОРЛЭЙТ ОТ ПОЛЯНСКИХ",
-      "name_ru": "",
-      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -942,7 +1014,7 @@
     {
       "id": "1871002514",
       "name_lat": "ЮМИКО ИСТОЧНИК ВДОХНОВЕНИЯ",
-      "name_ru": "",
+      "name_ru": "ЮМИКО ИСТОЧНИК ВДОХНОВЕНИЯ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
@@ -951,7 +1023,7 @@
     {
       "id": "283140681",
       "name_lat": "ЮМИНА ФАМИЛЬНАЯ ЦЕННОСТЬ",
-      "name_ru": "",
+      "name_ru": "ЮМИНА ФАМИЛЬНАЯ ЦЕННОСТЬ",
       "breed": "ГЛАДКОШЕРС",
       "breed_en": "",
       "total_shows": 6,
@@ -960,10 +1032,19 @@
     {
       "id": "529607382",
       "name_lat": "ЮМАЙК НИКТАР ПРЕДАННОСТИ",
-      "name_ru": "",
+      "name_ru": "ЮМАЙК НИКТАР ПРЕДАННОСТИ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1329460011",
+      "name_lat": "Ю'МИРА КВИН ИЗ ЦАРСТВА ОЗЕР",
+      "name_ru": "Ю'МИРА КВИН ИЗ ЦАРСТВА ОЗЕР",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -978,10 +1059,27 @@
     {
       "id": "598937363",
       "name_lat": "ЮМАЙК ПОКОРИТЕЛЬ СЕРДЕЦ ИЗ МИРАШЕЛА",
-      "name_ru": "",
+      "name_ru": "ЮМАЙК ПОКОРИТЕЛЬ СЕРДЕЦ ИЗ МИРАШЕЛА",
       "breed": "БАСЕНДЖИ НЕМЕЦКИЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "931363754",
+      "name_lat": "Ю МИННИ МАУС ИН МАЙ ПОККЕР",
+      "name_ru": "Ю МИННИ МАУС ИН МАЙ ПОККЕР",
+      "breed": "ТАКСА МИНИАТЮРНАЯ длинношерстная",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275937484",
+      "name_lat": "ЮМЖАНА",
+      "name_ru": "",
+      "breed": "СОБАКА) / HOTOSHO (BURYATSKAYA SOBAKA)",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -994,10 +1092,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "933426494",
+      "id": "10028250",
       "name_lat": "ЮМИСЕЙ БРИЕННА НОЙБЛ ЛЭЙДИ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1007,6 +1105,24 @@
       "name_lat": "ЮМА ПОВЕЛИТЕЛЬНИЦА ГНОМОВ",
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1653701653",
+      "name_lat": "Ю МАЙ ЭКСТАЗИ ИЗ СТАВРОПОЛЬСКОЙ ГУБЕРНИИ",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "894188479",
+      "name_lat": "Ю МАЙ ДРИМ СИР ШОН",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1039,19 +1155,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "561808103",
-      "name_lat": "ЮМ БАТЫР",
+      "id": "565471193",
+      "name_lat": "ЮММИ ТОР ДЕ ДЕЛАЛИНИ BOSTON",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "ГРИФФОН",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1992743056",
+      "id": "1057273428",
       "name_lat": "ЮМИ БЬЮТИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1138,6 +1253,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "97475740",
+      "name_lat": "Ю МЭЙК МИ ХЭППИ ИЗ БОЛЬШОГО ДОМА",
+      "name_ru": "Ю МЭЙК МИ ХЭППИ ИЗ БОЛЬШОГО ДОМА",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1253652584",
       "name_lat": "ЮМАТА ШОТЛ",
       "name_ru": "",
@@ -1156,19 +1280,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "121716929",
-      "name_lat": "ЮММИ ТОР ДЕ ДЕЛАЛИНИ",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1950237721",
+      "id": "26331444",
       "name_lat": "ЮМИСЕЙ ЦЕНТЕРО",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1185,7 +1300,7 @@
     {
       "id": "1996316539",
       "name_lat": "ЮМИ СЕВЕРНОЕ СИЯНИЕ С БЕЛОГО БЕРЕГА",
-      "name_ru": "",
+      "name_ru": "ЮМИ СЕВЕРНОЕ СИЯНИЕ С БЕЛОГО БЕРЕГА",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
@@ -1194,7 +1309,7 @@
     {
       "id": "654006788",
       "name_lat": "ЮМЭ ИНУ МИЗУКИ ХОШИ КИН",
-      "name_ru": "",
+      "name_ru": "ЮМЭ ИНУ МИЗУКИ ХОШИ КИН",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 3,
@@ -1203,17 +1318,26 @@
     {
       "id": "867685380",
       "name_lat": "ЮМИ ФАЙЕР ЛАЙН",
-      "name_ru": "",
+      "name_ru": "ЮМИ ФАЙЕР ЛАЙН",
       "breed": "СИБА/SHIBA",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "297869900",
+      "id": "1882797070",
+      "name_lat": "ЮМИ ИЗ ДОМА ПОД СОСНАМИ ОТ УСТИНОВОЙ ЮЛИИ",
+      "name_ru": "ЮМИ ИЗ ДОМА ПОД СОСНАМИ ОТ УСТИНОВОЙ ЮЛИИ",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1308069507",
       "name_lat": "ЮМИНА ФОН ВЭСПЭН ХАУС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЮМИНА ФОН ВЭСПЭН ХАУС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1264,10 +1388,36 @@
       "competition_dog_id": null
     },
     {
+      "id": "1530562746",
+      "name_lat": "Ю МАЙ ЛАЙФ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1173178272",
       "name_lat": "ЮММИ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1270374286",
+      "name_lat": "ЮМАЯХА",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "153793713",
+      "name_lat": "ЮМБЕРЛИ БРАЙТ САН",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1282,19 +1432,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "508898514",
-      "name_lat": "ЮМЭ ИНУ МИЮКИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "484899287",
+      "id": "854493751",
       "name_lat": "ЮМАТА ИЗ СОЛНЕЧНОГО ЗАБАЙКАЛЬЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1318,15 +1459,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "820082603",
-      "name_lat": "ЮМБЕРЛИ БРАЙТ САН",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "95908605",
       "name_lat": "ЮММИ ФАЙЕР ЧИКИ ФОКС",
       "name_ru": "",
@@ -1345,15 +1477,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "38801478",
-      "name_lat": "ЮМИ ЮМИ ЧОКЛЕТ КЕНДИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1670383550",
       "name_lat": "ЮМАРА НЬЮ ДРИМ",
       "name_ru": "",
@@ -1365,17 +1488,17 @@
     {
       "id": "541932372",
       "name_lat": "ЮМАКО ИЗ ТУЛЬСКОГО АРСЕНАЛА",
-      "name_ru": "",
+      "name_ru": "ЮМАКО ИЗ ТУЛЬСКОГО АРСЕНАЛА",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "907608038",
+      "id": "454636069",
       "name_lat": "ЮМБА ИЗ ДИНАСТИИ КОНОЛ'С",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЮМБА ИЗ ДИНАСТИИ КОНОЛ'С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1383,7 +1506,7 @@
     {
       "id": "1771200100",
       "name_lat": "ЮМАЛИЯ КРИСТИН",
-      "name_ru": "",
+      "name_ru": "ЮМАЛИЯ КРИСТИН",
       "breed": "SPITZ KLEINSPITZ ORANGE, GREY, OTHER COLOURS",
       "breed_en": "",
       "total_shows": 2,
@@ -1392,7 +1515,7 @@
     {
       "id": "828994460",
       "name_lat": "ЮМЖАНА ПАДРОНА",
-      "name_ru": "",
+      "name_ru": "ЮМЖАНА ПАДРОНА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -1401,7 +1524,7 @@
     {
       "id": "428573277",
       "name_lat": "ЮМИ ИЗ ПРИМОРСКОГО БАГУЛЬНИКА",
-      "name_ru": "",
+      "name_ru": "ЮМИ ИЗ ПРИМОРСКОГО БАГУЛЬНИКА",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -1410,7 +1533,7 @@
     {
       "id": "552216999",
       "name_lat": "ЮМИЛИЯ АДВЕНСИС",
-      "name_ru": "",
+      "name_ru": "ЮМИЛИЯ АДВЕНСИС",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -1453,10 +1576,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "429714097",
+      "id": "1371648422",
       "name_lat": "ЮМИНА ЛАРСИ",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1471,6 +1594,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1812867039",
+      "name_lat": "ЮМИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ ШПИЦ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1975718253",
+      "name_lat": "ЮМАС",
+      "name_ru": "",
+      "breed": "КАРЕЛЬСКАЯ МЕДВЕЖЬЯ СОБАКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "56480910",
       "name_lat": "ЮММИ МОНА",
       "name_ru": "",
@@ -1480,10 +1619,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "953434023",
+      "id": "208921706",
       "name_lat": "ЮМИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1493,6 +1632,23 @@
       "name_lat": "ЮМИ ОЧАРОВАШКА",
       "name_ru": "",
       "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "38778563",
+      "name_lat": "ЮМИНА",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "59431176",
+      "name_lat": "Ю МАЙ ДРИМ",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1552,10 +1708,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1881428376",
+      "id": "414419049",
       "name_lat": "ЮМ КААШ",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1588,10 +1744,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "12719576",
+      "id": "497358708",
       "name_lat": "ЮМИ НАКАТАНИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1642,10 +1798,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1805210647",
+      "id": "714875922",
       "name_lat": "ЮММИ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1723,6 +1879,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1236308744",
+      "name_lat": "Ю ‘ МИРА КВИН ИЗ ЦАРСТВА ОЗЁР",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "603830129",
+      "name_lat": "ЮМИСЕЙ БРУНЕЛЛА МАМБО ИТАЛЬЯНО",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "476402823",
+      "name_lat": "ЮММИ БЕЛОЕ ОБЛАКО",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "481291243",
       "name_lat": "ЮМЕН СНЕЖНЫЙ ПРИНЦ",
       "name_ru": "",
@@ -1732,10 +1915,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "127771918",
+      "id": "1792172429",
       "name_lat": "ЮМИ ИЗ ДИНАСТИИ КОНОЛ С",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1772,6 +1955,15 @@
       "name_lat": "ЮМАВА СТЕЛЛА",
       "name_ru": "",
       "breed": "ЧАУ-ЧАУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1620066304",
+      "name_lat": "Ю МАЙ ЛАВ С ОСТРОВА ЛЮБВИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1822,15 +2014,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "25139691",
-      "name_lat": "ЮМИСЕЙ БРУНЕЛЛА МАМБО ИТАЛЬЯНО",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1719915888",
       "name_lat": "ЮМОРЕСКА ИЗ ГУСАРСКОЙ БАЛЛАДЫ",
       "name_ru": "",
@@ -1867,20 +2050,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "5836035",
-      "name_lat": "ЮМНУДЫР УСПЕШНАЯ ДОЧЬ",
+      "id": "1239977959",
+      "name_lat": "ЮМЭ ОВЕР АНД ОВЕР ЛОВЕ",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "951210718",
-      "name_lat": "ЮМЭ ОВЕР АНД ОВЕР ЛОВЕ",
+      "id": "1675431509",
+      "name_lat": "Ю МЭРИ КАЙЛА",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1173502868",
+      "name_lat": "ЮМЭ ФОМ СЕНЕЖ ЗЕЕ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1912,11 +2103,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "261832882",
+      "name_lat": "ЮМ МЭЙЛИ ДЖУ",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ / SHIH TZU",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1967336670",
       "name_lat": "ЮМИ ШАТО ДЕЯ",
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "312234032",
+      "name_lat": "ЮМА САНДИ СОНОРА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1952,6 +2159,15 @@
       "name_lat": "ЮМ-КААШ РОЗМАРИН",
       "name_ru": "",
       "breed": "ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1694307329",
+      "name_lat": "Ю-МАЙРА БРЭВЭН ХЭРЦ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2020,15 +2236,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1818597731",
-      "name_lat": "ЮММИ БЕЛОЕ ОБЛАКО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "887120207",
       "name_lat": "ЮМБЕРРИЯ ЛАКРИМА",
       "name_ru": "",
@@ -2065,11 +2272,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "6642519",
-      "name_lat": "ЮМИ ИЗ ДОМА ПОД СОСНАМИ ОТ УСТИНОВОЙ ЮЛИИ",
+      "id": "815238949",
+      "name_lat": "Ю МАСТ ЛАВ МИ",
       "name_ru": "",
-      "breed": "БИГЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "205448333",
+      "name_lat": "ЮМ-КААШ ТЕТ А ТЕТ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "866130681",
+      "name_lat": "Ю'МАХА ИЗ НОВОЙ СИБИРИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     }

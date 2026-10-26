@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ZN",
-  "count": 48,
+  "count": 51,
   "dogs": [
     {
-      "id": "1256150362",
+      "id": "1750019156",
       "name_lat": "ZNOYNOE LETO",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ЗНОЙНОЕ ЛЕТО",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1348493349",
+      "name_lat": "ZNOYNYY MACHO",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -22,39 +31,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "509999259",
+      "id": "500254251",
       "name_lat": "ZNOYNAYA ZHARA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1377359673",
-      "name_lat": "ZNOYNYY MACHO",
-      "name_ru": "",
-      "breed": "BRABANSONПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "153900657",
+      "id": "808940750",
       "name_lat": "ZNAMYA POBEDY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1124380032",
+      "id": "215135409",
       "name_lat": "ZNOYNAYA KRASOTKA VON HAUS NOKS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ /",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1574079721",
+      "name_lat": "ZNAK SUDBY PARADIZ DLYA SIBERIAN KISS",
+      "name_ru": "ЗНАК СУДЬБЫ ПАРАДИЗ ДЛЯ СИБЕРИАН КИСС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 61,
       "competition_dog_id": null
     },
     {
@@ -67,19 +76,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1574079721",
-      "name_lat": "ZNAK SUDBY PARADIZ DLYA SIBERIAN KISS",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 48,
-      "competition_dog_id": null
-    },
-    {
-      "id": "889876516",
+      "id": "1719300258",
       "name_lat": "ZNAMYA POBEDY IZ SOZVEZDIYA STAFF",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 32,
       "competition_dog_id": null
@@ -94,6 +94,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1861840343",
+      "name_lat": "ZNAMENITAYA LICHNOST ZEMFIRA",
+      "name_ru": "ЗНАМЕНИТАЯ ЛИЧНОСТЬ ЗЕМФИРА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1948568554",
+      "name_lat": "ZNATNYI PAREN ZAKHARIY",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "382078344",
       "name_lat": "ZNAI NASHYH OT SHARLOTTY SNOWFLAKE",
       "name_ru": "",
@@ -103,12 +121,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1861840343",
-      "name_lat": "ZNAMENITAYA LICHNOST ZEMFIRA",
+      "id": "20857238",
+      "name_lat": "ZNAY NASHIH BE ONLY JOY",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed": "ШАР ПЕЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -121,15 +139,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "20857238",
-      "name_lat": "ZNAY NASHIH BE ONLY JOY",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "292910114",
       "name_lat": "ZNOY DEL AKGUN",
       "name_ru": "",
@@ -139,10 +148,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "966247599",
+      "id": "1735520478",
       "name_lat": "ZNATNYJ KAVALER URALA IZ DINASTII NASTI",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
@@ -150,10 +159,19 @@
     {
       "id": "958655308",
       "name_lat": "ZNAK SUDBY SEM",
-      "name_ru": "",
+      "name_ru": "ЗНАК СУДЬБЫ СЭМ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "208507062",
+      "name_lat": "ZNAK SUDBY FISHKA DLYA ZALOGA LYUBVI",
+      "name_ru": "ЗНАК СУДЬБЫ ФИШКА ДЛЯ ЗАЛОГА ЛЮБВИ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -162,25 +180,25 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "880969885",
+      "id": "747755161",
       "name_lat": "ZNATNAYA OSOBA KAZANOVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "358280750",
+      "id": "1845606757",
       "name_lat": "ZNAIKA OT LADYYULI",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -202,21 +220,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "966582507",
+      "id": "1424584812",
       "name_lat": "ZNATNYI KRASAVCHIK CALVE MARIS STELLA",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1948568554",
-      "name_lat": "ZNATNYI PAREN ZAKHARIY",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
-      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -265,17 +274,25 @@
       "competition_dog_id": null
     },
     {
-      "id": "1754682506",
-      "name_lat": "ZNAK SUDBY TRISHA",
+      "id": "885833944",
+      "name_lat": "ZNAK SUDBY IZ DOMA KARMANOVOI",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1535604552",
       "name_lat": "ZNAK SUDBY BRABUS",
+      "name_ru": "ЗНАК СУДЬБЫ БРАБУС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1754682506",
+      "name_lat": "ZNAK SUDBY TRISHA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
@@ -337,28 +354,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1920275222",
+      "id": "1752206439",
+      "name_lat": "ZNAK SUDBY DAYANA",
+      "name_ru": "ЗНАК СУДЬБЫ ДАЯНА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1365984376",
       "name_lat": "ZNAMYA POBEDY DIAMOND SKY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "208507062",
-      "name_lat": "ZNAK SUDBY FISHKA DLYA ZALOGA LYUBVI",
+      "id": "1053017227",
+      "name_lat": "ZNATNAYA OSOBA DLYA SILK KOLEKSHN",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1752206439",
-      "name_lat": "ZNAK SUDBY DAYANA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -378,6 +395,22 @@
       "name_ru": "",
       "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "654288470",
+      "name_lat": "ZNEMCHUZHINA MOYA YUKOS",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ ШНАУЦЕР ПЕРЕЦ С",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "722138139",
+      "name_lat": "ZNEMCHUZ HINA MOYA YUKOS",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ ШНАУЦЕР ПЕРЕЦ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -413,15 +446,6 @@
       "name_lat": "ZNOYNIY MACHO",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1053017227",
-      "name_lat": "ZNATNAYA OSOBA DLYA SILK KOLEKSHN",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

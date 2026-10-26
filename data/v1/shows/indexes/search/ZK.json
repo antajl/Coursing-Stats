@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ZK",
-  "count": 3,
+  "count": 5,
   "dogs": [
     {
       "id": "1243139144",
@@ -13,10 +13,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1890609961",
+      "id": "177045940",
       "name_lat": "ZKARABI'S JACK SPARROW",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 5,
       "competition_dog_id": null
@@ -28,6 +28,24 @@
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "796014707",
+      "name_lat": "Z-KORRA JIPO-ME",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "994288161",
+      "name_lat": "Z KROLEWSKIEGO DWORU EVIDENCE LOVE CZVETIK",
+      "name_ru": "",
+      "breed": "Кавалер Кинг Чарльз спаниель",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "PU",
-  "count": 393,
+  "count": 404,
   "dogs": [
     {
       "id": "1455654060",
@@ -22,6 +22,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1584245538",
+      "name_lat": "PUDING DOG RENE RUSSO",
+      "name_ru": "ПУДИНГ ДОГ РЕНЕ РУССО",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "1201286430",
       "name_lat": "PUDING DOG PRINC PERSII",
       "name_ru": "",
@@ -31,11 +40,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1584245538",
-      "name_lat": "PUDING DOG RENE RUSSO",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
+      "id": "399695247",
+      "name_lat": "PUTEVODNAYA ZVEZDA IZ MIRA ANZHELIKI",
+      "name_ru": "ПУТЕВОДНАЯ ЗВЕЗДА ИЗ МИРА АНЖЕЛИКИ",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "714994741",
+      "name_lat": "PURPURNOE PLAMYA IZ MIRA ANZHELIKI",
+      "name_ru": "ПУРПУРНОЕ ПЛАМЯ ИЗ МИРА АНЖЕЛИКИ",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER",
       "total_shows": 18,
       "competition_dog_id": null
     },
@@ -45,14 +63,14 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
-      "id": "201014647",
+      "id": "136763130",
       "name_lat": "PUELLO ORIS ZARANTHA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -63,7 +81,7 @@
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "CHOW CHOW",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -85,12 +103,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "714994741",
-      "name_lat": "PURPURNOE PLAMYA IZ MIRA ANZHELIKI",
+      "id": "1007663638",
+      "name_lat": "PUSHISTIKOFF HARVEY HAKSEL'",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЕР",
-      "breed_en": "BOXER",
-      "total_shows": 3,
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -103,19 +121,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1594952008",
+      "id": "1376939004",
+      "name_lat": "PUELLO ORIS L'AMOUR EST COMME LE VENT",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "773354234",
+      "name_lat": "Puello Oris Ups I Did It Again",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1855218413",
       "name_lat": "PUPPET MASTER ORISHA AKA SONYA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1660597446",
+      "id": "1650824946",
       "name_lat": "PUELLO ORIS MAGIC OF LOVE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 18,
       "competition_dog_id": null
@@ -130,37 +166,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "637920525",
+      "id": "1398541434",
       "name_lat": "PUELLO ORIS MISS INVINCIBLE",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "АМЕРИКАНСКИЙ ГОЛАЯ СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "973245433",
+      "id": "1818223428",
       "name_lat": "PUELLO ORIS UNIQUE ET FANTASTIQUE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "863661060",
-      "name_lat": "PUELLO ORIS L'AMOUR EST COMME LE VENT",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1706851406",
+      "id": "1700513127",
       "name_lat": "PUMA LEDI BOSS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -171,25 +198,16 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 23,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "1007663638",
-      "name_lat": "PUSHISTIKOFF HARVEY HAKSEL'",
+      "id": "640297154",
+      "name_lat": "PUSHISTIKOFF AMARONE VIKTORIA",
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1194696363",
-      "name_lat": "PUELLO ORIS UPS I DID IT AGAIN",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -202,6 +220,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "396660346",
+      "name_lat": "PUELLO ORIS BACCARAT",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
       "id": "1259732686",
       "name_lat": "PUNTINATO BALLANTE YAMAKSAI",
       "name_ru": "",
@@ -211,19 +238,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "640297154",
-      "name_lat": "PUSHISTIKOFF AMARONE VIKTORIA",
+      "id": "130665634",
+      "name_lat": "PUNTINATO BALLANTE YAMAKASI",
       "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 23,
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1802884850",
+      "id": "1961633866",
       "name_lat": "PURA BEYA DE ARAGON SHERRY",
       "name_ru": "",
-      "breed": "PYRENEAN",
+      "breed": "ПИРЕНЕЙСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -247,12 +274,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "876303659",
-      "name_lat": "PUELLO ORIS BACCARAT",
+      "id": "1543139859",
+      "name_lat": "PUELLO ORIS OPEN MY SOUL",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -292,24 +319,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "130665634",
-      "name_lat": "PUNTINATO BALLANTE YAMAKASI",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "DALMATIAN",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1543139859",
-      "name_lat": "PUELLO ORIS OPEN MY SOUL",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "652653525",
       "name_lat": "PUERTO LABRE RUTALDA RUYSCH",
       "name_ru": "",
@@ -319,10 +328,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1341831941",
+      "id": "1567640347",
       "name_lat": "PUELLO ORIS NEW AGE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -346,6 +355,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1782594206",
+      "name_lat": "PUSHISTAYA NIKZVEZDA GOSEPF",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
       "id": "970069152",
       "name_lat": "Puello Oris Veritas Certa",
       "name_ru": "",
@@ -355,12 +373,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "307813958",
+      "id": "632660133",
+      "name_lat": "PURPL SHEIDES LALIQUE AMETHYST",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "CHOW CHOW",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1774502485",
       "name_lat": "PUELLO ORIS EREDE AL TRONO",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "662971926",
+      "name_lat": "PUDING DOG OLIMPIYA",
+      "name_ru": "ПУДИНГ ДОГ ОЛИМПИЯ",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -382,30 +418,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "722267657",
+      "id": "1028587969",
       "name_lat": "PUSCHINKA S GLINYNOY GORKY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "662971926",
-      "name_lat": "PUDING DOG OLIMPIYA",
+      "id": "1942793371",
+      "name_lat": "PUSHISTIKOFF O'NEGA",
       "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "НЕМЕЦКИЙ ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "711599874",
-      "name_lat": "PUELLO ORIS A REGOLA D'ARTE",
+      "id": "1965305",
+      "name_lat": "Puello Oris A Regola D'Arte АРИЛИС ЛАЙН КИП ЛАВ ИН Ю",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 41,
+      "total_shows": 43,
       "competition_dog_id": null
     },
     {
@@ -423,34 +459,16 @@
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 24,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "453139347",
+      "id": "1342734076",
       "name_lat": "PUELLO ORIS VOODOO DANCE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ НЕМЕЦКИЙ",
       "breed_en": "",
-      "total_shows": 33,
-      "competition_dog_id": null
-    },
-    {
-      "id": "632660133",
-      "name_lat": "PURPL SHEIDES LALIQUE AMETHYST",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "CHOW CHOW",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1942793371",
-      "name_lat": "PUSHISTIKOFF O'NEGA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 6,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -463,15 +481,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1782594206",
-      "name_lat": "PUSHISTAYA NIKZVEZDA GOSEPF",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "1723646288",
       "name_lat": "PUSHISTAYA NIKZVEZDA SANTA SALEK",
       "name_ru": "",
@@ -481,10 +490,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "222567432",
+      "id": "844955565",
       "name_lat": "PURPLE HEART BORGIAS",
       "name_ru": "",
-      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ /",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -499,30 +508,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "748027386",
-      "name_lat": "PUELLO ORIS BLAZE OF GLORY",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1022850174",
-      "name_lat": "PUDING DOG CLIFFORD PRIDE",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1088234602",
       "name_lat": "PUPPENGAME ALF",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 17,
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1550554329",
+      "name_lat": "PUELLO ORIS BLAZE OF GLORY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СОБАКА) МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "144267015",
+      "name_lat": "PUDING DOG CLIFFORD PRIDE",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -562,6 +571,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "761436687",
+      "name_lat": "PURA BEYA DE ARAGON RAICHLE",
+      "name_ru": "",
+      "breed": "ПИРЕНЕЙСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "285745636",
       "name_lat": "PUPPY-BOOM INNOVA LARA CROFT",
       "name_ru": "",
@@ -571,12 +589,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "242152317",
-      "name_lat": "PUMA FROM MILLERON",
+      "id": "233117852",
+      "name_lat": "PURA BEYA DE ARAGON RAYA",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "ПИРЕНЕЙСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 39,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1351282592",
+      "name_lat": "PUMA FROM MILLERON",
+      "name_ru": "ПУМА ФРОМ МИЛЛЕРОН",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 43,
       "competition_dog_id": null
     },
     {
@@ -607,10 +634,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "180387102",
+      "id": "1486642087",
       "name_lat": "PUELLO ORIS GRAND COEUR",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 27,
       "competition_dog_id": null
@@ -625,10 +652,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1590423778",
+      "id": "1588147427",
       "name_lat": "PUDING DOG VOLSHEBNAYA SKAZKA",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -643,12 +670,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1224350893",
+      "id": "505862193",
       "name_lat": "PUCHISTIY OBEREG IZIUMCHIK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "658822718",
+      "name_lat": "PULYA DES FLAMMES DE MARS",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "806126315",
+      "name_lat": "PUBLICITY OT GVENDOLEN",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ",
+      "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -670,12 +715,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "771514269",
+      "id": "1516637249",
       "name_lat": "Puello Oris Make It Real",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "367058636",
+      "name_lat": "PUELLO ORIS YASMINA BLANCHE",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -724,10 +778,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1587752531",
+      "id": "324814935",
       "name_lat": "PUMBA",
       "name_ru": "",
-      "breed": "ЧЁРНО-ПОДПАЛЫЙ",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -751,6 +805,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "13969229",
+      "name_lat": "PUELLO ORIS GALAXY STAR",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 39,
+      "competition_dog_id": null
+    },
+    {
       "id": "290223926",
       "name_lat": "PUSHISIKOFF ZEFIRKA VANILKA",
       "name_ru": "",
@@ -760,10 +823,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "957584850",
+      "id": "1841703079",
+      "name_lat": "PUDING DOG ZOLOTAYA LILIYA",
+      "name_ru": "ПУДИНГ ДОГ ЗОЛОТАЯ ЛИЛИЯ",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "161852309",
       "name_lat": "Puello Oris L’amour Est Comme Le Vent",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 11,
       "competition_dog_id": null
@@ -778,21 +850,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "695193277",
-      "name_lat": "PUBLICITY OT GVENDOLEN",
+      "id": "44838087",
+      "name_lat": "PUMPKIN CAKE BULLETRISTIX",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "308274858",
-      "name_lat": "PUELLO ORIS GALAXY STAR",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 37,
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -814,15 +877,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1841703079",
-      "name_lat": "PUDING DOG ZOLOTAYA LILIYA",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "995087737",
       "name_lat": "PUDING DOG OSKAR OVERLORD",
       "name_ru": "",
@@ -832,35 +886,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "399695247",
-      "name_lat": "PUTEVODNAYA ZVEZDA IZ MIRA ANZHELIKI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЕР",
-      "breed_en": "BOXER",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "213169148",
+      "id": "118467067",
       "name_lat": "PUELLO ORIS GET THE GLORY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "131780701",
+      "id": "828934962",
       "name_lat": "PUELLO ORIS AMI POUR MA VIE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "787095659",
-      "name_lat": "PUSHISTIKOFF YA- PRINCESSA",
+      "id": "1076139385",
+      "name_lat": "PUSHISTIKOFF YA-PRINCESSA",
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
       "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
@@ -868,12 +913,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1012533158",
+      "id": "535045037",
+      "name_lat": "PUELLO ORIS OM TANTRA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "284444704",
       "name_lat": "Puello Oris Yara One And Only",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1847754923",
+      "name_lat": "PUTEVODNAYA ZVEZDA S TEPLOGO DOMA",
+      "name_ru": "ПУТЕВОДНАЯ ЗВЕЗДА С ТЕПЛОГО ДОМА",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 44,
       "competition_dog_id": null
     },
     {
@@ -904,15 +967,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "658822718",
-      "name_lat": "PULYA DES FLAMMES DE MARS",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "124277752",
       "name_lat": "PUTJADE PAINTED APACHE",
       "name_ru": "",
@@ -940,8 +994,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1027231577",
-      "name_lat": "PUERTO LABRE ELISA- MAYA",
+      "id": "1806171631",
+      "name_lat": "PUERTO LABRE ELISA-MAYA",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
       "breed_en": "",
@@ -967,10 +1021,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "417065350",
+      "id": "1204396288",
       "name_lat": "Puello Oris Zafferano",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -985,15 +1039,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1427100887",
-      "name_lat": "PUELLO ORIS YASMINA BLANCHE",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1333447032",
       "name_lat": "PUSHISTIKOFF USLADA",
       "name_ru": "",
@@ -1003,20 +1048,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1263002940",
+      "id": "131611301",
       "name_lat": "PUELLO ORIS INCANTO",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СOCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "525816425",
+      "id": "1263409597",
       "name_lat": "PURE POWER MIRA ALMA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "485579743",
+      "name_lat": "PUSHISTAYA NIKZVEZDA BABY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -1048,10 +1101,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "439492351",
+      "id": "758773616",
       "name_lat": "PUTEVODNAYA ZVEZDOCHKA (LONG COAT)",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1075,37 +1128,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1500206835",
+      "id": "401783130",
       "name_lat": "PUTYATICHNA IZ SOLNECHNOGO",
       "name_ru": "",
-      "breed": "И ДРУГИЕ ОКРАСЫ /",
+      "breed": "И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "233117852",
-      "name_lat": "PURA BEYA DE ARAGON RAYA",
-      "name_ru": "",
-      "breed": "ПИРЕНЕЙСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "507030800",
+      "id": "1872531810",
       "name_lat": "PUELLO ORIS JAQUELINE",
       "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "539276620",
+      "id": "941745048",
       "name_lat": "PUNSH",
       "name_ru": "",
-      "breed": "ЧЁРНО-ПОДПАЛЫЙ КУНХАУНД / BLACK AND TAN COONHOUND",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ КУНХАУНД / BLACK AND TAN COONHOUND",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1138,10 +1182,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "942969302",
+      "id": "59289042",
       "name_lat": "PUSHISTIY OBEREG MEGAN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1192,10 +1236,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1172382014",
+      "id": "254456394",
       "name_lat": "PUNSH",
       "name_ru": "",
-      "breed": "ЧЁРНО-ПОДПАЛЫЙ",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1210,10 +1254,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "321015794",
+      "id": "324915455",
       "name_lat": "PUMA HANTER",
       "name_ru": "",
-      "breed": "БЛАДХАУНД КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ /",
+      "breed": "БЛАДХАУНД КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1246,6 +1290,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "867092680",
+      "name_lat": "PURPLE RAIN INCIPITA VITA",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1994604620",
       "name_lat": "PUNAPIPPURIN TEERENPELI",
       "name_ru": "",
@@ -1255,21 +1308,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "867092680",
-      "name_lat": "PURPLE RAIN INCIPITA VITA",
+      "id": "1997890138",
+      "name_lat": "PUELLO ORIS BELLE ETOILE",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 12,
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "1543529918",
-      "name_lat": "Puello Oris Belle Etoile",
+      "id": "896086157",
+      "name_lat": "PUELLO ORIS HOPE FOR THE FUTURE",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -1309,57 +1362,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "896086157",
-      "name_lat": "PUELLO ORIS HOPE FOR THE FUTURE",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 23,
-      "competition_dog_id": null
-    },
-    {
-      "id": "44838087",
-      "name_lat": "PUMPKIN CAKE BULLETRISTIX",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "757689025",
+      "id": "141262748",
       "name_lat": "PUERTO LABRE NETFLIX",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "182481830",
+      "id": "682526122",
       "name_lat": "PUSHKIN IZ STRANY SNEGOV",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1744236606",
+      "id": "1496740039",
       "name_lat": "PUDING DOG ZOLOTAYA LIRA",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1348277247",
+      "id": "190888410",
+      "name_lat": "PUSHISTIKOFF BONA DEA",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "68974250",
       "name_lat": "PUELLO ORIS EVANGELINE MITT LIV",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ АМЕРИКАНСКИЙ",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "780071001",
+      "name_lat": "PUDING DOG OLESYA ZHEMCHUZHINA PRIVOLZHYA",
+      "name_ru": "ПУДИНГ ДОГ ОЛЕСЯ ЖЕМЧУЖИНА ПРИВОЛЖЬЯ",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1390,10 +1443,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "896480743",
+      "id": "1055383565",
       "name_lat": "PUELLO ORIS VIVA LA VITA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1408,21 +1461,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "75900498",
-      "name_lat": "PUELLO ORIS ADMIREZ- MOI",
+      "id": "1852036156",
+      "name_lat": "PUELLO ORIS ADMIREZ-MOI",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "27392132",
+      "id": "482588977",
       "name_lat": "PUDING DOG ERREA",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1397628717",
+      "name_lat": "PUSHISTAYA RADOST DIANA",
+      "name_ru": "ПУШИСТАЯ РАДОСТЬ ДИАНА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1435,21 +1497,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "683862283",
+      "id": "794834434",
       "name_lat": "PUDING DOG UMNITSA KRASAVITSA",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "607395213",
-      "name_lat": "PULYA IZ NOVO- PEREDELKINO",
+      "id": "1068420533",
+      "name_lat": "PULYA IZ NOVO-PEREDELKINO",
       "name_ru": "",
       "breed": "DACHSHUND KANINCHEN",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "768245209",
+      "name_lat": "PUMA IZ SOKOLINOGO GNEZDA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1462,28 +1533,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "976061345",
-      "name_lat": "PUMA IZ SOKOLINOGO GNEZDA",
-      "name_ru": "",
-      "breed": "ГОЛЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "645555310",
+      "id": "1229882670",
       "name_lat": "Puello Oris Just Do It",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БРЕТОНСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "13186107",
+      "id": "1064893386",
       "name_lat": "PUELLO ORIS QUEEN OF SPACE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -1525,10 +1587,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "405668860",
+      "id": "822887961",
       "name_lat": "PULKHERIA LINDA DE IMPERIUM AURI",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН /",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1540,24 +1602,6 @@
       "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД) / GERMAN",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1847754923",
-      "name_lat": "PUTEVODNAYA ZVEZDA S TEPLOGO DOMA",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "877150067",
-      "name_lat": "PUSHISTIKOFF BONA DEA",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД) /",
-      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1579,6 +1623,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1134253361",
+      "name_lat": "Puello Oris Talk About Me",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1409318411",
       "name_lat": "PUUSTERI",
       "name_ru": "",
@@ -1597,26 +1649,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "780071001",
-      "name_lat": "PUDING DOG OLESYA ZHEMCHUZHINA PRIVOLZHYA",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "85814858",
-      "name_lat": "PUELLO ORIS OM TANTRA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "534038875",
-      "name_lat": "PUELLO ORIS BOOGIE- WOOGIE",
+      "id": "168254901",
+      "name_lat": "PUELLO ORIS BOOGIE-WOOGIE",
       "name_ru": "",
       "breed": "ТЫЙ РЕТРИВЕР",
       "breed_en": "",
@@ -1633,12 +1667,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1756601919",
+      "name_lat": "PUMA IZ STEPNOGO ALTAYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "126069993",
+      "name_lat": "PUTYATISHNA OT FILIPPOVOY",
+      "name_ru": "ПУТЯТИШНА ОТ ФИЛИППОВОЙ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "743625572",
       "name_lat": "PUNCHER FROM CITY STARS",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1651,10 +1700,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1262809139",
+      "id": "1375459482",
       "name_lat": "PUSHKIN ART GRAND ROSE",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1669,10 +1718,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1541399171",
+      "id": "413791610",
       "name_lat": "PUELLO ORSI LUXURY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -1687,37 +1736,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "79898091",
+      "id": "741071601",
+      "name_lat": "PUTEVODNAYA ZVEZDA IZ TSVETNOY AKVARELI",
+      "name_ru": "ПУТЕВОДНАЯ ЗВЕЗДА ИЗ ЦВЕТНОЙ АКВАРЕЛИ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "602192399",
       "name_lat": "PUELLO ORIS CHELSEA MY STAR",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1581100776",
-      "name_lat": "PUELLO ORIS TALK ABOUT ME",
-      "name_ru": "",
-      "breed": "HAIRED ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1127342542",
+      "id": "10385",
       "name_lat": "PUMMA SPIRIT",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": 10385
+    },
+    {
+      "id": "1312546840",
+      "name_lat": "PUSHKIN CLASSIC VON GLANDORF",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1998442339",
+      "id": "657826988",
       "name_lat": "PUELLO ORIS YAMONTY ICE PEAK",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "голден ретривер",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1750,15 +1807,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1756601919",
-      "name_lat": "PUMA IZ STEPNOGO ALTAYA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1094753019",
       "name_lat": "PUDING DOG JUPITERSKAYA GEMALIYA",
       "name_ru": "",
@@ -1786,10 +1834,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588715317",
-      "name_lat": "Puello Oris Je Suis La Reine",
+      "id": "1985093739",
+      "name_lat": "PUELLO ORIS KHALEESI DAYNERISSE",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "479603363",
+      "name_lat": "Puello Oris Je Suis La Reine",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -1804,39 +1861,48 @@
       "competition_dog_id": null
     },
     {
+      "id": "1898077058",
+      "name_lat": "PULKHERIYA LINDA DE IMPERIUM AURI",
+      "name_ru": "ПУЛЬХЕРИЯ ЛИНДА ДЕ ИМПЕРИУМ АУРИ",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "breed_en": "JAPANESE CHIN",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "618353967",
       "name_lat": "PUELLO ORIS UTAH JAZZ",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1403178749",
+      "id": "1164276621",
       "name_lat": "PUARO",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "960171216",
+      "id": "238105042",
       "name_lat": "PUELLO ORIS AMON RA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "126069993",
-      "name_lat": "PUTYATISHNA OT FILIPPOVOY",
+      "id": "1722531366",
+      "name_lat": "PUELLO ORIS ENJOY THE RIDE",
       "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1867,12 +1933,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "722931748",
-      "name_lat": "PUELLO ORIS ENJOY THE RIDE",
+      "id": "1617354278",
+      "name_lat": "PUDING DOG TSAREVNA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "ДАЛМАТИН",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1885,6 +1950,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1444463460",
+      "name_lat": "PUMA LIHTENSHTEIN-OST",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "709851585",
       "name_lat": "PUERTO LABRE DELUNA",
       "name_ru": "",
@@ -1894,10 +1968,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "261589451",
+      "id": "1150481563",
       "name_lat": "PUELLO ORIS YANTA PHOENIX BIRD",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1909,6 +1983,14 @@
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "592370109",
+      "name_lat": "PUSYA LEDI VINTERFELLA",
+      "name_ru": "ПУСЯ ЛЕДИ ВИНТЕРФЕЛЛА",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1930,28 +2012,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1185132010",
+      "id": "1912326200",
       "name_lat": "PUELLO ORIS CELEONORA AMPARO DE FORTUNA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1898077058",
-      "name_lat": "PULKHERIYA LINDA DE IMPERIUM AURI",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "JAPANESE CHIN",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "524822672",
+      "id": "252677876",
       "name_lat": "PUELLO ORIS UN AMOUR DE MA VIE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1975,10 +2048,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1550927705",
+      "id": "151101695",
+      "name_lat": "PUELLO ORIS LUXURY",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1656390564",
       "name_lat": "PUDING DOG EKLIPTIKA",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2020,28 +2102,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "421539187",
-      "name_lat": "PUMA LIHTENSHTEIN-OST",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1584506249",
+      "id": "56817737",
       "name_lat": "PUMA TIGROVYJ GLAZ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "634831742",
+      "id": "1409439239",
       "name_lat": "PUAX",
       "name_ru": "",
-      "breed": "ЕВРАЗИЕР СОБАКА) СТАНДАРТНАЯ /",
+      "breed": "ЕВРАЗИЕР СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2056,8 +2129,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "86720299",
-      "name_lat": "PUDING DOG EREMEY- POKROVITEL",
+      "id": "189170495",
+      "name_lat": "PUDING DOG EREMEY-POKROVITEL",
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
@@ -2110,10 +2183,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1935523988",
+      "id": "1191921881",
+      "name_lat": "PUMA DE FLAMMES DE MARS",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "800716175",
+      "name_lat": "PUTEVODNAYA ZVEZDA IZ PRYANICHNOGO DOMIKA",
+      "name_ru": "",
+      "breed": "Немецкий Золотистый ретривер",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1094755176",
       "name_lat": "Puello Oris Aregola D'Arte",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2173,19 +2263,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "16591811",
-      "name_lat": "PUTEVODNAYA ZVEZDA IZ PRYANICHNOGO DOMIKA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "414981678",
+      "id": "1224773103",
       "name_lat": "PUELLO ORIS VIRGIN GOLD",
       "name_ru": "",
-      "breed": "БАССЕТ-ГРИФФОН ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2245,10 +2326,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "711481493",
+      "id": "475268737",
       "name_lat": "PURGA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2317,19 +2398,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1397628717",
-      "name_lat": "PUSHISTAYA RADOST DIANA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "296230153",
+      "id": "775522708",
       "name_lat": "PUDING DOG JOZEFINA",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2344,10 +2416,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1252162736",
+      "id": "1900808069",
       "name_lat": "PUDING DOG SHOKOLADNAYA SKAZKA",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2358,6 +2430,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1121054657",
+      "name_lat": "PUMPKIN GAUCHO",
+      "name_ru": "",
+      "breed": "КАРДИГАН /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2389,11 +2469,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "761436687",
-      "name_lat": "PURA BEYA DE ARAGON RAICHLE",
+      "id": "895295223",
+      "name_lat": "PUELLO ORIS JEUNESSE DOREE",
       "name_ru": "",
-      "breed": "ПИРЕНЕЙСКИЙ МАСТИФ",
-      "breed_en": "",
+      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2407,10 +2486,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "457647621",
+      "id": "260713990",
       "name_lat": "PUELLO ORIS LISTEN TO MY HEART",
       "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2443,19 +2522,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "914500760",
-      "name_lat": "PUSYA LEDI VINTERFELLA",
-      "name_ru": "",
-      "breed": "Бишон фризе /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1172101236",
+      "id": "120235937",
       "name_lat": "PUMBA PAES'S BULL",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2479,10 +2549,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "338282382",
+      "id": "43064832",
       "name_lat": "PUTEVODNAYA ZVEZDA IZ STRANY GREZ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2515,29 +2585,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "513146075",
-      "name_lat": "PUELLO ORIS KHALEESI DAYNERISSE",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1364324886",
-      "name_lat": "PUELLO ORIS LUXURY",
-      "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "857703899",
       "name_lat": "PURGA",
       "name_ru": "",
       "breed": "ЛАЙКА ЗАПАДНОСИБИРСКАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1388702425",
+      "name_lat": "PUMA PUNCU V. OXYMORON",
+      "name_ru": "",
+      "breed": "ПОДЕНКО ИБИЦЕНКО ГЛАДКОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2641,6 +2701,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1860693808",
+      "name_lat": "PUPPENGAME ALF",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "668252816",
       "name_lat": "PURLE RAIN INCIPITA VITA",
       "name_ru": "",
@@ -2650,19 +2718,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "243450596",
+      "id": "245841908",
       "name_lat": "PULKHERIYA IZ NEVSKOY TROYKI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ШНАУЦЕР ЧЕРНЫЙ",
+      "breed": "Окрас черный ШНАУЦЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "320264897",
+      "id": "1840795548",
       "name_lat": "PUAX",
       "name_ru": "",
-      "breed": "СОБАКА) СТАНДАРТНАЯ /",
+      "breed": "СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2686,6 +2754,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "418998333",
+      "name_lat": "PUELLO ORIS CHER AMI",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "499718718",
       "name_lat": "PURPL SHEIDES LALIQUE AVENHYST ПАРПЛ ШЕЙДЕС",
       "name_ru": "",
@@ -2704,10 +2780,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "260116880",
+      "id": "784821877",
+      "name_lat": "PUMA LIHTENSHTEIN-",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1339902804",
       "name_lat": "PUPPY KINGDOM AMELI",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2722,6 +2806,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1659161639",
+      "name_lat": "PUAX",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1046567825",
       "name_lat": "PULYA ZANDER",
       "name_ru": "",
@@ -2731,28 +2823,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "645134641",
-      "name_lat": "PUTEVODNAYA ZVEZDA IZ PRYANICHNOGO",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "794323174",
+      "id": "1460569872",
       "name_lat": "PUPPENGAMEALF",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1702413740",
+      "id": "738114344",
       "name_lat": "PUTYATISHNA ZOLOTAYA ZVEZDA TAVRIDY ZEFIRKA",
       "name_ru": "",
-      "breed": "ТАКСА ЖЕСТКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2794,6 +2877,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1667844935",
+      "name_lat": "Puello Oris Young Forever",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1931623505",
+      "name_lat": "PUMA KUTUEVASHIBAS",
+      "name_ru": "ПУМА КУТУЕВАШИБАС",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "114963115",
       "name_lat": "PUFFI",
       "name_ru": "",
@@ -2803,29 +2904,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "621594500",
+      "id": "94038344",
       "name_lat": "PUSYA",
       "name_ru": "",
-      "breed": "ЧЁРНО-ПОДПАЛЫЙ",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "520015388",
-      "name_lat": "PUSHISTIKOFF ILLUSIA SKROMNOSTI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1075565605",
-      "name_lat": "PUN KOTZKY BUMBERSHOOT",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "BEAGLE",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2857,19 +2940,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "105249790",
-      "name_lat": "PURAIDO NIGHT PANGER",
+      "id": "1675403143",
+      "name_lat": "PUELLO ORIS AMI POUR MAVIE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "81972913",
-      "name_lat": "Pulli Van Giller",
+      "id": "520015388",
+      "name_lat": "PUSHISTIKOFF ILLUSIA SKROMNOSTI",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "НЕМЕЦКИЙ ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1075565605",
+      "name_lat": "PUN KOTZKY BUMBERSHOOT",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "105249790",
+      "name_lat": "PURAIDO NIGHT PANGER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2884,19 +2985,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "385250895",
-      "name_lat": "PUELLO ORIS AMI POUR MAVIE",
-      "name_ru": "",
-      "breed": "БАССЕТ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1029181401",
+      "id": "506873828",
       "name_lat": "PUELLO ORIS NARNIA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2907,6 +2999,24 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "FRENCH BULLDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "648428284",
+      "name_lat": "PUELLO ORIS REINE DES ETOILES",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1046818235",
+      "name_lat": "PUSHISTAYA FORTUNA VALERI FAF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2947,19 +3057,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "648428284",
-      "name_lat": "PUELLO ORIS REINE DES ETOILES",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1155728995",
+      "id": "1048375659",
       "name_lat": "PUDDING SWEET IZ OMSKOI KREPOSTI",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2983,28 +3084,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "282527967",
-      "name_lat": "PUSHISTAYA FORTUNA VALERI FAF",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1915863300",
       "name_lat": "PURE GLOUD PRINCE CHRMING",
       "name_ru": "",
       "breed": "ЦВЕРГШПИЦ САМОЕДСКАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1422434581",
-      "name_lat": "Puello Oris Young Forever",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3109,6 +3192,42 @@
       "competition_dog_id": null
     },
     {
+      "id": "118084048",
+      "name_lat": "PUELLO ORIS GIVE ME YOUR SMILE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "731707453",
+      "name_lat": "PUELLO ORIS MY STAR WITH ME FOREVER",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "954454874",
+      "name_lat": "PUPPY-BOOM INNOVA APHRODITE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1292185978",
+      "name_lat": "PUGOVKIN OT MARSOVNY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "235677686",
       "name_lat": "PUSHISTIKOFF NORDALV",
       "name_ru": "",
@@ -3190,6 +3309,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "263783723",
+      "name_lat": "(PUFF) ИНКАНТОДЕЛМОНДО БЕЙТЛИ",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "82145930",
       "name_lat": "PUELLO ORIS UTAN JAZZ",
       "name_ru": "",
@@ -3217,11 +3345,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1817724814",
+      "id": "1874769933",
       "name_lat": "PUTIN VON DER EGAUPERLE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "789976833",
+      "name_lat": "Puello Oris Exlusive Edition",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3235,28 +3371,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1123150707",
+      "id": "348601371",
+      "name_lat": "PUMA VOM HAUS HELEN",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1908478426",
       "name_lat": "PUDING DOG KONTOS DELMOHTO",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "485300190",
-      "name_lat": "Puello Oris A Regola D'Arte АРИЛИС ЛАЙН КИП ЛАВ ИН Ю",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "593464619",
+      "id": "63382562",
       "name_lat": "PUERTO LABRE NICK NAME",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3293,15 +3428,6 @@
       "name_lat": "PUPPY KINGDOM YUKON DARK ELF LEGENDS",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "118084048",
-      "name_lat": "PUELLO ORIS GIVE ME YOUR SMILE",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3406,28 +3532,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1931623505",
-      "name_lat": "PUMA KUTUEVASHIBAS",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "731707453",
-      "name_lat": "PUELLO ORIS MY STAR WITH ME FOREVER",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "293689730",
+      "id": "1427061369",
       "name_lat": "PUNCHER CHERNAYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3478,37 +3586,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "949510278",
-      "name_lat": "PUPPY-BOOM INNOVA APHRODITE",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "288606465",
       "name_lat": "PUMPKIN MAGIC",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "741071601",
-      "name_lat": "PUTEVODNAYA ZVEZDA IZ TSVETNOY AKVARELI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1733706662",
-      "name_lat": "PUGOVKIN OT MARSOVNY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

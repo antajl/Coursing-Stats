@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "МТ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1784043215",
+      "name_lat": "МТИДАН ИЗ ГРАДА СИМБИРСКА",
+      "name_ru": "МТИДАН ИЗ ГРАДА СИМБИРСКА",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1274487743",
+      "name_lat": "Мтидан из Града Симбриска",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "577638938",
+      "name_lat": "М-ТАГАНКА",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

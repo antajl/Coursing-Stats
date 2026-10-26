@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "IH",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "842516192",
+      "name_lat": "IH VISOCHESTVO VIOLA ZHANMONIKA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1639602896",
+      "name_lat": "IH VISOCHESTVO BISHOP KARL",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "NEWFOUNDLAND",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1924713206",
+      "name_lat": "IH VISOCHESTVO KELVIN",
+      "name_ru": "",
+      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "breed_en": "CLUMBER SPANIEL",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

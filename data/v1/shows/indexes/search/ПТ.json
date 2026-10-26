@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ПТ",
-  "count": 32,
+  "count": 36,
   "dogs": [
     {
       "id": "1523019228",
       "name_lat": "ПТИ ПИТЕР АЙ ЭМ ДЖАСТ Э БОМБ",
-      "name_ru": "",
+      "name_ru": "ПТИ ПИТЕР АЙ ЭМ ДЖАСТ Э БОМБ",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 22,
@@ -15,7 +15,7 @@
     {
       "id": "63270164",
       "name_lat": "ПТИ ПИТЕР ВИ ДЖИНЖЕР ВОСП",
-      "name_ru": "",
+      "name_ru": "ПТИ ПИТЕР ВИ ДЖИНЖЕР ВОСП",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 15,
@@ -24,7 +24,7 @@
     {
       "id": "1345726775",
       "name_lat": "ПТИ БЕЛЬЖИК ГРАНТ КАПИТЭН",
-      "name_ru": "",
+      "name_ru": "ПТИ БЕЛЬЖИК ГРАНТ КАПИТЭН",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 9,
@@ -33,7 +33,7 @@
     {
       "id": "889790017",
       "name_lat": "ПТИ ПИТЕР ОКТОБА ИН РЕД ЭНД ГОЛД",
-      "name_ru": "",
+      "name_ru": "ПТИ ПИТЕР ОКТОБА ИН РЕД ЭНД ГОЛД",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 6,
@@ -45,7 +45,7 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -63,7 +63,7 @@
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -78,7 +78,7 @@
     {
       "id": "496209353",
       "name_lat": "ПТИ ПИТЕР ВЕЙВ ОФ ЛАК",
-      "name_ru": "",
+      "name_ru": "ПТИ ПИТЕР ВЕЙВ ОФ ЛАК",
       "breed": "BRABANSONПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 2,
@@ -121,6 +121,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1122371680",
+      "name_lat": "ПТИЧКА-НЕВЕЛИЧКА ИЗ СТАВРОПОЛЬСКОЙ ГУБЕРНИИ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1480943731",
       "name_lat": "Птица Счастья из Уральской Легенды",
       "name_ru": "",
@@ -132,7 +140,7 @@
     {
       "id": "548153958",
       "name_lat": "ПТИ БОМОНД ГОСПОЖА УДАЧА",
-      "name_ru": "",
+      "name_ru": "ПТИ БОМОНД ГОСПОЖА УДАЧА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -148,10 +156,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "175319845",
+      "id": "914892472",
       "name_lat": "ПТИ ПИТЕР ДЕНСИНГ СТЕП",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -168,10 +176,18 @@
     {
       "id": "1040667399",
       "name_lat": "ПТИ ПИТЕР ФАНИ ФЭЙС",
-      "name_ru": "",
+      "name_ru": "ПТИ ПИТЕР ФАНИ ФЭЙС",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1458920551",
+      "name_lat": "ПТИ БОМОНД ДЕНДИ",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -193,10 +209,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1370427776",
+      "id": "1830266837",
       "name_lat": "ПТИ ПИТЕР ЛАЕТА ПУЭЛЛО",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -204,19 +220,36 @@
     {
       "id": "146031081",
       "name_lat": "ПТИЦА СЧАСТЬЯ ИЗ ЗЕЛЕНОЙ РОЩИ",
-      "name_ru": "",
+      "name_ru": "ПТИЦА СЧАСТЬЯ ИЗ ЗЕЛЕНОЙ РОЩИ",
       "breed": "ШАРПЕЙ ШНАУЦЕР П/С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "454961096",
+      "id": "31919620",
       "name_lat": "ПТИЧКА ПЕВЧАЯ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ПТИЧКА ПЕВЧАЯ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1995584543",
+      "name_lat": "ПТИЧКА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "7639050",
+      "name_lat": "П-ТРЕЙСИ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -247,10 +280,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1693785706",
+      "id": "235335867",
       "name_lat": "ПТИ ПИТЕР ТАЙМЛЕС БЬЮТИ",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

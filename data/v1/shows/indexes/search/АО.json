@@ -1,24 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "АО",
-  "count": 21,
+  "count": 22,
   "dogs": [
-    {
-      "id": "1866127306",
-      "name_lat": "АОРИСАННА ГЛЕДДИ САММИТ",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
     {
       "id": "773177303",
       "name_lat": "АОКИ АЦУЙ ИЗ ИМПЕРИИ МЕЙДЗИ",
-      "name_ru": "",
+      "name_ru": "АОКИ АЦУЙ ИЗ ИМПЕРИИ МЕЙДЗИ",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1866127306",
+      "name_lat": "АОРИСАННА ГЛЕДДИ САММИТ",
+      "name_ru": "АОРИСАННА ГЛЕДДИ САММИТ",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -188,6 +188,15 @@
       "name_lat": "АОБЯНА",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ СОБАКА) / HOTOSHO (BURYATSKAYA SOBAKA)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1946137765",
+      "name_lat": "А'ОС ЛОРД ОФ ЗЕ МАУНТАЙНС",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

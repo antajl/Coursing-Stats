@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "АB",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "157369210",
+      "name_lat": "АBEAUTY TOY BLEKBERRI DZHEM",
+      "name_ru": "",
+      "breed": "БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "10074881",
+      "name_lat": "АBORIGENKA SIBIRI TOMI",
+      "name_ru": "АБОРИГЕНКА СИБИРИ ТОМИ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1321279727",
+      "name_lat": "АBRAND RIDDLE ARDENIYA KHLOYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

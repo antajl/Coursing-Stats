@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ЛЛ",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1763564350",
+      "name_lat": "ЛЛОЙД",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "581126003",
+      "name_lat": "ЛЛАЙФ СПРИНГ ЮЛЛОУ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "4931772",
+      "name_lat": "ЛЛОЙД ФАЕР",
+      "name_ru": "",
+      "breed": "РУССКАЯ САЛОННАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1946600587",
+      "name_lat": "ЛЛОЙД БЛЭК РЕЙВЕН",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

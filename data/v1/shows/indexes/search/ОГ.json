@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОГ",
-  "count": 832,
+  "count": 884,
   "dogs": [
     {
       "id": "1437421673",
       "name_lat": "ОГНЕННЫЙ ЛОТОС БЕЛКА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС БЕЛКА",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 23,
@@ -15,7 +15,7 @@
     {
       "id": "776449420",
       "name_lat": "ОГНЕННОЕ СЧАСТЬЕ МИРА НУМЕНОР'С",
-      "name_ru": "",
+      "name_ru": "ОГНЕННОЕ СЧАСТЬЕ МИРА НУМЕНОР'С",
       "breed": "СЕТТЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -24,7 +24,7 @@
     {
       "id": "1633721820",
       "name_lat": "ОГНЕННЫЙ ЛОТОС НАРУТО",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС НАРУТО",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
@@ -42,16 +42,25 @@
     {
       "id": "727660847",
       "name_lat": "ОГНЕННЫЙ ЛОТОС УЛЬТРАМАРИН",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС УЛЬТРАМАРИН",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
+      "id": "15490537",
+      "name_lat": "ОГНИ МОСКВЫ ШАФРАН ЗОЛОТОЙ",
+      "name_ru": "ОГНИ МОСКВЫ ШАФРАН ЗОЛОТОЙ",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "54415146",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ИНТРИГАНКА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ИНТРИГАНКА",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 18,
@@ -60,7 +69,7 @@
     {
       "id": "1657821668",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЦЕДРА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЦЕДРА",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 31,
@@ -69,17 +78,26 @@
     {
       "id": "1881678061",
       "name_lat": "ОГНЕННЫЙ ЛОТОС БОМБИЧЕСКАЯ СТЕША",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС БОМБИЧЕСКАЯ СТЕША",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1179454217",
+      "id": "482912319",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ГВЕНАЭЛЬ",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ГВЕНАЭЛЬ",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "151601044",
       "name_lat": "ОГНЕНА СТЕЛЛА ОСТЕР",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -87,43 +105,34 @@
     {
       "id": "517858421",
       "name_lat": "ОГНЕННЫЙ ЛОТОС МИЛАГРОС",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС МИЛАГРОС",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "521269195",
+      "id": "1413642140",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ГЕРБЕРА АМАТО ДИАМАНТЕ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР АМЕРИКАНСКИЙ",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ГЕРБЕРА АМАТО ДИАМАНТЕ",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1209504051",
       "name_lat": "ОГНЕННЫЙ ЛОТОС КАНЦЛЕР",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС КАНЦЛЕР",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "15490537",
-      "name_lat": "ОГНИ МОСКВЫ ШАФРАН ЗОЛОТОЙ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
       "id": "1962309852",
       "name_lat": "ОГНЕДАР ИЗ КРАСНОГО ДАРА",
-      "name_ru": "",
+      "name_ru": "ОГНЕДАР ИЗ КРАСНОГО ДАРА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 16,
@@ -132,16 +141,15 @@
     {
       "id": "1556149002",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ВАЛЬТУРИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ВАЛЬТУРИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "675605219",
       "name_lat": "ОГНИ СТОЛИЦЫ ФРЭНК",
-      "name_ru": "",
+      "name_ru": "ОГНИ СТОЛИЦЫ ФРЭНК",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 10,
@@ -153,13 +161,13 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "482912319",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС ГВЕНАЭЛЬ",
-      "name_ru": "",
+      "id": "1329380071",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ЖИВАНШИ",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЖИВАНШИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -168,19 +176,10 @@
     {
       "id": "1720361909",
       "name_lat": "ОГНЕННЫЙ ЛОТОС НЕБЕСНЫЙ АМУР",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС НЕБЕСНЫЙ АМУР",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1329380071",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС ЖИВАНШИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -195,7 +194,7 @@
     {
       "id": "994622112",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ХИПСТЕР",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ХИПСТЕР",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -204,7 +203,7 @@
     {
       "id": "191469798",
       "name_lat": "ОГЮСТ ГРАНД КИНГ",
-      "name_ru": "",
+      "name_ru": "ОГЮСТ ГРАНД КИНГ",
       "breed": "BULLDOG",
       "breed_en": "",
       "total_shows": 17,
@@ -222,7 +221,7 @@
     {
       "id": "1657489392",
       "name_lat": "ОГНЕННЫЙ ЛОТОС РИШЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС РИШЕЛЬ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -240,17 +239,17 @@
     {
       "id": "851356986",
       "name_lat": "ОГНЕННЫЙ ЛОТОС КВИНЕТТА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС КВИНЕТТА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "985758479",
+      "id": "1251297050",
       "name_lat": "ОГОНЬ ЖИЗНИ РОКСИ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ОГОНЬ ЖИЗНИ РОКСИ",
+      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -258,7 +257,7 @@
     {
       "id": "101825114",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЖАЖДУЩИЙ СЛАВЫ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЖАЖДУЩИЙ СЛАВЫ",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 10,
@@ -276,17 +275,17 @@
     {
       "id": "1491231486",
       "name_lat": "ОГНИ МОСКВЫ ХОЛИДЕЙ",
-      "name_ru": "",
+      "name_ru": "ОГНИ МОСКВЫ ХОЛИДЕЙ",
       "breed": "РУССКАЯ ТОЙ ПУДЕЛЬ СЕРЫЙ, РЫЖИЙ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1182180669",
+      "id": "1855767229",
       "name_lat": "ОГНЕННОЕ СЕРДЦЕ ТИАНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ОГНЕННОЕ СЕРДЦЕ ТИАНА",
+      "breed": "ВЕЙМАРАНЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -319,15 +318,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1177764391",
-      "name_lat": "ОГНЕВА ИЗ БЕЛЫХ ГЯУРОВ",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1941191172",
       "name_lat": "ОГНЕННЫЙ ЛИС ДЕ-НАЙТ ФО",
       "name_ru": "",
@@ -339,16 +329,24 @@
     {
       "id": "1388843126",
       "name_lat": "Огненная Китнисс",
-      "name_ru": "",
+      "name_ru": "Огненная Китнисс",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "330833971",
+      "name_lat": "ОГОНЕК БАРНИ ДЛЯ ДИЗА ФЛЕЙЧ",
+      "name_ru": "ОГОНЕК БАРНИ ДЛЯ ДИЗА ФЛЕЙЧ",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "243099476",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ТИМБИРЛИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ТИМБИРЛИ",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 12,
@@ -357,7 +355,7 @@
     {
       "id": "1512186675",
       "name_lat": "ОГНИ МОСКВЫ СИМОНА СИНЬОРИТА",
-      "name_ru": "",
+      "name_ru": "ОГНИ МОСКВЫ СИМОНА СИНЬОРИТА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 9,
@@ -384,7 +382,7 @@
     {
       "id": "373822242",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ГИФТ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ГИФТ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -393,7 +391,7 @@
     {
       "id": "1672512119",
       "name_lat": "ОГНЕННЫЙ ЛОТОС МЭЛОНИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС МЭЛОНИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -418,12 +416,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1977021666",
+      "id": "744054763",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЧИКАГО",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 4,
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЧИКАГО",
+      "breed": "СОБАКА /",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -438,7 +435,7 @@
     {
       "id": "1178872913",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ВИЛИСОВ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ВИЛИСОВ",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 9,
@@ -447,10 +444,18 @@
     {
       "id": "1025731474",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ХИТОВАЯ ДАНКА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ХИТОВАЯ ДАНКА",
       "breed": "КИНГ КИТАЙСКАЯ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "252842587",
+      "name_lat": "огу PONART HALL NIKE JORDAN",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -490,6 +495,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1941476686",
+      "name_lat": "ОГНЕННЫЙ ЛИС СТЕФАНИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "105912246",
       "name_lat": "огу ACADIA'S AMERICAN BLUE VELVET",
       "name_ru": "",
@@ -513,6 +526,14 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1084161873",
+      "name_lat": "огу ЛИНИЯ ГРАЦИИ МОРТОН БЛЭК",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -589,19 +610,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1324987538",
+      "id": "1470472324",
       "name_lat": "огу ИДВЕРД КЕЙТ КАРДИНАЛ ИГРА ТЕНЕЙ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "867722897",
+      "id": "136754595",
       "name_lat": "огу AMOUR OF MYSTERY",
       "name_ru": "",
-      "breed": "БУЛЛИ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -625,10 +646,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "344369435",
+      "id": "1171888008",
       "name_lat": "огу STRONG FAVORITE BULL'S BUTCH",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ – Классического размера",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ –",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -674,15 +695,6 @@
       "name_lat": "огу DOM ARKUDY ZEALOUS SMALL MUSTANG",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "330833971",
-      "name_lat": "ОГОНЕК БАРНИ ДЛЯ ДИЗА ФЛЕЙЧ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -798,7 +810,7 @@
     {
       "id": "1261085563",
       "name_lat": "ОГНЕННЫЙ ЛОТОС АЛИСИЯ БЛЭК МИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС АЛИСИЯ БЛЭК МИ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 9,
@@ -807,16 +819,16 @@
     {
       "id": "515364559",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЧУНГА-ЧАНГА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЧУНГА-ЧАНГА",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "1493228020",
       "name_lat": "ОГНЕННЫЙ ЛОТОС МУСКАТ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС МУСКАТ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -825,16 +837,25 @@
     {
       "id": "782678608",
       "name_lat": "ОГНЕННЫЙ ЛИС ШАКИРА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛИС ШАКИРА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "1924308212",
+      "name_lat": "огу Инки Пинки аус Виквельт",
+      "name_ru": "",
+      "breed": "Вельш Корги Пемброк",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1436654511",
       "name_lat": "ОГНЕВУШКА ПОСКАКУШКА ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
-      "name_ru": "",
+      "name_ru": "ОГНЕВУШКА ПОСКАКУШКА ИЗ СЕВЕРНОЙ СТОЛИЦЫ",
       "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
       "breed_en": "",
       "total_shows": 6,
@@ -843,17 +864,17 @@
     {
       "id": "121082976",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЯРИЯ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЯРИЯ",
       "breed": "СОБАКА",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1804721906",
+      "id": "1453642494",
       "name_lat": "ОГНИ МОСКВЫ МАЛЫШКА НА МИЛЛИОН",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ОГНИ МОСКВЫ МАЛЫШКА НА МИЛЛИОН",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -861,25 +882,42 @@
     {
       "id": "144171731",
       "name_lat": "ОГНЕННЫЙ ЛОТОС КАРЛИТАС",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС КАРЛИТАС",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1619991277",
+      "id": "185809181",
       "name_lat": "ОГОНЕК В НОЧИ ИЗ ДОМА ХЕЛЕНФИЛ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "ОГОНЕК В НОЧИ ИЗ ДОМА ХЕЛЕНФИЛ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
+      "id": "697028914",
+      "name_lat": "ОГНЕННЫЙ ОВЕН ДОБРЫЙ МАЛЫЙ",
+      "name_ru": "ОГНЕННЫЙ ОВЕН ДОБРЫЙ МАЛЫЙ",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "487172344",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ЦЕНТАВРИЯ",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЦЕНТАВРИЯ",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР /",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1087614759",
       "name_lat": "ОГНЕННЫЙ ЛОТОС КРИСТИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС КРИСТИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -888,52 +926,69 @@
     {
       "id": "20802226",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЖАН ЛУК",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛЕГИОН ЖАН ЛУК",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1308311608",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС АМАДЕЯ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "id": "419843285",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС РОНАЛЬДИНА",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС РОНАЛЬДИНА",
+      "breed": "СОБАКА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "697028914",
-      "name_lat": "ОГНЕННЫЙ ОВЕН ДОБРЫЙ МАЛЫЙ",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
+      "id": "1308311608",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС АМАДЕЯ",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС АМАДЕЯ",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "1906121898",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЗЕФИРКА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЗЕФИРКА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "928017844",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС УЛИССА",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС УЛИССА",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1903665932",
       "name_lat": "ОГНЕННАЯ АРМАТА ИЗ ХОРОВОДА ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ОГНЕННАЯ АРМАТА ИЗ ХОРОВОДА ЗВЕЗД",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
+      "id": "331918490",
+      "name_lat": "ОГНЕННЫЙ ЛИС КАРМЕЛИТА",
+      "name_ru": "ОГНЕННЫЙ ЛИС КАРМЕЛИТА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "374036056",
       "name_lat": "ОГНЕННЫЙ ЛОТОС МАЖОР",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС МАЖОР",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -942,7 +997,7 @@
     {
       "id": "191755814",
       "name_lat": "ОГНЕННЫЙ ЛОТОС АСИНИЯ УАЙТ ЭНДЖЕЛ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС АСИНИЯ УАЙТ ЭНДЖЕЛ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 6,
@@ -951,10 +1006,18 @@
     {
       "id": "1123606933",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЦВЕТАННА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЦВЕТАННА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "446814608",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС УИЛИСС ВИКИ ТАЙЛ",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС УИЛИСС ВИКИ ТАЙЛ",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -976,10 +1039,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "63027538",
+      "id": "771396118",
+      "name_lat": "огу ТАЛАНТЭЛ ВИНЧЕСТЕР СЭМ",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1910441171",
       "name_lat": "ОГНЕННЫЙ ОХОТНИК ЛУКАС",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -996,7 +1067,7 @@
     {
       "id": "1069403069",
       "name_lat": "ОГНЕННАЯ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННАЯ ЛЕДИ",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 14,
@@ -1005,7 +1076,7 @@
     {
       "id": "1665959315",
       "name_lat": "ОГНЕВУШКА - ПОСКАКУШКА",
-      "name_ru": "",
+      "name_ru": "ОГНЕВУШКА - ПОСКАКУШКА",
       "breed": "немецкий малый шпиц",
       "breed_en": "",
       "total_shows": 11,
@@ -1014,7 +1085,7 @@
     {
       "id": "647255716",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ИГРИВАЯ ВИШНЯ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ИГРИВАЯ ВИШНЯ",
       "breed": "СОБАКА ПУХОВАЯ",
       "breed_en": "",
       "total_shows": 24,
@@ -1030,36 +1101,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "771396118",
-      "name_lat": "огу ТАЛАНТЭЛ ВИНЧЕСТЕР СЭМ",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "756495793",
+      "id": "1104511564",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ДЖЕЛИКА ФОР ГЛЕНЛАЙФ",
       "name_ru": "",
-      "breed": "ГОЛЫЙ ТЕРЬЕР /",
+      "breed": "ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "989565981",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС ЦЕНТАВРИЯ",
-      "name_ru": "",
+      "id": "1496937516",
+      "name_lat": "ОГНЕННЫЙ ОХОТНИК НАЙДА II",
+      "name_ru": "ОГНЕННЫЙ ОХОТНИК НАЙДА",
+      "breed": "ФИНСКИЙ ШПИЦ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "539654744",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ХАЙ-ТЕК",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ХАЙ-ТЕК",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "1207575562",
       "name_lat": "ОГНЕННАЯ РОЗА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННАЯ РОЗА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
       "total_shows": 12,
@@ -1068,17 +1138,17 @@
     {
       "id": "36755486",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ПАРКЕР",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ПАРКЕР",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "928017844",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС УЛИССА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "id": "620179966",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС УЛЬВИЯ",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС УЛЬВИЯ",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1095,7 +1165,7 @@
     {
       "id": "1686832201",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН ИЛЛАРИЯ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛЕГИОН ИЛЛАРИЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 8,
@@ -1111,10 +1181,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1728551205",
+      "id": "686846225",
       "name_lat": "ОГНЕННЫЙ ЛИС ОСКАР КРАСАВЧИК",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1122,7 +1192,7 @@
     {
       "id": "961075082",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ПАРИС",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ПАРИС",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -1131,26 +1201,26 @@
     {
       "id": "1124306637",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ШЭЛТОН БОЙ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ШЭЛТОН БОЙ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1738899982",
-      "name_lat": "ОГОНЬ ЖИЗНИ РОЛЛС- РОЙС СВЕПТЕЙЛ",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "id": "377368791",
+      "name_lat": "ОГОНЬ ЖИЗНИ РОЛЛС-РОЙС СВЕПТЕЙЛ",
+      "name_ru": "ОГОНЬ ЖИЗНИ РОЛЛС-РОЙС СВЕПТЕЙЛ",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1152131231",
+      "id": "700519539",
       "name_lat": "ОГНИ МОСКВЫ РОЗА МАРИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ОГНИ МОСКВЫ РОЗА МАРИ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1158,7 +1228,7 @@
     {
       "id": "1463103509",
       "name_lat": "ОГДЕМ С ВОЗНЕСЕНСКОГО ПОСАДА",
-      "name_ru": "",
+      "name_ru": "ОГДЕМ С ВОЗНЕСЕНСКОГО ПОСАДА",
       "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 4,
@@ -1167,19 +1237,18 @@
     {
       "id": "1826530061",
       "name_lat": "ОГНЕННЫЙ ЛОТОС АЗАРТ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС АЗАРТ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "446814608",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС УИЛИСС ВИКИ ТАЙЛ",
+      "id": "1454552780",
+      "name_lat": "огу МАНУЭЛЬ ФРИД",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1221,10 +1290,19 @@
     {
       "id": "45402385",
       "name_lat": "огу БИГ ФЛАУЭР ИЗУМИ EVERYONE'S DREAM GARRON",
-      "name_ru": "",
+      "name_ru": "огу БИГ ФЛАУЭР ИЗУМИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1424577528",
+      "name_lat": "ОГОНЬ С КРУТОЯРА",
+      "name_ru": "ОГОНЬ С КРУТОЯРА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1239,7 +1317,7 @@
     {
       "id": "1186941647",
       "name_lat": "ОГНЕННАЯ СТРАСТЬ ИЗ СТАРОЙ ШУИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННАЯ СТРАСТЬ ИЗ СТАРОЙ ШУИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 2,
@@ -1248,19 +1326,28 @@
     {
       "id": "1948857311",
       "name_lat": "ОГНЕННАЯ ЛУНА (К/Х)",
-      "name_ru": "",
+      "name_ru": "ОГНЕННАЯ ЛУНА (К/Х)",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1744314448",
+      "id": "1770856357",
       "name_lat": "ОГНЕННЫЙ ЛИС ЖОНЕТТА",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "ОГНЕННЫЙ ЛИС ЖОНЕТТА",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "969023055",
+      "name_lat": "огу VELOUR FASHION SHOW BRABUS WIDESTAR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1273,10 +1360,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "296510580",
+      "id": "191551320",
       "name_lat": "ОГНЕЯР ИРОКЕЗ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1293,7 +1380,7 @@
     {
       "id": "145061345",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ШАЛЕ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ШАЛЕ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -1311,52 +1398,51 @@
     {
       "id": "471660161",
       "name_lat": "ОГНЕННАЯ ФИЕРИЯ ИЗ СТАИ ФРАЙБОР",
-      "name_ru": "",
+      "name_ru": "ОГНЕННАЯ ФИЕРИЯ ИЗ СТАИ ФРАЙБОР",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
+      "id": "97204566",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ЯНТАРЬ",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЯНТАРЬ",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "184678805",
       "name_lat": "ОГНЕННЫЙ ОХОТНИК МАЯ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ОХОТНИК МАЯ",
       "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "454476660",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС БЕЛ ПАУЛИ",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС БЕЛ ПАУЛИ",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "784581734",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЗАРКАНА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЗАРКАНА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "97204566",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС ЯНТАРЬ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1724978918",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ОДРИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "454476660",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС БЕЛ ПАУЛИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ОДРИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -1374,17 +1460,17 @@
     {
       "id": "805834911",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЖЕТТИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЖЕТТИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1212334789",
+      "id": "116817880",
       "name_lat": "ОГНЕННЫЙ ЛИС ГЕРМИОНА",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "ОГНЕННЫЙ ЛИС ГЕРМИОНА",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1392,7 +1478,7 @@
     {
       "id": "799835592",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ИВОРИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ИВОРИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1401,7 +1487,7 @@
     {
       "id": "1327487812",
       "name_lat": "ОГЛУШИТЕЛЬНЫЙ УСПЕХ ИЗ КОРОЛЕВСТВА СТАФФ",
-      "name_ru": "",
+      "name_ru": "ОГЛУШИТЕЛЬНЫЙ УСПЕХ ИЗ КОРОЛЕВСТВА СТАФФ",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1410,7 +1496,7 @@
     {
       "id": "1145268091",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ВАНИЛЬ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ВАНИЛЬ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
@@ -1444,27 +1530,52 @@
       "competition_dog_id": null
     },
     {
-      "id": "580037779",
+      "id": "125066964",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ХОХЛОМА",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ХОХЛОМА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1399397106",
+      "name_lat": "ОГНЕННЫЙ ЛИС ТРЮФЕЛЬ",
+      "name_ru": "ОГНЕННЫЙ ЛИС ТРЮФЕЛЬ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "800925507",
       "name_lat": "ОГОНЬ ЛУНЫ РИДЖИНА ДИ ПОРТО Д'ОРО",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1685551440",
-      "name_lat": "ОГОН ДЭЙКИН ИЗ ЦВЕТОЧНЫХ ЭЛЬФОВ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 5,
+      "id": "304427224",
+      "name_lat": "ОГНЕННАЯ МАРИЯ С БОСФОРА ВОСТОЧНОГО",
+      "name_ru": "ОГНЕННАЯ МАРИЯ С БОСФОРА ВОСТОЧНОГО",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "1824383435",
       "name_lat": "огу АСТИ МИТРЕЛЬ АРНИКА МОНТАНА",
-      "name_ru": "",
+      "name_ru": "огу АСТИ МИТРЕЛЬ АРНИКА МОНТАНА",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1113762335",
+      "name_lat": "огу AVE DINORNIS MITROFAN",
+      "name_ru": "огу АВЕ ДИНОРНИС МИТРОФАН",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -1482,7 +1593,7 @@
     {
       "id": "1534835146",
       "name_lat": "ОГНЕННЫЙ РИЧМОРД",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ РИЧМОРД",
       "breed": "SHEPHERD DOG DOUBLE COAT",
       "breed_en": "",
       "total_shows": 2,
@@ -1491,7 +1602,7 @@
     {
       "id": "32769806",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ШАНИ ВАЙТ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ШАНИ ВАЙТ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -1527,10 +1638,18 @@
     {
       "id": "1310441059",
       "name_lat": "огу БЛЭК СТРЕЙНДЖЕР САВАННА",
-      "name_ru": "",
+      "name_ru": "огу БЛЭК СТРЕЙНДЖЕР САВАННА",
       "breed": "АНГЛИЙСКИЙ КЕТТЛ ДОГ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "219523829",
+      "name_lat": "ОГНЕННАЯ КАССАНДРА ИЗ КОРОЛЕВСТВА СТАФФ",
+      "name_ru": "ОГНЕННАЯ КАССАНДРА ИЗ КОРОЛЕВСТВА СТАФФ",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1563,34 +1682,16 @@
     {
       "id": "1330681499",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЗАРА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЗАРА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1337327994",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС ХАЙ- ТЕК",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1621525728",
-      "name_lat": "ОГАРД С ЖУКОВКИ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "1255640243",
       "name_lat": "ОГНЕННЫЙ ЛОТОС МИЛАНА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС МИЛАНА",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 7,
@@ -1615,10 +1716,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1473998059",
+      "id": "890759999",
       "name_lat": "ОГНЕЯР ИМПЕРСКИЙ ШТУРМОВИК",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ОГНЕЯР ИМПЕРСКИЙ ШТУРМОВИК",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103747476",
+      "name_lat": "ОГНЕННАЯ НОЧЬ ИЗ КСАРО ЧЕСТНАЯ ИГРА К\\Х",
+      "name_ru": "ОГНЕННАЯ НОЧЬ ИЗ КСАРО ЧЕСТНАЯ ИГРА К\\Х",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1642,18 +1752,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1446440237",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС УЛЬВИЯ",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "428557654",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ШОНИ БЛЭК",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ШОНИ БЛЭК",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1705,15 +1806,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "675836939",
-      "name_lat": "ОГОНЬ ЛУНЫ ЗАКОЛДОВАННЫЙ ПРИНЦ ЗЕТАН",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1057316812",
       "name_lat": "огу FAVORIT IZ DOMA KOROLEVOI",
       "name_ru": "",
@@ -1732,21 +1824,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "734326426",
+      "id": "618191060",
       "name_lat": "ОГНЕННЫЙ ОХОТНИК ЛАДА II",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "FINNISH SPITZ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "472227932",
-      "name_lat": "огу VELOUR FASHION SHOW BRABUS WIDESTAR",
+      "id": "977598731",
+      "name_lat": "огу AMERICAN DREAM TOP EXTRA GLOSS",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР / AMERICAN",
-      "breed_en": "",
+      "breed": "БУЛЛИ ПОКЕТ",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1159949005",
+      "name_lat": "ОГНЕННАЯ РОЗА ИЗ ДОМА АЛАНТЕС",
+      "name_ru": "ОГНЕННАЯ РОЗА ИЗ ДОМА АЛАНТЕС",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "881270729",
+      "name_lat": "ОГНЕЖКА",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1768,9 +1875,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1303912554",
-      "name_lat": "ОГНЕННАЯ НОЧЬ ИЗ КСАРО- ЧЕСТНАЯ ИГРА",
-      "name_ru": "",
+      "id": "1615439278",
+      "name_lat": "ОГНЕННАЯ НОЧЬ ИЗ КСАРО-ЧЕСТНАЯ ИГРА",
+      "name_ru": "ОГНЕННАЯ НОЧЬ ИЗ КСАРО-ЧЕСТНАЯ ИГРА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
@@ -1806,10 +1913,26 @@
     {
       "id": "1531169391",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ПОРТЕР",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ПОРТЕР",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1888597891",
+      "name_lat": "огу ANTREABULLS EGYPT",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "140347650",
+      "name_lat": "огу TERRI ART NUVO",
+      "name_ru": "",
+      "breed": "БИВЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1869,10 +1992,19 @@
     {
       "id": "762946848",
       "name_lat": "ОГНИ МОСКВЫ ФРЕЙЛЕН АННА МАРИ",
-      "name_ru": "",
+      "name_ru": "ОГНИ МОСКВЫ ФРЕЙЛЕН АННА МАРИ",
       "breed": "ПУДЕЛЬ ТОЙ (рыжий, серый)",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1274159080",
+      "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЗЕНА",
+      "name_ru": "ОГНЕННЫЙ ЛЕГИОН ЗЕНА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1885,30 +2017,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "1782838630",
+      "name_lat": "ОГНЕННЫЙ ЛИС РОКСАНА",
+      "name_ru": "ОГНЕННЫЙ ЛИС РОКСАНА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1038530885",
       "name_lat": "ОГНЕННЫЙ ЛОТОС АДАЛИЯ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС АДАЛИЯ",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "331918490",
-      "name_lat": "ОГНЕННЫЙ ЛИС КАРМЕЛИТА",
+      "id": "1357007822",
+      "name_lat": "ОГНЕННЫЙ ОХОТНИК",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1522314190",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС РОНАЛЬДИНА",
+      "id": "342438697",
+      "name_lat": "огу AZART POGONI LOVELACE",
       "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2020,26 +2159,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1641497827",
+      "id": "1742897523",
       "name_lat": "огу ГОЛДЕН ФОЛЬКОН ШАМАН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "987361554",
+      "id": "778219294",
       "name_lat": "ОГНЕННЫЙ ЛИС КРИСТИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "ОГНЕННЫЙ ЛИС КРИСТИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "82109700",
-      "name_lat": "огу Аурум Дог Интегро-Де- Олливар",
+      "id": "1311392296",
+      "name_lat": "огу Аурум Дог Интегро-Де-Олливар",
       "name_ru": "",
       "breed": "Австралийская овчарка",
       "breed_en": "",
@@ -2074,10 +2213,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1198255746",
+      "id": "1983114957",
       "name_lat": "огу НОЧНОЙ ДОЗОР ОРАНЖ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2087,15 +2226,6 @@
       "name_lat": "огу ЮНАЙТЕД БАЙ Э СТРОНГ СПИРИТ ФОР ФРОЛАНД",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1194079766",
-      "name_lat": "огу AVE DINORNIS MITROFAN",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА / AUSTRALIAN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2209,15 +2339,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "791937819",
-      "name_lat": "Огонь Жизни Зиппи",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "717222421",
       "name_lat": "огу СЕВЕНТИ СЕВЕН ХАЙЛЭНДЕР",
       "name_ru": "",
@@ -2227,30 +2348,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1424577528",
-      "name_lat": "ОГОНЬ С КРУТОЯРА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "262824006",
-      "name_lat": "ОГОНЬ ЖИЗНИ КЛЕОПАТРА",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "id": "1541763865",
+      "name_lat": "ОГНЕННЫЙ ЛИС ШАРЛОТТА",
+      "name_ru": "ОГНЕННЫЙ ЛИС ШАРЛОТТА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1541763865",
-      "name_lat": "ОГНЕННЫЙ ЛИС ШАРЛОТТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 8,
+      "id": "533675805",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ЯМАХА",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЯМАХА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2258,6 +2369,15 @@
       "name_lat": "ОГНЕННЫЙ ЛОТОС РОНДА",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "374215734",
+      "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЖОНКИЛИЯ ЛАВ",
+      "name_ru": "ОГНЕННЫЙ ЛЕГИОН ЖОНКИЛИЯ ЛАВ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2272,18 +2392,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "374215734",
-      "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЖОНКИЛИЯ ЛАВ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "11387581",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ДАРСИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ДАРСИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -2292,17 +2403,8 @@
     {
       "id": "352471704",
       "name_lat": "ОГОНЬ ЛУНЫ РОЗАЛИНДА",
-      "name_ru": "",
+      "name_ru": "ОГОНЬ ЛУНЫ РОЗАЛИНДА",
       "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "503113647",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС ЯМАХА",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2328,17 +2430,8 @@
     {
       "id": "416899607",
       "name_lat": "ОГНЕННЫЙ ЛИС ШАННИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛИС ШАННИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "754745673",
-      "name_lat": "ОГНЕННАЯ НОЧЬ ИЗ КСАРО ЧЕСТНАЯ ИГРА К\\Х",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2373,7 +2466,16 @@
     {
       "id": "528222999",
       "name_lat": "огу СЕВЕНТИ СЕВЕН ХАЙГЕСТ ДЕГРИИ ОФ ДЖОЙ",
-      "name_ru": "",
+      "name_ru": "огу СЕВЕНТИ СЕВЕН ХАЙГЕСТ ДЕГРИИ ОФ ДЖОЙ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "270755019",
+      "name_lat": "огу MARRANDI KALINA",
+      "name_ru": "огу МАРРАНДИ КАЛИНА",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -2382,7 +2484,7 @@
     {
       "id": "644587028",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ИНТРИГА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ИНТРИГА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2506,19 +2608,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1994136575",
+      "id": "1935390559",
       "name_lat": "огу ROCK BOTTOM KUPA HOUSE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "49545303",
+      "id": "1574915511",
       "name_lat": "огу БРОНИСЛАВ ИЗ ДОМА ЛАНКАСТЕР",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2571,10 +2673,28 @@
     {
       "id": "308064244",
       "name_lat": "ОГНЕННЫЙ ЛИС ВЛАДА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛИС ВЛАДА",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1387172059",
+      "name_lat": "огу ШОУ ПЕРФОРМАНС МАСТ ГОУ ОН",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "214306206",
+      "name_lat": "огу GLORY GLOSS TOUCH ME",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2582,15 +2702,6 @@
       "name_lat": "огу ЮЗ Е ПАУА ФОР ФРОЛАНД",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "725271203",
-      "name_lat": "огу ШОУ ПЕРФОРМАНС МАСТ ГОУ ОН",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2677,28 +2788,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1418559818",
-      "name_lat": "огу GLORY GLOSS TOUCH ME",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "626011703",
       "name_lat": "огу BEREZOVOY ROSCHI METALLICA",
       "name_ru": "",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1496937516",
-      "name_lat": "ОГНЕННЫЙ ОХОТНИК НАЙДА II",
-      "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2722,10 +2815,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "420913962",
+      "id": "1571227598",
+      "name_lat": "огу ПУШИСТИКОФФ ФИНИСТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ВОЛЬФШПИЦ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "783650507",
       "name_lat": "огу DENFRIS SPARTAK",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2740,9 +2841,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "103553538",
+      "name_lat": "ОГНЕННЫЙ ЛИС УЛИССА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "619750449",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЖОЗЕФ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЖОЗЕФ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -2751,7 +2860,7 @@
     {
       "id": "438864451",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЖЕНЕВРА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЖЕНЕВРА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -2767,9 +2876,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1437754901",
+      "name_lat": "ОГУЗ-ХАН ЖАХАН",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "52514412",
       "name_lat": "ОГНЕННЫЙ ЛОТОС КЬЮТИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС КЬЮТИ",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 2,
@@ -2778,7 +2896,7 @@
     {
       "id": "1422175633",
       "name_lat": "ОГНЕННЫЙ ЛИС АССОЛЬ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛИС АССОЛЬ",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -2816,15 +2934,6 @@
       "name_lat": "ОГНЕННЫЙ ЛОТОС КИРСАНОВ",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР / AMERICAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1437754901",
-      "name_lat": "ОГУЗ-ХАН ЖАХАН",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2920,6 +3029,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1533171311",
+      "name_lat": "огу AVE DINORNIS ODRY",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "776285424",
       "name_lat": "огу BEREZOVOY ROSCHI GUARDIAN OF SOUL",
       "name_ru": "",
@@ -2956,10 +3073,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "132597560",
+      "id": "3799133",
       "name_lat": "ОГНЕННАЯ ЗВЕЗДА ГАНС КРИСТОБАЛЬ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "ОГНЕННАЯ ЗВЕЗДА ГАНС КРИСТОБАЛЬ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2967,7 +3084,7 @@
     {
       "id": "1078471339",
       "name_lat": "ОГРИН ЖОФФРЕЙ ДЕ ПЕЙРАК",
-      "name_ru": "",
+      "name_ru": "ОГРИН ЖОФФРЕЙ ДЕ ПЕЙРАК",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -3001,6 +3118,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "953494102",
+      "name_lat": "ОГНЕННЫЙ ЛЕГИОН АСТРА",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1756054694",
       "name_lat": "ОГНЕННЫЙ ЛОТОС БЕАТА БЛЮ СКАЙ",
       "name_ru": "",
@@ -3019,19 +3144,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1765958503",
+      "id": "176384038",
       "name_lat": "ОГНЕННАЯ ЗВЕЗДА ДАЙКИРИЯ ДОРИС",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "ОГНЕННАЯ ЗВЕЗДА ДАЙКИРИЯ ДОРИС",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1859471190",
+      "id": "347202090",
       "name_lat": "ОГНИ МОСКВЫ ЗЕМЛЯНИЧНЫЙ ДЖЕМ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ОГНИ МОСКВЫ ЗЕМЛЯНИЧНЫЙ ДЖЕМ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "66386541",
+      "name_lat": "огу АРЛЕН РУС СИН РО-АРХ ДЛЯ СЕЙИ ТАЙСЁГУН",
+      "name_ru": "огу АРЛЕН РУС СИН РО-АРХ ДЛЯ СЕЙИ ТАЙСЁГУН",
+      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3039,7 +3173,7 @@
     {
       "id": "92798064",
       "name_lat": "ОГНЕННЫЙ РИЧАРД",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ РИЧАРД",
       "breed": "КУПЛЯУСКАС ЕВГЕНИЙ СТАСИОВИЧ",
       "breed_en": "",
       "total_shows": 2,
@@ -3048,7 +3182,7 @@
     {
       "id": "1785320137",
       "name_lat": "ОГНЕННЫЙ ЛИС ЧЕРНИКА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛИС ЧЕРНИКА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -3057,10 +3191,18 @@
     {
       "id": "306211645",
       "name_lat": "ОГНИ СТОЛИЦЫ СТИЛЬНАЯ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ОГНИ СТОЛИЦЫ СТИЛЬНАЯ ЛЕДИ",
       "breed": "ЧИХУАХУА, ГЛАДКОШЕРС",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "191859215",
+      "name_lat": "ОГРА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3068,24 +3210,6 @@
       "name_lat": "огу ШТЕФФИ",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1274502251",
-      "name_lat": "огу ARSLAN LEO ORPHEUS",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ХИЛЛЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "760820871",
-      "name_lat": "огу COTTON WINGS INTELLIGENT",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3104,6 +3228,60 @@
       "name_lat": "огу SENTINELA FARRAPO QUEENSLANDER",
       "name_ru": "",
       "breed": "АВСТРАЛИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1157056586",
+      "name_lat": "огу ПЕТТИ БЕЛЬ",
+      "name_ru": "",
+      "breed": "ШВЕЙЦАРСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "954010226",
+      "name_lat": "огу ЗЕННЕНХУНД РОССИИ ПРАВДА",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "5865354",
+      "name_lat": "огу ВИНД ОФ ГРАНД ЭВЕРЕСТ",
+      "name_ru": "",
+      "breed": "вельш корги кардиган вельш корги кардиган вельш корги кардиган вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк немецкая овчарка",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1879824789",
+      "name_lat": "огу БИЛБЕРРИ С КРЕСТОВОГО ПОХОДА",
+      "name_ru": "",
+      "breed": "ШВЕЙЦАРСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1274502251",
+      "name_lat": "огу ARSLAN LEO ORPHEUS",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКИЙ ХИЛЛЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "760820871",
+      "name_lat": "огу COTTON WINGS INTELLIGENT",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3190,10 +3368,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "4275094",
+      "id": "741649658",
       "name_lat": "ОГНИ МОСКВЫ ЗЕМЛЯНИ ЧНЫЙ ДЖЕМ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕ ВЫЙ, СЕРЕБРИС ТЫЙ, АБРИКОС ОВЫЙ, КРАСНЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕ ВЫЙ, СЕРЕБРИС ТЫЙ, АБРИКОС ОВЫЙ, КРАСНЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3208,10 +3386,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "682459850",
+      "id": "374513819",
       "name_lat": "ОГНЕННАЯ ЗВЕЗДА ШЕННОН КЕЙТ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3244,19 +3422,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "159794611",
+      "id": "1996908058",
       "name_lat": "ОГНЕННАЯ ЗВЕЗДА ЦЕЛЛАРИЯ БРЕНДА",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1401680267",
+      "id": "50364034",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЯРКАЯ ЧЕРНИКА",
       "name_ru": "",
-      "breed": "СОБАКА ГОЛАЯ /",
+      "breed": "СОБАКА ГОЛАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3271,10 +3449,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1487340475",
+      "id": "1273720189",
       "name_lat": "ОГНИ СТОЛИЦЫ МАРМАЗЕТКА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3289,11 +3467,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "66386541",
-      "name_lat": "огу АРЛЕН РУС СИН РО-АРХ ДЛЯ СЕЙИ ТАЙСЁГУН",
+      "id": "561597463",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС НАЗИМА ФОР ГЛЕНЛАЙФ",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3316,26 +3493,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1157056586",
-      "name_lat": "огу ПЕТТИ БЕЛЬ",
-      "name_ru": "",
-      "breed": "ШВЕЙЦАРСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "954010226",
-      "name_lat": "огу ЗЕННЕНХУНД РОССИИ ПРАВДА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1961224533",
-      "name_lat": "огу СЕВЕНТИ СЕВЕН ТЕКИЛА-БУМ- БУМ",
+      "id": "1213203575",
+      "name_lat": "огу СЕВЕНТИ СЕВЕН ТЕКИЛА-БУМ-БУМ",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -3352,37 +3511,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1781570409",
-      "name_lat": "огу ВИНД ОФ ГРАНД ЭВЕРЕСТ",
-      "name_ru": "",
-      "breed": "вельш корги кардиган вельш корги кардиган вельш корги кардиган вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк немецкая овчарка немецкая овчарка",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "561471199",
       "name_lat": "огу ШЕБА КВИН МС ЛИОРА ЛАЙН",
       "name_ru": "",
       "breed": "АФФЕНПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1879824789",
-      "name_lat": "огу БИЛБЕРРИ С КРЕСТОВОГО ПОХОДА",
-      "name_ru": "",
-      "breed": "ШВЕЙЦАРСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "103553538",
-      "name_lat": "ОГНЕННЫЙ ЛИС УЛИССА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3478,10 +3610,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1762587761",
+      "id": "1780565618",
       "name_lat": "огу ДЖАЗ-БАНД ФРАНЧЕСКА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3496,21 +3628,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1048671200",
-      "name_lat": "огу АВЕ ДИНОРНИС МИТРОФАН",
+      "id": "507775892",
+      "name_lat": "огу ИНТЕРШАРМ ЭПАТАЖ",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1070969992",
-      "name_lat": "ОГНЕННАЯ КАССАНДРА ИЗ КОРОЛЕВСТВА СТАФФ",
+      "id": "1632075001",
+      "name_lat": "огу EMIL' IZ SAMARY GORODKA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "37061776",
+      "name_lat": "огу ОРАНЖ-СТОРИ УАЙТ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА Д/Ш",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "651030241",
+      "name_lat": "огу BUA LUANG UNICO",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3532,10 +3678,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "157360125",
+      "name_lat": "огу DGESS AVATAR OF COURAGE",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1271645484",
       "name_lat": "огу ATLANT",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1808626421",
+      "name_lat": "огу АРКТУР ИЗ КОРОЛЕВСТВА СТАФФ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3563,15 +3726,6 @@
       "name_lat": "огу Marrandi Joy Best Ever",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1808626421",
-      "name_lat": "огу АРКТУР ИЗ КОРОЛЕВСТВА СТАФФ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3649,11 +3803,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "691700273",
+      "name_lat": "огу VOSTORG OT FILIPPOVOY",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1025084833",
       "name_lat": "огу GENTLY BORN RIO KARNAVAL",
       "name_ru": "",
       "breed": "Окрас чёрный",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "373478433",
+      "name_lat": "огу MONKEY STAR ELF",
+      "name_ru": "",
+      "breed": "АФФЕНПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "172090683",
+      "name_lat": "огу ZHEMCHUG SEVERA ES- FANFAN-TYULPAN",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА – ГРЮНЕНДАЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3672,6 +3850,14 @@
       "name_ru": "",
       "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (бобтейл)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "604433598",
+      "name_lat": "огу ANITY HILLS CELTIC KNOT",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3703,18 +3889,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1357007822",
-      "name_lat": "ОГНЕННЫЙ ОХОТНИК",
-      "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1422086584",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЛАКОСТА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЛАКОСТА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -3750,7 +3927,7 @@
     {
       "id": "1805080801",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ОКТАВИЯ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ОКТАВИЯ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -3759,7 +3936,7 @@
     {
       "id": "1870952439",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН БАККАРДИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛЕГИОН БАККАРДИ",
       "breed": "ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -3768,7 +3945,7 @@
     {
       "id": "358225591",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ВИСКИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ВИСКИ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -3802,11 +3979,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1885297611",
-      "name_lat": "Огненная Ночь из Ксаро Честная Игра к/х",
+      "id": "1749909018",
+      "name_lat": "огу ИМПЕРИЯ ЛАЙФ ФОРЕСТ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3822,15 +3998,6 @@
     {
       "id": "112320026",
       "name_lat": "огу HEVENS GEIT FOR FROLAND",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "270755019",
-      "name_lat": "огу MARRANDI KALINA",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -3973,15 +4140,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1010664154",
-      "name_lat": "огу МАРРАНДИ КАЛИНА",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "159093296",
       "name_lat": "огу ИСГААРД БАГРАТИОН",
       "name_ru": "",
@@ -4000,10 +4158,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810131256",
+      "id": "1271013388",
       "name_lat": "ОГНЕННЫЙ ЛИС ЖОЗЕ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4027,11 +4185,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "84646358",
+      "name_lat": "огу НАФАНИ ЖАНИН ДЕ РОКСАН",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1427421967",
+      "name_lat": "ОГНИ СТОЛИЦЫ МАРС",
+      "name_ru": "",
+      "breed": "ГЛАДКОШЕРС",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "207886449",
       "name_lat": "огу КУНТИ ТРИКОЛОР ПРИНЦЕСС",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605875279",
+      "name_lat": "огу ASTRA VIKTORIYA TOKISA",
+      "name_ru": "",
+      "breed": "АКИТА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4081,10 +4263,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "140855142",
+      "id": "1344914889",
       "name_lat": "огу АНСЕРВИШ ЦЕНТАУРУС",
       "name_ru": "",
-      "breed": "австралийская овчарка бельгийская овчарка малинуа бородатый колли бородатый колли",
+      "breed": "австралийская овчарка бельгийская овчарка малинуа бородатый колли",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4171,6 +4353,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1626471600",
+      "name_lat": "ОГНЕННЫЙ ЛЕВ ИЗУМРУД",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1383544076",
       "name_lat": "огу PROSTO CHUDO LOS ANGELES",
       "name_ru": "",
@@ -4216,9 +4406,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "79058864",
+      "name_lat": "огу GOOD POINT DEVI",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "288483153",
       "name_lat": "ОГНА ФОМ ОЛЬСТЕР ХОФ",
-      "name_ru": "",
+      "name_ru": "ОГНА ФОМ ОЛЬСТЕР ХОФ",
       "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 4,
@@ -4234,12 +4432,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "519235797",
-      "name_lat": "ОГНЕННАЯ ЗВЕЗДА Я- МАЙК ДАЙМОНД",
-      "name_ru": "",
+      "id": "198411693",
+      "name_lat": "ОГНЕННАЯ ЗВЕЗДА Я-МАЙК ДАЙМОНД",
+      "name_ru": "ОГНЕННАЯ ЗВЕЗДА Я-МАЙК ДАЙМОНД",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "52192729",
+      "name_lat": "огу БАРБЕРРИ ФОРЕСТ КАЛЛИНАН БЛЭК БЭДЖ",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4265,6 +4471,24 @@
       "name_lat": "огу БАРАКИЭЛЬ",
       "name_ru": "",
       "breed": "АСТ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1717269586",
+      "name_lat": "огу БЕРРИ РЭД КРАФТ ВИНТЕР",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1651038075",
+      "name_lat": "огу Эддисон Томас Алва от Бор Кинг Прайд",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4387,24 +4611,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1717269586",
-      "name_lat": "огу БЕРРИ РЭД КРАФТ ВИНТЕР",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1651038075",
-      "name_lat": "огу Эддисон Томас Алва от Бор Кинг Прайд",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1312197036",
       "name_lat": "огу БРАЙИ-БОЙТ ИЗ ДОМА КОРОЛЕВОЙ",
       "name_ru": "",
@@ -4468,10 +4674,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "217138530",
+      "id": "858315444",
       "name_lat": "огу ЖИВАННА ФЕСТ ЛЕДИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4508,6 +4714,24 @@
       "name_lat": "огу FAWORITE KING LUKE SKYWALKER",
       "name_ru": "",
       "breed": "КИНГ ЧАРЛЬЗ КИНГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1387542142",
+      "name_lat": "огу GUDVIN’S RIDDL MANCHESTER",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1773689642",
+      "name_lat": "огу JEAN PAUL",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4567,15 +4791,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1363035902",
-      "name_lat": "огу GUDVIN’S RIDDL MANCHESTER",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1111636052",
       "name_lat": "огу ЕВРА ЛЕОНЕ КЭЛВИН ЭС ЭДЕН ЛАИС",
       "name_ru": "",
@@ -4603,6 +4818,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "333837502",
+      "name_lat": "огу БЛЭК СТРЕЙНДЖЕР ЭКСКАЛИБУР",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "596534983",
       "name_lat": "огу КЕЛМАСОМИ ЕНТЕС",
       "name_ru": "",
@@ -4612,11 +4835,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "291178271",
-      "name_lat": "огу JEAN PAUL",
+      "id": "979509307",
+      "name_lat": "огу ТАЛАНТЭЛ ГРАНД",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4630,11 +4852,59 @@
       "competition_dog_id": null
     },
     {
+      "id": "1099592291",
+      "name_lat": "огу ALPHA ROMEO BY BAUER",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "837103590",
+      "name_lat": "огу RADOST ZHIZNI YATAGAN BRAVE HEART",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА (самоед)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1009698840",
+      "name_lat": "огу ORENJI TAKASHI DENKA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1644153084",
+      "name_lat": "огу БЛЭК МЭДЖИК ОФ ЗЕ САН ОНИКС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "741958217",
+      "name_lat": "огу ТАЙГЕР ЛАНД РАПИТАЛ КАТАРРАТТО ВИТАЛ ВЭЙ",
+      "name_ru": "",
+      "breed": "Окрас сплошной",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1253074566",
       "name_lat": "огу ШАХРИЯР ЮДЖИН",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "47195219",
+      "name_lat": "огу KETRIN’S EDELWEISS",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4711,28 +4981,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1782838630",
-      "name_lat": "ОГНЕННЫЙ ЛИС РОКСАНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1290498050",
       "name_lat": "ОГНЕННЫЙ ЛИС ВЕРОНИКА",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "959709090",
-      "name_lat": "ОГНЕННАЯ МАРИЯ С БОСФОРА ВОСТОЧНОГО",
-      "name_ru": "",
-      "breed": "RUSSIAN BLACK TERRIER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4846,10 +5098,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1866272698",
+      "id": "545540287",
       "name_lat": "огу ЗАТЕЙНИК ИЗ МЫШКИНОГО ДОМА",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4864,10 +5116,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1510755379",
+      "id": "1181037603",
       "name_lat": "огу ГЕРМЕС АБСОЛЮТНАЯ ВЛАСТЬ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4878,6 +5130,14 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "186565833",
+      "name_lat": "огу АРЧЕР ФЛОК МОРИС",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4936,10 +5196,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "868900556",
+      "id": "183122839",
       "name_lat": "огу ЛАЙН ОФ ЛАЙФ ДАЙМЛЕР",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5062,18 +5322,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1274159080",
-      "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЗЕНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1182684300",
       "name_lat": "ОГРАНКА В СЕРЕБРЕ ИЗ ТВЕРСКОЙ СКАЗКИ",
-      "name_ru": "",
+      "name_ru": "ОГРАНКА В СЕРЕБРЕ ИЗ ТВЕРСКОЙ СКАЗКИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 4,
@@ -5091,17 +5342,8 @@
     {
       "id": "67704973",
       "name_lat": "Огненный Лис Дем Демыч",
-      "name_ru": "",
+      "name_ru": "Огненный Лис Дем Демыч",
       "breed": "КСОЛОИТЦКУНТЛИ НЕМЕЦКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "125066964",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС ХОХЛОМА",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5170,8 +5412,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "44722225",
-      "name_lat": "огу FOXBERRYHILLS HAT- TRICK",
+      "id": "1913621629",
+      "name_lat": "огу FOXBERRYHILLS HAT-TRICK",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "",
@@ -5184,6 +5426,14 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "257628403",
+      "name_lat": "огу ЭКТРОКАНИЭЛПИС ТОРО",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5208,7 +5458,7 @@
     {
       "id": "1696014376",
       "name_lat": "ОГОНЬ ЖИЗНИ ДИВНАЯ",
-      "name_ru": "",
+      "name_ru": "ОГОНЬ ЖИЗНИ ДИВНАЯ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -5217,7 +5467,7 @@
     {
       "id": "508910488",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЗУМБА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЗУМБА",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -5226,19 +5476,36 @@
     {
       "id": "920709601",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ХИМИЯ ЛЮБВИ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ХИМИЯ ЛЮБВИ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "65398510",
+      "id": "1510224738",
       "name_lat": "Огюст Величественный",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "name_ru": "Огюст Величественный",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1484940818",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ЦИАРА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1428274822",
+      "name_lat": "Огненный Лотос Азарис",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -5253,7 +5520,7 @@
     {
       "id": "1171239590",
       "name_lat": "ОГНЕННЫЙ ЛИС ХЭВЕНС ГЕЙТ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛИС ХЭВЕНС ГЕЙТ",
       "breed": "МАЛЫЙ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -5262,26 +5529,26 @@
     {
       "id": "588236728",
       "name_lat": "ОГНЕЯР ЗИМОГОР",
-      "name_ru": "",
+      "name_ru": "ОГНЕЯР ЗИМОГОР",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1363711580",
+      "id": "1476598521",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН АНУБИС",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "name_ru": "ОГНЕННЫЙ ЛЕГИОН АНУБИС",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "118355797",
+      "id": "1799435112",
       "name_lat": "ОГНЕННЫЙ ЛОТОС РАВИНА",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА /",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС РАВИНА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5323,6 +5590,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1920713036",
+      "name_lat": "огу АВАТАР НАЙТ СТАР",
+      "name_ru": "огу АВАТАР НАЙТ СТАР",
+      "breed": "бордер колли вельш корги кардиган вельш корги кардиган вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк восточноевропейская овчарка восточноевропейская овчарка немецкая овчарка немецкая овчарка мареммо абруцкая овчарка мареммо абруцкая овчарка шелти шелти бернский зенненхунд бульдог кане корсо немецкий боксер среднеазиатская овчарка среднеазиатская овчарка тибетский мастиф тибетский мастиф цвергшнауцер п/с",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "621755182",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЧА-ЧА-ЧА    ( ПУХ )",
       "name_ru": "",
@@ -5346,6 +5622,38 @@
       "name_ru": "",
       "breed": "Среднеазиатская овчарка",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "553990345",
+      "name_lat": "огу РЕАЛ СТАТУС ПИТЕР ПЭН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "4897969",
+      "name_lat": "ОГОНЬ ЛУНЫ ИДАЛЬГО",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "170224473",
+      "name_lat": "ОГНЕННЫЙ ЛЕВ МУН ЛАЙТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "328165272",
+      "name_lat": "ОГНЕННЫЙ ЛЕВ ЖОЗЕФИНА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5386,15 +5694,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1484940818",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС ЦИАРА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1214048238",
       "name_lat": "огу ВЕТАРА ДРИМС А РИАЛ",
       "name_ru": "",
@@ -5413,10 +5712,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "158832453",
+      "id": "1094789208",
       "name_lat": "ОГНЕННАЯ ШИРЛИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5458,19 +5757,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "484742177",
+      "id": "1071262588",
       "name_lat": "ОГА ПОВЕЛИТЕЛЬНИЦА СНОВ ЭЛЕОНОРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "25628211",
+      "id": "97988191",
       "name_lat": "ОГНИ МОСКВЫ ТЕРЕЗА МАРИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5514,35 +5813,26 @@
     {
       "id": "1203164335",
       "name_lat": "огу ШЕЙК КЛАМБЛ БЛЮБЕРРИ (NBT)",
-      "name_ru": "",
+      "name_ru": "огу ШЕЙК КЛАМБЛ БЛЮБЕРРИ",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1781020858",
+      "id": "740198155",
       "name_lat": "ОГОНЬ ЛУНЫ ЗАГАДОЧНАЯ ЛЕДИ ЗИЯ",
-      "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ОГОНЬ ЛУНЫ ЗАГАДОЧНАЯ ЛЕДИ ЗИЯ",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1399397106",
-      "name_lat": "ОГНЕННЫЙ ЛИС ТРЮФЕЛЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1920713036",
-      "name_lat": "огу АВАТАР НАЙТ СТАР",
-      "name_ru": "",
-      "breed": "бордер колли вельш корги кардиган вельш корги кардиган вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк восточноевропейская овчарка восточноевропейская овчарка немецкая овчарка немецкая овчарка мареммо абруцкая овчарка мареммо абруцкая овчарка шелти шелти бернский зенненхунд бульдог кане корсо немецкий боксер среднеазиатская овчарка среднеазиатская овчарка тибетский мастиф тибетский мастиф цвергшнауцер п/с",
+      "id": "903859192",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ЮЖНЫЙ ВЕТЕР",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ЮЖНЫЙ ВЕТЕР",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5550,7 +5840,7 @@
     {
       "id": "234249527",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЛАСКА",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛЕГИОН ЛАСКА",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -5559,8 +5849,17 @@
     {
       "id": "248339799",
       "name_lat": "ОГНЕННАЯ ЗВЕЗДА ОБРАЙЕН ХАЙМЕ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННАЯ ЗВЕЗДА ОБРАЙЕН ХАЙМЕ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "648314822",
+      "name_lat": "ОГОНЬ ЖИЗНИ ВЕЗУЧАЯ БРИДЖ",
+      "name_ru": "ОГОНЬ ЖИЗНИ ВЕЗУЧАЯ БРИДЖ",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5568,7 +5867,7 @@
     {
       "id": "772096262",
       "name_lat": "ОГНЕЯР ХАЗАР",
-      "name_ru": "",
+      "name_ru": "ОГНЕЯР ХАЗАР",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ БЕЛЫЙ, КОРИЧНЕВЫЙ, ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -5577,17 +5876,17 @@
     {
       "id": "1022476442",
       "name_lat": "ОГНЕННОЕ СЧАСТЬЕ МИРА НУМЕНОР’С",
-      "name_ru": "",
+      "name_ru": "ОГНЕННОЕ СЧАСТЬЕ МИРА НУМЕНОР’С",
       "breed": "СЕТТЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "394636985",
+      "id": "71758005",
       "name_lat": "ОГНИ МОСКВЫ ТОМАС ВИРТУОЗ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ОГНИ МОСКВЫ ТОМАС ВИРТУОЗ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5595,26 +5894,17 @@
     {
       "id": "863832763",
       "name_lat": "ОГНЕННЫЙ ЛОТОС СОЛНЕЧНЫЙ СВЕТ",
-      "name_ru": "",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС СОЛНЕЧНЫЙ СВЕТ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1240063117",
+      "id": "1424062704",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ФЭНСИ",
-      "name_ru": "",
-      "breed": "СОБАКА ГОЛАЯ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "794605352",
-      "name_lat": "ОГНЕННАЯ РОЗА ИЗ ДОМА АЛАНТЕС",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "name_ru": "ОГНЕННЫЙ ЛОТОС ФЭНСИ",
+      "breed": "СОБАКА ГОЛАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5670,6 +5960,14 @@
       "name_ru": "",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "461800765",
+      "name_lat": "ОГАСТА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5750,6 +6048,121 @@
       "name_lat": "ОГНИВА",
       "name_ru": "",
       "breed": "*БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "409",
+      "name_lat": "ОГОНЬ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 1,
+      "competition_dog_id": 409
+    },
+    {
+      "id": "1591970967",
+      "name_lat": "огу STRONG PRIDE TICH EDVARD",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1151613923",
+      "name_lat": "огу БОВОРО ФЕРРАРИ ТЕСТАРОССА",
+      "name_ru": "",
+      "breed": "бордер колли вельш корги пемброк вельш корги пемброк вельш корги пемброк немецкая овчарка немецкая овчарка немецкая овчарка восточноевропейская овчарка шелти шелти шипперке бернский зенненхунд бульдог бульдог доберман",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "75215867",
+      "name_lat": "огу СЕВЕНТИ СЕВЕН ОБСИДАН",
+      "name_ru": "",
+      "breed": "австралийская овчарка австралийская овчарка австралийская овчарка австралийская овчарка австралийская овчарка бордер колли бордер колли бордер колли вельш корги кардган вельш корги пемброк",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1075857451",
+      "name_lat": "огу KYNAGON MRs. MONEYPENNY",
+      "name_ru": "",
+      "breed": "бордер колли вельш корги кардиган вельш корги кардиган вельш корги кардиган вельш корги кардиган вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк колли длинношерст",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "426106610",
+      "name_lat": "огу АВЕ ДИНОРНИС ЛИЯ",
+      "name_ru": "",
+      "breed": "австралийская овчарка австралийская овчарка вельш корги кардиган вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк восточно - европейская овчарка колли длинношерстный колли длинношерстный колли длинношерстный немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка д/ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1007373999",
+      "name_lat": "огу МАРВЛАД АРИЯ ЛЮБВИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1010094625",
+      "name_lat": "ОГОНЬ ЛУНЫ РИДЖИНА ДИ ПОРТО Д’ОРО",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "351663111",
+      "name_lat": "огу MIL TAY'S GOLD DACKAR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "277838200",
+      "name_lat": "огу ЛЕЙМАРИ НЕОН ФЛЕШ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "875049734",
+      "name_lat": "огу BELLA DORATA PICASSO’S LEGASY",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "71234722",
+      "name_lat": "огу GALA GLORY BEAUTIFUL BELLE",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1887628732",
+      "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЯЛУНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5899,10 +6312,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "994717663",
+      "id": "1986851903",
       "name_lat": "ОГНЕННАЯ ЛЕДИ ИЗ КУРГАН ГРАДА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5962,10 +6375,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1741979116",
+      "id": "1907305417",
       "name_lat": "ОГНЕННАЯ ЗВЕЗДА ШАО ЛИНЬ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5984,15 +6397,6 @@
       "name_lat": "огу АВЕ ДИНОРНИС КАМА",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1591970967",
-      "name_lat": "огу STRONG PRIDE TICH EDVARD",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6020,15 +6424,6 @@
       "name_lat": "огу ЭППЛДОР БАРКИНГ ХЭАРТБРЕЙКУР",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "621493438",
-      "name_lat": "огу БОВОРО ФЕРРАРИ ТЕСТАРОССА",
-      "name_ru": "",
-      "breed": "бордер колли вельш корги пемброк вельш корги пемброк вельш корги пемброк немецкая овчарка немецкая овчарка немецкая овчарка восточноевропейская овчарка шелти шелти шипперке бернский зенненхунд бульдог бульдог доберман доберман",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6070,15 +6465,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1293294267",
-      "name_lat": "огу СЕВЕНТИ СЕВЕН ОБСИДАН",
-      "name_ru": "",
-      "breed": "австралийская овчарка австралийская овчарка австралийская овчарка австралийская овчарка австралийская овчарка бордер колли бордер колли бордер колли вельш корги кардган вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1237566509",
       "name_lat": "огу БАЙ БАХСЫ МАКСИМУС",
       "name_ru": "",
@@ -6097,10 +6483,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1903280094",
+      "id": "1803615463",
       "name_lat": "ОГОНЬ ЛУНЫ АМАЗОНКА",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6124,19 +6510,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1075857451",
-      "name_lat": "огу KYNAGON MRs. MONEYPENNY",
-      "name_ru": "",
-      "breed": "бордер колли вельш корги кардиган вельш корги кардиган вельш корги кардиган вельш корги кардиган вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк колли длинношерст",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "515144980",
+      "id": "787099827",
       "name_lat": "огу РОЯЛ ГОЛДЕН МЭ2ЙК /М/",
       "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА /МАЛИНУА/",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА /МАЛИНУА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6151,28 +6528,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "426106610",
-      "name_lat": "огу АВЕ ДИНОРНИС ЛИЯ",
-      "name_ru": "",
-      "breed": "австралийская овчарка австралийская овчарка вельш корги кардиган вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк вельш корги пемброк восточно - европейская овчарка колли длинношерстный колли длинношерстный колли длинношерстный немецкая овчарка немецкая овчарка немецкая овчарка немецкая овчарка д/ш",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1041004221",
       "name_lat": "огу АЙС ДЖОС РЫСЬ",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1924308212",
-      "name_lat": "огу Инки Пинки аус Виквельт",
-      "name_ru": "",
-      "breed": "Вельш Корги Пемброк",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6223,19 +6582,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "452866714",
+      "id": "975373675",
       "name_lat": "ОГЮСТ ЭТЬЕН ДЕ БО",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1079733011",
+      "id": "1119586170",
       "name_lat": "ОГНЕЯР ОДЕСССА",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6268,10 +6627,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1667541082",
+      "id": "1552417067",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЕЕ ВЕЛИЧЕСТВО ПОБЕДА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6299,15 +6658,6 @@
       "name_lat": "ОГОНЬ ЖИЗНИ ДАСТЕР",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK RUSSELL",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "357841364",
-      "name_lat": "ОГОНЬ ЖИЗНИ КИАРА",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6358,10 +6708,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1569632550",
+      "id": "773948447",
       "name_lat": "огу ЭНИТИ ЦЕЛТИК НОТ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6434,15 +6784,6 @@
       "name_lat": "огу ВЭЛМАРТИ ДЖИАРДИНИ",
       "name_ru": "",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1007373999",
-      "name_lat": "огу МАРВЛАД АРИЯ ЛЮБВИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6538,11 +6879,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "903859192",
-      "name_lat": "ОГНЕННЫЙ ЛОТОС ЮЖНЫЙ ВЕТЕР",
+      "id": "157580959",
+      "name_lat": "ОГНЕННЫЙ ЛИС ЩЕДРЫЙ ПОДАРОЧЕК",
       "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6551,15 +6891,6 @@
       "name_lat": "ОГОНЬ ПАРЕНЬ",
       "name_ru": "",
       "breed": "AMERICAN STAFFORDSHIRE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1428274822",
-      "name_lat": "Огненный Лотос Азарис",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6583,11 +6914,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "490468931",
+      "id": "686994324",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН АРМАДА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "39334951",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС АЛЬВАР",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ / BULL TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "420909185",
+      "name_lat": "ОГОНЬ ЖИЗНИ ДАЙМОНД",
+      "name_ru": "",
+      "breed": "РАССЕЛ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6619,6 +6966,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "682344852",
+      "name_lat": "ОГНЕННЫЙ ЛИС УМНИЦА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "894248170",
       "name_lat": "огу ГРЁЗЫ ШАРМА БЬЮТИ КАРАМЕЛЬ",
       "name_ru": "",
@@ -6637,19 +6992,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "629849827",
-      "name_lat": "огу КРАСА РУСИ ЧЕМПИОН",
+      "id": "282271876",
+      "name_lat": "ОГОНЬ ЛУНЫ ПАТРИК ДЖЕРРИ",
       "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "LABRADOR RETRIEVER",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "623718402",
-      "name_lat": "ОГОНЬ ЛУНЫ РИДЖИНА ДИ ПОРТО Д’ОРО",
+      "id": "629849827",
+      "name_lat": "огу КРАСА РУСИ ЧЕМПИОН",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6664,6 +7018,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1230420460",
+      "name_lat": "ОГНЕННЫЙ ОВЕН ГЛАВНОЕ СПОКОЙСТВИЕ",
+      "name_ru": "",
+      "breed": "ST. BERNARD",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "200879330",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ЧИТГАР",
       "name_ru": "",
@@ -6673,11 +7035,43 @@
       "competition_dog_id": null
     },
     {
+      "id": "472841807",
+      "name_lat": "ОГОН ДЭЙКИН ИЗ ЦВЕТНЫХ ЭЛЬФОВ",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "244802236",
+      "name_lat": "огу АМИТИСТ БЛАГОСЛОВЕННЫЙ",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1711760482",
+      "name_lat": "огу КРОШ ИЗ КРАСНОЙ ДОЛИНЫ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1384388249",
       "name_lat": "огу МАКСИМИЛИАНС",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "934816715",
+      "name_lat": "огу GLAMOURKENNEL ZHASTIN- ZHERAR",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6700,6 +7094,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1126443905",
+      "name_lat": "ОГНЕННЫЙ ЛОТОС ЧЕРЕШНЯ",
+      "name_ru": "",
+      "breed": "СОБАКА ПУХОВАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "53747712",
       "name_lat": "ОГНЕННЫЙ ЛОТОС ВЕРОНА",
       "name_ru": "",
@@ -6709,11 +7111,43 @@
       "competition_dog_id": null
     },
     {
+      "id": "242855681",
+      "name_lat": "огу ТАБИТА ТЕЙЛОР БРАУН",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА г/ш",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "40629833",
       "name_lat": "огу КНЯЗЬ ИЗ ДИНАСТИИ ГАЛЬЯНЖ",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "372661697",
+      "name_lat": "огу СТЕЛЛАРДЕНС АСТОН МАРТИН",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "738094406",
+      "name_lat": "огу STAR KARUNA GUNFIGHTER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "457866401",
+      "name_lat": "огу BULLETSTORM MIA ST.JOHN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6736,10 +7170,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "112990407",
+      "id": "440415372",
       "name_lat": "огу RAMZES DLYA VIA DEL` KORSO",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6790,10 +7224,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "300856844",
+      "id": "1764557379",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЛЕГОЛАС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6844,10 +7278,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1643548670",
+      "id": "322659473",
       "name_lat": "огу ДАЛСИТ КИСС А СКАЙ ФУЛЛ ОФ СТАРС",
       "name_ru": "",
-      "breed": "бородатый колли бородатый колли",
+      "breed": "бородатый колли",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6862,10 +7296,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "335191847",
+      "id": "141348326",
       "name_lat": "ОГОНЬ ЛУНЫ ДЭЙЗИ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6979,24 +7413,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "298790024",
-      "name_lat": "огу ЛЕЙМАРИ НЕОН ФЛЕШ",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "708958691",
-      "name_lat": "огу BELLA DORATA PICASSO’S LEGASY",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1060570152",
       "name_lat": "огу ДОН ДИАМОНД ДРАЙВЕР",
       "name_ru": "",
@@ -7028,15 +7444,6 @@
       "name_lat": "Огонь Луны Армани Бренд",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "648314822",
-      "name_lat": "ОГОНЬ ЖИЗНИ ВЕЗУЧАЯ БРИДЖ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7096,10 +7503,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1918793012",
+      "id": "971524715",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЛАЙЗА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7118,15 +7525,6 @@
       "name_lat": "огу MAR NERO ULTRA BLUEBERRY",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "930029168",
-      "name_lat": "ОГНИ СТОЛИЦЫ ТИМБЕРЛИ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7199,15 +7597,6 @@
       "name_lat": "ОГУЗ-ХАН ДЖИНА",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1211948530",
-      "name_lat": "огу GALA GLORY BEAUTIFUL BELLE",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7312,19 +7701,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "492385240",
+      "id": "1097531655",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЧЕСТЕР ТАЙГЕР",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "728514981",
-      "name_lat": "ОГНЕСЛАВА ИЗ САГИ О ГАРДАРИКЕ",
-      "name_ru": "",
-      "breed": "УИППЕТ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7393,10 +7773,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1360900839",
+      "id": "697342880",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН ШЕФН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7411,10 +7791,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "20436839",
+      "id": "476751904",
       "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЭВРИКА МАВРОС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7456,11 +7836,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "76270264",
-      "name_lat": "ОГНЕННЫЙ ЛЕГИОН ЯЛУНА",
+      "id": "392064546",
+      "name_lat": "ОГНЕННЫЙ ЛЕГИОН ШЕРОН БЛЕК",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1475840291",
+      "name_lat": "огу AKNUR GUL ODA YAROSLAVA",
+      "name_ru": "",
+      "breed": "ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },

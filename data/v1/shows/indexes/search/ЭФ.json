@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЭФ",
-  "count": 73,
+  "count": 76,
   "dogs": [
     {
       "id": "1617746389",
@@ -15,26 +15,17 @@
     {
       "id": "665199117",
       "name_lat": "ЭФЕРИУМ ФЛАФФИ КЛАУД",
-      "name_ru": "",
+      "name_ru": "ЭФЕРИУМ ФЛАФФИ КЛАУД",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "379677118",
-      "name_lat": "ЭФЛОРЕС ДАЯНА РОЗ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "806797801",
+      "id": "934635430",
       "name_lat": "ЭФФИ АМБЕР ИЗ ДОМА ВЕНГРЭ",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "name_ru": "ЭФФИ АМБЕР ИЗ ДОМА ВЕНГРЭ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -49,12 +40,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "877003468",
-      "name_lat": "ЭФФЕКТ ДОМИНО ОФ ГОЛД КОЛЛЕКШН",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
+      "id": "1274515447",
+      "name_lat": "ЭФФЕКТ ВОН ОСТЕН ХЕРЦ",
+      "name_ru": "ЭФФЕКТ ВОН ОСТЕН ХЕРЦ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "330331713",
+      "name_lat": "ЭФФЕКТ ДОМИНО ОФ ГОЛД КОЛЛЕКШН",
+      "name_ru": "ЭФФЕКТ ДОМИНО ОФ ГОЛД КОЛЛЕКШН",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -76,73 +75,63 @@
       "competition_dog_id": null
     },
     {
-      "id": "1282337664",
-      "name_lat": "ЭФЛОРЕС ОРХИДЕЯ",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1097272664",
       "name_lat": "ЭФА САН ДЭНС",
-      "name_ru": "",
+      "name_ru": "ЭФА САН ДЭНС",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1914002239",
-      "name_lat": "Эффект Ин Зе Еар Оф Зе Драгон Вестмиррр",
+      "id": "1425884450",
+      "name_lat": "ЭФФУЛГЕНТ САН",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "1505439608",
       "name_lat": "ЭФЛОРЕС ЛИБЕРТИ",
-      "name_ru": "",
+      "name_ru": "ЭФЛОРЕС ЛИБЕРТИ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "411910749",
       "name_lat": "ЭФЕНДИ БАНС ПИНКЕРТОН АЛАН",
-      "name_ru": "",
+      "name_ru": "ЭФЕНДИ БАНС ПИНКЕРТОН АЛАН",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "240554095",
-      "name_lat": "ЭФЛОРЕС ХОЛИДЕЙ",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1682839434",
-      "name_lat": "ЭФФЕКТ БАБОЧКИ ИЗ МАРИАЛГРАДА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "637130590",
+      "id": "231476992",
+      "name_lat": "ЭФЛОРЕС ХОЛИДЕЙ",
+      "name_ru": "ЭФЛОРЕС ХОЛИДЕЙ",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "53831723",
+      "name_lat": "ЭФФЕКТ БАБОЧКИ ИЗ МАРИАЛГРАДА",
+      "name_ru": "ЭФФЕКТ БАБОЧКИ ИЗ МАРИАЛГРАДА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "867858820",
       "name_lat": "ЭФФЕКТНАЯ КРАСОТКА СОТЕЛЕАН ТОЙ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "name_ru": "ЭФФЕКТНАЯ КРАСОТКА СОТЕЛЕАН ТОЙ",
+      "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -150,7 +139,7 @@
     {
       "id": "178249254",
       "name_lat": "Эфект Хэритейднс Оф Бьюти",
-      "name_ru": "",
+      "name_ru": "Эфект Хэритейднс Оф Бьюти",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -159,17 +148,25 @@
     {
       "id": "218897692",
       "name_lat": "ЭФФЕКТ ИЗ ЧЕРНИЧНОГО РАЯ",
-      "name_ru": "",
+      "name_ru": "ЭФФЕКТ ИЗ ЧЕРНИЧНОГО РАЯ",
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "737361783",
-      "name_lat": "ЭФЛОРЕС ЧЕЙНДЖ Ю МАЙНД",
+      "id": "618843318",
+      "name_lat": "ЭФФЕКТНЫЙ МАЙК",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "БИШОН ФРИЗЕ /",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "144087816",
+      "name_lat": "ЭФЛОРЕС ЧЕЙНДЖ Ю МАЙНД",
+      "name_ru": "ЭФЛОРЕС ЧЕЙНДЖ Ю МАЙНД",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -184,9 +181,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1155122780",
+      "name_lat": "ЭФФЕКТНЫЙ ЭРИК ИЗ РОСТОВА ПАПЫ",
+      "name_ru": "ЭФФЕКТНЫЙ ЭРИК ИЗ РОСТОВА ПАПЫ",
+      "breed": "МОПС",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "6078328",
       "name_lat": "ЭФЛОРЕС ЛАФАЭЛЬ",
-      "name_ru": "",
+      "name_ru": "ЭФЛОРЕС ЛАФАЭЛЬ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
@@ -195,17 +200,17 @@
     {
       "id": "1537001931",
       "name_lat": "ЭФЛОРЕС ГЕНРИЕТТА",
-      "name_ru": "",
+      "name_ru": "ЭФЛОРЕС ГЕНРИЕТТА",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1502425137",
+      "id": "599367745",
       "name_lat": "ЭФЛОРЕС КОРОЛЬ МОЕГО СЕРДЦА",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "name_ru": "ЭФЛОРЕС КОРОЛЬ МОЕГО СЕРДЦА",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -225,6 +230,14 @@
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "268870336",
+      "name_lat": "ЭФЛОРЕС КОЛДОВСКОЕ ОЗЕРО",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -256,37 +269,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1183804847",
-      "name_lat": "ЭФФЕКТНЫЙ МАЙК",
+      "id": "1441958080",
+      "name_lat": "ЭФФА ФАЙН ШОКОЛАТЕ",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "ПАПИЙОН",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "949086081",
-      "name_lat": "ЭФА ИЗ РОДНОГО КРАЯ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1184069686",
+      "id": "1093538584",
       "name_lat": "ЭФЖЕН ПОЛИ МАЛЕФИСЕНТА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1772382840",
+      "id": "365113381",
       "name_lat": "ЭФЛОРЕС ВАЛЕНСИЯ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -301,19 +304,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "282701587",
+      "id": "961560860",
       "name_lat": "ЭФЛОРЕС ЕЛАЙДЖА ВУД",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "758134183",
+      "id": "626913432",
       "name_lat": "ЭФЛОРЕС ИНДИАНА ДЖОНС",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -328,8 +331,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "988290537",
-      "name_lat": "ЭФФЕКТ БАБОЧКИ ШИХОУИН К-Ш",
+      "id": "1904812396",
+      "name_lat": "ЭФФЕКТ БАБОЧКИ ШИХОУИН",
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
@@ -355,10 +358,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1367807011",
+      "id": "128124780",
       "name_lat": "ЭФФЕКТ ИСКУШЕНИЯ СЕНСАЦИЯ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -373,27 +376,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "257649451",
+      "id": "1037883307",
       "name_lat": "ЭФЛОРЕС ДАРК ЧОКОЛАД ЭМБЕР",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЁРНЫЕ, ЧЁРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЕРНЫЕ, ЧЕРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1128060224",
+      "id": "1571429101",
       "name_lat": "ЭФЛОРЕС ЧЕЙСИ ШИК ЧИК",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЭФЛОРЕС ЧЕЙСИ ШИК ЧИК",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1315193121",
+      "name_lat": "Э'ФАЕР БОЙ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "24335369",
       "name_lat": "ЭФА С САЯНСКИХ ГОР",
-      "name_ru": "",
+      "name_ru": "ЭФА С САЯНСКИХ ГОР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -418,19 +430,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1092654297",
+      "id": "1825375873",
       "name_lat": "ЭФФЕКТНАЯ ЭДЖЕРЕН ИЗ ОРУЖЕЙНОГО КРАЯ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ЭФФЕКТНАЯ ЭДЖЕРЕН ИЗ ОРУЖЕЙНОГО КРАЯ",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "975049257",
+      "id": "157655014",
       "name_lat": "ЭФОРА ЗОРРО",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -463,19 +475,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "573338436",
+      "id": "684598049",
       "name_lat": "ЭФФЕКТ ИСКУШЕНИЯ РИФМА САПФИРА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1995598370",
+      "id": "1313839183",
       "name_lat": "ЭФФЕКТ ИСКУШЕНИЯ РОСКОШНА ЖЕМЧУЖИНА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -485,6 +497,32 @@
       "name_lat": "ЭФИОП",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "114355970",
+      "name_lat": "Э'ФАЕР БОЙ",
+      "name_ru": "",
+      "breed": "JACK RUSSELL TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "975049257",
+      "name_lat": "ЭФОРА ЗОРРО",
+      "name_ru": "",
+      "breed": "КАРДИГАН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "291490084",
+      "name_lat": "ЭФЛОРЕС ИСКУСНИЦА",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -508,19 +546,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1964718222",
+      "id": "1685530151",
       "name_lat": "ЭФЛОРЕС ИНКРИДИБЛ БОЙ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1361048200",
-      "name_lat": "ЭФЛОРЕС ИСКУСНИЦА",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -553,19 +582,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "850911809",
+      "id": "968539932",
       "name_lat": "ЭФФЕКТ БАБОЧКИ",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "779709860",
+      "id": "1367008441",
       "name_lat": "ЭФЛОРЕС КИНИРО ОТРАЖЕНИЕ ДУШИ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -580,10 +609,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "880010891",
+      "id": "508049431",
       "name_lat": "ЭФЕНДИ БАНС ЭРИТЭ ЭЛВЕН СОНГ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -598,10 +627,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "43911420",
+      "id": "1529835627",
       "name_lat": "ЭФЕНДИ ЭНДЖЕЛ АЙЗ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -634,8 +663,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1892282487",
-      "name_lat": "ЭФФИ ВАЙТ ГОЛД ТАН- РО",
+      "id": "861839725",
+      "name_lat": "ЭФФИ ВАЙТ ГОЛД ТАН-РО",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
@@ -647,15 +676,6 @@
       "name_lat": "ЭФФА ИЗ СОЧИ СИТИ",
       "name_ru": "",
       "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "693133288",
-      "name_lat": "ЭФФЕКТ ВОН ОСТЕН ХЕРЦ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР ПАЛЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

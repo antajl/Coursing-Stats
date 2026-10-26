@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ZL",
-  "count": 372,
+  "count": 387,
   "dogs": [
     {
       "id": "1537818114",
@@ -18,7 +18,7 @@
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "AFGHAN HOUND",
-      "total_shows": 278,
+      "total_shows": 294,
       "competition_dog_id": null
     },
     {
@@ -36,7 +36,7 @@
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 69,
+      "total_shows": 74,
       "competition_dog_id": null
     },
     {
@@ -49,21 +49,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1771620753",
+      "name_lat": "ZLATO'A TSARITSA",
+      "name_ru": "ЗЛАТО'А ЦАРИЦА",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "51733112",
       "name_lat": "ZLATAPUZ UMNITSA KRASAVITSA ZOSYA",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 43,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1771620753",
-      "name_lat": "ZLATO'A TSARITSA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -85,12 +85,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "257847803",
+      "id": "1659999711",
       "name_lat": "ZLATO DANY TAVOLGA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
-      "total_shows": 26,
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1138572363",
+      "name_lat": "ZLATOSLAVA IZ KRASNOGO DARA",
+      "name_ru": "ЗЛАТОСЛАВА ИЗ КРАСНОГО ДАРА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 43,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1461717013",
+      "name_lat": "ZLATA OT FILIPPOVOY",
+      "name_ru": "ЗЛАТА ОТ ФИЛИППОВОЙ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "ALASKAN MALAMUTE",
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -109,15 +127,6 @@
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 25,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1138572363",
-      "name_lat": "ZLATOSLAVA IZ KRASNOGO DARA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -162,7 +171,16 @@
       "name_ru": "",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "ST. BERNARD LONG HAIRED",
-      "total_shows": 17,
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1575694441",
+      "name_lat": "ZLATAPUZ SHANTAL",
+      "name_ru": "ЗЛАТАПУЗ ШАНТАЛЬ",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -171,15 +189,6 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
       "breed_en": "DEUTSCHE DOGGE BLUE",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1461717013",
-      "name_lat": "ZLATA OT FILIPPOVOY",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
-      "breed_en": "ALASKAN MALAMUTE",
       "total_shows": 18,
       "competition_dog_id": null
     },
@@ -199,6 +208,15 @@
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
       "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "123350027",
+      "name_lat": "ZLATO' A PAVA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
+      "breed_en": "",
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -225,7 +243,7 @@
       "name_ru": "",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -240,19 +258,10 @@
     {
       "id": "1788567666",
       "name_lat": "ZLATAPUZ SHALNAYA IMPERATRITSA",
-      "name_ru": "",
+      "name_ru": "ЗЛАТАПУЗ ШАЛЬНАЯ ИМПЕРАТРИЦА",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "123350027",
-      "name_lat": "ZLATO' A PAVA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
-      "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -279,16 +288,24 @@
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1575694441",
-      "name_lat": "ZLATAPUZ SHANTAL",
+      "id": "617124464",
+      "name_lat": "ZLATA 1 BY BAUER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "749711351",
+      "name_lat": "ZLATAPUZ CHUDO CHUDNOE DIVA DIVNAYA",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -297,7 +314,7 @@
       "name_ru": "",
       "breed": "ВОЛЬФШПИЦ",
       "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 46,
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
@@ -319,21 +336,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "749711351",
-      "name_lat": "ZLATAPUZ CHUDO CHUDNOE DIVA DIVNAYA",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
       "id": "36286271",
       "name_lat": "ZLATO'A RAYMONDA",
-      "name_ru": "",
+      "name_ru": "ЗЛАТО'А РАЙМОНДА",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -357,20 +365,29 @@
     {
       "id": "752058809",
       "name_lat": "ZLATA IZ KLANA LEGATO",
-      "name_ru": "",
+      "name_ru": "ЗЛАТА ИЗ КЛАНА ЛЕГАТО",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "96497351",
+      "id": "153415991",
+      "name_lat": "ZLATOVLASKA MALENKAYA FEYA",
+      "name_ru": "ЗЛАТОВЛАСКА МАЛЕНЬКАЯ ФЕЯ",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9613",
       "name_lat": "ZLAT O'HARRY BADIKHAN",
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "AFGHAN HOUND",
       "total_shows": 19,
-      "competition_dog_id": null
+      "competition_dog_id": 9613
     },
     {
       "id": "1662311975",
@@ -382,10 +399,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "269401067",
+      "id": "752320906",
+      "name_lat": "ZLATO EKATERINY GUBERNATOR",
+      "name_ru": "ЗЛАТО ЕКАТЕРИНЫ ГУБЕРНАТОР",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1054794683",
       "name_lat": "ZLATAN FORTUNE VESTAR SAPFIR",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -415,6 +441,15 @@
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
       "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "732518054",
+      "name_lat": "ZLATO EKATERINY ELEGANT ZOLOTOY MUSTANG",
+      "name_ru": "ЗЛАТО ЕКАТЕРИНЫ ЭЛЕГАНТ ЗОЛОТОЙ МУСТАНГ",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -481,21 +516,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "636540305",
+      "id": "237538860",
       "name_lat": "ZLAT O’HARRY ALTAIR",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1747373090",
+      "id": "838987353",
       "name_lat": "ZLATOGORA MAIN SHTERN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1395584570",
+      "name_lat": "ZLATO'A KARINA",
+      "name_ru": "ЗЛАТО'А КАРИНА",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -505,6 +549,15 @@
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1938572843",
+      "name_lat": "ZLATO EKATERINY FANTASTIKA",
+      "name_ru": "ЗЛАТО ЕКАТЕРИНЫ ФАНТАСТИКА",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -544,21 +597,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "485600980",
-      "name_lat": "ZLAT ALTYN AY ALISIYA",
+      "id": "1940335361",
+      "name_lat": "ZLATA BORN OLLYS'STAR",
       "name_ru": "",
-      "breed": "САМОЕД",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "617124464",
-      "name_lat": "ZLATA 1 BY BAUER",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "id": "485600980",
+      "name_lat": "ZLAT ALTYN AY ALISIYA",
+      "name_ru": "ЗЛАТ АЛТЫН АЙ АЛИСИЯ",
+      "breed": "САМОЕД",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -571,21 +624,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1395584570",
-      "name_lat": "ZLATO'A KARINA",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "517099091",
       "name_lat": "ZLATOVLASKA LUSY LU",
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "704289994",
+      "name_lat": "ZLATA IRIS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -616,21 +668,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "752320906",
-      "name_lat": "ZLATO EKATERINY GUBERNATOR",
-      "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
-      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1634250666",
       "name_lat": "ZLATA VELIKAYA CARICA",
       "name_ru": "",
       "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "250520743",
+      "name_lat": "Z'LA DIABLA NEGRA ARMADA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
+      "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -652,21 +704,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "916994064",
+      "name_lat": "ZLATO'A GAMLET PRINTS DATSKIY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
+      "breed_en": "DEUTSCHE DOGGE BLUE",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
       "id": "412612015",
       "name_lat": "ZLATO'A KOROLEVICH ELISEY",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "916994064",
-      "name_lat": "ZLATO'A GAMLET PRINTS DATSKIY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
-      "breed_en": "DEUTSCHE DOGGE BLUE",
-      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -681,10 +733,10 @@
     {
       "id": "1829586216",
       "name_lat": "ZLATA GOLDEN ROUZ",
-      "name_ru": "",
+      "name_ru": "ЗЛАТА ГОЛДЕН РОУЗ",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -694,6 +746,24 @@
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1204681839",
+      "name_lat": "ZLATO'A TSAR VSEYA RUSI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1039476914",
+      "name_lat": "ZLATAPUZ ZARINA VOSHOD SOLNTSA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -715,10 +785,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "233151843",
+      "id": "1729993314",
       "name_lat": "ZLATA PINPIRI AMBERCHARM DE LOVELYSTYLE'",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -733,21 +803,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "864251312",
+      "name_lat": "ZLATA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "985082786",
+      "name_lat": "ZLATO'A SHARDONE",
+      "name_ru": "ЗЛАТО'А ШАРДОНЕ",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "BOSTON TERRIER",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "183937173",
       "name_lat": "ZLATA",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "864251312",
-      "name_lat": "ZLATA",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -796,6 +875,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "985028887",
+      "name_lat": "ZLATA",
+      "name_ru": "",
+      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "85728085",
       "name_lat": "Zlato'A Ted",
       "name_ru": "",
@@ -805,10 +892,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "217903868",
+      "id": "1073151538",
       "name_lat": "ZLYUKA KLIMSVEVIK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -832,10 +919,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "326105697",
+      "id": "1375284781",
       "name_lat": "ZLATO'A FACE CONTROL",
       "name_ru": "",
-      "breed": "ОКРАС ЧЁРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
+      "breed": "ОКРАС ЧЕРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -850,21 +937,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1940335361",
-      "name_lat": "ZLATA BORN OLLYS'STAR",
+      "id": "43437845",
+      "name_lat": "ZLATA",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "БИГЛЬ КОРОТКОШЕРСТНЫЙ",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1938572843",
-      "name_lat": "ZLATO EKATERINY FANTASTIKA",
-      "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
-      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -877,12 +954,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "732518054",
-      "name_lat": "ZLATO EKATERINY ELEGANT ZOLOTOY MUSTANG",
+      "id": "353677543",
+      "name_lat": "ZLATA",
       "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
-      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
-      "total_shows": 3,
+      "breed": "КОРОТКОШ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -895,21 +971,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "454136511",
-      "name_lat": "ZLATAPUZ ELEGANT STYLE",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 25,
-      "competition_dog_id": null
-    },
-    {
       "id": "928793089",
       "name_lat": "ZLATA RADDI",
       "name_ru": "",
       "breed": "БИГЛЬ / BEAGLE",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "454136511",
+      "name_lat": "ZLATAPUZ ELEGANT STYLE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -922,21 +998,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1039476914",
-      "name_lat": "ZLATAPUZ ZARINA VOSHOD SOLNTSA",
+      "id": "1975631010",
+      "name_lat": "ZLATAPUZ ENERGY DRIVE",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 42,
       "competition_dog_id": null
     },
     {
-      "id": "1308652041",
-      "name_lat": "ZLATAPUZ ENERGY DRIVE",
-      "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
+      "id": "1020512679",
+      "name_lat": "ZLATA SKIFOV VELLENS",
+      "name_ru": "ЗЛАТА СКИФОВ ВЭЛЛЕНС",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 37,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -945,7 +1021,7 @@
       "name_ru": "",
       "breed": "GREAT DANE FAWN, BRINDLE",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -976,6 +1052,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "791475768",
+      "name_lat": "ZLATOTSVET KONFETKA SLADKAYA MOYA",
+      "name_ru": "ЗЛАТОЦВЕТ КОНФЕТКА СЛАДКАЯ МОЯ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "1324989592",
       "name_lat": "ZLAT IMPERIYA BENJAMIN BEST",
       "name_ru": "",
@@ -990,7 +1075,7 @@
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -1003,21 +1088,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1387318942",
-      "name_lat": "ZLATA SKIFOV VELLENS",
-      "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "220426541",
       "name_lat": "ZLATO'A PAVA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ / GREAT DANE BLUE",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1107408925",
+      "name_lat": "ZLATOYARA IZ DOMA KALERII",
+      "name_ru": "ЗЛАТОЯРА ИЗ ДОМА КАЛЕРИИ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1030,10 +1115,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1454293206",
+      "id": "1821308710",
+      "name_lat": "ZLATOGOR S RUSSKOY DUSHOY",
+      "name_ru": "ЗЛАТОГОР С РУССКОЙ ДУШОЙ",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1214063439",
       "name_lat": "ZLAT IMPERIYA SENIORITA BEATRICHE",
       "name_ru": "",
-      "breed": "СОБАКА /",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1048,10 +1141,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "273298569",
+      "id": "892240148",
       "name_lat": "ZLATTI LUBANIK ULYBKA DORY (P.BR.)",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1061,17 +1154,16 @@
       "name_lat": "ZLATA GOLDEN STAR HOLLY",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "791475768",
-      "name_lat": "ZLATOTSVET KONFETKA SLADKAYA MOYA",
+      "id": "309357663",
+      "name_lat": "ZLAT ALTYN AY ELISEH SILOVICH",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1079,15 +1171,6 @@
       "name_lat": "ZLATO VYATKI D'SHOW MUST GO ON",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "366942898",
-      "name_lat": "ZLAT ALTYN AY ELISEH SILOVICH",
-      "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1138,12 +1221,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "20094905",
+      "id": "1950216068",
       "name_lat": "ZLATTILYUBANIK SIMONA BEAUTIFUL",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1932812763",
+      "name_lat": "Zlata Iz Tsvetnoy Akvareli",
+      "name_ru": "ЗЛАТА ИЗ ЦВЕТНОЙ АКВАРЕЛИ",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1106232329",
+      "name_lat": "ZLATA KRASA SIBIRI",
+      "name_ru": "ЗЛАТА КРАСА СИБИРИ",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1153,6 +1253,24 @@
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "65102553",
+      "name_lat": "ZLATTI LYUBANIK ZIZI ANMER",
+      "name_ru": "ЗЛАТТИ ЛЮБАНИК ЗИЗИ АНМЕР",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1335319351",
+      "name_lat": "ZLATO DANY POTSELUY ANGELA",
+      "name_ru": "ЗЛАТО ДАНЫ ПОЦЕЛУЙ АНГЕЛА",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1183,21 +1301,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1613297607",
+      "name_lat": "ZLATA PRAGA IZ ZOOSFERY",
+      "name_ru": "ЗЛАТА ПРАГА ИЗ ЗООСФЕРЫ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "811792949",
       "name_lat": "ZLATO EKATERINI GOLLANDIYA",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ МОСКОВСКАЯ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "862896743",
-      "name_lat": "ZLATOGOR S RUSSKOY DUSHOY",
-      "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ /",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1219,10 +1337,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1425188248",
+      "id": "641785533",
       "name_lat": "ZLATTI LYUBANIK PEPPINA LEIR",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1264,10 +1382,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "826190403",
+      "id": "1903826263",
       "name_lat": "ZLATO S PRIAMURJA NADEZHNYI TOVARISCH",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1282,6 +1400,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1061452302",
+      "name_lat": "ZLATOVLASKA IZ NARO DE FOMINSKA",
+      "name_ru": "ЗЛАТОВЛАСКА ИЗ НАРО ДЕ ФОМИНСКА",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1720040317",
       "name_lat": "ZLATTI LYUBANIK NIKA IARKAIA ZVEZDA",
       "name_ru": "",
@@ -1291,19 +1418,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1613297607",
-      "name_lat": "ZLATA PRAGA IZ ZOOSFERY",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "DOBERMANN",
-      "total_shows": 7,
+      "id": "1221345927",
+      "name_lat": "ZLATO PUSHKINO FELICHITA",
+      "name_ru": "ЗЛАТО ПУШКИНО ФЕЛИЧИТА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1353074207",
+      "id": "1789940464",
+      "name_lat": "ZLAT STAR'S FORWARD TO THE DREAM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "753439630",
       "name_lat": "ZLATA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1315,6 +1451,15 @@
       "breed": "БИГЛЬ / BEAGLE",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "681354227",
+      "name_lat": "ZLATO A PANAMERA DLYA CHEMPION MOEGO SERDTSA",
+      "name_ru": "ЗЛАТО А ПАНАМЕРА ДЛЯ ЧЕМПИОН МОЕГО СЕРДЦА",
+      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1354,28 +1499,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1204681839",
-      "name_lat": "ZLATO'A TSAR VSEYA RUSI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1789940464",
-      "name_lat": "ZLAT STAR'S FORWARD TO THE DREAM",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1130181805",
+      "id": "879275280",
       "name_lat": "ZLATO'A PANAMERA DLYA CHEMPION MOEGO SERDTSA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ /",
+      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "151832578",
+      "name_lat": "ZLATOKUDRY NEGNIY ANGEL",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1390,12 +1526,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1005359315",
-      "name_lat": "ZLATO PUSHKINO FELICHITA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "id": "290606183",
+      "name_lat": "ZLATOZAR DEL TESORO POM",
+      "name_ru": "ЗЛАТОЗАР ДЕЛЬ ТЕСОРО ПОМ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1408,21 +1544,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "915549448",
+      "id": "1407431976",
+      "name_lat": "ZLATO’A CICERON",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙДОГ Окрас палевый и тигровый",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "6417999",
       "name_lat": "ZLAT ALTYN AY HOOCHI GUCCI MAN",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1392407534",
-      "name_lat": "ZLATOKUDRY NEGNIY ANGEL",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "id": "174174283",
+      "name_lat": "ZLATOSLAV ALIREN GRAND PLAZA",
+      "name_ru": "Златослав Алирен Гранд Плаза",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1444,28 +1589,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1053392899",
-      "name_lat": "ZLATO DANY POTSELUY ANGELA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "719764449",
+      "id": "1518219580",
       "name_lat": "ZLAT O'HARRY BELLATRIX",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "644769728",
+      "id": "375117566",
       "name_lat": "ZLATO EKATERINI OHRANYAYUSHAYA POKOY CHAYANA",
       "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
+      "breed": "МАЙОРКСКИЙ МОСКОВСКАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1463174919",
+      "name_lat": "ZLATAPUZ ELIXIR",
+      "name_ru": "",
+      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1480,19 +1625,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1463174919",
-      "name_lat": "ZLATAPUZ ELIXIR",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "91069332",
+      "id": "1072385147",
       "name_lat": "ZLATTI LYUBANIK SANSARA",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1507,10 +1643,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1132576799",
+      "id": "50293134",
       "name_lat": "ZLATA SKIFOF",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1561,6 +1697,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1802673714",
+      "name_lat": "ZLATO RUSI SPACY ARMON",
+      "name_ru": "",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "848825516",
       "name_lat": "ZLAT KARION LARSEN",
       "name_ru": "",
@@ -1570,19 +1714,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "65102553",
-      "name_lat": "ZLATTI LYUBANIK ZIZI ANMER",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1404267962",
+      "id": "20255889",
       "name_lat": "ZLATA VOM HAUS VASTAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1597,12 +1732,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1545441034",
-      "name_lat": "ZLATA DOLL IZ VOLSHEBNYKH SNOV",
+      "id": "158197904",
+      "name_lat": "ZLATA DOLL IZ VOLSHEBNYKH SNOV (Изменено по Решению ВК от 19.01.22 вопрос",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1615,12 +1750,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1799361802",
+      "name_lat": "ZLATOZAR IZ LARTSA SAMOTSVETOV",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "391432812",
       "name_lat": "ZLATOMIRA",
       "name_ru": "",
       "breed": "МАЛАМУТ / ALASKAN",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "162546938",
+      "name_lat": "ZLATA OF MAGICAL LAND",
+      "name_ru": "",
+      "breed": "HIGHLAND",
+      "breed_en": "WEST HIGHLAND WHITE TERRIER",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1642,28 +1794,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1061452302",
-      "name_lat": "ZLATOVLASKA IZ NARO DE FOMINSKA",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "83024758",
+      "id": "379994528",
       "name_lat": "ZLATOMIR OT LADYYULI",
       "name_ru": "",
-      "breed": "КУРЦХААР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1106232329",
-      "name_lat": "ZLATA KRASA SIBIRI",
+      "id": "1402994459",
+      "name_lat": "ZLAT ALTYN ELISEH SILOVICH",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1708,9 +1851,8 @@
       "id": "1993959840",
       "name_lat": "ZLATAPUZ ELECTRA",
       "name_ru": "",
-      "breed": "Мопс",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "МОПС",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1719,7 +1861,16 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1431742730",
+      "name_lat": "ZLAYA ZAYA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1729,15 +1880,6 @@
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1932812763",
-      "name_lat": "Zlata Iz Tsvetnoy Akvareli",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1768,15 +1910,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1407431976",
-      "name_lat": "ZLATO’A CICERON",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙДОГ Окрас палевый и тигровый",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "560254786",
       "name_lat": "ZLATOYARA S TEPLOGO STANA",
       "name_ru": "",
@@ -1804,15 +1937,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "600358156",
-      "name_lat": "ZLAYA ZAYA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1951464475",
       "name_lat": "ZLATAN BINGO",
       "name_ru": "",
@@ -1822,12 +1946,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "290606183",
-      "name_lat": "ZLATOZAR DEL TESORO POM",
+      "id": "1405044944",
+      "name_lat": "ZLATA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1867,10 +1991,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "838819779",
+      "id": "1301878131",
       "name_lat": "ZLATO PUSHKINO NIKOLETTA",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1921,21 +2045,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1864714788",
+      "id": "1615905873",
       "name_lat": "ZLAT IMPERIYABONNY BEAUTIFUL",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1402994459",
-      "name_lat": "ZLAT ALTYN ELISEH SILOVICH",
+      "id": "678071081",
+      "name_lat": "ZLATAPUZ EXCALIBUR FOR FORTUNETELLER",
       "name_ru": "",
-      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "МОПС",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1948,15 +2071,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "678071081",
-      "name_lat": "ZLATAPUZ EXCALIBUR FOR FORTUNETELLER",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1055184994",
       "name_lat": "ZLATASLAVA DAYMOND STAR",
       "name_ru": "",
@@ -1966,12 +2080,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1405044944",
-      "name_lat": "ZLATA",
+      "id": "338361620",
+      "name_lat": "Z’LA DIABLA NEGRA ARMADA",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed": "НЕМЕЦКИЙДОГ Окрас чёрный, мраморный, плащевой",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1991,15 +2105,6 @@
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": 9096
-    },
-    {
-      "id": "174174283",
-      "name_lat": "ZLATOSLAV ALIREN GRAND PLAZA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
     },
     {
       "id": "841401466",
@@ -2038,6 +2143,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "721170082",
+      "name_lat": "ZLATA",
+      "name_ru": "",
+      "breed": "WEIMARANER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1012854543",
+      "name_lat": "ZLATOGORJE EIVY JEAN- JAC SHAH SULTAN",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "653013210",
       "name_lat": "ZLATOZAR IZ DOMA KIRILLOVYH",
       "name_ru": "",
@@ -2065,30 +2186,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "450790326",
+      "id": "1959337578",
       "name_lat": "ZLATO MONTESUMI GLAMURES FLAME",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1957830258",
-      "name_lat": "ZLATO A PANAMERA DLYA CHEMPION MOEGO SERDTSA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1604518602",
+      "id": "1128204033",
       "name_lat": "ZLATKO TEAM CARRERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2110,10 +2222,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "84866581",
+      "id": "683963508",
+      "name_lat": "ZLATO VOLMARI VERNA",
+      "name_ru": "ЗЛАТО ВОЛМАРИ ВЕРНА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1876911195",
       "name_lat": "ZLATOKUDRAYA DZHEMMA DEL KONTE",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "LABRADOR RETRIEVER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2133,6 +2253,15 @@
       "name_ru": "",
       "breed": "РУССКАЯ САЛОННАЯ СОБАКА (РЫЖИЙ, ПАЛЕВЫЙ, КРЕМОВЫЙ, РЫЖЕ-БЕЛЫЙ, ПАЛЕВО-БЕЛЫЙ, КРЕМОВО-БЕЛЫЙ)",
       "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "304586122",
+      "name_lat": "ZLATA ZERONA",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Г-Ш ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2173,15 +2302,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "470156905",
-      "name_lat": "ZLATA ZERONA",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "582389848",
       "name_lat": "ZLATA I BY BAUER",
       "name_ru": "",
@@ -2191,21 +2311,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1802673714",
-      "name_lat": "ZLATO RUSI SPACY ARMON",
-      "name_ru": "",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "id": "1131495821",
+      "name_lat": "ZLATOVLASKA MALENKAYA FEYA OT LOMONOSOVOY",
+      "name_ru": "ЗЛАТОВЛАСКА МАЛЕНЬКАЯ ФЕЯ ОТ ЛОМОНОСОВОЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1131495821",
-      "name_lat": "ZLATOVLASKA MALENKAYA FEYA OT LOMONOSOVOY",
+      "id": "991784656",
+      "name_lat": "ZLATA SNOW QUEEN",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2299,12 +2418,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "476014682",
+      "id": "1897319510",
       "name_lat": "ZLAT ALTYN AY TALISMAN",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1310281923",
+      "name_lat": "ZLATO EKATERINY NUBIETS",
+      "name_ru": "ЗЛАТО ЕКАТЕРИНЫ НУБИЕЦ",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
+      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2326,19 +2454,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1107408925",
-      "name_lat": "ZLATOYARA IZ DOMA KALERII",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "793444718",
+      "id": "1395676562",
       "name_lat": "ZLATA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2371,6 +2490,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "642453352",
+      "name_lat": "ZLATOVLASOCHKAS GRADSKOGO PRIISKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1218809401",
       "name_lat": "ZLATO EKATERINY GRAZHDANSKAYA OBORONA",
       "name_ru": "",
@@ -2389,30 +2517,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "885357388",
-      "name_lat": "ZLATOVLASOCHKAS GRADSKOGO PRIISKA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1140179229",
       "name_lat": "ZLATA GOR",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1172540432",
-      "name_lat": "ZLATA OF MAGICAL LAND",
-      "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
-      "breed_en": "WEST HIGHLAND WHITE TERRIER",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2425,12 +2535,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1431742730",
-      "name_lat": "ZLAYA ZAYA",
+      "id": "1192173482",
+      "name_lat": "ZLATOMIRA S YABLONEVOGO SADA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
+      "breed": "ВЕЛЬШ КОРГИ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2479,10 +2588,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1259458087",
+      "id": "1171202203",
       "name_lat": "ZLATOPUZ VIRTUALNAYA REALNOST",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2515,8 +2624,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "725196242",
-      "name_lat": "ZLATYE KUPOLA ZAMIR- HAN",
+      "id": "5617922",
+      "name_lat": "ZLATYE KUPOLA ZAMIR-HAN",
       "name_ru": "",
       "breed": "CAUCASIAN SHEPHERD",
       "breed_en": "",
@@ -2529,15 +2638,6 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ",
       "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "985082786",
-      "name_lat": "ZLATO'A SHARDONE",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "BOSTON TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2569,6 +2669,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1390229529",
+      "name_lat": "ZLATOSLAVA CHERNAYA KOROLEVA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1772910907",
       "name_lat": "ZLATA",
       "name_ru": "",
@@ -2583,6 +2691,15 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1628970877",
+      "name_lat": "Z LEDULANDU ANABEL NELIE (D.R.T.)",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2605,15 +2722,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "153415991",
-      "name_lat": "ZLATOVLASKA MALENKAYA FEYA",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1178536205",
       "name_lat": "ZLATO'A MONTE BIANCO",
       "name_ru": "",
@@ -2623,10 +2731,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1852705260",
+      "id": "772619619",
       "name_lat": "ZLATOZAR OF FLOKISH FEST",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2695,6 +2803,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "347447881",
+      "name_lat": "ZLAT ALTYN AY WHITNEY HOUSTON",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46603888",
+      "name_lat": "ZLAT ALTYN AY FREYA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "762087861",
       "name_lat": "ZLATOZAR IZ KNIAZHESTVA POLOTSKOGO",
       "name_ru": "",
@@ -2740,15 +2866,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1310281923",
-      "name_lat": "ZLATO EKATERINY NUBIETS",
-      "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
-      "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1584568622",
       "name_lat": "ZLATAPUZ ZABAVA PUTYATISHNA",
       "name_ru": "",
@@ -2785,10 +2902,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1584196866",
+      "id": "71553529",
       "name_lat": "ZLATA IZ POMESTYA BOGOVIK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2803,19 +2920,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1507062179",
-      "name_lat": "ZLAT ALTYN AY WHITNEY HOUSTON",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "15310763",
+      "id": "413223586",
       "name_lat": "ZLATA MALENKAYA FEYA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2848,12 +2956,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "28864284",
-      "name_lat": "ZLAT ALTYN AY FREYA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "id": "1373149101",
+      "name_lat": "ZLATA ROSSI FAVORITA",
+      "name_ru": "ЗЛАТА РОССИ ФАВОРИТА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "900394812",
+      "name_lat": "ZLATOZAR",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1406899580",
+      "name_lat": "ZLATOGORA",
+      "name_ru": "",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2866,10 +2990,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "132853740",
+      "id": "1803439465",
       "name_lat": "ZLATA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2911,10 +3035,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "867722132",
+      "id": "500021712",
       "name_lat": "ZLATIK",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2947,6 +3071,51 @@
       "competition_dog_id": null
     },
     {
+      "id": "1234220436",
+      "name_lat": "ZLATO SKIFOV YUSTAS",
+      "name_ru": "",
+      "breed": "РУССКАЯ САЛОННАЯ СОБАКА (РЫЖИЙ, ПАЛЕВЫЙ, КРЕМОВЫЙ, РЫЖЕ-БЕЛЫЙ, ПАЛЕВО-БЕЛЫЙ, КРЕМОВО-БЕЛЫЙ)",
+      "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "63934965",
+      "name_lat": "ZLATO SKIFOV BRITNI",
+      "name_ru": "",
+      "breed": "РУССКАЯ САЛОННАЯ СОБАКА (РЫЖИЙ, ПАЛЕВЫЙ, КРЕМОВЫЙ, РЫЖЕ-БЕЛЫЙ, ПАЛЕВО-БЕЛЫЙ, КРЕМОВО-БЕЛЫЙ)",
+      "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1906378260",
+      "name_lat": "ZLATA BELLE IZ DOMA MARLEN",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1142924967",
+      "name_lat": "ZLAT ALTYN AY OKTAVIYA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "505070037",
+      "name_lat": "ZLAT ALTYN AY OLIMPIYA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "343332215",
       "name_lat": "ZLATO'A SHANEL",
       "name_ru": "",
@@ -2974,24 +3143,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1234220436",
-      "name_lat": "ZLATO SKIFOV YUSTAS",
-      "name_ru": "",
-      "breed": "РУССКАЯ САЛОННАЯ СОБАКА (РЫЖИЙ, ПАЛЕВЫЙ, КРЕМОВЫЙ, РЫЖЕ-БЕЛЫЙ, ПАЛЕВО-БЕЛЫЙ, КРЕМОВО-БЕЛЫЙ)",
-      "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "63934965",
-      "name_lat": "ZLATO SKIFOV BRITNI",
-      "name_ru": "",
-      "breed": "РУССКАЯ САЛОННАЯ СОБАКА (РЫЖИЙ, ПАЛЕВЫЙ, КРЕМОВЫЙ, РЫЖЕ-БЕЛЫЙ, ПАЛЕВО-БЕЛЫЙ, КРЕМОВО-БЕЛЫЙ)",
-      "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1770827677",
       "name_lat": "ZLATO PUSHKINO FLORIZEL",
       "name_ru": "",
@@ -3010,19 +3161,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "712011530",
+      "id": "27982555",
       "name_lat": "ZLAT IMPERIYA BOSCA PREKRASNAYA ZHEMCHUZHINA",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "299497613",
-      "name_lat": "ZLATA BELLE IZ DOMA MARLEN",
-      "name_ru": "",
-      "breed": "БОЛЬШОЙ БУЛЬДОГ",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3073,6 +3215,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "743679880",
+      "name_lat": "ZLATO`A BARAKUDA",
+      "name_ru": "",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "539586682",
       "name_lat": "ZLAT KARION TUTTA LARSEN KRASA TUSYA",
       "name_ru": "",
@@ -3091,20 +3241,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "974559277",
-      "name_lat": "ZLATA DOLL IZ VOLSHEBNYKH SNOV (Изменено по Решению ВК от 19.01.22 вопрос",
+      "id": "993296179",
+      "name_lat": "ZLATO'A ZHAN II",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "683963508",
-      "name_lat": "ZLATO VOLMARI VERNA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "GREAT DANE FAWN,",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3131,15 +3271,6 @@
       "name_lat": "ZLATA ZVEZDNAYA",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1390229529",
-      "name_lat": "ZLATOSLAVA CHERNAYA KOROLEVA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3190,10 +3321,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "78397252",
+      "id": "1171862752",
       "name_lat": "ZLATA AVE MUZA",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ БЕЛЬГИЙСКИЙ",
+      "breed": "ПРЯМОШЕРСТНЫЙ БЕЛЬГИЙСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3316,38 +3447,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1925371005",
-      "name_lat": "ZLAT ALTYN AY OKTAVIYA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1315897295",
-      "name_lat": "ZLAT ALTYN AY OLIMPIYA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1961217655",
+      "id": "1999508707",
       "name_lat": "ZLATOGOR SVET-",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "555923874",
-      "name_lat": "ZLATA ROSSI FAVORITA",
+      "id": "1898156287",
+      "name_lat": "ZLATAN RIK IZ KOROLEVSTVA STAFF",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "DM",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1155251599",
+      "name_lat": "D MEDVEZHY A STAYA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "712361365",
+      "name_lat": "DM HAN BULAT",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "447656436",
+      "name_lat": "DMITROVSKIY TALISMAN ONIKS",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1617553286",
+      "name_lat": "DM HAN BUCHA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    }
+  ]
+}

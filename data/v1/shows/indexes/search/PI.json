@@ -1,15 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "PI",
-  "count": 621,
+  "count": 637,
   "dogs": [
     {
-      "id": "1755853863",
+      "id": "1394343317",
       "name_lat": "PIRS BROSNAN IZ BELYKH GYAUROV",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ ИРЛАНДСКИЙ",
+      "name_ru": "ПИРС БРОСНАН ИЗ БЕЛЫХ ГЯУРОВ",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 42,
+      "total_shows": 71,
       "competition_dog_id": null
     },
     {
@@ -42,10 +42,10 @@
     {
       "id": "91535286",
       "name_lat": "PINA KOLADA FESHION TREND",
-      "name_ru": "",
+      "name_ru": "ПИНА КОЛАДА ФЕШИОН ТРЕНД",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 33,
+      "total_shows": 41,
       "competition_dog_id": null
     },
     {
@@ -58,6 +58,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1501208577",
+      "name_lat": "PICOLLO TECKEL AMIE",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
       "id": "1709552976",
       "name_lat": "PIOJIA DORO FAVORITE PRINCESS LEIA",
       "name_ru": "",
@@ -67,28 +76,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "859491113",
+      "name_lat": "PIKI KVIK FLOKI VANNARIN",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 49,
+      "competition_dog_id": null
+    },
+    {
       "id": "469500228",
       "name_lat": "PITER WESTIE THUNDER IN PARADISE",
       "name_ru": "",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "WEST HIGHLAND WHITE TERRIER",
-      "total_shows": 53,
+      "total_shows": 55,
       "competition_dog_id": null
     },
     {
-      "id": "880053993",
-      "name_lat": "PIKI KVIK FLOKI VANNARIN",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 45,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1099723547",
+      "id": "65851819",
       "name_lat": "PIAI LOOK AT ME",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 33,
       "competition_dog_id": null
@@ -121,12 +130,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1297522641",
-      "name_lat": "PICOLLO TECKEL AMIE",
+      "id": "1683541157",
+      "name_lat": "PIKI KVIK ENERGY OF SEA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
-      "total_shows": 24,
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1814962857",
+      "name_lat": "PIONER IZ DOMA KUNETS",
+      "name_ru": "ПИОНЕР ИЗ ДОМА КУНЕЦ",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "breed_en": "",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -135,25 +153,7 @@
       "name_ru": "",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
-      "total_shows": 32,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1944328237",
-      "name_lat": "PIKI KVIK ENERGY OF SEA",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "137342353",
-      "name_lat": "PITERNYUF HAT TRICK",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -162,25 +162,34 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "43390161",
+      "id": "137342353",
+      "name_lat": "PITERNYUF HAT TRICK",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1017547130",
+      "name_lat": "PILIGRIM ROUD ROKSOLANA SANRISE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "539827969",
       "name_lat": "PICOLLO TECKEL WEE MISS MILLA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1814962857",
-      "name_lat": "PIONER IZ DOMA KUNETS",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -193,39 +202,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "1238504371",
+      "id": "1720871331",
       "name_lat": "PICOLLO TECKEL LITTLE RED MARS",
       "name_ru": "",
-      "breed": "DACHSHUND MINIATURE",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1017547130",
-      "name_lat": "PILIGRIM ROUD ROKSOLANA SANRISE",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1384788767",
+      "id": "773590607",
       "name_lat": "PIKSEL IZ MYSHKINOGO DOMA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "826542666",
+      "id": "238754531",
       "name_lat": "PICOLLO TECKEL ZUNAMI",
       "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
       "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "489376947",
+      "name_lat": "PISHGER IZ KLOVI",
+      "name_ru": "ПИШГЕР ИЗ КЛОВИ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1176744174",
+      "name_lat": "PINCHERINO NATA PUNCH",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "GERMAN PINSCHER",
+      "total_shows": 47,
       "competition_dog_id": null
     },
     {
@@ -247,19 +265,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1176744174",
-      "name_lat": "PINCHERINO NATA PUNCH",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "GERMAN PINSCHER",
-      "total_shows": 46,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1465572725",
+      "id": "787963205",
       "name_lat": "PICOLLO TECKEL KEVIN THE MINION",
       "name_ru": "",
-      "breed": "DACHSHUND",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 16,
       "competition_dog_id": null
@@ -292,6 +301,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1692239229",
+      "name_lat": "PINCHERINO NAPA IRIS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "GERMAN PINSCHER",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1162682155",
+      "name_lat": "PITERNYUF KAMELIA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "211202233",
       "name_lat": "PIKI KVIK BETTY BOOP",
       "name_ru": "",
@@ -301,19 +328,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "5323570",
+      "id": "454505820",
       "name_lat": "PICOLLO TECKEL U-MY THORN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "869306138",
+      "id": "580415237",
+      "name_lat": "PICOLLO TECKEL ZIMPLY RED",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "571517332",
       "name_lat": "PICOLLO TECKEL QUEEN ARWEN",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -337,19 +373,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "488324325",
+      "id": "1519228717",
       "name_lat": "PICOLLO TECKEL TE AMO",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "398338390",
+      "id": "1541915416",
       "name_lat": "PICOLLO TECKEL PLAY AND WIN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 17,
       "competition_dog_id": null
@@ -364,15 +400,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1692239229",
-      "name_lat": "PINCHERINO NAPA IRIS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "GERMAN PINSCHER",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
       "id": "1804589573",
       "name_lat": "PINANOIR ZHAR PTITSA",
       "name_ru": "",
@@ -382,21 +409,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "727929867",
+      "id": "384287304",
       "name_lat": "PINE YARD BATUTA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1189759087",
+      "id": "1380740946",
       "name_lat": "PITER'S ROYAL FAMILY KAMALA",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ /",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -414,23 +441,32 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 32,
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
-      "id": "461683284",
+      "id": "93978700",
+      "name_lat": "PINE FOREST BEST STAR WARS",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1580415233",
       "name_lat": "PINCHERINO MATTA BERRY",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР /",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "breed_en": "",
       "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "1209318763",
+      "id": "52946739",
       "name_lat": "PILIGRIM ROAD ORIGINAL GANGSTER",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -445,12 +481,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "381604715",
+      "id": "1573374819",
       "name_lat": "PICOLLO TECKEL ZAYKA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 23,
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "900841789",
+      "name_lat": "PICOLLO TECKEL WORLD IS MINE",
+      "name_ru": "",
+      "breed": "DACHSHUND KANINCHEN",
+      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -517,12 +562,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "93978700",
-      "name_lat": "PINE FOREST BEST STAR WARS",
+      "id": "1486208555",
+      "name_lat": "PICTURE PERFECT S TAGANIEGO ROGA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1502501487",
+      "name_lat": "PITER WESTIE EVANGELINA PROSPEROUS",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -553,15 +607,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "900841789",
-      "name_lat": "PICOLLO TECKEL WORLD IS MINE",
-      "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN",
-      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
-      "total_shows": 42,
-      "competition_dog_id": null
-    },
-    {
       "id": "248959853",
       "name_lat": "PICOLLO TECKEL OCEAN DRIVE",
       "name_ru": "",
@@ -582,10 +627,10 @@
     {
       "id": "151988105",
       "name_lat": "PIKOVAYA DAMA IZ UNIKALNOY KOLLEKTSII",
-      "name_ru": "",
+      "name_ru": "ПИКОВАЯ ДАМА ИЗ УНИКАЛЬНОЙ КОЛЛЕКЦИИ",
       "breed": "ЛАНДСИР",
       "breed_en": "LANDSEER",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -607,12 +652,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1162682155",
-      "name_lat": "PITERNYUF KAMELIA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 8,
+      "id": "1328397082",
+      "name_lat": "PINK IZ NEVSKOGO DESANTA",
+      "name_ru": "ПИНК ИЗ НЕВСКОГО ДЕСАНТА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
@@ -652,39 +697,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "1184529971",
-      "name_lat": "PIPPI LONGOSTOKING S TAGANIEGO ROGA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "9861861",
       "name_lat": "PITERNYUF FATHER FROST",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "NEWFOUNDLAND",
-      "total_shows": 44,
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
       "id": "808108991",
       "name_lat": "PIKKU LEMPI FOR BEARMALS",
-      "name_ru": "",
+      "name_ru": "ПИККУ ЛЕМПИ ФОР БЭАРМАЛС",
       "breed": "ФИНСКИЙ ЛАППХУНД",
       "breed_en": "FINNISH LAPPONIAN DOG",
-      "total_shows": 7,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1486208555",
-      "name_lat": "PICTURE PERFECT S TAGANIEGO ROGA",
+      "id": "1892799",
+      "name_lat": "PICOLLO TECKEL ZETTA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "29336329",
+      "name_lat": "PITERNYUF KATYUSHA",
+      "name_ru": "ПИТЕРНЬЮФ КАТЮША",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "280780954",
+      "name_lat": "PIPPI LONGOSTOKING S TAGANIEGO ROGA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1525270746",
+      "name_lat": "PIRAT IZ ROPSHINSKOY STAI GAY YULIY",
+      "name_ru": "ПИРАТ ИЗ РОПШИНСКОЙ СТАИ ГАЙ ЮЛИЙ",
+      "breed": "МАЙОРКСКИЙ МАСТИФ (КА ДЕ БО)",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -715,15 +778,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1502501487",
-      "name_lat": "PITER WESTIE EVANGELINA PROSPEROUS",
-      "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "13342067",
       "name_lat": "PICOLLO TECKEL SOMERSET",
       "name_ru": "",
@@ -742,6 +796,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1779797135",
+      "name_lat": "PI-ET-RA OF TREFILIO U ARE MY DREAM",
+      "name_ru": "",
+      "breed": "БУЛЬМАСТИФ",
+      "breed_en": "BULLMASTIFF",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1806589959",
       "name_lat": "PICOLLO TECKEL U THE ONE",
       "name_ru": "",
@@ -751,20 +814,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1691106007",
+      "id": "1738885559",
       "name_lat": "PICOLLO TECKEL QUIN MARTIN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "915886989",
-      "name_lat": "PICOLLO TECKEL ZIMPLY RED",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
       "total_shows": 15,
       "competition_dog_id": null
     },
@@ -784,6 +838,15 @@
       "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1678077470",
+      "name_lat": "PITER ASIA DOG MACOTO IZENEDZHI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -823,19 +886,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1678077470",
-      "name_lat": "PITER ASIA DOG MACOTO IZENEDZHI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 28,
-      "competition_dog_id": null
-    },
-    {
-      "id": "258455531",
+      "id": "1812859991",
       "name_lat": "PICOLLO TECKEL O'MINI DI",
       "name_ru": "",
-      "breed": "DACHSHUND",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -850,12 +904,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1328397082",
-      "name_lat": "PINK IZ NEVSKOGO DESANTA",
+      "id": "917160767",
+      "name_lat": "PILIGRIM S BOSFORA VOSTOCHNOGO",
+      "name_ru": "ПИЛИГРИМ С БОСФОРА ВОСТОЧНОГО",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1812845573",
+      "name_lat": "PINO KOLADA ZHGUCHAYA",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 18,
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -868,21 +930,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1812845573",
-      "name_lat": "PINO KOLADA ZHGUCHAYA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "id": "730587537",
+      "name_lat": "PITER ULYBOK LADUSHKA",
+      "name_ru": "ПИТЕР УЛЫБОК ЛАДУШКА",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1879894773",
+      "name_lat": "PIOJIA DORO VIENTO DE LA VITA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1525270746",
-      "name_lat": "PIRAT IZ ROPSHINSKOY STAI GAY YULIY",
+      "id": "580302334",
+      "name_lat": "PIRS PLATINUM",
+      "name_ru": "ПИРС ПЛАТИНУМ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "JACK RUSSELL TERRIER",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "891178882",
+      "name_lat": "PILIGRIM ROAD SHINING MONARCH",
       "name_ru": "",
-      "breed": "МАЙОРКСКИЙ МАСТИФ (КА ДЕ БО)",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -891,7 +970,7 @@
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "NEWFOUNDLAND",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -913,10 +992,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "132764961",
+      "id": "1965104565",
+      "name_lat": "PIRAT IZ ROPSHINSKOY STAI VEKSALIYA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "77918300",
+      "name_lat": "PILIGRIM ROAD DAZZLING SIRIUS",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "834773391",
       "name_lat": "PIRAT IZ ROPSHINSKOY STAI GAJ YULIY",
       "name_ru": "",
-      "breed": "МАЙОРКСКИЙ МАСТИФ (КА ДЕ БО)",
+      "breed": "ЛЕОНБЕРГЕР МАЙОРКСКИЙ МАСТИФ (КА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -928,15 +1023,6 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "891178882",
-      "name_lat": "PILIGRIM ROAD SHINING MONARCH",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -976,19 +1062,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "192964044",
+      "name_lat": "PIA DESIDERATA JASMINE SAMBACH",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1376196613",
       "name_lat": "PINE FOREST BEST YOU ARE MY LOVE",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ СТАФФОРДШИРСКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1803853899",
-      "name_lat": "PILIGRIM S BOSFORA VOSTOCHNOGO",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1009,6 +1094,15 @@
       "breed": "СКОТЧ ИРСКИЙ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "591412630",
+      "name_lat": "PIPER HOLLY INCANTE VOLE",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1039,21 +1133,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1779797135",
-      "name_lat": "PI-ET-RA OF TREFILIO U ARE MY DREAM",
-      "name_ru": "",
-      "breed": "БУЛЬМАСТИФ",
-      "breed_en": "BULLMASTIFF",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "290098803",
       "name_lat": "PITER'S ROYAL FAMILY BONNIE",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
       "total_shows": 59,
+      "competition_dog_id": null
+    },
+    {
+      "id": "617081689",
+      "name_lat": "PITERSKIY BLUES YASHMA ZOLOTCE",
+      "name_ru": "",
+      "breed": "ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "188966373",
+      "name_lat": "PITLOCHRY'S OSCAR",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1066,15 +1168,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "188966373",
-      "name_lat": "PITLOCHRY'S OSCAR",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1662392427",
       "name_lat": "PINK FLOYD S BOLSHOY BUKVY",
       "name_ru": "",
@@ -1084,12 +1177,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "886698027",
+      "name_lat": "PIA DESIDERATA FLASH ROYAL",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР",
+      "breed_en": "LEONBERGER",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "1674427386",
       "name_lat": "PIER PILKIY KNYAZ (изм. реш ВК от 29.05.24 в.20)",
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "654254645",
+      "name_lat": "PINK REBEL DESTINY RUSTY LOVE",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -1129,24 +1240,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "886698027",
-      "name_lat": "PIA DESIDERATA FLASH ROYAL",
-      "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР",
-      "breed_en": "LEONBERGER",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "654254645",
-      "name_lat": "PINK REBEL DESTINY RUSTY LOVE",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "28943226",
       "name_lat": "PINE WOOD IZ DOMA KOROLEVOI",
       "name_ru": "",
@@ -1156,21 +1249,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "29336329",
-      "name_lat": "PITERNYUF KATYUSHA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1684183815",
+      "id": "567223238",
       "name_lat": "PINE FOREST BEST CHERRY CRAZY FLASH MINE",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1183,30 +1267,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "617081689",
-      "name_lat": "PITERSKIY BLUES YASHMA ZOLOTCE",
-      "name_ru": "",
-      "breed": "ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "657939427",
-      "name_lat": "PICOLLO TECKEL JUST A DREAM",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "435955062",
       "name_lat": "PIKOVAYA DAVA IZ DOMA OSTEE",
       "name_ru": "",
       "breed": "ЕВРАЗИЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1715668459",
+      "name_lat": "PICOLLO TECKEL JUST A DREAM",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1219,21 +1293,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "698741036",
+      "name_lat": "PICOLLO TECKEL ALL IS LOVE",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468451776",
+      "name_lat": "PITERSKIY BLUES HONEY BOY",
+      "name_ru": "",
+      "breed": "ГРИФФОН /",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "936577946",
+      "name_lat": "PIOJIA DORO ENDLESS KISS",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1344913077",
       "name_lat": "PITER'S ROYAL FAMILY SHANTY (изм по реш ВК от 22.02.23, п 40)",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1410291966",
-      "name_lat": "PITERSKIY BLUES HONEY BOY",
-      "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1273,6 +1363,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1576807381",
+      "name_lat": "PITERSTILE ROTONDA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "21455891",
       "name_lat": "PIXEL TOTO",
       "name_ru": "",
@@ -1282,30 +1381,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "966019608",
-      "name_lat": "PINE FOREST BEST NIKEN SELBY",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "id": "1463236431",
+      "name_lat": "PINK FLOYD IZ DINASTII CHEMPIONOV",
+      "name_ru": "ПИНК ФЛОЙД ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "698741036",
-      "name_lat": "PICOLLO TECKEL ALL IS LOVE",
+      "id": "180023101",
+      "name_lat": "PINE FOREST BEST NIKEN SELBY",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
-      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 10,
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "26865024",
-      "name_lat": "PITERSTILE ROTONDA",
+      "id": "1580958414",
+      "name_lat": "PICOLLO TECKEL ZE BEST",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 10,
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -1345,12 +1444,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1580958414",
-      "name_lat": "PICOLLO TECKEL ZE BEST",
+      "id": "916672127",
+      "name_lat": "PITERNYUF FAIRY SNOWGIRL",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
-      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 23,
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -1360,15 +1459,6 @@
       "breed": "ФОКСТЕРЬЕР СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "916672127",
-      "name_lat": "PITERNYUF FAIRY SNOWGIRL",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -1399,10 +1489,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1672659978",
+      "id": "1111078155",
+      "name_lat": "PINE FOREST BEST CINNAMON BUN TAST CRAZY",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "957343140",
       "name_lat": "PICOLLO TECKEL VIVA LA VIDA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1426,12 +1525,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "52514735",
-      "name_lat": "PINK FLOYD IZ DINASTII CHEMPIONOV",
+      "id": "126688444",
+      "name_lat": "PITERNYUF BANZAY",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ-",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "NEWFOUNDLAND",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1441,15 +1540,6 @@
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1111078155",
-      "name_lat": "PINE FOREST BEST CINNAMON BUN TAST CRAZY",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1471,10 +1561,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "242089944",
+      "id": "645559270",
       "name_lat": "PITER PAN STAYER GOLD IZ DOMA ZIDANA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1516,19 +1606,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "489376947",
-      "name_lat": "PISHGER IZ KLOVI",
+      "id": "571394381",
+      "name_lat": "PIA DESIDERATA JACARANDA DELTA",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
-      "total_shows": 3,
+      "breed": "ЛЕОНБЕРГЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1633269574",
+      "id": "1100905919",
       "name_lat": "PINOCHET",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА /",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1543,10 +1632,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "775478066",
+      "id": "614683262",
       "name_lat": "PITER'S ROYAL FAMILY BARHAM",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1588,7 +1677,7 @@
       "competition_dog_id": null
     },
     {
-      "id": "401765363",
+      "id": "401765362",
       "name_lat": "PITERA OGNENNAYA",
       "name_ru": "",
       "breed": "ДЛИННОШЕР",
@@ -1597,12 +1686,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "192964044",
-      "name_lat": "PIA DESIDERATA JASMINE SAMBACH",
+      "id": "516367392",
+      "name_lat": "PITERPRIDE BALLADE",
       "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1333909983",
+      "name_lat": "PIKOVAYA DAMA IZ DOMA OSTEE",
+      "name_ru": "",
+      "breed": "ЕВРАЗИЕР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1615,12 +1711,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1788399245",
-      "name_lat": "PITER ULYBOK LADUSHKA",
+      "id": "936467478",
+      "name_lat": "PINA COLADA IZ KITEZ GRADA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1669,6 +1765,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1658580296",
+      "name_lat": "PIA DESIDERATA JEWEL ORCHID",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1517949051",
       "name_lat": "PINTA",
       "name_ru": "",
@@ -1687,6 +1791,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "756230705",
+      "name_lat": "PIZHON ПРИМО ДЕЛЬ ВЕРО",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "347767238",
       "name_lat": "PICCOLA MACCHINA TEDESCA AURELIA AURITA",
       "name_ru": "",
@@ -1696,12 +1808,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "763682372",
-      "name_lat": "PINA COLADA IZ KITEZ GRADA",
+      "id": "1713224192",
+      "name_lat": "PIKAPIEDRABULL DARK DEVIL",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -1723,12 +1835,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "655486764",
+      "id": "1905000201",
       "name_lat": "PINE FOREST BEST INDI STAR BOY ZVEZDNYY MALCHIK",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1741,19 +1853,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "126688444",
-      "name_lat": "PITERNYUF BANZAY",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "NEWFOUNDLAND",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "164980220",
+      "id": "1223551966",
       "name_lat": "PICOLLO TECKEL ZUGAR SWEET",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 13,
       "competition_dog_id": null
@@ -1768,12 +1871,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1713224192",
-      "name_lat": "PIKAPIEDRABULL DARK DEVIL",
+      "id": "35710421",
+      "name_lat": "PILISI-KOCOS PANTLIKA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "ПУМИ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1795,6 +1898,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1558191512",
+      "name_lat": "PITERSKY DANDY OT BUMAGE",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1203760544",
+      "name_lat": "PITER ASIA DOG VIZITNAYA KARTOCHKA WINNER",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
       "id": "966768436",
       "name_lat": "PILIGRIM ROAD FANTASY IN GOLD",
       "name_ru": "",
@@ -1804,10 +1925,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1123600138",
+      "id": "1209112228",
       "name_lat": "PICOLLO TECKEL NO MERCY",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1819,33 +1940,6 @@
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "35710421",
-      "name_lat": "PILISI-KOCOS PANTLIKA",
-      "name_ru": "",
-      "breed": "ПУМИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1203760544",
-      "name_lat": "PITER ASIA DOG VIZITNAYA KARTOCHKA WINNER",
-      "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1558191512",
-      "name_lat": "PITERSKY DANDY OT BUMAGE",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1876,12 +1970,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "501782312",
+      "name_lat": "PILIGRIM ROAD KEY TO ALL DOORS",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "217781106",
       "name_lat": "PICCOLO TIBET FORCE AWAKENS",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1453024704",
+      "name_lat": "PITERNYUF KREML",
+      "name_ru": "ПИТЕРНЬЮФ КРЕМЛЬ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1894,21 +2006,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1777024546",
+      "id": "945710115",
       "name_lat": "PIOJIA DORO ONLINE ITS MY LIVE",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "501782312",
-      "name_lat": "PILIGRIM ROAD KEY TO ALL DOORS",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1948,12 +2051,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "82453869",
+      "name_lat": "PICOLLO TECKEL CALL IT MAGIC",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1723325223",
       "name_lat": "PIONEER NIKO-GRAD",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46844347",
+      "name_lat": "PITERSKY DANDY OT BUMAZE",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1966,26 +2087,43 @@
       "competition_dog_id": null
     },
     {
+      "id": "1505119666",
+      "name_lat": "PINK CAMPARI AT BRAIT NOUZ IZ YULVINGRADA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "641064401",
       "name_lat": "PITERNYUF FIRST SNOW DROP",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1392370574",
+      "id": "100977353",
+      "name_lat": "PILIGRIM ROAD LET'S DREAM",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "995637463",
       "name_lat": "PINAKOLADA OT VEDERNIKOVA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1930015375",
-      "name_lat": "PICCOLO TIBET KOH-I- NOR",
+      "id": "979484317",
+      "name_lat": "PICCOLO TIBET KOH-I-NOR",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
@@ -2020,21 +2158,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "908610021",
+      "id": "1061061496",
       "name_lat": "PILIGRIM ROAD LAND OF GRACE",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "46844347",
-      "name_lat": "PITERSKY DANDY OT BUMAZE",
+      "id": "199226369",
+      "name_lat": "PITER ULYBOK ZAPJATAYA",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2043,7 +2180,15 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ СТАФФОРДШИРСКИЙ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1330456218",
+      "name_lat": "PICOLLO TECKEL AMORE MIO",
+      "name_ru": "",
+      "breed": "DACHSHUND",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2065,10 +2210,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1796172220",
+      "id": "197334213",
+      "name_lat": "PINE FOREST BEST DINASTII REALGOLDNIMA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1967865458",
       "name_lat": "PILLAR GROSVI HAUS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2083,12 +2237,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "100977353",
-      "name_lat": "PILIGRIM ROAD LET'S DREAM",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "id": "1854550899",
+      "name_lat": "PITER ULYBOK ZATEYNIK",
+      "name_ru": "ПИТЕР УЛЫБОК ЗАТЕЙНИК",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2101,10 +2255,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "844464146",
+      "id": "1930617715",
+      "name_lat": "PIN UP GIRL THE SWEESTES COTON",
+      "name_ru": "",
+      "breed": "КОТОН ДЕ ТУЛЕАР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1602015135",
       "name_lat": "PIT BELYJ MAG",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2119,10 +2282,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1603746107",
+      "id": "435720946",
       "name_lat": "PINA COLADA FIRE JOY",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2137,6 +2300,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1030382085",
+      "name_lat": "PIK DANTE PLENITELNAYA SHINE STAR",
+      "name_ru": "",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "885582732",
+      "name_lat": "PIROS",
+      "name_ru": "",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "995909391",
+      "name_lat": "PIRAT BESSTRASHNYJ",
+      "name_ru": "",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "66766382",
       "name_lat": "PITER'S ROYAL FAMILY FUNNY GIRL",
       "name_ru": "",
@@ -2146,10 +2336,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "329710755",
+      "id": "1064904586",
       "name_lat": "PILIGRIM MAYFLOWER IZ ANGARII",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -2173,10 +2363,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "636382000",
+      "id": "1083833630",
       "name_lat": "PIAL LOOK AT ME",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2191,12 +2381,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1505119666",
-      "name_lat": "PINK CAMPARI AT BRAIT NOUZ IZ YULVINGRADA",
+      "id": "1679887272",
+      "name_lat": "PINEDAX LOVES RUSSIANS",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "NORWICH TERRIER",
-      "total_shows": 5,
+      "breed": "DACHSHUND KANINCHEN",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2209,39 +2399,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "208152424",
-      "name_lat": "PIROS",
+      "id": "1953533645",
+      "name_lat": "PITER'S ROYAL FAMILY TAURIKA",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1987052965",
-      "name_lat": "PICOLLO TECKEL CALL IT MAGIC",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "893268503",
-      "name_lat": "PITER ULYBOK ZATEYNIK",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1679887272",
-      "name_lat": "PINEDAX LOVES RUSSIANS",
-      "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -2281,10 +2444,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "652050022",
+      "id": "645628511",
       "name_lat": "PITERSTILE TAMENGONT",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2304,7 +2467,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2317,30 +2480,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1030382085",
-      "name_lat": "PIK DANTE PLENITELNAYA SHINE STAR",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1774905520",
       "name_lat": "PINE FOREST BEST KAMARA HAPPY STAR",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1930617715",
-      "name_lat": "PIN UP GIRL THE SWEESTES COTON",
-      "name_ru": "",
-      "breed": "КОТОН ДЕ ТУЛЕАР",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2353,10 +2498,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "188776701",
+      "id": "191380757",
       "name_lat": "PICOLLO TECKEL ALLEGRA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2380,10 +2525,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "630309800",
+      "name_lat": "PITER ULYBOK ISKORKA",
+      "name_ru": "ПИТЕР УЛЫБОК ИСКОРКА",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "265839935",
       "name_lat": "PITERNYUF FIRE AND ICE",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1381093782",
+      "name_lat": "PITERSKIY BLUES YUDENICH",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2395,15 +2556,6 @@
       "breed": "ENGLISH COCKER",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "952912732",
-      "name_lat": "PICOLLO TECKEL AMORE MIO",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2421,7 +2573,7 @@
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2434,19 +2586,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "1357168306",
+      "name_lat": "PIZHON BEST FATE",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "386311467",
       "name_lat": "PICHER ELSO",
       "name_ru": "",
       "breed": "ЛЕГАВАЯ / HUNGARIAN",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1937571824",
-      "name_lat": "PINE FOREST BEST DINASTII REALGOLDNIMA",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2470,10 +2622,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "944419708",
-      "name_lat": "PITER ULYBOK ZAPJATAYA",
+      "id": "1831893290",
+      "name_lat": "PIFAGOR NAOKI PLYUSH",
+      "name_ru": "ПИФАГОР НАОКИ ПЛЮШ",
+      "breed": "МОПС",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "189427594",
+      "name_lat": "Pinokolada",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2488,21 +2648,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1570102191",
-      "name_lat": "PICOLLO TECKEL ZETTA",
+      "id": "116730276",
+      "name_lat": "PICOLLO TECKEL CRYSTAL",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1953533645",
-      "name_lat": "PITER'S ROYAL FAMILY TAURIKA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 14,
+      "breed": "DACHSHUND KANINCHEN",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2515,10 +2665,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1169663085",
+      "id": "118807728",
+      "name_lat": "PINCHERINO ISKRA GOLDFISH",
+      "name_ru": "ПИНЧЕРИНО ИСКРА ГОЛДФИШ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "72359632",
       "name_lat": "PINE FOREST BEST LONDON LOVE OF LIFE",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2542,28 +2701,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "1623098715",
+      "id": "1554085010",
       "name_lat": "PITOMEC GIGANT YANSON",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1643297111",
-      "name_lat": "PITERSKIY BLUES YUDENICH",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1585441944",
+      "id": "1840282178",
+      "name_lat": "PITER ASIA DOG BLESK",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15168676",
+      "name_lat": "PINA COLADA IZ SOLNECHNOGO DOMA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1311589854",
+      "name_lat": "PICK ME UP PARADISE TETATET",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1767648701",
       "name_lat": "PIZHON KOROL EPOTAZHA",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2573,17 +2749,7 @@
       "name_lat": "PINKI IZ IMPERII OKSVOLL",
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "995909391",
-      "name_lat": "PIRAT BESSTRASHNYJ",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
-      "breed_en": "GERMAN WOLFSPITZ (KEESHOUND)",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2596,10 +2762,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1111840336",
+      "id": "347065096",
+      "name_lat": "PIKI KVIK ODIN",
+      "name_ru": "ПИКИ КВИК ОДИН",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "526612901",
       "name_lat": "PITT MIRACLE MAN",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2632,10 +2807,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "31876326",
+      "id": "562804677",
       "name_lat": "PICOLLO TECKEL ICE-ICE BABY",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ЗЕННЕНХУНД АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2647,15 +2822,6 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "118807728",
-      "name_lat": "PINCHERINO ISKRA GOLDFISH",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -2677,57 +2843,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "936577946",
-      "name_lat": "PIOJIA DORO ENDLESS KISS",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "819775422",
+      "id": "325559858",
       "name_lat": "PITER POEMA DOLKA NOCHI",
       "name_ru": "",
-      "breed": "МАЛЫЙ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "15168676",
-      "name_lat": "PINA COLADA IZ SOLNECHNOGO DOMA",
+      "id": "1389874002",
+      "name_lat": "PITER ULYBOK TSIFRA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1357168306",
-      "name_lat": "PIZHON BEST FATE",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed": "ПУДЕЛЬ ТОЙ БЕЛЫЙ, КОРИЧНЕВЫЙ , ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1234657659",
+      "id": "1462017346",
       "name_lat": "PILIGRIM ROAD ON MY WORD",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН) ПАПИЙОН /",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1311589854",
-      "name_lat": "PICK ME UP PARADISE TETATET",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2749,6 +2888,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1518308714",
+      "name_lat": "PIK'ANTA TARO OT PANDY SHARM",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "6029043",
       "name_lat": "PILIGRIM ROAD KELTIK SAN",
       "name_ru": "",
@@ -2762,24 +2910,6 @@
       "name_lat": "PIGMALION WINNING SMILE",
       "name_ru": "",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "103125814",
-      "name_lat": "PIK'ANTA TARO OT PANDY SHARM",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1840282178",
-      "name_lat": "PITER ASIA DOG BLESK",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2821,30 +2951,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "347065096",
-      "name_lat": "PIKI KVIK ODIN",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "736606172",
       "name_lat": "PITER PEN",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1389874002",
-      "name_lat": "PITER ULYBOK TSIFRA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ БЕЛЫЙ, КОРИЧНЕВЫЙ , ЧЕРНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2857,12 +2969,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1618870577",
+      "name_lat": "PIKAICHI FUJIYAMA KENSHA",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "678240950",
       "name_lat": "PIA DESIDERATA INVINCIBLE SWORD",
       "name_ru": "",
       "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "872360900",
+      "name_lat": "PIA DESIDERATA JUSTICIA BRANDEGI",
+      "name_ru": "",
+      "breed": "LEONBERGER",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2875,10 +3004,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "140446497",
+      "id": "1911518688",
       "name_lat": "PINK FLOYD IZ STOLITSY URALA",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2983,10 +3112,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "224960682",
+      "id": "1879437734",
       "name_lat": "PILILIA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ / MINIATURE",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ / MINIATURE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3007,6 +3136,32 @@
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ КЛАССИК",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "647800045",
+      "name_lat": "PINE FOREST BEST FORCE OF NATURE",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1412405006",
+      "name_lat": "PINCHERINO EVAR ADMIRAL",
+      "name_ru": "ПИНЧЕРИНО ЕВАР АДМИРАЛ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1857554274",
+      "name_lat": "PITER'S ROYAL FAMILY RICHARD ELF",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3091,10 +3246,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "172447034",
+      "id": "194226477",
       "name_lat": "PINO NUAR",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3127,10 +3282,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1687190356",
+      "id": "685042758",
       "name_lat": "PIKI KVIK X-RUNA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3172,12 +3327,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1120838281",
+      "id": "1464606268",
       "name_lat": "PISHANEL CHUNNY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3244,19 +3399,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "285878800",
+      "id": "1445834597",
       "name_lat": "PIPER",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "431036806",
+      "id": "535563775",
       "name_lat": "PICCOLO TECKEL STERLIGHT",
       "name_ru": "",
-      "breed": "DACHSHUND ZWERG KURZHAAR ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "DACHSHUND ZWERG KURZHAAR ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3293,15 +3448,6 @@
       "name_lat": "PITERSTILE RADOST",
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1831893290",
-      "name_lat": "PIFAGOR NAOKI PLYUSH",
-      "name_ru": "",
-      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3352,6 +3498,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1607660599",
+      "name_lat": "PITOMEC GIGANT DON AL CAPONE",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "374139703",
+      "name_lat": "PITER POEMA EFFEKT",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "892157536",
       "name_lat": "PIKI KVIK KANABI COFFEE DREAM",
       "name_ru": "",
@@ -3367,6 +3529,15 @@
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "984633386",
+      "name_lat": "PINE FOREST BEST REWARD OF KARELIA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3429,14 +3600,14 @@
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "457333559",
+      "id": "121483126",
       "name_lat": "PIRS-LAKKI",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3460,28 +3631,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1436936549",
-      "name_lat": "PINOKOLADA",
+      "id": "764103281",
+      "name_lat": "PIKHTA IS SIBIRSKOGO KNYAJESTVA",
       "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1953605002",
-      "name_lat": "PINOKOLADA",
-      "name_ru": "",
-      "breed": "ЭПАНЬОЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1083407624",
-      "name_lat": "PINOKOLADA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3514,15 +3667,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "227119160",
-      "name_lat": "PIKHTA IS SIBIRSKOGO KNYAJESTVA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "412390468",
       "name_lat": "PITERSTILE ISTORIYA",
       "name_ru": "",
@@ -3541,10 +3685,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "668322613",
+      "id": "1442728648",
       "name_lat": "PITOMEC GIGANT TEOBALDO",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3577,10 +3721,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "184606683",
+      "id": "1396038103",
+      "name_lat": "PITER’S ROYAL FAMILY PRIMA",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "35472844",
       "name_lat": "PIRAT VOM HAUS KOGOR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3592,6 +3744,15 @@
       "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "960801397",
+      "name_lat": "PIRATE DE TREMOUARD",
+      "name_ru": "",
+      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3622,15 +3783,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1857554274",
-      "name_lat": "PITER'S ROYAL FAMILY RICHARD ELF",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1346028760",
       "name_lat": "PIDZHI AJYAMI",
       "name_ru": "",
@@ -3653,15 +3805,6 @@
       "name_lat": "PIKSI",
       "name_ru": "",
       "breed": "WEIMARANER SHORT-",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "55581358",
-      "name_lat": "Pinokolada",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3721,6 +3864,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "143192610",
+      "name_lat": "PITERSTILE RASPUTIN",
+      "name_ru": "",
+      "breed": "норвич терьер",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1172507245",
       "name_lat": "PITER’S ROYAL FAMILY HEITZ MARKUS",
       "name_ru": "",
@@ -3739,10 +3890,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1394811437",
+      "id": "275553828",
       "name_lat": "PIROSMANI OT BARBATSUTSY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3784,10 +3935,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "775465381",
+      "id": "253548856",
       "name_lat": "PICOLO TECKEL ALL IS LOVE",
       "name_ru": "",
-      "breed": "DACHSHUND ZWERG KURZHAAR ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "DACHSHUND ZWERG KURZHAAR ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3826,33 +3977,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1453024704",
-      "name_lat": "PITERNYUF KREML",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1412405006",
-      "name_lat": "PINCHERINO EVAR ADMIRAL",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1618870577",
-      "name_lat": "PIKAICHI FUJIYAMA KENSHA",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3901,39 +4025,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "960801397",
-      "name_lat": "PIRATE DE TREMOUARD",
-      "name_ru": "",
-      "breed": "БРЕТОНСКИЙ ЭПАНЬОЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "287255115",
       "name_lat": "PICK ME UP IN PARADISE TETATET",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "SHIH TZU",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1673783358",
-      "name_lat": "PICOLLO TECKEL ZЕ BEST",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ  Г-Ш",
-      "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "580302334",
-      "name_lat": "PIRS PLATINUM",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "JACK RUSSELL TERRIER",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3964,10 +4061,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1547229297",
+      "id": "1349915314",
       "name_lat": "PIRANYA S FAMILY'S FRIVER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3982,10 +4079,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "932145295",
+      "id": "1648358590",
       "name_lat": "PIA MOLLI QUEEN OF HEARTS",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4009,6 +4106,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1524604799",
+      "name_lat": "PILILIA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1013108097",
       "name_lat": "PILAT",
       "name_ru": "",
@@ -4018,10 +4123,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "876006339",
+      "id": "1078320111",
       "name_lat": "PIKE PARIS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4054,10 +4159,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "29241171",
+      "id": "79370491",
       "name_lat": "Picollo Teckel Limited Edition",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4126,20 +4231,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "510510504",
-      "name_lat": "PIA DESIDERATA JACARANDA DELTA",
+      "id": "440786863",
+      "name_lat": "PITERRNYUF FAIRY SNOWGIRL",
       "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "116730276",
-      "name_lat": "PICOLLO TECKEL CRYSTAL",
-      "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN",
-      "breed_en": "",
+      "breed": "НЬЮФАУНДЛЕНД",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4216,6 +4311,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1768634970",
+      "name_lat": "PITERS ROYAL FAMILI RICHARDS ELF",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "536855851",
       "name_lat": "PIASHCHOTNAI",
       "name_ru": "",
@@ -4261,19 +4364,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "591412630",
-      "name_lat": "PIPER HOLLY INCANTE VOLE",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "290152614",
+      "id": "891886705",
       "name_lat": "PIANA PAVLIDE",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -4315,15 +4409,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1288018755",
-      "name_lat": "PINE FOREST BEST REWARD OF KARELIA",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "109773216",
       "name_lat": "PIBROK ZLATOVLASKA",
       "name_ru": "",
@@ -4342,11 +4427,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1965104565",
-      "name_lat": "PIRAT IZ ROPSHINSKOY STAI VEKSALIYA",
+      "id": "120824889",
+      "name_lat": "PIXEL HUNTER DELIGHT IN MOTION",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
-      "breed_en": "",
+      "breed": "MINIATURE SMOOTH-HAIRED ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -4356,6 +4440,14 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "629410440",
+      "name_lat": "PIXEL HUNTER DIRECT HIT",
+      "name_ru": "",
+      "breed": "ТАКСА",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -4423,10 +4515,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1165105850",
+      "id": "479102731",
       "name_lat": "PINE FOREST BEST EUROPE FIERY PASSION",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4459,6 +4551,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "534214023",
+      "name_lat": "PION SHARM SVET KRASA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "164462909",
+      "name_lat": "PITER'S ROYAL FAMILY NEIA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "161740157",
       "name_lat": "PINA COLADA",
       "name_ru": "",
@@ -4477,20 +4585,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "189427594",
-      "name_lat": "Pinokolada",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "936662427",
       "name_lat": "PILAT",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "140587222",
+      "name_lat": "PINE FOREST BEST TEA LAJONI",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4621,6 +4728,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1641032664",
+      "name_lat": "PICOLLO TECKEL ENDLESS LOVE",
+      "name_ru": "",
+      "breed": "DACHSHUND KANINCHEN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1932655662",
       "name_lat": "PINKAMINA RUBY PIE",
       "name_ru": "",
@@ -4644,6 +4759,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1259193203",
+      "name_lat": "PITTARI SEYBI NIYOKO",
+      "name_ru": "",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4720,6 +4843,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "337125372",
+      "name_lat": "PINCHERINO FANGO MOLLA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1563755632",
       "name_lat": "PINCHERINO RIU-GRANDI RUNTA",
       "name_ru": "",
@@ -4729,37 +4860,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "1658580296",
-      "name_lat": "PIA DESIDERATA JEWEL ORCHID",
-      "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "928302286",
+      "id": "204157376",
       "name_lat": "PICCOLO TECKEL LIMITED EDITION",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "438378960",
+      "id": "1515186902",
+      "name_lat": "PITER ULYBOK ZEMLYANIKA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ МИНИАТЮРНЫЙ БЕЛЫЙ, КОРИЧНЕВЫЙ , ЧЕРНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1532945701",
       "name_lat": "PILOT VENTURESOME",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "2588459",
+      "id": "859412938",
       "name_lat": "PILIGRIM ROAD ULYSS",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "615689583",
+      "name_lat": "PITER BEST KASANDRA",
+      "name_ru": "ПИТЕР БЕСТ КАСАНДРА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4769,15 +4908,6 @@
       "name_lat": "PIKACHU RODNICCHOK TIGER SADA",
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "802190257",
-      "name_lat": "PILIGRIM ROAD DAZZLING SIRIUS",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4801,10 +4931,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "646454009",
+      "id": "1582245681",
       "name_lat": "PITER'S ROYAL FAMILY UNISON PERFECT",
       "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4873,6 +5003,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1809481080",
+      "name_lat": "PIPINO",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "66519538",
       "name_lat": "PITER PEN",
       "name_ru": "",
@@ -4891,10 +5029,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "144931531",
+      "id": "454803727",
       "name_lat": "PIERO",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4967,6 +5105,15 @@
       "name_lat": "PIONA",
       "name_ru": "",
       "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1863987351",
+      "name_lat": "PIKANTNAYA SHTUCHKA OT JULY SMILE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5116,10 +5263,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "810697980",
+      "id": "1090545433",
       "name_lat": "PITERNYUF EAST OR WEST HOUM IS BEST",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5161,19 +5308,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "99627512",
+      "id": "969818226",
       "name_lat": "PINK FLOYD IZ KITEZ GRADA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "22080098",
+      "id": "309310764",
       "name_lat": "PICOLLO TECKEL WILD ROSE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5197,37 +5344,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "615689583",
-      "name_lat": "PITER BEST KASANDRA",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "630309800",
-      "name_lat": "PITER ULYBOK ISKORKA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1073418218",
       "name_lat": "PIPPILOTTA VIKTUALIA VIVA VITA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH BULLDOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1814920913",
-      "name_lat": "PIОN SHARM SVET KRASA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5251,10 +5371,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1490835061",
+      "id": "92181512",
       "name_lat": "PINK PANTHER DE NAVISSOS",
       "name_ru": "",
-      "breed": "БОКСЕР ТИГРОВЫЙ /",
+      "breed": "БОКСЕР ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5278,10 +5398,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1779221612",
+      "id": "729773641",
       "name_lat": "PITAYA IZ IMPERII ADAMANT",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5318,15 +5438,6 @@
       "name_lat": "PINE FOREST BEST ROSE’S LIME CORDIAL",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "656884814",
-      "name_lat": "PION SHARM SVET KRASA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ / CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5494,10 +5605,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "593887884",
+      "id": "262123086",
       "name_lat": "Pilgrim Star",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5530,20 +5641,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "83074643",
-      "name_lat": "PIKANTNAYA SHTUCHKA OT JULY SMILE",
+      "id": "1801989393",
+      "name_lat": "PINCHERINO FIMI TATA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1722314520",
-      "name_lat": "PIXEL HUNTER DELIGHT IN MOTION",
-      "name_ru": "",
-      "breed": "MINIATURE SMOOTH-HAIRED ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ / DACHSHUND",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5584,11 +5685,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1668259765",
-      "name_lat": "PIA DESIDERATA JUSTICIA BRANDEGI",
+      "id": "71585349",
+      "name_lat": "PININFARINA BATTISTA",
       "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР /",
-      "breed_en": "",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

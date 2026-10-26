@@ -1,0 +1,24 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ШЛ",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "1244265464",
+      "name_lat": "ШЛЯГЕР ИЗ АНТАГРАДА",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1885073050",
+      "name_lat": "ШЛЯПНИКОФФ ХОФФ БЕЛОРЕС",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

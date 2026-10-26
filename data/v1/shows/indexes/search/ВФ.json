@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ВФ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "166253114",
+      "name_lat": "В-ФОРТУНА ФОРТ",
+      "name_ru": "В-ФОРТУНА ФОРТ",
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1829008662",
+      "name_lat": "В-ФЬЕРЕ РОССО ДЕЛ'АМОРЕ",
+      "name_ru": "В-ФЬЕРЕ РОССО ДЕЛ'АМОРЕ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "792716316",
+      "name_lat": "В'ФЭЙС МАЙ ДЭВИЛ",
+      "name_ru": "",
+      "breed": "БОРДЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

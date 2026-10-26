@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "HH",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1603231881",
+      "name_lat": "H'HASHIKO",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "942313580",
+      "name_lat": "H)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "870814448",
+      "name_lat": "HHH NOVAYA ZHIZN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

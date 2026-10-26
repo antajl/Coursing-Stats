@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "SY",
-  "count": 65,
+  "count": 78,
   "dogs": [
     {
       "id": "389552868",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
-      "total_shows": 33,
+      "total_shows": 37,
       "competition_dog_id": null
     },
     {
@@ -18,7 +18,7 @@
       "name_ru": "",
       "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "WEIMARANER SHORT-HAIRED",
-      "total_shows": 39,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -27,7 +27,7 @@
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -36,7 +36,7 @@
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 34,
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -63,7 +63,7 @@
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -121,10 +121,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "504888078",
+      "name_lat": "S YSAD'BY MANSHETOVYH MIKKI MAUS",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "446385913",
       "name_lat": "SYMPHONY IZ LIGI CHEMPIONOV",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "Бордоский Бульдог",
       "breed_en": "BULLDOG",
       "total_shows": 8,
       "competition_dog_id": null
@@ -135,7 +144,25 @@
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "457554864",
+      "name_lat": "SYN SOLNTSA SOLOMON",
+      "name_ru": "СЫН СОЛНЦА СОЛОМОН",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "650371045",
+      "name_lat": "SYRDYK SULUS NARYN",
+      "name_ru": "СЫРДЫК СУЛУС НАРЫН",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -145,15 +172,6 @@
       "breed": "ШВЕДСКИЙ ВАЛЬХУНД",
       "breed_en": "SWEDISH VALLHUND",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "457554864",
-      "name_lat": "SYN SOLNTSA SOLOMON",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -175,21 +193,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "317431118",
+      "id": "1338712690",
       "name_lat": "SYUZI AI STILL LOVING YOU",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "650371045",
-      "name_lat": "SYRDYK SULUS NARYN",
+      "id": "1199228610",
+      "name_lat": "SYUZANNA-STAR FOR GLAMOURKENNEL",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -211,21 +229,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1199228610",
-      "name_lat": "SYUZANNA-STAR FOR GLAMOURKENNEL",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "919405507",
       "name_lat": "SYLVIANNE'S NOBLESSE OBLIGE",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 9,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "227372823",
+      "name_lat": "S YSAD'BY MANSHETOVYH KONDOR RED",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -247,10 +265,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "660037897",
+      "id": "1825552788",
       "name_lat": "SYUZANNA-STARFOR GLAMOURKENNEL",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ /",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -262,6 +280,22 @@
       "breed": "МОПС",
       "breed_en": "PUG",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1496039098",
+      "name_lat": "SYLVIA KRISTEL",
+      "name_ru": "",
+      "breed": "DACHSHUND KANINCHEN",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1561285787",
+      "name_lat": "S YSAD'BY MANSHETOVYH KRIS KELM",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -301,12 +335,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1496039098",
-      "name_lat": "SYLVIA KRISTEL",
+      "id": "835001840",
+      "name_lat": "SYRUS AUS DER BRUNNENSTRAßE",
       "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -328,10 +362,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "711644468",
+      "id": "1500810514",
+      "name_lat": "S YSAD'BY MANSHETOVYH SAKURA BYU",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1844394593",
       "name_lat": "SYDNEY (ALMAZNY BOSS)",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -346,19 +388,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "835001840",
-      "name_lat": "SYRUS AUS DER BRUNNENSTRAßE",
-      "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "982129979",
+      "id": "1427101426",
       "name_lat": "SYBILLA IZ ZOOSFERY",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -409,6 +442,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1957634486",
+      "name_lat": "S YSAD'BY MANSHETOVYH HLOYA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "882849315",
+      "name_lat": "SYTNOGO DVORA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ИЙ)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "59967560",
       "name_lat": "SYMPHONY OF STARS DECROUX",
       "name_ru": "",
@@ -418,11 +469,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "882849315",
-      "name_lat": "SYTNOGO DVORA",
+      "id": "139446535",
+      "name_lat": "SYMFHONY LOVE IZ MEDVEJEGO YARA",
       "name_ru": "",
-      "breed": "МАЛЫЙ ИЙ)",
-      "breed_en": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -454,6 +504,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1922723481",
+      "name_lat": "S'YU SVETSTYLE",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1200676516",
       "name_lat": "SYUZANA",
       "name_ru": "",
@@ -472,13 +531,22 @@
       "competition_dog_id": null
     },
     {
-      "id": "377562079",
+      "id": "241413768",
+      "name_lat": "S YSAD'BY MANSHETOVYH NEVADA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "10026",
       "name_lat": "SYLVIANNE'S UNDINE",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
       "total_shows": 2,
-      "competition_dog_id": null
+      "competition_dog_id": 10026
     },
     {
       "id": "1818916858",
@@ -490,10 +558,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "810686273",
+      "id": "438862153",
       "name_lat": "Syuzi",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1043926135",
+      "name_lat": "S-YARUSH",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -544,10 +621,44 @@
       "competition_dog_id": null
     },
     {
+      "id": "865772640",
+      "name_lat": "S YSAD'BY MANSHETOVYH STEFFI LYUS",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1875896365",
       "name_lat": "SYLVESTRE DANIEL STREET DI DI",
       "name_ru": "",
       "breed": "боксер бульдог",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1373031396",
+      "name_lat": "SYMPLE THE BEST СОФФИО Д АМОРЕ",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "623101264",
+      "name_lat": "SYRUS AUS DER BRUNNENSTRASS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1232985729",
+      "name_lat": "S YSAD'BY MANSHETOVYH NORTON",
+      "name_ru": "",
+      "breed": "Американская акита",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

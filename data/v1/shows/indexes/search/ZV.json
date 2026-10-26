@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ZV",
-  "count": 867,
+  "count": 903,
   "dogs": [
     {
       "id": "1877336152",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "CAIRN TERRIER",
-      "total_shows": 45,
+      "total_shows": 60,
       "competition_dog_id": null
     },
     {
@@ -18,34 +18,43 @@
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 29,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
-      "id": "685150242",
+      "id": "518621783",
       "name_lat": "ZVENI-DACHS LAKOSTA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
       "total_shows": 38,
       "competition_dog_id": null
     },
     {
-      "id": "1810203957",
+      "id": "868647112",
       "name_lat": "ZVEZDNAYA KAPEL DARCY DELIGHT",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 30,
       "competition_dog_id": null
     },
     {
-      "id": "1573929891",
+      "id": "1579162612",
       "name_lat": "ZVENTA SVENTANA TRIANA STARS CELEBRITY (MEDIO)",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "XOLOITZCUINTLE (INTERMEDIATE)",
-      "total_shows": 53,
+      "total_shows": 62,
+      "competition_dog_id": null
+    },
+    {
+      "id": "161461009",
+      "name_lat": "ZVEZDNAYA RADUGA SHCHEPETILNAYA LEDI",
+      "name_ru": "ЗВЕЗДНАЯ РАДУГА ЩЕПЕТИЛЬНАЯ ЛЕДИ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -55,6 +64,15 @@
       "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1301538719",
+      "name_lat": "ZVEZDOCHKA YASNAYA POLYA",
+      "name_ru": "",
+      "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
+      "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -76,6 +94,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "868231269",
+      "name_lat": "ZVEZDA PO IMENI SOLNCE",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 55,
+      "competition_dog_id": null
+    },
+    {
       "id": "1430339331",
       "name_lat": "ZVEZDNY VOLK DRAGO (G)",
       "name_ru": "",
@@ -85,12 +112,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "868231269",
-      "name_lat": "ZVEZDA PO IMENI SOLNCE",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "id": "272157323",
+      "name_lat": "ZVEZDOCHKA MOYA YASNAYA IZ BELYKH GYAUROV",
+      "name_ru": "ЗВЕЗДОЧКА МОЯ ЯСНАЯ ИЗ БЕЛЫХ ГЯУРОВ",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 50,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -103,6 +130,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "924790128",
+      "name_lat": "ZVEZDA MIKHAILA VIVA VALENSIYA",
+      "name_ru": "ЗВЕЗДА МИХАИЛА ВИВА ВАЛЕНСИЯ",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1263008292",
+      "name_lat": "ZVEZDA URALA ZHELANNAYA SHANTI",
+      "name_ru": "ЗВЕЗДА УРАЛА ЖЕЛАННАЯ ШАНТИ",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "MALTESE",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
       "id": "30842587",
       "name_lat": "ZVYOZDNYI MIR ONYX PERSONALITY",
       "name_ru": "",
@@ -112,84 +157,75 @@
       "competition_dog_id": null
     },
     {
-      "id": "1301538719",
-      "name_lat": "ZVEZDOCHKA YASNAYA POLYA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
-      "breed_en": "RUSSKAYA TSVETNAYA BOLONKA (RUSSIAN COLOURED BICHON)",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1537690610",
+      "id": "1287168254",
       "name_lat": "ZVEZDA ZABAYKALIA MARTIS",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1214937100",
+      "id": "228171785",
       "name_lat": "ZVYOZDNYI BYAKA IZ IMPERII INES",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1019491207",
+      "id": "639361956",
       "name_lat": "ZVEZDA STOLITSY ABU DHABI",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
       "total_shows": 45,
       "competition_dog_id": null
     },
     {
-      "id": "1263008292",
-      "name_lat": "ZVEZDA URALA ZHELANNAYA SHANTI",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "MALTESE",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "204718817",
+      "id": "47018782",
       "name_lat": "ZVEZDA ROSSII",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1584569669",
-      "name_lat": "ZVEZDNY LUCHIK LIFE GOLIVUD STAR",
-      "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ /",
+      "id": "1008670293",
+      "name_lat": "ZVEZDA URALA SAMBUKA SAN FAUSTINO",
+      "name_ru": "ЗВЕЗДА УРАЛА САМБУКА САН ФАУСТИНО",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 44,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1261502307",
+      "id": "1409496664",
+      "name_lat": "ZVEZDNY LUCHIK LIFE GOLIVUD STAR",
+      "name_ru": "",
+      "breed": "МОПС БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 46,
+      "competition_dog_id": null
+    },
+    {
+      "id": "921894240",
       "name_lat": "ZVENI-DACHS FORTUNATA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "924790128",
-      "name_lat": "ZVEZDA MIKHAILA VIVA VALENSIYA",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
+      "id": "1441257789",
+      "name_lat": "ZVEZDNYY DOZHD IZ DOMA YU-TI",
+      "name_ru": "ЗВЕЗДНЫЙ ДОЖДЬ ИЗ ДОМА Ю-ТИ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -207,7 +243,7 @@
       "name_ru": "",
       "breed": "СОБАКА ГОЛАЯ",
       "breed_en": "CHINESE CRESTED DOG",
-      "total_shows": 71,
+      "total_shows": 76,
       "competition_dog_id": null
     },
     {
@@ -215,6 +251,15 @@
       "name_lat": "ZVEZDNY ALLIANCE KINGDOM MISTRESS",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1105261328",
+      "name_lat": "ZVEZDY ORIONA SHELBI",
+      "name_ru": "",
+      "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -238,39 +283,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "1105261328",
-      "name_lat": "ZVEZDY ORIONA SHELBI",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "541559408",
-      "name_lat": "ZVEZDNYY DOZHD IZ DOMA YU-TI",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "272157323",
-      "name_lat": "ZVEZDOCHKA MOYA YASNAYA IZ BELYKH GYAUROV",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1065553417",
       "name_lat": "ZVEZDA PO IMENI SCHAST'YE",
       "name_ru": "",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "ST. BERNARD LONG HAIRED",
-      "total_shows": 14,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "37551111",
+      "name_lat": "ZVEZDNAYA NOCH AVGUSTA IZ BELYKH GYAUROV",
+      "name_ru": "ЗВЕЗДНАЯ НОЧЬ АВГУСТА ИЗ БЕЛЫХ ГЯУРОВ",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "IRISH WOLFHOUND",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "118903229",
+      "name_lat": "ZVEZDNAYA OSOBA SHERIN STOUN",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "254810830",
+      "name_lat": "ZVEZDA KINO IDEAL",
+      "name_ru": "ЗВЕЗДА КИНО ИДЕАЛ",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "306492681",
+      "name_lat": "ZVEZDA PLENITEL'NOGO SCHAST'YA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -283,6 +336,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "185130969",
+      "name_lat": "ZVYOZDNYI MIR TRIUMF SOZVEZDIYA SKORPIONA (Изменено по Решению ВК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "1499932634",
       "name_lat": "ZVYOZDNYI MIR BEATRICE SNOW WHITE",
       "name_ru": "",
@@ -292,10 +354,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "639252598",
+      "id": "1806778871",
+      "name_lat": "ZVEZDNY MEDVED PREZENT FO YOU",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1712069584",
       "name_lat": "ZVONKAYA MONETA IZ STRANI GREZ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -303,10 +374,18 @@
     {
       "id": "1045554252",
       "name_lat": "ZVEZDNYY FAVORIT KALIPSO",
-      "name_ru": "",
+      "name_ru": "ЗВЕЗДНЫЙ ФАВОРИТ КАЛИПСО",
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "910146270",
+      "name_lat": "ZVEZDNY MEDVED PRINSESSA AVRORA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -315,16 +394,7 @@
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "161461009",
-      "name_lat": "ZVEZDNAYA RADUGA SHCHEPETILNAYA LEDI",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -337,12 +407,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1710328017",
-      "name_lat": "ZVEZDA DETKINA WELL FAVORED",
+      "id": "1641308022",
+      "name_lat": "ZVEZDA ALTAYA URSULA",
+      "name_ru": "ЗВЕЗДА АЛТАЯ УРСУЛА",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1095347886",
+      "name_lat": "ZVEZDNAYA KAPEL RENESMI",
+      "name_ru": "ЗВЁЗДНАЯ КАПЕЛЬ РЕНЕСМИ",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1752455350",
+      "name_lat": "ZVEZDA DETKINA WELL-FAVORED",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "535973626",
+      "name_lat": "ZVEZDA UDACHI",
+      "name_ru": "ЗВЕЗДА УДАЧИ",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "BOSTON TERRIER",
+      "total_shows": 37,
       "competition_dog_id": null
     },
     {
@@ -351,7 +448,16 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1706280506",
+      "name_lat": "ZVEZDA ALTAYA TSAR",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -361,6 +467,24 @@
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
       "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "812371783",
+      "name_lat": "ZVER TIKHOMIR",
+      "name_ru": "ЗВЕРЬ ТИХОМИР",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "CAIRN TERRIER",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "798139628",
+      "name_lat": "ZVEZDA AMERLAND TRUMEN TROY",
+      "name_ru": "ЗВЕЗДА АМЕРЛАНД ТРУМЭН ТРОЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -382,39 +506,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "641423489",
+      "id": "1328990044",
       "name_lat": "ZVEZDA ADRIATIKI MAGNUS",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "name_ru": "ЗВЕЗДА АДРИАТИКИ МАГНУС",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "118903229",
-      "name_lat": "ZVEZDNAYA OSOBA SHERIN STOUN",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "185130969",
-      "name_lat": "ZVYOZDNYI MIR TRIUMF SOZVEZDIYA SKORPIONA (Изменено по Решению ВК",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1008670293",
-      "name_lat": "ZVEZDA URALA SAMBUKA SAN FAUSTINO",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -436,10 +533,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1813489345",
+      "id": "116485125",
       "name_lat": "ZVEZDA MOYA IZ HVOSTATOGO BALAGANA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -454,30 +551,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "17633425",
-      "name_lat": "ZVER PRONYA",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1051678961",
-      "name_lat": "ZVEZDA MARGEN EVRIKA STAR",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1165438000",
       "name_lat": "ZVEZDOCHKA BELAYA MITSU",
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17633425",
+      "name_lat": "ZVER PRONYA",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1161947077",
+      "name_lat": "ZVEZDA MARGEN EVRIKA STAR",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "767247138",
+      "name_lat": "ZVEZDA DINASTII ROYAL RICH BRUNO",
+      "name_ru": "ЗВЕЗДА ДИНАСТИИ РОЯЛ РИЧ БРУНО",
+      "breed": "СОБАКА ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -499,21 +605,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1680164406",
+      "id": "1805318427",
       "name_lat": "ZVEZDY AVRORY ALULA AUSTRALIS",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "910146270",
-      "name_lat": "ZVEZDNY MEDVED PRINSESSA AVRORA",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -522,7 +619,16 @@
       "name_ru": "",
       "breed": "КСОЛОИТЦКУИНТЛИ (СРЕДНИЙ)",
       "breed_en": "XOLOITZCUINTLE (INTERMEDIATE)",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1621716963",
+      "name_lat": "ZVONKO SMEYSYA",
+      "name_ru": "ЗВОНКО СМЕЙСЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -531,7 +637,25 @@
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "BASENJI",
-      "total_shows": 28,
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1250627886",
+      "name_lat": "ZVEZDNAYA KAPEL MAXIMUS",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "336548135",
+      "name_lat": "ZVEZDA GORODA DENVER",
+      "name_ru": "ЗВЕЗДА ГОРОДА ДЕНВЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -544,12 +668,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "105262023",
+      "name_lat": "ZVEZDA ROSSII OT DREVALLEY",
+      "name_ru": "ЗВЕЗДА РОССИИ ОТ ДРЕВАЛЛЕЙ",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "989078135",
       "name_lat": "ZVYOZDNYI MIR ULTRAMARIN",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "298963306",
+      "name_lat": "ZVENYASHCHAYA KAPEL MELISENTA",
+      "name_ru": "ЗВЕНЯЩАЯ КАПЕЛЬ МЕЛИСЕНТА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -571,10 +713,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1736274871",
+      "id": "928195053",
+      "name_lat": "ZVON TAYGI ROKSI ROYAL DAYMOND",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "911957771",
       "name_lat": "ZVEZDNYY VIKHR VOLT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -595,6 +745,15 @@
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "23423248",
+      "name_lat": "ZVEZDA VERENY ELAYT STAR",
+      "name_ru": "ЗВЕЗДА ВЕРЕНЫ ЭЛАЙТ СТАР",
+      "breed": "GREAT DANE FAWN, BRINDLE",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -625,21 +784,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "668793774",
-      "name_lat": "ZVYOZDNIY ALLUR BELISSIMA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "id": "98778744",
+      "name_lat": "ZVEZDA URALA CHICHIKITA CHINGISKHANOVNA",
+      "name_ru": "ЗВЕЗДА УРАЛА ЧИЧИКИТА ЧИНГИСХАНОВНА",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "23423248",
-      "name_lat": "ZVEZDA VERENY ELAYT STAR",
+      "id": "1932872491",
+      "name_lat": "ZVYOZDNIY ALLUR BELISSIMA",
       "name_ru": "",
-      "breed": "GREAT DANE FAWN, BRINDLE",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -652,12 +811,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "98778744",
-      "name_lat": "ZVEZDA URALA CHICHIKITA CHINGISKHANOVNA",
+      "id": "1924975994",
+      "name_lat": "ZVEZDNYIY VETER",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -670,12 +829,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1511488230",
+      "name_lat": "ZVEZDNAYA KAPEL MELODIA FLEITA",
+      "name_ru": "",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "381628146",
       "name_lat": "ZVEZDA KANGALA DAGIRA",
       "name_ru": "",
       "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -688,15 +856,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "767247138",
-      "name_lat": "ZVEZDA DINASTII ROYAL RICH BRUNO",
-      "name_ru": "",
-      "breed": "СОБАКА ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "733932682",
       "name_lat": "ZVYOZDNYI MIR NESKVIK",
       "name_ru": "",
@@ -706,49 +865,58 @@
       "competition_dog_id": null
     },
     {
-      "id": "1924975994",
-      "name_lat": "ZVEZDNYIY VETER",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "id": "1860050719",
+      "name_lat": "ZVEZDOCHKA MOYA IZ PITERSKOGO DOZORA",
+      "name_ru": "ЗВЁЗДОЧКА МОЯ ИЗ ПИТЕРСКОГО ДОЗОРА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "42354277",
+      "id": "1521963560",
       "name_lat": "ZVEZDA AL'BIONA IZ SOKOLINOGO GNEZDA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ВЕЙМАРАНЕР АМЕРИКАНСКИЙ",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1289812667",
+      "id": "821392376",
+      "name_lat": "ZVEZDA MIKHAILA AKVAMARIN",
+      "name_ru": "ЗВЕЗДА МИХАИЛА АКВАМАРИН",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1970378262",
       "name_lat": "ZVEZDA STOLITSY AYAS",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "821392376",
-      "name_lat": "ZVEZDA MIKHAILA AKVAMARIN",
+      "id": "749409159",
+      "name_lat": "ZVEZDNY MEDVED GREEK STAR PRINCESS",
       "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 14,
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "1250627886",
-      "name_lat": "ZVEZDNAYA KAPEL MAXIMUS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "id": "9094",
+      "name_lat": "ZVEZDNAYA RADUGA MARSEL",
+      "name_ru": "ЗВЕЗДНАЯ РАДУГА МАРСЕЛЬ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
+      "total_shows": 16,
+      "competition_dog_id": 9094
     },
     {
       "id": "175288666",
@@ -760,12 +928,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "112778534",
-      "name_lat": "ZVEZDOCHKA MOYA IZ PITERSKOGO DOZORA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 7,
+      "id": "190465051",
+      "name_lat": "ZVEZDA SOLOMONA IZ SOZVEZDIYA STAFF",
+      "name_ru": "ЗВЕЗДА СОЛОМОНА ИЗ СОЗВЕЗДИЯ СТАФФ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -778,30 +946,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "579736100",
-      "name_lat": "ZVENTA SVENTANA LYUTIK FOR KOSTAN DEI RINA (MINI)",
+      "id": "1255641761",
+      "name_lat": "ZVEROBOY SHELKOVIE OL'GERSY",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (МИНИАТЮРНЫЙ)",
-      "breed_en": "XOLOITZCUINTLE (MINIATURE)",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "749409159",
-      "name_lat": "ZVEZDNY MEDVED GREEK STAR PRINCESS",
+      "id": "784850402",
+      "name_lat": "ZVEZDA PANDORY MEKSIKANSKAYA GLORIYA",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "963798187",
-      "name_lat": "ZVEZDA SOLOMONA IZ SOZVEZDIYA STAFF",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 45,
+      "breed": "БИГЛЬ",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -832,12 +990,48 @@
       "competition_dog_id": null
     },
     {
+      "id": "183124825",
+      "name_lat": "ZVEZDA TAIS ALISENTIS",
+      "name_ru": "ЗВЕЗДА ТАИС АЛИСЕНТИС",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "160124402",
+      "name_lat": "ZVEZDA DETKINA ESENIN",
+      "name_ru": "ЗВЕЗДА ДЕТКИНА ЕСЕНИН",
+      "breed": "С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "582668848",
+      "name_lat": "ZVEZDNY MEDVED PRINC PARIZHA",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "888191054",
       "name_lat": "ZVENTA SVENTANA UTRENNYAYA RAPSODIA (MINI)",
       "name_ru": "",
       "breed": "КСОЛОИТЦКУИНТЛИ (МИНИАТЮРНЫЙ)",
       "breed_en": "XOLOITZCUINTLE (MINIATURE)",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1820479660",
+      "name_lat": "ZVEZDA PANDORY ZLATOVLASAYA MECHTA",
+      "name_ru": "ЗВЕЗДА ПАНДОРЫ ЗЛАТОВЛАСАЯ МЕЧТА",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -850,19 +1044,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1646324540",
+      "id": "795038125",
+      "name_lat": "ZVEZDA ALTAYA GRAND AFINA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "898782408",
       "name_lat": "ZVEZDA VIVIENNE WISTWOOD",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "76039879",
+      "id": "1693068801",
       "name_lat": "ZVEZDA SEVERA SHANEL MOON FACED BEAUTY",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -886,6 +1089,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1344872390",
+      "name_lat": "ZVEZDA MIKHAILA ALEKS",
+      "name_ru": "ЗВЕЗДА МИХАИЛА АЛЕКС",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "579736100",
+      "name_lat": "ZVENTA SVENTANA LYUTIK FOR KOSTAN DEI RINA (MINI)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МИНИАТЮРНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (MINIATURE)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "531369813",
       "name_lat": "ZVEZDA ZHELANIY SO ZVEZDNOGO PUTI",
       "name_ru": "",
@@ -895,37 +1116,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "795038125",
-      "name_lat": "ZVEZDA ALTAYA GRAND AFINA",
+      "id": "64950599",
+      "name_lat": "ZVEZDA EMIRA MOSCOW",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1706280506",
-      "name_lat": "ZVEZDA ALTAYA TSAR",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "id": "1899498034",
+      "name_lat": "ZVEZDA KANGALA GRAF",
+      "name_ru": "ЗВЕЗДА КАНГАЛА ГРАФ",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "306492681",
-      "name_lat": "ZVEZDA PLENITEL'NOGO SCHAST'YA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "id": "981538000",
+      "name_lat": "ZVEZDA KURGANA PRADA",
+      "name_ru": "ЗВЕЗДА КУРГАНА ПРАДА",
+      "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1255641761",
-      "name_lat": "ZVEROBOY SHELKOVIE OL'GERSY",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
+      "id": "277276046",
+      "name_lat": "Zvezdnyy Malchik",
+      "name_ru": "ЗВЁЗДНЫЙ МАЛЬЧИК",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -937,6 +1158,15 @@
       "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "834958989",
+      "name_lat": "ZVEZDA MIKHAILA VASILINA",
+      "name_ru": "ЗВЕЗДА МИХАИЛА ВАСИЛИНА",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "PEKINGESE",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -967,21 +1197,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "105262023",
-      "name_lat": "ZVEZDA ROSSII OT DREVALLEY",
+      "id": "1724464424",
+      "name_lat": "ZVEZDA STOLITSY VALENCIA",
       "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1344872390",
-      "name_lat": "ZVEZDA MIKHAILA ALEKS",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
+      "id": "1608350488",
+      "name_lat": "ZVEZDA KURGANA ZHETEM ZHOLI REVAL",
+      "name_ru": "ЗВЕЗДА КУРГАНА ЖЕТЕМ ЖОЛИ РЭВАЛ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46446549",
+      "name_lat": "ZVEZDA KANGALA OLIVIYA",
+      "name_ru": "ЗВЕЗДА КАНГАЛА ОЛИВИЯ",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -994,21 +1233,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "981538000",
-      "name_lat": "ZVEZDA KURGANA PRADA",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "19783213",
       "name_lat": "ZVEZDA ZABAYKALIA DIVA",
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "417793760",
+      "name_lat": "ZVEZDA DETKINA NICE FOR MY",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "breed_en": "",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -1021,29 +1260,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1763896633",
+      "id": "36901124",
       "name_lat": "ZVEZDA GARDARIKI SMARAGD",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "ЗВЕЗДА ГАРДАРИКИ СМАРАГД",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "834958989",
-      "name_lat": "ZVEZDA MIKHAILA VASILINA",
+      "id": "230410919",
+      "name_lat": "ZVEZDA ALBIONA FEYRI TEYL",
       "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "PEKINGESE",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1081208443",
-      "name_lat": "ZVEZDA KANGALA GRAF",
-      "name_ru": "",
-      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА /",
-      "breed_en": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -1057,21 +1286,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "542903005",
-      "name_lat": "ZVEZDA KOVALENI BAXTER",
+      "id": "236798950",
+      "name_lat": "ZVEZDNAYA OSOBA SHARON STOUN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "БУЛЬТЕРЬЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1511488230",
-      "name_lat": "ZVEZDNAYA KAPEL MELODIA FLEITA",
+      "id": "853093397",
+      "name_lat": "ZVEZDA KOVALENI BAXTER",
       "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1084,21 +1312,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1949348016",
+      "name_lat": "ZVEZDA GARDARIKI SHELBI TOMAS",
+      "name_ru": "ЗВЕЗДА ГАРДАРИКИ ШЕЛБИ ТОМАС",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1853054269",
       "name_lat": "ZVEZDA KURGANA IMBIRNIY PRYANIK",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1806778871",
-      "name_lat": "ZVEZDNY MEDVED PREZENT FO YOU",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1120,12 +1348,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1608350488",
-      "name_lat": "ZVEZDA KURGANA ZHETEM ZHOLI REVAL",
+      "id": "1108224042",
+      "name_lat": "ZVON TAYGI PANFIRA PANGREIS",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1442082098",
+      "name_lat": "ZVEZDA RODILAS KOLABAI",
+      "name_ru": "ЗВЕЗДА РОДИЛАСЬ КОЛАБАИ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1138,19 +1374,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1442082098",
-      "name_lat": "ZVEZDA RODILAS KOLABAI",
+      "id": "144503152",
+      "name_lat": "ZVEZDA VERENY TIFFANY",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1563272914",
+      "id": "19591720",
+      "name_lat": "ZVON TAYGI SARPAZAN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "274325929",
       "name_lat": "ZVEZDNAYA RADUGA TWIX",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1165,21 +1409,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "508044431",
+      "id": "1197777803",
       "name_lat": "ZVEZDNY POLET JUSTIN BLISS",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "417793760",
-      "name_lat": "ZVEZDA DETKINA NICE FOR MY",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -1192,21 +1427,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "160124402",
-      "name_lat": "ZVEZDA DETKINA ESENIN",
-      "name_ru": "",
-      "breed": "С СОЛЬЮ",
-      "breed_en": "",
-      "total_shows": 25,
+      "id": "1479282166",
+      "name_lat": "ZVEZDA KURGANA INTRIGA",
+      "name_ru": "ЗВЕЗДА КУРГАНА ИНТРИГА",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "CHOW CHOW",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "1479282166",
-      "name_lat": "ZVEZDA KURGANA INTRIGA",
+      "id": "1670159453",
+      "name_lat": "ZVEZDA MIKHAILA ASTRID",
+      "name_ru": "ЗВЕЗДА МИХАИЛА АСТРИД",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "155634153",
+      "name_lat": "ZVIOZDNAJA KOUPEL NATAN",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "CHOW CHOW",
-      "total_shows": 12,
+      "breed": "ЦВЕРГШНАУЦЕР П-С",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1214,8 +1458,7 @@
       "name_lat": "ZVIOZDNAYA METEL MARTI MY DREAM",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 37,
+      "total_shows": 44,
       "competition_dog_id": null
     },
     {
@@ -1224,6 +1467,15 @@
       "name_ru": "",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1378342776",
+      "name_lat": "ZVEZDA SIYANIE NOCHI",
+      "name_ru": "ЗВЕЗДА СИЯНИЕ НОЧИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
       "total_shows": 24,
       "competition_dog_id": null
     },
@@ -1246,10 +1498,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "499271681",
+      "id": "852854668",
+      "name_lat": "ZVEZDA PANDORY KARIYA LEGENDA",
+      "name_ru": "ЗВЕЗДА ПАНДОРЫ КАРИЯ ЛЕГЕНДА",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "887697327",
       "name_lat": "ZVENTA SVENTANA CHIPOTLE (STAND)",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed": "СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "XOLOITZCUINTLE (STANDARD)",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1282,19 +1543,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "155634153",
-      "name_lat": "ZVIOZDNAJA KOUPEL NATAN",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР П-С",
-      "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 8,
+      "id": "126923277",
+      "name_lat": "ZVEZDA PANDORY ALPEN GOLD",
+      "name_ru": "ЗВЕЗДА ПАНДОРЫ АЛЬПЕН ГОЛЬД",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
-      "id": "1284399463",
+      "id": "1582937959",
       "name_lat": "ZVEZDA RINGOV INDIGO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
@@ -1318,21 +1579,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1095347886",
-      "name_lat": "ZVEZDNAYA KAPEL RENESMI",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
+      "id": "1240216192",
+      "name_lat": "ZVEZDNAYA ELODI ENN",
+      "name_ru": "ЗВЕЗДНАЯ ЭЛОДИ ЭНН",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "1033168857",
       "name_lat": "ZVEZDA DAVIDA CHASHMA",
-      "name_ru": "",
+      "name_ru": "ЗВЕЗДА ДАВИДА ЧАШМА",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1372,24 +1632,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "535973626",
-      "name_lat": "ZVEZDA UDACHI",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "BOSTON TERRIER",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1621716963",
-      "name_lat": "ZVONKO SMEYSYA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1310799084",
       "name_lat": "ZVEZDNAYA RADUGA ASTA LA VISTA",
       "name_ru": "",
@@ -1408,39 +1650,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1254267710",
+      "id": "244028402",
       "name_lat": "ZVEZDA DETKINA JENEVIEVE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "582668848",
-      "name_lat": "ZVEZDNY MEDVED PRINC PARIZHA",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "254810830",
-      "name_lat": "ZVEZDA KINO IDEAL",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "64950599",
-      "name_lat": "ZVEZDA EMIRA MOSCOW",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1453,19 +1668,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1975203277",
+      "id": "19264560",
       "name_lat": "ZVEZDNAYA MALVINA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1025723758",
+      "id": "937289602",
       "name_lat": "ZVEZDNAYA KAPEL BORN TO LUCKY",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1489,15 +1704,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "277276046",
-      "name_lat": "Zvezdnyy Malchik",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1898327748",
       "name_lat": "ZVEZDNAYA KAPEL ZIVERT",
       "name_ru": "",
@@ -1516,13 +1722,22 @@
       "competition_dog_id": null
     },
     {
-      "id": "227568292",
-      "name_lat": "ZVEZDA STOLITSY VALENCIA",
+      "id": "1415321187",
+      "name_lat": "ZVEZDA URALA KALIPSO MAGIYA ELIT",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
-      "breed_en": "BULLDOG",
-      "total_shows": 4,
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
+    },
+    {
+      "id": "8878",
+      "name_lat": "ZVEZDNAYA RADUGA KHURMA MEDOVAYA",
+      "name_ru": "ЗВЕЗДНАЯ РАДУГА ХУРМА МЕДОВАЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": 8878
     },
     {
       "id": "1120102864",
@@ -1543,6 +1758,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1453996906",
+      "name_lat": "ZVEZDNAYA RADUGA ANYUTINY GLAZKI",
+      "name_ru": "ЗВЕЗДНАЯ РАДУГА АНЮТИНЫ ГЛАЗКИ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225193317",
+      "name_lat": "ZVYOZDNIY ALLUR MEYK",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "801743557",
       "name_lat": "ZVEZDA MIKHAILA BRAYNI",
       "name_ru": "",
@@ -1552,19 +1783,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1641308022",
-      "name_lat": "ZVEZDA ALTAYA URSULA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1415321187",
-      "name_lat": "ZVEZDA URALA KALIPSO MAGIYA ELIT",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
+      "id": "942951762",
+      "name_lat": "ZVEZDOCHKA KIKI SO ZVEZDNOGO PUTI",
+      "name_ru": "ЗВЕЗДОЧКА КИКИ СО ЗВЕЗДНОГО ПУТИ",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1572,10 +1794,10 @@
     {
       "id": "1197787111",
       "name_lat": "ZVEZDA NA SCHASTE IZ DOMA KUNETS",
-      "name_ru": "",
+      "name_ru": "ЗВЕЗДА НА СЧАСТЬЕ ИЗ ДОМА КУНЕЦ",
       "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1606,6 +1828,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1270607049",
+      "name_lat": "ZVEZDA URALA GALLA MARSIADA",
+      "name_ru": "ЗВЕЗДА УРАЛА ГАЛЛА МАРСИАДА",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1423440549",
       "name_lat": "ZVEZDA URALA NEBESNAYA FEYA",
       "name_ru": "",
@@ -1633,10 +1864,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "691336833",
+      "id": "227234595",
       "name_lat": "ZVEZDNAYA RADUGA PRADA",
       "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1678,21 +1909,66 @@
       "competition_dog_id": null
     },
     {
-      "id": "1799643032",
-      "name_lat": "ZVEZDA KURGANA SHTAB'S KAPITAN OTVAZHNYY",
+      "id": "1688950976",
+      "name_lat": "ZVEZDY AVRORY ASCELLA",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "436750786",
-      "name_lat": "ZVENTA SVENTANA TAJGA DLYA IRINY KOSTANDE (В ШЕРСТИ)",
+      "id": "993908770",
+      "name_lat": "ZVEZDA STOLITSY RIMINI",
       "name_ru": "",
-      "breed": "АКИТА СОБАКА) МИНИАТЮРНАЯ /",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "606368386",
+      "name_lat": "ZVON TAYGI KALINA KRASNAYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1799643032",
+      "name_lat": "ZVEZDA KURGANA SHTAB'S KAPITAN OTVAZHNYY",
+      "name_ru": "ЗВЕЗДА КУРГАНА ШТАБ'С КАПИТАН ОТВАЖНЫЙ",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1565006895",
+      "name_lat": "ZVON TAYGI ABSOLYUTNOE PREVOSKHODSTVO",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1555027662",
+      "name_lat": "ZVENTA SVENTANA TAJGA DLYA IRINY KOSTANDE (В ШЕРСТИ)",
+      "name_ru": "",
+      "breed": "ТАКСА СОБАКА) МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "180306994",
+      "name_lat": "ZVEZDNYY MEDVED YUPITER",
+      "name_ru": "Звездный Медведь Юпитер",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1714,21 +1990,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "824829828",
-      "name_lat": "ZVEZDY AVRORY ASCELLA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "400378771",
       "name_lat": "ZVEZDNAYA RADUGA ARBUZNYY FRESH",
       "name_ru": "",
       "breed": "ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "247825151",
+      "name_lat": "ZVEZDNAYA RADUGA BALOVEN SUDBY",
+      "name_ru": "ЗВЕЗДНАЯ РАДУГА БАЛОВЕНЬ СУДЬБЫ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1741,12 +2016,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1973139033",
+      "name_lat": "ZVEZDA ALTAYA PANTERA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1814959175",
       "name_lat": "ZVEZDA DETKINA PREMYERA",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "MINIATURE SCHNAUZER P-S",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "397005152",
+      "name_lat": "ZVEZDA ALTAYA INTERRA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1759,12 +2051,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "126923277",
-      "name_lat": "ZVEZDA PANDORY ALPEN GOLD",
+      "id": "1978430466",
+      "name_lat": "ZVEZDNYY FLASK IZ ZIMNIH GREZ",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 17,
+      "breed": "ПУДЕЛЬ МАЛЫЙ РЫЖИЙ, СЕРЫЙ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1777,10 +2068,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "203609756",
+      "id": "111033769",
+      "name_lat": "ZVEZDA ALTAYA AZALIYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "934277175",
       "name_lat": "ZVEZDA MARAMIRA CHUNGA CHANGA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1822,33 +2121,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "46446549",
-      "name_lat": "ZVEZDA KANGALA OLIVIYA",
-      "name_ru": "",
-      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1565006895",
-      "name_lat": "ZVON TAYGI ABSOLYUTNOE PREVOSKHODSTVO",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "230410919",
-      "name_lat": "ZVEZDA ALBIONA FEYRI TEYL",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "286269411",
       "name_lat": "ZVENTA SVENTANA DAVIDSONIA (STAND)",
       "name_ru": "",
@@ -1867,19 +2139,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1270607049",
-      "name_lat": "ZVEZDA URALA GALLA MARSIADA",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
+      "id": "235549915",
+      "name_lat": "ZVEZDA PRIIRTYSHYA ALANIYA",
+      "name_ru": "ЗВЕЗДА ПРИИРТЫШЬЯ АЛАНИЯ",
+      "breed": "ВОЛЧЬЯ СОБАКА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1029166925",
-      "name_lat": "ZVEZDA DETKINA BREATH- TAKING BILLBERRY",
+      "id": "816743713",
+      "name_lat": "ZVEZDA DETKINA BREATH-TAKING BILLBERRY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
@@ -1894,10 +2166,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1570843428",
+      "id": "762704507",
       "name_lat": "ZVEZDA ADRIATIRI TSEZAR",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1957,15 +2229,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "8878",
-      "name_lat": "ZVEZDNAYA RADUGA KHURMA MEDOVAYA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": 8878
-    },
-    {
       "id": "786400787",
       "name_lat": "ZVEZDA PRIIRTYSHYA KURAZH",
       "name_ru": "",
@@ -1993,15 +2256,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1453996906",
-      "name_lat": "ZVEZDNAYA RADUGA ANYUTINY GLAZKI",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1283952213",
       "name_lat": "ZVEZDNYY PES SHUANG",
       "name_ru": "",
@@ -2020,11 +2274,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "278376010",
+      "name_lat": "ZVEZDA ALTAYA PAULINA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "586774487",
       "name_lat": "ZVEZDA URALA GRAND MARSINA",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1791500706",
+      "name_lat": "ZVON TAYGI ALTAIR",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2035,6 +2305,15 @@
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1990242932",
+      "name_lat": "ZVEZDA OT OLSI DZHUNTAO LIFEN",
+      "name_ru": "ЗВЕЗДА ОТ ОЛСИ ДЖУНТАО ЛИФЕН",
+      "breed": "ЧУНЦИН",
+      "breed_en": "CHONGQING DOG",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2065,24 +2344,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "993908770",
-      "name_lat": "ZVEZDA STOLITSY RIMINI",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1990242932",
-      "name_lat": "ZVEZDA OT OLSI DZHUNTAO LIFEN",
-      "name_ru": "",
-      "breed": "ЧУНЦИН",
-      "breed_en": "CHONGQING DOG",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "176495159",
       "name_lat": "ZVEZDA KURGANA BARSELONA KOROLEVA RINGA",
       "name_ru": "",
@@ -2098,6 +2359,15 @@
       "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "BULLDOG",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1238134839",
+      "name_lat": "ZVEZDA IZ ZOLOTYH GRYOZ",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2119,6 +2389,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "587190372",
+      "name_lat": "ZVEZDNYI PRINZ RICHARD S KRASNOGO JARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "362062863",
       "name_lat": "ZVEZDA TIBETA ALISA",
       "name_ru": "",
@@ -2137,48 +2416,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "78976184",
+      "id": "1556994938",
       "name_lat": "ZVEZDA UDACHI VALENTINE IZ DOMA MARLEN",
       "name_ru": "",
-      "breed": "БОРДОСКИЙДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1601605668",
-      "name_lat": "ZVEZDNYI PRINZ RICHARD S KRASNOGO JARA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1970923176",
-      "name_lat": "ZVENTA SVENTANA TRIANA STARS CELEBRITY",
-      "name_ru": "",
-      "breed": "СОБАКА СРЕДНЯЯ /",
-      "breed_en": "",
-      "total_shows": 4,
+      "id": "1683703430",
+      "name_lat": "ZVAN ZIOR IZ IMPERII ADAMANT",
+      "name_ru": "ЗВАН ЗИОР ИЗ ИМПЕРИИ АДАМАНТ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 55,
       "competition_dog_id": null
     },
     {
       "id": "1311127206",
       "name_lat": "ZVEZDA TIBETA ATOS",
-      "name_ru": "",
+      "name_ru": "ЗВЕЗДА ТИБЕТА АТОС",
       "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
       "breed_en": "TIBETAN SPANIEL",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1238134839",
-      "name_lat": "ZVEZDA IZ ZOLOTYH GRYOZ",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
+      "id": "240834906",
+      "name_lat": "ZVEZDOCHKA URALA",
+      "name_ru": "ЗВЁЗДОЧКА УРАЛА",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1318940117",
+      "name_lat": "ZVEZDA KURGANA GOR BOG NEBA I SOLNTSA",
+      "name_ru": "ЗВЕЗДА КУРГАНА ГОР БОГ НЕБА И СОЛНЦА",
+      "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "145474125",
+      "name_lat": "ZVENTA SVENTANA TRIANA STARS CELEBRITY",
+      "name_ru": "",
+      "breed": "СОБАКА СРЕДНЯЯ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2218,6 +2506,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "570508278",
+      "name_lat": "ZVEZDNAYA KAPEL SEE OF LOVE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "945233032",
       "name_lat": "ZVEZDNIY PRINCE IZ SCHNEIDER RICH",
       "name_ru": "",
@@ -2227,46 +2524,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "92840041",
+      "id": "240876705",
       "name_lat": "ZVEZDA KOVALENI ELISEI I",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1318940117",
-      "name_lat": "ZVEZDA KURGANA GOR BOG NEBA I SOLNTSA",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
+      "id": "971318991",
+      "name_lat": "ZVEZDA KURGANA TEKHASSKIY MACHO",
+      "name_ru": "ЗВЕЗДА КУРГАНА ТЕХАССКИЙ МАЧО",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
-      "id": "1933525943",
-      "name_lat": "ZVEZDNAYA KAPEL SEE OF LOVE",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "id": "1543931098",
+      "name_lat": "ZVEZDA KURGANA MILANA MAGIYA",
+      "name_ru": "ЗВЕЗДА КУРГАНА МИЛАНА МАГИЯ",
+      "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "584476677",
+      "name_lat": "ZVEZDNAYA KAPEL SUPREME STAR",
+      "name_ru": "ЗВЁЗДНАЯ КАПЕЛЬ СУПРЕМЕ СТАР",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
       "id": "939792552",
       "name_lat": "ZVEZDA DINASTII FELIKS",
-      "name_ru": "",
+      "name_ru": "ЗВЕЗДА ДИНАСТИИ ФЕЛИКС",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "309422743",
+      "id": "1809892000",
       "name_lat": "ZVEZDA KOVALENI YAGO",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "KANINCHEN ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2290,19 +2596,64 @@
       "competition_dog_id": null
     },
     {
-      "id": "1176788908",
+      "id": "1020067147",
+      "name_lat": "ZVEZDOMIRAVON YUNTER CRAFT",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1892272854",
+      "name_lat": "ZVEZDA DETKINA NICE FOR ME",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1195777312",
       "name_lat": "ZVEZDA DETKINA AVRORA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "863324950",
+      "id": "1848433215",
+      "name_lat": "ZVEZDA PANDORY ZHIVOPISNAYA PANTERA",
+      "name_ru": "ЗВЕЗДА ПАНДОРЫ ЖИВОПИСНАЯ ПАНТЕРА",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1123252377",
+      "name_lat": "ZVEZDNAYA KAPEL ELEON",
+      "name_ru": "ЗВЁЗДНАЯ КАПЕЛЬ ЭЛЕОН",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "28644698",
+      "name_lat": "ZVEZDA URALA VAZHNAYA PERSONA",
+      "name_ru": "ЗВЕЗДА УРАЛА ВАЖНАЯ ПЕРСОНА",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "866472266",
       "name_lat": "ZVEZDA DETKINA MIMINO",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -2335,10 +2686,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1027236846",
+      "id": "1324232235",
       "name_lat": "ZVEZDA STOLITSY TOSKANA GRAND FINAL",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "BULLDOG",
       "total_shows": 20,
       "competition_dog_id": null
@@ -2362,21 +2713,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1020067147",
-      "name_lat": "ZVEZDOMIRAVON YUNTER CRAFT",
+      "id": "618008139",
+      "name_lat": "ZVEZDISLAVA AUS VIKWELT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "570243587",
-      "name_lat": "ZVEZDISLAVA AUS VIKWELT (Изменено по Решению ВК от 17.08.22 вопрос 25)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2389,37 +2731,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1627283450",
+      "id": "1596001867",
       "name_lat": "ZVEZDNAYA KAPEL ANGEL LOVE",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "574365480",
+      "id": "1215341547",
       "name_lat": "ZVEZDA STOLITSY BORUSSIYA NEJBL BRET",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "28644698",
-      "name_lat": "ZVEZDA URALA VAZHNAYA PERSONA",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 8,
+      "id": "902148883",
+      "name_lat": "ZVEZDA ADRIATIKI NADMIRA",
+      "name_ru": "ЗВЕЗДА АДРИАТИКИ НАДМИРА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "566219229",
+      "id": "319237397",
       "name_lat": "ZVEZDNAYA ROSSYP KASSIOPEYA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -2452,10 +2794,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1211180195",
+      "id": "1725823549",
       "name_lat": "ZVEZDA KOVALENI TIMATI",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2470,11 +2812,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1754025740",
-      "name_lat": "ZVEZDA DETKINA NICE FOR ME",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "id": "273758288",
+      "name_lat": "ZVEZDNAYA SOBAKA VERNISAZH",
+      "name_ru": "ЗВЕЗДНАЯ СОБАКА ВЕРНИСАЖ",
+      "breed": "ШИ - ТЦУ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "473152532",
+      "name_lat": "ZVEZDNAYA KAPEL ELMIRA",
+      "name_ru": "ЗВЕЗДНАЯ КАПЕЛЬ ЭЛЬМИРА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -2493,7 +2844,7 @@
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 18,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -2506,28 +2857,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "699435603",
+      "name_lat": "ZVEZDA DETKINA MASTER",
+      "name_ru": "ЗВЕЗДА ДЕТКИНА МАСТЕР",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "964388202",
+      "name_lat": "ZVEZDNY ALLIANCE DINA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "758827506",
       "name_lat": "ZVEZDY ORIONA TONY GHARMING SNOWBALL",
       "name_ru": "",
       "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1848433215",
-      "name_lat": "ZVEZDA PANDORY ZHIVOPISNAYA PANTERA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1543931098",
-      "name_lat": "ZVEZDA KURGANA MILANA MAGIYA",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2542,10 +2893,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "18376088",
+      "id": "1862117816",
+      "name_lat": "ZVEZDA ALTAYA DOMINIKA",
+      "name_ru": "ЗВЕЗДА АЛТАЯ ДОМИНИКА",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1681640490",
+      "name_lat": "ZVEZDNAYA KAPEL AMALIYA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181463056",
+      "name_lat": "ZVEZDA TRIUMFA DAR",
+      "name_ru": "ЗВЕЗДА ТРИУМФА ДАР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1559158862",
       "name_lat": "ZVEZDNAYA KAPEL SPIRIT OF VICTORY",
       "name_ru": "",
-      "breed": "АКИТА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2557,6 +2933,15 @@
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1255171102",
+      "name_lat": "ZVEZDNAYA PIL NICE SUITE QUEEN",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2614,15 +2999,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "235549915",
-      "name_lat": "ZVEZDA PRIIRTYSHYA ALANIYA",
-      "name_ru": "",
-      "breed": "ВОЛЧЬЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1173927141",
       "name_lat": "Zvezda Tibeta Atos, ch RUS",
       "name_ru": "",
@@ -2632,48 +3008,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "2503002",
+      "id": "1652594219",
       "name_lat": "ZVEZDOCHKA KENLEND BOX MAGIC TALISMAN",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР /",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1076047958",
-      "name_lat": "ZVEZDA KURGANA TEKHASSKIY MACHO",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "id": "618043310",
+      "name_lat": "ZVEZDA ALTAYA VALENSIYA",
+      "name_ru": "ЗВЕЗДА АЛТАЯ ВАЛЕНСИЯ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1494417911",
+      "id": "1867199542",
       "name_lat": "ZVEZDNY ALLIANCE COGUETTE",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "160191416",
+      "id": "550248410",
       "name_lat": "ZVEZDA DONA SINDI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "784850402",
-      "name_lat": "ZVEZDA PANDORY MEKSIKANSKAYA GLORIYA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2713,6 +3080,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "968874852",
+      "name_lat": "ZVEZDA GARDARIKI ELISEY",
+      "name_ru": "ЗВЕЗДА ГАРДАРИКИ ЕЛИСЕЙ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "827507476",
       "name_lat": "ZVEZDA ARKTIKI BEAUTY BANNY",
       "name_ru": "",
@@ -2722,12 +3098,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "839450383",
+      "id": "1528132268",
+      "name_lat": "ZVEZDY EUROTERY EVGENIKA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1499266384",
       "name_lat": "ZVENTA SVENTANA RYABINA",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ средняя",
+      "breed": "БАСЕНДЖИ ГОЛАЯ СОБАКА) СРЕДНЯЯ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "113108603",
+      "name_lat": "ZVEZDNYY TEDDI BIR",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2740,10 +3132,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1741790864",
+      "id": "396226533",
       "name_lat": "ZVON TAYGI PATRICIA",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2751,28 +3143,19 @@
     {
       "id": "179754369",
       "name_lat": "ZVEZDA ARKTIKI SINDI",
-      "name_ru": "",
+      "name_ru": "ЗВЕЗДА АРКТИКИ СИНДИ",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "964388202",
-      "name_lat": "ZVEZDNY ALLIANCE DINA",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
+      "id": "618533404",
+      "name_lat": "ZVEZDA KINO VYMPEL SVOBODY",
+      "name_ru": "ЗВЕЗДА КИНО ВЫМПЕЛ СВОБОДЫ",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "183124825",
-      "name_lat": "ZVEZDA TAIS ALISENTIS",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2794,21 +3177,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1862117816",
-      "name_lat": "ZVEZDA ALTAYA DOMINIKA",
+      "id": "312981767",
+      "name_lat": "ZVEZDA ZAPOLARJA IZ SEVERNOGO LEGIONA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "273758288",
-      "name_lat": "ZVEZDNAYA SOBAKA VERNISAZH",
+      "id": "445217773",
+      "name_lat": "ZVYOZDNY STATUS DINASTY WINNERS",
       "name_ru": "",
-      "breed": "ШИ - ТЦУ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259188008",
+      "name_lat": "ZVEZDA DAVIDA AFANASIY",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2821,10 +3213,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "113108603",
-      "name_lat": "ZVEZDNYY TEDDI BIR",
+      "id": "280404804",
+      "name_lat": "ZVENTA SVENTANA LYUTIK FOR KOSTAN DEI RINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed": "АМЕРИКАНСКАЯ СОБАКА) МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2839,12 +3231,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "240834906",
-      "name_lat": "ZVEZDOCHKA URALA",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
+      "id": "188013944",
+      "name_lat": "ZVEZDNAYA NOCH IZ VOSTOCHNOGO LEGIONA",
+      "name_ru": "ЗВЕЗДНАЯ НОЧЬ ИЗ ВОСТОЧНОГО ЛЕГИОНА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "93143567",
+      "name_lat": "ZVEZDA GARDARIKI RADOVLADA",
+      "name_ru": "ЗВЕЗДА ГАРДАРИКИ РАДОВЛАДА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2857,12 +3258,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "618533404",
-      "name_lat": "ZVEZDA KINO VYMPEL SVOBODY",
-      "name_ru": "",
+      "id": "276795186",
+      "name_lat": "ZVEZDA KINO BINOM FANTAZII",
+      "name_ru": "ЗВЕЗДА КИНО БИНОМ ФАНТАЗИИ",
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "809384112",
+      "name_lat": "Z'VALERI S USADBY TANKO",
+      "name_ru": "",
+      "breed": "DACHSHUND ZWERG",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2879,6 +3289,15 @@
       "name_lat": "ZVEZDNIY VETER RAFAEL",
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1387739846",
+      "name_lat": "ZVEZDA TIBETA ANTEY",
+      "name_ru": "ЗВЕЗДА ТИБЕТА АНТЕЙ",
+      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2902,15 +3321,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1528132268",
-      "name_lat": "ZVEZDY EUROTERY EVGENIKA",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "801849033",
       "name_lat": "ZVEZDA KOVALENI ATHENA FOR LITTL FUT",
       "name_ru": "",
@@ -2929,13 +3339,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "305606303",
+      "id": "759751397",
+      "name_lat": "ZVEZDNAYA RADUGA OSENNII POCELUI",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1089644783",
+      "name_lat": "ZVEZDA ADRIATIKI OKCHA",
+      "name_ru": "ЗВЕЗДА АДРИАТИКИ ОКЧА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "10452",
       "name_lat": "ZVEZDNAYA RADUGA MIROSLAVA",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
       "total_shows": 10,
-      "competition_dog_id": null
+      "competition_dog_id": 10452
     },
     {
       "id": "1205639028",
@@ -2947,19 +3374,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1684074083",
+      "id": "1905450375",
       "name_lat": "ZVEZDA KOVALENI ZODIAC",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "506539167",
+      "id": "1181278734",
       "name_lat": "ZVEZDA PETERBURGA JASMIN LITTLE PRINCESS",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2983,29 +3410,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1501859123",
+      "id": "1608498679",
       "name_lat": "ZVEZDA KOVALENI BESSIE FOR LITTL FUT",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "593802074",
+      "id": "734022028",
       "name_lat": "ZVEZDA AST POINT CLUB CANOSSA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "445217773",
-      "name_lat": "ZVYOZDNY STATUS DINASTY WINNERS",
+      "id": "1643023744",
+      "name_lat": "ZVEZDA SEVERA VENDY",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 6,
       "competition_dog_id": null
     },
@@ -3019,10 +3445,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "265017828",
+      "id": "591667192",
       "name_lat": "ZVEZDA DETKINA LEDI DI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3037,21 +3463,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "520929396",
+      "name_lat": "ZVYOZDNY STATUS SUNRISE MY LOVE SHOW CRAZY",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1328385780",
       "name_lat": "ZVIOZDNAYA SIMFONIYA YUDZHERI DREAM",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "408066550",
-      "name_lat": "ZVEZDA ADRIATIKI OKCHA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3064,6 +3490,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "293713851",
+      "name_lat": "ZVEZDA GARDARIKI ULTRA",
+      "name_ru": "ЗВЕЗДА ГАРДАРИКИ УЛЬТРА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1273472143",
+      "name_lat": "ZVEZDY ORIONA PERESVET SWEET DREAM",
+      "name_ru": "",
+      "breed": "САМОЕД /",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "693366653",
       "name_lat": "ZVEZDA URALA OCHAROVATELNAYA LETISIYA BRAUNI",
       "name_ru": "",
@@ -3073,12 +3516,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1255171102",
-      "name_lat": "ZVEZDNAYA PIL NICE SUITE QUEEN",
+      "id": "1607467227",
+      "name_lat": "ZVEZDA DETKINA ZAIMON",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed": "СОЛЬЮ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3100,30 +3543,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1775825909",
-      "name_lat": "ZVEZDNAYA RADUGA OSENNII POCELUI",
+      "id": "1486636404",
+      "name_lat": "ZVEZDNIY ZODIAK",
       "name_ru": "",
-      "breed": "RUSSIAN HUNTING",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1123252378",
-      "name_lat": "ZVEZDNAYA KAPEL ELEON",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1683703430",
-      "name_lat": "ZVAN ZIOR IZ IMPERII ADAMANT",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 23,
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "KAVKAZSKAYA OVCHARKA (CAUCASIAN SHEPHERD DOG)",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3154,6 +3579,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1617270609",
+      "name_lat": "ZVEZDA MIKHAILA BRAUNI",
+      "name_ru": "ЗВЕЗДА МИХАИЛА БРАУНИ",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "141893108",
+      "name_lat": "ZVEZDA KOVALENI TSVETTA",
+      "name_ru": "ЗВЕЗДА КОВАЛЕНИ ЦВЕТТА",
+      "breed": "DACHSHUND KANINCHEN",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1486721748",
       "name_lat": "ZVEZDNYY GALLAKTICHESKIY LUNTIK",
       "name_ru": "",
@@ -3172,10 +3615,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "479847496",
+      "id": "600173061",
       "name_lat": "ZVEZDA TAVRIDY BAUNTI",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -3190,15 +3633,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1820479660",
-      "name_lat": "ZVEZDA PANDORY ZLATOVLASAYA MECHTA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "61489532",
       "name_lat": "ZVYOZDNYI MIR ANNABEL'LI",
       "name_ru": "",
@@ -3208,21 +3642,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "259188008",
-      "name_lat": "ZVEZDA DAVIDA AFANASIY",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
+      "id": "1172904563",
+      "name_lat": "ZVEZDNYY VEKTOR INESSA",
+      "name_ru": "ЗВЕЗДНЫЙ ВЕКТОР ИНЕССА",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1796899005",
+      "id": "540068918",
+      "name_lat": "ZVEZDNIY SIN",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1962175514",
       "name_lat": "ZVEZDA ADRIATIKI KESSI II",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1899590372",
+      "name_lat": "ZVEZDA ADRIATIKI GARMONIYA",
+      "name_ru": "Звезда Адриатики Гармония",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1275776310",
+      "name_lat": "ZVEZDA KANGALA OBEREG",
+      "name_ru": "ЗВЕЗДА КАНГАЛА ОБЕРЕГ",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "breed_en": "KANGAL SHEPHERD DOG",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3235,12 +3695,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1739821066",
-      "name_lat": "ZVEZDA ALTAYA VALENSIYA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "id": "1933775461",
+      "name_lat": "ZVON TAYGI ARIYA",
+      "name_ru": "ЗВОН ТАЙГИ АРИЯ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -3253,10 +3713,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1165795503",
+      "id": "1530003678",
       "name_lat": "ZVEZDA NADEZHDY HARLEY",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3316,30 +3776,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "24305002",
-      "name_lat": "ZVEZDA GARDARIKI ULTRA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "3254073",
+      "id": "335872189",
       "name_lat": "ZVEZDA TRIUMFA SAPFIR",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1681640490",
-      "name_lat": "ZVEZDNAYA KAPEL AMALIYA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "id": "1105316869",
+      "name_lat": "ZVEZDA ALTAYA KASSANDRA",
+      "name_ru": "ЗВЕЗДА АЛТАЯ КАССАНДРА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1067165938",
+      "name_lat": "ZVEZDNAYA KAPEL RIGAMI GOLD FOR PANDA SHARM",
+      "name_ru": "ЗВЕЗДНАЯ КАПЕЛЬ РИГАМИ ГОЛД ФОР ПАНДА ШАРМ",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3361,19 +3821,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1603626607",
-      "name_lat": "ZVEZDA ADRIATIKI GARMONIYA",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1826595001",
+      "id": "1561495449",
       "name_lat": "ZVEZDNAYA ZMEJKA S USADBY TANKO",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3394,6 +3845,15 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "819033471",
+      "name_lat": "ZVEZDA KINO CUBINA",
+      "name_ru": "",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3442,10 +3902,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "37595609",
+      "id": "316513437",
+      "name_lat": "ZVEZDA URALA YA SAMAYA KRASIVAYA",
+      "name_ru": "ЗВЕЗДА УРАЛА Я САМАЯ КРАСИВАЯ",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "195365526",
+      "name_lat": "ZVEZDA GARDARIKI SOLA ADEL",
+      "name_ru": "ЗВЕЗДА ГАРДАРИКИ СОЛА АДЕЛЬ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1257307684",
       "name_lat": "ZVEZDNY ALLIANCE EZHEVICHKA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3460,11 +3938,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1607467227",
-      "name_lat": "ZVEZDA DETKINA ZAIMON",
-      "name_ru": "",
-      "breed": "СОЛЬЮ",
-      "breed_en": "",
+      "id": "1521216706",
+      "name_lat": "ZVEZDA USSURI DELIYA",
+      "name_ru": "ЗВЕЗДА УССУРИ ДЕЛИЯ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -3487,10 +3964,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1087038583",
+      "id": "261790187",
       "name_lat": "ZVENI-DACHS GELENDVAGEN",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3502,6 +3979,14 @@
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "384229205",
+      "name_lat": "ZVIOZDNAYA METEL LANTANA OF LIGHT",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3523,21 +4008,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1446311470",
+      "id": "77766942",
       "name_lat": "ZVEZDA KOVALENI J’ADORE FOR LITTL FUT",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "276795186",
-      "name_lat": "ZVEZDA KINO BINOM FANTAZII",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3545,15 +4021,6 @@
       "name_lat": "ZVEZDNAYA KAPEL ULMARI",
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1933775461",
-      "name_lat": "ZVON TAYGI ARIYA",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3595,30 +4062,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "237762987",
+      "id": "1891998882",
       "name_lat": "ZVEZDA IMPERII JELANNAYA S’YUZI",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "819033471",
-      "name_lat": "ZVEZDA KINO CUBINA",
+      "id": "1588513949",
+      "name_lat": "ZVEZDA DETKINA TSITSERON",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1275776310",
-      "name_lat": "ZVEZDA KANGALA OBEREG",
-      "name_ru": "",
-      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
-      "breed_en": "KANGAL SHEPHERD DOG",
-      "total_shows": 1,
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3631,30 +4088,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "520929396",
-      "name_lat": "ZVYOZDNY STATUS SUNRISE MY LOVE SHOW CRAZY",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "37551111",
-      "name_lat": "ZVEZDNAYA NOCH AVGUSTA IZ BELYKH GYAUROV",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "94845654",
+      "id": "977200615",
       "name_lat": "ZVEZDA MOEY DUSHI ELIS",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1761648491",
+      "name_lat": "ZVEZDA EMIRA ZARINA LEO ALEKSA",
+      "name_ru": "ЗВЕЗДА ЭМИРА ЗАРИНА ЛЕО АЛЕКСА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3712,12 +4160,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1387739846",
-      "name_lat": "ZVEZDA TIBETA ANTEY",
+      "id": "96228882",
+      "name_lat": "ZVEZDNAYA RADUGA SON SAO",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3726,24 +4174,6 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "BICHON FRISE",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1411151206",
-      "name_lat": "ZVEZDNAYA RADUGA SON SAO",
-      "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "34942936",
-      "name_lat": "ZVENTA SVENTANA JAKER (STAND)",
-      "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
-      "breed_en": "XOLOITZCUINTLE (STANDARD)",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -3784,21 +4214,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "93143567",
-      "name_lat": "ZVEZDA GARDARIKI RADOVLADA",
+      "id": "168958707",
+      "name_lat": "ZVENTA SVENTANA JAKER",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "АЛЯСКИНСКИЙ СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1486636404",
-      "name_lat": "ZVEZDNIY ZODIAK",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "KAVKAZSKAYA OVCHARKA (CAUCASIAN SHEPHERD DOG)",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3813,10 +4234,10 @@
     {
       "id": "1793014629",
       "name_lat": "ZVON TAYGI KURAZH",
-      "name_ru": "",
+      "name_ru": "ЗВОН ТАЙГИ КУРАЖ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -3838,21 +4259,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1240216192",
-      "name_lat": "ZVEZDNAYA ELODI ENN",
+      "id": "80382159",
+      "name_lat": "ZVEZDNAYA RADUGA POLET IKARA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "852854668",
-      "name_lat": "ZVEZDA PANDORY KARIYA LEGENDA",
+      "id": "1672536183",
+      "name_lat": "ZVEZDA DETKINA VERY PROMISING STAR CHILD",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "SCHNAUZER PEPPER AND",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3883,12 +4303,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "312981767",
-      "name_lat": "ZVEZDA ZAPOLARJA IZ SEVERNOGO LEGIONA",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 4,
+      "id": "537897802",
+      "name_lat": "ZVEZDA ADRIATIKI ZHASTIN KRONOS",
+      "name_ru": "ЗВЕЗДА АДРИАТИКИ ЖАСТИН КРОНОС",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3928,6 +4348,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1547767638",
+      "name_lat": "ZVEZDA AMERLAND CIMAL STRAZH BASTIONA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1292113897",
       "name_lat": "ZVEZDA VOSTOKA NARGIS",
       "name_ru": "",
@@ -3937,10 +4365,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "913173382",
+      "id": "1350698778",
       "name_lat": "ZVEZDA DETKINA STIL MODERN",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3964,19 +4392,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1168546518",
+      "id": "175738881",
       "name_lat": "ZVEZDA KURGANA VIZFYNIYA",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1285990845",
+      "id": "853255136",
       "name_lat": "ZVENTA SVENTANA CASHHEW",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ СОБАКА) МИНИАТЮРНАЯ /",
+      "breed": "БАСЕНДЖИ СОБАКА) МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4009,19 +4437,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "304696185",
+      "id": "1962949956",
       "name_lat": "ZVEZDA TAVRIDY ARDENT MAGIE NOIRE",
       "name_ru": "",
-      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН /",
+      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "712863846",
+      "id": "824777666",
       "name_lat": "ZVEZDNYY PUT",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4045,39 +4473,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "942951762",
-      "name_lat": "ZVEZDOCHKA KIKI SO ZVEZDNOGO PUTI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "463672874",
       "name_lat": "ZVEROBOY HRABRIY VOIN",
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ Окрас абрикосовый, серебристый, красный",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "928195053",
-      "name_lat": "ZVON TAYGI ROKSI ROYAL DAYMOND",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1197627359",
-      "name_lat": "ZVEZDA DETKINA MASTER",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -4108,6 +4509,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "921314146",
+      "name_lat": "ZVEZDA SIRIUS IZABELLA",
+      "name_ru": "ЗВЕЗДА СИРИУС ИЗАБЕЛЛА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "637224348",
       "name_lat": "ZVEZDNAYA AZBUKA VKUSA DE RIVO BIANCO",
       "name_ru": "",
@@ -4135,15 +4545,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "336548135",
-      "name_lat": "ZVEZDA GORODA DENVER",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1675930388",
       "name_lat": "ZVEZDA KINO ZLATANA",
       "name_ru": "",
@@ -4162,12 +4563,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "606368386",
-      "name_lat": "ZVON TAYGI KALINA KRASNAYA",
-      "name_ru": "",
+      "id": "1266888388",
+      "name_lat": "ZVEZDA GARDARIKI NAUM",
+      "name_ru": "ЗВЕЗДА ГАРДАРИКИ НАУМ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -4177,6 +4578,15 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1106709005",
+      "name_lat": "ZVEZDA PANDORY OMEGA ORBITA",
+      "name_ru": "ЗВЕЗДА ПАНДОРЫ ОМЕГА ОРБИТА",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4198,15 +4608,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "798139628",
-      "name_lat": "ZVEZDA AMERLAND TRUMEN TROY",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "180880846",
       "name_lat": "ZVEZDA ALTAYA XALVA",
       "name_ru": "",
@@ -4222,6 +4623,14 @@
       "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1354852152",
+      "name_lat": "ZVEZDA ADRIATIKI BELISIMO",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -4252,10 +4661,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1347928769",
+      "id": "1650924549",
       "name_lat": "ZVEZDA DETKINA BERDA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4270,10 +4679,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "141904615",
+      "id": "418829400",
       "name_lat": "ZVOZDNYY DOZHD' IZ DOMA YU-TI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4315,19 +4724,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "968874852",
-      "name_lat": "ZVEZDA GARDARIKI ELISEY",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "143892466",
+      "id": "939490110",
       "name_lat": "ZVEZDA DETKINA ARISTOTLE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4342,28 +4742,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588513949",
-      "name_lat": "ZVEZDA DETKINA TSITSERON",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1408301421",
       "name_lat": "ZVEZDA DETKINA SOMERSET MOGHAM",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "397005152",
-      "name_lat": "ZVEZDA ALTAYA INTERRA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4375,15 +4757,6 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1836740805",
-      "name_lat": "ZVEZDA URALA YA SAMAYA KRASIVAYA",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ / MALTESE",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4405,29 +4778,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1201588164",
+      "name_lat": "ZVEZDA DETKINA JUNKER",
+      "name_ru": "",
+      "breed": "СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "472354395",
+      "name_lat": "ZVEZDA USSURI DELIA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1228461361",
       "name_lat": "ZVEZDA ADRIATIKI YUZHANA",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "694584229",
-      "name_lat": "ZVEZDA DETKINA JUNKER",
-      "name_ru": "",
-      "breed": "СОЛЬЮ / MINIATURE",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1641055882",
-      "name_lat": "ZVEZDA USSURI DELIA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -4531,6 +4904,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1823834248",
+      "name_lat": "ZVEZDA DETKINA YAGUAR",
+      "name_ru": "ЗВЕЗДА ДЕТКИНА ЯГУАР",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1267778274",
       "name_lat": "ZVEZDNY POLET IMAGE ROYAL",
       "name_ru": "",
@@ -4544,6 +4926,15 @@
       "name_lat": "ZVEZDA EDEM",
       "name_ru": "",
       "breed": "MINIATURE SCHNAUZER WHITE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1962182772",
+      "name_lat": "ZVEZDA SEVERA YARIE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4585,15 +4976,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1559484422",
-      "name_lat": "ZVEZDA SEVERA YARIE",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1313698994",
       "name_lat": "ZVEZDA DETKINA CHILI PEPPER II",
       "name_ru": "",
@@ -4630,10 +5012,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "762938834",
+      "id": "77247127",
       "name_lat": "ZVEZDA IMPERII HALK HOGAN",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4657,6 +5039,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1748646551",
+      "name_lat": "ZVEZDA DETKINA VERY PROMISING STAR CHILD (Изменено по Решению ВК от 20.10.21 вопрос 43)",
+      "name_ru": "",
+      "breed": "СОЛЬЮ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "629624108",
       "name_lat": "ZVEZDA ORIONA EBIGEIL DEL KORAZON",
       "name_ru": "",
@@ -4666,19 +5056,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "501145180",
+      "id": "1561890553",
       "name_lat": "ZVENTA SVENTANA FABIANA",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ СОБАКА) СРЕДНЯЯ /",
+      "breed": "БАСЕНДЖИ СОБАКА) СРЕДНЯЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "687185623",
+      "id": "1581215510",
       "name_lat": "ZVENTA SVENTANA SHALFEJ",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ СОБАКА) МИНИАТЮРНАЯ /",
+      "breed": "БАСЕНДЖИ СОБАКА) МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4702,15 +5092,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "181463056",
-      "name_lat": "ZVEZDA TRIUMFA DAR",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "294126097",
       "name_lat": "ZVEZDA DETKINA WELL-FAWORED",
       "name_ru": "",
@@ -4729,12 +5110,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "38116988",
+      "id": "511683654",
       "name_lat": "ZVENTA SVENTANA MARANG",
       "name_ru": "",
-      "breed": "Ксолоитцкуинтли (Мексиканская голая собака) средняя",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -4747,37 +5128,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "80382159",
-      "name_lat": "ZVEZDNAYA RADUGA POLET IKARA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1172904563",
-      "name_lat": "ZVEZDNYY VEKTOR INESSA",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "31741085",
       "name_lat": "ZVEZDA URALA EKZOTIKA",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1761648491",
-      "name_lat": "ZVEZDA EMIRA ZARINA LEO ALEKSA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4801,11 +5155,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1845183673",
+      "id": "1944483729",
       "name_lat": "ZVEZDA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "249612688",
+      "name_lat": "ZVEZDNAYA MAGIYA KRASSA ALROSA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4864,19 +5226,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1067165938",
-      "name_lat": "ZVEZDNAYA KAPEL RIGAMI GOLD FOR PANDA SHARM",
+      "id": "639235554",
+      "name_lat": "ZVEZDA STOLITSY ANTVERPEN GARRI",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1672536183",
-      "name_lat": "ZVEZDA DETKINA VERY PROMISING STAR CHILD",
-      "name_ru": "",
-      "breed": "SCHNAUZER PEPPER AND",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4918,15 +5271,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "584476677",
-      "name_lat": "ZVEZDNAYA KAPEL SUPREME STAR",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "169873735",
       "name_lat": "ZVEZDNAYA RADUGA TOPOLINYJ PUKH",
       "name_ru": "",
@@ -4945,28 +5289,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "341851623",
-      "name_lat": "ZVEZDA STOLITSY ANTVERPEN GARRI",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1617270609",
-      "name_lat": "ZVEZDA MIKHAILA BRAUNI",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "535853770",
+      "id": "1353022935",
       "name_lat": "ZVEZDNAYA KAPEL SHUROCHKA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5017,10 +5343,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1323918299",
-      "name_lat": "ZVEZDA DETKINA CHILI- PEPPER",
+      "id": "410523505",
+      "name_lat": "ZVEZDA DETKINA CHILI-PEPPER",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5053,10 +5379,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1343328851",
+      "id": "1986698357",
+      "name_lat": "ZVEZDA ALTAYA EMIR SHOU",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1727413907",
       "name_lat": "ZVEZDA ZABAYKALIA IVOLGA VIOLETTI",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "ШПИЦ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -5089,10 +5424,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "309180217",
+      "id": "977784560",
       "name_lat": "ZVEZDA KURGANA BENTLY-KONTINENTAL",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5116,10 +5451,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "28470176",
+      "id": "1115858308",
+      "name_lat": "ZVEZDA ADRIATIKI BARSELONNA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "102522431",
       "name_lat": "ZVEZDA STOLITSY ALEXANDRIA",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5143,10 +5486,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "924501813",
+      "id": "1581692049",
       "name_lat": "ZVEZDA DETKINA JULIETTE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5170,15 +5513,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1986698357",
-      "name_lat": "ZVEZDA ALTAYA EMIR SHOU",
-      "name_ru": "",
-      "breed": "CHIHUAHUA SMOOTH",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1238977329",
       "name_lat": "ZVEZDA KURGANA YA BOMBA",
       "name_ru": "",
@@ -5192,6 +5526,24 @@
       "name_lat": "ZVEZDA TRIUMFA MOLLY",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1956675926",
+      "name_lat": "ZVEZDA ALTAYA YALTA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "447508163",
+      "name_lat": "ZVEZDOMIRA VON YUNTER CRAFT",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5215,15 +5567,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "570747159",
-      "name_lat": "ZVEZDA SIRIUS IZABELLA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "355874508",
       "name_lat": "ZVEZDA ADRIATIKY YURGEN",
       "name_ru": "",
@@ -5237,15 +5580,6 @@
       "name_lat": "ZVEZDA DETKINA SOMMERSET MAGHAM",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР перец с солью (Германия)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "447508163",
-      "name_lat": "ZVEZDOMIRA VON YUNTER CRAFT",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5323,15 +5657,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1670159453",
-      "name_lat": "ZVEZDA MIKHAILA ASTRID",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1449721222",
       "name_lat": "ZVEZDA STOLITSY BORUSSIA",
       "name_ru": "",
@@ -5377,15 +5702,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "195365526",
-      "name_lat": "ZVEZDA GARDARIKI SOLA ADEL",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "536164854",
       "name_lat": "ZVEOZDNYI MIR BEATRICE SNOW WHITE",
       "name_ru": "",
@@ -5409,6 +5725,14 @@
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "591081497",
+      "name_lat": "ZVEZDNAYA KAPEL ZHEMAN",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5458,10 +5782,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "513380977",
+      "id": "1847281778",
       "name_lat": "ZVEZDOCHKA SWELL",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5476,28 +5800,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "947917164",
+      "id": "422204832",
       "name_lat": "ZVEZDA S VOLNOY",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1417023472",
+      "id": "1471290140",
       "name_lat": "ZVEZDA DETKINA STAR OF NICHT",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "209263468",
+      "id": "879965765",
       "name_lat": "ZVEZDA ADRIATIKI OMANDA",
       "name_ru": "",
-      "breed": "КАНЕ ИТАЛЬЯНСКИЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5530,21 +5854,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1526640288",
+      "id": "1828027946",
       "name_lat": "ZVEZDNAYA RADUGA ENDI",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "759087470",
-      "name_lat": "ZVEZDA ADRIATIKI NADMIRA",
+      "id": "838527692",
+      "name_lat": "ZVEZDA ANTARES VOZDUSHNYY POTSELUY",
       "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "ШИ ТЦУ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -5611,6 +5934,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1649998276",
+      "name_lat": "ZVEZDA SEVERA SHOKOLADNYI KREM",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "777834620",
+      "name_lat": "ZVEZDA SEVERA PRYANIK",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1717016651",
       "name_lat": "ZVEZDA DAVIDA NUESTROS AMIGOS",
       "name_ru": "",
@@ -5629,11 +5970,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1649998276",
-      "name_lat": "ZVEZDA SEVERA SHOKOLADNYI KREM",
+      "id": "825383070",
+      "name_lat": "ZVEZDA ADRIATIKI AVRORA",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -5647,30 +5988,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "202773604",
+      "id": "234019649",
       "name_lat": "ZVEZDA MOSKOVSKOY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1502452897",
-      "name_lat": "ZVEZDA ADRIATIKI AVRORA",
+      "id": "528682416",
+      "name_lat": "ZVEZDA ADRIATIKI DON DOMINIK",
       "name_ru": "",
       "breed": "КОРСО",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "473152532",
-      "name_lat": "ZVEZDNAYA KAPEL ELMIRA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -5773,15 +6105,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1266888388",
-      "name_lat": "ZVEZDA GARDARIKI NAUM",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "450266844",
       "name_lat": "ZVEZDA DONA SHERRY",
       "name_ru": "",
@@ -5791,19 +6114,44 @@
       "competition_dog_id": null
     },
     {
-      "id": "19591720",
-      "name_lat": "ZVON TAYGI SARPAZAN",
+      "id": "1901861125",
+      "name_lat": "ZVEZDNAYA KAPEL WISH WIN",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "54919662",
+      "name_lat": "ZVEZDA DAVIDA VASCO",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1710652055",
+      "name_lat": "ZVENI-DAKS LACOSTA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "528682416",
-      "name_lat": "ZVEZDA ADRIATIKI DON DOMINIK",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "id": "317502027",
+      "name_lat": "ZVEZDA ADRIATIKI GEFEST",
+      "name_ru": "ЗВЕЗДА АДРИАТИКИ ГЕФЕСТ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "73641877",
+      "name_lat": "ZVEZDA KURGANA OBI VAN LINDA",
+      "name_ru": "ЗВЕЗДА КУРГАНА ОБИ ВАН ЛИНДА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5827,24 +6175,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "420158178",
-      "name_lat": "ZVENI-DAKS LACOSTA",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "812032277",
-      "name_lat": "ZVEZDA SEVERA PRYANIK",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1195250136",
       "name_lat": "ZVEZDA STOLITSY WINCHESTER",
       "name_ru": "",
@@ -5854,20 +6184,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "812371783",
-      "name_lat": "ZVER TIKHOMIR",
+      "id": "1603810547",
+      "name_lat": "ZVEZDA ZABAYKALYA VALENSIYA KOROLEVA OSENI",
       "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "CAIRN TERRIER",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "298963306",
-      "name_lat": "ZVENYASHCHAYA KAPEL MELISENTA",
+      "id": "1106439474",
+      "name_lat": "ZVEZDA ZABAYKALYA KHLOYA VAYT",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5926,15 +6256,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "180306994",
-      "name_lat": "ZVEZDNYY MEDVED YUPITER",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
-      "breed_en": "CHINESE CRESTED DOG",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1669920098",
       "name_lat": "ZVEZDNY MEDVED CHARLES KING (PUFF)",
       "name_ru": "",
@@ -5971,11 +6292,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1378342776",
-      "name_lat": "ZVEZDA SIYANIE NOCHI",
+      "id": "34942936",
+      "name_lat": "ZVENTA SVENTANA JAKER (STAND)",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6003,6 +6324,14 @@
       "name_ru": "",
       "breed": "КОРСО / ITALIAN CANE",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1029194578",
+      "name_lat": "ZVEZDA DETKINA HENNESSY",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6070,19 +6399,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "331718807",
+      "id": "1639856944",
       "name_lat": "ZVEZDA ADRIATIKI ZHAKLIN",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "73641877",
-      "name_lat": "ZVEZDA KURGANA OBI VAN LINDA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6092,6 +6412,15 @@
       "name_lat": "ZVEZDA TRIUMFA MEJBELL",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "197707216",
+      "name_lat": "ZVEZDA ADRIATIKI YARA BELLA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6142,10 +6471,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "765976853",
+      "id": "1350266264",
       "name_lat": "ZVEZDA DUSHI MOEY KARA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6187,28 +6516,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "225193317",
-      "name_lat": "ZVYOZDNIY ALLUR MEYK",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "31763694",
-      "name_lat": "ZVEZDA ZABAYKALYA VALENSIYA KOROLEVA OSENI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "99206916",
       "name_lat": "ZVEZDA DAVIDA BAKARDI",
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275673688",
+      "name_lat": "ZVEZDA PLENITELNOGO SHASTIA",
+      "name_ru": "",
+      "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6232,20 +6552,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1901861125",
-      "name_lat": "ZVEZDNAYA KAPEL WISH WIN",
+      "id": "252312069",
+      "name_lat": "ZVEZDNYI MIR ORLANDO-II",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1141518910",
-      "name_lat": "ZVEZDA ZABAYKALYA KHLOYA VAYT",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6268,10 +6578,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "122114339",
+      "id": "1240999946",
       "name_lat": "ZVEZDNY POLET ZEVS",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6295,10 +6605,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1798375326",
+      "id": "948365818",
+      "name_lat": "ZVEZDA PRIMORIJA OFELIYA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ /",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "600906407",
       "name_lat": "ZVEZDA ADRIATIKI LEKSI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6322,17 +6640,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1418747322",
+      "id": "1824096149",
       "name_lat": "ZVEZDA ADRIATIKI MARUSYA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "197707216",
-      "name_lat": "ZVEZDA ADRIATIKI YARA BELLA",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
@@ -6340,10 +6649,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "351358919",
-      "name_lat": "ZVEZDA FON ARGUS- HAUS",
+      "id": "274695310",
+      "name_lat": "ZVEZDA FON ARGUS-HAUS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6367,19 +6676,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "153426915",
+      "id": "1008846140",
       "name_lat": "ZVEZDA ALTAYA DARINA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "124921107",
+      "id": "289681138",
       "name_lat": "ZVEZDA ADRIATIKI TSERIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ИТАЛЬЯНСКИЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6403,10 +6712,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "315900941",
-      "name_lat": "ZVEZDA DETKINA RIVIERA- ROSHEL",
+      "id": "472008429",
+      "name_lat": "ZVEZDA DETKINA RIVIERA-ROSHEL",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1160592495",
+      "name_lat": "ZVEZDNYY LUCHIK EVA B'YUTI",
+      "name_ru": "ЗВЕЗДНЫЙ ЛУЧИК ЕВА БЬЮТИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6417,6 +6735,14 @@
       "name_ru": "",
       "breed": "ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "255710047",
+      "name_lat": "ZVEZDNAYA MALISHKA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6457,10 +6783,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "357505792",
+      "id": "481085781",
       "name_lat": "ZVEZDNY",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ /",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6493,10 +6819,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1467145320",
+      "id": "803348382",
       "name_lat": "ZVONKAYA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6529,20 +6855,73 @@
       "competition_dog_id": null
     },
     {
-      "id": "188013944",
-      "name_lat": "ZVEZDNAYA NOCH IZ VOSTOCHNOGO LEGIONA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "675943711",
       "name_lat": "ZVEZDNAYA ROSSYP IZ LIGI CHEMPIONOV",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "418480056",
+      "name_lat": "ZVEZDA STOLITSY VENEZIA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "734342211",
+      "name_lat": "ZVENTA SVENTANA EVGENIYA",
+      "name_ru": "",
+      "breed": "СОБАКА) МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1912293634",
+      "name_lat": "ZVEZDA ZABAYKALIA ZHENEVEVA BAY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1452050463",
+      "name_lat": "ZVEZDA ZABAYKALIA ILIFIYA DOLORAS VIAN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1473778520",
+      "name_lat": "ZVEZDNAYA RADUGA TESSA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "146417390",
+      "name_lat": "ZVEZDNAYA RADUGA PALMIRA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "802999553",
+      "name_lat": "ZVEZDA SEVERA PANNA COTTA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6709,15 +7088,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "418480056",
-      "name_lat": "ZVEZDA STOLITSY VENEZIA",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1430390186",
       "name_lat": "ZVEZDA AMERLAND LUCKY ORANGE",
       "name_ru": "",
@@ -6817,10 +7187,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1366983473",
+      "id": "12106098",
       "name_lat": "ZVEZDA MERINADE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6853,37 +7223,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1173648340",
+      "id": "1099802059",
       "name_lat": "ZVEZDA ADRIATIKI YURGEN",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "9094",
-      "name_lat": "ZVEZDNAYA RADUGA MARSEL",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": 9094
-    },
-    {
-      "id": "233126293",
+      "id": "79058545",
       "name_lat": "ZVEZDA DETKINA EURYDICA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1636567706",
+      "id": "1256294763",
       "name_lat": "ZVEZDA KURGANA TEKHASSKUY MACHO",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6907,15 +7268,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "415364437",
-      "name_lat": "ZVEZDA DETKINA YAGUAR",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ / MINIATURE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "537644496",
       "name_lat": "ZVEZDA KINOSURA",
       "name_ru": "",
@@ -6930,6 +7282,14 @@
       "name_ru": "",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "538613959",
+      "name_lat": "ZVEZDNAYA AKIKO MANAMI EMMI",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7033,15 +7393,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "734342211",
-      "name_lat": "ZVENTA SVENTANA EVGENIYA",
-      "name_ru": "",
-      "breed": "СОБАКА) МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "576159162",
       "name_lat": "ZVYOZD ИРБОКС ХАННА",
       "name_ru": "",
@@ -7105,10 +7456,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "66842884",
+      "id": "972940721",
       "name_lat": "ZVEZDNIY PES CZINDAO",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7168,10 +7519,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1543926573",
+      "id": "1724408817",
       "name_lat": "ZVEZDA ALTAYA BIG BOSS",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЁРСТНЫЙ",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7181,6 +7532,15 @@
       "name_lat": "ZVYOZDNYI MIR HOUSTON LEGEND OF LOVE",
       "name_ru": "",
       "breed": "САМОЕД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "684147028",
+      "name_lat": "ZVEZDISLAVA AUS VIKWELT (Изменено по Решению ВК от 17.08.22 вопрос 25)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ / GERMAN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7222,15 +7582,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1105316869",
-      "name_lat": "ZVEZDA ALTAYA KASSANDRA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1184250412",
       "name_lat": "ZVEZDNAYA PIL URFIN DZHUS",
       "name_ru": "",
@@ -7258,19 +7609,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1775507198",
+      "id": "59277448",
       "name_lat": "ZVEZDA (Изменено по решению ВК от 22.05.2025 В. 9)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "231151606",
-      "name_lat": "ZVEZDA ADRIATIKI GEFEST",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7285,10 +7627,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "338318075",
+      "id": "512050866",
       "name_lat": "ZVEZDA ADRIATIKI KONAN",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7402,15 +7744,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "571449087",
-      "name_lat": "ZVEZDA ZABAYKALIA ZHENEVEVA BAY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1787815550",
       "name_lat": "ZVEZDNYI GENERAL ALIS FAER",
       "name_ru": "",
@@ -7420,10 +7753,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810674012",
+      "id": "1122511833",
       "name_lat": "ZVEZDA ADRIATIKI ARCHIBALD",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7438,10 +7771,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1336617993",
+      "id": "768093318",
       "name_lat": "ZVYEZDNYY ALLYUR ARIYA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7519,33 +7852,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1956675926",
-      "name_lat": "ZVEZDA ALTAYA YALTA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "65038800",
-      "name_lat": "ZVEZDA ALTAYA AZALIYA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1436513531",
-      "name_lat": "ZVEZDA ZABAYKALIA ILIFIYA DOLORAS VIAN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "865570783",
       "name_lat": "ZVON TAIGI ABSOLYUTNOE PREVOSKHODSTVO",
       "name_ru": "",
@@ -7582,33 +7888,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "175362052",
-      "name_lat": "ZVEZDNAYA RADUGA TESSA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1915180748",
-      "name_lat": "ZVEZDNAYA RADUGA PALMIRA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "275673688",
-      "name_lat": "ZVEZDA PLENITELNOGO SHASTIA",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1743200754",
       "name_lat": "ZVEZDA ADRIATIKI ADEL",
       "name_ru": "",
@@ -7618,37 +7897,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "144503152",
-      "name_lat": "ZVEZDA VERENY TIFFANY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "558450724",
+      "id": "1364999035",
       "name_lat": "ZVEZDA ADRIATIKI ASYA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1196037165",
-      "name_lat": "ZVEZDA ADRIATIKI ZHASTIN KRONOS",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1467850693",
+      "id": "1164854913",
       "name_lat": "ZVEZDA PLENITELNO GO",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7663,11 +7924,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "252312069",
-      "name_lat": "ZVEZDNYI MIR ORLANDO-II",
+      "id": "1678900670",
+      "name_lat": "ZVEZDA RUSI DINASTIYA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7681,38 +7941,68 @@
       "competition_dog_id": null
     },
     {
-      "id": "1028839865",
-      "name_lat": "ZVEZDA ADRIATIKI BARSELONNA",
+      "id": "221979532",
+      "name_lat": "ZVEZDNYJ GENERAL VENOM",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
-      "breed_en": "",
+      "breed": "ПОКЕТ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "15950390",
+      "id": "222181656",
       "name_lat": "ZVEZDA AMERLAND ZHI VAN SHI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1342343443",
+      "id": "1522118173",
+      "name_lat": "ZVEZDA ADRIATIKI AFINA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "313842051",
       "name_lat": "ZVEZDA AMERLAND ZALIM KHAN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1949348016",
-      "name_lat": "ZVEZDA GARDARIKI SHELBI TOMAS",
+      "id": "1210541700",
+      "name_lat": "ZVEZDA ADRIATIKI BEYLIS",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
+      "breed": "КОРСО",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1522227457",
+      "name_lat": "ZVEZDA ADRIATIKI YAGOZA",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1321199616",
+      "name_lat": "ZVEZDA YUGA SOFI ADEL",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "685887033",
+      "name_lat": "ZVEZDA MARGEN VIRGINIA MADSEN",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7735,20 +8025,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1160592495",
-      "name_lat": "ZVEZDNYY LUCHIK EVA B'YUTI",
+      "id": "1327626451",
+      "name_lat": "ZVEZDNAYA LEDI EMILI",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "54919662",
-      "name_lat": "ZVEZDA DAVIDA VASCO",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7780,15 +8060,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1579314212",
-      "name_lat": "ZVEZDA SEVERA VENDY",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1573322900",
       "name_lat": "ZVEZDA KINO LUSI",
       "name_ru": "",
@@ -7798,10 +8069,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1162559490",
+      "id": "1980600574",
       "name_lat": "ZVEZDA PO IMENI",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

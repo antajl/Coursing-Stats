@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ИА",
-  "count": 8,
+  "count": 10,
   "dogs": [
     {
       "id": "1563735342",
@@ -22,6 +22,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "812755513",
+      "name_lat": "И АС СТАРС ГОЛУБАЯ МЕЧТА",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "281433709",
       "name_lat": "ИАЛ ГИГАНТ ВИНСЕН",
       "name_ru": "",
@@ -33,7 +42,7 @@
     {
       "id": "1684938681",
       "name_lat": "ИАЛИССА ИЛАЛИ С БУЛЬВАРА БРИОШ",
-      "name_ru": "",
+      "name_ru": "ИАЛИССА ИЛАЛИ С БУЛЬВАРА БРИОШ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 4,
@@ -58,6 +67,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1619942441",
+      "name_lat": "И'АРЧИ АВГУСТ ПЕРВЫЙ SENNENHUND ROSSII CHIRNKHAUS",
+      "name_ru": "И'АРЧИ АВГУСТ ПЕРВЫЙ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "772720383",
       "name_lat": "ИАЛИССА ИЛАЛИ С БУЛЬВАРА БРИОШШ",
       "name_ru": "",
@@ -69,7 +87,7 @@
     {
       "id": "708671171",
       "name_lat": "ИАСО ДАНТИ БОСС ИЗ ЛАГУНЫ ГРЕЗ",
-      "name_ru": "",
+      "name_ru": "ИАСО ДАНТИ БОСС ИЗ ЛАГУНЫ ГРЕЗ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,

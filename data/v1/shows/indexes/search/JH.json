@@ -1,13 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "JH",
-  "count": 4,
+  "count": 6,
   "dogs": [
     {
-      "id": "752595969",
+      "id": "1741798445",
       "name_lat": "JHGUCHII MACHO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -18,7 +18,7 @@
       "name_ru": "",
       "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -31,12 +31,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1731754306",
+      "name_lat": "JÄÄHELMEN LUCKY LADY AFMAS",
+      "name_ru": "",
+      "breed": "SAMOYED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1408674234",
+      "name_lat": "JÄÄHELMEN LUCKY LADY",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1637171165",
       "name_lat": "JHELEZNAYA LADY VON OSTEN HERZ",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     }
   ]

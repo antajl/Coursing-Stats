@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЯЗ",
-  "count": 9,
+  "count": 17,
   "dogs": [
     {
       "id": "688418343",
@@ -22,12 +22,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1328053744",
-      "name_lat": "ЯЗИДА ОТ САМАРСКОЙ ЖЕМЧУЖИНЫ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "id": "662215143",
+      "name_lat": "Я ЗВЕЗДА ИЗ МОСКОВСКОЙ МЕТЕЛИ",
+      "name_ru": "Я ЗВЕЗДА ИЗ МОСКОВСКОЙ МЕТЕЛИ",
+      "breed": "САМОЕД /",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "823312074",
+      "name_lat": "Я-ЗОР ИЗ КРАЯ ЛЕСНЫХ ОЗЕР",
+      "name_ru": "Я-ЗОР ИЗ КРАЯ ЛЕСНЫХ ОЗЕР",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "722453189",
+      "name_lat": "ЯЗИДА ОТ САМАРСКОЙ ЖЕМЧУЖИНЫ",
+      "name_ru": "ЯЗИДА ОТ САМАРСКОЙ ЖЕМЧУЖИНЫ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -36,7 +53,25 @@
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1999293818",
+      "name_lat": "Я ЗВЕЗДА ДЛЯ ДИАМОНД НАТАЛИ ДЕ АЛАСИТАС",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1850090475",
+      "name_lat": "Я'ЗАРА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -49,11 +84,45 @@
       "competition_dog_id": null
     },
     {
+      "id": "1798266216",
+      "name_lat": "ЯЗГУЛЬ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1037870088",
       "name_lat": "ЯЗОН",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "353764241",
+      "name_lat": "Я ЗВЕЗДА ИЗ ТРЕТЬЯКОВСКОЙ ГАЛЕРЕИ",
+      "name_ru": "",
+      "breed": "VOSTOCHNOEVROPEISKAYA OVCHARKA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1074484249",
+      "name_lat": "Я'ЗАМБАГА ФИЕЛИСС ХЭНК",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1126115141",
+      "name_lat": "ЯЗАРА ИСТ МАУНТИН УИНД",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "total_shows": 1,
       "competition_dog_id": null
     },

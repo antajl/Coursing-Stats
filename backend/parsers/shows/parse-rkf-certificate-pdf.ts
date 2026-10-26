@@ -22,4 +22,4 @@ export {
   parseCertificatePdf,
 } from './rkf-cert/catalog-dogs'
 export type { MainRingCompetitionKey, MainRingRow } from './rkf-cert/main-ring'
-export { parseMainRingPdf, parseBisPdf } from './rkf-cert/main-ring'
+export { parseMainRingPdf, parseMainRingItems, parseBisPdf } from './rkf-cert/main-ring'

@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "СП",
-  "count": 650,
+  "count": 656,
   "dogs": [
     {
       "id": "911691051",
@@ -13,10 +13,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1545016726",
+      "id": "1888288170",
       "name_lat": "СПАРК ГАЛА'С ВИКОНТЕССА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "name_ru": "СПАРК ГАЛА'С ВИКОНТЕССА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -24,7 +24,7 @@
     {
       "id": "31527833",
       "name_lat": "СПРИНГ СИТИ ДЭННИС ОСКАР",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ДЭННИС ОСКАР",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 10,
@@ -33,26 +33,35 @@
     {
       "id": "1571379723",
       "name_lat": "СПРИНГ ЧЕЙЗ УНИВЕРСАЛ ДЕЛАЙТ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ УНИВЕРСАЛ ДЕЛАЙТ",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
     },
     {
+      "id": "1399792101",
+      "name_lat": "СПРАЙТЛИ ЛАУТ ФЛОРЕНТИЕЦ",
+      "name_ru": "СПРАЙТЛИ ЛАУТ ФЛОРЕНТИЕЦ",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1766797599",
       "name_lat": "СПРИНГ ЧЕЙЗ УЛЬТРА МЕЙДЖИК",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ УЛЬТРА МЕЙДЖИК",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "567364175",
+      "id": "472131011",
       "name_lat": "СПАРТА ПОКОРИТЕЛЬНИЦА СЕРДЕЦ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "name_ru": "СПАРТА ПОКОРИТЕЛЬНИЦА СЕРДЕЦ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -60,7 +69,7 @@
     {
       "id": "1897250893",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ФИНДИ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ФИНДИ",
       "breed": "ШВЕЙЦАРСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 9,
@@ -69,7 +78,7 @@
     {
       "id": "949972110",
       "name_lat": "СПАНИШ ГРАНД ВАНИЛЛА КРЕМ",
-      "name_ru": "",
+      "name_ru": "СПАНИШ ГРАНД ВАНИЛЛА КРЕМ",
       "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 21,
@@ -78,7 +87,7 @@
     {
       "id": "629091775",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЭЛИАС",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЭЛИАС",
       "breed": "БОКСЕР ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 12,
@@ -94,18 +103,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1399792101",
-      "name_lat": "СПРАЙТЛИ ЛАУТ ФЛОРЕНТИЕЦ",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
       "id": "178081145",
       "name_lat": "СПРИНГ ЧЕЙЗ СТАНД БАЙ МИ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ СТАНД БАЙ МИ",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
       "total_shows": 12,
@@ -114,7 +114,7 @@
     {
       "id": "254129433",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЭРЛИ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЭРЛИ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 14,
@@ -132,7 +132,7 @@
     {
       "id": "1449709099",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЯХОНТ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЯХОНТ",
       "breed": "БЕРНСКИЙ ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 9,
@@ -141,17 +141,17 @@
     {
       "id": "1262596816",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЮДЖИН",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЮДЖИН",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1018869051",
+      "id": "210024783",
       "name_lat": "СПАРК ГАЛА'С ЮГРА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "name_ru": "СПАРК ГАЛА'С ЮГРА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -159,25 +159,16 @@
     {
       "id": "166098801",
       "name_lat": "СПРИНГ ЧЕЙЗ РУМБА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ РУМБА",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1784028438",
-      "name_lat": "СПАНИШ ГРАНД АРИАННА",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ",
-      "breed_en": "SPANISH MASTIFF",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
       "id": "1519365039",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЖЕЛАННА",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЖЕЛАННА",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 15,
@@ -186,17 +177,17 @@
     {
       "id": "1380440953",
       "name_lat": "СПРИНГ ШОУ ЖЕРОМ СВИТ КАНДИ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ ЖЕРОМ СВИТ КАНДИ",
       "breed": "ИТАЛЬЯНСКИЙ СПИНОНЕ",
       "breed_en": "ITALIAN SPINONE",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "753728735",
+      "id": "1246442574",
       "name_lat": "СПРИНГ ЧЕЙЗ МАФИЯ",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "name_ru": "СПРИНГ ЧЕЙЗ МАФИЯ",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -204,17 +195,17 @@
     {
       "id": "1945507226",
       "name_lat": "СПРИНГ ЧЕЙЗ ФЛОРА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ ФЛОРА",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "385764189",
+      "id": "1652851041",
       "name_lat": "СПЕЙС БЕАР ЮВЕЛИР",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "name_ru": "СПЕЙС БЕАР ЮВЕЛИР",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
@@ -222,7 +213,7 @@
     {
       "id": "256427918",
       "name_lat": "СПЕЙС БЕАР ФАЛЬКОН ХАВЕЙ",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР ФАЛЬКОН ХАВЕЙ",
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 17,
@@ -238,12 +229,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1557448463",
+      "name_lat": "СПАЙС ГЁРЛ ГАРДЕНЖЭЛ",
+      "name_ru": "СПАЙС ГЁРЛ ГАРДЕНЖЭЛ",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1247549858",
       "name_lat": "СПЭЙС ВЭЙ КАЛЛИСТА",
-      "name_ru": "",
+      "name_ru": "СПЭЙС ВЭЙ КАЛЛИСТА",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9927816",
+      "name_lat": "СПЕЕД ШРИНКИНГ ФЕОДОРА ФЛИНТС",
+      "name_ru": "СПЕЕД ШРИНКИНГ ФЕОДОРА ФЛИНТС",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -252,31 +260,22 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "310395703",
       "name_lat": "СПРАЙТЛИ ЛАУТ ЗОУИ",
-      "name_ru": "",
+      "name_ru": "СПРАЙТЛИ ЛАУТ ЗОУИ",
       "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1565623008",
-      "name_lat": "СПАРТАК БЕЛГОРОДСКИЙ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "1408521489",
       "name_lat": "СПРАЙТЛИ ЛАУТ ОРАНЖЕРИ",
-      "name_ru": "",
+      "name_ru": "СПРАЙТЛИ ЛАУТ ОРАНЖЕРИ",
       "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
@@ -292,45 +291,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1736040272",
+      "id": "1649275779",
       "name_lat": "СПРИНГ СИТИ ЛОЛА СОНДРА",
-      "name_ru": "",
-      "breed": "ВОЛЬФХАУНД",
+      "name_ru": "СПРИНГ СИТИ ЛОЛА СОНДРА",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД /",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "338712637",
       "name_lat": "СПРИНГ ШОУ ДАНАИДА СИТА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ ДАНАИДА СИТА",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "153043873",
+      "id": "1575413872",
       "name_lat": "СПЕЙС БЕАР ЮВЕЛИРНАЯ ШТУЧКА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "name_ru": "СПЕЙС БЕАР ЮВЕЛИРНАЯ ШТУЧКА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1557448463",
-      "name_lat": "СПАЙС ГЁРЛ ГАРДЕНЖЭЛ",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1646804723",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЦИКАДА",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЦИКАДА",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 5,
@@ -366,7 +356,7 @@
     {
       "id": "291283537",
       "name_lat": "СПРИНГ ЧЕЙЗ ЮПИТЕР",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ ЮПИТЕР",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
       "total_shows": 7,
@@ -375,7 +365,7 @@
     {
       "id": "1584921344",
       "name_lat": "СПАНИЕЛЬ ОТ ЭРНЕСТА ЖЕНЕВА",
-      "name_ru": "",
+      "name_ru": "СПАНИЕЛЬ ОТ ЭРНЕСТА ЖЕНЕВА",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -384,16 +374,16 @@
     {
       "id": "1026163766",
       "name_lat": "СПЭЙС ВЭЙ АНТАРЕС",
-      "name_ru": "",
+      "name_ru": "СПЭЙС ВЭЙ АНТАРЕС",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "JACK RUSSELL TERRIER",
-      "total_shows": 27,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
       "id": "774584537",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ИРИБИС",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ИРИБИС",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
@@ -402,7 +392,7 @@
     {
       "id": "1365350199",
       "name_lat": "СПЕЙС БЕАР ФЕРРАРИЯ КРИСПА",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР ФЕРРАРИЯ КРИСПА",
       "breed": "Шнауцер перец с солью",
       "breed_en": "",
       "total_shows": 19,
@@ -411,26 +401,26 @@
     {
       "id": "1060574194",
       "name_lat": "СПРИНГ СИТИ ХЛОЯ ТРИНА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ХЛОЯ ТРИНА",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "838447464",
+      "id": "1502893837",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ХАРИЗМА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ХАРИЗМА",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "99703526",
+      "id": "251811551",
       "name_lat": "СПАРК ГАЛА'С ШАХ АЛМАЗ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР /",
+      "name_ru": "СПАРК ГАЛА'С ШАХ АЛМАЗ",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
@@ -438,7 +428,7 @@
     {
       "id": "875373844",
       "name_lat": "СПЛЕНДИД СТАРЛАЙТ ФО АЛИЕНС БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД СТАРЛАЙТ ФО АЛИЕНС БЬЮТИ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 7,
@@ -454,19 +444,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1509043855",
+      "id": "1934051963",
       "name_lat": "СПАРК ГАЛА'С ЮЛА",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1505475602",
+      "id": "1701168752",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЖИВАНШИ",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЖИВАНШИ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -490,10 +480,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1367169690",
+      "id": "1542278182",
       "name_lat": "СПАРК ГАЛА'С ЮНАЙТ",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -501,7 +491,7 @@
     {
       "id": "1632049919",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ИЗАР",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ИЗАР",
       "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
@@ -510,7 +500,7 @@
     {
       "id": "462884900",
       "name_lat": "СПЭЙС МАСТЕР ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
-      "name_ru": "",
+      "name_ru": "СПЭЙС МАСТЕР ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 5,
@@ -519,17 +509,17 @@
     {
       "id": "267102891",
       "name_lat": "СПРИНГ ЧЕЙЗ МАХЕША",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ МАХЕША",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1856949201",
+      "id": "234064733",
       "name_lat": "СПАРТА ПОКОРИТЕЛЬНИЦ А СЕРДЕЦ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -544,10 +534,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1013123829",
+      "id": "532007070",
       "name_lat": "СПРИНГ ШОУ ЖЕННИ СТАР ОФ ЛУК",
-      "name_ru": "",
-      "breed": "СПИНОНЕ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "СПРИНГ ШОУ ЖЕННИ СТАР ОФ ЛУК",
+      "breed": "БАВАРСКАЯ ИТАЛЬЯНСКИЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -562,10 +552,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "80846372",
+      "id": "1149782348",
       "name_lat": "СПРИНГ ШОУ БЛАЗИНГ ФАВОРИТКЕ СТАР",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "СПРИНГ ШОУ БЛАЗИНГ ФАВОРИТКЕ СТАР",
+      "breed": "КИНГ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -576,6 +566,14 @@
       "name_ru": "",
       "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "145701447",
+      "name_lat": "СПИРИТ",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -591,7 +589,7 @@
     {
       "id": "1436785656",
       "name_lat": "СПЕЙС БЕАР ФИТОНИ'Я АННА",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР ФИТОНИ'Я АННА",
       "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 15,
@@ -600,7 +598,7 @@
     {
       "id": "1382252926",
       "name_lat": "СПРИНГ ШОУ ГЛАМУР",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ ГЛАМУР",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 6,
@@ -616,10 +614,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1976716993",
+      "id": "1810768649",
       "name_lat": "СПЕЛЛФУЛ ДОГ'С МУСТИК БЛОНД",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "СПЕЛЛФУЛ ДОГ'С МУСТИК БЛОНД",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -645,7 +643,7 @@
     {
       "id": "1271523327",
       "name_lat": "СПЕЙС БЕАР ЭРИКА МАЙ СВИИТ ХЕАРТ",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР ЭРИКА МАЙ СВИИТ ХЕАРТ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
@@ -654,17 +652,17 @@
     {
       "id": "1497237445",
       "name_lat": "СПРИНГ ШОУ АТАМАНТИЯ ЯФЕТИКА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ АТАМАНТИЯ ЯФЕТИКА",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1644202164",
+      "id": "1039365601",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР НИКОЯ",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР НИКОЯ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -681,7 +679,7 @@
     {
       "id": "1396738036",
       "name_lat": "СПИРИТ ВАЛЬД ФАЕР",
-      "name_ru": "",
+      "name_ru": "СПИРИТ ВАЛЬД ФАЕР",
       "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 3,
@@ -697,10 +695,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1973137714",
+      "id": "1564461751",
       "name_lat": "СПРИНГ СИТИ ЗЕНА",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -708,10 +706,10 @@
     {
       "id": "1437253495",
       "name_lat": "СПАНИШ ГРАНД ДЖЕННИ",
-      "name_ru": "",
+      "name_ru": "СПАНИШ ГРАНД ДЖЕННИ",
       "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -726,10 +724,19 @@
     {
       "id": "1560656333",
       "name_lat": "СПАНИШ ГРАНД ДАНИЭЛЬ",
-      "name_ru": "",
+      "name_ru": "СПАНИШ ГРАНД ДАНИЭЛЬ",
       "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127707474",
+      "name_lat": "СПЛЕНДИД ТРИКОЛОР ЯХОНТ-II",
+      "name_ru": "",
+      "breed": "БОЛЬШОЙ ШВЕЙЦАРСКИЙ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -742,12 +749,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "664373628",
+      "id": "362963865",
       "name_lat": "СПИРЕЛЛЕН ЛАНКАСТЕР ДИ'ЛАЙТ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "СПИРЕЛЛЕН ЛАНКАСТЕР ДИ'ЛАЙТ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "715708563",
+      "name_lat": "СПРИНГ МЕЛОДИ",
+      "name_ru": "СПРИНГ МЕЛОДИ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -778,10 +794,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1697793282",
+      "id": "1301970429",
       "name_lat": "СПАЙС ГЕРЛ",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -802,15 +818,6 @@
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "715708563",
-      "name_lat": "СПРИНГ МЕЛОДИ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -850,10 +857,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "302341018",
+      "id": "1232796966",
       "name_lat": "СПАРК ГАЛА’С ГРАЦИЯ ЛОСК",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -906,7 +913,7 @@
     {
       "id": "1879207613",
       "name_lat": "СПЕЙС БЕАР РИТМ ПРАВИЛА ИГРЫ",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР РИТМ ПРАВИЛА ИГРЫ",
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 2,
@@ -917,15 +924,6 @@
       "name_lat": "СПАЙС ГЕРЛ",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1840723095",
-      "name_lat": "СПАЙС ГЁРЛ ГАРДЕНЖЕЛ",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -949,9 +947,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1630318089",
+      "name_lat": "СПЕЕД ШРИНКИНГ ФЕЕРИЯ",
+      "name_ru": "СПЕЕД ШРИНКИНГ ФЕЕРИЯ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1655727136",
       "name_lat": "СПАРТА СЛАЙ ФОКС",
-      "name_ru": "",
+      "name_ru": "СПАРТА СЛАЙ ФОКС",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 5,
@@ -1005,19 +1011,10 @@
     {
       "id": "1203251513",
       "name_lat": "СПАРТАК ИЗ ДОМА ШВЕДОВЫХ",
-      "name_ru": "",
+      "name_ru": "СПАРТАК ИЗ ДОМА ШВЕДОВЫХ",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1802531622",
-      "name_lat": "СПАНИШ ГРАНД ИГНАТ",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ",
-      "breed_en": "SPANISH MASTIFF",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1032,16 +1029,25 @@
     {
       "id": "813151448",
       "name_lat": "СПИРИТО ДЕЛЛА МОНТАНИЯ БЕРНАРДО",
-      "name_ru": "",
+      "name_ru": "СПИРИТО ДЕЛЛА МОНТАНИЯ БЕРНАРДО",
       "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "47119449",
+      "name_lat": "СПЛЕНДИД ТРИКОЛОР ХАРАС",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ХАРАС",
+      "breed": "ЭНТЛЕБУХЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "464990544",
       "name_lat": "СПАРТАК ИЗ ИМПЕРИИ ФАВОРИТОВ",
-      "name_ru": "",
+      "name_ru": "СПАРТАК ИЗ ИМПЕРИИ ФАВОРИТОВ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 20,
@@ -1050,25 +1056,16 @@
     {
       "id": "383044742",
       "name_lat": "СПЛИНТЕ ОФ ДЕ САН АВРОРА",
-      "name_ru": "",
+      "name_ru": "СПЛИНТЕ ОФ ДЕ САН АВРОРА",
       "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "47119449",
-      "name_lat": "СПЛЕНДИД ТРИКОЛОР ХАРАС",
-      "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "1643593300",
       "name_lat": "СПИРИТО ДЕЛЛА МОНТАНИЯ БАКАРДИ",
-      "name_ru": "",
+      "name_ru": "СПИРИТО ДЕЛЛА МОНТАНИЯ БАКАРДИ",
       "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -1086,10 +1083,9 @@
     {
       "id": "1886296694",
       "name_lat": "СПЭЙС ВЭЙ АШЕР",
-      "name_ru": "",
+      "name_ru": "СПЭЙС ВЭЙ АШЕР",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1104,7 +1100,7 @@
     {
       "id": "927785518",
       "name_lat": "СПАРК ГАЛА'С ТЕТ-А-ТЕТ",
-      "name_ru": "",
+      "name_ru": "СПАРК ГАЛА'С ТЕТ-А-ТЕТ",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 17,
@@ -1113,17 +1109,17 @@
     {
       "id": "1477447221",
       "name_lat": "СПРИНГ СИТИ БЕЛУС НЕЙЛ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ БЕЛУС НЕЙЛ",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1578589653",
+      "id": "1482311017",
       "name_lat": "СПИРИТ ФОРЦЕ БОЙ РАШЕН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "СПИРИТ ФОРЦЕ БОЙ РАШЕН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -1131,26 +1127,35 @@
     {
       "id": "1506112657",
       "name_lat": "СПЯЩИЙ САЯН ВЕНДИ МЛЕЧНЫЙ ПУТЬ",
-      "name_ru": "",
+      "name_ru": "СПЯЩИЙ САЯН ВЕНДИ МЛЕЧНЫЙ ПУТЬ",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1738650387",
+      "id": "416384052",
+      "name_lat": "СПРИНГ СИТИ МЁРФИ МАТИЛЬДА",
+      "name_ru": "СПРИНГ СИТИ МЁРФИ МАТИЛЬДА",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "997889914",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ХОФФ",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ХОФФ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1907048426",
+      "id": "1078880827",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ОНИКС",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ОНИКС",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1158,7 +1163,7 @@
     {
       "id": "1962063308",
       "name_lat": "СПИТФАЙЕР ЧУДО МОЛНИЯ",
-      "name_ru": "",
+      "name_ru": "СПИТФАЙЕР ЧУДО МОЛНИЯ",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 9,
@@ -1167,10 +1172,19 @@
     {
       "id": "546871766",
       "name_lat": "СПЯЩИЙ САЯН ВЕЛЕС ДУХ ЛЕСА",
-      "name_ru": "",
+      "name_ru": "СПЯЩИЙ САЯН ВЕЛЕС ДУХ ЛЕСА",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1145439881",
+      "name_lat": "СПРИНГ СИТИ СТИАНА БРИТТА",
+      "name_ru": "СПРИНГ СИТИ СТИАНА БРИТТА",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1194,28 +1208,19 @@
     {
       "id": "1564065297",
       "name_lat": "СПРАЙТЛИ ЛАУТ МОМЕНТО ДИ ГРАЦИЯ",
-      "name_ru": "",
+      "name_ru": "СПРАЙТЛИ ЛАУТ МОМЕНТО ДИ ГРАЦИЯ",
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "280851747",
-      "name_lat": "СПАНИШ ГРАНД ТОНИО",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ",
-      "breed_en": "SPANISH MASTIFF",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "97030987",
       "name_lat": "СПИРИТ ВАЛЬД ЮТА БРИНДЖИНГ ГООД ЛАК",
-      "name_ru": "",
+      "name_ru": "СПИРИТ ВАЛЬД ЮТА БРИНДЖИНГ ГООД ЛАК",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1273,19 +1278,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1964928833",
+      "id": "1219869109",
       "name_lat": "СПИРИТ ФОРЦЕ МАЙРОН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "СПИРИТ ФОРЦЕ МАЙРОН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1939247270",
+      "id": "116969119",
       "name_lat": "СПЕРИЛЛЕН ШАРМ КИНГ ИН",
+      "name_ru": "СПЕРИЛЛЕН ШАРМ КИНГ ИН",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "135904122",
+      "name_lat": "СПАЙКВЭЛ ЯКУДЗА",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1293,7 +1307,7 @@
     {
       "id": "862343116",
       "name_lat": "СПРИНГ ЧЕЙЗ ЛАНД КРУЗЕР",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ ЛАНД КРУЗЕР",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -1311,7 +1325,7 @@
     {
       "id": "1465802695",
       "name_lat": "СПРИНГ СИТИ ШЭННА СЕЙЛА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ШЭННА СЕЙЛА",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 9,
@@ -1320,7 +1334,7 @@
     {
       "id": "287141052",
       "name_lat": "СПИРИТУС ЛИБЕРТАТИС АДЕЛАИДА",
-      "name_ru": "",
+      "name_ru": "СПИРИТУС ЛИБЕРТАТИС АДЕЛАИДА",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
@@ -1329,7 +1343,7 @@
     {
       "id": "506220206",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЦЕНТАВР",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЦЕНТАВР",
       "breed": "БОКСЕР ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 8,
@@ -1338,16 +1352,25 @@
     {
       "id": "168730325",
       "name_lat": "СПРИНГ СИТИ КИМА НЕССА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ КИМА НЕССА",
       "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
+      "id": "1032231273",
+      "name_lat": "СПИКА БРИЛЛИАНТ ДЕВЫ",
+      "name_ru": "СПИКА БРИЛЛИАНТ ДЕВЫ",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "341723366",
       "name_lat": "СПЛЕНДИД РОТТ ВИКТОР",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД РОТТ ВИКТОР",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -1356,19 +1379,10 @@
     {
       "id": "1799073725",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР СЕВЕРНАЯ ПАЛЬМИРА",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР СЕВЕРНАЯ ПАЛЬМИРА",
       "breed": "БЕРНСКИЙ ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1032231273",
-      "name_lat": "СПИКА БРИЛЛИАНТ ДЕВЫ",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1390,6 +1404,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "144140568",
+      "name_lat": "СПЛЕНДИД ТРИКОЛОР НАОМИ",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР НАОМИ",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1030664184",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ТОКАЙ",
       "name_ru": "",
@@ -1401,43 +1424,42 @@
     {
       "id": "502413126",
       "name_lat": "СПАРТАК ОТ ОРБАРО ШИК",
-      "name_ru": "",
+      "name_ru": "СПАРТАК ОТ ОРБАРО ШИК",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1917915570",
-      "name_lat": "СПАРТАК С ЖЕМЧУЖНОЙ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
       "id": "1404759036",
       "name_lat": "СПРИНГ СИТИ БРЕННА АРЕЛА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ БРЕННА АРЕЛА",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "886603389",
+      "name_lat": "СПРИНГ ЧЕЙЗ ЖАСМИН",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "40890389",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР УТРЕННЯЯ ЗВЕЗДА",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР УТРЕННЯЯ ЗВЕЗДА",
       "breed": "БОЛЬШОЙ ШВЕЙЦАРСКИЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1685941521",
       "name_lat": "СПЕЙС БЕАР УЗУМБАРСКАЯ ФИАЛКА УАЙТ",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР УЗУМБАРСКАЯ ФИАЛКА УАЙТ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
@@ -1453,37 +1475,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "416384052",
-      "name_lat": "СПРИНГ СИТИ МЁРФИ МАТИЛЬДА",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "id": "509786955",
+      "name_lat": "СПЛЕНДИД ТРИКОЛОР УЛЬТРА БОН",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР УЛЬТРА БОН",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "7458",
       "name_lat": "СПРИНГ ШОУ БЛАЗИНГ ФАВОРИТЕ СТАР",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ БЛАЗИНГ ФАВОРИТЕ СТАР",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": 7458
     },
     {
-      "id": "7124908",
-      "name_lat": "СПЭЙС СТАР НОРИС",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "id": "1816992196",
+      "name_lat": "СПАРК ГАЛА'С ГРАЦИЯ ЛОСК",
+      "name_ru": "СПАРК ГАЛА'С ГРАЦИЯ ЛОСК",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "560890481",
+      "id": "219275041",
+      "name_lat": "СПРИНГ ЧЕЙЗ ЗАБАВА",
+      "name_ru": "СПРИНГ ЧЕЙЗ ЗАБАВА",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173074313",
+      "name_lat": "СПЭЙС СТАР НОРИС",
+      "name_ru": "СПЭЙС СТАР НОРИС",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1592513261",
       "name_lat": "СПАРКИ СЧАСТЛИВЧИК",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "СПАРКИ СЧАСТЛИВЧИК",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1491,17 +1531,35 @@
     {
       "id": "169017370",
       "name_lat": "СПРИНГ СИТИ САГАР КИНГ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ САГАР КИНГ",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "96311881",
+      "id": "74481876",
       "name_lat": "СПАНИШ ГРАНД ТОСКАНА",
+      "name_ru": "СПАНИШ ГРАНД ТОСКАНА",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "164823871",
+      "name_lat": "СПЕЙС БЕАР ЗЕРБИНА МЕКСИКА (Изменено по решению ВК от 28.07.21 воп 31)",
+      "name_ru": "СПЕЙС БЕАР ЗЕРБИНА МЕКСИКА (Изменено по решению ВК от 28.07.21 воп 31)",
+      "breed": "СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "740122566",
+      "name_lat": "СПАНИШ ГРАНД АЮ",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1509,7 +1567,7 @@
     {
       "id": "563305706",
       "name_lat": "СПРИНГ СИТИ САЛЛИВАН МАГВАЙР",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ САЛЛИВАН МАГВАЙР",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 5,
@@ -1518,7 +1576,7 @@
     {
       "id": "1117915848",
       "name_lat": "СПЯЩИЙ САЯН ФРЕЙ СЫН ВЕЛИКОГО ЗЕВСА",
-      "name_ru": "",
+      "name_ru": "СПЯЩИЙ САЯН ФРЕЙ СЫН ВЕЛИКОГО ЗЕВСА",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 5,
@@ -1527,25 +1585,33 @@
     {
       "id": "1938617587",
       "name_lat": "СПРИНГ СИТИ ИСИБЕЛЬ ЭЙСЛИНН",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ИСИБЕЛЬ ЭЙСЛИНН",
       "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "478710032",
+      "id": "1840933745",
       "name_lat": "СПАРК ГАЛА’С ЭРОТИКА",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР /",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "284059231",
+      "name_lat": "СПРИНГ СИТИ ЛЕРОЙ АСТИН",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1264100315",
       "name_lat": "СПЛЕНДИД СТАРЛАЙТ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД СТАРЛАЙТ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 7,
@@ -1554,44 +1620,26 @@
     {
       "id": "1805840209",
       "name_lat": "СПРИНГ СИТИ ЛИНЕТТА ДОННА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ЛИНЕТТА ДОННА",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "135904122",
-      "name_lat": "СПАЙКВЭЛ ЯКУДЗА",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "886603389",
-      "name_lat": "СПРИНГ ЧЕЙЗ ЖАСМИН",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1423071876",
       "name_lat": "СПЯЩИЙ САЯН ЭННИ",
-      "name_ru": "",
+      "name_ru": "СПЯЩИЙ САЯН ЭННИ",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1529083415",
+      "id": "599237718",
       "name_lat": "СПРИНГ СИТИ ЛАСАР АЛАН",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД /",
+      "name_ru": "СПРИНГ СИТИ ЛАСАР АЛАН",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1606,28 +1654,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1782457004",
-      "name_lat": "СПРИНГ СИТИ СТИАНА БРИТТА",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "101353708",
-      "name_lat": "СПАРК ГАЛА'С ШАЛЬНАЯ ИМПЕРАТРИЦА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР /",
+      "id": "186125283",
+      "name_lat": "СПАРК ГАЛА'С ГРОЗА ЕГОЗА",
+      "name_ru": "СПАРК ГАЛА'С ГРОЗА ЕГОЗА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1253292381",
+      "id": "1566729929",
+      "name_lat": "СПАРК ГАЛА'С ШАЛЬНАЯ ИМПЕРАТРИЦА",
+      "name_ru": "СПАРК ГАЛА'С ШАЛЬНАЯ ИМПЕРАТРИЦА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "901443713",
       "name_lat": "СПАРКИ СТАР",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1635,19 +1683,28 @@
     {
       "id": "1575662523",
       "name_lat": "СПРИНГ ЧЕЙЗ ЗМАЙЛ ТУ МИ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ ЗМАЙЛ ТУ МИ",
       "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1058269368",
+      "id": "185125341",
       "name_lat": "СПРИНГ ЧЕЙЗ ГЛИНТВЕЙН",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "name_ru": "СПРИНГ ЧЕЙЗ ГЛИНТВЕЙН",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "740206622",
+      "name_lat": "СПАНИШ ГРАНД ЧЭНС",
+      "name_ru": "СПАНИШ ГРАНД ЧЭНС",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1669,39 +1726,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1955232493",
+      "name_lat": "СПЕРИЛЛЕН РЭЙ OФ ЛАЙТ",
+      "name_ru": "СПЕРИЛЛЕН РЭЙ ОФ ЛАЙТ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "306074545",
       "name_lat": "СПРИНГ ШОУ АРМАНИ АРГИРЕЙ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ АРМАНИ АРГИРЕЙ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "771523818",
+      "name_lat": "СПАРК ОФ ФАЙЕ ФО АВАЛАНШ ИЗ ГОЛУБОЙ ЛЕГЕНДЫ",
+      "name_ru": "",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "551247387",
       "name_lat": "СПЛЕНДИТ ТРИКОЛОР НИКОЯ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИТ ТРИКОЛОР НИКОЯ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "478526738",
-      "name_lat": "СПЯЩИЙ САЯН ФИОНА ДОЧЬ ЗЕВСА",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "503192682",
-      "name_lat": "СПЕЙСИ ИЗ ЗАПОЛЯРЬЯ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1710,31 +1767,40 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "509786955",
-      "name_lat": "СПЛЕНДИД ТРИКОЛОР УЛЬТРА БОН",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "id": "478526738",
+      "name_lat": "СПЯЩИЙ САЯН ФИОНА ДОЧЬ ЗЕВСА",
+      "name_ru": "СПЯЩИЙ САЯН ФИОНА ДОЧЬ ЗЕВСА",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1518598039",
+      "id": "503192682",
+      "name_lat": "СПЕЙСИ ИЗ ЗАПОЛЯРЬЯ",
+      "name_ru": "СПЕЙСИ ИЗ ЗАПОЛЯРЬЯ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1102968695",
       "name_lat": "СПИРИТ ФОРЦЕ БУГАТТИ ВЕЙРОН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "СПИРИТ ФОРЦЕ БУГАТТИ ВЕЙРОН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "115770349",
       "name_lat": "Спрайтли Лаут Заффери",
-      "name_ru": "",
+      "name_ru": "Спрайтли Лаут Заффери",
       "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -1759,12 +1825,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1594963719",
-      "name_lat": "СПАНИШ ГРАНД АЮ",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "id": "786247843",
+      "name_lat": "СПИРИТО ДЕЛЛА МОНТАНИЯ ВИККО",
+      "name_ru": "СПИРИТО ДЕЛЛА МОНТАНИЯ ВИККО",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1797,44 +1863,35 @@
     {
       "id": "1075303776",
       "name_lat": "Спэйс Стар Илва",
-      "name_ru": "",
+      "name_ru": "СПЭЙС СТАР ИЛВА",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "574844399",
-      "name_lat": "СПАНИШ ГРАНД ЧЭНС",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "42657721",
       "name_lat": "СПРИНГ СИТИ ИЗАР МАНУС",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ИЗАР МАНУС",
       "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1381216161",
+      "id": "1302403836",
       "name_lat": "СПЛЕНДИД РОТТ ВИРДЖИНИЯ",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "866799131",
+      "id": "1974097746",
       "name_lat": "СПАНИШ ГРАНД БЭТАНИ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1842,7 +1899,7 @@
     {
       "id": "1946187826",
       "name_lat": "Спарк оф Файе Аваланш из Голубой Легенды",
-      "name_ru": "",
+      "name_ru": "Спарк оф Файе Аваланш из Голубой Легенды",
       "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1860,7 +1917,7 @@
     {
       "id": "1938838421",
       "name_lat": "СПРИНГ СИТИ ШАЙН ОФ БЬЮТИ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ШАЙН ОФ БЬЮТИ",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "IRISH WOLFHOUND",
       "total_shows": 9,
@@ -1878,16 +1935,16 @@
     {
       "id": "1843136202",
       "name_lat": "СПРИНГ ЧЕЙЗ ЗОДИАК",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ ЗОДИАК",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "180763965",
       "name_lat": "СПОТ СЛАЙ ХАУНД ИН ЗЕ ФОРЕСТ",
-      "name_ru": "",
+      "name_ru": "СПОТ СЛАЙ ХАУНД ИН ЗЕ ФОРЕСТ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 6,
@@ -1896,7 +1953,7 @@
     {
       "id": "6881472",
       "name_lat": "СПЕЙС БЕАР ЯЛТА СВИТ",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР ЯЛТА СВИТ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -1914,34 +1971,25 @@
     {
       "id": "1194139197",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЗУАРА",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЗУАРА",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1955232493",
-      "name_lat": "СПЕРИЛЛЕН РЭЙ OФ ЛАЙТ",
+      "id": "1132072061",
+      "name_lat": "СПАРК ГАЛА'С ВИКОНТ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1163849079",
-      "name_lat": "СПАРК ГАЛА'С ГРОЗА ЕГОЗА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "106620718",
       "name_lat": "СПРИНГ ШОУ БЕЛИССИМО ФЛОВЕР",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ БЕЛИССИМО ФЛОВЕР",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 5,
@@ -1950,7 +1998,7 @@
     {
       "id": "978953169",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЮДИФЬ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЮДИФЬ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
@@ -1959,17 +2007,26 @@
     {
       "id": "501042406",
       "name_lat": "Спринг Дон Винд Цвейг Арт",
-      "name_ru": "",
+      "name_ru": "Спринг Дон Винд Цвейг Арт",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "654453980",
+      "id": "1823656537",
       "name_lat": "СПРИНГ СИТИ ФРЭДО ВИНЧЕНЦО",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1762881590",
+      "name_lat": "СПЛЕНДИД ТРИКОЛОР ШЕРЛОК",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ШЕРЛОК",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1977,7 +2034,7 @@
     {
       "id": "1565317631",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР УРИЭЛЬ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР УРИЭЛЬ",
       "breed": "БЕРНСКИЙ ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -1986,26 +2043,26 @@
     {
       "id": "681271006",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР АПОСТОЛ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР АПОСТОЛ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "142171041",
+      "id": "237758204",
       "name_lat": "СПАНИШ ГРАНД ЧАРЛЬСТОН",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "352326751",
+      "id": "1743738303",
       "name_lat": "СПРИНГ ШОУ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2013,17 +2070,17 @@
     {
       "id": "146099534",
       "name_lat": "СПАРРОУ ДЖЕК ИЗ ДОМА ВЕНГРЭ",
-      "name_ru": "",
+      "name_ru": "СПАРРОУ ДЖЕК ИЗ ДОМА ВЕНГРЭ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "771523818",
-      "name_lat": "СПАРК ОФ ФАЙЕ ФО АВАЛАНШ ИЗ ГОЛУБОЙ ЛЕГЕНДЫ",
+      "id": "326275502",
+      "name_lat": "СПРИНГ ЧЕЙЗ ЕУЕ ОФ Э ТИГЕР",
       "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2056,28 +2113,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1843160116",
-      "name_lat": "СПИРИТ ВАЛЬД НИКА ТЕРРА НОВА",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "983583416",
       "name_lat": "СПРАЙТЛИ ЛАУТ МАРМЕЛЛАТА МИРТИЛЛИ",
-      "name_ru": "",
+      "name_ru": "СПРАЙТЛИ ЛАУТ МАРМЕЛЛАТА МИРТИЛЛИ",
       "breed": "СИЛИХЕМ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1250422915",
-      "name_lat": "СПРИНГ ЧЕЙЗ ЕУЕ ОФ Э ТИГЕР",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2085,19 +2124,10 @@
     {
       "id": "1524478563",
       "name_lat": "СПЕЙС БЕАР НИНЕЛ СВИТ ТОФФИ",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР НИНЕЛ СВИТ ТОФФИ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "144140568",
-      "name_lat": "СПЛЕНДИД ТРИКОЛОР НАОМИ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2110,15 +2140,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "127707474",
-      "name_lat": "СПЛЕНДИД ТРИКОЛОР ЯХОНТ-II",
-      "name_ru": "",
-      "breed": "БОЛЬШОЙ ШВЕЙЦАРСКИЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "941078104",
       "name_lat": "СПЭРРОУ'С ГАРС ГАРРИ",
       "name_ru": "",
@@ -2128,10 +2149,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1789035694",
+      "id": "231006199",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ШЕКСПИР",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2146,19 +2167,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1345839933",
+      "name_lat": "СПАРТАК ПОЛНАЯ ПОБЕДА",
+      "name_ru": "СПАРТАК ПОЛНАЯ ПОБЕДА",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1546640068",
       "name_lat": "СПЕЛАЯ ВИШНЯ ФОМ НОРДИШЕН ХОФ",
-      "name_ru": "",
+      "name_ru": "СПЕЛАЯ ВИШНЯ ФОМ НОРДИШЕН ХОФ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1465690265",
+      "id": "1404552932",
       "name_lat": "СПРИНГ СИТИ КИАРА НИРА",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ /",
+      "name_ru": "СПРИНГ СИТИ КИАРА НИРА",
+      "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2166,7 +2195,7 @@
     {
       "id": "1202935747",
       "name_lat": "СПРИНГ СИТИ ЗОЛИО АЛФОНСО",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ЗОЛИО АЛФОНСО",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
@@ -2175,7 +2204,7 @@
     {
       "id": "704542682",
       "name_lat": "СПЯЩИЙ САЯН ФРАНСИНА",
-      "name_ru": "",
+      "name_ru": "СПЯЩИЙ САЯН ФРАНСИНА",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 4,
@@ -2184,7 +2213,7 @@
     {
       "id": "244840255",
       "name_lat": "СПЕЙС БЕАР СТЕНД БАЙ МИ",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР СТЕНД БАЙ МИ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -2200,6 +2229,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "770772588",
+      "name_lat": "СПРИНГ ЧЕЙЗ ЕСКВАЙР ДЕ ТОЛКИНГ АЙС",
+      "name_ru": "СПРИНГ ЧЕЙЗ ЕСКВАЙР ДЕ ТОЛКИНГ АЙС",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "215474741",
       "name_lat": "СПАРТА",
       "name_ru": "",
@@ -2211,26 +2248,25 @@
     {
       "id": "580790151",
       "name_lat": "СПЕЙС БЕАР РОДЖЕРСИЯ ПИННАТА",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР РОДЖЕРСИЯ ПИННАТА",
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1850799944",
       "name_lat": "СПРИНГ ШОУ ЗИЛАН ДАНС ВАЙТ МИ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ ЗИЛАН ДАНС ВАЙТ МИ",
       "breed": "ПАПИЙОН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "56351670",
+      "id": "1368559791",
       "name_lat": "СПИРИТО ЛУНАРЕ ЕРЛИ СПРИНГ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "СПИРИТО ЛУНАРЕ ЕРЛИ СПРИНГ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2245,19 +2281,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1481335319",
-      "name_lat": "СПИРИТО ЛУНАРЕ КЛУБНИЧНЫЙ КЕКС",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1150474081",
+      "id": "1070792892",
       "name_lat": "СПЕКЛВЕСТ ТРОЙЯ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР /",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2265,7 +2292,7 @@
     {
       "id": "1735791389",
       "name_lat": "СПИРИТ ВАЛЬД СМАРДЖ МОДЕСТ",
-      "name_ru": "",
+      "name_ru": "СПИРИТ ВАЛЬД СМАРДЖ МОДЕСТ",
       "breed": "РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -2290,10 +2317,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1345836328",
+      "id": "17261773",
       "name_lat": "СПЕКЛВЕСТ ТАМЕРЛАН",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР /",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2310,26 +2337,17 @@
     {
       "id": "1008274504",
       "name_lat": "СПЭЙС СТАР ОБИС НОЙЗ",
-      "name_ru": "",
+      "name_ru": "СПЭЙС СТАР ОБИС НОЙЗ",
       "breed": "СХИППЕРКЕ ЧЕХОСЛОВАЦКАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "457828855",
-      "name_lat": "СПЛЕНДИД ТРИКОЛОР ШЕРЛОК",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1302150884",
+      "id": "1133181713",
       "name_lat": "СПЛЕНДИТ ТРИКОЛОР ТАЙНА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "name_ru": "СПЛЕНДИТ ТРИКОЛОР ТАЙНА",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2344,15 +2362,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "786247843",
-      "name_lat": "СПИРИТО ДЕЛЛА МОНТАНИЯ ВИККО",
-      "name_ru": "",
-      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1224523791",
       "name_lat": "СПИРИТ ВАЛЬД МОЛЛИ ЛАККИ СТАР",
       "name_ru": "",
@@ -2362,10 +2371,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1521517781",
+      "id": "646799977",
       "name_lat": "СПИРИТ ФОРЦЕ ФЕЛИЧИТА НЭЙ ПАЛМИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2380,19 +2389,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1145840214",
+      "id": "794526264",
       "name_lat": "СПИРИТ ФОРЦЕ ЧЕЛСИ БРАЙТОН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "СПИРИТ ФОРЦЕ ЧЕЛСИ БРАЙТОН",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1766301374",
+      "id": "595272320",
       "name_lat": "СПИРИТ ФОРЦЕ ЧИРО ДИ МАРЦИО",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2402,15 +2411,6 @@
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЗАМАНИЯ",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "853503635",
-      "name_lat": "СПАРТАК ИЗ ДОМА АКТЕОНА",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2443,18 +2443,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1132072061",
-      "name_lat": "СПАРК ГАЛА'С ВИКОНТ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "863530856",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ПАРАДАЙС",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ПАРАДАЙС",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
@@ -2470,10 +2461,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1184111747",
+      "id": "1368508357",
+      "name_lat": "СПРИНГ ШОУ ИНФАНТА КИАРА ВОЛЬ ЭЛЕГАНТ",
+      "name_ru": "СПРИНГ ШОУ ИНФАНТА КИАРА ВОЛЬ ЭЛЕГАНТ",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1665303690",
       "name_lat": "СПЕЙС БЕАР ЮМИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "name_ru": "СПЕЙС БЕАР ЮМИ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2499,17 +2499,17 @@
     {
       "id": "407849395",
       "name_lat": "СПЭЙС СТАР НОРТОН КИНГ КОНГ",
-      "name_ru": "",
+      "name_ru": "СПЭЙС СТАР НОРТОН КИНГ КОНГ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1873244148",
+      "id": "878659361",
       "name_lat": "СПАНИШ ГРАНД ЮТА ЛЕОНА",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "name_ru": "СПАНИШ ГРАНД ЮТА ЛЕОНА",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2524,19 +2524,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "1029410449",
+      "name_lat": "СПИРИТ ФОРЦЕ БАРРАКУДА ЛАКШЕРИ",
+      "name_ru": "СПИРИТ ФОРЦЕ БАРРАКУДА ЛАКШЕРИ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "232560945",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР КУПЕР",
       "name_ru": "",
       "breed": "БОКСЕР ШВЕЙЦАРСКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1989405373",
-      "name_lat": "СПИРИТ ФОРЦЕ БАРРАКУДА ЛАКШЕРИ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2553,17 +2553,8 @@
     {
       "id": "1981772431",
       "name_lat": "СПУТНИК ОРИОНА ЮСУФ ВОИН СИБИРИ",
-      "name_ru": "",
+      "name_ru": "СПУТНИК ОРИОНА ЮСУФ ВОИН СИБИРИ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "9707561",
-      "name_lat": "СПЕЙС БЕАР ЗЕРБИНА МЕКСИКА",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2596,10 +2587,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1896763079",
+      "id": "210114950",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ДАКОТА",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2643,7 +2634,7 @@
     {
       "id": "1385353639",
       "name_lat": "СПАЙС ГЕРЛ ИЗ ЧЕРНОГО ЯНТАРЯ",
-      "name_ru": "",
+      "name_ru": "СПАЙС ГЕРЛ ИЗ ЧЕРНОГО ЯНТАРЯ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -2659,27 +2650,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1198383416",
+      "id": "439408838",
       "name_lat": "СПЕЛАЯ ВИШНЯ ИЗ ВОЙСКА ТАМЕРЛАНА ( ПРОДАЕТСЯ)",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "СПЕЛАЯ ВИШНЯ ИЗ ВОЙСКА ТАМЕРЛАНА ( ПРОДАЕТСЯ)",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1348892901",
-      "name_lat": "СПИРИТ ВАЛЬД ГРИФФИН",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "1035383288",
       "name_lat": "СПИРИТ ВАЛЬД РИЧАРД ЛИОН ХЕАРТЕД",
-      "name_ru": "",
+      "name_ru": "СПИРИТ ВАЛЬД РИЧАРД ЛИОН ХЕАРТЕД",
       "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -2695,6 +2677,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "950784941",
+      "name_lat": "СПИРИТ ФОРЦЕ БАЙКАЛ СТРОНГ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "230790190",
       "name_lat": "СПЕЙС БЕАР ХЮРРЕМ СУЛТАН",
       "name_ru": "",
@@ -2706,26 +2696,17 @@
     {
       "id": "689413363",
       "name_lat": "СПЭЙС СТАР ОРСА",
-      "name_ru": "",
+      "name_ru": "СПЭЙС СТАР ОРСА",
       "breed": "ЧЕХОСЛОВАЦКАЯ ВОЛЧЬЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1906424549",
-      "name_lat": "СПАРК ГАЛА'С ГРАЦИЯ ЛОСК",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "295472310",
+      "id": "95904225",
       "name_lat": "СПРИНГ ШОУ ВИТТОРИО ШАРЛОТ",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "name_ru": "СПРИНГ ШОУ ВИТТОРИО ШАРЛОТ",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2733,7 +2714,7 @@
     {
       "id": "1483262473",
       "name_lat": "СПРИНГ СИТИ НУАЛА ОРНИЯ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ НУАЛА ОРНИЯ",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 5,
@@ -2751,7 +2732,7 @@
     {
       "id": "1804971014",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЯШМА ЗОЛОТАЯ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЯШМА ЗОЛОТАЯ",
       "breed": "ЗЕННЕНХУНД ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -2760,10 +2741,9 @@
     {
       "id": "910746406",
       "name_lat": "СПЕЙС БЕАР РОДЖЕР МЫ ДРУЗЬЯ",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР РОДЖЕР МЫ ДРУЗЬЯ",
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2805,19 +2785,10 @@
     {
       "id": "1511771925",
       "name_lat": "СПУТНИК ВЕЛЕСА ЛЕДИ БЛЕЙК",
-      "name_ru": "",
+      "name_ru": "СПУТНИК ВЕЛЕСА ЛЕДИ БЛЕЙК",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "219275041",
-      "name_lat": "СПРИНГ ЧЕЙЗ ЗАБАВА",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2825,15 +2796,6 @@
       "name_lat": "СПАРТАК ОТВАЖНЫЙ",
       "name_ru": "",
       "breed": "КОМОНДОР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "724668911",
-      "name_lat": "СПИРИТ ВАЛЬД УРБАН ПРИНЦЕСС",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2866,10 +2828,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "76389701",
+      "id": "456700504",
       "name_lat": "СПЭЙС СТАР О’БИС НОЙЗ",
       "name_ru": "",
-      "breed": "ВОЛЧЬЯ СОБАКА /",
+      "breed": "ВОЛЧЬЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1658680140",
+      "name_lat": ". СПАНИШ ГРАНД В МАРКО",
+      "name_ru": "",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2886,7 +2857,7 @@
     {
       "id": "409781777",
       "name_lat": "СПЕЙС БЕАР БАНКСИЯ ГРАНДИС",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР БАНКСИЯ ГРАНДИС",
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 3,
@@ -2895,37 +2866,36 @@
     {
       "id": "1663434696",
       "name_lat": "СПРИНГ ШОУ ЗЕСТ ОФ КЕЙК ИЗАБЕЛЬ / SPRING SHOW ZEST OF CAKE IZABEL",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ ЗЕСТ ОФ КЕЙК ИЗАБЕЛЬ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1908896284",
       "name_lat": "СПАЙК ОФ ТЕРРА-ВИЛДЕРЕР",
-      "name_ru": "",
+      "name_ru": "СПАЙК ОФ ТЕРРА-ВИЛДЕРЕР",
       "breed": "НЕМЕЦКИЙ ДРАТХААР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1804654893",
+      "id": "217959521",
       "name_lat": "СПАРТА ИЗ РОСТОВА ПАПЫ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1368508357",
-      "name_lat": "СПРИНГ ШОУ ИНФАНТА КИАРА ВОЛЬ ЭЛЕГАНТ",
+      "id": "145290866",
+      "name_lat": "СПРИНГ МЕЛОДИ ИЗ СИБИРСКОГО КНЯЖЕСТВА",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2947,19 +2917,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1327985190",
-      "name_lat": "СПЕРИЛЛЕН РЭЙ ОФ ЛАЙТ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "id": "978897279",
+      "name_lat": "СПАНИШ ГРАНД УЛИССА МАДРИДСКИЙ ДВОР ШАМПАНЬ ДЕ ЛЯ",
+      "name_ru": "СПАНИШ ГРАНД УЛИССА МАДРИДСКИЙ ДВОР ШАМПАНЬ ДЕ ЛЯ",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1046184479",
+      "id": "653553550",
       "name_lat": "СПИРИТО ЛУНАРЕ СОЛЕ МИО",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2967,7 +2937,7 @@
     {
       "id": "580429685",
       "name_lat": "СПРИНГ ЧЕЙЗ ИНФИНИТИ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ЧЕЙЗ ИНФИНИТИ",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -2976,7 +2946,7 @@
     {
       "id": "26346628",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЕВРОПА",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЕВРОПА",
       "breed": "БЕРНСКИЙ ШВЕЙЦАРСКИЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -3001,6 +2971,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "633480652",
+      "name_lat": "СПАРТАК",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "185533923",
       "name_lat": "СПАНИШ ГРАНД МАВЕРИК",
       "name_ru": "",
@@ -3012,17 +2990,17 @@
     {
       "id": "1080292136",
       "name_lat": "СПАРТАК КЛОНДАЙК",
-      "name_ru": "",
+      "name_ru": "СПАРТАК КЛОНДАЙК",
       "breed": "английский кокер спаниель",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1573857160",
+      "id": "1083303639",
       "name_lat": "СПАРТАК ФОМ БАЙКАЛ ХАУС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "СПАРТАК ФОМ БАЙКАЛ ХАУС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3100,6 +3078,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "77007482",
+      "name_lat": "СПЛЕНДИД ТРИКОЛОР ПОБЕДА",
+      "name_ru": "",
+      "breed": "ШВЕЙЦАРСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "296226186",
       "name_lat": "СПЕЙС БЕАР ГАРРИ КУПЕР",
       "name_ru": "",
@@ -3136,10 +3122,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1869253408",
+      "id": "1495287285",
       "name_lat": "СПАНИШ ГРАНД ПЭШН",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3226,10 +3212,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1770100640",
+      "id": "1972294261",
       "name_lat": "СПАНИШ ГРАНД АНЕЛИТА",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3271,6 +3257,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "295123145",
+      "name_lat": "СПИСОКЙ ЛИСЬЕГО НОСА СИРТАКИ",
+      "name_ru": "",
+      "breed": "ГШ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1890107196",
+      "name_lat": "СПАНИЕЛЬ NADZEYA PLEASURE 25.07..2026 ИСПАНСКАЯ ВОДЯНАЯ MELNIKAVA ИБЕРИЯ ГРАНТЕ",
+      "name_ru": "",
+      "breed": "ОТСУТСТ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "854947914",
       "name_lat": "СПАРК ГАЛА'С ЧИИТА СТРЕНС ОФ МОУШЕН",
       "name_ru": "",
@@ -3291,7 +3293,7 @@
     {
       "id": "74575044",
       "name_lat": "СПЕЙС БЕАР ЛАТИНА ОЛВЕЙС КВИН",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР ЛАТИНА ОЛВЕЙС КВИН",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 5,
@@ -3300,7 +3302,7 @@
     {
       "id": "1676895117",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ПРЕСИЯ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ПРЕСИЯ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
@@ -3309,27 +3311,43 @@
     {
       "id": "1877953364",
       "name_lat": "СПОРТ ОСКАР РЕЙНОЛЬД ПРЕЗИДЕНТ",
-      "name_ru": "",
+      "name_ru": "СПОРТ ОСКАР РЕЙНОЛЬД ПРЕЗИДЕНТ",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1804474913",
-      "name_lat": "СПЛЕНДИД РОТТ ВИЗЕРИОН",
+      "id": "607561069",
+      "name_lat": "СПАРКЛИНГ КРИСТАЛ ФИДЖЕТ",
+      "name_ru": "СПАРКЛИНГ КРИСТАЛ ФИДЖЕТ",
+      "breed": "СПАНИЕЛЬ-ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1193394701",
+      "name_lat": "СПБСИМОНИКА ВИТУС АЛЭЙР",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1690501224",
-      "name_lat": "СПБСИМОНИКА ВИТУС АЛЭЙР",
+      "id": "1244293840",
+      "name_lat": "СПУТНИК ВЕЛЕСА ПАРТОС",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
+      "breed": "МОПС / PUG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1193505423",
+      "name_lat": "СПИРИТО ДЕЛЛА МОНТАНИЯ ВАЛЕРИО",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3343,10 +3361,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1576237428",
+      "id": "1935914145",
       "name_lat": "СПАРК ГАЛА'С ЭСТАФЕТА",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР /",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3354,16 +3372,24 @@
     {
       "id": "850718772",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР РИДДИК",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР РИДДИК",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "1093654511",
+      "name_lat": "СПЕНСЕР ОЛИВЕР СТОУН",
+      "name_ru": "СПЕНСЕР ОЛИВЕР СТОУН",
+      "breed": "LABRADOR RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1356989416",
       "name_lat": "СПУТНИЦА ЛЮБВИ ТАИСИЯ",
-      "name_ru": "",
+      "name_ru": "СПУТНИЦА ЛЮБВИ ТАИСИЯ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3406,37 +3432,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "255028350",
-      "name_lat": "СПАНИШЬ ГРАНД ЧЕНС",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "509565413",
-      "name_lat": "СПАНИШ ГРАНД УЛИССА",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "173418949",
       "name_lat": "СПЕЙС БЕАР МИШЕЛЬ СЕНТ ПЛЮШ",
       "name_ru": "",
       "breed": "Американски й кокер спаниель",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "256846278",
-      "name_lat": "СПАРТАК ПОЛНАЯ ПОБЕДА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3460,6 +3459,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "292705667",
+      "name_lat": "СПАНИЕЛЬ ОТ ЭРНЕСТА БЕТА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "120661242",
+      "name_lat": "СПАНИШ ГРАНД В МАРКО",
+      "name_ru": "",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1312956463",
       "name_lat": "СПИРИТ ВАЛЬД ЛУМУМБА",
       "name_ru": "",
@@ -3469,12 +3485,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1385149281",
+      "id": "862793408",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР УНИКА",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БЕРНСКИЙ",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР УНИКА",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3498,19 +3514,28 @@
     {
       "id": "80573436",
       "name_lat": "СПУТНИК ОРИОНА ЯМАН",
-      "name_ru": "",
+      "name_ru": "СПУТНИК ОРИОНА ЯМАН",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "127587581",
+      "id": "446966464",
       "name_lat": "СПРИНГ ХАЙДЖ КЛАСС",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "38730290",
+      "name_lat": "СПАРК ГАЛА'С ФОРТЕЦЦА ВОЛАНТЕ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3523,10 +3548,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1672198426",
+      "id": "1202966220",
       "name_lat": "СПИРИТ ФОРЦЕ БАМБИНА АМАТА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3541,37 +3566,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1606187403",
-      "name_lat": "СПУТНИК ОРИОНА ЮРМА НОВАЯ ЭРА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "973156398",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР КРОНДШТАДТ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР КРОНДШТАДТ",
       "breed": "SCHIPPERKE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "672109116",
+      "id": "136021593",
       "name_lat": "СПАЛИШ ГРАНД ВЕСТФАЛИЯ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "name_ru": "СПАЛИШ ГРАНД ВЕСТФАЛИЯ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1941982169",
+      "id": "1050207117",
       "name_lat": "СПИРИТ ФОРЦЕ ЭМПАЙЕР МОТТО",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "СПИРИТ ФОРЦЕ ЭМПАЙЕР МОТТО",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3604,28 +3620,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "96285899",
-      "name_lat": "СПАРК ГАЛА'С ПОСЕЙДОН",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "32463585",
-      "name_lat": "СПАРТА ПОКОРИТЕЛЬ- НИЦА СЕРДЕЦ",
-      "name_ru": "",
+      "id": "1750032727",
+      "name_lat": "СПАРТА ПОКОРИТЕЛЬ-НИЦА СЕРДЕЦ",
+      "name_ru": "СПАРТА ПОКОРИТЕЛЬ-НИЦА СЕРДЕЦ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1053460981",
+      "id": "822562696",
       "name_lat": "СПИРИТ ХАННА МОНТАН",
       "name_ru": "",
-      "breed": "СИБА /",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3642,7 +3649,7 @@
     {
       "id": "73148682",
       "name_lat": "СПРИНГ СИТИ ХЬЮЗА МЭЙДИ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ХЬЮЗА МЭЙДИ",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 2,
@@ -3687,7 +3694,7 @@
     {
       "id": "1354165622",
       "name_lat": "СПИРИТО ЛУНАРЕ АРРОУ",
-      "name_ru": "",
+      "name_ru": "СПИРИТО ЛУНАРЕ АРРОУ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
@@ -3721,19 +3728,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "978897279",
-      "name_lat": "СПАНИШ ГРАНД УЛИССА МАДРИДСКИЙ ДВОР ШАМПАНЬ ДЕ ЛЯ",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "170433839",
+      "id": "1518123819",
       "name_lat": "СПАРК ГАЛА'С ЗЕТА ОФИУЧИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР / RUSSIAN BLACK",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР / RUSSIAN BLACK",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3741,7 +3739,7 @@
     {
       "id": "1337724980",
       "name_lat": "СПРИНГ СИТИ КЕЛЛИ АРЛЕНА",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ КЕЛЛИ АРЛЕНА",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 2,
@@ -3757,18 +3755,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "38730290",
-      "name_lat": "СПАРК ГАЛА'С ФОРТЕЦЦА ВОЛАНТЕ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1988133169",
       "name_lat": "СПРИНГ СИТИ ХЕЗЕР ГРАНИЯ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ХЕЗЕР ГРАНИЯ",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 4,
@@ -3777,7 +3766,7 @@
     {
       "id": "1110628585",
       "name_lat": "СПРИНГ ШОУ ЖАН ЖАК РУССО",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ ЖАН ЖАК РУССО",
       "breed": "СПИНОНЕ",
       "breed_en": "",
       "total_shows": 10,
@@ -3793,10 +3782,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "270771057",
+      "id": "1859472261",
       "name_lat": "СПИРИТ ФОРЦЕ БЕЛЛА ДОННА",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "СПИРИТ ФОРЦЕ БЕЛЛА ДОННА",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -3813,7 +3802,7 @@
     {
       "id": "336493078",
       "name_lat": "СПРИНГ ШОУ Ж'ЭМПОРИО АРМАНИ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ Ж'ЭМПОРИО АРМАНИ",
       "breed": "ИТАЛЬЯНСКИЙ СПИНОНЕ",
       "breed_en": "",
       "total_shows": 6,
@@ -3822,7 +3811,7 @@
     {
       "id": "1798432686",
       "name_lat": "СПЕЙС БЕАР ЭРИКА МАЙ СВИНТ ХЕАРТ",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР ЭРИКА МАЙ СВИНТ ХЕАРТ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -3831,7 +3820,7 @@
     {
       "id": "1231182779",
       "name_lat": "СПАРКЛИНГ КРИСТАЛ",
-      "name_ru": "",
+      "name_ru": "СПАРКЛИНГ КРИСТАЛ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 5,
@@ -3840,10 +3829,19 @@
     {
       "id": "258727085",
       "name_lat": "СПИРИТО ДЕЛЛА МОНТАНИЯ ДОМЕНИКО",
-      "name_ru": "",
+      "name_ru": "СПИРИТО ДЕЛЛА МОНТАНИЯ ДОМЕНИКО",
       "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "797849225",
+      "name_lat": "СПРИНГ СИТИ УЛА САДИ",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3867,17 +3865,26 @@
     {
       "id": "1239489733",
       "name_lat": "СПАРТАК ВИКТОРИ",
-      "name_ru": "",
+      "name_ru": "СПАРТАК ВИКТОРИ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "267538152",
+      "id": "737760433",
+      "name_lat": "СПИРИТ ФОРЦЕ ЧАЯ",
+      "name_ru": "СПИРИТ ФОРЦЕ ЧАЯ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "255070166",
       "name_lat": "СПИРИТ ФОРЦЕ ИННЕР ЛАЙФ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "СПИРИТ ФОРЦЕ ИННЕР ЛАЙФ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3885,17 +3892,8 @@
     {
       "id": "538935737",
       "name_lat": "СПЕЛАЯ ВИШНЯ ИЗ ВОЙСКА ТАМЕРЛАНА",
-      "name_ru": "",
+      "name_ru": "СПЕЛАЯ ВИШНЯ ИЗ ВОЙСКА ТАМЕРЛАНА",
       "breed": "СТАФФОРДШИРСКИЙ АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1413747805",
-      "name_lat": "СПИРИТ ФОРЦЕ ЧАЯ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3903,7 +3901,7 @@
     {
       "id": "962419059",
       "name_lat": "СПЭЙС ЭНСЛЭЙВЕР ТАНОС К/Х",
-      "name_ru": "",
+      "name_ru": "СПЭЙС ЭНСЛЭЙВЕР ТАНОС К/Х",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -3915,24 +3913,6 @@
       "name_ru": "",
       "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "SPANISH MASTIFF",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1362656933",
-      "name_lat": "СПЛЕНДИД РОТТ ТЕСЛА",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "797849225",
-      "name_lat": "СПРИНГ СИТИ УЛА САДИ",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -3955,9 +3935,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "1116572594",
+      "name_lat": "СПРИНГ ЧЕЙЗ КИССЕС ОФ ФИРЕ",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "383027348",
+      "name_lat": "СПЛЕНДИД ТРИКОЛОР ЖГУЧАЯ БРЮНЕТКА",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1272101556",
       "name_lat": "СПЕРИЛЛЕН ЭКСЕЛЕНТ ДЖАЗ МИЛКИ",
-      "name_ru": "",
+      "name_ru": "СПЕРИЛЛЕН ЭКСЕЛЕНТ ДЖАЗ МИЛКИ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 3,
@@ -3966,7 +3963,7 @@
     {
       "id": "701550702",
       "name_lat": "СПИРИТО ДЕЛЛА МОНТАНИЯ ДЖУСТИНА",
-      "name_ru": "",
+      "name_ru": "СПИРИТО ДЕЛЛА МОНТАНИЯ ДЖУСТИНА",
       "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -3975,35 +3972,35 @@
     {
       "id": "227223620",
       "name_lat": "СПАРТАК ПЕСНЬ ГЛАДИАТОРОВ",
-      "name_ru": "",
+      "name_ru": "СПАРТАК ПЕСНЬ ГЛАДИАТОРОВ",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "607561069",
-      "name_lat": "СПАРКЛИНГ КРИСТАЛ ФИДЖЕТ",
-      "name_ru": "",
-      "breed": "СПАНИЕЛЬ-ПАПИЙОН",
+      "id": "1831116059",
+      "name_lat": "СПИРИТ ВАЛЬД ТОР КОРОЛЕВСКИЙ СЫН",
+      "name_ru": "СПИРИТ ВАЛЬД ТОР КОРОЛЕВСКИЙ СЫН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "149005431",
+      "id": "805631073",
       "name_lat": "СПРАЙТЛИ ЛАУТ СПАЙСИ САН",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
+      "name_ru": "СПРАЙТЛИ ЛАУТ СПАЙСИ САН",
+      "breed": "СКАЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1964548637",
+      "id": "1848386216",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ГОЛИАФ",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ГОЛИАФ",
+      "breed": "АМЕРИКАНСКИЙ БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4011,17 +4008,8 @@
     {
       "id": "1852412663",
       "name_lat": "СПРИНГ ШОУ ВЕНСАН КАССЕЛЬ",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ ВЕНСАН КАССЕЛЬ",
       "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "678973974",
-      "name_lat": "СПИРИТ ВАЛЬД ТОР КОРОЛЕВСКИЙ СЫН",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4072,10 +4060,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1380074023",
+      "id": "646489511",
       "name_lat": "СПАРКИ СТАР",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736801282",
+      "name_lat": "СПИРИТО ЛУНАРЕ АМЕТИСТ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1322217243",
+      "name_lat": "СПИРИТО ЛУНАРЕ АКВАМАРИН",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4108,10 +4114,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "842268780",
+      "id": "874438217",
       "name_lat": "СПИРИТ ВАЛЬД ОЛИВИЯ ЭНДЖЕЛ АЙС",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4135,15 +4141,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1814898362",
-      "name_lat": "СПИРИТО ЛУНАРЕ АМЕТИСТ",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1696471731",
       "name_lat": "СПЭЙС ИНВЕЙДЕРС ЭДМОН ДАНТЕС",
       "name_ru": "",
@@ -4158,6 +4155,14 @@
       "name_ru": "",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "971423598",
+      "name_lat": "СПАЙК ИЗ ЖУРАВЛИНОГО КЛИНА",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4225,10 +4230,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1138856591",
+      "id": "933557704",
       "name_lat": "СПАЙКВЭЛ КРОНОС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4270,11 +4275,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1126576899",
-      "name_lat": "СПАРК ГАЛА'С ЭРОТИКА",
+      "id": "1615153229",
+      "name_lat": "СПРИНГ ЧЕЙЗ ЛИНКОЛЬН",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181078638",
+      "name_lat": "СПАРТА 2 ИЗ БЕРЕЗОВОГО ЛОГА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4290,7 +4302,7 @@
     {
       "id": "1799479790",
       "name_lat": "СПЕНСЕР ФОН ХАУС ДЕВАРТИС",
-      "name_ru": "",
+      "name_ru": "СПЕНСЕР ФОН ХАУС ДЕВАРТИС",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 2,
@@ -4299,7 +4311,7 @@
     {
       "id": "1208898219",
       "name_lat": "СПРИНГ ШОУ БРАЙТ ФАЙЕР",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ БРАЙТ ФАЙЕР",
       "breed": "КОНТИНЕНТ. ТОЙ СПАНИЕЛЬ-ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
@@ -4308,17 +4320,26 @@
     {
       "id": "947071652",
       "name_lat": "СПЛЕНДИД РОТТ ВИВЬЕН ЛИ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД РОТТ ВИВЬЕН ЛИ",
       "breed": "ROTTWEILER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "917316573",
+      "id": "1902748276",
+      "name_lat": "СПЕЙС СТАР ЖЕФФИ КУЛ",
+      "name_ru": "СПЕЙС СТАР ЖЕФФИ КУЛ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "63789952",
       "name_lat": "СПЭЙС СТАР ВЛАСТА ФАНТАСТИШ БАТЕРФЛЯЙ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "name_ru": "СПЭЙС СТАР ВЛАСТА ФАНТАСТИШ БАТЕРФЛЯЙ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4326,7 +4347,7 @@
     {
       "id": "790217425",
       "name_lat": "СПИРИТА ДЕЛЛА МОНТАНИЯ ГОРДИАН",
-      "name_ru": "",
+      "name_ru": "СПИРИТА ДЕЛЛА МОНТАНИЯ ГОРДИАН",
       "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -4335,8 +4356,26 @@
     {
       "id": "648802216",
       "name_lat": "СПРИНГ ШОУ БЕССАММЕ МУЧО",
-      "name_ru": "",
+      "name_ru": "СПРИНГ ШОУ БЕССАММЕ МУЧО",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "58098075",
+      "name_lat": "СПАНИЕЛЬ ОТ ЭРНЕСТА АРУНА",
+      "name_ru": "СПАНИЕЛЬ ОТ ЭРНЕСТА АРУНА",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1336995533",
+      "name_lat": "СПАРК ГАЛА'С ЦУКАТА",
+      "name_ru": "СПАРК ГАЛА'С ЦУКАТА",
+      "breed": "RUSSIAN BLACK TERRIER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4344,17 +4383,17 @@
     {
       "id": "302509456",
       "name_lat": "СПЕЙС БЕАР СТРАЙВ ФО ГРЕАТНЕСС",
-      "name_ru": "",
+      "name_ru": "СПЕЙС БЕАР СТРАЙВ ФО ГРЕАТНЕСС",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "927555516",
+      "id": "1507840985",
       "name_lat": "СПАНИШ ГРАНД ВИВИАН",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "name_ru": "СПАНИШ ГРАНД ВИВИАН",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4362,17 +4401,8 @@
     {
       "id": "275615766",
       "name_lat": "СПРИНГ СИТИ ЭНРИКА Д'ОРО",
-      "name_ru": "",
+      "name_ru": "СПРИНГ СИТИ ЭНРИКА Д'ОРО",
       "breed": "КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1975816425",
-      "name_lat": "СПИРИТО ЛУНАРЕ АКВАМАРИН",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4380,7 +4410,7 @@
     {
       "id": "436134171",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР БОМОНТ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР БОМОНТ",
       "breed": "АРГЕНТИНСКИЙДОГ БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -4389,7 +4419,7 @@
     {
       "id": "1673317968",
       "name_lat": "СПАЙСИ САН РЕЙ",
-      "name_ru": "",
+      "name_ru": "СПАЙСИ САН РЕЙ",
       "breed": "SPITZ MINIATURE SPITZ ORANGE, GREY, OTHER",
       "breed_en": "",
       "total_shows": 2,
@@ -4398,7 +4428,7 @@
     {
       "id": "285601051",
       "name_lat": "СПИРИНГ ШОУ ВИТТОРИО ШАРЛОТ",
-      "name_ru": "",
+      "name_ru": "СПИРИНГ ШОУ ВИТТОРИО ШАРЛОТ",
       "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
@@ -4407,8 +4437,17 @@
     {
       "id": "1932340215",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ЖАЗИРА ДИОСА",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИД ТРИКОЛОР ЖАЗИРА ДИОСА",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1657658460",
+      "name_lat": "СПЕЛАЯ БРУСНИЧКА",
+      "name_ru": "СПЕЛАЯ БРУСНИЧКА",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4416,17 +4455,8 @@
     {
       "id": "447742122",
       "name_lat": "СПЛЕНДИТ СТАРЛАЙТ ИЗ ДОМА АНГЕЛИНЫ",
-      "name_ru": "",
+      "name_ru": "СПЛЕНДИТ СТАРЛАЙТ ИЗ ДОМА АНГЕЛИНЫ",
       "breed": "ВОСТОЧНОЕВРОПЕ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1439880207",
-      "name_lat": "СПЕЕД ШРИНКИНГ ФЕОДОРА ФЛИНТС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4450,10 +4480,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1874827433",
+      "id": "93039741",
       "name_lat": "СПАЙК",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4477,6 +4507,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1537225427",
+      "name_lat": "СПАРТАК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "551872912",
       "name_lat": "СПАРТА",
       "name_ru": "",
@@ -4486,10 +4524,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1689222455",
+      "id": "463068327",
       "name_lat": "СПРИНГ ШОУ",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ АМЕРИКАНСКИЙ АМЕРИКАНСКИЙ АМЕРИКАНСКИЙ",
+      "breed": "ШАР ПЕЙ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4504,10 +4542,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "155267935",
+      "id": "98649791",
       "name_lat": "СПЭРО",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4576,19 +4614,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "521044821",
+      "id": "854664121",
       "name_lat": "СПАРТАК",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1702878469",
+      "id": "355490626",
       "name_lat": "СПРАВЕДЛИ",
       "name_ru": "",
-      "breed": "КОРОТКОШЕ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4621,6 +4659,76 @@
       "competition_dog_id": null
     },
     {
+      "id": "135184455",
+      "name_lat": "Спайси Марракеш",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1182227280",
+      "name_lat": "СПИРИТ ФОРЦЕ ФЕЛИЧИТА НЕЙ ПАЛМИ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "988002467",
+      "name_lat": "СПРИНГ ШОУ ЗЕЭЛИС АНГЕЛИК МАГИК",
+      "name_ru": "",
+      "breed": "СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1729136051",
+      "name_lat": "СПАНЖИФАЙ ИМПЕРИАЛ КРАЙЛЕР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "342899773",
+      "name_lat": "СПРИНГ СИТИ ДРИМ ОФ АБИГЕЙЛ",
+      "name_ru": "",
+      "breed": "ВОЛЬФХАУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1372794131",
+      "name_lat": "СПРИНГ СИТИ ИНБЕР ХАКОН",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1322437245",
+      "name_lat": "СПРИНГ СИТИ МЭРИЭЛ АХАНА",
+      "name_ru": "",
+      "breed": "ВОЛЬФХАУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1297711851",
+      "name_lat": "СПРИНГ СИТИ МИРНА АРЛЕТТА",
+      "name_ru": "",
+      "breed": "ВОЛЬФХАУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1291862047",
       "name_lat": "СПАНИШ ГРАНД ТРИНИТИ",
       "name_ru": "",
@@ -4632,15 +4740,6 @@
     {
       "id": "950865061",
       "name_lat": "СПАНИШ ГРАНД ТИФФАНИ",
-      "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ",
-      "breed_en": "SPANISH MASTIFF",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "525841875",
-      "name_lat": "СПАНИШ ГРАНД МАЛЕНА",
       "name_ru": "",
       "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "SPANISH MASTIFF",
@@ -4684,10 +4783,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "160291726",
+      "id": "68772617",
       "name_lat": "СПРИНГ СИТИ ЛЕТИЦИЯ ОРНЭЛЛА",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4738,10 +4837,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1853843436",
+      "id": "1242560969",
       "name_lat": "СПЛЕНДИД ТРИКОЛОР ГОТА",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4751,15 +4850,6 @@
       "name_lat": "СПЯЩАЯ КРАСАВИЦА МАЛИФИСЕНТА",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "379393355",
-      "name_lat": "Спайси Марракеш",
-      "name_ru": "",
-      "breed": "ГОЛЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4783,15 +4873,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1902748276",
-      "name_lat": "СПЕЙС СТАР ЖЕФФИ КУЛ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1933904908",
       "name_lat": "СПЭРРОУ`С ГАРС ДАФФИ",
       "name_ru": "",
@@ -4810,10 +4891,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "722904953",
+      "id": "1244710212",
       "name_lat": "СПАНИШ ГРАНД ПАНДОРА",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4900,15 +4981,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "307997372",
-      "name_lat": "Спэйс Стар Жеффи Кул",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "329390418",
       "name_lat": "СПЕЙС БЕАР ЛАВ БРАЙТ ДЖАЙВ",
       "name_ru": "",
@@ -4936,28 +5008,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1182227280",
-      "name_lat": "СПИРИТ ФОРЦЕ ФЕЛИЧИТА НЕЙ ПАЛМИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "262947684",
+      "id": "762596241",
       "name_lat": "СПАРТАК СТАР САКСЕС",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "782708787",
+      "id": "1421029411",
       "name_lat": "СПИРИТ ФОРЦЕ ЧАБОРЗ ГРОЗНЫЙ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4972,10 +5035,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "251616220",
+      "id": "999236114",
       "name_lat": "СПАРТТАЙМ АЛЬКОНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5035,10 +5098,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "559101086",
+      "id": "1755886503",
       "name_lat": "СПРИНГ СИТИ ЛОРЕНЦА АЛЕССИЯ",
       "name_ru": "",
-      "breed": "КАНЕ КОРСО /",
+      "breed": "КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5053,10 +5116,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1672561709",
+      "id": "1308975108",
       "name_lat": "СПОЛОХИ ИЗ СТРАНЫ СНЕГОВ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ /",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5125,28 +5188,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "178824756",
-      "name_lat": "СПЕНСЕР ОЛИВЕР СТОУН",
+      "id": "1703173433",
+      "name_lat": "С ПРИКУБАНСКОГО ЛЕКСУС",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "166534683",
-      "name_lat": "СПАНИЕЛЬ ОТ ЭРНЕСТА АРУНА",
-      "name_ru": "",
-      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "19695179",
+      "id": "754509115",
       "name_lat": "СПИРИТ ФОРЦЕ ФЛЕЙМ ЛАВ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5161,19 +5215,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1371388785",
+      "id": "703229362",
       "name_lat": "СПАЙКВЭЛ ЕРМИНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1336995533",
-      "name_lat": "СПАРК ГАЛА'С ЦУКАТА",
-      "name_ru": "",
-      "breed": "RUSSIAN BLACK TERRIER",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5188,11 +5233,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "1415257111",
+      "name_lat": "СПЛЕНДИД ТРИКОЛОР ХИТАЧИ",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "62835353",
+      "name_lat": "СПЕЙС БЕАР РОЙ НАЙС",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ПЕРЕЦ С",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "618201681",
       "name_lat": "СПРАЙТЛИ ЛАУТ ОЛД СМАГГЛЕР",
       "name_ru": "",
       "breed": "скотч терьер",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "416659651",
+      "name_lat": "СПЛЕНДИД ТРИКОЛОР ВИТТЕН",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5215,20 +5284,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1328049342",
-      "name_lat": "СПИРИТУС ЛИБЕРАТИС АДЕЛАИДА",
+      "id": "549265260",
+      "name_lat": "СПИРИТ ОВ ВИКТОРИИ ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "971423598",
-      "name_lat": "СПАЙК ИЗ ЖУРАВЛИНОГО КЛИНА",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5256,6 +5315,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1833420180",
+      "name_lat": "СПРИНГТАЙМ СТАР ДЮ МОНД",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5359,10 +5426,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "150295891",
+      "id": "148114648",
       "name_lat": "СПРИНГ СИТИ АЛОИЗО ДАРИО",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5413,10 +5480,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1226118206",
+      "id": "1354433369",
       "name_lat": "СПРИНГ СИТИ АРТУРО ФАУСТО",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5431,19 +5498,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "844755985",
+      "id": "160424108",
       "name_lat": "СПАРТА ИЗ ДОМА ВНУКОВЫХ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "979471811",
+      "id": "136301226",
       "name_lat": "СПИРИТ ВАЛЬД НЕРОН",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5566,15 +5633,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "514400480",
-      "name_lat": "СПЕЛАЯ БРУСНИЧКА",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "48706912",
       "name_lat": "СПАРТА ИЗ АЛЕКСАНДРОВ ГРАДА",
       "name_ru": "",
@@ -5683,15 +5741,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "342899773",
-      "name_lat": "СПРИНГ СИТИ ДРИМ ОФ АБИГЕЙЛ",
-      "name_ru": "",
-      "breed": "ВОЛЬФХАУНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "173558288",
       "name_lat": "СПЕРИЛЛЕН КЕББИ ФАЕР",
       "name_ru": "",
@@ -5719,28 +5768,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1372794131",
-      "name_lat": "СПРИНГ СИТИ ИНБЕР ХАКОН",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1381759165",
+      "id": "1303932544",
       "name_lat": "СПРИНГ КАШЕМИР ВЕ КИНГ ОФ МАЙ",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "205385111",
+      "id": "295695987",
       "name_lat": "СПЕЙС БЕАР ВИТО",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5782,20 +5822,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1116572594",
-      "name_lat": "СПРИНГ ЧЕЙЗ КИССЕС ОФ ФИРЕ",
+      "id": "1015390887",
+      "name_lat": "СПРИНГ ЧЕЙЗ МЕЙК МИ ХЕППИ",
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1322437245",
-      "name_lat": "СПРИНГ СИТИ МЭРИЭЛ АХАНА",
-      "name_ru": "",
-      "breed": "ВОЛЬФХАУНД",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5827,20 +5857,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974664683",
-      "name_lat": "СПЕЕД ШРИНКИНГ ФЕЕРИЯ",
+      "id": "677165925",
+      "name_lat": "СПАНИЕЛЬ NADZEYA КЭНДИ 25.07..2026 ФЭЙШИНЭЙШН ШОУ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1297711851",
-      "name_lat": "СПРИНГ СИТИ МИРНА АРЛЕТТА",
-      "name_ru": "",
-      "breed": "ВОЛЬФХАУНД",
-      "breed_en": "",
+      "breed": "ТАТЬЯНИН КАВ ВОРЛД",
       "total_shows": 1,
       "competition_dog_id": null
     },

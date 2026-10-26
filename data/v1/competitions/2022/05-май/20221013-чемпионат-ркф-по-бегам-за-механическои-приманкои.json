@@ -1,0 +1,1196 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-25T22:46:20.994Z",
+  "source": "manual-entry",
+  "event_id": 20221013,
+  "event": {
+    "id": 20221013,
+    "year": 2022,
+    "date_start": "2022-05-14",
+    "date_end": "2022-05-14",
+    "rank_label": "",
+    "event_type": "bzmp",
+    "competition_kind": "",
+    "competition_type": "",
+    "title": "Чемпионат РКФ по бегам за механической приманкой (курсинг)",
+    "host_club": null,
+    "region": null,
+    "location": "Ярославская область, село Великое",
+    "catalog_url": null,
+    "results_url": null,
+    "rules_url": null,
+    "results_pdf_url": null,
+    "confirmed": 1,
+    "last_modified": "2026-10-25T22:46:20.994Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": [
+      "Орлова М.О.",
+      "Крылова Е.В."
+    ],
+    "track_schemes": []
+  },
+  "result_count": 13,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20221013,
+      "dog_id": 11023,
+      "breed_class": "Американский пит-бультерьер - Стандартный - Общая",
+      "catalog_no": 2,
+      "placement": 1,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 8,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  16,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 162
+          }
+        ],
+        "grand_total": 334,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11023,
+        "dog_key": "istinnaya-tsennost--американскии-пит-бультер",
+        "name_lat": "ISTINNAYA TSENNOST",
+        "name_ru": "ИСТИННАЯ ЦЕННОСТЬ",
+        "breed": "Американский пит-бультерьер",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20221013,
+      "dog_id": 11024,
+      "breed_class": "Американский пит-бультерьер - Стандартный - Общая",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  17,
+                  18,
+                  15,
+                  15
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  14,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 8,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 174
+          }
+        ],
+        "grand_total": 330,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11024,
+        "dog_key": "pit4life-placebo--американскии-пит-бультер",
+        "name_lat": "PIT4LIFE PLACEBO",
+        "name_ru": "PIT4LIFE PLACEBO",
+        "breed": "Американский пит-бультерьер",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20221013,
+      "dog_id": 11025,
+      "breed_class": "Американский пит-бультерьер - Юниоры - Кобели",
+      "catalog_no": 3,
+      "placement": 1,
+      "total_score": 351,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Лучший юниор",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 178
+          },
+          {
+            "heat_number": 9,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 173
+          }
+        ],
+        "grand_total": 351,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11025,
+        "dog_key": "brave-fighter-s-toretto--американскии-пит-бультер",
+        "name_lat": "BRAVE FIGHTER'S TORETTO",
+        "name_ru": "BRAVE FIGHTER'S TORETTO",
+        "breed": "Американский пит-бультерьер",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20221013,
+      "dog_id": 11026,
+      "breed_class": "Американский пит-бультерьер - Юниоры - Кобели",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 9,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  18
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 176
+          }
+        ],
+        "grand_total": 347,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11026,
+        "dog_key": "brave-fighter-s-unchain-my-heart--американскии-пит-бультер",
+        "name_lat": "BRAVE FIGHTER'S UNCHAIN MY HEART",
+        "name_ru": "BRAVE FIGHTER'S UNCHAIN MY HEART",
+        "breed": "Американский пит-бультерьер",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20221013,
+      "dog_id": 9217,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Общая",
+      "catalog_no": 5,
+      "placement": 1,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  18,
+                  16,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 10,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  19,
+                  18,
+                  17,
+                  19,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 176
+          }
+        ],
+        "grand_total": 338,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9217,
+        "dog_key": "лан-браит-бугатти-блэк-lan-bright-bugatt--американскии-стаффордшир",
+        "name_lat": "ЛАН БРАЙТ БУГАТТИ БЛЭК /LAN BRIGHT BUGATTI BLACK",
+        "name_ru": "ЛАН БРАЙТ БУГАТТИ БЛЭК /LAN BRIGHT BUGATTI BLACK",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20221013,
+      "dog_id": 9438,
+      "breed_class": "Американский стаффордширский терьер - Стандартный - Общая",
+      "catalog_no": 6,
+      "placement": 2,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 10,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  16,
+                  17
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 167
+          }
+        ],
+        "grand_total": 338,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9438,
+        "dog_key": "russkiy-favorit-bessonnaya-noch--американскии-стаффордшир",
+        "name_lat": "RUSSKIY FAVORIT BESSONNAYA NOCH",
+        "name_ru": "РУССКИЙ ФАВОРИТ БЕССОННАЯ НОЧЬ",
+        "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20221013,
+      "dog_id": 11027,
+      "breed_class": "Бигль - Стандартный - Общая",
+      "catalog_no": 9,
+      "placement": 1,
+      "total_score": 351,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 181
+          },
+          {
+            "heat_number": 11,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  19,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 170
+          }
+        ],
+        "grand_total": 351,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11027,
+        "dog_key": "brava-vista-milonga--бигль",
+        "name_lat": "BRAVA VISTA MILONGA",
+        "name_ru": "БРАВА ВИСТА МИЛОНГА",
+        "breed": "Бигль",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20221013,
+      "dog_id": 9220,
+      "breed_class": "Бигль - Стандартный - Общая",
+      "catalog_no": 7,
+      "placement": 2,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 165
+          },
+          {
+            "heat_number": 11,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  15,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 168
+          }
+        ],
+        "grand_total": 333,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9220,
+        "dog_key": "арес--бигль",
+        "name_lat": "АРЕС",
+        "name_ru": "АРЕС",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20221013,
+      "dog_id": 10386,
+      "breed_class": "Бигль - Стандартный - Общая",
+      "catalog_no": 8,
+      "placement": 3,
+      "total_score": 301,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  14,
+                  17,
+                  16,
+                  13,
+                  13
+                ],
+                "sum": 73
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  14,
+                  16,
+                  16,
+                  14,
+                  15
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 148
+          },
+          {
+            "heat_number": 12,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 77
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  15,
+                  15,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 153
+          }
+        ],
+        "grand_total": 301,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10386,
+        "dog_key": "манифик-мет-юлиан--бигль",
+        "name_lat": "МАНИФИК МЕТ ЮЛИАН",
+        "name_ru": "МАНИФИК МЕТ ЮЛИАН",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20221013,
+      "dog_id": 9232,
+      "breed_class": "Метис - Стандартный - Общая",
+      "catalog_no": 10,
+      "placement": 1,
+      "total_score": 343,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  16,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 170
+          },
+          {
+            "heat_number": 14,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 173
+          }
+        ],
+        "grand_total": 343,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9232,
+        "dog_key": "боня--метис",
+        "name_lat": "BONYA",
+        "name_ru": "БОНЯ",
+        "breed": "МЕТИС",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20221013,
+      "dog_id": 9236,
+      "breed_class": "Метис - Стандартный - Общая",
+      "catalog_no": 13,
+      "placement": 2,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 178
+          },
+          {
+            "heat_number": 14,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  14,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 161
+          }
+        ],
+        "grand_total": 339,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9236,
+        "dog_key": "кнопа--метис",
+        "name_lat": "KNOPA",
+        "name_ru": "КНОПА",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20221013,
+      "dog_id": 11008,
+      "breed_class": "Метис - Стандартный - Общая",
+      "catalog_no": 12,
+      "placement": 3,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 13,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 168
+          }
+        ],
+        "grand_total": 334,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11008,
+        "dog_key": "dzhina--метис",
+        "name_lat": "DZHINA",
+        "name_ru": "ДЖИНА",
+        "breed": "Метис",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20221013,
+      "dog_id": 9230,
+      "breed_class": "Метис - Стандартный - Общая",
+      "catalog_no": 11,
+      "placement": 4,
+      "total_score": 332,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 13,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  18,
+                  15,
+                  18
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 163
+          }
+        ],
+        "grand_total": 332,
+        "format": "coursing"
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9230,
+        "dog_key": "пес--метис",
+        "name_lat": "PES",
+        "name_ru": "ПЕС",
+        "breed": "МЕТИС",
+        "sex": "Кобель",
+        "owner": null
+      }
+    }
+  ]
+}

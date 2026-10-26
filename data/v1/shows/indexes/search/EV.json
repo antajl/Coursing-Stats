@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EV",
-  "count": 1068,
+  "count": 1097,
   "dogs": [
     {
       "id": "1306194679",
@@ -9,7 +9,16 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
-      "total_shows": 51,
+      "total_shows": 59,
+      "competition_dog_id": null
+    },
+    {
+      "id": "481636181",
+      "name_lat": "EVLASTRA VALS YUZHNOGO VETRA",
+      "name_ru": "ЕВЛАСТРА ВАЛЬС ЮЖНОГО ВЕТРА",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "SHIH TZU",
+      "total_shows": 54,
       "competition_dog_id": null
     },
     {
@@ -18,7 +27,25 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 81,
+      "total_shows": 94,
+      "competition_dog_id": null
+    },
+    {
+      "id": "855763698",
+      "name_lat": "EVGENIYA IZ FORTUNA MERDI",
+      "name_ru": "ЕВГЕНИЯ ИЗ ФОРТУНА МЕРДИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 60,
+      "competition_dog_id": null
+    },
+    {
+      "id": "39355099",
+      "name_lat": "EVONTY DAENERYS STORMBORN",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "BASENJI",
+      "total_shows": 55,
       "competition_dog_id": null
     },
     {
@@ -28,15 +55,6 @@
       "breed": "БАСЕНДЖИ",
       "breed_en": "BASENJI",
       "total_shows": 94,
-      "competition_dog_id": null
-    },
-    {
-      "id": "39355099",
-      "name_lat": "EVONTY DAENERYS STORMBORN",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "BASENJI",
-      "total_shows": 50,
       "competition_dog_id": null
     },
     {
@@ -58,37 +76,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "481636181",
-      "name_lat": "EVLASTRA VALS YUZHNOGO VETRA",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "SHIH TZU",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1603488508",
+      "id": "1598763475",
       "name_lat": "EVAN KAUFMAN DE ZAUBER HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1792568147",
+      "id": "110971971",
       "name_lat": "EVGEN POLI EVEREST",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 48,
       "competition_dog_id": null
     },
     {
-      "id": "965941893",
+      "id": "1729819467",
+      "name_lat": "EVAK'S SPRING JAZZ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1758392617",
       "name_lat": "EVLADICHE VALKIRIYA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 39,
       "competition_dog_id": null
@@ -108,7 +126,7 @@
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "BASENJI",
-      "total_shows": 46,
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
@@ -117,32 +135,32 @@
       "name_ru": "",
       "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1729819467",
-      "name_lat": "EVAK'S SPRING JAZZ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "778309984",
+      "id": "1797047861",
       "name_lat": "EVANTA STIL GALATEYA",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "763677573",
+      "id": "1099857619",
+      "name_lat": "EVRIKA IZ DOMA GRIMALDI",
+      "name_ru": "ЭВРИКА ИЗ ДОМА ГРИМАЛЬДИ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1602648265",
       "name_lat": "EVERT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -157,6 +175,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "843971544",
+      "name_lat": "EVE VON AISCHTAL BLICK",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
       "id": "479771752",
       "name_lat": "EVERLASTING LOVE S TAGANIEGO ROGA",
       "name_ru": "",
@@ -166,21 +193,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "663083985",
+      "id": "1513129580",
       "name_lat": "EVOLUTION GOLD TEDDY",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "331699526",
+      "id": "1099787199",
       "name_lat": "EVDOGSTAR PERVAYA LADY",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -189,7 +216,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 83,
+      "total_shows": 88,
       "competition_dog_id": null
     },
     {
@@ -211,10 +238,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "857948152",
+      "id": "281567468",
       "name_lat": "EVALAIZ HABANERA",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -226,6 +253,24 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "154279613",
+      "name_lat": "EVLADICHE FEYR PLEY",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1443833071",
+      "name_lat": "EVLADICHE OLIMPIKA",
+      "name_ru": "ЕВЛАДИЧЕ ОЛИМПИКА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -247,21 +292,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1037197360",
+      "id": "613922084",
       "name_lat": "EVERT",
       "name_ru": "",
-      "breed": "ШЁРСТНА",
+      "breed": "ШЕРСТНА",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1940884735",
-      "name_lat": "EVE VON AISCHTAL BLICK",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -270,25 +306,25 @@
       "name_ru": "",
       "breed": "ПРАЖСКИЙ КРЫСАРИК",
       "breed_en": "PRAGUE RATTER",
-      "total_shows": 22,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1693175334",
+      "id": "1056158814",
+      "name_lat": "EVEREST GLORIOSO",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "breed_en": "",
+      "total_shows": 76,
+      "competition_dog_id": null
+    },
+    {
+      "id": "27285249",
       "name_lat": "EVLADICHE SHISEIDO EVER BLOOM",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1294592869",
-      "name_lat": "EVA VALENSIYA DLYA MILENAS KHAUS",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -297,7 +333,33 @@
       "name_ru": "",
       "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "FLAT COATED RETRIEVER",
-      "total_shows": 14,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1141714439",
+      "name_lat": "EVANGELINA OT NEVSKOGO HOBBITA",
+      "name_ru": "",
+      "breed": "ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "712572937",
+      "name_lat": "EVA VALENSIYA DLYA MILENAS KHAUS",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "560203815",
+      "name_lat": "EVGENIY OT NEVSKOGO HOBBITA",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -307,6 +369,15 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1930025218",
+      "name_lat": "EVARAUTALA DEL GUARDENGO",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "breed_en": "ENGLISH POINTER",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -328,28 +399,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1930025218",
-      "name_lat": "EVARAUTALA DEL GUARDENGO",
+      "id": "795720362",
+      "name_lat": "EVA STAR LINE EMA KRASAVITSA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
-      "breed_en": "ENGLISH POINTER",
-      "total_shows": 21,
+      "breed": "ТОЙ-ФОКСТЕРЬЕР",
+      "breed_en": "TOY FOX TERRIER",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "1056158814",
-      "name_lat": "EVEREST GLORIOSO",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 68,
-      "competition_dog_id": null
-    },
-    {
-      "id": "68714856",
+      "id": "1113700855",
       "name_lat": "EVIL FORKAS LEKSA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -364,10 +426,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "183502458",
+      "id": "663261387",
       "name_lat": "EVZEN PODSKALSKE DOLEJSI",
       "name_ru": "",
-      "breed": "ПРАЖСКИЙ КРЫСАРИК /",
+      "breed": "ПРАЖСКИЙ КРЫСАРИК",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -391,15 +453,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "795720362",
-      "name_lat": "EVA STAR LINE EMA KRASAVITSA",
-      "name_ru": "",
-      "breed": "ТОЙ-ФОКСТЕРЬЕР",
-      "breed_en": "TOY FOX TERRIER",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
       "id": "249738958",
       "name_lat": "EVA KOROLEVA",
       "name_ru": "",
@@ -418,21 +471,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1725870648",
+      "id": "1512478563",
       "name_lat": "EVA BLYUZ TERRA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1099857619",
-      "name_lat": "EVRIKA IZ DOMA GRIMALDI",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "YORKSHIRE TERRIER",
-      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -441,14 +485,14 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ, СЕРЫЙ",
       "breed_en": "POODLE MINIATURE FAWN, GREY",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "134140116",
+      "id": "876599240",
       "name_lat": "EVLADICHE MARSHAL BLACK SILVERY STAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
@@ -481,12 +525,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1642535813",
+      "id": "328461976",
       "name_lat": "EVERYONE'S DREAM KAYROS",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "52379223",
+      "name_lat": "EVFRAT OT V.K. KANGAL TURK KAN",
+      "name_ru": "",
+      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
+      "breed_en": "KANGAL SHEPHERD DOG",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -499,19 +552,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "52379223",
-      "name_lat": "EVFRAT OT V.K. KANGAL TURK KAN",
-      "name_ru": "",
-      "breed": "КАНГАЛЬСКАЯ ОВЧАРКА",
-      "breed_en": "KANGAL SHEPHERD DOG",
-      "total_shows": 11,
+      "id": "212373201",
+      "name_lat": "EVIL FORKAS LARRI",
+      "name_ru": "ЭВИЛ ФОРКАС ЛАРРИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "671921280",
+      "id": "1162485198",
       "name_lat": "EVGEN POLI CHINGIZ HAN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -526,6 +579,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1030307181",
+      "name_lat": "EVANGELINA S LIPETSKOY SLOBODY",
+      "name_ru": "ЕВАНГЕЛИНА С ЛИПЕЦКОЙ СЛОБОДЫ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "833823944",
       "name_lat": "EVAK'S NEVER MIND",
       "name_ru": "",
@@ -535,21 +597,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1732698944",
+      "id": "1512315151",
       "name_lat": "EVROPA VON HELLER STERN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "1813421631",
+      "id": "324136475",
       "name_lat": "EVLADICHE MAGIYA OGNYA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -568,15 +630,6 @@
       "breed": "ГАННОВЕРСКАЯ ГОНЧАЯ ПО",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1141714439",
-      "name_lat": "EVANGELINA OT NEVSKOGO HOBBITA",
-      "name_ru": "",
-      "breed": "ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -607,10 +660,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "128674694",
+      "id": "1540458495",
       "name_lat": "EVOLUTE ALEKSA'S VON GOLD SIEG",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -625,6 +678,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "693175899",
+      "name_lat": "EVRAZIYA SHELKOVYY PUT`",
+      "name_ru": "ЕВРАЗИЯ ШЕЛКОВЫЙ ПУТЬ",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1963651678",
+      "name_lat": "EVA MARIA S VOSTOKA DALNEGO",
+      "name_ru": "",
+      "breed": "ЛХАССКИЙ АПСО",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1717879421",
+      "name_lat": "EVGENIKA PACIFIC OCEAN",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
       "id": "196926667",
       "name_lat": "EVANA",
       "name_ru": "",
@@ -634,30 +714,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "843419717",
+      "id": "1443253470",
       "name_lat": "EVGENIYA IZ BELOGO JARA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "834980465",
+      "id": "997115148",
       "name_lat": "EVEREST RICH SOUL",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "630107695",
-      "name_lat": "EVA MARIA S VOSTOKA DALNEGO",
-      "name_ru": "",
-      "breed": "ЛХАССКИЙ АПСО /",
-      "breed_en": "",
-      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -679,12 +750,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "390436460",
-      "name_lat": "EVLADICHE FEYR PLEY",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ ШНАУЦЕР ПЕРЕЦ С",
-      "breed_en": "",
-      "total_shows": 3,
+      "id": "1899070450",
+      "name_lat": "EVA LAURA GOSPOZHA UDACHA",
+      "name_ru": "ЕВА ЛАУРА ГОСПОЖА УДАЧА",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "SHIH TZU",
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -706,12 +777,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1717879421",
-      "name_lat": "EVGENIKA PACIFIC OCEAN",
+      "id": "219041890",
+      "name_lat": "EVGENIKA SUNNY PICCOLO TEZORO",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1162093167",
+      "name_lat": "EVIDENCE LOVE LUXURY GIRL",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 94,
       "competition_dog_id": null
     },
     {
@@ -733,10 +813,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1647956479",
-      "name_lat": "EVIDASH ESPER RAINMAKER- RAINSTOPPER",
+      "id": "1022547487",
+      "name_lat": "EVIDASH ESPER RAINMAKER-RAINSTOPPER",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -769,30 +849,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1438879727",
+      "name_lat": "EVANGELIYA SKAZKA VOSTOKA",
+      "name_ru": "ЕВАНГЕЛИЯ СКАЗКА ВОСТОКА",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1889495826",
       "name_lat": "EVRO IZ RODA VERNYH PSOV",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "SCHNAUZER BLACK",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1162093167",
-      "name_lat": "EVIDENCE LOVE LUXURY GIRL",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 81,
-      "competition_dog_id": null
-    },
-    {
-      "id": "511530305",
-      "name_lat": "EVANGELINA S LIPETSKOY SLOBODY",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -811,15 +882,6 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1438879727",
-      "name_lat": "EVANGELIYA SKAZKA VOSTOKA",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -850,10 +912,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1720547906",
+      "id": "687518598",
       "name_lat": "EVREDIKA IZ DOMA LENGRI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -868,30 +930,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "219041890",
-      "name_lat": "EVGENIKA SUNNY PICCOLO TEZORO",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 30,
-      "competition_dog_id": null
-    },
-    {
       "id": "1432314474",
       "name_lat": "EVIN TEDDY BIR",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "693175899",
-      "name_lat": "EVRAZIYA SHELKOVYY PUT`",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -904,12 +948,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1978584299",
+      "id": "1300523994",
       "name_lat": "EVENKI WINNERS VERSAILLES",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1435964781",
+      "name_lat": "EVERYDAYS MIRACLE MARMELAD",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1137668740",
+      "name_lat": "EVELLIYA GRAND MILAGRO",
+      "name_ru": "ЕВЕЛЛИЯ ГРАНД МИЛАГРО",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -931,10 +993,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "306849030",
+      "id": "1788000639",
       "name_lat": "EVONTY DAENERYS STORMBOR",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ /",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -967,12 +1029,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1550920172",
+      "id": "75345799",
+      "name_lat": "EVA STAR LINE CHIKA",
+      "name_ru": "",
+      "breed": "ТОЙ-ФОКСТЕРЬЕРШИ ТЦУ",
+      "breed_en": "TOY FOX TERRIER",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "422198069",
       "name_lat": "EVA IZ DOLINY SOLNCA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "бретонский золотистый ретривер",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "932892021",
+      "name_lat": "EVERYDAYS MIRACLE SAKURA ВОЛШЕБНИК",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -994,6 +1074,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1021251841",
+      "name_lat": "EVANGELISTA IZ DOMA KESLER",
+      "name_ru": "ЕВАНГЕЛИСТА ИЗ ДОМА КЕСЛЕР",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "357811939",
+      "name_lat": "EVANTA STIL SHARLOTTA",
+      "name_ru": "ЕВАНТА СТИЛЬ ШАРЛОТТА",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "958213095",
       "name_lat": "EVA SOLO MAJOR WARRIOR",
       "name_ru": "",
@@ -1008,14 +1106,23 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "167830543",
+      "id": "430211531",
       "name_lat": "EVLADICHE KHIMENA DE LA FRONTERA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "700922732",
+      "name_lat": "EVA ISIDA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1048,6 +1155,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1913634712",
+      "name_lat": "EVITA RIANA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "749558235",
       "name_lat": "EVRAZIYA",
       "name_ru": "",
@@ -1057,10 +1173,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "498917414",
+      "id": "1207590719",
+      "name_lat": "EVA STAR LINE DANIELA",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1134028572",
       "name_lat": "EVA SHERI DAR",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -1075,30 +1199,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "913434698",
+      "id": "340605522",
+      "name_lat": "EVRIKA IZ DREVNEGO RODA",
+      "name_ru": "ЭВРИКА ИЗ ДРЕВНЕГО РОДА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "286698414",
       "name_lat": "EVLADICHE ILLUZIYA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "560203815",
-      "name_lat": "EVGENIY OT NEVSKOGO HOBBITA",
-      "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1603064106",
+      "id": "1388526971",
       "name_lat": "EVENING TUNE FOR YOU",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "PETIT BRABANCON",
-      "total_shows": 35,
+      "total_shows": 41,
       "competition_dog_id": null
     },
     {
@@ -1174,10 +1298,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1095247556",
+      "id": "1609676624",
       "name_lat": "EVAK'S ICEBERG",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
       "total_shows": 25,
       "competition_dog_id": null
@@ -1228,15 +1352,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1435964781",
-      "name_lat": "EVERYDAYS MIRACLE MARMELAD",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
       "id": "144881212",
       "name_lat": "EVREDICE BEAUTIFUL PEARL",
       "name_ru": "",
@@ -1246,12 +1361,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "16267378",
+      "name_lat": "EVIL FORKAS MONAKO",
+      "name_ru": "ЭВИЛ ФОРКАС МОНАКО",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "1920666223",
       "name_lat": "EVANGELISTA VERNIY STRAZH",
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "67665881",
+      "name_lat": "EVRA LEONE VISKONTI BEYBI LI",
+      "name_ru": "ЕВРА ЛЕОНЕ ВИСКОНТИ БЕЙБИ ЛИ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1270,6 +1403,15 @@
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "32473486",
+      "name_lat": "EVERYDAYS MIRACLE SECRET",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1296,7 +1438,7 @@
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1306,6 +1448,15 @@
       "breed": "ПЕКИНЕС",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1617357230",
+      "name_lat": "EVSEJ AMATI",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1374,19 +1525,10 @@
     {
       "id": "509457309",
       "name_lat": "EVDAKIYA PASKO",
-      "name_ru": "",
+      "name_ru": "ЕВДАКИЯ ПАСЬКО",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "291326120",
-      "name_lat": "EVA ISIDA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1396,6 +1538,15 @@
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "140655046",
+      "name_lat": "EVA ESTRELLA",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1462,6 +1613,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1613263832",
+      "name_lat": "EVERYDAYS MIRACLE SWEETIE",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1842261552",
+      "name_lat": "EVGENIYA ASTAKHOVA FLO",
+      "name_ru": "ЕВГЕНИЯ АСТАХОВА ФЛО",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1669667520",
       "name_lat": "EVA SOLO IRON MAN",
       "name_ru": "",
@@ -1480,20 +1648,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "858095548",
-      "name_lat": "EVRA LEONE VISKONTI BEYBI LI",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "735676398",
       "name_lat": "Evonty Energy Of Sun Light, ch RUS",
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1004758266",
+      "name_lat": "EVGEN POLI YAGUAR",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1507,37 +1674,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1373437028",
+      "id": "125486072",
       "name_lat": "EVNIKA VERSHINA BLAZHENSTVA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1336644827",
-      "name_lat": "EVERYDAYS MIRACLE SAKURA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "421448901",
+      "id": "694595416",
       "name_lat": "EVA HIT-PARAD ZVEZD MONTANA VUD",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "689565027",
+      "id": "1615991552",
       "name_lat": "EVGESHA VASHDARGOLD",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1552,8 +1710,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1837731396",
-      "name_lat": "EVA BELAYA ORHIDEYA",
+      "id": "1704414782",
+      "name_lat": "EVA SOLO AEROSMITH",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
@@ -1561,12 +1719,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "855763698",
-      "name_lat": "EVGENIYA IZ FORTUNA MERDI",
+      "id": "1686885568",
+      "name_lat": "EVSEY NOIRMERI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
-      "total_shows": 7,
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 37,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1837731396",
+      "name_lat": "EVA BELAYA ORHIDEYA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1588,10 +1755,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "644008462",
+      "id": "1352080562",
       "name_lat": "EVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1615,12 +1782,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1704414782",
-      "name_lat": "EVA SOLO AEROSMITH",
+      "id": "4075982",
+      "name_lat": "EVAK'S WINNER TAKE IT ALL",
       "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "пудель миниатюрный",
+      "breed_en": "POODLE MINIATURE FAWN, GREY",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1633,21 +1800,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "242815821",
+      "name_lat": "EVA IZ SAGI O GARDARIKE",
+      "name_ru": "ЕВА ИЗ САГИ О ГАРДАРИКЕ",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "968801733",
+      "name_lat": "EVIDENCE LOVE ROYAL KISS",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "416893741",
       "name_lat": "EVALAIZ JOELLE",
       "name_ru": "",
       "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "FLAT COATED RETRIEVER",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1252352901",
-      "name_lat": "EVIDENCE LOVE ROYAL KISS",
-      "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1660,39 +1835,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1899070450",
-      "name_lat": "EVA LAURA GOSPOZHA UDACHA",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "SHIH TZU",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
       "id": "1024655801",
       "name_lat": "EVAN ART OF BULLS",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1686885568",
-      "name_lat": "EVSEY NOIRMERI",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1369845026",
-      "name_lat": "EVIDENCE LOVE CHA CHA CHA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 61,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -1701,7 +1849,25 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 33,
+      "total_shows": 37,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1369845026",
+      "name_lat": "EVIDENCE LOVE CHA CHA CHA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 65,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1770286700",
+      "name_lat": "EVROAZIYA INFANTA",
+      "name_ru": "ЕВРОАЗИЯ ИНФАНТА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -1714,19 +1880,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "91749094",
-      "name_lat": "EVAK'S WINNER TAKE IT ALL",
+      "id": "1925769127",
+      "name_lat": "EVERYDAYS MERACLE PEACH PIE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ, СЕРЫЙ",
-      "breed_en": "POODLE MINIATURE FAWN, GREY",
-      "total_shows": 6,
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "203675115",
+      "id": "1647015087",
       "name_lat": "EVLADICHE YOU MY HOPE TO WIN",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1750,6 +1916,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1966930985",
+      "name_lat": "EVROPA ROKKI RAUD",
+      "name_ru": "ЕВРОПА РОККИ РАУД",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "55756422",
       "name_lat": "EVFRAT POVELITEL",
       "name_ru": "",
@@ -1759,10 +1934,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "711980669",
+      "id": "912822944",
       "name_lat": "EVRIK ARISTOKRAT FINIKII",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -1786,21 +1961,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1137668740",
-      "name_lat": "EVELLIYA GRAND MILAGRO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "id": "1053278283",
+      "name_lat": "EVLADICHE PROZA",
+      "name_ru": "ЕВЛАДИЧЕ ПРОЗА",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "318237686",
-      "name_lat": "EVGEN POLI MALEFISENTA (Изменено по Решению ВК от 28.12.22 вопрос 34)",
+      "id": "1280143584",
+      "name_lat": "EVIDENCE LOVE NEED TO HAPPINESS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1463843871",
+      "name_lat": "EVRA DARK PLAM",
+      "name_ru": "ЕВРА ДАРК ПЛАМ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1831,12 +2015,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1565934105",
+      "name_lat": "EVI GRANOS FANSI",
+      "name_ru": "ЭВИ ГРАНОС ФАНСИ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1320500151",
       "name_lat": "EVA HIT-PARAD ZVEZD PIPPA MIDLTON",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1754874040",
+      "name_lat": "EVGEN POLI MALEFISENTA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -1849,30 +2050,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1775947871",
+      "id": "520867263",
       "name_lat": "EVGEN POLI EXPERT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "75345799",
-      "name_lat": "EVA STAR LINE CHIKA",
-      "name_ru": "",
-      "breed": "ТОЙ-ФОКСТЕРЬЕРШИ ТЦУ",
-      "breed_en": "TOY FOX TERRIER",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1966930985",
-      "name_lat": "EVROPA ROKKI RAUD",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1894,19 +2077,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1463843871",
-      "name_lat": "EVRA DARK PLAM",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1346666015",
+      "id": "838925251",
       "name_lat": "EVRIKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1921,28 +2095,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1662074151",
+      "id": "185955298",
       "name_lat": "EVEREST DALNEGO VOSTOKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1280143584",
-      "name_lat": "EVIDENCE LOVE NEED TO HAPPINESS",
+      "id": "1440632896",
+      "name_lat": "EVERYDAYS MIRACLE SEREBRO",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 27,
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1851951436",
+      "id": "741793577",
       "name_lat": "EVELLIYA MILIY ANGEL",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1966,24 +2140,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "32473486",
-      "name_lat": "EVERYDAYS MIRACLE SECRET",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1021251841",
-      "name_lat": "EVANGELISTA IZ DOMA KESLER",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "858208756",
       "name_lat": "EVA SOLO M’LORD CAPER",
       "name_ru": "",
@@ -1993,21 +2149,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1440632896",
-      "name_lat": "EVERYDAYS MIRACLE SEREBRO",
+      "id": "217024294",
+      "name_lat": "EVROAZIYA PONT",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "435073679",
-      "name_lat": "EVLADICHE PROZA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2029,6 +2176,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "897928713",
+      "name_lat": "EVROSTIL' KELVIN",
+      "name_ru": "ЕВРОСТИЛЬ КЕЛЬВИН",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1613647768",
+      "name_lat": "EVGRAF IZ DOMA ELIV'S",
+      "name_ru": "ЕВГРАФ ИЗ ДОМА ЕЛИВ'С",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1930108573",
       "name_lat": "EVA SOLO IN-TIME BLUE LAGUNE",
       "name_ru": "",
@@ -2038,19 +2203,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1600963562",
+      "id": "1341344124",
       "name_lat": "EVGEN POLI APOLLON",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "251058076",
+      "id": "31197349",
       "name_lat": "EVAN IKE",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2074,10 +2239,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1821481197",
+      "id": "1865569185",
       "name_lat": "EVGEN POLI HONDA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2101,10 +2266,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "411264658",
+      "id": "1003140713",
       "name_lat": "EVIL FORKAS ZHUSTINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2116,6 +2281,15 @@
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "283799050",
+      "name_lat": "EVRA LEONE UELLFART DES CHARMES",
+      "name_ru": "ЕВРА ЛЕОНЕ УЭЛЛФАРТ ДЕС ЧАРМЕС",
+      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2137,10 +2311,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1068899679",
+      "id": "513821568",
       "name_lat": "EVLALIYA DALIDA",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН) ФАЛЕН",
+      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2182,20 +2356,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1928244171",
+      "id": "260440964",
       "name_lat": "EVA BLISS GRAND",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1517133780",
-      "name_lat": "EVA ESTRELLA",
+      "id": "1000923484",
+      "name_lat": "EVPATY VON KHAALIBORG",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2209,11 +2382,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "575041488",
+      "name_lat": "EVA RATKE VOM MAIR HOF",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1787835935",
       "name_lat": "EVETTA STEFANIYA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "408677502",
+      "name_lat": "EVA SOLO TOBLERONE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1374003701",
+      "name_lat": "EVLASTRA GESTIYA",
+      "name_ru": "",
+      "breed": "ПАПИЙОН",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2224,24 +2421,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "818421893",
-      "name_lat": "EVITA RIANA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "214210225",
-      "name_lat": "EVSEJ AMATI",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2272,21 +2451,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "283799050",
-      "name_lat": "EVRA LEONE UELLFART DES CHARMES",
+      "id": "365458893",
+      "name_lat": "EVA XL",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1613647768",
-      "name_lat": "EVGRAF IZ DOMA ELIV'S",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ XL",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2308,10 +2477,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "13018467",
+      "id": "689893962",
       "name_lat": "EVRO",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ (КУРЦХААР) /",
+      "breed": "ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2321,15 +2490,6 @@
       "name_lat": "EVEREST",
       "name_ru": "",
       "breed": "SPINONE ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "475857892",
-      "name_lat": "EVA ISIDA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2380,6 +2540,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1742803673",
+      "name_lat": "EVA SOLO MS SHUGGA PLAM'S",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "454080680",
       "name_lat": "EVTIDA BY TKACHEVA",
       "name_ru": "",
@@ -2389,10 +2557,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1077336758",
+      "id": "1237610714",
       "name_lat": "EVRO-LEDI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2443,19 +2611,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "669021259",
+      "id": "28972151",
       "name_lat": "EVAK'S SAGGEZZA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1148817677",
+      "id": "1987695206",
       "name_lat": "EVA IZ DOMA RAYDER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2470,37 +2638,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "979402204",
+      "id": "1575509137",
       "name_lat": "EVRAZIYA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1766939093",
+      "id": "1658512693",
       "name_lat": "EVRIKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "456429485",
-      "name_lat": "EVA ESTRELLA",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1382414289",
-      "name_lat": "EVSEJ AMATI",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2524,6 +2674,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1433879340",
+      "name_lat": "EVA SOLO ONE N'ONLY CHASEN TRAP",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1319425418",
+      "name_lat": "EVGESHA OT RUSSKOGO COUTURIER",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1423686534",
       "name_lat": "EVKLEYA MARGO",
       "name_ru": "",
@@ -2533,10 +2699,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "713041928",
+      "id": "977488597",
       "name_lat": "EVGENIKA EDINSTVENNAYA KRASOTKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "GERMAN КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2547,6 +2713,22 @@
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1690724967",
+      "name_lat": "EVA VOM SANDRA LAND",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1978684530",
+      "name_lat": "EVIN OT SOLLNIKA",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2562,10 +2744,10 @@
     {
       "id": "1409930332",
       "name_lat": "EVDOKIM IZ AGLITSKOGO SADA",
-      "name_ru": "",
+      "name_ru": "ЕВДОКИМ ИЗ АГЛИЦКОГО САДА",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2578,10 +2760,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "632693342",
+      "id": "621573408",
       "name_lat": "EVGEN POLI EXCALIBUR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2605,10 +2787,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "546570426",
+      "id": "1769097895",
       "name_lat": "EVAN IZ PRIAZOVSKIH STEPEY",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -2623,30 +2805,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "242815821",
-      "name_lat": "EVA IZ SAGI O GARDARIKE",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "817099910",
+      "id": "1042300159",
       "name_lat": "EVLAMPIYA",
       "name_ru": "",
-      "breed": "БОРДЕР ТЕРЬЕР /",
+      "breed": "БОРДЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "53966172",
+      "id": "271850099",
       "name_lat": "EVANDZHELEN LI LI VOM FESTBURG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1705998996",
+      "name_lat": "EVER LOVELY BUSY LIZZIE",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -2668,10 +2850,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "404140569",
+      "id": "791660644",
       "name_lat": "EVIDENCE OUT ILLUSION OF SILVER WAY",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -2683,6 +2865,33 @@
       "breed": "НЕМЕЦКАЯ ОВЧАРКА ОСТЕВАЯ ШЕРСТЬ С ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1976701747",
+      "name_lat": "EVONTY HAS ALL MY LOVE",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1251382142",
+      "name_lat": "EVROPA EDISON",
+      "name_ru": "ЕВРОПА ЕДИСОН",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "131570714",
+      "name_lat": "EVALAIZ MAESTRO",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -2704,11 +2913,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "131570714",
-      "name_lat": "EVALAIZ MAESTRO",
+      "id": "1668322737",
+      "name_lat": "EVONTY CHARITY OF LOVE",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
@@ -2722,21 +2931,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1705998996",
-      "name_lat": "EVER LOVELY BUSY LIZZIE",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1116440838",
       "name_lat": "EVONTY KENYA'S SAVANNA",
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
-      "total_shows": 32,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -2749,12 +2949,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1668322737",
-      "name_lat": "EVONTY CHARITY OF LOVE",
+      "id": "1372359335",
+      "name_lat": "EVRA LEONE SNOW QUEEN",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 20,
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2776,10 +2976,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1770286700",
-      "name_lat": "EVROAZIYA INFANTA",
-      "name_ru": "",
+      "id": "1489763450",
+      "name_lat": "EVDOGSTAR SIMBA",
+      "name_ru": "ЕВДОГСТАР СИМБА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "671914126",
+      "name_lat": "EVIL FORKAS SOLOMON",
+      "name_ru": "ЭВИЛ ФОРКАС СОЛОМОН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
@@ -2794,19 +3003,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "28939638",
+      "id": "56634702",
       "name_lat": "EVDOKIYA S RUSSKOY DUSHOY",
       "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
     },
     {
-      "id": "768805487",
+      "id": "1405667877",
+      "name_lat": "EVA MEDISON OF SANKTUM",
+      "name_ru": "ЕВА МЕДИСОН ОФ САНКТУМ",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1872750597",
       "name_lat": "EVGRAF S RUSSKOY DUSHOY",
       "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "MOSKOVSKAYA STOROZHEVAYA (MOSCOW WATCH DOG)",
       "total_shows": 18,
       "competition_dog_id": null
@@ -2821,21 +3039,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "43523797",
-      "name_lat": "EVIL FORKAS SOLOMON",
+      "id": "466644678",
+      "name_lat": "EVIDENCE LOVE CZVETIK SEMICZVETIK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1372359335",
-      "name_lat": "EVRA LEONE SNOW QUEEN",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 10,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -2848,12 +3057,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1513359590",
+      "name_lat": "EVA DOLCHE VITA",
+      "name_ru": "ЕВА ДОЛЬЧЕ ВИТА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "48320847",
       "name_lat": "EVATARA YUKI YUMIRI (Изменено по решению ВК от 22.05.2024 В. 39)",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1339437409",
+      "name_lat": "EVIL FORKAS ZELLA",
+      "name_ru": "ЭВИЛ ФОРКАС ЗЕЛЛА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1558835825",
+      "name_lat": "EVIADA'S BURRATA",
+      "name_ru": "ЕВИАДА'С БУРРАТА",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "BOSTON TERRIER",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2866,10 +3102,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "222454187",
+      "id": "593855415",
       "name_lat": "EVELINA VAN HOPE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -2893,10 +3129,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "498213568",
+      "id": "223679253",
       "name_lat": "EVI GRANOS BLUBERRY",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2938,10 +3174,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "51136908",
+      "id": "188154680",
       "name_lat": "EVPATIY KOLOVRAT VARG VADER",
       "name_ru": "",
-      "breed": "БОКСЁР",
+      "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2956,19 +3192,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1489763450",
-      "name_lat": "EVDOGSTAR SIMBA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "145707114",
+      "id": "1570120164",
       "name_lat": "EVGENY SPALVOTA PASAKA",
       "name_ru": "",
-      "breed": "БИШОН ГАВАНЕС",
+      "breed": "ХАВАНЕЗ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2983,39 +3210,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "1976701747",
-      "name_lat": "EVONTY HAS ALL MY LOVE",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
+      "id": "191287703",
+      "name_lat": "EVRA LEONE GALAKTIKA",
+      "name_ru": "ЕВРА ЛЕОНЕ ГАЛАКТИКА",
+      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1796949354",
+      "name_lat": "EVIDENCE LOVE TOP MODEL",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "30897158",
+      "id": "469247898",
       "name_lat": "EVLADICHE MELORIYA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "80760056",
+      "id": "354092061",
       "name_lat": "EVONTY MISS UNIVERSE",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ /",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "889112402",
-      "name_lat": "EVERYDAYS MERACLE PEACH PIE",
+      "id": "823125916",
+      "name_lat": "EVLADICHE PIANA DI MONTE VERNA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -3046,6 +3281,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "9106",
+      "name_lat": "EVA MAGNOLIA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": 9106
+    },
+    {
       "id": "916115406",
       "name_lat": "EVIL EMPIRE BULLY'S MOLLY",
       "name_ru": "",
@@ -3055,19 +3299,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "466644678",
-      "name_lat": "EVIDENCE LOVE CZVETIK SEMICZVETIK",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1891356587",
+      "id": "906127983",
       "name_lat": "EVLADICHE ONCE YOU",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -3082,12 +3317,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "191287703",
-      "name_lat": "EVRA LEONE GALAKTIKA",
+      "id": "429528010",
+      "name_lat": "EVONTY DAKOTA SWEET DREAMS",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "BASENJI",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1737896499",
+      "name_lat": "EVA SOLO PORTINARI BICHE",
+      "name_ru": "ЕВА СОЛО ПОРТИНАРИ БИЧЕ",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "934771723",
+      "name_lat": "EVROBOND AMON",
+      "name_ru": "ЕВРОБОНД АМОН",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -3118,6 +3371,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "845340659",
+      "name_lat": "EVROAZIYA ZIP ZAP",
+      "name_ru": "ЕВРОАЗИЯ ЗИП ЗАП",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "1341681980",
       "name_lat": "EVIDENCE LOVE GOOD LOOKING",
       "name_ru": "",
@@ -3127,20 +3389,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "9106",
-      "name_lat": "EVA MAGNOLIA",
+      "id": "680688119",
+      "name_lat": "EVA",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": 9106
-    },
-    {
-      "id": "429528010",
-      "name_lat": "EVONTY DAKOTA SWEET DREAMS",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "BASENJI",
       "total_shows": 10,
       "competition_dog_id": null
     },
@@ -3149,26 +3402,34 @@
       "name_lat": "EVIDENCE LOVE SHANIKA",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "1414834320",
-      "name_lat": "EVLADICHE PIANA DI MONTE VERNA",
+      "id": "1229682055",
+      "name_lat": "EVERYDAY STAR BELLA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "Окрас оранжевый, серый, и другие НЕМЕЦКИЙ ШПИЦ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1623917498",
-      "name_lat": "EVROBOND AMON",
+      "id": "104187665",
+      "name_lat": "EVERYONE'S DREAM OPTIMUS PRIME",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1865864635",
+      "name_lat": "EVLADICHE TETE-A-TETE",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3181,37 +3442,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1415519628",
+      "id": "210019181",
       "name_lat": "EVAK'S THE DESTINY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ /",
+      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE MINIATURE FAWN, GREY",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1229682055",
-      "name_lat": "EVERYDAY STAR BELLA",
-      "name_ru": "",
-      "breed": "Окрас оранжевый, серый, и другие НЕМЕЦКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1367037322",
+      "id": "1751523263",
       "name_lat": "EVRIK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ /",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1541370086",
+      "id": "1568816424",
       "name_lat": "EVERYBODY LOVES ME FOR DAO GUAN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3235,10 +3487,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1711270192",
+      "id": "937148452",
       "name_lat": "EVAK S WATERMARK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3262,10 +3514,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "94458859",
+      "id": "1582730172",
       "name_lat": "EVIL FORKAS MIRRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3289,12 +3541,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "105352674",
+      "name_lat": "EVIDENCE LOVE TOUCH OF SUN",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1120243",
       "name_lat": "EVA SUPER MODEL RAYSKIY SAD",
       "name_ru": "",
       "breed": "БИВЕР",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "337750046",
+      "name_lat": "EVANTA STIL SHERIF",
+      "name_ru": "ЕВАНТА СТИЛЬ ШЕРИФ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -3307,12 +3576,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "845340659",
-      "name_lat": "EVROAZIYA ZIP ZAP",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "1508832753",
+      "name_lat": "EVRAZIYA IZ ANGEL GRADA",
+      "name_ru": "ЕВРАЗИЯ ИЗ АНГЕЛ ГРАДА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "278221009",
+      "name_lat": "EVLAMPIYA S SOBERBASH",
+      "name_ru": "ЕВЛАМПИЯ С СОБЕРБАШ",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3325,6 +3603,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1537057160",
+      "name_lat": "EVLASTRA VALKIRIYA",
+      "name_ru": "ЕВЛАСТРА ВАЛЬКИРИЯ",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1593453721",
+      "name_lat": "EVALAIZ MERSEDES",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1428735182",
       "name_lat": "EVELYNN S BOLSHOGO SAMPSONIJA",
       "name_ru": "",
@@ -3334,19 +3630,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1737896499",
-      "name_lat": "EVA SOLO PORTINARI BICHE",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "PUG",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "16829164",
+      "id": "531179248",
       "name_lat": "EVIL FORKAS SANTA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д/Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3370,15 +3657,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "104187665",
-      "name_lat": "EVERYONE'S DREAM OPTIMUS PRIME",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1915346878",
       "name_lat": "EVANGELIYA EDELSHTAYN",
       "name_ru": "",
@@ -3388,10 +3666,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1009634594",
+      "id": "1182598671",
+      "name_lat": "EVELINA IZ DINASTII CHEMPIONOV",
+      "name_ru": "ЭВЕЛИНА ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "976717300",
       "name_lat": "EVGEN POLI ART ENJOY DREAMBOAT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -3442,15 +3729,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1716081328",
-      "name_lat": "EVROPA EDISON",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1709671278",
       "name_lat": "EVSNESENS ROUZBAD",
       "name_ru": "",
@@ -3460,10 +3738,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "471624586",
+      "id": "737590940",
       "name_lat": "EVER LORD DE CAMPDORCAN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3487,10 +3765,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "867521935",
+      "id": "613249395",
       "name_lat": "EVA PRIMA BLYUZ IZ VIKINGEMA",
       "name_ru": "",
-      "breed": "COAT ПУЛИ ЧЁРНЫЙ, СЕРЫЙ, РЫЖИЙ",
+      "breed": "COAT ПУЛИ ЧЕРНЫЙ, СЕРЫЙ, РЫЖИЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3502,15 +3780,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1753928010",
-      "name_lat": "EVLADICHE TETE-A-TETE",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3541,10 +3810,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "389485060",
-      "name_lat": "EVERYONE'S DREAM VERDAD OPEN SOUL",
-      "name_ru": "",
+      "id": "385478219",
+      "name_lat": "EVERYONES DREAM VERDAD OPEN SOUL",
+      "name_ru": "ЕВЕРЫОНЕ'С ДРЕАМ ВЕРДАД ОПЕН СОУЛ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1262081660",
+      "name_lat": "EVONTY CHARMING BEAUTY",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ / BASENJI",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -3568,10 +3846,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "774050391",
+      "id": "868675511",
       "name_lat": "EVOQUE RANGER OT VLADLEI ARISH",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -3613,12 +3891,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "610886068",
-      "name_lat": "EVLASTRA VALKIRIYA",
+      "id": "709679316",
+      "name_lat": "EVAK'S MASSIVE ATTACK",
       "name_ru": "",
-      "breed": "ШИ ТЦУ / SHIH TZU",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3631,19 +3908,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "82246192",
+      "id": "299914501",
       "name_lat": "EVRAZIY IZ DOMA KUNETS",
       "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР /",
+      "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "786206727",
+      "id": "1488771352",
       "name_lat": "EVRIKA FOM HAUS STIER",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3667,19 +3944,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1593453721",
-      "name_lat": "EVALAIZ MERSEDES",
+      "id": "1839643010",
+      "name_lat": "EVA LONGORIA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1019500545",
+      "id": "1471326589",
       "name_lat": "EVLADICHE ZVEZDNAYA MELODIYA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3694,24 +3971,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "404880122",
-      "name_lat": "EVELINA IZ DINASTII CHEMPIONOV",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1627984828",
-      "name_lat": "EVIL FORKAS MONAKO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "3550975",
       "name_lat": "EVRIKA IZ IMPERII LARIEL",
       "name_ru": "",
@@ -3721,8 +3980,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1267075710",
-      "name_lat": "EVA IZ NOVO- PEREDELKINO",
+      "id": "982549104",
+      "name_lat": "EVA IZ NOVO-PEREDELKINO",
       "name_ru": "",
       "breed": "DACHSHUND ZWERG",
       "breed_en": "",
@@ -3730,10 +3989,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1589607167",
+      "id": "310628643",
       "name_lat": "EVELINA LUARD DE FORTUNA'M",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3757,6 +4016,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "603773220",
+      "name_lat": "EVRO KALLISTO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1088444041",
       "name_lat": "EVA BEAUTY STAR",
       "name_ru": "",
@@ -3766,19 +4033,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "816713482",
+      "id": "54778532",
       "name_lat": "EVROPA KLARA DIFINO",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1908588686",
+      "id": "1573340400",
       "name_lat": "EVGEN POLI MAYBACH",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -3799,6 +4066,15 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "267076973",
+      "name_lat": "EVERYDAYS MIRACLE ASTORIA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3883,30 +4159,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "419675849",
+      "id": "754448724",
       "name_lat": "EVERYONE'S DREAM LIONES TENDERNESS",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "618661212",
-      "name_lat": "EVA DOLCHE VITA",
+      "id": "1570663852",
+      "name_lat": "EVALAIZ MIA MARTINI",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "680688119",
-      "name_lat": "EVA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3919,19 +4186,10 @@
       "competition_dog_id": 6104
     },
     {
-      "id": "1839643010",
-      "name_lat": "EVA LONGORIA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1581496041",
+      "id": "618831732",
       "name_lat": "EVROAZIYA VA VA VOOM",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3943,6 +4201,15 @@
       "breed": "ДОБЕРМАН / DOBERMANN",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "406017598",
+      "name_lat": "EVIN DE MARKO",
+      "name_ru": "ЕВИН ДЕ МАРКО",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3973,12 +4240,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1558835825",
-      "name_lat": "EVIADA'S BURRATA",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "BOSTON TERRIER",
-      "total_shows": 2,
+      "id": "400772631",
+      "name_lat": "EVALETTA IZ STAROY SHUI",
+      "name_ru": "ЕВАЛЕТТА ИЗ СТАРОЙ ШУИ",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -3991,15 +4258,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "217024294",
-      "name_lat": "EVROAZIYA PONT",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "824048477",
       "name_lat": "EVERYDAY STAR PON CHIK",
       "name_ru": "",
@@ -4009,12 +4267,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1467386501",
+      "id": "257619472",
+      "name_lat": "EVANESCENCE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1164390721",
       "name_lat": "EVA SOLO BLOSSOM & HONEY",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "471042151",
+      "name_lat": "EVA-UNA SAMANA STAR",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1749029705",
+      "name_lat": "EVIDENCE LOVE SONATA SENSUAL INSPIRATION",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -4027,19 +4312,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1669004599",
+      "id": "1470273955",
+      "name_lat": "EVERYDAYS MIRACLE TOFFIFI",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "224586903",
       "name_lat": "EVA LOTTA C ZOLOTOGO PLESA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1981002363",
+      "id": "1789523979",
       "name_lat": "EVGEN POLI ZAKHIR SHAKH",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4054,10 +4348,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "809947084",
+      "id": "1448709545",
       "name_lat": "EVOLUTSIA ESSICONA",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ /",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4068,7 +4362,7 @@
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -4144,24 +4438,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1106864566",
-      "name_lat": "EVENTIDE ABSOLUT FESTIVAL SOUL",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1188264036",
-      "name_lat": "EVA VOM TAMRIEL",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1734186578",
       "name_lat": "EVR IZ MISHKINOGO DOMA",
       "name_ru": "",
@@ -4171,12 +4447,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1749029705",
-      "name_lat": "EVIDENCE LOVE SONATA SENSUAL INSPIRATION",
+      "id": "1106864566",
+      "name_lat": "EVENTIDE ABSOLUT FESTIVAL SOUL",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1109050513",
+      "name_lat": "EVA VOM TAMRIEL",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4186,6 +4471,14 @@
       "breed": "НЕМЕЦКИЙ ДРАТХААР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "840891826",
+      "name_lat": "EVRIKA IZ STRANI GREZ",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -4207,19 +4500,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "944989011",
+      "name_lat": "EVGENIKA AMADARE",
+      "name_ru": "ЕВГЕНИКА АМАДАРЕ",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "631349226",
       "name_lat": "EVA SOLO ACE OF HEART",
       "name_ru": "",
       "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "944989011",
-      "name_lat": "EVGENIKA AMADARE",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4243,10 +4536,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "517577207",
+      "id": "64015691",
       "name_lat": "EVRIKA IZ ZAZERKALIA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4261,10 +4554,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "176358306",
+      "id": "321907446",
       "name_lat": "EVANDZHELINA GOLDEN HAPPINESS PROSERPINE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "POINTING ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4297,10 +4590,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1216921677",
+      "id": "101403905",
       "name_lat": "EVGEN POLI MARMELADKA CHILI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -4312,6 +4605,14 @@
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "210316553",
+      "name_lat": "EVA SOLO BLEK KOFE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4333,28 +4634,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1262081660",
-      "name_lat": "EVONTY CHARMING BEAUTY",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ / BASENJI",
+      "id": "1384380711",
+      "name_lat": "EVEREST TITAN",
+      "name_ru": "ЕВЕРЕСТ ТИТАН",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "400772631",
-      "name_lat": "EVALETTA IZ STAROY SHUI",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "867627205",
+      "id": "269664129",
       "name_lat": "EVA SOLO RUSSIAN ROULETT FOR BABA HENIRA",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4369,19 +4661,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "278221009",
-      "name_lat": "EVLAMPIYA S SOBERBASH",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "699134894",
+      "id": "1883965037",
       "name_lat": "EVA VON HAUS DEVARTIS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4405,20 +4688,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1509145125",
-      "name_lat": "EVRAZIYA IZ ANGEL GRADA",
+      "id": "1573962384",
+      "name_lat": "EVRAZIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "357811939",
-      "name_lat": "EVANTA STIL SHARLOTTA",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
+      "breed": "БОРДЕР КОЛЛИ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4441,15 +4714,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1565934105",
-      "name_lat": "EVI GRANOS FANSI",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1081572380",
       "name_lat": "EVONTY KEY MAN",
       "name_ru": "",
@@ -4459,12 +4723,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1834237956",
-      "name_lat": "EVANESCENCE",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "id": "30647314",
+      "name_lat": "EVI GRANOS BENTLI",
+      "name_ru": "ЭВИ ГРАНОС БЕНТЛИ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -4501,15 +4765,6 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "471042151",
-      "name_lat": "EVA-UNA SAMANA STAR",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4657,6 +4912,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1249397611",
+      "name_lat": "EVIDENCE LOVE HOPE OF STAR",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1145771505",
+      "name_lat": "EVROSTIL' TOSKANA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "862319342",
       "name_lat": "EVA’SBURG GRACE VALENCIA",
       "name_ru": "",
@@ -4666,11 +4939,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1058482821",
-      "name_lat": "EVROSTIL' TOSKANA",
+      "id": "562527841",
+      "name_lat": "EVELIA GLAFIRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -4702,19 +4974,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "711577621",
-      "name_lat": "EVRIKA IZ STRANI GREZ",
+      "id": "1271573031",
+      "name_lat": "EVVIVA ADK GEDEON VICTORY-WAY",
       "name_ru": "",
-      "breed": "ЖЕСТКОШЕРС СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "532246820",
-      "name_lat": "EVVIVA ADK GEDEON VICTORY- WAY",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4733,15 +4996,6 @@
       "name_lat": "EVAK’S FACEBOOK",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "267076973",
-      "name_lat": "EVERYDAYS MIRACLE ASTORIA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4774,10 +5028,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "500931115",
+      "id": "165144903",
       "name_lat": "EVA BRAUNING",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4810,10 +5064,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "839956936",
+      "id": "518384493",
       "name_lat": "EVANGELINA FLEUR DE LYS",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4882,10 +5136,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1716451257",
+      "id": "1987881626",
       "name_lat": "EVIL FORKAS DASHA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4900,30 +5154,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1617357230",
-      "name_lat": "EVSEJ AMATI",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "776133172",
       "name_lat": "EVA STELLA BIONE FORTUNA",
       "name_ru": "",
       "breed": "AND THE ABRUZZES",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1796949354",
-      "name_lat": "EVIDENCE LOVE TOP MODEL",
-      "name_ru": "",
-      "breed": "Кавалер Кинг Чарльз спаниель",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -4945,12 +5181,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "95416279",
+      "id": "824472427",
       "name_lat": "EVA SOLO MUST ENDEAVOR DREAM",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "876652841",
+      "name_lat": "EVA FROM MILLERON",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1252932461",
+      "name_lat": "EVANESCENCE",
+      "name_ru": "",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4969,15 +5222,6 @@
       "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1570663852",
-      "name_lat": "EVALAIZ MIA MARTINI",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -5044,12 +5288,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "537509887",
+      "id": "812023512",
       "name_lat": "EVIL FORKAS ZIRKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1733766636",
+      "name_lat": "EVRO",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -5107,10 +5360,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1908980429",
+      "id": "846142768",
       "name_lat": "EVDARSIYA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5197,15 +5450,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "105352674",
-      "name_lat": "EVIDENCE LOVE TOUCH OF SUN",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1722956690",
       "name_lat": "EVRO GOLD",
       "name_ru": "",
@@ -5215,20 +5459,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1956146160",
-      "name_lat": "EVA",
+      "id": "717195805",
+      "name_lat": "EVERYDAY DREAMER VELVET GARDEN",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1706499257",
-      "name_lat": "EVERYDAY DREAMER VELVET GARDEN",
+      "id": "1981920927",
+      "name_lat": "EVGEN POLI DEDPUL",
       "name_ru": "",
-      "breed": "БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5237,15 +5480,6 @@
       "name_lat": "EVIDENCE LOVE STELLA FAVORITE SHARM",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "40245490",
-      "name_lat": "EVA",
-      "name_ru": "",
-      "breed": "КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5269,10 +5503,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "167243833",
+      "id": "1192701956",
       "name_lat": "EVEREST",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5287,19 +5521,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "419140520",
+      "id": "271724162",
       "name_lat": "EVTENIA DACHSHUND",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "110662601",
+      "id": "398092909",
       "name_lat": "EVA SOLO MAST EDEAVOR DREAM",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5314,12 +5548,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "565528740",
-      "name_lat": "EVGEN POLI CHELSY- DEMIREL",
+      "id": "229247764",
+      "name_lat": "EVGEN POLI CHELSY-DEMIREL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "414900180",
+      "name_lat": "EVRA LEONE CHOYS VOZ LAKI",
+      "name_ru": "ЕВРА ЛЕОНЕ ЧОЙС ВОЗ ЛАКИ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -5332,28 +5575,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "30647314",
-      "name_lat": "EVI GRANOS BENTLI",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1006968284",
-      "name_lat": "EVEREST IZ SOKOLINOGO GNEZDA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "id": "1623261582",
+      "name_lat": "EVLASTRA GARDI ATARI MACHIKO",
+      "name_ru": "ЕВЛАСТРА ГАРДИ АТАРИ МАЧИКО",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1274813778",
+      "id": "747373922",
+      "name_lat": "EVEREST IZ SOKOLINOGO GNEZDA",
+      "name_ru": "",
+      "breed": "СЕТТЕР АНГЛИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1465003734",
       "name_lat": "EVELINA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5368,21 +5611,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "173805102",
+      "id": "1117034962",
       "name_lat": "EVEREST IZ KAZANSKOGO HANSTVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1509300332",
-      "name_lat": "EVRO KALLISTO",
-      "name_ru": "",
-      "breed": "SPITZ TOY (POMERANIAN) ORANGE, GREY, OTHER",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -5395,28 +5629,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "632123593",
-      "name_lat": "EVAK'S MASSIVE ATTACK",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ,КРАСН ЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1470273955",
-      "name_lat": "EVERYDAYS MIRACLE TOFFIFI",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1878362776",
       "name_lat": "EVA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "383203443",
+      "name_lat": "EVLAMPIA OT ANKO ZANKO",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5440,19 +5665,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "881895010",
+      "id": "1557925300",
       "name_lat": "EVA ZAVETNOE ZHELANIE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1262089468",
-      "name_lat": "EVLAMPIA OT ANKO ZANKO",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5503,19 +5719,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "151589779",
+      "id": "1720868074",
       "name_lat": "EVVNTIY",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1733766636",
-      "name_lat": "EVRO",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5525,15 +5732,6 @@
       "name_lat": "EVERYONES DREAM ANGEL SUNLIT",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "142182883",
-      "name_lat": "EVELIA GLAFIRA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5552,15 +5750,6 @@
       "name_lat": "EVA CHERI FIDELES ANGELUS",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "156646558",
-      "name_lat": "EVA RATKE VOM MAIR HOF",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5597,7 +5786,14 @@
       "name_lat": "EVER LOVELY BUT ME NO BUTS",
       "name_ru": "",
       "breed": "ШЕЛТИ",
-      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1075042008",
+      "name_lat": "EVENING STAR DI STELLA ARDENS",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ /",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -5674,20 +5870,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1068194363",
+      "name_lat": "EVA TALISMAN OF FORTUNE",
+      "name_ru": "ЭВА ТАЛИСМАН ОФ ФОРТУНЕ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "969569310",
+      "name_lat": "EVEREST",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "48199531",
       "name_lat": "EVLAMPIYA KOROLEVA POBEDY",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "PUG",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1068194363",
-      "name_lat": "EVA TALISMAN OF FORTUNE",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -5710,10 +5915,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "70914302",
+      "id": "1298005721",
       "name_lat": "EVANGELINE",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5724,15 +5929,6 @@
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "JACK RUSSELL TERRIER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "406017598",
-      "name_lat": "EVIN DE MARKO",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -5782,19 +5978,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1627043115",
-      "name_lat": "EVONTY DOLLY DOLL",
+      "id": "126236255",
+      "name_lat": "EVALAIZ PICASSO MOANNSER",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ",
+      "breed": "LABRADOR RETRIEVER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "734227625",
-      "name_lat": "EVIL FORKAS ZELLA",
+      "id": "1627043115",
+      "name_lat": "EVONTY DOLLY DOLL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5818,24 +6014,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "661202939",
-      "name_lat": "EVANESCENCE",
-      "name_ru": "",
-      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1210802172",
-      "name_lat": "EVANESCENCE",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1035939609",
       "name_lat": "EVRIVEA",
       "name_ru": "",
@@ -5850,6 +6028,14 @@
       "name_ru": "",
       "breed": "BORDER TERRIER",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "165912467",
+      "name_lat": "EVDOSHA",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5881,10 +6067,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1868774958",
+      "id": "1448715603",
       "name_lat": "EVA EVANGELINA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5899,10 +6085,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "691518727",
-      "name_lat": "EVEREST",
+      "id": "726067561",
+      "name_lat": "EVENING STAR",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5980,6 +6166,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1408954758",
+      "name_lat": "EVLADICHE NORMANDIYA LIVARO",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1684432021",
       "name_lat": "EVIL FORKAS TSERBER",
       "name_ru": "",
@@ -5989,11 +6183,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "126236255",
-      "name_lat": "EVALAIZ PICASSO MOANNSER",
+      "id": "1538714826",
+      "name_lat": "EVERYDAYS MIRACLE",
       "name_ru": "",
-      "breed": "LABRADOR RETRIEVER",
-      "breed_en": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6016,19 +6209,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "1449684568",
+      "name_lat": "EVGEN POLI MALEFISENTA (Изменено по Решению ВК от 28.12.22 вопрос 34)",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "678712938",
       "name_lat": "EVA’SBURG VALENCIA",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1672212405",
-      "name_lat": "EVENING STAR",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6043,10 +6236,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1743495364",
+      "id": "1612039521",
       "name_lat": "EVROAZIYA CHANTEREL QUEEN'S KORGI",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6079,19 +6272,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1401810828",
+      "id": "1734097859",
       "name_lat": "EVANDZHELEN LI LI FOM FESTBURG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1414036315",
+      "id": "1906251947",
       "name_lat": "EVIDANCE LOVE LUXURY GIRL",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6124,10 +6317,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1644290209",
+      "id": "25530946",
       "name_lat": "EVRA 2 S FAMILY'S FRIVER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -6151,11 +6344,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1172542300",
+      "id": "1373206010",
       "name_lat": "EVGEN POLI EINSTEIN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "567011693",
+      "name_lat": "EVIL EMPIRE BYLLY'S EMOJI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -6223,19 +6424,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "147855472",
-      "name_lat": "EVANESCENCE",
-      "name_ru": "",
-      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1741279520",
+      "id": "1619703188",
       "name_lat": "EVILIA",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6250,10 +6442,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1124120592",
+      "id": "596643554",
       "name_lat": "EVANESCENCE",
       "name_ru": "",
-      "breed": "SPRINGER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
+      "breed": "SPRINGER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР / GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6286,10 +6478,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "791424748",
+      "id": "1041983175",
       "name_lat": "EVRA",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6308,15 +6500,6 @@
       "name_lat": "EVTENIA",
       "name_ru": "",
       "breed": "СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1814128346",
-      "name_lat": "EVA ISIDA",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6484,10 +6667,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "14345470",
+      "id": "1596180359",
       "name_lat": "EVIDENCE MIRECLE FOR STONEHENGE",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6502,19 +6685,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "48929926",
-      "name_lat": "EVONTY RAYHA TALISHA",
+      "id": "628022905",
+      "name_lat": "EVRO SHOW KAPITOSHKA",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ / BASENJI",
+      "breed": "ТАКСА ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "628022905",
-      "name_lat": "EVRO SHOW KAPITOSHKA",
+      "id": "48929926",
+      "name_lat": "EVONTY RAYHA TALISHA",
       "name_ru": "",
-      "breed": "ТАКСА ТЕРЬЕР)",
+      "breed": "БАСЕНДЖИ / BASENJI",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6538,6 +6721,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1955991016",
+      "name_lat": "EVELIN IZ BELOGO JARA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1958895593",
       "name_lat": "EVE",
       "name_ru": "",
@@ -6556,10 +6747,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1976064332",
+      "id": "1544438445",
       "name_lat": "EVA RAJSKIJ CZVETOK",
       "name_ru": "",
-      "breed": "КЛАССИК БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6583,10 +6774,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "750489952",
+      "id": "938567406",
+      "name_lat": "EVRA SENDI",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "91579694",
       "name_lat": "EVANGELINA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6610,6 +6809,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "386242443",
+      "name_lat": "EVRA GREYS VOM MAIR HOF",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1419039966",
       "name_lat": "EVGRAF IZ DOMA ELIV’S",
       "name_ru": "",
@@ -6628,21 +6835,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "116534835",
+      "id": "1582836055",
       "name_lat": "EVLADICHE KHEJ RIVER",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1249397611",
-      "name_lat": "EVIDENCE LOVE HOPE OF STAR",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -6682,6 +6880,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1177099251",
+      "name_lat": "EVA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "981865474",
       "name_lat": "EVIL FORKAS REGGI",
       "name_ru": "",
@@ -6691,19 +6897,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1177099251",
-      "name_lat": "EVA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1260317520",
+      "id": "994986046",
       "name_lat": "EVGEN POLI NATURAL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -6727,20 +6924,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "92065346",
-      "name_lat": "EVA MEDISON OF SANKTUM",
+      "id": "1609016084",
+      "name_lat": "EVA LONGORIA",
       "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "647717483",
-      "name_lat": "EVRO",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6772,37 +6959,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "897928713",
-      "name_lat": "EVROSTIL' KELVIN",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1103518433",
+      "id": "469692086",
       "name_lat": "EVRIKA KINSKI",
       "name_ru": "",
-      "breed": "КАНЕ КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1615181855",
+      "id": "216515154",
       "name_lat": "EVA VALENSIA",
       "name_ru": "",
-      "breed": "КИЧ СВЕТЛАНА НИКОЛАЕВНВА БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1190730618",
+      "id": "1482741329",
       "name_lat": "EVRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6813,15 +6991,6 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
       "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "212373201",
-      "name_lat": "EVIL FORKAS LARRI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6907,10 +7076,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1905106830",
+      "id": "116107170",
       "name_lat": "EVA SOLO RUSSO BELEZA",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6943,10 +7112,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "979423861",
+      "id": "929580767",
+      "name_lat": "EVIDENS LOVE OSKAR CONQUEROR OF HEARTS",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "215925080",
+      "name_lat": "EVIDENS LOVE LUXURY GIRL",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "883721369",
       "name_lat": "EVANGELISTADI CASA KALINAS",
       "name_ru": "",
-      "breed": "ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6961,10 +7146,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "744721401",
+      "id": "1239846269",
       "name_lat": "EVA SOLO ONE N’ONLY CHASEN TRAP",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6976,24 +7161,6 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1035767339",
-      "name_lat": "EVLADICHE OLIMPIKA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "700922732",
-      "name_lat": "EVA ISIDA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -7024,20 +7191,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1282305742",
+      "name_lat": "EVROAZIYA BIG BOSS",
+      "name_ru": "ЕВРОАЗИЯ БИГ БОСС",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1543308919",
       "name_lat": "EVIDENCE LOVE LION KING",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1282305742",
-      "name_lat": "EVROAZIYA BIG BOSS",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -7051,10 +7218,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "570123584",
-      "name_lat": "EVEREST TITAN",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "id": "1327539085",
+      "name_lat": "EVROAZIYA VENUS'S SLIPPER",
+      "name_ru": "ЕВРОАЗИЯ ВЕНУС'С СЛИППЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7141,20 +7308,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1576276388",
-      "name_lat": "EVENING STAR DI STELLA ARDENS",
+      "id": "604177638",
+      "name_lat": "EVERYONE'S",
       "name_ru": "",
-      "breed": "ЧЕРНЫЙ, МРАМОРНЫЙ",
+      "breed": "УАЙТ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1036633639",
-      "name_lat": "EVERYONE'S",
+      "id": "1429112641",
+      "name_lat": "EVIDENS LOVE TOUCH OF SUN",
       "name_ru": "",
-      "breed": "УАЙТ ТЕРЬЕР /",
-      "breed_en": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7186,10 +7352,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1202463736",
+      "id": "210089757",
       "name_lat": "EVALAIZ PARKER PEN",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -7204,10 +7370,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "761630253",
+      "id": "1840616464",
       "name_lat": "EVA LOTTA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -7245,6 +7411,22 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "446199833",
+      "name_lat": "EVONTY INSTINCT OF VIKTORY",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "866815769",
+      "name_lat": "EVONTY INTERNAL ENERGY",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -7303,11 +7485,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "340605522",
-      "name_lat": "EVRIKA IZ DREVNEGO RODA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "id": "1873262098",
+      "name_lat": "EVGENIKA IL VENTO DELLA VITA",
+      "name_ru": "ЕВГЕНИКА ИЛ ВЕНТО ДЕЛЛА ВИТА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -7321,10 +7503,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1610131042",
-      "name_lat": "EVEREST",
+      "id": "1829959799",
+      "name_lat": "EVIL GOD STAR",
+      "name_ru": "Эвил Год Стар",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207265756",
+      "name_lat": "EVA SNEZHNAYA KOROLEVA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БОКСЕР БУЛЬДОГ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17690875",
+      "name_lat": "EVA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "519794819",
+      "name_lat": "EVA XL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -7375,6 +7583,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1052727024",
+      "name_lat": "EVA SOLO SCORPIONS",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "198789085",
       "name_lat": "EVA S BURG GRACE VALENCIA",
       "name_ru": "",
@@ -7411,15 +7628,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "973349536",
-      "name_lat": "EVIL FORKAS SPARTAK",
-      "name_ru": "",
-      "breed": "Немецкая овчарка стандартная",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1809367037",
       "name_lat": "EVIL FORKAS ALTAIR",
       "name_ru": "",
@@ -7433,6 +7641,15 @@
       "name_lat": "EVONTY ROBIN HOOD",
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "590233694",
+      "name_lat": "EVIDENCE LOVE YOU ARE MY DREAM",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -7456,6 +7673,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "973349536",
+      "name_lat": "EVIL FORKAS SPARTAK",
+      "name_ru": "",
+      "breed": "Немецкая овчарка стандартная",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1820891414",
       "name_lat": "EVA ESENIYA",
       "name_ru": "",
@@ -7470,15 +7696,6 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА К-Ш",
       "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "17690875",
-      "name_lat": "EVA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -7555,17 +7772,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1300187776",
-      "name_lat": "EVALAIZ EL-PRAT",
+      "id": "578022651",
+      "name_lat": "EVEREST FENOMENAL SAKSES",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1873262098",
-      "name_lat": "EVGENIKA IL VENTO DELLA VITA",
+      "id": "856741676",
+      "name_lat": "EVA HIT-PARAD ZVEZD IOLANTA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1300187776",
+      "name_lat": "EVALAIZ EL-PRAT",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
@@ -7681,20 +7907,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1052727024",
-      "name_lat": "EVA SOLO SCORPIONS",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1772541001",
       "name_lat": "EVA ANGEL EYES",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "239873361",
+      "name_lat": "EVRA LEONE IMBO ORVIL DOMINO",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -7708,20 +7933,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "207265756",
-      "name_lat": "EVA SNEZHNAYA KOROLEVA",
+      "id": "413890390",
+      "name_lat": "EVDOGSTAR UNICUM ULANA",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "590233694",
-      "name_lat": "EVIDENCE LOVE YOU ARE MY DREAM",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -7762,10 +7977,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "260697611",
+      "id": "1492305204",
       "name_lat": "EVANGELINA BEAUTY STAR",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7798,19 +8013,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "476384609",
+      "id": "1838784258",
       "name_lat": "EVA-TEONA FOR KATARINA STOLTS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "337750046",
-      "name_lat": "EVANTA STIL SHERIF",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7834,28 +8040,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "137096672",
+      "id": "1062438767",
       "name_lat": "EVGENIKA FAJRI STAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1613263832",
-      "name_lat": "EVERYDAYS MIRACLE SWEETIE",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "889691720",
-      "name_lat": "EVA HIT-PARAD ZVEZD IOLANTA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7865,6 +8053,15 @@
       "name_lat": "EVERDEEN QUEEN",
       "name_ru": "",
       "breed": "ДОБЕРМАН ИТАЛЬЯНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1991678281",
+      "name_lat": "EVLAMPIYA KOROLEVA KRASOTY",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7897,28 +8094,44 @@
       "competition_dog_id": null
     },
     {
-      "id": "876652841",
-      "name_lat": "EVA FROM MILLERON",
+      "id": "850183314",
+      "name_lat": "EVIDASH JOELLE",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1417108171",
+      "id": "833983708",
+      "name_lat": "EVLASTRA GERTSOGINYA IZABELLA",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1449353436",
       "name_lat": "EVRO V.LILU LAND",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "704442472",
-      "name_lat": "EVEREST FENOMENAL SAKSES",
+      "id": "2980501",
+      "name_lat": "EVRA LEONE ZAGADKA SEVERA",
+      "name_ru": "ЕВРА ЛЕОНЕ ЗАГАДКА СЕВЕРА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "585128252",
+      "name_lat": "EVROAZIYA UNAFFECTED BOY",
       "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7933,19 +8146,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1523244354",
+      "id": "59657027",
       "name_lat": "EVANGELINA DUSHECHKA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "13667674",
+      "id": "83437137",
       "name_lat": "EVA LIGHT UP STARS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР Окрас белый",
+      "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7978,6 +8191,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "581589585",
+      "name_lat": "EVATARI SEKEY TENSHI",
+      "name_ru": "ЕВАТАРИ СЭКЭЙ ТЕНШИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1476128535",
       "name_lat": "Everydays Miracle Eclipse",
       "name_ru": "",
@@ -7996,10 +8218,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1991678281",
-      "name_lat": "EVLAMPIYA KOROLEVA KRASOTY",
+      "id": "1263847407",
+      "name_lat": "EVKLIDA DE ORSE MAK FLAI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -8059,37 +8281,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "213362587",
+      "id": "1168988971",
       "name_lat": "EVROPA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "126235988",
+      "id": "1331496961",
       "name_lat": "EVRIK",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "69618739",
+      "id": "768446728",
       "name_lat": "Ev Maximus",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1732347706",
+      "id": "637878302",
       "name_lat": "EVA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8109,6 +8331,14 @@
       "name_ru": "",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1613365978",
+      "name_lat": "EVRO GOLD",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8154,6 +8384,14 @@
       "name_ru": "",
       "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1269980351",
+      "name_lat": "EVA LAURA",
+      "name_ru": "",
+      "breed": "RUSSIAN TOY",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8239,10 +8477,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1092860963",
+      "id": "1701275402",
       "name_lat": "EVDOKIYA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8257,10 +8495,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1070145342",
+      "id": "734745707",
       "name_lat": "EVA",
       "name_ru": "",
-      "breed": "КЛАССИК БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8275,10 +8513,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1981506755",
+      "id": "1521782634",
       "name_lat": "EVITA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8329,24 +8567,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1032359132",
-      "name_lat": "EVEREST",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "519794819",
-      "name_lat": "EVA XL",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "271380688",
       "name_lat": "EVITA STAR",
       "name_ru": "",
@@ -8374,15 +8594,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "969569310",
-      "name_lat": "EVEREST",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "979555538",
       "name_lat": "EVA XL",
       "name_ru": "",
@@ -8397,6 +8608,14 @@
       "name_ru": "",
       "breed": "БУРБУЛЬ ЮЖНОАФРИКАНСКИЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1952052969",
+      "name_lat": "EVA",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8432,6 +8651,68 @@
       "name_lat": "EVLAMPIYA",
       "name_ru": "",
       "breed": "ЭПАНЬОЛЬ БРЕТОНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "588092884",
+      "name_lat": "EVA LONGORIA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "415962221",
+      "name_lat": "EVROSTIL' TRYUFEL V SHOKOLADE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1866191082",
+      "name_lat": "EVROSTIL' TEKILA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "564330672",
+      "name_lat": "EVA LAURA IZ SVERKAJUSHEG O MIRA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1741481156",
+      "name_lat": "EVANESCENCE JIFFY STAYS WITH",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "778587064",
+      "name_lat": "Everydays Miracle Plombir",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "665637623",
+      "name_lat": "EVANGELINA IZ STOLITSY URALA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8707,15 +8988,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1829959799",
-      "name_lat": "EVIL GOD STAR",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "631356231",
       "name_lat": "EVANGELINA FERNANDA",
       "name_ru": "",
@@ -8725,28 +8997,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "2980501",
-      "name_lat": "EVRA LEONE ZAGADKA SEVERA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1411231616",
       "name_lat": "EVERYDAY STAR KALLEN",
       "name_ru": "",
       "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) / GERMAN SPITZ ZWERGSPITZ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "15831570",
-      "name_lat": "EVLASTRA GARDI ATARI MACHIKO",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ / SHIH TZU",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8770,19 +9024,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "422486892",
+      "id": "3788747",
       "name_lat": "EVERYDAYS MIRACLE ATLANTIDA, ,",
       "name_ru": "",
-      "breed": "ИВЕР/",
+      "breed": "ИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "703770619",
+      "id": "1609956274",
       "name_lat": "EVANGELINA BLACK FLOWER",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8815,28 +9069,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1808314652",
-      "name_lat": "EVIL EMPIRE BYLLY'S EMOJI",
-      "name_ru": "",
-      "breed": "ПОКЕТ / AMERICAN BULLY",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "208429028",
       "name_lat": "EVOLYUTSIYA CULTURE OF BULLS",
       "name_ru": "",
       "breed": "BORDEAUX БУЛЬДОГ / BULLDOG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "585128252",
-      "name_lat": "EVROAZIYA UNAFFECTED BOY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8869,6 +9105,54 @@
       "competition_dog_id": null
     },
     {
+      "id": "238652400",
+      "name_lat": "EVIL EMPIRE BULLY’S DISHA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1793176730",
+      "name_lat": "EVELINA EKSKLYUZIV NOCHES",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "869612128",
+      "name_lat": "EVERYONES DREAM BRAVE WARLIKE LEADER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "125220976",
+      "name_lat": "EVAK'S MARSHMALLOW",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "568995982",
+      "name_lat": "EVIDENS LOVE GRAND PRIX",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "80525127",
+      "name_lat": "EVIDENS LOVE BEAUTY OF SOUL",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "784603859",
       "name_lat": "EVA GOLDEN ROUZ",
       "name_ru": "",
@@ -8878,10 +9162,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "601273236",
+      "id": "1672738234",
       "name_lat": "EVIL FORKAS VANESSA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8959,10 +9243,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1390806389",
+      "id": "1950838665",
       "name_lat": "EVGEN POLI NAVRUZ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8986,10 +9270,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "7428318",
+      "id": "509080958",
       "name_lat": "EVA HIT-PARD ZVEZD PIPPA MIDLTON",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЁРНЫЕ, ЧЁРНО-ПОДПАЛЫЕ,",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЕРНЫЕ, ЧЕРНО-ПОДПАЛЫЕ,",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9049,10 +9333,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "676851013",
+      "id": "498127510",
       "name_lat": "EVLAMPIYA IZ KO’MARINOY STAI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9071,24 +9355,6 @@
       "name_lat": "EVA-MARIYA BRAUN",
       "name_ru": "",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "581589585",
-      "name_lat": "EVATARI SEKEY TENSHI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1327539085",
-      "name_lat": "EVROAZIYA VENUS'S SLIPPER",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9125,15 +9391,6 @@
       "name_lat": "EVKA APERTO LIBRO",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "239873361",
-      "name_lat": "EVRA LEONE IMBO ORVIL DOMINO",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9211,19 +9468,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1304446852",
+      "id": "1661217670",
       "name_lat": "EVIDANCE LOVE OLIVIA BRIGHT LADY",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1028313348",
+      "id": "428730374",
       "name_lat": "EVIDANCE LOVE TOP MODEL",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9292,15 +9549,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "606090041",
-      "name_lat": "EVROSTIL' TRYUFEL V SHOKOLADE",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "139793069",
       "name_lat": "EVONTY FELIZ ESTRELLA",
       "name_ru": "",
@@ -9323,15 +9571,6 @@
       "name_lat": "EVERY MOMENT ВЕНЕРА",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "175835830",
-      "name_lat": "EVROSTIL' TEKILA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9364,19 +9603,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1465458217",
+      "id": "1880490237",
       "name_lat": "EVGEN POLI BEHA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1072978536",
-      "name_lat": "EVA LAURA IZ SVERKAJUSHEG O MIRA",
-      "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9400,10 +9630,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "699540160",
+      "id": "1721309973",
       "name_lat": "EVONTY BASSILUR INFINITY",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ /",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -9454,24 +9684,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1741481156",
-      "name_lat": "EVANESCENCE JIFFY STAYS WITH",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1263847407",
-      "name_lat": "EVKLIDA DE ORSE MAK FLAI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1350689794",
       "name_lat": "EVER RED HOT CHILI",
       "name_ru": "",
@@ -9490,24 +9702,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "728727023",
-      "name_lat": "EVIL FORKAS IFA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1417790120",
-      "name_lat": "Everydays Miracle Plombir",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1445874022",
       "name_lat": "EVERYDAYS MIRACLE SWAROWSKI",
       "name_ru": "",
@@ -9517,11 +9711,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1010343408",
+      "id": "1137648990",
       "name_lat": "EVGEN POLI VESTERN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1151864925",
+      "name_lat": "EVA'S BURG NOBLE LADY",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -9562,6 +9764,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1985028508",
+      "name_lat": "EVELYN PETIT IZ ZOLOTOGO EDEMA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1345064972",
+      "name_lat": "EVELLIYA ZHELANNAYA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "153589972",
       "name_lat": "EVONTY IMPERIAL HIGHNESS",
       "name_ru": "",
@@ -9580,28 +9798,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "665637623",
-      "name_lat": "EVANGELINA IZ STOLITSY URALA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "393451537",
+      "id": "1487418037",
       "name_lat": "EVANGELISTE BEAUTY",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "981514881",
-      "name_lat": "EVGENIYA ASTAKHOVA FLO",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

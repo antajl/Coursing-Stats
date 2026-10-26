@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "УT",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "939536940",
+      "name_lat": "у THAI THAI OF SALSA'S STARS",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "579116486",
+      "name_lat": "у TSVIB'S BROADWAY MELODY",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "893795262",
+      "name_lat": "у TAIRKAYAN TOTORA",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

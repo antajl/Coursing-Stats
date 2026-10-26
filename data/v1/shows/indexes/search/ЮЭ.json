@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЮЭ",
-  "count": 8,
+  "count": 12,
   "dogs": [
     {
       "id": "191153539",
       "name_lat": "ЮЭЛА КИЛГЕТТИ",
-      "name_ru": "",
+      "name_ru": "ЮЭЛА КИЛГЕТТИ",
       "breed": "ПАРСОН РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1688459412",
+      "name_lat": "Ю ЭНД АЙ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -31,11 +40,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1292779832",
+      "name_lat": "Ю ЭНД МИ ФОРЕВЕР ОТ АНВЕРОН",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1292793299",
       "name_lat": "ЮЭЛЬ МИСС ЭБИГАЛЬ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181593141",
+      "name_lat": "ЮЭН",
+      "name_ru": "",
+      "breed": "Сиба",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -63,6 +88,14 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468797525",
+      "name_lat": "ЮЭЛЬ ВЕРНЕР САРА",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 1,
       "competition_dog_id": null
     },

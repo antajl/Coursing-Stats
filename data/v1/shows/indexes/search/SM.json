@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "SM",
-  "count": 633,
+  "count": 651,
   "dogs": [
     {
       "id": "677628660",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
-      "total_shows": 113,
+      "total_shows": 122,
       "competition_dog_id": null
     },
     {
@@ -18,14 +18,14 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "PUG",
-      "total_shows": 70,
+      "total_shows": 73,
       "competition_dog_id": null
     },
     {
-      "id": "694022258",
+      "id": "968311510",
       "name_lat": "SMART CONNECTION DARK QUEEN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -45,7 +45,7 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 64,
+      "total_shows": 69,
       "competition_dog_id": null
     },
     {
@@ -54,7 +54,7 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 67,
+      "total_shows": 72,
       "competition_dog_id": null
     },
     {
@@ -63,14 +63,14 @@
       "name_ru": "",
       "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "GIANT SCHNAUZER BLACK",
-      "total_shows": 27,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "1989071590",
+      "id": "947435754",
       "name_lat": "SMART CONNECTION STARLIGHT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
       "total_shows": 47,
       "competition_dog_id": null
@@ -85,30 +85,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "811144987",
+      "id": "113355172",
       "name_lat": "SMALL GALAXY VIZANTIYA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "368490320",
-      "name_lat": "SMYSL ZHIZNI LAURA",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "PUG",
-      "total_shows": 47,
-      "competition_dog_id": null
-    },
-    {
-      "id": "764917210",
-      "name_lat": "SMYSL ZHIZNI IMPERATOR",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -117,14 +99,41 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
       "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
-      "total_shows": 29,
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
-      "id": "180147815",
+      "id": "368490320",
+      "name_lat": "SMYSL ZHIZNI LAURA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 48,
+      "competition_dog_id": null
+    },
+    {
+      "id": "764917210",
+      "name_lat": "SMYSL ZHIZNI IMPERATOR",
+      "name_ru": "СМЫСЛ ЖИЗНИ ИМПЕРАТОР",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 54,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1285271599",
+      "name_lat": "SMYSL ZHIZNI UNDOUBTED MASTERPIESE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1233399003",
       "name_lat": "SMART CONNECTION HIPNOTIC",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -144,7 +153,7 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -171,16 +180,25 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
-      "id": "604770640",
+      "id": "157278331",
+      "name_lat": "SMASH JP SPRING PRINCE",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "POODLE TOY BLACK, WHITE, BROWN",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "337933084",
       "name_lat": "SMART CONNECTION FIRE GAME",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -193,12 +211,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1285271599",
-      "name_lat": "SMYSL ZHIZNI UNDOUBTED MASTERPIESE",
+      "id": "1469484187",
+      "name_lat": "SMYSL ZHIZNI OH DANGER ZONE",
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -207,7 +225,7 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "MINIATURE BULL TERRIER",
-      "total_shows": 24,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -238,10 +256,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1223345782",
+      "id": "52999154",
       "name_lat": "SMART CONNECTION BAY BREEZE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -252,7 +270,25 @@
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "SAMOYED",
-      "total_shows": 15,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1513777196",
+      "name_lat": "SMALL ONYX",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "968877205",
+      "name_lat": "SM BAY ZUR-TASH",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -265,48 +301,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "968877205",
-      "name_lat": "SM BAY ZUR-TASH",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "946106427",
+      "id": "1426376178",
       "name_lat": "SMIDGEON IZ IMPERII ADAMANT",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 23,
-      "competition_dog_id": null
-    },
-    {
-      "id": "157278331",
-      "name_lat": "SMASH JP SPRING PRINCE",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "POODLE TOY BLACK, WHITE, BROWN",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1513777196",
-      "name_lat": "SMALL ONYX",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1469484187",
-      "name_lat": "SMYSL ZHIZNI OH DANGER ZONE",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -315,7 +315,24 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1803944924",
+      "name_lat": "SMART CONNECTION DARKNET",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "717726436",
+      "name_lat": "Smolin's dog Illiada Gordost Rossii",
+      "name_ru": "",
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "OLD ENGLISH SHEEPDOG",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -324,6 +341,15 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1578521982",
+      "name_lat": "SMURF FROM LONGWAY GUREN",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "AMERICAN BULLY POCKET",
       "total_shows": 15,
       "competition_dog_id": null
     },
@@ -364,12 +390,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "717726436",
-      "name_lat": "SMOLIN'S DOG ILLIADA GORDOST ROSSII",
+      "id": "378780268",
+      "name_lat": "SMALLSPRING GUY STAR MUSIC",
       "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "OLD ENGLISH SHEEPDOG",
-      "total_shows": 15,
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1241095971",
+      "name_lat": "SMIGAR OLIVIYA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -379,15 +414,6 @@
       "breed": "НОРФОЛК ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "378780268",
-      "name_lat": "SMALLSPRING GUY STAR MUSIC",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -418,10 +444,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "796943662",
+      "id": "1013205202",
       "name_lat": "SMART CONNECTION WISTERIA LANE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
@@ -445,6 +471,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "804825218",
+      "name_lat": "SMART ART LEMONADE DUCHES",
+      "name_ru": "",
+      "breed": "НОРФОЛК ТЕРЬЕР",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "814190728",
       "name_lat": "SM BAY KISA",
       "name_ru": "",
@@ -454,10 +488,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "183127613",
+      "id": "1035549507",
+      "name_lat": "SMART STYLE BANDEROS DLJA SNOW MIRACLE",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1859643039",
+      "name_lat": "SMART AS A WHIP DARK SECRET",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "277809248",
       "name_lat": "SMILAIN FERRERO",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -481,30 +533,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1035549507",
-      "name_lat": "SMART STYLE BANDEROS DLJA SNOW MIRACLE",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Г-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "15868723",
+      "id": "484951260",
       "name_lat": "SMALL GALAXY GUCHCHI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1859643039",
-      "name_lat": "SMART AS A WHIP DARK SECRET",
+      "id": "1983595021",
+      "name_lat": "SMILAIN ROLLAND",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 18,
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -514,6 +557,15 @@
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1345170981",
+      "name_lat": "SMILE ANGEL VANTABLACK",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -544,6 +596,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1351048774",
+      "name_lat": "SMART WOOD HILLS TEODORA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "49632033",
       "name_lat": "SMART WOOD HILLS ISTRA",
       "name_ru": "",
@@ -568,15 +629,6 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1578521982",
-      "name_lat": "SMURF FROM LONGWAY GUREN",
-      "name_ru": "",
-      "breed": "ПОКЕТ",
-      "breed_en": "AMERICAN BULLY POCKET",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -607,6 +659,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "79182185",
+      "name_lat": "SMART BAND HUMMER",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "340165472",
       "name_lat": "SM BILLY RICHARD",
       "name_ru": "",
@@ -625,6 +686,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1175765780",
+      "name_lat": "Smolin's dog Je T'Aime Смолинз дог Мишель",
+      "name_ru": "",
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
+      "breed_en": "OLD ENGLISH SHEEPDOG",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "1861705881",
       "name_lat": "SMILE ANGEL TSENTURION",
       "name_ru": "",
@@ -634,21 +704,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1175765780",
-      "name_lat": "Smolin's dog Je T'Aime Смолинз дог Мишель",
+      "id": "194099419",
+      "name_lat": "SMILE ANGEL YOU MY LIFE",
       "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
-      "breed_en": "OLD ENGLISH SHEEPDOG",
-      "total_shows": 18,
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "62051934",
+      "id": "95420178",
       "name_lat": "SMART CONNECTION NJOY NORD FOREST",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
-      "total_shows": 18,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -670,10 +740,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "725010538",
+      "id": "1464573070",
       "name_lat": "SMART CONNECTION DALLIANCE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
       "total_shows": 9,
       "competition_dog_id": null
@@ -688,12 +758,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1351048774",
-      "name_lat": "SMART WOOD HILLS TEODORA",
+      "id": "1332077700",
+      "name_lat": "SMILAIN TSENTURIYA-II",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "DOBERMANN",
-      "total_shows": 21,
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
@@ -706,12 +776,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1985596194",
+      "id": "155929891",
       "name_lat": "SMART ART GLORY STORY",
       "name_ru": "",
-      "breed": "НОРФОЛК ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "НОРФОЛК ТЕРЬЕР",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -742,10 +811,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1113470041",
+      "id": "70180004",
       "name_lat": "SMILE STARS ORNALDO MICONTY",
       "name_ru": "",
-      "breed": "ЛАГОТТО РОМАНЬОЛО /",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -823,6 +892,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "76803038",
+      "name_lat": "SMORODINA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1759217946",
       "name_lat": "SMART CHOICE FROM HEAVENLI LAB",
       "name_ru": "",
@@ -841,10 +918,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "182732513",
+      "id": "1993873171",
       "name_lat": "SMART SUNDAY DE’LIA TALE",
       "name_ru": "",
-      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -859,30 +936,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "38289935",
+      "id": "477350462",
       "name_lat": "SMIGAR GLADE SPRING",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1332077700",
-      "name_lat": "SMILAIN TSENTURIYA-II",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "YORKSHIRE TERRIER",
-      "total_shows": 34,
-      "competition_dog_id": null
-    },
-    {
-      "id": "194099419",
-      "name_lat": "SMILE ANGEL YOU MY LIFE",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "SHETLAND SHEEPDOG",
-      "total_shows": 19,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -895,19 +954,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "127757281",
+      "id": "54020109",
       "name_lat": "SMART CONNECTION PROFILE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 41,
+      "total_shows": 42,
       "competition_dog_id": null
     },
     {
-      "id": "1633146053",
+      "id": "1670169048",
       "name_lat": "SMART WOOD HILLS GRANDESSA",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
@@ -919,6 +978,15 @@
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "245379741",
+      "name_lat": "SMOLIN'S DOG LILIANA",
+      "name_ru": "Смолин'с дог Лилиана",
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
+      "breed_en": "OLD ENGLISH SHEEPDOG",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -958,10 +1026,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1084574664",
+      "id": "1497664060",
       "name_lat": "SMART CONNECTION FALSIFICATION",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -973,15 +1041,6 @@
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1345170981",
-      "name_lat": "SMILE ANGEL VANTABLACK",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1003,15 +1062,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "245379741",
-      "name_lat": "SMOLIN'S DOG LILIANA",
-      "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
-      "breed_en": "OLD ENGLISH SHEEPDOG",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "101330153",
       "name_lat": "SMASH S TAGANIEGO ROGA",
       "name_ru": "",
@@ -1027,6 +1077,15 @@
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "842669657",
+      "name_lat": "SMART WOOD HILLS XENOX",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ЧЁРНО-ПОДПАЛЫЙ",
+      "breed_en": "DOBERMANN",
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -1063,15 +1122,6 @@
       "breed": "POODLE TOY BLACK, WHITE, BROWN",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "842669657",
-      "name_lat": "SMART WOOD HILLS XENOX",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО-ПОДПАЛЫЙ",
-      "breed_en": "DOBERMANN",
-      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -1120,6 +1170,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1987310789",
+      "name_lat": "SMILE FOR ME",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ФАЛЕН",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "85018569",
+      "name_lat": "SMART PTYS ZLOTA BEJA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "406929545",
       "name_lat": "SMILE",
       "name_ru": "",
@@ -1134,7 +1202,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
       "breed_en": "AMERICAN BULLY POCKET",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1174,8 +1242,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1190740420",
-      "name_lat": "SMILE OF HAPPINESS AY- TADOR",
+      "id": "1615170524",
+      "name_lat": "SMILE OF HAPPINESS AY-TADOR",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -1183,19 +1251,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "461644070",
-      "name_lat": "SMYSL ZHIZNI XENIA SHOW N' GLOW",
+      "id": "511810365",
+      "name_lat": "SMYSL ZHIZNI XENIA SHOW N'GLOW",
       "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
-      "breed_en": "",
+      "breed": "МОПС",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "79182185",
-      "name_lat": "SMART BAND HUMMER",
+      "id": "461644070",
+      "name_lat": "SMYSL ZHIZNI XENIA SHOW N' GLOW",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1237,10 +1304,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "7763656",
+      "id": "144153446",
       "name_lat": "SMALLSPRING ALBION LIGHTS",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СЕТТЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1273,12 +1340,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "511810365",
-      "name_lat": "Smysl Zhizni Xenia Show N'Glow",
+      "id": "132104383",
+      "name_lat": "SMURFETTE IZ SKAZOCHNOGO LESA",
       "name_ru": "",
-      "breed": "МОПС",
+      "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1309,15 +1376,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1983595021",
-      "name_lat": "SMILAIN ROLLAND",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1493581559",
       "name_lat": "SMILE ANGEL CALINKA-MALINKA",
       "name_ru": "",
@@ -1327,10 +1385,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "872302281",
+      "id": "1021771370",
       "name_lat": "SMOLL GALAXY BEJLIS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1381,10 +1439,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1559858440",
+      "id": "1152592493",
+      "name_lat": "SMISE ZHIZNI UN GRAND AMOUR",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1813855405",
       "name_lat": "SM BAY KISA",
       "name_ru": "",
-      "breed": "Я ОВЧАРКА /",
+      "breed": "Я ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1399,11 +1466,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "348170309",
+      "id": "1852798870",
       "name_lat": "SMOLL GALAXY GUCHCHI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "561997164",
+      "name_lat": "SMYSL ZHIZNI MY PRESENT TWINKLE STAR",
+      "name_ru": "",
+      "breed": "МОПС",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1453,48 +1528,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "473668573",
+      "id": "1963652650",
       "name_lat": "SMART WOOD HILLS ZAR",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
       "breed_en": "DOBERMANN",
-      "total_shows": 27,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "1332306632",
+      "id": "290756717",
       "name_lat": "SMILEKEEPING KATALINA SHARMAN KERRI'K",
       "name_ru": "",
-      "breed": "КЕРРИ БЛЮ ТЕРЬЕР /",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1163192902",
-      "name_lat": "SMURFETTE IZ SKAZOCHNOGO LESA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ /",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "85018569",
-      "name_lat": "SMART PTYS ZLOTA BEJA",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "218091539",
+      "id": "504106190",
       "name_lat": "SMART WOOD HILLS JENNIFER",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "ДОБЕРМАН ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "DOBERMANN",
-      "total_shows": 35,
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -1512,7 +1569,7 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1561,12 +1618,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "185769370",
+      "id": "1064813022",
       "name_lat": "SMASHPARK MISS.CHU",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "810128909",
+      "name_lat": "SMOLANT RIVES DARINA LIFE",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1363062865",
+      "name_lat": "SMALL VIRGINIA CELESTE GOLD PEARL",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "AFGHAN HOUND",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "8732688",
+      "name_lat": "SMART WOOD HILLS XANDRA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1579,30 +1662,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "810128909",
-      "name_lat": "SMOLANT RIVES DARINA LIFE",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1795732772",
       "name_lat": "SMARTI STAR STEFFI",
       "name_ru": "",
       "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1363062865",
-      "name_lat": "SMALL VIRGINIA CELESTE GOLD PEARL",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "AFGHAN HOUND",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1624,30 +1689,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "119784951",
+      "name_lat": "SMOLL MEDZHIK MIKKI",
+      "name_ru": "",
+      "breed": "ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "594819074",
       "name_lat": "SMILYVYI HETMAN DNWINDTALKERS",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "194617100",
-      "name_lat": "SMOLL MEDZHIK MIKKI",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "8732688",
-      "name_lat": "SMART WOOD HILLS XANDRA",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -1678,21 +1733,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "40982454",
+      "id": "1233330351",
       "name_lat": "SMIGAR AGDAY VIRTUS",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1212240511",
+      "id": "26525651",
       "name_lat": "SMART CONNECTION SMASHING NEWS",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1183941419",
+      "name_lat": "SMOLL BLUE MAGIC DANAYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1705,10 +1769,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "119990871",
+      "id": "1897029010",
       "name_lat": "SMALLSPRING GALAYRDO",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "SPRINGER SPANIEL",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1732,19 +1796,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "215721527",
-      "name_lat": "SMOLL BLUE MAGIC DANAYA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1461541780",
+      "id": "360108874",
       "name_lat": "SMART WOOD HILLS UNIQUE",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "DOBERMANN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1759,21 +1814,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "926552156",
-      "name_lat": "SMART WOOD HILLS LAVANDA",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
       "id": "1114229452",
       "name_lat": "SMART WOOD HILLS MONTE-CHRISTO",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
-      "total_shows": 20,
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "197200584",
+      "name_lat": "SMART WOOD HILLS LAVANDA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -1795,10 +1850,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "240776212",
+      "id": "1749413057",
       "name_lat": "SMILE ELITE BENTLEY",
       "name_ru": "",
-      "breed": "СОБАКА /",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -1822,6 +1877,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "678586548",
+      "name_lat": "SMYSL ZHIZNI CHERNIKA",
+      "name_ru": "СМЫСЛ ЖИЗНИ ЧЕРНИКА",
+      "breed": "МОПС",
+      "breed_en": "PUG",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "750059023",
       "name_lat": "SMASHING IN BLACK EGORUSHKA",
       "name_ru": "",
@@ -1831,10 +1895,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1929463799",
+      "id": "1258721846",
       "name_lat": "SMOLLY S BEREGA DONA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1846,15 +1910,6 @@
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "678586548",
-      "name_lat": "SMYSL ZHIZNI CHERNIKA",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "PUG",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1876,6 +1931,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "175158285",
+      "name_lat": "SMOLIN'S DOG KOROLEVICH YELISEY",
+      "name_ru": "",
+      "breed": "OLD ENGLISH SHEEPDOG (BOBTAIL)",
+      "breed_en": "OLD ENGLISH SHEEPDOG",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1285363238",
       "name_lat": "SMIRNOV STYLE I'TOMARE",
       "name_ru": "",
@@ -1885,10 +1949,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1449301535",
+      "id": "1970159163",
       "name_lat": "SMART CONNECTION ON AND ON",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1900,6 +1964,15 @@
       "breed": "БОРДЕР ТЕРЬЕР",
       "breed_en": "BORDER TERRIER",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "282201767",
+      "name_lat": "SM BAY ZMEJ GORYNYCH",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1930,10 +2003,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "285321045",
+      "id": "1584183825",
       "name_lat": "SMART CONNECTION PAY AND PLAY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1957,10 +2030,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "15348317",
+      "id": "251020800",
       "name_lat": "SMILE HONNY MOON",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1971,16 +2044,25 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "268519572",
+      "id": "1422694721",
       "name_lat": "SMART WOOD HILLS GALLANT",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "757361093",
+      "name_lat": "SMART WOOD HILLS QORITSA TSARITSA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1993,10 +2075,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1239591141",
+      "id": "862194296",
       "name_lat": "SMIGAR GOLLYWOOD SMILE",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2029,21 +2111,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1911107750",
+      "id": "417228447",
       "name_lat": "SMALL HEROES BULL NICO",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "282201767",
-      "name_lat": "SM BAY ZMEJ GORYNYCH",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2056,10 +2129,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "83074740",
+      "id": "352097370",
       "name_lat": "SMOLENSKIY BRILLIANT USPEH",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2101,15 +2174,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1783262181",
-      "name_lat": "SMOLIN'S DOG KOROLEVICH YELISEY",
-      "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
-      "breed_en": "OLD ENGLISH SHEEPDOG",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1350730866",
       "name_lat": "SMILEWOOD SHERRY",
       "name_ru": "",
@@ -2119,10 +2183,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "373617280",
+      "id": "305684693",
       "name_lat": "SMAYLI FO ME IZ DOMA KOROLEVOY",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2133,7 +2197,7 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -2143,6 +2207,15 @@
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "102544211",
+      "name_lat": "SMILE ANGEL SUPER MAN",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2191,6 +2264,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "214157860",
+      "name_lat": "SMALL VIRGINIA CAMELLIA GUEEN",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "718956958",
       "name_lat": "SMOLIN'S DOG GEORG FREDERIK",
       "name_ru": "",
@@ -2209,17 +2291,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "102544211",
-      "name_lat": "SMILE ANGEL SUPER MAN",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "877153259",
-      "name_lat": "SMART WOOD HILLS ICE- N-FIRE",
+      "id": "1571879185",
+      "name_lat": "SMART WOOD HILLS ICE-N-FIRE",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
@@ -2236,10 +2309,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "527321703",
+      "id": "1539758299",
       "name_lat": "SMASHING IN BLACK HUGO",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "GIANT SCHNAUZER BLACK",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2263,8 +2336,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922825421",
-      "name_lat": "SMOLLIS HOUSE SHEIZARA",
+      "id": "1611515986",
+      "name_lat": "SMOLLIS-HOUSE SHEIZARA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -2322,7 +2395,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2335,12 +2408,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1617479905",
-      "name_lat": "SMART CONNECTION DARKNET",
+      "id": "598511120",
+      "name_lat": "SMART WOOD HILLS SONATA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2353,10 +2426,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1278759320",
+      "id": "1937503028",
       "name_lat": "SMART GIRL IZ SEVERNOY IMPERII",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2371,12 +2444,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "390129517",
+      "name_lat": "SMART WOOD HILLS BOSFOR",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1333017160",
+      "name_lat": "SMESH GORDON",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1126433826",
       "name_lat": "SMIGAR KOROLINA DZHEJ",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "NEWFOUNDLAND",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "627369003",
+      "name_lat": "SMELYY SEMEN SEMENOVICH",
+      "name_ru": "СМЕЛЫЙ СЕМЕН СЕМЕНОВИЧ",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2425,12 +2525,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "396221675",
+      "id": "1900407266",
       "name_lat": "SMILING SNOWBALL BON VOYAGE",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24358873",
+      "name_lat": "SMELLS LIKE TEEN SPIRIT",
+      "name_ru": "",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2443,28 +2552,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "953225731",
+      "id": "1221839503",
       "name_lat": "SMART CONNECTION OPIATIC",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "273767770",
+      "id": "1948163574",
       "name_lat": "SMART CONNECTION OPIUM INSIGHT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "804825218",
-      "name_lat": "SMART ART LEMONADE DUCHES",
+      "id": "1575876062",
+      "name_lat": "SMYSL ZHIZNI NIKITOS A BLACK STAR",
       "name_ru": "",
-      "breed": "НОРФОЛК ТЕРЬЕР",
+      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2485,15 +2594,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "598511120",
-      "name_lat": "SMART WOOD HILLS SONATA",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "DOBERMANN",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2524,12 +2624,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1900162809",
+      "id": "1897540995",
+      "name_lat": "SMILE ANGEL LUXURY BRANDA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "920920260",
       "name_lat": "SMART WOOD HILLS FERARRI-II",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "352272371",
+      "name_lat": "SM BAY PAHAN AK",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2548,6 +2666,24 @@
       "breed": "ПОКЕТ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1801990853",
+      "name_lat": "SMILE HOUSE BULLY SIMBAD",
+      "name_ru": "",
+      "breed": "ПОКЕТ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "459715824",
+      "name_lat": "SMILE ANGEL OCHAROVASH KA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2578,21 +2714,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1477225333",
+      "id": "1568746760",
       "name_lat": "SM BAY NOCH",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "627369003",
-      "name_lat": "SMELYY SEMEN SEMENOVICH",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2605,12 +2732,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "802605219",
+      "id": "1364522892",
       "name_lat": "SMANTA SMITT",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1061723481",
+      "name_lat": "SMAYLA STAR VICTORIA",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1495998371",
+      "name_lat": "SMALL SMART EYRA",
+      "name_ru": "СМАЛЛ СМАРТ ЭЙРА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2623,46 +2768,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "24358873",
-      "name_lat": "SMELLS LIKE TEEN SPIRIT",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1011378941",
+      "id": "153956154",
       "name_lat": "SMART ART VELVET PRALINE",
       "name_ru": "",
-      "breed": "TERRIER",
+      "breed": "НОРФОЛК ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1575876062",
-      "name_lat": "SMYSL ZHIZNI NIKITOS A BLACK STAR",
+      "id": "1847222450",
+      "name_lat": "SMYSL ZHIZNI UNDEGROUD BATTLE",
       "name_ru": "",
       "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "214157860",
-      "name_lat": "SMALL VIRGINIA CAMELLIA GUEEN",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "390129517",
-      "name_lat": "SMART WOOD HILLS BOSFOR",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2674,6 +2792,14 @@
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "701627168",
+      "name_lat": "SMILAIN SOLE MIO-II",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2722,12 +2848,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1897540995",
-      "name_lat": "SMILE ANGEL LUXURY BRANDA",
+      "id": "272405102",
+      "name_lat": "SMIRNOV STYLE HLOYA LISI",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2767,6 +2893,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "911427256",
+      "name_lat": "SMIGAR IREN ADLER",
+      "name_ru": "СМИГАР ИРЕН АДЛЕР",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1364256146",
       "name_lat": "SMART BOY",
       "name_ru": "",
@@ -2776,10 +2911,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "732090610",
+      "id": "178445939",
       "name_lat": "SMALL VIRGINIA ESTELLA SKY MAIDEN",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2794,10 +2929,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "839367284",
+      "id": "1519067352",
       "name_lat": "SMART CONNECTION WONDERZONE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2809,6 +2944,15 @@
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "158640231",
+      "name_lat": "SMILE MAY HEART FORTUNA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2866,21 +3010,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1899905153",
+      "name_lat": "SMILE ANGEL RENESSANCE",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1264626655",
       "name_lat": "SMART WOOD HILLS GOLDEN GINGER",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "459715824",
-      "name_lat": "SMILE ANGEL OCHAROVASH KA",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2911,10 +3055,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "191308312",
+      "id": "208068012",
       "name_lat": "SMART CONNECTION PERFECTA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2929,10 +3073,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1359786333",
+      "id": "1128461568",
       "name_lat": "SM BAY MA DAMA",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2947,10 +3091,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "108526970",
+      "id": "794655691",
       "name_lat": "SMILE ELITE AMBER",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2974,15 +3118,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "770957662",
-      "name_lat": "SMAYLA STAR VICTORIA",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "347986381",
       "name_lat": "SM BAY KISA",
       "name_ru": "",
@@ -2996,6 +3131,15 @@
       "name_lat": "SMILE LUCK SKY IN MY EYES ( )",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1448632804",
+      "name_lat": "SMYSL ZHIZNI IMPAKTO",
+      "name_ru": "СМЫСЛ ЖИЗНИ ИМПАКТО",
+      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3019,21 +3163,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "978283004",
+      "id": "1609985026",
       "name_lat": "SMART WOOD HILLS GOODWIN",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "DOBERMANN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "272405102",
-      "name_lat": "SMIRNOV STYLE HLOYA LISI",
+      "id": "885450623",
+      "name_lat": "SMOLLI LOLA",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "216343133",
+      "name_lat": "SM BAY AUDI-TORIYA",
+      "name_ru": "СМ БАЙ АУДИ-ТОРИЯ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3046,10 +3198,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "693416306",
+      "id": "1506219147",
       "name_lat": "SMALLSPRING BRAVE HEART",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3064,10 +3216,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "789596915",
+      "id": "340805015",
       "name_lat": "SMART CONNECTION DIVINO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3082,6 +3234,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "801463743",
+      "name_lat": "SMOLLI LOLA",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1003728101",
       "name_lat": "SM BAY LA BLUE",
       "name_ru": "",
@@ -3091,19 +3251,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "237940446",
-      "name_lat": "SMILE HOUSE BULLY SIMBAD",
-      "name_ru": "",
-      "breed": "ПОКЕТ / AMERICAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "630845027",
+      "id": "75939567",
       "name_lat": "SMART CONNECTION EMPOWERMENT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -3127,19 +3278,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1880220575",
+      "id": "300538443",
       "name_lat": "SMART CONNECTION DIMENSIONS",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1847222450",
-      "name_lat": "SMYSL ZHIZNI UNDEGROUD BATTLE",
-      "name_ru": "",
-      "breed": "МОПС",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3163,15 +3305,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "757361093",
-      "name_lat": "SMART WOOD HILLS QORITSA TSARITSA",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "803946098",
       "name_lat": "SMART WOOD HILLS ODRI",
       "name_ru": "",
@@ -3181,12 +3314,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1899905153",
-      "name_lat": "SMILE ANGEL RENESSANCE",
+      "id": "1301961767",
+      "name_lat": "SMILAIN NARNIYA",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3226,10 +3359,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "712501695",
+      "id": "1772181395",
       "name_lat": "SMART CONNTCTION STEFANIA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3244,10 +3377,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1915961856",
+      "id": "154755628",
       "name_lat": "SMART CONNECTION BLOND REFLECTION",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3325,39 +3458,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "352272371",
-      "name_lat": "SM BAY PAHAN AK",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "551302486",
+      "id": "1220138579",
       "name_lat": "SMALL GELAXXY VOSTORG",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1875506959",
-      "name_lat": "SMILGA IS SAPIEGINES",
+      "id": "1311841864",
+      "name_lat": "Smilga is Sapiegines",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1333017160",
-      "name_lat": "SMESH GORDON",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3505,10 +3620,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1594115184",
+      "id": "715460933",
       "name_lat": "SMARTWOOD HILLS KLYDE",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3541,19 +3656,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1571131571",
+      "id": "475948314",
       "name_lat": "SMILE FIND FAVORITE IN ALL",
       "name_ru": "",
-      "breed": "СКИЙ ТЕРЬЕР /",
+      "breed": "СКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "83157126",
+      "id": "462479048",
       "name_lat": "SMOLENSKOGO FORDA BRIGHTON HEART POINT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3622,12 +3737,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "911427256",
-      "name_lat": "SMIGAR IREN ADLER",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "id": "656014836",
+      "name_lat": "Small Smart Gorus",
+      "name_ru": "СМАЛЛ СМАРТ ГОРУС",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1753055020",
+      "name_lat": "SMALL ROCKET ZHAYNA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ ТЕРЬЕР /",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1919598168",
+      "name_lat": "SMART BAND MITCHEL",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3703,19 +3834,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "78116279",
+      "id": "1706088843",
       "name_lat": "SMART CONNECTION WONDERZON",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "656014836",
-      "name_lat": "Small Smart Gorus",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3725,15 +3847,6 @@
       "name_lat": "SMALL VIRGINIA CRACE FOR LOVE",
       "name_ru": "",
       "breed": "ПУЛИ ЖЕМЧУЖНО- БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1232433039",
-      "name_lat": "SMYSL ZHIZNI NIKITОS A BLACK STAR",
-      "name_ru": "",
-      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3784,21 +3897,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "483423497",
+      "id": "419428054",
       "name_lat": "SMART WOOD HILLS REINA RONDA",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
+      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
       "breed_en": "DOBERMANN",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1301961767",
-      "name_lat": "SMILAIN NARNIYA",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3808,6 +3912,23 @@
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "POODLE TOY",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1551024731",
+      "name_lat": "(SMOOTH) БОН ТРИУМФ О МАЙ ГОД",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "70828888",
+      "name_lat": "SMART WOOD HILLS OKHRA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3901,10 +4022,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1712105788",
+      "id": "1479216473",
       "name_lat": "SMILAIN ZEROMOLECULE TRENDICE",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3973,10 +4094,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1628109291",
+      "id": "910458594",
       "name_lat": "SMART WOOD HILLS YANTARNAYA",
       "name_ru": "",
-      "breed": "КОРИЧНЕВО- ПОДПАЛЫЙ /",
+      "breed": "КОРИЧНЕВО- ПОДПАЛЫЙ",
       "breed_en": "DOBERMANN",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3991,19 +4112,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "216343133",
-      "name_lat": "SM BAY AUDI-TORIYA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1565184092",
+      "id": "1498630448",
       "name_lat": "SMYSL ZHIZNI NIKITA IS A BLACK STAR",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4041,6 +4153,14 @@
       "name_ru": "",
       "breed": "ШЕЛТИ / SHETLAND",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1485088312",
+      "name_lat": "SMALL VIRGINIA HAPPINES YOU GIVE ME",
+      "name_ru": "",
+      "breed": "ПУЛИ ЖЕМЧУЖНО-БЕЛЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4099,11 +4219,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "885450623",
-      "name_lat": "SMOLLI LOLA",
+      "id": "794509564",
+      "name_lat": "SM BAY KISA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
+      "breed": "SHEPHERD DOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4121,15 +4240,6 @@
       "name_lat": "SMILE LUCK Z'THE FAST AND LOUD FOR KALASHNIKHOF",
       "name_ru": "",
       "breed": "ПЕМБРОК / WELSH",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "556278058",
-      "name_lat": "SMART WOOD HILLS OKHRA",
-      "name_ru": "",
-      "breed": "DOBERMANN BROWN &",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4180,10 +4290,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1987310789",
-      "name_lat": "SMILE FOR ME",
+      "id": "1447989491",
+      "name_lat": "SMALE IS THE BEST GUY",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ФАЛЕН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4225,15 +4335,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1447989491",
-      "name_lat": "SMALE IS THE BEST GUY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "243544605",
       "name_lat": "SMOLL BLUE MAGIC SHAKI LAKI",
       "name_ru": "",
@@ -4243,10 +4344,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1739122222",
+      "id": "827496823",
       "name_lat": "SMART WOOD HILLS BOSTON",
       "name_ru": "",
-      "breed": "Доберман /",
+      "breed": "Доберман",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4279,15 +4380,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "158640231",
-      "name_lat": "SMILE MAY HEART FORTUNA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "152962908",
       "name_lat": "SMILAIN NEW HAPPYNESS",
       "name_ru": "",
@@ -4297,28 +4389,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1544226841",
+      "id": "961023717",
       "name_lat": "SMART CONNECTION SPIRIT HUNTER",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1448632804",
-      "name_lat": "SMYSL ZHIZNI IMPAKTO",
+      "id": "1644386587",
+      "name_lat": "SMALL PRESENT IN WINTER",
       "name_ru": "",
-      "breed": "МОПС",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1925865553",
+      "id": "1710446316",
       "name_lat": "SMALL SMART GINTARE",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4351,11 +4443,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "1202415309",
+      "name_lat": "SMYSL ZHIZNI YASMINA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "188120711",
       "name_lat": "SMART WOOD HILLS QUINGI",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1341191975",
+      "name_lat": "SMILE LUCK ONLY VICTORY ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -4369,6 +4478,32 @@
       "competition_dog_id": null
     },
     {
+      "id": "164968589",
+      "name_lat": "SMORODINKA OT DONTSOVA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "956198176",
+      "name_lat": "SMART OT LUNNOY ZHEMCHUZHINY",
+      "name_ru": "СМАРТ ОТ ЛУННОЙ ЖЕМЧУЖИНЫ",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "258328860",
+      "name_lat": "SMART JOKER",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "915878268",
       "name_lat": "SMILEY STAR",
       "name_ru": "",
@@ -4378,10 +4513,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "707518608",
+      "id": "1558642260",
       "name_lat": "SMILEY STAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "606371071",
+      "name_lat": "SMURF OF GLARING",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4531,19 +4675,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1644386587",
-      "name_lat": "SMALL PRESENT IN WINTER",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1942480208",
+      "id": "194040244",
       "name_lat": "SMOLENSKOE CHUDO ANYUTKA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4612,10 +4747,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "195009018",
+      "id": "44439627",
       "name_lat": "SMART WOOD HILLS OLF",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4738,15 +4873,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1280948443",
-      "name_lat": "SMURF OF GLARING",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1906898599",
       "name_lat": "SMALL VIRGINIA HAPPINESS YOU GIVE ME",
       "name_ru": "",
@@ -4774,10 +4900,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1886524613",
+      "id": "75881677",
       "name_lat": "SMOLENSKIY BRILLIANT UDACHA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4855,19 +4981,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "1111836933",
+      "name_lat": "Smart Art Neon Light",
+      "name_ru": "",
+      "breed": "НОРФОЛК ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1790274991",
+      "name_lat": "SM BAY TANKHOY",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "525876960",
       "name_lat": "SMART JOKER",
       "name_ru": "",
       "breed": "ЦВЕТНОЙ / BULL",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "258328860",
-      "name_lat": "SMART JOKER",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4909,19 +5042,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "926888833",
-      "name_lat": "SMART JOKER",
+      "id": "376623809",
+      "name_lat": "SMARTI",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "376623809",
-      "name_lat": "SMARTI",
+      "id": "1979082535",
+      "name_lat": "SMALLSPRING GALYARDO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4999,15 +5132,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1559118311",
-      "name_lat": "SMALLSPRING GALYARDO",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "261682595",
       "name_lat": "SMILTYNES TRISPALVIS OLGERSEL",
       "name_ru": "",
@@ -5062,10 +5186,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1374851859",
+      "id": "1396541831",
       "name_lat": "SMART CONNECTION REAL BHANYANAN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5089,11 +5213,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1564999006",
+      "name_lat": "SMILYVYI HETMAN DNVINTALKERS",
+      "name_ru": "",
+      "breed": "ЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1132809997",
       "name_lat": "SMILAIN BENTLEY FOR MEN",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "178798543",
+      "name_lat": "SMILAIN PANASONIK",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5116,19 +5256,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1341191975",
-      "name_lat": "SMILE LUCK ONLY VICTORY ( )",
+      "id": "1991115407",
+      "name_lat": "SMIGAR JEMCHUJNAYA ZVEZDA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1991115407",
-      "name_lat": "SMIGAR JEMCHUJNAYA ZVEZDA",
+      "id": "412351380",
+      "name_lat": "S MAKSHER RI GENIAL",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "breed": "КАРДИГАН / WELSH",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5170,10 +5310,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "179689013",
+      "id": "845418553",
       "name_lat": "SMART CONNECTION ORANGE IS A NEW BLACK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5188,19 +5328,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1495998371",
-      "name_lat": "SMALL SMART EYRA",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1973795418",
+      "id": "1602376350",
       "name_lat": "SMART CONNECTION ORANGE IS NEW BLACK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5242,10 +5373,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "114988897",
+      "id": "1628222722",
       "name_lat": "SMILE STARS ZOIDBERG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5404,10 +5535,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1651721241",
+      "id": "1739322980",
       "name_lat": "SMAILIK S PRIMORSKOGO BASTIONA",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5422,10 +5553,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "41378168",
+      "id": "1571325988",
       "name_lat": "SMART BAND ZHUZHA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЁРСТНЫЙ",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5462,15 +5593,6 @@
       "name_lat": "SM BAY A-NASHA",
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1152592493",
-      "name_lat": "SMISE ZHIZNI UN GRAND AMOUR",
-      "name_ru": "",
-      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5584,15 +5706,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1241095971",
-      "name_lat": "SMIGAR OLIVIYA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1955632234",
       "name_lat": "SMART BAND OBI VAN KENOBI",
       "name_ru": "",
@@ -5616,6 +5729,22 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "618754125",
+      "name_lat": "SMART ART PEPPER SWEET",
+      "name_ru": "",
+      "breed": "НОРФОЛК ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1158397948",
+      "name_lat": "SMART ART NEON LIGHTS",
+      "name_ru": "",
+      "breed": "НОРФОЛК ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5647,20 +5776,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "956198176",
-      "name_lat": "SMART OT LUNNOY ZHEMCHUZHINY",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "705988032",
       "name_lat": "SMILEY SHOW DUNAYSHKA",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ / POODLE TOY FAWN (RED, APRICOT), GREY",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1053915335",
+      "name_lat": "SMALLSPRING DANDELION SUNNY",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5683,10 +5811,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1032479658",
+      "id": "692948470",
       "name_lat": "SMERALDO DITYA BRIONI",
       "name_ru": "",
-      "breed": "БОЛЬШОЙ МИНИАТЮРНЫЙ ЧЁРНЫЙ",
+      "breed": "БОЛЬШОЙ МИНИАТЮРНЫЙ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5696,6 +5824,15 @@
       "name_lat": "SMILE ANGEL PATRONUS",
       "name_ru": "",
       "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1635899225",
+      "name_lat": "S MIRACLE OF MOONLIGHT",
+      "name_ru": "",
+      "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

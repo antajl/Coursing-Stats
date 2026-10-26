@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ИЖ",
-  "count": 17,
+  "count": 18,
   "dogs": [
     {
       "id": "1613518460",
       "name_lat": "ИЖ ПРЕСТИЖ ЮВЕЛИЯ ВАЙТ ГОЛД",
-      "name_ru": "",
+      "name_ru": "ИЖ ПРЕСТИЖ ЮВЕЛИЯ ВАЙТ ГОЛД",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -22,10 +22,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "539472562",
+      "id": "1906770483",
       "name_lat": "ИЖ ПРЕСТИЖ ТЕЯ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ИЖ ПРЕСТИЖ ТЕЯ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -33,26 +33,35 @@
     {
       "id": "1663105601",
       "name_lat": "ИЖ ПРЕСТИЖ СТЕФАНИЯ",
-      "name_ru": "",
+      "name_ru": "ИЖ ПРЕСТИЖ СТЕФАНИЯ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "589549549",
+      "id": "426129241",
+      "name_lat": "ИЖЕРСТЕЙ АРМАДА",
+      "name_ru": "ИЖЕРСТЕЙ АРМАДА",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "461141630",
       "name_lat": "ИЖЕННИ ИЗ ДОМА ДИМАИС",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "name_ru": "ИЖЕННИ ИЗ ДОМА ДИМАИС",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1010232920",
+      "id": "1041385853",
       "name_lat": "ИЖ ПРЕСТИЖ НОЭЛЛА АВАНСИЯ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "name_ru": "ИЖ ПРЕСТИЖ НОЭЛЛА АВАНСИЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -85,9 +94,25 @@
       "competition_dog_id": null
     },
     {
+      "id": "297448340",
+      "name_lat": "ИЖ ПРЕСТИЖ НЮША",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "317622972",
+      "name_lat": "ИЖ ПРЕСТИЖ НОРА",
+      "name_ru": "ИЖ ПРЕСТИЖ НОРА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1577379684",
       "name_lat": "ИЖЕРСТЕЙ ЮММИ ДЛЯ ФАВОРИТ ХОУП",
-      "name_ru": "",
+      "name_ru": "ИЖЕРСТЕЙ ЮММИ ДЛЯ ФАВОРИТ ХОУП",
       "breed": "НЕМЕЦКИЙ ПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -100,15 +125,6 @@
       "breed": "ЗАПАДНОСИБИРСКАЯ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "426129241",
-      "name_lat": "ИЖЕРСТЕЙ АРМАДА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -125,15 +141,6 @@
       "name_lat": "ИЖЕРСТЕЙ ФАНТИК",
       "name_ru": "",
       "breed": "ЦВЕРГШПИЦ –",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "317622972",
-      "name_lat": "ИЖ ПРЕСТИЖ НОРА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "БТ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "74668476",
+      "name_lat": "Б-ТУГАЙ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "989732841",
+      "name_lat": "Б-ТАЙМЫР",
+      "name_ru": "",
+      "breed": "ВОСТОЧНО-СИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "252105930",
+      "name_lat": "Б'Торакумо Фуджияма Кенша",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

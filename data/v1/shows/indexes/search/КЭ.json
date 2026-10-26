@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "КЭ",
-  "count": 610,
+  "count": 611,
   "dogs": [
     {
       "id": "1855324671",
@@ -9,7 +9,15 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1162109471",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЛАСКОВЫЙ МАЙ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЛАСКОВЫЙ МАЙ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -22,10 +30,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "412948799",
+      "id": "573437679",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ШАНГРИ-ЛА",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ШАНГРИ-ЛА",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -36,7 +44,7 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -67,10 +75,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "474282886",
+      "id": "879482425",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ТОМАС",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ТОМАС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -112,12 +120,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "17148829",
-      "name_lat": "КЭТТИЛАЙН ВАЛЬКИРИЯ",
+      "id": "339257850",
+      "name_lat": "КЭТТИЛАЙН ВЛАСТЕЛИН КОЛЕЦ",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17148829",
+      "name_lat": "КЭТТИЛАЙН ВАЛЬКИРИЯ",
+      "name_ru": "КЭТТИЛАЙН ВАЛЬКИРИЯ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -132,7 +148,7 @@
     {
       "id": "1400607559",
       "name_lat": "КЭТТИЛАЙН МАЙ ДРИМ КАМ ТРУ",
-      "name_ru": "",
+      "name_ru": "КЭТТИЛАЙН МАЙ ДРИМ КАМ ТРУ",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 19,
@@ -157,9 +173,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1467103334",
+      "name_lat": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА ПАРВИЗ",
+      "name_ru": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА ПАРВИЗ",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "956910079",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ АЛМАЗ",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ АЛМАЗ",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 7,
@@ -186,7 +211,7 @@
     {
       "id": "925900992",
       "name_lat": "КЭТРИН КРИСТОЛ ЧОЛИНА",
-      "name_ru": "",
+      "name_ru": "КЭТРИН КРИСТОЛ ЧОЛИНА",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -204,7 +229,7 @@
     {
       "id": "590481309",
       "name_lat": "Кэтрин Хаус Тиффани для Анистар",
-      "name_ru": "",
+      "name_ru": "Кэтрин Хаус Тиффани для Анистар",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 4,
@@ -213,7 +238,7 @@
     {
       "id": "282466382",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ АЛИСА",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ АЛИСА",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -229,19 +254,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1240646852",
+      "id": "1784644682",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЛАВ СТОРИ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЛАВ СТОРИ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1821459760",
+      "id": "883445174",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЕВДЖЕНИЯ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЕВДЖЕНИЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "DACHSHUND MINIATURE LONG-HAIRED",
       "total_shows": 17,
       "competition_dog_id": null
@@ -252,7 +277,24 @@
       "name_ru": "",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1016959295",
+      "name_lat": "КЭЛОРИ ВИННЕР ЕСПЕШИАЛИ ФО Ю",
+      "name_ru": "КЭЛОРИ ВИННЕР ЕСПЕШИАЛИ ФО Ю",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1237267870",
+      "name_lat": "КЭЛОРИ ВИННЕР ЕКСВИЗИТЕЛИ БЬЮТИФУЛ БОЙ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -274,27 +316,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1237267870",
-      "name_lat": "КЭЛОРИ ВИННЕР ЕКСВИЗИТЕЛИ БЬЮТИФУЛ БОЙ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1016959295",
-      "name_lat": "КЭЛОРИ ВИННЕР ЕСПЕШИАЛИ ФО Ю",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "819687416",
       "name_lat": "Кэтрин Кристол Торнадо",
-      "name_ru": "",
+      "name_ru": "Кэтрин Кристол Торнадо",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 8,
@@ -303,7 +327,7 @@
     {
       "id": "1993898126",
       "name_lat": "КЭРОЛ МАРТИША ЛЬЮИС",
-      "name_ru": "",
+      "name_ru": "КЭРОЛ МАРТИША ЛЬЮИС",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 9,
@@ -328,10 +352,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1886993297",
-      "name_lat": "КЭРОЛАЙН МАЛЕНЬКАЯ БЭХА (Д- Ш)",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "id": "1167933235",
+      "name_lat": "КЭРОЛАЙН МАЛЕНЬКАЯ БЭХА (Д-Ш)",
+      "name_ru": "КЭРОЛАЙН МАЛЕНЬКАЯ БЭХА (Д-Ш)",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -346,19 +370,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "687018715",
+      "id": "1413629458",
+      "name_lat": "КЭТРИН КРИСТОЛ ЭНЕРДЖИ",
+      "name_ru": "КЭТРИН КРИСТОЛ ЭНЕРДЖИ",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "97724620",
       "name_lat": "КЭНОН ФОМ ХАУС ДЕМИРА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1670942328",
+      "id": "1506054652",
       "name_lat": "КЭРОЛЛ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -370,24 +402,6 @@
       "breed": "БОЛОНКА",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1819293983",
-      "name_lat": "Кэтрин`С Рафаэлла",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1327155553",
-      "name_lat": "КЭТРИН КРИСТОЛ ЧИНАРА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -409,6 +423,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "19150000",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ НОКТЮРН",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ НОКТЮРН",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1873836548",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ГАТИ",
       "name_ru": "",
@@ -420,7 +442,7 @@
     {
       "id": "868402974",
       "name_lat": "Кэнди Долл Твикс",
-      "name_ru": "",
+      "name_ru": "Кэнди Долл Твикс",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 15,
@@ -429,28 +451,37 @@
     {
       "id": "463102990",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ГАТЭН",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ГАТЭН",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
       "id": "1615759399",
       "name_lat": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА ОЛИУС",
-      "name_ru": "",
+      "name_ru": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА ОЛИУС",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "995911849",
+      "id": "1832644713",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЧЕЙСИ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЧЕЙСИ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1312132287",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ВЕДИ ВУЛЬФ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ВЕДИ ВУЛЬФ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -492,7 +523,7 @@
     {
       "id": "108951407",
       "name_lat": "КЭТРИН БАЙКАЛЬСКАЯ ЗВЕЗДА",
-      "name_ru": "",
+      "name_ru": "КЭТРИН БАЙКАЛЬСКАЯ ЗВЕЗДА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
@@ -508,12 +539,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1467103334",
-      "name_lat": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА ПАРВИЗ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "id": "422833788",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ НИКОЛАС БЭТМЕН",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ НИКОЛАС БЭТМЕН",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "578140836",
+      "name_lat": "КЭНДИ ЛЕДИ ЮНА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -526,15 +566,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "339257850",
-      "name_lat": "КЭТТИЛАЙН ВЛАСТЕЛИН КОЛЕЦ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1512253004",
       "name_lat": "КЭТРИН'С НИКОЛЕТТ",
       "name_ru": "",
@@ -544,10 +575,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "847219221",
+      "id": "969671741",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ИРАКЛИ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ИРАКЛИ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -555,19 +586,10 @@
     {
       "id": "232976681",
       "name_lat": "КЭЛАЙДОСКОУП ОФ КОЛОРЗ К/Х",
-      "name_ru": "",
+      "name_ru": "КЭЛАЙДОСКОУП ОФ КОЛОРЗ К/Х",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1676912594",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ НИКОЛАС БЭТМЕН",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -598,10 +620,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1110810297",
+      "id": "560907373",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЧЕССА ПРИНЦЕССА МОЛЛИ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЧЕССА ПРИНЦЕССА МОЛЛИ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -622,6 +644,15 @@
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1213114658",
+      "name_lat": "КЭЙТ",
+      "name_ru": "",
+      "breed": "КЛАССИК",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -670,28 +701,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "655828428",
+      "id": "700353027",
       "name_lat": "КЭШ БРАЙН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "42682094",
+      "id": "1505354985",
       "name_lat": "КЭТ-БОЮ",
       "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1174559971",
+      "id": "878482912",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЖОРЖ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -717,10 +748,10 @@
     {
       "id": "120480845",
       "name_lat": "КЭНДИ КЛАБ ЭЙФОРИЯ",
-      "name_ru": "",
+      "name_ru": "КЭНДИ КЛАБ ЭЙФОРИЯ",
       "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -733,36 +764,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "581395251",
-      "name_lat": "КЭЗУМИ ЭМИКО",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
       "id": "834842544",
       "name_lat": "КЭТТИ СКАРЛЕТ ИЗ МОСКОВСКОЙ МЕТЕЛИ",
-      "name_ru": "",
+      "name_ru": "КЭТТИ СКАРЛЕТ ИЗ МОСКОВСКОЙ МЕТЕЛИ",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "SAMOYED",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1780216200",
-      "name_lat": "КЭНДИ СВИТ КАПИТАН ДЖЕК ВОРОБЕЙ",
-      "name_ru": "",
+      "id": "1764918760",
+      "name_lat": "КЭНДИ СВИТ КАПИТАН ДЖЕК ВОРОБЕЙ СНОУ СТАЙЛ",
+      "name_ru": "КЭНДИ СВИТ КАПИТАН ДЖЕК ВОРОБЕЙ СНОУ СТАЙЛ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
       "id": "73158315",
       "name_lat": "КЭРОЛ СВИТ КЭРРОТ",
-      "name_ru": "",
+      "name_ru": "КЭРОЛ СВИТ КЭРРОТ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 30,
@@ -771,10 +793,19 @@
     {
       "id": "689697480",
       "name_lat": "КЭТТИЛАЙН БУСИНКА",
-      "name_ru": "",
+      "name_ru": "КЭТТИЛАЙН БУСИНКА",
       "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "608207284",
+      "name_lat": "КЭЙСИ СВЕТ НЕО ОЛУНДЖИ БАЙС",
+      "name_ru": "КЭЙСИ СВЕТ НЕО ОЛУНДЖИ БАЙС",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -787,12 +818,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "244623780",
+      "name_lat": "Кэнди Долл Эндлесс Лав",
+      "name_ru": "",
+      "breed": "Лабрадор Ретривер",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1678459729",
       "name_lat": "КЭТРИН'С ЭКЛИПС",
-      "name_ru": "",
+      "name_ru": "КЭТРИН'С ЭКЛИПС",
       "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -807,10 +846,28 @@
     {
       "id": "1158410324",
       "name_lat": "КЭТЧ МИ ИФ КАН",
-      "name_ru": "",
+      "name_ru": "КЭТЧ МИ ИФ КАН",
       "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
       "breed_en": "BULL TERRIER STANDART",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1768544649",
+      "name_lat": "КЭШ МАНИ",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "102968621",
+      "name_lat": "КЭЙСИ ЧЕРНАЯ ЖЕМЧУЖИНА",
+      "name_ru": "КЭЙСИ ЧЕРНАЯ ЖЕМЧУЖИНА",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -823,12 +880,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1335944277",
-      "name_lat": "КЭМП ВИННЕР ОФ АЛЛ СОУЛС",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 1,
+      "id": "1664465689",
+      "name_lat": "КЭТМАРИ'С ГОЛДЕН КЕЙ",
+      "name_ru": "КЭТМАРИ'С ГОЛДЕН КЕЙ",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -841,15 +898,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "451600259",
-      "name_lat": "КЭРОЛАЙН ИЗ ПОДГОРНОГО КОРОЛЕВСТВА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "747052557",
       "name_lat": "КЭТРИН'С КВЕСТ ФО САКСИСС",
       "name_ru": "",
@@ -859,10 +907,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "506472659",
+      "id": "1474684055",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ВИВА ЛА ВИДА",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ВИВА ЛА ВИДА",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -886,18 +934,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1940366204",
-      "name_lat": "КЭРОЛИН РОУЗ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1647557550",
       "name_lat": "КЭНДИ ДОЛЛ ИБЕРИЯ",
-      "name_ru": "",
+      "name_ru": "КЭНДИ ДОЛЛ ИБЕРИЯ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 13,
@@ -906,19 +945,36 @@
     {
       "id": "1617395734",
       "name_lat": "КЭТРИН ГРЭЙС АВРОРА",
-      "name_ru": "",
+      "name_ru": "КЭТРИН ГРЭЙС АВРОРА",
       "breed": "ЛАНКАШИРСКИЙ ХИЛЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1086274050",
+      "id": "205168695",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ БРИОШЬ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ БРИОШЬ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1364334085",
+      "name_lat": "КЭТТИЛАЙН ГАРРИ ПОТТЕР",
+      "name_ru": "КЭТТИЛАЙН ГАРРИ ПОТТЕР",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "AIREDALE TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1999891278",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ШАТО-ШАЛОН",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ШАТО-ШАЛОН",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -931,19 +987,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1664465689",
-      "name_lat": "КЭТМАРИ'С ГОЛДЕН КЕЙ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1577636172",
+      "id": "247221193",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ БЕРГАМОТ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ БЕРГАМОТ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -951,25 +998,16 @@
     {
       "id": "1513687812",
       "name_lat": "КЭТТИЛАЙН МАЛИФИСЕНТА",
-      "name_ru": "",
+      "name_ru": "КЭТТИЛАЙН МАЛИФИСЕНТА",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "102968621",
-      "name_lat": "КЭЙСИ ЧЕРНАЯ ЖЕМЧУЖИНА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1013729236",
       "name_lat": "КЭНДИ КАРАМЕЛЬ ФРАУ АЛЛ ЧИПС ОН БЛЭК",
-      "name_ru": "",
+      "name_ru": "КЭНДИ КАРАМЕЛЬ ФРАУ АЛЛ ЧИПС ОН БЛЭК",
       "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 8,
@@ -994,48 +1032,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "270396254",
+      "id": "27587952",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ОРЛАНДИНА",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ОРЛАНДИНА",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1364334085",
-      "name_lat": "КЭТТИЛАЙН ГАРРИ ПОТТЕР",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "AIREDALE TERRIER",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "1648601141",
       "name_lat": "КЭРОЛАЙН БРАЙТ",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН БРАЙТ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "753801537",
-      "name_lat": "КЭЛВИН ВАЙТ ХАЛК",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
+      "id": "137503796",
+      "name_lat": "КЭНДИ СВИТ ПРИНЦЕССА ЛУКЕРЬЯ",
+      "name_ru": "КЭНДИ СВИТ ПРИНЦЕССА ЛУКЕРЬЯ",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1723995925",
-      "name_lat": "кэнди долл альварес гомес",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "id": "753801537",
+      "name_lat": "КЭЛВИН ВАЙТ ХАЛК",
+      "name_ru": "КЭЛВИН ВАЙТ ХАЛК",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1050,7 +1079,7 @@
     {
       "id": "197834315",
       "name_lat": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА МЕЛИНА",
-      "name_ru": "",
+      "name_ru": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА МЕЛИНА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -1059,7 +1088,7 @@
     {
       "id": "311598052",
       "name_lat": "КЭТРИН ЛАВЛИ САН",
-      "name_ru": "",
+      "name_ru": "КЭТРИН ЛАВЛИ САН",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 13,
@@ -1077,19 +1106,10 @@
     {
       "id": "798694537",
       "name_lat": "КЭТРИН'С АЛЬБА РОССА",
-      "name_ru": "",
+      "name_ru": "КЭТРИН'С АЛЬБА РОССА",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "608207284",
-      "name_lat": "КЭЙСИ СВЕТ НЕО ОЛУНДЖИ БАЙС",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1120,19 +1140,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "851158282",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ВЕДИ ВУЛЬФ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "id": "1004464059",
+      "name_lat": "КЭТЧ МИ ИФ Ю КАН БАЙ АХМЕД БОЗИЕВ",
+      "name_ru": "КЭТЧ МИ ИФ Ю КАН БАЙ АХМЕД БОЗИЕВ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "40383896",
+      "id": "919121226",
       "name_lat": "КЭНДИ КАРАМЕЛЬ Э РИД МИ ИН ЗЕ КРАУД",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
+      "name_ru": "КЭНДИ КАРАМЕЛЬ Э РИД МИ ИН ЗЕ КРАУД",
+      "breed": "СИЛИХЕМ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1140,7 +1160,7 @@
     {
       "id": "286311282",
       "name_lat": "КЭТРИН КРИСТОЛ ПРЕЗЕНТ ДЛЯ ЛИРИС",
-      "name_ru": "",
+      "name_ru": "КЭТРИН КРИСТОЛ ПРЕЗЕНТ ДЛЯ ЛИРИС",
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 5,
@@ -1156,6 +1176,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "665999367",
+      "name_lat": "КЭТТИЛАЙН РОЗАМУНДА БЬЮТИ ФРОМ ВИНТЕРРА",
+      "name_ru": "",
+      "breed": "ШИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1287825347",
+      "name_lat": "КЭТРИН ЛОНГ КИС",
+      "name_ru": "КЭТРИН ЛОНГ КИС",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "552917614",
+      "name_lat": "КЭТСУМИ ИЗ ОРСКОЙ КРЕПОСТИ",
+      "name_ru": "КЭТСУМИ ИЗ ОРСКОЙ КРЕПОСТИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "817990746",
       "name_lat": "КЭТМАРИ'С ПОКЕР ФЕЙС",
       "name_ru": "",
@@ -1167,7 +1214,7 @@
     {
       "id": "1118608804",
       "name_lat": "КЭНДИ СВИТ РАФАЭЛЬ",
-      "name_ru": "",
+      "name_ru": "КЭНДИ СВИТ РАФАЭЛЬ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 8,
@@ -1185,8 +1232,17 @@
     {
       "id": "936547119",
       "name_lat": "КЭНДИ ДОЛЛ ЖОЗЕЛЬ БАККАРДИ",
-      "name_ru": "",
+      "name_ru": "КЭНДИ ДОЛЛ ЖОЗЕЛЬ БАККАРДИ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1339513822",
+      "name_lat": "КЭНДИ КИСС",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1194,10 +1250,18 @@
     {
       "id": "1896828211",
       "name_lat": "КЭНДИ СВИТ ЯРВУД АЙКО",
-      "name_ru": "",
+      "name_ru": "КЭНДИ СВИТ ЯРВУД АЙКО",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "141120919",
+      "name_lat": "КЭТТИЛАЙН ЯГОДКА МОЯ",
+      "name_ru": "КЭТТИЛАЙН ЯГОДКА МОЯ",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1210,39 +1274,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "1795927296",
-      "name_lat": "КЭТРИН'С ДЛЯ ВАЛЕРИНА РОСС",
+      "id": "1881483780",
+      "name_lat": "КЭНДИ ДОЛЛ ТАТУ",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "554007735",
       "name_lat": "КЭТТИЛАЙН МИРЦЕЛА МАЛИНКА",
-      "name_ru": "",
+      "name_ru": "КЭТТИЛАЙН МИРЦЕЛА МАЛИНКА",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
+      "id": "398249750",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ВЕЛЕТТА",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ВЕЛЕТТА",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1097454505",
       "name_lat": "КЭВЕН СИЛЬВЕР ХОСТ",
-      "name_ru": "",
+      "name_ru": "КЭВЕН СИЛЬВЕР ХОСТ",
       "breed": "WEIMARANER SHORT-",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1239154209",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ВЕЛЕТТА",
+      "id": "895248481",
+      "name_lat": "КЭТТИЛАЙН МИРОН МИРЭКЛ / KATTYLINE MIRON MIRACLE",
       "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1255,10 +1328,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1216417838",
+      "id": "964020087",
       "name_lat": "КЭНДИ КАРАМЕЛЬ ФОЛЛОВ СЬЮИТ",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "name_ru": "КЭНДИ КАРАМЕЛЬ ФОЛЛОВ СЬЮИТ",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1273,30 +1346,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "261286586",
+      "id": "656118071",
       "name_lat": "КЭТИ РОЗМАРИ",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "name_ru": "КЭТИ РОЗМАРИ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "308815688",
+      "id": "26500333",
       "name_lat": "КЭНДИ СВИТ РОДЖЕР",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "КЭНДИ СВИТ РОДЖЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "552917614",
-      "name_lat": "КЭТСУМИ ИЗ ОРСКОЙ КРЕПОСТИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 6,
+      "id": "751654582",
+      "name_lat": "КЭНДИ КЛАБ ВАНДЕР (Д.Ш.)",
+      "name_ru": "КЭНДИ КЛАБ ВАНДЕР (Д.Ш.)",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1309,39 +1382,47 @@
       "competition_dog_id": null
     },
     {
+      "id": "434641946",
+      "name_lat": "КЭНДИ БОЙ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256011454",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ТАЙСОН",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ТАЙСОН",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1964666545",
       "name_lat": "КЭТРИН ОЛИВИЯ",
-      "name_ru": "",
+      "name_ru": "КЭТРИН ОЛИВИЯ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "605028855",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ТАЙСОН",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТАКСА",
+      "id": "1299945904",
+      "name_lat": "Кэнди Долл Окленд",
+      "name_ru": "Кэнди Долл Окленд",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "1707401281",
       "name_lat": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА МАССАНДРА",
-      "name_ru": "",
+      "name_ru": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА МАССАНДРА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "751654582",
-      "name_lat": "КЭНДИ КЛАБ ВАНДЕР (Д.Ш.)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1356,17 +1437,8 @@
     {
       "id": "80057038",
       "name_lat": "КЭНДИ СВИТ ЛИС",
-      "name_ru": "",
+      "name_ru": "КЭНДИ СВИТ ЛИС",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1287825347",
-      "name_lat": "КЭТРИН ЛОНГ КИС",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1383,19 +1455,10 @@
     {
       "id": "1695987617",
       "name_lat": "КЭТРИН ХАУС АССОЛЬ ЯЛИКА",
-      "name_ru": "",
+      "name_ru": "КЭТРИН ХАУС АССОЛЬ ЯЛИКА",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "137503796",
-      "name_lat": "КЭНДИ СВИТ ПРИНЦЕССА ЛУКЕРЬЯ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1408,10 +1471,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "119249158",
-      "name_lat": "КЭТМАРИ'С ГОУ-ФОР- ГОЛД",
+      "id": "845463115",
+      "name_lat": "КЭТМАРИ'С ГОУ-ФОР-ГОЛД",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1426,27 +1489,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1441717417",
+      "id": "135764246",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ САНГРИЯ В ЗОЛОТОЙ РОДНИК",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ САНГРИЯ В ЗОЛОТОЙ РОДНИК",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "761543599",
-      "name_lat": "КЭНДИ КИСС",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "id": "1963828760",
+      "name_lat": "КЭТРИН'С ДЖОЙ А'ФИЛ ЗЕ РЕВОЛЮШЕН",
+      "name_ru": "КЭТРИН'С ДЖОЙ А'ФИЛ ЗЕ РЕВОЛЮШЕН",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "835473797",
       "name_lat": "КЭНДИ КАРАМЕЛЬ БИТТЕР КАМПАРИ",
-      "name_ru": "",
+      "name_ru": "КЭНДИ КАРАМЕЛЬ БИТТЕР КАМПАРИ",
       "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 4,
@@ -1462,12 +1525,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1952785256",
+      "name_lat": "КЭТСУО",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1447257903",
       "name_lat": "КЭТТИЛАЙН ЮРМАЛА",
-      "name_ru": "",
+      "name_ru": "КЭТТИЛАЙН ЮРМАЛА",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "286160931",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ МЕККА",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ МЕККА",
+      "breed": "ТАКСА МИНИАТЮРНАЯ длинношерстная",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1482,7 +1562,7 @@
     {
       "id": "1361614109",
       "name_lat": "КЭРРИ ГРАНТ ИЗ ОЖЕРЕЛЬЯ",
-      "name_ru": "",
+      "name_ru": "КЭРРИ ГРАНТ ИЗ ОЖЕРЕЛЬЯ",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 6,
@@ -1491,7 +1571,7 @@
     {
       "id": "1158998460",
       "name_lat": "КЭНДИ ДОЛЛ СИАРА",
-      "name_ru": "",
+      "name_ru": "КЭНДИ ДОЛЛ СИАРА",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -1507,19 +1587,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "439169868",
+      "id": "959641897",
       "name_lat": "КЭТМАРИ'С ПФАНТОМ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1027426942",
+      "id": "149170439",
       "name_lat": "КЭТТИЛАЙН ВЕЛИЖАНА",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1534,12 +1614,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "901895101",
+      "id": "1941586193",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ВИШНЯ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ВИШНЯ",
+      "breed": "DACHSHUND MINIATURE WIRE-",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "246397348",
+      "name_lat": "КЭЙСИ СВЕТ ТАИС АФИНСКАЯ",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1552,10 +1640,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1048835220",
+      "id": "502040438",
       "name_lat": "КЭТРИН ЛИЛЛИ БЕЛЛЬ",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "name_ru": "КЭТРИН ЛИЛЛИ БЕЛЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1570,10 +1658,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1768544649",
+      "id": "1083404388",
       "name_lat": "КЭШ МАНИ",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1606,19 +1694,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1062647760",
+      "id": "128913669",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ФРЕЗИЯ",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "3723933",
+      "id": "90934101",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ДЕЙНЕРИС",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1626,7 +1714,7 @@
     {
       "id": "601050738",
       "name_lat": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА ЧЕСТЕР",
-      "name_ru": "",
+      "name_ru": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА ЧЕСТЕР",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
@@ -1653,19 +1741,10 @@
     {
       "id": "343231562",
       "name_lat": "КЭНДИ ФОКС ЗАБАВНАЯ ДЕВЧОНКА",
-      "name_ru": "",
+      "name_ru": "КЭНДИ ФОКС ЗАБАВНАЯ ДЕВЧОНКА",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1881483780",
-      "name_lat": "КЭНДИ ДОЛЛ ТАТУ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1675,6 +1754,14 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1938492453",
+      "name_lat": "КЭЙГУ",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1689,35 +1776,26 @@
     {
       "id": "1198611357",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЛАЙМА",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЛАЙМА",
       "breed": "DACHSHUND MINIATURE",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "375511269",
-      "name_lat": "КЭНДИ ДОЛЛ МАЙРОН",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "894756791",
+      "id": "414376843",
       "name_lat": "КЭРРИ ПРИНЦЕССА ЛЕЯ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "КЭРРИ ПРИНЦЕССА ЛЕЯ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "183896584",
+      "id": "1317916451",
       "name_lat": "КЭТТИ",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ МАСТИФ",
+      "breed": "МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1779,7 +1857,7 @@
     {
       "id": "1901812830",
       "name_lat": "КЭДАКАЙ ЕКО КАЙ СИНДЗИ",
-      "name_ru": "",
+      "name_ru": "КЭДАКАЙ ЕКО КАЙ СИНДЗИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 5,
@@ -1788,7 +1866,7 @@
     {
       "id": "1281660990",
       "name_lat": "КЭТСУМИ ПОБЕДНАЯ КРАСОТА",
-      "name_ru": "",
+      "name_ru": "КЭТСУМИ ПОБЕДНАЯ КРАСОТА",
       "breed": "АКИТА АМЕРИКАНСКАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -1797,19 +1875,10 @@
     {
       "id": "1206143297",
       "name_lat": "КЭНДИ СВИТ ТОМАС УАЙТ",
-      "name_ru": "",
+      "name_ru": "КЭНДИ СВИТ ТОМАС УАЙТ",
       "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "935635717",
-      "name_lat": "КЭТРИН'С ДЖОЙ А'ФИЛ ЗЕ РЕВОЛЮШЕН",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1824,37 +1893,36 @@
     {
       "id": "854452261",
       "name_lat": "КЭНДИ СВИТ ИНФИНИТИ ДЭ ЛЮКС",
-      "name_ru": "",
+      "name_ru": "КЭНДИ СВИТ ИНФИНИТИ ДЭ ЛЮКС",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1013774931",
-      "name_lat": "КЭТРИН КРИСТОЛ УНДИНА",
+      "id": "442984890",
+      "name_lat": "КЭТСУО",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР / AMERICAN",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1933278852",
-      "name_lat": "КЭНДИ ДОЛЛ ЗАКАРИ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "СИБА / SHIBA",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1012026039",
       "name_lat": "КЭССИ ЭЛИЗАБЕТ ШАРМАН",
-      "name_ru": "",
+      "name_ru": "КЭССИ ЭЛИЗАБЕТ ШАРМАН",
       "breed": "ЛАБРАДОР БЕЛЬГИЙСКИЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1990584388",
+      "name_lat": "КЭТРИН'С ДЕ ЖА ВЮ",
+      "name_ru": "КЭТРИН'С ДЕ ЖА ВЮ",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1867,45 +1935,44 @@
       "competition_dog_id": null
     },
     {
-      "id": "1990584388",
-      "name_lat": "КЭТРИН'С ДЕ ЖА ВЮ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1751842076",
       "name_lat": "КЭТРИН КРИСТОЛ ЧАРА",
-      "name_ru": "",
+      "name_ru": "КЭТРИН КРИСТОЛ ЧАРА",
       "breed": "ЧУНЦИН АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "411310950",
+      "id": "733452127",
       "name_lat": "КЭТТИЛАЙН ВЕСЕЛИНА",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1952785256",
-      "name_lat": "КЭТСУО",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
+      "id": "602812727",
+      "name_lat": "КЭТЕРИ ЧИСТАЯ",
+      "name_ru": "КЭТЕРИ ЧИСТАЯ",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "998511071",
+      "name_lat": "КЭЙСИ ПРЕТТИ БЕЙБИ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "1262730646",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ НИККИ",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ НИККИ",
       "breed": "ЦВЕРГШНАУЦ",
       "breed_en": "",
       "total_shows": 2,
@@ -1921,9 +1988,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "483772418",
+      "name_lat": "КЭТСУМИ ВАКАРИ",
+      "name_ru": "КЭТСУМИ ВАКАРИ",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЕРНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1279583915",
+      "name_lat": "КЭТТИЛАЙН САМУРАЙ",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "620886956",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЗЕНФИР",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЗЕНФИР",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
       "breed_en": "",
       "total_shows": 2,
@@ -1948,28 +2032,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1739179478",
-      "name_lat": "КЭТРИН'С ЭКАТЕРИНА",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "150341446",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ГАТЕН",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1412513986",
+      "id": "459881868",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ФЕМИДА",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2002,24 +2068,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1299945904",
-      "name_lat": "Кэнди Долл Окленд",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "473540928",
-      "name_lat": "КЭНДИ ЛЕДИ ЮНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "161015703",
       "name_lat": "КЭНДИ ДОЛЛ ЭНДЛЭСС ЛАВ",
       "name_ru": "",
@@ -2029,12 +2077,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "752845077",
-      "name_lat": "КЭТРИН'С КАТЯ-КАТЕРИНА",
+      "id": "655653783",
+      "name_lat": "КЭНДИ ДОЛЛ ЖОЗЕЛЬ БАКАРДИ",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2049,7 +2097,7 @@
     {
       "id": "1585439051",
       "name_lat": "КЭНДИ СВИТ АННА ВИКТОРИЯ",
-      "name_ru": "",
+      "name_ru": "КЭНДИ СВИТ АННА ВИКТОРИЯ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
@@ -2067,7 +2115,7 @@
     {
       "id": "445855866",
       "name_lat": "КЭТСУМИ ХАНА",
-      "name_ru": "",
+      "name_ru": "КЭТСУМИ ХАНА",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
@@ -2083,18 +2131,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "998511071",
-      "name_lat": "КЭЙСИ ПРЕТТИ БЕЙБИ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "id": "1466400176",
+      "name_lat": "КЭТТИЛАЙН БЛЭК ТРЮФЕЛЬ",
+      "name_ru": "КЭТТИЛАЙН БЛЭК ТРЮФЕЛЬ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1018832228",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ПРИНЦЕССА",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "419558137",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ПАРКУА ПА",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ПАРКУА ПА",
       "breed": "АФГАНСКАЯ ТАКСА МИН..Д-Ш",
       "breed_en": "",
       "total_shows": 2,
@@ -2103,17 +2160,8 @@
     {
       "id": "531474646",
       "name_lat": "КЭТРИН С БЕЛОЙ РЕКИ",
-      "name_ru": "",
+      "name_ru": "КЭТРИН С БЕЛОЙ РЕКИ",
       "breed": "ШАР ПЕЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1884884298",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ПРИНЦЕССА",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2146,15 +2194,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "347988505",
-      "name_lat": "КЭШ МАНИ",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "700019668",
       "name_lat": "КЭНДИ КЛАУТ",
       "name_ru": "",
@@ -2182,28 +2221,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1436799559",
-      "name_lat": "КЭТТИЛАЙН ЯГОДКА МОЯ",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "582615028",
+      "id": "1203094305",
       "name_lat": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА РАЛЬФИНА",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1767406624",
+      "id": "1182439157",
       "name_lat": "КЭТРИН ЛЭДИ БЭГ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2263,11 +2293,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "11940346",
-      "name_lat": "КЭТТИ С ВЕРШИНЫ ИНЬ- ЯНЬ",
+      "id": "908281770",
+      "name_lat": "КЭТТИ С ВЕРШИНЫ ИНЬ-ЯНЬ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "202357986",
+      "name_lat": "КЭРИДЭД АМЭРЭНТА",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2308,6 +2346,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1078279797",
+      "name_lat": "КЭНДИ ДОЛЛ ИНФИНИТИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "2419241",
       "name_lat": "КЭТРИН БЛЭК МЭДЖИК",
       "name_ru": "",
@@ -2317,10 +2364,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1220217116",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ НИККИ САННИ БОЙ",
+      "id": "178489557",
+      "name_lat": "КЭНДИ СВИТ ГАВАННА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "211168058",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ НИККИ САННИ БОЙ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ НИККИ САННИ БОЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2335,19 +2390,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "835334944",
+      "id": "1308470773",
       "name_lat": "КЭНДИ СВИИТ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1077756267",
-      "name_lat": "КЭМЕРОН ИЗ АЛТАЙСКОЙ ДИНАСТИИ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2364,43 +2410,51 @@
     {
       "id": "1491268013",
       "name_lat": "КЭРЛИН КОРОЛЕВА РИНГА",
-      "name_ru": "",
+      "name_ru": "КЭРЛИН КОРОЛЕВА РИНГА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1117762673",
-      "name_lat": "КЭПИТАЛ ДРИМ АСИЯ ЛЯ ФЛЁР",
-      "name_ru": "",
-      "breed": "YORKSHIRE TERRIER",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1593104085",
-      "name_lat": "КЭТРИН'С ДЖОЙ БЛЭК СТАР",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1321819717",
       "name_lat": "КЭТРИН С ДОЛИНЫ СНЕГОВ",
-      "name_ru": "",
+      "name_ru": "КЭТРИН С ДОЛИНЫ СНЕГОВ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1117762673",
+      "name_lat": "КЭПИТАЛ ДРИМ АСИЯ ЛЯ ФЛЁР",
+      "name_ru": "КЭПИТАЛ ДРИМ АСИЯ ЛЯ ФЛЁР",
+      "breed": "YORKSHIRE TERRIER",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "397811432",
+      "name_lat": "КЭТРИН'С ДЖОЙ БЛЭК СТАР",
+      "name_ru": "КЭТРИН'С ДЖОЙ БЛЭК СТАР",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1785436823",
+      "name_lat": "КЭПИТАЛ ДРИМ КАРМЕЛИТА",
+      "name_ru": "КЭПИТАЛ ДРИМ КАРМЕЛИТА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1819489983",
       "name_lat": "КЭНДИ СВИТ ОЗБОРН",
-      "name_ru": "",
+      "name_ru": "КЭНДИ СВИТ ОЗБОРН",
       "breed": "Вельш корги пемброк",
       "breed_en": "",
       "total_shows": 3,
@@ -2445,7 +2499,7 @@
     {
       "id": "727539621",
       "name_lat": "КЭТРИН ЛИЛЛИ БЭЛЬ",
-      "name_ru": "",
+      "name_ru": "КЭТРИН ЛИЛЛИ БЭЛЬ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -2470,10 +2524,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1618470236",
+      "id": "1983630963",
       "name_lat": "КЭТРИН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2524,10 +2578,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "620608111",
+      "id": "1198381484",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ВЕДИ ВИШНЯ",
+      "name_ru": "",
+      "breed": "ГЛАДКОШЕРСТНЫЙ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "769158655",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЭКЗОТИКА",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2551,10 +2614,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1028544937",
+      "id": "149092046",
       "name_lat": "Кэролайн Юджел Шамбертен",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2587,10 +2650,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1344753359",
+      "id": "109259769",
       "name_lat": "КЭТРИН*С ДЖОЙ БЛЭК СТАР",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ АКИТА",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2614,19 +2677,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "728321569",
-      "name_lat": "КЭТРИН ХАУС ЗАЗА ЭРЛИ",
+      "id": "806854147",
+      "name_lat": "КЭНДИ СВИТ ОЛИВЕР ДЖОЗЕФ ЛОДЖ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1103068360",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ВЕДИ ВИШНЯ",
+      "id": "1314966397",
+      "name_lat": "КЭТРИН ХАУС ЗАЗА ЭРЛИ",
       "name_ru": "",
-      "breed": "ГЛАДКОШЁРСТНЫЙ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2641,37 +2703,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1813299982",
+      "id": "472011617",
       "name_lat": "КЭМП ВИННЕР ОФ АЛЛСОУЛС",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "638599129",
+      "id": "1714277945",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ОЛИВИЯ",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1785359705",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЛАСКОВЫЙ МАЙ",
-      "name_ru": "",
-      "breed": "ТАКСА АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "212940281",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ МЕККА",
-      "name_ru": "",
-      "breed": "ТАКСА, МИНИАТЮРН",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2679,10 +2723,10 @@
     {
       "id": "1253906493",
       "name_lat": "КЭРРИ ОЛВЕЙС ЙОРС",
-      "name_ru": "",
+      "name_ru": "КЭРРИ ОЛВЕЙС ЙОРС",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2695,10 +2739,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1724907783",
+      "id": "35621654",
       "name_lat": "КЭНДИ ФОКС ДАЯНА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "name_ru": "КЭНДИ ФОКС ДАЯНА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2731,18 +2775,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "244623780",
-      "name_lat": "Кэнди Долл Эндлесс Лав",
-      "name_ru": "",
-      "breed": "Лабрадор Ретривер",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1537641741",
       "name_lat": "КЭРОЛАЙН КЕННЕДИ",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН КЕННЕДИ",
       "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -2760,37 +2795,10 @@
     {
       "id": "221852969",
       "name_lat": "КЭТЛИН ЭЛИС СТЕФАНИ",
-      "name_ru": "",
+      "name_ru": "КЭТЛИН ЭЛИС СТЕФАНИ",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1530280601",
-      "name_lat": "Кэнди Долл Роксет",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1279583915",
-      "name_lat": "КЭТТИЛАЙН САМУРАЙ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "665999367",
-      "name_lat": "КЭТТИЛАЙН РОЗАМУНДА БЬЮТИ ФРОМ ВИНТЕРРА",
-      "name_ru": "",
-      "breed": "ШИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2839,11 +2847,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1336017175",
+      "id": "924869462",
       "name_lat": "КЭЛЛИ МАЙ ДРИМ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "193311602",
+      "name_lat": "КЭТТИЛАЙН АЗАЛИЯ ЧАРОДЕЙКА",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2868,7 +2884,7 @@
     {
       "id": "108153118",
       "name_lat": "КЭНДИ КЛАБ ИЛЛЮЗИЯ",
-      "name_ru": "",
+      "name_ru": "КЭНДИ КЛАБ ИЛЛЮЗИЯ",
       "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -2877,17 +2893,17 @@
     {
       "id": "1058898545",
       "name_lat": "КЭТРИН ГРЕЙС АКЕЛА",
-      "name_ru": "",
+      "name_ru": "КЭТРИН ГРЕЙС АКЕЛА",
       "breed": "ДОБЕРМАН ЧЕРНЫЙ С ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "896016506",
+      "id": "1684005364",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЕСЕНИЯ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЕСЕНИЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2933,24 +2949,6 @@
       "name_lat": "КЭНДИ КЛАУТ",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ / BICHON",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1920195438",
-      "name_lat": "КЭТСУМИ ВАКАРИ",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1329434309",
-      "name_lat": "КЭНДИ СВИТ КАПИТАН ДЖЕК ВОРОБЕЙ СНОУ СТАЙЛ",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3019,45 +3017,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "602812727",
-      "name_lat": "КЭТЕРИ ЧИСТАЯ",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "699539220",
-      "name_lat": "КЭТСУМИ СО ЗВЕЗДНОГО ПУТИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "655653783",
-      "name_lat": "КЭНДИ ДОЛЛ ЖОЗЕЛЬ БАКАРДИ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "556143070",
-      "name_lat": "КЭНДИ КЛАБ ВАНДЕР",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1365854431",
       "name_lat": "КЭТТИ СКАРЛЕТ О'ХАРА",
-      "name_ru": "",
+      "name_ru": "КЭТТИ СКАРЛЕТ О'ХАРА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
@@ -3066,7 +3028,7 @@
     {
       "id": "451979033",
       "name_lat": "КЭНДИ ДОЛЛ ХАРТ'С ШАДОУ",
-      "name_ru": "",
+      "name_ru": "КЭНДИ ДОЛЛ ХАРТ'С ШАДОУ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 6,
@@ -3075,17 +3037,17 @@
     {
       "id": "1056544214",
       "name_lat": "КЭТРИН ИЗ ФРАНЦУЗСКОГО ЛЕГИОНА",
-      "name_ru": "",
+      "name_ru": "КЭТРИН ИЗ ФРАНЦУЗСКОГО ЛЕГИОНА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1488838585",
+      "id": "1883449220",
       "name_lat": "КЭЙСИ БРИЛЛИАНС",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "name_ru": "КЭЙСИ БРИЛЛИАНС",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3111,7 +3073,7 @@
     {
       "id": "1022353424",
       "name_lat": "КЭМ ИЗ ДОМА МАРИИ",
-      "name_ru": "",
+      "name_ru": "КЭМ ИЗ ДОМА МАРИИ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
@@ -3120,9 +3082,17 @@
     {
       "id": "1525172969",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ УНИКУМ",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ УНИКУМ",
       "breed": "DACHSHUND KANINCHEN",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "535627476",
+      "name_lat": "КЭТМАРИС ЧИПС - ЭНД - ЧИЗ",
+      "name_ru": "КЭТМАРИС ЧИПС - ЭНД - ЧИЗ",
+      "breed": "СИКОКУ",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -3145,6 +3115,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1559330744",
+      "name_lat": "КЭРИ",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1721826641",
+      "name_lat": "КЭЛЕНДС ОФ КАССИОПЕЯ ИЗ ДОЛИНЫ СОЛНЦА",
+      "name_ru": "КЭЛЕНДС ОФ КАССИОПЕЯ ИЗ ДОЛИНЫ СОЛНЦА",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1879664201",
       "name_lat": "КЭРЭЛИН ИЗ ЦАРИЦИНСКОЙ КОЛЛЕКЦИИ",
       "name_ru": "",
@@ -3159,6 +3147,15 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1725267373",
+      "name_lat": "КЭЙРЮ ХИКАРУ",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -3181,18 +3178,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1721826641",
-      "name_lat": "КЭЛЕНДС ОФ КАССИОПЕЯ ИЗ ДОЛИНЫ СОЛНЦА",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "2000851061",
       "name_lat": "КЭРОЛАЙН НЕБЕСНЫЙ АНГЕЛ",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН НЕБЕСНЫЙ АНГЕЛ",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -3201,17 +3189,8 @@
     {
       "id": "1374718210",
       "name_lat": "КЭНДИ КРИСТЕН ДЖЕННЕР",
-      "name_ru": "",
+      "name_ru": "КЭНДИ КРИСТЕН ДЖЕННЕР",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1466400176",
-      "name_lat": "КЭТТИЛАЙН БЛЭК ТРЮФЕЛЬ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3219,17 +3198,8 @@
     {
       "id": "24944803",
       "name_lat": "КЭТРИН ДАНИЭЛЬ ФАЭРИ САН",
-      "name_ru": "",
+      "name_ru": "КЭТРИН ДАНИЭЛЬ ФАЭРИ САН",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "915028267",
-      "name_lat": "КЭТТИЛАЙН МИРОН МИРЭКЛ / KATTYLINE MIRON MIRACLE",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3237,7 +3207,7 @@
     {
       "id": "164301201",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЗЛАТА",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЗЛАТА",
       "breed": "СТАФФОРДШИРС ТАКСА, МИНИАТЮРНАЯ,",
       "breed_en": "",
       "total_shows": 3,
@@ -3280,6 +3250,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1044657202",
+      "name_lat": "КЭТТИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "294480407",
       "name_lat": "КЭТТИ ПЭРРИ",
       "name_ru": "",
@@ -3289,10 +3268,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1843764285",
+      "id": "1020449376",
       "name_lat": "КЭССИ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3316,19 +3295,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1784127411",
-      "name_lat": "КЭНДИ БОЙ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1306335883",
+      "id": "489163648",
       "name_lat": "КЭРИ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3347,24 +3317,6 @@
       "name_lat": "КЭТСУМИ",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1213114658",
-      "name_lat": "КЭЙТ",
-      "name_ru": "",
-      "breed": "КЛАССИК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1559330744",
-      "name_lat": "КЭРИ",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3415,24 +3367,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1725267373",
-      "name_lat": "КЭЙРЮ ХИКАРУ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "205483370",
-      "name_lat": "КЭТЧ МИ ИФ Ю КАН БАЙ АХМЕД БОЗИЕВ",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "540615592",
       "name_lat": "КЭТРИН ГРЭЙС ДАНТЕ АЛИГЬЕРИ",
       "name_ru": "",
@@ -3442,10 +3376,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1591307886",
+      "id": "1836218295",
       "name_lat": "КЭРРИ БРУН ФУТ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "677432977",
+      "name_lat": "КЭТТИЛАЙН МАРКИЗА АНГЕЛОВ",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3460,10 +3403,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1896173514",
+      "id": "1513354468",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ РЕЙНА",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3523,6 +3466,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "90405069",
+      "name_lat": "КЭТТИЛАЙН ДЖЕЙН ВОНДЕРФУЛ",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "136658312",
       "name_lat": "КЭНДИ СВИТ ВАЛЛИ",
       "name_ru": "",
@@ -3559,18 +3511,36 @@
       "competition_dog_id": null
     },
     {
+      "id": "417536941",
+      "name_lat": "КЭТТИЛАЙН МАГИЯ ЛАН РОССЭ",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1165008715",
       "name_lat": "КЭНДИ КЛАБ МИСТИКА",
-      "name_ru": "",
+      "name_ru": "КЭНДИ КЛАБ МИСТИКА",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "SHIH TZU",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "384712449",
+      "name_lat": "КЭТЛИН ЭЛЛАДА ЛЮБВИ",
+      "name_ru": "КЭТЛИН ЭЛЛАДА ЛЮБВИ",
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1095653982",
       "name_lat": "Кэролайн Юджел",
-      "name_ru": "",
+      "name_ru": "Кэролайн Юджел",
       "breed": "ФОКСТЕРЬЕР ТАКСА КРОЛИ.Г-Ш",
       "breed_en": "",
       "total_shows": 2,
@@ -3579,7 +3549,7 @@
     {
       "id": "1677698068",
       "name_lat": "КЭНДИ ДОЛЛ БРУКЛИН",
-      "name_ru": "",
+      "name_ru": "КЭНДИ ДОЛЛ БРУКЛИН",
       "breed": "LABRADOR RETRIEVER",
       "breed_en": "",
       "total_shows": 2,
@@ -3588,25 +3558,41 @@
     {
       "id": "254854751",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ АТАРИ СЭЙБИ",
-      "name_ru": "",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ АТАРИ СЭЙБИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "205692328",
-      "name_lat": "КЭТТИЛАЙН МАРКИЗА АНГЕЛОВ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР ТАКСА",
+      "id": "1508429540",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ АЙРЭН",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ АЙРЭН",
+      "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1281447262",
+      "name_lat": "КЭНДИ СВИТ УМИЛА",
+      "name_ru": "КЭНДИ СВИТ УМИЛА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "186232060",
+      "name_lat": "КЭНДИ СВИТ ТОФУ ПЛЕЙН",
+      "name_ru": "КЭНДИ СВИТ ТОФУ ПЛЕЙН",
+      "breed": "WELSH CORGI PEMBROKE",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1179942586",
       "name_lat": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА ШЕРЛОК",
-      "name_ru": "",
+      "name_ru": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА ШЕРЛОК",
       "breed": "ЗЕННЕНХУНД БЕРНСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3615,17 +3601,17 @@
     {
       "id": "1053048503",
       "name_lat": "КЭЛЛИ МИРАНДА",
-      "name_ru": "",
+      "name_ru": "КЭЛЛИ МИРАНДА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1170948334",
+      "id": "147517499",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЖАНЕТ С АЛМАКС СТАРС",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "КЭРОЛАЙН ЮДЖЕЛ ЖАНЕТ С АЛМАКС СТАРС",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3633,7 +3619,7 @@
     {
       "id": "1932005295",
       "name_lat": "КЭРРИ ДЖЕЙН БЕБИ",
-      "name_ru": "",
+      "name_ru": "КЭРРИ ДЖЕЙН БЕБИ",
       "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -3642,17 +3628,17 @@
     {
       "id": "213469754",
       "name_lat": "КЭТРИН\"С ПОРТАФОРТУНА",
-      "name_ru": "",
+      "name_ru": "КЭТРИН\"С ПОРТАФОРТУНА",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ КЛАССИК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "19150000",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ НОКТЮРН",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "id": "1978401616",
+      "name_lat": "Кэри Каприз Востока",
+      "name_ru": "Кэри Каприз Востока",
+      "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3712,10 +3698,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1522359091",
+      "id": "918814618",
       "name_lat": "КЭРОЛАЙН",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3739,10 +3725,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "883314892",
+      "id": "1387821737",
       "name_lat": "КЭРИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3775,19 +3761,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "223507122",
+      "id": "1937547827",
       "name_lat": "КЭЛЛИ",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "22578205",
+      "id": "1157359040",
       "name_lat": "КЭНДИ КИСС",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3838,20 +3824,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1044657202",
-      "name_lat": "КЭТТИ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "876914294",
       "name_lat": "КЭРОЛАЙН",
       "name_ru": "",
       "breed": "Бигль",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "393920476",
+      "name_lat": "КЭРРИ АЙС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3865,11 +3850,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1180646043",
+      "name_lat": "КЭССИ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "772666171",
       "name_lat": "КЭМАЙ",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1070961160",
+      "name_lat": "КЭШ МАНИ",
+      "name_ru": "",
+      "breed": "СЕТТЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3883,11 +3884,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "77300514",
+      "name_lat": "КЭТТИ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ / MALTESE",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "913270922",
       "name_lat": "КЭНДИ СТАР",
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1011914301",
+      "name_lat": "КЭРРИ",
+      "name_ru": "",
+      "breed": "TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3955,10 +3972,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1235304166",
+      "id": "741545338",
       "name_lat": "КЭНДИ",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЁРСТНЫЙ",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4000,10 +4017,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1744279188",
+      "id": "822393530",
       "name_lat": "КЭРРИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4090,19 +4107,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1828196648",
+      "id": "1279466134",
       "name_lat": "КЭНДИ ШАЙН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "130049203",
+      "id": "276855131",
       "name_lat": "КЭНДИ ШАЙН",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4153,10 +4170,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "930782508",
+      "id": "1120209869",
       "name_lat": "КЭЙТ",
       "name_ru": "",
-      "breed": "КЛАССИК БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4180,6 +4197,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "928120450",
+      "name_lat": "КЭЙТ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ КЛАССИК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1886942637",
       "name_lat": "КЭТИ",
       "name_ru": "",
@@ -4189,10 +4214,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1880575283",
+      "id": "569926263",
       "name_lat": "КЭНДИ КИСС",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4211,6 +4236,33 @@
       "name_lat": "КЭШ ЛИН",
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "212896326",
+      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЧЕРРУТИ",
+      "name_ru": "",
+      "breed": "ТАКСА СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "748632648",
+      "name_lat": "КЭНДИ БЛОССОМ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "660515580",
+      "name_lat": "КЭНДИ СНЕЖНАЯ ФЕЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4270,15 +4322,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "384712449",
-      "name_lat": "КЭТЛИН ЭЛЛАДА ЛЮБВИ",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1958183941",
       "name_lat": "КЭТРИН ХАУС НЕЗАБУДКА НЕКСИ",
       "name_ru": "",
@@ -4333,10 +4376,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1512956531",
+      "id": "1379730768",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЦАРЕВНА НЕСМЕЯНА",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4405,10 +4448,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1102303741",
+      "id": "1385463744",
       "name_lat": "КЭНДИ ФОКС ЕЛЕНСИС",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4477,15 +4520,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1215846352",
-      "name_lat": "КЭТЛИН ИЗ СОЗВЕЗДИЯ АДОМАСА",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "408837251",
       "name_lat": "КЭРЛИН БРАЙТ ИЗ ЦАРСКОГО СЕЛА МИШЕЛЬ",
       "name_ru": "",
@@ -4495,10 +4529,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1807166602",
+      "id": "416460891",
       "name_lat": "КЭНДИ ДОЛЛ ПАУЭР ОФ ЛАВ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4531,28 +4565,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1605212421",
+      "id": "316583944",
       "name_lat": "Кэтлин Байрон",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "14637413",
+      "id": "1576765730",
       "name_lat": "Кэролайн Юджел Фиджи",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "645402474",
+      "id": "1149916575",
       "name_lat": "Кэролайн Юджел Флейта",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4598,15 +4632,6 @@
       "name_lat": "КЭТРИН ХАУС АМЕЛИ ЯШМА (Г/Ш)",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "212896326",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ЧЕРРУТИ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4702,8 +4727,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1506699346",
-      "name_lat": "КЭТРИН ХАУС ЯДЕЛЬ- ВИ-ГРАНДИ",
+      "id": "1401885462",
+      "name_lat": "КЭТРИН ХАУС ЯДЕЛЬ-ВИ-ГРАНДИ",
       "name_ru": "",
       "breed": "TERRIER",
       "breed_en": "",
@@ -4711,10 +4736,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "394665268",
+      "id": "1109750310",
       "name_lat": "Кэролайн Юджел Жозефина V",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4774,33 +4799,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1508429540",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ АЙРЭН",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1821176990",
-      "name_lat": "КЭПИТАЛ ДРИМ КАРМЕЛИТА",
-      "name_ru": "",
-      "breed": "CHIHUAHUA LONG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "880777036",
-      "name_lat": "КЭРОЛАЙН ЮДЖЕЛ АЙРЕН",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "139620380",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ВАКИ ТАРУ КЕНДЖИ",
       "name_ru": "",
@@ -4810,11 +4808,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "153830869",
+      "id": "988514482",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ФРЕДЕГОНДА",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1738385697",
+      "name_lat": "КЭРРИ БЛЭКК ТИГРИС",
+      "name_ru": "",
+      "breed": "CHIHUAHUA",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1285734076",
+      "name_lat": "КЭТТИ ТИЛЬДА",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4855,15 +4869,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1901578353",
-      "name_lat": "КЭТМАРИ'С ЧИПС-ЭНД- ЧИЗ",
-      "name_ru": "",
-      "breed": "СИКОКУ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1237419571",
       "name_lat": "КЭТСУРО ШИН ХЭРУ",
       "name_ru": "",
@@ -4877,15 +4882,6 @@
       "name_lat": "КЭРИ АНВИ ЛЮСАННА РОС",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1470623638",
-      "name_lat": "КЭНДИ СВИТ ТОФУ ПЛЕЙН",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4909,6 +4905,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "492372179",
+      "name_lat": "КЭТИ АМИКО КИН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1331859365",
+      "name_lat": "КЭПИТАЛ ДРИМ ШАМАХАНСКАЯ ЦАРИЦА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "270744884",
+      "name_lat": "КЭНДИ СВИТ АННИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1550044758",
       "name_lat": "КЭТРИН ХАУС КАРАМЕЛЬКА ЛИ ЛУ",
       "name_ru": "",
@@ -4927,19 +4947,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1958105493",
+      "id": "121012136",
       "name_lat": "КЭТТИЛАЙН БИТКОИН",
       "name_ru": "",
-      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР /",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "353075032",
+      "id": "946254980",
       "name_lat": "КЭРОЛАЙН ИЗ ВОДЕВИЛЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4972,10 +4992,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "407358286",
+      "id": "1876327497",
       "name_lat": "КЭРИ САНТАНА",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5143,8 +5163,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "484699344",
-      "name_lat": "КЭТРИН ГРЕЙС АБЕРФОРТ- ГРОХХ",
+      "id": "310230912",
+      "name_lat": "КЭТРИН ГРЕЙС АБЕРФОРТ-ГРОХХ",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
@@ -5197,15 +5217,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "90405069",
-      "name_lat": "КЭТТИЛАЙН ДЖЕЙН ВОНДЕРФУЛ",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1263463981",
       "name_lat": "КЭТТИЛАЙН МАЙ ДРИМ КАМ ТРУ BAILEYS CREAM CARAMEL S",
       "name_ru": "",
@@ -5215,28 +5226,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "753149786",
-      "name_lat": "КЭНДИ БЛОССОМ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1396688025",
+      "id": "530128333",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ БАРОНЕССА II",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1618925494",
+      "id": "396937616",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ САНДРА",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5260,10 +5262,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1527947517",
+      "id": "884731477",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ ИНОКЕНТИЙ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5287,28 +5289,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1966137187",
+      "id": "1944647923",
       "name_lat": "КЭТРИН ХОФ БРУСНИКА",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1599114052",
-      "name_lat": "КЭРРИ ТЕ СЕКРЕТ ОФ МЭДЖИК",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1597069489",
+      "id": "558589153",
       "name_lat": "КЭРОЛАЙН ЮДЖЕЛ КИРЮША",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5332,19 +5325,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "317621224",
-      "name_lat": "КЭТРИН ХАУС ИВЕТТА МОЛЛИ Д-Ш",
+      "id": "449261209",
+      "name_lat": "КЭТРИН ХАУС ИВЕТТА МОЛЛИ",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1392335864",
-      "name_lat": "КЭНДИ СНЕЖНАЯ ФЕЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5372,15 +5356,6 @@
       "name_lat": "КЭТТИЛАЙН ВАСИЛИСК ТУГАРИН ЗМЕЙ (Н/Б)",
       "name_ru": "",
       "breed": "ШИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1078279797",
-      "name_lat": "КЭНДИ ДОЛЛ ИНФИНИТИ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5431,11 +5406,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "417536941",
-      "name_lat": "КЭТТИЛАЙН МАГИЯ ЛАН РОССЭ",
+      "id": "1197387046",
+      "name_lat": "КЭТТИЛАЙН КАМЕЛИЯ БЛЭК ФОКС (Н/Б)",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
-      "breed_en": "",
+      "breed": "СХИППЕРКЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5458,20 +5432,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1480068489",
+      "id": "100112429",
       "name_lat": "КЭТРИН ДЖОНС",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1978401616",
-      "name_lat": "Кэри Каприз Востока",
+      "id": "164670524",
+      "name_lat": "КЭТРИН ХАУС ЗОЛЛИ ЭНЕЙ",
       "name_ru": "",
-      "breed": "БАССЕТ ХАУНД",
-      "breed_en": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },

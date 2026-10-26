@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЯЙ",
-  "count": 6,
+  "count": 7,
   "dogs": [
     {
       "id": "167594476",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -17,6 +17,15 @@
       "name_lat": "ЯЙВА КАМА",
       "name_ru": "",
       "breed": "ВЕЛЬШ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1301156634",
+      "name_lat": "Я Й Я ОТ НАТАЛИ ТЕРРА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null

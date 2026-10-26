@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "NP",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "707441710",
+      "name_lat": "N & P'S CANDLE IN THE WIND",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1112570299",
+      "name_lat": "N' PRINCESSE-D' ELIDE DU ZEPHYR DE BIZANCE",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1603454259",
+      "name_lat": "N'PRINCESSE-D'ELIDE DU ZEPHYR DE BIZANCE",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

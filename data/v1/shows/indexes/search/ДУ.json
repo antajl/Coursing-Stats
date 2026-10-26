@@ -1,30 +1,30 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ДУ",
-  "count": 407,
+  "count": 406,
   "dogs": [
-    {
-      "id": "1379052853",
-      "name_lat": "ДУША МОЯ АЛЁНУШКА",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
     {
       "id": "979468765",
       "name_lat": "ДУБАЙ ИЗ КАЗАНСКОГО ХАНСТВА",
-      "name_ru": "",
+      "name_ru": "ДУБАЙ ИЗ КАЗАНСКОГО ХАНСТВА",
       "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
+      "id": "222272257",
+      "name_lat": "ДУРАНТЕ ВИТА ЧИСТЫЙ АНГЕЛ",
+      "name_ru": "ДУРАНТЕ ВИТА ЧИСТЫЙ АНГЕЛ",
+      "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ, РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "1761401455",
       "name_lat": "ДУША СЕВЕРА СЧАСТЬЕ МОЕ ГЛАША",
-      "name_ru": "",
+      "name_ru": "ДУША СЕВЕРА СЧАСТЬЕ МОЕ ГЛАША",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
@@ -33,7 +33,7 @@
     {
       "id": "943815489",
       "name_lat": "ДУЕНО ДЕЛ АЛМА МАГИЯ УСПЕХА",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА МАГИЯ УСПЕХА",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 11,
@@ -42,7 +42,7 @@
     {
       "id": "1167046421",
       "name_lat": "ДУРАНТЕ ВИТА ТРИУМФ",
-      "name_ru": "",
+      "name_ru": "ДУРАНТЕ ВИТА ТРИУМФ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 18,
@@ -60,7 +60,7 @@
     {
       "id": "205562265",
       "name_lat": "ДУША РОССИИ МАРФУШЕЧКА-ДУШЕЧКА",
-      "name_ru": "",
+      "name_ru": "ДУША РОССИИ МАРФУШЕЧКА-ДУШЕЧКА",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -69,7 +69,7 @@
     {
       "id": "1710444455",
       "name_lat": "ДУША РОССИИ СОЛОХА",
-      "name_ru": "",
+      "name_ru": "ДУША РОССИИ СОЛОХА",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
@@ -78,7 +78,7 @@
     {
       "id": "363968494",
       "name_lat": "ДУШИСТЫЙ ЦВЕТОК ДЖУЛИ",
-      "name_ru": "",
+      "name_ru": "ДУШИСТЫЙ ЦВЕТОК ДЖУЛИ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
@@ -96,7 +96,7 @@
     {
       "id": "136706938",
       "name_lat": "ДУША РОССИИ РЕПА",
-      "name_ru": "",
+      "name_ru": "ДУША РОССИИ РЕПА",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
@@ -114,7 +114,7 @@
     {
       "id": "124079523",
       "name_lat": "ДУЭТТО ТАНТО ЛЯНЧА",
-      "name_ru": "",
+      "name_ru": "ДУЭТТО ТАНТО ЛЯНЧА",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -130,27 +130,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1990480702",
+      "id": "6686842",
       "name_lat": "ДУШЕВНАЯ МЕЛОДИЯ ИЗ ДОМА МЕНЬШИКОВЫХ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ДУШЕВНАЯ МЕЛОДИЯ ИЗ ДОМА МЕНЬШИКОВЫХ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "222272257",
-      "name_lat": "ДУРАНТЕ ВИТА ЧИСТЫЙ АНГЕЛ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ, РЫЖИЙ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1461214731",
       "name_lat": "ДУРАНТЕ ВИТА ДЬЮДРОП",
-      "name_ru": "",
+      "name_ru": "ДУРАНТЕ ВИТА ДЬЮДРОП",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 5,
@@ -175,12 +166,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1416671332",
-      "name_lat": "ДУКАТ ИЗ НОВО- ПЕРЕДЕЛКИНО",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "id": "868928615",
+      "name_lat": "ДУКАТ ИЗ НОВО-ПЕРЕДЕЛКИНО",
+      "name_ru": "ДУКАТ ИЗ НОВО-ПЕРЕДЕЛКИНО",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "557708396",
+      "name_lat": "ДУЭТТО ТАНТО КСОРА",
+      "name_ru": "ДУЭТТО ТАНТО КСОРА",
+      "breed": "БОКСЕР РЫЖИЙ",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -190,6 +189,15 @@
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46528747",
+      "name_lat": "ДУЭТТО ТАНТО ПАТРИЦИЯ",
+      "name_ru": "ДУЭТТО ТАНТО ПАТРИЦИЯ",
+      "breed": "БОКСЕР",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -204,25 +212,16 @@
     {
       "id": "453892499",
       "name_lat": "ДУНЯША ДИВНАЯ МЕЧТА",
-      "name_ru": "",
+      "name_ru": "ДУНЯША ДИВНАЯ МЕЧТА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "46528747",
-      "name_lat": "ДУЭТТО ТАНТО ПАТРИЦИЯ",
-      "name_ru": "",
-      "breed": "БОКСЕР",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "420280570",
       "name_lat": "ДУША РОССИИ НАЙДА",
-      "name_ru": "",
+      "name_ru": "ДУША РОССИИ НАЙДА",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -231,7 +230,7 @@
     {
       "id": "887512723",
       "name_lat": "ДУРАНТЕ ВИТА УНДИНА",
-      "name_ru": "",
+      "name_ru": "ДУРАНТЕ ВИТА УНДИНА",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 8,
@@ -240,15 +239,23 @@
     {
       "id": "1320770428",
       "name_lat": "ДУЕНО ДЕЛ АЛМА РАЙСКОЕ ЯБЛОКО",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА РАЙСКОЕ ЯБЛОКО",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1719400114",
-      "name_lat": "ДУША СЕВЕРА БУГИ- ВУГИ",
+      "id": "906956727",
+      "name_lat": "ДУХ КОТЛИС ГИНТАРАС",
+      "name_ru": "ДУХ КОТЛИС ГИНТАРАС",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1445944768",
+      "name_lat": "ДУША СЕВЕРА БУГИ-ВУГИ",
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
@@ -270,7 +277,7 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -292,21 +299,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "217824741",
+      "id": "1624287241",
       "name_lat": "ДУХ КОТЛИС ВИВЬЕН ЛИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ДУХ КОТЛИС ВИВЬЕН ЛИ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "557708396",
-      "name_lat": "ДУЭТТО ТАНТО КСОРА",
-      "name_ru": "",
-      "breed": "БОКСЕР РЫЖИЙ",
-      "breed_en": "",
-      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -319,21 +317,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "225425408",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА ОСКАР ЗОЛОТОНОСНЫЙ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "id": "1218957471",
+      "name_lat": "ДУЭТТО ТАНТО ПАДДИНГТОН",
+      "name_ru": "ДУЭТТО ТАНТО ПАДДИНГТОН",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "36805987",
-      "name_lat": "ДУРАНТЕ ВИТА ДИЗАЙН",
-      "name_ru": "",
-      "breed": "УИППЕТ",
+      "id": "225425408",
+      "name_lat": "ДУЕНО ДЕЛ АЛМА ОСКАР ЗОЛОТОНОСНЫЙ",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ОСКАР ЗОЛОТОНОСНЫЙ",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -346,8 +344,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "230347037",
-      "name_lat": "ДУША РОССИИ ХВАЛА- НН",
+      "id": "1118897719",
+      "name_lat": "ДУША РОССИИ ХВАЛА-НН",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -357,7 +355,7 @@
     {
       "id": "1100381214",
       "name_lat": "ДУХ КОТЛИС ГОСУДАРЫНЯ",
-      "name_ru": "",
+      "name_ru": "ДУХ КОТЛИС ГОСУДАРЫНЯ",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -366,10 +364,10 @@
     {
       "id": "1500253718",
       "name_lat": "ДУРАНТЕ ВИТА ПРЕМЬЕР АПЛАУС",
-      "name_ru": "",
+      "name_ru": "ДУРАНТЕ ВИТА ПРЕМЬЕР АПЛАУС",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -393,28 +391,10 @@
     {
       "id": "1821663756",
       "name_lat": "ДУЕНО ДЕЛ АЛМА ВАЛЕРИ",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ВАЛЕРИ",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "627180458",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА ЕСТЬ ТАКОЙ ПАРЕНЬ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "295452981",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА ШОПЕН МУЗЫКАНТ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -474,33 +454,15 @@
     {
       "id": "1297215642",
       "name_lat": "ДУЕНО ДЕЛ АЛМА ПОБЕДА БУДЕТ ЗА НАМИ",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ПОБЕДА БУДЕТ ЗА НАМИ",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1001369301",
-      "name_lat": "ДУРАНТЕ ВИТА АЛОНСО",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "119386883",
-      "name_lat": "ДУХ КОТЛИС ГИНТАРАС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "451428021",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА ИНДЖИ- ЮНА",
+      "id": "529574947",
+      "name_lat": "ДУЕНО ДЕЛ АЛМА ИНДЖИ-ЮНА",
       "name_ru": "",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
@@ -508,28 +470,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "766783655",
+      "id": "416921611",
       "name_lat": "ДУБЛОН",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "761401927",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА НЕМЕСИДА ДОЧЬ ОКЕАНА",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "810871553",
+      "id": "211134026",
       "name_lat": "ДУЕНО ДЕЛ АЛМА ИРГА",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -580,10 +533,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1499414999",
+      "id": "932373411",
       "name_lat": "ДУХ КОТЛИС ДАНТЕ АЛИГЬЕРИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ДУХ КОТЛИС ДАНТЕ АЛИГЬЕРИ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
       "total_shows": 9,
       "competition_dog_id": null
@@ -591,28 +544,37 @@
     {
       "id": "1136781269",
       "name_lat": "ДУЛЬСИНЕЯ ИЗ СТАРОЙ ШУИ",
-      "name_ru": "",
+      "name_ru": "ДУЛЬСИНЕЯ ИЗ СТАРОЙ ШУИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "324780362",
+      "id": "213019382",
       "name_lat": "ДУСЕНЬКА-МАРУСЕНЬКА ИЗ ЗИМНИХ ГРЁЗ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ДУСЕНЬКА-МАРУСЕНЬКА ИЗ ЗИМНИХ ГРЁЗ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "POODLE TOY",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "343807565",
+      "id": "780292536",
+      "name_lat": "ДУРАНТЕ ВИТА ШЕКСПИР СОНЕТ ФОР АМБЕР ВЕЙВ",
+      "name_ru": "ДУРАНТЕ ВИТА ШЕКСПИР СОНЕТ ФОР АМБЕР ВЕЙВ",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1255877808",
       "name_lat": "ДУЛЬСИНЕЯ ТОБОССКАЯ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "name_ru": "ДУЛЬСИНЕЯ ТОБОССКАЯ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -627,16 +589,16 @@
     {
       "id": "1110524810",
       "name_lat": "ДУЕНО ДЕЛ АЛМА БЕТТИ ВАЙТ ДИАМОНД",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА БЕТТИ ВАЙТ ДИАМОНД",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "742388447",
       "name_lat": "ДУША СЕВЕРА ЖАСМИН",
-      "name_ru": "",
+      "name_ru": "ДУША СЕВЕРА ЖАСМИН",
       "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 12,
@@ -645,7 +607,7 @@
     {
       "id": "788914882",
       "name_lat": "ДУРМАН ТРАВА ОТ ФОРЕСТ ГИРЦ",
-      "name_ru": "",
+      "name_ru": "ДУРМАН ТРАВА ОТ ФОРЕСТ ГИРЦ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 13,
@@ -654,7 +616,7 @@
     {
       "id": "1273804958",
       "name_lat": "ДУША СЕВЕРА ЖЕНЬШЕНЬ ПРИНЦЕССА ПОЛЛАРИС",
-      "name_ru": "",
+      "name_ru": "ДУША СЕВЕРА ЖЕНЬШЕНЬ ПРИНЦЕССА ПОЛЛАРИС",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 13,
@@ -663,19 +625,10 @@
     {
       "id": "1215383813",
       "name_lat": "ДУХ КОТЛИС ГВИНЕВРА",
-      "name_ru": "",
+      "name_ru": "ДУХ КОТЛИС ГВИНЕВРА",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "780292536",
-      "name_lat": "ДУРАНТЕ ВИТА ШЕКСПИР СОНЕТ ФОР АМБЕР ВЕЙВ",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -690,7 +643,7 @@
     {
       "id": "599613728",
       "name_lat": "ДУША РОССИИ ЖЕСТЬ",
-      "name_ru": "",
+      "name_ru": "ДУША РОССИИ ЖЕСТЬ",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
@@ -708,7 +661,16 @@
     {
       "id": "1481258312",
       "name_lat": "ДУША РОССИИ Е-ФИМ ДОМБАЙ-УЛЬГЕН",
-      "name_ru": "",
+      "name_ru": "ДУША РОССИИ Е-ФИМ ДОМБАЙ-УЛЬГЕН",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "587679626",
+      "name_lat": "ДУША РОССИИ ГРУША",
+      "name_ru": "ДУША РОССИИ ГРУША",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
@@ -717,17 +679,17 @@
     {
       "id": "582254412",
       "name_lat": "ДУКАТ ИЗ ГРАДА КАТЕРИНЫ",
-      "name_ru": "",
+      "name_ru": "ДУКАТ ИЗ ГРАДА КАТЕРИНЫ",
       "breed": "СОЛЬЮ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1315845653",
-      "name_lat": "ДУША РОССИИ ЕМЕЛЬ- ЯН",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "id": "660479860",
+      "name_lat": "ДУША РОССИИ ЕМЕЛЬ-ЯН",
+      "name_ru": "ДУША РОССИИ ЕМЕЛЬ-ЯН",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -742,18 +704,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1035736349",
-      "name_lat": "ДУШЕВНЫЙ ДЖОННИ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "87277541",
       "name_lat": "ДУШЕЧКА С МЕЩЁРСКОЙ СТОРОНЫ",
-      "name_ru": "",
+      "name_ru": "ДУШЕЧКА С МЕЩЁРСКОЙ СТОРОНЫ",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 9,
@@ -762,37 +715,19 @@
     {
       "id": "990542870",
       "name_lat": "ДУЕНО ДЕЛ АЛМА ВИКИНГ",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ВИКИНГ",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1494903585",
-      "name_lat": "ДУНЯША ИЗ ЛУННОГО САДА",
+      "id": "195895358",
+      "name_lat": "ДУНКАН",
       "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "76685781",
-      "name_lat": "ДУЭТТО ТАНТО ПАДДИНГТОН",
-      "name_ru": "",
-      "breed": "БОКСЕР",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "464370156",
-      "name_lat": "ДУРАНТЕ ВИТА ЦЕЛЕСТИНА ОБВОРОЖИТЕЛЬНАЯ",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -805,10 +740,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1528269827",
+      "id": "1525389034",
       "name_lat": "ДУЭНО ДЕЛ АЛМА ГЕРА",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ /",
+      "name_ru": "ДУЭНО ДЕЛ АЛМА ГЕРА",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -816,7 +751,7 @@
     {
       "id": "1761055047",
       "name_lat": "ДУББИ АСГАР НАТСУМИ ШИК МИКИ",
-      "name_ru": "",
+      "name_ru": "ДУББИ АСГАР НАТСУМИ ШИК МИКИ",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 4,
@@ -834,26 +769,26 @@
     {
       "id": "290417417",
       "name_lat": "ДУЭТТО ТАНТО КАРАМЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ДУЭТТО ТАНТО КАРАМЕЛЬ",
       "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "264665037",
       "name_lat": "ДУНАЙ ВЕЛИКОЛЕПНЫЙ СТРАЖ",
-      "name_ru": "",
+      "name_ru": "ДУНАЙ ВЕЛИКОЛЕПНЫЙ СТРАЖ",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "121592871",
+      "id": "1740450534",
       "name_lat": "ДУНАЙ ИМПЕРАТОР ЦЕЗАРЬ",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "name_ru": "ДУНАЙ ИМПЕРАТОР ЦЕЗАРЬ",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -861,7 +796,7 @@
     {
       "id": "1722982540",
       "name_lat": "ДУРАНТЕ ВИТА ГОТЭМ",
-      "name_ru": "",
+      "name_ru": "ДУРАНТЕ ВИТА ГОТЭМ",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 9,
@@ -879,10 +814,19 @@
     {
       "id": "380027379",
       "name_lat": "ДУША РОССИИ ВАССА",
-      "name_ru": "",
+      "name_ru": "ДУША РОССИИ ВАССА",
       "breed": "CAUCASIAN SHEPHERD",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "951753813",
+      "name_lat": "ДУНАЙСКАЯ ПЕСЕНКА",
+      "name_ru": "ДУНАЙСКАЯ ПЕСЕНКА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -897,34 +841,24 @@
     {
       "id": "1195303569",
       "name_lat": "ДУША РОССИИ БАЛИСТИКА",
-      "name_ru": "",
+      "name_ru": "ДУША РОССИИ БАЛИСТИКА",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "776",
-      "name_lat": "ДУШЕЧКА-КРАСА ИЗ ДОМА АЛАНТЕС",
+      "id": "274390796",
+      "name_lat": "ДУГЛАС/DUGLAS",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": 776
-    },
-    {
-      "id": "297521259",
-      "name_lat": "ДУША РОССИИ ГРУША",
-      "name_ru": "",
-      "breed": "CAUCASIAN SHEPHERD",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "744860314",
       "name_lat": "ДУХ ШВАРЦВАЛЬДА НА РУБЛЕВКЕ ЛУКЕРИЯ",
-      "name_ru": "",
+      "name_ru": "ДУХ ШВАРЦВАЛЬДА НА РУБЛЕВКЕ ЛУКЕРИЯ",
       "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
@@ -933,9 +867,17 @@
     {
       "id": "711930250",
       "name_lat": "ДУЛЬСЕНЕЯ БЕНТ ПЕРСЕЙ",
-      "name_ru": "",
+      "name_ru": "ДУЛЬСЕНЕЯ БЕНТ ПЕРСЕЙ",
       "breed": "ШИ-ТЦУ",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1060091777",
+      "name_lat": "ДУША МОЯ БАРСА",
+      "name_ru": "ДУША МОЯ БАРСА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -958,6 +900,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "72935356",
+      "name_lat": "ДУЭНО ДЕЛ АЛМА ГЕРДА",
+      "name_ru": "ДУЭНО ДЕЛ АЛМА ГЕРДА",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "717236965",
       "name_lat": "ДУША РОССИИ ЛЬВИНАЯ СИЛА",
       "name_ru": "",
@@ -969,7 +920,7 @@
     {
       "id": "212546683",
       "name_lat": "ДУНЯ ДЕЛИШЕЗ ГЕРЛ",
-      "name_ru": "",
+      "name_ru": "ДУНЯ ДЕЛИШЕЗ ГЕРЛ",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -985,9 +936,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "76201741",
+      "name_lat": "ДУКС",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1127506892",
+      "name_lat": "ДУРАНТЕ ВИТА ЧЕЛСИ",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "574194141",
       "name_lat": "ДУШИ ОТРАДА ИЗ МИТЬКОВ",
-      "name_ru": "",
+      "name_ru": "ДУШИ ОТРАДА ИЗ МИТЬКОВ",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 3,
@@ -1023,10 +991,18 @@
     {
       "id": "108207947",
       "name_lat": "ДУША ОХОТЫ АРМА",
-      "name_ru": "",
+      "name_ru": "ДУША ОХОТЫ АРМА",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1070458168",
+      "name_lat": "ДУШЕЧКА ГОЛУБУШКА С ВОСХОДА",
+      "name_ru": "ДУШЕЧКА ГОЛУБУШКА С ВОСХОДА",
+      "breed": "ВОЛЬФШПИЦ (КЕЕСХОНД)",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1039,19 +1015,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "534118237",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА ВАРЯГ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1294192780",
+      "id": "112652393",
       "name_lat": "ДУХ УРАЛА ФИДЖИ",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "name_ru": "ДУХ УРАЛА ФИДЖИ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1068,19 +1035,28 @@
     {
       "id": "779534056",
       "name_lat": "ДУША ДРАКОНА ЧАЙНАЯ РОЗА",
-      "name_ru": "",
+      "name_ru": "ДУША ДРАКОНА ЧАЙНАЯ РОЗА",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "564119892",
+      "name_lat": "ДУББИ АСГАР ЖИЗЕЛЬ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1078230744",
       "name_lat": "ДУРАНТЕ ВИТА РЕВОЛЮШН",
-      "name_ru": "",
+      "name_ru": "ДУРАНТЕ ВИТА РЕВОЛЮШН",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1093,10 +1069,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "898496158",
+      "id": "6102439",
       "name_lat": "ДУБРАВА ИЗ ЦАРСКОСЕЛЬСКОЙ УСАДЬБЫ",
-      "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
+      "name_ru": "ДУБРАВА ИЗ ЦАРСКОСЕЛЬСКОЙ УСАДЬБЫ",
+      "breed": "СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1104,7 +1080,7 @@
     {
       "id": "186416747",
       "name_lat": "ДУША СЕВЕРА ДЕДА МОРОЗА ПОМОЩНИК",
-      "name_ru": "",
+      "name_ru": "ДУША СЕВЕРА ДЕДА МОРОЗА ПОМОЩНИК",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -1129,10 +1105,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "560069983",
+      "id": "483185142",
       "name_lat": "ДУЭНЬОС ДЕ ЛЯ ВИДА СКРУДЖ",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ)",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1140,7 +1116,7 @@
     {
       "id": "1869158708",
       "name_lat": "ДУЭТТО ТАНТО МАКИНТОШ",
-      "name_ru": "",
+      "name_ru": "ДУЭТТО ТАНТО МАКИНТОШ",
       "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1149,17 +1125,17 @@
     {
       "id": "429333212",
       "name_lat": "ДУХ ШВАРЦВАЛЬДА НА РУБЛЕВКЕ ГОЛДИ",
-      "name_ru": "",
+      "name_ru": "ДУХ ШВАРЦВАЛЬДА НА РУБЛЕВКЕ ГОЛДИ",
       "breed": "AFFENPINSCHER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1598904466",
+      "id": "1223257518",
       "name_lat": "ДУХ КОТЛИС БУРГОМИСТР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ДУХ КОТЛИС БУРГОМИСТР",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1167,7 +1143,7 @@
     {
       "id": "230243148",
       "name_lat": "ДУПЛЕТ ИЗ ДРЕМУЧЕГО ЛЕСА",
-      "name_ru": "",
+      "name_ru": "ДУПЛЕТ ИЗ ДРЕМУЧЕГО ЛЕСА",
       "breed": "WEIMARANER SHORT-",
       "breed_en": "",
       "total_shows": 3,
@@ -1176,7 +1152,7 @@
     {
       "id": "265013186",
       "name_lat": "ДУЕНО ДЕЛ АЛМА БИЗОН-СЕРДЦЕ ПРЕРИЙ",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА БИЗОН-СЕРДЦЕ ПРЕРИЙ",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -1185,7 +1161,7 @@
     {
       "id": "971812012",
       "name_lat": "ДУЕНО ДЕЛ АЛМА ЕССЕНКО АННАБЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ЕССЕНКО АННАБЕЛЬ",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -1201,39 +1177,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1206733188",
+      "id": "1353140872",
       "name_lat": "ДУЭНЬОС ДЕ ЛЯ ВИДА РИНГО",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) /",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "423071919",
-      "name_lat": "ДУНАЙСКАЯ ПЕСЕНКА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1859789370",
-      "name_lat": "ДУША РОСИИ БАРЫНЯ- СУДАРЫНЯ",
-      "name_ru": "",
+      "id": "214535606",
+      "name_lat": "ДУША РОСИИ БАРЫНЯ-СУДАРЫНЯ",
+      "name_ru": "ДУША РОСИИ БАРЫНЯ-СУДАРЫНЯ",
       "breed": "CAUCASIAN SHEPHERD",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "72935356",
-      "name_lat": "ДУЭНО ДЕЛ АЛМА ГЕРДА",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1248,35 +1206,26 @@
     {
       "id": "1558440786",
       "name_lat": "ДУША ВАРЮША ИЗ МЕДВЕЖЬЕГО ЯРА",
-      "name_ru": "",
+      "name_ru": "ДУША ВАРЮША ИЗ МЕДВЕЖЬЕГО ЯРА",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1484975791",
+      "id": "1096701864",
       "name_lat": "ДУНАЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "661681152",
-      "name_lat": "ДУРАНТЕ ВИТА ШЕКСПИР СОНЕТ ФОР АМБЕР ВЭЙВ",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1761573351",
+      "id": "76959273",
       "name_lat": "ДУЕНО ДЕЛ АЛМА ВАЛЕНСИЯ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ БУЛЬДОГ",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ВАЛЕНСИЯ",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1300,18 +1249,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "564119892",
-      "name_lat": "ДУББИ АСГАР ЖИЗЕЛЬ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1293616219",
       "name_lat": "ДУША ДЕВИЦА ИЗ СТАРОЙ ШУИ",
-      "name_ru": "",
+      "name_ru": "ДУША ДЕВИЦА ИЗ СТАРОЙ ШУИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 7,
@@ -1329,16 +1269,25 @@
     {
       "id": "1270113546",
       "name_lat": "ДУБАЙ ИЗ ЗАПРУДА",
-      "name_ru": "",
+      "name_ru": "ДУБАЙ ИЗ ЗАПРУДА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "96037227",
+      "name_lat": "ДУРАНТЕ ВИТА ШУГА БЭБИ",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "289689862",
       "name_lat": "ДУША МОЯ КАПИТАЛИНА ГРОМОВНА ОТ ОРБАРО ШИК",
-      "name_ru": "",
+      "name_ru": "ДУША МОЯ КАПИТАЛИНА ГРОМОВНА ОТ ОРБАРО ШИК",
       "breed": "CAUCASIAN SHEPHERD",
       "breed_en": "",
       "total_shows": 3,
@@ -1354,33 +1303,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "47713283",
-      "name_lat": "ДУНКАН",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "76201741",
-      "name_lat": "ДУКС",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1846048115",
-      "name_lat": "ДУНКАН",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1468449807",
       "name_lat": "ДУША РОССИИ ЮСТА",
       "name_ru": "",
@@ -1390,10 +1312,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1497685320",
+      "id": "1829162748",
       "name_lat": "ДУЭНЬОС ДЕ ЛЯ ВИДА НО КОММЕНТС",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) /",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1446,10 +1368,19 @@
     {
       "id": "1757363521",
       "name_lat": "ДУЭТТО ТАНТО ЛИМОНЧЕЛЛА",
-      "name_ru": "",
+      "name_ru": "ДУЭТТО ТАНТО ЛИМОНЧЕЛЛА",
       "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "163381155",
+      "name_lat": "ДУША ПОЛЕЙ ВИХРЬ",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1462,18 +1393,34 @@
       "competition_dog_id": null
     },
     {
+      "id": "451708008",
+      "name_lat": "ДУЛЬСИНЕЯ",
+      "name_ru": "",
+      "breed": "ЭПАНЬОЛЬ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1697826320",
+      "name_lat": "ДУЕНО ДЕЛ АЛМА АМАЛФИ БЕЛАЯ ОРХИДЕЯ",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1099819165",
       "name_lat": "ДУББИ АСГАР ЭВРИКА",
-      "name_ru": "",
+      "name_ru": "ДУББИ АСГАР ЭВРИКА",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "1497758972",
       "name_lat": "ДУЛЬСИНЕЯ ДЕЛЬ ТОБОСО",
-      "name_ru": "",
+      "name_ru": "ДУЛЬСИНЕЯ ДЕЛЬ ТОБОСО",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 4,
@@ -1482,28 +1429,28 @@
     {
       "id": "230710131",
       "name_lat": "ДУЛЬСИНЕЯ СИБИРСКАЯ",
-      "name_ru": "",
+      "name_ru": "ДУЛЬСИНЕЯ СИБИРСКАЯ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1437022652",
-      "name_lat": "ДУНКАН",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙДОГ БУЛЬДОГ",
+      "id": "808468654",
+      "name_lat": "ДУШИ ОТРАДА ЗЛАТОВЛАСКА",
+      "name_ru": "ДУШИ ОТРАДА ЗЛАТОВЛАСКА",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "808468654",
-      "name_lat": "ДУШИ ОТРАДА ЗЛАТОВЛАСКА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
+      "id": "257216507",
+      "name_lat": "ДУЭНО ДЕЛ АЛМА КОРСАР ГРОЗА МОРЕЙ",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА КОРСАР ГРОЗА МОРЕЙ",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1525,10 +1472,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1673639253",
+      "id": "1298406512",
       "name_lat": "ДУГЛАС",
       "name_ru": "",
-      "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО) МАСТИФ",
+      "breed": "МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1570,24 +1517,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "800254323",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА КОРСАР ГРОЗА МОРЕЙ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "544607152",
-      "name_lat": "ДУША МОЯ БАРСА",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "64109749",
       "name_lat": "ДУЕНО ДЕЛ АЛМА ПАТРИЦИЯ БЕЛЫЙ АНГЕЛ",
       "name_ru": "",
@@ -1599,7 +1528,7 @@
     {
       "id": "66138936",
       "name_lat": "ДУББИ АСГАР БАТАР",
-      "name_ru": "",
+      "name_ru": "ДУББИ АСГАР БАТАР",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
@@ -1626,7 +1555,7 @@
     {
       "id": "1991528687",
       "name_lat": "ДУББИ АСГАР САЙЛИНА",
-      "name_ru": "",
+      "name_ru": "ДУББИ АСГАР САЙЛИНА",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -1651,11 +1580,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "96037227",
-      "name_lat": "ДУРАНТЕ ВИТА ШУГА БЭБИ",
+      "id": "1829197549",
+      "name_lat": "ДУББИ АСГАР ГУНСЭН",
       "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1687,20 +1615,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1567763629",
+      "id": "161710817",
       "name_lat": "ДУШИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1809637757",
-      "name_lat": "ДУГЛАС",
+      "id": "842526603",
+      "name_lat": "ДУЛЬСИНЕЯ",
       "name_ru": "",
-      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "немецкий цвергшпиц/померански й шпиц",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1723,28 +1650,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1182126355",
+      "id": "208638330",
       "name_lat": "ДУЭНЬОС ДЕ ЛЯ ВИДА НО КОММЕН ТС",
       "name_ru": "",
-      "breed": "КАНАРИО (КАНАРСК ИЙ ДОГ) /",
+      "breed": "КАНАРИО (КАНАРСК ИЙ ДОГ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1322664234",
+      "id": "1284813807",
       "name_lat": "ДУДУ ШЕРИ РЕЙНА ДЕ ЛА БЕЛЬЕСА",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "479817878",
+      "id": "910542773",
       "name_lat": "ДУКС ИЗ ДОМА АЛЛЕНС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1786,20 +1713,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1127506892",
-      "name_lat": "ДУРАНТЕ ВИТА ЧЕЛСИ",
+      "id": "461457611",
+      "name_lat": "ДУРАНТЕ ВИТА НЬЮ ХИТ",
       "name_ru": "",
-      "breed": "УИППЕТ",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104723634",
+      "name_lat": "ДУЭНЬОС ДЭ ЛЯ ВИДА РОКСОЛАНА",
+      "name_ru": "",
+      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1742860165",
+      "name_lat": "ДУББИ АСГАР КАЦУМИ",
+      "name_ru": "",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "635713712",
-      "name_lat": "ДУББИ АСГАР КАЦУМИ",
+      "id": "1742871206",
+      "name_lat": "ДУО ТАЛЕНТА ОФЕЛИЯ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1815,17 +1757,17 @@
     {
       "id": "980549899",
       "name_lat": "ДУБРАВА ЗНОЙНАЯ",
-      "name_ru": "",
+      "name_ru": "ДУБРАВА ЗНОЙНАЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "226562701",
+      "id": "606212588",
       "name_lat": "ДУО ЛИППО",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1851,7 +1793,7 @@
     {
       "id": "7632074",
       "name_lat": "ДУШЕЧКА-ПОДУШЕЧКА",
-      "name_ru": "",
+      "name_ru": "ДУШЕЧКА-ПОДУШЕЧКА",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -1876,9 +1818,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "402646183",
+      "name_lat": "ДУША ДЕВИЦА ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
+      "name_ru": "ДУША ДЕВИЦА ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
+      "breed": "ШЕЛТИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1328471358",
       "name_lat": "ДУЭНО ДЕЛ АЛЬМА ГИЯ",
-      "name_ru": "",
+      "name_ru": "ДУЭНО ДЕЛ АЛЬМА ГИЯ",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 2,
@@ -1948,10 +1898,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1510058745",
+      "id": "1911468228",
       "name_lat": "ДУЛЬСИНЕЯ",
       "name_ru": "",
-      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР) /",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1984,19 +1934,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "95057700",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА ГЕРДА",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1772570100",
+      "id": "94646034",
       "name_lat": "ДУША РОССИИ ЖЕЛЕЗНАЯ ЛЕДИ ЖУЛИ",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД ПИНЧЕР",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2058,7 +1999,7 @@
     {
       "id": "654437152",
       "name_lat": "ДУЭТТО ТАНТО МИНОРИ",
-      "name_ru": "",
+      "name_ru": "ДУЭТТО ТАНТО МИНОРИ",
       "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2067,7 +2008,7 @@
     {
       "id": "1183940197",
       "name_lat": "ДУША ВОСТОКА ЕТЕРНАЛ ЛАВ ВАЙТ ЭНДЖЕЛ",
-      "name_ru": "",
+      "name_ru": "ДУША ВОСТОКА ЕТЕРНАЛ ЛАВ ВАЙТ ЭНДЖЕЛ",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
@@ -2101,6 +2042,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1131335280",
+      "name_lat": "ДУСЯ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "997738855",
       "name_lat": "ДУША МОЯ ВАСИЛИСА",
       "name_ru": "",
@@ -2119,19 +2068,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1430586573",
-      "name_lat": "ДУШЕЧКА ДОБРЫНЯ НИКИТИЧ",
+      "id": "71470866",
+      "name_lat": "ДУШОЙ ПЕСНЯ ПЕЧЕНЕГА",
       "name_ru": "",
-      "breed": "МОПС БЕЖЕВЫЙ",
+      "breed": "СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "71470866",
-      "name_lat": "ДУШОЙ ПЕСНЯ ПЕЧЕНЕГА",
+      "id": "1430586573",
+      "name_lat": "ДУШЕЧКА ДОБРЫНЯ НИКИТИЧ",
       "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ",
+      "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2164,19 +2113,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "1367997363",
+      "name_lat": "ДУША КОМПАНИИ ИЗ ЭЛИСГРАДА",
+      "name_ru": "ДУША КОМПАНИИ ИЗ ЭЛИСГРАДА",
+      "breed": "WELSH CORGI PEMBROKE",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "475466572",
       "name_lat": "ДУББИ АСГАР УДАЧА",
       "name_ru": "",
       "breed": "САМОЕДСКАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "37428583",
-      "name_lat": "ДУША КОМПАНИИ ИЗ ЭЛИСГРАДА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2191,9 +2140,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "788",
+      "name_lat": "ДУША-ДЕВИЦА",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": 788
+    },
+    {
       "id": "45276192",
       "name_lat": "ДУША ОХОТЫ БРАЙАН",
-      "name_ru": "",
+      "name_ru": "ДУША ОХОТЫ БРАЙАН",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -2205,6 +2163,14 @@
       "name_ru": "",
       "breed": "ВОСТОЧНОСИБИРСКАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "519673849",
+      "name_lat": "ДУША-ДЕВИЦА",
+      "name_ru": "",
+      "breed": "RUSSIAN",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2229,7 +2195,7 @@
     {
       "id": "1265858846",
       "name_lat": "ДУББИ АСГАР ФОРТУНА",
-      "name_ru": "",
+      "name_ru": "ДУББИ АСГАР ФОРТУНА",
       "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 5,
@@ -2256,7 +2222,7 @@
     {
       "id": "1249316462",
       "name_lat": "ДУЭНЬОС ДЕ ЛЯ ВИДА ПОЗИТИВ",
-      "name_ru": "",
+      "name_ru": "ДУЭНЬОС ДЕ ЛЯ ВИДА ПОЗИТИВ",
       "breed": "КАНАРСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 4,
@@ -2265,7 +2231,7 @@
     {
       "id": "976569301",
       "name_lat": "ДУББИ АСГАР ОСКАР",
-      "name_ru": "",
+      "name_ru": "ДУББИ АСГАР ОСКАР",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
@@ -2281,11 +2247,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "965859752",
+      "id": "1074374236",
       "name_lat": "ДУЭНЬОС ДЕ ЛЯ ВИДА ПАЛОМА",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) /",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1072136095",
+      "name_lat": "ДУББИ АСГАР БАКС",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2299,10 +2273,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "56535863",
-      "name_lat": "ДУЛЬСИНЕЯ ФАЙЕР СТАР",
+      "id": "830008149",
+      "name_lat": "ДУХ КОТЛИС ЗАРНИ ЭРИУС",
       "name_ru": "",
-      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2310,7 +2284,7 @@
     {
       "id": "1507519365",
       "name_lat": "ДУЕНО ДЕЛ АЛМА ЛЕГЕНДА О ЛЮБВИ",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ЛЕГЕНДА О ЛЮБВИ",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 3,
@@ -2398,6 +2372,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "651505548",
+      "name_lat": "ДУББИ АСГАР КАССИОПЕЯ",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1009441049",
       "name_lat": "Дуранте Вита Голдэн Гэйт",
       "name_ru": "",
@@ -2434,10 +2417,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1928576821",
+      "id": "1805454825",
+      "name_lat": "ДУ ЗЕ ТРИК ИЗ ВКУСНОЙ БУЛОЧНОЙ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "30911176",
       "name_lat": "ДУЛЬСИ КАРА МУРЗА",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2470,15 +2461,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1072136095",
-      "name_lat": "ДУББИ АСГАР БАКС",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1045795950",
       "name_lat": "ДУША СЕВЕРА РАФАЭЛКА",
       "name_ru": "",
@@ -2488,10 +2470,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "89630128",
+      "id": "1324403870",
       "name_lat": "ДУНКАН ВИНС ЮДЖИН",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2506,28 +2488,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "688276598",
+      "id": "254858794",
       "name_lat": "ДУЛЬСИНЕЯ ТАБОЛЬСКАЯ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "830008149",
-      "name_lat": "ДУХ КОТЛИС ЗАРНИ ЭРИУС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "257216507",
-      "name_lat": "ДУЭНО ДЕЛ АЛМА КОРСАР ГРОЗА МОРЕЙ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2544,7 +2508,7 @@
     {
       "id": "376327645",
       "name_lat": "Душечка Дуняша",
-      "name_ru": "",
+      "name_ru": "Душечка Дуняша",
       "breed": "НЕМЕЦКИЙ ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ ШПИЦ)",
       "breed_en": "",
       "total_shows": 2,
@@ -2562,7 +2526,7 @@
     {
       "id": "1419727980",
       "name_lat": "ДУНЯША СЧАСТЛИВАЯ ЗВЕЗДА",
-      "name_ru": "",
+      "name_ru": "ДУНЯША СЧАСТЛИВАЯ ЗВЕЗДА",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -2571,17 +2535,17 @@
     {
       "id": "133771520",
       "name_lat": "ДУЛЬСИНЕЯ ИЗ СОЗВЕЗДИЯ РЫЖИХ ПСОВ",
-      "name_ru": "",
+      "name_ru": "ДУЛЬСИНЕЯ ИЗ СОЗВЕЗДИЯ РЫЖИХ ПСОВ",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1334874011",
+      "id": "643083199",
       "name_lat": "ДУША МОЯ ИЗ АМАЛЬГАМЫ ЗВЕЗД",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "name_ru": "ДУША МОЯ ИЗ АМАЛЬГАМЫ ЗВЕЗД",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2589,16 +2553,25 @@
     {
       "id": "1641584380",
       "name_lat": "ДУША СЕВЕРА ОЛИВИЯ",
-      "name_ru": "",
+      "name_ru": "ДУША СЕВЕРА ОЛИВИЯ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "417067531",
-      "name_lat": "ДУХ КОТЛИС ГРАФ МОНТЕ- КРИСТО",
-      "name_ru": "",
+      "id": "250764866",
+      "name_lat": "ДУЕНО ДЕЛ АЛМА ЦАРЕВНА ЛЕБЕДЬ",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ЦАРЕВНА ЛЕБЕДЬ",
+      "breed": "АРГЕНТИНСКИЙ ДОГ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "215364521",
+      "name_lat": "ДУХ КОТЛИС ГРАФ МОНТЕ-КРИСТО",
+      "name_ru": "ДУХ КОТЛИС ГРАФ МОНТЕ-КРИСТО",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -2731,6 +2704,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1056254669",
+      "name_lat": "ДУГЛАС",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "343821746",
       "name_lat": "ДУЛЬЧИТА",
       "name_ru": "",
@@ -2785,10 +2766,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1266037243",
+      "id": "950263079",
       "name_lat": "ДУСИК ПУСИК",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2812,10 +2793,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1455467122",
+      "id": "1293513809",
       "name_lat": "дуняша",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ПУДЕЛЬ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2839,10 +2820,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1865094624",
+      "id": "1278949255",
       "name_lat": "ДУГЛАС",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2866,22 +2847,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "1092946497",
+      "id": "687116853",
       "name_lat": "ДУДУ МИНЬОН",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
-    },
-    {
-      "id": "788",
-      "name_lat": "ДУША-ДЕВИЦА",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": 788
     },
     {
       "id": "179325482",
@@ -2897,6 +2869,50 @@
       "name_lat": "ДУСЛАН",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1928751014",
+      "name_lat": "ДУЛЬСИНЕЯ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "712261331",
+      "name_lat": "ДУЭНЬОС ДЕ ЛЯ ВИДА СТИЧ",
+      "name_ru": "",
+      "breed": "СОБАКА ДОГ) / PRESA CANARIO",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1168336291",
+      "name_lat": "ДУЕНО ДЕЛ АЛМА ЙОКОНА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "463025831",
+      "name_lat": "ДУШОЙ ПОСАДСКАЯ СТРАЖА",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1242118559",
+      "name_lat": "ДУШЕНЬКА ИЗ ДОМА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3010,10 +3026,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "660037907",
+      "id": "1329401210",
       "name_lat": "ДУХ УРАЛА ШЕДЕВР СЕВЕРА",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3023,15 +3039,6 @@
       "name_lat": "ДУШЕЧКА ДОМОВЕНОК",
       "name_ru": "",
       "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1835121752",
-      "name_lat": "ДУШЕЧКА ГОЛУБУШКА С ВОСХОДА",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3109,10 +3116,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "73955055",
+      "id": "504749342",
       "name_lat": "ДУББИ АСГАР БЕРРИ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3181,15 +3188,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "163381155",
-      "name_lat": "ДУША ПОЛЕЙ ВИХРЬ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "163393136",
       "name_lat": "ДУША ПОЛЕЙ БЫЛИНА",
       "name_ru": "",
@@ -3199,10 +3197,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1250349501",
+      "id": "1915063264",
       "name_lat": "ДУГЛАС ИЗ СИБИРСКИХ АФИН",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3235,11 +3233,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1144740081",
-      "name_lat": "ДУББИ АСГАР КАССИОПЕЯ",
+      "id": "1234344329",
+      "name_lat": "ДУНОВЕНИЕ ВЕТРА",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3280,6 +3277,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "551830380",
+      "name_lat": "ДУХИ СЕВЕРА ВЕГА",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "886942269",
       "name_lat": "Душечка для Флеш Оф Джой",
       "name_ru": "",
@@ -3316,10 +3321,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "533832602",
+      "id": "165485548",
+      "name_lat": "ДУББИ АСГАР ВЭДЖИ",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1291765355",
       "name_lat": "ДУХ УРАЛА ПРОМЕТЕЙ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3361,6 +3374,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "606144006",
+      "name_lat": "ДУББИ АСГАР КАПИТАЛИНА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "484655600",
       "name_lat": "ДУША ДРАКОНА ХАРИЗМА (СМУФ)",
       "name_ru": "",
@@ -3370,37 +3391,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1220975934",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА ИЛЛИАДА",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "279179941",
-      "name_lat": "ДУША ДЕВИЦА ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ / SHETLAND",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1755577265",
+      "id": "668318745",
       "name_lat": "ДУ ОРСЕ МАК ФЛАЙ ЭСТХОЛИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "712261331",
-      "name_lat": "ДУЭНЬОС ДЕ ЛЯ ВИДА СТИЧ",
-      "name_ru": "",
-      "breed": "СОБАКА ДОГ) / PRESA CANARIO",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3460,15 +3454,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "202556545",
-      "name_lat": "ДУША РОССИИ ЛОБАЗ",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1888071276",
       "name_lat": "ДУЕНО ДЕЛ АЛМА МЕСЯЦ ЯСНЫЙ",
       "name_ru": "",
@@ -3491,15 +3476,6 @@
       "name_lat": "ДУЕНО ДЕЛ АЛМА ИРИСКА",
       "name_ru": "",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "708288130",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА ЙОКОНА",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3550,15 +3526,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "463025831",
-      "name_lat": "ДУШОЙ ПОСАДСКАЯ СТРАЖА",
-      "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1664332201",
       "name_lat": "ДУХ КОТЛИС БРИДЖИТ БОРДО",
       "name_ru": "",
@@ -3595,24 +3562,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1587601522",
-      "name_lat": "ДУА ЛИПА ДИСКО СТИЛЯ",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "861466240",
-      "name_lat": "ДУЕНО ДЕЛ АЛМА ЦАРЕВНА ЛЕБЕДЬ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1422927566",
       "name_lat": "ДУЕНО ДЕЛ АЛМА ЗАБАВА ПУТЯТИШНА",
       "name_ru": "",
@@ -3631,20 +3580,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "808154642",
+      "id": "1039012654",
       "name_lat": "ДУША МОЯ ИЗ КНЯЖЕСТВА ВОЛХОНСКОЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "574015477",
+      "id": "976843110",
       "name_lat": "ДУШИ ЛЮБУШКА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1015257325",
+      "name_lat": "ДУ ОРСЕ МАК ФЛАЙ ФЕРЗЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "185805545",
+      "name_lat": "ДУЕНО ДЕЛ АЛМА ОХОТНИЧИЙ АЗАРТ",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3658,11 +3623,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1242118559",
-      "name_lat": "ДУШЕНЬКА ИЗ ДОМА",
+      "id": "1259324115",
+      "name_lat": "ДУЛЬСЕНЕЯ ТОБОЛЬСКАЯ",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
       "total_shows": 1,
       "competition_dog_id": null
     }

@@ -1,24 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "УШ",
-  "count": 15,
+  "count": 17,
   "dogs": [
     {
       "id": "1452707255",
       "name_lat": "УШИКА ИЗ ДОМА КАРМАНОВОЙ",
-      "name_ru": "",
+      "name_ru": "УШИКА ИЗ ДОМА КАРМАНОВОЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "279517872",
-      "name_lat": "УШУАЙЯ БИГЛ АНТАРКТИДА",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -33,10 +24,10 @@
     {
       "id": "1537112081",
       "name_lat": "УШАСТЫЙ НЯНЬ ОТ ФОРЕСТ ГИРЦ",
-      "name_ru": "",
+      "name_ru": "УШАСТЫЙ НЯНЬ ОТ ФОРЕСТ ГИРЦ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -58,6 +49,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1777576362",
+      "name_lat": "УШЕР",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181151589",
+      "name_lat": "УШЕР",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1765246405",
+      "name_lat": "УШЕР",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "667743256",
+      "name_lat": "УШЕР",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "637891778",
       "name_lat": "УША ИЗ НОВОЙ СИБИРИ",
       "name_ru": "",
@@ -67,10 +90,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "927516039",
+      "id": "760623403",
+      "name_lat": "УШКОВОЙ МАРИЛЕВС РОЯЛ БЛЭК ПЁРЛ",
+      "name_ru": "",
+      "breed": "ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1811262022",
       "name_lat": "УШНА-КАРА СОЛНЕЧНЫЙ ИСТОЧНИК ЖИЗНИ",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -98,24 +129,6 @@
       "name_lat": "УШУК ТУМШУК",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1777576362",
-      "name_lat": "УШЕР",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "667743256",
-      "name_lat": "УШЕР",
-      "name_ru": "",
-      "breed": "КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

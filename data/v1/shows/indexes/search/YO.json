@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "YO",
-  "count": 173,
+  "count": 185,
   "dogs": [
     {
       "id": "1621842697",
@@ -63,14 +63,14 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "ENGLISH SPRINGER SPANIEL",
-      "total_shows": 30,
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
-      "id": "1923678479",
+      "id": "1746889247",
       "name_lat": "YOU LIGHT UP THE NIGHT DEGLI ARISTOBASSI",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 23,
       "competition_dog_id": null
@@ -108,7 +108,7 @@
       "name_ru": "",
       "breed": "ПЕКИНЕС",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -121,10 +121,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1401310543",
+      "id": "726721295",
       "name_lat": "YOU CRAISY KATANA IZ DOMA LANKASTER",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 33,
       "competition_dog_id": null
@@ -144,7 +144,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "AMERICAN HAIRLESS TERRIER",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -157,12 +157,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1718412270",
+      "id": "236572016",
       "name_lat": "YOU'ADMIRE ME S TAGANIEGO ROGA",
       "name_ru": "",
-      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
       "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179251627",
+      "name_lat": "YOZHKA-MATRYOSHKA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -189,7 +198,7 @@
       "name_ru": "",
       "breed": "АППЕНЦЕЛЛЕР ЗЕННЕНХУНД",
       "breed_en": "APPENZELL CATTLE DOG",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -198,7 +207,7 @@
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "AKITA",
-      "total_shows": 28,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -211,6 +220,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "833436773",
+      "name_lat": "YOU LIFE SAPFIR'STAR RESSTYLE",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "766008240",
       "name_lat": "YOU ONLY YOU TSELESTIYA",
       "name_ru": "",
@@ -220,30 +238,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "833436773",
-      "name_lat": "YOU LIFE SAPFIR'STAR RESSTYLE",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "370146541",
       "name_lat": "YOU LIFE STYLISH QUEEN RESSLINE",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "179251627",
-      "name_lat": "YOZHKA-MATRYOSHKA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -274,6 +274,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "10944",
+      "name_lat": "YOU WARM MY HEART",
+      "name_ru": "",
+      "breed": "Поденко Ибиценко",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": 10944
+    },
+    {
       "id": "1287919962",
       "name_lat": "YOGI BEAR MINI'S TATRANSKA LABKA",
       "name_ru": "",
@@ -285,19 +294,10 @@
     {
       "id": "774908043",
       "name_lat": "YONATAN SO ZVEZDNOGO PUTI",
-      "name_ru": "",
+      "name_ru": "ЙОНАТАН СО ЗВЕЗДНОГО ПУТИ",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1590524059",
-      "name_lat": "YOU WARM MY HEART",
-      "name_ru": "",
-      "breed": "ПОДЕНКО ИБИЦЕНКО КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed_en": "SHIBA",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -307,6 +307,15 @@
       "breed": "СИБА",
       "breed_en": "SHIBA",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "665893003",
+      "name_lat": "YOU ONLY YOU GUDWIN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -346,6 +355,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1677041343",
+      "name_lat": "YONONA LUCE MARFA",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "369243157",
       "name_lat": "YOZHA GORYNOVNA S ELENIGORII",
       "name_ru": "",
@@ -364,21 +382,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "665893003",
-      "name_lat": "YOU ONLY YOU GUDWIN",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
       "id": "1880568315",
       "name_lat": "YOU ONLY YOU OTTO",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "AMERICAN HAIRLESS TERRIER",
       "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1331599607",
+      "name_lat": "YOUR SENSES ARE ALWAYS RIGHT",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "660525140",
+      "name_lat": "YOU ARE MY DREAM S TAGANIEGO ROGA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -405,16 +432,16 @@
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1637892157",
-      "name_lat": "YOU ARE MY DREAM S TAGANIEGO ROGA",
+      "id": "1106836415",
+      "name_lat": "YOU'RE MY GALAXY IZ STRANI GREZ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -427,12 +454,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "993754830",
-      "name_lat": "YOU'RE MY GALAXY IZ STRANI GREZ",
+      "id": "598929205",
+      "name_lat": "YOU ARE MY SUNSHINE IZ DOMA LANKASTER",
       "name_ru": "",
-      "breed": "DACHSHUND",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -454,12 +481,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "351036353",
-      "name_lat": "YOU ARE MY SUNSHINE IZ DOMA LANKASTER",
+      "id": "1045869816",
+      "name_lat": "YOKO ONO MY ROYAL PRESENT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -478,6 +505,14 @@
       "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "GIANT SCHNAUZER BLACK",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "958213302",
+      "name_lat": "YOU ONLY YOU DOROTHY",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -526,6 +561,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "244194016",
+      "name_lat": "YOU CAN IZ TSVETNOY SKAZKI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1939614325",
       "name_lat": "YOU SWEET LOVE S RUSSKOGO BAIKALA",
       "name_ru": "",
@@ -535,21 +579,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "757692132",
-      "name_lat": "YOKO ONO MY ROYAL PRESENT",
-      "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1077560511",
       "name_lat": "YOSHISAN PALACE TOTORO",
       "name_ru": "",
       "breed": "ЯПОНСКИЙХИН",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "645794702",
+      "name_lat": "YOUNG DUKE'S MISTER JACK",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "44360159",
+      "name_lat": "YOSHIKO SO ZVEZDNOGO PUTI",
+      "name_ru": "ЙОШИКО СО ЗВЕЗДНОГО ПУТИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -598,10 +650,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1248462290",
+      "id": "999287123",
       "name_lat": "YOU MY DREAM SIR SHON",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -612,16 +664,7 @@
       "name_ru": "",
       "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "281798083",
-      "name_lat": "YOU ONLY YOU DOROTHY",
-      "name_ru": "",
-      "breed": "ГОЛЫЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -639,7 +682,16 @@
       "name_ru": "",
       "breed": "Вельш корги пемброк",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1238052539",
+      "name_lat": "YOUR SENSES BALANCE",
+      "name_ru": "",
+      "breed": "АППЕНЦЕЛЛЕР",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -648,6 +700,15 @@
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "142851206",
+      "name_lat": "YOU LIFE STYLISH'QUEEN RESSLINE",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -706,15 +767,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "244194016",
-      "name_lat": "YOU CAN IZ TSVETNOY SKAZKI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "851921560",
       "name_lat": "YONERA’S BROM",
       "name_ru": "",
@@ -742,28 +794,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1238052539",
-      "name_lat": "YOUR SENSES BALANCE",
-      "name_ru": "",
-      "breed": "АППЕНЦЕЛЛЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "44360159",
-      "name_lat": "YOSHIKO SO ZVEZDNOGO PUTI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "359580809",
+      "id": "184324372",
       "name_lat": "YOMILY VOM HARZ PARSIFAL",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -787,10 +821,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "964779109",
+      "id": "1341989397",
+      "name_lat": "YOHAN BLAKE BACHIO",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1784505945",
       "name_lat": "YOUNG LADY SOUL OF GRYFFINDOK",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -859,6 +901,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1713951248",
+      "name_lat": "YOU ONLY LIVE ONCE FOR MY AMAZING SPEED",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "928886367",
+      "name_lat": "YOKA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "577158772",
       "name_lat": "YOKOS S TANAISA",
       "name_ru": "",
@@ -868,10 +927,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "541620380",
+      "id": "1172286730",
+      "name_lat": "YOKO EIDZJU",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "857545529",
       "name_lat": "YOLANDA VON DIETRICH",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -1021,10 +1088,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1977404851",
+      "id": "1342524485",
       "name_lat": "YOU DANCE FOR ME",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ТОЙ ФОКСТЕРЬЕР ТОЙ ФОКСТЕРЬЕР",
+      "breed": "ПУДЕЛЬ ТОЙ АБРИКОСОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1057,6 +1124,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "967575817",
+      "name_lat": "YOKA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "200937311",
       "name_lat": "YOU ADMIRE EVERYONE S TAGANIEGO ROGA",
       "name_ru": "",
@@ -1075,10 +1150,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1953362395",
-      "name_lat": "YONA VON NORDEN- STERN",
+      "id": "1623384536",
+      "name_lat": "YONA VON NORDEN-STERN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1174,10 +1249,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "60388789",
+      "id": "1997309789",
       "name_lat": "YOU COFFEE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1192,10 +1267,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1063302167",
+      "id": "39132758",
       "name_lat": "YOU WON'T CATCH",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1219,12 +1294,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "928886367",
-      "name_lat": "YOKA",
+      "id": "789629481",
+      "name_lat": "YOMEY KEYSI",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
+      "breed": "СИБА / SHIBA",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "710432595",
+      "name_lat": "YOSHIDA VOM ALIHEL HOF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1264,21 +1346,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1677041343",
-      "name_lat": "YONONA LUCE MARFA",
+      "id": "1809847098",
+      "name_lat": "YOU ONLY ONE IZ ZAMKA MELVIN",
       "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "382639578",
-      "name_lat": "YOHIT FROM GUDZYK LAND",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1291,12 +1363,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "142851206",
-      "name_lat": "YOU LIFE STYLISH'QUEEN RESSLINE",
+      "id": "382639578",
+      "name_lat": "YOHIT FROM GUDZYK LAND",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 2,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1354,11 +1426,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1341989397",
-      "name_lat": "YOHAN BLAKE BACHIO",
+      "id": "1105009965",
+      "name_lat": "YORKAMANIA JEWERLY MASTERPIECE",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "ФРАНЦУЗСКИЙ ГЛАДКОШЕРСТНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1381,10 +1452,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1148482296",
+      "id": "86171044",
       "name_lat": "Yoshy",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1435,10 +1506,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "222481232",
+      "id": "905225893",
       "name_lat": "YOULMAS NOSTALGIE DE FRANCE",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1471,6 +1542,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1379023009",
+      "name_lat": "YORKAMANIASUN CHOKOLATE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1422530241",
+      "name_lat": "YORKAMANIA YUKKSI MOMMI- POMMI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "134753471",
+      "name_lat": "YORKAMANIA SHIRLI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "137130373",
+      "name_lat": "YOGUSOMINEBARI LAIF SPRING HEART",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1897549866",
       "name_lat": "YOU ONLY YOU SINDRI",
       "name_ru": "",
@@ -1482,15 +1585,6 @@
     {
       "id": "1319550736",
       "name_lat": "YORKAMANIA TEQUILA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "241926965",
-      "name_lat": "YORKAMANIA JEWERLY MASTERPIECE",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "breed_en": "",

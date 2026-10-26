@@ -1,15 +1,32 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AO",
-  "count": 8,
+  "count": 14,
   "dogs": [
     {
-      "id": "606306099",
+      "id": "1006403288",
       "name_lat": "AO ZHAN SERAPHIN",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "23305282",
+      "name_lat": "A - OTRADA NOSTALGIE DE FRANCE",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "596978488",
+      "name_lat": "A ODRI IZ SEREBRYANOGO",
+      "name_ru": "",
+      "breed": "КИНГ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -31,6 +48,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "974559889",
+      "name_lat": "A ORHIDEYA GLORI OF",
+      "name_ru": "",
+      "breed": "РСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "57638245",
       "name_lat": "AO SEN M BECKHAM",
       "name_ru": "",
@@ -40,10 +66,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "237328804",
+      "id": "134680749",
       "name_lat": "AOUR DE ASTRAY",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -58,10 +84,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "657525588",
+      "id": "307324118",
       "name_lat": "AOMI",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1892725724",
+      "name_lat": "A OOPS ITS HOT PABLO PICASSO",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -73,6 +108,24 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1549822561",
+      "name_lat": "A - OTRADA ANINE NOSTALGIE DE FRANCE",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1439168670",
+      "name_lat": "A'OREGON",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     }
   ]

@@ -1,40 +1,57 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОВ",
-  "count": 81,
+  "count": 119,
   "dogs": [
     {
       "id": "109701157",
       "name_lat": "ОВАЦИЯ ДОНА БОЛЬШАЯ АМБИЦИЯ",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ ДОНА БОЛЬШАЯ АМБИЦИЯ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "32939609",
+      "id": "491012772",
       "name_lat": "ОВАЦИЯ ДОНА АЗАРТНАЯ ЗВЕЗДА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ОВАЦИЯ ДОНА АЗАРТНАЯ ЗВЕЗДА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "136516189",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ГРАНДТ КЛАРЕНС",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ГРАНДТ КЛАРЕНС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1691971249",
+      "name_lat": "ОВАЦИЯ ДОНА БЬЯНКА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "480904507",
       "name_lat": "ОВЕР ТУ Ю ИЗ ТЕРЛЕЦКОЙ ДУБРАВЫ",
-      "name_ru": "",
+      "name_ru": "ОВЕР ТУ Ю ИЗ ТЕРЛЕЦКОЙ ДУБРАВЫ",
       "breed": "ДАЛМАТИН",
       "breed_en": "DALMATIAN",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1064314209",
+      "id": "1910377841",
       "name_lat": "ОВАЦИЯ КРИСТИ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ОВАЦИЯ КРИСТИ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
       "total_shows": 6,
       "competition_dog_id": null
@@ -42,19 +59,36 @@
     {
       "id": "705955655",
       "name_lat": "ОВАЦИЯ ДОНА ФОРТУНА ВИННЕР",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ ДОНА ФОРТУНА ВИННЕР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1032951128",
+      "id": "922788607",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ РОННИ",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ РОННИ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1535877140",
       "name_lat": "ОВАЦИЯ ЭБОНИ БЬЮТИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁР.",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕР.",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1945496508",
+      "name_lat": "ОВАЦИЯ ДОНА ВОСХИТИТЕЛЬНАЯ МИА БЕЛЛА",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -69,19 +103,18 @@
     {
       "id": "1986951531",
       "name_lat": "ОВАИЯ ДОНА ФОРТУНА ВИННЕР",
-      "name_ru": "",
+      "name_ru": "ОВАИЯ ДОНА ФОРТУНА ВИННЕР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1945496508",
-      "name_lat": "ОВАЦИЯ ДОНА ВОСХИТИТЕЛЬНАЯ МИА БЕЛЛА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
+      "id": "1918811301",
+      "name_lat": "О' ВИЛЕН ЖАНАРВИ ИГНАТИУС",
+      "name_ru": "О' ВИЛЕН ЖАНАРВИ ИГНАТИУС",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -99,7 +132,7 @@
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -112,6 +145,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "830483066",
+      "name_lat": "ОВАЦИЯ ПРИМАДОННА",
+      "name_ru": "ОВАЦИЯ ПРИМАДОННА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1183447139",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ЖАСМИН",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ЖАСМИН",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "780314046",
       "name_lat": "ОВЕР ТАЙМ АКАСИ",
       "name_ru": "",
@@ -121,10 +172,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "691417899",
+      "id": "1986177878",
       "name_lat": "ОВАЦИЯ ИЗ ЗВЕЗДНОГО ЛЕГИОНА",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -132,43 +183,68 @@
     {
       "id": "350062991",
       "name_lat": "ОВАЦИЯ ОМСКАЯ СЕНСАЦИЯ",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ ОМСКАЯ СЕНСАЦИЯ",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "830483066",
-      "name_lat": "ОВАЦИЯ ПРИМАДОННА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "id": "1383469965",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ФИДЖЕРАЛЬД ГЕНРИ АРОН",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ФИДЖЕРАЛЬД ГЕНРИ АРОН",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "923808839",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ РУФФИ РОБЕРТИНА",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ РУФФИ РОБЕРТИНА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "951285612",
       "name_lat": "ОВАЦИЯ ПЕРВАЯ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ ПЕРВАЯ ЛЕДИ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1981209434",
+      "id": "1679279015",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ МОТ ЛАНСЕЛОТ ТЕО",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ МОТ ЛАНСЕЛОТ ТЕО",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "127179591",
       "name_lat": "ОВАЦИЯ ИЗ КОМПАНИИ СЕБЯСТЬЯНА",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "name_ru": "ОВАЦИЯ ИЗ КОМПАНИИ СЕБЯСТЬЯНА",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
+      "id": "23827064",
+      "name_lat": "ОВАЦИЯ ОЛЬГА КНЯЖНА РУСИ",
+      "name_ru": "ОВАЦИЯ ОЛЬГА КНЯЖНА РУСИ",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "427206306",
       "name_lat": "ОВАЦИЯ ДЖУЛИТ КЛЕО",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ ДЖУЛИТ КЛЕО",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 13,
@@ -177,53 +253,52 @@
     {
       "id": "1097665114",
       "name_lat": "ОВАЦИЯ ДОНА НОН СТОП НЭВЭ ВЕНДЕТТА",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ ДОНА НОН СТОП НЭВЭ ВЕНДЕТТА",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "531048455",
-      "name_lat": "ОВАЦИЯ ДОНА КАСАБЛАНКА",
+      "id": "84345480",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ АМАЙЯ ЛОРАНС",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "412854470",
+      "name_lat": "ОВАЦИЯ ДОНА КАСАБЛАНКА",
+      "name_ru": "ОВАЦИЯ ДОНА КАСАБЛАНКА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1679063973",
-      "name_lat": "ОВЕРНЬ ИЗЮМОВНА АЛЬМИЛЕ",
+      "id": "1331435672",
+      "name_lat": "О\"ВИЛЕН ЖАНАРВИ ФАЙЕР ФОРТУНА",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "53470008",
+      "name_lat": "ОВЕРНЬ ИЗЮМОВНА АЛЬМИЛЕ",
+      "name_ru": "ОВЕРНЬ ИЗЮМОВНА АЛЬМИЛЕ",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "17716945",
+      "id": "285708005",
       "name_lat": "ОВАЦИЯ ДЖУДИТ КЛЕО",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "422578242",
-      "name_lat": "ОВАЦИЯ ДОНА ЭГОИСТА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "23827064",
-      "name_lat": "ОВАЦИЯ ОЛЬГА КНЯЖНА РУСИ",
-      "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -238,6 +313,32 @@
       "competition_dog_id": null
     },
     {
+      "id": "638341091",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ РАЗОБЕЛЬ МАРИ",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ РАЗОБЕЛЬ МАРИ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1774626800",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ОДЕЛИЯ",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ОДЕЛИЯ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "456777445",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ БИНИФИКА ЗЛАТО СОЛНЦЕ",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ БИНИФИКА ЗЛАТО СОЛНЦЕ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "99666153",
       "name_lat": "ОВАДАН ГОАР",
       "name_ru": "",
@@ -247,9 +348,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "200532855",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ДАСТИН ВИНСЕНТ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1599838092",
       "name_lat": "ОВАЦИЯ ИЗ КРАЯ ЛЕСНЫХ ОЗЁР",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ ИЗ КРАЯ ЛЕСНЫХ ОЗЁР",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -258,7 +368,7 @@
     {
       "id": "1442668630",
       "name_lat": "ОВАЦИЯ ТАНГО В ДВОЕМ",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ ТАНГО В ДВОЕМ",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
@@ -274,18 +384,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1961627433",
-      "name_lat": "ОВЕРИ ИМПОРТАНТ ПЕРСОН МАТИЛЬДА",
+      "id": "1399925564",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ГЛЭДИС КЭРОЛИН",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1427252379",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ГРИФФИНДОР",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ГРИФФИНДОР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "359911582",
       "name_lat": "ОВАЦИЯ АЛИСА",
-      "name_ru": "",
+      "name_ru": "ОВАЦИЯ АЛИСА",
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 2,
@@ -310,10 +429,55 @@
       "competition_dog_id": null
     },
     {
+      "id": "1650738468",
+      "name_lat": "ОВАЦИЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1908037092",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ЛЕКСУС ДЛЯ БОРДО БРАВО",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ЛЕКСУС ДЛЯ БОРДО БРАВО",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1922978007",
       "name_lat": "ОВАЦИЯ ДОНА КОМИЛЬФО",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1795456579",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ИКС ИКС ЭЛЬ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "867315977",
+      "name_lat": "О\" ВИЛЕН ЖАНАРВИ ЛЕКСУС ДЛЯ БОРДО БРАВО",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1612961469",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ МОТ ЛОНСЕЛОТ ТЕО",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -337,12 +501,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "92485412",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ТАЛАНТА МИЛОВИЦА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1363080046",
       "name_lat": "ОВАН ОСЛЕПИТЕЛЬНЫЙ ПАРЕНЬ",
-      "name_ru": "",
+      "name_ru": "ОВАН ОСЛЕПИТЕЛЬНЫЙ ПАРЕНЬ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1378915257",
+      "name_lat": "О’ВИЛЕН ЖАНАРВИ ДАСТИН ВИНСЕНТ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -355,21 +537,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1889149241",
+      "id": "1974288559",
       "name_lat": "ОВАЦИЯ ЭВАНС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ БУЛЬДОГ",
+      "name_ru": "ОВАЦИЯ ЭВАНС",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1734565854",
+      "id": "1801934689",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ РАФАЭЛКА ГРАНДА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "218526951",
       "name_lat": "ОВИНА АЙВАРЕС",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "835103695",
+      "name_lat": "О-ВЬЮГА",
+      "name_ru": "",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -391,6 +591,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "279294590",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ДОНАТЕЛЛА ПРИМА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "898833879",
+      "name_lat": "ОВАЦИЯ ШИКАРНАЯ СЕНСАЦИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "596952544",
       "name_lat": "ОВАЦИИ А'ШЕЙЛА",
       "name_ru": "",
@@ -409,19 +626,54 @@
       "competition_dog_id": null
     },
     {
-      "id": "572099619",
+      "id": "341984322",
+      "name_lat": "О 'ВИЛЕН ЖАНАРВИ ЖОРЖЕТ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "143104524",
       "name_lat": "ОВАЦИЯ ОГНЯ ИЗ ГРАДА БЕЛЫХ БЕРЕЗ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1650738468",
-      "name_lat": "ОВАЦИЯ",
+      "id": "146023042",
+      "name_lat": "ОВАЦИЯ ИЗ ФОМКИНО",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1353862282",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ РЭММИ",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ РЭММИ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1599934704",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ДЭРРИК ЛАЭРТ",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ДЭРРИК ЛАЭРТ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1756572770",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ МИШЕЛЬ ДЭЛЬ БОКА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -436,10 +688,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "146023042",
-      "name_lat": "ОВАЦИЯ ИЗ ФОМКИНО",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "id": "602035631",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ФЕРРАРИ ВИТТОРИЯ",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ФЕРРАРИ ВИТТОРИЯ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -490,10 +742,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "882234938",
+      "id": "52359441",
       "name_lat": "ОВАЦИЯ КАРИС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -508,10 +760,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1997498218",
+      "id": "1419056635",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ЛОРЕТТА МИРРА",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ЛОРЕТТА МИРРА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1944844715",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ЭЛИНОР ВАНДА АФРОДИТА",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ЭЛИНОР ВАНДА АФРОДИТА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "367776187",
       "name_lat": "ОВАЦИЯ ДОНА РЭДИАНТ ХЕППИНЕСС ВЕНИАМИН",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ОВАЦИЯ ДОНА РЭДИАНТ ХЕППИНЕСС ВЕНИАМИН",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "592652513",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ЭВАНЕССА АФИНА",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ЭВАНЕССА АФИНА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1288350603",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ИЛЛИАДА",
+      "name_ru": "О'ВИЛЕН ЖАНАРВИ ИЛЛИАДА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -544,10 +832,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "462475712",
+      "id": "919969572",
       "name_lat": "ОВАЦИЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -562,10 +850,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "916563463",
+      "id": "665608327",
       "name_lat": "ОВАЦИЯ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -616,6 +904,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "248417224",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ЖЕФФРУА ВИЛЛАРДУЕН",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1316616592",
       "name_lat": "ОВАЦИЯ ОТ СОЛЬНИКА",
       "name_ru": "",
@@ -625,10 +922,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "116605420",
+      "id": "848094153",
       "name_lat": "ОВЕЙН ЭЛЬФО ИЗ СОЗВЕЗДИЯ",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ /",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "518129735",
+      "name_lat": "О ВАТАШИ НО ОМАМОРИ ПАУЛА",
+      "name_ru": "",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -638,6 +944,15 @@
       "name_lat": "ОВЕРИСА АЛИСТАР",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "118181812",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ БЕЛИТА ЛЕДИ ЛАЙФ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -724,11 +1039,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "85307544",
+      "id": "1692708295",
       "name_lat": "ОВИТА ФОМ ХАУС КСЕНИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "538627315",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ЖЮЛЬЕТТА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1891731240",
+      "name_lat": "О'ВИЛЕН ЖАНАРВИ ЭНЖИ ЭТУАЛЬ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 1,
       "competition_dog_id": null
     }

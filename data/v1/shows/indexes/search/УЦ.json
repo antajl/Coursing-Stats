@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "УЦ",
-  "count": 5,
+  "count": 6,
   "dogs": [
     {
       "id": "1959360630",
@@ -10,6 +10,15 @@
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1458388048",
+      "name_lat": "у ЦЕРАЛЬД ДРАЙВ",
+      "name_ru": "",
+      "breed": "ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {

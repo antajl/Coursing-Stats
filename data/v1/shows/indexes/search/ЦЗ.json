@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ЦЗ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1137142470",
+      "name_lat": "Ц-ЗАБАР",
+      "name_ru": "",
+      "breed": "GERMAN HUNTING TERRIER (GERMAN JAGDTERRIER)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "389062525",
+      "name_lat": "Ц-ЗАРИ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1173970599",
+      "name_lat": "ЦЗИН ШАО ХАО ЛИАНХУА",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

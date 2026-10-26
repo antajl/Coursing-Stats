@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "DC",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "203337633",
+      "name_lat": "D-CHRISTMAS NIGHT IZ STRANI GREZ",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1882389756",
+      "name_lat": "D'CLARION MAGIC CROWN",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    }
+  ]
+}

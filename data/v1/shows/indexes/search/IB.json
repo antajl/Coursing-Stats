@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "IB",
-  "count": 40,
+  "count": 45,
   "dogs": [
     {
       "id": "1629667134",
@@ -10,6 +10,15 @@
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1202322798",
+      "name_lat": "IBERIA GRANTE MILEDY",
+      "name_ru": "",
+      "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -22,21 +31,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "424072805",
+      "id": "1398416084",
       "name_lat": "IBICA LA FAMILIYA BRZ",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ)",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1202322798",
-      "name_lat": "IBERIA GRANTE MILEDY",
-      "name_ru": "",
-      "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -58,10 +58,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "825029610",
+      "id": "477746489",
+      "name_lat": "I BIRBANTI SUL DIVANO IGRA",
+      "name_ru": "",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
+      "breed_en": "ROMAGNA WATER DOG (LAGOTTO ROMAGNOLO)",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1367604795",
       "name_lat": "IBIS",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -103,12 +112,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "28753925",
+      "id": "1019212881",
       "name_lat": "IBRIS SHARM KASPER",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "ИБРИС ШАРМ КАСПЕР",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -211,6 +220,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1771853914",
+      "name_lat": "IBRAGIM PASHA",
+      "name_ru": "ИБРАГИМ ПАША",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1834766335",
       "name_lat": "IBN MUFASA",
       "name_ru": "",
@@ -220,10 +238,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "641402955",
+      "id": "91344704",
       "name_lat": "IBERIA BILA KAIFA",
       "name_ru": "",
-      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ К-Ш",
       "breed_en": "COLLIE SMOOTH",
       "total_shows": 3,
       "competition_dog_id": null
@@ -234,6 +252,14 @@
       "name_ru": "",
       "breed": "JACK RUSSELL TERRIER",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1438391752",
+      "name_lat": "IBERIA GRANTE NAGHT(NBT)",
+      "name_ru": "",
+      "breed": "ВОДЯНАЯ СОБАКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -265,10 +291,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1771853914",
-      "name_lat": "IBRAGIM PASHA",
+      "id": "449848416",
+      "name_lat": "I BELIVE I CAN FLY SWISS KISS",
       "name_ru": "",
-      "breed": "ШИ ТЦУ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -292,10 +318,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "719789658",
+      "id": "57799020",
       "name_lat": "IBIS S KRYMSKOY ZEMLI DIANY",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "name_ru": "ИБИС С КРЫМСКОЙ ЗЕМЛИ ДИАНЫ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "778845141",
+      "name_lat": "IBERT SENZH GRAF FERANZH",
+      "name_ru": "Иберт Сенж Граф Феранж",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -310,11 +345,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "778845141",
-      "name_lat": "IBERT SENZH GRAF FERANZH",
+      "id": "1123076868",
+      "name_lat": "IBERIA GRANTE STEPHANIE",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
+      "breed": "СОБАКА / SPANISH",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -351,6 +385,14 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1355320482",
+      "name_lat": "IBRISTYLE BEAUTIFUL MARY LEE",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },

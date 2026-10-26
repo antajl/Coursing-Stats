@@ -1,24 +1,33 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "KR",
-  "count": 920,
+  "count": 961,
   "dogs": [
-    {
-      "id": "1807446411",
-      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN BRAD PITT",
-      "name_ru": "",
-      "breed": "БАВАРСКАЯ ГОРНАЯ",
-      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
-      "total_shows": 40,
-      "competition_dog_id": null
-    },
     {
       "id": "154406219",
       "name_lat": "KREDO FESTA XIAO LONG",
       "name_ru": "",
       "breed": "ШЕЛКОВИСТЫЙ ТЕРЬЕР",
       "breed_en": "AUSTRALIAN SILKY TERRIER",
-      "total_shows": 44,
+      "total_shows": 50,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1807446411",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN BRAD PITT",
+      "name_ru": "",
+      "breed": "БАВАРСКАЯ ГОРНАЯ",
+      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
+      "total_shows": 41,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40859380",
+      "name_lat": "KRASA OHOT KOLOVRAT",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
+      "breed_en": "ZAPADNOSIBIRSKAYA LAIKA (WEST-SIBERIAN LAIKA)",
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
@@ -31,21 +40,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "40859380",
-      "name_lat": "KRASA OHOT KOLOVRAT",
-      "name_ru": "",
-      "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
-      "breed_en": "ZAPADNOSIBIRSKAYA LAIKA (WEST-SIBERIAN LAIKA)",
-      "total_shows": 44,
-      "competition_dog_id": null
-    },
-    {
       "id": "1230038546",
       "name_lat": "KRISTAL MIRAKEL AGAT",
-      "name_ru": "",
+      "name_ru": "КРИСТАЛ МИРАКЭЛ АГАТ",
       "breed": "ПЕКИНЕС",
       "breed_en": "PEKINGESE",
-      "total_shows": 36,
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
@@ -54,7 +54,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "AMERICAN HAIRLESS TERRIER",
-      "total_shows": 47,
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
@@ -67,10 +67,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1634271290",
+      "id": "941265035",
       "name_lat": "KRISTINA FELICIA IL RE GRAND",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -81,7 +81,7 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 41,
+      "total_shows": 44,
       "competition_dog_id": null
     },
     {
@@ -94,12 +94,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974379263",
+      "id": "565108003",
       "name_lat": "KRONJUWEL SHOW ME THE WORLD FOR MASLOFF HOF",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "DACHSHUND MINIATURE LONG-HAIRED",
       "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "189751978",
+      "name_lat": "KREMLEVSKIY HIMIK",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
+      "total_shows": 68,
       "competition_dog_id": null
     },
     {
@@ -121,21 +130,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "189751978",
-      "name_lat": "KREMLEVSKIY HIMIK",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
-      "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
-      "total_shows": 63,
-      "competition_dog_id": null
-    },
-    {
-      "id": "137798471",
+      "id": "263176071",
       "name_lat": "KROKODYL DUNDEE Z FOX-KLANU",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
-      "total_shows": 58,
+      "total_shows": 66,
       "competition_dog_id": null
     },
     {
@@ -145,6 +145,15 @@
       "breed": "СОЛЬЮ",
       "breed_en": "",
       "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1672869135",
+      "name_lat": "KROSHKA-MATRESHKA TSEREMONIYA",
+      "name_ru": "КРОШКА-МАТРЕШКА ЦЕРЕМОНИЯ",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "BIEWER TERRIER",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -171,7 +180,7 @@
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "BASENJI",
-      "total_shows": 63,
+      "total_shows": 65,
       "competition_dog_id": null
     },
     {
@@ -180,7 +189,25 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 34,
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "433948512",
+      "name_lat": "KRISBISS AKITAS MARUSYA",
+      "name_ru": "КРИСБИСС АКИТАС МАРУСЯ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1321578228",
+      "name_lat": "KRISHTA TALISMAN SOLNECHNOY GORY",
+      "name_ru": "КРИШТА ТАЛИСМАН СОЛНЕЧНОЙ ГОРЫ",
+      "breed": "КОМОНДОР",
+      "breed_en": "KOMONDOR",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -202,12 +229,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1321578228",
-      "name_lat": "KRISHTA TALISMAN SOLNECHNOY GORY",
+      "id": "1399920048",
+      "name_lat": "K'RICHARD THE LION HEART",
       "name_ru": "",
-      "breed": "КОМОНДОР",
-      "breed_en": "KOMONDOR",
-      "total_shows": 11,
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -265,12 +292,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1803110323",
-      "name_lat": "KRISTOFER ANTONI REE (STAND)",
+      "id": "662648260",
+      "name_lat": "KRONJUWEL TAGIRA",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
-      "breed_en": "XOLOITZCUINTLE (STANDARD)",
-      "total_shows": 28,
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -283,6 +310,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1827027863",
+      "name_lat": "KRAGAYUN AIR FORS BLACK MAGIC",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1857618415",
+      "name_lat": "KRISTALNAYA MECHTA MIRA",
+      "name_ru": "КРИСТАЛЬНАЯ МЕЧТА МИРА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "944064008",
       "name_lat": "KRISMELL DREAM GIFT",
       "name_ru": "",
@@ -292,12 +337,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1802194486",
+      "id": "1143168646",
       "name_lat": "KREPKIY ORESHEK IZ ZAMKA LANSELOTA",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "name_ru": "КРЕПКИЙ ОРЕШЕК ИЗ ЗАМКА ЛАНСЕЛОТА",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -306,7 +351,25 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1233393190",
+      "name_lat": "KRYL'YA ANGELA STILYAGA",
+      "name_ru": "КРЫЛЬЯ АНГЕЛА СТИЛЯГА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "400638595",
+      "name_lat": "KRISMELL EFFERVESCE OCEAN",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -328,12 +391,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1827027863",
-      "name_lat": "KRAGAYUN AIR FORS BLACK MAGIC",
+      "id": "3557504",
+      "name_lat": "KRISTOFER ANTONI REE",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1557018458",
+      "name_lat": "KRISTALNYY AMULET RUBIK",
+      "name_ru": "КРИСТАЛЬНЫЙ АМУЛЕТ РУБИК",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -348,10 +420,10 @@
     {
       "id": "1764994400",
       "name_lat": "KRAO KENMOR MORGANA",
-      "name_ru": "",
+      "name_ru": "КРАО КЕНМОР МОРГАНА",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -364,6 +436,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "140190391",
+      "name_lat": "KRUTON BATON IZ DOMA GRYOZ (LONG COAT)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "984285153",
+      "name_lat": "KRAO KENMOR LEVIAFAN",
+      "name_ru": "КРАО КЕНМОР ЛЕВИАФАН",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
       "id": "1177827037",
       "name_lat": "KRISTIAN FOR HEART",
       "name_ru": "",
@@ -373,10 +463,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "909273465",
+      "id": "1177943477",
       "name_lat": "KRASNYJ DRAKON",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
@@ -391,6 +481,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1579513186",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN KEYT",
+      "name_ru": "КРАСИВАЯ СЧАСТЛИВАЯ ЖИЗНЬ КЕЙТ",
+      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "47850120",
       "name_lat": "KRASNAYA STRELA SAVORY",
       "name_ru": "",
@@ -400,21 +499,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "869140594",
-      "name_lat": "KRONJUWEL FILS",
+      "id": "464851981",
+      "name_lat": "KRISTIAN PART OF MY SOUL",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 10,
+      "breed": "ПАПИЙОН",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
       "id": "1885423963",
       "name_lat": "KRISTA STIMULA",
-      "name_ru": "",
+      "name_ru": "КРИСТА СТИМУЛА",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 16,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1749174556",
+      "name_lat": "KRONJUWEL FILS",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "821762025",
+      "name_lat": "KRAS TOYER BAXTER",
+      "name_ru": "",
+      "breed": "СОЛЬЮ",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1128210635",
+      "name_lat": "KREYG BRAKE DANCE",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -423,7 +549,7 @@
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -436,19 +562,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "163276522",
+      "name_lat": "KREM BRYULE ZIMNYAYA VISHNYA",
+      "name_ru": "КРЕМ БРЮЛЕ ЗИМНЯЯ ВИШНЯ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1796991250",
+      "name_lat": "KRISTA SHIK GENEVIEVA",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "985389508",
       "name_lat": "KRONVERSKIY FARADZH",
       "name_ru": "",
       "breed": "ТАЗЫ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "672903865",
-      "name_lat": "KRONJUWEL TAGIRA",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -472,21 +606,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1974533007",
-      "name_lat": "KRASAVICA KITTI",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "533862653",
       "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN KEYLI",
       "name_ru": "",
       "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
       "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
-      "total_shows": 11,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "174020555",
+      "name_lat": "KRASAVICA KITTI",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -496,15 +630,6 @@
       "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
       "breed_en": "RUSSKIY СHIORNY TERRIER (RUSSIAN BLACK TERRIER)",
       "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1341620840",
-      "name_lat": "KRISTIAN PART OF MY SOUL",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -526,12 +651,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "108337065",
-      "name_lat": "KRYL'YA ANGELA STILYAGA",
+      "id": "950006255",
+      "name_lat": "KRONOS IZ TVERSKOGO DOMA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "792633388",
+      "name_lat": "KRASA BELARUSI TAIRON",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
+      "breed_en": "ENTLEBUCH CATTLE DOG",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -544,10 +678,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1746910508",
+      "id": "1877278705",
+      "name_lat": "KRISTAL KLEAR VIKTORI",
+      "name_ru": "КРИСТАЛ КЛЕАР ВИКТОРИ",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "963803471",
+      "name_lat": "KRISBISS AKITAS NIKA",
+      "name_ru": "КРИСБИСС АКИТАС НИКА",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "125849479",
+      "name_lat": "KROSHKA-MATRESHKA ZHARKIY MACHO",
+      "name_ru": "КРОШКА - МАТРЕШКА ЖАРКИЙ МАЧО",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "60866208",
       "name_lat": "KRASA KUBANI ANKHEL",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -580,21 +741,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "821762025",
-      "name_lat": "KRAS TOYER BAXTER",
+      "id": "1578684738",
+      "name_lat": "KRYL'YA ANGELA ABSOLUTNAYA POBEDA (LONG COAT)",
       "name_ru": "",
-      "breed": "СОЛЬЮ",
-      "breed_en": "SCHNAUZER P-S",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "292027909",
-      "name_lat": "KRYL'YA ANGELA ABSOLUTNAYA POBEDA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 11,
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -604,6 +756,15 @@
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "356541252",
+      "name_lat": "KROSH STORI ALFA ROMEO",
+      "name_ru": "КРОШ СТОРИ АЛЬФА РОМЕО",
+      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -625,10 +786,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1315695551",
+      "id": "1421598614",
       "name_lat": "KRATOS PALLANT",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -640,15 +801,6 @@
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "CHINESE CRESTED DOG",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "356541252",
-      "name_lat": "KROSH STORI ALFA ROMEO",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -688,6 +840,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "898879274",
+      "name_lat": "KRASA DUSHI KATALEYA",
+      "name_ru": "КРАСА ДУШИ КАТАЛЕЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "83698425",
       "name_lat": "KRUELLA DE VIL",
       "name_ru": "",
@@ -706,12 +866,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1726523080",
-      "name_lat": "KRASA BELARUSI TAIRON",
-      "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
-      "breed_en": "ENTLEBUCH CATTLE DOG",
-      "total_shows": 13,
+      "id": "70073326",
+      "name_lat": "KRISTA SHIK ADELINA",
+      "name_ru": "КРИСТА ШИК АДЕЛИНА",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "MALTESE",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -742,39 +902,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "400638595",
-      "name_lat": "KRISMELL EFFERVESCE OCEAN",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "BEAGLE",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "70073326",
-      "name_lat": "KRISTA SHIK ADELINA",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1658867445",
+      "id": "1362163738",
       "name_lat": "KRYL'YA ANGELA KONFETTI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1672869135",
-      "name_lat": "KROSHKA-MATRESHKA TSEREMONIYA",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "BIEWER TERRIER",
-      "total_shows": 5,
+      "id": "95377097",
+      "name_lat": "KRISTAL DOLLS A M BINGO",
+      "name_ru": "КРИСТАЛ ДОЛЛС А М БИНГО",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -787,39 +929,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "867083346",
+      "name_lat": "KRISTALIANSI ZHEROM",
+      "name_ru": "КРИСТАЛИАНСИ ЖЕРОМ",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "CAIRN TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1668104934",
       "name_lat": "KRISTALNAYA ROSSYP IZ TSVETNOY AKVARELI",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "95377097",
-      "name_lat": "KRISTAL DOLLS A M BINGO",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "950006255",
-      "name_lat": "KRONOS IZ TVERSKOGO DOMA",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "867083346",
-      "name_lat": "KRISTALIANSI ZHEROM",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "CAIRN TERRIER",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -832,30 +956,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1932892022",
+      "id": "1337759759",
       "name_lat": "KRYLYA ANGELA IVASCHECHKA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "716706724",
+      "id": "1309664056",
       "name_lat": "KRAJS SMOLL RIVER",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "125849479",
-      "name_lat": "KROSHKA-MATRESHKA ZHARKIY MACHO",
+      "id": "1250925092",
+      "name_lat": "KROSH VEZDE HOROSH",
       "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -886,6 +1010,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1042541614",
+      "name_lat": "KRUTAYA STAYA YANTAR",
+      "name_ru": "КРУТАЯ СТАЯ ЯНТАРЬ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "831376014",
       "name_lat": "KRAGAYUN BENTLIS MAJBAKH",
       "name_ru": "",
@@ -895,10 +1028,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "707439538",
+      "id": "1227751588",
       "name_lat": "KRISVILLE ARCHER NIGHT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -913,12 +1046,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "140190391",
-      "name_lat": "KRUTON BATON IZ DOMA GRYOZ (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 8,
+      "id": "901757015",
+      "name_lat": "KRISTOFER UEYN SNOU VIND",
+      "name_ru": "КРИСТОФЕР УЭЙН СНОУ ВИНД",
+      "breed": "МАЛЬТЕЗЕ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -958,15 +1091,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "738550169",
-      "name_lat": "KRUTON-BATON IZ DOMA GRYOZ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
       "id": "197746147",
       "name_lat": "KROUNI LIV MARKIZ",
       "name_ru": "",
@@ -981,14 +1105,23 @@
       "name_ru": "",
       "breed": "БОКСЕР",
       "breed_en": "BOXER",
-      "total_shows": 46,
+      "total_shows": 47,
       "competition_dog_id": null
     },
     {
-      "id": "1697283343",
+      "id": "1371733330",
+      "name_lat": "KRISTALIANSI CHARMING BIM",
+      "name_ru": "КРИСТАЛИАНСИ ЧАРМИНГ БИМ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "AMERICAN COCKER SPANIEL",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "565830728",
       "name_lat": "KRAWALL VON ARLETT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 19,
       "competition_dog_id": null
@@ -1003,6 +1136,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "161207810",
+      "name_lat": "KRISTIAN'G OT PANDY SHARM",
+      "name_ru": "КРИСТИАН'Г ОТ ПАНДЫ ШАРМ",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "BIEWER TERRIER",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "46176683",
+      "name_lat": "KRASA RUSI GEROY",
+      "name_ru": "КРАСА РУСИ ГЕРОЙ",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "376628351",
       "name_lat": "KRISTARI'S LIGHTNING STRIKES TWICE",
       "name_ru": "",
@@ -1014,19 +1165,46 @@
     {
       "id": "229717610",
       "name_lat": "KRUTAYA STAYA ABSOLYUT",
-      "name_ru": "",
+      "name_ru": "КРУТАЯ СТАЯ АБСОЛЮТ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "161207810",
-      "name_lat": "KRISTIAN'G OT PANDY SHARM",
+      "id": "706254294",
+      "name_lat": "KRUTAYA STAYA GOLDEN BOY",
+      "name_ru": "КРУТАЯ СТАЯ ГОЛДЕН БОЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1386417139",
+      "name_lat": "KREDO FESTA VITTORE",
+      "name_ru": "КРЕДО ФЕСТА ВИТТОРЕ",
+      "breed": "ШЕЛКОВИСТЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "111182966",
+      "name_lat": "KRYL'YA ANGELA STILNYY MACHO (LONG COAT)",
       "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "BIEWER TERRIER",
-      "total_shows": 11,
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468180415",
+      "name_lat": "KRISTOFER ROBIN",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1057,12 +1235,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1468180415",
-      "name_lat": "KRISTOFER ROBIN",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "id": "921165260",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN IDEAL",
+      "name_ru": "КРАСИВАЯ СЧАСТЛИВАЯ ЖИЗНЬ ИДЕАЛ",
+      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1265591246",
+      "name_lat": "KRAGAYUN GET DZHORDZH BLEK BOB ( )",
+      "name_ru": "КРАГАЮН ГЕТ ДЖОРДЖ БЛЕК БОБ/ НАТУРАЛЬНЫЙ",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1979256918",
+      "name_lat": "KRISTRAZH CHERVONA RUTA ESKUDO DE ORO",
+      "name_ru": "КРИСТРАЖ ЧЕРВОНА РУТА ЭСКУДО ДЕ ОРО",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "152918488",
+      "name_lat": "KRASA PITERA NEVA",
+      "name_ru": "КРАСА ПИТЕРА НЕВА",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "KING CHARLES SPANIEL",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1075,30 +1280,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "706254294",
-      "name_lat": "KRUTAYA STAYA GOLDEN BOY",
+      "id": "433044282",
+      "name_lat": "KRYL'YA ANGELA MIRANDA (LONG COAT)",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1386417139",
-      "name_lat": "KREDO FESTA VITTORE",
-      "name_ru": "",
-      "breed": "ШЕЛКОВИСТЫЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "390087421",
-      "name_lat": "KRYL'YA ANGELA MIRANDA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1138,6 +1325,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1808131451",
+      "name_lat": "KRASNAYA STRELA SAVVA",
+      "name_ru": "КРАСНАЯ СТРЕЛА САВВА",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1825548554",
       "name_lat": "KRASNOYE SERDTSE RENESME",
       "name_ru": "",
@@ -1165,19 +1361,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1120703912",
+      "id": "553659388",
       "name_lat": "KRASA OPOLYA ASSOL",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1224423550",
+      "id": "735019595",
       "name_lat": "KRISTIANO ANIMA LIBERA",
       "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКИЙ ИТАЛЬЯНСКИЙ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -1192,10 +1388,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1992539899",
+      "id": "1676530354",
       "name_lat": "KRASNYY DRAKON JOKHANG AYU YINCZHOU",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1210,39 +1406,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "898879274",
-      "name_lat": "KRASA DUSHI KATALEYA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1808131451",
-      "name_lat": "KRASNAYA STRELA SAVVA",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "837836122",
       "name_lat": "KRISTALL BELYJ VOLK",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1128210635",
-      "name_lat": "KREYG BRAKE DANCE",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1264,6 +1433,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "621555370",
+      "name_lat": "KRUTAYA STAYA VINSENT",
+      "name_ru": "КРУТАЯ СТАЯ ВИНСЕНТ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "1509029209",
       "name_lat": "KRISTABEL DE LAVER STYLE",
       "name_ru": "",
@@ -1273,11 +1451,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1042541614",
-      "name_lat": "KRUTAYA STAYA YANTAR",
+      "id": "1386275469",
+      "name_lat": "KRATOS",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1073841996",
+      "name_lat": "KRLSTOFER UEYN SNOU VIND",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -1291,19 +1476,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "75977243",
+      "id": "1187385023",
       "name_lat": "KREIT KROSS RED VARG",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "702028026",
+      "id": "617606312",
       "name_lat": "KROMVELY IS BLAGORODNOGO DOMA",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1318,21 +1503,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1070311983",
-      "name_lat": "KRISTEN BRUNEN ZHAN- LYUK RAYKHMANN D-SH",
+      "id": "1129012061",
+      "name_lat": "KRISTEN BRUNEN ZHAN-LYUK RAYKHMANN D-SH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "149390509",
+      "id": "8829584",
       "name_lat": "KRASOTKA SYUZI",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "name_ru": "КРАСОТКА СЬЮЗИ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1345,28 +1530,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1744114860",
+      "id": "940940568",
       "name_lat": "KRASOTKA ESMERALDA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1955073132",
+      "id": "935107029",
       "name_lat": "KRIS POKORITEL SERDEC",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1857533462",
+      "id": "839956554",
       "name_lat": "KRISSTIL KADILLAK",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1378,15 +1563,6 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
       "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1371733330",
-      "name_lat": "KRISTALIANSI CHARMING BIM",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "AMERICAN COCKER SPANIEL",
-      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1408,12 +1584,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1647195455",
+      "name_lat": "KRISSTIL VANKUVER",
+      "name_ru": "КРИССТИЛ ВАНКУВЕР",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1668276623",
+      "name_lat": "KRISBISS AKITAS DRAGO",
+      "name_ru": "КРИСБИСС АКИТАС ДРАГО",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
       "id": "1318300283",
       "name_lat": "KRISBISS AKITAS VARVARA BEAUTY",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "AMERICAN AKITA",
-      "total_shows": 22,
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1231151327",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZH BROOKE ODLI",
+      "name_ru": "",
+      "breed": "БАВАРСКАЯ ГОРНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1435,39 +1638,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1231151327",
-      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZH BROOKE ODLI",
-      "name_ru": "",
-      "breed": "БАВАРСКАЯ ГОРНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "393271643",
       "name_lat": "KRISTALIANSI NASLEDNITSA PRESTOLA  ( GR.BEL. )",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "GRIFFON BELGE",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "160850943",
+      "id": "1570018928",
       "name_lat": "KRYL'YA ANGELA ZVEZDA MOYA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1474450355",
-      "name_lat": "KRISSTIL VANKUVER",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1480,12 +1665,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "155407825",
-      "name_lat": "KRYL'YA ANGELA STILNYY MACHO",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
+      "id": "1492570773",
+      "name_lat": "KRUTAYA STAYA EKSKLYUZIVNAYA KRASOTKA",
+      "name_ru": "КРУТАЯ СТАЯ ЭКСКЛЮЗИВНАЯ КРАСОТКА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1504,6 +1689,78 @@
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1038024985",
+      "name_lat": "KRALVES RENA",
+      "name_ru": "КРАЛВЕС РЕНА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1040855174",
+      "name_lat": "KRISTRAZH LEBEDINAYA PESNYA",
+      "name_ru": "КРИСТРАЖ ЛЕБЕДИНАЯ ПЕСНЯ",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "180966577",
+      "name_lat": "KRISTALLINA SHOU GOLD",
+      "name_ru": "КРИСТАЛЛИНА ШОУ ГОЛД",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1803110323",
+      "name_lat": "KRISTOFER ANTONI REE (STAND)",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed_en": "XOLOITZCUINTLE (STANDARD)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1218868055",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN BLACK ANGEL",
+      "name_ru": "",
+      "breed": "ГОНЧАЯ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "836954895",
+      "name_lat": "KRUTAYA STAYA UNA",
+      "name_ru": "КРУТАЯ СТАЯ УНА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "191118856",
+      "name_lat": "KRASA PITERA ONIKS 2",
+      "name_ru": "",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1847714987",
+      "name_lat": "KRASA OPOLYA AFINA",
+      "name_ru": "КРАСА ОПОЛЬЯ АФИНА",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1552,48 +1809,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "503025887",
+      "id": "185179472",
       "name_lat": "KRYL'YA ANGELA DIVA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "КРЫЛЬЯ АНГЕЛА ДИВА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "191118856",
-      "name_lat": "KRASA PITERA ONIKS 2",
-      "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1442630071",
-      "name_lat": "KRASA OPOLYA AFINA",
-      "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "163276522",
-      "name_lat": "KREM BRYULE ZIMNYAYA VISHNYA",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1218868055",
-      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN BLACK ANGEL",
-      "name_ru": "",
-      "breed": "ГОНЧАЯ",
-      "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1606,12 +1827,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1877278705",
-      "name_lat": "KRISTAL KLEAR VIKTORI",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 9,
+      "id": "292816139",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN VEGAS",
+      "name_ru": "КРАСИВАЯ СЧАСТЛИВАЯ ЖИЗНЬ ВЕГАС",
+      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1630,15 +1851,6 @@
       "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1688646418",
-      "name_lat": "KRONVERSKIY/AJA NIKI",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1696,10 +1908,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "288026586",
+      "id": "870433364",
       "name_lat": "KRONJUWEL LONGORIA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "DACHSHUND MINIATURE LONG-HAIRED",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1723,46 +1935,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1040855174",
-      "name_lat": "KRISTRAZH LEBEDINAYA PESNYA",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1668276623",
-      "name_lat": "KRISBISS AKITAS DRAGO",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1764269801",
+      "id": "1375663329",
       "name_lat": "KRISTIAN CHARMING TIMES",
       "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "836954895",
-      "name_lat": "KRUTAYA STAYA UNA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "780622290",
+      "id": "1781838686",
       "name_lat": "KREMLEVSKIY TSEL",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1795,12 +1980,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "409225493",
-      "name_lat": "KRAGAYUN GET DZHORDZH BLEK BOB",
+      "id": "217963795",
+      "name_lat": "KRON JUWEL GALANTIS",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "720032372",
+      "name_lat": "KRUTAYA STAYA ZOLOTINKA",
+      "name_ru": "КРУТАЯ СТАЯ ЗОЛОТИНКА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "89210750",
+      "name_lat": "KRISTALIANSI SILVER",
+      "name_ru": "КРИСТАЛИАНСИ СИЛЬВЕР",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "370827862",
+      "name_lat": "KRASA RUSI BARRAKUDA",
+      "name_ru": "КРАСА РУСИ БАРРАКУДА",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1225457240",
+      "name_lat": "KRISTARI'S CACTUS JACK",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1013046351",
+      "name_lat": "KREDO FESTA ESTRELLA BRILLA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКИЙ ШЕЛКОВИСТЫЙ ТЕРЬЕР",
+      "breed_en": "AUSTRALIAN SILKY TERRIER",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1849,10 +2079,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "368074639",
+      "id": "815884563",
+      "name_lat": "KROSH STORI BRISTOR",
+      "name_ru": "КРОШ СТОРИ БРИСТОР",
+      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
+      "breed_en": "TIBETAN SPANIEL",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "190906360",
       "name_lat": "KRAIS HOLIDEIS",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН) ПАПИЙОН",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1876,6 +2115,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "95338986",
+      "name_lat": "KRISTA SHIK IMPERIUM",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "311337922",
       "name_lat": "KRISTALIANSI ZHENEVIEVA",
       "name_ru": "",
@@ -1885,19 +2132,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1250925092",
-      "name_lat": "KROSH VEZDE HOROSH",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "878889560",
+      "id": "902546813",
       "name_lat": "KROSH STORI DASHI",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ /",
+      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1921,6 +2159,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "981344741",
+      "name_lat": "KRAGAYUN LYUSENT STAR",
+      "name_ru": "КРАГАЮН ЛЮСЬЕНТ СТАР",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1372775138",
       "name_lat": "KRUTAYA STAYA KOROLEVA",
       "name_ru": "",
@@ -1930,12 +2177,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1510842267",
+      "id": "1546243031",
       "name_lat": "KREIDEBERG VASILISK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "566663871",
+      "name_lat": "KRISTIANIA AV SOLFJELLTUN",
+      "name_ru": "",
+      "breed": "НОРМАНДСКИЙ БАССЕТ",
+      "breed_en": "NORMAND ARTESIEN BASSET",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1948,21 +2204,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1682501644",
-      "name_lat": "KRYL'YA ANGELA FELICHITA (Изменено по решению ВК от 25.06.2026 В. 36)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "id": "1552215343",
+      "name_lat": "KRISTINA ANTIGUA",
+      "name_ru": "КРИСТИНА АНТИГУА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1598961242",
-      "name_lat": "KRISTINA ANTIGUA",
+      "id": "626396673",
+      "name_lat": "KRYL'YA ANGELA FELICHITA (Изменено по решению ВК от 25.06.2026 В. 36)",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1984,30 +2240,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "370827862",
-      "name_lat": "KRASA RUSI BARRAKUDA",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "720032372",
-      "name_lat": "KRUTAYA STAYA ZOLOTINKA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "103607550",
+      "id": "122421687",
       "name_lat": "KREPKIY ORESHEK IZ DOMA LYALIS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2020,21 +2258,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "815884563",
-      "name_lat": "KROSH STORI BRISTOR",
+      "id": "586203053",
+      "name_lat": "KRUGLYOTLICHNIK VOLT",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
-      "breed_en": "TIBETAN SPANIEL",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "981344741",
-      "name_lat": "KRAGAYUN LYUSENT STAR",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2047,19 +2275,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "661842274",
+      "id": "751068891",
+      "name_lat": "KRISTINA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1688646418",
+      "name_lat": "KRONVERSKIY/AJA NIKI",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605289315",
       "name_lat": "KRAFT LORI",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "615956121",
+      "id": "1288124378",
       "name_lat": "KRYLYA ANGELA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2074,10 +2319,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1796009951",
+      "id": "1071489869",
+      "name_lat": "K-RIKA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ / RUSSIAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1077138000",
       "name_lat": "KROHA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2092,10 +2345,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "199559989",
+      "id": "1386483677",
       "name_lat": "KRONJUWEL EXCLUSIVE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2112,10 +2365,10 @@
     {
       "id": "1814682683",
       "name_lat": "KRASNOYARSKAYA ZHEMCHUZHINA OLIVER VUD",
-      "name_ru": "",
+      "name_ru": "КРАСНОЯРСКАЯ ЖЕМЧУЖИНА ОЛИВЕР ВУД",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2128,8 +2381,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1320939078",
-      "name_lat": "KRISMELL GIDDY SENT- HELENS",
+      "id": "315064246",
+      "name_lat": "KRISMELL GIDDY SENT-HELENS",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
@@ -2137,10 +2390,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "107928934",
+      "id": "603994335",
       "name_lat": "KREATYUR YABLONKA EDEMA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2152,6 +2405,14 @@
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1615780138",
+      "name_lat": "KREED",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2200,15 +2461,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1386275469",
-      "name_lat": "KRATOS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "312041572",
       "name_lat": "KRISTOPH VON DER BRANDENBURGER BRANDIE BANDE",
       "name_ru": "",
@@ -2227,11 +2479,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1132804024",
+      "id": "1678848612",
       "name_lat": "KRUTAYA STAYA IZYUMINKA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "143853428",
+      "name_lat": "KRUTAYA STAYA ITANA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2245,19 +2505,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "908878992",
+      "name_lat": "KRUTAYA STAYA SHANEL",
+      "name_ru": "КРУТАЯ СТАЯ ШАНЕЛЬ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "829335972",
       "name_lat": "KRISTAL SLAVY ARCHIBALT",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1015413767",
-      "name_lat": "KRUTAYA STAYA SHANEL",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ / FRENCH",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2290,12 +2550,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "432401118",
+      "id": "1688265712",
       "name_lat": "KRONJUWEL ZORIANA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "979754449",
+      "name_lat": "KRISTALIANSI CHARITI",
+      "name_ru": "КРИСТАЛИАНСИ ЧАРИТИ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1416366353",
+      "name_lat": "KRASOTKA TAY",
+      "name_ru": "",
+      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2331,7 +2608,7 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -2353,24 +2630,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "979754449",
-      "name_lat": "KRISTALIANSI CHARITI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
-      "id": "111182966",
-      "name_lat": "KRYL'YA ANGELA STILNYY MACHO (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "383542684",
       "name_lat": "KRISMELL BLACK DIAMOND",
       "name_ru": "",
@@ -2389,21 +2648,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1013046351",
-      "name_lat": "KREDO FESTA ESTRELLA BRILLA",
+      "id": "1964416617",
+      "name_lat": "KRYPTONITE DE INFINITUM TAURUS",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ШЕЛКОВИСТЫЙ ТЕРЬЕР",
-      "breed_en": "AUSTRALIAN SILKY TERRIER",
-      "total_shows": 9,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "433948512",
-      "name_lat": "KRISBISS AKITAS MARUSYA",
+      "id": "145999919",
+      "name_lat": "KRASNOYE SERDTSE UMA TURMAN",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 6,
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2416,12 +2675,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "292816139",
-      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN VEGAS",
+      "id": "1371853907",
+      "name_lat": "KRISTEL MEYBL",
+      "name_ru": "КРИСТЭЛ МЭЙБЛ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "458913846",
+      "name_lat": "KRASOTA I GRATSIA GOLDI",
       "name_ru": "",
-      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -2434,30 +2702,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1719355135",
-      "name_lat": "KRASNOYE SERDTSE UMA TURMAN",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "175676005",
       "name_lat": "KROSH STORI ABSOLUTELY SPOTLESS",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
       "breed_en": "TIBETAN SPANIEL",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "566663871",
-      "name_lat": "KRISTIANIA AV SOLFJELLTUN",
-      "name_ru": "",
-      "breed": "НОРМАНДСКИЙ БАССЕТ",
-      "breed_en": "NORMAND ARTESIEN BASSET",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2479,21 +2729,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "458913846",
-      "name_lat": "KRASOTA I GRATSIA GOLDI",
+      "id": "486695970",
+      "name_lat": "KRISTALIANSI SIMONA",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КЕРН ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1225457240",
-      "name_lat": "KRISTARI'S CACTUS JACK",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 15,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2506,12 +2747,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1579513186",
-      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN KEYT",
-      "name_ru": "",
-      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
-      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
-      "total_shows": 3,
+      "id": "911801790",
+      "name_lat": "KROSHKA-MATRESHKA LAVERNA",
+      "name_ru": "КРОШКА-МАТРЕШКА ЛАВЕРНА",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "587984501",
+      "name_lat": "KRASA RUSI KNYAZHNA",
+      "name_ru": "КРАСА РУСИ КНЯЖНА",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "WHITE SWISS SHEPHERD DOG",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1485729385",
+      "name_lat": "KROSHKA-MATRESHKA PEPPILOTTA",
+      "name_ru": "КРОШКА МАТРЕШКА ПЭППИЛОТТА",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "BIEWER TERRIER",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -2524,12 +2783,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "486695970",
-      "name_lat": "KRISTALIANSI SIMONA",
+      "id": "475660285",
+      "name_lat": "KRISBISS AKITAS BREAKING THE RULES",
       "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -2542,30 +2801,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "227710738",
+      "id": "1628833278",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN KETTI",
+      "name_ru": "КРАСИВАЯ СЧАСТЛИВАЯ ЖИЗНЬ КЕТТИ",
+      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "882359365",
+      "name_lat": "KRISHTA ADELOR",
+      "name_ru": "КРИШТА АДЕЛОР",
+      "breed": "КОМОНДОР",
+      "breed_en": "KOMONDOR",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1244904595",
       "name_lat": "KRASA ORLOVII OSTIN",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1588475472",
+      "id": "1762195194",
       "name_lat": "KRAKS IZ KHABAROVSKA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1964416617",
-      "name_lat": "KRYPTONITE DE INFINITUM TAURUS",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "id": "73096497",
+      "name_lat": "KRYL'YA ANGELA DIADEMA",
+      "name_ru": "КРЫЛЬЯ АНГЕЛА ДИАДЕМА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1954237138",
+      "name_lat": "KRONJUWEL CAIWANA",
+      "name_ru": "",
+      "breed": "DACHSHUND",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2578,28 +2864,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1485729385",
-      "name_lat": "KROSHKA-MATRESHKA PEPPILOTTA",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "BIEWER TERRIER",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "911801790",
-      "name_lat": "KROSHKA-MATRESHKA LAVERNA",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1077538528",
+      "id": "1826450498",
       "name_lat": "KREIT KROSS VIVA MYSTERIA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2614,21 +2882,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "890658050",
-      "name_lat": "KRON JUWEL COLIBRI",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "id": "680039502",
+      "name_lat": "KROSHKA-MATRESHKA IV SEN LORAN",
+      "name_ru": "КРОШКА-МАТРЕШКА ИВ СЕН ЛОРАН",
+      "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "494923400",
+      "id": "1129203276",
+      "name_lat": "KRON JUWEL COLIBRI",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1995363993",
       "name_lat": "KREIT KROSS VRUNGEL",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1566665817",
+      "name_lat": "KRUTAYA STAYA FUROR",
+      "name_ru": "КРУТАЯ СТАЯ ФУРОР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "633328372",
+      "name_lat": "KREMLEVSKIY TROYANA",
+      "name_ru": "КРЕМЛЕВСКИЙ ТРОЯНА",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -2641,10 +2936,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1426872010",
+      "id": "1128757398",
       "name_lat": "KRUTOY KADR OT GOSPOJI PANINOI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2659,28 +2954,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "89210750",
-      "name_lat": "KRISTALIANSI SILVER",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "633328372",
-      "name_lat": "KREMLEVSKIY TROYANA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "367065808",
+      "id": "527095333",
       "name_lat": "KRUTAYA STAYA ITAKA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -2695,19 +2972,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "268956218",
+      "id": "1967271563",
       "name_lat": "KRATEYA LUCEO NON URO",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "499656521",
+      "id": "1377465946",
+      "name_lat": "KREATYUR KHRIZANTEMA",
+      "name_ru": "КРЕАТЮР ХРИЗАНТЕМА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1847672688",
       "name_lat": "KRISTA BELLE YULIANNA",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "ПОКЕТ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2731,21 +3017,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1566665817",
-      "name_lat": "KRUTAYA STAYA FUROR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1351857993",
       "name_lat": "KRASSEL OLYMPIC PEACE ALICE ( SHORT)",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2758,10 +3035,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1831838381",
+      "id": "590707890",
       "name_lat": "KRYLYA ANGELA ZATEJNICA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -2803,6 +3080,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1134411168",
+      "name_lat": "KRUASSAN IL-DE FRANS",
+      "name_ru": "КРУАССАН ИЛЬ-ДЕ-ФРАНС",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1504916521",
       "name_lat": "KRASSEL KERMIS PARTY URSULA",
       "name_ru": "",
@@ -2812,19 +3098,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1490150933",
+      "id": "99823857",
       "name_lat": "KREIT KROSS REDBERRI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1371853907",
-      "name_lat": "KRISTEL MEYBL",
+      "id": "486124084",
+      "name_lat": "KRISTA BELLE TUTTI-FRUTTI",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2834,24 +3120,23 @@
       "name_lat": "KRISHANS FORT ANIKA",
       "name_ru": "",
       "breed": "БОКСЕР РЫЖИЙ",
-      "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
       "id": "1735314332",
       "name_lat": "KRUTAYA STAYA DRAGOMIR",
-      "name_ru": "",
+      "name_ru": "КРУТАЯ СТАЯ ДРАГОМИР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 19,
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "264665348",
+      "id": "1765561424",
       "name_lat": "KRISTA IZ DOMA PRONINYKH",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2881,6 +3166,15 @@
       "breed": "LEONBERGER",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "238379520",
+      "name_lat": "KRASA ORLOVII EDINSTVENNAYA LADY",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2920,15 +3214,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "984285153",
-      "name_lat": "KRAO KENMOR LEVIAFAN",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "DOBERMANN",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "707076701",
       "name_lat": "KRISHNA VENTURESOME",
       "name_ru": "",
@@ -2938,21 +3223,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "475660285",
-      "name_lat": "KRISBISS AKITAS BREAKING THE RULES",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "AMERICAN AKITA",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
       "id": "1521423151",
       "name_lat": "KREMLEVSKIY FILOSOFIYA",
       "name_ru": "",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "953246798",
+      "name_lat": "KRISSTIL ZEFIRKA V SHOKOLADE",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2974,6 +3259,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1053656539",
+      "name_lat": "KRISTAL LEDY SPRING",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "794130121",
+      "name_lat": "KRISBISS AKITAS DORIS",
+      "name_ru": "КРИСБИСС АКИТАС ДОРИС",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1644543662",
       "name_lat": "KREMENETSKI ALCORCON CARPETANO",
       "name_ru": "",
@@ -2983,12 +3286,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1053656539",
-      "name_lat": "KRISTAL LEDY SPRING",
+      "id": "765987543",
+      "name_lat": "KRAVITZ LENNY CORSAIREY CASCH",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ БЕЛЬГИЙСКИЙ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "436265768",
+      "name_lat": "KRUTAYA STAYA FORTUNA",
+      "name_ru": "КРУТАЯ СТАЯ ФОРТУНА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -3028,6 +3340,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1794658447",
+      "name_lat": "Kristari’s Cactus",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "293053930",
+      "name_lat": "KROCUS TOO HOT",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1938852647",
+      "name_lat": "KRASOTA IZ IMPERII LARIEL",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1784079148",
       "name_lat": "KRASNOY E SERDTSE CICIRON",
       "name_ru": "",
@@ -3037,21 +3373,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "370709761",
+      "id": "100907070",
       "name_lat": "Kruton Baton Iz Doma Gryoz, ch RUS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "794130121",
-      "name_lat": "KRISBISS AKITAS DORIS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3068,6 +3395,24 @@
       "name_lat": "KRASSEL JAGGUELINE EVA",
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1340370129",
+      "name_lat": "KRUTAYA STAYA ETO YA",
+      "name_ru": "КРУТАЯ СТАЯ ЭТО Я",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1099918792",
+      "name_lat": "KRAGAYUN AITARUS",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -3100,21 +3445,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "587984501",
-      "name_lat": "KRASA RUSI KNYAZHNA",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "WHITE SWISS SHEPHERD DOG",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "872823370",
       "name_lat": "KRISTA BELLE ZABAVA",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1704722917",
+      "name_lat": "KRAGAYUN ASHERA",
+      "name_ru": "КРАГАЮН АШЕРА",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3127,12 +3472,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1582665435",
-      "name_lat": "KRAVITZ LENNY CORSAIREY CASCH",
+      "id": "932187616",
+      "name_lat": "KRUTAYA STAYA FRANT",
+      "name_ru": "КРУТАЯ СТАЯ ФРАНТ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1696557519",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN BROOKE ODLI",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ БЕЛЬГИЙСКИЙ",
+      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "646489800",
+      "name_lat": "KRUTAYA STAYA IDEALNY FRANTSUZ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1477250315",
+      "name_lat": "KRISTALIANSI APRICOT",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "CAIRN TERRIER",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3145,6 +3517,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1694804744",
+      "name_lat": "KRASA RUSI EFFEKT",
+      "name_ru": "КРАСА РУСИ ЭФФЕКТ",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1069683979",
       "name_lat": "KRYMSKAYA VESNA ATHENA",
       "name_ru": "",
@@ -3154,21 +3535,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1624094254",
-      "name_lat": "KRUASSAN IL-DE FRANS",
+      "id": "414288487",
+      "name_lat": "KRONVERSKIY/AJA NIKI",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1313830099",
-      "name_lat": "KRASA ORLOVII EDINSTVENNAYA LADY",
-      "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3190,30 +3562,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1164247138",
-      "name_lat": "KRISSTIL ZEFIRKA V SHOKOLADE",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "932187616",
-      "name_lat": "KRUTAYA STAYA FRANT",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "261290350",
       "name_lat": "KREIZI TITANIA",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "120570652",
+      "name_lat": "KRYLATKA",
+      "name_ru": "",
+      "breed": "ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1942710909",
+      "name_lat": "KROSH STORI OTTAVA",
+      "name_ru": "КРОШ СТОРИ ОТТАВА",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3226,10 +3598,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "440447331",
+      "id": "1021360700",
       "name_lat": "KREIT KROSS ROCAMBOLE",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3262,12 +3634,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1893427477",
-      "name_lat": "KRUTAYA STAYA FORTUNA",
+      "id": "1031414254",
+      "name_lat": "KRAUS DE VAL DE CAYONE",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "БОКСЕР РЫЖИЙ",
+      "breed_en": "BOXER",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "665693395",
+      "name_lat": "KREML LEON OF NEOPLANTA",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "933700858",
+      "name_lat": "KRASNOE SERDTSE YUSTA",
+      "name_ru": "КРАСНОЕ СЕРДЦЕ ЮСТА",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1464095563",
+      "name_lat": "KRASOTKA IZ KOROLEVSTVA STAFF",
+      "name_ru": "КРАСОТКА ИЗ КОРОЛЕВСТВА СТАФФ",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3280,30 +3678,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1954237138",
-      "name_lat": "KRONJUWEL CAIWANA",
-      "name_ru": "",
-      "breed": "DACHSHUND",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "172039822",
       "name_lat": "KRUTAYA STAYA OKTAVIA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1031414254",
-      "name_lat": "KRAUS DE VAL DE CAYONE",
-      "name_ru": "",
-      "breed": "БОКСЕР РЫЖИЙ",
-      "breed_en": "BOXER",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -3316,12 +3696,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "621555370",
-      "name_lat": "KRUTAYA STAYA VINSENT",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
-      "total_shows": 4,
+      "id": "1795296157",
+      "name_lat": "KREYTON VSEGDA VPEREDI",
+      "name_ru": "КРЕЙТОН ВСЕГДА ВПЕРЕДИ",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3330,7 +3710,7 @@
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3352,10 +3732,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "751241832",
+      "id": "1331747316",
       "name_lat": "KRISSTIL OLIMPIK",
       "name_ru": "",
-      "breed": "АУЦЕР ЧЁРНЫЙ",
+      "breed": "АУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 39,
       "competition_dog_id": null
@@ -3363,10 +3743,19 @@
     {
       "id": "1128408272",
       "name_lat": "KRUTAYA STAYA INMAR",
-      "name_ru": "",
+      "name_ru": "КРУТАЯ СТАЯ ИНМАР",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "86627016",
+      "name_lat": "KRAS TOYER BOHEMIA",
+      "name_ru": "",
+      "breed": "СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -3397,15 +3786,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "120570652",
-      "name_lat": "KRYLATKA",
-      "name_ru": "",
-      "breed": "ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "105672650",
       "name_lat": "KRASATULKA MARUSKA IZ KOROLEVSTVA STAFF",
       "name_ru": "",
@@ -3419,15 +3799,6 @@
       "name_lat": "KRASSOVER",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER KING",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1637130578",
-      "name_lat": "KREML LEON OF NEOPLANTA",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3451,47 +3822,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "14149343",
+      "id": "1315151167",
       "name_lat": "KRID RUA DE SANTES",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "646489800",
-      "name_lat": "KRUTAYA STAYA IDEALNY FRANTSUZ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "id": "989679874",
+      "name_lat": "KRESTIAN DE LONG ANTUAN",
+      "name_ru": "КРЕСТИАН ДЕ ЛОНГ АНТУАН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "40535103",
+      "id": "727560346",
+      "name_lat": "KRISTIAN GREY",
+      "name_ru": "КРИСТИАН ГРЕЙ",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "154506798",
       "name_lat": "KREDDOK KEVIN COSTNER",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1477250315",
-      "name_lat": "KRISTALIANSI APRICOT",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "CAIRN TERRIER",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "921165260",
-      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN IDEAL",
-      "name_ru": "",
-      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
-      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
+      "id": "1906313189",
+      "name_lat": "KRAGAYUN KIMIKO",
+      "name_ru": "КРАГАЮН КИМИКО",
+      "breed": "СИБА",
+      "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
@@ -3505,12 +3876,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "680039502",
-      "name_lat": "KROSHKA-MATRESHKA IV SEN LORAN",
+      "id": "829608782",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN DZHONNI DEPP",
+      "name_ru": "КРАСИВАЯ СЧАСТЛИВАЯ ЖИЗНЬ ДЖОННИ ДЭПП",
+      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1998028128",
+      "name_lat": "KRISTA BELLE NIAGARA",
       "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3537,7 +3917,7 @@
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
       "breed_en": "TIBETAN SPANIEL",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3550,19 +3930,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "29202780",
-      "name_lat": "KRON JUWEL GALANTIS",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1643586674",
+      "id": "1552508600",
       "name_lat": "KRISTAL WHITE IDEAL",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3577,28 +3948,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1099918792",
-      "name_lat": "KRAGAYUN AITARUS",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "228016684",
+      "id": "516343203",
       "name_lat": "KRISTEN BRUNEN STRAYK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1935748660",
-      "name_lat": "KRISTA BELLE TUTTI-FRUTTI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3613,12 +3966,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1696557519",
-      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN BROOKE ODLI",
+      "id": "1738358167",
+      "name_lat": "KRASA BELARUSI SOLOMON",
       "name_ru": "",
-      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1960054792",
+      "name_lat": "KROSHKA CHARUYUSHCHAYA S BEREGOV URALA",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1591720183",
+      "name_lat": "KREATYUR CHUKI TUKI TA",
+      "name_ru": "КРЕАТЮР ЧУКИ ТУКИ ТА",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3631,10 +4002,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1465865960",
+      "id": "1839612186",
       "name_lat": "KREIT KROSS NOTA BENE",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3649,30 +4020,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1320278834",
+      "id": "307716787",
       "name_lat": "KRUTAYA STAYA TCIARA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1854669521",
+      "id": "1436311183",
+      "name_lat": "KRASSEL LADY MARY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "11963756",
       "name_lat": "KROSH STORI OUT OF COMPETITION",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ /",
+      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1127250649",
+      "id": "1128603428",
       "name_lat": "KRISTARI’S SEVENTH HEAVEN",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3685,10 +4065,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "581115930",
+      "id": "1523188396",
       "name_lat": "KREIT KROSS KARMINA BURANA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -3721,6 +4101,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1151545760",
+      "name_lat": "KRYAZH YAKUTII MANSUR",
+      "name_ru": "",
+      "breed": "КАРЕЛЬСКАЯ МЕДВЕЖЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "509705108",
       "name_lat": "KRONVERSKIY/AJA NIKI",
       "name_ru": "",
@@ -3748,12 +4137,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "60307381",
-      "name_lat": "KREATYUR KHRIZANTEMA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "id": "955592465",
+      "name_lat": "KRISTRAZH MALIFISENTA",
+      "name_ru": "КРИСТРАЖ МАЛИФИСЕНТА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -3793,10 +4182,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "434711854",
+      "id": "209913018",
       "name_lat": "KRASA OPOLYA AKVAREL",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3807,7 +4196,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -3838,30 +4227,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1379955002",
-      "name_lat": "KRASA BELARUSI SOLOMON",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "734553819",
+      "id": "1183420546",
       "name_lat": "KRONJUWEL ZUCKERMAN",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "103952464",
-      "name_lat": "KRASNOE SERDTSE YUSTA",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3910,37 +4281,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1942710909",
-      "name_lat": "KROSH STORI OTTAVA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "88996297",
       "name_lat": "KRONVERSKIY/AJA BALDAR",
       "name_ru": "",
       "breed": "САЛЮКИ / SALUKI",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1096513485",
-      "name_lat": "KRISTARI’S LIGHTING STRIKER TWICE",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1552876954",
-      "name_lat": "KRISTEN BRUNEN DASTIN HOFMAN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3955,10 +4299,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1079735103",
+      "id": "272416304",
+      "name_lat": "KRISTARI’S LIGHTING STRIKER TWICE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "280586417",
+      "name_lat": "KRISTEN BRUNEN DASTIN HOFMAN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1962129559",
       "name_lat": "Krasnaya Runa",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3982,19 +4344,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "234205893",
+      "id": "1357780815",
       "name_lat": "KROKER CHESTER VOM HARZ PARSIFAL",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "283421401",
+      "id": "1579639588",
       "name_lat": "KRISTARI'S CAESAR OF VOLANTIS",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4018,12 +4380,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "610378294",
+      "id": "264176603",
       "name_lat": "KRISSTIL GERERD",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ / GIANT",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ / GIANT",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "405044387",
+      "name_lat": "KRUTAYA STAYA STAVR",
+      "name_ru": "КРУТАЯ СТАЯ СТАВР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -4031,6 +4402,15 @@
       "name_lat": "KRISTEN BRUNEN ELISEY",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "712964592",
+      "name_lat": "KRASA RUSI ULANA",
+      "name_ru": "КРАСА РУСИ УЛАНА",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4063,10 +4443,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "562102523",
+      "name_lat": "KRUTAYA STAYA NIK",
+      "name_ru": "Крутая Стая Ник",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "786536044",
       "name_lat": "KRONJUWEL VOLTAIRE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ  Г-Ш",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4117,10 +4506,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "311410678",
+      "id": "197373522",
       "name_lat": "KRASH VOM RUDZIT HOF",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -4135,10 +4524,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1416112055",
+      "id": "593648837",
       "name_lat": "KRISTEL KARAMEL O LE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "SHORT-HAIRED ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -4162,15 +4551,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "86627016",
-      "name_lat": "KRAS TOYER BOHEMIA",
-      "name_ru": "",
-      "breed": "СОЛЬЮ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "86722918",
       "name_lat": "KRASS ORION SAPORRO",
       "name_ru": "",
@@ -4180,10 +4560,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "434011925",
+      "id": "268785594",
       "name_lat": "KREATYUR EXCELLENCE",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4195,6 +4575,14 @@
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1066797384",
+      "name_lat": "KRASOTKA TAY",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4234,15 +4622,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1151545760",
-      "name_lat": "KRYAZH YAKUTII MANSUR",
-      "name_ru": "",
-      "breed": "КАРЕЛЬСКАЯ МЕДВЕЖЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "117001416",
       "name_lat": "KRASA OPOLYA EUR SIR JORDAN",
       "name_ru": "",
@@ -4261,28 +4640,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "86525482",
-      "name_lat": "KRAGAYUN ASHERA",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ / SCHIPPERKE",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1366777133",
       "name_lat": "KRASNAYA STRELLA LILLY DOLL",
       "name_ru": "",
       "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1042700636",
-      "name_lat": "KRYL'YA ANGELA DIADEMA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4297,28 +4658,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "900739167",
-      "name_lat": "KRAGAYUN GET DZHORDZH BLEK BOB ( )",
+      "id": "536707457",
+      "name_lat": "KRASA BELARUSI CHIO-CHIO-SUN",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "908736484",
-      "name_lat": "KRASA BELARUSI CHIO- CHIO-SUN",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "ENTLEBUCH CATTLE DOG",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "96460651",
+      "id": "82194170",
       "name_lat": "KRYL'YA ANGELA TOP TRIUMF",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4333,21 +4685,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "749733168",
+      "name_lat": "KRASSOVER",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1657435453",
+      "name_lat": "KRISTA BELLE ORLANDO",
+      "name_ru": "",
+      "breed": "BULLDOG БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1833393949",
       "name_lat": "KRISTI AGATA",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "295373219",
-      "name_lat": "KRESTIAN DE LONG ANTUAN",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4387,6 +4748,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "547475852",
+      "name_lat": "KRONVERSKIY/AJA NIKI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "91195690",
       "name_lat": "KRISTLY MAYTI",
       "name_ru": "",
@@ -4423,10 +4792,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "18666325",
+      "id": "70261608",
       "name_lat": "KREML LEON OF NEOPLAN TA",
       "name_ru": "",
-      "breed": "ЕР /",
+      "breed": "ЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4468,15 +4837,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1795296157",
-      "name_lat": "KREYTON VSEGDA VPEREDI",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "883775374",
       "name_lat": "KRONJUWEL ILFI TIGRIS",
       "name_ru": "",
@@ -4504,10 +4864,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "133292292",
+      "id": "1715416551",
       "name_lat": "KRISTA IZ DOMA PONINYKH",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4522,30 +4882,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1436311183",
-      "name_lat": "KRASSEL LADY MARY",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1009579685",
+      "id": "1783681169",
       "name_lat": "KRKOROK CERNE ESO",
       "name_ru": "",
-      "breed": "ЧЁРНО - ПОДПАЛЫЙ",
+      "breed": "ЧЕРНО - ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "829608782",
-      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN DZHONNI DEPP",
-      "name_ru": "",
-      "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
-      "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -4567,12 +4909,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1694804744",
-      "name_lat": "KRASA RUSI EFFEKT",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "id": "791498097",
+      "name_lat": "KRUTAYA STAYA CHAROVNITSA",
+      "name_ru": "КРУТАЯ СТАЯ ЧАРОВНИЦА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "174775591",
+      "name_lat": "KRISTINA VITAL SCREEN",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4612,6 +4962,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1289561342",
+      "name_lat": "KRISTA SHIK DIOR",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1691535311",
       "name_lat": "KRISTOFF SPLENDER KING",
       "name_ru": "",
@@ -4626,14 +4984,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1338353710",
+      "id": "206843629",
       "name_lat": "KRISTEN BRUNEN PALFI SABINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4653,7 +5011,7 @@
       "name_ru": "",
       "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -4684,10 +5042,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "943962729",
+      "id": "895859085",
       "name_lat": "KRISTIL CZEFEYA",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1533663097",
+      "name_lat": "KREDO FESTA ELINA",
+      "name_ru": "",
+      "breed": "ШЕЛКОВИСТЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4697,15 +5064,6 @@
       "name_lat": "KRASA",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1960054792",
-      "name_lat": "KROSHKA CHARUYUSHCHAYA S BEREGOV URALA",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4747,10 +5105,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1473155398",
+      "id": "1910680794",
       "name_lat": "KRISSTIL CZEFEYA",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4783,21 +5141,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1537324507",
+      "id": "89719756",
       "name_lat": "KRISTEN BRUNEN KHELENA BONEM",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
+      "id": "288871576",
+      "name_lat": "KRISTEN BRUNEN SARA KONAR",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "609497652",
       "name_lat": "KRISTEL-POLIN",
-      "name_ru": "",
+      "name_ru": "КРИСТЕЛ-ПОЛИН",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1361823884",
+      "name_lat": "KRONOS IZ IMPERII DREVNIKH VOINOV",
+      "name_ru": "",
+      "breed": "ЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -4810,21 +5184,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "791498097",
-      "name_lat": "KRUTAYA STAYA CHAROVNITSA",
+      "id": "683464329",
+      "name_lat": "KRISPY",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1361823884",
-      "name_lat": "KRONOS IZ IMPERII DREVNIKH VOINOV",
-      "name_ru": "",
-      "breed": "ЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4837,21 +5201,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "882359365",
-      "name_lat": "KRISHTA ADELOR",
-      "name_ru": "",
-      "breed": "КОМОНДОР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1315657811",
+      "id": "743300419",
       "name_lat": "KRASOTKA KETTI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "КИНГ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -4859,15 +5214,6 @@
       "name_lat": "KRAGAYUN ZEST BEST",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1998028128",
-      "name_lat": "KRISTA BELLE NIAGARA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4891,11 +5237,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1635025438",
-      "name_lat": "KRISTINA VITAL SCREEN",
+      "id": "1781974997",
+      "name_lat": "KRAGAYUN AMON- RA",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
+      "breed": "СХИППЕРКЕ / SCHIPPERKE",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4909,28 +5254,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1377240569",
+      "id": "1223876805",
       "name_lat": "KRASA OPOLYA EMELYAN LIKHOY ATAMAN",
       "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "727560346",
-      "name_lat": "KRISTIAN GREY",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "651194379",
+      "id": "1769811919",
       "name_lat": "KREIT KROSS BACCARA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4954,11 +5290,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "412114622",
+      "id": "124278461",
       "name_lat": "KRASA",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1596865827",
+      "name_lat": "KRISTI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5044,10 +5388,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "28696566",
+      "id": "1724663905",
       "name_lat": "KRIS IZ DINASTII KANTEMIROVY",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5107,10 +5451,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1517944713",
+      "id": "1179060244",
       "name_lat": "KRONOS THE TITAN",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5143,10 +5487,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "924188111",
+      "id": "203167968",
       "name_lat": "KRYL'YA ANGELA HARIZMA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5170,11 +5514,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1026552425",
+      "id": "33713766",
       "name_lat": "KRISTMAS LAV MISTER WOW",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1174159483",
+      "name_lat": "KRASSEL REGAL STANCE (К/Ш)",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5188,19 +5540,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1644324516",
-      "name_lat": "KRUTAYA STAYA ETO YA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1995241453",
+      "id": "374601217",
       "name_lat": "KREDDOK ZEEL'",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5224,10 +5567,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1144224964",
+      "id": "1591497040",
       "name_lat": "KRAVT LOVE OF",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5242,30 +5585,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "410851742",
+      "id": "101080231",
       "name_lat": "KREDDOK QUEEN LENNAN GABRIEL",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "963803471",
-      "name_lat": "KRISBISS AKITAS NIKA",
+      "id": "164655437",
+      "name_lat": "KRYLATKA",
       "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "152918488",
-      "name_lat": "KRASA PITERA NEVA",
-      "name_ru": "",
-      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "KING CHARLES SPANIEL",
-      "total_shows": 3,
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ / BORZOI -",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -5296,10 +5629,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1772658499",
+      "id": "1047898195",
       "name_lat": "KRUTOY SAM",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5323,10 +5656,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1979256918",
-      "name_lat": "KRISTRAZH CHERVONA RUTA ESKUDO DE ORO",
+      "id": "801234952",
+      "name_lat": "KRUTAYA STAYA KRASAVCHIK",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5395,15 +5728,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "583345260",
-      "name_lat": "KRASNOYE SERDTSE UMA",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "505901735",
       "name_lat": "KRASNOYE SERDTSE INESSA",
       "name_ru": "",
@@ -5463,15 +5787,23 @@
       "name_ru": "",
       "breed": "ЭНТЛЕБУХЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1972608321",
+      "name_lat": "KREIT KROSS REDBERRY",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1161828357",
-      "name_lat": "KREIT KROSS REDBERRY",
+      "id": "1608191667",
+      "name_lat": "KRISTINAVITALSCREEN",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
-      "breed_en": "",
+      "breed": "ДОБЕРМАН",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5485,10 +5817,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1000527757",
+      "id": "251000765",
       "name_lat": "KRISTI BRIGHT FOX SAPPHIRE",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ ПИНЧЕР",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5584,10 +5916,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1696326891",
+      "id": "940794075",
       "name_lat": "KRASNOYE SERDTSE SHELLY MARIE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "DACHSHUND KANINCHEN SMOOTH-HAIRED",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5611,10 +5943,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "53577838",
+      "id": "135255566",
       "name_lat": "KRASNOYARAYAGODA BERGAMOTA AROMAT",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЁРНЫЕ, ЧЁРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЧЕРНЫЕ, ЧЕРНО-ПОДПАЛЫЕ, ШОКОЛАДНЫЕ, ШОКОЛАДНО-",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -5674,29 +6006,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "955592465",
-      "name_lat": "KRISTRAZH MALIFISENTA",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "222657188",
+      "id": "371952374",
       "name_lat": "KRONJUWEL SUVOROV",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1857618415",
-      "name_lat": "KRISTALNAYA MECHTA MIRA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5710,19 +6024,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1195853933",
+      "id": "909248969",
       "name_lat": "KRISSTIL NUAR LUMIER",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "313528416",
+      "id": "570035509",
       "name_lat": "KRASNYY AMULET CHAYNAYA ROZA DLYA DYUSHALI",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5737,19 +6051,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "489548918",
+      "id": "1487373761",
       "name_lat": "KRYL'YA ANGELA NASLEDNITSA IMPERII",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "RUSSIAN TOY LONG-",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1440206602",
+      "id": "1662959174",
       "name_lat": "KROSH IZ KRASNOY DOLINY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5764,12 +6078,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1399960815",
+      "id": "175932453",
       "name_lat": "KRUTAYA STAYA FAYA FIRE FOX",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1958656703",
+      "name_lat": "KRASNAYA STRELA SOUL",
+      "name_ru": "КРАСНАЯ СТРЕЛА СОУЛ",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -5782,6 +6105,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "116434692",
+      "name_lat": "KRISTEN BRUNEN LANDAU",
+      "name_ru": "КРИСТЕН БРУНЕН ЛАНДАУ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1831449057",
       "name_lat": "KROHA MOYA GABRIELLA",
       "name_ru": "",
@@ -5791,10 +6123,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1092612272",
-      "name_lat": "KROOS TEAM CARRERA (L- H)",
+      "id": "1513337820",
+      "name_lat": "KROOS TEAM CARRERA (L-H)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5881,24 +6213,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1906313189",
-      "name_lat": "KRAGAYUN KIMIKO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "312682458",
-      "name_lat": "KRISTA SHIK DIOR",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ / MALTESE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "54602061",
       "name_lat": "KRUTAYA STAYA YOU ARE MY WISH",
       "name_ru": "",
@@ -5935,10 +6249,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "749733168",
-      "name_lat": "KRASSOVER",
+      "id": "1495919887",
+      "name_lat": "KRISTA BELLE HVASTA DLYA KUZNEOVOJ",
       "name_ru": "",
-      "breed": "ШИ ТЦУ",
+      "breed": "Бульдог",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5962,11 +6276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1495919887",
-      "name_lat": "KRISTA BELLE HVASTA DLYA KUZNEOVOJ",
+      "id": "1302496664",
+      "name_lat": "KRYL'YA ANGELA MADLEN",
       "name_ru": "",
-      "breed": "Бульдог",
-      "breed_en": "",
+      "breed": "RUSSIAN TOY",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5989,19 +6302,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "594329146",
+      "id": "501459331",
       "name_lat": "KRESTOVOGO POHODA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1557018458",
-      "name_lat": "KRISTALNYY AMULET RUBIK",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6034,12 +6338,36 @@
       "competition_dog_id": null
     },
     {
+      "id": "1228553369",
+      "name_lat": "KRIPTONITE DE INFINITUM TAURUS",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "139018339",
       "name_lat": "KRUTAYA STAYA BOTSMAN",
       "name_ru": "",
       "breed": "СПЛОШНОЙ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "77310017",
+      "name_lat": "KRISTEN BRUNEN ZHOZEFINA BAGARNE",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "829815409",
+      "name_lat": "KRASA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -6079,10 +6407,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "923666911",
+      "id": "1777639720",
       "name_lat": "KRONOS CASA DI ALBA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6097,28 +6425,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "995818608",
-      "name_lat": "KRLSTOFER UEYN SNOU VIND",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ / MALTESE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "907699336",
-      "name_lat": "KRISTA BELLE ORLANDO",
-      "name_ru": "",
-      "breed": "Бульдог",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "977163415",
+      "id": "1360534263",
       "name_lat": "KRASNOE SERDTSE SHELLY MARIE",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6259,6 +6569,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1450465713",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN ELON MASK",
+      "name_ru": "",
+      "breed": "ГОНЧАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "384656229",
       "name_lat": "KRASOTKA S ZOLOTOGO GRADA",
       "name_ru": "",
@@ -6286,19 +6605,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1450465713",
-      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN ELON MASK",
+      "id": "1835544390",
+      "name_lat": "KROSH STORI NIGHT STAR",
       "name_ru": "",
-      "breed": "ГОНЧАЯ",
-      "breed_en": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "364797329",
+      "id": "1230120338",
       "name_lat": "KRASA KINGA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6309,6 +6628,15 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР БЕЛЬГИЙСКИЙ",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1476882526",
+      "name_lat": "KRISTA BELLE BRILLIANT",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -6331,38 +6659,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1835544390",
-      "name_lat": "KROSH STORI NIGHT STAR",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "BEAGLE",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1476882526",
-      "name_lat": "KRISTA BELLE BRILLIANT",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "315030458",
       "name_lat": "KRISTOL'S HOUSE CHABA",
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1578684738",
-      "name_lat": "KRYL'YA ANGELA ABSOLUTNAYA POBEDA (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -6376,19 +6677,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1409711501",
+      "id": "1695114736",
       "name_lat": "KRISTY BLACK NIGTH",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "650197473",
+      "id": "129665852",
       "name_lat": "KRASNY DEMON MAGNETICA",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -6430,6 +6731,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "680568467",
+      "name_lat": "KROSHKA-MATRESHKA RIVIERA",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1335410675",
       "name_lat": "KRISTAN",
       "name_ru": "",
@@ -6457,19 +6767,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1522668287",
+      "id": "550298350",
       "name_lat": "KRIS",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1212693705",
+      "id": "387762004",
       "name_lat": "KROUZ ROUZ",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6484,19 +6794,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "751068891",
-      "name_lat": "KRISTINA",
+      "id": "1298559497",
+      "name_lat": "KRASAVCHIK",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1298559497",
-      "name_lat": "KRASAVCHIK",
+      "id": "1917798944",
+      "name_lat": "KRASA OLIVIYA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6543,15 +6853,6 @@
       "name_ru": "",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "GRIFFON BRUXELLOIS",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "433044282",
-      "name_lat": "KRYL'YA ANGELA MIRANDA (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6682,10 +6983,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "493134312",
+      "id": "982433306",
       "name_lat": "KREIT KROSS PIAF",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6709,19 +7010,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1652922659",
+      "id": "302346002",
       "name_lat": "KRIVBASS GOLDEN BULLS INTELLECTUAL",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "405044387",
-      "name_lat": "KRUTAYA STAYA STAVR",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6754,15 +7046,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1754974803",
-      "name_lat": "KRISTEN BRUNEN LANDAU",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "326830201",
       "name_lat": "KRASA PITERA INFANTA BEAUTY",
       "name_ru": "",
@@ -6781,19 +7064,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "360731919",
+      "id": "27294014",
       "name_lat": "KRAY CHERNOZEMIYA ALFA",
       "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА /",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "165546026",
+      "id": "688491676",
       "name_lat": "KREIT KROSS KROSBI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6803,15 +7086,6 @@
       "name_lat": "KRISTEN BRUNEN ESTA",
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "116472708",
-      "name_lat": "KRASA OLIVIYA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6853,15 +7127,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1253250786",
-      "name_lat": "KRALVES RENA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1414037401",
       "name_lat": "KRISTOPHER HAPPPY HOGAN",
       "name_ru": "",
@@ -6871,11 +7136,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "77310017",
-      "name_lat": "KRISTEN BRUNEN ZHOZEFINA BAGARNE",
+      "id": "1398834554",
+      "name_lat": "KRISVILLE BONNIE BRIGHT",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1499002293",
+      "name_lat": "KROSH STORI ALESSA",
+      "name_ru": "КРОШ СТОРИ АЛЕССА",
+      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
+      "breed_en": "TIBETAN SPANIEL",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -6907,19 +7180,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "261115449",
+      "id": "1659531780",
       "name_lat": "KRASA BELARUSI CHEISI",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1366959063",
+      "id": "702047344",
       "name_lat": "KRISTAL SLAVY SELENA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "806773947",
+      "name_lat": "KRISTAL S SEREBRYANOY LAGUNY",
+      "name_ru": "КРИСТАЛ С СЕРЕБРЯНОЙ ЛАГУНЫ",
+      "breed": "БИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1007317308",
+      "name_lat": "KREMASTO NERO LEND BRIZ",
+      "name_ru": "КРЕМАСТО НЭРО ЛЭНД БРИЗ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -6952,6 +7243,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "262592363",
+      "name_lat": "KRASNYY ZHEMCHUG BRITTA",
+      "name_ru": "КРАСНЫЙ ЖЕМЧУГ БРИТТА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "177863795",
       "name_lat": "KREMASTO NERO IZZY GUDIVIS",
       "name_ru": "",
@@ -6979,19 +7279,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1350707414",
+      "id": "1018400544",
       "name_lat": "KRISTAL SECRET BELLADON",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1070120658",
-      "name_lat": "KREDO FESTA ELINA",
-      "name_ru": "",
-      "breed": "ШЕЛКОВИСТЫЙ АВСТРАЛИЙСКИЙ",
+      "id": "1400940795",
+      "name_lat": "KRUTAYA STAYA VIKING",
+      "name_ru": "Крутая Стая Викинг",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7010,6 +7310,15 @@
       "name_lat": "KREDO FESTA ELISEY",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР АВСТРАЛИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1893747620",
+      "name_lat": "KRONJUWEL BEFORE YOU",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -7051,10 +7360,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "947884196",
+      "id": "27279995",
+      "name_lat": "KRAP",
+      "name_ru": "",
+      "breed": "GERMAN SHORT-HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1129483137",
+      "name_lat": "KRISPY",
+      "name_ru": "",
+      "breed": "Чарльз спаниель",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1069971664",
       "name_lat": "KRISTA BELL",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7132,10 +7457,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1620122468",
+      "id": "468925026",
       "name_lat": "KRASA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7186,10 +7511,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1295098673",
+      "id": "130219452",
       "name_lat": "KRASAVCHIK",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7213,15 +7538,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "829815409",
-      "name_lat": "KRASA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "631914895",
       "name_lat": "KRASAVITSA",
       "name_ru": "",
@@ -7231,11 +7547,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1492570773",
-      "name_lat": "KRUTAYA STAYA EKSKLYUZIVNAYA KRASOTKA",
+      "id": "228588160",
+      "name_lat": "KRISTA BELLE IZOLDA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1952664873",
+      "name_lat": "KRISTA BELLE ROKSOLINA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "598363133",
+      "name_lat": "KRASAVCHIK LAKI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "120729862",
+      "name_lat": "KROSHECHNAYA BUSINKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7245,15 +7588,6 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "46176683",
-      "name_lat": "KRASA RUSI GEROY",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "WHITE SWISS SHEPHERD DOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7308,15 +7642,6 @@
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "PETIT BRABANCON",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1499002293",
-      "name_lat": "KROSH STORI ALESSA",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
-      "breed_en": "TIBETAN SPANIEL",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7492,10 +7817,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1748867569",
+      "id": "246630540",
       "name_lat": "KRONI BOB S BEREGA TURI",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7510,15 +7835,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "85415995",
-      "name_lat": "KRISTA BELLE IZOLDA",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1488418405",
       "name_lat": "KRASNYJ BARKHAT OPTIMUS PRAIM",
       "name_ru": "",
@@ -7528,10 +7844,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "60114043",
+      "id": "1745380402",
       "name_lat": "KRASNI BARHAT OPTIMUS PRAIM",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7600,15 +7916,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "806773947",
-      "name_lat": "KRISTAL S SEREBRYANOY LAGUNY",
-      "name_ru": "",
-      "breed": "БИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1514284999",
       "name_lat": "KRAIOS KNIGHT GLOW",
       "name_ru": "",
@@ -7618,11 +7925,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1505749687",
+      "id": "70114803",
       "name_lat": "KREPKIY ORESHEK IZ ZAMKA LANSELOT",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1349572324",
+      "name_lat": "KRASIVAYA SCHASTLIVAYA ZHIZN GAROLD",
+      "name_ru": "",
+      "breed": "BAVARIAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1867376586",
+      "name_lat": "KRON-RAI VON HAUS LYNX",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1144110762",
+      "name_lat": "KRYLYA ANGELA DLYA ETOYLE OL'LANT",
+      "name_ru": "",
+      "breed": "ФАНТОМ) ТОЙ БЕЛО- ЧЁРНЫЙ / PHOODLE (ARLEQUINE &",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7636,11 +7967,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1022631551",
+      "name_lat": "KRISTARI`S SEVENTH HEAVEN",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "733838385",
       "name_lat": "KRISTABEL BRAJT",
       "name_ru": "",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "857348950",
+      "name_lat": "KRISHANS FORT ALAIN PROST",
+      "name_ru": "",
+      "breed": "БОКСЕР ТИГРОВЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7681,37 +8028,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "751579608",
-      "name_lat": "KRISTA BELLE ROKSOLINA",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1007317308",
-      "name_lat": "KREMASTO NERO LEND BRIZ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "489905180",
+      "id": "564121224",
       "name_lat": "KRUTAYA VOM HAUS ERFULLUNGEN VUNSCHEN",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "155507601",
+      "id": "1835667500",
       "name_lat": "KRISTAL DOLLS A M RONALD",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7762,19 +8091,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "371702391",
-      "name_lat": "KRISTAL SLAVY SANDRA",
+      "id": "1336242278",
+      "name_lat": "K’RICHARD THE LION HEART",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "262592363",
-      "name_lat": "KRASNYY ZHEMCHUG BRITTA",
+      "id": "371702391",
+      "name_lat": "KRISTAL SLAVY SANDRA",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7825,10 +8154,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1728234624",
+      "id": "1559326287",
       "name_lat": "KRISTAL CASA DELLA SPERANZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7843,19 +8172,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "68261889",
+      "id": "1666933218",
       "name_lat": "KRON S FAMILY'S FRIVER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1788629657",
+      "id": "1425419285",
       "name_lat": "KRISTMAS KAY ROAND",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7888,19 +8217,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "651464696",
+      "id": "741833028",
       "name_lat": "KREMLEVSKIY HARIZMATICHNYJ BRYUNET",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1578608258",
+      "id": "1967806499",
       "name_lat": "KRYL'YA ANGELA IGRIVAYA SHALUNYA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7915,10 +8244,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1759179437",
+      "id": "459034506",
       "name_lat": "KRISTIANO IZ KRYMA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7951,19 +8280,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "562102523",
-      "name_lat": "KRUTAYA STAYA NIK",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1067668036",
+      "id": "1762932662",
       "name_lat": "KREIT KROSS YAMAL",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8005,10 +8325,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "504825788",
+      "id": "103927824",
       "name_lat": "KRISTAL BLACK",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8059,19 +8379,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1958656703",
-      "name_lat": "KRASNAYA STRELA SOUL",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1494758873",
+      "id": "263031620",
       "name_lat": "KRESTOVOGO POHODA VIVID SPRING EXCLUSIVE",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8113,10 +8424,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "29190832",
+      "id": "1964330734",
       "name_lat": "KRON'YUVEL GELIOS",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8131,37 +8442,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "672510294",
+      "id": "598447536",
       "name_lat": "KREIG VOMN HARZ PARSIFAL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1226812923",
+      "id": "279436844",
       "name_lat": "KRALVES TISA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1690531645",
+      "id": "75816977",
       "name_lat": "KRASNAYA PRINCESSA SHASTLIVAYA ZVEZDA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1460934121",
-      "name_lat": "KRASAVCHIK LAKI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8176,10 +8478,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1066354108",
+      "id": "182988798",
       "name_lat": "KRISTAL SECRET BELLADONN",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8194,11 +8496,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1400940795",
-      "name_lat": "KRUTAYA STAYA VIKING",
+      "id": "883305425",
+      "name_lat": "KRISTEN BRUNEN ELANIYA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "LABRADOR",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8212,20 +8513,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "107269095",
-      "name_lat": "KRONJUWEL BEFORE YOU",
+      "id": "1179001743",
+      "name_lat": "KREDO FESTA ZALMAN",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "ШЕЛКОВИСТЫЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "801234952",
-      "name_lat": "KRUTAYA STAYA KRASAVCHIK",
+      "id": "1392062086",
+      "name_lat": "KRUCHE VSEKH VERHOM NA ZVEZDE",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "CHIHUAHUA SMOOTH",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -8239,47 +8538,69 @@
       "competition_dog_id": null
     },
     {
-      "id": "1745520845",
-      "name_lat": "KROSHKA- MATRESHKA RIVIERA",
+      "id": "629690735",
+      "name_lat": "KRONA STYLE SHALIRA",
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "735387610",
-      "name_lat": "KROSHECHNAYA BUSINKA",
+      "id": "697296671",
+      "name_lat": "KRASA PITERA PRESTIGE GOLD",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "859333895",
+      "id": "195288100",
+      "name_lat": "KRESTOVOGO POHODA GVENDOLIN ZOLOTAYA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1109644156",
+      "name_lat": "KRAO KENMOR NUTELLA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1451111811",
       "name_lat": "KROSHKA EVGENIYA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "158633458",
+      "id": "1652889854",
       "name_lat": "KRALYA S ZOLOTOGO",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "363199367",
+      "id": "1521809263",
       "name_lat": "KRISTAL RICHARD ROYAL",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "27242281",
+      "name_lat": "KRATOS TEAM CARRERA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     }

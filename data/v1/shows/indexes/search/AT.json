@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AT",
-  "count": 627,
+  "count": 656,
   "dogs": [
     {
       "id": "1141967953",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
       "breed_en": "WEST HIGHLAND WHITE TERRIER",
-      "total_shows": 120,
+      "total_shows": 124,
       "competition_dog_id": null
     },
     {
@@ -22,21 +22,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1082962993",
+      "name_lat": "ATLANT TRASS VIKAR",
+      "name_ru": "АТЛАНТ ТРАСС ВИКАР",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
       "id": "1576312390",
       "name_lat": "ATAMI BIJOU NOIR",
       "name_ru": "",
       "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "984140117",
+      "id": "1276899345",
       "name_lat": "ATAMI NOLANA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -45,7 +54,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -54,16 +63,16 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ БОЛЬШОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
-      "id": "102453375",
+      "id": "1784404507",
       "name_lat": "ATELIER PRINCESS MOSKVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -72,16 +81,25 @@
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1530325925",
+      "id": "157743981",
       "name_lat": "ATTENDO ANAСONDA LUX VERNALIS",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 42,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1786295686",
+      "name_lat": "ATAMI YARKIJ PREDSTAVITEL",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -94,21 +112,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1463574594",
-      "name_lat": "ATAMI YARKIJ PREDSTAVITEL",
+      "id": "1728799974",
+      "name_lat": "ATAMI FAMILY JEWEL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 28,
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "702314433",
+      "id": "1235806525",
       "name_lat": "ATHINA ROMANTIC VALLEY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -121,21 +138,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1618743630",
+      "id": "810067483",
       "name_lat": "ATLANT TRASS INTAN",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1870694642",
-      "name_lat": "ATLANT TRASS VIKAR (P.BR)",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "PETIT BRABANCON",
-      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -157,10 +165,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "976397972",
+      "id": "651419999",
+      "name_lat": "ATALA BLAGORODNAYA",
+      "name_ru": "АТАЛА БЛАГОРОДНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "783940360",
       "name_lat": "ATELIER PRINCESS YOKOHAMA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ",
       "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
       "total_shows": 31,
       "competition_dog_id": null
@@ -172,15 +189,6 @@
       "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ",
       "breed_en": "POODLE TOY",
       "total_shows": 37,
-      "competition_dog_id": null
-    },
-    {
-      "id": "691375787",
-      "name_lat": "ATAMI FAMILY JEWEL",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ /",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -197,8 +205,7 @@
       "name_lat": "ATTILA VOM SCHNALLEBERG",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДРАТХААР",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -211,30 +218,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "266076648",
+      "id": "868668892",
       "name_lat": "ATAMI ORFEY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1711121533",
+      "id": "696717472",
       "name_lat": "ATTITUDE REWRITE THE STARS",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
       "total_shows": 48,
       "competition_dog_id": null
     },
     {
-      "id": "1212791131",
+      "id": "1760912357",
+      "name_lat": "ATOMIC HEART BLACK SAPPHIRE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "475357119",
       "name_lat": "ATAMI SUERTE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -247,39 +263,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "1760912357",
-      "name_lat": "ATOMIC HEART BLACK SAPPHIRE",
+      "id": "6048320",
+      "name_lat": "ATLANT HOLDS THE SKY",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 15,
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "1016915934",
+      "id": "223432797",
+      "name_lat": "ATLAS SIDERA",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
+      "breed_en": "",
+      "total_shows": 47,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1059606759",
       "name_lat": "ATELIER PRINCESS IPPOLITA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ /",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1706114827",
-      "name_lat": "ATALA BLAGORODNAYA",
+      "id": "1124236234",
+      "name_lat": "ATAMI KOLBERT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "521766094",
+      "name_lat": "ATAMI VERSAL",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "824915114",
-      "name_lat": "ATAMI VERSAL",
+      "id": "899284621",
+      "name_lat": "AT DAMON FOR DE MILOS AUX MILLE ECLATS D'APHRODITE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -292,12 +326,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "6048320",
-      "name_lat": "ATLANT HOLDS THE SKY",
+      "id": "1246454420",
+      "name_lat": "ATAMI NORDAN",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
-      "total_shows": 18,
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -310,37 +344,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "1301264171",
-      "name_lat": "ATLAS SIDERA",
-      "name_ru": "",
-      "breed": "ГОЛАЯ СОБАКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 43,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1306439912",
+      "id": "403893468",
       "name_lat": "ATAMI CESARE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "730435664",
-      "name_lat": "ATTENTION TO MY PERSON",
+      "id": "1415548107",
+      "name_lat": "A TASTE OF HONEY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "NEWFOUNDLAND",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "857905672",
+      "name_lat": "ATLANTA KEROLL EL MONTE",
+      "name_ru": "АТЛАНТА КЭРОЛЛ ЭЛЬ МОНТЕ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "1871520998",
+      "id": "1784600096",
+      "name_lat": "ATTENTION TO MY PERSON",
+      "name_ru": "",
+      "breed": "СЕТТЕР",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "94599812",
+      "name_lat": "ATAMI PLATINA",
+      "name_ru": "АТАМИ ПЛАТИНА",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259760546",
       "name_lat": "ATAMI KLIS GELUK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -364,6 +416,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1901650347",
+      "name_lat": "ATELIER PRINCESS KANDY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "527397290",
       "name_lat": "ATHOS",
       "name_ru": "",
@@ -373,21 +433,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "747497945",
+      "name_lat": "ATTICO MELODY OF THE WIND",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1844816685",
+      "name_lat": "ATTITUDE HANDSOME IS AS HANDSOME DOES",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "STAFFORDSHIRE BULL TERRIER",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "603583608",
       "name_lat": "ATLANT DERZHASCHIY NEBESNYY SVOD",
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "961673181",
-      "name_lat": "ATTICO MELODY OF THE WIND",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -409,21 +478,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1575885235",
+      "id": "1112042719",
       "name_lat": "ATAMI ZHOZHOLITA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1023593816",
-      "name_lat": "ATAMI PLATINA",
+      "id": "1994226132",
+      "name_lat": "ATTASHE IN BLACK STYLE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
-      "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
-      "total_shows": 11,
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -445,28 +514,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "936044270",
-      "name_lat": "ATAMI KOLBERT",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "id": "334331385",
+      "name_lat": "ATAPASKI YAPONIYA",
+      "name_ru": "АТАПАСКИ ЯПОНИЯ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1884700269",
+      "id": "1188212289",
       "name_lat": "ATAMI CENTURION",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1158574657",
+      "id": "749475509",
       "name_lat": "ATLANT IZ TERRIER CITY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -476,24 +545,6 @@
       "name_lat": "ATTITUDE HORSES FOR COURSES",
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "899284621",
-      "name_lat": "AT DAMON FOR DE MILOS AUX MILLE ECLATS D'APHRODITE",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "670875712",
-      "name_lat": "ATAMI NORDAN",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -513,7 +564,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -526,10 +577,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "190122707",
+      "id": "1909794106",
       "name_lat": "ATTITUDE SHINING DIAMOND",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -544,10 +595,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "457747554",
+      "id": "914647988",
+      "name_lat": "A'TAKABRO-TAKATA IZ DOMA KOROLEVOI",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "937946247",
+      "name_lat": "ATUM EVENING SUN",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1187939427",
       "name_lat": "ATTENTION BULL ARAGON",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -559,15 +628,6 @@
       "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ РЫЖИЙ, СЕРЫЙ",
       "breed_en": "POODLE STANDARD FAWN, GREY",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "937946247",
-      "name_lat": "ATUM EVENING SUN",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -630,7 +690,7 @@
       "name_ru": "",
       "breed": "ЛАГОТТО РОМАНЬОЛО",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -670,30 +730,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "334331385",
-      "name_lat": "ATAPASKI YAPONIYA",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1807623992",
       "name_lat": "ATHANASIOS",
       "name_ru": "",
       "breed": "СОБАКА МАЛАЯ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1776546376",
-      "name_lat": "ATTITUDE HANDSOME IS AS HANDSOME DOES",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -710,33 +752,32 @@
       "name_lat": "ATHENA PALLAS OF SUNNY GLEN",
       "name_ru": "",
       "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1111220679",
+      "id": "1222951397",
+      "name_lat": "ATAMI UNELMA",
+      "name_ru": "АТАМИ УНЕЛЬМА",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "639912579",
       "name_lat": "ATAMI KEY TO MY HEART",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1280565017",
-      "name_lat": "ATAMI UNELMA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
-      "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1937544749",
+      "id": "44573185",
       "name_lat": "ATAMI PAVA GOLDIE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
       "total_shows": 11,
       "competition_dog_id": null
@@ -751,21 +792,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "215840468",
+      "id": "1957184331",
       "name_lat": "ATSEL HOF OSKAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
       "id": "1316375238",
       "name_lat": "ATLANTERRA ALBA FURIOSA",
-      "name_ru": "",
+      "name_ru": "АТЛАНТЕРРА АЛЬБА ФУРИОСА",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1812970864",
+      "name_lat": "ATAPASKI RISHAR",
+      "name_ru": "АТАПАСКИ РИШАР",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -775,6 +825,15 @@
       "breed": "ПУДЕЛЬ СРЕДНИЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "POODLE MINIATURE FAWN, GREY",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1668543802",
+      "name_lat": "ATLANTIDA ROSENSHINE",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -796,19 +855,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1664138558",
-      "name_lat": "ATLANTIDA ROSENSHINE",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1745742444",
+      "id": "322224611",
       "name_lat": "ATSEL HOF ZARNIKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -828,7 +878,7 @@
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -859,6 +909,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "846",
+      "name_lat": "ATILLA NOTUS",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": 846
+    },
+    {
       "id": "747149376",
       "name_lat": "ATTITUDE FIFTH GEAR",
       "name_ru": "",
@@ -868,19 +927,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "92880962",
-      "name_lat": "ATAMI REBECCA CONQUERING OLYMPUS",
+      "id": "1237879440",
+      "name_lat": "ATAMI HOLI LOLA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "878195204",
-      "name_lat": "ATAMI HOLI LOLA",
+      "id": "89102726",
+      "name_lat": "ATAMI REBECCA CONQUERING OLYMPUS",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -891,7 +950,7 @@
       "name_ru": "",
       "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -913,6 +972,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1582860436",
+      "name_lat": "ATAMI FENSI",
+      "name_ru": "",
+      "breed": "БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "768811806",
       "name_lat": "ATHOS FROM HAUS IREN",
       "name_ru": "",
@@ -922,10 +990,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1060578330",
+      "id": "217631646",
       "name_lat": "ATAMI FENSI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -958,15 +1026,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1440494749",
-      "name_lat": "ATAMI FENSI",
-      "name_ru": "",
-      "breed": "БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1377816869",
       "name_lat": "AT DA YA O LADUSHKA",
       "name_ru": "",
@@ -976,21 +1035,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1723064208",
-      "name_lat": "ATAMI TENDER KISS",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1933817441",
       "name_lat": "ATLEN HEALENT OWERWHELMING FEELING",
       "name_ru": "",
       "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
-      "total_shows": 7,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1513811716",
+      "name_lat": "ATAMI TENDER KISS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1003,21 +1062,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1257134631",
+      "id": "399942296",
+      "name_lat": "A`TAYRISH HERMIONA",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "THAI RIDGEBACK DOG",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1355269223",
       "name_lat": "ATTENDO ANACONDA LUX VERNALIS",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1151333039",
+      "id": "1293714142",
       "name_lat": "ATZE VOM ZELLWALDRAND",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -1048,6 +1116,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "879521191",
+      "name_lat": "ATSEL HOF SHIKARNAYA SHTUCHKA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "259943205",
       "name_lat": "ATAMI IRISHKA DUSHECHKA IGRUSHECHKA",
       "name_ru": "",
@@ -1057,21 +1134,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "479301404",
+      "id": "61963048",
       "name_lat": "ATAMI CHEESECAKE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "879521191",
-      "name_lat": "ATSEL HOF SHIKARNAYA SHTUCHKA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1084,12 +1152,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1354999386",
+      "name_lat": "ATSUSHI MASASHI",
+      "name_ru": "АТСУШИ МАСАШИ",
+      "breed": "АКИТА",
+      "breed_en": "AKITA",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1576622585",
       "name_lat": "ATESLA KONSORTIUM OMNIS VITAE",
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1356585523",
+      "name_lat": "ATTITUDE HUNKY DORY",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "STAFFORDSHIRE BULL TERRIER",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1111,12 +1197,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1354999386",
-      "name_lat": "ATSUSHI MASASHI",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "AKITA",
-      "total_shows": 2,
+      "id": "1684083088",
+      "name_lat": "ATAPASKI ZEFIRKA FREYA",
+      "name_ru": "АТАПАСКИ ЗЕФИРКА ФРЕЯ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1129,12 +1215,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "411734770",
+      "id": "169422963",
       "name_lat": "ATTILA VERDI",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР /",
+      "name_ru": "АТТИЛА ВЕРДИ",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1183,30 +1269,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1356585523",
-      "name_lat": "ATTITUDE HUNKY DORY",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1540096361",
+      "id": "1930839540",
       "name_lat": "ATIKA",
       "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР /",
+      "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1994226132",
-      "name_lat": "ATTASHE IN BLACK STYLE",
+      "id": "597829941",
+      "name_lat": "ATLANT MAGIC SINGER ORANGE",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "БИГЛЬ",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1567487030",
+      "name_lat": "ATHENA DIVINE MAIDEN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1219,39 +1304,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "421752109",
-      "name_lat": "ATAPASKI ZEFIRKA FREYA",
+      "id": "1152200969",
+      "name_lat": "ATHENA ROMANTIC VALLEY",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
       "id": "1512419729",
       "name_lat": "ATAMI GO TAKIMISOU",
-      "name_ru": "",
+      "name_ru": "АТАМИ ГО ТАКИМИСОУ",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "655840532",
+      "id": "1348609473",
       "name_lat": "ATOS D'OTVIL",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "706695781",
-      "name_lat": "ATHENA ROMANTIC VALLEY",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1264,12 +1340,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1567487030",
-      "name_lat": "ATHENA DIVINE MAIDEN",
+      "id": "1864942807",
+      "name_lat": "ATTITUDE CHANCES ARE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "БУЛЬТЕРЬЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1279,6 +1354,14 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "850710629",
+      "name_lat": "ATA NEO ZORKAYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1336,19 +1419,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1058998604",
+      "id": "482919864",
       "name_lat": "ATAMI ESHLY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1775352679",
+      "id": "849112290",
       "name_lat": "ATAMI ORFEY",
       "name_ru": "",
-      "breed": "БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ /",
+      "breed": "БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1372,28 +1455,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1437731554",
+      "id": "1066948822",
       "name_lat": "ATTILLA VON MUNDUN GSSEEN",
       "name_ru": "",
-      "breed": "ШЁРСТНА",
+      "breed": "ШЕРСТНА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "974935671",
+      "id": "1275009872",
       "name_lat": "ATELIER PRINCESS BALI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ",
       "breed_en": "POODLE TOY",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "533990260",
+      "id": "1905940009",
       "name_lat": "ATUAL DE GYA ZHAKLIN",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1417,10 +1500,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1553343508",
+      "id": "1110799432",
       "name_lat": "ATAMI ESHLY",
       "name_ru": "",
-      "breed": "БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1462,10 +1545,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "273337954",
+      "id": "499627774",
       "name_lat": "ATILLA VOM SCHNALLEBERG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1485,6 +1568,14 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "POODLE STANDARD BLACK, WHITE, BROWN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "87059841",
+      "name_lat": "ATENA VINTER S'OUL",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКИЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1525,19 +1616,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "191959693",
+      "id": "216126192",
       "name_lat": "ATTITUDE THERE IS NO IF",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "863147958",
+      "id": "958325530",
       "name_lat": "ATAMI KISS FROM THE SUN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1552,12 +1643,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1636365581",
-      "name_lat": "ATAPASKI RISHAR",
+      "id": "1766677564",
+      "name_lat": "ATLANTERRA LA ISLA BONITA",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1024055468",
+      "name_lat": "ATARAXIS RUNS THE NIGHT",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1566,15 +1666,6 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ГОЛУБОЙ",
       "breed_en": "DEUTSCHE DOGGE BLUE",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "326431019",
-      "name_lat": "ATARAXIS RUNS THE NIGHT",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
@@ -1597,15 +1688,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1766677564",
-      "name_lat": "ATLANTERRA LA ISLA BONITA",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "1945176239",
       "name_lat": "ATAPASKI RIM",
       "name_ru": "",
@@ -1624,10 +1706,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1211586963",
+      "id": "1409205754",
       "name_lat": "ATOMIC TOYS SIMPLE THE GREAT SHOWMAN",
       "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ /",
+      "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1642,12 +1724,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1119504501",
+      "id": "1621625324",
+      "name_lat": "ATLANTIC STAR SOUL OF GRYFFINDOR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "582661640",
       "name_lat": "ATTITUDE LET 'EM TALK",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 39,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -1660,10 +1751,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1263553384",
+      "id": "1948510056",
+      "name_lat": "ATAMI ORNIS ALISA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1223513357",
       "name_lat": "ATAPASKI RAPUNCEL",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1675,15 +1774,6 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "944465850",
-      "name_lat": "ATLANTIC STAR SOUL OF GRYFFINDOR",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1705,10 +1795,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "837524542",
+      "id": "1551644189",
       "name_lat": "ATSEL HOF MAXIMUS 2",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
@@ -1741,10 +1831,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "389761000",
+      "id": "1157720244",
       "name_lat": "ATAMI USTINIA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1759,19 +1849,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "212856021",
+      "id": "1204506856",
       "name_lat": "ATTILIO COMPATRIOTA DI BONFINI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ БРАКК /",
+      "breed": "ИТАЛЬЯНСКИЙ БРАКК",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1581991866",
+      "id": "850149387",
       "name_lat": "ATLANERRA ANAIS ANAIS",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -1786,21 +1876,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "927780998",
+      "id": "1601240894",
+      "name_lat": "ATMOSFERA AVANTYURA",
+      "name_ru": "АТМОСФЕРА АВАНТЮРА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "927804671",
       "name_lat": "ATTITUDE LOUDER THAN WORDS",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
       "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "1255197748",
-      "name_lat": "ATAMI ORNIS ALISA",
+      "id": "932297289",
+      "name_lat": "ATREYO SILVER SWIFT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "УИППЕТ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1813,10 +1912,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1509487742",
+      "id": "630483719",
       "name_lat": "ATTIKA",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1849,10 +1948,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "6064098",
+      "id": "1909789667",
       "name_lat": "ATTITUDE MATCHPOINT",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -1867,12 +1966,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1266293915",
+      "id": "1590992615",
       "name_lat": "ATAMI MARILYN'S MYSTICAL MELODY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1903,37 +2002,62 @@
       "competition_dog_id": null
     },
     {
-      "id": "1570199109",
+      "id": "943001432",
       "name_lat": "ATTITUDE GRAND CRU",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "656709304",
+      "id": "1881560810",
+      "name_lat": "ATLANA TSARITSA BOGATYREI",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1447813951",
+      "name_lat": "ATARI FLINN STAR",
+      "name_ru": "АТАРИ ФЛИНН СТАР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1954849535",
+      "name_lat": "ATLANT",
+      "name_ru": "",
+      "breed": "МАЙОРСКИЙ МАСТИФ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1247555148",
       "name_lat": "ATTENTION PLEASE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1090049371",
+      "id": "311480466",
       "name_lat": "ATAPASKI ROMANTIK",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "name_ru": "АТАПАСКИ РОМАНТИК",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "183160645",
+      "id": "1460336717",
       "name_lat": "ATSEL HOF ODIN 2",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
@@ -1957,6 +2081,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "934367958",
+      "name_lat": "ATAPASKI NINA RICHI",
+      "name_ru": "АТАПАСКИ НИНА РИЧИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "757948598",
       "name_lat": "Atapaski Coco Shanel",
       "name_ru": "",
@@ -1966,19 +2099,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "352796336",
+      "id": "1887844876",
       "name_lat": "ATAMI UTICIYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "652914225",
+      "id": "920041294",
       "name_lat": "ATOMIC FLASH IZ DINASTII CHEMPIONOV",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -2011,30 +2144,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "95397682",
+      "id": "80885427",
       "name_lat": "ATTITUDE GOOGLE ME",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1242698586",
+      "id": "84239183",
       "name_lat": "ATSEL HOF TALLINA",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "572213994",
+      "id": "890158395",
       "name_lat": "ATSEL HOF VERT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА /",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2065,10 +2198,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1454190105",
+      "id": "1939734701",
       "name_lat": "ATAMI OSKAR",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2092,6 +2225,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1010922372",
+      "name_lat": "ATTAYAN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1176054685",
       "name_lat": "ATLANT",
       "name_ru": "",
@@ -2110,28 +2251,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "780644676",
+      "id": "552420816",
       "name_lat": "ATAMI FREDERIK",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "527261988",
+      "id": "1654584304",
       "name_lat": "ATAMI TILL EULENSPIEGEL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "906312407",
+      "id": "1686283030",
       "name_lat": "ATTRACTIVE ASTIN MARTEN",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2146,10 +2287,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "45067376",
+      "id": "729932756",
       "name_lat": "ATOS",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2164,30 +2305,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1427096240",
+      "id": "535770492",
       "name_lat": "ATAMI CHARLI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "932297289",
-      "name_lat": "ATREYO SILVER SWIFT",
-      "name_ru": "",
-      "breed": "УИППЕТ",
+      "id": "112566093",
+      "name_lat": "ATILLA MAURI",
+      "name_ru": "АТИЛЛА МАУРИ",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "934367958",
-      "name_lat": "ATAPASKI NINA RICHI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2200,19 +2332,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "100417943",
+      "id": "946043627",
       "name_lat": "ATAMI ZHURDEN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "173766325",
+      "id": "728064686",
       "name_lat": "ATSEL HOF LINDSVALD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2272,19 +2404,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1238346954",
+      "id": "1188474950",
       "name_lat": "ATAMI CHARA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "735342536",
+      "id": "434943767",
       "name_lat": "ATSEL HOF GREYS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2299,10 +2431,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "162835717",
+      "id": "182886057",
       "name_lat": "ATAMI NEOBYKNOVENNOE CHUDO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2326,19 +2458,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "125816404",
+      "id": "1323065905",
       "name_lat": "ATTE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1849451973",
+      "id": "507118721",
       "name_lat": "ATAMI SHATURMEL SHINING SHERL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2353,39 +2485,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "51074441",
+      "id": "749372021",
       "name_lat": "ATAMI ZHUSTINA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "321586925",
+      "id": "804827472",
       "name_lat": "ATHENA SUNNY ANGEL",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "85748661",
+      "id": "1902463816",
       "name_lat": "ATLANTICBREEZE SNOWSTORM",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "112566093",
-      "name_lat": "ATILLA MAURI",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2398,21 +2521,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "181508019",
+      "id": "1702530471",
       "name_lat": "ATAMI ANGEL EYES",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "645480436",
+      "id": "1515653921",
       "name_lat": "ATRIA GOLDEN GALAXY",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1361265329",
+      "name_lat": "ATAKA RAJANA AXIOMA RINGA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2461,10 +2593,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1040130191",
+      "id": "357516491",
       "name_lat": "ATAMI ERIKA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2497,12 +2629,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "774796367",
+      "id": "132098686",
       "name_lat": "ATTITUDE NOBODY'S YOU",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "622638635",
+      "name_lat": "ATOMNAYA BOMBA",
+      "name_ru": "",
+      "breed": "GERMAN WIRE-HAIRED",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2533,21 +2674,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1673609767",
+      "id": "200846819",
       "name_lat": "ATAMI CHEESCAKE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1380745743",
+      "id": "1552840008",
       "name_lat": "ATAMANKA AUS VIKWELT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1681441069",
+      "name_lat": "ATTITUDE UNION LABEL",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2560,21 +2710,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1881560810",
-      "name_lat": "ATLANA TSARITSA BOGATYREI",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "962930784",
       "name_lat": "ATHENA WISE WARRIOR",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -2587,10 +2728,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "860365901",
+      "id": "286250017",
       "name_lat": "ATAMI UMAY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2605,6 +2746,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "551069353",
+      "name_lat": "ATARASHI NAMI YUNKO",
+      "name_ru": "АТАРАШИ НАМИ ЮНКО",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "307014980",
       "name_lat": "ATLANTA GEORGIA",
       "name_ru": "",
@@ -2614,19 +2764,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1181214088",
-      "name_lat": "ATTITUDE UNION LABEL",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "700825095",
+      "id": "928962819",
       "name_lat": "ATHENA PALLADA IZ IMPERII VYTNOVYH",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2659,28 +2800,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "1203707934",
+      "id": "119715986",
       "name_lat": "ATAMI TAVIYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "364222706",
+      "id": "1157533136",
+      "name_lat": "ATARASHI HIRO FUJI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1371608950",
       "name_lat": "ATAMI CHAINAYA ROZA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1798000971",
+      "id": "761758370",
+      "name_lat": "ATAKA RAJANA ANSWER UNIVERSAL",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1327036122",
       "name_lat": "ATTITUDE MIGHT BE STARJOIN",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ СТАФФОРДШИРСКИЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2713,28 +2871,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "622638635",
-      "name_lat": "ATOMNAYA BOMBA",
-      "name_ru": "",
-      "breed": "GERMAN WIRE-HAIRED",
+      "id": "337031976",
+      "name_lat": "ATAMI PERSEY",
+      "name_ru": "АТАМИ ПЕРСЕЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "17561211",
+      "id": "843203975",
       "name_lat": "ATAMI LOVELY STAR",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1906635125",
+      "id": "192311009",
       "name_lat": "ATAMI ESHLY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ / POODLE STANDARD BROWN, BLACK, WHITE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ / POODLE STANDARD BROWN, BLACK, WHITE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2758,6 +2916,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1155909378",
+      "name_lat": "ATTILA BRAVE GAY",
+      "name_ru": "АТТИЛА БРАВЕ ГАЙ",
+      "breed": "ВЕЙМАРАНЕР К-Ш",
+      "breed_en": "WEIMARANER SHORT-HAIRED",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "379715406",
       "name_lat": "ATTENTION PLEASE IRON SQUAD",
       "name_ru": "",
@@ -2767,10 +2934,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "240039106",
+      "id": "1867867436",
       "name_lat": "ATLEAN HEALENT OWERWHELMING FEELING",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2830,30 +2997,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "961416759",
+      "id": "615497795",
+      "name_lat": "ATARASHI NAMI ZORDAN SINNOTOMO",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605174662",
       "name_lat": "ATLANT IZ RYZHEI STAI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "517069176",
+      "id": "288539668",
       "name_lat": "ATHENA IS THE CONQUEROR OF HEARTS",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1361265329",
-      "name_lat": "ATAKA RAJANA AXIOMA RINGA",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2872,6 +3038,14 @@
       "breed": "SIBERIAN HUSKY",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1927723632",
+      "name_lat": "ATHENA",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА / EAST",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2902,10 +3076,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1205627985",
+      "id": "1701481669",
       "name_lat": "ATAMI CHARA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ / POODLE STANDARD BROWN, BLACK, WHITE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ / POODLE STANDARD BROWN, BLACK, WHITE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2920,10 +3094,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1333807640",
+      "id": "1058000820",
       "name_lat": "ATAMI REINA DE LA BELLEZA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2938,6 +3112,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "795017167",
+      "name_lat": "ATOMNAYA ALYASKA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "61482622",
       "name_lat": "ATOMIC TOYS INDIANA JONES",
       "name_ru": "",
@@ -2947,10 +3130,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "14336286",
+      "id": "1489152294",
+      "name_lat": "ATAPASKI NAOTO",
+      "name_ru": "АТАПАСКИ НАОТО",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1278412258",
       "name_lat": "ATAMI BIJOU NOIP",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2992,6 +3184,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "713729743",
+      "name_lat": "A'TAYRISH ARKADASHIM",
+      "name_ru": "",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "717049470",
       "name_lat": "Atlakamani",
       "name_ru": "",
@@ -3010,20 +3211,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1007066118",
+      "id": "7367994",
       "name_lat": "ATOS",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1245482531",
+      "id": "760955343",
       "name_lat": "ATLANTA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ОКРАС ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ОКРАС ЧЕРНЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1140224711",
+      "name_lat": "ATAMI FENSI",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3055,19 +3264,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1157533136",
-      "name_lat": "ATARASHI HIRO FUJI",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "339546424",
+      "id": "495716775",
       "name_lat": "ATSEL HOF GLEMI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3100,19 +3300,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "761758370",
-      "name_lat": "ATAKA RAJANA ANSWER UNIVERSAL",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "806821873",
       "name_lat": "ATLANT",
       "name_ru": "",
       "breed": "MASTIFF МАСТИФ / MASTIFF",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1134825636",
+      "name_lat": "ATAMI SIYANIE ANGELSKIX GLAZ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3131,15 +3331,6 @@
       "name_lat": "ATLINCO",
       "name_ru": "",
       "breed": "АКИТА КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "551069353",
-      "name_lat": "ATARASHI NAMI YUNKO",
-      "name_ru": "",
-      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3190,30 +3381,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1447813951",
-      "name_lat": "ATARI FLINN STAR",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1531835422",
       "name_lat": "ATLANTIKA VON SHINING STAR EMPIRE",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1012236751",
-      "name_lat": "ATA NEO ZORKAYA",
-      "name_ru": "",
-      "breed": "WIRE-HAIRED POINTING DOG (DEUTSCH DRAHTHAAR)",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3224,15 +3397,6 @@
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
-    },
-    {
-      "id": "846",
-      "name_lat": "ATILLA NOTUS",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": 846
     },
     {
       "id": "1870775490",
@@ -3271,6 +3435,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1396103001",
+      "name_lat": "ATAMI ORFEY",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1827354420",
       "name_lat": "ATSTEL HOF SHERWOOD",
       "name_ru": "",
@@ -3280,19 +3452,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1991824168",
+      "id": "1706426295",
       "name_lat": "ATSEL HOF USTINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1489152294",
-      "name_lat": "ATAPASKI NAOTO",
-      "name_ru": "",
-      "breed": "СИБА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3343,19 +3506,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "107276165",
+      "id": "1384243039",
+      "name_lat": "ATLANTGRES ERHAN DARLAY NORT SOUL",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "149946116",
+      "name_lat": "ATARASHI HIRO FUDZHI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "562056856",
       "name_lat": "ATSEL HOF IN LOVE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "334870420",
+      "id": "1198654475",
       "name_lat": "ATSEL HOF YASHMINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3388,11 +3567,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1927723632",
-      "name_lat": "ATHENA",
+      "id": "1950161269",
+      "name_lat": "ATLANT",
       "name_ru": "",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА / EAST",
-      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1051128797",
+      "name_lat": "ATLANT",
+      "name_ru": "",
+      "breed": "ДЕ БО) МАСТИФ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3478,10 +3664,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "161246207",
+      "id": "26147443",
       "name_lat": "ATLTEZZA MASSIMA ZLATICA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3491,15 +3677,6 @@
       "name_lat": "ATTILA SKIFSKIY TSAR",
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ / IRISH",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1049337628",
-      "name_lat": "ATAMI PERSEY",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3532,10 +3709,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "38682626",
+      "id": "910276436",
       "name_lat": "ATLANTIK STAR SOUL OF GRYFFINDOR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3604,24 +3781,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "857905672",
-      "name_lat": "ATLANTA KEROLL EL MONTE",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "795017167",
-      "name_lat": "ATOMNAYA ALYASKA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "15861357",
       "name_lat": "ATTITUDE SOMETHING IN THE AIR",
       "name_ru": "",
@@ -3640,12 +3799,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1155909378",
-      "name_lat": "ATTILA BRAVE GAY",
+      "id": "1289709658",
+      "name_lat": "ATLEN HEALENT OWERWHELMING FELLING",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР К-Ш",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "КОЛЛИ Д-Ш МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -3658,21 +3816,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "370439661",
+      "id": "1248681541",
       "name_lat": "ATSEL HOF YURRENA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "615497795",
-      "name_lat": "ATARASHI NAMI ZORDAN SINNOTOMO",
+      "id": "223315623",
+      "name_lat": "ATHENA IS AN ARISTOCRATIC THING",
       "name_ru": "",
-      "breed": "АКИТА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "120586266",
+      "name_lat": "ATSEL HOF GABI",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ /",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3689,15 +3855,6 @@
       "name_lat": "ATLANT S BEREGA DONTSA",
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1092684250",
-      "name_lat": "ATAMI SIYANIE ANGELSKIX GLAZ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3730,10 +3887,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1090609078",
+      "id": "1534878490",
       "name_lat": "ATAMI ESHLY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3748,19 +3905,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "431432412",
+      "id": "48281347",
       "name_lat": "ATLANT",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "196121185",
+      "id": "1027730261",
       "name_lat": "ATLANTIKA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3775,10 +3932,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1434304793",
+      "id": "1105360740",
       "name_lat": "ATLINCO",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ /",
+      "breed": "БАСЕНДЖИ СОБАКА) СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3834,6 +3991,14 @@
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1486298870",
+      "name_lat": "ATLANTIDA PERFORMANCE",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3919,10 +4084,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "278744232",
+      "id": "1806442807",
       "name_lat": "ATSEL HOF GLAMUR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4009,10 +4174,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "744563602",
+      "id": "887404814",
       "name_lat": "ATAMI ORFEY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4027,10 +4192,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "577519876",
+      "id": "1139572366",
       "name_lat": "ATAS VEJO VAIKAI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4081,19 +4246,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "307777543",
+      "id": "1808512834",
       "name_lat": "ATTE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ / DACHSHUND NORMALGRUSSE RAUHHAAR",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш / DACHSHUND NORMALGRUSSE RAUHHAAR",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "114255684",
+      "id": "255537730",
       "name_lat": "ATLANTIDA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4108,10 +4273,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "147322489",
+      "id": "673249626",
       "name_lat": "ATSEL HOF LAS-VEGAS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -4130,15 +4295,6 @@
       "name_lat": "ATELIER PRINCESS GAGARIN",
       "name_ru": "",
       "breed": "ПУДЕЛЬ СРЕДНИЙ КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1782105589",
-      "name_lat": "ATHЕNA ROMANTIC VALLEY",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4180,19 +4336,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "287417609",
+      "id": "445149541",
       "name_lat": "ATAMI UMAY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1745453415",
+      "id": "202350363",
       "name_lat": "ATAMI TOSYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4221,6 +4377,14 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "830209355",
+      "name_lat": "ATLAS SIDERA KINICH AHAU",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4279,6 +4443,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1870694642",
+      "name_lat": "ATLANT TRASS VIKAR (P.BR)",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "PETIT BRABANCON",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "26477739",
+      "name_lat": "ATAKA IZ DINASTII ZOLOTKO",
+      "name_ru": "АТАКА ИЗ ДИНАСТИИ ЗОЛОТЬКО",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "682466007",
+      "name_lat": "A-TOGETHER FOREVER",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1766059079",
       "name_lat": "ATAMANKA IZ YRALSKOY MECHTI",
       "name_ru": "",
@@ -4315,10 +4506,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "26477739",
-      "name_lat": "ATAKA IZ DINASTII ZOLOTKO",
+      "id": "974332951",
+      "name_lat": "ATFIRSTSIGHT LOVE MIDNIGHT BEAR",
       "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -4333,11 +4524,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "223315623",
-      "name_lat": "ATHENA IS AN ARISTOCRATIC THING",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
+      "id": "953175002",
+      "name_lat": "ATSEL KHOF SHALUNYA DLYA GRAND DEFENS RUS-S",
+      "name_ru": "АЦЕЛЬ ХОФ ШАЛУНЬЯ ДЛЯ ГРАНД ДЕФЕНС РУС-С",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -4347,6 +4538,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1729976142",
+      "name_lat": "ATLANT IRON HEART",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -4362,15 +4561,6 @@
     {
       "id": "706604850",
       "name_lat": "ATSEL HOF AFINA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "953175002",
-      "name_lat": "ATSEL KHOF SHALUNYA DLYA GRAND DEFENS RUS-S",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
@@ -4432,6 +4622,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1977147594",
+      "name_lat": "ATOMIC FLAME",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1282450571",
       "name_lat": "ATARASHI HIRO FUMIKO",
       "name_ru": "",
@@ -4450,10 +4648,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "39199082",
+      "id": "627302113",
       "name_lat": "ATSEL HOF NAITIRI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4482,6 +4680,15 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "342542461",
+      "name_lat": "ATHENA",
+      "name_ru": "",
+      "breed": "МАСТИФ",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4666,10 +4873,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1586481937",
+      "id": "829141932",
       "name_lat": "ATTITUDE NO RELIGION",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4684,19 +4891,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "425975329",
+      "id": "1815676284",
       "name_lat": "ATHENA PALLAS ZEUS DAUGHTER",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "585454185",
+      "id": "1831367644",
+      "name_lat": "ATLANTIC STAR SOUL OF GRIFFINDOR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1434958497",
       "name_lat": "ATSEL HOF MAKHNO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4738,28 +4953,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "487908284",
+      "id": "1696559633",
       "name_lat": "ATLAN SEVERNOE SIYANIE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "515853352",
+      "id": "340849558",
       "name_lat": "ATALANTA BIS BRAVO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "974332951",
-      "name_lat": "ATFIRSTSIGHT LOVE MIDNIGHT BEAR",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4783,15 +4989,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1977147594",
-      "name_lat": "ATOMIC FLAME",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1922785200",
       "name_lat": "ATHENA DIVINE",
       "name_ru": "",
@@ -4801,19 +4998,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1512664261",
+      "id": "599592408",
       "name_lat": "ATAKA RAJANA AURA VICTORY",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "950386961",
-      "name_lat": "ATSEL HOF GABI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4828,11 +5016,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "597829941",
-      "name_lat": "ATLANT MAGIC SINGER ORANGE",
+      "id": "940131637",
+      "name_lat": "ATLANTA OLIMPIC DIAMOND",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4882,28 +5069,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1224078468",
-      "name_lat": "ATHENA",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ БО) МАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1627920192",
       "name_lat": "ATTE",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА / AMERICAN AKITA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "149455038",
-      "name_lat": "ATHENA",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5008,15 +5177,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1795986501",
-      "name_lat": "ATOM",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "900387486",
       "name_lat": "ATRIA",
       "name_ru": "",
@@ -5035,20 +5195,44 @@
       "competition_dog_id": null
     },
     {
-      "id": "194909578",
+      "id": "113698989",
+      "name_lat": "ATLANT",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1263977007",
       "name_lat": "ATHENA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1463531542",
+      "id": "207381946",
       "name_lat": "ATLAS",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1323969237",
+      "name_lat": "ATOM",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1307477674",
+      "name_lat": "ATOM",
+      "name_ru": "",
+      "breed": "БОРДЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5251,19 +5435,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1262293975",
+      "id": "243017750",
       "name_lat": "ATTITUDE WALK THE TALK",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1132703133",
+      "id": "1592365888",
       "name_lat": "ATSEL HOF SHELI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5287,10 +5471,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "252698654",
+      "id": "949193511",
       "name_lat": "ATABASKI KHAN OLBI NERON",
       "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5332,20 +5516,52 @@
       "competition_dog_id": null
     },
     {
-      "id": "212095276",
+      "id": "772930903",
+      "name_lat": "ATSEL HOF FIFOCHKA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1735833895",
+      "name_lat": "ATSEL HOF ZIRBI BURES",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "419571628",
+      "name_lat": "ATSEL HOF URFINA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1832229027",
       "name_lat": "ATSEL HOF ETI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1752038937",
+      "id": "1084702813",
       "name_lat": "ATELIER PRINCESS WIEN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ / POODLE MINIATURE BLACK",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ / POODLE MINIATURE BLACK",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1392133303",
+      "name_lat": "ATSEL HOF GORON",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5359,10 +5575,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1286919636",
+      "id": "1628141486",
+      "name_lat": "ATLANTERRALA ISLA BONITA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "79884808",
       "name_lat": "ATMOSFERA SCHASTYA IZ DOMA DUVAL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5422,8 +5646,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1901722918",
-      "name_lat": "ATZE IV VOM SPANGER- FORST",
+      "id": "1648160264",
+      "name_lat": "ATZE IV VOM SPANGER-FORST",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДРАТХААР",
       "breed_en": "",
@@ -5431,10 +5655,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "68863435",
+      "id": "1755602908",
       "name_lat": "ATZE V. ROTHENBACHERWALD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5458,10 +5682,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "96567668",
+      "id": "1405619883",
       "name_lat": "ATSEL HOF KARMA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5476,10 +5700,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "181504256",
+      "id": "1857216207",
       "name_lat": "ATSEL HOF ALEKSANDRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5494,10 +5718,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "977045552",
+      "id": "1780192286",
       "name_lat": "ATLANTIC KEEPERS ASSOL MON AMI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5512,8 +5736,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1778010341",
-      "name_lat": "ATSEL HOF ZAJKA- MIYA",
+      "id": "58046919",
+      "name_lat": "ATSEL HOF ZAJKA-MIYA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -5539,10 +5763,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1320007131",
+      "id": "1308655440",
       "name_lat": "ATREY KAVALIERE",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5552,15 +5776,6 @@
       "name_lat": "ATTENTION BULL FOSSA",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1601240894",
-      "name_lat": "ATMOSFERA AVANTYURA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5625,6 +5840,14 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "979879454",
+      "name_lat": "ATALEA BLOSSOM COLLABORATION LYUPRI",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },

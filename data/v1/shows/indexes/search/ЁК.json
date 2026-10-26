@@ -1,8 +1,16 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЁК",
-  "count": 7,
+  "count": 8,
   "dogs": [
+    {
+      "id": "876666132",
+      "name_lat": "ЁК-ЁК",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
     {
       "id": "91630158",
       "name_lat": "ЁКА",
@@ -15,7 +23,7 @@
     {
       "id": "685199607",
       "name_lat": "ЁКИ-АЙ ЛЕГЕНДА НАШЕГО ВРЕМЕНИ",
-      "name_ru": "",
+      "name_ru": "ЁКИ-АЙ ЛЕГЕНДА НАШЕГО ВРЕМЕНИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 6,

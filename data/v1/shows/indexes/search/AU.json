@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AU",
-  "count": 651,
+  "count": 657,
   "dogs": [
+    {
+      "id": "1592043406",
+      "name_lat": "AURORA OT BUMAGE",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed_en": "SCOTTISH TERRIER",
+      "total_shows": 77,
+      "competition_dog_id": null
+    },
     {
       "id": "1446982481",
       "name_lat": "AURELIYA IZ MIRA ANZHELIKI",
@@ -13,21 +22,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1592043406",
-      "name_lat": "AURORA OT BUMAGE",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
-      "breed_en": "SCOTTISH TERRIER",
-      "total_shows": 75,
-      "competition_dog_id": null
-    },
-    {
       "id": "872211914",
       "name_lat": "AURA WORLD HARMONY",
       "name_ru": "",
       "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
       "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
-      "total_shows": 64,
+      "total_shows": 69,
       "competition_dog_id": null
     },
     {
@@ -54,14 +54,14 @@
       "name_ru": "",
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "BASSET HOUND",
-      "total_shows": 101,
+      "total_shows": 108,
       "competition_dog_id": null
     },
     {
-      "id": "242611671",
+      "id": "174394902",
       "name_lat": "AURUM IS NOT THAT BREAKS HEARTS",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 33,
       "competition_dog_id": null
@@ -76,12 +76,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "96969516",
+      "id": "911055170",
       "name_lat": "AUFSTIEG INGUR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24007275",
+      "name_lat": "AURUM TIME DISCOVERY",
+      "name_ru": "",
+      "breed": "ЛХАССКИЙ АПСО",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -94,21 +103,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "24007275",
-      "name_lat": "AURUM TIME DISCOVERY",
+      "id": "1874275459",
+      "name_lat": "AURUM ANIMA AURELIUS DUX SIVERSKIY",
       "name_ru": "",
-      "breed": "ЛХАССКИЙ АПСО",
-      "breed_en": "",
-      "total_shows": 13,
+      "breed": "ВЕЛЬШ ТЕРЬЕР",
+      "breed_en": "WELSH TERRIER",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1724967927",
+      "id": "132571979",
       "name_lat": "AUREI VELLERIS LEGATEE OF KINGDOM",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "41377712",
+      "name_lat": "AURORAS MOON GARM SAY HI",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -121,12 +139,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "41377712",
-      "name_lat": "AURORAS MOON GARM SAY HI",
+      "id": "1449369201",
+      "name_lat": "AURORAS MOON MADE FOR LOVING YOU",
       "name_ru": "",
       "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 24,
+      "breed_en": "DALMATIAN",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -166,10 +184,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1890205615",
+      "id": "742967262",
       "name_lat": "AURICSTAFF EMBER FLEUR-DE-LIS",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1140635634",
+      "name_lat": "AURORAS MOON KOLOSSUS",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -193,21 +220,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "539759350",
-      "name_lat": "AURORAS MOON JUSTIFY ZE LOVE",
+      "id": "1327156541",
+      "name_lat": "AURORAS MOON JUSTIFY ZE LOVE ZVEZDOCHKA MOYA",
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "DALMATIAN",
-      "total_shows": 25,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1173424236",
-      "name_lat": "AURUM ANIMA АURELIUS DUX SIVERSKIY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -229,12 +247,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1750659393",
+      "name_lat": "AURORAS MOON MOTHER NORTH",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1192447304",
+      "name_lat": "AURUM TIME ERALASH",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "total_shows": 55,
+      "competition_dog_id": null
+    },
+    {
       "id": "1313728636",
       "name_lat": "AURUM FOX",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -247,12 +282,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1750659393",
-      "name_lat": "AURORAS MOON MOTHER NORTH",
+      "id": "829909227",
+      "name_lat": "AURUM DOG INTEGRO-DE-OLLIVAR",
+      "name_ru": "АУРУМ ДОГ ИНТЕГРО-ДЕ-ОЛЛИВАР",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 65,
+      "competition_dog_id": null
+    },
+    {
+      "id": "680361816",
+      "name_lat": "AURUM TIME AMBITION",
       "name_ru": "",
-      "breed": "ДАЛМАТИН",
+      "breed": "ЛХАССКИЙ АПСО",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 41,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1226091972",
+      "name_lat": "AURUS LINE NIKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
+      "breed_en": "GERMAN PINSCHER",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -274,15 +327,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1226091972",
-      "name_lat": "AURUS LINE NIKA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ПИНЧЕР",
-      "breed_en": "GERMAN PINSCHER",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "122150566",
       "name_lat": "AUGUSTA CHARLOTTE",
       "name_ru": "",
@@ -292,30 +336,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "680361816",
-      "name_lat": "AURUM TIME AMBITION",
-      "name_ru": "",
-      "breed": "ЛХАССКИЙ АПСО",
-      "breed_en": "",
-      "total_shows": 36,
-      "competition_dog_id": null
-    },
-    {
       "id": "189802141",
       "name_lat": "AURURA FORTUNA STAR KANBERRA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1449369201",
-      "name_lat": "AURORAS MOON MADE FOR LOVING YOU",
+      "id": "848997946",
+      "name_lat": "AURUM VENDEE RUBI ANABEL",
       "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "DALMATIAN",
-      "total_shows": 12,
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -328,39 +363,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "358149790",
+      "name_lat": "AURO CONCURR SKYWAIKER",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "951419356",
       "name_lat": "AURORA FORTUNA STAR X REY",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "MINIATURE AMERICAN SHEPHERD",
       "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "358149790",
-      "name_lat": "AURO CONCURR SKYWAIKER",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1192447304",
-      "name_lat": "AURUM TIME ERALASH",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 49,
-      "competition_dog_id": null
-    },
-    {
-      "id": "829909227",
-      "name_lat": "AURUM DOG INTEGRO-DE-OLLIVAR",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -382,10 +399,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1850911126",
+      "id": "83917327",
       "name_lat": "AURORA FORTUNA STAR ZETA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА /",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -400,6 +417,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1673379799",
+      "name_lat": "AURORAS MOON NIGHTTIME BIRD",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "78723683",
+      "name_lat": "AURO CONCURR EREMI ZINGI",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 45,
+      "competition_dog_id": null
+    },
+    {
       "id": "1767794647",
       "name_lat": "AURUM DOG MANHATTAN",
       "name_ru": "",
@@ -409,10 +444,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "851489916",
+      "id": "433946554",
       "name_lat": "AURUM PRIDE KON-TIKI",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БАССЕТ-ГРИФФОН",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -424,15 +459,6 @@
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1140635634",
-      "name_lat": "AURORAS MOON KOLOSSUS",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -454,21 +480,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1064001023",
+      "id": "360420846",
       "name_lat": "AUREO MEDIO ICON STYLE",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1874275459",
-      "name_lat": "AURUM ANIMA AURELIUS DUX SIVERSKIY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ ТЕРЬЕР",
-      "breed_en": "WELSH TERRIER",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -486,16 +503,7 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 28,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1673379799",
-      "name_lat": "AURORAS MOON NIGHTTIME BIRD",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -504,7 +512,16 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "82426536",
+      "name_lat": "AUSSIE REVOLUTION HIGHTIDE CROWNED WITH FLAVOR",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -523,6 +540,15 @@
       "breed": "МАЛЫЙ ВАНДЕЙСКИЙ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "982501516",
+      "name_lat": "AURORAS MOON NOW I SEE THE SUN",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -562,21 +588,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "78723683",
-      "name_lat": "AURO CONCURR EREMI ZINGI",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "id": "199705534",
+      "name_lat": "AURUM DOG ISTRED",
+      "name_ru": "АУРУМ ДОГ ИСТРЭД",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 43,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "1423827220",
-      "name_lat": "AURUM VENDEE RUBI ANABEL",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "id": "1926221424",
+      "name_lat": "AURUM DOG KILIAN",
+      "name_ru": "АУРУМ ДОГ КИЛИАН",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1983867013",
+      "name_lat": "AURUM DOG VYSSHAYA LIGA",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "WEIMARANER SHORT-HAIRED",
+      "total_shows": 37,
       "competition_dog_id": null
     },
     {
@@ -586,15 +621,6 @@
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1983867013",
-      "name_lat": "AURUM DOG VYSSHAYA LIGA",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "WEIMARANER SHORT-HAIRED",
-      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -625,15 +651,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "199705534",
-      "name_lat": "AURUM DOG ISTRED",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 23,
-      "competition_dog_id": null
-    },
-    {
       "id": "184225683",
       "name_lat": "AURORAS MOON ZARATHUSTRA SAID",
       "name_ru": "",
@@ -652,15 +669,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1926221424",
-      "name_lat": "AURUM DOG KILIAN",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1489436981",
       "name_lat": "AURORA SNOW MAGIC SILK SHINE",
       "name_ru": "",
@@ -675,7 +683,7 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -697,19 +705,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "982501516",
-      "name_lat": "AURORAS MOON NOW I SEE THE SUN",
+      "id": "1495130194",
+      "name_lat": "AURORAS MOON JUPITER ASCENDING",
       "name_ru": "",
       "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed_en": "DALMATIAN",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "636718691",
+      "id": "968284358",
       "name_lat": "AURUM PRIDE AMARETTO",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -733,10 +741,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "859062432",
+      "id": "1651443014",
       "name_lat": "AURUM AGLIS CHENDJEL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -769,10 +777,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1711907806",
+      "id": "1441917435",
       "name_lat": "AURA ZHENEVY IZ MILYKH ELFOV",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -796,12 +804,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1617570661",
+      "name_lat": "AUTBEK SHAYBA",
+      "name_ru": "АУТБЕК ШАЙБА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
       "id": "646536437",
       "name_lat": "Austin The Majestic Marisoft",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "556939056",
+      "name_lat": "AURUM DOG ZHREBIY UDACHI",
+      "name_ru": "АУРУМ ДОГ ЖРЕБИЙ УДАЧИ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "71684141",
+      "name_lat": "AUREO VULCANO FIERO NAPOLI",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -832,15 +867,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1406702256",
-      "name_lat": "AUREO VULCANO FIERO NAPOLI",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 25,
-      "competition_dog_id": null
-    },
-    {
       "id": "614657692",
       "name_lat": "AUTOGRAPH NOLAN PARKER",
       "name_ru": "",
@@ -850,10 +876,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "236134138",
+      "id": "827220782",
+      "name_lat": "AURUM TIME ANTANANARIVO (PUFF)",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1157877273",
       "name_lat": "AURUM TIME VICTORIA",
       "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -864,14 +899,14 @@
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
-      "id": "657986257",
+      "id": "349240658",
       "name_lat": "AUTBEK PIELOT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -886,19 +921,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1495130194",
-      "name_lat": "AURORAS MOON JUPITER ASCENDING",
+      "id": "1115064997",
+      "name_lat": "AURUM DOG ONE IN E MILLION",
+      "name_ru": "АУРУМ ДОГ ОНЕ ИН Э МИЛЛИОН",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1586146627",
+      "name_lat": "AUTOGRAPH UILYAM FILIPPE",
       "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "DALMATIAN",
+      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "945503081",
+      "id": "1590288303",
       "name_lat": "AURUM VELLERIS DISCO DANCER",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СПРИНГЕР АНГЛИЙСКИЙ",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -918,25 +961,16 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "385667277",
-      "name_lat": "AURUM DOG ZHREBIY UDACHI",
+      "id": "1734371480",
+      "name_lat": "AURA WHITE OF SNOWY DRAGON",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1115064997",
-      "name_lat": "AURUM DOG ONE IN E MILLION",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -949,12 +983,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1491873512",
+      "name_lat": "AUREI VELLERIS MOANA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "407030687",
+      "name_lat": "AURUM DOG CHERRY BLOSSOM QUEEN",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "773559108",
       "name_lat": "AURELIA IZ MIRA ANZHELIKI",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "BOXER",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "675458263",
+      "name_lat": "AURO CONCURR NIRVANA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -985,21 +1046,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1586146627",
-      "name_lat": "AUTOGRAPH UILYAM FILIPPE",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1574278050",
       "name_lat": "AURORA BOREALIS SPICA",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1315161352",
+      "name_lat": "AUSSIEPRIDE SHOCKWAVE",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1012,15 +1073,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1258369318",
-      "name_lat": "AUTBEK SHAYBA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "7365204",
       "name_lat": "AURORAS MOON LOUDER FOR ELEVATION",
       "name_ru": "",
@@ -1030,10 +1082,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "983442983",
+      "id": "39323003",
       "name_lat": "AUTUMN JOY IZ STRANI GREZ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1041,28 +1093,19 @@
     {
       "id": "496637987",
       "name_lat": "AUFALEND ORNELLA",
-      "name_ru": "",
+      "name_ru": "АУФАЛЕНД ОРНЕЛЛА",
       "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "LEONBERGER",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1440649134",
+      "id": "1842286189",
       "name_lat": "AUFSTIEG SATIVA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "675458263",
-      "name_lat": "AURO CONCURR NIRVANA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1072,6 +1115,14 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1079021195",
+      "name_lat": "AURORAS MOON NARCISSISTIC FLAME ECLIPSES",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1093,10 +1144,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "608532579",
+      "id": "124830735",
       "name_lat": "AUTOGRAPH URSULA ROYAL DAJMOND",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1120,19 +1171,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "54886857",
+      "name_lat": "AURUM SYMPHONY NICO ROBIN",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ИТАЛЬЯНСКИЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1901265032",
       "name_lat": "AUDI VIDE SILE",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "44503419",
-      "name_lat": "AURUM SYMPHONY NICO ROBIN",
-      "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1147,30 +1198,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "923516676",
+      "id": "352207643",
       "name_lat": "AUTBEK OLET",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1666186694",
+      "id": "566915658",
       "name_lat": "AUREI VELLERIS TAMPLIER",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "827220782",
-      "name_lat": "AURUM TIME ANTANANARIVO (PUFF)",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 25,
       "competition_dog_id": null
     },
     {
@@ -1201,6 +1243,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1648232626",
+      "name_lat": "AUREO MEDIO GERMIONA",
+      "name_ru": "АУРЕО МЕДИО ГЕРМИОНА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1704093843",
+      "name_lat": "AUSTIN ARVO",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
+      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "868701199",
+      "name_lat": "AUTOGRAPH SAMARA BLUES",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1127500765",
       "name_lat": "AURO CONCURR AMAZING",
       "name_ru": "",
@@ -1210,10 +1279,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "509136300",
+      "id": "1427042202",
       "name_lat": "AUTOGRAPH CHERVONA RUTA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1228,19 +1297,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "268029435",
-      "name_lat": "AUTOGRAPH SAMARA BLUES",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "231432469",
+      "id": "1272153680",
       "name_lat": "AURUM SYMPHONY LADY GAGA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -1252,6 +1312,15 @@
       "breed": "СИЛИХЕМ ТЕРЬЕР",
       "breed_en": "SEALYHAM TERRIER",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259973116",
+      "name_lat": "AURORA BOREALIS",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -1273,15 +1342,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "652813701",
-      "name_lat": "AURA WHITE OF SNOWY DRAGON",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1276053531",
       "name_lat": "AURUM COR DE PIERRE ET FLAMME",
       "name_ru": "",
@@ -1291,10 +1351,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "536768936",
+      "id": "125952620",
       "name_lat": "AURORA SWEETHEART MELODY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
@@ -1372,12 +1432,48 @@
       "competition_dog_id": null
     },
     {
+      "id": "779476346",
+      "name_lat": "AURORAS MOON AMAZING GRACE",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1636616597",
+      "name_lat": "AURUM VELLERIS DARE DEVIL",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1785749409",
+      "name_lat": "AURORA IZ ZVEZDNOGO LEGIONA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "94736061",
       "name_lat": "AURORA BOREALIS LOS MACHADEROS",
       "name_ru": "",
       "breed": "ПОЙНТЕР АНГЛИЙСКИЙ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "969907363",
+      "name_lat": "AURUM DOG INDIANA DZHONS",
+      "name_ru": "АУРУМ ДОГ ИНДИАНА ДЖОНС",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1390,28 +1486,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "198357970",
-      "name_lat": "AURUM VELLERIS DARE DEVIL",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1590390264",
+      "id": "1797902903",
       "name_lat": "AURORA THE SHINING STAR",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "432270256",
+      "id": "135244421",
       "name_lat": "AURUM BERSERK",
       "name_ru": "",
-      "breed": "БУЛЬМАСТИФ /",
+      "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1426,12 +1513,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "204941894",
-      "name_lat": "AUSTIN ARVO",
+      "id": "1322241079",
+      "name_lat": "AURICSTAFF URMAN DEL REY",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1462,15 +1549,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1491873512",
-      "name_lat": "AUREI VELLERIS MOANA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1123878650",
       "name_lat": "AUTUMN SUNRAY",
       "name_ru": "",
@@ -1480,12 +1558,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1785749409",
-      "name_lat": "AURORA IZ ZVEZDNOGO LEGIONA",
+      "id": "363641245",
+      "name_lat": "AURO CONCURR SIRIUS FOR PONART HALL",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
-      "breed_en": "BULLDOG",
-      "total_shows": 8,
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1494,7 +1571,16 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 29,
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "7592212",
+      "name_lat": "AURUM SIBERIA BARNA",
+      "name_ru": "АУРУМ СИБЕРИА БАРНА",
+      "breed": "ПТИ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1525,10 +1611,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "676276791",
+      "id": "978126454",
       "name_lat": "AUGUSTA LUISE ROSA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1588,15 +1674,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "969907363",
-      "name_lat": "AURUM DOG INDIANA DZHONS",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1641361398",
       "name_lat": "AURORA FAMILY LEGEND ALINKA MALINKA",
       "name_ru": "",
@@ -1615,10 +1692,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "7592212",
-      "name_lat": "AURUM SIBERIA BARNA",
+      "id": "1176655875",
+      "name_lat": "AURORAS MOON JULY WHITES",
       "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1642,10 +1719,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "716144177",
+      "id": "738241433",
       "name_lat": "AUFSTIEG LAKITA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1723,21 +1800,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "407030687",
-      "name_lat": "AURUM DOG CHERRY BLOSSOM QUEEN",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1913086975",
       "name_lat": "AURIKA IZ ZHASMINOVOGO DVORTSA",
       "name_ru": "",
       "breed": "ПЕКИНЕС",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "260358471",
+      "name_lat": "AURICSTAFF DESTINY TO BE TOGETHER",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "86757383",
+      "name_lat": "AURUM TIME OKSFORD",
+      "name_ru": "",
+      "breed": "СОБАКА ГОЛАЯ",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1750,21 +1835,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1504280380",
+      "id": "1289802259",
       "name_lat": "AUTBEK YURGA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1315161352",
-      "name_lat": "AUSSIEPRIDE SHOCKWAVE",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1792,15 +1868,6 @@
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1089344932",
-      "name_lat": "AURUM TIME OKSFORD",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "CHINESE CRESTED DOG",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1849,12 +1916,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "243367961",
-      "name_lat": "AURICSTAFF DESTINY TO BE TOGETHER",
+      "id": "1156240058",
+      "name_lat": "AURUS IZ BANDI GARRI",
       "name_ru": "",
-      "breed": "СКОТЧ ИРСКИЙ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1867,21 +1934,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1648232626",
-      "name_lat": "AUREO MEDIO GERMIONA",
+      "id": "1010137637",
+      "name_lat": "AURORAS MOON AZUR",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "815535187",
-      "name_lat": "AURUS IZ BANDI GARRI",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1899,7 +1957,7 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1930,10 +1988,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1345180814",
+      "id": "1751155159",
       "name_lat": "AURICSTAFF EDWARD DIAMOND CHASE",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1948,28 +2006,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "779476346",
-      "name_lat": "AURORAS MOON AMAZING GRACE",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "DALMATIAN",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1147417628",
+      "id": "489720505",
       "name_lat": "AURISTAFF DESTINY TO BE TOGETHER",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1047257991",
+      "id": "831788002",
+      "name_lat": "AURA ALLEGRA",
+      "name_ru": "АУРА АЛЛЕГРА",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "289167980",
+      "name_lat": "AURUM TIME AVENUE TWO FAME",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "899151521",
+      "name_lat": "AURUM DOG GRIMM",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "176484422",
       "name_lat": "AURICSTAFF YAKIRA AGIRUDA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1981,6 +2057,15 @@
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
       "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "673729579",
+      "name_lat": "AUROCONCURR IN LOVE WE TRUST",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -2011,30 +2096,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1410661370",
+      "id": "669101334",
       "name_lat": "AUREI VELLERIS DANTE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "831788002",
-      "name_lat": "AURA ALLEGRA",
+      "id": "26864804",
+      "name_lat": "AUFSTIEG CHINGIZKHAN",
       "name_ru": "",
-      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "289167980",
-      "name_lat": "AURUM TIME AVENUE TWO FAME",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2056,24 +2132,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "899151521",
-      "name_lat": "AURUM DOG GRIMM",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 23,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1704093843",
-      "name_lat": "AUSTIN ARVO",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
-      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "450807628",
       "name_lat": "AUSSIEPRIDE VICTORIA'S SECRET BOTSVANNA",
       "name_ru": "",
@@ -2083,10 +2141,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "843001185",
+      "id": "1047649980",
       "name_lat": "AUTOGRAPH ORABELLE MUSIC",
       "name_ru": "",
-      "breed": "С СЕРЕБРОМ /",
+      "breed": "С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2101,12 +2159,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1412615371",
+      "name_lat": "AURUM RECLUDIT CUNCTA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "222559831",
       "name_lat": "AURORAS MOON BRIGHT STAR",
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1177155345",
+      "name_lat": "AURORA FEJU ERA",
+      "name_ru": "",
+      "breed": "САЛЮКИ",
+      "breed_en": "SALUKI",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2115,34 +2190,16 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "673729579",
-      "name_lat": "AUROCONCURR IN LOVE WE TRUST",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1920704594",
+      "id": "225191572",
       "name_lat": "AURUM PRIDE ZEMFIRA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 32,
-      "competition_dog_id": null
-    },
-    {
-      "id": "82426536",
-      "name_lat": "AUSSIE REVOLUTION HIGHTIDE CROWNED WITH FLAVOR",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
-      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -2164,6 +2221,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1195675290",
+      "name_lat": "AUREUM SOLIS",
+      "name_ru": "",
+      "breed": "КАРДИГАН",
+      "breed_en": "WELSH CORGI CARDIGAN",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "198295390",
       "name_lat": "AUSSIE’S TABOO HIMMERA",
       "name_ru": "",
@@ -2182,6 +2248,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1118590968",
+      "name_lat": "AURO CONCURR MILLION LIKES",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "963900450",
       "name_lat": "AUREO MEDIO JENY",
       "name_ru": "",
@@ -2191,10 +2266,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1560550119",
+      "id": "1530818715",
       "name_lat": "AUSHIGERSKAYA ZVEZDA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2209,15 +2284,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1195675290",
-      "name_lat": "AUREUM SOLIS",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1880511562",
       "name_lat": "AURO CONCURR USER OF MY MONEY",
       "name_ru": "",
@@ -2227,19 +2293,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1665858887",
+      "id": "1402862779",
       "name_lat": "AUSTIN TI DE CHETHUZ",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "550115053",
+      "id": "1525132624",
       "name_lat": "AURICSTAFF RASKA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2249,8 +2315,7 @@
       "name_lat": "AURORAS MOON BORKNAGAR",
       "name_ru": "",
       "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2260,15 +2325,6 @@
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1118590968",
-      "name_lat": "AURO CONCURR MILLION LIKES",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2299,12 +2355,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "259973116",
-      "name_lat": "AURORA BOREALIS",
+      "id": "1824139388",
+      "name_lat": "AUROCONCURR ME AND YOU",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2344,10 +2400,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "2000084064",
+      "id": "1418161461",
       "name_lat": "AURICSTAFF HEARTY FRIEND",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2362,6 +2418,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1808273457",
+      "name_lat": "AURIKA YASNOE SOLNYSHKO",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "814403427",
       "name_lat": "AUTOGRAPH DISNEY LAND",
       "name_ru": "",
@@ -2371,19 +2436,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1010137637",
-      "name_lat": "AURORAS MOON AZUR",
+      "id": "1917982810",
+      "name_lat": "AURUM STAR",
       "name_ru": "",
-      "breed": "ДАЛМАТИН",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1596124492",
+      "id": "771728169",
       "name_lat": "AURICSTAFF URSA GENTLE SOUL",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
@@ -2434,21 +2499,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1730312002",
+      "name_lat": "AURA SILVERSKY WHITE NIGHTS",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "273623385",
       "name_lat": "AURORA GRACE UBI",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1824139388",
-      "name_lat": "AUROCONCURR ME AND YOU",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2461,12 +2526,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "95229071",
-      "name_lat": "AURUM RECLUDIT CUNCTA",
+      "id": "1822864749",
+      "name_lat": "AUFSTIEG EROFEY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "217177985",
+      "name_lat": "AUGUST",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2479,12 +2552,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1513651970",
+      "id": "1443135996",
+      "name_lat": "AURA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1584796761",
       "name_lat": "AURUM VELLERIS GOLDEN GLORY",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1493606736",
+      "name_lat": "AURUM TIME AVINJON",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1079222561",
+      "name_lat": "AURUM LUX DON ZHUAN",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2497,48 +2595,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "579209005",
+      "id": "291778697",
       "name_lat": "AUTOGRAPH MALEFISENTA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "836181842",
+      "id": "1839776436",
       "name_lat": "AURELIYA SOL HELGA BULLS",
       "name_ru": "",
-      "breed": "ШЕЛТИ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "2155109",
-      "name_lat": "AUFSTIEG EROFEY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1443135996",
-      "name_lat": "AURA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "26864804",
-      "name_lat": "AUFSTIEG CHINGIZKHAN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2560,19 +2631,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1593721061",
-      "name_lat": "AURA'S BEGIN A BRAVE GAME",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1790156167",
       "name_lat": "AUSTRALIS ASHLEY RAY",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1593721061",
+      "name_lat": "AURA'S BEGIN A BRAVE GAME",
+      "name_ru": "",
+      "breed": "МОПС / PUG",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2587,10 +2658,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "144304971",
+      "id": "303213717",
+      "name_lat": "AURORAS MOON LIKE WHITENING",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1138050626",
       "name_lat": "AURO CONCURR O-LA-LA IM COOL",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ /",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2623,15 +2703,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "717472295",
-      "name_lat": "AURORA MORNING STAR",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "929933590",
       "name_lat": "AURORA SUNSTONE CRASH DUDE IS HERE",
       "name_ru": "",
@@ -2641,19 +2712,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "303213717",
-      "name_lat": "AURORAS MOON LIKE WHITENING",
+      "id": "1922337607",
+      "name_lat": "AUDI",
       "name_ru": "",
-      "breed": "ДАЛМАТИН",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1450503455",
+      "id": "246603971",
       "name_lat": "AUTBEK MALBORO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2683,15 +2754,6 @@
       "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1322241079",
-      "name_lat": "AURICSTAFF URMAN DEL REY",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2728,6 +2790,15 @@
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1922386203",
+      "name_lat": "AURORA MORNING STAR.",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2776,12 +2847,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922337607",
-      "name_lat": "AUDI",
+      "id": "104634499",
+      "name_lat": "AURUM TIME ANTANANARIVO",
       "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "384423136",
+      "name_lat": "AURUM BLACK EASTERN CHIC",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2803,6 +2883,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1526209875",
+      "name_lat": "AURORA FORTUNA STAR HAMISH HARDING",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "502032488",
       "name_lat": "AURO CONCURR YOU AND ME",
       "name_ru": "",
@@ -2812,28 +2901,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1689648222",
+      "id": "1858270917",
       "name_lat": "AUTUMN FLOWER",
       "name_ru": "",
-      "breed": "РОДЕЗИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "английский золотистый ретривер",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1841002367",
+      "id": "58182345",
+      "name_lat": "AURUM VELLERIS FALLEN FOR YOU",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "390173550",
       "name_lat": "AURICSTAFF ULTRAGERL",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "267648057",
+      "id": "1756350523",
       "name_lat": "AURORA IZ DOMA YU-TI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ (ДЛИННОШЕРСТНЫЙ)",
+      "breed": "ПУДЕЛЬ РУССКИЙ ТОЙ (ДЛИННОШЕРСТНЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2875,12 +2972,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "89742833",
-      "name_lat": "AURUM FOX",
+      "id": "850146148",
+      "name_lat": "AURORAS MOON BRAVED THE IDOL",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ДАЛМАТИН",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2888,15 +2984,6 @@
       "name_lat": "AURUS PRIDE ARRIVA",
       "name_ru": "",
       "breed": "ТОЙ-ФОКСТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "850146148",
-      "name_lat": "AURORAS MOON BRAVED THE IDOL",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2911,10 +2998,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1259483950",
+      "id": "1886802290",
       "name_lat": "AUTOGRAPH YARIKA",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ / GIANT",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ / GIANT",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2938,6 +3025,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "956756277",
+      "name_lat": "AURORAS MOON MORNINGSTAR ON HORIZON",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН / DALMATIAN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1583470894",
       "name_lat": "AURO CONCURR AMBASSADOR MARCUS",
       "name_ru": "",
@@ -2956,30 +3051,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1177155345",
-      "name_lat": "AURORA FEJU ERA",
-      "name_ru": "",
-      "breed": "САЛЮКИ",
-      "breed_en": "SALUKI",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1254005866",
-      "name_lat": "AURA SILVERSKY WHITE NIGHTS",
-      "name_ru": "",
-      "breed": "RUSSIAN HUNTING",
+      "id": "875564457",
+      "name_lat": "AUTBEK LAGONDA",
+      "name_ru": "АУТБЕК ЛАГОНДА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1808273457",
-      "name_lat": "AURIKA YASNOE SOLNYSHKO",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2992,39 +3069,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1810465234",
-      "name_lat": "AUTBEK LAGONDA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "id": "1306145053",
+      "name_lat": "AUTBEK KONSUL",
+      "name_ru": "АУТБЕК КОНСУЛ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1393297214",
-      "name_lat": "AUTBEK KONSUL",
+      "id": "1800651326",
+      "name_lat": "AURUM TIME ARMANI CHIK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ЛХАССКИЙ АПСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "501673321",
+      "id": "959758658",
       "name_lat": "AURONCO DI CADORE",
       "name_ru": "",
-      "breed": "АРЛЕКИН МИНИАТЮРНЫЙ /",
+      "breed": "ПУДЕЛЬ ФАНТОМ) МИНИАТЮРНЫЙ БЕЛО- ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "791434661",
+      "id": "274362110",
       "name_lat": "AUTBEK RADEK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -3037,21 +3114,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "726220578",
+      "id": "1959302489",
       "name_lat": "AUTBEK MALVINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1680253158",
-      "name_lat": "AURUM STAR",
+      "id": "189911510",
+      "name_lat": "AURO CONCURR TENNESSEE",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "287058994",
+      "name_lat": "AURORA MORNING STAR",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -3093,10 +3179,10 @@
     {
       "id": "1500861744",
       "name_lat": "AURUS AURUM AURIKA",
-      "name_ru": "",
+      "name_ru": "АУРУС АУРУМ АУРИКА",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -3118,10 +3204,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1749584587",
+      "id": "1878954204",
       "name_lat": "AUFSTIEG TSITSERON",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3136,15 +3222,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "104634499",
-      "name_lat": "AURUM TIME ANTANANARIVO",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1145522758",
       "name_lat": "AUSTRALIA BEST SHOW",
       "name_ru": "",
@@ -3154,19 +3231,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "401458290",
-      "name_lat": "AUTBEK ZHEST",
+      "id": "396835592",
+      "name_lat": "AURORAS MOON MY IRRESISTIBLE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
+      "breed": "ДАЛМАТИН / DALMATIAN",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1962101691",
-      "name_lat": "AURUM TIME AVINJON",
+      "id": "1793948937",
+      "name_lat": "AUTBEK ZHEST",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3181,10 +3257,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1124578931",
+      "id": "1187303863",
       "name_lat": "AUTBEK AMAZONKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3205,6 +3281,23 @@
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1705466659",
+      "name_lat": "AURUM DOG LUFIR",
+      "name_ru": "АУРУМ ДОГ ЛУФИР",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "523175137",
+      "name_lat": "AUTBEK MAGIYA",
+      "name_ru": "АУТБЕК МАГИЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3262,28 +3355,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1479960802",
-      "name_lat": "AURUM LUX DON ZHUAN",
-      "name_ru": "",
-      "breed": "BIEWER TERRIER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1891425255",
+      "id": "6205019",
       "name_lat": "AUTOGRAPH BUTTERFLY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1311728514",
+      "id": "725470083",
       "name_lat": "AURUM DOG DAENERYS TARGARYEN",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3316,6 +3400,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "103059875",
+      "name_lat": "AURA STRELKA",
+      "name_ru": "АУРА СТРЕЛКА",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1748304627",
       "name_lat": "AUTBEK LE OF LAKI STAR",
       "name_ru": "",
@@ -3325,10 +3418,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1819454361",
+      "id": "1564394298",
       "name_lat": "AUTBEK BRAVISSIMA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3352,6 +3445,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "142505366",
+      "name_lat": "AURUM VELLERIS FLYING HIGH",
+      "name_ru": "",
+      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "985128666",
       "name_lat": "AURUM BLACK",
       "name_ru": "",
@@ -3361,30 +3462,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "59182769",
+      "id": "1574690636",
       "name_lat": "AURUM TIME ANTANANARIV O (PUFF)",
       "name_ru": "",
-      "breed": "СОБАКА /",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "967904131",
-      "name_lat": "AURUM STAR",
-      "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1716588221",
-      "name_lat": "AURUM BLACK EASTERN CHIC",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3415,6 +3498,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "291415722",
+      "name_lat": "AURELIYA SWEET DREAMS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "244237994",
       "name_lat": "AURORA LEGACY BOX WITH KIWI (NBT)",
       "name_ru": "",
@@ -3424,10 +3515,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "491134463",
+      "id": "348657159",
       "name_lat": "AURUM STARK",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3460,10 +3551,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "348745072",
+      "id": "372673882",
       "name_lat": "AURURA FORTUNA STAR MARIMBA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3478,28 +3569,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "382887882",
+      "id": "998358427",
       "name_lat": "AUFSTIEG CHESMENKA",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "33737662",
-      "name_lat": "AURUM STAR",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1070676433",
+      "id": "412660853",
       "name_lat": "AUTOGRAPH ZHEZZIFINA",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3523,10 +3605,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "63473786",
+      "id": "770767812",
       "name_lat": "AUTOGRAPH SALISBURY STANLEY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ) ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3568,28 +3650,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1503207849",
+      "id": "1864154164",
       "name_lat": "AUTOGRAP",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАШАР ПЕЙ /",
+      "breed": "ЦВЕРГШНАШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "727971353",
-      "name_lat": "AURUM STAR",
-      "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1107640500",
+      "id": "60297487",
       "name_lat": "AURUM MAGIC RESPEKTABELNY MACHO",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3676,11 +3749,35 @@
       "competition_dog_id": null
     },
     {
+      "id": "1509516050",
+      "name_lat": "AUTOGRAPH SAMARA BLUES (Изменено по решению ВК от 31.08.21 воп 20)",
+      "name_ru": "",
+      "breed": "ФАНТОМ) ТОЙ ЧЁРНЫЙ С ПОДПАЛОМ / PHOODLE (HARLEKIN & PHANTOM)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1844442781",
       "name_lat": "AURIKA MY FIRST STAR",
       "name_ru": "",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "842316303",
+      "name_lat": "AURO CONCURR MIDNIGHT FAIRY",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1245723061",
+      "name_lat": "AUSTRALIAN SWEET",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3712,10 +3809,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "954853739",
+      "id": "787864892",
       "name_lat": "AURUM VOM HAUS KOGOR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3730,39 +3827,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1176655875",
-      "name_lat": "AURORAS MOON JULY WHITES",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "189911510",
-      "name_lat": "AURO CONCURR TENNESSEE",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1666378777",
       "name_lat": "AUSAR VOM KRESSBACH",
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "ROTTWEILER",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1917982810",
-      "name_lat": "AURUM STAR",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -3784,10 +3854,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "905696880",
+      "id": "1106180097",
+      "name_lat": "AURING FOKS LORELLEYA",
+      "name_ru": "АУРИНГ ФОКС ЛОРЕЛЛЕЯ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1032430332",
       "name_lat": "AUTOGRAPH DISNEY LEND",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3820,10 +3899,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "414861914",
+      "id": "333219056",
       "name_lat": "AURUM PRIDE ZIMUSHKA-ZIMA",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3838,10 +3917,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1271579306",
+      "id": "1934974066",
       "name_lat": "AURUM VELLERIS VICTORY BELLE",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3874,21 +3953,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "562404092",
-      "name_lat": "AURA STRELKA",
+      "id": "1423076252",
+      "name_lat": "AURELI AVELIN IZ ANGARSKOI JEMCHUJNY",
       "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "424026243",
+      "id": "1671138154",
       "name_lat": "AUTOBIANKI",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "919437734",
+      "name_lat": "AURISSTAFF SHERIDAN AMAZING",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "STAFFORDSHIRE BULL TERRIER",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3901,15 +3988,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "919437734",
-      "name_lat": "AURISSTAFF SHERIDAN AMAZING",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "270342160",
       "name_lat": "AURUM AGLIS STARK",
       "name_ru": "",
@@ -3919,10 +3997,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1143716096",
+      "id": "290866733",
+      "name_lat": "AURORA FORTUNA STAR ROCK AND ROLL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "891189967",
       "name_lat": "AUTBEK FRAER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3934,6 +4020,15 @@
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "710167156",
+      "name_lat": "AUTBECK PRINCESSA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -4000,12 +4095,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1675374442",
-      "name_lat": "AUTBEK MAGIYA",
+      "id": "146241092",
+      "name_lat": "AUGUST",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "АМЕРИКАНСКИЙ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4063,6 +4158,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "65733132",
+      "name_lat": "AURIS AURORA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "511184101",
       "name_lat": "AUDREY HEPBURN DENTELLE BLANCHE",
       "name_ru": "",
@@ -4108,19 +4212,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "170098398",
+      "id": "243104893",
       "name_lat": "AUTBEK SONATA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "757865224",
-      "name_lat": "AURIS AURORA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4144,12 +4239,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1578720584",
+      "id": "19196116",
       "name_lat": "AURUM BLACK",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "554187930",
+      "name_lat": "AURORA RADIANCE OF",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -4175,15 +4279,6 @@
       "name_lat": "AURORAS MOON DREAM THEATER",
       "name_ru": "",
       "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "554187930",
-      "name_lat": "AURORA RADIANCE OF",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4216,15 +4311,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "710167156",
-      "name_lat": "AUTBECK PRINCESSA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "209847666",
       "name_lat": "AURO CONCURR FAMOUS PERSON",
       "name_ru": "",
@@ -4239,6 +4325,14 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1864693441",
+      "name_lat": "AURORA'S AURUM BERTHA MARIA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4279,10 +4373,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "988694620",
+      "id": "764674489",
       "name_lat": "AURUM",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4360,6 +4454,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1089155062",
+      "name_lat": "AURORA LEGACY MOON AND SUN NBT",
+      "name_ru": "",
+      "breed": "AUSTRALIAN",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "461023535",
       "name_lat": "AURUM TIGER",
       "name_ru": "",
@@ -4369,19 +4472,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1089155062",
-      "name_lat": "AURORA LEGACY MOON AND SUN NBT",
-      "name_ru": "",
-      "breed": "AUSTRALIAN",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "217177985",
+      "id": "1946617461",
       "name_lat": "AUGUST",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -4392,6 +4486,15 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "128297423",
+      "name_lat": "Aureo Medio Evropa",
+      "name_ru": "АУРЕО МЕДИО ЕВРОПА",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
@@ -4419,6 +4522,15 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "114422446",
+      "name_lat": "AURISSTAFF PRESTIGE",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "STAFFORDSHIRE BULL TERRIER",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -4459,10 +4571,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1551827760",
+      "id": "276778170",
+      "name_lat": "AURUM AYRTON IN CORDE FAN BO",
+      "name_ru": "",
+      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "278626215",
       "name_lat": "AURUM PRIDE CEYLON",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ШАКАЛО-ПСОВАЯ СОБАКА –",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1929288557",
+      "name_lat": "AURUS PRIDE AIVENGO",
+      "name_ru": "",
+      "breed": "ТОЙ-ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4515,15 +4645,6 @@
     {
       "id": "90772384",
       "name_lat": "AURISSTAFF WHITE WONDER FOR MAINSTAI",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "114422446",
-      "name_lat": "AURISSTAFF PRESTIGE",
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
@@ -4585,17 +4706,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "276778170",
-      "name_lat": "AURUM AYRTON IN CORDE FAN BO",
-      "name_ru": "",
-      "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "185125559",
-      "name_lat": "AURUM HILLS D- DZHOYSTIK LORD OF THE HEARTS",
+      "id": "820006431",
+      "name_lat": "AURUM HILLS D-DZHOYSTIK LORD OF THE HEARTS",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -4612,37 +4724,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "957503208",
+      "id": "561782925",
       "name_lat": "AURORAS MOON JUSTIFY MY LOVE",
       "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "94304690",
-      "name_lat": "AURUM STAR",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "816230031",
-      "name_lat": "AURUM STAR",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1561358304",
+      "id": "607161518",
       "name_lat": "AURIKA SUZY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4652,6 +4746,32 @@
       "name_lat": "AURA USPEHA",
       "name_ru": "",
       "breed": "С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "923516676",
+      "name_lat": "AUTBEK OLET",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "841048276",
+      "name_lat": "AURUM PRIDE UTONCHYONNAYA OSOBA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "987880775",
+      "name_lat": "AURUM VELLERIS BRIAN BACK IN STYLE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4675,38 +4795,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1309271348",
-      "name_lat": "AURIСSTAFF SHERIDAN AMAZING",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1120862280",
-      "name_lat": "AURIСSTAFF PRESTIGE",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
-      "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1259194878",
       "name_lat": "AUREATE ESPADA VOM BONDFAM",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "841048276",
-      "name_lat": "AURUM PRIDE UTONCHYONNAYA OSOBA",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4837,15 +4930,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "951657745",
-      "name_lat": "AURUM VENDEE DELIA DOLCE OLIVIA",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ длинношерстная",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "8135415",
       "name_lat": "AUSSIEPRIDE GLAME’N’GLOW FOR MISTYCOR",
       "name_ru": "",
@@ -4864,11 +4948,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "987880775",
-      "name_lat": "AURUM VELLERIS BRIAN BACK IN STYLE",
+      "id": "1034103378",
+      "name_lat": "AURING FOKS DARK QUEEN",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "973667859",
+      "name_lat": "AURITA KLAVDIA OT NEVSKOGO DUETA",
+      "name_ru": "",
+      "breed": "ПАПИЙОН",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4927,10 +5019,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1705466659",
-      "name_lat": "AURUM DOG LUFIR",
+      "id": "1570151545",
+      "name_lat": "AURUS VOM GROSSEN SCHATZ",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4981,6 +5073,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "886577365",
+      "name_lat": "AURUM REGIUM AETHER ABYSS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1618745052",
+      "name_lat": "AURORA FORTUNA STAR YASMINA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1219249691",
+      "name_lat": "AURORAS MOON PUDRA",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "628679167",
       "name_lat": "AUGUSTIN LUCKY STAR RED",
       "name_ru": "",
@@ -4990,10 +5106,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "238630005",
+      "id": "52169838",
       "name_lat": "AUTBEK NELSON-STARK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5017,6 +5133,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1301899213",
+      "name_lat": "AURUM DOG ZHASMIN",
+      "name_ru": "АУРУМ ДОГ ЖАСМИН",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "951657745",
+      "name_lat": "AURUM VENDEE DELIA DOLCE OLIVIA",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ длинношерстная",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1266945876",
       "name_lat": "AUTOGRAPH ENRIKKI BELISSIMO",
       "name_ru": "",
@@ -5026,19 +5160,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1929288557",
-      "name_lat": "AURUS PRIDE AIVENGO",
+      "id": "209018492",
+      "name_lat": "AURING FOXS DOLCE VITA",
       "name_ru": "",
-      "breed": "ТОЙ-ФОКСТЕРЬЕР",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN) ORANGE, GREY, OTHER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "933522509",
+      "id": "214027467",
+      "name_lat": "AURELIA BELISSIMA",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "980163248",
       "name_lat": "AUGUSTA FIRST LADY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5048,15 +5191,6 @@
       "name_lat": "AURUM LUX MIRRA",
       "name_ru": "",
       "breed": "BIEWER TERRIER",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1564159505",
-      "name_lat": "AURUS VOM GROSSEN SCHATZ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5125,10 +5259,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1617585928",
+      "id": "542808324",
       "name_lat": "AURORA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5138,15 +5272,6 @@
       "name_lat": "AURUM STAR",
       "name_ru": "",
       "breed": "КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1543759216",
-      "name_lat": "AURUM STAR",
-      "name_ru": "",
-      "breed": "ВОЛЬФШПИЦ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5174,24 +5299,6 @@
       "name_lat": "AURELIYA",
       "name_ru": "",
       "breed": "КАНГАЛЬСКАЯ МАЙОРКСКИЙ МАСТИФ (КА ДЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1974051022",
-      "name_lat": "AURUM STAR",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "765370078",
-      "name_lat": "AURUM STAR",
-      "name_ru": "",
-      "breed": "СПРИНГЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5242,19 +5349,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "146241092",
-      "name_lat": "AUGUST",
+      "id": "479933787",
+      "name_lat": "AURIKA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "77238547",
-      "name_lat": "AURIKA",
+      "id": "715405285",
+      "name_lat": "AURORA ICECREAM",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "601290292",
+      "name_lat": "AURICSTAFF CASANOVA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "62555976",
+      "name_lat": "AUGUSTA SPENSER",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "726092105",
+      "name_lat": "AURORA FORTUNA STAR ROK-N-ROLL",
+      "name_ru": "",
+      "breed": "МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "277528815",
+      "name_lat": "AURORA RADIANCE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5287,10 +5430,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "607345976",
+      "id": "1380903084",
       "name_lat": "AURUM VENDEE DOMINIKO DOLCE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш ZWERG-DACHSHUND (TECKEL) - LANGHAAR (Specialty) ТАКСА МИНИАТЮРНАЯ Д-Ш ZWERG-DACHSHUND (TECKEL) - LANGHAAR (Specialty) ТАКСА МИНИАТЮРНАЯ Д-Ш ZWERG-DACHSHUND (TECKEL) - LANGHAAR (Specialty) ТАКСА МИНИАТЮРНАЯ Д-Ш ZWERG-DACHSHUND (TECKEL) - LANGHAAR (Specialty) ТАКСА МИНИАТЮРНАЯ Д-Ш ZWERG-DACHSHUND (TECKEL) - LANGHAAR (Specialty) ТАКСА МИНИАТЮРНАЯ Д-Ш ZWERG-DACHSHUND (TECKEL) - LANGHAAR (Specialty) ТАКСА МИНИАТЮРНАЯ Д-Ш ZWERG-DACHSHUND (TECKEL) - LANGHAAR (Specialty) ТАКСА МИНИАТЮРНАЯ Ж-Ш",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5332,10 +5475,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1090526803",
+      "id": "682139872",
       "name_lat": "AURUM VENDEE DOMINICO DOLCHE",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5359,7 +5502,7 @@
       "competition_dog_id": null
     },
     {
-      "id": "72090255",
+      "id": "72090256",
       "name_lat": "AUSSIEPRIDE GLAME'N'GLOW FOR MISTYCOR",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
@@ -5404,46 +5547,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1034103378",
-      "name_lat": "AURING FOKS DARK QUEEN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1926448655",
-      "name_lat": "AURUM TIME ARMANI CHIK",
-      "name_ru": "",
-      "breed": "ЛХАССКИЙ АПСО /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1071957040",
+      "id": "1577591557",
       "name_lat": "AURUS VOM FROSTEN",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "209018492",
-      "name_lat": "AURING FOXS DOLCE VITA",
-      "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN) ORANGE, GREY, OTHER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "143085989",
-      "name_lat": "AURELIA BELISSIMA",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5458,19 +5565,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "715405285",
-      "name_lat": "AURORA ICECREAM",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "656914635",
+      "id": "339291868",
       "name_lat": "AUTBEK FERRARI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5485,19 +5583,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "781015032",
-      "name_lat": "AURO CONCURR SEBASTIAN",
+      "id": "239860109",
+      "name_lat": "AUTOGRAPH DISNEY LAND AUTOGRAPH NOLAN",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
-      "breed_en": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "128297423",
-      "name_lat": "Aureo Medio Evropa",
+      "id": "781015032",
+      "name_lat": "AURO CONCURR SEBASTIAN",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5557,28 +5654,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "601290292",
-      "name_lat": "AURICSTAFF CASANOVA",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1584073129",
       "name_lat": "AUREO MEDIO ISABELLA",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "174311203",
-      "name_lat": "AURUM DOG ZHASMIN",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА / AUSTRALIAN SHEPHERD",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5593,8 +5672,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "772732212",
-      "name_lat": "AURO CONCURR OH-LA- LA IM COOL",
+      "id": "1705199252",
+      "name_lat": "AURO CONCURR OH-LA-LA IM COOL",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
@@ -5606,24 +5685,6 @@
       "name_lat": "AURUM VENDEE ENERGIZER",
       "name_ru": "",
       "breed": "ДАЛМАТИН ВАНДЕЙСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1106180097",
-      "name_lat": "AURING FOKS LORELLEYA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1140373912",
-      "name_lat": "AUGUSTA SPENSER",
-      "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5737,15 +5798,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1437480499",
-      "name_lat": "AURORA FORTUNA STAR ROK-N-ROLL",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1600953503",
       "name_lat": "AURELIA PATTE DU ROI",
       "name_ru": "",
@@ -5782,19 +5834,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "315498170",
-      "name_lat": "AURORA RADIANCE",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "372342653",
+      "id": "934779830",
       "name_lat": "AUTBEK BOECZ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5809,28 +5852,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1526209875",
-      "name_lat": "AURORA FORTUNA STAR HAMISH HARDING",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1072864389",
       "name_lat": "AURUM DOG HTEDZHU",
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "208601241",
-      "name_lat": "AURELIYA SWEET DREAMS",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5854,11 +5879,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1109163876",
-      "name_lat": "AURUM VELLERIS FALLEN FOR YOU",
+      "id": "1292636333",
+      "name_lat": "AURUM AFFETTO LETITSIIA TO ANGEL'O RANCH",
       "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР ПАЛЕВЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     }

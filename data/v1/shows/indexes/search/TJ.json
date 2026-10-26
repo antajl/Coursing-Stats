@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "TJ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1910652830",
+      "name_lat": "TJOTTES SAVED BY A DANCE",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "677643846",
+      "name_lat": "TJOTTE'S THE PURPLELIZER",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1645100220",
+      "name_lat": "TJOTTE’S THE PURPLELIZER",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

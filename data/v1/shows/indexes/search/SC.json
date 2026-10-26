@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "SC",
-  "count": 439,
+  "count": 447,
   "dogs": [
     {
       "id": "1309826921",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ДАЛМАТИН",
       "breed_en": "",
-      "total_shows": 76,
+      "total_shows": 81,
       "competition_dog_id": null
     },
     {
@@ -22,21 +22,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "598651158",
-      "name_lat": "SCOTTISH COMANDOS HANUMA",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 35,
-      "competition_dog_id": null
-    },
-    {
       "id": "691172858",
       "name_lat": "SCOTLAND WEYR DAZZLING FIERY DREAM",
       "name_ru": "",
       "breed": "ФАРАОНОВА СОБАКА",
       "breed_en": "PHARAOH HOUND",
-      "total_shows": 39,
+      "total_shows": 50,
+      "competition_dog_id": null
+    },
+    {
+      "id": "598651158",
+      "name_lat": "SCOTTISH COMANDOS HANUMA",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 37,
       "competition_dog_id": null
     },
     {
@@ -45,7 +45,7 @@
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "ROTTWEILER",
-      "total_shows": 44,
+      "total_shows": 51,
       "competition_dog_id": null
     },
     {
@@ -63,7 +63,7 @@
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
-      "total_shows": 56,
+      "total_shows": 61,
       "competition_dog_id": null
     },
     {
@@ -72,43 +72,16 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
-      "id": "1453676957",
+      "id": "1811785813",
       "name_lat": "SCHWARZ WOLF RUSSLAND EVA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1912071226",
-      "name_lat": "SCOTTISH COMANDOS UKKI UMNICHKA",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1885394569",
-      "name_lat": "SCHWAGER HOF BRIONI",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "ROTTWEILER",
-      "total_shows": 56,
-      "competition_dog_id": null
-    },
-    {
-      "id": "82791415",
-      "name_lat": "SCARLET O'HARA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -117,7 +90,16 @@
       "name_ru": "",
       "breed": "ФАРАОНОВА СОБАКА",
       "breed_en": "PHARAOH HOUND",
-      "total_shows": 26,
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1912071226",
+      "name_lat": "SCOTTISH COMANDOS UKKI UMNICHKA",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -126,34 +108,70 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 42,
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
-      "id": "108574076",
-      "name_lat": "SCHWARZ WOLF RUSSLAND ESENIA",
+      "id": "1885394569",
+      "name_lat": "SCHWAGER HOF BRIONI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 10,
+      "breed": "РОТВЕЙЛЕР",
+      "breed_en": "ROTTWEILER",
+      "total_shows": 57,
       "competition_dog_id": null
     },
     {
-      "id": "1410702983",
+      "id": "82791415",
+      "name_lat": "SCARLET O'HARA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "4807834",
+      "name_lat": "SCHWARZ WOLF RUSSLAND ESENIA (L-H)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "83965147",
       "name_lat": "SCHASTIE MOE FELIX OT FOREST GIRTS",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "52051855",
+      "id": "957584204",
+      "name_lat": "SCOTTISH COMANDOS VOEVODA",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "81542811",
       "name_lat": "SCHUBERT LOVE DU MONT DE L'AMOUR D'HATEA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1270628220",
+      "name_lat": "SCANDVIK ELEMENT DESIGN",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 37,
       "competition_dog_id": null
     },
     {
@@ -166,12 +184,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1285887009",
-      "name_lat": "SCANDVIK ELEMENT DESIGN",
+      "id": "1241241696",
+      "name_lat": "SCANDVIK SWEET SUGAR",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 31,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1085808124",
+      "name_lat": "SCHWARZ WOLF RUSSLAND ASTI (L-H)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -193,12 +220,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1526704975",
+      "id": "703986330",
       "name_lat": "SCOTTISH COMANDOS HOTTABYCH",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "ЛЕЙКЛЕНД СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -220,30 +247,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "957584204",
-      "name_lat": "SCOTTISH COMANDOS VOEVODA",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "713071112",
       "name_lat": "SCOTTISH COMANDOS ASSOL",
       "name_ru": "",
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "453127298",
-      "name_lat": "SCHWARZ WOLF RUSSLAND ASTI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -262,6 +271,15 @@
       "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1957230432",
+      "name_lat": "SCANDVIK PANDORA",
+      "name_ru": "",
+      "breed": "С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -342,7 +360,16 @@
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
-      "total_shows": 38,
+      "total_shows": 39,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1495280910",
+      "name_lat": "SCARAMOUCH DE AKRA-LEUKA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР П-С",
+      "breed_en": "MINIATURE SCHNAUZER P-S",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -360,7 +387,7 @@
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -373,30 +400,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1904841725",
+      "id": "1208243449",
       "name_lat": "SCHAST'E TJUHI NEXT DREAM",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1241241696",
-      "name_lat": "SCANDVIK SWEET SUGAR",
+      "id": "223824048",
+      "name_lat": "SCOTTISH COMANDOS AMULET AVATARA",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1495280910",
-      "name_lat": "SCARAMOUCH DE AKRA-LEUKA",
+      "id": "1247404243",
+      "name_lat": "SCHASTLIVY MIR ORNELLA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР П-С",
-      "breed_en": "MINIATURE SCHNAUZER P-S",
-      "total_shows": 15,
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "YORKSHIRE TERRIER",
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -409,11 +436,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1247404243",
-      "name_lat": "SCHASTLIVY MIR ORNELLA",
+      "id": "1162710286",
+      "name_lat": "SCANDVIK YAPPIE",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "YORKSHIRE TERRIER",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
       "total_shows": 24,
       "competition_dog_id": null
     },
@@ -433,6 +460,15 @@
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "477672023",
+      "name_lat": "SCARLET OHARA SIGMA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -477,14 +513,14 @@
       "name_ru": "",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1116195010",
+      "id": "821128375",
       "name_lat": "SCOTTISH COMANDOS YU NOU MI RASHEN",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "ОХОТНИЧИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -526,15 +562,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1957230432",
-      "name_lat": "SCANDVIK PANDORA",
-      "name_ru": "",
-      "breed": "С СОЛЬЮ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "141611751",
       "name_lat": "SCHWAGER HOF BORN TO BE BEST (Изменено по решению ВК от 22.05.2025 В. 35)",
       "name_ru": "",
@@ -544,19 +571,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "223824048",
-      "name_lat": "SCOTTISH COMANDOS AMULET AVATARA",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "953811892",
+      "id": "923673825",
       "name_lat": "SCHASTLIVYY ANGEL PRINTS SNEGOV",
       "name_ru": "",
-      "breed": "САМОЕД /",
+      "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -598,10 +616,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1494188285",
+      "id": "294746400",
       "name_lat": "SCHASTYE DOMA ERBHOF RAFAELLA",
       "name_ru": "",
-      "breed": "Сибирский хаски /",
+      "breed": "Сибирский хаски",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -622,6 +640,24 @@
       "breed": "МОПС",
       "breed_en": "PUG",
       "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "922760584",
+      "name_lat": "SCHASTIE IZ PITERA BRAUNIT",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1202181201",
+      "name_lat": "SCHASTLIVAJA ZVEZDA SHEPOT OSENNEGO LESA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -670,19 +706,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "477672023",
-      "name_lat": "SCARLET OHARA SIGMA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "428378813",
+      "id": "133924598",
       "name_lat": "SCHWARZ WOLF RUSSLAND GERDA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
@@ -706,10 +733,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "432123206",
+      "id": "1268569352",
       "name_lat": "SCHNEIDER FEST VANESSA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -730,15 +757,6 @@
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1085808124",
-      "name_lat": "SCHWARZ WOLF RUSSLAND ASTI (L-H)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -832,10 +850,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1158936424",
+      "id": "275128589",
       "name_lat": "SCANDVIK HARLEY DAVIDSON",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 48,
       "competition_dog_id": null
@@ -850,6 +868,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "321997502",
+      "name_lat": "SCHWEPPES IZ FORTUNA MERDI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
       "id": "1517523550",
       "name_lat": "SCOTTISH COMANDOS SHOTLANDSKIJ SHEF",
       "name_ru": "",
@@ -859,19 +886,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1202181201",
-      "name_lat": "SCHASTLIVAJA ZVEZDA SHEPOT OSENNEGO LESA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "559185031",
+      "id": "1415849219",
       "name_lat": "SCHASTLIVAJA ZVEZDA NOKTYURN",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -886,30 +904,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "683796163",
+      "id": "476328935",
       "name_lat": "SCHWARZ WOLF RUSSLAND BAFFY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1162710286",
-      "name_lat": "SCANDVIK YAPPIE",
+      "id": "310705780",
+      "name_lat": "SCHASTLIVAYA ZVEZDA TEONA",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "NORWICH TERRIER",
-      "total_shows": 19,
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1123649693",
-      "name_lat": "SCHASTLIVAYA ZVEZDA TEONA",
+      "id": "1912637415",
+      "name_lat": "SCHAST'E TJUHI MARMELADKA CHOCOLADKA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -931,12 +949,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1668899807",
+      "id": "730674132",
       "name_lat": "SCOTTISH COMANDOS ROZ MARI",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
+      "breed": "СИЛИХЕМ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "598192634",
+      "name_lat": "SCANDVIK WILDFIRE",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "160507642",
+      "name_lat": "SCHASTLIVY MIR DELISIYA",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1050225544",
+      "name_lat": "SCANDVIK IF I WANT",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -946,15 +990,6 @@
       "breed": "ПАРСОН СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "598192634",
-      "name_lat": "SCANDVIK WILDFIRE",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -976,21 +1011,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1770905496",
+      "id": "1750243549",
       "name_lat": "SCHAST'E TJUHI USLADA SHOKOLADE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "918159041",
+      "id": "279953639",
+      "name_lat": "SCARLET LAIT LEONHARD- NIKOLAUS FON'AEGON",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "156818377",
       "name_lat": "SCARLET O’HARA D’ARGUS ALSATIAN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1039,10 +1082,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1651039792",
+      "id": "321820933",
       "name_lat": "SCHASTIE EVROPY MARSEL",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1057,12 +1100,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "175490549",
-      "name_lat": "SCANDVIK IF I WANT",
+      "id": "333154916",
+      "name_lat": "SCANDVIK FANCY PANSY",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1084,12 +1127,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "401164081",
-      "name_lat": "SCHASTLIVAJA ZVEZDA SHEPOT OSENNEGO",
+      "id": "996501445",
+      "name_lat": "SCOTTISH COMANDOS ROMANTIC FLASH",
       "name_ru": "",
-      "breed": "БИГЛЬ /",
+      "breed": "СКАЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1111,21 +1154,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "194244674",
+      "id": "117461415",
       "name_lat": "SCHASTIE EVROPY D JAZZY COMET",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1090339865",
-      "name_lat": "SCANDVIK FANCY PANSY",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1147,15 +1181,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "919701842",
-      "name_lat": "SCOTTISH COMANDOS ROMANTIC FLASH",
-      "name_ru": "",
-      "breed": "SCOTTISH",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
       "id": "200585054",
       "name_lat": "SCHUBERT LOVE DU MONT DE L' AMOUR D' HATEA",
       "name_ru": "",
@@ -1165,10 +1190,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1958873996",
+      "id": "1253380969",
       "name_lat": "SCOTTISH GRAFFITI REVOLUTION WINDSOR STYLE",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "SCOTTISH TERRIER",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1219,12 +1244,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1674003091",
-      "name_lat": "SCHASTLIVY MIR DELISIYA",
+      "id": "1768398149",
+      "name_lat": "SCANDVIK FANNY SUNNY",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 24,
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1273,21 +1297,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1965983719",
-      "name_lat": "SCOTTISH COMANDOS ROZE MARY Изменения внесены по РЕШ ВК от 16.11.2022",
+      "id": "481690050",
+      "name_lat": "SCANDVIK YAGO",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "647293162",
-      "name_lat": "SCANDAL DE YASMIN- DREAMS",
+      "id": "781872974",
+      "name_lat": "SCANDAL DE YASMIN-DREAMS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1699283735",
+      "name_lat": "SCHASTIE IZ PITERA BAKSTON",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -1327,12 +1360,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "481690050",
-      "name_lat": "SCANDVIK YAGO",
+      "id": "219597833",
+      "name_lat": "SCOOTER SUN DELIGHT",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "NORWICH TERRIER",
-      "total_shows": 19,
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 46,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103968057",
+      "name_lat": "SCOTTISH COMANDOS ROZE MARY",
+      "name_ru": "",
+      "breed": "СКАЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1342,15 +1384,6 @@
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1443232880",
-      "name_lat": "SCANDVIK FANNY SUNNY",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1372,39 +1405,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "942643457",
+      "id": "1574695900",
       "name_lat": "SCANDVIK XANDRO",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "206893326",
+      "id": "1438291523",
       "name_lat": "SCHASTE PRINOSYASHCHAYA IZ STOLITSY URALA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
     },
     {
-      "id": "128917076",
+      "id": "1859517697",
       "name_lat": "SCHERRI DLYA SOZVEZDIYA DANAI S BEREGA DONA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1412787733",
-      "name_lat": "SCHAST'E TJUHI GORNY EDELVEIS",
+      "id": "1620806736",
+      "name_lat": "SCHAST`E TJUHI GORNY EDELVEIS",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1417,12 +1450,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1699283735",
-      "name_lat": "SCHASTIE IZ PITERA BAKSTON",
+      "id": "506324818",
+      "name_lat": "SCHOKOLADNOE DIVO CHARODEYKA",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1444,15 +1477,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "348592485",
-      "name_lat": "SCHWEPPES IZ FORTUNA MERDI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "353516592",
       "name_lat": "SCHASTIE ETO KUINMI",
       "name_ru": "",
@@ -1462,10 +1486,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "355196604",
+      "id": "1219001049",
       "name_lat": "SCHASTIE EVROPY SHEILA",
       "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД /",
+      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -1480,6 +1504,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "443198838",
+      "name_lat": "SCHWARZ WOLF RUSSLAND ANTEY (L-H)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
       "id": "556018842",
       "name_lat": "SCHASTLIVAJA ZVEZDA BENIDIKT",
       "name_ru": "",
@@ -1489,21 +1522,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "219597833",
-      "name_lat": "SCOOTER SUN DELIGHT",
+      "id": "1256386048",
+      "name_lat": "Scottish Impress Sauvage Dior, ch RUS",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 35,
-      "competition_dog_id": null
-    },
-    {
-      "id": "608198171",
-      "name_lat": "SCHOKOLADNOE DIVO CHARODEYKA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ /",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1525,10 +1549,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "975628675",
+      "id": "1698700487",
       "name_lat": "SCHOKOLADNOE DIVO ETNA OCHAROVANIE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1552,12 +1576,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1568155894",
+      "id": "1252936687",
       "name_lat": "SCOOBY DOBRY ROK",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН /",
+      "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "341700656",
+      "name_lat": "SCHYU ALARM",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1606,28 +1639,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1920624648",
-      "name_lat": "SCHWARZ WOLF RUSSLAND ANTEY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1659644728",
+      "id": "1913147078",
       "name_lat": "SCHNEIDER FEST TSVETAMIRA CHERNAYA ZHEMCHUZHINA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "724545231",
+      "id": "255347966",
       "name_lat": "SCHASTIE EVROPY GESSI",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1646,6 +1670,15 @@
       "name_lat": "SCHASTLIVY MIR MARIA MIRABELA",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "810867823",
+      "name_lat": "S.CONNERY IRISPRIDE KEEP",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ / AMERICAN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1696,10 +1729,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "822620263",
+      "id": "563661094",
       "name_lat": "SCOTTISH COMANDOS ROXETTE",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1711,15 +1744,6 @@
       "breed": "GERMAN SHEPHERD",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1256386048",
-      "name_lat": "Scottish Impress Sauvage Dior, ch RUS",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1741,12 +1765,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1252944896",
+      "id": "1342185853",
       "name_lat": "SCHASTE MOE NEFIRTITI",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1079741507",
+      "name_lat": "SCHNEIDER FEST AFRIKA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1759,19 +1792,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1079741507",
-      "name_lat": "SCHNEIDER FEST AFRIKA",
+      "id": "1230917226",
+      "name_lat": "SCHASTIE IZ PITERA VIVA MICHELLE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "375803754",
+      "id": "240857084",
       "name_lat": "SCHNEIDER FEST GOTIKA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1783,15 +1816,6 @@
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "257845709",
-      "name_lat": "SCHYU ALARM",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1827,7 +1851,7 @@
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1858,10 +1882,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "87831645",
+      "id": "1271894193",
       "name_lat": "SCHNEIDER FEST ARAGORN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1876,12 +1900,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1660134753",
+      "name_lat": "SCHASTIE EVROPY ENNI",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "315584466",
       "name_lat": "SCANDVIK LOVELAS",
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1749106175",
+      "name_lat": "SCHASTE MOE STARK",
+      "name_ru": "",
+      "breed": "КОРСО",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1903,12 +1944,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "922760584",
-      "name_lat": "SCHASTIE IZ PITERA BRAUNIT",
+      "id": "798045240",
+      "name_lat": "SCHASTIE ETO BRAVUSHKA",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "МОПС",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1966,19 +2006,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1660134753",
-      "name_lat": "SCHASTIE EVROPY ENNI",
-      "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "329088316",
+      "id": "737977562",
       "name_lat": "SCHNEIDER FEST CVETAMIRA CHERNAYA ZHEMCHUZHINA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1993,21 +2024,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1749106175",
-      "name_lat": "SCHASTE MOE STARK",
+      "id": "445830986",
+      "name_lat": "SCHWARZ ANDJEL HAUS MILANA",
       "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1912637415",
-      "name_lat": "SCHAST'E TJUHI MARMELADKA CHOCOLADKA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2020,10 +2042,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "708326866",
+      "id": "276573523",
       "name_lat": "SCANDVIK MERRY JERRY",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -2043,16 +2065,7 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ,КРАС НЫЙ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "798045240",
-      "name_lat": "SCHASTIE ETO BRAVUSHKA",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2088,14 +2101,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "618949307",
+      "id": "186881806",
       "name_lat": "SCANDVIK IRISH CREAM",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ ПШЕНИЧНЫЙ ТЕРЬЕР",
+      "breed": "ПШЕНИЧНЫЙ ТЕРЬЕР",
       "breed_en": "IRISH SOFT COATED WHEATEN TERRIER",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2107,6 +2120,15 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "804049912",
+      "name_lat": "SCHASTLIVAYA MARRI OT LOMONOSOVOY",
+      "name_ru": "СЧАСТЛИВАЯ МАРРИ ОТ ЛОМОНОСОВОЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2164,6 +2186,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "268354160",
+      "name_lat": "SCLAVENSIS SO SWANKY TUNES",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "120272710",
       "name_lat": "SCHASTLIVAJA ZVEZDA BERENESS",
       "name_ru": "",
@@ -2173,19 +2203,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1466693515",
+      "id": "448163130",
+      "name_lat": "S-CHRISTOPHE IZ IMPERII INES",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1435194391",
+      "name_lat": "SCANDVIK VERY SPECIAL INSIDE",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1004836276",
       "name_lat": "SCHEDRAYA DUSHA OT VALARIS",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1435102071",
+      "id": "1199719204",
       "name_lat": "SCOTTISH IMPRESS D'ORSAY LA DANDY",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed": "КЕРРИ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2218,15 +2266,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "4807834",
-      "name_lat": "SCHWARZ WOLF RUSSLAND ESENIA (L-H)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "498057897",
       "name_lat": "SCHESGARA",
       "name_ru": "",
@@ -2236,12 +2275,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "737951891",
+      "id": "424151290",
       "name_lat": "SCHESGARA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2308,10 +2347,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "382084715",
+      "id": "1062552418",
       "name_lat": "SCANDVIK NEXN IN LINE",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2389,15 +2428,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "443198838",
-      "name_lat": "SCHWARZ WOLF RUSSLAND ANTEY (L-H)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "844862715",
       "name_lat": "SCHWARZ WOLF RUSSLAND AGATA (L-H)",
       "name_ru": "",
@@ -2434,15 +2464,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1230917226",
-      "name_lat": "SCHASTIE IZ PITERA VIVA MICHELLE",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1198094419",
       "name_lat": "SCHASTLIVAJA ZVEZDA SIBIRIADA",
       "name_ru": "",
@@ -2461,10 +2482,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1071352523",
+      "id": "1697416642",
       "name_lat": "SCHIFFERДОН БРЕТОН ВЕКТРА",
       "name_ru": "",
-      "breed": "ЭПАНЬОЛЬ /",
+      "breed": "ЭПАНЬОЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2506,10 +2527,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1757545486",
+      "id": "331639758",
+      "name_lat": "SCOTTISH COMANDOS ROZE MARY Изменения внесены по РЕШ ВК от 16.11.2022",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1776943980",
+      "name_lat": "SCHEKOTLIVY VOPROS OT FOREST GIRTS",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "923967655",
       "name_lat": "SCHAST’E TJUHI USLADA SHOKOLADE",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2533,15 +2572,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1435194391",
-      "name_lat": "SCANDVIK VERY SPECIAL INSIDE",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1639837039",
       "name_lat": "SCHASTLIVY OBEREGV GABBI GIRL",
       "name_ru": "",
@@ -2551,12 +2581,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1489860454",
+      "id": "401412727",
       "name_lat": "SCARLET MON AMUR",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "BULLDOG FAWN, BRINDLE",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "491401131",
+      "name_lat": "SCHWARZ SCHILLING",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "885371299",
+      "name_lat": "SCOTTISH COMANDOS ROXETT",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР) / SCOTTISH",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2578,19 +2626,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "493569787",
-      "name_lat": "SCHWARZ SCHILLING",
+      "id": "1762449726",
+      "name_lat": "SCHEDRY DAR S LIPETSKOY SLOBODY",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ПУДЕЛЬ МАЛЫЙ (серебристый, абрикосовый)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1762449726",
-      "name_lat": "SCHEDRY DAR S LIPETSKOY SLOBODY",
+      "id": "1557848979",
+      "name_lat": "S.CONNERY STAR SHAINE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ (серебристый, абрикосовый)",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2605,10 +2653,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "447971954",
+      "id": "1279841267",
       "name_lat": "SCHASTLIVY MIR DIADEMA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2623,19 +2671,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "885371299",
-      "name_lat": "SCOTTISH COMANDOS ROXETT",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР) / SCOTTISH",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1243934378",
+      "id": "193022715",
       "name_lat": "SCANDVIK UNIQUE WAV",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2668,21 +2707,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "181724369",
+      "id": "966433644",
       "name_lat": "SCANDVIK POLAR DAWN",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "780097314",
-      "name_lat": "SCHEKOTLIVY VOPROS OT FOREST GIRTS",
+      "id": "1018741288",
+      "name_lat": "SCHASTYE NA LADOSHKE YARIK",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2875,6 +2913,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "19304106",
+      "name_lat": "SCHESGARA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР / LABRADOR",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1387464661",
       "name_lat": "SCHASTIE EVROPY DEYVI",
       "name_ru": "",
@@ -2920,6 +2966,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "179298298",
+      "name_lat": "SCHASTLIVCHIK RODZHER",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1730080401",
       "name_lat": "SCARLETT SMALLIE QUEEN",
       "name_ru": "",
@@ -2947,15 +3001,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "804049912",
-      "name_lat": "SCHASTLIVAYA MARRI OT LOMONOSOVOY",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "72848012",
       "name_lat": "Scotland Weyr Akira Saori, ch RUS",
       "name_ru": "",
@@ -2969,6 +3014,15 @@
       "name_lat": "SCHENA",
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ / BICHON",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1233106330",
+      "name_lat": "SCHASTIE EVROPY ELISSIA",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3010,6 +3064,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1985337964",
+      "name_lat": "SCHEDRAYA OSEN IS BERLINA LESA",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "568986912",
       "name_lat": "SCHUBERT LOVE DU MONT DE L' AMOUR D'HATEA",
       "name_ru": "",
@@ -3046,15 +3108,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1233106330",
-      "name_lat": "SCHASTIE EVROPY ELISSIA",
-      "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "486649374",
       "name_lat": "SCHATZ CHAROVNIT",
       "name_ru": "",
@@ -3082,19 +3135,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1488505467",
+      "id": "1182931951",
       "name_lat": "SCHWARZ WOLF RUSSLAND BAFFY (Д-Ш)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "452706431",
+      "id": "1100461475",
       "name_lat": "SCHWARZ WOLF RUSSLAND AGATA (Д-Ш)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3118,10 +3171,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "145408985",
+      "id": "514376589",
       "name_lat": "SCHNEIDER FEST GARDARIKA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3172,15 +3225,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "445830986",
-      "name_lat": "SCHWARZ ANDJEL HAUS MILANA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "138508632",
       "name_lat": "SCHASTYE DOMA ERBHOF CAMI",
       "name_ru": "",
@@ -3190,10 +3234,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "592489527",
+      "id": "447990902",
       "name_lat": "SCANDVIK QUELLE",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3271,10 +3315,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "520114193",
+      "id": "733348498",
       "name_lat": "SCHWARZ WOLF RUSSLAND DON",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3406,10 +3450,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "517318430",
+      "id": "696482466",
       "name_lat": "SCHUBERT LOVE",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3469,6 +3513,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1724165211",
+      "name_lat": "SCHEDRYY DAR IZ POLETA MECHTI",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "360025624",
       "name_lat": "SCARLETT ROYAL SUMMER JAM",
       "name_ru": "",
@@ -3478,10 +3530,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1247915995",
+      "id": "858790927",
+      "name_lat": "SCHELKUNCHIK ISTSELYAYUSCHIY SERDTSE IZ POLETA MECHTI",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "323439595",
       "name_lat": "SCHWARZENEGGER IZ KURGAN GRADA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3532,10 +3592,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1816079946",
+      "id": "1150326994",
       "name_lat": "SCHASTLIVAYA",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3545,6 +3605,24 @@
       "name_lat": "SCAZOCHNAYA",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1038530481",
+      "name_lat": "SCHASTYE V DOM",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1331815335",
+      "name_lat": "SCHASTIE OT USTINOVOI",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3622,10 +3700,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1078972658",
+      "id": "260826739",
       "name_lat": "SCERDTSE URALA FUNTIK",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3730,10 +3808,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "610849577",
+      "id": "1251687860",
       "name_lat": "SCANDVIK CARTE BLANCHE FOR SVELIZ",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3748,15 +3826,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1165840026",
-      "name_lat": "SCHASTYE V DOM",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1813555067",
       "name_lat": "SCHASTIE ETO VIVIEN",
       "name_ru": "",
@@ -3766,10 +3835,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1814355704",
+      "id": "1628650013",
       "name_lat": "SCHENHIN FON BAYTEN",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3928,15 +3997,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1179663527",
-      "name_lat": "SCHASTIE OT USTINOVOI",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "60030303",
       "name_lat": "SCHASTIE IZ PITERA EVANGELINA",
       "name_ru": "",
@@ -3946,10 +4006,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1105533996",
+      "id": "123736995",
       "name_lat": "SCHWARZ WOLF RUSSLAND ZLATA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,22 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ШИ",
-  "count": 618,
+  "count": 610,
   "dogs": [
     {
-      "id": "1310038616",
-      "name_lat": "ШИБЮРЛЕ ЦАРЕВНА СИЛА СИБИРИ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 66,
-      "competition_dog_id": null
-    },
-    {
-      "id": "922609301",
+      "id": "852235709",
       "name_lat": "ШИКАРНАЯ ШТУЧКА ФАР ИСТЕРН ХАНТЕР",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ШИКАРНАЯ ШТУЧКА ФАР ИСТЕРН ХАНТЕР",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -24,26 +15,17 @@
     {
       "id": "1193741815",
       "name_lat": "ШИК И ШАРМ КЕНДИ ДЕ МИ КОРАЗОН",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ КЕНДИ ДЕ МИ КОРАЗОН",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 46,
       "competition_dog_id": null
     },
     {
-      "id": "213857266",
-      "name_lat": "ШИТЦЛАНДИЯ ОГНЕЖКА",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 35,
-      "competition_dog_id": null
-    },
-    {
-      "id": "702618247",
+      "id": "1986160491",
       "name_lat": "ШИЛЛА ЛАЙН ПРАДА",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН ПРАДА",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -51,7 +33,7 @@
     {
       "id": "37483550",
       "name_lat": "ШИК ДЛЯ СЕВЕРНОГО СТИЛЯ",
-      "name_ru": "",
+      "name_ru": "ШИК ДЛЯ СЕВЕРНОГО СТИЛЯ",
       "breed": "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ",
       "breed_en": "CHIEN PARTICOLORE A POIL FRISE MEDIUM",
       "total_shows": 12,
@@ -60,16 +42,25 @@
     {
       "id": "1185945634",
       "name_lat": "ШИШКИН ШАРМ НАЗИЯ",
-      "name_ru": "",
+      "name_ru": "ШИШКИН ШАРМ НАЗИЯ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 43,
+      "total_shows": 48,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1666275272",
+      "name_lat": "ШИНИНГ СТАРДОГС РЕЙНОЛЬД",
+      "name_ru": "ШИНИНГ СТАРДОГС РЕЙНОЛЬД",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "816344760",
       "name_lat": "ШИЛЕНБАР АМАЗОНКА",
-      "name_ru": "",
+      "name_ru": "ШИЛЕНБАР АМАЗОНКА",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 18,
@@ -78,35 +69,53 @@
     {
       "id": "1601682501",
       "name_lat": "ШИШКИН ШАРМ КЮНГ МИ",
-      "name_ru": "",
+      "name_ru": "ШИШКИН ШАРМ КЮНГ МИ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "543736191",
-      "name_lat": "ШИНИНГ СТАРДОГС РЕЙНОЛЬД",
-      "name_ru": "",
-      "breed": "СОБАКА",
+      "id": "1802865428",
+      "name_lat": "ШИРОЙ КЕЙКИ ХЛОЕ (К/Х)",
+      "name_ru": "ШИРОЙ КЕЙКИ ХЛОЕ (К/Х)",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "1805760875",
+      "name_lat": "ШИШКИН ШАРМ ПИЖОН",
+      "name_ru": "ШИШКИН ШАРМ ПИЖОН",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "660035869",
+      "name_lat": "ШИКАРНАЯ ШТУЧКА",
+      "name_ru": "ШИКАРНАЯ ШТУЧКА",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 59,
+      "competition_dog_id": null
+    },
+    {
       "id": "1021522078",
       "name_lat": "ШИНДЖУ АКИРА СИЛЬВИЯ МАНГАНО",
-      "name_ru": "",
+      "name_ru": "ШИНДЖУ АКИРА СИЛЬВИЯ МАНГАНО",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "516340429",
+      "id": "1184422481",
       "name_lat": "ШИЛЛА ЛАЙН НЕКСТ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН НЕКСТ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -121,27 +130,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1881699625",
+      "id": "841982181",
       "name_lat": "ШИЛЛА ЛАЙН БАДДИ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН БАДДИ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "660035869",
-      "name_lat": "ШИКАРНАЯ ШТУЧКА",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 47,
-      "competition_dog_id": null
-    },
-    {
       "id": "1501846251",
       "name_lat": "ШИЛЛА ЛАЙН ГЕКТОР",
-      "name_ru": "",
+      "name_ru": "ШИЛЛА ЛАЙН ГЕКТОР",
       "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ (ВЫЖЛА)",
       "breed_en": "",
       "total_shows": 5,
@@ -150,26 +150,17 @@
     {
       "id": "1050664964",
       "name_lat": "ШИК И ШАРМ АМАДЕУС РОК МЕ",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ АМАДЕУС РОК МЕ",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 34,
       "competition_dog_id": null
     },
     {
-      "id": "1805760875",
-      "name_lat": "ШИШКИН ШАРМ ПИЖОН",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "427137379",
+      "id": "178832095",
       "name_lat": "ШИЛЛА ЛАЙН ПЕРСЕЙ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН ПЕРСЕЙ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -184,37 +175,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1802865428",
-      "name_lat": "ШИРОЙ КЕЙКИ ХЛОЕ (К/Х)",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "670753088",
+      "id": "241762360",
       "name_lat": "ШИК И ШАРМ УЛРИЧ ЛУН",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ШИК И ШАРМ УЛРИЧ ЛУН",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "970452257",
+      "id": "389129001",
       "name_lat": "ШИК ПЕТЕРБУРГ Ф. РАНЕВСКАЯ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШИК ПЕТЕРБУРГ Ф. РАНЕВСКАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1748575937",
+      "id": "253599658",
       "name_lat": "ШИК ШАРМ ЦАРИНА",
-      "name_ru": "",
-      "breed": "ФАЛЕН",
+      "name_ru": "ШИК ШАРМ ЦАРИНА",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -222,7 +204,7 @@
     {
       "id": "544626650",
       "name_lat": "ШИКАРНАЯ ШАНЕЛЬ ИЗ ОРУЖЕЙНОГО КРАЯ",
-      "name_ru": "",
+      "name_ru": "ШИКАРНАЯ ШАНЕЛЬ ИЗ ОРУЖЕЙНОГО КРАЯ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
@@ -231,7 +213,7 @@
     {
       "id": "856070788",
       "name_lat": "ШИКАРНАЯ ШТУЧКА ИЗ АЗОВ-СИТИ",
-      "name_ru": "",
+      "name_ru": "ШИКАРНАЯ ШТУЧКА ИЗ АЗОВ-СИТИ",
       "breed": "РУССКАЯ ЦВЕТНАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -240,43 +222,60 @@
     {
       "id": "1672700021",
       "name_lat": "ШИ МИ ЛОВ ОКСФОРД",
-      "name_ru": "",
+      "name_ru": "ШИ МИ ЛОВ ОКСФОРД",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "627432755",
+      "id": "274915087",
       "name_lat": "ШИЛЛА ЛАЙН СШЕРЛОК ХОЛМЕС",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН СШЕРЛОК ХОЛМЕС",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1606001277",
+      "name_lat": "ШИЛЛА ЛАЙН ВАРНА",
+      "name_ru": "",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЁРСТНАЯ",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1357552228",
-      "name_lat": "ШИКАРНАЯ МАРГО",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1687972191",
+      "id": "1439099875",
       "name_lat": "ШИЛЛА ЛАЙН ЧОЙЗ",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1722803611",
+      "name_lat": "ШИРЛИ РОУЗ ИРИС",
+      "name_ru": "ШИРЛИ РОУЗ ИРИС",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1587279797",
+      "name_lat": "ШИОМАРУ ХАУ ЛАКИ КЕН Ю ГЕТ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "1931937926",
       "name_lat": "ШИБЮРЛЕ ХАРРИСОН БЛЭК ЗАВЕТНОЙ СТРАСТИ",
-      "name_ru": "",
+      "name_ru": "ШИБЮРЛЕ ХАРРИСОН БЛЭК ЗАВЕТНОЙ СТРАСТИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 30,
@@ -285,7 +284,7 @@
     {
       "id": "1939157186",
       "name_lat": "ШИК НИКА ВЕНЦЕДОР",
-      "name_ru": "",
+      "name_ru": "ШИК НИКА ВЕНЦЕДОР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 18,
@@ -294,7 +293,7 @@
     {
       "id": "1688866812",
       "name_lat": "ШИНДЖУ АКИРА БЕНДЖАМИН",
-      "name_ru": "",
+      "name_ru": "ШИНДЖУ АКИРА БЕНДЖАМИН",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 7,
@@ -319,10 +318,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "105379907",
+      "id": "111325119",
       "name_lat": "ШИЛЛА ЛАЙН ЯХОНТ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН ЯХОНТ",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -330,7 +329,7 @@
     {
       "id": "1821885401",
       "name_lat": "ШИШКИН ШАРМ КИА РИО",
-      "name_ru": "",
+      "name_ru": "ШИШКИН ШАРМ КИА РИО",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 9,
@@ -339,7 +338,7 @@
     {
       "id": "753474384",
       "name_lat": "ШИКАРДОССОФФ ОСКАР",
-      "name_ru": "",
+      "name_ru": "ШИКАРДОССОФФ ОСКАР",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 10,
@@ -355,27 +354,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "159241787",
+      "name_lat": "ШИ МИ ЛОВ РАФИНАД",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1452638224",
       "name_lat": "ШИЛЛА ЛАЙН ПАРКЕР",
-      "name_ru": "",
+      "name_ru": "ШИЛЛА ЛАЙН ПАРКЕР",
       "breed": "ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1587279797",
-      "name_lat": "ШИОМАРУ ХАУ ЛАКИ КЕН Ю ГЕТ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1213774139",
       "name_lat": "ШИК И ШАРМ ДЕЛИ ХЕППИНЕС",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ ДЕЛИ ХЕППИНЕС",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 3,
@@ -400,10 +399,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1908651728",
+      "id": "1239453",
       "name_lat": "ШИК ХОУМ КИСС МИ ДЖЕНТЛ",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ШИК ХОУМ КИСС МИ ДЖЕНТЛ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -420,10 +419,10 @@
     {
       "id": "1297625527",
       "name_lat": "ШИВА ГВАРДИАН ОФ ЗЕ КВИН",
-      "name_ru": "",
+      "name_ru": "ШИВА ГВАРДИАН ОФ ЗЕ КВИН",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -432,7 +431,7 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -447,19 +446,19 @@
     {
       "id": "604922938",
       "name_lat": "ШИ МИ ЛОВ ЛАЙФ",
-      "name_ru": "",
+      "name_ru": "ШИ МИ ЛОВ ЛАЙФ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
       "id": "1103031238",
       "name_lat": "ШИК ПЕТЕРБУРГ ПЕСОК БАЛТИКИ",
-      "name_ru": "",
+      "name_ru": "ШИК ПЕТЕРБУРГ ПЕСОК БАЛТИКИ",
       "breed": "DACHSHUND",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -474,19 +473,10 @@
     {
       "id": "499754011",
       "name_lat": "ШИОМАРУ ГВЕН СТЭЙСИ",
-      "name_ru": "",
+      "name_ru": "ШИОМАРУ ГВЕН СТЭЙСИ",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "309463524",
-      "name_lat": "ШИРОЙ КЕЙКИ ХЛОЕ",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed_en": "SHIBA",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -501,35 +491,35 @@
     {
       "id": "1988806887",
       "name_lat": "ШИШКИН ШАРМ ЖАР-ПТИЦА",
-      "name_ru": "",
+      "name_ru": "ШИШКИН ШАРМ ЖАР-ПТИЦА",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "230263172",
+      "id": "1445154048",
       "name_lat": "ШИЛЛА ЛАЙН ТАЛИСМАН ТЭДДИ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН ТАЛИСМАН ТЭДДИ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1212254775",
+      "id": "1726825851",
       "name_lat": "ШИЛЛА ЛАЙН ЦЕЦИЛИЯ",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "321099394",
+      "id": "1349412460",
       "name_lat": "ШИК ПЕТЕРБУРГА ХЕМИНГУЭЙ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШИК ПЕТЕРБУРГА ХЕМИНГУЭЙ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -537,29 +527,29 @@
     {
       "id": "1961726110",
       "name_lat": "ШИК И ШАРМ ЦИРИЛЛА",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ ЦИРИЛЛА",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "159046526",
+      "id": "1329241826",
       "name_lat": "ШИЛЛА ЛАЙН СШЕРЛОК ХОЛМС",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН СШЕРЛОК ХОЛМС",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1986709962",
+      "id": "10655",
       "name_lat": "ШИГ ИЗ ДОМА ПРОНИНЫХ",
-      "name_ru": "",
+      "name_ru": "ШИГ ИЗ ДОМА ПРОНИНЫХ",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
+      "competition_dog_id": 10655
     },
     {
       "id": "552359777",
@@ -589,20 +579,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1722803611",
-      "name_lat": "ШИРЛИ РОУЗ ИРИС",
-      "name_ru": "",
+      "id": "583744602",
+      "name_lat": "Ширли Роуз Капитан Спэрроу",
+      "name_ru": "Ширли Роуз Капитан Спэрроу",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1293962895",
+      "id": "699549875",
       "name_lat": "ШИЛЛА ЛАЙН ИТАН",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1495817293",
+      "name_lat": "ШИ МИ ЛОВ ТРОЯ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -618,7 +615,7 @@
     {
       "id": "772345553",
       "name_lat": "ШИРО ЮКИ АВРОРА",
-      "name_ru": "",
+      "name_ru": "ШИРО ЮКИ АВРОРА",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -661,6 +658,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "774694955",
+      "name_lat": "Шинджу Акира Бенджиро Дар",
+      "name_ru": "Шинджу Акира Бенджиро Дар",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1650822548",
       "name_lat": "ШИОМАРУ БЕЛИВ ИН ДРИМ",
       "name_ru": "",
@@ -679,10 +684,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "271806001",
+      "id": "1367178797",
       "name_lat": "ШИЛЛА ЛАЙН ЧАРДАШ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН ЧАРДАШ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -724,21 +729,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "123720124",
+      "id": "1927122353",
       "name_lat": "ШИ ИЗ ЗЕ УАН",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "ШИ ИЗ ЗЕ УАН",
+      "breed": "ФОКСТЕРЬЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1497838586",
-      "name_lat": "ШИРО ЮКИ АРИАДНА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -757,6 +753,15 @@
       "breed": "ЛАЙКА ЗАПАДНОСИБИРСКАЯ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "133320076",
+      "name_lat": "ШИЛЛА ЛАЙН ЕВАНГЕЛИСТА",
+      "name_ru": "ШИЛЛА ЛАЙН ЕВАНГЕЛИСТА",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -789,62 +794,62 @@
     {
       "id": "649374659",
       "name_lat": "ШИКАРДОССОФФ БОНОПАРТЕ НАПОЛЕОНЕ",
-      "name_ru": "",
+      "name_ru": "ШИКАРДОССОФФ БОНОПАРТЕ НАПОЛЕОНЕ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "1527670998",
       "name_lat": "ШИОМАРУ ТУРН ИТ ИНТО ЛАВ",
-      "name_ru": "",
+      "name_ru": "ШИОМАРУ ТУРН ИТ ИНТО ЛАВ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "518646669",
+      "id": "1875720176",
       "name_lat": "ШИККО БОЙ ИЗ ИМПЕРИИ ИНЕС",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "name_ru": "ШИККО БОЙ ИЗ ИМПЕРИИ ИНЕС",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
       "id": "64312536",
       "name_lat": "ШИОМАРУ ГРЕТ ГЕТСБИ",
-      "name_ru": "",
+      "name_ru": "ШИОМАРУ ГРЕТ ГЕТСБИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1430747501",
+      "id": "1406689477",
       "name_lat": "ШИК ПЕТЕРБУРГ СЕВЕРНЫЙ ВЕТЕР",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШИК ПЕТЕРБУРГ СЕВЕРНЫЙ ВЕТЕР",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1702263513",
+      "id": "1503501946",
       "name_lat": "ШИВА ИЗ ДОМА КАРМАНОВОЙ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ШИВА ИЗ ДОМА КАРМАНОВОЙ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1164433193",
+      "id": "1006363607",
       "name_lat": "ШИКОШАЛУНИШКА МАКС ЛАВ МИШКА",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ШИКОШАЛУНИШКА МАКС ЛАВ МИШКА",
+      "breed": "КИНГ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -852,7 +857,7 @@
     {
       "id": "1365267171",
       "name_lat": "ШИШКИН ШАРМ КЮ БОК",
-      "name_ru": "",
+      "name_ru": "ШИШКИН ШАРМ КЮ БОК",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 5,
@@ -861,7 +866,7 @@
     {
       "id": "1469981689",
       "name_lat": "ШИК И ШАРМ РЭЙНБОУ ШАЙН",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ РЭЙНБОУ ШАЙН",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ФАЛЕН",
       "breed_en": "CONTINENTAL TOY SPANIEL PHALENE",
       "total_shows": 3,
@@ -870,7 +875,7 @@
     {
       "id": "1142069333",
       "name_lat": "ШИК И ШАРМ БЛЭК ЛЕДИ МИШЕЛЬ ШАРМАН",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ БЛЭК ЛЕДИ МИШЕЛЬ ШАРМАН",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 2,
@@ -879,28 +884,37 @@
     {
       "id": "1841244753",
       "name_lat": "ШИКО МОТО ПУГОВКА",
-      "name_ru": "",
+      "name_ru": "ШИКО МОТО ПУГОВКА",
       "breed": "DACHSHUND KANINCHEN",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "374127425",
+      "id": "1228632874",
+      "name_lat": "ШИКАРНАЯ ЧЕРНОБУРКА",
+      "name_ru": "ШИКАРНАЯ ЧЕРНОБУРКА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1682258972",
       "name_lat": "ШИНЖУ ОФ ЗЕ СИЛК РОАД ОФ РУССИА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "name_ru": "ШИНЖУ ОФ ЗЕ СИЛК РОАД ОФ РУССИА",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1536169469",
-      "name_lat": "ШИТОНУБА ЭНДЛЕСС ЧАРМ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 3,
+      "id": "296374573",
+      "name_lat": "ШИКАРНЫЙ РОМЕО",
+      "name_ru": "ШИКАРНЫЙ РОМЕО",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -922,18 +936,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1522652199",
-      "name_lat": "ШИЛЕВИ СИЛАЭР РИЧАРД ТРЭВОЛ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "784019074",
       "name_lat": "ШИК ОТ КУТЮР ИЗ МИМОЛЕТНОГО ВИДЕНИЯ",
-      "name_ru": "",
+      "name_ru": "ШИК ОТ КУТЮР ИЗ МИМОЛЕТНОГО ВИДЕНИЯ",
       "breed": "ПУДЕЛЬ СРЕДНИЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 11,
@@ -942,34 +947,16 @@
     {
       "id": "1474200505",
       "name_lat": "ШИТЦЛАНДИЯ ЕНКО",
-      "name_ru": "",
+      "name_ru": "ШИТЦЛАНДИЯ ЕНКО",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1627055755",
-      "name_lat": "ШИНАТОИНУ ДАИЧИ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1228632874",
-      "name_lat": "ШИКАРНАЯ ЧЕРНОБУРКА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "564803355",
       "name_lat": "ШИЛЕЛЕ КАЛТАМАН 2",
-      "name_ru": "",
+      "name_ru": "ШИЛЕЛЕ КАЛТАМАН 2",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 10,
@@ -978,16 +965,16 @@
     {
       "id": "1514042863",
       "name_lat": "ШИК МОДЕРН СУПРИМ",
-      "name_ru": "",
+      "name_ru": "ШИК МОДЕРН СУПРИМ",
       "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ШПИЦ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1154608823",
-      "name_lat": "ШИК И ШАРМ ВИКИ- НИКИ ТУГЕЗЕ ФОРЕВЕ",
-      "name_ru": "",
+      "id": "1419034047",
+      "name_lat": "ШИК И ШАРМ ВИКИ-НИКИ ТУГЕЗЕ ФОРЕВЕ",
+      "name_ru": "ШИК И ШАРМ ВИКИ-НИКИ ТУГЕЗЕ ФОРЕВЕ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 10,
@@ -996,7 +983,7 @@
     {
       "id": "1204097840",
       "name_lat": "ШИКАРНЫЙ БЛИК",
-      "name_ru": "",
+      "name_ru": "ШИКАРНЫЙ БЛИК",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 8,
@@ -1014,7 +1001,7 @@
     {
       "id": "1071952110",
       "name_lat": "ШИНИНГ СТАРДОГС КАЙЗА",
-      "name_ru": "",
+      "name_ru": "ШИНИНГ СТАРДОГС КАЙЗА",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 8,
@@ -1023,7 +1010,7 @@
     {
       "id": "928958771",
       "name_lat": "ШИКАРДОССОФФ БЕРНАРД ШОУ",
-      "name_ru": "",
+      "name_ru": "ШИКАРДОССОФФ БЕРНАРД ШОУ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
@@ -1032,7 +1019,7 @@
     {
       "id": "1647146426",
       "name_lat": "Шик и Шарм Ясна Перфект Симпле",
-      "name_ru": "",
+      "name_ru": "Шик и Шарм Ясна Перфект Симпле",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
       "breed_en": "",
       "total_shows": 12,
@@ -1048,10 +1035,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1480042501",
+      "id": "1701255960",
       "name_lat": "ШИКАРНАЯ ШАРЛОТА ИЗ СЕРДЦА МОЕГО",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР /",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1059,28 +1046,19 @@
     {
       "id": "1597675528",
       "name_lat": "ШИК МОДЕРН НИМБО",
-      "name_ru": "",
+      "name_ru": "ШИК МОДЕРН НИМБО",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ РЫЖИЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "263765654",
+      "id": "1270741775",
       "name_lat": "ШИКАРД ОТ ПАНДЫ ШАРМ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "ШИКАРД ОТ ПАНДЫ ШАРМ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "296374573",
-      "name_lat": "ШИКАРНЫЙ РОМЕО",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1095,16 +1073,24 @@
     {
       "id": "763384252",
       "name_lat": "ШИК И ШАРМ МЭДЖИК ТАЛИСМАН",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ МЭДЖИК ТАЛИСМАН",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
+      "id": "56312939",
+      "name_lat": "ШИРО ШАЙЕН",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1451361542",
       "name_lat": "ШИНДЖУ АКИРА АВРОРА АМБЕР ФЛОВЕР",
-      "name_ru": "",
+      "name_ru": "ШИНДЖУ АКИРА АВРОРА АМБЕР ФЛОВЕР",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 12,
@@ -1120,27 +1106,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "1081515867",
-      "name_lat": "ШИКА ИЗ СЕВЕРНОЙ ЛИГИ ЧЕМПИОНОВ",
+      "id": "1348700667",
+      "name_lat": "ШИБЮРЛЕ ГЛОРИАННА КВИН",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1934921454",
+      "name_lat": "ШИК И ШАРМ АВЕ МАРИЯ",
+      "name_ru": "ШИК И ШАРМ АВЕ МАРИЯ",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1120436303",
-      "name_lat": "ШИНАТОИНУ ДЖИНА",
-      "name_ru": "",
-      "breed": "АКИТА",
+      "id": "1955360711",
+      "name_lat": "ШИЛЛА ЛАЙН НОРД",
+      "name_ru": "ШИЛЛА ЛАЙН НОРД",
+      "breed": "ЛЕГАВАЯ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "1047355052",
       "name_lat": "ШИБЮРЛЕ КЭНДИ СВИТ",
-      "name_ru": "",
+      "name_ru": "ШИБЮРЛЕ КЭНДИ СВИТ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 10,
@@ -1156,73 +1150,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "1983053575",
+      "id": "1122240491",
       "name_lat": "ШИЛЛА ЛАЙН ЛАНСЕЛОТ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН ЛАНСЕЛОТ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "615365855",
+      "id": "945926351",
       "name_lat": "ШИК И ШАРМ АСТОН МАРТИН",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ШИК И ШАРМ АСТОН МАРТИН",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1886943658",
-      "name_lat": "ШИБЮРЛЕ ГЛОРИАННА КВИН",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "71949445",
       "name_lat": "ШИКАРДОС ИЗ ДИНАСТИИ КОНОЛС",
-      "name_ru": "",
+      "name_ru": "ШИКАРДОС ИЗ ДИНАСТИИ КОНОЛС",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1955360711",
-      "name_lat": "ШИЛЛА ЛАЙН НОРД",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "244812869",
       "name_lat": "ШИМАТТА САКУРА ФОКС ДЖОЛЛИТИ ( )",
-      "name_ru": "",
+      "name_ru": "ШИМАТТА САКУРА ФОКС ДЖОЛЛИТИ ( )",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1144849329",
+      "id": "1739117593",
       "name_lat": "ШИК ПЕТЕРБУРГ Ф. ДОСТОЕВСКИЙ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШИК ПЕТЕРБУРГ Ф. ДОСТОЕВСКИЙ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "205686282",
+      "id": "339283419",
       "name_lat": "ШИЛЕНБАР ДАНИЕЛЬ",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "name_ru": "ШИЛЕНБАР ДАНИЕЛЬ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -1248,7 +1224,7 @@
     {
       "id": "1388163656",
       "name_lat": "ШИОМАРУ ХАНА",
-      "name_ru": "",
+      "name_ru": "ШИОМАРУ ХАНА",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 5,
@@ -1264,18 +1240,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "833042128",
-      "name_lat": "ШИШКИН ДОМ РАЙСКАЯ ПТИЦА",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "123283509",
       "name_lat": "ШИШКИН ДОМ МЕДОВАЯ ЛАПА",
-      "name_ru": "",
+      "name_ru": "ШИШКИН ДОМ МЕДОВАЯ ЛАПА",
       "breed": "CAUCASIAN SHEPHERD",
       "breed_en": "",
       "total_shows": 4,
@@ -1284,7 +1251,7 @@
     {
       "id": "946070078",
       "name_lat": "ШИШКИН ШАРМ БЕРЕТА",
-      "name_ru": "",
+      "name_ru": "ШИШКИН ШАРМ БЕРЕТА",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 4,
@@ -1293,7 +1260,7 @@
     {
       "id": "1569874104",
       "name_lat": "ШИЛЛИНГ НА СЧАСТЬЕ С ВОСХОДА",
-      "name_ru": "",
+      "name_ru": "ШИЛЛИНГ НА СЧАСТЬЕ С ВОСХОДА",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 6,
@@ -1302,7 +1269,7 @@
     {
       "id": "1371628132",
       "name_lat": "ШИКАРНЫЙ ШЕРЛОК",
-      "name_ru": "",
+      "name_ru": "ШИКАРНЫЙ ШЕРЛОК",
       "breed": "GERMAN SPITZ",
       "breed_en": "",
       "total_shows": 4,
@@ -1318,37 +1285,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1198352994",
+      "id": "1500557923",
       "name_lat": "ШИК И ШАРМ МАРТИН ИДЕН НЕВЕР ГИВ АП",
-      "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "name_ru": "ШИК И ШАРМ МАРТИН ИДЕН НЕВЕР ГИВ АП",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1712924648",
+      "id": "1955844276",
       "name_lat": "ШИЛЛА ЛАЙН НИКОЛЬ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН НИКОЛЬ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1579842127",
-      "name_lat": "ШИОМАРУ ДЕНКО НИ СОРА МИСТИК ФЭИХТ ОФ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "251888771",
       "name_lat": "ШИНИНГ СТАРДОГС КОКО ШАНЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ШИНИНГ СТАРДОГС КОКО ШАНЕЛЬ",
       "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "555415959",
+      "name_lat": "ШИЛЛА ЛАЙН НИЦЦА",
+      "name_ru": "ШИЛЛА ЛАЙН НИЦЦА",
+      "breed": "ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1356,7 +1323,7 @@
     {
       "id": "958830740",
       "name_lat": "ШИЛЕЛЕ МАЛИКА",
-      "name_ru": "",
+      "name_ru": "ШИЛЕЛЕ МАЛИКА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -1365,7 +1332,7 @@
     {
       "id": "44216259",
       "name_lat": "ШИКАРНАЯ ШТУЧКА ШЕРИ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ШИКАРНАЯ ШТУЧКА ШЕРИ ЛЕДИ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
@@ -1374,19 +1341,10 @@
     {
       "id": "168434478",
       "name_lat": "ШИЛЛА ЛАЙН СШАТЗИ СЕБАСТИАН",
-      "name_ru": "",
+      "name_ru": "ШИЛЛА ЛАЙН СШАТЗИ СЕБАСТИАН",
       "breed": "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "555415959",
-      "name_lat": "ШИЛЛА ЛАЙН НИЦЦА",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1419,10 +1377,18 @@
     {
       "id": "1108841409",
       "name_lat": "ШИОМАРУ РИНГ ОФ ФАЕР",
-      "name_ru": "",
+      "name_ru": "ШИОМАРУ РИНГ ОФ ФАЕР",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1635424672",
+      "name_lat": "ШИОМАРУ ВИЗАРД ОФ ОЗ",
+      "name_ru": "ШИОМАРУ ВИЗАРД ОФ ОЗ",
+      "breed": "Сиба",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1432,6 +1398,15 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9293161",
+      "name_lat": "ШИККИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1446,28 +1421,10 @@
     {
       "id": "1595715775",
       "name_lat": "ШИКАРНАЯ ДЖЕССИКА",
-      "name_ru": "",
+      "name_ru": "ШИКАРНАЯ ДЖЕССИКА",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "56312939",
-      "name_lat": "ШИРО ШАЙЕН",
-      "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1100715240",
-      "name_lat": "ШИН НО КАМИ НО РИКИ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1482,37 +1439,19 @@
     {
       "id": "1086938803",
       "name_lat": "ШИГАНЭ ТАЙНА МОЕЙ ДУШИ",
-      "name_ru": "",
+      "name_ru": "ШИГАНЭ ТАЙНА МОЕЙ ДУШИ",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1539977844",
-      "name_lat": "ШИВАРА ИЗ СВЕТЛОГО ДОМА",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1627787954",
+      "id": "624547236",
       "name_lat": "ШИ'С МАЙ ДРИМ ИЗ ДОМА ЛАНКАСТЕР",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ШИ'С МАЙ ДРИМ ИЗ ДОМА ЛАНКАСТЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "69766864",
-      "name_lat": "ШИКАРНАЯ ШТУЧКА ШЕРРИ ГОЛД ЛЕДИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1525,18 +1464,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "250880944",
-      "name_lat": "ШИОМАРУ САЕМИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "170189379",
       "name_lat": "ШИШКИН ШАРМ АМУР",
-      "name_ru": "",
+      "name_ru": "ШИШКИН ШАРМ АМУР",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
       "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
       "total_shows": 6,
@@ -1545,55 +1475,53 @@
     {
       "id": "414402902",
       "name_lat": "ШИОМАРУ КОНСТЕЛЛАТИОН ТУ ИЛОРИ",
-      "name_ru": "",
+      "name_ru": "ШИОМАРУ КОНСТЕЛЛАТИОН ТУ ИЛОРИ",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "657314097",
-      "name_lat": "ШИКАРНАЯ ШТУЧКА ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 9,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1726682272",
       "name_lat": "ШИК БЛЕСК КРАСОТА ОТ НАТАЛИ ТЕРРА",
-      "name_ru": "",
+      "name_ru": "ШИК БЛЕСК КРАСОТА ОТ НАТАЛИ ТЕРРА",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
+      "id": "1737421217",
+      "name_lat": "ШИЛЛА ЛАЙН ИСКРА",
+      "name_ru": "",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "769983705",
       "name_lat": "ШИКАРНАЯ ШТУЧКА ИЗ СТАРОЙ ШУИ",
-      "name_ru": "",
+      "name_ru": "ШИКАРНАЯ ШТУЧКА ИЗ СТАРОЙ ШУИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1683386322",
-      "name_lat": "ШИКАТАН ДЕ ДЕЛАЛИНИ",
+      "id": "655241224",
+      "name_lat": "ШИЛЕВИ СИЛАЭР О'МЭЛЛИ КЛЭР",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЕР",
-      "breed_en": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1779208860",
-      "name_lat": "ШИОМАРУ ОНЕ ИН А МИЛЛИОН",
-      "name_ru": "",
+      "id": "1605411440",
+      "name_lat": "ШИОМАРУ КВИН ОФ ДРАГОНС",
+      "name_ru": "ШИОМАРУ КВИН ОФ ДРАГОНС",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1617,7 +1545,7 @@
     {
       "id": "129400797",
       "name_lat": "ШИК МОДЕРН ЧИЛИ ПЕППЕР",
-      "name_ru": "",
+      "name_ru": "Шик Модерн Чили Пеппер",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
@@ -1633,11 +1561,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "101249384",
-      "name_lat": "ШИЛЛА ЛАЙН ЕВАНГЕЛИСТА",
+      "id": "837091456",
+      "name_lat": "ШИРЛИ РОУЗ АДЭЛАРД",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1653,34 +1580,24 @@
     {
       "id": "318497807",
       "name_lat": "ШИК И ШАРМ МОНА ЛИЗА ФЕЙВОРИТ МАЙ ЛУУК",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ МОНА ЛИЗА ФЕЙВОРИТ МАЙ ЛУУК",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ-",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "9293161",
-      "name_lat": "ШИККИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1470132029",
+      "id": "331756182",
       "name_lat": "ШИК И ШАРМ ЯНУАР ЖУА ДЕ ВИВР",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ – ПАПИЙОН",
-      "breed_en": "",
-      "total_shows": 4,
+      "name_ru": "ШИК И ШАРМ ЯНУАР ЖУА ДЕ ВИВР",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1897454128",
       "name_lat": "ШИЛЛА ЛАЙН ЦЕНТЕРИЯ",
-      "name_ru": "",
+      "name_ru": "ШИЛЛА ЛАЙН ЦЕНТЕРИЯ",
       "breed": "ВЫЖЛА",
       "breed_en": "",
       "total_shows": 3,
@@ -1696,10 +1613,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "148120440",
+      "id": "539049629",
       "name_lat": "ШИРОТА ДУШИ С КРАСНОГО ЯРА",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН /",
+      "name_ru": "ШИРОТА ДУШИ С КРАСНОГО ЯРА",
+      "breed": "ДАЛМАТИН",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1725,7 +1642,7 @@
     {
       "id": "1278395697",
       "name_lat": "ШИШКИН ШАРМ ЖЕМЧУЖИНА РОССИИ",
-      "name_ru": "",
+      "name_ru": "ШИШКИН ШАРМ ЖЕМЧУЖИНА РОССИИ",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ-",
       "breed_en": "",
       "total_shows": 4,
@@ -1743,7 +1660,7 @@
     {
       "id": "635373704",
       "name_lat": "ШИНАТОИНУ ИНАРИ ХОШИ",
-      "name_ru": "",
+      "name_ru": "ШИНАТОИНУ ИНАРИ ХОШИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -1752,7 +1669,7 @@
     {
       "id": "1895788199",
       "name_lat": "ШИКО МОН АМИ СИРИУС",
-      "name_ru": "",
+      "name_ru": "ШИКО МОН АМИ СИРИУС",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -1761,16 +1678,43 @@
     {
       "id": "698227048",
       "name_lat": "ШИТЦЛАНДИЯ ЕВА ТВИГГИ",
-      "name_ru": "",
+      "name_ru": "ШИТЦЛАНДИЯ ЕВА ТВИГГИ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1151274200",
+      "name_lat": "ШИОМАРУ Ю АРЕ ЗЕ ОНЛИ ОН",
+      "name_ru": "ШИОМАРУ Ю АРЕ ЗЕ ОНЛИ ОН",
+      "breed": "Сиба",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1619278191",
+      "name_lat": "ШИЭЛД АГНИ",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1187098460",
+      "name_lat": "ШИОМАРУ ТЕЙЛОР РЕНЕ",
+      "name_ru": "ШИОМАРУ ТЕЙЛОР РЕНЕ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "27859108",
       "name_lat": "ШИК И ШАРМ ЖЭ АН КУП ДЕ ФОДР",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ ЖЭ АН КУП ДЕ ФОДР",
       "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ-",
       "breed_en": "",
       "total_shows": 4,
@@ -1779,17 +1723,25 @@
     {
       "id": "599407617",
       "name_lat": "ШИЛЛА ЛАЙН ЯХРОМА",
-      "name_ru": "",
+      "name_ru": "ШИЛЛА ЛАЙН ЯХРОМА",
       "breed": "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "515197039",
+      "id": "1324208764",
+      "name_lat": "ШИШКИН ШАРМ БЕРЕТТА",
+      "name_ru": "ШИШКИН ШАРМ БЕРЕТТА",
+      "breed": "ЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -)",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1354382771",
       "name_lat": "ШИЛА ФОМ АЛИХЕЛЬ ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ШИЛА ФОМ АЛИХЕЛЬ ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1800,25 +1752,16 @@
       "name_ru": "",
       "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1187098460",
-      "name_lat": "ШИОМАРУ ТЕЙЛОР РЕНЕ",
-      "name_ru": "",
-      "breed": "СИБА",
+      "id": "363604966",
+      "name_lat": "ШИКАРНО НАРЯДНАЯ ИЗ ТВЕРСКОЙ СКАЗКИ",
+      "name_ru": "ШИКАРНО НАРЯДНАЯ ИЗ ТВЕРСКОЙ СКАЗКИ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "583096253",
-      "name_lat": "ШИЛЛА ЛАЙН ИСКРА",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1840,10 +1783,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1867144772",
+      "id": "1240643825",
       "name_lat": "ШИКО МОН АМИ СТЕФАНИ",
-      "name_ru": "",
-      "breed": "БИВЕР ТЕРЬЕР /",
+      "name_ru": "ШИКО МОН АМИ СТЕФАНИ",
+      "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1851,7 +1794,7 @@
     {
       "id": "1185124503",
       "name_lat": "ШИШИО КАТАШИ",
-      "name_ru": "",
+      "name_ru": "ШИШИО КАТАШИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -1876,10 +1819,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "974606583",
+      "id": "1181098043",
       "name_lat": "ШИЛЛА ЛАЙН ВИКТОРИЯ",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1894,10 +1837,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "225159729",
+      "id": "417408557",
       "name_lat": "ШИЛЛА ЛАЙН РОДЕРИКА",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН РОДЕРИКА",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1905,34 +1848,42 @@
     {
       "id": "1655614594",
       "name_lat": "ШИНО НО КАМИ НО РИКИ",
-      "name_ru": "",
+      "name_ru": "ШИНО НО КАМИ НО РИКИ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1405069156",
+      "name_lat": "ШИК И ШАРМ АМУРА ДЕ ФЭНСИ",
+      "name_ru": "ШИК И ШАРМ АМУРА ДЕ ФЭНСИ",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ-ФАЛЕН",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1625100847",
       "name_lat": "ШИКАРНАЯ ОСОБА",
-      "name_ru": "",
+      "name_ru": "ШИКАРНАЯ ОСОБА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "524196924",
+      "id": "373594934",
       "name_lat": "ШИК И ШАРМ ЭМИЛИ ФЕСТ ЛЕДИ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ - ПАПИЙОН",
+      "name_ru": "ШИК И ШАРМ ЭМИЛИ ФЕСТ ЛЕДИ",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "276135541",
       "name_lat": "ШИНАТОИНУ ДАЙХИМЕ",
-      "name_ru": "",
+      "name_ru": "ШИНАТОИНУ ДАЙХИМЕ",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 4,
@@ -1943,15 +1894,6 @@
       "name_lat": "ШИККИ",
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1609114552",
-      "name_lat": "ШИНАТОИНУ ДАЙТАН",
-      "name_ru": "",
-      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1968,19 +1910,10 @@
     {
       "id": "582276337",
       "name_lat": "ШИКАРНАЯ ЛЕДИ",
-      "name_ru": "",
+      "name_ru": "ШИКАРНАЯ ЛЕДИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1386586457",
-      "name_lat": "Шиомару Киба",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2020,19 +1953,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "818499425",
+      "id": "140319932",
       "name_lat": "ШИКАРНАЯ ЗВЕЗДА МИСС ТЕСЛА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "name_ru": "ШИКАРНАЯ ЗВЕЗДА МИСС ТЕСЛА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "129938099",
+      "id": "1542179610",
       "name_lat": "ШИНИНГ СТАРДОГС ЛЕЙЛА",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2040,7 +1973,7 @@
     {
       "id": "1416605352",
       "name_lat": "ШИК И ШАРМ ГЛЕДИ БИАТРИС Ж'АДОР",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ ГЛЕДИ БИАТРИС Ж'АДОР",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 4,
@@ -2049,7 +1982,7 @@
     {
       "id": "685182777",
       "name_lat": "ШИМФ ЛАЙН АЛЬТЕР ЭГО",
-      "name_ru": "",
+      "name_ru": "ШИМФ ЛАЙН АЛЬТЕР ЭГО",
       "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
@@ -2065,19 +1998,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "76303732",
+      "id": "773288097",
       "name_lat": "ШИК ИЗ ДОНСКОЙ ЛИБЕРИИ ДЛЯ СЕЛИОНА ПРАЙМ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "172938314",
-      "name_lat": "ШИОМАРУ Ю АРЕ ЗЕ ОНЛИ ОН",
-      "name_ru": "",
-      "breed": "Сиба / SHIBA",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2085,19 +2009,10 @@
     {
       "id": "1271798979",
       "name_lat": "ШИКАРДОССОФФ БАВАРИЯ",
-      "name_ru": "",
+      "name_ru": "ШИКАРДОССОФФ БАВАРИЯ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1605411440",
-      "name_lat": "ШИОМАРУ КВИН ОФ ДРАГОНС",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2119,10 +2034,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1570312085",
+      "id": "66215610",
       "name_lat": "ШИККОМАРУ АРЧИ ЗУН",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ШИККОМАРУ АРЧИ ЗУН",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2164,19 +2079,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "363604966",
-      "name_lat": "ШИКАРНО НАРЯДНАЯ ИЗ ТВЕРСКОЙ СКАЗКИ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "509350396",
+      "id": "167519257",
       "name_lat": "ШИК БЛЕСК КРАСОТА БУСИНКА ЖЕМЧУЖНАЯ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2191,19 +2097,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1686201871",
+      "id": "1520129598",
       "name_lat": "ШИНКОРИ САН",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1032690286",
-      "name_lat": "ШИЭЛД АГНИ",
-      "name_ru": "",
-      "breed": "SCHNAUZER BLACK ШНАУЦЕР ЧЁРНЫЙ /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2227,21 +2124,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "285870152",
-      "name_lat": "ШИЭЛД АГНИ",
+      "id": "1579842127",
+      "name_lat": "ШИОМАРУ ДЕНКО НИ СОРА МИСТИК ФЭИХТ ОФ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "159241787",
-      "name_lat": "ШИ МИ ЛОВ РАФИНАД",
+      "id": "645381850",
+      "name_lat": "ШИНОБУ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "АКИТА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2254,10 +2151,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "732740940",
+      "id": "733109462",
       "name_lat": "ШИКАРНЫЙ ПАРЕНЬ ШТУЧНЫЙ ЭКЗЕМПЛЯР",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "name_ru": "ШИКАРНЫЙ ПАРЕНЬ ШТУЧНЫЙ ЭКЗЕМПЛЯР",
+      "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2265,7 +2162,7 @@
     {
       "id": "399121491",
       "name_lat": "ШИВАВА ПРЕСТИЖ ИРОН",
-      "name_ru": "",
+      "name_ru": "ШИВАВА ПРЕСТИЖ ИРОН",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -2274,7 +2171,7 @@
     {
       "id": "3432052",
       "name_lat": "ШИЛЛА ЛАЙН ЗЛАТА",
-      "name_ru": "",
+      "name_ru": "ШИЛЛА ЛАЙН ЗЛАТА",
       "breed": "ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -2283,7 +2180,7 @@
     {
       "id": "98443519",
       "name_lat": "ШИРЕЛЬ ЛАУРА",
-      "name_ru": "",
+      "name_ru": "ШИРЕЛЬ ЛАУРА",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
@@ -2292,7 +2189,7 @@
     {
       "id": "114139069",
       "name_lat": "ШИК МОДЕРН САМО СОВЕРШЕНСТВО",
-      "name_ru": "",
+      "name_ru": "ШИК МОДЕРН САМО СОВЕРШЕНСТВО",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -2326,9 +2223,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "739693661",
+      "name_lat": "ШИЛЛА ЛАЙН ХАРЛЕЙ",
+      "name_ru": "",
+      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1329373961",
+      "name_lat": "ШИЛЕНБАР БРИДЖИДА",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "441720917",
       "name_lat": "ШИНАТОИНУ МИЙА",
-      "name_ru": "",
+      "name_ru": "ШИНАТОИНУ МИЙА",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
@@ -2337,7 +2251,7 @@
     {
       "id": "112173557",
       "name_lat": "ШИК ПЕТЕРБУРГ ОДА РАДОСТИ",
-      "name_ru": "",
+      "name_ru": "ШИК ПЕТЕРБУРГ ОДА РАДОСТИ",
       "breed": "ЭРДЕЛЬТЕРЬЕР CТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -2346,7 +2260,7 @@
     {
       "id": "984544592",
       "name_lat": "ШИНЬ-Ю СЕЙ БИТЭКИ ХИБИ",
-      "name_ru": "",
+      "name_ru": "ШИНЬ-Ю СЕЙ БИТЭКИ ХИБИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
@@ -2362,10 +2276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1957348293",
+      "id": "1148380196",
       "name_lat": "ШИКО",
       "name_ru": "",
-      "breed": "СТАФ. БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2425,10 +2339,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1896927044",
+      "id": "763883466",
       "name_lat": "ШИК ПЕТЕРБУРГ ОЛИВКА С КОСТОЧКОЙ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2470,6 +2384,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "184520816",
+      "name_lat": "ШИНЬ-Ю СЕЙ КАРРИ- ЙОРОКОБИ НО МЭГАМИ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "905401830",
       "name_lat": "ШИРЛИ РОУЗ АРИЭННА",
       "name_ru": "",
@@ -2492,15 +2414,6 @@
       "name_lat": "Шиомару А'Скай Фулл оф Старс",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1934921454",
-      "name_lat": "ШИК И ШАРМ АВЕ МАРИЯ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2533,10 +2446,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "273741947",
+      "id": "236289074",
       "name_lat": "ШИНСИЛЬ ЛЕДИ ОТ ПАНДЫ ШАРМ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "ШИНСИЛЬ ЛЕДИ ОТ ПАНДЫ ШАРМ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2569,15 +2482,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "645381850",
-      "name_lat": "ШИНОБУ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "453928884",
       "name_lat": "ШИН",
       "name_ru": "",
@@ -2589,7 +2493,7 @@
     {
       "id": "1891052009",
       "name_lat": "ШИКАРНО СЛОЖЕН ШКЕТ ИЗ МЫШКИНОГО ДОМА",
-      "name_ru": "",
+      "name_ru": "ШИКАРНО СЛОЖЕН ШКЕТ ИЗ МЫШКИНОГО ДОМА",
       "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "DACHSHUND MINIATURE SMOOTH-HAIRED",
       "total_shows": 3,
@@ -2605,10 +2509,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1391148007",
+      "id": "892274854",
       "name_lat": "ШИКАРНАЯ ШТУЧКА АЛЕКСАНДРА",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2627,15 +2531,6 @@
       "name_lat": "ШИБЮРЛЕ ЧЕРРИ БЛЭК",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "55263464",
-      "name_lat": "ШИКАРДОССОФФ БАРСЕЛОНА",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2677,10 +2572,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "3048752",
+      "id": "515748869",
       "name_lat": "ШИКО МОН АМИ МИШЕЛЬ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2731,10 +2626,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "860717478",
+      "id": "503399258",
       "name_lat": "ШИЛЛА ЛАЙН НЕКСТ (НАЙТ)",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2857,36 +2752,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1538215651",
-      "name_lat": "ШИОМАРУ ГВЕН СТЕЙСИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "SHIBA",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "316864592",
-      "name_lat": "ШИВА ОБЕРФРАУ ФРОМ ФОРТ ОГИР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1949972456",
-      "name_lat": "ШИШКИН ШАРМ ВЕРСАЛЬ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1472723492",
       "name_lat": "ШИФБЕРГ ХОФ ФИТТА",
-      "name_ru": "",
+      "name_ru": "ШИФБЕРГ ХОФ ФИТТА",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
       "total_shows": 3,
@@ -2929,20 +2797,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1188457251",
-      "name_lat": "ШИЛЛА ЛАЙН СШЕРЛОК ХОЛМEС",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "950392702",
       "name_lat": "ШИЛЕВИ СИЛАЭР ДЭН ИСТЭН ЛОЙС",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1717389952",
+      "name_lat": "ШИККИ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2983,10 +2850,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1679253595",
+      "id": "1457709223",
       "name_lat": "ШИЛЛА ЛАЙН ХАКСЛИ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН ХАКСЛИ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3010,15 +2877,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1623037741",
-      "name_lat": "ШИК БЛЕСК ЕНИСЕЙСКИЙ БОМОНД",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1176505595",
       "name_lat": "ШИВОРАНА МЕРОНИ ЭЛЬ",
       "name_ru": "",
@@ -3028,17 +2886,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "129619435",
-      "name_lat": "ШИК И ШАРМ ЦАРИНА",
+      "id": "1623037741",
+      "name_lat": "ШИК БЛЕСК ЕНИСЕЙСКИЙ БОМОНД",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1917689797",
-      "name_lat": "ШИВА- БОГИНЯ",
+      "id": "376516377",
+      "name_lat": "ШИВА-БОГИНЯ",
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
@@ -3055,10 +2913,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1518246431",
+      "id": "1232483214",
       "name_lat": "ШИК-ТО БЕЛЬ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3069,6 +2927,23 @@
       "name_ru": "",
       "breed": "ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "222226510",
+      "name_lat": "ШИЛЛА ЛАЙН НАЙК",
+      "name_ru": "ШИЛЛА ЛАЙН НАЙК",
+      "breed": "ЛЕГАВАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "201054402",
+      "name_lat": "ШИКАРДОС СОФФ БОНОПАРТЕ НАПОЛЕОНЕ",
+      "name_ru": "",
+      "breed": "CAVALIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3091,19 +2966,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1780075178",
-      "name_lat": "ШИБЮРЛЕ ОЛИВЕР ТВИСТ",
+      "id": "424093899",
+      "name_lat": "ШИЛЛА ЛАЙН ТИФАНИ",
       "name_ru": "",
-      "breed": "МАЛЫЙ НЕМЕЦКИЙ",
+      "breed": "ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "406863482",
-      "name_lat": "ШИЛЛА ЛАЙН ТИФАНИ",
+      "id": "9741049",
+      "name_lat": "ШИЛЛА ЛАЙН БОСС",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ /",
+      "breed": "ЛЕГАВАЯ / HUNGARIAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1780075178",
+      "name_lat": "ШИБЮРЛЕ ОЛИВЕР ТВИСТ",
+      "name_ru": "",
+      "breed": "МАЛЫЙ НЕМЕЦКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3127,27 +3011,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "9741049",
-      "name_lat": "ШИЛЛА ЛАЙН БОСС",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ / HUNGARIAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1040090919",
-      "name_lat": "ШИОМАРУ МИКАГЕМАРУ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "AKITA",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1424195200",
       "name_lat": "ШИРО ЮКИ ХИТОШИ ЙОШИКО",
-      "name_ru": "",
+      "name_ru": "ШИРО ЮКИ ХИТОШИ ЙОШИКО",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
@@ -3163,19 +3029,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "361616422",
+      "id": "1573479850",
       "name_lat": "ШИЛЛА ЛАЙН ЦАРЬ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН ЦАРЬ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1494061791",
+      "id": "868359671",
       "name_lat": "ШИШКИН ШАРМ ИЛЬЯ МУРОМЕЦ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ –",
+      "name_ru": "ШИШКИН ШАРМ ИЛЬЯ МУРОМЕЦ",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3201,17 +3067,17 @@
     {
       "id": "1466413889",
       "name_lat": "ШИММЕР ОФ ГЭЛЭКСИ",
-      "name_ru": "",
+      "name_ru": "ШИММЕР ОФ ГЭЛЭКСИ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "595227973",
+      "id": "262923164",
       "name_lat": "ШИ ВА ВА ИЗ ГОРОДА ЧЕРНОГО ЛИСА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ШИ ВА ВА ИЗ ГОРОДА ЧЕРНОГО ЛИСА",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3221,15 +3087,6 @@
       "name_lat": "ШИРО ЮКИКО",
       "name_ru": "",
       "breed": "СИБА / SHIBA",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "316919730",
-      "name_lat": "ШИЛЛА ЛАЙН НАЙК",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ / HUNGARIAN",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3262,10 +3119,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1843325930",
+      "id": "1219966523",
       "name_lat": "ШИ МИ ЛАВ ЗЕВС",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3289,18 +3146,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1010901291",
-      "name_lat": "ШИН СЕЙКАТСУ БИДЗЭН",
+      "id": "378709603",
+      "name_lat": "ШИК МОДЕРН РОККО- КО",
       "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "143765986",
       "name_lat": "ШИНАМУН ДЕЙ ЭЛИТ БРАНКО",
-      "name_ru": "",
+      "name_ru": "ШИНАМУН ДЕЙ ЭЛИТ БРАНКО",
       "breed": "ЛАГОТТО",
       "breed_en": "",
       "total_shows": 3,
@@ -3334,10 +3190,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "516448258",
+      "name_lat": "ШИНА",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "125701588",
       "name_lat": "ШИРИН",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1925278505",
+      "name_lat": "ШИЛЛА ЛАЙН ЗИППО",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ / HUNGARIAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1473999014",
+      "name_lat": "ШИЛЕВИ СИЛАЭР РЭММИ ДЖО ЭВАНС",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3415,6 +3298,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "173276639",
+      "name_lat": "ШИОМАРУ А СКАЙ ФУЛЛ ОФ СТАРС",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "149003466",
       "name_lat": "ШИОМАРУ КВИМБИ КЕРРИ",
       "name_ru": "",
@@ -3433,11 +3325,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1925278505",
-      "name_lat": "ШИЛЛА ЛАЙН ЗИППО",
+      "id": "1802083770",
+      "name_lat": "ШИЛЕЛЕ ТАМЕРЛАН",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ / HUNGARIAN",
-      "breed_en": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1100057674",
+      "name_lat": "ШИЛЕЛЕ ПЕРИ БУДУР",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3550,15 +3449,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "26654979",
-      "name_lat": "ШИОМАРУ НАРУТО УЗУМАКИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "94749592",
       "name_lat": "ШИЛЕНБАР А Я КРАСОТКА",
       "name_ru": "",
@@ -3595,10 +3485,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1145497819",
+      "id": "437353751",
       "name_lat": "ШИЛЛА ЛАЙН БАЛАТОН",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3622,10 +3512,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "883476504",
+      "id": "262685188",
       "name_lat": "ШИНДЖУ АКИРА ФРАНЧЕСКА МИЛА РОУЗ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЁРНЫЙ",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3640,28 +3530,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1494915706",
-      "name_lat": "ШИЛЕВИ СИЛАЭР РЭММИ ДЖО ЭВАНС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1986965898",
       "name_lat": "ШИОМАРУ МАЙ ВИН",
       "name_ru": "",
       "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "739693661",
-      "name_lat": "ШИЛЛА ЛАЙН ХАРЛЕЙ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3676,10 +3548,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "442147093",
+      "id": "839029184",
       "name_lat": "ШИШКИН ШАРМ АФРОДИТА",
-      "name_ru": "",
-      "breed": "АЛЬНЫЙ ТОЙ",
+      "name_ru": "ШИШКИН ШАРМ АФРОДИТА",
+      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3687,17 +3559,17 @@
     {
       "id": "635870811",
       "name_lat": "ШИХАН АЛЕКСАНДРИЯ ДЕЯ",
-      "name_ru": "",
+      "name_ru": "ШИХАН АЛЕКСАНДРИЯ ДЕЯ",
       "breed": "SHEEPDOG",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1450160399",
+      "id": "1612602332",
       "name_lat": "ШИК И ШАРМ ДЭЙМОН САЛЬВАТОРЕ",
-      "name_ru": "",
-      "breed": "ПАПИЙОН",
+      "name_ru": "ШИК И ШАРМ ДЭЙМОН САЛЬВАТОРЕ",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3705,7 +3577,7 @@
     {
       "id": "1332062396",
       "name_lat": "ШИКАРНОЕ ШТУЧНОЕ МАНТО",
-      "name_ru": "",
+      "name_ru": "ШИКАРНОЕ ШТУЧНОЕ МАНТО",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
@@ -3714,7 +3586,7 @@
     {
       "id": "1729373628",
       "name_lat": "ШИК И ШАРМ ЖУИС ДИ ФОРА",
-      "name_ru": "",
+      "name_ru": "ШИК И ШАРМ ЖУИС ДИ ФОРА",
       "breed": "континентальный той спаниель -папийон",
       "breed_en": "",
       "total_shows": 2,
@@ -3723,16 +3595,32 @@
     {
       "id": "1048911894",
       "name_lat": "ШИНЬ-Ю СЕЙ МИНОРИ ГАИЙО ДЭ",
-      "name_ru": "",
+      "name_ru": "ШИНЬ-Ю СЕЙ МИНОРИ ГАИЙО ДЭ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
+      "id": "27828224",
+      "name_lat": "ШИЛЕВИ СИЛАЭР ЖУА ДЭ ВИВР",
+      "name_ru": "ШИЛЕВИ СИЛАЭР ЖУА ДЭ ВИВР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1450405201",
+      "name_lat": "ШИФБЕРГ ХОФ РАДХА РАДЖНИ",
+      "name_ru": "ШИФБЕРГ ХОФ РАДХА РАДЖНИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ОСТЕВАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1677330182",
       "name_lat": "ШИБЮРЛЕ ХАРИЗМА СИЛА СИБИРИ",
-      "name_ru": "",
+      "name_ru": "ШИБЮРЛЕ ХАРИЗМА СИЛА СИБИРИ",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -3741,7 +3629,7 @@
     {
       "id": "34777225",
       "name_lat": "ШИВАВА ПРЕСТИЖ ЭРА",
-      "name_ru": "",
+      "name_ru": "ШИВАВА ПРЕСТИЖ ЭРА",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -3750,7 +3638,7 @@
     {
       "id": "1415821485",
       "name_lat": "ШИКАРНЫЙ ГИННЕС",
-      "name_ru": "",
+      "name_ru": "ШИКАРНЫЙ ГИННЕС",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
@@ -3759,17 +3647,17 @@
     {
       "id": "1609297480",
       "name_lat": "ШИКАРДОССОФ ЕЛИСЕЙ",
-      "name_ru": "",
+      "name_ru": "ШИКАРДОССОФ ЕЛИСЕЙ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1958754035",
+      "id": "553167055",
       "name_lat": "ШИЛЛА ЛАЙН ТЕРЕЗА",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ШИЛЛА ЛАЙН ТЕРЕЗА",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3777,7 +3665,7 @@
     {
       "id": "1452788479",
       "name_lat": "ШИМФ ЛАЙН ВИКТОРИ ФАЕРИ",
-      "name_ru": "",
+      "name_ru": "ШИМФ ЛАЙН ВИКТОРИ ФАЕРИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -3786,7 +3674,7 @@
     {
       "id": "1585187787",
       "name_lat": "ШИК ПЕТЕРБУРГ САМЕХАДА",
-      "name_ru": "",
+      "name_ru": "ШИК ПЕТЕРБУРГ САМЕХАДА",
       "breed": "ФОКСТЕРЬЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3795,7 +3683,7 @@
     {
       "id": "368412614",
       "name_lat": "ШИП СТАЙЛ ЛАКШЕРИ ДОЛЛ",
-      "name_ru": "",
+      "name_ru": "ШИП СТАЙЛ ЛАКШЕРИ ДОЛЛ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
@@ -3804,7 +3692,7 @@
     {
       "id": "1458428230",
       "name_lat": "ШИЗУКА-МИТСУКО",
-      "name_ru": "",
+      "name_ru": "ШИЗУКА-МИТСУКО",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
@@ -3813,7 +3701,7 @@
     {
       "id": "1526177296",
       "name_lat": "ШИКАРНАЯ ШТУЧКА ЛЕДИ ДИ",
-      "name_ru": "",
+      "name_ru": "ШИКАРНАЯ ШТУЧКА ЛЕДИ ДИ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -3822,26 +3710,25 @@
     {
       "id": "1837059137",
       "name_lat": "ШИ МИ ЛОВ ВАНИЛА",
-      "name_ru": "",
+      "name_ru": "ШИ МИ ЛОВ ВАНИЛА",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "876142894",
-      "name_lat": "ШИКАРНАЯ ДАМА",
-      "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
-      "breed_en": "",
+      "id": "453751360",
+      "name_lat": "ШИНИНГ СТАРДОГС ЧЕЙЗИ",
+      "name_ru": "ШИНИНГ СТАРДОГС ЧЕЙЗИ",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "206976339",
+      "id": "517375868",
       "name_lat": "ШИКАРНАЯ ЗВЕЗДА ОТ ХЕЛСИБРЕНД",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "name_ru": "ШИКАРНАЯ ЗВЕЗДА ОТ ХЕЛСИБРЕНД",
+      "breed": "ПУДЕЛЬ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3856,10 +3743,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "242109679",
+      "id": "572567326",
       "name_lat": "ШИТОКА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3874,10 +3761,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "442008256",
+      "id": "653326090",
       "name_lat": "ШИВА",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3892,19 +3779,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "630210420",
+      "id": "846929569",
       "name_lat": "ШИК ШОУ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "847719401",
+      "id": "1640525544",
       "name_lat": "ШИК ЛОРЕЙН",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3973,10 +3860,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "373614943",
+      "id": "487140558",
       "name_lat": "ШИ ВА ВА",
       "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН /",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3987,6 +3874,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1946517717",
+      "name_lat": "ШИРО",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4009,8 +3904,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "243634131",
-      "name_lat": "ШИВА- БОГИНЯ",
+      "id": "1593149639",
+      "name_lat": "ШИВА-БОГИНЯ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
       "breed_en": "",
@@ -4036,10 +3931,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1819080355",
+      "id": "1931117962",
       "name_lat": "ШИП",
       "name_ru": "",
-      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН /",
+      "breed": "КАВАЛЕР ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4094,15 +3989,6 @@
       "name_lat": "ШИН ШИЛЛА",
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "516448258",
-      "name_lat": "ШИНА",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4189,6 +4075,50 @@
       "competition_dog_id": null
     },
     {
+      "id": "193422406",
+      "name_lat": "ШИВОН",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "711565510",
+      "name_lat": "ШИВОРАНА МОРИНЕ МЕРСЕДЕС",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "397860221",
+      "name_lat": "ШИКАРНАЯ РОССЫПЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "581160068",
+      "name_lat": "ШИЛЛА ЛАЙН ВЕЛЕС",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ / HUNGARIAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1675959345",
+      "name_lat": "ШИЛЕВИ СИЛАЭР СИНДИ МЭРИ СИВИЛЬ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "778205393",
       "name_lat": "ШИЛЛА ЛАЙН ДЕЛИСИЯ",
       "name_ru": "",
@@ -4198,10 +4128,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1381860631",
+      "id": "468693936",
       "name_lat": "ШИ ИЗ ЗЕ ВАН ИЗ ДИНАСТИИ ЧЕМПИОНОВ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4225,10 +4155,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1493947314",
+      "id": "153511731",
       "name_lat": "ШИК ИЗ СОЛНЕЧНОГО ГОРОДА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4405,19 +4335,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1099700404",
+      "id": "135300577",
       "name_lat": "ШИК И ШАРМ ЖАЗ БЭНД",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "473063171",
-      "name_lat": "ШИВОРАНА МОРИНЕ МЕРСЕДЕС",
-      "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4531,15 +4452,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "57256482",
-      "name_lat": "ШИОМАРУ ВИЗАРД ОФ ОЗ",
-      "name_ru": "",
-      "breed": "СИБА / SHIBA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1453652258",
       "name_lat": "ШИХАН АРГОНАФТ ДЖЕНИРАЛ",
       "name_ru": "",
@@ -4576,17 +4488,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "129978966",
-      "name_lat": "ШИНЬ-Ю СЕЙ КАОРИ- ЙОРОКОБИ НО МЭГАМИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "173276639",
-      "name_lat": "ШИОМАРУ А СКАЙ ФУЛЛ ОФ СТАРС",
+      "id": "1791226496",
+      "name_lat": "ШИНЬ-Ю СЕЙ КАОРИ-ЙОРОКОБИ НО МЭГАМИ",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
@@ -4634,15 +4537,6 @@
       "name_lat": "ШИК И ШАРМ ТАЛИСМАН ДЕ ЛА ФОРТУНЕ",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "905973669",
-      "name_lat": "ШИШКИН ШАРМ БЕРЕТТА",
-      "name_ru": "",
-      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4702,6 +4596,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "252954628",
+      "name_lat": "ШИОМАРУ КОНСТЕЛЛА ТИОН ТУ ИЛОРИ",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1620402856",
       "name_lat": "ШИКО МОН АМИ ФРОМ МУНШОТ",
       "name_ru": "",
@@ -4711,11 +4613,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "547842853",
+      "id": "48026296",
       "name_lat": "ШИЛЛА МАРВИН ТЕЙЛОРА",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "496358927",
+      "name_lat": "ШИВАВА ПРЕСТИЖ САНТА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ / CHIHUAHUA LONG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4774,28 +4684,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1802083770",
-      "name_lat": "ШИЛЕЛЕ ТАМЕРЛАН",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1100057674",
-      "name_lat": "ШИЛЕЛЕ ПЕРИ БУДУР",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1689339262",
+      "id": "618305544",
       "name_lat": "ШИКО ИЗ ЧЕРТОВА РВА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4819,11 +4711,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "587012792",
+      "id": "566453932",
+      "name_lat": "ШИННИНГ ЧАРМ МАРВИН",
+      "name_ru": "",
+      "breed": "SHEEPDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1474473199",
       "name_lat": "ШИКАДО МАМОРИТАИ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1984917103",
+      "name_lat": "ШИНЬ-Ю СЕЙ НАРИКО ТАКАРА",
+      "name_ru": "",
+      "breed": "СИБА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4873,6 +4781,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1893113745",
+      "name_lat": "ШИДАР ЗВЕЗДА УДАЧИ",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "289109391",
       "name_lat": "ШИШКИН ШАРМ ГОЛД",
       "name_ru": "",
@@ -4882,19 +4798,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1468192103",
-      "name_lat": "ШИКАРНАЯ ШАНТИЯ",
+      "id": "1492060937",
+      "name_lat": "ШИРО ЮКИ КУМИКО",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1841832659",
-      "name_lat": "ШИЛЕВИ СИЛАЭР ЖУА ДЭ ВИВР",
+      "id": "1774785171",
+      "name_lat": "ШИОМАРУ АБСОЛЮТ ХЭППИНЕСС",
       "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed": "СИБА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468192103",
+      "name_lat": "ШИКАРНАЯ ШАНТИЯ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4972,19 +4895,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1737136001",
+      "id": "1907923548",
       "name_lat": "ШИКАРНАЯ ПИНА КОЛАДА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "102857239",
+      "id": "1303150678",
       "name_lat": "ШИК ЛЕДИ ОТ ДИАМАНТ ДРИМ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5026,10 +4949,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1786445727",
+      "id": "1369029699",
       "name_lat": "Шикардос из Династии Конол'с (д-ш)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5044,10 +4967,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "206746926",
+      "id": "567518327",
       "name_lat": "ШИКО ЮКИ АВРОРА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5098,10 +5021,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1707361354",
+      "id": "1819931151",
       "name_lat": "ШИКАРНАЯ ЭЛЬЗА ИЗ ТЕРЬЕР СИТИ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5116,10 +5039,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "223788945",
+      "id": "1022788149",
       "name_lat": "ШИКАРНЫЙ ДЖЕК ВОМ ХАРЦ ПАРСИФАЛЬ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5224,10 +5147,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1417029571",
+      "id": "574968972",
       "name_lat": "ШИММИ ГЛАМУР ГОДРИК",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5278,10 +5201,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1401764371",
+      "id": "67763183",
       "name_lat": "ШИЛЛА ЛАЙН ЧАККИ",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5314,10 +5237,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "263420567",
+      "id": "1421792859",
       "name_lat": "ШИЛЛА ЛАЙН БРУНО",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5341,28 +5264,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1425952082",
+      "id": "424610003",
       "name_lat": "ШИК АРМАНИ ИЗ МАРИАЛГРАДА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1565144715",
-      "name_lat": "ШИК ПЕТЕРБУРГ ЧУДЕСНАЯ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "812675965",
-      "name_lat": "ШИНИЧИ КЕЙТАШИ",
-      "name_ru": "",
-      "breed": "АКИТА",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5431,15 +5336,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1417641833",
-      "name_lat": "ШИКАРНАЯ РОССЫПЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1226818175",
       "name_lat": "ШИТЦЛАНДИЯ ПРИМА РЭЙЧЕЛ",
       "name_ru": "",
@@ -5476,19 +5372,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1519276834",
+      "id": "525932478",
       "name_lat": "ШИЛЛА ЛАЙН ВАЛЬТЕР II",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "581160068",
-      "name_lat": "ШИЛЛА ЛАЙН ВЕЛЕС",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ / HUNGARIAN",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5503,11 +5390,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "517839045",
-      "name_lat": "ШИЛЕВИ СИЛАЭР СИНДИ МЭРИ СИВИЛЬ",
+      "id": "679144479",
+      "name_lat": "ШИАРЕНТАНА С ЛАДОНИ АНГЕЛА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "967401348",
+      "name_lat": "ШИНОБИ ОФ ЗЕ ХИДДЕН ЛЕАФ",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5521,10 +5415,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1836107835",
+      "id": "50281091",
+      "name_lat": "ШИНАМУН ДЕЙ ЭЛИТ БРАНКО GOLD STAR`S BEST OF THE BEST",
+      "name_ru": "",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "445448495",
       "name_lat": "ШИК ПЕТЕРБУРГ ЯДЕРНЫЙ ОТВЕТ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5539,19 +5441,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1535881774",
+      "id": "100284098",
       "name_lat": "ШИНДЖУ АКИРА БЭНДЖИРО ДАР",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО-ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "378709603",
-      "name_lat": "ШИК МОДЕРН РОККО- КО",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО-ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

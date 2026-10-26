@@ -1,24 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "CU",
-  "count": 138,
+  "count": 144,
   "dogs": [
-    {
-      "id": "604926593",
-      "name_lat": "CUSTOS MORUM ARMAN",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 82,
-      "competition_dog_id": null
-    },
     {
       "id": "1536682437",
       "name_lat": "CUORE SAROV VEYA FEYA",
       "name_ru": "",
       "breed": "НИДЕРЛАНДСКИЙ КОЙКЕРХОНДЬЕ",
       "breed_en": "NEDERLANDSE KOOIKERHONDJE",
-      "total_shows": 34,
+      "total_shows": 37,
+      "competition_dog_id": null
+    },
+    {
+      "id": "604926593",
+      "name_lat": "CUSTOS MORUM ARMAN",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "WELSH CORGI PEMBROKE",
+      "total_shows": 90,
       "competition_dog_id": null
     },
     {
@@ -36,7 +36,7 @@
       "name_ru": "",
       "breed": "СЭНТОНЖСКАЯ ГОНЧАЯ",
       "breed_en": "GASCON SAINTONGEOIS GREAT",
-      "total_shows": 72,
+      "total_shows": 77,
       "competition_dog_id": null
     },
     {
@@ -45,7 +45,7 @@
       "name_ru": "",
       "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -58,10 +58,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "579587346",
+      "id": "714215059",
       "name_lat": "CURA DEL SUENO CHARRO",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ АЛАНО /",
+      "breed": "ИСПАНСКИЙ АЛАНО",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -76,12 +76,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1475125410",
+      "id": "113980121",
       "name_lat": "CURT VOM GAMSETAL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "350167260",
+      "name_lat": "CULT BULLT ARABICA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -112,6 +121,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1543749834",
+      "name_lat": "CUSTODIA CALLISTO NESS KING",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "474436058",
       "name_lat": "CUNNINGS CHANGE THE RULES",
       "name_ru": "",
@@ -121,21 +139,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "986057007",
+      "id": "1796768094",
       "name_lat": "CUBA LIBRE DLYA IMPERII AN'IGOR",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1543749834",
-      "name_lat": "CUSTODIA CALLISTO NESS KING",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -148,10 +157,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "781910846",
+      "id": "968812822",
       "name_lat": "CUTE FUN FIRE RICKY MARTIN FOR ALLEKSTAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (померанский )",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -229,15 +238,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1117178645",
-      "name_lat": "CULT BULLT ARABICA",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
       "id": "503735013",
       "name_lat": "CUSTODIA CALLISTO PRINCESSA BOREALIS",
       "name_ru": "",
@@ -247,10 +247,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "535103733",
+      "id": "1473133921",
       "name_lat": "CUBA IZ PETROGRADA",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -301,10 +301,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1271752337",
+      "id": "44332844",
       "name_lat": "CURLY POM’S DYNASTY DJ",
       "name_ru": "",
-      "breed": "СЕНТОНЖСКАЯ ГОНЧАЯ /",
+      "breed": "СЕНТОНЖСКАЯ ГОНЧАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -346,10 +346,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "280358304",
+      "id": "608788805",
       "name_lat": "CULTURE OF BULLS SHINY RUBY",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "SWISS MOUNTAIN DOG БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -360,14 +360,14 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ СПРИНГЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "90546964",
+      "id": "1008490312",
       "name_lat": "CUKERKA IZ SKAZOCHNOGO LESA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -454,6 +454,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1398104150",
+      "name_lat": "CUCAT FRUT",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "498243008",
       "name_lat": "Curly Pom's Dynasty",
       "name_ru": "",
@@ -463,11 +472,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1398104150",
-      "name_lat": "CUCAT FRUT",
+      "id": "708876127",
+      "name_lat": "CUPID CLEO KES",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
       "total_shows": 7,
       "competition_dog_id": null
     },
@@ -487,15 +495,6 @@
       "breed": "ШИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1264954062",
-      "name_lat": "CUPID CLEO KES",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -526,10 +525,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1946477355",
+      "id": "41248345",
       "name_lat": "CUTE FUN FIRE RIO RITA",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -553,10 +552,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1345365157",
+      "id": "859717355",
+      "name_lat": "CUSTODIA CALLISTO SIDERA CAOLO ADDERE",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1631664184",
       "name_lat": "CUPCAKES SUPER MARINOS ROSALINDA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА /",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -566,15 +574,6 @@
       "name_lat": "CUTELEDY NEW'SUNNY MECHTA DETSTVA",
       "name_ru": "",
       "breed": "ВЕЙМАРАНЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1605170047",
-      "name_lat": "CUSTODIA CALLISTO SIDERA CAOLO ADDERE",
-      "name_ru": "",
-      "breed": "ШИППЕРКЕ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -643,12 +642,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1992237600",
+      "id": "1943021761",
       "name_lat": "CUPCAKE BLACK CHERRY VENTURESOME",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -697,10 +696,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1513401042",
+      "id": "1788897442",
+      "name_lat": "CURASH EAST ZENA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "865901225",
       "name_lat": "CUTULUS BILLIE J.",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -769,12 +776,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "926161965",
+      "id": "1016928587",
       "name_lat": "CUTE FUN FIRE BELLA",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1825073651",
+      "name_lat": "CUDVIN'S RIDDL BELLY BETTY SUNSHINE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -787,11 +803,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1614466493",
-      "name_lat": "CUDVIN'S RIDDL BELLY BETTY SUNSHINE",
+      "id": "1632445696",
+      "name_lat": "CUTE FUN FIRE VIRDZHINIYA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -904,10 +919,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "959091867",
+      "id": "1044107634",
       "name_lat": "CUTE LADY NEWSUNNY MECHTA DETSTVA",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1003,29 +1018,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "1387199448",
+      "id": "1991303576",
       "name_lat": "CUTE FUN FIRE VIVYEN",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "665560399",
+      "id": "248344301",
       "name_lat": "CUTE FUN FIRE URSULA",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1822441358",
+      "id": "199160542",
       "name_lat": "CUTE FUN FIRE RADAMIRA",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1026070052",
+      "name_lat": "CUSTODIA CALLISTO PLUSH WOLF",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "878495818",
+      "name_lat": "CUSTODIA CALLISTO OSITO FIERRO ( )",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1039,10 +1070,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "114037884",
+      "id": "505866578",
       "name_lat": "CUBA",
       "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1138,10 +1169,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "31944528",
+      "id": "1087024190",
       "name_lat": "CUDA'S BELLO DI PAPA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1183,10 +1214,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1933115739",
+      "id": "1255966866",
       "name_lat": "CULTIVAR MOANA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1201,10 +1232,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "643522000",
+      "id": "1096120064",
       "name_lat": "CUTIE FUN FACT CRYSTALL IZ GORODA NA NEVE",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1214,6 +1245,15 @@
       "name_lat": "CUCULCAN ELESTA",
       "name_ru": "",
       "breed": "ПУДЕЛЬ РУССКИЙ ТОЙ (ДЛИННОШЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "554173791",
+      "name_lat": "C' UZO MY STAR ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1242,6 +1282,14 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1142064046",
+      "name_lat": "CUTE SOUL GUSTAVO GREAT WINNER",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     }

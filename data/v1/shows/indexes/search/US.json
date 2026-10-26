@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "US",
-  "count": 167,
+  "count": 171,
   "dogs": [
     {
       "id": "400944106",
@@ -9,7 +9,16 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
-      "total_shows": 169,
+      "total_shows": 177,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1657315428",
+      "name_lat": "U SPOT ME IZ TERLETSKOY DUBRAVY",
+      "name_ru": "",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "DALMATIAN",
+      "total_shows": 114,
       "competition_dog_id": null
     },
     {
@@ -17,8 +26,7 @@
       "name_lat": "USHKYR IZ KAZAKHSKIH STEPEY",
       "name_ru": "",
       "breed": "КАЗАХСКИЙ ТАЗЫ",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -27,16 +35,43 @@
       "name_ru": "",
       "breed": "СЛЮГИ",
       "breed_en": "SLOUGHI",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1343547135",
+      "id": "1569443887",
       "name_lat": "USLADA OCHEY MOIH",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "467980898",
+      "name_lat": "USLADA DLYA VESELOY ZAGADKI",
+      "name_ru": "УСЛАДА ДЛЯ ВЕСЁЛОЙ ЗАГАДКИ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1668826413",
+      "name_lat": "USTIN SUMMER AVGUSTIN",
+      "name_ru": "УСТИН СУММЕР АВГУСТИН",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1414585199",
+      "name_lat": "U SING ELECTRA AUX MILLE ECLATS D'APHRODITE",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -54,7 +89,16 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1065555175",
+      "name_lat": "USADBA OLGINO ELIZABETH ЗИМНЯЯ СКАЗКА ИЗ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -81,7 +125,24 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "790370645",
+      "name_lat": "Usadba Olgino Angara",
+      "name_ru": "УСАДЬБА ОЛЬГИНО АНГАРА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1468174098",
+      "name_lat": "USLADA SERDTSA",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -94,15 +155,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "790370645",
-      "name_lat": "Usadba Olgino Angara",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "915118156",
       "name_lat": "US NAVY DES ROMARINS DE MAYERLING",
       "name_ru": "",
@@ -112,21 +164,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1263995966",
+      "name_lat": "USHUAYYA BIGL ANTARKTIDA",
+      "name_ru": "УШУАЙЯ БИГЛ АНТАРКТИДА",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "699208680",
       "name_lat": "USAIN SAINT LEO IZ ZAMKA PRIORA",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1468174098",
-      "name_lat": "USLADA SERDTSA",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -148,15 +200,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1065555175",
-      "name_lat": "USADBA OLGINO ELIZABETH ЗИМНЯЯ СКАЗКА ИЗ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "410274259",
       "name_lat": "USTIN VOM HAUS SCHIRAN",
       "name_ru": "",
@@ -172,6 +215,15 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1064507119",
+      "name_lat": "USADBA OLGINO MILASHKA",
+      "name_ru": "УСАДЬБА ОЛЬГИНО МИЛАШКА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -193,28 +245,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1064507119",
-      "name_lat": "USADBA OLGINO MILASHKA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "540336611",
       "name_lat": "USLADA",
       "name_ru": "",
       "breed": "ХАВАНЕЗ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1668826413",
-      "name_lat": "USTIN SUMMER AVGUSTIN",
-      "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -231,10 +265,10 @@
     {
       "id": "1340181077",
       "name_lat": "USLADA BLESK URALA",
-      "name_ru": "",
+      "name_ru": "УСЛАДА БЛЕСК УРАЛА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -253,6 +287,15 @@
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "444342647",
+      "name_lat": "USLADA SERDTSA IZ IMENIYA RUSINOVO",
+      "name_ru": "УСЛАДА СЕРДЦА ИЗ ИМЕНИЯ РУСИНОВО",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 47,
       "competition_dog_id": null
     },
     {
@@ -292,10 +335,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "500035378",
+      "id": "857192511",
       "name_lat": "USHIKA IZ DOMA KARMANOVOI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -307,6 +350,15 @@
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "426152026",
+      "name_lat": "USAIN BOLT IZ KAZANSKOGO HANSTVA",
+      "name_ru": "",
+      "breed": "пудель средний",
+      "breed_en": "POODLE MEDIUM BLACK, WHITE, BROWN",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -328,6 +380,32 @@
       "competition_dog_id": null
     },
     {
+      "id": "869576402",
+      "name_lat": "USPESHNAYA LADY",
+      "name_ru": "",
+      "breed": "Английский кокер спаниель",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "277134156",
+      "name_lat": "USLADA AMINIKA BEL",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "908742145",
+      "name_lat": "USADBA OLGINO BRITNI",
+      "name_ru": "Усадьба Ольгино Бритни",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "49824604",
       "name_lat": "USTINYA IZ NEVSKOGO DESANTA",
       "name_ru": "",
@@ -337,30 +415,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "277134156",
-      "name_lat": "USLADA AMINIKA BEL",
+      "id": "253667416",
+      "name_lat": "USPEKH OLGOR DAR EKATERINY",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1263995966",
-      "name_lat": "USHUAYYA BIGL ANTARKTIDA",
+      "id": "1355213151",
+      "name_lat": "USLADA VANILLA SWEET",
       "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "445125151",
-      "name_lat": "USPESHNAYA LADY",
-      "name_ru": "",
-      "breed": "Английский кокер спаниель / ENGLISH",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -382,30 +451,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "908742145",
-      "name_lat": "USADBA OLGINO BRITNI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1916382713",
-      "name_lat": "USAIN BOLT IZ KAZANSKOGO HANSTVA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ",
-      "breed_en": "POODLE MEDIUM BLACK, WHITE, BROWN",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "512247817",
+      "id": "1423726837",
       "name_lat": "USTINYA IZ KAZANSKOGO HANSTVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -415,24 +466,6 @@
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
       "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1355213151",
-      "name_lat": "USLADA VANILLA SWEET",
-      "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "444342647",
-      "name_lat": "USLADA SERDTSA IZ IMENIYA RUSINOVO",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -447,10 +480,10 @@
     {
       "id": "977916813",
       "name_lat": "USLADA IZ SHEL'VIT",
-      "name_ru": "",
+      "name_ru": "УСЛАДА ИЗ ШЭЛ'ВИТ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -478,6 +511,15 @@
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "331330195",
+      "name_lat": "USLADA HRUSTALYA DARLING DOL",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN) WHITE, BLACK, BROWN, ORANGE, GREY, OTHER COLOURS",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -526,21 +568,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "410657337",
+      "id": "349016580",
       "name_lat": "USHNA-KARA SOLNECHNYJ ISTOCHNIK ZHIZNI",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "331330195",
-      "name_lat": "USLADA HRUSTALYA DARLING DOL",
-      "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN) WHITE, BLACK, BROWN, ORANGE, GREY, OTHER COLOURS",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -607,12 +640,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1034015416",
+      "id": "1316733234",
       "name_lat": "USPEH II S VOLOZHKI",
       "name_ru": "",
-      "breed": "КОЛЛИ КОРОТКОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ К-Ш",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -661,6 +694,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1424593458",
+      "name_lat": "USLADA S ALTAY AYAN",
+      "name_ru": "УСЛАДА С АЛТАЙ АЯН",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "49642077",
       "name_lat": "USLADA OCHEY",
       "name_ru": "",
@@ -697,28 +739,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1380565957",
+      "id": "122073011",
+      "name_lat": "Usi Pusi Simona Rozhdennaya Pobezhdat",
+      "name_ru": "УСИ ПУСИ СИМОНА РОЖДЕННАЯ ПОБЕЖДАТЬ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1222258570",
       "name_lat": "USZAKI PASSION FRUIT",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1666197649",
+      "id": "20341589",
       "name_lat": "US'BOIS VANILLE IMPERIAL LUXURY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "620665755",
+      "id": "280360146",
       "name_lat": "USLADA HRUSTALYA LAKOMYY KUSOCHEK SCHAST’YA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -733,21 +784,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1350763529",
+      "id": "1676406986",
       "name_lat": "USHER VON HAUS DEVARTIS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1424593458",
-      "name_lat": "USLADA S ALTAY AYAN",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -757,6 +799,14 @@
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1646770043",
+      "name_lat": "USZAKI LIVE FOREVER",
+      "name_ru": "",
+      "breed": "КАРДИГАН",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -805,6 +855,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1293502914",
+      "name_lat": "USLADA SERDTSA IZ DINASTII RUTTS",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "312028485",
       "name_lat": "USLADA COLOR FEERIA",
       "name_ru": "",
@@ -832,30 +891,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1309768294",
-      "name_lat": "USLADA SERDTSA IZ DINASTII RUTTS",
+      "id": "1502626231",
+      "name_lat": "USTAS IZ TVERSKOGO DOMA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1972017996",
-      "name_lat": "USPEKH OLGOR DAR EKATERINY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "467980898",
-      "name_lat": "USLADA DLYA VESELOY ZAGADKI",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Г-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) SMOOTH-HAIRED",
-      "total_shows": 3,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -895,19 +936,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "118793940",
+      "id": "564053377",
       "name_lat": "USLADA",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1165796721",
+      "id": "1148719566",
       "name_lat": "USPEKHA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1023496947",
+      "name_lat": "USLADA GREAT BIG BEAR",
+      "name_ru": "",
+      "breed": "СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -931,10 +981,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "131685154",
+      "id": "1473732598",
       "name_lat": "US BOIS VANILLE IMPERIAL LUXARY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -949,19 +999,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1236272498",
-      "name_lat": "USLADA GREAT BIG BEAR",
-      "name_ru": "",
-      "breed": "СТОРОЖЕВАЯ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "688295871",
+      "id": "259993247",
       "name_lat": "USLADA IZ SOZVEZDIYA STAFF",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -985,19 +1026,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1502626231",
-      "name_lat": "USTAS IZ TVERSKOGO DOMA",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "655773784",
+      "id": "478961487",
       "name_lat": "USMAN IL SALVATORE",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1009,6 +1041,22 @@
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "566188765",
+      "name_lat": "USLADA COLOUR FEERIA",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1286674115",
+      "name_lat": "USLADA",
+      "name_ru": "",
+      "breed": "ПАПИЙОН",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1044,7 +1092,16 @@
       "name_ru": "",
       "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "200202157",
+      "name_lat": "Uspekh V Zhizni",
+      "name_ru": "УСПЕХ В ЖИЗНИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1075,19 +1132,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "10252623",
+      "id": "1140996699",
       "name_lat": "USGES FOR",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1646770043",
-      "name_lat": "USZAKI LIVE FOREVER",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1102,10 +1150,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "414044967",
+      "id": "104350979",
       "name_lat": "USSURI GOLD LINE OLIVIYA BRAUN",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1129,12 +1177,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "200202157",
-      "name_lat": "Uspekh V Zhizni",
+      "id": "1334935006",
+      "name_lat": "USADBA OLGINO SHERHAN",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1156,10 +1204,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1334935006",
-      "name_lat": "USADBA OLGINO SHERHAN",
+      "id": "1691915877",
+      "name_lat": "USHAKOV BELLA BERNOLA",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1201,6 +1249,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "155208711",
+      "name_lat": "USLADA MOEGO SERDTSA",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1725029109",
       "name_lat": "USPESHNYJ FRANT SARKEL ARS",
       "name_ru": "",
@@ -1210,19 +1266,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1691915877",
-      "name_lat": "USHAKOV BELLA BERNOLA",
+      "id": "644153873",
+      "name_lat": "USADBA OLGINO MARSEL",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "122073011",
-      "name_lat": "Usi Pusi Simona Rozhdennaya Pobezhdat",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1273,10 +1320,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "62771486",
+      "id": "280280403",
       "name_lat": "USPEKH",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1286,6 +1333,15 @@
       "name_lat": "US TOURMALIN",
       "name_ru": "",
       "breed": "КИНГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "108217040",
+      "name_lat": "USLADUSHKA GOLDEN ANIK'S",
+      "name_ru": "",
+      "breed": "MINIATURE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1399,15 +1455,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1734752998",
-      "name_lat": "USADBA OLGINO MARSEL",
-      "name_ru": "",
-      "breed": "ПЕМБРОК / WELSH",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1820827954",
       "name_lat": "USADBA OLGINO",
       "name_ru": "",
@@ -1417,20 +1464,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "566188765",
-      "name_lat": "USLADA COLOUR FEERIA",
+      "id": "1929299362",
+      "name_lat": "USTINA BE COME THE STAR DRAGON",
       "name_ru": "",
-      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "155208711",
-      "name_lat": "USLADA MOEGO SERDTSA",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
+      "breed": "КОРСО /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1476,7 +1513,7 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1493,15 +1530,6 @@
       "name_lat": "USMI BIG BOSS",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "108217040",
-      "name_lat": "USLADUSHKA GOLDEN ANIK'S",
-      "name_ru": "",
-      "breed": "MINIATURE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

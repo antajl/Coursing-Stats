@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EJ",
-  "count": 21,
+  "count": 24,
   "dogs": [
     {
       "id": "1549910173",
@@ -22,10 +22,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1866343530",
+      "id": "1248586470",
       "name_lat": "EJKON",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -58,11 +58,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "226543130",
+      "id": "129947883",
       "name_lat": "EJKON",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ (КУРЦХААР) /",
+      "breed": "ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "489957408",
+      "name_lat": "EJKON",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -94,10 +102,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1069366897",
+      "id": "104085772",
       "name_lat": "EJW18 OSO DE MIEL HALONG",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -130,12 +138,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "79580515",
+      "name_lat": "E-JET",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "119727262",
       "name_lat": "EJEVIKA",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "135329485",
+      "name_lat": "E JEAN",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

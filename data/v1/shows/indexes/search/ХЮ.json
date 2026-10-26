@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ХЮ",
-  "count": 19,
+  "count": 30,
   "dogs": [
     {
-      "id": "1948457849",
+      "id": "872941934",
       "name_lat": "ХЮРРЕМ СУЛТАН ИЗ ЛИГИ ЧЕМПИОНОВ",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "name_ru": "ХЮРРЕМ СУЛТАН ИЗ ЛИГИ ЧЕМПИОНОВ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1708484863",
+      "name_lat": "Х'ЮТАУН ШАЙНИ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -31,6 +40,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "155281033",
+      "name_lat": "Х'ЮТАУН ЦВЕТАНКА",
+      "name_ru": "Х'ЮТАУН ЦВЕТАНКА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "98091558",
       "name_lat": "ХЮРЕМ ЛЮБИМАЯ ХАНУМ",
       "name_ru": "",
@@ -40,12 +58,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1648164778",
-      "name_lat": "ХЮРРЕМ СУЛТАН",
+      "id": "1340852518",
+      "name_lat": "Х’ЮТАУН КЛЭР АУРЕЛИ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "448665889",
+      "name_lat": "ХЮРРЕМ СУЛТАН",
+      "name_ru": "ХЮРРЕМ СУЛТАН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275406540",
+      "name_lat": "Х'ЮТАУН ТЕРЕЗА",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -76,6 +112,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "465106996",
+      "name_lat": "Х'ЮТАУН ИЛОН МАСК",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "166754346",
       "name_lat": "ХЮМАШАХ ОЕССЕН СТИЛЬ",
       "name_ru": "",
@@ -87,7 +131,7 @@
     {
       "id": "250506046",
       "name_lat": "ХЮРЕМ СУЛТАН",
-      "name_ru": "",
+      "name_ru": "ХЮРЕМ СУЛТАН",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -98,6 +142,15 @@
       "name_lat": "ХЮРРЭМ",
       "name_ru": "",
       "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "833031766",
+      "name_lat": "ХЮРЕМ",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -121,10 +174,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1979235541",
+      "id": "1734427086",
+      "name_lat": "Х`ЮТАУН ЖУЛИАНА ПАЭС",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1934606070",
       "name_lat": "ХЮРЕМ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ (белый, черный, коричневый) ПУДЕЛЬ ТОЙ (белый, черный, коричневый)",
+      "breed": "ПУДЕЛЬ ТОЙ (белый, черный, коричневый)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -139,19 +201,44 @@
       "competition_dog_id": null
     },
     {
-      "id": "833031766",
-      "name_lat": "ХЮРЕМ",
+      "id": "1197834776",
+      "name_lat": "Х'ЮТАУН АНРЭЙ",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "857996904",
-      "name_lat": "ХЮРЕМ",
+      "id": "218744527",
+      "name_lat": "Х'ЮТАУН БЭЙЛИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "442473171",
+      "name_lat": "Х'ЮТАУН ВЕСТА ОФ МАЙ ХАРТ",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1438491904",
+      "name_lat": "Х'ЮТАУН ФРЕНК ЭНТОНИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1407235961",
+      "name_lat": "Х’ЮТАУН ГЕРМИОНА ГРЕЙНДЖЕР",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -166,10 +253,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1954097026",
+      "id": "1261106508",
+      "name_lat": "Х'ЮТАУН ПОЛИНКА",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1541402745",
       "name_lat": "ХЮРРЕМ С ИННОКЕНТЬЕВСКОЙ СЛОБОДЫ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

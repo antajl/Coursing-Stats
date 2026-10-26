@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "TY",
-  "count": 82,
+  "count": 78,
   "dogs": [
     {
       "id": "1409551482",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 47,
+      "total_shows": 50,
       "competition_dog_id": null
     },
     {
@@ -18,7 +18,7 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 25,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -40,6 +40,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1636750575",
+      "name_lat": "TYUTELKA KIRA LAPKA SCHASTYA",
+      "name_ru": "",
+      "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1586664010",
       "name_lat": "TYNDARIUS IZ MIRA ANZHELIKI",
       "name_ru": "",
@@ -53,6 +61,15 @@
       "name_lat": "TYSON",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "75662370",
+      "name_lat": "TYRA NESUSHCHAYA UDACHU",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -85,28 +102,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1512134465",
-      "name_lat": "TYRA NESUSHCHAYA UDACHU",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1986660510",
       "name_lat": "TYBALT THE BRAVE KNIGHT",
       "name_ru": "",
       "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "WEIMARANER SHORT-HAIRED",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "634324106",
+      "id": "1342492763",
       "name_lat": "TYRANOSAURUSREX MOONVILLAGE",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД /",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1004465670",
+      "name_lat": "TYLER TWIX",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -116,15 +133,6 @@
       "name_lat": "TYSON DES FLAMMES DE MARS",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "927987978",
-      "name_lat": "TYUTELKA KIRA LAPKA SCHASTYA",
-      "name_ru": "",
-      "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -144,7 +152,7 @@
       "name_ru": "",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -172,6 +180,15 @@
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1049370942",
+      "name_lat": "TYLER OT PIGALOVIH (LANGHAARIG)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -220,24 +237,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "486345238",
-      "name_lat": "tyler twix",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1975665738",
-      "name_lat": "TYLER TWIX",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1526624846",
       "name_lat": "TYSON",
       "name_ru": "",
@@ -274,30 +273,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1049370942",
-      "name_lat": "TYLER OT PIGALOVIH (LANGHAARIG)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1744486278",
       "name_lat": "TYPHOON",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1865073653",
-      "name_lat": "TYLER OT PIGALOVIH",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -306,7 +287,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "AMERICAN BULLDOG",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -333,7 +314,7 @@
       "name_ru": "",
       "breed": "КАРДИГАН",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -342,14 +323,14 @@
       "name_ru": "",
       "breed": "САМОЕД",
       "breed_en": "SAMOYED",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "705463315",
+      "id": "1102859386",
       "name_lat": "TYS AND NAIL",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ /",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -382,12 +363,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "582243457",
+      "id": "268762377",
       "name_lat": "TYURSHTAYN RYUTTER FROM FORT OGIR",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ТЮРШТАЙН РЮТТЕР ФРОМ ФОРТ ОГИР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -397,15 +378,6 @@
       "breed": "ВЕЙМАРАНЕР К-Ш",
       "breed_en": "WEIMARANER SHORT-HAIRED",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "992264322",
-      "name_lat": "TYLER TWIX",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -442,6 +414,14 @@
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ (США)",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "300819742",
+      "name_lat": "TYLER",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -535,10 +515,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1177747763",
+      "id": "1103970714",
       "name_lat": "TYSON IRON FIST",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -580,19 +560,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "613235949",
+      "id": "559415201",
       "name_lat": "TYSON CORAZON DE LEON IZ DOMA ZIDANA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1930911070",
+      "id": "30660199",
       "name_lat": "TYRESE WILD CAT",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -602,6 +582,15 @@
       "name_lat": "TYSON",
       "name_ru": "",
       "breed": "ПОКЕТ / AMERICAN BULLY",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "696857729",
+      "name_lat": "TYRA BANKS",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -625,10 +614,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "300819742",
+      "id": "1178887520",
       "name_lat": "TYLER",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -661,33 +650,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1004465670",
-      "name_lat": "TYLER TWIX",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1498755851",
-      "name_lat": "TYRA BANKS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "238173390",
-      "name_lat": "TYRA BANKS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1939386353",
       "name_lat": "TYRALEA",
       "name_ru": "",
@@ -706,10 +668,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1201991024",
+      "id": "225349788",
       "name_lat": "TYEMNOGO",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

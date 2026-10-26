@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "VU",
-  "count": 86,
+  "count": 91,
   "dogs": [
     {
       "id": "935337007",
@@ -22,21 +22,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "755421425",
+      "id": "1692661226",
+      "name_lat": "VULKAN RADOSTI NEFERTARI",
+      "name_ru": "ВУЛКАН РАДОСТИ НЕФЕРТАРИ",
+      "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1174325132",
       "name_lat": "VULLPET GRAND CHIZETTA",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "137996039",
+      "id": "706515463",
+      "name_lat": "VULLPET ESENIYA-ZLATA",
+      "name_ru": "ВУЛЛПЭТ ЕСЕНИЯ-ЗЛАТА",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1320496883",
       "name_lat": "VULKAN DAL ROSSO",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "562139857",
+      "name_lat": "VULKAN RADOSTI GRIFINDOR",
+      "name_ru": "ВУЛКАН РАДОСТИ ГРИФИНДОР",
+      "breed": "БОЛОНКА",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -55,15 +82,6 @@
       "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "706515463",
-      "name_lat": "VULLPET ESENIYA-ZLATA",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -94,30 +112,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1213790732",
+      "id": "1300421666",
       "name_lat": "VULF DI FIAMMA VIVO",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ВУЛЬФ ДИ ФИАММА ВИВО",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "967810808",
+      "id": "875321294",
       "name_lat": "VUF SHON",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "74585859",
-      "name_lat": "VULKAN RADOSTI NEFERTARI",
-      "name_ru": "",
-      "breed": "РУССКАЯ ЦВЕТНАЯ БОЛОНКА /",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -139,12 +148,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1544098321",
+      "name_lat": "VULKAN IZ DOMA SAMURAYA",
+      "name_ru": "ВУЛКАН ИЗ ДОМА САМУРАЯ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1994474761",
       "name_lat": "VULCAN IZ DOMA SAMURAYA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "415057802",
+      "name_lat": "VUKI IZ LUNNOGO SADA",
+      "name_ru": "ВУКИ ИЗ ЛУННОГО САДА",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "CAIRN TERRIER",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -166,10 +193,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "165535250",
+      "id": "565431463",
+      "name_lat": "VULLPET DARINA DANA",
+      "name_ru": "ВУЛЛПЭТ ДАРИНА ДАНА",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "791115667",
       "name_lat": "VUNSCHEN SANTA JULF GUNTHER",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -193,28 +229,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "759061936",
+      "id": "256566623",
       "name_lat": "VUDHAUS ANNET",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "589715373",
+      "id": "207769616",
       "name_lat": "VUDI ALLEN",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1894385490",
+      "id": "1107896019",
       "name_lat": "VUDI VALENTAJN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -229,57 +265,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1544098321",
-      "name_lat": "VULKAN IZ DOMA SAMURAYA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "765579308",
       "name_lat": "VULCANO DE PENAMELLERA",
       "name_ru": "",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "419657805",
+      "id": "963302064",
       "name_lat": "VUDI GELEZINIS VILKAS",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "562139857",
-      "name_lat": "VULKAN RADOSTI GRIFINDOR",
-      "name_ru": "",
-      "breed": "БОЛОНКА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "407876167",
+      "id": "634283968",
       "name_lat": "VULKANA AUS VIKWELT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "415057802",
-      "name_lat": "VUKI IZ LUNNOGO SADA",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "CAIRN TERRIER",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -292,15 +301,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "194306462",
-      "name_lat": "VULLPET DARINA DANA",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "28332649",
       "name_lat": "VULLPET ELAYZA MIDDLTON",
       "name_ru": "",
@@ -310,12 +310,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1647081180",
+      "name_lat": "VULKAN",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "457066817",
       "name_lat": "VULLPET ELLAYZA MIDDLTON",
-      "name_ru": "",
+      "name_ru": "ВУЛЛПЭТ ЕЛЛАЙЗА МИДДЛТОН",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -328,30 +336,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "1919487769",
+      "id": "649275748",
       "name_lat": "VUNSHEN APPEL DI FORTUNA PRAGA KOPPOD'",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "49233290",
+      "id": "299871511",
       "name_lat": "VULKAN LYUBVI IZ GRADA BELYKH BEREZ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1146999668",
+      "id": "1126009505",
       "name_lat": "VUF SHON",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40280542",
+      "name_lat": "VURSA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ЯГДТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "342632037",
+      "name_lat": "VULL MARK MOIS",
+      "name_ru": "ВУЛЛ МАРК МОИС",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -370,6 +395,32 @@
       "breed": "БОЛОНКА / RUSSIAN",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1147461263",
+      "name_lat": "VUNSCHEN TERALINE HEARTLAND",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1253161726",
+      "name_lat": "VULLPET ERMAK UDALOY",
+      "name_ru": "ВУЛЛПЭТ ЕРМАК УДАЛОЙ",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275437644",
+      "name_lat": "VULKAN TIBETA",
+      "name_ru": "ВУЛКАН ТИБЕТА",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -427,15 +478,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "275437644",
-      "name_lat": "VULKAN TIBETA",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1766067771",
       "name_lat": "VUNSCHEN ISAD INTISAAR CHERRI",
       "name_ru": "",
@@ -481,28 +523,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1845060903",
+      "id": "647378918",
       "name_lat": "VUNSCHEN ЭРИА ПРО ВЕНАТОР",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "903693584",
-      "name_lat": "VULL MARK MOIS",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1253161726",
-      "name_lat": "VULLPET ERMAK UDALOY",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -517,10 +541,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "376107351",
+      "id": "864668182",
       "name_lat": "VUDI ALLEN GROSVI HAUS",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -562,28 +586,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1647081180",
-      "name_lat": "VULKAN",
+      "id": "1391853728",
+      "name_lat": "VUL MARK",
       "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ",
+      "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1656182327",
-      "name_lat": "VURT TU TOPS",
+      "id": "773759983",
+      "name_lat": "VULF",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "161743043",
+      "id": "1705500278",
+      "name_lat": "VURT TU TOPS",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1263162794",
       "name_lat": "VULF",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -603,6 +636,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1140877038",
+      "name_lat": "VULCAN MANU",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -652,11 +693,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1391853728",
-      "name_lat": "VUL MARK",
+      "id": "1878760859",
+      "name_lat": "VUF SHON",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
+      "breed": "С ПОДШЕРСТКОМ /",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -670,10 +710,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1781875881",
+      "id": "1659108246",
       "name_lat": "VULKAN",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -688,19 +728,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "773759983",
-      "name_lat": "VULF",
-      "name_ru": "",
-      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "943663386",
+      "id": "1774825269",
       "name_lat": "VUNSCHEN КАНЕ ВОРЕВО ЮСТАСЯ",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -724,11 +755,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1851845403",
+      "id": "1390288140",
       "name_lat": "VULKAN DE MARTTA SUERTE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "364671026",
+      "name_lat": "VULPET GRAND CHIZETТA",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -742,10 +781,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1312232634",
+      "id": "755742609",
       "name_lat": "VULKAN VON DER KATZE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,30 +1,30 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "АЭ",
-  "count": 66,
+  "count": 65,
   "dogs": [
     {
       "id": "1264056773",
       "name_lat": "АЭЛИТА ФРОМ КОНСТЕЛЛЕЙШН ЛИОН",
-      "name_ru": "",
+      "name_ru": "АЭЛИТА ФРОМ КОНСТЕЛЛЕЙШН ЛИОН",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "158968865",
+      "id": "108460181",
       "name_lat": "АЭЛИТА БОЕВОЙ АНГЕЛ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "АЭЛИТА БОЕВОЙ АНГЕЛ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
       "id": "914917469",
       "name_lat": "АЭЛИТА ЭТУАЛЬ БЛАНШ (Изменено по решению ВК от 12.07.2024 В. 40)",
-      "name_ru": "",
+      "name_ru": "АЭЛИТА ЭТУАЛЬ БЛАНШ (Изменено по решению ВК от 12.07.2024 В. 40)",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 6,
@@ -49,10 +49,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1589017351",
+      "id": "644431451",
       "name_lat": "АЭЛИТА",
       "name_ru": "",
-      "breed": "ТАКСА ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -69,7 +69,7 @@
     {
       "id": "637575871",
       "name_lat": "АЭГНОР ИЗ ВОРОБЬИНОГО ГНЕЗДА",
-      "name_ru": "",
+      "name_ru": "АЭГНОР ИЗ ВОРОБЬИНОГО ГНЕЗДА",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -78,26 +78,34 @@
     {
       "id": "1145360112",
       "name_lat": "АЭЛИТА СТАР ЛАЙТ",
-      "name_ru": "",
+      "name_ru": "Аэлита Стар Лайт",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1048246984",
+      "id": "1820617307",
+      "name_lat": "АЭЛИТА",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1075822333",
       "name_lat": "Аэлита",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "17277275",
+      "id": "1603701922",
       "name_lat": "Аэлита",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ТАКСА СТАНДАРТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -105,25 +113,24 @@
     {
       "id": "1282378120",
       "name_lat": "АЭН СОФ КОРРАДО",
-      "name_ru": "",
+      "name_ru": "АЭН СОФ КОРРАДО",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "300393350",
-      "name_lat": "АЭЛЬФА АНИМА МЕА",
-      "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "breed_en": "",
-      "total_shows": 5,
+      "id": "1331538639",
+      "name_lat": "АЭН СОФ ЮНИКА",
+      "name_ru": "АЭН СОФ ЮНИКА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "40835937",
       "name_lat": "АЭН СОФ ВАРЛОК",
-      "name_ru": "",
+      "name_ru": "АЭН СОФ ВАРЛОК",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 9,
@@ -141,19 +148,10 @@
     {
       "id": "94993459",
       "name_lat": "АЭЛИТА БОНИТА ЛАКШЕРИ",
-      "name_ru": "",
+      "name_ru": "АЭЛИТА БОНИТА ЛАКШЕРИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "754006068",
-      "name_lat": "АЭН СОФ ЮНИКА",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -163,6 +161,15 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "98193200",
+      "name_lat": "АЭН СОФ НЭВЭР ЛООК БЭК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -177,7 +184,7 @@
     {
       "id": "1283684975",
       "name_lat": "АЭНОР ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
-      "name_ru": "",
+      "name_ru": "АЭНОР ИЗ ГРАФСКОГО ПОМЕСТЬЯ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 10,
@@ -229,9 +236,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1672503317",
+      "name_lat": "А-ЭЛИТА ИЗ БЕЛОЙ ГВАРДИИ",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "443182020",
       "name_lat": "АЭЛИТА АЙС СТАЙЛ",
-      "name_ru": "",
+      "name_ru": "АЭЛИТА АЙС СТАЙЛ",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 3,
@@ -247,30 +263,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1641367173",
-      "name_lat": "АЭН СОФ ЗУ-ЗУ ЛОЛА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "191193738",
       "name_lat": "АЭЛЛИ ЮТА ЭНН",
-      "name_ru": "",
+      "name_ru": "АЭЛЛИ ЮТА ЭНН",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "98193200",
-      "name_lat": "АЭН СОФ НЭВЭР ЛООК БЭК",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -280,15 +278,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1389779690",
-      "name_lat": "АЭЛИТА ДЕ ЛАЙ-ЛА ИЗ ЦАРСТВА СВАРОГА/AELITA DE LAY-LA IZ",
-      "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА / SAMOYED",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -305,8 +294,7 @@
       "name_lat": "АЭН СОФ ГРЭММИ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -334,15 +322,6 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1997382115",
-      "name_lat": "АЭРИС ОКЕАН МЕЧТЫ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -391,10 +370,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1076439447",
+      "id": "221126667",
       "name_lat": "АЭЛИТА",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -427,8 +406,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "463424369",
-      "name_lat": "АЭЛИКА ПОВЕЛИТЕЛЬНИЦА СЛАДКОЕЖЕК К-Ш",
+      "id": "705117090",
+      "name_lat": "АЭЛИКА ПОВЕЛИТЕЛЬНИЦА СЛАДКОЕЖЕК",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
@@ -436,10 +415,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1692520727",
+      "id": "17964886",
       "name_lat": "АЭЛИТА ШАРМ",
       "name_ru": "",
-      "breed": "ПРАЖСКИЙ КРЫСАРИК /",
+      "breed": "ПРАЖСКИЙ КРЫСАРИК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -463,6 +442,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1581132520",
+      "name_lat": "АЭЛИТА ШАРОН",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1305024355",
       "name_lat": "АЭЛИН ЛАЙВЛИНЕСС",
       "name_ru": "",
@@ -472,10 +460,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "594209650",
+      "id": "775121139",
       "name_lat": "АЭЛИТА БЕЙБИ ДИ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -544,6 +532,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1142605153",
+      "name_lat": "АЭН СОФ ЕС МАЙ БОЙ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1646227663",
       "name_lat": "АЭН СОФ АНЖЕЛИКА МАРКИЗА ДЭ ЭНДЖЕС",
       "name_ru": "",
@@ -562,10 +558,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1287652195",
+      "id": "32235627",
       "name_lat": "АЭЛЛА ЯРНА С ТРЕТЬЕЙ ПЛАНЕТЫ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -575,15 +571,6 @@
       "name_lat": "АЭЛИТА КАПОНЭ (К/Х)",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1105996384",
-      "name_lat": "АЭЛИТА ШАРОН",
-      "name_ru": "",
-      "breed": "СКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

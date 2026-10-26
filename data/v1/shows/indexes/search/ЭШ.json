@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЭШ",
-  "count": 101,
+  "count": 99,
   "dogs": [
     {
       "id": "112340533",
       "name_lat": "ЭШЛИ ГОЛД ПРАЙД ЛАККИ",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ ГОЛД ПРАЙД ЛАККИ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 11,
@@ -22,6 +22,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "968898347",
+      "name_lat": "ЭШЛИ ЭЛВИТА",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1417760000",
       "name_lat": "ЭШЛИ",
       "name_ru": "",
@@ -31,19 +40,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "358121917",
+      "id": "1424934881",
       "name_lat": "ЭШЛИ",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- ПОДПАЛЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "830994676",
-      "name_lat": "ЭШЛИ ЭЛВИТА",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -51,7 +51,7 @@
     {
       "id": "1268959630",
       "name_lat": "ЭШЛИ ФРЕШ ВИНД",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ ФРЕШ ВИНД",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 15,
@@ -60,7 +60,7 @@
     {
       "id": "1667961104",
       "name_lat": "ЭШЛИ ГОЛД ПРАЙД ГАРСИ",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ ГОЛД ПРАЙД ГАРСИ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -78,19 +78,18 @@
     {
       "id": "1759043820",
       "name_lat": "ЭШЛИ ГОЛД ПРАЙД ЛЮТЕР",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ ГОЛД ПРАЙД ЛЮТЕР",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1061407382",
-      "name_lat": "ЭШЛИ ЭЛВИТА",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 2,
+      "id": "83887990",
+      "name_lat": "ЭШЛИ БЕЛАЯ ЛИЛИЯ",
+      "name_ru": "ЭШЛИ БЕЛАЯ ЛИЛИЯ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -103,19 +102,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "841873507",
+      "id": "872087431",
       "name_lat": "ЭШЛИ ФОН КАЙЗЕР ШТЕРН (Д-Ш)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭШЛИ ФОН КАЙЗЕР ШТЕРН (Д-Ш)",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1387339911",
+      "id": "1183594822",
       "name_lat": "ЭШЛИ ГОЛД ПРАЙД ТЕСЛА",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -139,19 +138,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1193150492",
+      "id": "1155352249",
       "name_lat": "ЭШЛИ",
       "name_ru": "",
-      "breed": "ГОНЧАЯ /",
+      "breed": "ГОНЧАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1662780908",
+      "id": "176678857",
       "name_lat": "ЭШХ БАР ЧОКЛАД",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "name_ru": "ЭШХ БАР ЧОКЛАД",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -159,17 +158,26 @@
     {
       "id": "555448450",
       "name_lat": "ЭШЛИ ГОЛД ПРАЙД ЖЕССИКА",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ ГОЛД ПРАЙД ЖЕССИКА",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1592438689",
+      "id": "518313833",
+      "name_lat": "ЭШХ ПРИТТИ",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1377472502",
       "name_lat": "ЭШЛИ ЛЮБИМЕЦ ПУБЛИКИ",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -177,25 +185,34 @@
     {
       "id": "824247799",
       "name_lat": "ЭШХ БЕСАМЕ МУЧО",
-      "name_ru": "",
+      "name_ru": "ЭШХ БЕСАМЕ МУЧО",
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "104397975",
+      "id": "993040651",
       "name_lat": "ЭШОЛЬЦИЯ ВАЛЕНСИЯ ДЭ ЛОР (Д-Ш)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "ЭШОЛЬЦИЯ ВАЛЕНСИЯ ДЭ ЛОР (Д-Ш)",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1936985854",
+      "name_lat": "ЭШОЛЬЦИЯ ТЕФФИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "22354075",
       "name_lat": "ЭШЛИ ГОЛД ПРАЙД ЛОРА",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ ГОЛД ПРАЙД ЛОРА",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
@@ -204,7 +221,7 @@
     {
       "id": "1799806603",
       "name_lat": "ЭШЛИ (В ШЕРСТИ)",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ (В ШЕРСТИ)",
       "breed": "АМЕРИКАНСКАЯ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -213,7 +230,7 @@
     {
       "id": "1060753634",
       "name_lat": "ЭШХ БЭБИ ДОЛЛ",
-      "name_ru": "",
+      "name_ru": "ЭШХ БЭБИ ДОЛЛ",
       "breed": "БУЛЬТЕРЬЕР СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 8,
@@ -231,35 +248,26 @@
     {
       "id": "1365194993",
       "name_lat": "ЭШЛИ ИЗ ДОМА ДЕФРАНШ",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ ИЗ ДОМА ДЕФРАНШ",
       "breed": "MINIATURE SCHNAUZER BLACK AND SILVER ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1564681100",
-      "name_lat": "ЭШХ ПРИТТИ",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1631563577",
       "name_lat": "ЭШЛИ ГОЛД ПРАЙД ФЕНДИ",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ ГОЛД ПРАЙД ФЕНДИ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1936985854",
-      "name_lat": "ЭШОЛЬЦИЯ ТЕФФИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "id": "1362500918",
+      "name_lat": "ЭШЛИ ЭЙЗИ СТЭП",
+      "name_ru": "ЭШЛИ ЭЙЗИ СТЭП",
+      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -276,7 +284,7 @@
     {
       "id": "534192313",
       "name_lat": "ЭШОЛЬЦИЯ ВИШНЯ",
-      "name_ru": "",
+      "name_ru": "ЭШОЛЬЦИЯ ВИШНЯ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -328,19 +336,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1679282561",
+      "id": "1354026076",
       "name_lat": "ЭШХ ПАДДИНГТОН",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "128583202",
+      "id": "726161443",
       "name_lat": "ЭШЛИ ГОЛД ПРАЙД ЗАКИРИЙ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "name_ru": "ЭШЛИ ГОЛД ПРАЙД ЗАКИРИЙ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -355,15 +363,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "294406408",
-      "name_lat": "ЭШЛИ ЯРАТОН ОТ НЕВСКОГО ДУЭТА",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1952289450",
       "name_lat": "ЭШЛИ",
       "name_ru": "",
@@ -373,9 +372,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "159229760",
+      "name_lat": "ЭШЛИ ИМАС ЯШМА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "981345156",
       "name_lat": "ЭШЛИ КРАСАВИЦА",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ КРАСАВИЦА",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 3,
@@ -418,10 +425,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "421336671",
+      "id": "981343363",
       "name_lat": "ЭШЛИ ИЗ СИБИРСКИХ АФИН (Д-Ш)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -429,19 +436,10 @@
     {
       "id": "1818375504",
       "name_lat": "ЭШЛИ БРАЙТ СТАР",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ БРАЙТ СТАР",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1845683575",
-      "name_lat": "ЭШЛИ ИНДЕ СОУЛ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -460,6 +458,14 @@
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "719856045",
+      "name_lat": "ЭШХ ПРИТТИ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -517,15 +523,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1080107193",
-      "name_lat": "ЭШЛИ-ТЭОНА СТАР ДЛЯ ВИА ПРИМА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "306329317",
       "name_lat": "ЭШЛИ",
       "name_ru": "",
@@ -537,7 +534,7 @@
     {
       "id": "672492687",
       "name_lat": "ЭШЛИ ДЕЙ ЭЛИТ БРАНКО",
-      "name_ru": "",
+      "name_ru": "ЭШЛИ ДЕЙ ЭЛИТ БРАНКО",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 4,
@@ -593,15 +590,6 @@
       "name_lat": "ЭШЛИ ПРИНЦ РЕКИ",
       "name_ru": "",
       "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1362500918",
-      "name_lat": "ЭШЛИ ЭЙЗИ СТЭП",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -778,20 +766,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "719856045",
-      "name_lat": "ЭШХ ПРИТТИ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1021810770",
       "name_lat": "ЭШАЙН",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1638474776",
+      "name_lat": "ЭШЛИ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -814,6 +801,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "51824174",
+      "name_lat": "Эшли Шоу Принцесс Ту Кеназ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "975989350",
       "name_lat": "ЭШЛИ ИЗ ДОМА ЛАНКАСТЕР",
       "name_ru": "",
@@ -823,19 +819,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1500220393",
+      "id": "1309251700",
       "name_lat": "ЭШЛИ МАЙДЖИК КОЛД ЭДЖ",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "159229760",
-      "name_lat": "ЭШЛИ ИМАС ЯШМА",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -850,19 +837,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1320374213",
+      "id": "1522001357",
       "name_lat": "ЭШОЛЬЦИЯ АЛЕСИМА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "51824174",
-      "name_lat": "Эшли Шоу Принцесс Ту Кеназ",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

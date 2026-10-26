@@ -1282,11 +1282,11 @@
       "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Микс",
       "catalog_no": 37,
       "placement": null,
-      "total_score": null,
+      "total_score": 89,
       "judge_count": 3,
       "qualification": "",
       "vc": "",
-      "status": "disqualified",
+      "status": "withdrawn",
       "raw_scores_json": {
         "heats": [
           {
@@ -1312,12 +1312,12 @@
           },
           {
             "heat_number": 2,
-            "bib_number": null,
-            "bib_color": null,
+            "bib_number": 62,
+            "bib_color": "red",
             "judges": [],
             "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "disqualified": true,
+            "disqualification_reason": "Снят владельцем"
           }
         ]
       },
@@ -1342,11 +1342,11 @@
       "breed_class": "Родезийский риджбек - Ветераны - Микс",
       "catalog_no": 16,
       "placement": 1,
-      "total_score": null,
+      "total_score": 164,
       "judge_count": 3,
       "qualification": "",
       "vc": "",
-      "status": "disqualified",
+      "status": "finished",
       "raw_scores_json": {
         "heats": [
           {
@@ -1363,7 +1363,7 @@
                   17,
                   18
                 ],
-                "sum": 164
+                "sum": 81
               },
               {
                 "judge_number": 2,
@@ -1374,27 +1374,27 @@
                   18,
                   18
                 ],
-                "sum": null
+                "sum": 83
               }
             ],
-            "total": null,
+            "total": 164,
             "disqualified": false,
             "disqualification_reason": null
           },
           {
             "heat_number": 2,
-            "bib_number": null,
-            "bib_color": null,
+            "bib_number": 49,
+            "bib_color": "red",
             "judges": [],
             "total": null,
             "disqualified": false,
-            "disqualification_reason": null
+            "disqualification_reason": "Снят владельцем (Расценен по первому забегу)"
           }
         ]
       },
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Ветераны</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ARIES KHAN MARLON BRANDO</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>30</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>164</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>49</i></font></td> <td rowspan=\"2\" colspan=\"5\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Снят владельцем<br>(Расценен по первому забегу)</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b></b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>164</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "Иванова Г.С., Куликова Г.В., Кузнецова Н.Н.",
-      "status_reason": "Расценен по первому забегу",
+      "status_reason": "Снят владельцем (Расценен по первому забегу)",
       "dog_key": "aries-khan-marlon-brando--родезиискии-риджбек",
       "dog": {
         "id": 9248,
@@ -1832,7 +1832,7 @@
       "judge_count": 3,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "disqualified",
       "raw_scores_json": {
         "heats": [
           {
@@ -1849,7 +1849,7 @@
                   4,
                   16
                 ],
-                "sum": 77
+                "sum": 47
               },
               {
                 "judge_number": 2,
@@ -1860,27 +1860,27 @@
                   5,
                   10
                 ],
-                "sum": null
+                "sum": 30
               }
             ],
-            "total": null,
+            "total": 77,
             "disqualified": false,
             "disqualification_reason": null
           },
           {
             "heat_number": 2,
-            "bib_number": 100,
+            "bib_number": null,
             "bib_color": null,
             "judges": [],
             "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "disqualified": true,
+            "disqualification_reason": "Не прошёл во второй круг (Набрал менее 100 баллов в первом круге)"
           }
         ]
       },
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ГРАНД КОРТЕЖ НЕМБУС ЗЕ БРАЙТЕСТ</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>23</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>77</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i></i></font></td> <td rowspan=\"2\" colspan=\"5\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Не прошёл во второй круг<br>(Набрал менее 100 баллов в первом круге)</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b></b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>77</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "Иванова Г.С., Куликова Г.В., Кузнецова Н.Н.",
-      "status_reason": null,
+      "status_reason": "Не прошёл во второй круг (Набрал менее 100 баллов в первом круге)",
       "dog_key": "гранд-кортеж-нембус-зе-браитест--родезиискии-риджбек",
       "dog": {
         "id": 180,
@@ -1903,7 +1903,7 @@
       "judge_count": 3,
       "qualification": "",
       "vc": "",
-      "status": "unknown_status_check_raw_text",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -1912,23 +1912,14 @@
             "bib_color": "#f0ffff",
             "judges": [],
             "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
-          },
-          {
-            "heat_number": 2,
-            "bib_number": null,
-            "bib_color": null,
-            "judges": [],
-            "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "disqualified": true,
+            "disqualification_reason": "Сход"
           }
         ]
       },
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Родезийский риджбек</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АРИЕС ХАН РЕГУЛУС РЭДКЛИФФ /<br>ARIES KHAN REGULUS RADCLIFFE</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>23</i></font></td> <td colspan=\"5\" rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сход</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b></b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i></i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b></b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b></b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "Иванова Г.С., Куликова Г.В., Кузнецова Н.Н.",
-      "status_reason": null,
+      "status_reason": "Сход",
       "dog_key": "aries-khan-regulus-radcliffe--родезиискии-риджбек",
       "dog": {
         "id": 9367,
@@ -2362,7 +2353,7 @@
       "breed_class": "Родезийский риджбек - Стандартный - Суки",
       "catalog_no": 24,
       "placement": null,
-      "total_score": null,
+      "total_score": 172,
       "judge_count": 3,
       "qualification": "",
       "vc": "",
@@ -2383,7 +2374,7 @@
                   18,
                   18
                 ],
-                "sum": 172
+                "sum": 88
               },
               {
                 "judge_number": 2,
@@ -2394,21 +2385,21 @@
                   16,
                   18
                 ],
-                "sum": null
+                "sum": 84
               }
             ],
-            "total": null,
+            "total": 172,
             "disqualified": false,
             "disqualification_reason": null
           },
           {
             "heat_number": 2,
-            "bib_number": null,
-            "bib_color": null,
+            "bib_number": 46,
+            "bib_color": "red",
             "judges": [],
             "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "disqualified": true,
+            "disqualification_reason": "Снят (Возврат к владельцу, стимулирование голосом, посыл собаки на трассу)"
           }
         ]
       },
@@ -3599,7 +3590,7 @@
       "judge_count": 3,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -3625,18 +3616,18 @@
           },
           {
             "heat_number": 2,
-            "bib_number": null,
-            "bib_color": null,
+            "bib_number": 63,
+            "bib_color": "red",
             "judges": [],
             "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "disqualified": true,
+            "disqualification_reason": "Сход"
           }
         ]
       },
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">63</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БЛОССОМТАЙМ /<br>BLOSSOMTIME</font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>4</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>87</b></font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>63</i></font></td> <td colspan=\"5\" rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сход</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b></b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>87</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "Иванова Г.С., Куликова Г.В., Кузнецова Н.Н.",
-      "status_reason": null,
+      "status_reason": "Сход",
       "dog_key": "blossomtime--уиппет",
       "dog": {
         "id": 9434,
@@ -4406,7 +4397,7 @@
       "judge_count": 3,
       "qualification": "",
       "vc": "",
-      "status": "finished",
+      "status": "dnf",
       "raw_scores_json": {
         "heats": [
           {
@@ -4432,18 +4423,18 @@
           },
           {
             "heat_number": 2,
-            "bib_number": null,
-            "bib_color": null,
+            "bib_number": 70,
+            "bib_color": "red",
             "judges": [],
             "total": null,
-            "disqualified": false,
-            "disqualification_reason": null
+            "disqualified": true,
+            "disqualification_reason": "Сход"
           }
         ]
       },
       "raw_text": " <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">60</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Уиппет</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный-спринтеры</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td> <td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ /<br>LUXURY WHIPP NEW BELLE</font></td> <td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>9</i></font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b>92</b></font></td> <td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>70</i></font></td> <td colspan=\"5\" rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сход</font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><b></b></font></td> <td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>92</b></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> <td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"></font></td> ",
       "judges": "Иванова Г.С., Куликова Г.В., Кузнецова Н.Н.",
-      "status_reason": null,
+      "status_reason": "Сход",
       "dog_key": "luxury-whipp-new-belle--уиппет",
       "dog": {
         "id": 249,
@@ -5369,5 +5360,7 @@
   ],
   "id": "20230903--cacl-03092023-",
   "date_start": "2023-09-03",
-  "title": " cacl 03092023 "
+  "title": "ЧРКФ - CACL по курсингу",
+  "location": "Вологодская область, г. Вологда",
+  "judges": "Иванова Г.С., Куликова Г.В., Кузнецова Н.Н."
 }

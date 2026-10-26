@@ -1,17 +1,8 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "РЫ",
-  "count": 339,
+  "count": 331,
   "dogs": [
-    {
-      "id": "356412104",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ЮМИ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
     {
       "id": "1424523642",
       "name_lat": "РЫЖАЯ МОЛНИЯ ЛУИДЖИ",
@@ -22,21 +13,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "346615643",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ЧЕЙЗ- II",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "507241429",
       "name_lat": "РЫЖАЯ МОЛНИЯ НОЛИНА",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1121790777",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ЧЕЙЗ-II",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЧЕЙЗ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -45,32 +36,41 @@
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "138376799",
+      "name_lat": "РЫЖАЯ ЗАРЯ ПОЛЛИ-НИКОЛЬ",
+      "name_ru": "РЫЖАЯ ЗАРЯ ПОЛЛИ-НИКОЛЬ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "1392251566",
       "name_lat": "РЫЖАЯ БЕСТИЯ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ БЕСТИЯ",
       "breed": "SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "705137033",
+      "id": "357949853",
       "name_lat": "РЫЖЕЕ ЧУДО МАРТИН БЛЕК",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "РЫЖЕЕ ЧУДО МАРТИН БЛЕК",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "1921292986",
+      "id": "1431172742",
       "name_lat": "РЫЖЕЕ ЧУДО МОККО ШОКО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "РЫЖЕЕ ЧУДО МОККО ШОКО",
+      "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -78,25 +78,16 @@
     {
       "id": "149163219",
       "name_lat": "РЫЖАЯ МОЛНИЯ ХЬЮСТОН",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ХЬЮСТОН",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "394835919",
-      "name_lat": "РЫЖАЯ ЗАРЯ ПОЛЛИ-НИКОЛЬ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1558668827",
       "name_lat": "РЫЖАЯ МОЛНИЯ ЧЕРНИКА",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЧЕРНИКА",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
       "total_shows": 17,
@@ -105,7 +96,7 @@
     {
       "id": "123440081",
       "name_lat": "РЫЖАЯ СТАЯ ЖЕМЧУЖИНА МОЕГО СЕРДЦА",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ СТАЯ ЖЕМЧУЖИНА МОЕГО СЕРДЦА",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 10,
@@ -114,7 +105,7 @@
     {
       "id": "913119029",
       "name_lat": "РЫЖАЯ МОЛНИЯ ПЭШН БОЙ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ПЭШН БОЙ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 9,
@@ -132,7 +123,7 @@
     {
       "id": "446656984",
       "name_lat": "РЫЖАЯ МОЛНИЯ РУНА",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ РУНА",
       "breed": "BORDER COLLIE",
       "breed_en": "",
       "total_shows": 4,
@@ -168,7 +159,7 @@
     {
       "id": "1535083529",
       "name_lat": "РЫЖАЯ СТАЯ БОЛЬШАЯ МЕДВЕДИЦА",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ СТАЯ БОЛЬШАЯ МЕДВЕДИЦА",
       "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "ST. BERNARD SHORT HAIRED",
       "total_shows": 19,
@@ -177,7 +168,7 @@
     {
       "id": "1352352400",
       "name_lat": "РЫЖАЯ МОЛНИЯ ХЕЛАВИСА",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ХЕЛАВИСА",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 10,
@@ -186,55 +177,45 @@
     {
       "id": "1997510880",
       "name_lat": "РЫЖАЯ БЕСТИЯ ДАКОТА БЛЮ РИЧАРДС",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ДАКОТА БЛЮ РИЧАРДС",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "683414987",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ВАРЯ",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "57263463",
       "name_lat": "РЫЖАЯ МОЛНИЯ ДЭЙМОС",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ДЭЙМОС",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "509104688",
+      "id": "908848389",
       "name_lat": "РЫЖАЯ МОЛНИЯ ТРИКСИ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
-      "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "800182761",
-      "name_lat": "РЫЖАЯ МОЛНИЯ АРИЯ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ТРИКСИ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 28,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
       "id": "1504161848",
       "name_lat": "РЫЖИЙ АП ОТ НЭЛ'З ЮССЕН",
-      "name_ru": "",
+      "name_ru": "РЫЖИЙ АП ОТ НЭЛ'З ЮССЕН",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1033587703",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ЧИТА ДРИТА",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -258,7 +239,7 @@
     {
       "id": "1373510250",
       "name_lat": "РЫТВИНС БЕАТРИС БРЭМБЛ",
-      "name_ru": "",
+      "name_ru": "РЫТВИНС БЕАТРИС БРЭМБЛ",
       "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 10,
@@ -303,28 +284,19 @@
     {
       "id": "169285972",
       "name_lat": "РЫЖЕЕ СЧАСТЬЕ МИСТЕРИОС ОУШЕН",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ СЧАСТЬЕ МИСТЕРИОС ОУШЕН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1066291795",
+      "id": "169936151",
       "name_lat": "РЫЖЕЕ ЧУДО ЮРКИЙ УГОЛЕК",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "РЫЖЕЕ ЧУДО ЮРКИЙ УГОЛЕК",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "437336210",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ЧЕРРИ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -337,18 +309,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "1316486225",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ЕЛСИ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1174525597",
       "name_lat": "РЫЖАЯ БЕСТИЯ ЕВГЕНИЯ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ЕВГЕНИЯ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -438,7 +401,7 @@
     {
       "id": "23101701",
       "name_lat": "РЫЖАЯ МОЛНИЯ ГРИННА",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ГРИННА",
       "breed": "BORDER COLLIE",
       "breed_en": "",
       "total_shows": 3,
@@ -472,15 +435,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1305265944",
-      "name_lat": "Рыжая Молния Одри",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1864197292",
       "name_lat": "РЫЖАЯ МОЛНИЯ",
       "name_ru": "",
@@ -492,7 +446,7 @@
     {
       "id": "1362199498",
       "name_lat": "РЫТВИНС БРИЕНА БРИТИШ",
-      "name_ru": "",
+      "name_ru": "РЫТВИНС БРИЕНА БРИТИШ",
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -526,19 +480,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1983528806",
+      "id": "303348774",
       "name_lat": "РЫЖИЙ ТИКЕ УОИР ДРЕАМ",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1070558976",
+      "id": "1892256085",
       "name_lat": "РЫЖЕЕ ЧУДО ЮНИК ЧАНС",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "name_ru": "РЫЖЕЕ ЧУДО ЮНИК ЧАНС",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -553,9 +507,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "1666276177",
+      "name_lat": "РЫЖЕЕ ЧУДО ЧИНЗАНО",
+      "name_ru": "РЫЖЕЕ ЧУДО ЧИНЗАНО",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "155276012",
       "name_lat": "РЫЖЕЕ СЧАСТЬЕ МАЭСТРО Ю ТЕРН ТУ ВИН",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ СЧАСТЬЕ МАЭСТРО Ю ТЕРН ТУ ВИН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 21,
@@ -571,9 +534,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1558108426",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ТАИСА АФИНСКАЯ",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ТАИСА АФИНСКАЯ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1898462982",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ЧЕЛСИ",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЧЕЛСИ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1908743103",
       "name_lat": "РЫЖЕЕ ЧУДО НАРЦИССО РОДРИГЕЗ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО НАРЦИССО РОДРИГЕЗ",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
       "total_shows": 20,
@@ -582,25 +563,25 @@
     {
       "id": "97971374",
       "name_lat": "РЫЖИЕ СТРАЖИ ДОМА РАСТОРГУЕВЫХ ЯГОДКА",
-      "name_ru": "",
+      "name_ru": "РЫЖИЕ СТРАЖИ ДОМА РАСТОРГУЕВЫХ ЯГОДКА",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1569294142",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ПАНДОРА",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 4,
+      "id": "783531407",
+      "name_lat": "РЫЖАЯ БЕСТИЯ ХАЛК",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ХАЛК",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
       "id": "1657525977",
       "name_lat": "РЫЖАЯ СТАЯ ЖЕРАР",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ СТАЯ ЖЕРАР",
       "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 11,
@@ -618,7 +599,7 @@
     {
       "id": "1509099354",
       "name_lat": "РЫЖЕЕ ЧУДО ТАИНСТВЕННАЯ ЗВЕЗДА",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ТАИНСТВЕННАЯ ЗВЕЗДА",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 13,
@@ -627,79 +608,43 @@
     {
       "id": "279801540",
       "name_lat": "РЫЖАЯ МОЛНИЯ ЖЕМЧУГ СИБИРИ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЖЕМЧУГ СИБИРИ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1677566380",
-      "name_lat": "РЫЖАЯ ПАСТУШКА ИЗ ДОМА ИНФАНТЫ",
+      "id": "790384972",
+      "name_lat": "РЫЖАЯ МОЛНИЯ БУСИНКА",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 39,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1930790427",
-      "name_lat": "РЫЖАЯ БЕСТИЯ ХАЛК",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 30,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1666276177",
-      "name_lat": "РЫЖЕЕ ЧУДО ЧИНЗАНО",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "227058211",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ТАИСА АФИНСКАЯ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "1483333508",
       "name_lat": "РЫЖАЯ МОЛНИЯ ЖАКЛИН",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЖАКЛИН",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1900662961",
-      "name_lat": "РЫЖАЯ МОЛНИЯ БУСИНКА",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1991863841",
+      "id": "1587448188",
       "name_lat": "РЫЖИЙ ОХОТНИК СКАЗКА",
-      "name_ru": "",
-      "breed": "НОРБОТТЕН ШПИЦ /",
+      "name_ru": "РЫЖИЙ ОХОТНИК СКАЗКА",
+      "breed": "НОРБОТТЕН ШПИЦ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "1203943424",
       "name_lat": "РЫЖЕЕ ЧУДО АЙШВАРИЯ РАЙ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО АЙШВАРИЯ РАЙ",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 8,
@@ -708,35 +653,53 @@
     {
       "id": "1619906724",
       "name_lat": "РЫЖАЯ МОЛНИЯ АДОНИС",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ АДОНИС",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1577520539",
-      "name_lat": "РЫТВИНС ЯНСИ",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "id": "724797370",
+      "name_lat": "РЫЖАЯ БЕСТИЯ ЦЕЗАРИОН",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ЦЕЗАРИОН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1330167188",
-      "name_lat": "РЫЖАЯ БЕСТИЯ ЦЕЗАРИОН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "id": "1138998994",
+      "name_lat": "РЫТВИНС ЯНСИ",
+      "name_ru": "РЫТВИНС ЯНСИ",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "907384196",
-      "name_lat": "РЫЖАЯ БЕСТИЯ УНГВАРИ СТАР",
+      "id": "268944040",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ШЕРЛОК",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "154982541",
+      "name_lat": "Рыжий Охотник Лель",
+      "name_ru": "",
+      "breed": "Норботтен Шпиц",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "189921691",
+      "name_lat": "РЫЖАЯ БЕСТИЯ УНГВАРИ СТАР",
+      "name_ru": "РЫЖАЯ БЕСТИЯ УНГВАРИ СТАР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -744,7 +707,7 @@
     {
       "id": "1566339424",
       "name_lat": "РЫЖАЯ МОЛНИЯ МИТСОУ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ МИТСОУ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 9,
@@ -753,35 +716,35 @@
     {
       "id": "1150330007",
       "name_lat": "РЫЖЕЕ ЧУДО БОЙ ДЖОЙ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО БОЙ ДЖОЙ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1144039509",
+      "id": "192659560",
       "name_lat": "РЫЖИЙ ОХОТНИК МИРАЖ",
-      "name_ru": "",
-      "breed": "НОРБОТТЕН ШПИЦ /",
+      "name_ru": "РЫЖИЙ ОХОТНИК МИРАЖ",
+      "breed": "НОРБОТТЕН ШПИЦ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1686764078",
+      "id": "946318711",
       "name_lat": "РЫЖАЯ МОЛНИЯ ЛАГЕРТА",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЛАГЕРТА",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1585641441",
+      "id": "843749692",
       "name_lat": "РЫЖЕЕ ЧУДО ЖГУЧИЙ МАЧО",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "РЫЖЕЕ ЧУДО ЖГУЧИЙ МАЧО",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -798,17 +761,17 @@
     {
       "id": "908081970",
       "name_lat": "РЫЖАЯ МОЛНИЯ ИНФИНИТИ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ИНФИНИТИ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "801693145",
+      "id": "1986106916",
       "name_lat": "РЫЖАЯ МОЛНИЯ НИКОЛЬ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "name_ru": "РЫЖАЯ МОЛНИЯ НИКОЛЬ",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -825,26 +788,43 @@
     {
       "id": "1807982102",
       "name_lat": "РЫЖАЯ МОЛНИЯ ГОРДОН",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ГОРДОН",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "1095652250",
+      "name_lat": "РЫЦАРЬ ДЖЕКИ",
+      "name_ru": "РЫЦАРЬ ДЖЕКИ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "360808335",
       "name_lat": "РЫЖАЯ МОЛНИЯ ПЯТЫЙ ЭЛЕМЕНТ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ПЯТЫЙ ЭЛЕМЕНТ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "880594171",
-      "name_lat": "РЫЖИЙ АП ОТ НЭЛ`З ЮССЭН",
+      "id": "659954317",
+      "name_lat": "РЫЖИК ИЗ КРИСТАЛЬНОЙ РОСЫ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГД ТЕРЬЕР)",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1316377749",
+      "name_lat": "РЫЖИЙ АП ОТ НЭЛ`З ЮССЭН",
+      "name_ru": "РЫЖИЙ АП ОТ НЭЛ`З ЮССЭН",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -852,44 +832,35 @@
     {
       "id": "464441704",
       "name_lat": "РЫЖАЯ МОЛНИЯ ВИТЯЗЬ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ВИТЯЗЬ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "154982541",
-      "name_lat": "Рыжий Охотник Лель",
-      "name_ru": "",
-      "breed": "Норботтен Шпиц",
+      "id": "797985350",
+      "name_lat": "РЫЖЕЕ ЧУДО БЛЭК КРОУ",
+      "name_ru": "РЫЖЕЕ ЧУДО БЛЭК КРОУ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "268944040",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ШЕРЛОК",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "328753066",
+      "id": "390140923",
       "name_lat": "РЫСЯ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1223523595",
+      "id": "204086786",
       "name_lat": "РЫЖЕЕ ЧУДО АРМАНДО",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "name_ru": "РЫЖЕЕ ЧУДО АРМАНДО",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -897,44 +868,44 @@
     {
       "id": "1818869543",
       "name_lat": "РЫЖАЯ МОЛНИЯ МАКС МАРА",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ МАКС МАРА",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1644705554",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ШЕРРИ- ЛЕДИ",
-      "name_ru": "",
+      "id": "1303900278",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ШЕРРИ-ЛЕДИ",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ШЕРРИ-ЛЕДИ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "730940026",
-      "name_lat": "РЫЖЕЕ ЧУДО БЛЭК КРОУ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "id": "591744842",
+      "name_lat": "РЫЖЕЕ ЧУДО ХАММЕР",
+      "name_ru": "РЫЖЕЕ ЧУДО ХАММЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "247325276",
       "name_lat": "РЫЖАЯ МОЛНИЯ ХУГО БОСС",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ХУГО БОСС",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "577835178",
+      "id": "1506938244",
       "name_lat": "РЫЖАЯ БЕСТИЯ ДЭЙМОС ДАРК",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -949,19 +920,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "256608749",
+      "id": "1257318480",
       "name_lat": "РЫЖЕЕ ЧУДО ВАНИЛЬ АБСОЛЮ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "897767919",
+      "id": "1298420766",
       "name_lat": "РЫЖИЙ ОХОТНИК ВОГУЛ",
-      "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "name_ru": "РЫЖИЙ ОХОТНИК ВОГУЛ",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -969,17 +940,17 @@
     {
       "id": "727015208",
       "name_lat": "РЫЖАЯ БЕСТИЯ ЕЛИЗАВЕТА",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ЕЛИЗАВЕТА",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "348367663",
+      "id": "674357547",
       "name_lat": "РЫЖЕЕ ЧУДО ЮЖНАЯ НОЧЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "РЫЖЕЕ ЧУДО ЮЖНАЯ НОЧЬ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1005,7 +976,7 @@
     {
       "id": "294546849",
       "name_lat": "РЫЖЕЕ ЧУДО НИЛА ВЕРМЕЙР",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО НИЛА ВЕРМЕЙР",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 4,
@@ -1017,34 +988,16 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "730514126",
-      "name_lat": "РЫЖАЯ МОЛНИЯ БРИТТАНИ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1898462982",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ЧЕЛСИ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1573128475",
       "name_lat": "РЫЖАЯ СТАЯ ЕНИСЕЙ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ СТАЯ ЕНИСЕЙ",
       "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1086,7 +1039,7 @@
     {
       "id": "1487590834",
       "name_lat": "РЫНЯ РУССКАЯ ДУША",
-      "name_ru": "",
+      "name_ru": "РЫНЯ РУССКАЯ ДУША",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -1095,26 +1048,25 @@
     {
       "id": "1488349988",
       "name_lat": "РЫСЬ ИЗ ТЮМЕНСКОЙ ДРУЖИНЫ",
-      "name_ru": "",
+      "name_ru": "РЫСЬ ИЗ ТЮМЕНСКОЙ ДРУЖИНЫ",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "251066383",
-      "name_lat": "Рыжая Бестия Жаклин Кеннеди (д-ш)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 15,
+      "id": "77386587",
+      "name_lat": "РЫЖАЯ БЕСТИЯ ШЕРИФ",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ШЕРИФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "286877276",
+      "id": "1004394233",
       "name_lat": "РЫЖЕЕ ЧУДО ЮНИВЕРСАЛ ОФ МАЙ ХАРТ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1122,17 +1074,17 @@
     {
       "id": "354367066",
       "name_lat": "РЫЖАЯ МОЛНИЯ ИРИС РЕЙНБОУ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ИРИС РЕЙНБОУ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1289167520",
+      "id": "1234057589",
       "name_lat": "РЫЖАЯ МОЛНИЯ ЧАРМИН ЛЕДИЗ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЧАРМИН ЛЕДИЗ",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1140,7 +1092,7 @@
     {
       "id": "40040013",
       "name_lat": "РЫЖИК ЛАККИ АДЕЛИНА ПАТТИ",
-      "name_ru": "",
+      "name_ru": "РЫЖИК ЛАККИ АДЕЛИНА ПАТТИ",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 3,
@@ -1156,9 +1108,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "430776601",
+      "name_lat": "РЫЖАЯ МОЛНИЯ РАЙСКАЯ ПТИЧКА",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "57826295",
       "name_lat": "РЫЖАЯ БЕСТИЯ ЯРЫЙ ЛАРС",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ЯРЫЙ ЛАРС",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 10,
@@ -1167,19 +1128,10 @@
     {
       "id": "1768233405",
       "name_lat": "РЫЖАЯ МОЛНИЯ ДЕКСТЕР",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ДЕКСТЕР",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "659954317",
-      "name_lat": "РЫЖИК ИЗ КРИСТАЛЬНОЙ РОСЫ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1192,15 +1144,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "114713085",
-      "name_lat": "РЫЖАЯ МОЛНИЯ РУ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1873985498",
       "name_lat": "РЫЖИЙ ОХОТНИК ЮТА",
       "name_ru": "",
@@ -1210,55 +1153,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "523318567",
-      "name_lat": "РЫЖАЯ МОЛНИЯ КОНУНГ РАГНАР",
+      "id": "871068722",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ХАММЕР",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "256046134",
-      "name_lat": "РЫЦАРЬ ДЖЕКИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "743506100",
+      "id": "1197611561",
       "name_lat": "РЫЖЕЕ ЧУДО ИНТЕНС ПЭШЕН",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 14,
+      "name_ru": "РЫЖЕЕ ЧУДО ИНТЕНС ПЭШЕН",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
       "id": "1987377401",
       "name_lat": "РЫЖЕЕ ЧУДО МАРДЖЕРИ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО МАРДЖЕРИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1459851389",
+      "id": "953467062",
       "name_lat": "РЫЖАЯ БЕСТИЯ ЯСМИНА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ЯСМИНА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1049801720",
+      "id": "884584551",
       "name_lat": "РЫЖАЯ БЕСТИЯ ВОРОЖЕЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ВОРОЖЕЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1318,18 +1251,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "544287138",
-      "name_lat": "РЫЖАЯ МОЛНИЯ АМАЛИЯ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "283479501",
       "name_lat": "РЫЖАЯ МОЛНИЯ ШАРМИНГ ШЕЙЛА",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ШАРМИНГ ШЕЙЛА",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 3,
@@ -1338,7 +1262,7 @@
     {
       "id": "767376956",
       "name_lat": "РЫЖЕЕ СЧАСТЬЕ ОЛИВЕР СКАЙ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ СЧАСТЬЕ ОЛИВЕР СКАЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
@@ -1356,35 +1280,34 @@
     {
       "id": "1847068123",
       "name_lat": "РЫЖАЯ МОЛНИЯ ЛОКИ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ЛОКИ",
       "breed": "BORDER COLLIE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1974931371",
+      "id": "116946858",
+      "name_lat": "РЫЖАЯ МОЛНИЯ АРАТОРН",
+      "name_ru": "РЫЖАЯ МОЛНИЯ АРАТОРН",
+      "breed": "БОРДЕР КОЛЛИ /",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "802025340",
       "name_lat": "РЫЖАЯ БЕСТИЯ ЗОРРО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "591744842",
-      "name_lat": "РЫЖЕЕ ЧУДО ХАММЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "736133705",
+      "id": "1116363260",
       "name_lat": "РЫЖЕЕ СЧАСТЬЕ МУНЛАЙТ СОНАТА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "name_ru": "РЫЖЕЕ СЧАСТЬЕ МУНЛАЙТ СОНАТА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1392,7 +1315,7 @@
     {
       "id": "20294509",
       "name_lat": "РЫЖАЯ МОЛНИЯ ПИТЕР ПЭН",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ПИТЕР ПЭН",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
@@ -1414,15 +1337,6 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1258562300",
-      "name_lat": "РЫЖАЯ МОЛНИЯ РАЙСКАЯ ПТИЧКА",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1471,10 +1385,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "350753481",
+      "id": "1000547668",
       "name_lat": "РЫЖЕЕ ЧУДО СВИТ КЕНДИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1498,10 +1412,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1902225618",
+      "id": "160873182",
       "name_lat": "РЫЖЕЕ ЧУДО ИМПУЛЬС ЛАВЛИ РОК",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "РЫЖЕЕ ЧУДО ИМПУЛЬС ЛАВЛИ РОК",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1509,7 +1423,7 @@
     {
       "id": "1693791701",
       "name_lat": "РЫЖИЙ ОХОТНИК ИЛАЙ",
-      "name_ru": "",
+      "name_ru": "РЫЖИЙ ОХОТНИК ИЛАЙ",
       "breed": "КАРЕЛЬСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 2,
@@ -1518,7 +1432,7 @@
     {
       "id": "624180799",
       "name_lat": "РЫЖЕЕ ЧУДО ЗИМНЯЯ ЗАТЕЯ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ЗИМНЯЯ ЗАТЕЯ",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -1527,37 +1441,37 @@
     {
       "id": "985299985",
       "name_lat": "РЫЖЕЕ ЧУДО АБСЕНТ АБСОЛЮ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО АБСЕНТ АБСОЛЮ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
       "id": "1891692063",
       "name_lat": "РЫЖЕЕ ЧУДО ЧАРЛЬЗ КИНГ ОФ ЗЕ РИНГ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ЧАРЛЬЗ КИНГ ОФ ЗЕ РИНГ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "508242397",
+      "id": "1233173493",
       "name_lat": "РЫЖИЙ КОРОЛЬ С ТЕМЕРНИКА",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "РЫЖИЙ КОРОЛЬ С ТЕМЕРНИКА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "871068722",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ХАММЕР",
+      "id": "145327563",
+      "name_lat": "РЫЖАЯ СТАЯ ДАРЯЩИЙ РАДОСТЬ",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
+      "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1588,10 +1502,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1373552350",
+      "id": "1089215463",
       "name_lat": "РЫЖИЙ ОХОТНИК ШАКИРА",
-      "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "name_ru": "РЫЖИЙ ОХОТНИК ШАКИРА",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1633,28 +1547,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1283162306",
+      "id": "1055971011",
       "name_lat": "РЫЖИЙ ОХОТНИК ФАРТ",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "734404196",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ИЗЮМЧИК",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1981651009",
+      "id": "714182940",
       "name_lat": "РЫЖЕЕ ЧУДО ЭЙМИ ТОШИКО ЧИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1687,8 +1592,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "827580658",
-      "name_lat": "РЫЖИЙ ОХОТНИК ЮЛЬ-ЛЯ- ЛЯ",
+      "id": "1321974718",
+      "name_lat": "РЫЖИЙ ОХОТНИК ЮЛЬ-ЛЯ-ЛЯ",
       "name_ru": "",
       "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
@@ -1714,19 +1619,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1592206942",
-      "name_lat": "РЫЖАЯ БЕСТИЯ ГЕРМИОНА- ВОЛШЕБНИЦА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "id": "334926395",
+      "name_lat": "РЫЖАЯ БЕСТИЯ ГЕРМИОНА-ВОЛШЕБНИЦА",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ГЕРМИОНА-ВОЛШЕБНИЦА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "114299711",
+      "id": "1587306798",
       "name_lat": "РЫЖАЯ МОЛНИЯ ОТТО ФОН РИЧ",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1741,27 +1646,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1243304234",
-      "name_lat": "РЫЖАЯ МОЛНИЯ КРАФТ",
-      "name_ru": "",
+      "id": "47831927",
+      "name_lat": "РЫЖАЯ МОЛНИЯ БАРОККО",
+      "name_ru": "РЫЖАЯ МОЛНИЯ БАРОККО",
       "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "77386587",
-      "name_lat": "РЫЖАЯ БЕСТИЯ ШЕРИФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "1990759936",
       "name_lat": "РЫЖЕЕ ЧУДО ЗВЁЗДНЫЙ ДОЖДЬ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ЗВЁЗДНЫЙ ДОЖДЬ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -1770,7 +1665,7 @@
     {
       "id": "1089993768",
       "name_lat": "РЫЖИЕ СТРАЖИ ДОМА РАСТОРГУЕВЫХ",
-      "name_ru": "",
+      "name_ru": "РЫЖИЕ СТРАЖИ ДОМА РАСТОРГУЕВЫХ",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -1804,15 +1699,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1156523630",
-      "name_lat": "РЫЖАЯ МОЛНИЯ МЕГАМИ",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1140712271",
       "name_lat": "Рыжий Блеск Брендон Бодигард",
       "name_ru": "",
@@ -1840,6 +1726,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1118799676",
+      "name_lat": "РЫЖИЙ ОХОТНИК РАНГАР",
+      "name_ru": "",
+      "breed": "НОРБОТТЕН ШПИЦ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "181591129",
       "name_lat": "РЫЖИЙ ОХОТНИК ЗАБАВА",
       "name_ru": "",
@@ -1858,36 +1752,50 @@
       "competition_dog_id": null
     },
     {
-      "id": "1678008401",
-      "name_lat": "РЫЖАЯ МОЛНИЯ НИКО",
+      "id": "1709317012",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ЛАЙМ",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1009241769",
+      "name_lat": "РЫЖАЯ БЕСТИЯ ШКОДА",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ШКОДА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1502070144",
+      "name_lat": "РЫССИ",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1269714200",
+      "name_lat": "РЫЖЕЕ ЧУДО ЧЕРОКИ",
+      "name_ru": "РЫЖЕЕ ЧУДО ЧЕРОКИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1133092224",
       "name_lat": "РЫЖАЯ МОЛНИЯ АБСЕНТ",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ МОЛНИЯ АБСЕНТ",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1009241769",
-      "name_lat": "РЫЖАЯ БЕСТИЯ ШКОДА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "130625681",
       "name_lat": "РЫЖЕЕ ЧУДО ЛАНОЙ ЛАВЛИ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ЛАНОЙ ЛАВЛИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
@@ -1905,17 +1813,17 @@
     {
       "id": "507935096",
       "name_lat": "РЫЖЕЕ ЧУДО ЧЕЛСИ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ЧЕЛСИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "277863068",
+      "id": "873140147",
       "name_lat": "РЫСЬ ИЗ КУЗНЕЦКГРАДА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "РЫСЬ ИЗ КУЗНЕЦКГРАДА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1930,9 +1838,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "160585365",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ЧИТА",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1657713196",
       "name_lat": "РЫЖЕЕ ЧУДО ЛАВЛИ ЧИК",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ЛАВЛИ ЧИК",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -1941,19 +1858,10 @@
     {
       "id": "1465263278",
       "name_lat": "РЫЖЕЕ ЧУДО ЦАРИЦА НОЧИ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ЦАРИЦА НОЧИ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1502070144",
-      "name_lat": "РЫССИ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1966,46 +1874,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1304676053",
+      "id": "1213205697",
       "name_lat": "РЫЖЕЕ ЧУДО ВЭНИТИ ИНТРИГА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "29232405",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ЖУЖАННА",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1720726602",
       "name_lat": "РЫСЯ ФРАНЦ МАРИ",
-      "name_ru": "",
+      "name_ru": "РЫСЯ ФРАНЦ МАРИ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1268857474",
-      "name_lat": "РЫЖИЙ РУНИ ИЗ ВОРОЖЕИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "id": "170228330",
+      "name_lat": "РЫЖЕЕ ЧУДО ЧИЛИ ПЕППЕР (К/Х)",
+      "name_ru": "РЫЖЕЕ ЧУДО ЧИЛИ ПЕППЕР (К/Х)",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "170228330",
-      "name_lat": "РЫЖЕЕ ЧУДО ЧИЛИ ПЕППЕР (К/Х)",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "740034022",
+      "name_lat": "РЫЖИЙ РУНИ ИЗ ВОРОЖЕИ",
+      "name_ru": "РЫЖИЙ РУНИ ИЗ ВОРОЖЕИ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2013,19 +1912,10 @@
     {
       "id": "1475688858",
       "name_lat": "РЫЖАЯ БЕСТИЯ ЖЕЛЕЗНЫЙ ВОЛК",
-      "name_ru": "",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ЖЕЛЕЗНЫЙ ВОЛК",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "369240030",
-      "name_lat": "РЫСЯ (БР.ГР)",
-      "name_ru": "",
-      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2038,12 +1928,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "369240030",
+      "name_lat": "РЫСЯ (БР.ГР)",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "202460893",
       "name_lat": "РЫЖАЯ МОЛНИЯ ОКСФОРД",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1366375967",
+      "name_lat": "РЫЖЕЕ ЧУДО ИНГРИД ФЛАЙ ФЛАУ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2065,6 +1972,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1527028819",
+      "name_lat": "Рыжая Бестия Жаклин Кеннеди (д-ш)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1292067246",
       "name_lat": "РЫЖАЯ МОЛНИЯ ЮХАН ФО ГЛОБАЛ ЭЛИТ",
       "name_ru": "",
@@ -2074,12 +1990,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "132094524",
+      "id": "1240999922",
       "name_lat": "РЫЖАЯ БЕСТИЯ ЧАЙТОН Д.Ш",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ЧАЙТОН Д.Ш",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -2088,23 +2004,14 @@
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1277808862",
-      "name_lat": "РЫБКА ЗОЛОТАЯ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "236286141",
+      "id": "846980342",
       "name_lat": "РЫЖАЯ БЕСТИЯ МАРС АТАКУЕТ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "РЫЖАЯ БЕСТИЯ МАРС АТАКУЕТ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2124,15 +2031,6 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1259543639",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ПЕРСИВАЛЬ ЛАНСМАРК",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2173,18 +2071,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "712317948",
-      "name_lat": "РЫЖЕЕ ЧУДО ФЕЛИЧИТА АЛЬ ЧОКОЛАТТО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "id": "1871134867",
+      "name_lat": "РЫЖЕЕ ЧУДО ХАЛСТОН НАЙТ",
+      "name_ru": "РЫЖЕЕ ЧУДО ХАЛСТОН НАЙТ",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1143364936",
+      "name_lat": "РЫЖЕЕ ЧУДО ФЕЛИЧИТА АЛЬ ЧОКОЛАТТО",
+      "name_ru": "РЫЖЕЕ ЧУДО ФЕЛИЧИТА АЛЬ ЧОКОЛАТТО",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "54985493",
+      "name_lat": "РЫЖАЯ МОЛНИЯ АГАТТА",
+      "name_ru": "РЫЖАЯ МОЛНИЯ АГАТТА",
+      "breed": "БОРДЕР КОЛЛИ",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
       "id": "1462202699",
       "name_lat": "РЫЖЕЕ ЧУДО ОБАЯТЕЛЬНЫЙ И ПРИВЛЕКАТЕЛЬНЫЙ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ОБАЯТЕЛЬНЫЙ И ПРИВЛЕКАТЕЛЬНЫЙ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -2193,15 +2108,6 @@
     {
       "id": "1095324236",
       "name_lat": "РЫЖАЯ МОЛНИЯ НАЙТ ВУЛЬФ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "424775105",
-      "name_lat": "РЫЖАЯ МОЛНИЯ НИМФЕЯ",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
@@ -2218,19 +2124,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "603421655",
+      "id": "684768278",
       "name_lat": "РЫЖАЯ МОЛНИЯ СУПЕР БОРДЕР КОЛЛИ",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1871134867",
-      "name_lat": "РЫЖЕЕ ЧУДО ХАЛСТОН НАЙТ",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2254,10 +2151,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "875116222",
+      "id": "320429213",
       "name_lat": "РЫЖАЯ БЕСТИЯ МОЛЛИ МЭЙДЖИК",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2353,10 +2250,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "756565192",
+      "id": "1155170172",
       "name_lat": "РЫЖЕЕ ЧУДО КРАЛЯ ЛЯЛЯ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2418,7 +2315,7 @@
     {
       "id": "1679287373",
       "name_lat": "РЫЖЕЕ СЧАСТЬЕ МИСТЕР АРЧИ",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ СЧАСТЬЕ МИСТЕР АРЧИ",
       "breed": "RUSSIAN TOY SMOOTH-",
       "breed_en": "",
       "total_shows": 2,
@@ -2427,36 +2324,43 @@
     {
       "id": "472934510",
       "name_lat": "РЫЖЕЕ ЧУДО ХАРРИКЕЙН ОФ ПЭШН",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ ЧУДО ХАРРИКЕЙН ОФ ПЭШН",
       "breed": "немецкий цверг шпиц/помера нский",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "47831927",
-      "name_lat": "РЫЖАЯ МОЛНИЯ БАРОККО",
-      "name_ru": "",
+      "id": "1292023417",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ГВИНЕВРА",
+      "name_ru": "РЫЖАЯ МОЛНИЯ ГВИНЕВРА",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1790710236",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ГВИНЕВРА",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
-      "breed_en": "",
+      "id": "119545500",
+      "name_lat": "РЫЖАЯ БЕСТИЯ ЦЕФЕЙ",
+      "name_ru": "РЫЖАЯ БЕСТИЯ ЦЕФЕЙ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1987466696",
       "name_lat": "РЫЖЕЕ СЧАСТЬЕ ПОЦЕЛУЙ СОЛНЦА",
-      "name_ru": "",
+      "name_ru": "РЫЖЕЕ СЧАСТЬЕ ПОЦЕЛУЙ СОЛНЦА",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1784109234",
+      "name_lat": "Рыжая Заря Расса",
+      "name_ru": "Рыжая Заря Расса",
+      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2506,28 +2410,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922465815",
+      "id": "1814760022",
       "name_lat": "РЫЖЕЕ ЧУДО ЭИДЖИ ЮТАКА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "145327563",
-      "name_lat": "РЫЖАЯ СТАЯ ДАРЯЩИЙ РАДОСТЬ",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1511465192",
+      "id": "312566413",
       "name_lat": "РЫЖАЯ МОЛНИЯ РИЧАРД ЛЬВИНОЕ СЕРДЦЕ",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2587,10 +2482,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1550942117",
+      "id": "1977370424",
       "name_lat": "РЫЖЕЕ ЧУДО ХОЙЯ ДЕ КАДЕНАС",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2614,10 +2509,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "880695326",
+      "id": "1948104487",
       "name_lat": "РЫЖИЙ ОХОТНИК ФАРТОВЫЙ",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2650,10 +2545,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1948028837",
+      "id": "405591864",
       "name_lat": "РЫЖЕЕ ЧУДО ЧИКИТА",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2704,8 +2599,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1895728140",
-      "name_lat": "РЫЖАЯ МОЛНИЯ КОСТА- РИКА",
+      "id": "1981796272",
+      "name_lat": "РЫЖАЯ МОЛНИЯ КОСТА-РИКА",
       "name_ru": "",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
@@ -2740,10 +2635,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "334142159",
+      "id": "1062257918",
       "name_lat": "РЫЖАЯ МОЛНИЯ ХАЛФ ЛАЙФ",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2767,8 +2662,24 @@
       "competition_dog_id": null
     },
     {
-      "id": "350912995",
-      "name_lat": "РЫЖАЯ МОЛНИЯ НИК- КЕЙ",
+      "id": "1680651511",
+      "name_lat": "РЫЖЕЕ ЧУДО ЗОЛОТОЙ ЛЕВ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1106719541",
+      "name_lat": "РЫЖИЙ ОХОТНИК РУССКИЙ БОГАТЫРЬ",
+      "name_ru": "",
+      "breed": "НОРБОТТЕН ШПИЦ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "963399815",
+      "name_lat": "РЫЖАЯ МОЛНИЯ НИК-КЕЙ",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ / BORDER",
       "breed_en": "",
@@ -2776,11 +2687,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1742867007",
-      "name_lat": "РЫЖАЯ МОЛНИЯ ПАСИФИК ОУШЕН",
+      "id": "1175910083",
+      "name_lat": "РЫЖАЯ БЕСТИЯ ЗЕЯ СТРЕМИТЕЛЬНАЯ",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2803,6 +2713,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1770659692",
+      "name_lat": "РЫЖЕЕ ЧУДО ЕГО ВЕЛИЧЕСТВО",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1477651594",
       "name_lat": "РЫЖЕЕ ЧУДО ЦАРСКИЙ ПОДАРОК",
       "name_ru": "",
@@ -2812,19 +2730,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1507538861",
+      "id": "59063545",
       "name_lat": "РЫЖЕЕ ЧУДО ХАНУМА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "583966859",
-      "name_lat": "РЫЖАЯ БЕСТИЯ ЦЕФЕЙ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2857,37 +2766,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1342005421",
+      "id": "133082757",
       "name_lat": "РЫЖАЯ БЕСТИЯ БАЛОВЕНЬ СУДЬБЫ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "610815210",
+      "id": "291480726",
       "name_lat": "РЫЖЕЕ ЧУДО ЧУДНАЯ ЧЁРНАЯ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1126258301",
+      "id": "269789417",
       "name_lat": "РЫЖЕЕ ЧУДО САРАБЕККА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1045743361",
+      "id": "1372170466",
       "name_lat": "РЫЖАЯ БЕСТИЯ ВОЛАН ДЕ МОРТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2902,8 +2811,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "338065808",
-      "name_lat": "РЫЖЕЕ ЧУДО КОН- ФЕТТИ",
+      "id": "204896388",
+      "name_lat": "РЫЖЕЕ ЧУДО КОН-ФЕТТИ",
       "name_ru": "",
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
@@ -2931,15 +2840,6 @@
     {
       "id": "1249635338",
       "name_lat": "РЫЖАЯ МОЛНИЯ ЛИЯ",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "562740908",
-      "name_lat": "РЫЖАЯ МОЛНИЯ К.РОЙ- МУСТАНГ",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
@@ -2992,10 +2892,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "115444460",
+      "id": "252119854",
       "name_lat": "РЫЖАЯ ЗАРЯ НЕАПОЛЬ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3019,10 +2919,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "738607437",
+      "id": "519219120",
       "name_lat": "РЫЖАЯ МОЛНИЯ МИЛЯША",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3037,10 +2937,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "639682917",
+      "id": "479159998",
       "name_lat": "РЫЖАЯ БЕСТИЯ ЗОЛУШКА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3051,6 +2951,14 @@
       "name_ru": "",
       "breed": "БОРДЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1823737788",
+      "name_lat": "РЫЖАЯ МОЛНИЯ ГЕНРИЕТТА",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
       "total_shows": 1,
       "competition_dog_id": null
     }

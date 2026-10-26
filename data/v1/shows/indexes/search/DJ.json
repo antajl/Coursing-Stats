@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "DJ",
-  "count": 298,
+  "count": 308,
   "dogs": [
     {
       "id": "999501807",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 39,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -18,25 +18,25 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 66,
+      "total_shows": 70,
       "competition_dog_id": null
     },
     {
-      "id": "303914442",
+      "id": "1316131850",
+      "name_lat": "DJELARI HIL OMAR SI (L-H)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
+      "total_shows": 54,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1846099132",
       "name_lat": "DJUKETTI ESTRELIA UNA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
-      "total_shows": 49,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1652434121",
-      "name_lat": "DJELARI HIL ОМАR SI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 51,
       "competition_dog_id": null
     },
     {
@@ -45,25 +45,16 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
       "breed_en": "AMERICAN HAIRLESS TERRIER",
-      "total_shows": 23,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
-      "id": "1175167525",
+      "id": "1679661496",
       "name_lat": "DJET SET EAST WIND ( )",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 49,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1984765964",
-      "name_lat": "DJELARI HIL OMAR SI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -90,16 +81,24 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 27,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "281067460",
-      "name_lat": "DJET SET IMPRESSIVE LADY",
+      "id": "656536346",
+      "name_lat": "DJET SET IMPRESSIVE LADY ( )",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 59,
+      "total_shows": 65,
+      "competition_dog_id": null
+    },
+    {
+      "id": "543557388",
+      "name_lat": "DJUKETTI TAKESHI KITANO",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -112,21 +111,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1130475748",
+      "id": "1763967702",
       "name_lat": "DJUKETTI TORRENS CHIF",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "FOX TERRIER (WIRE)",
       "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "1042293595",
+      "id": "1314940051",
       "name_lat": "DJET SET TRIS PRIOR",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -135,7 +134,15 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "420005846",
+      "name_lat": "DJUSEFINA MOON",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -148,10 +155,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1567220571",
+      "id": "1065734783",
       "name_lat": "DJUKETTI KOLT CHE GEVARA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -166,48 +173,66 @@
       "competition_dog_id": null
     },
     {
-      "id": "1612710219",
-      "name_lat": "DJUKETTI EKO ONA",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 31,
-      "competition_dog_id": null
-    },
-    {
       "id": "1229926267",
       "name_lat": "DJET SET DELIGHT",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
-      "id": "282448016",
+      "id": "1715528804",
+      "name_lat": "DJUKETTI EKO ONA",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1824599457",
       "name_lat": "DJUKETTI TOP KRIS HARDI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1144321583",
+      "id": "670879396",
       "name_lat": "DJEHAN GIR VIVIAN",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ /",
+      "breed": "BORDER COLLIE",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1184265744",
+      "id": "151742456",
+      "name_lat": "DJET SET CAYDER PERSIAN SUCCESS",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 74,
+      "competition_dog_id": null
+    },
+    {
+      "id": "759822738",
       "name_lat": "DJUKETTI YUPITER KRISTAL SPEJS",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "346333115",
+      "name_lat": "DJIA LAN YASMIRA ESENIYA",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -220,21 +245,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1808371582",
-      "name_lat": "DJET SET CAYDER PERSIAN SUCCESS",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 66,
-      "competition_dog_id": null
-    },
-    {
       "id": "1931850217",
       "name_lat": "DJAKARTAS BAD GUY",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ",
       "breed_en": "POODLE TOY",
-      "total_shows": 18,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -247,12 +263,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "748385686",
+      "name_lat": "DJET SET EAST WIND( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 46,
+      "competition_dog_id": null
+    },
+    {
       "id": "7228",
       "name_lat": "DJACKPOT IZ SELA TSAREVO",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 22,
+      "total_shows": 27,
       "competition_dog_id": 7228
     },
     {
@@ -274,10 +299,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1328877562",
+      "id": "369091281",
       "name_lat": "DJANGO VOM WESPEN HAUS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -292,21 +317,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "346333115",
-      "name_lat": "DJIA LAN YASMIRA ESENIYA",
+      "id": "798913303",
+      "name_lat": "DJANGO OSVOBOJDENNYI",
       "name_ru": "",
-      "breed": "ШИ ТЦУ",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "748385686",
-      "name_lat": "DJET SET EAST WIND( )",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 38,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -328,10 +344,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1416233271",
+      "id": "1505056878",
+      "name_lat": "DJARLY BLEIZ",
+      "name_ru": "",
+      "breed": "БОСТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1881566280",
       "name_lat": "DJAZ-BAND ZHIZN' V SHOCOLADE",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -346,12 +371,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "543557388",
-      "name_lat": "DJUKETTI TAKESHI KITANO",
+      "id": "1819176339",
+      "name_lat": "DJINNY LEELOO DALLAS",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -373,28 +398,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1316131850",
-      "name_lat": "DJELARI HIL OMAR SI (L-H)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1921838310",
+      "id": "1606162720",
       "name_lat": "DJELARI HIL ETREY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "111072378",
+      "id": "1623545612",
       "name_lat": "DJUKETTI TIANA CHERUTTI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -418,21 +434,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "4863357",
+      "name_lat": "DJEHAN GIR HUNTER",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1453678355",
       "name_lat": "DJONNI DEPP",
       "name_ru": "",
       "breed": "ИНТЛИ (СТАНДАРТН",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1187849343",
-      "name_lat": "DJARLY BLEIZ",
-      "name_ru": "",
-      "breed": "БОСТОН ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -499,15 +515,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "639982918",
-      "name_lat": "DJINNY LEELOO DALLAS",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1695613329",
       "name_lat": "DJANAKI IZ DOMA KOROLEVOI",
       "name_ru": "",
@@ -526,15 +533,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1532059229",
-      "name_lat": "DJUSEFINA MOON",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД ИТАЛЬЯНСКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "188118772",
       "name_lat": "DJUVANSTAR VALENSIA ASABI",
       "name_ru": "",
@@ -544,28 +542,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "195934500",
+      "id": "61056406",
       "name_lat": "DJUKETTI TEONA KRASH ROUZ",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "116079231",
+      "id": "1016733699",
       "name_lat": "DJUKETTI TEODOR KING",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1980596861",
+      "id": "720387744",
       "name_lat": "DJUVANSTAR DIODOR",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ /",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -589,10 +587,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "14400298",
+      "id": "661744028",
       "name_lat": "DJUKETTI BOZHOLE LUAR",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -607,19 +605,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "199610138",
+      "name_lat": "DJEHAN GIR BRENDI",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ /",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "118058760",
       "name_lat": "DJEHAN GIR CHERVONNYY - KLIM",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "836623799",
+      "id": "1693392848",
       "name_lat": "DJAZ-BAND VIRMA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -661,6 +666,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "738652807",
+      "name_lat": "DJEHAN GIR VOLT SHAKH BANI",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1678363760",
       "name_lat": "DJAZ-BAND FORMULA IGRY",
       "name_ru": "",
@@ -688,15 +701,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "798913303",
-      "name_lat": "DJANGO OSVOBOJDENNYI",
-      "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "861908444",
       "name_lat": "DJUKETTI TRINITI CHIARA",
       "name_ru": "",
@@ -712,15 +716,6 @@
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "4863357",
-      "name_lat": "DJEHAN GIR HUNTER",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -742,30 +737,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1114380330",
-      "name_lat": "DJUKETTI TADDEUS KVIN TAJ",
-      "name_ru": "",
-      "breed": "Фокстерьер жесткошерстный",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1376367576",
+      "id": "1115576162",
       "name_lat": "DJET SET CETRISA FIRE GERL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1532335338",
+      "id": "1703925916",
+      "name_lat": "DJUKETTI TADDEUS KVIN TAJ",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1886603140",
       "name_lat": "DJET SET C'TSAURON FIRSTBORN",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -796,21 +791,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "582859691",
+      "name_lat": "DJEKPOT IZ ORLINOGO GNEZDA",
+      "name_ru": "",
+      "breed": "АКИТА АЛЯСКИНСКИЙ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "110209786",
       "name_lat": "DJUVANSTAR AZIZI INDAR",
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "582859691",
-      "name_lat": "DJEKPOT IZ ORLINOGO GNEZDA",
-      "name_ru": "",
-      "breed": "АКИТА АЛЯСКИНСКИЙ",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -841,6 +836,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1489441236",
+      "name_lat": "DJUNE NYOKKO",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "AKITA",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1917982206",
       "name_lat": "DJETTA VOM HOUSE ALEKS",
       "name_ru": "",
@@ -850,10 +854,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1711576240",
+      "id": "158948252",
       "name_lat": "DJOHNNY DEPP",
       "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed": "СКАЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "SCOTTISH TERRIER",
       "total_shows": 10,
       "competition_dog_id": null
@@ -863,6 +867,24 @@
       "name_lat": "DJUVANSTAR EIVA PUNITA",
       "name_ru": "",
       "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "741477265",
+      "name_lat": "DJUKETTI TAPRINA FABIAN",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "106167113",
+      "name_lat": "DJOY KVIN EVEREST",
+      "name_ru": "",
+      "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -886,6 +908,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1986090304",
+      "name_lat": "D'JADI LUKE SKYWALKER BELSTOK DELLA CONTEA DEL NORD",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "222635955",
       "name_lat": "DJAZZ",
       "name_ru": "",
@@ -895,19 +926,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1333812917",
-      "name_lat": "DJUKETTI TAPRINA FABIAN",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1016217915",
+      "id": "805871814",
       "name_lat": "DJOEL YARKIY SVET SAPFIROVOY ZVEZDY",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -922,20 +944,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "65712484",
+      "id": "866163798",
       "name_lat": "DJUKETTI YURK CHERUS",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "668723844",
+      "id": "1694040013",
       "name_lat": "DJUKETTI CHUBAKKA ARISTO",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "395963363",
+      "name_lat": "DJASPER IZ GRADA KATERINY",
+      "name_ru": "",
+      "breed": "СОЛЬЮ",
+      "breed_en": "SCHNAUZER P-S",
       "total_shows": 11,
       "competition_dog_id": null
     },
@@ -964,15 +995,6 @@
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "106167113",
-      "name_lat": "DJOY KVIN EVEREST",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1039,10 +1061,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1987884254",
+      "id": "364880359",
       "name_lat": "DJINNY WEASLEY TSERTUS GARDE",
       "name_ru": "",
-      "breed": "DACHSHUND ZWERG LANGHAAR ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ /",
+      "breed": "DACHSHUND ZWERG LANGHAAR ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1057,39 +1079,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "374618149",
+      "id": "1051395045",
       "name_lat": "DJET SET TSETRISSA FIRE GIRL",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "395963363",
-      "name_lat": "DJASPER IZ GRADA KATERINY",
-      "name_ru": "",
-      "breed": "СОЛЬЮ",
-      "breed_en": "SCHNAUZER P-S",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1995222116",
+      "id": "294145366",
       "name_lat": "DJUKETTI KAORI CHIKKO",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1489441236",
-      "name_lat": "DJUNE NYOKKO",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "AKITA",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1098,7 +1102,7 @@
       "name_ru": "",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1120,21 +1124,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1732831135",
+      "id": "1607662952",
       "name_lat": "DJAZ-BAND TI SUPER",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ (ГЛАДКОШЕРСТНЫЙ)",
+      "breed": "МАЛЫЙ РУССКИЙ ТОЙ (ГЛАДКОШЕРС",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1528817218",
+      "id": "1138281539",
       "name_lat": "DJEEVES FRIEND OF WOOSTER",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "459055963",
+      "name_lat": "DJHENTLMEN UDACHI S KRASNOGO JARA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1147,10 +1160,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1543304661",
+      "id": "1199793640",
       "name_lat": "DJET SET LAVELY PRINCE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
@@ -1174,15 +1187,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "459055963",
-      "name_lat": "DJHENTLMEN UDACHI S KRASNOGO JARA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "427036065",
       "name_lat": "DJUVANSTAR DOMINICA",
       "name_ru": "",
@@ -1197,7 +1201,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1210,10 +1214,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1959139652",
+      "id": "1773616310",
       "name_lat": "DJUKETTI KURAZH LORAN",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1273,6 +1277,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1802378993",
+      "name_lat": "DJAMESON SINE METU",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "74901964",
       "name_lat": "DJUVANSTAR ILARIO VALENS",
       "name_ru": "",
@@ -1282,10 +1294,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1138015853",
+      "id": "219821522",
       "name_lat": "DJUKETTI TAYNA COCO",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1309,6 +1321,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1870472336",
+      "name_lat": "DJELARI HIL SAMURAY",
+      "name_ru": "",
+      "breed": "GERMAN SHEPHERD DOG",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1627913511",
       "name_lat": "DJEMMI DJU DGIJA MEIXIU",
       "name_ru": "",
@@ -1324,6 +1345,23 @@
       "breed": "ЖЕСТКОШЕРС",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1059644560",
+      "name_lat": "DJEHAN GIR B'YANKA",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1941668517",
+      "name_lat": "DJELARI HIL TAYYA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1363,6 +1401,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1794486009",
+      "name_lat": "DJUVANSTAR GLYCERIA GODA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ / BASENJI",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1748568845",
       "name_lat": "DJELARI HIL YAKUDZA",
       "name_ru": "",
@@ -1381,8 +1428,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "106930899",
+      "name_lat": "DJUKETTI TIIDA FELICITY",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1124004014",
-      "name_lat": "Djungle Child Lokki",
+      "name_lat": "DJUNGLE CHILD LOKKI",
       "name_ru": "",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
@@ -1390,19 +1446,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "733523161",
+      "id": "929458548",
       "name_lat": "DJIA LAN DIN LUK",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1870472336",
-      "name_lat": "DJELARI HIL SAMURAY",
+      "id": "559760852",
+      "name_lat": "DJENTEL ROUZ LA VALERINA ROSS",
       "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG",
+      "breed": "SHETLAND",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1381196545",
+      "name_lat": "DJAZZ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1444,21 +1508,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1742965807",
-      "name_lat": "DJUKETTI TIIDA FELICITY",
+      "id": "308021659",
+      "name_lat": "DJUKETTI YUNIKA CHARMING",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1059644560",
-      "name_lat": "DJEHAN GIR B'YANKA",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1471,28 +1526,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1976035642",
+      "id": "440249544",
       "name_lat": "DJUKETTI YURIK CHERUSS",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ / FOX",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш / FOX",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "769393424",
+      "id": "1181718",
       "name_lat": "DJELARI HIL ZIMA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "365364880",
+      "id": "522917861",
       "name_lat": "DJASSARI IZ GALAKUNA",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1504,24 +1559,6 @@
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "923711979",
-      "name_lat": "DJEHAN GIR BRENDI",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1794486009",
-      "name_lat": "DJUVANSTAR GLYCERIA GODA",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ / BASENJI",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1606,19 +1643,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "502872286",
+      "id": "1034301053",
       "name_lat": "DJUMANTI IZ BEREZOVOGO LOGA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "783881499",
+      "id": "1300375497",
       "name_lat": "DJUKETTI KYARA CHELLI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1633,11 +1670,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "304994631",
-      "name_lat": "DJUKETTI YUNIKA CHARMING",
+      "id": "1896245465",
+      "name_lat": "DJUVANSTAR GADAMBA BRIS",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
-      "breed_en": "",
+      "breed": "БАСЕНДЖИ / BASENJI",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -1651,21 +1687,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1617557486",
-      "name_lat": "DJAZZ",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "319852004",
       "name_lat": "DJULIETTA DOMINO DUKATTO",
       "name_ru": "",
       "breed": "OLD ENGLISH SHEEPDOG (BOBTAIL)",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "102532595",
+      "name_lat": "DJELARI HIL TAMERLAN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1723,6 +1758,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "964995636",
+      "name_lat": "DJEHAN GIR BETMAN",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "750349591",
       "name_lat": "DJEYLI EN MARGO (LONG COAT)",
       "name_ru": "",
@@ -1741,10 +1784,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1937910217",
+      "id": "396777805",
       "name_lat": "DJUKETTI KAYRA EMILIYA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1772,15 +1815,6 @@
       "name_lat": "DJOKER",
       "name_ru": "",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1381196545",
-      "name_lat": "DJAZZ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1818,6 +1852,30 @@
       "name_ru": "",
       "breed": "AFFENPINSCHERDOGDOG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "464799662",
+      "name_lat": "DJAKARTASBAD GUY",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ ПАПИЙОН",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "520899644",
+      "name_lat": "DJIA LAN JESSI HELSING",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "878788380",
+      "name_lat": "DJENIFFER SWEET CANDY",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР / JACK",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1867,10 +1925,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "166875000",
+      "id": "996978309",
       "name_lat": "DJESSI",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1903,10 +1961,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1023988613",
+      "id": "607285912",
       "name_lat": "DJUSTIN DARLING BOO IZ ZOLOTOGO SUNDECHKA",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1921,37 +1979,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1645984688",
+      "id": "48758910",
+      "name_lat": "DJAZ-BAND MUZYKA VESNY VIVABOSSA (LONG COAT)",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1186657473",
       "name_lat": "DJUKETTI FLORANS YAHOTESSA DIAMAND",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "948612284",
-      "name_lat": "DJAZ-BAND MUZYKA VESNY VIVABOSSA",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1491140215",
+      "id": "1709710891",
       "name_lat": "DJUKETTI YUTTA FILADELFIA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1469783118",
+      "id": "127833664",
       "name_lat": "DJUKETTI MONA LIZA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1966,10 +2024,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "915422347",
+      "id": "1849422159",
       "name_lat": "DJUKETTI TIARA KALISA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2020,11 +2078,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "1093136303",
+      "name_lat": "D-JEDI YODA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1445625760",
       "name_lat": "DJUVANSTAR FANDAR AFOLABI",
       "name_ru": "",
       "breed": "БАСЕНДЖИ / BASENJI",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "50717211",
+      "name_lat": "DJOKER",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2070,7 +2145,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2092,12 +2167,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "777302511",
+      "id": "1138052126",
       "name_lat": "DJET SET KATRINA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1559363042",
+      "name_lat": "DJUVANSTAR THEODOR TEO",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2107,6 +2191,15 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1450716378",
+      "name_lat": "DJET SET TSAURON FIRSTBORN",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2124,15 +2217,6 @@
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1809362528",
-      "name_lat": "DJET SET TSAURON FIRSTBORN",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
-      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -2155,19 +2239,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "37165149",
+      "id": "1046459970",
       "name_lat": "DJAZ-BAND DITRIH",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "102532595",
-      "name_lat": "DJELARI HIL TAMERLAN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2191,10 +2266,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "346679913",
+      "id": "470238010",
+      "name_lat": "DJEHAN GIR ANTAREKS",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "796810854",
       "name_lat": "DJAZ-BAND NATAN",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "650977212",
+      "name_lat": "D’JOKER POKER FACE",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2263,6 +2355,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "163733128",
+      "name_lat": "D'JERRY LEE SEVERNYI SHTORM BY SHANTIMAL",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "ALASKAN MALAMUTE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "112783852",
       "name_lat": "DJUVANSTAR NATUS VINCERE",
       "name_ru": "",
@@ -2290,15 +2391,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "48758910",
-      "name_lat": "DJAZ-BAND MUZYKA VESNY VIVABOSSA (LONG COAT)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ Д-Ш",
-      "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1470300002",
       "name_lat": "DJUVANSTAR VASILIKA ALISIA",
       "name_ru": "",
@@ -2312,15 +2404,6 @@
       "name_lat": "DJIGAN FROM THE TEMPLE OF AMON",
       "name_ru": "",
       "breed": "ПОКЕТ / AMERICAN BULLY",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "656536346",
-      "name_lat": "DJET SET IMPRESSIVE LADY ( )",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2344,10 +2427,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "576388537",
+      "id": "54268188",
+      "name_lat": "DJABBA JOFFREY RONAN",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1937141393",
       "name_lat": "DJUNA IZ POMESTYA BOGOVIK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2357,15 +2449,6 @@
       "name_lat": "DJOLLY VON OSTEN HERZ",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "659746791",
-      "name_lat": "DJUVANSTAR THEODOR TEO",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ / BASENJI",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2389,19 +2472,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1991488917",
+      "id": "1333702568",
       "name_lat": "DJAFAR MOLOSSY IZ ASII",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1222241345",
-      "name_lat": "DJABBA JOFFREY RONAN",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2425,10 +2499,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1745159285",
+      "id": "938581512",
       "name_lat": "DJORDAN",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2443,10 +2517,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "114003738",
+      "id": "1268570997",
       "name_lat": "DJESSICA",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2479,6 +2553,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "983160914",
+      "name_lat": "DJONNI DEPP",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "876149996",
+      "name_lat": "DJOSHUA BULDOG KIND HEART",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1750363340",
       "name_lat": "DJUSTIN BEBERON",
       "name_ru": "",
@@ -2493,15 +2584,6 @@
       "name_ru": "",
       "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "RUSSKIY TOY (RUSSIAN TOY) LONG-HAIRED",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "876149996",
-      "name_lat": "DJOSHUA BULDOG KIND HEART",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2528,15 +2610,6 @@
       "name_lat": "DJEKPOT GOLDEN FOX",
       "name_ru": "",
       "breed": "ПЕМБРОК / WELSH",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "999005263",
-      "name_lat": "DJUNE NYOKKО",
-      "name_ru": "",
-      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2569,19 +2642,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1811756493",
+      "id": "1534783186",
       "name_lat": "DJAZ-BAND NAGLYY FRUKT",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1082047441",
+      "id": "454888685",
       "name_lat": "DJUKETTI TOR KONTI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2623,10 +2696,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "730535121",
+      "id": "937190252",
       "name_lat": "DJUSTIN DARLING BOO IZ ZOLOTOGO SUNDUCHKA",
       "name_ru": "",
-      "breed": "И ДРУГИЕ ОКРАСЫ /",
+      "breed": "И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2641,6 +2714,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "715125683",
+      "name_lat": "D'JOAN ROWLING VIPCAVALER",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1250086424",
       "name_lat": "DJEY VOM NEO REICH",
       "name_ru": "",
@@ -2650,19 +2732,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "128291642",
+      "id": "483455156",
       "name_lat": "DJOLI FOM BAIKAL HAUS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "470238010",
-      "name_lat": "DJEHAN GIR ANTAREKS",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2677,10 +2750,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1528340302",
-      "name_lat": "DJEHAN GIR VOLT",
+      "id": "511326479",
+      "name_lat": "D'JORDG LOUIS PRINCE UELSKIY",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

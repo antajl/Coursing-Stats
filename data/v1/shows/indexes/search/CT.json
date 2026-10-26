@@ -1,0 +1,52 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "CT",
+  "count": 5,
+  "dogs": [
+    {
+      "id": "1754468571",
+      "name_lat": "C-TIPSI",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "650053979",
+      "name_lat": "C-TIPSI",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1589657523",
+      "name_lat": "CTEVE",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "534164227",
+      "name_lat": "CTAR ALLIANCE ZUMA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "56936861",
+      "name_lat": "C'TSAURON",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

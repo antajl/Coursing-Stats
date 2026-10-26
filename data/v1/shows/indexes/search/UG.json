@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UG",
-  "count": 31,
+  "count": 32,
   "dogs": [
     {
       "id": "301987049",
@@ -45,7 +45,7 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -58,10 +58,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "239866659",
+      "id": "434595162",
+      "name_lat": "U-GY-OH DE L'ODYSSEE D'HERA",
+      "name_ru": "",
+      "breed": "ГОЛЛАНДСКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "DUTCH SHEPHERD DOG SHORT HAIRED",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "627060234",
       "name_lat": "UGANDA DREAM OF AFRICA OT SIGIRII",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ /",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -94,12 +103,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1469344",
+      "id": "315628149",
       "name_lat": "UGO VOM HAUS HELEN",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1799386865",
+      "name_lat": "UGROZA IZ DOMA SHEBIS",
+      "name_ru": "УГРОЗА ИЗ ДОМА ШЕБИС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -121,10 +139,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1456528029",
+      "id": "995107674",
       "name_lat": "UGO GALADO IZ IMPERII ADAMANT",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -193,15 +211,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "48901082",
-      "name_lat": "UGROZA IZ DOMA SHEBIS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1238553835",
       "name_lat": "UGO SALVE MARIS STELLA",
       "name_ru": "",
@@ -256,10 +265,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "138786137",
+      "id": "1394837861",
       "name_lat": "UGO BOSS",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

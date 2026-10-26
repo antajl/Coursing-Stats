@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ML",
-  "count": 4,
+  "count": 6,
   "dogs": [
     {
       "id": "1472011130",
@@ -20,6 +20,24 @@
       "breed_en": "WHIPPET",
       "total_shows": 12,
       "competition_dog_id": 9272
+    },
+    {
+      "id": "702624163",
+      "name_lat": "M-LIZA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1298709847",
+      "name_lat": "M'LORD IZ OK'VI LAND",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
     },
     {
       "id": "1869308017",

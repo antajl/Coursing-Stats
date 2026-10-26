@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "CZ",
-  "count": 89,
+  "count": 92,
   "dogs": [
     {
       "id": "542554333",
@@ -37,6 +37,15 @@
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1598064075",
+      "name_lat": "CZAR SOLOMON MUDRYJ",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -76,15 +85,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1598064075",
-      "name_lat": "CZAR SOLOMON MUDRYJ",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1713126707",
       "name_lat": "CZESSIYA DOROTEYA",
       "name_ru": "",
@@ -121,10 +121,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1754534176",
+      "id": "1139009222",
       "name_lat": "CZAPFIR BLACK AUS OLENBURG (L-H)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -175,6 +175,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "670502612",
+      "name_lat": "CZVETOK VETRA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "798479388",
       "name_lat": "CZARICZA SAVSKAYA",
       "name_ru": "",
@@ -189,16 +198,7 @@
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "670502612",
-      "name_lat": "CZVETOK VETRA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -220,12 +220,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1538444202",
+      "id": "1524334587",
       "name_lat": "CZENTURIYA EL GRANTE",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1094246235",
+      "name_lat": "CZVETNAYA SKAZKA IZ STAROY SHUI",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -256,28 +265,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1512988486",
-      "name_lat": "CZELIOS AMEDZHIK KING",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "582544489",
       "name_lat": "CZINIYA IZ POLYARNOGO SIYANIYA",
       "name_ru": "",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "619418704",
+      "id": "1512988486",
+      "name_lat": "CZELIOS AMEDZHIK KING",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "262826917",
       "name_lat": "CZADAK DOG LEONTINE",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -337,10 +344,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1637078404",
+      "id": "152606700",
       "name_lat": "CZARINA LUNA",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "ЙСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -369,7 +376,7 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -414,7 +421,7 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -472,10 +479,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "270713441",
+      "id": "79863740",
       "name_lat": "CZIVILIYA ALFA DZEN",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -508,10 +515,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1902604004",
+      "id": "341032641",
       "name_lat": "CZIRKON IZ KOMPANIYI SEBASTIANA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -526,8 +533,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1743557710",
-      "name_lat": "CZEJZ- OSTIN",
+      "id": "404874098",
+      "name_lat": "CZEJZ-OSTIN",
       "name_ru": "",
       "breed": "ИЙ",
       "breed_en": "",
@@ -544,10 +551,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1831124359",
+      "id": "467545618",
       "name_lat": "CZUBAKI IZ DOMA ROMANA",
       "name_ru": "",
-      "breed": "ЛАБРАДОРРЕТРИВЕР/",
+      "breed": "ЛАБРАДОРРЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -589,6 +596,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "697899737",
+      "name_lat": "CZEFEY",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1356014417",
       "name_lat": "CZERRI LAUTER MEJLAN",
       "name_ru": "",
@@ -598,19 +613,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "259542293",
+      "id": "1121398599",
+      "name_lat": "CZITADEL' DELI",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1387512876",
       "name_lat": "CZEDEN RONNI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "340755176",
+      "id": "1183445974",
       "name_lat": "CZENA LYUBVI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -643,10 +666,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "303668965",
+      "id": "1797657629",
       "name_lat": "CZIRCZEYA ASTERIYA",
       "name_ru": "",
-      "breed": "ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -688,10 +711,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1189804132",
+      "id": "875520354",
       "name_lat": "CZYGAN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -724,6 +747,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1943413652",
+      "name_lat": "CZACZA IZ PODNEBESYA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1426800643",
       "name_lat": "CZARICZA NILA NEFERTITI",
       "name_ru": "",
@@ -751,10 +783,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "18845868",
+      "id": "339566930",
+      "name_lat": "CZHEMMARI CHIP TAYUR",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "424240265",
       "name_lat": "CZARICZA NEBESNAYA S ZAPADNOGO",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -778,28 +818,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "200615377",
-      "name_lat": "CZACZA IZ PODNEBESYA",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "659248216",
       "name_lat": "CZARSKAYA ZAZNOBA OT VANILNOY LUNY (LONG COAT)",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1094246235",
-      "name_lat": "CZVETNAYA SKAZKA IZ STAROY SHUI",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

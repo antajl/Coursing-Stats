@@ -98,8 +98,16 @@ export function buildJudgeDetails(rows: unknown[], judgesData: { id?: string; na
 
     const detailPath = path.join(outDir, `${judgeDetailKey(judgeName)}.json`)
     const detailJson = JSON.stringify(payload)
+    if (fs.existsSync(detailPath)) {
+      try {
+        if (fs.readFileSync(detailPath, "utf-8") === detailJson) {
+          count += 1;
+          continue;
+        }
+      } catch {}
+    }
     let lastErr: unknown
-    for (let attempt = 0; attempt < 12; attempt++) {
+    for (let attempt = 0; attempt < 25; attempt++) {
       try {
         fs.writeFileSync(detailPath, detailJson, 'utf-8')
         lastErr = null
@@ -108,7 +116,7 @@ export function buildJudgeDetails(rows: unknown[], judgesData: { id?: string; na
         lastErr = e
         const code = (e as NodeJS.ErrnoException)?.code
         if (code !== 'UNKNOWN' && code !== 'EPERM' && code !== 'EBUSY') throw e
-        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 80 * (attempt + 1))
+        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 150 * (attempt + 1))
       }
     }
     if (lastErr) throw lastErr

@@ -1,24 +1,23 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OT",
-  "count": 226,
+  "count": 240,
   "dogs": [
     {
       "id": "21456650",
       "name_lat": "OTAKAR ELLI ZAFFIRO DE AMBRA",
       "name_ru": "",
       "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1569068345",
+      "id": "1385048045",
       "name_lat": "OTVAZHNYJ DRUG ZENIT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 41,
       "competition_dog_id": null
     },
     {
@@ -27,7 +26,16 @@
       "name_ru": "",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "WHITE SWISS SHEPHERD DOG",
-      "total_shows": 20,
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1759882066",
+      "name_lat": "OTAKAR ELLI ARTUR KING",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -45,23 +53,14 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 27,
+      "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "1759882066",
-      "name_lat": "OTAKAR ELLI ARTUR KING",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "427770755",
+      "id": "605273751",
       "name_lat": "OTVAZHNY VOIN KIRYAN",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -73,6 +72,15 @@
       "breed": "ЧИХУАХУА К-Ш",
       "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "340672376",
+      "name_lat": "OTTIMA VAI ASTON PRIME",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 44,
       "competition_dog_id": null
     },
     {
@@ -114,10 +122,10 @@
     {
       "id": "302969520",
       "name_lat": "OTLICHNYY VYBOR INTRIGA",
-      "name_ru": "",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР ИНТРИГА",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -130,10 +138,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1460929980",
+      "id": "846950968",
       "name_lat": "OTA DI BONFINI ЕРМАК",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -145,6 +153,15 @@
       "breed": "ТНАЯ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1757994739",
+      "name_lat": "OTLICHNYY VYBOR YA TAKAYA",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР Я ТАКАЯ",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -175,21 +192,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "795924907",
+      "id": "1701635323",
+      "name_lat": "OTOMEZA GAJA",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1033984137",
       "name_lat": "OTAVIA BEL FIORE",
       "name_ru": "",
-      "breed": "КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1841277154",
-      "name_lat": "OTTIMA VAI ASTON PRIME",
+      "id": "228719118",
+      "name_lat": "OTOMBI ZULU FROM SOUS AFRIKA",
+      "name_ru": "ОТОМБИ ЗУЛУ ФРОМ СОУС АФРИКА",
+      "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
+      "breed_en": "SOUTH AFRICAN BOERBOEL",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1238916628",
+      "name_lat": "OTAKAR ELLI VIVID CHERRY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "breed": "НОРФОЛК ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 39,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -202,6 +237,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "323754192",
+      "name_lat": "OTTIMA VAI PIKSEL",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1279807850",
       "name_lat": "OTRADA",
       "name_ru": "",
@@ -211,21 +255,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "323754192",
-      "name_lat": "OTTIMA VAI PIKSEL",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "66953162",
       "name_lat": "OTTIMA VAI DZHET FLEYM",
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1320429491",
+      "name_lat": "O' TEIELA SO ZVEZDNOGO PUTI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -247,6 +291,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1084181044",
+      "name_lat": "OTAKAR ELLI VINCENT",
+      "name_ru": "",
+      "breed": "НОРФОЛК ТЕРЬЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "41924399",
       "name_lat": "OTASH",
       "name_ru": "",
@@ -265,12 +317,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "228719118",
-      "name_lat": "OTOMBI ZULU FROM SOUS AFRIKA",
-      "name_ru": "",
-      "breed": "ЮЖНОАФРИКАНСКИЙ БУРБУЛЬ",
-      "breed_en": "SOUTH AFRICAN BOERBOEL",
-      "total_shows": 3,
+      "id": "1792008584",
+      "name_lat": "OTRADA SERDTSA",
+      "name_ru": "ОТРАДА СЕРДЦА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -328,12 +380,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "336720575",
+      "id": "275657675",
       "name_lat": "OTVAZHNY VOIN MILODAN",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "346431485",
+      "name_lat": "O-TOR",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
+      "breed_en": "ZAPADNOSIBIRSKAYA LAIKA (WEST-SIBERIAN LAIKA)",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -346,10 +407,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1358543475",
+      "id": "1771531175",
       "name_lat": "OTVAZHNY VOIN MAGNA Р",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -364,15 +425,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1757994739",
-      "name_lat": "OTLICHNYY VYBOR YA TAKAYA",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "786290204",
       "name_lat": "OTDIHLAF MISTER ARCHIBALD",
       "name_ru": "",
@@ -382,10 +434,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1163245932",
+      "id": "637533600",
       "name_lat": "OTVAZHNY VOIN MAGNUM",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -427,10 +479,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "38016343",
+      "id": "1823622914",
       "name_lat": "OTTO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ ЛЕГАВАЯ (ДРАТХААР)",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -442,6 +494,15 @@
       "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "279265183",
+      "name_lat": "OTRADA SERDTSA MOEGO IZ VOLSHEBNOGO LESA",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "IRISH WOLFHOUND",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -481,10 +542,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "614817675",
+      "id": "432347999",
       "name_lat": "OTASH",
       "name_ru": "",
-      "breed": "ШИ ТЦУ АФГАНСКАЯ АФГАНСКАЯ",
+      "breed": "ШИ ТЦУ АФГАНСКАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -508,21 +569,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1238916628",
-      "name_lat": "OTAKAR ELLI VIVID CHERRY",
+      "id": "659028035",
+      "name_lat": "OTTIMA VAI NIKA DRIM",
       "name_ru": "",
-      "breed": "НОРФОЛК ТЕРЬЕР",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "355487284",
-      "name_lat": "OTTIMA VAI NIKA DRIM",
+      "id": "101405823",
+      "name_lat": "OTTIMA VAI KALIPSO",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 3,
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -544,21 +604,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "279265183",
-      "name_lat": "OTRADA SERDTSA MOEGO IZ VOLSHEBNOGO LESA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
       "id": "243501267",
       "name_lat": "OTTO THE LORD IZ CHERNOY RATI",
       "name_ru": "",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -567,7 +618,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 46,
+      "total_shows": 50,
       "competition_dog_id": null
     },
     {
@@ -580,10 +631,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "418744413",
+      "id": "1567903605",
       "name_lat": "OT TEBYA BEZ UMA IZ GORODA TAKS",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -594,7 +645,16 @@
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "942819238",
+      "name_lat": "O'TCHERNIY ALMAZ NOSTALGIE DE FRANCE",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -613,6 +673,15 @@
       "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "526789099",
+      "name_lat": "OTVAZHNAYA ODETTA",
+      "name_ru": "ОТВАЖНАЯ ОДЕТТА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -652,10 +721,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1227092185",
+      "id": "581003429",
+      "name_lat": "OTCHIY DOM KAMA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1116125837",
       "name_lat": "OTVAZHNYJ DRUG ESENIYA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -688,21 +766,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "581003429",
-      "name_lat": "OTCHIY DOM KAMA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
       "id": "1317855906",
       "name_lat": "OTTEY MORELI",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "427811659",
+      "name_lat": "OTLICHNYY VYBOR UILIAM",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -769,12 +847,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "427811659",
-      "name_lat": "OTLICHNYY VYBOR UILIAM",
+      "id": "915209771",
+      "name_lat": "OTLICHNYY VYBOR UELLS",
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -787,12 +865,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "526789099",
-      "name_lat": "OTVAZHNAYA ODETTA",
+      "id": "1779534628",
+      "name_lat": "OTVAZHNIY KAPITAN OT SIBIRSKOGO MEDVEDJA",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173808377",
+      "name_lat": "OTDIHLAF PRAIMROUS DLYA DUBRAVI",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1375696617",
+      "name_lat": "OTDIHLAF NELSON",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -823,39 +919,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "857282384",
+      "id": "649036573",
       "name_lat": "OTRADA RADOSTNAYA SHTUCHKA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1375696617",
-      "name_lat": "OTDIHLAF NELSON",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "id": "122039558",
+      "name_lat": "OTVAGA S KRUTOYARA",
+      "name_ru": "ОТВАГА С КРУТОЯРА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1779534628",
-      "name_lat": "OTVAZHNIY KAPITAN OT SIBIRSKOGO MEDVEDJA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "173808377",
-      "name_lat": "OTDIHLAF PRAIMROUS DLYA DUBRAVI",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -868,12 +946,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1701635323",
-      "name_lat": "OTOMEZA GAJA",
+      "id": "1723131463",
+      "name_lat": "OTDIHLAF MAGGI",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -882,7 +960,7 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "SHETLAND SHEEPDOG",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -913,6 +991,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1820762079",
+      "name_lat": "OTOMI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1066226296",
       "name_lat": "OTRADA IZ MIRA ANZHELIKI",
       "name_ru": "",
@@ -931,19 +1017,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "743007703",
+      "id": "1980049975",
       "name_lat": "OTVAZHNYJ DRUG FELIX",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1652111619",
+      "id": "1292567955",
       "name_lat": "OTVAZHNYJ DRUG DELTA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -976,6 +1062,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1402152401",
+      "name_lat": "OTVAZHNAYA AVRORA DLYA KARMA OF SHARMA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "277286174",
       "name_lat": "OTIS BOANERGOS EMELJA",
       "name_ru": "",
@@ -994,28 +1089,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "122039558",
-      "name_lat": "OTVAGA S KRUTOYARA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1515039823",
+      "id": "1961920675",
       "name_lat": "OTRADA LYUBVI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "967482771",
+      "id": "1521452103",
       "name_lat": "OTVAZHNY VOIN ILIANA",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1043,15 +1129,6 @@
       "name_lat": "OTTOMAN",
       "name_ru": "",
       "breed": "ЧЕРНЫЙ КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "199352085",
-      "name_lat": "OTVAZHNAYA AVRORA DLYA KARMA OF SHARMA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1093,10 +1170,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "84027889",
+      "id": "1867010325",
       "name_lat": "OTA NAOMI",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЁРНЫЙ",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1129,10 +1206,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1261467754",
+      "id": "821574331",
       "name_lat": "OTTO IZ DOMA LEVSHOVOI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН /",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1192,10 +1269,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "271850530",
+      "id": "1709375011",
       "name_lat": "OTARD BARON",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1219,6 +1296,32 @@
       "competition_dog_id": null
     },
     {
+      "id": "144750184",
+      "name_lat": "O-TOR",
+      "name_ru": "",
+      "breed": "СИБИРСКАЯ ЛАЙКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "692001372",
+      "name_lat": "O-TOR",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА / WEST SIBERIAN LAIKA",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1208691042",
+      "name_lat": "O-TOR",
+      "name_ru": "",
+      "breed": "ЗАПАДНО-СИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "894312283",
       "name_lat": "OTTIMA VAJ POPKORN",
       "name_ru": "",
@@ -1232,15 +1335,6 @@
       "name_lat": "OT BASTINDY ROTTLIFE",
       "name_ru": "",
       "breed": "SCHNAUZERR BLACK",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "915209771",
-      "name_lat": "OTLICHNYY VYBOR UELLS",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1309,10 +1403,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1343431357",
+      "id": "1157551697",
       "name_lat": "OTOORI EXCENTRIC IZ KITEZ GRADA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1327,6 +1421,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "852533982",
+      "name_lat": "O-TOR",
+      "name_ru": "",
+      "breed": "ЛАЙКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1309112216",
       "name_lat": "OTDIHLAF EDVARD II",
       "name_ru": "",
@@ -1338,17 +1441,17 @@
     {
       "id": "611726920",
       "name_lat": "OTLICHNYY VYBOR TURMALIN",
-      "name_ru": "",
+      "name_ru": "ОТЛИЧНЫЙ ВЫБОР ТУРМАЛИН",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1635189759",
+      "id": "174916739",
       "name_lat": "OTHER RUS DE PLATEMARE",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1372,19 +1475,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "498880580",
+      "id": "1118846552",
       "name_lat": "OT GOSPOJI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1455378807",
+      "id": "1177304006",
       "name_lat": "OT DONTSOVA",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1399,12 +1502,46 @@
       "competition_dog_id": null
     },
     {
+      "id": "1157576197",
+      "name_lat": "OTDIHLAF TSEDRA APELSINOVAYA",
+      "name_ru": "",
+      "breed": "ШЕЛТИ / SHETLAND",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1832062232",
+      "name_lat": "O TSAR BOMB DES ETOILES  D`ARTEMIS",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА К-Ш",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1562742423",
       "name_lat": "OTLICHNYY VYBOR CUNAMI",
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "47560216",
+      "name_lat": "OTTIMA VAI RUMBA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "226537581",
+      "name_lat": "O-TOR",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1423,6 +1560,15 @@
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1145730945",
+      "name_lat": "OTRADA GLAZ MOIKH",
+      "name_ru": "ОТРАДА ГЛАЗ МОИХ",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1453,28 +1599,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1723131463",
-      "name_lat": "OTDIHLAF MAGGI",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1145730945",
-      "name_lat": "OTRADA GLAZ MOIKH",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1749967607",
+      "id": "339992886",
       "name_lat": "OTGON OD AVRAGA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1512,6 +1640,15 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1410922499",
+      "name_lat": "OTIS BOANERGOS SWEET SPESSARTINE",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "SCHNAUZER BLACK",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1588,15 +1725,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1410922499",
-      "name_lat": "OTIS BOANERGOS SWEET SPESSARTINE",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
-      "breed_en": "SCHNAUZER BLACK",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "474809689",
       "name_lat": "OTTSUKISAMA FYYU",
       "name_ru": "",
@@ -1660,10 +1788,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "448701910",
+      "id": "1140686264",
+      "name_lat": "OT KUTYUR AMELI",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1904847951",
       "name_lat": "OTIKS SOFIEVSKAYA ZEMLYA",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1678,19 +1815,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "254162295",
-      "name_lat": "OT KUTYUR AMELI",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1366014542",
+      "id": "1657340311",
       "name_lat": "OTILLIA",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1741,10 +1869,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "696757574",
+      "id": "917666032",
       "name_lat": "OT NEVSKOGO",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1768,15 +1896,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1271385364",
-      "name_lat": "OTVAZHNYJ DRUG KIVI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "184052312",
       "name_lat": "OTIS BOANERGOS ZVEZDOCHET",
       "name_ru": "",
@@ -1791,6 +1910,15 @@
       "name_ru": "",
       "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "SCHNAUZER BLACK",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1271385364",
+      "name_lat": "OTVAZHNYJ DRUG KIVI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1903,6 +2031,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1925403038",
+      "name_lat": "OT VALLENSII MY IZBRANNIK",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1811292391",
       "name_lat": "OTDIHLAF BENTLEY",
       "name_ru": "",
@@ -1939,10 +2075,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "626854603",
+      "id": "138179010",
       "name_lat": "OTIS KRISMAS GIF",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1979,24 +2115,6 @@
       "name_lat": "OTCHIY DOM KNYAZ KAZANSKIKH ZVEZD",
       "name_ru": "",
       "breed": "CENTRAL ASIA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1792008584",
-      "name_lat": "OTRADA SERDTSA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1081707922",
-      "name_lat": "OTTIMA VAI RUMBA",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

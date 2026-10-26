@@ -1,11 +1,11 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "PS",
-  "count": 21,
+  "count": 29,
   "dogs": [
     {
-      "id": "1030955776",
-      "name_lat": "PSKOVSTAR GUSTAVO- SHAKIRA-INTERNATIONAL",
+      "id": "979928968",
+      "name_lat": "PSKOVSTAR GUSTAVO-SHAKIRA-INTERNATIONAL",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
@@ -13,17 +13,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "276777585",
+      "id": "510679129",
       "name_lat": "PSKOVLAND VELTEN",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "158941417",
-      "name_lat": "PSKOVSTAR CHERO-DE- LOS-ANHELITA",
+      "id": "527201010",
+      "name_lat": "P.S FROM RUSSIA WITH LOVE Z KROLEWSKIEGO DWORU",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 44,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1360891501",
+      "name_lat": "PSKOVSTAR CHERO-DE-LOS-ANHELITA",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
@@ -31,21 +40,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "653285596",
+      "id": "361171443",
       "name_lat": "PSKOVLAND SHTURMAN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ПСКОВЛАНД ШТУРМАН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179745624",
+      "name_lat": "P.S. FROM RUSSIA WITH LOVE Z KROLEWSKIEGO DWORU",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
       "id": "1454138134",
       "name_lat": "PSKOVSTAR SHAKIRA-DEL-KARMEN",
-      "name_ru": "",
+      "name_ru": "ПСКОВСТАР ШАКИРА - ДЕЛ -КАРМЕН",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -55,6 +73,15 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1496060363",
+      "name_lat": "P’SCHNAPS IZ DOMA KERIKI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ СТАНДАРТ",
+      "breed_en": "AMERICAN BULLY CLASSIC",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -76,6 +103,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1361479096",
+      "name_lat": "P.S. FROM RUSSIA WITH LOVE Z KOROLEVSKIEGO DWORU",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "72185348",
+      "name_lat": "P.S.FROM RUSSIA WITH LOVE Z KROLEWSKIEGO DWORU",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "829546529",
       "name_lat": "PSOV HUNTER AFTER",
       "name_ru": "",
@@ -94,6 +139,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "242167711",
+      "name_lat": "P'SCHNAPPS IZ DOMA KERIKI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "55153083",
       "name_lat": "PSKOVLAND PANTERA",
       "name_ru": "",
@@ -103,10 +157,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "134817271",
+      "id": "1011827088",
       "name_lat": "PSKOVLAND FERRARI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -123,10 +177,10 @@
     {
       "id": "1445026342",
       "name_lat": "PSIKHEYA KRYLYA BABOCHKI",
-      "name_ru": "",
+      "name_ru": "ПСИХЕЯ КРЫЛЬЯ БАБОЧКИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -139,28 +193,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "278213505",
+      "id": "1650882914",
       "name_lat": "PSKOVLAND FORD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "767890150",
+      "id": "1797445043",
+      "name_lat": "PSKOVLAND ONITA",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1073472085",
+      "name_lat": "P.S FROM RUSSIA WITH LOVE Z KROLEWSKIEGO",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1185860901",
       "name_lat": "PSKOVLAND HAPPY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "725896727",
+      "id": "67485424",
       "name_lat": "PSKOVLAND YARKAYA ZVEZDOCHKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -184,10 +255,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1249305066",
+      "id": "993929057",
       "name_lat": "PSKOVLAND FORZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

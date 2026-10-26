@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "HU",
-  "count": 558,
+  "count": 587,
   "dogs": [
     {
       "id": "438127064",
@@ -9,14 +9,23 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "309980238",
+      "id": "269286488",
+      "name_lat": "HUMAN SIGHT ONE LOVE",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "163258694",
       "name_lat": "HUMMER IZ ZVIOZNOGO RAYA",
       "name_ru": "",
-      "breed": "BULLDOG БУЛЬДОГ /",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 26,
       "competition_dog_id": null
@@ -31,28 +40,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "269286488",
-      "name_lat": "HUMAN SIGHT ONE LOVE",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1595028977",
       "name_lat": "HUNTER FOR DREAM OPIUM",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
       "breed_en": "ENGLISH POINTER",
-      "total_shows": 38,
+      "total_shows": 43,
       "competition_dog_id": null
     },
     {
-      "id": "410385765",
+      "id": "693593600",
+      "name_lat": "HUNTER FOR DREAM HUMA",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "breed_en": "ENGLISH POINTER",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "431785960",
       "name_lat": "HULK FROM THE URALS",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "BULL TERRIER STANDART",
       "total_shows": 21,
       "competition_dog_id": null
@@ -67,19 +76,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "621583262",
+      "id": "684618371",
       "name_lat": "HUNTER GUARDIA CELESTE STELLARE",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 34,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
-      "id": "181892110",
+      "id": "885926029",
       "name_lat": "HUGO TEAM CARRERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -99,7 +108,7 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -108,15 +117,6 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "693593600",
-      "name_lat": "HUNTER FOR DREAM HUMA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
-      "breed_en": "ENGLISH POINTER",
       "total_shows": 11,
       "competition_dog_id": null
     },
@@ -135,7 +135,7 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 47,
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
@@ -144,7 +144,7 @@
       "name_ru": "",
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "IRISH RED SETTER",
-      "total_shows": 16,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -162,7 +162,7 @@
       "name_ru": "",
       "breed": "АФФЕНПИНЧЕР",
       "breed_en": "AFFENPINSCHER",
-      "total_shows": 36,
+      "total_shows": 40,
       "competition_dog_id": null
     },
     {
@@ -171,7 +171,7 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 31,
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -180,7 +180,7 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
       "breed_en": "ENGLISH POINTER",
-      "total_shows": 22,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -238,12 +238,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "276388119",
+      "name_lat": "HUNTER FOR DREAM DRIVER PACK",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1909295372",
+      "name_lat": "HUSGARDEN DAARIO",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "919272300",
       "name_lat": "HUNT'N'CATCH DAKOTA",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "775467897",
+      "name_lat": "HUSGARDEN VERMAX",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -256,20 +282,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1233046309",
+      "name_lat": "HUGO SEVERNYY VETER",
+      "name_ru": "",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1603710907",
       "name_lat": "HUGO HAUSE UTONCHENNAYA OSOBA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
       "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "276388119",
-      "name_lat": "HUNTER FOR DREAM DRIVER PACK",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
@@ -305,8 +331,7 @@
       "name_lat": "HUMAN SIGHT JIMMY CHOO",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -319,12 +344,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1873393491",
+      "name_lat": "HURMA S OSINOVTSA",
+      "name_ru": "",
+      "breed": "ФИНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "1456767604",
       "name_lat": "HUMAN SIGHT INDUCTRIX",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "724218847",
+      "name_lat": "HUSQUISHER GALA DALI",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -355,12 +398,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "775467897",
-      "name_lat": "HUSGARDEN VERMAX",
+      "id": "1693830457",
+      "name_lat": "H'UTAUN KLER AURELI",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -369,16 +412,23 @@
       "name_ru": "",
       "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "946275206",
+      "name_lat": "HULIGANKA - ATAMANKA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1233046309",
-      "name_lat": "HUGO SEVERNYY VETER",
+      "id": "292235433",
+      "name_lat": "HUSGARDEN GORYNYCH",
       "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -388,6 +438,15 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
       "breed_en": "GERMAN SPITZ MEDIUM ORANGE, GREY & OTHER COLOR",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "662717362",
+      "name_lat": "HUSQUISHER BRAZILIAN THUNDER",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -454,30 +513,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "485034354",
+      "name_lat": "HUMAN SIGHT MATUMBA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "1822031065",
       "name_lat": "HUMMER FROM CITY STARS",
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "AMERICAN BULLY STANDARD",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "485034354",
-      "name_lat": "HUMAN SIGHT MATUMBA",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ",
-      "breed_en": "",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1873393491",
-      "name_lat": "HURMA S OSINOVTSA",
-      "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -490,15 +540,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "724218847",
-      "name_lat": "HUSQUISHER GALA DALI",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "383066896",
       "name_lat": "HUSQUISHER JUST A DREAM",
       "name_ru": "",
@@ -508,12 +549,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "825796421",
+      "name_lat": "HUSKY HAVEN REBECCA MADER",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
       "id": "22945228",
       "name_lat": "HUGO THE NOTORIOUS BLUE JACKET",
       "name_ru": "",
       "breed": "AUSTRALIAN CATTLE DOG",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "249939655",
+      "name_lat": "HUMAN SIGHT BARAK OBAMA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "MINIATURE BULL TERRIER",
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -562,30 +621,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "249939655",
-      "name_lat": "HUMAN SIGHT BARAK OBAMA",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "MINIATURE BULL TERRIER",
-      "total_shows": 35,
-      "competition_dog_id": null
-    },
-    {
       "id": "930662816",
       "name_lat": "HUNT WILLIAM HOLMAN",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "662717362",
-      "name_lat": "HUSQUISHER BRAZILIAN THUNDER",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -598,15 +639,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "825796421",
-      "name_lat": "HUSKY HAVEN REBECCA MADER",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
       "id": "1876241367",
       "name_lat": "HUSGARDEN BAILEYS",
       "name_ru": "",
@@ -616,12 +648,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "871494516",
+      "id": "140189345",
       "name_lat": "HUSKY HAVEN BLUE CURACAO",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -634,21 +666,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1871206540",
-      "name_lat": "HUSQUISHER CLOUD NINE",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1995706086",
       "name_lat": "HUMAN SIGHT G-DRIVE",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "MINIATURE BULL TERRIER",
-      "total_shows": 31,
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1396529257",
+      "name_lat": "HUSQUISHER CLOUD NINE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -661,10 +693,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "799896612",
+      "id": "541458168",
       "name_lat": "HURMA IZ KAZANSKOGO HANSTVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -733,12 +765,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "283674177",
+      "id": "1322500094",
       "name_lat": "HURREM PROXENY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1771815241",
+      "name_lat": "HULK PERFECT GUARDIAN",
+      "name_ru": "",
+      "breed": "ПРЕСА КАНАРИО",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "89593762",
+      "name_lat": "HUNTER BLAZE MINI LABAKAN SLOVAKIA",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1303785667",
+      "name_lat": "HUSKY IMPERIAL GREAT HUNTER",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 54,
       "competition_dog_id": null
     },
     {
@@ -747,7 +806,7 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "MINIATURE BULL TERRIER",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -832,6 +891,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1083707593",
+      "name_lat": "HUMMER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1022529826",
       "name_lat": "HUNGARIAN WHITE RASTA COPFOS",
       "name_ru": "",
@@ -850,12 +918,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1303785667",
-      "name_lat": "HUSKY IMPERIAL GREAT HUNTER",
+      "id": "1576789105",
+      "name_lat": "HUBINETTANS RICKY WITH THE TUFT",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 46,
+      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
+      "breed_en": "IRISH SOFT COATED WHEATEN TERRIER",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -904,12 +972,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "261925559",
+      "name_lat": "HUMMER GORDOST SANAT-SHAN",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "259287570",
       "name_lat": "HUSQUISHER EVENING STAR",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1748516281",
+      "name_lat": "HUGO HAUSE DAYKI KATASHI",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -922,30 +1008,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1748516281",
-      "name_lat": "HUGO HAUSE DAYKI KATASHI",
+      "id": "229888680",
+      "name_lat": "HUNTER HIKS VIP PERSON",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "261925559",
-      "name_lat": "HUMMER GORDOST SANAT-SHAN",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1576789105",
-      "name_lat": "HUBINETTANS RICKY WITH THE TUFT",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ МЯГКОШЕРСТНЫЙ",
-      "breed_en": "IRISH SOFT COATED WHEATEN TERRIER",
-      "total_shows": 21,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -967,28 +1035,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "229888680",
-      "name_lat": "HUNTER HIKS VIP PERSON",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1909295372",
-      "name_lat": "HUSGARDEN DAARIO",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1706931647",
+      "id": "1433688419",
       "name_lat": "HUNTAKS NICE AND EASY",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1012,6 +1062,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "1929021786",
+      "name_lat": "HUSQUISHER FAMILY JEWEL BLACK PEARL",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 34,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1064165077",
+      "name_lat": "HUNTER TERRIER FLESH BLEK",
+      "name_ru": "",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "659020899",
+      "name_lat": "HUGO LEMON PAI",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "28008421",
       "name_lat": "HUNCWOT KLUSUJACA SFORA",
       "name_ru": "",
@@ -1021,30 +1098,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "659020899",
-      "name_lat": "HUGO LEMON PAI",
+      "id": "787507254",
+      "name_lat": "HUSQUISHER JABOTICABA",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1063179346",
+      "id": "499713994",
       "name_lat": "HUANG JIN BI AN VALDEZ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "360115955",
-      "name_lat": "HUSQUISHER FAMILY JEWEL BLACK PEARL",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 29,
       "competition_dog_id": null
     },
     {
@@ -1057,10 +1125,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1038557473",
+      "id": "539368926",
       "name_lat": "HURREM PROKSENY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1102,6 +1170,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1910476302",
+      "name_lat": "HUGH DARK ALGERNON",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "396301566",
       "name_lat": "HUNTER OF TAURICA JINNA",
       "name_ru": "",
@@ -1129,12 +1206,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1379189839",
+      "name_lat": "HUMMER",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1256380509",
       "name_lat": "HUNDERTOWER RED IRISH ALLE",
       "name_ru": "",
       "breed": "ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1210,12 +1296,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1670767614",
+      "id": "361734563",
       "name_lat": "HULCK HOGAN",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1225,6 +1311,15 @@
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "455807116",
+      "name_lat": "HUBBA BUBBA S ZELENOGO GORODA",
+      "name_ru": "",
+      "breed": "DACHSHUND STANDARD",
+      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1246,28 +1341,53 @@
       "competition_dog_id": null
     },
     {
-      "id": "1489230122",
+      "id": "21083034",
       "name_lat": "HUNTER FANTASTIK SOLYARIS",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1566319474",
+      "id": "873176766",
       "name_lat": "HUCKLEBERRYIZ BANDY CHERNYH",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР – ОКРАС ЧЁРНЫЙ",
+      "breed": "РИЗЕНШНАУЦЕР – ОКРАС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "619332249",
+      "id": "873395193",
+      "name_lat": "HUSQUISHER EXCELLENT IMPRESSION",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1347256949",
+      "name_lat": "HUNTER FOR DREAM KENYA NAIROBI",
+      "name_ru": "",
+      "breed": "БИГЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1700527562",
+      "name_lat": "Hunter",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1451662079",
       "name_lat": "HUSTON STALINGRAD BULLY",
       "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1309,10 +1429,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1798466133",
+      "id": "127569474",
       "name_lat": "HULK HOGAN",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1171177291",
+      "name_lat": "HUMMER",
+      "name_ru": "",
+      "breed": "БУЛЛИ ПОКЕТ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "242549058",
+      "name_lat": "HUNTER FOR DREAM CHIHIRO OGINO",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1345,15 +1482,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1318830449",
-      "name_lat": "HUNTER FOR DREAM CHIHIRO OGINO",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ (КУРЦХААР) ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "125773784",
       "name_lat": "HUNTERUNIVERSAL TAYA",
       "name_ru": "",
@@ -1372,12 +1500,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1083707593",
-      "name_lat": "HUMMER",
+      "id": "180446602",
+      "name_lat": "HUNTER",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "523889250",
+      "name_lat": "HUNTER VERNISSAGE BULL",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -1417,21 +1553,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "279439419",
+      "name_lat": "H'UTAUN MAYLI",
+      "name_ru": "",
+      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "268382236",
       "name_lat": "HUSQUISHER UNIVERSE BELONGS TO ME",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "455807116",
-      "name_lat": "HUBBA BUBBA S ZELENOGO GORODA",
-      "name_ru": "",
-      "breed": "DACHSHUND STANDARD",
-      "breed_en": "DACHSHUND STANDARD WIRE-HAIRED",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1444,21 +1579,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "721731025",
-      "name_lat": "HUMAN SIGHT DINKY",
+      "id": "1725840105",
+      "name_lat": "HUGH TEODOR JACK MAN IZ MOSKOVSKOY METELY",
       "name_ru": "",
-      "breed": "MINIATURE BULL",
-      "breed_en": "",
-      "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "523889250",
-      "name_lat": "HUNTER VERNISSAGE BULL",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 17,
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1466,17 +1592,25 @@
       "name_lat": "HUANG JIN ZHI ZUN CHINA GAERO",
       "name_ru": "",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1725840105",
-      "name_lat": "HUGH TEODOR JACK MAN IZ MOSKOVSKOY METELY",
+      "id": "721731025",
+      "name_lat": "HUMAN SIGHT DINKY",
       "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "SAMOYED",
-      "total_shows": 14,
+      "breed": "MINIATURE BULL",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "167646502",
+      "name_lat": "HUNTING COLLECTION DEFEAT",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "WEIMARANER SHORT-HAIRED",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1485,7 +1619,16 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "MINIATURE BULL TERRIER",
-      "total_shows": 10,
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1362299790",
+      "name_lat": "HUSKY HAVEN GREAT HOPE",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1494,7 +1637,7 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -1516,19 +1659,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "167646502",
-      "name_lat": "HUNTING COLLECTION DEFEAT",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
-      "breed_en": "WEIMARANER SHORT-HAIRED",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1883548236",
+      "id": "809097257",
       "name_lat": "HUSQUISHER MOLLY",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -1543,21 +1677,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "395776543",
-      "name_lat": "HUSKY HAVEN GREAT HOPE",
+      "id": "638939192",
+      "name_lat": "HURACAN IZ BELOGO JARA",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "28595465",
+      "id": "842757524",
       "name_lat": "HUNTER BE COME THE STAR DRAGON",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -1570,21 +1704,56 @@
       "competition_dog_id": null
     },
     {
-      "id": "1199641384",
+      "id": "185994722",
+      "name_lat": "HUSKY FUND VHITE AMBER BALTIC",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "495417313",
+      "name_lat": "H'UTAUN TERESA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1391653581",
       "name_lat": "HUCKLEBERRY RAY OF SUN BEAM",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "1896526111",
-      "name_lat": "HURACAN IZ BELOGO JARA",
+      "id": "1434977228",
+      "name_lat": "HUMAN SIGNT BOMBER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1591513182",
+      "name_lat": "HUNTMAGIC LION KING",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "462554305",
+      "name_lat": "HUSQUISHER DOCTOR WHO",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1593,7 +1762,7 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1606,12 +1775,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "630036460",
+      "name_lat": "HUSQUISHER GALACTIC VITA",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "468759783",
+      "name_lat": "HUSQUISHER BOHEMIAN RHAPSODY",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "SIBERIAN HUSKY",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1934036381",
       "name_lat": "HUNDERWOOD SIGNATURE",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "13453257",
+      "name_lat": "HUND HAUS TRUBETSKOY ARCHIBALD (L-H)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -1642,10 +1837,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1314617913",
+      "id": "974626308",
       "name_lat": "HUSQUISHER ULTIMATUM",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1660,30 +1855,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1656527665",
-      "name_lat": "HUMAN SIGNT BOMBER",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ /",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "462554305",
-      "name_lat": "HUSQUISHER DOCTOR WHO",
+      "id": "1394764965",
+      "name_lat": "HUSQUISHER BOUNTY HUNTER",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 18,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "630036460",
-      "name_lat": "HUSQUISHER GALACTIC VITA",
+      "id": "710914468",
+      "name_lat": "HUSKY FUND BEAUTY OF AMBER COAST",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1310982539",
+      "name_lat": "HUGO IZ IMPERII ADAMANT ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 49,
+      "competition_dog_id": null
+    },
+    {
+      "id": "530190661",
+      "name_lat": "HUSQUISHER EYES WIDE OPEN",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "250564550",
+      "name_lat": "HUNTING TRAIL BELLATRIKS",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1693,15 +1904,6 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "250564550",
-      "name_lat": "HUNTING TRAIL BELLATRIKS",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1750,30 +1952,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1745520314",
+      "id": "938806803",
+      "name_lat": "HUNTER FOR DREAM ZIPPO",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1813910283",
       "name_lat": "HUNDERWOOD ORIGINAL SONG",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1394764965",
-      "name_lat": "HUSQUISHER BOUNTY HUNTER",
+      "id": "245252462",
+      "name_lat": "HURAGAN PSIA PSOTA",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "933274938",
-      "name_lat": "HUGO IZ IMPERII ADAMANT ( )",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1783,15 +1985,6 @@
       "breed": "БУЛЬДОГ / BULLDOG",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1591513182",
-      "name_lat": "HUNTMAGIC LION KING",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1813,30 +2006,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1654912839",
+      "id": "485166151",
       "name_lat": "HUMMER ELITE TEAM OF GASTER",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1525031265",
-      "name_lat": "HUND HAUS TRUBETSKOY ARCHIBALD",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
-      "id": "938806803",
-      "name_lat": "HUNTER FOR DREAM ZIPPO",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1849,17 +2024,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1064165077",
-      "name_lat": "HUNTER TERRIER FLESH BLEK",
-      "name_ru": "",
-      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "530190661",
-      "name_lat": "HUSQUISHER EYES WIDE OPEN",
+      "id": "256127789",
+      "name_lat": "HUSKY FUND DESCENDANT WOLF",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
@@ -1867,19 +2033,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "820769672",
-      "name_lat": "HUSKY FUND DESCENDANT WOLF",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1527162145",
+      "id": "636741564",
       "name_lat": "HUGO BOSS GELIET",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1894,12 +2051,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "284601414",
+      "id": "1209533942",
+      "name_lat": "HUNDERSHAFT THEODORE AT HAILAIT'S",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "371667647",
       "name_lat": "HUSKY HAVEN LILLY EVANGELINE",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "303852061",
+      "name_lat": "HUNDERTOWER IRVIN IT'S MY LOVE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "116163146",
+      "name_lat": "HUMAN SIGNT GROMIKA",
+      "name_ru": "",
+      "breed": "ЦВЕТНОЙ",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1918,6 +2102,15 @@
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "938976540",
+      "name_lat": "HUSKY FUND VOGUE GIRL",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1948,10 +2141,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "982995772",
-      "name_lat": "HUNDERTOWER IRVIN IT'S MY LOVE",
+      "id": "772361183",
+      "name_lat": "HUNTER FOR DREAM SANNI SENDI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1975,6 +2168,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1218950757",
+      "name_lat": "HUNTER TERRIER AYKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "654889738",
       "name_lat": "HULK HOGAN KING",
       "name_ru": "",
@@ -1984,30 +2186,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "245252462",
-      "name_lat": "HURAGAN PSIA PSOTA",
-      "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "468567939",
       "name_lat": "HUNTER FROM HAUS NATTIM",
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "468759783",
-      "name_lat": "HUSQUISHER BOHEMIAN RHAPSODY",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2038,10 +2222,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1339034456",
+      "id": "1065614973",
       "name_lat": "HUSQUISHER AVENTA",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2056,33 +2240,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "116163146",
-      "name_lat": "HUMAN SIGNT GROMIKA",
-      "name_ru": "",
-      "breed": "ЦВЕТНОЙ",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1218950757",
-      "name_lat": "HUNTER TERRIER AYKA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1017533675",
-      "name_lat": "HUSKY FUND VHITE AMBER BALTIC",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1625330310",
       "name_lat": "HUNTER’S SOUL DRIVE OF LIFE",
       "name_ru": "",
@@ -2092,10 +2249,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "581076118",
+      "id": "1855559085",
       "name_lat": "HUNTER FOR DREAM DELPHI FUNCTION",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2119,19 +2276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "710914468",
-      "name_lat": "HUSKY FUND BEAUTY OF AMBER COAST",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "558279123",
+      "id": "1566163831",
       "name_lat": "HUFFISH SMART HOLIDAY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2173,20 +2321,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "61246384",
+      "name_lat": "HUGO BOSS INCREDIBLE BON PRIDE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "727744829",
       "name_lat": "HUSKY HAVEN G-HAWAIIAN RUM",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1209533942",
-      "name_lat": "HUNDERSHAFT THEODORE AT HAILAIT'S",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
@@ -2197,6 +2345,14 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "870916626",
+      "name_lat": "HUSGARDEN DORAN",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2236,19 +2392,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "927350514",
+      "id": "854901382",
       "name_lat": "HURREM SULTAN VELIKOLEPNAYA",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1183554268",
+      "id": "1069310841",
       "name_lat": "HUNDERTOWER ENISEY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -2263,21 +2419,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1263417409",
-      "name_lat": "HUSKY FUND VOGUE GIRL",
+      "id": "1542966998",
+      "name_lat": "HUSQUISHER U TAKE MY HEART",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
-      "breed_en": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1167843022",
-      "name_lat": "HUGO BOSS INCREDIBLE BON PRIDE",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2296,15 +2442,6 @@
       "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "13453257",
-      "name_lat": "HUND HAUS TRUBETSKOY ARCHIBALD (L-H)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
-      "breed_en": "GERMAN SHEPHERD DOG LONG DOUBLE COAT",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2331,14 +2468,14 @@
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "SIBERIAN HUSKY",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1120588785",
+      "id": "1921884293",
       "name_lat": "HUGO INSTINCT OF VICTORY",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -2380,10 +2517,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "588801197",
+      "id": "563404239",
       "name_lat": "HUNTER HOUSE TIMON",
       "name_ru": "",
-      "breed": "КЕРН МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2407,15 +2544,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "130096207",
-      "name_lat": "HUNTER FOR DREAM SANNI SЕNDI",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "384044478",
       "name_lat": "HUNTER OF TAURICA GEE GEE",
       "name_ru": "",
@@ -2430,7 +2558,7 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2470,10 +2598,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1588205149",
+      "id": "674401581",
       "name_lat": "HUGO BOSS SIUDA OT LUGARI",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2492,15 +2620,6 @@
       "name_lat": "HUGO BOSS GALANT COLORIT",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1771815241",
-      "name_lat": "HULK PERFECT GUARDIAN",
-      "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2560,10 +2679,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1364826203",
+      "id": "1161791378",
       "name_lat": "HUSKY HAVEN MORNING MERRY SUN",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2574,7 +2693,7 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2614,10 +2733,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "227131018",
+      "id": "261678683",
       "name_lat": "HUSKY IMPERIAL PRESENCE OF WITCH",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2632,15 +2751,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1186989030",
-      "name_lat": "HUNTER FOR DREAM SANNI SENDI",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ПОЙНТЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "402282323",
       "name_lat": "HUNTER FOR DREAM SANNY SANDY",
       "name_ru": "",
@@ -2650,10 +2760,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1554060889",
+      "id": "155054861",
       "name_lat": "HULLABALOO'S COUNT YOUR FINGERS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2665,6 +2775,14 @@
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1198512220",
+      "name_lat": "HUNDERTOWER ORION FLAMES OF LOVE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2803,21 +2921,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1384566163",
+      "id": "87357946",
       "name_lat": "HUSQUISHER SHUGAR RAY",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1379189839",
-      "name_lat": "HUMMER",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2881,6 +2990,14 @@
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1427785056",
+      "name_lat": "HUSQUISHER FAMILY JEWEL BLACK PERAL",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2965,12 +3082,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1673320916",
+      "id": "1447100545",
       "name_lat": "HUMMER",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ /",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ ПОКЕТ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2992,19 +3108,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1883950775",
+      "id": "161869558",
       "name_lat": "HUSQUISHER ASTER MAGNETIC ATTRACTION",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1180461413",
+      "id": "197866945",
+      "name_lat": "HUSQUISHER VERDADE DE SABOR",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1890760440",
       "name_lat": "HUMAN SIGHT DARSEY OWL",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3064,6 +3188,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1813129075",
+      "name_lat": "HUNTER FOR DREAM ASTI MONDORO",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "444133630",
       "name_lat": "HUSKY HAVEN RODERIK STRONG",
       "name_ru": "",
@@ -3073,19 +3206,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "227375677",
-      "name_lat": "HUNTER FOR DREAM ASTI MONDORO",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1990723141",
+      "id": "372442913",
       "name_lat": "HUFFISH ALEPH SMART SCTION",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3127,10 +3251,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "792728250",
+      "id": "98758836",
       "name_lat": "HUNTER'S PARADE DUMBLEDORE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3154,10 +3278,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "990753939",
+      "id": "1189202170",
       "name_lat": "HUMBERTO FO SHEKSBURG",
       "name_ru": "",
-      "breed": "ФИНСКИЙ ШПИЦ /",
+      "breed": "ФИНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3172,10 +3296,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "868278768",
+      "id": "1920079863",
       "name_lat": "HUMMER DEI MOLOSSI ARETUSEI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3204,6 +3328,23 @@
       "name_ru": "",
       "breed": "СЕТТЕР КОРОТКОШЕРСТНЫЙ / WEIMARANER",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1783878004",
+      "name_lat": "(HUSQUISHER ULTIMATUM) БИГ ФЛАУЭР ДРИМС",
+      "name_ru": "",
+      "breed": "SIBERIAN HUSKY",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "90965228",
+      "name_lat": "HUSQUISHER UTAKE MY HEART",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3262,6 +3403,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "203634350",
+      "name_lat": "HUSKY HAVEN REDGINALD WINDZOR",
+      "name_ru": "",
+      "breed": "Сибирский хаски",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "929684862",
       "name_lat": "HUNTER OF TAURICA EUSTOMA",
       "name_ru": "",
@@ -3280,10 +3430,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1223178652",
+      "id": "408503987",
       "name_lat": "HUND HAUS TRUBETSKOY ASTERIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3303,6 +3453,14 @@
       "name_ru": "",
       "breed": "немецкий цвергшпиц",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1622618926",
+      "name_lat": "HUSQUISHER EXCELLENT",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3334,20 +3492,44 @@
       "competition_dog_id": null
     },
     {
-      "id": "585984251",
+      "id": "1077103151",
       "name_lat": "HUNTER WARRIOR",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР Окрас чёрный",
+      "breed": "РИЗЕНШНАУЦЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1503787306",
-      "name_lat": "HUBERTH LIHTENSHTEIN- OST",
+      "id": "103366659",
+      "name_lat": "HUNTERUNIVERSAL LEO",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "260745743",
+      "name_lat": "HUBERTH LIHTENSHTEIN-OST",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1072999656",
+      "name_lat": "HURRICANE ОБЕРИН МАРТЕЛЛ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "525136214",
+      "name_lat": "HUSQUIISHER BOUNTY HUNTER",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3374,15 +3556,6 @@
       "name_lat": "HUSGARDEN BRAND TABASCO",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "516864932",
-      "name_lat": "HULIGANKA - ATAMANKA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3415,6 +3588,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1575671673",
+      "name_lat": "HUGO HAUS YARKAYA OCHEN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "199131008",
       "name_lat": "HUSKY HAVEN BARBARIS CANDY",
       "name_ru": "",
@@ -3442,6 +3623,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "112602579",
+      "name_lat": "HUSKY HAVEN REDGINALD",
+      "name_ru": "",
+      "breed": "ХАСКИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1428732428",
       "name_lat": "HUNTER ATILLA MALLY STYLE",
       "name_ru": "",
@@ -3460,12 +3649,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1183932621",
+      "id": "672559141",
+      "name_lat": "HUMAN SIGNT G-DRIVE",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "535840560",
       "name_lat": "HUSKY HAVEN EL MACHO ALFA",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3577,8 +3774,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "623559016",
-      "name_lat": "HUGH JACMAN IZ KSARO- CHESTNAYA IGRA",
+      "id": "1816357330",
+      "name_lat": "HUGH JACMAN IZ KSARO-CHESTNAYA IGRA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -3595,10 +3792,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "242441942",
+      "id": "702150991",
       "name_lat": "HUGH GRAND FOR BLISS STARS",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3608,15 +3805,6 @@
       "name_lat": "HUBA-BUBA VOM HAUS ANGEL",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1392289119",
-      "name_lat": "HUNTER FOR DREAM KENYA NAIROBI",
-      "name_ru": "",
-      "breed": "КОКЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3676,8 +3864,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1879644932",
-      "name_lat": "HUBERT LIHTENSHTEIN- OST",
+      "id": "167265074",
+      "name_lat": "HUBERT LIHTENSHTEIN-OST",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
@@ -3712,10 +3900,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1136495401",
+      "id": "558992938",
       "name_lat": "HUNTER VON TEAM GREAT MONGOLIA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3766,21 +3954,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1128818109",
+      "id": "1037143008",
       "name_lat": "HUKLBERRY IZ VOROBINOGO GNEZDA",
       "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР /",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "203634350",
-      "name_lat": "HUSKY HAVEN REDGINALD WINDZOR",
+      "id": "841588458",
+      "name_lat": "HUMPHREY DE CAN ARBEDA",
       "name_ru": "",
-      "breed": "Сибирский хаски",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "СЕНБЕРНАР К-Ш",
+      "breed_en": "ST. BERNARD SHORT HAIRED",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3797,6 +3985,15 @@
       "name_lat": "HUNTERS",
       "name_ru": "",
       "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "520684923",
+      "name_lat": "HUNDRED REASONS",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3829,24 +4026,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "520684923",
-      "name_lat": "HUNDRED REASONS",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "841588458",
-      "name_lat": "HUMPHREY DE CAN ARBEDA",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР К-Ш",
-      "breed_en": "ST. BERNARD SHORT HAIRED",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "232141794",
       "name_lat": "HUGO IZ IMPERII ADAMANT ( ) (Изменено по решению ВК от 26.05.21 вопрос 38)",
       "name_ru": "",
@@ -3870,7 +4049,7 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "MINIATURE BULL TERRIER",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3883,10 +4062,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1181085696",
+      "id": "1704475238",
+      "name_lat": "HUNTER’S SOUL ZVEZDNAY PIL’",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1583191503",
       "name_lat": "HURREM CASА DELLA SPERANZA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -4063,15 +4250,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "787507254",
-      "name_lat": "HUSQUISHER JABOTICABA",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "648103619",
       "name_lat": "HUGO BOSS",
       "name_ru": "",
@@ -4086,7 +4264,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 4,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -4094,6 +4272,15 @@
       "name_lat": "HUSQUISHER IMPERATOR",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "947174509",
+      "name_lat": "HUMAN SIGHT ROLY-POLY",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -4162,28 +4349,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1371365366",
+      "id": "942063957",
       "name_lat": "HUND HAUS TRUBETSKOY VALKIRIYA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "89593762",
-      "name_lat": "HUNTER BLAZE MINI LABAKAN SLOVAKIA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "271045893",
-      "name_lat": "HUMAN SIGHT ROLY- POLY",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4198,8 +4367,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1504901921",
-      "name_lat": "HUGE LOVE IZ KSARO- CHESTNAYA IGRA",
+      "id": "1160890141",
+      "name_lat": "HUGE LOVE IZ KSARO-CHESTNAYA IGRA",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
@@ -4212,6 +4381,14 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БЕЛЫЙ",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1628829818",
+      "name_lat": "HUNTER'S SOUL INFINITY FLAME",
+      "name_ru": "",
+      "breed": "ИРЛАНДСКИЙ КРАСНЫЙ СЕТТЕР",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -4234,19 +4411,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1149125215",
+      "id": "1201738190",
       "name_lat": "HUGO BOSS",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1700527562",
-      "name_lat": "Hunter",
+      "id": "1290520056",
+      "name_lat": "HUNTER FOR DREAM DYNAMIC LIBRARY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4369,10 +4546,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "487600939",
+      "id": "1587401250",
       "name_lat": "HUSQUISHER HER MAJESTY",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4405,10 +4582,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "823860900",
+      "id": "933519289",
       "name_lat": "HUANITA IZ TSVETNIKA",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4423,11 +4600,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1910476302",
-      "name_lat": "HUGH DARK ALGERNON",
+      "id": "630527287",
+      "name_lat": "HUNTER HIKS DAKROSA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "355450189",
+      "name_lat": "HUNTER’S SOUL ZVEZDNAYA PIL’",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4477,11 +4661,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "1481370212",
-      "name_lat": "HUNTER FOR DREAM DYNAMIC LIBRARY",
+      "id": "1328941796",
+      "name_lat": "HUNTER FOR DREAM SPANCH BOB",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
+      "breed": "С СЕРЕБРОМ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "945648257",
+      "name_lat": "HUNTER'S SOUL ZVEZDNAYA PYL'",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1593946809",
+      "name_lat": "HUNTER HIKS AVRORA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4526,15 +4725,6 @@
       "name_lat": "HUGO BOSS",
       "name_ru": "",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "508742460",
-      "name_lat": "HULCK HOGAN",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4684,10 +4874,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "482120535",
+      "id": "1653447574",
       "name_lat": "HUSKY FUND WOLF FANG",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4738,10 +4928,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1527335509",
+      "id": "1739002472",
       "name_lat": "HUGO BOSS SAMMYSMILE",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4769,15 +4959,6 @@
       "name_lat": "HUSQUISHER YANTARIUS MARKUS",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "19677021",
-      "name_lat": "HUMAN SIGNT G-DRIVE",
-      "name_ru": "",
-      "breed": "ЦВЕТНОЙ / BULL TERRIER",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4828,10 +5009,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1701398211",
+      "name_lat": "HUM TET A TET YOULIANNETTE",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "659777021",
       "name_lat": "HUNTING RAGE BEGONIYA BIBERVELT",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР (Белый)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1099469782",
+      "name_lat": "H'UTAUN TSVETANKA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4891,6 +5089,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "719027226",
+      "name_lat": "H'UTAUN GERMIONA GREJNDZHER",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1907563952",
       "name_lat": "HUNTER YAR IZ GORNOGO OSTROGA",
       "name_ru": "",
@@ -4936,10 +5143,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1794107337",
+      "id": "1097138945",
       "name_lat": "HUND HAUS Serbia TRUBETSKOY ARCHIBALD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4972,10 +5179,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "944478303",
+      "id": "353757048",
       "name_lat": "HUND HAUS TRUBETSKOY DZHOKER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4999,11 +5206,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "685047615",
+      "id": "743159320",
       "name_lat": "HUNTER ARMANDIA LIDDERDALI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1196760336",
+      "name_lat": "HUMMER OF THOR FROM HOUSE ZIDANE",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -5017,11 +5232,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "292235433",
-      "name_lat": "HUSGARDEN GORYNYCH",
+      "id": "1314422394",
+      "name_lat": "HUNTER'S SOUL INSPRING LIGHT",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
+      "breed": "СЕТТЕР / IRISH RED",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "318333417",
+      "name_lat": "HUMAN SIGHT RAZZLE- DAZZLE",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     }

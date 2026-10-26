@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЧЖ",
-  "count": 5,
+  "count": 6,
   "dogs": [
     {
       "id": "279847178",
@@ -24,7 +24,7 @@
     {
       "id": "1194540379",
       "name_lat": "Чженьджу Лайза",
-      "name_ru": "",
+      "name_ru": "Чженьджу Лайза",
       "breed": "Пекинес",
       "breed_en": "",
       "total_shows": 5,
@@ -44,6 +44,15 @@
       "name_lat": "ЧЖЕНЬ ЧЖУ",
       "name_ru": "",
       "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "237587012",
+      "name_lat": "Ч-ЖАКЛИН КЛЕОПАТРА ФОН ВИШЕНХОФФ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "БЁ",
-  "count": 16,
+  "count": 18,
   "dogs": [
     {
       "id": "991314717",
       "name_lat": "БЁРБЕРИ СВИТ ДРИМ",
-      "name_ru": "",
+      "name_ru": "БЁРБЕРИ СВИТ ДРИМ",
       "breed": "SPRINGER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -22,10 +22,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "55355725",
+      "id": "1026239538",
       "name_lat": "БЁРБЕРИ",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -42,10 +42,18 @@
     {
       "id": "433442111",
       "name_lat": "БЁРТОН ИЗ ЛЕСНОГО ПОМЕСТЬЯ",
-      "name_ru": "",
+      "name_ru": "БЁРТОН ИЗ ЛЕСНОГО ПОМЕСТЬЯ",
       "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1944987193",
+      "name_lat": "БЁРД ИН ПЭРАДАЙЗ",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -87,7 +95,7 @@
     {
       "id": "98466487",
       "name_lat": "БЁРБЕРИ ЖЕМЧУЖИНА ЕЛИЗАВЕТЫ",
-      "name_ru": "",
+      "name_ru": "БЁРБЕРИ ЖЕМЧУЖИНА ЕЛИЗАВЕТЫ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -144,6 +152,14 @@
       "name_ru": "",
       "breed": "LABRADOR",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1565140840",
+      "name_lat": "БЁРДИ ФЭЙТ МЕЛОДИ",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     }

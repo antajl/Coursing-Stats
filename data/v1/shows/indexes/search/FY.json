@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "FY",
-  "count": 9,
+  "count": 10,
   "dogs": [
     {
       "id": "126701898",
       "name_lat": "FYUDZH S BEREGA LABY",
-      "name_ru": "",
+      "name_ru": "ФЬЮДЖ С БЕРЕГА ЛАБЫ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 41,
+      "competition_dog_id": null
+    },
+    {
+      "id": "674118374",
+      "name_lat": "F'YUCHER",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {

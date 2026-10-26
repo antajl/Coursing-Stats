@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЯП",
-  "count": 39,
+  "count": 49,
   "dogs": [
     {
       "id": "1175079403",
       "name_lat": "ЯПЕЛЮР ЭЛЬВЕДО ВТОРОЙ",
-      "name_ru": "",
+      "name_ru": "ЯПЕЛЮР ЭЛЬВЕДО ВТОРОЙ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1605398654",
+      "name_lat": "Я ПРОСТО ОГОНЬ",
+      "name_ru": "Я ПРОСТО ОГОНЬ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -22,10 +31,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "994210228",
+      "id": "1015579115",
       "name_lat": "ЯПОЛЛО АНЦИО БЕЛЬВЕДЕР",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "ЯПОЛЛО АНЦИО БЕЛЬВЕДЕР",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -42,7 +51,7 @@
     {
       "id": "1120017566",
       "name_lat": "ЯПОНСКИЙ САД ВИТА ИЗ А ПРИНСЕСС",
-      "name_ru": "",
+      "name_ru": "ЯПОНСКИЙ САД ВИТА ИЗ А ПРИНСЕСС",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 7,
@@ -51,7 +60,7 @@
     {
       "id": "583204615",
       "name_lat": "ЯПОНСКИЙ САД ОНЛИ Ю",
-      "name_ru": "",
+      "name_ru": "ЯПОНСКИЙ САД ОНЛИ Ю",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 4,
@@ -67,6 +76,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1575937088",
+      "name_lat": "Я-ПОНЧИК",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1542011979",
       "name_lat": "ЯПОНКА ЮНА ИЗ ЖУРАВЛИНОГО КЛИНА",
       "name_ru": "",
@@ -76,10 +94,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "968366220",
+      "id": "437493417",
+      "name_lat": "Я ПЁТР ИЗ ЛИКИНСКИХ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "244621888",
       "name_lat": "ЯПОНЧИК МИШКА ИЗ ВОРОЖЕИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "84480752",
+      "name_lat": "ЯППИ БРАЙТ СПАРК",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1182429753",
+      "name_lat": "ЯПОНСКИЙ САД КЕЙМ ТУ СПАРКЛ",
+      "name_ru": "ЯПОНСКИЙ САД КЕЙМ ТУ СПАРКЛ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -94,21 +138,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "84480752",
-      "name_lat": "ЯППИ БРАЙТ СПАРК",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "168962982",
       "name_lat": "ЯППИ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "215038760",
+      "name_lat": "ЯПОЛЛИ ФО МЭРИ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -121,24 +165,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "307421980",
-      "name_lat": "ЯПОНИЯ ИЗ ФОРТУНА МЕРДИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "215038760",
-      "name_lat": "ЯПОЛЛИ ФО МЭРИ",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1776384087",
       "name_lat": "ЯПОНСКИЙ САД ВИТА ИЗ А ПРИНЦЕСС",
       "name_ru": "",
@@ -148,10 +174,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1474199909",
+      "id": "854658808",
       "name_lat": "ЯПОНСКИЙ САД ИГНАЙТ ЗЭ СПАРК",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -159,7 +185,7 @@
     {
       "id": "800454706",
       "name_lat": "ЯППИ БАЙ ТАМИКОШ",
-      "name_ru": "",
+      "name_ru": "ЯППИ БАЙ ТАМИКОШ",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
@@ -168,25 +194,24 @@
     {
       "id": "648492503",
       "name_lat": "ЯПОНСКИЙ САД ОН МАЙ МАЙНД",
-      "name_ru": "",
+      "name_ru": "ЯПОНСКИЙ САД ОН МАЙ МАЙНД",
       "breed": "МАЛАМУТ АМЕРИКАНСКАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1182429753",
-      "name_lat": "ЯПОНСКИЙ САД КЕЙМ ТУ СПАРКЛ",
+      "id": "1149521867",
+      "name_lat": "ЯПОНИЯ ЦВЕТУЩАЯ САКУРА",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "МОПС",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "1782596887",
       "name_lat": "ЯПОНСКИЙ САД ГИФТ ТУ Ю ФО НАКАСАТО",
-      "name_ru": "",
+      "name_ru": "ЯПОНСКИЙ САД ГИФТ ТУ Ю ФО НАКАСАТО",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 7,
@@ -202,6 +227,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "271726915",
+      "name_lat": "Я-ПОНЧИК",
+      "name_ru": "",
+      "breed": "LABRADOR RETRIEVER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "76205379",
       "name_lat": "ЯПОНСКИЙ САД МУН ЛАЙТ ОРАНДЖ",
       "name_ru": "",
@@ -213,10 +247,19 @@
     {
       "id": "1249758594",
       "name_lat": "ЯПОНСКИЙ САД ДЖЕНЕВРА ФОР НАКАСАТО",
-      "name_ru": "",
+      "name_ru": "ЯПОНСКИЙ САД ДЖЕНЕВРА ФОР НАКАСАТО",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1719660132",
+      "name_lat": "ЯПОНСКАЯ САКУРА ИЗ МИРА АНЖЕЛИКИ",
+      "name_ru": "ЯПОНСКАЯ САКУРА ИЗ МИРА АНЖЕЛИКИ",
+      "breed": "БОКСЕР ТИГРОВЫЙ",
+      "breed_en": "BOXER BRINDLE",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -229,11 +272,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "360854594",
-      "name_lat": "ЯПОНСКАЯ САКУРА ИЗ МИРА АНЖЕЛИКИ",
+      "id": "613482912",
+      "name_lat": "Я-ПОНЧИК",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЕР ТИГРОВЫЙ",
-      "breed_en": "BOXER BRINDLE",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "471731498",
+      "name_lat": "Я-ПАНТЕРА ИЗ КРАЯ ЛЕСНЫХ ОЗЕР",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "649699263",
+      "name_lat": "Я ПОНЧИК БАРЧУК",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "104294668",
+      "name_lat": "Я ПОНЧИК САХАРНЫЙ",
+      "name_ru": "Я ПОНЧИК САХАРНЫЙ",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -247,10 +317,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "20312274",
+      "id": "753113171",
       "name_lat": "ЯППИ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1281311528",
+      "name_lat": "Я ПУГОВКА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА Г/Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -292,10 +371,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "47980821",
+      "id": "1153650472",
       "name_lat": "ЯПОНСКИЙ САД ХРИЗАНТЕМА",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -341,6 +420,15 @@
       "name_lat": "ЯПОНСКИЙ САД КЕН АЙ КИСС Ю",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1025315281",
+      "name_lat": "Я ПРИНЦ ИГОРЬ ОФ МАЙ ИММОРТАЛ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

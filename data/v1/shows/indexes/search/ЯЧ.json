@@ -1,0 +1,43 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ЯЧ",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1168240349",
+      "name_lat": "Я ЧУДО АЙРИС",
+      "name_ru": "Я ЧУДО АЙРИС",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1471658513",
+      "name_lat": "Я ЧУДО АЙРИС PUMPKIN CAKE",
+      "name_ru": "",
+      "breed": "TERRIER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "270129906",
+      "name_lat": "Я'ЧАЙКОВСКИЙ ОФ ХАУС НАТАЛИ",
+      "name_ru": "",
+      "breed": "РОТВЕЙЛЕР / ROTTWEILER",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "615464685",
+      "name_lat": "Я ЧЕРРИ ИЗ СКАЗГРАДА",
+      "name_ru": "",
+      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

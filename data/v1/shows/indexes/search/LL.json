@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "LL",
-  "count": 10,
+  "count": 16,
   "dogs": [
     {
       "id": "1629583337",
@@ -40,12 +40,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "367295570",
+      "id": "220650451",
       "name_lat": "LLTTLE BRUSH CZURIEL",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -67,12 +67,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1734429506",
+      "id": "747790393",
       "name_lat": "LLOYD LUTHER CRAFT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1188443259",
+      "name_lat": "L'ÄLEGRIA VICTORY SOLO",
+      "name_ru": "",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -85,11 +94,51 @@
       "competition_dog_id": null
     },
     {
+      "id": "1076096097",
+      "name_lat": "LLS SUGAR CUBE",
+      "name_ru": "",
+      "breed": "СПРИНГЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "62249587",
+      "name_lat": "LLS THUNDER SIEGER’S MY",
+      "name_ru": "",
+      "breed": "СПРИНГЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "638672629",
+      "name_lat": "LlSEGO NOSA YARILO",
+      "name_ru": "",
+      "breed": "КРОЛИЧЬЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1269710470",
       "name_lat": "LLIRIENS MAKE IT REAL NOT FANTASY",
       "name_ru": "",
       "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1613076988",
+      "name_lat": "LLS CIRCLE OF LIFE BLACK",
+      "name_ru": "",
+      "breed": "СПРИНГЕР СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1571467064",
+      "name_lat": "LLS FEW STEPS CLOSER BLACK",
+      "name_ru": "",
+      "breed": "СПРИНГЕР СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     }

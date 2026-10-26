@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OB",
-  "count": 265,
+  "count": 274,
   "dogs": [
     {
       "id": "402204643",
@@ -10,6 +10,15 @@
       "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
       "breed_en": "OLD ENGLISH SHEEPDOG",
       "total_shows": 53,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1746400803",
+      "name_lat": "Obereg Pamyati Biya Charovnitsa",
+      "name_ru": "ОБЕРЕГ ПАМЯТИ БИЯ ЧАРОВНИЦА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 48,
       "competition_dog_id": null
     },
     {
@@ -22,57 +31,66 @@
       "competition_dog_id": null
     },
     {
-      "id": "1462965218",
+      "id": "1436427053",
       "name_lat": "OBNIMU I POTSELUYU OT BUMAGE",
       "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed": "КЕРРИ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 37,
       "competition_dog_id": null
     },
     {
-      "id": "1378613304",
+      "id": "1423049252",
       "name_lat": "OBERON V.D. KLEINEN BARTIGEN",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
+      "total_shows": 53,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1274316763",
+      "name_lat": "OBEREG VELESA ZARATUSHTRA",
+      "name_ru": "ОБЕРЕГ ВЕЛЕСА ЗАРАТУШТРА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
       "total_shows": 51,
       "competition_dog_id": null
     },
     {
-      "id": "773382195",
-      "name_lat": "OBEREG VELESA ZARATUSHTRA",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "id": "679299625",
+      "name_lat": "OBEREG VELESA KINZA",
+      "name_ru": "ОБЕРЕГ ВЕЛЕСА КИНЗА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
-      "total_shows": 32,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
-      "id": "590693107",
+      "id": "536331610",
       "name_lat": "OBERON LEO VOM ZARENDORF",
       "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР /",
+      "breed": "ЛЕОНБЕРГЕР",
       "breed_en": "",
       "total_shows": 52,
       "competition_dog_id": null
     },
     {
-      "id": "318894797",
+      "id": "1351207461",
       "name_lat": "OBERLAUF SHAKER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 29,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "1359447262",
+      "id": "1700565488",
       "name_lat": "OBEREG VELESA MADERA",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ОБЕРЕГ ВЕЛЕСА МАДЕРА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
-      "total_shows": 34,
+      "total_shows": 44,
       "competition_dog_id": null
     },
     {
@@ -85,12 +103,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "535079464",
+      "id": "1574853303",
       "name_lat": "OBERLAUF GABRIEL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -103,12 +121,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "550642118",
+      "id": "484362821",
+      "name_lat": "OBERLAUF SHTERN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 37,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1196350661",
       "name_lat": "OBERLAUF LEFORT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -139,15 +166,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1021107693",
-      "name_lat": "OBERLAUF SHTERN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 33,
-      "competition_dog_id": null
-    },
-    {
       "id": "728855793",
       "name_lat": "OBEREG VELESA BOGEMA",
       "name_ru": "",
@@ -175,30 +193,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "679299625",
-      "name_lat": "OBEREG VELESA KINZA",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
-      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
-      "total_shows": 14,
+      "id": "72160734",
+      "name_lat": "OBOLSTITEL DONZHUAN IZ ROSTOVA PAPY",
+      "name_ru": "ОБОЛЬСТИТЕЛЬ ДОНЖУАН ИЗ РОСТОВА ПАПЫ",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
       "id": "1955886365",
       "name_lat": "OBRAZ ZHIZNI VIVIAN",
-      "name_ru": "",
+      "name_ru": "ОБРАЗ ЖИЗНИ ВИВИАН",
       "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 10,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "588358598",
+      "id": "987610051",
+      "name_lat": "OBEREG RUSI DOCH' DRAKONA",
+      "name_ru": "ОБЕРЕГ РУСИ ДОЧЬ ДРАКОНА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1683315397",
       "name_lat": "OBERLAUF AVANGARD",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 28,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -211,12 +238,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "987610051",
-      "name_lat": "OBEREG RUSI DOCH' DRAKONA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "id": "151329267",
+      "name_lat": "OBEREG ROSSII GRANATOVYY BRASLET",
+      "name_ru": "ОБЕРЕГ РОССИИ ГРАНАТОВЫЙ БРАСЛЕТ",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -226,6 +253,33 @@
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "207374515",
+      "name_lat": "OBEREG VELESA ISHTVAN",
+      "name_ru": "Оберег Велеса Иштван",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1396791523",
+      "name_lat": "OBERON IZ DOLINY SOLNCA",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1700628155",
+      "name_lat": "OBEREG RUSI ZLATOZAR",
+      "name_ru": "ОБЕРЕГ РУСИ ЗЛАТОЗАР",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -274,6 +328,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "10638",
+      "name_lat": "OBEREG ROSSII GOSPOZHA METELITSA",
+      "name_ru": "ОБЕРЕГ РОССИИ ГОСПОЖА МЕТЕЛИЦА",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": 10638
+    },
+    {
       "id": "674092054",
       "name_lat": "OBEREG ROSSII EREMEYA LASTOCHKA",
       "name_ru": "",
@@ -283,12 +346,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1692373580",
+      "id": "1736576041",
       "name_lat": "OBUSH SHED U SEMI OZER",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "name_ru": "ОБУШ ШЕД У СЕМИ ОЗЕР",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -298,24 +361,6 @@
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "284693851",
-      "name_lat": "OBEREG VELESA ISHTVAN",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "151329267",
-      "name_lat": "OBEREG ROSSII GRANATOVYY BRASLET",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -337,15 +382,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1396791523",
-      "name_lat": "OBERON IZ DOLINY SOLNCA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 24,
-      "competition_dog_id": null
-    },
-    {
       "id": "778175729",
       "name_lat": "OBVIOUS CHOICE ZHENEVA",
       "name_ru": "",
@@ -355,21 +391,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "211081356",
-      "name_lat": "OBUSH SHED UBOYNAYA SILA",
+      "id": "9257",
+      "name_lat": "OBEREG RUSI AGAT",
+      "name_ru": "ОБЕРЕГ РУСИ АГАТ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 48,
+      "competition_dog_id": 9257
+    },
+    {
+      "id": "1350429033",
+      "name_lat": "OBUSH SHED UBOYNAYA SILA AQUATORIYA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "1739128585",
+      "id": "137255882",
       "name_lat": "OBERLAUF ZHOZEFINA IMPERIAL",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ОБЕРЛАУФ ЖОЗЕФИНА ИМПЕРИАЛ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -384,20 +429,38 @@
     {
       "id": "611755996",
       "name_lat": "OBEREG PAMYATI SLAVYANKA",
-      "name_ru": "",
+      "name_ru": "ОБЕРЕГ ПАМЯТИ СЛАВЯНКА",
       "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1862137253",
+      "name_lat": "OBEREG ROSSII VLADYCHITSA GESTOLA",
+      "name_ru": "ОБЕРЕГ РОССИИ ВЛАДЫЧИЦА ГЕСТОЛА",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
       "id": "783",
       "name_lat": "OBEREG S VERSHINY IN-YAN",
-      "name_ru": "",
+      "name_ru": "ОБЕРЕГ С ВЕРШИНЫ ИНЬ-ЯНЬ",
       "breed": "НЕМЕЦКИЙ ДОГ",
       "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
-      "total_shows": 20,
+      "total_shows": 26,
       "competition_dog_id": 783
+    },
+    {
+      "id": "1338341273",
+      "name_lat": "OBERLAUF URUZ",
+      "name_ru": "ОБЕРЛАУФ УРУЗ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
     },
     {
       "id": "441",
@@ -409,31 +472,22 @@
       "competition_dog_id": 441
     },
     {
-      "id": "920928575",
-      "name_lat": "OBEREG ROSSII GOSPOZHA METELITSA",
+      "id": "88111358",
+      "name_lat": "OBUSH SHED CENA LYUBVI",
       "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- БЕЛЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1700628155",
-      "name_lat": "OBEREG RUSI ZLATOZAR",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "9257",
-      "name_lat": "OBEREG RUSI AGAT",
-      "name_ru": "",
+      "id": "10990",
+      "name_lat": "OBEREG RUSI ALEKSANDRIT",
+      "name_ru": "ОБЕРЕГ РУСИ АЛЕКСАНДРИТ",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 43,
-      "competition_dog_id": 9257
+      "total_shows": 28,
+      "competition_dog_id": 10990
     },
     {
       "id": "1423011584",
@@ -445,40 +499,31 @@
       "competition_dog_id": null
     },
     {
-      "id": "1862137253",
-      "name_lat": "OBEREG ROSSII VLADYCHITSA GESTOLA",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 12,
+      "id": "1210994512",
+      "name_lat": "OBUSH SHED SMORODINA",
+      "name_ru": "ОБУШ ШЕД СМОРОДИНА",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1210994512",
-      "name_lat": "OBUSH SHED SMORODINA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 13,
+      "id": "396918830",
+      "name_lat": "OBEREG VELESA DENIS DAVYDOV",
+      "name_ru": "ОБЕРЕГ ВЕЛЕСА ДЕНИС ДАВЫДОВ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "726",
       "name_lat": "OBEREG RUSI ZARYA ZARYANITSA",
-      "name_ru": "",
+      "name_ru": "ОБЕРЕГ РУСИ ЗАРЯ ЗАРЯНИЦА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 22,
       "competition_dog_id": 726
-    },
-    {
-      "id": "179218180",
-      "name_lat": "OBEREG RUSI ALEKSANDRIT",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 18,
-      "competition_dog_id": null
     },
     {
       "id": "1275412157",
@@ -490,28 +535,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "382087729",
-      "name_lat": "OBERLAUF URUZ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 14,
+      "id": "174950383",
+      "name_lat": "OBEREG VELESA LEZGINKA",
+      "name_ru": "ОБЕРЕГ ВЕЛЕСА ЛЕЗГИНКА",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1705380519",
+      "id": "661",
+      "name_lat": "OBEREG RUSI ZAZNOBA",
+      "name_ru": "ОБЕРЕГ РУСИ ЗАЗНОБА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": 661
+    },
+    {
+      "id": "319748860",
       "name_lat": "OBSIDIAN TEAM CARRERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1510265620",
+      "id": "1888465798",
       "name_lat": "OBEREG VELESA OLDEST MONEY STYLE",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
       "total_shows": 16,
       "competition_dog_id": null
@@ -526,10 +580,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1415819016",
+      "id": "241403202",
+      "name_lat": "OBEREG RUSI LAVR POBEDITEL'",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "769932540",
       "name_lat": "OBI WAN OLIVIA",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -553,10 +615,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "696644574",
+      "id": "1788394385",
       "name_lat": "OBAYASHKA OT SERYH PSOV",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -571,10 +633,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1727853409",
+      "id": "882174391",
       "name_lat": "OBAMA",
       "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -589,39 +651,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "72160734",
-      "name_lat": "OBOLSTITEL DONZHUAN IZ ROSTOVA PAPY",
-      "name_ru": "",
-      "breed": "МОПС",
+      "id": "9263",
+      "name_lat": "OBEREG RUSI VEDUN'YA",
+      "name_ru": "ОБЕРЕГ РУСИ ВЕДУНЬЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "396918830",
-      "name_lat": "OBEREG VELESA DENIS DAVYDOV",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
-      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
-      "total_shows": 6,
-      "competition_dog_id": null
+      "total_shows": 21,
+      "competition_dog_id": 9263
     },
     {
       "id": "73084498",
       "name_lat": "OBEREG ROSSII DASHENKA DUSHA",
-      "name_ru": "",
+      "name_ru": "ОБЕРЕГ РОССИИ ДАШЕНЬКА ДУША",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "711498797",
-      "name_lat": "OBEREG RUSI VEDUN'YA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 14,
+      "id": "1835377440",
+      "name_lat": "OBEREG ROSSII VERSHINA SAUKHOKH",
+      "name_ru": "ОБЕРЕГ РОССИИ ВЕРШИНА САУХОХ",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -634,12 +687,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1746400803",
-      "name_lat": "OBEREG PAMYATI BIYA CHAROVNITSA",
+      "id": "663",
+      "name_lat": "OBEREG RUSI ZLATO SOLNYSHKO",
+      "name_ru": "ОБЕРЕГ РУСИ ЗЛАТО СОЛНЫШКО",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": 663
+    },
+    {
+      "id": "1708058459",
+      "name_lat": "OBEREG VELESA INGRID",
+      "name_ru": "ОБЕРЕГ ВЕЛЕСА ИНГРИД",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "496499835",
+      "name_lat": "OBEREG VELESA GEYSHA",
       "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 12,
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -652,21 +723,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "726882771",
-      "name_lat": "OBEREG VELESA GEYSHA",
+      "id": "1551974509",
+      "name_lat": "OBVIOUS CHIOCE AATU BOREI",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "922124979",
-      "name_lat": "OBEREG VELESA INGRID",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -679,57 +741,57 @@
       "competition_dog_id": null
     },
     {
-      "id": "1835377440",
-      "name_lat": "OBEREG ROSSII VERSHINA SAUKHOKH",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1551974509",
-      "name_lat": "OBVIOUS CHIOCE AATU BOREI",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
+      "id": "1640498044",
+      "name_lat": "OBEREG PAMYATI ALMAZ ZEMLI RUSSKOY",
+      "name_ru": "ОБЕРЕГ ПАМЯТИ АЛМАЗ ЗЕМЛИ РУССКОЙ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1492728839",
+      "id": "1038700291",
+      "name_lat": "O'BLAKO'S MR. KICHI KERUK",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "613506481",
       "name_lat": "OBEREG VELESA NOMENKLATURA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ИТАЛЬЯНСКИЙ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "663",
-      "name_lat": "OBEREG RUSI ZLATO SOLNYSHKO",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "id": "1113284014",
+      "name_lat": "OBI-VAN-LINDA IZ LEVANZHI",
+      "name_ru": "ОБИ-ВАН ЛИНДА ИЗ ЛЕВАНЖИ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": 663
-    },
-    {
-      "id": "630931144",
-      "name_lat": "OBERLAUF ERHAN",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
       "id": "371475548",
       "name_lat": "OBRAZ ZHIZNI EMO",
-      "name_ru": "",
+      "name_ru": "ОБРАЗ ЖИЗНИ ЕМО",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1766181399",
+      "name_lat": "OBERLAUF ERHAN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -751,12 +813,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1972159490",
-      "name_lat": "OBUSH SHED CENA LYUBVI",
+      "id": "1730562572",
+      "name_lat": "OBUSH SHED VICE-PREMIER",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- БЕЛЫЙ",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -769,57 +831,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "661",
-      "name_lat": "OBEREG RUSI ZAZNOBA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": 661
-    },
-    {
       "id": "827632011",
       "name_lat": "OBERLAUF ZOLOTAYA MOYA",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА Короткошерстная",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "866020582",
+      "id": "1194540218",
+      "name_lat": "OBIN VIM WINNER",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1631651190",
       "name_lat": "OBEREG SOLNTSE",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1113284014",
-      "name_lat": "OBI-VAN-LINDA IZ LEVANZHI",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "908136409",
       "name_lat": "OBEREG RUSI GALAKTIKA",
-      "name_ru": "",
+      "name_ru": "ОБЕРЕГ РУСИ ГАЛАКТИКА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1640498044",
-      "name_lat": "OBEREG PAMYATI ALMAZ ZEMLI RUSSKOY",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -838,6 +881,14 @@
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1361152956",
+      "name_lat": "OBUSH SHED DANIYA",
+      "name_ru": "",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -886,10 +937,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "999667709",
+      "id": "623983649",
       "name_lat": "OBOZAEMAEMAYA KUKOLKA IZ ZIMNIX GREZ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -904,28 +955,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "129366656",
+      "id": "1978441290",
       "name_lat": "OBEREG VELESA DENIS DAVUDOV",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "52997715",
-      "name_lat": "OBEREG RUSI AMETIST",
+      "id": "10968",
+      "name_lat": "OBEREG RUSI ARTEMIDA",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 24,
-      "competition_dog_id": null
+      "total_shows": 11,
+      "competition_dog_id": 10968
     },
     {
-      "id": "692955762",
+      "id": "9260",
+      "name_lat": "OBEREG RUSI AMETIST",
+      "name_ru": "ОБЕРЕГ РУСИ АМЕТИСТ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 27,
+      "competition_dog_id": 9260
+    },
+    {
+      "id": "9307",
+      "name_lat": "OBEREG RUSI AFRODITA",
+      "name_ru": "ОБЕРЕГ РУСИ АФРОДИТА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 25,
+      "competition_dog_id": 9307
+    },
+    {
+      "id": "1729776393",
       "name_lat": "OBERLAUF ZALTSBURG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
@@ -942,19 +1011,19 @@
     {
       "id": "1710873715",
       "name_lat": "OBEREG ROSSII AMALGAMA SEREBRA",
-      "name_ru": "",
+      "name_ru": "ОБЕРЕГ РОССИИ АМАЛЬГАМА СЕРЕБРА",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1353789011",
-      "name_lat": "OBEREG RUSI ARTEMIDA",
+      "id": "3587120",
+      "name_lat": "OBUSH SHED MED SLASHCHE YANTARYA",
       "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 9,
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -967,12 +1036,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1455100365",
-      "name_lat": "OBUSH SHED MED SLASHCHE YANTARYA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "id": "1214998294",
+      "name_lat": "OBEREG PAMYATI ANFISA KRASA KUBANI",
+      "name_ru": "ОБЕРЕГ ПАМЯТИ АНФИСА КРАСА КУБАНИ",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9306",
+      "name_lat": "OBEREG RUSI VERNAYA SERDTSEM",
+      "name_ru": "ОБЕРЕГ РУСИ ВЕРНАЯ СЕРДЦЕМ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 14,
+      "competition_dog_id": 9306
+    },
+    {
+      "id": "389010589",
+      "name_lat": "OBEREG VELESA DOBRONEGA",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -985,10 +1072,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1929771529",
+      "id": "1316482326",
+      "name_lat": "O'BAJAN DU HARAS DE CROUZ",
+      "name_ru": "",
+      "breed": "АЗАВАК",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1000780490",
       "name_lat": "OBERLAUF UMIATA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1003,12 +1099,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1586071541",
-      "name_lat": "OBEREG VELESA DOBRONEGA",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "id": "913643038",
+      "name_lat": "OBERLAUF MILORD",
+      "name_ru": "ОБЕРЛАУФ МИЛОРД",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1021,19 +1117,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "288195647",
+      "id": "749188654",
       "name_lat": "OBUSH SHED NU NICHEGO SEBE MADAMA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "824835723",
+      "id": "356054914",
       "name_lat": "OBERLAUF ULFEYA",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -1048,6 +1144,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1908181879",
+      "name_lat": "OBERLAUF OLESYA",
+      "name_ru": "ОБЕРЛАУФ ОЛЕСЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9497",
+      "name_lat": "OBEREG RUSI BEGUSCHAYA PO VOLNAM",
+      "name_ru": "",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 16,
+      "competition_dog_id": 9497
+    },
+    {
       "id": "318676941",
       "name_lat": "OBEREG VELESA AFERA",
       "name_ru": "",
@@ -1057,39 +1170,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1963066321",
+      "id": "756206821",
       "name_lat": "OBSIDIAN IZ MIMOLETNOGO VIDENIJA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ МАЛЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1753917034",
+      "id": "1311981755",
       "name_lat": "OBIVAN (MEDIO)",
       "name_ru": "",
-      "breed": "ЛАЙКА СОБАКА) СРЕДНЯЯ /",
+      "breed": "ЛАЙКА СОБАКА) СРЕДНЯЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1528126199",
+      "id": "251662646",
       "name_lat": "OBERLAUF TEODORA",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "913643038",
-      "name_lat": "OBERLAUF MILORD",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 14,
+      "id": "320743967",
+      "name_lat": "OBRAZ ZHIZNI BRILLIANS",
+      "name_ru": "ОБРАЗ ЖИЗНИ БРИЛЛИАНС",
+      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
+      "breed_en": "MINIATURE AMERICAN SHEPHERD",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1102,30 +1215,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "9307",
-      "name_lat": "OBEREG RUSI AFRODITA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": 9307
-    },
-    {
       "id": "816701299",
       "name_lat": "OBERLAUF VIZANTIYA",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1132892303",
-      "name_lat": "OBERLAUF OLESYA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1138,6 +1233,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1907904375",
+      "name_lat": "O'BLAKO'S MR KICHI KERUK",
+      "name_ru": "",
+      "breed": "САМОЕДСКАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "869601970",
       "name_lat": "OBERON GOLDEN ANIK'S",
       "name_ru": "",
@@ -1147,12 +1251,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "609396080",
+      "name_lat": "OBLACHNAYA FANTAZIYA VARVARA",
+      "name_ru": "",
+      "breed": "БОЛОНКА",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "827276570",
       "name_lat": "OBEREG NA UDACHU ARCHI",
-      "name_ru": "",
+      "name_ru": "ОБЕРЕГ НА УДАЧУ АРЧИ",
       "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1161,7 +1273,7 @@
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1174,10 +1286,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1906903746",
+      "id": "1013374860",
       "name_lat": "OBEREG VELESA ALKHIMIK",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1192,28 +1304,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "9497",
-      "name_lat": "OBEREG RUSI BEGUSCHAYA PO VOLNAM",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "id": "27322041",
+      "name_lat": "OBEREG ROSSII AGATA VELICHAVAYA",
+      "name_ru": "ОБЕРЕГ РОССИИ АГАТА ВЕЛИЧАВАЯ",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": 9497
-    },
-    {
-      "id": "1212321573",
-      "name_lat": "OBEREG RUSI VERNAYA SERDTSEM",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "477244611",
+      "id": "1559585269",
+      "name_lat": "OBEREG RUSI ALMAZ",
+      "name_ru": "ОБЕРЕГ РУСИ АЛМАЗ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "150897734",
+      "name_lat": "OBEREG VELESA GAMAYUN",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "8390119",
       "name_lat": "OBERON GROSVI HAUS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1228,12 +1349,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1270511109",
+      "id": "1605903640",
       "name_lat": "OBEREG LUBVI AMATERU TSAR FATHER",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "654833233",
+      "name_lat": "OBRAZ ZHIZNI GERA",
+      "name_ru": "ОБРАЗ ЖИЗНИ ГЕРА",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "WELSH CORGI CARDIGAN",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1242,16 +1372,7 @@
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "27322041",
-      "name_lat": "OBEREG ROSSII AGATA VELICHAVAYA",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1273,29 +1394,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1214998294",
-      "name_lat": "OBEREG PAMYATI ANFISA KRASA KUBANI",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "VOSTOCHNOEVROPEISKAYA OVCHARKA (EAST EUROPEAN SHEPHERD DOG)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1925875136",
       "name_lat": "OBUSH SHED HASHIRAMA",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "320743967",
-      "name_lat": "OBRAZ ZHIZNI BRILLIANS",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
-      "breed_en": "MINIATURE AMERICAN SHEPHERD",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -1309,19 +1412,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "54350105",
+      "id": "248652986",
       "name_lat": "OBERLAUF ALEXANDRIA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "159322020",
+      "id": "229636561",
       "name_lat": "OBUSH SHED MYOD SLASHCHE YANTARYA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1333,15 +1436,6 @@
       "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1559585269",
-      "name_lat": "OBEREG RUSI ALMAZ",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1358,15 +1452,6 @@
       "name_lat": "Obito Uchikha",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР (Черный с серебр.)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1934392842",
-      "name_lat": "OBEREG VELESA GAMAYUN",
-      "name_ru": "",
-      "breed": "DACHSHUND STANDARD",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1399,12 +1484,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "174950383",
-      "name_lat": "OBEREG VELESA LEZGINKA",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
-      "breed_en": "DACHSHUND STANDARD SMOOTH-HAIRED",
-      "total_shows": 2,
+      "id": "242840103",
+      "name_lat": "OBRAZ ZHIZNI LIATRIS",
+      "name_ru": "ОБРАЗ ЖИЗНИ ЛИАТРИС",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1474140645",
+      "name_lat": "OBUSH SHED ZENA KOROLEVA SERDETS",
+      "name_ru": "ОБУШ ШЕД ЗЕНА КОРОЛЕВА СЕРДЕЦ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1414,24 +1508,6 @@
       "breed": "ШИ ТЦУ",
       "breed_en": "SHIH TZU",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1436523356",
-      "name_lat": "OBLACHNAYA FANTAZIYA VARVARA",
-      "name_ru": "",
-      "breed": "БОЛОНКА / RUSSIAN",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1474140645",
-      "name_lat": "OBUSH SHED ZENA KOROLEVA SERDETS",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1480,10 +1556,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1022880247",
+      "id": "1554758999",
       "name_lat": "OBEREG VELESA ZHUKOV",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1507,21 +1583,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "5973",
+      "name_lat": "OBEREG RUSI ITIL'",
+      "name_ru": "ОБЕРЕГ РУСИ ИТИЛЬ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": 5973
+    },
+    {
       "id": "9306",
       "name_lat": "OBEREG RUSI VERNAYA SERDCZEM",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 21,
       "competition_dog_id": 9306
     },
     {
-      "id": "68432640",
-      "name_lat": "OBUSH SHED VICE- PREMIER",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "id": "1299481466",
+      "name_lat": "OBEREG RUSI KOKTEBEL'",
+      "name_ru": "ОБЕРЕГ РУСИ КОКТЕБЕЛЬ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "601769118",
+      "name_lat": "OBUSH SHED ZIMNYAYA VISHNYA",
+      "name_ru": "ОБУШ ШЕД ЗИМНЯЯ ВИШНЯ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1561,10 +1654,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "287210218",
+      "id": "1837146187",
       "name_lat": "OBERLAUF TORVIL KONUNG",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "немецкая овчарка пули",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1606,28 +1699,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "19107804",
+      "id": "590950643",
       "name_lat": "OBERLAUF ERMAK",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "654833233",
-      "name_lat": "OBRAZ ZHIZNI GERA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "987340017",
+      "id": "1898084146",
       "name_lat": "OBERLAUF KLEOPATRA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1705,13 +1789,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "126428897",
+      "id": "10204",
       "name_lat": "OBEREG",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
       "total_shows": 6,
-      "competition_dog_id": null
+      "competition_dog_id": 10204
     },
     {
       "id": "1432878680",
@@ -1723,19 +1807,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1111511671",
+      "id": "316864694",
       "name_lat": "OBERLAUF K'QUEEN",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "828621136",
-      "name_lat": "OBUSH SHED ZIMNYAYA VISHNYA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1786,10 +1861,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "525016485",
+      "id": "1840382765",
       "name_lat": "OBAMA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1804,21 +1879,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1781836593",
+      "id": "751250802",
       "name_lat": "OBERLAUF BUSAYNA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "19995450",
+      "id": "1172322833",
       "name_lat": "OBERLAUF DOMINIKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1148342689",
+      "name_lat": "OBEREG RUSI ZABAVA PUTYATICHNA",
+      "name_ru": "ОБЕРЕГ РУСИ ЗАБАВА ПУТЯТИЧНА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1179821114",
+      "name_lat": "OBEREG LUBVI ANSHEE GOLDEN GIRL",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1840,8 +1933,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1179821114",
-      "name_lat": "OBEREG LUBVI ANSHEE GOLDEN GIRL",
+      "id": "689847566",
+      "name_lat": "O BELAYA AKULA IZ HOROVODA ZVEZD",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "76902211",
+      "name_lat": "OBEREG LUBVI ASAMI SEGUN'S DREAM",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
@@ -1855,15 +1957,6 @@
       "breed": "АКИТА АЛЯСКИНСКИЙ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1148342689",
-      "name_lat": "OBEREG RUSI ZABAVA PUTYATICHNA",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1885,10 +1978,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1489461762",
+      "id": "328997625",
       "name_lat": "OBSESSION TEAM CARRERA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1912,22 +2005,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "241403202",
-      "name_lat": "OBEREG RUSI LAVR POBEDITEL'",
-      "name_ru": "",
+      "id": "5968",
+      "name_lat": "OBEREG RUSI IRIS",
+      "name_ru": "ОБЕРЕГ РУСИ ИРИС",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "76902211",
-      "name_lat": "OBEREG LUBVI ASAMI SEGUN'S DREAM",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
+      "competition_dog_id": 5968
     },
     {
       "id": "1357892081",
@@ -1984,19 +2068,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "562502860",
+      "id": "1184702723",
       "name_lat": "OBERLAUF ALEXANDER",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1398183335",
+      "id": "232193019",
       "name_lat": "OBERLAUF ZVEROBOY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2007,17 +2091,8 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": 5969
-    },
-    {
-      "id": "5973",
-      "name_lat": "OBEREG RUSI ITIL'",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": 5973
     },
     {
       "id": "1222574765",
@@ -2025,6 +2100,22 @@
       "name_ru": "",
       "breed": "AMERICAN AKITA",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1535099630",
+      "name_lat": "OBEREG LUBVI AKARI CINNAMON BONBON",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "43440374",
+      "name_lat": "OBERLAUF ZEMFIRA",
+      "name_ru": "Оберлауф Земфира",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2038,10 +2129,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "37604781",
+      "id": "1057523077",
       "name_lat": "OBERLAUF SHTERN (L-H)",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2119,20 +2210,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "708132283",
-      "name_lat": "OBRAZ ZHIZNI DAYKIRI",
+      "id": "827679754",
+      "name_lat": "O BENTLY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "WELSH CORGI CARDIGAN",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "242840103",
-      "name_lat": "OBRAZ ZHIZNI LIATRIS",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
+      "breed": "ХОХЛАТАЯ СОБАКА",
+      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2151,6 +2233,15 @@
       "name_ru": "",
       "breed": "МИНИАТЮРНАЯ АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "MINIATURE AMERICAN SHEPHERD",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "708132283",
+      "name_lat": "OBRAZ ZHIZNI DAYKIRI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "WELSH CORGI CARDIGAN",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2182,19 +2273,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1131516445",
+      "id": "1308074944",
       "name_lat": "OBUSH SHED NANDO'S FIRST SON",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "121932107",
+      "id": "1881879618",
       "name_lat": "OBUSH SHED NEW ADVENTURE",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "644457241",
+      "name_lat": "O BERNARDE TTA",
+      "name_ru": "",
+      "breed": "SIGHTHOUND",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2227,19 +2327,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1266362845",
-      "name_lat": "OBERLAUF CHAROVNITSA (д/ш)",
+      "id": "1032777236",
+      "name_lat": "OBERLAUF KVIN STAR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Длинношерстная",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "87260861",
-      "name_lat": "OBEREG LUBVI AKARI CINNAMON BONBON",
+      "id": "1266362845",
+      "name_lat": "OBERLAUF CHAROVNITSA (д/ш)",
       "name_ru": "",
-      "breed": "АКИТА / AMERICAN",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Длинношерстная",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2344,15 +2443,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1350429033",
-      "name_lat": "OBUSH SHED UBOYNAYA SILA AQUATORIYA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "999351044",
       "name_lat": "OBEREG LUBVI BISHAMOMTEN PRIDE AND JOY",
       "name_ru": "",
@@ -2366,24 +2456,6 @@
       "name_lat": "OBRANAYA SOTRONA LUNY TRISTIKSBULL ZHELEZNIJ ARGUMENT",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "5968",
-      "name_lat": "OBEREG RUSI IRIS",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": 5968
-    },
-    {
-      "id": "1361152956",
-      "name_lat": "OBUSH SHED DANIYA",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

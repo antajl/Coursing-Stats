@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "SJ",
-  "count": 11,
+  "count": 13,
   "dogs": [
     {
       "id": "398510619",
@@ -76,6 +76,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "881877423",
+      "name_lat": "S JULIET РУССИАН СИМФОНИ ОФЕЛИЯ",
+      "name_ru": "",
+      "breed": "БРЮССЕЛЬСКИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "228425926",
       "name_lat": "SJURPRIZ IZ PODMOCKOVJA GLEAM OF HOPE",
       "name_ru": "",
@@ -99,6 +107,14 @@
       "name_ru": "",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1496533197",
+      "name_lat": "SJURPRIZ IZ PODMOCKOVJA RAZ I NAVSEGDA",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
       "total_shows": 1,
       "competition_dog_id": null
     }

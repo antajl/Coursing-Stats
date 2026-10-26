@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UD",
-  "count": 111,
+  "count": 113,
   "dogs": [
     {
       "id": "940039565",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 86,
+      "total_shows": 100,
       "competition_dog_id": null
     },
     {
@@ -22,12 +22,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "217260123",
+      "name_lat": "UDACHA IZ DOMA AKTEONA",
+      "name_ru": "Удача Из Дома Актеона",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
       "id": "295791465",
       "name_lat": "UDDGER IZ VOROBINOGO GNEZDA",
-      "name_ru": "",
+      "name_ru": "УДДГЕР ИЗ ВОРОБЬИНОГО ГНЕЗДА",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -67,19 +76,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "217260123",
-      "name_lat": "UDACHA IZ DOMA AKTEONA",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "558387459",
+      "id": "1990843347",
       "name_lat": "UDZHER BRIZ IZ DOMA KARMANOV OI",
       "name_ru": "",
-      "breed": "ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -87,10 +87,10 @@
     {
       "id": "1593090936",
       "name_lat": "UDALOY MOLODETS",
-      "name_ru": "",
+      "name_ru": "УДАЛОЙ МОЛОДЕЦ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 38,
+      "total_shows": 39,
       "competition_dog_id": null
     },
     {
@@ -100,6 +100,33 @@
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1693959992",
+      "name_lat": "UDALOY MOLODETS IZ STAROY SHUI",
+      "name_ru": "УДАЛОЙ МОЛОДЕЦ ИЗ СТАРОЙ ШУИ",
+      "breed": "ШЕЛТИ",
+      "breed_en": "SHETLAND SHEEPDOG",
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1788724327",
+      "name_lat": "UDACHNY VYBOR TEODORO",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1232219221",
+      "name_lat": "UDIVITELNAYA TIFFANI IZ TSVETNYH SNOV",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -121,6 +148,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1297298632",
+      "name_lat": "UDARNAYA VOLNA",
+      "name_ru": "УДАРНАЯ ВОЛНА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "985955575",
       "name_lat": "UDALOV'S MAGIC ELLIOT",
       "name_ru": "",
@@ -130,21 +166,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1297298632",
-      "name_lat": "UDARNAYA VOLNA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "32196648",
       "name_lat": "UDACHA FORTUNY ALLEGRA",
-      "name_ru": "",
+      "name_ru": "УДАЧА ФОРТУНЫ АЛЛЕГРА",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -175,6 +202,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1312879476",
+      "name_lat": "UDACHA OBGONYAYUSHCHAYA VETER",
+      "name_ru": "УДАЧА ОБГОНЯЮЩАЯ ВЕТЕР",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1892335999",
       "name_lat": "UDIVITEL'NAYA LEDI BAFFI",
       "name_ru": "",
@@ -184,30 +220,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "900827329",
+      "id": "1724004541",
       "name_lat": "UDZHUNA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1625112289",
-      "name_lat": "UDIVITELNAYA TIFFANI IZ TSVETNYH SNOV",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1693959992",
-      "name_lat": "UDALOY MOLODETS IZ STAROY SHUI",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -234,7 +252,16 @@
       "name_ru": "",
       "breed": "ТОЙ ФОКСТЕРЬЕР",
       "breed_en": "TOY FOX TERRIER",
-      "total_shows": 2,
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1367536618",
+      "name_lat": "UDACHNY PROJEKT OT BUMAGE",
+      "name_ru": "",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -256,15 +283,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1367536618",
-      "name_lat": "UDACHNY PROJEKT OT BUMAGE",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1645912263",
       "name_lat": "UDALOY MOLODET S IZ STAROY SHUI",
       "name_ru": "",
@@ -280,6 +298,15 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1488490775",
+      "name_lat": "UDZUKI FLIGHT",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -301,30 +328,55 @@
       "competition_dog_id": null
     },
     {
-      "id": "1488490775",
-      "name_lat": "UDZUKI FLIGHT",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 7,
+      "id": "1748925082",
+      "name_lat": "UDACHA FORTUNY PAULINA",
+      "name_ru": "УДАЧА ФОРТУНЫ ПАУЛИНА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "932532614",
+      "id": "233508275",
+      "name_lat": "UDALOY KNYAZ S RUSSKOY DUSHOY",
+      "name_ru": "",
+      "breed": "ЛЕОНБЕРГЕР СТОРОЖЕВАЯ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1679805166",
+      "name_lat": "UDACHNY VYBOR LEPESTOK SHAFRANA",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103603722",
       "name_lat": "UDACHNYY SLUCHAY IZ ZAZERKALIA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "969115919",
+      "name_lat": "U-DAR-HAN",
+      "name_ru": "",
+      "breed": "ХОРТАЯ БОРЗАЯ",
+      "breed_en": "HORTAYA BORZAYA",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "740508838",
       "name_lat": "UDZIYASU - AKIRA",
-      "name_ru": "",
+      "name_ru": "УДЗИЯСУ-АКИРА",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -355,10 +407,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1079112811",
+      "id": "720042239",
       "name_lat": "UDJANO",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ ПИНЧЕР",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ ПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -382,10 +434,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "561701378",
+      "id": "886366874",
       "name_lat": "UDIVITELNOE CHASTIE AISHA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -418,19 +470,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "793348306",
-      "name_lat": "UDIVITEL'NYY MORIARTI MONBLAN",
+      "id": "402706632",
+      "name_lat": "UDARYNYA IZ TSARSKOSELSKOI USADBY",
       "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
+      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "183081785",
-      "name_lat": "UDARYNYA IZ TSARSKOSELSKOI USADBY",
+      "id": "793348306",
+      "name_lat": "UDIVITEL'NYY MORIARTI MONBLAN",
       "name_ru": "",
-      "breed": "МОСКОВСКАЯ СТОРОЖЕВАЯ НЕМЕЦКИЙ ДОГ чёрный, мраморный ПИНЧЕР",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -445,30 +497,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "233508275",
-      "name_lat": "UDALOY KNYAZ S RUSSKOY DUSHOY",
-      "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР СТОРОЖЕВАЯ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "1148172404",
       "name_lat": "UDELNYJ KNYAZ OT KARELSKIKH MEDVEDEY",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "NEWFOUNDLAND",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1695947315",
-      "name_lat": "UDACHA FORTUNY PAULINA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -490,28 +524,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1490720946",
+      "id": "1907291612",
       "name_lat": "UDIVITELNOE CHUDO IZ OMSKOI KREPOSTI",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1999072958",
+      "id": "1424575303",
       "name_lat": "UDEL'NAYA SLOBODA EDGAR",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "597027119",
+      "id": "1879134779",
       "name_lat": "UDJANO",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -598,19 +632,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "234420702",
-      "name_lat": "UDACHI (Изменено по",
+      "id": "1077169294",
+      "name_lat": "UDACHA IZ VOLSHEBNOGO",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "ВОЛЬФХАУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1077169294",
-      "name_lat": "UDACHA IZ VOLSHEBNOGO",
+      "id": "1237126935",
+      "name_lat": "UDACHI (Изменено по",
       "name_ru": "",
-      "breed": "ВОЛЬФХАУНД",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -625,21 +659,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1312879476",
-      "name_lat": "UDACHA OBGONYAYUSHCHAYA VETER",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "724086302",
       "name_lat": "UDIVITELNY USTIN",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -657,15 +682,6 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1679805166",
-      "name_lat": "UDACHNY VYBOR LEPESTOK SHAFRANA",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -724,19 +740,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "56079810",
+      "id": "365870019",
       "name_lat": "UDACHNY VYBOR MADAGASCAR",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1818105749",
+      "id": "220266830",
       "name_lat": "UDACHA S BEREGA PAHRY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -760,10 +776,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1049603013",
+      "id": "1007894232",
+      "name_lat": "UDIVITELNAYA EVA",
+      "name_ru": "УДИВИТЕЛЬНАЯ ЕВА",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1868358377",
       "name_lat": "UDJANO-A",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -800,6 +825,15 @@
       "name_lat": "UDACHA IZ",
       "name_ru": "",
       "breed": "ВОЛЬФХАУНД",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "161468790",
+      "name_lat": "UDEL NAYA SLOBODA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -877,20 +911,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1411631409",
+      "id": "549889614",
       "name_lat": "UDIVITELNAYA MECHTA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "161468790",
-      "name_lat": "UDEL NAYA SLOBODA",
+      "id": "1997513430",
+      "name_lat": "UDACHLIVAYA MOLLY",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ",
-      "breed_en": "",
+      "breed": "МОПС / PUG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -949,15 +982,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1007894232",
-      "name_lat": "UDIVITELNAYA EVA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "520003392",
       "name_lat": "UDACHA IZ KRASNOGO DARA",
       "name_ru": "",
@@ -985,19 +1009,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1061964379",
+      "id": "64121234",
       "name_lat": "UDIN UNIQUE SPOT",
       "name_ru": "",
-      "breed": "ТНАЯ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1788724327",
-      "name_lat": "UDACHNY VYBOR TEODORO",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed": "ТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

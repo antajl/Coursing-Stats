@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ПЮ",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "1670840555",
+      "name_lat": "ПЮР БРИЛЛИАНТС",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1728771613",
+      "name_lat": "ПЮСЬИТ ОФ ХЭППИНЕСС",
+      "name_ru": "ПЮСЬИТ ОФ ХЭППИНЕСС",
+      "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1964945400",
+      "name_lat": "ПЮЛЬШЕРИ С ВЕРХНЕВОЛЖЬЯ",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

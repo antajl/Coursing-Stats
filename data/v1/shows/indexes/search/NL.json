@@ -1,0 +1,25 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "NL",
+  "count": 2,
+  "dogs": [
+    {
+      "id": "408429195",
+      "name_lat": "NL/B.YCH, JW B/NL THE RED SQUIRRELS KINDRA",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "DOGUE DE BORDEAUX",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275444551",
+      "name_lat": "N LOTIS",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

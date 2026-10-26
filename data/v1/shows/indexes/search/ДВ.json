@@ -1,60 +1,77 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ДВ",
-  "count": 82,
+  "count": 91,
   "dogs": [
     {
-      "id": "1674593904",
+      "id": "456841628",
       "name_lat": "ДВУСТВОЛКА ИЗ СКАЗА О РУСИЧАХ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "name_ru": "ДВУСТВОЛКА ИЗ СКАЗА О РУСИЧАХ",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1481864641",
+      "id": "1489272145",
       "name_lat": "ДВИНСКИЕ ЗОРИ ЛУКЕРЬЯ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ДВИНСКИЕ ЗОРИ ЛУКЕРЬЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1907811725",
+      "id": "920994931",
+      "name_lat": "Д'ВАЛЬКУВИЯ ИЗ БЕЛОГО ЯРА",
+      "name_ru": "Д'ВАЛЬКУВИЯ ИЗ БЕЛОГО ЯРА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1449255257",
       "name_lat": "ДВОРЦОВЫЙ ПЕС ГЛОРИЯ ВИНКС",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "904917558",
+      "name_lat": "ДВИНСКИЕ ЗОРИ МАРШАЛ",
+      "name_ru": "ДВИНСКИЕ ЗОРИ МАРШАЛ",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1036444954",
       "name_lat": "ДВОРЦОВЫЙ ПЁС ТРИСТАН",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙ ПЁС ТРИСТАН",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "904917558",
-      "name_lat": "ДВИНСКИЕ ЗОРИ МАРШАЛ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "18333224",
       "name_lat": "ДВОРЦОВЫЙ ПЕС БРАЙТ САННИ СТАР",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙ ПЕС БРАЙТ САННИ СТАР",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "867074976",
+      "name_lat": "ДВОРЦОВЫЙ ПЁС МАЛДЕР ОН ЗЕ КИНД",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -78,7 +95,7 @@
     {
       "id": "8754144",
       "name_lat": "ДВОРЦОВЫЙ ПЕС ХАНИ АМБЕР ЗЛАТИСЛАВА",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙ ПЕС ХАНИ АМБЕР ЗЛАТИСЛАВА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 8,
@@ -87,17 +104,26 @@
     {
       "id": "209474931",
       "name_lat": "ДВОРЦОВЫЙ ПЁС МИШЕЛЬ ГОЛД ЭМБЕР",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙ ПЁС МИШЕЛЬ ГОЛД ЭМБЕР",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1310269592",
+      "id": "1897584698",
+      "name_lat": "ДВИНСКИЕ ЗОРИ НАРЦИССО",
+      "name_ru": "ДВИНСКИЕ ЗОРИ НАРЦИССО",
+      "breed": "ЭРДЕЛЬТЕРЬЕР ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1087822098",
       "name_lat": "ДВИНСКИЙ ЗОРИ ЕКО ЗЕ САН",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -112,37 +138,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "971310418",
-      "name_lat": "ДВИНСКИЕ ЗОРИ НАРЦИССО",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "873896458",
-      "name_lat": "ДВЕНСКИЕ ЗОРИ НИМФЕТКА",
+      "id": "1281632056",
+      "name_lat": "ДВИНСКИЕ ЗОРИ НАБУККО",
       "name_ru": "",
       "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1084902335",
+      "name_lat": "ДВЕНСКИЕ ЗОРИ НИМФЕТКА",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1456049340",
+      "id": "28076432",
       "name_lat": "ДВУСТВОЛКАИЗ СКАЗА О РУСИЧАХ",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "717465298",
+      "id": "93871886",
       "name_lat": "ДВИНСКИЕ ЗОРИ ЕСИ ТУ ЛАВ",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ Ж-",
+      "name_ru": "ДВИНСКИЕ ЗОРИ ЕСИ ТУ ЛАВ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -166,27 +191,45 @@
       "competition_dog_id": null
     },
     {
+      "id": "635992809",
+      "name_lat": "ДВОЙНАЯ ДЕРЗОСТЬ",
+      "name_ru": "ДВОЙНАЯ ДЕРЗОСТЬ",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "123330915",
       "name_lat": "ДВОРЦОВЫЙ ПЁС НЕЛЬСОН ЭЛЕГАНТ СТАЙЛ",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙ ПЁС НЕЛЬСОН ЭЛЕГАНТ СТАЙЛ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "635992809",
-      "name_lat": "ДВОЙНАЯ ДЕРЗОСТЬ",
+      "id": "398506242",
+      "name_lat": "ДВОРЦОВЫЙ ПЕС ГРАНД ЧЕРОККИ",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed": "НЕМЕЦКИЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1278694149",
+      "name_lat": "ДВОРЦОВЫЙПЕС ТУАРЕГ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙТОЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "988911999",
       "name_lat": "ДВОЙНОЙ ВИСКИ СО ЛЬДОМ",
-      "name_ru": "",
+      "name_ru": "ДВОЙНОЙ ВИСКИ СО ЛЬДОМ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 6,
@@ -195,17 +238,8 @@
     {
       "id": "1358932623",
       "name_lat": "ДВОРЦОВЫЙ ПЕС МАРЛОН РОМАНТИК",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙ ПЕС МАРЛОН РОМАНТИК",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "867074976",
-      "name_lat": "ДВОРЦОВЫЙ ПЁС МАЛДЕР ОН ЗЕ КИНД",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -213,7 +247,7 @@
     {
       "id": "413257607",
       "name_lat": "ДВИНСКИЕ ЗОРИ БАТТЕРФЛЯЙ",
-      "name_ru": "",
+      "name_ru": "ДВИНСКИЕ ЗОРИ БАТТЕРФЛЯЙ",
       "breed": "DACHSHUND KANINCHEN",
       "breed_en": "",
       "total_shows": 3,
@@ -222,7 +256,7 @@
     {
       "id": "104542180",
       "name_lat": "ДВОРЦОВЫЙ ПЕС АСТЕРОИД",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙ ПЕС АСТЕРОИД",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -231,7 +265,7 @@
     {
       "id": "1399904540",
       "name_lat": "ДВОРЦОВЫЙПЕС ОСМАН ГРЕЙТ РОМАНТИК",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙПЕС ОСМАН ГРЕЙТ РОМАНТИК",
       "breed": "НЕМЕЦКИЙТОЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 2,
@@ -249,7 +283,7 @@
     {
       "id": "330146942",
       "name_lat": "ДВОЙГАС РАДЖА",
-      "name_ru": "",
+      "name_ru": "ДВОЙГАС РАДЖА",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 2,
@@ -265,12 +299,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "269122574",
+      "name_lat": "ДВИНСКИЕ ЗОРИ ЕЖЕВИКА",
+      "name_ru": "ДВИНСКИЕ ЗОРИ ЕЖЕВИКА",
+      "breed": "DACHSHUND KANINCHEN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "487597612",
       "name_lat": "ДВОРЦОВЫЙ ПЕС ИМПЕРИАЛ ПРЭШЕС ЭМЕРАЛЬД",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙ ПЕС ИМПЕРИАЛ ПРЭШЕС ЭМЕРАЛЬД",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "320460524",
+      "name_lat": "Д'ВЭНГАРД ЛЕГАСИ D'VANGUARD LEGACY",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "953366875",
+      "name_lat": "ДВИНСКИЕ ЗОРИ ЕКО ЗЕ САН",
+      "name_ru": "",
+      "breed": "ТАКСА",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -285,7 +344,7 @@
     {
       "id": "31131768",
       "name_lat": "ДВОР БОЯР ЖАСМИН",
-      "name_ru": "",
+      "name_ru": "ДВОР БОЯР ЖАСМИН",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
       "total_shows": 4,
@@ -301,30 +360,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1689407812",
+      "id": "199144433",
       "name_lat": "ДВИНСКАЯ РОССЫПЬ МОЙ КАПРИЗ",
       "name_ru": "",
-      "breed": "ТНАЯ /",
+      "breed": "ТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "35665278",
+      "id": "24301575",
       "name_lat": "ДВИНСКИЕ ЗОРИ УЗРА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "name_ru": "ДВИНСКИЕ ЗОРИ УЗРА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "391971295",
-      "name_lat": "ДВУХМЕРНОЕ СЧАСТЬЕ",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -355,22 +405,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1192573876",
+      "id": "281292600",
       "name_lat": "Дворцовый Пёс Хьюстон",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "Дворцовый Пёс Хьюстон",
+      "breed": "Немецкая овчарка",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "9429",
-      "name_lat": "ДВОЙНОЙ ОБГОН ИЗ СЕЛА ЦАРЕВО",
+      "id": "672421554",
+      "name_lat": "ДВОРА",
       "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": 9429
+      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
     },
     {
       "id": "1461002794",
@@ -420,7 +469,7 @@
     {
       "id": "804277032",
       "name_lat": "ДВОРЦОВЫЙ ПЕС КАЙ ПЛАТИНИК КРАУН",
-      "name_ru": "",
+      "name_ru": "ДВОРЦОВЫЙ ПЕС КАЙ ПЛАТИНИК КРАУН",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
@@ -445,11 +494,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1983854991",
-      "name_lat": "ДВИНСКИЕ ЗОРИ ЕЖЕВИКА",
+      "id": "193989121",
+      "name_lat": "ДВОРЦА ВИВАТ ФОРЕВО",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "ПЕКИНЕС",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -474,7 +522,7 @@
     {
       "id": "1327666471",
       "name_lat": "ДВОР БОЯР ЗОЗНОБА ДЛЯ ХОРОВОДА ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ДВОР БОЯР ЗОЗНОБА ДЛЯ ХОРОВОДА ЗВЕЗД",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 3,
@@ -510,7 +558,7 @@
     {
       "id": "1488833090",
       "name_lat": "ДВОЙНОЙ ТРИУМФ",
-      "name_ru": "",
+      "name_ru": "ДВОЙНОЙ ТРИУМФ",
       "breed": "SHEEPDOG",
       "breed_en": "",
       "total_shows": 2,
@@ -519,9 +567,17 @@
     {
       "id": "761931502",
       "name_lat": "ДВОЙНОЙ ОБГОН ИЗ СЕЛА ЦАРЕВА",
-      "name_ru": "",
+      "name_ru": "ДВОЙНОЙ ОБГОН ИЗ СЕЛА ЦАРЕВА",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "398697642",
+      "name_lat": "ДВИНСКИЕ ЗОРИ РИНГО СТАРР",
+      "name_ru": "ДВИНСКИЕ ЗОРИ РИНГО СТАРР",
+      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -531,6 +587,23 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1494588388",
+      "name_lat": "Д-ВУК",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "751241155",
+      "name_lat": "ДВОРЦОВЫЙ ПЕС БЕАТРИКС КИДДО",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -589,15 +662,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "398506242",
-      "name_lat": "ДВОРЦОВЫЙ ПЕС ГРАНД ЧЕРОККИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "177872236",
       "name_lat": "ДВОРЦОВЫЙ ПЁС ТУАРЕТ",
       "name_ru": "",
@@ -616,19 +680,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1278694149",
-      "name_lat": "ДВОРЦОВЫЙПЕС ТУАРЕГ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙТОЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1129063114",
+      "id": "1845908184",
       "name_lat": "ДВОР НАКИЛОН В МОТЛИ ХАУС",
       "name_ru": "",
-      "breed": "испанский мастиф испанский мастиф",
+      "breed": "испанский мастиф",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -715,10 +770,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1749501417",
+      "id": "1441858446",
       "name_lat": "ДВИНСКИЕ ЗОРИ МОЯ ЛУНА",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -738,6 +793,23 @@
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "603143845",
+      "name_lat": "Д’ВАЛЬКУВИЯ ИЗ БЕЛОГО ЯРА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "15986092",
+      "name_lat": "ДВИНСКИЕ ЗОРИ ПЕНКА КАПУЧИНО",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     }

@@ -1,0 +1,50 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "UJ",
+  "count": 5,
+  "dogs": [
+    {
+      "id": "440717384",
+      "name_lat": "UJNIY BEREG MAMBO ENERDZHI",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1553605850",
+      "name_lat": "UJNIY BEREG ORTODOKS BRAUN",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1759198698",
+      "name_lat": "UJIN ROMULUS SAMUEL",
+      "name_ru": "",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1505283711",
+      "name_lat": "UJNIY BEREG JANINA GRANDA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "264478999",
+      "name_lat": "UJNIY BEREG HELIOS HOLIDAY",
+      "name_ru": "",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

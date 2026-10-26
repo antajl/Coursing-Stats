@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "KV",
-  "count": 92,
+  "count": 96,
   "dogs": [
     {
       "id": "164434876",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "CHOW CHOW",
-      "total_shows": 15,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -31,21 +31,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "578085130",
+      "id": "1898894232",
       "name_lat": "KVIT OUNLI'S VAIRA BELLA REINE",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "796844457",
+      "id": "557456811",
       "name_lat": "KVIT OUNLI'S VILORA ARE VITA",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "197485146",
+      "name_lat": "KVENTIN TARANTINO",
+      "name_ru": "КВЕНТИН ТАРАНТИНО",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "DOGUE DE BORDEAUX",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1336213121",
+      "name_lat": "KVINT S BEREGA SHEKSNY",
+      "name_ru": "КВИНТ С БЕРЕГА ШЕКСНЫ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -54,7 +72,16 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "399671514",
+      "name_lat": "Kvin Of May Khart",
+      "name_ru": "КВИН ОФ МАЙ ХАРТ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -67,15 +94,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1336213121",
-      "name_lat": "KVINT S BEREGA SHEKSNY",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
       "id": "131091673",
       "name_lat": "Kvin Diesel",
       "name_ru": "",
@@ -85,10 +103,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "204013610",
+      "id": "31157702",
       "name_lat": "KVETKA BLAKITNY BURSHTYN",
       "name_ru": "",
-      "breed": "СПРИНГЕР ВОДЯНАЯ",
+      "breed": "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -103,12 +121,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1672251894",
+      "name_lat": "KVIRAV EVROVALYUTA",
+      "name_ru": "КВИРАВ ЕВРОВАЛЮТА",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "1065824127",
       "name_lat": "KVIN DOGY HAUS MODEST",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1110634881",
+      "name_lat": "KVANTEMIR",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -139,21 +174,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1022360441",
+      "id": "1327146509",
       "name_lat": "KVITA CAZADOR DEL TORROS",
       "name_ru": "",
-      "breed": "МАЙОРКСКИЙ МАСТИФ (КА ДЕ БО)",
+      "breed": "ИТАЛЬЯНСКИЙ МАЙОРКСКИЙ МАСТИФ (КА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1672251894",
-      "name_lat": "KVIRAV EVROVALYUTA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 18,
+      "id": "166404285",
+      "name_lat": "KVIT OUNLI'S ARNOLD BALT GOLDEN KLIFF",
+      "name_ru": "КВИТ ОУНЛИ`С АРНОЛЬД БАЛТ ГОЛДЕН КЛИФФ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "263696787",
+      "name_lat": "KVIN DOMINIKA",
+      "name_ru": "КВИН ДОМИНИКА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -163,15 +207,6 @@
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "166404285",
-      "name_lat": "KVIT OUNLI'S ARNOLD BALT GOLDEN KLIFF",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -193,19 +228,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "303833576",
+      "id": "1226044587",
       "name_lat": "KVIT OUNLI'S ZHANSAJ YAKHONT",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1629870849",
+      "id": "35129949",
       "name_lat": "KVIT OUNLI'S ARNOLD BALT GOLDEN",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -220,30 +255,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "263696787",
-      "name_lat": "KVIN DOMINIKA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "MAREMMA AND THE ABRUZZES SHEEPDOG",
-      "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
       "id": "1935160901",
       "name_lat": "KVIT OUNLI'S GAURI YASMIN",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "842044808",
-      "name_lat": "KVANT EGO ELENA ЯН ГУЛАН БАРСЕЛОНА ДЛЯ",
-      "name_ru": "",
+      "id": "499326359",
+      "name_lat": "KVANT EGO ELENA",
+      "name_ru": "КВАНТ ЭГО ЕЛЕНА",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 26,
+      "total_shows": 30,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1854763248",
+      "name_lat": "KVINSI PROMES S GORY MEZMAY",
+      "name_ru": "КВИНСИ ПРОМЕС С ГОРЫ МЕЗМАЙ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "BERNESE MOUNTAIN DOG",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -256,21 +291,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "152300882",
+      "id": "1779545367",
       "name_lat": "KVANT EGO BEIBA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1523639320",
+      "id": "835606799",
       "name_lat": "KVANT EGO DART AT THE RING",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -278,15 +313,14 @@
       "name_lat": "KVIRAV BALLADA O LUBVI",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1153883072",
+      "id": "821145511",
       "name_lat": "KVANT EGO GUESS",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -301,12 +335,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "621805652",
+      "name_lat": "KVINT COSMOS IZ RELAX LANDA",
+      "name_ru": "",
+      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "636799793",
       "name_lat": "KVIRAV DONNA KARAN",
-      "name_ru": "",
+      "name_ru": "КВИРАВ ДОННА КАРАН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1737834644",
+      "name_lat": "KVAINSNAUNZ MIKAELLA DAIZY LAIMA",
+      "name_ru": "",
+      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -319,15 +371,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1737834644",
-      "name_lat": "KVAINSNAUNZ MIKAELLA DAIZY LAIMA",
-      "name_ru": "",
-      "breed": "MINIATURE SCHNAUZER BLACK AND SILVER",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "629573889",
       "name_lat": "KVIT OUNLI`S BARBARA DRIMS OF LAV",
       "name_ru": "",
@@ -337,21 +380,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "490997787",
+      "id": "138711211",
       "name_lat": "KVAZAR GOLD BAGIRA RAMP",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1854763248",
-      "name_lat": "KVINSI PROMES S GORY MEZMAY",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "id": "875087017",
+      "name_lat": "KVANT EGO GREY",
+      "name_ru": "КВАНТ ЭГО ГРЕЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -364,12 +407,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "787727212",
-      "name_lat": "KVANT EGO GREY",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "id": "1446028237",
+      "name_lat": "Kvit Ounli's Melanya",
+      "name_ru": "КВИТ ОУНЛИ'С МЕЛАНЬЯ",
+      "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -382,15 +425,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "621805652",
-      "name_lat": "KVINT COSMOS IZ RELAX LANDA",
-      "name_ru": "",
-      "breed": "БЕДЛИНГТОН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1099036052",
       "name_lat": "KVIRAV ZODIAK LIGE SUPERPSOV",
       "name_ru": "",
@@ -400,10 +434,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "329257533",
+      "id": "1963803907",
       "name_lat": "Kvit Ounli*s Edemskaya Roza",
       "name_ru": "",
-      "breed": "Английский",
+      "breed": "Английский Кокер Золотистый Ретривер",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -418,12 +452,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "490550682",
+      "id": "321112577",
       "name_lat": "KVARTET GUARNERI",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "247498404",
+      "name_lat": "KVESTA S PREDGORIY URALA",
+      "name_ru": "КВЕСТА С ПРЕДГОРИЙ УРАЛА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -436,30 +479,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1901114391",
+      "id": "1240951024",
       "name_lat": "KVANTO ARMAGEDONAS",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "431794652",
+      "id": "641268510",
       "name_lat": "KVATRO",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1706255761",
+      "id": "1561918893",
       "name_lat": "KVANTEMIR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1051891301",
+      "name_lat": "K'VANFISH S'MUVI RYZHIY AP",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -472,15 +524,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1446028237",
-      "name_lat": "Kvit Ounli's Melanya",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "56176346",
       "name_lat": "KVANT EGO VED`MA",
       "name_ru": "",
@@ -490,10 +533,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1492355188",
+      "name_lat": "KVINI",
+      "name_ru": "",
+      "breed": "СИБА / SHIBA",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "585377051",
       "name_lat": "KVINTA",
       "name_ru": "",
       "breed": "ПОЙНТЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "450948365",
+      "name_lat": "K’VANFISH S’MUVI TRI STIKHII",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -553,15 +613,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "197485146",
-      "name_lat": "KVENTIN TARANTINO",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "248167276",
       "name_lat": "KVIT OUNLI'S AVGUSTEJSHAYA OSOBA LIVIYA",
       "name_ru": "",
@@ -571,10 +622,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1558230995",
+      "id": "1087006143",
+      "name_lat": "KVIT OUNLI'S KORVETE BOJKIJ",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "907146364",
       "name_lat": "KVANT EGO VED’MA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -589,30 +649,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1671484486",
-      "name_lat": "KVAZAR GOLD BAGIRA RАMP",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1760512095",
       "name_lat": "KVINTA IZ LESNOGO",
       "name_ru": "",
       "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1087006143",
-      "name_lat": "KVIT OUNLI'S KORVETE BOJKIJ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -670,10 +712,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "369961600",
+      "id": "791716305",
       "name_lat": "KVADRO POTSELUY PAMYATY",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -715,6 +757,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "688035897",
+      "name_lat": "KVENTIN BLACK FESTIVAL",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "111340285",
       "name_lat": "KVIT OUNLI'S EDGARD",
       "name_ru": "",
@@ -728,15 +779,6 @@
       "name_lat": "KVIT OLINLI'S EDGARD",
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "168044146",
-      "name_lat": "KVESTA S PREDGORIY URALA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -760,10 +802,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "198777015",
+      "id": "1960680683",
       "name_lat": "KVINSTANN FREERIDER",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -796,10 +838,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "96102835",
+      "id": "842044808",
+      "name_lat": "KVANT EGO ELENA ЯН ГУЛАН БАРСЕЛОНА ДЛЯ",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "92374385",
       "name_lat": "KVIN IZ GORODA NA NEVE",
       "name_ru": "",
-      "breed": "БАСЕНДЖИ НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСК",
+      "breed": "БАСЕНДЖИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -809,24 +860,6 @@
       "name_lat": "KVIN OF MAY HART AUS VIKWELT",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "267090285",
-      "name_lat": "KVENTIN BLACK FESTIVAL",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "399671514",
-      "name_lat": "Kvin Of May Khart",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

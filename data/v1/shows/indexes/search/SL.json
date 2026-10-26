@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "SL",
-  "count": 486,
+  "count": 513,
   "dogs": [
     {
       "id": "465987634",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 106,
+      "total_shows": 111,
       "competition_dog_id": null
     },
     {
@@ -27,7 +27,7 @@
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 46,
+      "total_shows": 57,
       "competition_dog_id": null
     },
     {
@@ -36,7 +36,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 77,
+      "total_shows": 81,
       "competition_dog_id": null
     },
     {
@@ -46,6 +46,24 @@
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1602783154",
+      "name_lat": "SLAVJANKA VASSABI VIP",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 66,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1180863204",
+      "name_lat": "SLAVJANKA SONIA RYKIEL ( N/B )",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "SCHIPPERKE",
+      "total_shows": 49,
       "competition_dog_id": null
     },
     {
@@ -63,15 +81,6 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 34,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1180863204",
-      "name_lat": "SLAVJANKA SONIA RYKIEL ( N/B )",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "SCHIPPERKE",
       "total_shows": 35,
       "competition_dog_id": null
     },
@@ -103,12 +112,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1602783154",
-      "name_lat": "SLAVJANKA VASSABI VIP",
+      "id": "427009796",
+      "name_lat": "SLAVJANKA CHAMBERLAIN",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 53,
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -118,15 +127,6 @@
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
       "total_shows": 22,
-      "competition_dog_id": null
-    },
-    {
-      "id": "427009796",
-      "name_lat": "SLAVJANKA CHAMBERLAIN",
-      "name_ru": "",
-      "breed": "CHIHUAHUA SMOOTH",
-      "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
-      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -144,7 +144,16 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 52,
+      "total_shows": 56,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1928697310",
+      "name_lat": "SLAY ANGELS JUVENTINA",
+      "name_ru": "",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -157,21 +166,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1928697310",
-      "name_lat": "SLAY ANGELS JUVENTINA",
-      "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 16,
-      "competition_dog_id": null
-    },
-    {
       "id": "1847143376",
       "name_lat": "SLY ANGELS FELICE GRIMALDI",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
       "breed_en": "ITALIAN SIGHTHOUND",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -180,7 +180,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 31,
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -198,16 +198,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 41,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1029194147",
-      "name_lat": "SLAVJANKA DJENIFER",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 35,
+      "total_shows": 45,
       "competition_dog_id": null
     },
     {
@@ -216,7 +207,25 @@
       "name_ru": "",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "ROTTWEILER",
-      "total_shows": 23,
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1029194147",
+      "name_lat": "SLAVJANKA DJENIFER",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 42,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1300450950",
+      "name_lat": "SLAVA IZ TERLETSKOY DUBRAVY",
+      "name_ru": "СЛАВА ИЗ ТЕРЛЕЦКОЙ ДУБРАВЫ",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -225,7 +234,25 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 51,
+      "total_shows": 61,
+      "competition_dog_id": null
+    },
+    {
+      "id": "293443997",
+      "name_lat": "SLAVAYAR ZHAN KLOD",
+      "name_ru": "СЛАВАЯР ЖАН КЛОД",
+      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 28,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1316960419",
+      "name_lat": "SLAVJANKA SAKURA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
@@ -234,16 +261,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 31,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1300450950",
-      "name_lat": "SLAVA IZ TERLETSKOY DUBRAVY",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -256,6 +274,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1654498046",
+      "name_lat": "SLAVJANKA GAUGUIN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 58,
+      "competition_dog_id": null
+    },
+    {
       "id": "1501029153",
       "name_lat": "SLUGA BLAGORODSTVA PALLADIY",
       "name_ru": "",
@@ -265,19 +292,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1654498046",
-      "name_lat": "SLAVJANKA GAUGUIN",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 55,
-      "competition_dog_id": null
-    },
-    {
-      "id": "524268904",
+      "id": "299001916",
       "name_lat": "SLAV TROPHY REVOLUCIA",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
@@ -292,21 +310,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "574220214",
+      "id": "1769754799",
       "name_lat": "SLAVJANKA DINASTIA SIBIRI",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 44,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1316960419",
-      "name_lat": "SLAVJANKA SAKURA",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 29,
+      "total_shows": 47,
       "competition_dog_id": null
     },
     {
@@ -333,7 +342,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -342,7 +351,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 34,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
@@ -364,12 +373,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1447420766",
+      "id": "1138174679",
+      "name_lat": "SLAVJANKA ALLIANCE",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1864949419",
+      "name_lat": "SLAVJANKA ORELIYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1731697620",
       "name_lat": "SLAV TROPHY RED MACHINE",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1123846956",
+      "name_lat": "SLADKAYA ZHIZN TRISTA TRIDTSAT TRI",
+      "name_ru": "СЛАДКАЯ ЖИЗНЬ ТРИСТА ТРИДЦАТЬ ТРИ",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -382,10 +418,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1997005981",
+      "id": "1327578818",
+      "name_lat": "SLAVJANKA FAKIR",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР /",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1438795417",
       "name_lat": "SLAVA VON DEN BLACK DIAMOND",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -397,24 +441,6 @@
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 19,
-      "competition_dog_id": null
-    },
-    {
-      "id": "293443997",
-      "name_lat": "SLAVAYAR ZHAN KLOD",
-      "name_ru": "",
-      "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1803607235",
-      "name_lat": "SLAVJANKA FAKIR",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -445,12 +471,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "206526081",
+      "name_lat": "SLAVJANKA KURAZH N B",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 32,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1766983631",
+      "name_lat": "SLAVJANKA ERONA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 40,
+      "competition_dog_id": null
+    },
+    {
       "id": "172712620",
       "name_lat": "SLAVJANKA SHARON-II",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "136878536",
+      "name_lat": "SLADKAYA ZHIZN CHEREMUKHA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -463,12 +516,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "206526081",
-      "name_lat": "SLAVJANKA KURAZH N B",
+      "id": "301434390",
+      "name_lat": "SLAVJANKA PAL ZILERI",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 46,
       "competition_dog_id": null
     },
     {
@@ -478,24 +531,6 @@
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1766983631",
-      "name_lat": "SLAVJANKA ERONA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 35,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1864949419",
-      "name_lat": "SLAVJANKA ORELIYA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -517,12 +552,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "838407261",
+      "name_lat": "SLAVJANKA ZEGNA",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "170571280",
       "name_lat": "SLAVYANSKAYA VOLNITSA DON-BAS",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ВОЛЬНИЦА ДОН-БАС",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -535,15 +579,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "838407261",
-      "name_lat": "SLAVJANKA ZEGNA",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1999289039",
       "name_lat": "SLAVJANKA FORTUNA",
       "name_ru": "",
@@ -553,19 +588,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1067622871",
-      "name_lat": "SLAVJANKA PAL ZILERI",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 36,
-      "competition_dog_id": null
-    },
-    {
-      "id": "372518344",
+      "id": "1147927422",
       "name_lat": "SLAVENTAL VINCO SOLO",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -585,7 +611,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 14,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -598,12 +624,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "725986040",
+      "name_lat": "SLAVJANKA EGO FACTO",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "999982618",
       "name_lat": "SLAVNYY BARON S RUSSKOY DUSHOY",
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ СТОРОЖЕВАЯ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "54290115",
+      "name_lat": "SLAVJANKA PORSCHE CAYENNE",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -625,19 +669,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1123846956",
-      "name_lat": "SLADKAYA ZHIZN TRISTA TRIDTSAT TRI",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "226045969",
+      "id": "1046091868",
       "name_lat": "SLAVENTAL GLORIA VICTORY",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ИРЛАНДСКИЙ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -652,6 +687,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1567192119",
+      "name_lat": "SLAVJANKA FRIEDA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "32247332",
       "name_lat": "SLAVJANKA IVERIA",
       "name_ru": "",
@@ -661,21 +705,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1138174679",
-      "name_lat": "SLAVJANKA ALLIANCE",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1567192119",
-      "name_lat": "SLAVJANKA FRIEDA",
+      "id": "36178196",
+      "name_lat": "SLAVJANKA VIVA VIKTORI",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -685,15 +720,6 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
-      "id": "36178196",
-      "name_lat": "SLAVJANKA VIVA VIKTORI",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -751,10 +777,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1442920368",
+      "id": "483363461",
       "name_lat": "SLY ANGELS SUBMARINE",
       "name_ru": "",
-      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА) /",
+      "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -814,10 +840,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1404307401",
+      "id": "852313684",
       "name_lat": "SLEACE OF LIFE ESPECIALLY FOR YOU",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -829,15 +855,6 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "725986040",
-      "name_lat": "SLAVJANKA EGO FACTO",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -859,6 +876,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "878014670",
+      "name_lat": "SLAVJANKA FORSETI",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
       "id": "1024400291",
       "name_lat": "SLAVJANKA ZINGER",
       "name_ru": "",
@@ -873,7 +899,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 29,
+      "total_shows": 30,
       "competition_dog_id": null
     },
     {
@@ -895,21 +921,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "136878536",
-      "name_lat": "SLADKAYA ZHIZN CHEREMUKHA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "878014670",
-      "name_lat": "SLAVJANKA FORSETI",
+      "id": "468374712",
+      "name_lat": "SLAVJANKA YUSTINIAN",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -922,12 +939,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "468374712",
-      "name_lat": "SLAVJANKA YUSTINIAN",
+      "id": "1442013685",
+      "name_lat": "SLAVJANKA SAMUEL",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -940,12 +957,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1442013685",
-      "name_lat": "SLAVJANKA SAMUEL",
+      "id": "121353144",
+      "name_lat": "SLAVYANSKAYA VOLNITSA BASNYA",
+      "name_ru": "СЛАВЯНСКАЯ ВОЛЬНИЦА БАСНЯ",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1670618691",
+      "name_lat": "SLAVJANKA HATTORI",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 22,
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -955,6 +981,24 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "551763057",
+      "name_lat": "S'LICHOBOR PORTER (LONG COAT)",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА Д-Ш",
+      "breed_en": "CHIHUAHUA LONG-HAIRED",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "518584824",
+      "name_lat": "SLAVJANKA NOVELLA-II",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -976,12 +1020,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "518584824",
-      "name_lat": "SLAVJANKA NOVELLA-II",
+      "id": "1462486901",
+      "name_lat": "SLAVJANKA IZBRANNITSA",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 10,
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -994,30 +1038,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1870282226",
+      "name_lat": "SLAVJANKA KISS MI",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
       "id": "1283582880",
       "name_lat": "SLAVINJAKALINA",
       "name_ru": "",
       "breed": "ВЕЙМАРАНЕР Д-Ш",
       "breed_en": "WEIMARANER LONG-HARIED",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1462486901",
-      "name_lat": "SLAVJANKA IZBRANNITSA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 15,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1870282226",
-      "name_lat": "SLAVJANKA KISS MI",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -1039,11 +1074,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1670618691",
-      "name_lat": "SLAVJANKA HATTORI",
+      "id": "1095977709",
+      "name_lat": "SLAVJANKA ASTI MONDORO",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
+      "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -1066,30 +1101,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "767637124",
+      "name_lat": "SLAVAYAR CHARODEY",
+      "name_ru": "СЛАВАЯР ЧАРОДЕЙ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "598383881",
       "name_lat": "SLAVJANKA KADRIL N B",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "767637124",
-      "name_lat": "SLAVAYAR CHARODEY",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1095977709",
-      "name_lat": "SLAVJANKA ASTI MONDORO",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1129,6 +1155,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "817600358",
+      "name_lat": "SLAVJANKA YANERIYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "801548173",
       "name_lat": "SLAVJANKA DALIDA",
       "name_ru": "",
@@ -1138,10 +1173,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1692689420",
+      "id": "1950185449",
       "name_lat": "SLAVJANKA MISS SIXTY",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1165,10 +1200,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1812935762",
+      "id": "71253971",
       "name_lat": "SLAVJANKA GELIOS",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1183,12 +1218,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1478138037",
+      "name_lat": "SLAVNYY SAMURAY S BUHTY LADOGI",
+      "name_ru": "",
+      "breed": "ПЕКИНЕС",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "120193514",
       "name_lat": "SLAVJANKA DRIVE",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "82720693",
+      "name_lat": "SLAVJANKA VIVALDI",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1201,12 +1254,39 @@
       "competition_dog_id": null
     },
     {
+      "id": "1033261255",
+      "name_lat": "SLAVJANKA RAFAEL",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "829826294",
+      "name_lat": "SLADKAYA ZHIZN YAKUDZA",
+      "name_ru": "СЛАДКАЯ ЖИЗНЬ ЯКУДЗА",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1489834192",
       "name_lat": "SLIHOBOR LINE TIMURA",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "325488475",
+      "name_lat": "SLAVJANKA BAGRATION",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1219,30 +1299,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "121353144",
-      "name_lat": "SLAVYANSKAYA VOLNITSA BASNYA",
-      "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
-      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1989162396",
       "name_lat": "SLAVJANKA SHERIDAN",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1033261255",
-      "name_lat": "SLAVJANKA RAFAEL",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1261,6 +1323,15 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1849067377",
+      "name_lat": "SLAVAYAR KOROLEVSKAYA VATRUSHKA",
+      "name_ru": "СЛАВАЯР КОРОЛЕВСКАЯ ВАТРУШКА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1300,6 +1371,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "566791426",
+      "name_lat": "SLAVJANKA AQUARELLE",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "1604085215",
       "name_lat": "SLAVIANA",
       "name_ru": "",
@@ -1315,6 +1395,15 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1768841013",
+      "name_lat": "SLAVJANKA AMIGO",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1336,30 +1425,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1504288255",
-      "name_lat": "SLADKAYA ZHIZN YAKUDZA",
-      "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1140999583",
       "name_lat": "SLAVJANKA AMURA DE FANCY",
       "name_ru": "",
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1768841013",
-      "name_lat": "SLAVJANKA AMIGO",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1372,6 +1443,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1222832158",
+      "name_lat": "SLAVYAN",
+      "name_ru": "",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1472526522",
       "name_lat": "SLAVAYAR KLEO VULEN",
       "name_ru": "",
@@ -1381,12 +1460,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "817600358",
-      "name_lat": "SLAVJANKA YANERIYA",
+      "id": "1069337416",
+      "name_lat": "SLAVJANKA YANESSA 2",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1399,12 +1477,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1495871135",
+      "name_lat": "SLAVJANKA SALVATORE FERRAGAMO",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "238029269",
       "name_lat": "SLAVJANKA JUNITI",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -1417,10 +1504,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1577346488",
+      "id": "1287712690",
       "name_lat": "SLAVJANSKOI",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1462,10 +1549,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "836554468",
+      "id": "1893836717",
       "name_lat": "SLNECHNAYA RAPSODIYA IZ ROSTOVA PAPY",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1480,21 +1567,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "997130924",
+      "id": "1048960648",
       "name_lat": "SLAVINJA HEMATYNA",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
       "total_shows": 37,
-      "competition_dog_id": null
-    },
-    {
-      "id": "566791426",
-      "name_lat": "SLAVJANKA AQUARELLE",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1507,10 +1585,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1096359638",
+      "id": "303411535",
       "name_lat": "SLAVJANKA KENZO",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1522,6 +1600,15 @@
       "breed": "СХИППЕРКЕ",
       "breed_en": "SCHIPPERKE",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1169709907",
+      "name_lat": "SLAVJANKA EMANUEL",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1540,15 +1627,6 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "65353894",
-      "name_lat": "SLAVJANKA SALVATORE FERRAGAMO",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1624,6 +1702,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1516094359",
+      "name_lat": "SLAVJANKA MARC O'POLO",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
       "id": "1135091406",
       "name_lat": "SLAVINJA KALINA",
       "name_ru": "",
@@ -1648,6 +1735,15 @@
       "breed": "ИРЛАНДСКИЙ КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1179864788",
+      "name_lat": "S'LUKOMORYA-KRASOTA GALA VICTORIA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1687,6 +1783,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1717554646",
+      "name_lat": "SLAVJANKA FRIDA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "634914427",
       "name_lat": "SLAVJAN BLACK BOOMER",
       "name_ru": "",
@@ -1723,19 +1827,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1516094359",
-      "name_lat": "SLAVJANKA MARC O'POLO",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "484773874",
+      "id": "1315158387",
       "name_lat": "SLAVJANKA ZANA ZAN",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1750,8 +1845,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "412310188",
-      "name_lat": "SLAVJANKA SAVAGE- II",
+      "id": "131856440",
+      "name_lat": "SLAVJANKA SAVAGE-II",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
@@ -1759,21 +1854,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1129400548",
+      "id": "1090773265",
       "name_lat": "SLAVJANKA LERIS",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "901541167",
+      "id": "63858014",
       "name_lat": "SLAVJANKA SHANGRI-LA",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "44130161",
+      "name_lat": "SLADKAYA ZHIZN CHAYNAYA ROZA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "684410427",
+      "name_lat": "SLADKAYA ZHIZN YAGODKA MOYA",
+      "name_ru": "СЛАДКАЯ ЖИЗНЬ ЯГОДКА МОЯ",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1786,10 +1899,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "931075795",
+      "id": "334844218",
       "name_lat": "SLY A PET BIZZARINI",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1804,21 +1917,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1169709907",
-      "name_lat": "SLAVJANKA EMANUEL",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "334493807",
       "name_lat": "SLADKAYA ZHIZN INDEPENDENT VAMP",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "286035319",
+      "name_lat": "SLAVJANKA ARARAT",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1846,15 +1959,6 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "684410427",
-      "name_lat": "SLADKAYA ZHIZN YAGODKA MOYA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1939,19 +2043,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1682389671",
+      "id": "1523038566",
       "name_lat": "SLAVJANKA NARTSISS (N&B)",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "841398308",
+      "id": "1309211217",
       "name_lat": "SLAVJANKA ORIFLAME",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1998,7 +2102,7 @@
       "name_ru": "",
       "breed": "БОЛЬШОЙ ШВЕЙЦАРСКИЙ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2011,19 +2115,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "910704122",
-      "name_lat": "SLAV TROPHY BOOGIE- WOOGIE",
+      "id": "1553450905",
+      "name_lat": "SLAV TROPHY BOOGIE-WOOGIE",
       "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
+      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1935474875",
+      "id": "1424081522",
       "name_lat": "SLAVJANKA BARNET",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2035,6 +2139,15 @@
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "813368455",
+      "name_lat": "SLADKAYA ZHIZN EVGENIYA EXCLUSIVE LINE",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2056,12 +2169,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "260674928",
+      "name_lat": "SLAVAYAR YANTAR",
+      "name_ru": "СЛАВАЯР ЯНТАРЬ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "831412204",
+      "name_lat": "SLAV TROPHY RUVENZORI",
+      "name_ru": "",
+      "breed": "СOCKER SPANIEL",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "86290579",
       "name_lat": "SLAVINJA FLORA FOR FANTOM INDIGO",
       "name_ru": "",
       "breed": "WEIMARANER LONG-",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2070,6 +2201,15 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "766862646",
+      "name_lat": "SLAVYANSKAYA VOLNITSA BLAGODAT",
+      "name_ru": "СЛАВЯНСКАЯ ВОЛЬНИЦА БЛАГОДАТЬ",
+      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
       "total_shows": 6,
       "competition_dog_id": null
     },
@@ -2083,15 +2223,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "286035319",
-      "name_lat": "SLAVJANKA ARARAT",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "23825232",
       "name_lat": "SLAV TROPHY MASSANDRA",
       "name_ru": "",
@@ -2101,10 +2232,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "787280899",
+      "id": "1418613482",
       "name_lat": "SLAJANKA SAPFIRA",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2137,30 +2268,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1675162639",
+      "id": "1339417573",
       "name_lat": "SLAV TROPHY RODEZIYA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "766862646",
-      "name_lat": "SLAVYANSKAYA VOLNITSA BLAGODAT",
+      "id": "587526787",
+      "name_lat": "SLADKA YAGODKA OT BUMAGE",
       "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
+      "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "813368455",
-      "name_lat": "SLADKAYA ZHIZN EVGENIYA EXCLUSIVE LINE",
+      "id": "191887632",
+      "name_lat": "SLADKAYA ZHIZN DYNAMIC FLIGHT",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2173,17 +2304,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "215769883",
+      "id": "960179282",
       "name_lat": "SLAVUTICH IZ GALAKUNA",
       "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "133593170",
-      "name_lat": "SLAVJANKA MONTE- KRISTO",
+      "id": "1336287902",
+      "name_lat": "SLAVJANKA MONTE-KRISTO",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
@@ -2272,10 +2403,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1350800287",
+      "id": "1090960654",
       "name_lat": "SLAVJANKA NARISISS (N'B)",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2326,15 +2457,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "325488475",
-      "name_lat": "SLAVJANKA BAGRATION",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "59374193",
       "name_lat": "SLAVJANKA IMPULSE BRAVO",
       "name_ru": "",
@@ -2344,10 +2466,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "711179552",
+      "id": "922295169",
       "name_lat": "SLAV TROPHY YA IS SUN LE FAY",
       "name_ru": "",
-      "breed": "ВАНДЕЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2380,10 +2502,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "781045871",
+      "id": "1892423791",
       "name_lat": "SLIOORIN FREELOVE",
       "name_ru": "",
-      "breed": "БЕДЛИНГТОН ТЕРЬЕР /",
+      "breed": "BEDLINGTON TERRIER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2398,12 +2520,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1131452354",
+      "id": "1083324153",
       "name_lat": "SLAV TROPHY YASNA MYATA",
       "name_ru": "",
-      "breed": "АРТЕЗИАНО- ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "COCKER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "695464989",
+      "name_lat": "SLAVJANKA KADRIL",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "285019482",
+      "name_lat": "SLAVJANKA ASTON MARTIN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2412,7 +2551,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2461,11 +2600,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1790705247",
+      "name_lat": "SLED ROSOMAKHI IRCHIN",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "585105224",
       "name_lat": "SLAVYANSKAYA ZVEZDA EDELWEIS",
       "name_ru": "",
       "breed": "SAMOYED",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "535852189",
+      "name_lat": "SLAVJANKA IV SEN LORAN",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2479,15 +2634,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "82720693",
-      "name_lat": "SLAVJANKA VIVALDI",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "239745157",
       "name_lat": "SLIHOBOR LINE NALA SPACE",
       "name_ru": "",
@@ -2497,12 +2643,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "672620485",
-      "name_lat": "SLAVJAN-KA ULTRA BRENDA",
+      "id": "1471953395",
+      "name_lat": "SLAVJAN- KA ULTRA BRENDA",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2519,15 +2664,6 @@
       "name_lat": "SLY ANGELS JASTINA SCARLET FLOWER",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "587526787",
-      "name_lat": "SLADKA YAGODKA OT BUMAGE",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2551,10 +2687,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1704219071",
+      "id": "556507715",
       "name_lat": "SLAV TROPHY NORVEGIA",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2587,10 +2723,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1571659544",
+      "id": "1579539517",
       "name_lat": "SLAVJANKA HEY LON",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2614,21 +2750,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1478138037",
-      "name_lat": "SLAVNYY SAMURAY S BUHTY LADOGI",
-      "name_ru": "",
-      "breed": "ПЕКИНЕС",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "459625861",
       "name_lat": "SLAVJAN DEPARDIEU",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1053573636",
+      "name_lat": "S LUKOMORYA-KRASOTA CHERVONNIY TUZ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2641,21 +2777,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "191887632",
-      "name_lat": "SLADKAYA ZHIZN DYNAMIC FLIGHT",
+      "id": "796350050",
+      "name_lat": "SLAVAYAR ALABOR",
       "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "СЕНБЕРНАР КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1496184660",
-      "name_lat": "SLAV TROPHY RUVENZORI",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -2668,10 +2795,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "255827366",
+      "id": "338807711",
       "name_lat": "SLAVJANKA SAVAGE",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2704,12 +2831,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922644095",
+      "id": "346077294",
       "name_lat": "SLY A PET BUGATTI",
       "name_ru": "",
-      "breed": "Доберман /",
+      "breed": "Доберман",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1550998305",
+      "name_lat": "SLAVJANKA YUNAYTED",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2767,6 +2902,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1465902097",
+      "name_lat": "SLED ROSOMAKHI ONLY YOU FUROR",
+      "name_ru": "",
+      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1284921215",
       "name_lat": "SLAVJANKA UKOS ( )",
       "name_ru": "",
@@ -2785,19 +2928,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "868079918",
+      "id": "262114423",
       "name_lat": "SLIHOBOR LINE UNCORA CAWALI",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1390879828",
+      "id": "710319956",
+      "name_lat": "SLAVJANKA CALYPSO",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР /",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "13018881",
       "name_lat": "SLAVYANKA JUVENTA ( )",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ /",
+      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2805,18 +2956,9 @@
     {
       "id": "1065151033",
       "name_lat": "SLAVYANSKAYA VOLNITSA EFROSINIYA",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ВОЛЬНИЦА ЕФРОСИНИЯ",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "44130161",
-      "name_lat": "SLADKAYA ZHIZN CHAYNAYA ROZA",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -2830,12 +2972,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "945686057",
+      "id": "152895741",
       "name_lat": "SLUZHEBNYY ROMAN IZ VOISKA TAMERLANA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "946590692",
+      "name_lat": "SLAVAYAR YUSSI",
+      "name_ru": "СЛАВАЯР ЮССИ",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2902,12 +3053,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1037436353",
+      "id": "886558348",
       "name_lat": "SLAVJAN-KA LAYKER",
       "name_ru": "",
-      "breed": "CHIHUAHUA SMOOTH",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2943,23 +3094,30 @@
       "name_ru": "",
       "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "54290115",
-      "name_lat": "SLAVJANKA PORSCHE CAYENNE",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1972307166",
+      "id": "223714864",
+      "name_lat": "SLAVJANKA ALFA ROMEO",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1907640329",
+      "name_lat": "Slavjanka Kalipso",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1756363389",
       "name_lat": "SLASHING STRONG SPIRIT BINAZIR",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3001,6 +3159,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1605314493",
+      "name_lat": "S LIPETSKIH ЖАКЛИН ЦАРИЦА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА РСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "480068618",
       "name_lat": "SLEDUI ZA MECHTOI ROXY SHAKIRA",
       "name_ru": "",
@@ -3028,6 +3195,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1603907175",
+      "name_lat": "S'LUKOMORYA - KRASOTA EVOLUCIA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1372388930",
+      "name_lat": "SLAVJANKA MEDEJA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "652233430",
       "name_lat": "SLAVJANKA ZHENEVEVA",
       "name_ru": "",
@@ -3037,10 +3220,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1053099594",
+      "id": "67600022",
       "name_lat": "SLOBODY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3051,15 +3234,6 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1790705247",
-      "name_lat": "SLED ROSOMAKHI IRCHIN",
-      "name_ru": "",
-      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
-      "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -3127,10 +3301,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "884368398",
+      "id": "828510551",
       "name_lat": "SLAVJANKA AQVARELLE",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3190,10 +3364,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1080543160",
+      "id": "371609437",
       "name_lat": "SLOYKA S VISHNEY",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3208,8 +3382,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "142478574",
-      "name_lat": "Slavjanka Novella- II De Mister Flynn",
+      "id": "31528754",
+      "name_lat": "Slavjanka Novella-II De Mister Flynn",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
@@ -3231,6 +3405,14 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "592226498",
+      "name_lat": "SLADKAY MOY IZ GRAFSKOGO POMESTYA",
+      "name_ru": "",
+      "breed": "SHEEPDOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3275,24 +3457,6 @@
       "name_lat": "SLED ROSSOMAKHI ONLY YOU FUROR",
       "name_ru": "",
       "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1465902097",
-      "name_lat": "SLED ROSOMAKHI ONLY YOU FUROR",
-      "name_ru": "",
-      "breed": "МАРЕММО-АБРУЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "535852189",
-      "name_lat": "SLAVJANKA IV SEN LORAN",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3343,10 +3507,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1210838199",
+      "id": "1424224502",
       "name_lat": "SLAVINJA (FCI)KALINA",
       "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР ДЛИННОШЕРСТНЫЙ /",
+      "breed": "ВЕЙМАРАНЕР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3384,6 +3548,14 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1205604744",
+      "name_lat": "SLAVJNKA MARSELLA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3453,10 +3625,10 @@
     {
       "id": "488717545",
       "name_lat": "SLAVYANSKAYA VOLNITSA BYLINA",
-      "name_ru": "",
+      "name_ru": "СЛАВЯНСКАЯ ВОЛЬНИЦА БЫЛИНА",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3577,11 +3749,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1849067377",
-      "name_lat": "SLAVAYAR KOROLEVSKAYA VATRUSHKA",
+      "id": "8174980",
+      "name_lat": "SLAVJNKA IV SEN LORAN",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1898492008",
+      "name_lat": "SLIHOBOR LINE NEYTEN",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3613,19 +3792,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1907640329",
-      "name_lat": "Slavjanka Kalipso",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1915837262",
+      "id": "1560143714",
       "name_lat": "SLOWINE ZLATO KOLT",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3644,8 +3814,25 @@
       "name_lat": "SLAVJANKA VILFRED",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "242079996",
+      "name_lat": "SLAVJANKA ELISEYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "158682085",
+      "name_lat": "SLAVJANKA KURAZH",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3667,11 +3854,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "727029565",
+      "id": "1839871131",
+      "name_lat": "SLAVJANKA ZHOLY FLER",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1094977888",
       "name_lat": "SLAVJANKA UMBERTO",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "862433086",
+      "name_lat": "SLAVJANKA SHALNAYA IMPERATRITSA",
+      "name_ru": "",
+      "breed": "СХИППЕРКЕ",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -3707,15 +3910,6 @@
       "name_lat": "SLEDUI ZA MECHTOI RICHARD BRUNO",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "158682085",
-      "name_lat": "SLAVJANKA KURAZH",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3802,6 +3996,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "171944047",
+      "name_lat": "Slavjanka Dargo Fest",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "6796897",
       "name_lat": "SLAY PET BLEK STAR MAFIYA",
       "name_ru": "",
@@ -3811,11 +4013,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "862433086",
-      "name_lat": "SLAVJANKA SHALNAYA IMPERATRITSA",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
+      "id": "1090182960",
+      "name_lat": "SLAVYANKA IZ SOLNECHNOGO DOMA",
+      "name_ru": "СЛАВЯНКА ИЗ СОЛНЕЧНОГО ДОМА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -3829,20 +4030,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "564338124",
-      "name_lat": "SLAVJANKA ORIOLE",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "936266656",
       "name_lat": "SLAV TROPHY MUSIC OF THE NIGHT ILLORIENS",
       "name_ru": "",
       "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "564338124",
+      "name_lat": "SLAVJANKA ORIOLE",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4009,6 +4210,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "133489435",
+      "name_lat": "SLAVJANKA GIVENCHY",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1779146920",
       "name_lat": "SLADKAYA GRUSHENKA IZ GORODA NA NEVE",
       "name_ru": "",
@@ -4018,10 +4227,45 @@
       "competition_dog_id": null
     },
     {
+      "id": "1244727358",
+      "name_lat": "SLAVA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "476135313",
       "name_lat": "SLAY",
       "name_ru": "",
       "breed": "МОПС БЕЖЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "54439104",
+      "name_lat": "SLAV TROPHY CHARMING LADY DI",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "922623906",
+      "name_lat": "SLAV TROPHY BARISTA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225991683",
+      "name_lat": "SLADKAYA YAGODKA EZHEVICHKA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4041,15 +4285,6 @@
       "name_ru": "",
       "breed": "ТЫВА ЫТ (ТУВИНСКАЯ СОБАКА)",
       "breed_en": "TYVA YT",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "54439104",
-      "name_lat": "SLAV TROPHY CHARMING LADY DI",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4180,11 +4415,36 @@
       "competition_dog_id": null
     },
     {
+      "id": "122100010",
+      "name_lat": "S LAKNEST CINDEREL",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1040621456",
       "name_lat": "SLIBERTY STAIL ZVEZDNAYA NOCH",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "87866174",
+      "name_lat": "SLAVJANKA IZBRANNIT SA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "802733872",
+      "name_lat": "SLAVJAN-KA UNA ENOLA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4198,20 +4458,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "260674928",
-      "name_lat": "SLAVAYAR YANTAR",
+      "id": "1852254730",
+      "name_lat": "SLAI BLEK DAIMOND",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "946590692",
-      "name_lat": "SLAVAYAR YUSSI",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "ЦВЕРГПИНЧЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4220,15 +4470,6 @@
       "name_lat": "SLUZHEBNYYROMAN IZ VOISKA TAMERLANA",
       "name_ru": "",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1282379398",
-      "name_lat": "SLAV TROPHY BARISTA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4261,10 +4502,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "982190112",
+      "id": "1287491526",
       "name_lat": "SLAVJANSKOI DUSHOI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4279,28 +4520,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "831469830",
+      "id": "1282133375",
       "name_lat": "SLIHOBOR LINE VIKONT",
       "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "300445223",
-      "name_lat": "SLADKAYA YAGODKA EZHEVICHKA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "905993434",
+      "id": "308601556",
       "name_lat": "SLADKIY EKLERCHIK",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4324,33 +4556,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "285019482",
-      "name_lat": "SLAVJANKA ASTON MARTIN",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "242079996",
-      "name_lat": "SLAVJANKA ELISEYA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "223714864",
-      "name_lat": "SLAVJANKA ALFA ROMEO",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1913811670",
       "name_lat": "SLAVJANKA KALINA KRASNAYA N B",
       "name_ru": "",
@@ -4365,6 +4570,14 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1632097397",
+      "name_lat": "SLADKAYA ZHIZN YUNESSA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },

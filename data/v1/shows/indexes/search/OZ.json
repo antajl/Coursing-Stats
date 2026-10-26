@@ -1,24 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "OZ",
-  "count": 63,
+  "count": 73,
   "dogs": [
     {
       "id": "278995997",
       "name_lat": "OZARA IZ BELYKH GYAUROV",
-      "name_ru": "",
+      "name_ru": "ОЗАРА ИЗ БЕЛЫХ ГЯУРОВ",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 26,
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
       "id": "1693409632",
       "name_lat": "OZARNITSA GOLDEN ANIK'S",
-      "name_ru": "",
+      "name_ru": "ОЗАРНИЦА ГОЛДЕН АНИК'С",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -36,7 +36,7 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -45,7 +45,25 @@
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1783194385",
+      "name_lat": "OZMA DZHERI IZ SIBIRSKOY GLUBINKI",
+      "name_ru": "ОЗМА ДЖЕРИ ИЗ СИБИРСКОЙ ГЛУБИНКИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "118179767",
+      "name_lat": "O ZLATO VYATKI IZ SLADKOGO KOROLEVSTVA",
+      "name_ru": "О ЗЛАТО ВЯТКИ ИЗ СЛАДКОГО КОРОЛЕВСТВА",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -58,19 +76,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "316539430",
+      "id": "436680610",
       "name_lat": "OZZI HAPPY STAR",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "MINIATURE SCHNAUZER BLACK & SILVER",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "11004049",
+      "id": "1371153646",
       "name_lat": "OZMILLION",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -103,21 +121,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "347738937",
-      "name_lat": "OZMA DZHERI IZ SIBIRSKOY GLUBINKI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "209347399",
       "name_lat": "OZERA RAZLIV",
       "name_ru": "",
       "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "748603095",
+      "name_lat": "O-ZON BLUE SPIRIT IZ SEVERNOI DOLINE",
+      "name_ru": "",
+      "breed": "КЕРРИ БЛЮ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -175,6 +193,32 @@
       "competition_dog_id": null
     },
     {
+      "id": "1517366565",
+      "name_lat": "OZI MODEL URALA",
+      "name_ru": "ОЗИ МОДЕЛЬ УРАЛА",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "CAIRN TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "278554312",
+      "name_lat": "OZZY OSBOURNE S KNJAZHESKOGO DVORA",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ / BASENJI",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "546560892",
+      "name_lat": "OZZI FON FRANK",
+      "name_ru": "ОЗЗИ ФОН ФРАНК",
+      "breed": "МОПС",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1356891988",
       "name_lat": "OZORNITSA IZ GRADA KATERINY",
       "name_ru": "",
@@ -193,12 +237,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "488392321",
+      "name_lat": "OZZY NO BARTAS KRASTA",
+      "name_ru": "",
+      "breed": "ШЕРСТЬ С ПОДШЕРСТКОМ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "875169786",
       "name_lat": "OZZI DIASTAR",
-      "name_ru": "",
+      "name_ru": "ОЗЗИ ДИАСТАР",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -211,21 +263,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "546560892",
-      "name_lat": "OZZI FON FRANK",
+      "id": "1388075862",
+      "name_lat": "OZZY STELLA VENANDI",
       "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "278554312",
-      "name_lat": "OZZY OSBOURNE S KNJAZHESKOGO DVORA",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ / BASENJI",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -256,19 +298,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "108645035",
+      "id": "1834370053",
+      "name_lat": "OZZI",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "852640380",
       "name_lat": "OZZJUOLL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "291208273",
+      "id": "665878062",
       "name_lat": "OZZI ROYAL",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "933405835",
+      "name_lat": "O'ZONE VIGGO APPEL DI FORTUNA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН / DOBERMANN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -292,10 +351,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "559187985",
+      "id": "1695740537",
       "name_lat": "OZZI",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -310,10 +369,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1746983468",
+      "id": "882882979",
       "name_lat": "OZZY LAST HATHY",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -323,6 +382,24 @@
       "name_lat": "OZZI BEL'KANT",
       "name_ru": "",
       "breed": "БИШОН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1600132641",
+      "name_lat": "O'ZONE VIGGO",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН / DOBERMANN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "193130692",
+      "name_lat": "O'ZONE VIGGO",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -364,6 +441,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1205921835",
+      "name_lat": "O'ZONE VALHALLA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1729455686",
       "name_lat": "OZIRKA WARIHANA",
       "name_ru": "",
@@ -382,8 +468,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "794091139",
-      "name_lat": "OZIRKA RYO JINKO- TEKINA",
+      "id": "1093958421",
+      "name_lat": "OZIRKA RYO JINKO-TEKINA",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
@@ -415,15 +501,6 @@
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "706903590",
-      "name_lat": "OZZY NO BARTAS KRASTA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -472,10 +549,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "984390622",
+      "id": "43919526",
+      "name_lat": "O`ZALINA MALENKAJA ZORACHKA",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ ШИ - ТЦУ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "998677378",
       "name_lat": "OZZY",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ / GIANT",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ / GIANT",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -517,11 +603,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1517366565",
-      "name_lat": "OZI MODEL URALA",
+      "id": "96070115",
+      "name_lat": "OZZI",
       "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "CAIRN TERRIER",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
       "total_shows": 1,
       "competition_dog_id": null
     },

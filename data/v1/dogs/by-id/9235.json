@@ -6,16 +6,18 @@
   "name_lat": "BRAVE FIGHTER’S MILK AND HONEY",
   "name_ru": "BRAVE FIGHTER’S MILK AND HONEY",
   "breed": "МЕТИС",
-  "sex": null,
+  "sex": "Сука",
   "owner": null,
   "competition_ids": [
     1202,
     1204,
+    20221010,
     20230416,
     20230502
   ],
   "competition_files": [
     "competitions/2023/04-апрель/1202-чемпионат-ркф-по-бегам-за-механическои-приманкои.json",
-    "competitions/2023/05-май/1204-чемпионат-ркф-по-бегам-за-механическои-приманкои.json"
+    "competitions/2023/05-май/1204-чемпионат-ркф-по-бегам-за-механическои-приманкои.json",
+    "competitions/2022/04-апрель/20221010-чемпионат-ркф-по-бегам-за-механическои-приманкои.json"
   ]
 }

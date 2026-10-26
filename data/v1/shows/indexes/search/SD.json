@@ -1,0 +1,42 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "SD",
+  "count": 4,
+  "dogs": [
+    {
+      "id": "1310232930",
+      "name_lat": "S-DEYMON",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "breed_en": "RUSSKIY OHOTNICHIY SPANIEL (RUSSIAN HUNTING SPANIEL)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1660545305",
+      "name_lat": "S-DANA",
+      "name_ru": "",
+      "breed": "ПОЙНТЕР АНГЛИЙСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "55562043",
+      "name_lat": "S DARIKA NORD STAR",
+      "name_ru": "",
+      "breed": "SCHNAUZER BLACK",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1254940629",
+      "name_lat": "S-DJULBARS VOM MAIR HOF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

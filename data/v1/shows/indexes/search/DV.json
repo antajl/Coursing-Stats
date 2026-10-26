@@ -1,15 +1,15 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "DV",
-  "count": 34,
+  "count": 37,
   "dogs": [
     {
-      "id": "438393643",
+      "id": "593808360",
       "name_lat": "DVINSKIE ZORI EASY TO LOVE",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
-      "total_shows": 24,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -31,12 +31,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1169775204",
+      "id": "1781005601",
       "name_lat": "DVINSKIE ZORI KIND OF MAGIC",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -94,6 +94,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "10648",
+      "name_lat": "DVOYNOY OBGON IZ SELA TSAREVO",
+      "name_ru": "ДВОЙНОЙ ОБГОН ИЗ СЕЛА ЦАРЕВО",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": 10648
+    },
+    {
       "id": "235213089",
       "name_lat": "DVORTSOVIY PES OSMANTUS MAJOR DISCAVERY",
       "name_ru": "",
@@ -103,21 +112,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "248631494",
-      "name_lat": "DVOYNOY OBGON IZ SELA TSAREVO",
-      "name_ru": "",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1172952879",
+      "id": "409076799",
       "name_lat": "DVUKHMERNOE SCHASTE",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ДВУХМЕРНОЕ СЧАСТЬЕ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -130,10 +130,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "496079914",
+      "id": "1359156175",
       "name_lat": "DVINSKIE ZORI BELE AMOUR",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -148,10 +148,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1120583133",
+      "id": "893636148",
+      "name_lat": "D'VANGUARD LEGACY",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1721993804",
       "name_lat": "DVINSKIE ZORI BUTTERFLY",
       "name_ru": "",
-      "breed": "DACHSHUND KANINCHEN LONG-",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -166,16 +175,16 @@
       "competition_dog_id": null
     },
     {
-      "id": "1138052860",
+      "id": "1329695454",
       "name_lat": "DVINSKIE ZORI VESNUSHKA",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "932894491",
+      "id": "932894492",
       "name_lat": "Dvortsa Фортис Дог Жокей",
       "name_ru": "",
       "breed": "БИГЛЬ",
@@ -229,19 +238,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "7058168",
-      "name_lat": "DVORTSOVIY PES FELICITA",
+      "id": "1040768434",
+      "name_lat": "DVORTSOVIYPES IMPERIAL PRECIOUS EMERALD",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed": "GERMAN Й) / GERMAN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1040768434",
-      "name_lat": "DVORTSOVIYPES IMPERIAL PRECIOUS EMERALD",
+      "id": "7058168",
+      "name_lat": "DVORTSOVIY PES FELICITA",
       "name_ru": "",
-      "breed": "GERMAN Й) / GERMAN",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -274,6 +283,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1693280963",
+      "name_lat": "DVINSKIE ZORI PITER PEN",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "391172336",
       "name_lat": "DVINSKIE ZORI YOUR HIGHNESS",
       "name_ru": "",
@@ -301,10 +318,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1875117215",
+      "id": "234941342",
+      "name_lat": "DVORTSOVIY PES CAPUCHINA HAPPY PEARL",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "293248843",
       "name_lat": "DVORTSOVIY PES DOMINIC UNIQUE TYPE",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

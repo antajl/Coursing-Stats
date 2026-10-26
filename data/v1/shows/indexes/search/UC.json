@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "UC",
-  "count": 4,
+  "count": 6,
   "dogs": [
     {
       "id": "918695653",
@@ -10,6 +10,24 @@
       "breed": "СИБА",
       "breed_en": "SHIBA",
       "total_shows": 45,
+      "competition_dog_id": null
+    },
+    {
+      "id": "206867668",
+      "name_lat": "U CAN’T TOUCH THIS VITORAZ",
+      "name_ru": "",
+      "breed": "DACHSHUND KANINCHEN",
+      "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1246297340",
+      "name_lat": "U CAN'T TOUCH THIS VITORAZ",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
+      "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -22,12 +40,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1145226188",
+      "id": "1559177315",
       "name_lat": "UCZI ZGRAJA Z WOJTOWKI",
       "name_ru": "",
-      "breed": "ITALIAN CANE CORSO",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {

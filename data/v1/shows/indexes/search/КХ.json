@@ -1,12 +1,12 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "КХ",
-  "count": 12,
+  "count": 16,
   "dogs": [
     {
       "id": "162013258",
       "name_lat": "КХАРИНА МАЛЕНЬКАЯ АЗИЯ",
-      "name_ru": "",
+      "name_ru": "КХАРИНА МАЛЕНЬКАЯ АЗИЯ",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 15,
@@ -40,6 +40,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "510740707",
+      "name_lat": "КХАРИЗ АНИМА ИМАНИ",
+      "name_ru": "КХАРИЗ АНИМА ИМАНИ",
+      "breed": "АППЕНЦЕЛЛЕР",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "50203771",
       "name_lat": "КХОМОЛУНГМА С ЛИПЕЦКИХ ОЗЕР",
       "name_ru": "",
@@ -58,15 +66,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1545298492",
-      "name_lat": "КХАРИЗ АНИМА ИМАНИ",
-      "name_ru": "",
-      "breed": "АППЕНЦЕЛЛЕР ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1623216975",
       "name_lat": "КХОКОЛАТЕ МОФЕТА",
       "name_ru": "",
@@ -76,10 +75,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1422810464",
+      "id": "1296722218",
+      "name_lat": "(к/х)",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "582297399",
+      "name_lat": "к/х Limelight Gold Digger",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1788632362",
       "name_lat": "КХРИСТИАН ДИОР ИЗ СТРАНЫ ГРЕЗ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1681821515",
+      "name_lat": "К-Х",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "234938494",
+      "name_lat": "К ХАЛСИ ДЛЯ ПРАЙД ХОСТ",
+      "name_ru": "",
+      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -94,10 +129,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1831478342",
+      "id": "1282842677",
       "name_lat": "КХАЛЛИСИЯ КОРОЛЕВА ДРАКОНОВ",
       "name_ru": "",
-      "breed": "СЕРЕБРОМШАР ПЕЙ ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

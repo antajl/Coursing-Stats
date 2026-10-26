@@ -1,11 +1,11 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "IS",
-  "count": 553,
+  "count": 574,
   "dogs": [
     {
-      "id": "1323980356",
-      "name_lat": "ISAD INTISAAR SHANGRI- LA",
+      "id": "37262496",
+      "name_lat": "ISAD INTISAAR SHANGRI-LA",
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
@@ -18,7 +18,16 @@
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 32,
+      "total_shows": 36,
+      "competition_dog_id": null
+    },
+    {
+      "id": "685380124",
+      "name_lat": "ISKANDER TOLKO VPERED",
+      "name_ru": "ИСКАНДЕР ТОЛЬКО ВПЕРЕД",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -49,12 +58,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "291937916",
+      "id": "1637349681",
+      "name_lat": "ISTOCHNIK FORTUNY PLATINA",
+      "name_ru": "ИСТОЧНИК ФОРТУНЫ ПЛАТИНА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "600668968",
       "name_lat": "ISTWOOD KIDDY WIN'S",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
       "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1960361598",
+      "name_lat": "ISLAY IZ SOZVEZDIYA SURSKIKH PSOV",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 35,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1864211434",
+      "name_lat": "ISABELLE BLACK ROSE BETELGEISE",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -76,30 +112,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "20175364",
+      "id": "9657904",
       "name_lat": "IST SHAIN BIG BOSS",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1960361598",
-      "name_lat": "ISLAY IZ SOZVEZDIYA SURSKIKH PSOV",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 33,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1864211434",
-      "name_lat": "ISABELLE BLACK ROSE BETELGEISE",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -108,7 +126,7 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 22,
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -144,16 +162,16 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ ГОНЧАЯ",
       "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "23388185",
+      "id": "945180163",
       "name_lat": "ISLANDS OF GOLD ALLEN",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ГАННОВЕРСКАЯ ГОНЧАЯ ПО",
       "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -162,7 +180,16 @@
       "name_ru": "",
       "breed": "ЭРДЕЛЬТЕРЬЕР",
       "breed_en": "AIREDALE TERRIER",
-      "total_shows": 24,
+      "total_shows": 27,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179362069",
+      "name_lat": "ISHTA BHASKARA IZ ZVEZDNOGO GRAFSTVA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
+      "breed_en": "AUSTRALIAN TERRIER",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -175,6 +202,33 @@
       "competition_dog_id": null
     },
     {
+      "id": "122452976",
+      "name_lat": "ISSAN BOYSSON BOHEMIA",
+      "name_ru": "",
+      "breed": "СУССЕКС СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1036528653",
+      "name_lat": "ISGAARD VENDETTA",
+      "name_ru": "ИСГААРД ВЕНДЕТТА",
+      "breed": "БОСЕРОН",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "950264537",
+      "name_lat": "ISTOCHNIK RADOSTI YAROSLAV",
+      "name_ru": "",
+      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "265649251",
       "name_lat": "ISAD INTISAAR CHERRI",
       "name_ru": "",
@@ -184,21 +238,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "145067383",
+      "id": "1638114263",
       "name_lat": "ISH KAKAYA MASHA S USADBY TANKO",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "179362069",
-      "name_lat": "ISHTA BHASKARA IZ ZVEZDNOGO GRAFSTVA",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ТЕРЬЕР",
-      "breed_en": "AUSTRALIAN TERRIER",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -211,12 +256,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1103895888",
+      "id": "1278835263",
       "name_lat": "ISOR VOM ZISAWINKEL",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 18,
+      "competition_dog_id": null
+    },
+    {
+      "id": "904707874",
+      "name_lat": "ISAY ZOLOTOY PESOK S VISHNEVOY ROSHI",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
+      "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -229,30 +283,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "904707874",
-      "name_lat": "ISAY ZOLOTOY PESOK S VISHNEVOY ROSHI",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
-      "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
-      "total_shows": 32,
-      "competition_dog_id": null
-    },
-    {
-      "id": "122452976",
-      "name_lat": "ISSAN BOYSSON BOHEMIA",
-      "name_ru": "",
-      "breed": "СУССЕКС СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "860473906",
       "name_lat": "ISABELLA VICTORIA IZ BELO GOLUBYH ANGELOV",
       "name_ru": "",
       "breed": "СТАРОАНГЛИЙСКАЯ ОВЧАРКА (БОБТЕЙЛ)",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1389980275",
+      "name_lat": "ISTRA IZ DOMA KUNETS",
+      "name_ru": "ИСТРА ИЗ ДОМА КУНЕЦ",
+      "breed": "ЯПОНСКИЙ ХИН",
+      "breed_en": "JAPANESE CHIN",
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -261,14 +306,14 @@
       "name_ru": "",
       "breed": "БИШОН ФРИЗЕ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "375301026",
+      "id": "1959252710",
       "name_lat": "ISKRISTY INEY ZVEZDA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -285,10 +330,10 @@
     {
       "id": "880687450",
       "name_lat": "ISTINA SERDTSA BAGRAT",
-      "name_ru": "",
+      "name_ru": "ИСТИНА СЕРДЦА БАГРАТ",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 27,
       "competition_dog_id": null
     },
     {
@@ -307,6 +352,15 @@
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "74370246",
+      "name_lat": "ISKRENNYAYA RADOST IZ TSVETNOY AKVARELI",
+      "name_ru": "ИСКРЕННЯЯ РАДОСТЬ ИЗ ЦВЕТНОЙ АКВАРЕЛИ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -337,39 +391,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1036528653",
-      "name_lat": "ISGAARD VENDETTA",
-      "name_ru": "",
-      "breed": "БОСЕРОН",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1144807666",
       "name_lat": "ISLANDS OF GOLD ARIEL",
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN) WHITE, BLACK, BROWN, ORANGE, GREY, OTHER COLOURS",
       "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1389980275",
-      "name_lat": "ISTRA IZ DOMA KUNETS",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН",
-      "breed_en": "JAPANESE CHIN",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "950264537",
-      "name_lat": "ISTOCHNIK RADOSTI YAROSLAV",
-      "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -382,19 +409,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "928866425",
+      "id": "1513397828",
       "name_lat": "ISIDA EYRA",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1796496330",
+      "id": "1149474027",
       "name_lat": "IST WIND DJERONIMO",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -405,7 +432,15 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "GERMAN SPITZ MEDIUM BLACK, BROWN",
-      "total_shows": 8,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "54367669",
+      "name_lat": "ISTORIYA LUBVI YASMINA",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -427,21 +462,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "54367669",
-      "name_lat": "ISTORIYA LUBVI YASMINA",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1034506144",
+      "id": "365053484",
       "name_lat": "ISTOK SKAZKI IZ HVOSTATOGO BALAGANA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -463,28 +489,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "207921766",
+      "id": "919244962",
       "name_lat": "ISLAND OF LOTUSES UNIS LIFE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ ТОЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "883166592",
+      "id": "19103266",
       "name_lat": "ISTIN IRIS IOLANTIT DE LOVELYSTYLE'",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "СОБАКА КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1716543571",
+      "id": "268398403",
       "name_lat": "Iskra Favorite Time",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -495,7 +521,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -514,6 +540,24 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "388818812",
+      "name_lat": "ISAN NO DARYUMI SAURI ANEKO",
+      "name_ru": "ИСАН НО ДАРЮМИ САУРИ АНЕКО",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1896326419",
+      "name_lat": "ISTVUD KLINT",
+      "name_ru": "ИСТВУД КЛИНТ",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -562,12 +606,38 @@
       "competition_dog_id": null
     },
     {
+      "id": "1942531043",
+      "name_lat": "ISKRISTYI INEY ZEVS",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
       "id": "461730958",
       "name_lat": "ISAYA DEL AILEND",
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "141228529",
+      "name_lat": "ISIDA SVIIT KANDI",
+      "name_ru": "ИСИДА СВИИТ КАНДИ",
+      "breed": "ХАВАНЕЗ",
+      "breed_en": "HAVANESE",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1140761721",
+      "name_lat": "ISKRA PLAMENI VESELIN",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -580,19 +650,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "193344551",
-      "name_lat": "ISKRISTYI INEY ZEVS",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 23,
-      "competition_dog_id": null
-    },
-    {
-      "id": "533500817",
+      "id": "1823746092",
       "name_lat": "ISABEL IS A BEAUTY FAIRY DE VIVA LEGENDA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -607,12 +668,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "211374486",
+      "id": "522412847",
       "name_lat": "ISKRA IZ DOMA LYALIS",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ИСКРА ИЗ ДОМА ЛЯЛИС",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -620,15 +681,6 @@
       "name_lat": "IST SHAIN YUTA",
       "name_ru": "",
       "breed": "БОКСЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "141228529",
-      "name_lat": "ISIDA SVIIT KANDI",
-      "name_ru": "",
-      "breed": "ХАВАНЕЗ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -643,12 +695,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1981248318",
+      "name_lat": "ISTORIYA LYUBVI ODA VETRU",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ ОДА ВЕТРУ",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 22,
+      "competition_dog_id": null
+    },
+    {
       "id": "1954565135",
       "name_lat": "ISTORIYA LUBVI FANTASY",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1730165623",
+      "name_lat": "ISTOCHNIK RADOSTI S BEREGA OSKOLA",
+      "name_ru": "ИСТОЧНИК РАДОСТИ С БЕРЕГА ОСКОЛА",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -670,28 +740,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "189232578",
+      "id": "499670935",
+      "name_lat": "IS MY LOVE FAIRY TALE FOR DALVOS ALKASAR",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 31,
+      "competition_dog_id": null
+    },
+    {
+      "id": "687025518",
       "name_lat": "ISTVUD VOM OLSTER HOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д/Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1036075417",
+      "id": "768967117",
       "name_lat": "ISTANZA UNICA TIBALD",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "74370246",
-      "name_lat": "ISKRENNYAYA RADOST IZ TSVETNOY AKVARELI",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -702,16 +772,15 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1140761721",
-      "name_lat": "ISKRA PLAMENI VESELIN",
+      "id": "1182235269",
+      "name_lat": "ISA BASURIS BONCHINCHI FOR PASTERITA KANDRBUL",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 8,
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -733,12 +802,37 @@
       "competition_dog_id": null
     },
     {
+      "id": "1330963617",
+      "name_lat": "IST SHAIN VIKTOR GYUGO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЁР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "185208533",
       "name_lat": "ISTINNIY DGENTELMEN FAVORIT",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1673105815",
+      "name_lat": "ISOLDA SUN SHINE",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "9090292",
+      "name_lat": "ISTINNAYA TSARITSA IZ KAZANSKOGO HANSTVA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -751,10 +845,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "214756426",
+      "id": "1083836846",
       "name_lat": "ISLAND OF LOTUSES GORDON FLIRT",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЁХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ДРУГИЕ ОКРАСЫ (ДВУХЦВЕТНЫЙ, С ПЛАЩОМ, С ПОДПАЛОМ, ТРЕХЦВЕТНЫЙ, МНОГОЦВЕТНЫЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -787,6 +881,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1145556303",
+      "name_lat": "ISPANETS",
+      "name_ru": "",
+      "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1279577959",
+      "name_lat": "ISAURE D'ISKANDAR",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
+      "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1063557085",
       "name_lat": "ISTORIYA LUBVI MA BELLE",
       "name_ru": "",
@@ -796,10 +907,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "603516400",
+      "id": "1216171044",
       "name_lat": "ISLAND OF LOTUSES YA TSAR",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -811,15 +922,6 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1279577959",
-      "name_lat": "ISAURE D'ISKANDAR",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
-      "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -859,21 +961,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "499670935",
-      "name_lat": "IS MY LOVE FAIRY TALE FOR DALVOS ALKASAR",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 27,
-      "competition_dog_id": null
-    },
-    {
       "id": "201555617",
       "name_lat": "ISKRA PLAMENI BARBIE DOLL DIAMOND",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 34,
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -888,19 +981,28 @@
     {
       "id": "950574619",
       "name_lat": "ISKRA PER VERI VINTSITORE",
-      "name_ru": "",
+      "name_ru": "ИСКРА ПЕР ВЕРИ ВИНЦИТОРЕ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
       "id": "526234396",
       "name_lat": "ISKRA PLAMENI ASTRA FORTUNATE",
-      "name_ru": "",
+      "name_ru": "ИСКРА ПЛАМЕНИ АСТРА ФОРТУНАТЕ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 21,
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1273243833",
+      "name_lat": "IS MY LOVE CAPTAIN BLOOD",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -913,21 +1015,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "641983263",
+      "id": "1865048168",
+      "name_lat": "ISTOCHNIK SCHASTYA INDIRA",
+      "name_ru": "ИСТОЧНИК СЧАСТЬЯ ИНДИРА",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "72645243",
       "name_lat": "ISTOCHNIK UDACHI TSUIKLONIK IN BEST",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "МАЛЫЙ ШПИЦ ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "160339029",
-      "name_lat": "ISTOCHNIK SCHASTYA INDIRA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 11,
+      "id": "1451777745",
+      "name_lat": "ISKROMETNAYA RUBI",
+      "name_ru": "ИСКРОМЕТНАЯ РУБИ",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -940,30 +1051,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "875299235",
+      "id": "1176073239",
       "name_lat": "ISLANDS OF GOLD TESSA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "701386951",
+      "id": "218939596",
+      "name_lat": "ISPOLINY SIBIRI NAIL ANITA SYUZAN",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "788365755",
       "name_lat": "ISTINNAYA ISTORIYA LYUBVI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "811229650",
+      "name_lat": "ISANA DI LIRIS",
+      "name_ru": "ИСАНА ДИ ЛИРИС",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "1236021564",
       "name_lat": "ISAD INTISAAR OLTI",
-      "name_ru": "",
+      "name_ru": "ИСАД ИНТИСААР ОЛТИ",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "AFGHAN HOUND",
-      "total_shows": 1,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -976,10 +1105,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "609860072",
+      "id": "1328033606",
       "name_lat": "ISLANDS OF GOLD AFRODITA",
       "name_ru": "",
-      "breed": "БАССЕТ-ГРИФФОН ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ПО КРОВЯНОМУ СЛЕДУ",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 12,
       "competition_dog_id": null
@@ -994,12 +1123,56 @@
       "competition_dog_id": null
     },
     {
+      "id": "39300154",
+      "name_lat": "ISKRENNIY DRUG IZ ZIMNIH GREZ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ",
+      "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "935745689",
       "name_lat": "ISTINA OT NEVSKOGO HOBBITA",
       "name_ru": "",
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "KING CHARLES SPANIEL",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1199768620",
+      "name_lat": "ISTORIYA LYUBVI MA BELLE",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "568955998",
+      "name_lat": "ISTORIYA LUBVI MON AMUR",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "164668783",
+      "name_lat": "I'SAKI VICTORIA DENDI",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "575181683",
+      "name_lat": "ISAD INTISAAR YUVESTA",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1012,21 +1185,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "218939596",
-      "name_lat": "ISPOLINY SIBIRI NAIL ANITA SYUZAN",
+      "id": "271671367",
+      "name_lat": "ISTINNAYA LYUBOV' IZ SKAZOCHNOGO LESA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 16,
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1730165623",
-      "name_lat": "ISTOCHNIK RADOSTI S BEREGA OSKOLA",
+      "id": "843049546",
+      "name_lat": "ISKANDER",
       "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 33,
       "competition_dog_id": null
     },
     {
@@ -1035,7 +1207,7 @@
       "name_ru": "",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1044,7 +1216,16 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "515543315",
+      "name_lat": "ISLANDIYA V BELOM PLENU",
+      "name_ru": "ИСЛАНДИЯ В БЕЛОМ ПЛЕНУ",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1057,12 +1238,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1199768620",
-      "name_lat": "ISTORIYA LYUBVI MA BELLE",
-      "name_ru": "",
-      "breed": "УИППЕТ",
+      "id": "1647723159",
+      "name_lat": "ISSIDA IZ DOMA TSORRI",
+      "name_ru": "ИССИДА ИЗ ДОМА ЦОРРИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1075,6 +1256,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "631331822",
+      "name_lat": "ISTINNAYA LEDI IZ IZHGRADA",
+      "name_ru": "ИСТИННАЯ ЛЕДИ ИЗ ИЖГРАДА",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "334090247",
       "name_lat": "ISTOCHNIK RADOSTY S BEREGA OSKOLA",
       "name_ru": "",
@@ -1084,12 +1274,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "843049546",
-      "name_lat": "ISKANDER",
+      "id": "1455292779",
+      "name_lat": "ISARIO KAN HANAKO",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 31,
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1111,15 +1300,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "515543315",
-      "name_lat": "ISLANDIYA V BELOM PLENU",
-      "name_ru": "",
-      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1294528574",
       "name_lat": "ISTOCHNIK UDACHI HAPPY APRICOT",
       "name_ru": "",
@@ -1129,21 +1309,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1981248318",
-      "name_lat": "ISTORIYA LYUBVI ODA VETRU",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1552102040",
       "name_lat": "ISTINNY GENTLEMAN S MOSKOVSKOI DRUZHINY",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "182841434",
+      "name_lat": "ISABELLA GREY NIGHT",
+      "name_ru": "",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1165,10 +1345,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "152907200",
+      "id": "10670613",
       "name_lat": "ISAD INTISAAR ROSALINE KRISTAL",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1183,10 +1363,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "678909794",
+      "id": "675415182",
       "name_lat": "ISTANZA UNICA ANTONIO VELLUTO NERO",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "GERMAN TOY SPITZ (POMERANIAN)",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1228,15 +1408,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "631331822",
-      "name_lat": "ISTINNAYA LEDI IZ IZHGRADA",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "245627049",
       "name_lat": "ISAD INTISAAR EDGAR",
       "name_ru": "",
@@ -1255,37 +1426,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "420121175",
-      "name_lat": "ISKRA FABORITE TIME",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "856519698",
+      "id": "564961949",
       "name_lat": "IS MY LOVE JERRY",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "9090292",
-      "name_lat": "ISTINNAYA TSARITSA IZ KAZANSKOGO HANSTVA",
+      "id": "490335159",
+      "name_lat": "ISKRA FABORITE TIME",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СТАНДАРТНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "736438499",
+      "id": "765636468",
       "name_lat": "ISKANDER GOLD",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "ПОКЕТ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1300,19 +1462,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "388818812",
-      "name_lat": "ISAN NO DARYUMI SAURI ANEKO",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1117313206",
       "name_lat": "ISTA",
       "name_ru": "",
       "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР) ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1372283900",
+      "name_lat": "ISTOCHNIK UDACHI TSARITSA CHAROVNITSA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1409800272",
+      "name_lat": "ISTWOOD KIDOY WIN'S",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1327,19 +1498,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "45985708",
+      "id": "1290049294",
       "name_lat": "ISKA FROM BOHEMICA LAND",
       "name_ru": "",
-      "breed": "БИШОН ХАВАНЕЗ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "866514168",
-      "name_lat": "ISTOCHNIK UDACHI TSARITSA CHAROVNITSA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "ХАВАНЕЗ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1349,15 +1511,6 @@
       "name_lat": "Isgaard Vasiliki Czarevna",
       "name_ru": "",
       "breed": "БОСЕРОН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "521064689",
-      "name_lat": "ISTWOOD KIDOY WIN'S",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1390,10 +1543,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1429738220",
+      "id": "628193481",
       "name_lat": "ISTOTIYA LUBVI IZ DOMA KATERINY GUR",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1426,6 +1579,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "187852639",
+      "name_lat": "ISAD INTISAAR VAN DEN VEKER",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
       "id": "1624219245",
       "name_lat": "IST SHAIN REYCHEL",
       "name_ru": "",
@@ -1444,12 +1606,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1614348134",
-      "name_lat": "ISAD INTISAAR VAN DEN VEKER",
+      "id": "1007509669",
+      "name_lat": "ISABELLA LEO VON DER SEEWIESE",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
-      "breed_en": "",
-      "total_shows": 21,
+      "breed": "ЛЕОНБЕРГЕР",
+      "breed_en": "LEONBERGER",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1462,12 +1624,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1896326419",
-      "name_lat": "ISTVUD KLINT",
+      "id": "1815722316",
+      "name_lat": "IS MY LOVE CALLISTA",
       "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "BEAGLE",
-      "total_shows": 3,
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1480,6 +1642,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "868367889",
+      "name_lat": "IST WIND CHELSEA",
+      "name_ru": "",
+      "breed": "КОЛЛИ Д-Ш",
+      "breed_en": "",
+      "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
       "id": "1591428951",
       "name_lat": "ISKRA TER'AVALON",
       "name_ru": "",
@@ -1489,30 +1660,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1815722316",
-      "name_lat": "IS MY LOVE CALLISTA",
+      "id": "1830681344",
+      "name_lat": "ISABELLA ROSSELLINI",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 10,
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1530285665",
-      "name_lat": "IST WIND CHELSEA",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "id": "157832595",
+      "name_lat": "ISTOCHNIK SCHASTYA",
+      "name_ru": "ИСТОЧНИК СЧАСТЬЯ",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
       "id": "225722632",
       "name_lat": "ISTOCHNIK FORTUNY URMAN DLYA KURGAN GRADA",
-      "name_ru": "",
+      "name_ru": "ИСТОЧНИК ФОРТУНЫ УРМАН ДЛЯ КУРГАН ГРАДА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 13,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -1527,10 +1697,10 @@
     {
       "id": "261133661",
       "name_lat": "ISIDA GLAZA ANGELA",
-      "name_ru": "",
+      "name_ru": "ИСИДА ГЛАЗА АНГЕЛА",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1543,21 +1713,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1007509669",
-      "name_lat": "ISABELLA LEO VON DER SEEWIESE",
-      "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР",
-      "breed_en": "LEONBERGER",
-      "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "486169374",
+      "id": "1535027716",
       "name_lat": "ISLANDS OF GOLD ANITA",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "СOCKER SPANIEL",
       "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 11,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1570,12 +1731,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1642588421",
+      "name_lat": "I'SAKI VICTORIA ZH'IRLANDIYA TOR",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "STAFFORDSHIRE BULL TERRIER",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1165251286",
       "name_lat": "ISPOLINY SIBIRI VIANKA PARSY",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1039536524",
+      "name_lat": "ISAD INTISAAR SABRINA",
+      "name_ru": "Исад Интисаар Сабрина",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1588,12 +1767,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "387639808",
-      "name_lat": "ISTOCHNIK FORTUNY EL- VETTA",
+      "id": "721718500",
+      "name_lat": "ISTOCHNIK FORTUNY EL-VETTA",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "518458376",
+      "name_lat": "ISKLYUCHITELNAYA KRASOTKA",
+      "name_ru": "ИСКЛЮЧИТЕЛЬНАЯ КРАСОТКА",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1606,21 +1794,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "900327726",
-      "name_lat": "ISABELLA ROSSELLINI",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ АБРИКОСОВЫЙ",
+      "id": "100973925",
+      "name_lat": "ISKORKA RONI",
+      "name_ru": "ИСКОРКА РОНИ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "1039536524",
-      "name_lat": "ISAD INTISAAR SABRINA",
+      "id": "216105153",
+      "name_lat": "ISTORIYA LUBVI YUPITER",
       "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -1633,19 +1821,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "540081153",
+      "id": "1444303580",
       "name_lat": "ISIDORA IZ DOMA SHVEDOVIH",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1111344911",
+      "id": "313064254",
       "name_lat": "ISAD INTISAAR FLORENTINA",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -1669,15 +1857,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "157832595",
-      "name_lat": "ISTOCHNIK SCHASTYA",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1842817284",
       "name_lat": "ISTOCHNIK RADOSTI MIKAELLA MONTANA",
       "name_ru": "",
@@ -1696,6 +1875,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1305233250",
+      "name_lat": "Iskander",
+      "name_ru": "",
+      "breed": "Среднеазиатск ая Овчарка",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "860822040",
       "name_lat": "IS MY LOVE BIG SNOW JOY",
       "name_ru": "",
@@ -1711,6 +1899,15 @@
       "breed": "GERMAN SHORT-HAIRED",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "993501037",
+      "name_lat": "ISHTER IZ STAI VOLKOV",
+      "name_ru": "ИШТЕР ИЗ СТАИ ВОЛКОВ",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1750,6 +1947,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1815464232",
+      "name_lat": "ISAN NO DARYUMI ODZE",
+      "name_ru": "ИСАН НО ДАРЮМИ ОДЗЭ",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1772154273",
       "name_lat": "ISAD INTISAAR URBANA",
       "name_ru": "",
@@ -1774,6 +1980,23 @@
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "676237894",
+      "name_lat": "ISLANDSKAYA FLOKI",
+      "name_ru": "ИСЛАНДСКАЯ ФЛОКИ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНОГО ОКРАСА",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1066707328",
+      "name_lat": "ISPOLNITEL” ZHELANIY",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1804,10 +2027,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922207363",
+      "id": "956804311",
       "name_lat": "IST SHAIN URFIN DJUS",
       "name_ru": "",
-      "breed": "БОКСЁР НЕМЕЦКИЙ",
+      "breed": "БОКСЕР НЕМЕЦКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1885,15 +2108,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1273243833",
-      "name_lat": "IS MY LOVE CAPTAIN BLOOD",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1056467342",
       "name_lat": "ISIDA",
       "name_ru": "",
@@ -1912,37 +2126,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "676237894",
-      "name_lat": "ISLANDSKAYA FLOKI",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНОГО ОКРАСА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "518458376",
-      "name_lat": "ISKLYUCHITELNAYA KRASOTKA",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1284492732",
+      "id": "1467364598",
       "name_lat": "IST WIND SNOW DREAM",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "123376648",
+      "id": "530528871",
+      "name_lat": "ISTOCHNIK FORTUNY YUMNA SOZVEZDIE YUGRY",
+      "name_ru": "ИСТОЧНИК ФОРТУНЫ ЮМНА СОЗВЕЗДИЕ ЮГРЫ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "964053933",
       "name_lat": "ISTOCHNIK RADOSTI MEYSON",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1953,16 +2158,7 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "216105153",
-      "name_lat": "ISTORIYA LUBVI YUPITER",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 17,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -1986,10 +2182,10 @@
     {
       "id": "128637864",
       "name_lat": "ISTOCHNIK SCHASTYA APOLLON",
-      "name_ru": "",
+      "name_ru": "ИСТОЧНИК СЧАСТЬЯ АПОЛЛОН",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -2002,48 +2198,56 @@
       "competition_dog_id": null
     },
     {
-      "id": "811300613",
-      "name_lat": "ISKRISTY BELY ANGEL",
+      "id": "207981646",
+      "name_lat": "ISTOCHNIK RADOSTI ZVEZDA FO' SHEKSBURG",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "149999367",
-      "name_lat": "ISTINNAYA LADY ISADORA",
+      "id": "828875746",
+      "name_lat": "ISPOLINY SIBIRI NORMAN TOM BARRY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1876779046",
-      "name_lat": "ISKRENNIY DRUG IZ ZIMNIH GREZ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ",
-      "breed_en": "POODLE MINIATURE BLACK, WHITE, BROWN",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "83286812",
       "name_lat": "ISAD INTISAAR RANDI",
-      "name_ru": "",
+      "name_ru": "ИСАД ИНТИСААР РАНДИ",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "256290297",
+      "name_lat": "ISKRISTY BELY ANGEL",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1241767227",
+      "name_lat": "ISTINNAYA LADY ISADORA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1815464232",
-      "name_lat": "ISAN NO DARYUMI ODZE",
+      "id": "434750088",
+      "name_lat": "ISKRA PLAMENI BABY GOLDEN GIRL",
       "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2056,12 +2260,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "75743497",
+      "id": "1936327060",
       "name_lat": "ISTOCHNIK RADOSTI ZENA",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1948763089",
+      "name_lat": "IS MY LOVE FLEX OF SUNLIGHT",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2119,6 +2331,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1738987548",
+      "name_lat": "ISTINNYJ MACHO IZ LICHOI STAI ( )",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "917147398",
       "name_lat": "ISKRA YOSHIKO S KRUTOYARA",
       "name_ru": "",
@@ -2128,12 +2349,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1584176144",
-      "name_lat": "ISKORKA RONI",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
-      "breed_en": "",
-      "total_shows": 4,
+      "id": "99959170",
+      "name_lat": "ISTORIYA LYUBVI IZ SAGI O GARDARIKE",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ ИЗ САГИ О ГАРДАРИКЕ",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2143,6 +2364,15 @@
       "breed": "GREAT DANE FAWN, BRINDLE",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "86639574",
+      "name_lat": "ISKANDER",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2164,21 +2394,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "269484130",
+      "id": "1142572131",
       "name_lat": "ISABELLE RISIN STAR",
       "name_ru": "",
-      "breed": "САМОЕД /",
+      "breed": "САМОЕД",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "128652511",
-      "name_lat": "ISTOCHNIK RADOSTI ZVEZDA FO' SHEKSBURG",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -2193,10 +2414,10 @@
     {
       "id": "939780972",
       "name_lat": "ISAD INTISAAR URMAS",
-      "name_ru": "",
+      "name_ru": "ИСАД ИНТИСААР УРМАС",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -2218,21 +2439,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "716471239",
-      "name_lat": "ISKANDAR DARK KNAYT",
+      "id": "621137443",
+      "name_lat": "ISLAND OF LOTUSES EGO VYSOCHESTVO",
       "name_ru": "",
-      "breed": "КАРДИГАН",
+      "breed": "ФАНТОМ) ЧЕРНЫЙ С ПОДПАЛОМ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1469891508",
-      "name_lat": "ISKROMETNAYA RUBI",
+      "id": "1600035728",
+      "name_lat": "ISKANDAR DARK KNAYT",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДР.ОКРАСЫ",
-      "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
-      "total_shows": 4,
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2245,12 +2466,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "683484357",
+      "id": "1500837585",
       "name_lat": "ISKRA TER’AVALON",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "202305903",
+      "name_lat": "ISTORIYA LUBVI YA SITORA",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "230063941",
+      "name_lat": "ISE CREAM CAVALERIA OF'DIAMONDS",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "CAVALIER KING CHARLES SPANIEL",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2269,15 +2507,6 @@
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "568955998",
-      "name_lat": "ISTORIYA LUBVI MON AMUR",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2317,39 +2546,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "530528871",
-      "name_lat": "ISTOCHNIK FORTUNY YUMNA SOZVEZDIE YUGRY",
+      "id": "1243130989",
+      "name_lat": "ISSAHAR OT ANGELA ALLIN",
       "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
+      "breed": "ЧАУ ЧАУ",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "686710756",
+      "id": "1536589841",
       "name_lat": "ISLA VINTER TEYL",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "202305903",
-      "name_lat": "ISTORIYA LUBVI YA SITORA",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "828875746",
-      "name_lat": "ISPOLINY SIBIRI NORMAN TOM BARRY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2362,6 +2572,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "112029312",
+      "name_lat": "ISABELL WOM NATI KIRSHEN",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "114922432",
       "name_lat": "ISABELLA BLACK EXCLUSIVE",
       "name_ru": "",
@@ -2371,10 +2589,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1879860631",
+      "id": "256646237",
+      "name_lat": "IS MY LOVE GEM OF COLLECTION",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "646563115",
       "name_lat": "ISKRA RADOSTI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2398,30 +2624,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "86639574",
-      "name_lat": "ISKANDER",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1765738286",
       "name_lat": "ISKROMETNAYA ZLATA",
       "name_ru": "",
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "537587257",
-      "name_lat": "ISA BASURIS BONCHINCHI FOR PASTERITA KANDRBUL",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ / BULL",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2443,10 +2651,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "916295137",
+      "id": "296495932",
       "name_lat": "ISLA VINTER TAYE",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2524,28 +2732,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "333057129",
+      "id": "9870",
       "name_lat": "ISTORIYA LUBVI GARDARIKA",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
+      "competition_dog_id": 9870
     },
     {
-      "id": "1738987548",
-      "name_lat": "ISTINNYJ MACHO IZ LICHOI STAI ( )",
-      "name_ru": "",
+      "id": "177954270",
+      "name_lat": "ISMINA VERONIK",
+      "name_ru": "ИСМИНА ВЕРОНИК",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1730203524",
+      "id": "476434448",
       "name_lat": "ISKRISTY INEY DIONORA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2557,6 +2764,15 @@
       "breed": "КЛАССИК",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "347452015",
+      "name_lat": "ISTOCHNIK FORTUNY VELES",
+      "name_ru": "ИСТОЧНИК ФОРТУНЫ ВЕЛЕС",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -2587,15 +2803,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "434750088",
-      "name_lat": "ISKRA PLAMENI BABY GOLDEN GIRL",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "9286",
       "name_lat": "ISTORIYA LUBVI SUPREME LOVE",
       "name_ru": "",
@@ -2605,19 +2812,10 @@
       "competition_dog_id": 9286
     },
     {
-      "id": "1865206803",
-      "name_lat": "ISLAND OF LOTUSES EGO VYSOCHESTVO",
-      "name_ru": "",
-      "breed": "ФАНТОМ) ЧЁРНЫЙ С ПОДПАЛОМ / PHOODLE (ARLEQUINE &",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "999363963",
+      "id": "1892963143",
       "name_lat": "ISKRISTY INEY INGEBORA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2647,6 +2845,24 @@
       "breed": "ШЬЕН ПАРТИКОЛОР А ПУАЛЬ ФРИЗЕ ТОЙ",
       "breed_en": "CHIEN PARTICOLORE A POIL FRISE TOY",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1753830056",
+      "name_lat": "ISIDORA IZ SERDTSA CHERNOGO MORYA",
+      "name_ru": "ИСИДОРА ИЗ СЕРДЦА ЧЕРНОГО МОРЯ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "205474797",
+      "name_lat": "ISTOCHNIK FORTUNY URBAY",
+      "name_ru": "ИСТОЧНИК ФОРТУНЫ УРБАЙ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2704,28 +2920,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1455292779",
-      "name_lat": "ISARIO KAN HANAKO",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1835518930",
       "name_lat": "ISKANDER",
       "name_ru": "",
       "breed": "БОРДОСКИЙДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "993501037",
-      "name_lat": "ISHTER IZ STAI VOLKOV",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2737,6 +2935,15 @@
       "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1963626095",
+      "name_lat": "ISIDA IZ KLANA LEGATO",
+      "name_ru": "ИСИДА ИЗ КЛАНА ЛЕГАТО",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -2794,31 +3001,22 @@
       "competition_dog_id": null
     },
     {
-      "id": "799433352",
+      "id": "98889995",
       "name_lat": "IS MY LOVE BLISS EVERY DAY",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "347452015",
-      "name_lat": "ISTOCHNIK FORTUNY VELES",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "9448",
+      "id": "219788217",
       "name_lat": "ISLA SAVANNA DJORDJIYA",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "BEAGLE",
       "total_shows": 7,
-      "competition_dog_id": 9448
+      "competition_dog_id": null
     },
     {
       "id": "192158610",
@@ -2839,12 +3037,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "643877443",
+      "name_lat": "ISTORIYA LUBVI MON AMOUR",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "224637864",
       "name_lat": "ISAD INTISAAR CVETNAYA SHTUCHKA",
       "name_ru": "",
       "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1781237762",
+      "name_lat": "ISTOCHNIK SCHASTYA IZ KAMENSKA",
+      "name_ru": "ИСТОЧНИК СЧАСТЬЯ ИЗ КАМЕНСКА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2875,11 +3090,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "643877443",
-      "name_lat": "ISTORIYA LUBVI MON AMOUR",
+      "id": "1387796571",
+      "name_lat": "ISABELLE GRACEFUL DIVA",
       "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
+      "breed": "БИВЕР ТЕРЬЕР / BIEWER TERRIER",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2902,19 +3116,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1006758596",
-      "name_lat": "ISLAND CHOKOLADO MESECHINATA",
+      "id": "204406405",
+      "name_lat": "ISKRA GOLD IZ YAROSLAVSKOGO KNIAJESTVA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1408196463",
-      "name_lat": "ISKRA GOLD IZ YAROSLAVSKOGO KNIAJESTVA",
+      "id": "1006758596",
+      "name_lat": "ISLAND CHOKOLADO MESECHINATA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2965,6 +3179,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "763540746",
+      "name_lat": "ISTORIYA LYUBVI SPAYS GERL",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ СПАЙС ГЕРЛ",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "33824014",
       "name_lat": "ISTORIYA LUBVI RATIBOR LIGHT RAY",
       "name_ru": "",
@@ -2974,10 +3197,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1892009623",
+      "id": "553449606",
       "name_lat": "ISSAGAR OT ANGELA ALLIN",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2992,10 +3215,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "802561931",
+      "id": "846590082",
       "name_lat": "ISTOCHNIK UDACHI UL'RIKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) /",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3019,10 +3242,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "697879398",
+      "id": "1951336446",
       "name_lat": "ISKANDER",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3064,19 +3287,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1673153306",
+      "id": "1944472043",
       "name_lat": "ISIDORA SBEREGA DONA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "20987012",
+      "id": "10469552",
       "name_lat": "IST SHAIN HILLARY",
       "name_ru": "",
-      "breed": "БОКСЁР",
+      "breed": "БОКСЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3159,7 +3382,7 @@
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3181,20 +3404,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1361886294",
-      "name_lat": "ISSAHAR OT ANGELA ALLIN",
+      "id": "1828151799",
+      "name_lat": "ISKO BRUMENTAL",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1066707328",
-      "name_lat": "ISPOLNITEL” ZHELANIY",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3235,15 +3448,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "205474797",
-      "name_lat": "ISTOCHNIK FORTUNY URBAY",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "338701031",
       "name_lat": "ISVUD",
       "name_ru": "",
@@ -3253,28 +3457,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1963626095",
-      "name_lat": "ISIDA IZ KLANA LEGATO",
+      "id": "468067298",
+      "name_lat": "ISTOCHNIK RADOSTI CARAVAGGIO",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "Энтлебухер зенненхунд",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "529016419",
+      "id": "1294832624",
+      "name_lat": "ISLAND OF LOTUSES KING GEORG",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "POODLE TOY",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "191414090",
       "name_lat": "ISKRA LUNNOGO SVETA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "479220552",
-      "name_lat": "ISSIDA IZ DOMA TSORRI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "id": "1487047077",
+      "name_lat": "ISPOLNITEL ZHELANIY IZ PITERSKOGO DOZORA",
+      "name_ru": "ИСПОЛНИТЕЛЬ ЖЕЛАНИЙ ИЗ ПИТЕРСКОГО ДОЗОРА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3298,15 +3510,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "331255957",
-      "name_lat": "ISIDORA IZ SERDTSA CHERNOGO MORYA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1152060598",
       "name_lat": "ISTORIYA LUBVI MAESTRO",
       "name_ru": "",
@@ -3320,6 +3523,15 @@
       "name_lat": "ISSUE-BOSHI VENTURESOME",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "486027391",
+      "name_lat": "IS MY LOVE FRESH BRIZ FOR OTTIMA WAY",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3352,6 +3564,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1712529237",
+      "name_lat": "ISTANZA UNICA TAO",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "383152515",
       "name_lat": "ISTINNY J LORD IZ ZELENOY ROSHI",
       "name_ru": "",
@@ -3370,46 +3590,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1643674192",
-      "name_lat": "ISPOLNITEL ZHELANIY IZ PITERSKOGO DOZORA",
+      "id": "1503423109",
+      "name_lat": "ISTORIYA LUBVI BOREAS MUN",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
+      "breed": "УИППЕТ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1105007879",
-      "name_lat": "IS MY LOVE FRESH BRIZ FOR OTTIMA WAY",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1771296319",
+      "id": "1900987438",
       "name_lat": "IST SHAIN URFIN JUISE",
       "name_ru": "",
-      "breed": "БОКСЕР ТИГРОВЫЙ /",
+      "breed": "БОКСЕР ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "432891535",
-      "name_lat": "ISAD INTISAAR YUVESTA",
-      "name_ru": "",
-      "breed": "КОРИЧНЕВО- ПОДПАЛЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "614201964",
+      "id": "1050556385",
       "name_lat": "IST WIND TRULY MAGIC",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3420,6 +3621,14 @@
       "name_ru": "",
       "breed": "SHORT-HAIRED POINTER (VIZSLA)",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1838513502",
+      "name_lat": "ISSIDORA S DOLINY BELIKH KAMNEY",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3469,21 +3678,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "246716434",
+      "id": "1487703446",
       "name_lat": "ISKANDER IZ KAZANSKOGO HANSTVA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "99959170",
-      "name_lat": "ISTORIYA LYUBVI IZ SAGI O GARDARIKE",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -3493,15 +3693,6 @@
       "breed": "КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "811229650",
-      "name_lat": "ISANA DI LIRIS",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3550,15 +3741,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "230063941",
-      "name_lat": "ISE CREAM CAVALERIA OF'DIAMONDS",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1961768421",
       "name_lat": "ISLAND SPICE MAJOR",
       "name_ru": "",
@@ -3595,15 +3777,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "91079025",
-      "name_lat": "ISKRYASCHAYA NADEZHDA S VISHNEVOY ROSHI",
-      "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
-      "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "933939959",
       "name_lat": "IS MY LOVE DEARLY BELOVED",
       "name_ru": "",
@@ -3613,10 +3786,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "755762115",
+      "id": "91079025",
+      "name_lat": "ISKRYASCHAYA NADEZHDA S VISHNEVOY ROSHI",
+      "name_ru": "",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
+      "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "8744106",
       "name_lat": "ISKRA WISH FOXY",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3631,19 +3813,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "439616564",
-      "name_lat": "ISHTVAN",
-      "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "id": "272493142",
+      "name_lat": "ISTOCHNIK UDACHI ELIS",
+      "name_ru": "ИСТОЧНИК УДАЧИ ЭЛИС",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "979892601",
+      "name_lat": "ISMA SWEET",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1535236234",
+      "id": "1440490689",
       "name_lat": "ISTINA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3676,28 +3866,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "824236432",
-      "name_lat": "ISMINA VERONIK",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК / WELSH CORGI",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1461845020",
       "name_lat": "ISKANDER",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1637349681",
-      "name_lat": "ISTOCHNIK FORTUNY PLATINA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3712,28 +3884,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "182075522",
+      "id": "1360956547",
       "name_lat": "ISTOCHNIK",
       "name_ru": "",
-      "breed": "СЕРЕБРОМ /",
+      "breed": "СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1706896304",
+      "id": "1857466014",
       "name_lat": "IS MINE ROYAL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1655907939",
+      "id": "1208640488",
       "name_lat": "ISIDA MIRIKS",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -3789,7 +3961,7 @@
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3840,19 +4012,28 @@
     {
       "id": "1266907066",
       "name_lat": "ISTOCHNIK FORTUNY CHELITA",
-      "name_ru": "",
+      "name_ru": "ИСТОЧНИК ФОРТУНЫ ЧЕЛИТА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 10,
+      "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1677875155",
+      "id": "1714186810",
       "name_lat": "ISTOCHNIK RADOSTI NOVAYA ZVEZDA",
       "name_ru": "",
-      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД /",
+      "breed": "ЭНТЛЕБУХЕР ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1937078745",
+      "name_lat": "ISTOCHNIK UDACHI TSUNAMI ON THE SHOW",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -3870,15 +4051,6 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "SREDNEASIATSKAYA OVCHARKA (CENTRAL ASIA SHEPHERD DOG)",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "599306314",
-      "name_lat": "ISTOCHNIK UDACHI TSUNAMI ON THE SHOW",
-      "name_ru": "",
-      "breed": "GERMAN SPITZ TOY (POMERANIAN)",
-      "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -3928,15 +4100,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "763540746",
-      "name_lat": "ISTORIYA LYUBVI SPAYS GERL",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "484091543",
       "name_lat": "ISTRA DIKIY TSVETOK",
       "name_ru": "",
@@ -3946,11 +4109,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1678970744",
+      "id": "259206597",
       "name_lat": "ISTINNAYA KOKETKA OT ELEGANT LADY",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1019292102",
+      "name_lat": "ISTOCHNIK FORTUNY CHECHELINA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "662332630",
+      "name_lat": "ISLANDS OF GOLD ALLISTER",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
+      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -3973,6 +4154,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1827838227",
+      "name_lat": "ISIS DENICO SAMURAI",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "181810565",
+      "name_lat": "Iskra Schastya Odeliya",
+      "name_ru": "Искра Счастья Оделия",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "182474549",
       "name_lat": "ISA NYR INAYA",
       "name_ru": "",
@@ -3982,28 +4181,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "662332630",
-      "name_lat": "ISLANDS OF GOLD ALLISTER",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЛЕГАВАЯ",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1698390121",
       "name_lat": "ISHTON SIRIUS STAR",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1827838227",
-      "name_lat": "ISIS DENICO SAMURAI",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4018,11 +4199,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1294832624",
-      "name_lat": "ISLAND OF LOTUSES KING GEORG",
+      "id": "1438665918",
+      "name_lat": "ISLANDS OF GOLD ADRIAN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "POODLE TOY",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1345996909",
+      "name_lat": "ISTOCHNIK UDACHI PIKSI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "695897183",
+      "name_lat": "I`SAKI VICTORIA ZHASMIN APOLONIYA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "STAFFORDSHIRE BULL TERRIER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1806477214",
+      "name_lat": "I'SAKI VICTORIA EVA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ БУЛЬТЕРЬЕР",
+      "breed_en": "STAFFORDSHIRE BULL TERRIER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4032,15 +4240,6 @@
       "name_ru": "",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
       "breed_en": "GRIFFON BRUXELLOIS",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1438665918",
-      "name_lat": "ISLANDS OF GOLD ADRIAN",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4072,13 +4271,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "266949482",
+      "id": "10327",
       "name_lat": "ISTORIYA LUBVI NIGEL FAST",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
       "total_shows": 2,
-      "competition_dog_id": null
+      "competition_dog_id": 10327
     },
     {
       "id": "216671124",
@@ -4113,15 +4312,6 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "685380124",
-      "name_lat": "ISKANDER TOLKO VPERED",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4225,15 +4415,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1536124729",
-      "name_lat": "ISTOCHNIK UDACHI PIKSI",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1312045769",
       "name_lat": "ISABELLE YASMIN ADJANI",
       "name_ru": "",
@@ -4252,37 +4433,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1417263025",
+      "id": "1803520717",
       "name_lat": "ISTORIYA LYUBVI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "181810565",
-      "name_lat": "Iskra Schastya Odeliya",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1744490694",
-      "name_lat": "ISABELLA GREY NIGHT",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "782192939",
-      "name_lat": "ISOLDA SUN SHINE",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4315,15 +4469,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1019292102",
-      "name_lat": "ISTOCHNIK FORTUNY CHECHELINA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1049864763",
       "name_lat": "ISAN NO DARYUMI BENIKA HOSHI",
       "name_ru": "",
@@ -4351,21 +4496,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "842241460",
-      "name_lat": "IS MY LOVE GEM OF COLLECTION",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "id": "1656965516",
+      "name_lat": "ISKRA IZ DINASTII KONOL'S",
+      "name_ru": "ИСКРА ИЗ ДИНАСТИИ КОНОЛ'С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1305233250",
-      "name_lat": "Iskander",
+      "id": "477086437",
+      "name_lat": "IS PERFECTION S ZELENOGO GORODA",
       "name_ru": "",
-      "breed": "Среднеазиатск ая Овчарка",
+      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "716710734",
+      "name_lat": "ISTOCHNIK RADOSTI BAVARIA",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "431060049",
+      "name_lat": "ISTOCHNIK FORTUNY CHEKIST",
+      "name_ru": "ИСТОЧНИК ФОРТУНЫ ЧЕКИСТ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -4405,10 +4568,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1700775049",
+      "id": "248782125",
       "name_lat": "ISABEL",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4423,10 +4586,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1821076684",
+      "id": "1439899880",
       "name_lat": "ISVOLD",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4441,10 +4604,26 @@
       "competition_dog_id": null
     },
     {
+      "id": "985399276",
+      "name_lat": "ISKRA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "827981293",
       "name_lat": "ISTA",
       "name_ru": "",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "7947910",
+      "name_lat": "ISTA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4585,6 +4764,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "578885453",
+      "name_lat": "I`SAKI VICTORIA ZH`IRLANDIYA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "452128075",
       "name_lat": "ISABEL PRICE",
       "name_ru": "",
@@ -4603,28 +4791,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1311707056",
+      "id": "1298770979",
       "name_lat": "ISTORIA LUBVI OT SIBIRSKOGO MEDVEDJA",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "155345320",
+      "id": "343502686",
       "name_lat": "ISKO OD PETKOVICA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1903904178",
+      "id": "134378803",
       "name_lat": "ISE ON MY HEART",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4639,19 +4827,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1781237762",
-      "name_lat": "ISTOCHNIK SCHASTYA IZ KAMENSKA",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1941334950",
+      "id": "1069677983",
       "name_lat": "ISAD INTISAAR TAYM TU FRIL",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ /",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4662,6 +4841,14 @@
       "name_ru": "",
       "breed": "AFGHAN HOUND",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1297147430",
+      "name_lat": "ISTOCHNIK SCHASTYA ВАРЯ",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4693,46 +4880,45 @@
       "competition_dog_id": null
     },
     {
-      "id": "1828215585",
+      "id": "1769033757",
       "name_lat": "ISPOLIN KAMCHATKI GLOREDEL",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1997027468",
+      "id": "660177802",
       "name_lat": "ISABEL GOLD PEARL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "886826975",
+      "id": "1624567376",
       "name_lat": "IST WIND CHESS SET",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1354771092",
+      "id": "1254436089",
+      "name_lat": "ISABEL RISING STAR",
+      "name_ru": "",
+      "breed": "САМОЕД",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "135572914",
       "name_lat": "ISAD INTISAAR CHELSI",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "272493142",
-      "name_lat": "ISTOCHNIK UDACHI ELIS",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4810,15 +4996,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1386805147",
-      "name_lat": "ISKRA IZ DINASTII KONOL'S",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "707528153",
       "name_lat": "ISTAM SO SHKODNOGO DVORA",
       "name_ru": "",
@@ -4882,10 +5059,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "27011735",
+      "id": "1921323222",
       "name_lat": "ISKRA S FABRIKI GRYOZ",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4927,11 +5104,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "112029312",
-      "name_lat": "ISABELL WOM NATI KIRSHEN",
+      "id": "797402544",
+      "name_lat": "ISABELA ORIOLE SHINING",
       "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
+      "breed": "БАСЕНДЖИ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4945,38 +5121,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "477086437",
-      "name_lat": "IS PERFECTION S ZELENOGO GORODA",
+      "id": "265121619",
+      "name_lat": "ISIDA GREIS ZGRAIA NADGEI",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "716710734",
-      "name_lat": "ISTOCHNIK RADOSTI BAVARIA",
+      "id": "1445973352",
+      "name_lat": "ISKRA EMERALD STAR",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "431060049",
-      "name_lat": "ISTOCHNIK FORTUNY CHEKIST",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "491937622",
-      "name_lat": "ISTINNAYA LYUBOV' IZ SKAZOCHNOGO LESA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ",
-      "breed_en": "",
+      "breed": "ВЕЛЬШ КОРГИ",
       "total_shows": 1,
       "competition_dog_id": null
     }

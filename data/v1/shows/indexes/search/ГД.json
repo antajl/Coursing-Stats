@@ -1,13 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ГД",
-  "count": 3,
+  "count": 5,
   "dogs": [
     {
-      "id": "84070507",
+      "id": "281140247",
       "name_lat": "ГДЕ ЖЕ ТЫ ИЗ СОЛНЕЧНОЙ КОЛЫБЕЛИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ГДЕ ЖЕ ТЫ ИЗ СОЛНЕЧНОЙ КОЛЫБЕЛИ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 22,
       "competition_dog_id": null
@@ -15,10 +15,28 @@
     {
       "id": "60160039",
       "name_lat": "ГДРАНД МАРКО КЧИЛИ ПЕПЕР ОТ КЕКСБАНД",
-      "name_ru": "",
+      "name_ru": "ГДРАНД МАРКО КЧИЛИ ПЕПЕР ОТ КЕКСБАНД",
       "breed": "КАРДИГАН",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "390832339",
+      "name_lat": "Г ДЖИ ДЖИ УТРЕННЯЯ ЗВЕЗДА",
+      "name_ru": "Г ДЖИ ДЖИ УТРЕННЯЯ ЗВЕЗДА",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1206632690",
+      "name_lat": "Г'ДЖИ ДЖИ УТРЕННЯЯ ЗВЕЗДА",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "SHIBA",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

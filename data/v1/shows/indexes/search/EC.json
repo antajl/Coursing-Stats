@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "EC",
-  "count": 33,
+  "count": 38,
   "dogs": [
     {
       "id": "852879616",
       "name_lat": "ECHANG VU DESHSHAN",
-      "name_ru": "",
+      "name_ru": "ЕЧАНГ ВУ ДЭШШАН",
       "breed": "ЧУНЦИН",
       "breed_en": "CHONGQING DOG",
-      "total_shows": 223,
+      "total_shows": 253,
+      "competition_dog_id": null
+    },
+    {
+      "id": "605474547",
+      "name_lat": "ECSTATIC TO LOVE S TAGANIEGO ROGA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "breed_en": "MINIATURE SCHNAUZER BLACK",
+      "total_shows": 47,
       "competition_dog_id": null
     },
     {
@@ -22,21 +31,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "784357182",
+      "id": "897588571",
       "name_lat": "ECHCHE TA KARTINKA IZ GRADA BELYKH BEREZ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 29,
       "competition_dog_id": null
     },
     {
-      "id": "605474547",
-      "name_lat": "ECSTATIC TO LOVE S TAGANIEGO ROGA",
+      "id": "649863286",
+      "name_lat": "ECLER OT LUKYANOVOY",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
-      "breed_en": "MINIATURE SCHNAUZER BLACK",
-      "total_shows": 45,
+      "breed": "САМОЕД",
+      "breed_en": "SAMOYED",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {
@@ -49,15 +58,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "649863286",
-      "name_lat": "ECLER OT LUKYANOVOY",
-      "name_ru": "",
-      "breed": "САМОЕД",
-      "breed_en": "SAMOYED",
-      "total_shows": 21,
-      "competition_dog_id": null
-    },
-    {
       "id": "1204843441",
       "name_lat": "ECLAT S TAGANIEGO ROGA",
       "name_ru": "",
@@ -67,21 +67,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1226394244",
+      "name_lat": "ECLAIR&LOLLIPOP OF NESSLAND",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 38,
+      "competition_dog_id": null
+    },
+    {
       "id": "1058160207",
       "name_lat": "ECZUMI FROM HAUS IREN",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1226394244",
-      "name_lat": "ECLAIR&LOLLIPOP OF NESSLAND",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 32,
       "competition_dog_id": null
     },
     {
@@ -99,7 +99,15 @@
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "CAVALIER KING CHARLES SPANIEL",
-      "total_shows": 22,
+      "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "542719191",
+      "name_lat": "ECLIPSE GENTLE BABY",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -118,6 +126,15 @@
       "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "702328884",
+      "name_lat": "ECLAIR VIT'ASSA",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -148,6 +165,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "163743457",
+      "name_lat": "E-CHAMAN IZ DOMA LOTSMAN",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "462319964",
       "name_lat": "ECLAIR & LOLLIPOP OF NESSLAND",
       "name_ru": "",
@@ -175,6 +201,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "648808510",
+      "name_lat": "ECLAT NASLEDIE TIRELLA",
+      "name_ru": "",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "339614928",
       "name_lat": "ECSTASY KORNUTINNA",
       "name_ru": "",
@@ -184,10 +218,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1075363797",
+      "id": "190635844",
       "name_lat": "ECLIPSE DE IMPERIAL CAN",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ)",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -220,12 +254,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1377310790",
-      "name_lat": "ECLAIR VIT'ASSA",
+      "id": "107534123",
+      "name_lat": "ECLAT IZ BELOGO JARA",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ ПЯТНИСТЫЙ",
-      "breed_en": "FRENCH BULLDOG",
-      "total_shows": 5,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -261,6 +294,14 @@
       "name_ru": "",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "103949680",
+      "name_lat": "ECSTAZI NA VSYU ZHIZN",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },

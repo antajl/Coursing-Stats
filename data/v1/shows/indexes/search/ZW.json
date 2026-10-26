@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ZW",
-  "count": 14,
+  "count": 15,
   "dogs": [
     {
       "id": "262390504",
@@ -22,10 +22,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "57241079",
+      "id": "619233334",
       "name_lat": "ZWEZDA PETERBURGA SUNLIGHT",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -40,10 +40,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "493535671",
+      "name_lat": "ZWEZDY EUROTERY EVRA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1065946431",
       "name_lat": "ZWERGMANIA GOD-GIVEN FOR SANTA KNYRYS",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР (белый)",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "50200340",
+      "name_lat": "ZWEZDY EVROTERY EVGENIKA",
+      "name_ru": "",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -67,8 +84,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "956700772",
-      "name_lat": "ZWERGMANIA GOD- GIVEN FOR SANTA KNIRYS",
+      "id": "1605600994",
+      "name_lat": "ZWERGMANIA GOD-GIVEN FOR SANTA KNIRYS",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР БЕЛЫЙ",
       "breed_en": "",
@@ -118,15 +135,6 @@
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "50200340",
-      "name_lat": "ZWEZDY EVROTERY EVGENIKA",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     }
   ]

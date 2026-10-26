@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "KB",
-  "count": 2,
+  "count": 3,
   "dogs": [
     {
       "id": "96611944",
@@ -9,7 +9,15 @@
       "name_ru": "",
       "breed": "АМЕРИКАНСКИЙ БУЛЛИ СТАНДАРТ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1173850143",
+      "name_lat": "KB WINCHESTER",
+      "name_ru": "",
+      "breed": "СТАНДАРТ /",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {

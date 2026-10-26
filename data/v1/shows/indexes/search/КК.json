@@ -1,0 +1,33 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "КК",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "320877579",
+      "name_lat": "К'КОКО ШАНЕЛЬ ИЗ ЧЕНТАО-ПАРК",
+      "name_ru": "",
+      "breed": "ХАВАНЕЗ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1068831871",
+      "name_lat": "ККАИМ КАМАЛ ЮРМАЛА",
+      "name_ru": "",
+      "breed": "АКИТА АЛЯСКИНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1373273624",
+      "name_lat": "К КАЛИНЫ ЛЕЛЯ БЕЛОСНЕ",
+      "name_ru": "",
+      "breed": "Н -",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

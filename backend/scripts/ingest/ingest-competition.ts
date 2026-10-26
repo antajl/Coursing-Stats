@@ -237,10 +237,10 @@ export function findMatchingDog(
         if (storedTokens.has(t)) shared += 1;
       }
 
-      const minTokens = Math.min(draftTokens.size, storedTokens.size);
-      const overlapRatio = shared / minTokens;
+      const maxTokens = Math.max(draftTokens.size, storedTokens.size);
+      const overlapRatio = shared / maxTokens;
 
-      if (shared >= 2 && overlapRatio >= 0.75) {
+      if (shared >= 2 && overlapRatio >= 0.80) {
         return { matchedDog: stored, matchType: 'translit', confidence: overlapRatio };
       }
     }
@@ -425,22 +425,26 @@ export async function ingestCompetition(
       });
     }
 
+    const rawScoresJson =
+      row.raw_scores_json ??
+      (row.heats ? { heats: row.heats, grand_total: row.total_score, format: draft.event_type } : {});
+
     processedResults.push({
       id: row.id || idx + 1,
       event_id: eventId,
       dog_id: assignedId,
-      breed_class: row.breed_class ?? null,
-      catalog_no: row.catalog_no ?? null,
-      placement: row.placement ?? null,
+      breed_class: row.breed_class ?? row.competition_class ?? null,
+      catalog_no: row.catalog_no ?? row.catalog_number ?? null,
+      placement: row.placement ?? row.place ?? null,
       total_score: row.total_score ?? null,
-      judge_count: row.judge_count ?? 0,
-      qualification: row.qualification ?? '',
-      vc: row.vc ?? '',
+      judge_count: row.judge_count ?? (Array.isArray(draft.judges) ? draft.judges.length : 2),
+      qualification: row.qualification ?? row.certificate ?? '',
+      vc: row.vc ?? row.title ?? '',
       status: row.status ?? 'finished',
-      raw_scores_json: row.raw_scores_json ?? {},
+      raw_scores_json: rawScoresJson,
       raw_text: row.raw_text ?? '',
       judges: row.judges ?? '',
-      status_reason: row.status_reason ?? null,
+      status_reason: row.status_reason ?? row.disqualification_reason ?? null,
       dog: {
         id: assignedId,
         dog_key: resolvedDogKey,
@@ -544,7 +548,7 @@ export async function ingestCompetition(
     };
     if (!Array.isArray(calendar.events)) calendar.events = [];
 
-    const existingEvIdx = calendar.events.findIndex((e) => e.id === eventId);
+    const existingEvIdx = calendar.events.findIndex((e) => String(e.id) === String(eventId));
     const eventRecord = {
       ...(existingEvIdx >= 0 ? calendar.events[existingEvIdx] : {}),
       id: eventId,

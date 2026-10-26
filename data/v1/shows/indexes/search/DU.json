@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "DU",
-  "count": 386,
+  "count": 397,
   "dogs": [
     {
       "id": "1327870991",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
-      "total_shows": 83,
+      "total_shows": 87,
       "competition_dog_id": null
     },
     {
@@ -22,21 +22,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1005079753",
-      "name_lat": "DUVINAL MAURO MAREL",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 59,
-      "competition_dog_id": null
-    },
-    {
       "id": "1272024480",
       "name_lat": "DUNFIL WESTERN PRINCE",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "GERMAN SPITZ MINIATURE ORANGE, GREY & OTHER COLOR",
-      "total_shows": 50,
+      "total_shows": 54,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1005079753",
+      "name_lat": "DUVINAL MAURO MAREL",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 65,
       "competition_dog_id": null
     },
     {
@@ -55,6 +55,15 @@
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1505474837",
+      "name_lat": "DUE PARCHI AKI",
+      "name_ru": "",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "BORDER COLLIE",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -85,6 +94,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1390675614",
+      "name_lat": "DUSHA MOYA ALENUSHKA",
+      "name_ru": "ДУША МОЯ АЛЁНУШКА",
+      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
+      "breed_en": "IRISH WOLFHOUND",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
       "id": "1183013324",
       "name_lat": "DUBBI ASGAR CHIVAS",
       "name_ru": "",
@@ -94,19 +112,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "721025878",
+      "id": "341252559",
       "name_lat": "DUBLE DREAM LOVESET SCHUBERT",
       "name_ru": "",
-      "breed": "СЕТТЕР ГОРДОН /",
+      "breed": "СЕТТЕР ГОРДОН",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "499166536",
+      "id": "66112237",
       "name_lat": "DUVINAL ELADJA EMIREL",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 29,
       "competition_dog_id": null
@@ -121,19 +139,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1505474837",
-      "name_lat": "DUE PARCHI AKI",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "BORDER COLLIE",
-      "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1309660791",
+      "id": "276361678",
       "name_lat": "DUENOS DE LA VIDA SUPER STAR",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ)",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "PRESA CANARIO",
       "total_shows": 8,
       "competition_dog_id": null
@@ -153,7 +162,7 @@
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "BORDER COLLIE",
-      "total_shows": 22,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -189,7 +198,7 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -234,7 +243,25 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 42,
+      "total_shows": 44,
+      "competition_dog_id": null
+    },
+    {
+      "id": "119340958",
+      "name_lat": "DUETTO TANTO IMPERIA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ БОКСЕР",
+      "breed_en": "BOXER BRINDLE",
+      "total_shows": 19,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1533432259",
+      "name_lat": "DUKH KOTLIS GWINEVRA",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
+      "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -247,12 +274,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "75135682",
-      "name_lat": "DURANTE VITA REVOLUTION",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
+      "id": "268196984",
+      "name_lat": "DUENO DEL ALMA NEMESIDA DOCH OKEANA",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА НЕМЕСИДА ДОЧЬ ОКЕАНА",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -261,7 +288,16 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, РЫЖИЙ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "75135682",
+      "name_lat": "DURANTE VITA REVOLUTION",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -274,19 +310,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "541791625",
+      "id": "1456802861",
       "name_lat": "DUBBI ASGAR ELIZAR",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1803406507",
+      "id": "1834924355",
       "name_lat": "DU'CHELIEU GRANDE INGRID",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -312,10 +348,10 @@
     {
       "id": "1541300141",
       "name_lat": "DUENO DEL ALMA VARYAG",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ВАРЯГ",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -323,8 +359,7 @@
       "name_lat": "DUH SVOBODY EDELWEIS",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -337,12 +372,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "357834974",
+      "id": "1102458343",
       "name_lat": "DUBBI ASGAR CHIKA",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "748896522",
+      "name_lat": "DURANTE VITA ALONSO",
+      "name_ru": "ДУРАНТЕ ВИТА АЛОНСО",
+      "breed": "УИППЕТ",
+      "breed_en": "WHIPPET",
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -352,15 +396,6 @@
       "breed": "БАВАРСКАЯ ГОРНАЯ ГОНЧАЯ",
       "breed_en": "BAVARIAN MOUNTAIN SCENT HOUND",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1533432259",
-      "name_lat": "DUKH KOTLIS GWINEVRA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
-      "breed_en": "DEUTSCHE DOGGE FAWN, BRINDLE",
-      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -391,12 +426,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "268196984",
-      "name_lat": "DUENO DEL ALMA NEMESIDA DOCH OKEANA",
+      "id": "1072122796",
+      "name_lat": "DUFREY DEVILLE ARMAGEDDON",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 5,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -436,6 +470,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "631883536",
+      "name_lat": "DURAN DURAN IZ PRIMORSKOY STAI",
+      "name_ru": "",
+      "breed": "MINIATURE SMOOTH-HAIRED ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1046980621",
       "name_lat": "DUBBI ASGAR MLYUSYA",
       "name_ru": "",
@@ -454,6 +496,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "236436856",
+      "name_lat": "DUENOS DA LA VIDA POSITIVE",
+      "name_ru": "",
+      "breed": "ПРЕСА КАНАРИО",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "625255119",
       "name_lat": "DUO TALENTA ENDI",
       "name_ru": "",
@@ -463,12 +514,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1288400236",
+      "id": "10476",
       "name_lat": "DUSHA SEVERA ELENA PREKRASNAYA",
       "name_ru": "",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "RUSSKAYA PSOVAYA BORZAYA (BORZOI)",
       "total_shows": 15,
+      "competition_dog_id": 10476
+    },
+    {
+      "id": "1337106202",
+      "name_lat": "DURANTE VITA NEW HIT",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -481,30 +541,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1337106202",
-      "name_lat": "DURANTE VITA NEW HIT",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1666298067",
+      "id": "462516026",
       "name_lat": "DUCKHILLS PIX NORDIC KING OF JINGLE",
       "name_ru": "",
-      "breed": "КОЙКЕРХОНДЬЕ /",
+      "breed": "КОЙКЕРХОНДЬЕ",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "868113000",
-      "name_lat": "DUENDE ALANTA EAGLE WING",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МОСКОВСКАЯ",
-      "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -513,16 +555,16 @@
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "WHIPPET",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "598109428",
-      "name_lat": "DUENOS DA LA VIDA POSITIVE",
+      "id": "812106010",
+      "name_lat": "DUENDE ALANTA EAGLE WING",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) /",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
+      "breed_en": "DACHSHUND STANDARD LONG-HAIRED",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -531,6 +573,24 @@
       "name_ru": "",
       "breed": "ПРЕСА КАНАРИО",
       "breed_en": "PRESA CANARIO",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "323145737",
+      "name_lat": "DUNNOTTAR IZ SIBIRSKOGO KNYAJESTVA",
+      "name_ru": "",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1111273956",
+      "name_lat": "DUENOS DE LA VIDA POSITIVE",
+      "name_ru": "",
+      "breed": "ПРЕСА КАНАРИО",
+      "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
@@ -540,7 +600,7 @@
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "DOBERMANN",
-      "total_shows": 16,
+      "total_shows": 17,
       "competition_dog_id": null
     },
     {
@@ -562,12 +622,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1255776110",
+      "id": "1326148791",
       "name_lat": "DUBBI ASGAR SHIKA",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1194009119",
+      "name_lat": "DURANTE VITA DIZAYN",
+      "name_ru": "ДУРАНТЕ ВИТА ДИЗАЙН",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -598,21 +667,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1723880068",
+      "id": "1293943601",
       "name_lat": "DUBBI ASGAR ARMANI GOLD",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "748896522",
-      "name_lat": "DURANTE VITA ALONSO",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "WHIPPET",
-      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -625,15 +685,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "323145737",
-      "name_lat": "DUNNOTTAR IZ SIBIRSKOGO KNYAJESTVA",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1849717286",
       "name_lat": "DUZHIY HLOPETS VAN'KA KUCHERYAVYI MAGIC MUSIC",
       "name_ru": "",
@@ -641,6 +692,15 @@
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
+    },
+    {
+      "id": "776",
+      "name_lat": "DUSHECHKA-KRASA IZ DOMA ALANTES",
+      "name_ru": "ДУШЕЧКА-КРАСА ИЗ ДОМА АЛАНТЕС",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "IRISH TERRIER",
+      "total_shows": 8,
+      "competition_dog_id": 776
     },
     {
       "id": "1568936999",
@@ -652,19 +712,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "237510645",
-      "name_lat": "DUENOS DE LA VIDA POSITIVE",
-      "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (Канарский Дог)",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1880601465",
+      "id": "1607871149",
       "name_lat": "DUBROVSKAYA ART TEQUILA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -688,10 +739,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1446235603",
+      "id": "1159794338",
       "name_lat": "DUCKHILLS PIX NORDIC KING OF JANGLE",
       "name_ru": "",
-      "breed": "ГОЛЛАНДСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "КОЙКЕРХОНДЬЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -702,7 +753,7 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -715,12 +766,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "506716761",
+      "name_lat": "DUENO DEL ALMA EST TAKOY PAREN",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ЕСТЬ ТАКОЙ ПАРЕНЬ",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "breed_en": "DOGO ARGENTINO",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1283904313",
       "name_lat": "DUSHECHKA MILANIYA",
       "name_ru": "",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1781361365",
+      "name_lat": "DUENO DEL ALMA SHOPEN MUZYKANT",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ШОПЕН МУЗЫКАНТ",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "breed_en": "DOGO ARGENTINO",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -742,13 +811,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "776",
-      "name_lat": "DUSHECHKA-KRASA IZ DOMA ALANTES",
+      "id": "1888658441",
+      "name_lat": "DULSINEYA",
       "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "IRISH TERRIER",
+      "breed": "НЕМЕЦКИЙ ШПИЦ МАЛЫЙ",
       "total_shows": 2,
-      "competition_dog_id": 776
+      "competition_dog_id": null
+    },
+    {
+      "id": "1698705838",
+      "name_lat": "DUNAY",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
+      "total_shows": 3,
+      "competition_dog_id": null
     },
     {
       "id": "1562854112",
@@ -762,10 +838,10 @@
     {
       "id": "1588339743",
       "name_lat": "DUENO DEL ALMA ILLIADA",
-      "name_ru": "",
+      "name_ru": "ДУЕНО ДЕЛ АЛМА ИЛЛИАДА",
       "breed": "АРГЕНТИНСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -787,10 +863,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "354433260",
+      "id": "706986488",
       "name_lat": "DUSHECHKA UNIKS LINE",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -814,10 +890,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "560801212",
+      "id": "783044201",
+      "name_lat": "DULSINEYA",
+      "name_ru": "",
+      "breed": "GERMAN",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "213357240",
       "name_lat": "DUO TALENTA ENDY",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -841,6 +925,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1093843988",
+      "name_lat": "Dueno Del Alma Prima Alpiyskiy Tsvetok",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "330003593",
       "name_lat": "Duchesse le Vent De Tauris",
       "name_ru": "",
@@ -850,11 +943,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1860789691",
-      "name_lat": "Dueno Del Alma Prima Alpiyskiy Tsvetok",
+      "id": "1529436671",
+      "name_lat": "DUKE OF MY HEART IZ GORNOGO KRAYA",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ БУЛЬДОГ",
-      "breed_en": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -874,6 +966,14 @@
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "645337738",
+      "name_lat": "DUENO DEL ALMA MELODIYA LYUBVI",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ ДОГ БУЛЬДОГ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -913,12 +1013,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "27959030",
+      "id": "44427088",
       "name_lat": "DUKAT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1027865449",
+      "name_lat": "DUVINAL VIADORA VILADJA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -931,19 +1040,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "194981972",
+      "id": "2000051969",
       "name_lat": "DUBBI ASGAR BORN TO BE A STAR",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "398851983",
+      "id": "1122059419",
       "name_lat": "DUSENKA-MARUSENKA IZ ZIMNIH GREZ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -955,24 +1064,6 @@
       "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "THAI RIDGEBACK DOG",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1027865449",
-      "name_lat": "DUVINAL VIADORA VILADJA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "679700079",
-      "name_lat": "DUETTO TANTO IMPERIA",
-      "name_ru": "",
-      "breed": "БОКСЕР ТИГРОВЫЙ",
-      "breed_en": "BOXER BRINDLE",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -994,21 +1085,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "353459587",
+      "name_lat": "DURANTE VITA SHOW MUST GO ON",
+      "name_ru": "",
+      "breed": "УИППЕТ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "1841350723",
       "name_lat": "DUSHA KAVKAZA ASTON MARTIN",
       "name_ru": "",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "754975719",
+      "id": "452918438",
       "name_lat": "DUBBI ASGAR CHIAKI",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1021,12 +1121,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "353459587",
-      "name_lat": "DURANTE VITA SHOW MUST GO ON",
+      "id": "972646276",
+      "name_lat": "DUKHOUSE BEAUTIFUL WOLF",
       "name_ru": "",
-      "breed": "УИППЕТ",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1035,16 +1135,16 @@
       "name_ru": "",
       "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 18,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "995893193",
+      "id": "443072084",
       "name_lat": "DUSIT THAIRIDGEBACK KAO SAN",
       "name_ru": "",
-      "breed": "ТАЙСКИЙ РИДЖБЕК /",
+      "breed": "ТАЙСКИЙ РИДЖБЕК",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1057,19 +1157,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1976510727",
+      "id": "960357549",
       "name_lat": "DURANT KIDDY WIN'S",
       "name_ru": "",
-      "breed": "ЮЖНОРУССКАЯ БУЛЬДОГ",
+      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
       "breed_en": "BULLDOG",
-      "total_shows": 4,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "474715973",
+      "id": "119571497",
+      "name_lat": "DUSHEVNYY DZHONNI",
+      "name_ru": "ДУШЕВНЫЙ ДЖОННИ",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1885026337",
       "name_lat": "DURON SUPERIOR WORLD (MINI)",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1111,12 +1220,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "972646276",
-      "name_lat": "DUKHOUSE BEAUTIFUL WOLF",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "id": "900590090",
+      "name_lat": "DURANTE VITA TSELESTINA OBVOROZHITELNAYA",
+      "name_ru": "ДУРАНТЕ ВИТА ЦЕЛЕСТИНА ОБВОРОЖИТЕЛЬНАЯ",
+      "breed": "УИППЕТ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1548985182",
+      "name_lat": "DUNYASHA IZ LUNNOGO SADA",
+      "name_ru": "ДУНЯША ИЗ ЛУННОГО САДА",
+      "breed": "КЕРН ТЕРЬЕР",
+      "breed_en": "CAIRN TERRIER",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1129,10 +1247,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "29037094",
+      "id": "1115296799",
       "name_lat": "DUMM DUMM ROYAL OF FRANCE EDDY",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1174,19 +1292,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "376574058",
+      "id": "1462038148",
+      "name_lat": "DUSHECHKA JEAN MICHELLE",
+      "name_ru": "",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1128244923",
       "name_lat": "DUBBI ASGAR ALAN",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "87280165",
+      "id": "377549093",
       "name_lat": "DUTCH CONSOLIDATION QUADRILLE",
       "name_ru": "",
-      "breed": "ГОЛЛАНДСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1201,10 +1328,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "812658688",
+      "id": "1574440388",
       "name_lat": "DUENOS DA LA BIDA POSITIVE",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) /",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1237,19 +1364,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1462038148",
-      "name_lat": "DUSHECHKA JEAN MICHELLE",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1800393596",
+      "id": "816511571",
       "name_lat": "DUSTIN VOM ARIOVIST",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
@@ -1332,7 +1450,7 @@
       "name_ru": "",
       "breed": "БОКСЕР ТИГРОВЫЙ",
       "breed_en": "BOXER",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -1342,6 +1460,15 @@
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "281763055",
+      "name_lat": "D’ULIN HOUSE SAPPHIRE PRINCESS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -1381,10 +1508,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "130484499",
+      "id": "753024402",
       "name_lat": "DU'CHELIEU GRANDE DARIANA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1408,10 +1535,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "840586528",
+      "id": "234127349",
       "name_lat": "DUVINAL ZIRLI ZEVINA",
       "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1435,10 +1562,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "805312240",
+      "id": "1794995141",
       "name_lat": "DURALEX POLONIA HONOLULU",
       "name_ru": "",
-      "breed": "Доберман /",
+      "breed": "Доберман",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1453,10 +1580,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1932299365",
+      "id": "1777194488",
       "name_lat": "DUKH KOTLIS AYSEDORA",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ /",
+      "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1579,15 +1706,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "119571497",
-      "name_lat": "DUSHEVNYY DZHONNI",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "117740012",
       "name_lat": "DUVINAL MEDERIKA MIRANZA",
       "name_ru": "",
@@ -1606,10 +1724,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "226476573",
+      "id": "79216576",
       "name_lat": "DUBBI ASGAR ARISTOKRATKA",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -1642,10 +1760,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1325509020",
+      "id": "1662008001",
       "name_lat": "DUENOS DE LA VIDA STYLISH LADY",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) / PRESA",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1669,12 +1787,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "738841632",
+      "name_lat": "DUVINAL YARDENA YANSI (Изменено по решению ВК от 26.03.2026, в. 12)",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "598913855",
       "name_lat": "DUSTIN HOFFMAN",
       "name_ru": "",
       "breed": "ЧИХУАХУА К-Ш",
       "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "359783250",
+      "name_lat": "DUSHA ENISEYA ASTRID",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1714,30 +1850,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "359783250",
-      "name_lat": "DUSHA ENISEYA ASTRID",
+      "id": "1180175712",
+      "name_lat": "DURANTE VITA OPERA QUEEN",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "900590090",
-      "name_lat": "DURANTE VITA TSELESTINA OBVOROZHITELNAYA",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
+      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "1659930339",
       "name_lat": "DULSINEYA FAYER STAR",
-      "name_ru": "",
+      "name_ru": "ДУЛЬСИНЕЯ ФАЙЕР СТАР",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "RUSSKIY OHOTNICHIY SPANIEL (RUSSIAN HUNTING SPANIEL)",
-      "total_shows": 1,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1750,19 +1876,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "755621346",
+      "id": "316551055",
       "name_lat": "DURANTE VITA PREMIERE APPLAUSE",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1573225339",
+      "id": "1956512655",
       "name_lat": "DUBRAVUSHKA IZ GRADA PETROVA",
       "name_ru": "",
-      "breed": "РУССКИЙ ЧЁРНЫЙ ТЕРЬЕР",
+      "breed": "РУССКИЙ ЧЕРНЫЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1795,30 +1921,21 @@
       "competition_dog_id": null
     },
     {
+      "id": "1005731470",
+      "name_lat": "DUFFY CO FROM MOONSHOT",
+      "name_ru": "",
+      "breed": "ЛАГОТТО РОМАНЬОЛО",
+      "breed_en": "ROMAGNA WATER DOG (LAGOTTO ROMAGNOLO)",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "835656475",
       "name_lat": "DUETTO TANTO KSORA",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ БОКСЕР",
       "breed_en": "BOXER",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1390675614",
-      "name_lat": "DUSHA MOYA ALENUSHKA",
-      "name_ru": "",
-      "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
-      "breed_en": "IRISH WOLFHOUND",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1435571160",
-      "name_lat": "DUVINAL YARDENA YANSI",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "",
-      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1867,37 +1984,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1194009119",
-      "name_lat": "DURANTE VITA DIZAYN",
-      "name_ru": "",
-      "breed": "УИППЕТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1518513334",
-      "name_lat": "DUVINAL SANDR STILLER",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1121016231",
       "name_lat": "DUSTIN HOFFMAN BULL ESQUIRE",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
       "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "222214575",
+      "name_lat": "DUVINAL SANDR STILLER",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "16345494",
+      "id": "67814927",
       "name_lat": "DUNAY DIVNIY KRASAVETS",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1921,19 +2029,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1788378977",
+      "id": "690134274",
       "name_lat": "DUNJA VON DER WALDESRUH",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1976807293",
+      "id": "1486242720",
       "name_lat": "DUBBI ASGAR ARYA",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -1966,6 +2074,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1945579443",
+      "name_lat": "DUCHESS",
+      "name_ru": "",
+      "breed": "ЭРДЕЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "823490037",
       "name_lat": "DULSINEA",
       "name_ru": "",
@@ -1984,37 +2101,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1945579443",
-      "name_lat": "DUCHESS",
-      "name_ru": "",
-      "breed": "ЭРДЕЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1493541501",
+      "id": "41919925",
       "name_lat": "DUENDE ALANTA AFRODITA",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1000102567",
+      "id": "1368381798",
       "name_lat": "DU BOIS DE COMPIEGNE",
       "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "689095422",
+      "id": "1632490887",
       "name_lat": "DUCHESSE DEKSILEN’S",
       "name_ru": "",
-      "breed": "DACHSHUND ZWERG RAUHHAAR ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ /",
+      "breed": "DACHSHUND ZWERG RAUHHAAR ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2029,15 +2137,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1548985182",
-      "name_lat": "DUNYASHA IZ LUNNOGO SADA",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "CAIRN TERRIER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "91402839",
       "name_lat": "DUVINAL MACHIKO MAGNUS",
       "name_ru": "",
@@ -2047,10 +2146,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1989020117",
+      "id": "1497089765",
       "name_lat": "DUVINAL BARRENA BICCHI",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД ПИНЧЕР",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2065,12 +2164,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1005731470",
-      "name_lat": "DUFFY CO FROM MOONSHOT",
+      "id": "1630836373",
+      "name_lat": "DUFREY DEVILLE APHRODISIAC",
       "name_ru": "",
-      "breed": "ЛАГОТТО РОМАНЬОЛО",
-      "breed_en": "ROMAGNA WATER DOG (LAGOTTO ROMAGNOLO)",
-      "total_shows": 4,
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "breed_en": "FRENCH BULLDOG",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2083,10 +2182,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "362558647",
+      "id": "1337522683",
       "name_lat": "DUENOS DE LA VIDA LILU",
       "name_ru": "",
-      "breed": "ПРЕСА КАНАРИО (КАНАРСКИЙ ДОГ) /",
+      "breed": "ПРЕСА КАНАРИО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2173,10 +2272,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "703037807",
+      "id": "1777766411",
       "name_lat": "DUSENKA-MARUSENKAIZ ZIMNIH GREZ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2245,28 +2344,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1450890478",
+      "id": "1237929527",
       "name_lat": "DUQUESA DO SUMAUMA",
       "name_ru": "",
-      "breed": "БРАЗИЛЬСКИЙ ФИЛА /",
+      "breed": "БРАЗИЛЬСКИЙ ФИЛА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "382801790",
+      "id": "663295495",
       "name_lat": "DUBBI ASGAR VESTA",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "983700611",
+      "id": "907108202",
       "name_lat": "DUKHOUSE BEAUTIFU L WOLF",
       "name_ru": "",
-      "breed": "АКИТА /",
+      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2389,10 +2488,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1702240128",
+      "id": "1894652373",
       "name_lat": "DUNAY S BERG SHTROM",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ /",
+      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2412,7 +2511,7 @@
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2443,10 +2542,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1508141510",
+      "id": "409226303",
       "name_lat": "DUNNOTAR IZ SIBIRSKOGO KNYAJESTVA",
       "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ /",
+      "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2479,24 +2578,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "786991354",
-      "name_lat": "Dubravy Аврорас Мун Амейзинг",
-      "name_ru": "",
-      "breed": "ДАЛМАТИН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1679225853",
-      "name_lat": "DUVINAL YARDENA YANSI (Изменено по решению ВК от 26.03.2026, в. 12)",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "121199932",
       "name_lat": "DU CLOS DE SEA-",
       "name_ru": "",
@@ -2506,10 +2587,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "191438190",
-      "name_lat": "DUNKAN DONBASS- MASTER",
+      "id": "786991354",
+      "name_lat": "Dubravy Аврорас Мун Амейзинг",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ДАЛМАТИН",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "897362595",
+      "name_lat": "DUNKAN DONBASS-MASTER",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2524,10 +2614,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "130803507",
+      "id": "1596137370",
       "name_lat": "DUDU SHERI",
       "name_ru": "",
-      "breed": "ФРИЗЕ /",
+      "breed": "ФРИЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2569,10 +2659,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "293779620",
+      "id": "609872512",
+      "name_lat": "D'ULIN HOUSE ESME TWILAIT STAR",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "742058608",
       "name_lat": "DUKH KOTLIS BRIGITTE BARDOT",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -2587,10 +2686,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1872818994",
+      "id": "177181363",
       "name_lat": "DUBBI ASGAR ARNI",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2614,10 +2713,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "144997352",
+      "id": "1275729045",
       "name_lat": "DUSHA MOYA LUBAVA IZ GRADA BELYKH BEREZ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2632,6 +2731,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1662623449",
+      "name_lat": "DU HAST MICH VOM MAIR HOF",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "762538688",
+      "name_lat": "DUENO DEL ALMA NUT JAM",
+      "name_ru": "",
+      "breed": "АРГЕНТИНСКИЙ ДОГ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1506722720",
       "name_lat": "DUSIT THAI RIDGEBACK ANGUN DAM DAM",
       "name_ru": "",
@@ -2641,20 +2757,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "162081363",
-      "name_lat": "DUVINAL DAGMAR DAMIANA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
-      "breed_en": "MINIATURE PINSCHER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "572929741",
       "name_lat": "DUGLAS ALVITAS GENMAX",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "BULLDOG",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "162081363",
+      "name_lat": "DUVINAL DAGMAR DAMIANA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "MINIATURE PINSCHER",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2677,15 +2793,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1209505954",
-      "name_lat": "DU HAST MICH VOM MAIR HOF",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "707754509",
       "name_lat": "DUBBI ASGAR BITEG",
       "name_ru": "",
@@ -2704,10 +2811,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1072122796",
-      "name_lat": "DUFREY DEVILLE ARMAGEDDON",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "id": "1949524715",
+      "name_lat": "DUA LIPA DISKO STILYA",
+      "name_ru": "ДУА ЛИПА ДИСКО СТИЛЯ",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2718,15 +2825,6 @@
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "506716761",
-      "name_lat": "DUENO DEL ALMA EST TAKOY PAREN",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "DOGO ARGENTINO",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2803,15 +2901,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1781361365",
-      "name_lat": "DUENO DEL ALMA SHOPEN MUZYKANT",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "DOGO ARGENTINO",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1065550700",
       "name_lat": "DUKE OF CAMBRIDGE",
       "name_ru": "",
@@ -2884,20 +2973,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1949524715",
-      "name_lat": "DUA LIPA DISKO STILYA",
+      "id": "831216045",
+      "name_lat": "DUKH KOTLIS VYSOTSKY",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ / GREAT DANE BLACK, HARLEKIN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "133164569",
-      "name_lat": "DUKH KOTLIS VYSOTSKY",
+      "id": "1484630930",
+      "name_lat": "DUBBI ASGAR TSAYGER",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ / GREAT DANE BLACK, HARLEKIN",
-      "breed_en": "",
+      "breed": "МОПС",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2907,6 +2995,23 @@
       "name_ru": "",
       "breed": "МОПС",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1057122435",
+      "name_lat": "DULCINEA IZ TSVETNIKA",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ (ГЛАДКОШЕРСТНЫЙ)",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "182559272",
+      "name_lat": "DUNE IZ BELOY BRIGADY",
+      "name_ru": "",
+      "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2974,10 +3079,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1622045794",
+      "id": "1860712350",
       "name_lat": "DUBLIN",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3028,6 +3133,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1427755942",
+      "name_lat": "DUVINAL ZEUS ZAKIR",
+      "name_ru": "",
+      "breed": "MINIATURE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1164462642",
       "name_lat": "DUBRAVA IZ TSARSKOSELSKOY USADBY",
       "name_ru": "",
@@ -3069,15 +3183,6 @@
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ, СЕРЫЙ",
       "breed_en": "POODLE MINIATURE FAWN, GREY",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1630836373",
-      "name_lat": "DUFREY DEVILLE APHRODISIAC",
-      "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "FRENCH BULLDOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3136,28 +3241,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "898400133",
+      "id": "9764",
       "name_lat": "DULCE BAYA DE NAQHI (STAND.)",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ (СТАНДАРТНЫЙ)",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
       "breed_en": "XOLOITZCUINTLE (STANDARD)",
       "total_shows": 1,
-      "competition_dog_id": null
+      "competition_dog_id": 9764
     },
     {
-      "id": "1427755942",
-      "name_lat": "DUVINAL ZEUS ZAKIR",
-      "name_ru": "",
-      "breed": "MINIATURE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1096087686",
+      "id": "1829238146",
       "name_lat": "DUNASTIE FROM HOUSE VAISING",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3181,10 +3277,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "516560221",
+      "id": "46964034",
       "name_lat": "DUCHESS LEGENDA ELTIGENA",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3208,19 +3304,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1032379035",
+      "id": "1995044818",
       "name_lat": "DUBBI ASGAR ELKA",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1728502669",
+      "id": "1711581168",
       "name_lat": "DUBBI ASGAR TSUBAKI",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ /",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3316,10 +3412,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1729774720",
+      "id": "1519798444",
       "name_lat": "DUNNASID BLACK TEMPTATION",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3388,15 +3484,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "199444168",
-      "name_lat": "DULCINEA IZ TSVETNIKA",
-      "name_ru": "",
-      "breed": "МОПС РУССКИЙ ТОЙ (ГЛАДКОШЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1578938553",
       "name_lat": "DUSHI OTRADA MYSHKA NORUSHKA",
       "name_ru": "",
@@ -3406,10 +3493,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "779367491",
+      "id": "785312703",
       "name_lat": "DUNE VOM WOLFSHOF",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3442,19 +3529,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "408150817",
+      "id": "348968989",
       "name_lat": "DUKH KOTLIS DIAHANN",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "767244448",
+      "id": "1040712430",
       "name_lat": "DUBROVSKAYA ART SUPER-PUPER",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3469,11 +3556,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "436227182",
-      "name_lat": "DUENO DEL ALMA NUT JAM",
+      "id": "1236109962",
+      "name_lat": "DUSHISTAYA IZ DOMA DUVAL",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙДОГ",
-      "breed_en": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
       "total_shows": 1,
       "competition_dog_id": null
     }

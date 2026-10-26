@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "WD",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "896930077",
+      "name_lat": "W-DREAM MASTER OF WINNERS VALLEY ХЕППИХАРТ БИЭР",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1372550174",
+      "name_lat": "W-DAGO DEL CAKIC",
+      "name_ru": "",
+      "breed": "Немецкий курцхаар",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1318437415",
+      "name_lat": "W.D.O'LALA DETONATOR",
+      "name_ru": "",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "breed_en": "WEST HIGHLAND WHITE TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

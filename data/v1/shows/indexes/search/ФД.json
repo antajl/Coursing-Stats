@@ -1,0 +1,34 @@
+{
+  "schema": "coursing-stats/show-search-v1",
+  "prefix": "ФД",
+  "count": 3,
+  "dogs": [
+    {
+      "id": "997786454",
+      "name_lat": "ФДЕЛИС КОРДЕ БОМОНТ",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1211208925",
+      "name_lat": "Ф-ДЖОЯ ЗАРАВШАН",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1034187652",
+      "name_lat": "ФДЁР ДЕ РОЗ УНА БЕЛЛА МИА",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    }
+  ]
+}

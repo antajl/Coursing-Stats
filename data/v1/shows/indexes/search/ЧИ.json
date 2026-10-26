@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЧИ",
-  "count": 932,
+  "count": 913,
   "dogs": [
     {
-      "id": "604098763",
+      "id": "1778647710",
       "name_lat": "ЧИБСТЕН НАРНИЯ",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "name_ru": "ЧИБСТЕН НАРНИЯ",
+      "breed": "ЙОРКШИРСКИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "947781736",
+      "name_lat": "ЧИСТЫЙ БРИЛЛИАНТ ИЗ СТАРОЙ ШУИ",
+      "name_ru": "ЧИСТЫЙ БРИЛЛИАНТ ИЗ СТАРОЙ ШУИ",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
+      "total_shows": 35,
       "competition_dog_id": null
     },
     {
@@ -18,13 +27,13 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 35,
+      "total_shows": 36,
       "competition_dog_id": null
     },
     {
       "id": "1744452857",
       "name_lat": "ЧИГРАН ЭРМОСО",
-      "name_ru": "",
+      "name_ru": "ЧИГРАН ЭРМОСО",
       "breed": "МАЙОРКСКИЙ МАСТИФ (КА ДЕ БО)",
       "breed_en": "",
       "total_shows": 24,
@@ -36,14 +45,23 @@
       "name_ru": "",
       "breed": "ХОРТАЯ БОРЗАЯ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1041389851",
-      "name_lat": "ЧИЛИМГУР ХАЛВА",
+      "id": "1607935700",
+      "name_lat": "ЧИКСА ИЗ ХОРОВОДА ЗВЕЗД",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "470141379",
+      "name_lat": "ЧИППА ИПЬЮДЕНТ СТЕП",
+      "name_ru": "ЧИППА ИПЬЮДЕНТ СТЕП",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -58,30 +76,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "897563465",
+      "id": "1359294925",
       "name_lat": "ЧИЛАУТ ИЗ СТРАНЫ СНЕГОВ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1607935700",
-      "name_lat": "ЧИКСА ИЗ ХОРОВОДА ЗВЕЗД",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
+      "id": "442602940",
+      "name_lat": "ЧИЛИМГУР ЭВИТА",
+      "name_ru": "ЧИЛИМГУР ЭВИТА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "698157011",
-      "name_lat": "ЧИППА ИПЬЮДЕНТ СТЕП",
+      "id": "481131520",
+      "name_lat": "ЧИНЗАНО ПЕРФЕКТ УАН (М.БР)",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -94,27 +112,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "947781736",
-      "name_lat": "ЧИСТЫЙ БРИЛЛИАНТ ИЗ СТАРОЙ ШУИ",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "CONTINENTAL TOY SPANIEL PAPILLON",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
       "id": "1314572566",
       "name_lat": "ЧИНШОУ КАЙСО",
-      "name_ru": "",
+      "name_ru": "ЧИНШОУ КАЙСО",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
     },
     {
+      "id": "274412373",
+      "name_lat": "ЧИКОО ВЕСЁЛЫЙ ГРЕМЛИН",
+      "name_ru": "ЧИКОО ВЕСЁЛЫЙ ГРЕМЛИН",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "1380150470",
       "name_lat": "ЧИФ РОЯЛ АКБЭР САПФИРА",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР САПФИРА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 7,
@@ -123,17 +141,17 @@
     {
       "id": "1325763727",
       "name_lat": "ЧИНГИС ХАН ТИБЕТ'С ХЕРИТЕЙДЖ",
-      "name_ru": "",
+      "name_ru": "ЧИНГИС ХАН ТИБЕТ'С ХЕРИТЕЙДЖ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "775964084",
+      "id": "312191713",
       "name_lat": "ЧИКИ ЭНЖЕЛ ФАНФАН ТЮЛЬПАН",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -141,55 +159,46 @@
     {
       "id": "1796535176",
       "name_lat": "ЧИНЗАНА ИЗ СТЕПНОГО АЛТАЯ",
-      "name_ru": "",
+      "name_ru": "ЧИНЗАНА ИЗ СТЕПНОГО АЛТАЯ",
       "breed": "ОХОТНИЧИЙ ТЕРЬЕР (ЯГДТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "274412373",
-      "name_lat": "ЧИКОО ВЕСЁЛЫЙ ГРЕМЛИН",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
+      "id": "360561343",
+      "name_lat": "ЧИКИ МОНИ ЕЛИЗАВЕТА",
+      "name_ru": "ЧИКИ МОНИ ЕЛИЗАВЕТА",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "167953281",
-      "name_lat": "ЧИПОЛЛИНО С ДВИНЫ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "815930045",
-      "name_lat": "ЧИМГИ ТУРА РОКСОЛАНА",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
-      "breed_en": "YAKUTSKAYA LAIKA (YAKUTIAN LAIKA)",
-      "total_shows": 29,
-      "competition_dog_id": null
-    },
-    {
-      "id": "668151723",
+      "id": "194302844",
       "name_lat": "ЧИЛЬДА ФОМ МАИР ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЧИЛЬДА ФОМ МАИР ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "859608721",
+      "name_lat": "ЧИПОЛЛИНО С ДВИНЫ",
+      "name_ru": "ЧИПОЛЛИНО С ДВИНЫ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1871382892",
+      "name_lat": "ЧИКА БОМБ ИЗ ДОМА КОРОЛЕВОЙ НБТ",
+      "name_ru": "ЧИКА БОМБ ИЗ ДОМА КОРОЛЕВОЙ НБТ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "178725757",
-      "name_lat": "ЧИКА БОМБ ИЗ ДОМА КОРОЛЁВОЙ",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
-      "breed_en": "",
-      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -211,28 +220,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "658613739",
-      "name_lat": "ЧИЛИМГУР ЭВИТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "481131520",
-      "name_lat": "ЧИНЗАНО ПЕРФЕКТ УАН (М.БР)",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "596017509",
+      "id": "142031647",
       "name_lat": "ЧИНГИЗ ИЗ РУССКОЙ ЗВЕЗДЫ",
-      "name_ru": "",
-      "breed": "ХОТОШО (БУРЯТСКАЯ СОБАКА)",
+      "name_ru": "ЧИНГИЗ ИЗ РУССКОЙ ЗВЕЗДЫ",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ХОТОШО (БУРЯТСКАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -247,18 +238,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "360561343",
-      "name_lat": "ЧИКИ МОНИ ЕЛИЗАВЕТА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
       "id": "1978684286",
       "name_lat": "ЧИКАГО ИЗ КОРОЛЕВСТВА АННЫ",
-      "name_ru": "",
+      "name_ru": "ЧИКАГО ИЗ КОРОЛЕВСТВА АННЫ",
       "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
@@ -267,7 +249,7 @@
     {
       "id": "5059274",
       "name_lat": "ЧИРЕЛЛИ БУГАТТИ",
-      "name_ru": "",
+      "name_ru": "ЧИРЕЛЛИ БУГАТТИ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 20,
@@ -276,7 +258,7 @@
     {
       "id": "303122407",
       "name_lat": "ЧИСТОЕ ЗОЛОТО ВИВЬЕН",
-      "name_ru": "",
+      "name_ru": "ЧИСТОЕ ЗОЛОТО ВИВЬЕН",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 9,
@@ -285,17 +267,17 @@
     {
       "id": "593749850",
       "name_lat": "ЧИКИ ЭНЖЕЛ ГОЛДИЛОКС",
-      "name_ru": "",
+      "name_ru": "ЧИКИ ЭНЖЕЛ ГОЛДИЛОКС",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "994827022",
+      "id": "108722263",
       "name_lat": "ЧИНЦИЯ ФОМ ХАУС ЭРФЮЛЮНГЕН ВЮНШЕН",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН /",
+      "name_ru": "ЧИНЦИЯ ФОМ ХАУС ЭРФЮЛЮНГЕН ВЮНШЕН",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
@@ -303,25 +285,16 @@
     {
       "id": "59358283",
       "name_lat": "ЧИП ШОКОЛЭЙД ЮНИВЕРС",
-      "name_ru": "",
+      "name_ru": "ЧИП ШОКОЛЭЙД ЮНИВЕРС",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1343276653",
-      "name_lat": "ЧИБСТЕН НОУ ХАУ (Изменено по решению ВК от 19.02.2025 В. 42)",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
       "id": "553068926",
       "name_lat": "ЧИЛИМГУР ЛАДИСЛАВ",
-      "name_ru": "",
+      "name_ru": "ЧИЛИМГУР ЛАДИСЛАВ",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 4,
@@ -330,10 +303,19 @@
     {
       "id": "393191480",
       "name_lat": "ЧИХОКЛАБ ШЕЗЭМ",
-      "name_ru": "",
+      "name_ru": "ЧИХОКЛАБ ШЕЗЭМ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1029628712",
+      "name_lat": "ЧИНГИСХАН ЗАВОЕВАТЕЛЬ МИРА",
+      "name_ru": "ЧИНГИСХАН ЗАВОЕВАТЕЛЬ МИРА",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -348,34 +330,61 @@
     {
       "id": "1863302657",
       "name_lat": "ЧИРОКОС АСУНА",
-      "name_ru": "",
+      "name_ru": "ЧИРОКОС АСУНА",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
+      "id": "1530762431",
+      "name_lat": "ЧИЛИМГУР ЯХА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1406653109",
+      "name_lat": "ЧИККОНЕ ЛУИЗА ИРИСС ДЕЛЮКС",
+      "name_ru": "ЧИККОНЕ ЛУИЗА ИРИСС ДЕЛЮКС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 92,
+      "competition_dog_id": null
+    },
+    {
       "id": "406844180",
       "name_lat": "Чилеста Рейна",
-      "name_ru": "",
+      "name_ru": "ЧИЛЕСТА РЕЙНА",
       "breed": "МАЙОРКСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "433383878",
+      "id": "607916229",
       "name_lat": "ЧИЛИ ИЗ ФОРТУНА МЕРДИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЧИЛИ ИЗ ФОРТУНА МЕРДИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "896720986",
+      "name_lat": "ЧИБСТЕН НОУ ХАУ",
+      "name_ru": "ЧИБСТЕН НОУ ХАУ",
+      "breed": "СКОТЧ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "373421521",
       "name_lat": "ЧИНШОУ ТИНА ТИН",
-      "name_ru": "",
+      "name_ru": "ЧИНШОУ ТИНА ТИН",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -384,7 +393,7 @@
     {
       "id": "242509385",
       "name_lat": "ЧИЛИ С СОБЕРБАШ",
-      "name_ru": "",
+      "name_ru": "ЧИЛИ С СОБЕРБАШ",
       "breed": "ТОЙ-ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
@@ -400,12 +409,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1904455977",
+      "name_lat": "ЧИКА НОРА ИЗ ДОМА МИРОСЛАВА",
+      "name_ru": "ЧИКА НОРА ИЗ ДОМА МИРОСЛАВА",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1192002841",
       "name_lat": "ЧИРОКОС АМУРЧИК",
-      "name_ru": "",
+      "name_ru": "ЧИРОКОС АМУРЧИК",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "117031578",
+      "name_lat": "ЧИО-ЧИО-САН",
+      "name_ru": "",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -456,44 +482,17 @@
     {
       "id": "162670479",
       "name_lat": "ЧИНГИЗХАН ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
-      "name_ru": "",
+      "name_ru": "ЧИНГИЗХАН ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1029628712",
-      "name_lat": "ЧИНГИСХАН ЗАВОЕВАТЕЛЬ МИРА",
-      "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "63180659",
-      "name_lat": "ЧИНГИСХАН МОГУЧИЙ",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "17833537",
-      "name_lat": "ЧИККОНЕ ЛУИЗА ИРИСС ДЕЛЮКС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 74,
-      "competition_dog_id": null
-    },
-    {
-      "id": "611687707",
+      "id": "1626050036",
       "name_lat": "ЧИАНА МЭДЖИК ЛАВ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ БУЛЬТЕРЬЕР",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -501,7 +500,7 @@
     {
       "id": "3048588",
       "name_lat": "ЧИЭРА ГВЕНДОЛИН",
-      "name_ru": "",
+      "name_ru": "ЧИЭРА ГВЕНДОЛИН",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 16,
@@ -510,7 +509,7 @@
     {
       "id": "130607939",
       "name_lat": "ЧИКИТА БОНИТА ИЗ СИБИРСКОГО КНЯЖЕСТВА",
-      "name_ru": "",
+      "name_ru": "ЧИКИТА БОНИТА ИЗ СИБИРСКОГО КНЯЖЕСТВА",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 11,
@@ -519,19 +518,10 @@
     {
       "id": "1580938430",
       "name_lat": "ЧИХОХИТ ФАВОРИТ ЗАДОР",
-      "name_ru": "",
+      "name_ru": "ЧИХОХИТ ФАВОРИТ ЗАДОР",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1530762431",
-      "name_lat": "ЧИЛИМГУР ЯХА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -562,10 +552,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "276826639",
+      "id": "239562063",
       "name_lat": "ЧИАРА СВИТ КАНДИ",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -573,25 +563,25 @@
     {
       "id": "717784098",
       "name_lat": "ЧИКИ МОНИ РУБИ",
-      "name_ru": "",
+      "name_ru": "ЧИКИ МОНИ РУБИ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1365118263",
-      "name_lat": "Чика Свит Кенди",
-      "name_ru": "",
-      "breed": "БАСЕНДЖИ",
+      "id": "1467456835",
+      "name_lat": "ЧИНГИЗ БАЙ ИЗ ЗАПРУДА",
+      "name_ru": "ЧИНГИЗ БАЙ ИЗ ЗАПРУДА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
       "id": "323938892",
       "name_lat": "ЧИНТАМАНИ ДАЙКИРИ",
-      "name_ru": "",
+      "name_ru": "ЧИНТАМАНИ ДАЙКИРИ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 13,
@@ -618,37 +608,28 @@
     {
       "id": "1314180408",
       "name_lat": "ЧИСТОЕ ЗОЛОТО ИЗ МИМОЛЕТНОГО ВИДЕНИЯ",
-      "name_ru": "",
+      "name_ru": "ЧИСТОЕ ЗОЛОТО ИЗ МИМОЛЕТНОГО ВИДЕНИЯ",
       "breed": "ПУДЕЛЬ СРЕДНИЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1467456835",
-      "name_lat": "ЧИНГИЗ БАЙ ИЗ ЗАПРУДА",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1972522062",
-      "name_lat": "ЧИЛИМГУР ЯХА",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1524896733",
+      "id": "39070537",
       "name_lat": "ЧИКА ИЗ ВИЛЛИНОГО ДОМА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1052585189",
+      "name_lat": "ЧИККОНЕ ФОН ВЭСПЭН ХАУС",
+      "name_ru": "ЧИККОНЕ ФОН ВЭСПЭН ХАУС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -663,35 +644,43 @@
     {
       "id": "1386295732",
       "name_lat": "ЧИВАС РЫЖЕЕ СЧАСТЬЕ OLLIE ANGEL STAR",
-      "name_ru": "",
+      "name_ru": "ЧИВАС РЫЖЕЕ СЧАСТЬЕ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "772242843",
-      "name_lat": "ЧИНШОУ ХЁ МАДЖЕСТИ",
+      "id": "664698608",
+      "name_lat": "ЧИППО ЧИПОЛИНО РОБЕРТ ЧАРЛЬЗ РЭДФОРД",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ",
+      "breed": "ПТИ БРАБАНСОН",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1988626727",
+      "name_lat": "ЧИНШОУ ХЁ МАДЖЕСТИ",
+      "name_ru": "ЧИНШОУ ХЁ МАДЖЕСТИ",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1697376228",
+      "id": "334655311",
       "name_lat": "ЧИНГИЗ",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "995489017",
+      "id": "279414230",
       "name_lat": "ЧИКО ОФ МЕЛЕНХАУС",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "name_ru": "ЧИКО ОФ МЕЛЕНХАУС",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -715,10 +704,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1942464851",
+      "id": "1894703068",
       "name_lat": "ЧИНГИЗ ХАН",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -728,15 +717,6 @@
       "name_lat": "ЧИЛИМГУР ОДИССЕЯ",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1593621158",
-      "name_lat": "ЧИККОНЕ ФОН ВЭСПЭН ХАУС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -760,21 +740,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "584585476",
-      "name_lat": "ЧИЛИМГУР ЧИЛИ",
+      "id": "1350323751",
+      "name_lat": "ЧИПОЛИНО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
-      "total_shows": 16,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "290661877",
-      "name_lat": "ЧИЭСА ТЭКЕРА КИЙОКА",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
+      "id": "332933403",
+      "name_lat": "ЧИЛИМГУР ЧИЛИ",
+      "name_ru": "ЧИЛИМГУР ЧИЛИ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -796,18 +776,26 @@
       "competition_dog_id": null
     },
     {
-      "id": "59328299",
+      "id": "1056475551",
       "name_lat": "ЧИВАС ДРИМ ЕКСТРА СПЕШИАЛ д/ш",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
+      "id": "1605720252",
+      "name_lat": "ЧИКАГО МОНТИ",
+      "name_ru": "ЧИКАГО МОНТИ",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "394370426",
       "name_lat": "ЧИБСТЕН МОРКОВКА",
-      "name_ru": "",
+      "name_ru": "ЧИБСТЕН МОРКОВКА",
       "breed": "СКОТТЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
@@ -816,7 +804,7 @@
     {
       "id": "1965168858",
       "name_lat": "ЧИКО ИЗ ЦАРЕВЩИНЫ",
-      "name_ru": "",
+      "name_ru": "ЧИКО ИЗ ЦАРЕВЩИНЫ",
       "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 2,
@@ -825,7 +813,7 @@
     {
       "id": "1172817739",
       "name_lat": "ЧИО-ЧИО-САН МАРИТТА ЛИЛИАН",
-      "name_ru": "",
+      "name_ru": "ЧИО-ЧИО-САН МАРИТТА ЛИЛИАН",
       "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
       "breed_en": "",
       "total_shows": 9,
@@ -868,10 +856,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1068215617",
+      "id": "599501602",
       "name_lat": "ЧИЛИМГУР МОНА ЛИЗА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1740060746",
+      "name_lat": "ЧИ КЕН СО ВЕЛАРИ ШАРП",
+      "name_ru": "ЧИ КЕН СО ВЕЛАРИ ШАРП",
+      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -879,7 +876,7 @@
     {
       "id": "829716005",
       "name_lat": "ЧИЛИ ОТ ФОРЕСТ ГИРЦ",
-      "name_ru": "",
+      "name_ru": "ЧИЛИ ОТ ФОРЕСТ ГИРЦ",
       "breed": "ФОКСТЕРЬЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -890,24 +887,6 @@
       "name_lat": "ЧИО-ЧИО-САН",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1619304909",
-      "name_lat": "ЧИО-ЧИО-САН",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "863910433",
-      "name_lat": "ЧИО-ЧИО-САН",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -931,10 +910,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1740060746",
-      "name_lat": "ЧИ КЕН СО ВЕЛАРИ ШАРП",
+      "id": "1327513762",
+      "name_lat": "ЧИБСТЕН НОУ ХАУ (Изменено по решению ВК от 19.02.2025 В. 42)",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ЙОРКШИРСКИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -949,8 +928,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1250217346",
-      "name_lat": "ЧИКОЛЕТТА ИЗ ЧЕНТАО- ПАРК",
+      "id": "423280084",
+      "name_lat": "ЧИКОЛЕТТА ИЗ ЧЕНТАО-ПАРК",
       "name_ru": "",
       "breed": "ХАВАНЕЗ",
       "breed_en": "",
@@ -958,10 +937,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "148380591",
+      "id": "1684976923",
       "name_lat": "ЧИККИ-РИККИ БЛЕК ПЕРЛ ФО ШЕЛЛЕН'С",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -985,6 +964,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "380319894",
+      "name_lat": "Чилита-Ф Шарифа Асма",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1337109854",
       "name_lat": "ЧИПОЛИНО",
       "name_ru": "",
@@ -1003,19 +990,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "734093908",
-      "name_lat": "ЧИПОЛИНО",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "917120107",
+      "id": "146963675",
       "name_lat": "ЧИХОКЛАБ ХОЛЛИ МОЛЛИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1023,19 +1001,28 @@
     {
       "id": "97053757",
       "name_lat": "ЧИКАБОН КИНГ ФО ВИКТОРИ",
-      "name_ru": "",
+      "name_ru": "ЧИКАБОН КИНГ ФО ВИКТОРИ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "72177945",
+      "id": "229664938",
       "name_lat": "ЧИМБЭ ДЛЯ ДОСТОЯНИЯ-РБ",
-      "name_ru": "",
-      "breed": "ХОТОШО (БУРЯТСКАЯ СОБАКА)",
+      "name_ru": "ЧИМБЭ ДЛЯ ДОСТОЯНИЯ-РБ",
+      "breed": "TIBETAN MONGOLSKAYA SOBAKA)",
       "breed_en": "HOTOSHO (BURYATIAN DOG)",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "844492136",
+      "name_lat": "ЧИЛИМГУР ЕЛИЗАВЕТА ПЕРВАЯ",
+      "name_ru": "ЧИЛИМГУР ЕЛИЗАВЕТА ПЕРВАЯ",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 34,
       "competition_dog_id": null
     },
     {
@@ -1048,21 +1035,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "17105488",
+      "id": "209208741",
       "name_lat": "ЧИЛИМГУР ЗАБАВА",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "name_ru": "ЧИЛИМГУР ЗАБАВА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 71,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1467340199",
-      "name_lat": "ЧИЛИМГУР ВАЛЬКИРИЯ",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "",
-      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -1093,84 +1071,75 @@
       "competition_dog_id": null
     },
     {
-      "id": "53625173",
-      "name_lat": "ЧИЛИМГУР ЕЛИЗАВЕТА ПЕРВАЯ",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "id": "562368266",
+      "name_lat": "ЧИЛИМГУР ГАРПИЯ",
+      "name_ru": "ЧИЛИМГУР ГАРПИЯ",
+      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
-      "total_shows": 23,
+      "total_shows": 56,
       "competition_dog_id": null
     },
     {
       "id": "99750915",
       "name_lat": "ЧИКИ МОНИ МАГНАТ",
-      "name_ru": "",
+      "name_ru": "ЧИКИ МОНИ МАГНАТ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "CHIHUAHUA LONG-HAIRED",
       "total_shows": 16,
       "competition_dog_id": null
     },
     {
-      "id": "1869879739",
-      "name_lat": "ЧИЛИМГУР ЕВФРАТ",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "234565012",
       "name_lat": "ЧИКА БОМБ ИЗ ЦВЕТНОЙ СКАЗКИ",
-      "name_ru": "",
+      "name_ru": "ЧИКА БОМБ ИЗ ЦВЕТНОЙ СКАЗКИ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "AMERICAN COCKER SPANIEL",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1077580541",
-      "name_lat": "ЧИЛИМГУР ГАРПИЯ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 42,
-      "competition_dog_id": null
-    },
-    {
       "id": "383645699",
       "name_lat": "ЧИКИ МОНИ МАГНОЛИЯ",
-      "name_ru": "",
+      "name_ru": "ЧИКИ МОНИ МАГНОЛИЯ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "CHIHUAHUA LONG-HAIRED",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "736543618",
-      "name_lat": "ЧИЛИМГУР РОСТОВ",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
-      "breed_en": "NEWFOUNDLAND",
-      "total_shows": 2,
+      "id": "1056505517",
+      "name_lat": "ЧИЛИМГУР ЁЗГЕДА",
+      "name_ru": "ЧИЛИМГУР ЁЗГЕДА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "89674789",
-      "name_lat": "ЧИЛИМГУР ЁЗГЕДА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "id": "1049353547",
+      "name_lat": "ЧИСТОЙ ВОДЫ БРИЛЛИАНТ",
+      "name_ru": "ЧИСТОЙ ВОДЫ БРИЛЛИАНТ",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
       "id": "770545023",
       "name_lat": "ЧИБСТЕН КОМАН СА ВА",
-      "name_ru": "",
+      "name_ru": "ЧИБСТЕН КОМАН СА ВА",
       "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "33131189",
+      "name_lat": "ЧИМИТ ДОРЖИ",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1185,16 +1154,25 @@
     {
       "id": "1700449010",
       "name_lat": "ЧИХ БАЙ ЛАВ АПРИОРИ ФЁСТ",
-      "name_ru": "",
+      "name_ru": "ЧИХ БАЙ ЛАВ АПРИОРИ ФЕСТ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "CHIHUAHUA SMOOTH-HAIRED",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
+      "id": "524326202",
+      "name_lat": "ЧИМБИ РИМБИ С БЕРЕГА ДОНА",
+      "name_ru": "ЧИМБИ РИМБИ С БЕРЕГА ДОНА",
+      "breed": "НЬЮФАУНДЛЕНД",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
       "id": "1434762577",
       "name_lat": "ЧИХОКЛАБ ОЛЛИН КАСТА",
-      "name_ru": "",
+      "name_ru": "ЧИХОКЛАБ ОЛЛИН КАСТА",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
@@ -1203,64 +1181,52 @@
     {
       "id": "55648047",
       "name_lat": "ЧИНТАМАНИ ОСТИН",
-      "name_ru": "",
+      "name_ru": "ЧИНТАМАНИ ОСТИН",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "818282938",
-      "name_lat": "ЧИЛИМ ИЗ ДОМА ЕЛИВ'С",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 15,
+      "id": "1724089269",
+      "name_lat": "ЧИНТАМАНИ РОБИН ГУД",
+      "name_ru": "ЧИНТАМАНИ РОБИН ГУД",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "646102156",
       "name_lat": "ЧИФ РОЯЛ АКБЭР ЧИО ЧИО САН",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ЧИО ЧИО САН",
       "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 10,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "47203199",
+      "id": "1335558744",
       "name_lat": "ЧИЛИМГУР ЁЛАНТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЧИЛИМГУР ЁЛАНТА",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "561634003",
-      "name_lat": "ЧИМБИ РИМБИ С БЕРЕГА ДОНА",
+      "id": "184994698",
+      "name_lat": "ЧИРОЙ",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 9,
+      "breed": "CENTRAL",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "116330366",
       "name_lat": "ЧИФ РОЯЛ АКБЭР ЭНРИКО",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ЭНРИКО",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1381547951",
-      "name_lat": "ЧИЛИМГУР ВОРЧУН",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1284,7 +1250,7 @@
     {
       "id": "657657038",
       "name_lat": "ЧИХОКЛАБ ЛОРАН МОНИФИК",
-      "name_ru": "",
+      "name_ru": "ЧИХОКЛАБ ЛОРАН МОНИФИК",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
@@ -1300,12 +1266,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "518123290",
+      "id": "80597894",
       "name_lat": "ЧИФ РОЯЛ АКБЭР ШИМБА",
-      "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ШИМБА",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "200092275",
+      "name_lat": "ЧИЛИ ЛУННАЯ ДОЛИНА",
+      "name_ru": "ЧИЛИ ЛУННАЯ ДОЛИНА",
+      "breed": "ЙОРКШИРСКИЙ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1318,6 +1293,32 @@
       "competition_dog_id": null
     },
     {
+      "id": "1233925962",
+      "name_lat": "ЧИЛИМГУР ДИЗЕЛЬ",
+      "name_ru": "ЧИЛИМГУР ДИЗЕЛЬ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 21,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1955576448",
+      "name_lat": "ЧИНГИСХАН ПЕРВЫЙ ИМПЕРАТОР",
+      "name_ru": "ЧИНГИСХАН ПЕРВЫЙ ИМПЕРАТОР",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "587903156",
+      "name_lat": "ЧИНКО ТОРИКИ",
+      "name_ru": "ЧИНКО ТОРИКИ",
+      "breed": "АКИТА /",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
       "id": "1657234389",
       "name_lat": "ЧИРОЙ",
       "name_ru": "",
@@ -1327,54 +1328,53 @@
       "competition_dog_id": null
     },
     {
-      "id": "1835408056",
-      "name_lat": "ЧИ КЕН СО КИЦУНЭ NASLEDIE TOBETOV",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
       "id": "1248650335",
       "name_lat": "ЧИКИ МОНИ ГРИЗЛИ БЕАР МАЙТИ",
-      "name_ru": "",
+      "name_ru": "ЧИКИ МОНИ ГРИЗЛИ БЕАР МАЙТИ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "552154513",
-      "name_lat": "ЧИКИ МОНИ ЭРИКА МАЙ ЮНИВЕРС",
+      "id": "596132303",
+      "name_lat": "ЧИНА РОУЗ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1049353547",
-      "name_lat": "ЧИСТОЙ ВОДЫ БРИЛЛИАНТ",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "543625946",
-      "name_lat": "ЧИЛИ ЛУННАЯ ДОЛИНА",
-      "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР",
+      "id": "65784600",
+      "name_lat": "ЧИКИ МОНИ ЭРИКА МАЙ ЮНИВЕРС",
+      "name_ru": "ЧИКИ МОНИ ЭРИКА МАЙ ЮНИВЕРС",
+      "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "376851703",
+      "name_lat": "ЧИАБАТТА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "839657178",
+      "name_lat": "ЧИЛИТА ДОЛЛ ТО АЛЛ УМКА",
+      "name_ru": "ЧИЛИТА ДОЛЛ ТО АЛЛ УМКА",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1378267127",
       "name_lat": "ЧИКИ ЭНЖЕЛ ЭКСТРАВАГАНЗА",
-      "name_ru": "",
+      "name_ru": "ЧИКИ ЭНЖЕЛ ЭКСТРАВАГАНЗА",
       "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "NORWICH TERRIER",
       "total_shows": 8,
@@ -1383,17 +1383,17 @@
     {
       "id": "778653346",
       "name_lat": "ЧИНТАМАНИ ЛАКШМИ ЛОТУС",
-      "name_ru": "",
+      "name_ru": "ЧИНТАМАНИ ЛАКШМИ ЛОТУС",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1787342698",
+      "id": "128047547",
       "name_lat": "ЧИНГИЗ ХАН ВЕЛИКИЙ ВОИН",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "name_ru": "ЧИНГИЗ ХАН ВЕЛИКИЙ ВОИН",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1401,7 +1401,7 @@
     {
       "id": "386559790",
       "name_lat": "ЧИ КЕН СО ВАЛЕНСИЯ ВОРМУНД",
-      "name_ru": "",
+      "name_ru": "ЧИ КЕН СО ВАЛЕНСИЯ ВОРМУНД",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 10,
@@ -1417,10 +1417,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "37495474",
+      "id": "1161223830",
       "name_lat": "Чизар Мистерио Дивино",
-      "name_ru": "",
-      "breed": "Ксолоитцкуинтли Стандартный",
+      "name_ru": "Чизар Мистерио Дивино",
+      "breed": "БАСЕНДЖИ КСОЛОИТСКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1428,7 +1428,7 @@
     {
       "id": "1610877221",
       "name_lat": "ЧИХ'ОРДА ЮЛИК",
-      "name_ru": "",
+      "name_ru": "ЧИХ'ОРДА ЮЛИК",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -1437,109 +1437,19 @@
     {
       "id": "383028398",
       "name_lat": "ЧИЗКЕЙК ИЗ ПОКОЛЕНИЯ ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ЧИЗКЕЙК ИЗ ПОКОЛЕНИЯ ЗВЕЗД",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1912078360",
-      "name_lat": "ЧИЛИМГУР ГЕФЕСТ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "259047305",
       "name_lat": "ЧИРФУЛ СМАЙЛ ОФ ЗЕ САН",
-      "name_ru": "",
+      "name_ru": "ЧИРФУЛ СМАЙЛ ОФ ЗЕ САН",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1724089269",
-      "name_lat": "ЧИНТАМАНИ РОБИН ГУД",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "918926432",
-      "name_lat": "ЧИЛАЙЗА МАЙ ДРИМС",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ОХОТНИЧИЙ ТЕРЬЕР (ЯГД ТЕРЬЕР)",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1057078544",
-      "name_lat": "ЧИНГИСХАН",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "247156222",
-      "name_lat": "ЧИХУА-БОМОНД ФОРТУНАТА ФРАНТИ (Д- Ш)",
-      "name_ru": "",
-      "breed": "CHIHUAHUA LONG",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1919586287",
-      "name_lat": "ЧИЧ МАРИН ИЗ ДОМА ТАЮР",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ миниатюрный ОКРАС БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "157355183",
-      "name_lat": "ЧИФ РОЯЛ АКБЭР ЧАЙНАЯ РОЗА",
-      "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1653925420",
-      "name_lat": "ЧИННУРИ ЗВЕЗДА ВОСТОКА",
-      "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1696213410",
-      "name_lat": "ЧИККОНЕ ЛУИЗА ИРИС ДЕЛЮКС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "304037154",
-      "name_lat": "ЧИППО ЧИПОЛИНО ЧАС ФОРТУНЫ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1548,13 +1458,85 @@
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1869698622",
+      "name_lat": "ЧИЛАЙЗА МАЙ ДРИМС",
+      "name_ru": "ЧИЛАЙЗА МАЙ ДРИМС",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1316353406",
+      "name_lat": "ЧИНГИСХАН",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "19962252",
+      "name_lat": "ЧИХУА-БОМОНД ФОРТУНАТА ФРАНТИ (Д-Ш)",
+      "name_ru": "ЧИХУА-БОМОНД ФОРТУНАТА ФРАНТИ (Д-Ш)",
+      "breed": "CHIHUAHUA LONG",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "952106475",
+      "name_lat": "ЧИЧ МАРИН ИЗ ДОМА ТАЮР",
+      "name_ru": "ЧИЧ МАРИН ИЗ ДОМА ТАЮР",
+      "breed": "ПУДЕЛЬ миниатюрный ОКРАС БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "157355183",
+      "name_lat": "ЧИФ РОЯЛ АКБЭР ЧАЙНАЯ РОЗА",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ЧАЙНАЯ РОЗА",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1223238516",
+      "name_lat": "ЧИККОНЕ ЛУИЗА ИРИС ДЕЛЮКС",
+      "name_ru": "ЧИККОНЕ ЛУИЗА ИРИС ДЕЛЮКС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "410551075",
+      "name_lat": "ЧИППО ЧИПОЛИНО ЧАС ФОРТУНЫ",
+      "name_ru": "ЧИППО ЧИПОЛИНО ЧАС ФОРТУНЫ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1782302131",
+      "name_lat": "ЧИКИ МОНИ ЭЛЕКТРА ЧИРФУЛ",
+      "name_ru": "ЧИКИ МОНИ ЭЛЕКТРА ЧИРФУЛ",
+      "breed": "CHIHUAHUA SMOOTH",
+      "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
       "id": "1018291146",
       "name_lat": "ЧИЛИПЕППЕР'С ОРНЕЛЛА МУТИ",
-      "name_ru": "",
+      "name_ru": "ЧИЛИПЕППЕР'С ОРНЕЛЛА МУТИ",
       "breed": "ПУДЕЛЬ МАЛЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "POODLE MEDIUM FAWN, GREY",
       "total_shows": 5,
@@ -1570,10 +1552,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "459431706",
+      "id": "671733275",
       "name_lat": "ЧИЛИТА-Ф ЧЕЗАРИЯ (Д.Ш.)",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЧИЛИТА-Ф ЧЕЗАРИЯ (Д.Ш.)",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1588,27 +1570,27 @@
       "competition_dog_id": null
     },
     {
+      "id": "1324595682",
+      "name_lat": "ЧИЛИМГУР ДАКОТА",
+      "name_ru": "ЧИЛИМГУР ДАКОТА",
+      "breed": "ПОДШЕРСТКОМ",
+      "breed_en": "",
+      "total_shows": 26,
+      "competition_dog_id": null
+    },
+    {
       "id": "145874497",
       "name_lat": "ЧИНАРА ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
-      "name_ru": "",
+      "name_ru": "ЧИНАРА ИЗ АЛЕКСАНДРОВОЙ СЛОБОДЫ",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "596132303",
-      "name_lat": "ЧИНА РОУЗ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
       "id": "606016653",
       "name_lat": "ЧИНШОУ НАДАРИЯ НЕРО ДЕ АВОЛА",
-      "name_ru": "",
+      "name_ru": "ЧИНШОУ НАДАРИЯ НЕРО ДЕ АВОЛА",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -1624,9 +1606,17 @@
       "competition_dog_id": null
     },
     {
+      "id": "1667591608",
+      "name_lat": "ЧИКАГО ГОЛДЕН БОЙ",
+      "name_ru": "ЧИКАГО ГОЛДЕН БОЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "566684110",
       "name_lat": "ЧИЛИМГУР ФАНТА",
-      "name_ru": "",
+      "name_ru": "ЧИЛИМГУР ФАНТА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 17,
@@ -1635,16 +1625,24 @@
     {
       "id": "1160582157",
       "name_lat": "ЧИНШОУ ТУ АНА",
-      "name_ru": "",
+      "name_ru": "ЧИНШОУ ТУ АНА",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "102101460",
+      "name_lat": "ЧИХУА БОМОНД БАЗЗ ЛАЙТЕР",
+      "name_ru": "ЧИХУА БОМОНД БАЗЗ ЛАЙТЕР",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "405520870",
       "name_lat": "ЧИГРИАЛ БРЮС ВИЛЛИС СМАЙЛ",
-      "name_ru": "",
+      "name_ru": "ЧИГРИАЛ БРЮС ВИЛЛИС СМАЙЛ",
       "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 4,
@@ -1653,7 +1651,7 @@
     {
       "id": "462537861",
       "name_lat": "ЧИЛИПЕППЕР'С ВЕГАС НАЙТ",
-      "name_ru": "",
+      "name_ru": "ЧИЛИПЕППЕР'С ВЕГАС НАЙТ",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ (Бел.Черн.Корич.)",
       "breed_en": "",
       "total_shows": 5,
@@ -1662,7 +1660,7 @@
     {
       "id": "1772628317",
       "name_lat": "ЧИ СТАЙЛ РОББИ",
-      "name_ru": "",
+      "name_ru": "ЧИ СТАЙЛ РОББИ",
       "breed": "CHIHUAHUA SMOOTH",
       "breed_en": "",
       "total_shows": 4,
@@ -1680,73 +1678,37 @@
     {
       "id": "1716692952",
       "name_lat": "ЧИКАГО ГРАД ДЕ КЬЕРРО",
-      "name_ru": "",
+      "name_ru": "ЧИКАГО ГРАД ДЕ КЬЕРРО",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "87451105",
-      "name_lat": "ЧИТЕЛЛИ ЧЕРРИС",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "id": "722681279",
+      "name_lat": "ЧИНЗАНА ДОНИ ЗВЕЗДА ПОЛЕСЬЯ",
+      "name_ru": "ЧИНЗАНА ДОНИ ЗВЕЗДА ПОЛЕСЬЯ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "646506591",
-      "name_lat": "ЧИНЗАНА ДОНИ ЗВЕЗДА ПОЛЕСЬЯ",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "250763366",
       "name_lat": "ЧИППО ЧИПОЛИНО ФЛОРЕНС ФОССОВЕЙ",
-      "name_ru": "",
+      "name_ru": "ЧИППО ЧИПОЛИНО ФЛОРЕНС ФОССОВЕЙ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "77505651",
+      "id": "1918526623",
       "name_lat": "ЧИКА УМИ БЛЕК",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "name_ru": "ЧИКА УМИ БЛЕК",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1966302857",
-      "name_lat": "ЧИЛИМГУР ДИЗЕЛЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1984815237",
-      "name_lat": "ЧИ КЕН СО ВИЛЛИНА РЕГАН",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "106765502",
-      "name_lat": "ЧИКИ МОНИ ЭЛЕКТРА ЧИРФУЛ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1759,39 +1721,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "150103750",
+      "id": "89224364",
       "name_lat": "ЧИВАС ГОЛДЕН РОЯЛ",
-      "name_ru": "",
-      "breed": "КОКЕР СПАНИЕЛЬ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ЧИВАС ГОЛДЕН РОЯЛ",
+      "breed": "КОКЕР АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1888703969",
-      "name_lat": "ЧИНКО ТОРИКИ",
-      "name_ru": "",
-      "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1000369818",
       "name_lat": "Чиво Гоурмет Хандсоме",
-      "name_ru": "",
+      "name_ru": "Чиво Гоурмет Хандсоме",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1763566727",
-      "name_lat": "ЧИЛИМГУР ЖИВАНШИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -1815,35 +1759,34 @@
     {
       "id": "10199450",
       "name_lat": "ЧИНТАМАНИ ДУБАЙ",
-      "name_ru": "",
+      "name_ru": "ЧИНТАМАНИ ДУБАЙ",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
+      "id": "156836804",
+      "name_lat": "ЧИХОКЛАБ ИШИМИ ВЕНДЕТТА",
+      "name_ru": "ЧИХОКЛАБ ИШИМИ ВЕНДЕТТА",
+      "breed": "CHIHUAHUA",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "274845927",
       "name_lat": "ЧИККО ФОМ ОЛЬСТЕР ХОФ",
-      "name_ru": "",
+      "name_ru": "ЧИККО ФОМ ОЛЬСТЕР ХОФ",
       "breed": "GERMAN SHEPHERD DOG",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "846297265",
-      "name_lat": "ЧИКАГО ИЗ БЕЛОЙ СОТНИ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1770776407",
+      "id": "1751298359",
       "name_lat": "ЧИКИ МОНИ МЕРСЕДЕС",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ЧИКИ МОНИ МЕРСЕДЕС",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1851,34 +1794,16 @@
     {
       "id": "799670416",
       "name_lat": "ЧИ'СТАЙЛ ЯНККО",
-      "name_ru": "",
+      "name_ru": "ЧИ'СТАЙЛ ЯНККО",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "567913486",
-      "name_lat": "ЧИНЗАНА ИЗ ДОМА КУНЕЦ",
-      "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "967042561",
-      "name_lat": "ЧИЛИМГУР ПАРАБЕЛУМ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "369463333",
       "name_lat": "ЧИНШОУ РУФУС ФО ХОЛЛЕНС СТОУН",
-      "name_ru": "",
+      "name_ru": "ЧИНШОУ РУФУС ФО ХОЛЛЕНС СТОУН",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -1903,10 +1828,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1299156960",
+      "id": "926747829",
       "name_lat": "ЧИП ОФ ЧЕКЛАД ИЗ ЗАМКА ПРИОРА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
+      "name_ru": "ЧИП ОФ ЧЕКЛАД ИЗ ЗАМКА ПРИОРА",
+      "breed": "ЦВЕРГПИНЧЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1914,7 +1839,7 @@
     {
       "id": "283515084",
       "name_lat": "ЧИН ЧИН ИЗ ЧЕРНИЧНОГО РАЯ",
-      "name_ru": "",
+      "name_ru": "ЧИН ЧИН ИЗ ЧЕРНИЧНОГО РАЯ",
       "breed": "БАССЕТ ХАУНД",
       "breed_en": "",
       "total_shows": 2,
@@ -1923,7 +1848,7 @@
     {
       "id": "82120846",
       "name_lat": "ЧИЛИМГУР ДИОДОРА",
-      "name_ru": "",
+      "name_ru": "ЧИЛИМГУР ДИОДОРА",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 6,
@@ -1932,19 +1857,10 @@
     {
       "id": "235120183",
       "name_lat": "ЧИВАС АРЧИБАЛЬД",
-      "name_ru": "",
+      "name_ru": "ЧИВАС АРЧИБАЛЬД",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "664698608",
-      "name_lat": "ЧИППО ЧИПОЛИНО РОБЕРТ ЧАРЛЬЗ РЭДФОРД",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1959,10 +1875,10 @@
     {
       "id": "1026828463",
       "name_lat": "ЧИККИ ОЗБОРН",
-      "name_ru": "",
+      "name_ru": "ЧИККИ ОЗБОРН",
       "breed": "COCKER SPANIEL ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -1984,10 +1900,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1077562623",
+      "id": "84949360",
       "name_lat": "ЧИЛИТА-Ф ЦВЕТ ВИСКИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1995,19 +1911,19 @@
     {
       "id": "209209795",
       "name_lat": "ЧИХОРДА ОДРИ",
-      "name_ru": "",
+      "name_ru": "ЧИХОРДА ОДРИ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1322356126",
-      "name_lat": "ЧИЛИМГУР ЗИГЕР",
+      "id": "121708443",
+      "name_lat": "ЧИЛИ РЭД ЧИКО",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -2029,15 +1945,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "121708443",
-      "name_lat": "ЧИЛИ РЭД ЧИКО",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "537790662",
       "name_lat": "ЧИЕННА ОРАНЖ ФИЕРИ",
       "name_ru": "",
@@ -2049,7 +1956,7 @@
     {
       "id": "1238422395",
       "name_lat": "ЧИКИ МОНИ ПЕПСИ",
-      "name_ru": "",
+      "name_ru": "ЧИКИ МОНИ ПЕПСИ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
@@ -2058,7 +1965,7 @@
     {
       "id": "41873508",
       "name_lat": "ЧИКАГО ИЗ ЗВЕЗДНОЙ СТАИ",
-      "name_ru": "",
+      "name_ru": "ЧИКАГО ИЗ ЗВЕЗДНОЙ СТАИ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
@@ -2067,17 +1974,17 @@
     {
       "id": "602728005",
       "name_lat": "ЧИВАС РИГОЛ БЛЕК ЛЕЙБЛ",
-      "name_ru": "",
+      "name_ru": "ЧИВАС РИГОЛ БЛЕК ЛЕЙБЛ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1733178656",
+      "id": "1899576556",
       "name_lat": "ЧИНЗАНО ИЗ ВОДЕВИЛЯ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2085,7 +1992,7 @@
     {
       "id": "59516782",
       "name_lat": "ЧИКИ МОНИ УЛЬЯША ХИТКОУТ",
-      "name_ru": "",
+      "name_ru": "ЧИКИ МОНИ УЛЬЯША ХИТКОУТ",
       "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 3,
@@ -2094,43 +2001,25 @@
     {
       "id": "1966890887",
       "name_lat": "ЧИХ БАЙ ЛАВ ФЕРРАРИ",
-      "name_ru": "",
+      "name_ru": "ЧИХ БАЙ ЛАВ ФЕРРАРИ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1604754204",
-      "name_lat": "ЧИЛИ ИЗ ДОМА ЕЛИВ'С",
-      "name_ru": "",
-      "breed": "КЕРН ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "380463667",
       "name_lat": "ЧИАНА КАРМЕЛЬ",
-      "name_ru": "",
+      "name_ru": "ЧИАНА КАРМЕЛЬ",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "1992685071",
-      "name_lat": "ЧИЛИТА-Ф ШУГА БОЙ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1518620834",
       "name_lat": "ЧИКАГО ИЗ КОРОЛЕВСЬВА АННЫ",
-      "name_ru": "",
+      "name_ru": "ЧИКАГО ИЗ КОРОЛЕВСЬВА АННЫ",
       "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 5,
@@ -2139,17 +2028,17 @@
     {
       "id": "1863117664",
       "name_lat": "ЧИНЗАНА КВИН ОФ ЗЕ НАЙТ",
-      "name_ru": "",
+      "name_ru": "ЧИНЗАНА КВИН ОФ ЗЕ НАЙТ",
       "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "188312318",
+      "id": "302968338",
       "name_lat": "ЧИХУА-БОМОНД ЮРЕНА ЭЛОССИ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "name_ru": "ЧИХУА-БОМОНД ЮРЕНА ЭЛОССИ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2166,35 +2055,17 @@
     {
       "id": "736970549",
       "name_lat": "ЧИЛИ РЕД ПЕППЕР",
-      "name_ru": "",
+      "name_ru": "ЧИЛИ РЕД ПЕППЕР",
       "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1763486994",
-      "name_lat": "ЧИКИТА ИЗ БЕЛОЙ СОТНИ",
-      "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1380279388",
-      "name_lat": "ЧИХУА-БОМОНД ЖАН- ЖАК",
+      "id": "1475813366",
+      "name_lat": "ЧИХУА-БОМОНД ЖАН-ЖАК",
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "839657178",
-      "name_lat": "ЧИЛИТА ДОЛЛ ТО АЛЛ УМКА",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2220,7 +2091,7 @@
     {
       "id": "935975068",
       "name_lat": "ЧИФ РОЯЛ АКБЭР ОРНЕЛЛА СИЛЬВЕР СНОУ",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ОРНЕЛЛА СИЛЬВЕР СНОУ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
@@ -2229,7 +2100,7 @@
     {
       "id": "1948434859",
       "name_lat": "ЧИХУА-БОМОНД ФЭЙ ФРАНТИН (Д-Ш)",
-      "name_ru": "",
+      "name_ru": "ЧИХУА-БОМОНД ФЭЙ ФРАНТИН (Д-Ш)",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -2238,7 +2109,7 @@
     {
       "id": "780533643",
       "name_lat": "Чихуашка Милашка Аливия",
-      "name_ru": "",
+      "name_ru": "Чихуашка Милашка Аливия",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -2263,21 +2134,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "623958036",
-      "name_lat": "ЧИНГИСХАН ПЕРВЫЙ ИМПЕРАТОР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "259809262",
       "name_lat": "ЧИХУА-БОМОНД АТТАЛИЯ ДЭНИРО Д-Ш",
-      "name_ru": "",
+      "name_ru": "ЧИХУА-БОМОНД АТТАЛИЯ ДЭНИРО Д-Ш",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -2287,6 +2149,15 @@
       "breed": "СПРИНГЕР ГОНЧАЯ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "243955085",
+      "name_lat": "ЧИЛЛИ",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2310,7 +2181,7 @@
     {
       "id": "724300294",
       "name_lat": "ЧИСТОЕ ЗОЛОТО",
-      "name_ru": "",
+      "name_ru": "ЧИСТОЕ ЗОЛОТО",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
@@ -2344,10 +2215,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1620982537",
+      "id": "369132436",
       "name_lat": "ЧИМГИ ТУРА РАДОСВЕТ",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2364,7 +2235,7 @@
     {
       "id": "244578718",
       "name_lat": "ЧИКИ ЭНД ЧАРМИНГ ИЗ ЮЖНОГО РАЯ",
-      "name_ru": "",
+      "name_ru": "ЧИКИ ЭНД ЧАРМИНГ ИЗ ЮЖНОГО РАЯ",
       "breed": "БЕЛАЯ ШВЕЙЦАРСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -2373,8 +2244,17 @@
     {
       "id": "1306762224",
       "name_lat": "ЧИСТОГО ЗОЛОТА",
-      "name_ru": "",
+      "name_ru": "ЧИСТОГО ЗОЛОТА",
       "breed": "СЕРЕБРОМШАР АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "600765824",
+      "name_lat": "ЧИЛИПЕППЕР'C УЛТИМА РЕЙ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МАЛЫЙ (рыжий, серый)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2382,24 +2262,24 @@
     {
       "id": "47969391",
       "name_lat": "ЧИФ РОЯЛ АКБЭР ЧИАННА ТАЙЯ",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ЧИАННА ТАЙЯ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "229483595",
+      "id": "1905592676",
       "name_lat": "ЧИЖИК ПЫЖИК",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1469569912",
-      "name_lat": "ЧИВАСИК ИЗ НАДРОВИИ (Д- Ш)",
+      "id": "1058546248",
+      "name_lat": "ЧИВАСИК ИЗ НАДРОВИИ (Д-Ш)",
       "name_ru": "",
       "breed": "ПРАЖСКИЙ КРЫСАРИК",
       "breed_en": "",
@@ -2407,10 +2287,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "489984479",
+      "id": "478614862",
       "name_lat": "ЧИФ ЮНИК С БЕРЕГА ТУРЫ",
-      "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "name_ru": "ЧИФ ЮНИК С БЕРЕГА ТУРЫ",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2418,7 +2298,7 @@
     {
       "id": "1150720658",
       "name_lat": "ЧИХОКЛАБ ГАБРИЕЛА БЛУБЕРИ",
-      "name_ru": "",
+      "name_ru": "ЧИХОКЛАБ ГАБРИЕЛА БЛУБЕРИ",
       "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 7,
@@ -2427,7 +2307,7 @@
     {
       "id": "1262149340",
       "name_lat": "ЧИКАРА КУМАГАИ",
-      "name_ru": "",
+      "name_ru": "ЧИКАРА КУМАГАИ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 5,
@@ -2436,7 +2316,7 @@
     {
       "id": "1248945594",
       "name_lat": "ЧИФ ЭНДЖЕЛ АЙС",
-      "name_ru": "",
+      "name_ru": "ЧИФ ЭНДЖЕЛ АЙС",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 4,
@@ -2445,17 +2325,8 @@
     {
       "id": "125671692",
       "name_lat": "ЧИЛИТА СВИТ МЭЛОДИ",
-      "name_ru": "",
+      "name_ru": "ЧИЛИТА СВИТ МЭЛОДИ",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "194011704",
-      "name_lat": "ЧИ'СТАЙЛ ЗОЛОТОЙ ИГРОК",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2463,17 +2334,35 @@
     {
       "id": "261642744",
       "name_lat": "ЧИФ РОЯЛ АКБЭР БЕЛЛА БЛЕЙК",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР БЕЛЛА БЛЕЙК",
       "breed": "МОПС",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "912319564",
+      "id": "194011704",
+      "name_lat": "ЧИ'СТАЙЛ ЗОЛОТОЙ ИГРОК",
+      "name_ru": "ЧИ'СТАЙЛ ЗОЛОТОЙ ИГРОК",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1767658124",
+      "name_lat": "ЧИВАСКЛАБ ГРЕЙС ОКСИ",
+      "name_ru": "ЧИВАСКЛАБ ГРЕЙС ОКСИ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "555388457",
       "name_lat": "ЧИТА",
       "name_ru": "",
-      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ /",
+      "breed": "ОХОТНИЧИЙ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2488,17 +2377,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1269232975",
+      "id": "712656590",
       "name_lat": "ЧИККОНЕ'С КИСС",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "name_ru": "ЧИККОНЕ'С КИСС",
+      "breed": "КИТАЙСКАЯ КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "189188160",
-      "name_lat": "ЧИХУА-БОМОНД РОМИРОС ГЛОРИУС (Д- Ш)",
+      "id": "47595674",
+      "name_lat": "ЧИХУА-БОМОНД РОМИРОС ГЛОРИУС (Д-Ш)",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
@@ -2596,19 +2485,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "634020212",
-      "name_lat": "ЧИХ'ОРДА ЕВА ЕЛЕНА (Д- Ш)",
+      "id": "237450540",
+      "name_lat": "ЧИХ'ОРДА ЕВА ЕЛЕНА (Д-Ш)",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1846344077",
+      "id": "1500124656",
       "name_lat": "ЧИЛЛИ ПЛАТИНУМ БЛОНД",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2632,19 +2521,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "51934842",
+      "id": "663793915",
       "name_lat": "ЧИЛЛИТА-Ф ЦВЕТ ВИСКИ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1950830962",
+      "id": "1588655991",
       "name_lat": "ЧИЭРИНА СКАЗКА ВЕРБНОГО ЛЕСА",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2652,53 +2541,35 @@
     {
       "id": "1077657751",
       "name_lat": "ЧИО ЧИО САН ИЗ СОЗВЕЗДИЯ РЫЖИХ ПСОВ",
-      "name_ru": "",
+      "name_ru": "ЧИО ЧИО САН ИЗ СОЗВЕЗДИЯ РЫЖИХ ПСОВ",
       "breed": "ГРИФФОН",
       "breed_en": "",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "763995517",
-      "name_lat": "ЧИ КЕН СО БЕЛЛАТОР НЕРО",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "100895743",
-      "name_lat": "ЧИНЗАНО РОССО",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
       "id": "1249402947",
       "name_lat": "ЧИВАС ГРАНД ВИННЕР",
-      "name_ru": "",
+      "name_ru": "ЧИВАС ГРАНД ВИННЕР",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "87563453",
+      "id": "1610629553",
       "name_lat": "ЧИЖИК-ПЫЖИК ИЗ ЗИМНИХ ГРЁЗ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "name_ru": "ЧИЖИК-ПЫЖИК ИЗ ЗИМНИХ ГРЁЗ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "216288336",
+      "id": "852228005",
       "name_lat": "ЧИЗАР ОТВАЖНЫЙ С БЕЛОГО БЕРЕГА",
       "name_ru": "",
-      "breed": "САМОЕДСКАЯ СОБАКА /",
+      "breed": "САМОЕДСКАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2706,7 +2577,7 @@
     {
       "id": "1604993604",
       "name_lat": "ЧИКО ФУДЖИЯМА КЕНША",
-      "name_ru": "",
+      "name_ru": "ЧИКО ФУДЖИЯМА КЕНША",
       "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 3,
@@ -2715,19 +2586,10 @@
     {
       "id": "1370695709",
       "name_lat": "ЧИВАСКЛАБ КАСАНДРА ОЛСИ",
-      "name_ru": "",
+      "name_ru": "ЧИВАСКЛАБ КАСАНДРА ОЛСИ",
       "breed": "CAVALIER KING CHARLES SPANIEL",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1096817320",
-      "name_lat": "ЧИАБАТТА",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2740,10 +2602,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "171870176",
+      "id": "1033631121",
       "name_lat": "ЧИНГИЗ ХАН",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2787,7 +2649,7 @@
     {
       "id": "568921822",
       "name_lat": "ЧИЛИМГУ Р ЁЗГЕДА",
-      "name_ru": "",
+      "name_ru": "ЧИЛИМГУ Р ЁЗГЕДА",
       "breed": "SHEPHER",
       "breed_en": "",
       "total_shows": 2,
@@ -2796,7 +2658,7 @@
     {
       "id": "113629257",
       "name_lat": "ЧИКАГО ИЗ НОЧНЫХ СНАЙПЕРОВ",
-      "name_ru": "",
+      "name_ru": "ЧИКАГО ИЗ НОЧНЫХ СНАЙПЕРОВ",
       "breed": "СТАФФОРДШИРСКИЙ АМЕРИКАНСКАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -2812,18 +2674,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "331909661",
-      "name_lat": "ЧИМГИ ТУРА ЖИЛЬ",
-      "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1362936440",
       "name_lat": "ЧИБИ ДЕЙЕНЕРИС ШТОРМБОРН",
-      "name_ru": "",
+      "name_ru": "ЧИБИ ДЕЙЕНЕРИС ШТОРМБОРН",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 5,
@@ -2841,7 +2694,7 @@
     {
       "id": "607120396",
       "name_lat": "ЧИКИ МОНИ УМА ФОР МАРВАЛИСА",
-      "name_ru": "",
+      "name_ru": "ЧИКИ МОНИ УМА ФОР МАРВАЛИСА",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
@@ -2854,15 +2707,6 @@
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1767658124",
-      "name_lat": "ЧИВАСКЛАБ ГРЕЙС ОКСИ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2884,29 +2728,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "2271934",
-      "name_lat": "ЧИРОКОС ЕЖИ- МАРИО",
-      "name_ru": "",
+      "id": "1704139928",
+      "name_lat": "ЧИРОКОС ЕЖИ-МАРИО",
+      "name_ru": "ЧИРОКОС ЕЖИ-МАРИО",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "994840385",
-      "name_lat": "ЧИГРИГ ИЗ ЗАПАДНОЙ СИБИРИ",
+      "id": "1832540391",
+      "name_lat": "ЧИЛИ ПЕППЕР ИЗ ДОМА АКМЫ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1436061556",
-      "name_lat": "ЧИО-ЧИО-САН",
+      "id": "988248261",
+      "name_lat": "ЧИРОКОС ЯНИНА",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2929,19 +2771,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1295666220",
-      "name_lat": "ЧИАБАТТА",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "198973453",
+      "id": "1141205025",
       "name_lat": "ЧИНГИЗ ХАН",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ / FOX",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш / FOX",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2965,19 +2798,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "728878689",
-      "name_lat": "ЧИПОЛИНО",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1903423705",
+      "id": "1335413453",
       "name_lat": "ЧИППО ЧИПОЛИНО ОЛЕННА",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3001,10 +2825,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "486256291",
+      "id": "875330954",
       "name_lat": "ЧИКРОСС АПРИОРИ ВИННЕР",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3019,19 +2843,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "877689822",
-      "name_lat": "ЧИЛИ ПЕППЕР ИЗ ДОМА АКМЫ",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1008179341",
+      "id": "1267848432",
       "name_lat": "ЧИЛИМГУР ЕФРАТ",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3064,30 +2879,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "1594342656",
+      "id": "1658571885",
       "name_lat": "ЧИПП НОСИТЕЛЬ БУДУЩЕГО",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1093190554",
-      "name_lat": "ЧИФ ГРЕЙТ БРАВО",
+      "id": "1701623088",
+      "name_lat": "ЧИРОКОС ВАЛЕНСИЯ",
       "name_ru": "",
-      "breed": "МОПС",
-      "breed_en": "",
-      "total_shows": 6,
+      "breed": "MINIATURE PINSCHER",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "921881280",
-      "name_lat": "ЧИБСТЕН НОН СТОП",
+      "id": "690712774",
+      "name_lat": "ЧИБИ-ЧИЙО",
       "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1093190554",
+      "name_lat": "ЧИФ ГРЕЙТ БРАВО",
+      "name_ru": "ЧИФ ГРЕЙТ БРАВО",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3109,12 +2932,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "69798391",
+      "id": "1486879798",
       "name_lat": "ЧИХУА-БОМОНД ЛЕСЛИ ЛАУНО (Д-Ш)",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "name_ru": "ЧИХУА-БОМОНД ЛЕСЛИ ЛАУНО (Д-Ш)",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1705378796",
+      "name_lat": "ЧИБСТЕН ПОРШН ОФ ХЭППИНЕСС",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1797289367",
+      "name_lat": "ЧИККИ",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -3127,10 +2968,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1612521506",
+      "id": "1671343022",
       "name_lat": "Чихоклаб Оливер Кинг Ав",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3138,7 +2979,7 @@
     {
       "id": "1271500592",
       "name_lat": "ЧИН ЧИН ИЗ ЖАСМИНОВОГО ДВОРЦА",
-      "name_ru": "",
+      "name_ru": "ЧИН ЧИН ИЗ ЖАСМИНОВОГО ДВОРЦА",
       "breed": "ПЕКИНЕС",
       "breed_en": "",
       "total_shows": 3,
@@ -3163,19 +3004,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1048522183",
+      "id": "1696807736",
       "name_lat": "ЧИКА БЬЮТИ НАЙТ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "349645618",
+      "id": "865870230",
       "name_lat": "ЧИРФУЛ ДОЛЛИ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3219,7 +3060,7 @@
     {
       "id": "531192862",
       "name_lat": "ЧИХУА-БОМОНД МАРИОНА",
-      "name_ru": "",
+      "name_ru": "ЧИХУА-БОМОНД МАРИОНА",
       "breed": "ЧИХУАХУА длинношерстная",
       "breed_en": "",
       "total_shows": 2,
@@ -3228,7 +3069,7 @@
     {
       "id": "596962611",
       "name_lat": "ЧИФ РОЯЛ АКБЭР ЗУЛЬФИРА",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ЗУЛЬФИРА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
@@ -3237,7 +3078,7 @@
     {
       "id": "285387840",
       "name_lat": "ЧИКА ТОНИЯ КОРОНАДО ДЕ ГЛОРИЯ",
-      "name_ru": "",
+      "name_ru": "ЧИКА ТОНИЯ КОРОНАДО ДЕ ГЛОРИЯ",
       "breed": "МОПС БЕЖЕВЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -3246,26 +3087,17 @@
     {
       "id": "1639165500",
       "name_lat": "ЧИФ РОЯЛ АКБЭР ЮВЕНТА",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ЮВЕНТА",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "600765824",
-      "name_lat": "ЧИЛИПЕППЕР'C УЛТИМА РЕЙ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МАЛЫЙ (рыжий, серый)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "720892836",
+      "id": "112849361",
       "name_lat": "ЧИНЗАНА",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3325,24 +3157,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1104826186",
-      "name_lat": "ЧИЛЛИ",
-      "name_ru": "",
-      "breed": "СЕТТЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "828097964",
-      "name_lat": "ЧИЛЛИ",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1616581927",
       "name_lat": "ЧИЛЛИ",
       "name_ru": "",
@@ -3379,10 +3193,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "124234643",
+      "id": "1078543287",
       "name_lat": "ЧИЗЕТТИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРОМ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3451,10 +3265,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1772554091",
+      "id": "223282344",
       "name_lat": "ЧИЖИК ПЫЖИК ОТ ФОРЕСТ ГИРЦ",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3496,10 +3310,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "816874098",
+      "id": "261534707",
       "name_lat": "ЧИМГИ ТУРА СУНКЭН БАСХАН",
       "name_ru": "",
-      "breed": "ЯКУТСКАЯ ЛАЙКА /",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3546,6 +3360,14 @@
       "name_ru": "",
       "breed": "МОПС / PUG",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1409779897",
+      "name_lat": "ЧИ’СТАЙЛ ГАБРИЕЛЛА",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3622,8 +3444,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1678147673",
-      "name_lat": "ЧИЧОЛИНА ИЗ ЧЕНТАО- ПАРК",
+      "id": "314924733",
+      "name_lat": "ЧИЧОЛИНА ИЗ ЧЕНТАО-ПАРК",
       "name_ru": "",
       "breed": "ХАВАНЕЗ",
       "breed_en": "",
@@ -3651,7 +3473,7 @@
     {
       "id": "110456363",
       "name_lat": "ЧИКАГО ИН'КРЕДЭБЛ НЕО КОНЦЕПТ",
-      "name_ru": "",
+      "name_ru": "ЧИКАГО ИН'КРЕДЭБЛ НЕО КОНЦЕПТ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
@@ -3660,17 +3482,8 @@
     {
       "id": "845580389",
       "name_lat": "ЧИХУА-БОМОНД ФОРТУНАТА ФРАНТИ",
-      "name_ru": "",
+      "name_ru": "ЧИХУА-БОМОНД ФОРТУНАТА ФРАНТИ",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "690712774",
-      "name_lat": "ЧИБИ-ЧИЙО",
-      "name_ru": "",
-      "breed": "СИБА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3678,19 +3491,10 @@
     {
       "id": "643944906",
       "name_lat": "ЧИНЗАРЮ ГО ДЗИПАНГУ",
-      "name_ru": "",
+      "name_ru": "ЧИНЗАРЮ ГО ДЗИПАНГУ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "43728630",
-      "name_lat": "ЧИЛИМГУР ДАКОТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -3703,28 +3507,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1712184687",
+      "id": "483438184",
       "name_lat": "ЧИЛИМГУР ЁШИКО",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЧИЛИМГУР ЁШИКО",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1223733996",
+      "id": "1915838051",
       "name_lat": "ЧИЛИМГУР ТАЙГА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "Чилимгур Тайга",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1004560874",
+      "id": "1593288545",
       "name_lat": "ЧИПСИ ФОМ АЛИХЕЛЬ ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЧИПСИ ФОМ АЛИХЕЛЬ ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3739,10 +3543,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1641139617",
+      "id": "151656112",
+      "name_lat": "ЧИЗУ МАЙ ДЖОЙ",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "941764418",
       "name_lat": "ЧИЛИМГУР ËШИКО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3752,6 +3564,15 @@
       "name_lat": "ЧИЁКА НАМИ МОМОКА",
       "name_ru": "",
       "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1633814065",
+      "name_lat": "ЧИЧЧОЛИНА ИЗ ДОМА ВЕНГРЕ",
+      "name_ru": "ЧИЧЧОЛИНА ИЗ ДОМА ВЕНГРЕ",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3786,28 +3607,10 @@
     {
       "id": "1643235040",
       "name_lat": "ЧИН КИНГДОМ АЛЬ ПАЧИНО",
-      "name_ru": "",
+      "name_ru": "ЧИН КИНГДОМ АЛЬ ПАЧИНО",
       "breed": "ЯПОНСКИЙ ХИН",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "304415789",
-      "name_lat": "ЧИППОЛИНО ИЗ ДОМА КОНФАЭЛЬ",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "142304698",
-      "name_lat": "ЧИАБАТТА",
-      "name_ru": "",
-      "breed": "ВОЛЧЬЯ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -3824,15 +3627,6 @@
       "name_lat": "ЧИКАО",
       "name_ru": "",
       "breed": "АКИТА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1633814065",
-      "name_lat": "ЧИЧЧОЛИНА ИЗ ДОМА ВЕНГРЕ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3858,16 +3652,16 @@
     {
       "id": "1298203086",
       "name_lat": "ЧИХ ОРДА ДЖИНА ЛОЛЛОБРИДЖИДА",
-      "name_ru": "",
+      "name_ru": "ЧИХ ОРДА ДЖИНА ЛОЛЛОБРИДЖИДА",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "13388140",
-      "name_lat": "ЧИЛДА ЛА- ДОМИНИКА",
-      "name_ru": "",
+      "id": "1163089322",
+      "name_lat": "ЧИЛДА ЛА-ДОМИНИКА",
+      "name_ru": "ЧИЛДА ЛА-ДОМИНИКА",
       "breed": "АКИТА АМЕРИКАНСКАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -3876,17 +3670,34 @@
     {
       "id": "1600071807",
       "name_lat": "ЧИКАГО ЧЕЙЗ ДЕЛЬ АЙЛЕНД",
-      "name_ru": "",
+      "name_ru": "ЧИКАГО ЧЕЙЗ ДЕЛЬ АЙЛЕНД",
       "breed": "MINIATURE PINSCHER",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "17815020",
+      "id": "735476004",
+      "name_lat": "ЧИФ РОЯЛ АКБЭР НЕОНЕЛЛА",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР НЕОНЕЛЛА",
+      "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1223758126",
+      "name_lat": "ЧИН ЧИН Ф.Д. КЛЯЙНЕН БЭРТИГЕН",
+      "name_ru": "ЧИН ЧИН Ф.Д. КЛЯЙНЕН БЭРТИГЕН",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1524744023",
       "name_lat": "ЧИЛИМГУР ХАНОР",
-      "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "name_ru": "ЧИЛИМГУР ХАНОР",
+      "breed": "NEWFOUNDLАND",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3910,24 +3721,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "413981288",
-      "name_lat": "ЧИАБАТТА",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "926132005",
-      "name_lat": "ЧИАБАТТА",
-      "name_ru": "",
-      "breed": "ШЕЛТИ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "951479420",
       "name_lat": "ЧИНА РОУЗ",
       "name_ru": "",
@@ -3937,11 +3730,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "207679931",
+      "id": "203942837",
       "name_lat": "ЧИЖИК ПЫЖИК",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179777634",
+      "name_lat": "ЧИКА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -3964,6 +3765,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1330366948",
+      "name_lat": "ЧИ'СТАЙЛ БРИЛЛИАНТ ФОР СОФИЯ",
+      "name_ru": "",
+      "breed": "ДЛИННОШЕРСТНЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "758462485",
       "name_lat": "ЧИФТЭН ДЖЕФФРИ CHAMING",
       "name_ru": "",
@@ -3973,10 +3783,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1829308275",
-      "name_lat": "ЧИХУА- БОМОНД ЦИАСАН СЕВЕН ВАЙШЕС (Д-Ш)",
+      "id": "112547136",
+      "name_lat": "ЧИХУА-БОМОНД ЦИАСАН СЕВЕН ВАЙШЕС (Д-Ш)",
       "name_ru": "",
-      "breed": "ТНАЯ /",
+      "breed": "ТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3991,10 +3801,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "677335351",
+      "id": "1892067702",
       "name_lat": "ЧИНЗАНО С БЕРЕГОВ НЕВЫ",
       "name_ru": "",
-      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ /",
+      "breed": "МАЛЫЙ ШПИЦ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4027,28 +3837,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1330366948",
-      "name_lat": "ЧИ'СТАЙЛ БРИЛЛИАНТ ФОР СОФИЯ",
-      "name_ru": "",
-      "breed": "ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1284673873",
       "name_lat": "ЧИЛИТА-Ф СИЛА СТИХИИ",
       "name_ru": "",
       "breed": "Окрас ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "897877809",
-      "name_lat": "ЧИФ РОЯЛ АКБЭР НЕОНЕЛЛА",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4063,19 +3855,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1646947233",
-      "name_lat": "ЧИХУА-БОМОНДФЭЙ ФРАНТИН (Д- Ш)",
+      "id": "1097029493",
+      "name_lat": "ЧИХУА-БОМОНДФЭЙ ФРАНТИН (Д-Ш)",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1915290842",
-      "name_lat": "ЧИЛИТА БЛОССУМ",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4090,10 +3873,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "697997840",
+      "id": "1270329372",
       "name_lat": "ЧИХУА БОМОНД ГИЛАНА МЭЙ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4108,10 +3891,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1925655322",
+      "id": "507049499",
       "name_lat": "ЧИЛИТА-Ф РОБИН БОБИН",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4126,6 +3909,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "768629171",
+      "name_lat": "ЧИБСТЕН ПЛАНЕТ ОФ ЛАВ",
+      "name_ru": "",
+      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1661911153",
       "name_lat": "ЧИЗ",
       "name_ru": "",
@@ -4135,10 +3927,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1940323450",
+      "id": "599013067",
       "name_lat": "ЧИНШОУ ГОЛИЦЫН",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ /",
+      "name_ru": "ЧИНШОУ ГОЛИЦЫН",
+      "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4171,20 +3963,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "140663031",
+      "id": "727805750",
       "name_lat": "ЧИНГАРА",
       "name_ru": "",
-      "breed": "РОТВЕЙЛЕР /",
+      "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1846251464",
+      "id": "1819514582",
       "name_lat": "ЧИЖИК ПЫЖИК",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ / FOX TERRIER WIRE",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш / FOX TERRIER WIRE",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "107145282",
+      "name_lat": "ЧИЖИК ПЫЖИК",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ / FOX",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -4207,10 +4007,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1090852490",
+      "id": "1105839581",
+      "name_lat": "ЧИНАР ИЗ РОДНОГО КРАЯ",
+      "name_ru": "",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "74046763",
       "name_lat": "ЧИЛИТА-Ф ГУСАРСКАЯ БАЛАДА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4261,37 +4069,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1708758980",
-      "name_lat": "ЧИВАСКЛАБ ГРЭЙС ОКСИ",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "919606675",
-      "name_lat": "ЧИНМОЙ ФРАНТА",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1537284462",
       "name_lat": "ЧИНАЗЕС С ВЕРХНЕВОЛЖЬЯ",
-      "name_ru": "",
+      "name_ru": "ЧИНАЗЕС С ВЕРХНЕВОЛЖЬЯ",
       "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1664643067",
+      "id": "118582722",
       "name_lat": "ЧИЗЕТТИ",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4306,10 +4096,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "134466333",
+      "id": "626854660",
       "name_lat": "ЧИХУА-БОМОНД ХЕЙЛИАНА (Д-Ш)",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ЧИХУА-БОМОНД ХЕЙЛИАНА (Д-Ш)",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4333,10 +4123,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1916024596",
+      "id": "853363649",
       "name_lat": "ЧИО-РИО",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4387,10 +4177,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1755325009",
+      "id": "1212175596",
       "name_lat": "ЧИБСТЕН ЕЛОЧКА",
       "name_ru": "",
-      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР) /",
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4432,10 +4222,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "223402604",
+      "id": "205677468",
       "name_lat": "ЧИЛИТА ТАНЕЦ МАЛЕНЬКОЙ ЗВЕЗДЫ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4486,19 +4276,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1222453413",
+      "id": "1184757734",
       "name_lat": "ЧИНУК ТИГУА ИЗ ТАКСАГРАДА",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1705378796",
-      "name_lat": "ЧИБСТЕН ПОРШН ОФ ХЭППИНЕСС",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4515,7 +4296,7 @@
     {
       "id": "72264805",
       "name_lat": "ЧИО ЧИО САН ДЭЯ",
-      "name_ru": "",
+      "name_ru": "ЧИО ЧИО САН ДЭЯ",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -4531,18 +4312,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "639434872",
-      "name_lat": "ЧИКАГО ГОЛДЕН БОЙ",
-      "name_ru": "",
-      "breed": "КОРСО / ITALIAN CANE",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1152890521",
       "name_lat": "ЧИХУА-БОМОНД ИРЛОТТИ ЛИТДЖИ",
-      "name_ru": "",
+      "name_ru": "ЧИХУА-БОМОНД ИРЛОТТИ ЛИТДЖИ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -4594,10 +4366,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1868710779",
-      "name_lat": "ЧИХУА БОМОНД ЧИЛИТТА ЭРНАННИ-Д- Ш",
+      "id": "443685568",
+      "name_lat": "ЧИНА ДОЛЛ ЭНДЖОЙ БЬЮТИ",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР / YORKSHIRE TERRIER",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "678827143",
+      "name_lat": "ЧИХУА БОМОНД ЧИЛИТТА ЭРНАННИ-Д-Ш",
+      "name_ru": "",
+      "breed": "ФРАНЦУЗСКИЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4621,10 +4401,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "490818093",
+      "id": "28461921",
       "name_lat": "ЧИЛЛИ ПЕППЕР ИРИСС ДЕЛЮКС",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "name_ru": "ЧИЛЛИ ПЕППЕР ИРИСС ДЕЛЮКС",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -4684,46 +4464,46 @@
       "competition_dog_id": null
     },
     {
-      "id": "1987479172",
+      "id": "1491048217",
       "name_lat": "ЧИЛИТА-Ф ТЕССА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1016552308",
-      "name_lat": "ЧИЗАРИО ИЗ УНИКАЛЬНОЙ КОЛЛЕКЦИИ",
+      "id": "1835408056",
+      "name_lat": "ЧИ КЕН СО КИЦУНЭ NASLEDIE TOBETOV",
       "name_ru": "",
-      "breed": "КЛАМБЕР СПАНИЕЛЬ",
+      "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1683062291",
-      "name_lat": "ЧИНКО ФОМ МАИР ХОФ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
       "id": "1007289421",
       "name_lat": "ЧИКИТА ФОР СОФИРА ИЗ ДОМА ЛАНКАСТЕР",
-      "name_ru": "",
+      "name_ru": "ЧИКИТА ФОР СОФИРА ИЗ ДОМА ЛАНКАСТЕР",
       "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1822440132",
+      "name_lat": "ЧИНКО ФОМ МАИР ХОФ",
+      "name_ru": "ЧИНКО ФОМ МАИР ХОФ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1380014809",
+      "id": "1638518368",
       "name_lat": "ЧИЛИМГУР ЖЕНЕВЕРА КОРЕТТА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЧИЛИМГУР ЖЕНЕВЕРА КОРЕТТА",
+      "breed": "SHEPHERD DOG DOUBLE",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -4738,21 +4518,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "54948674",
-      "name_lat": "ЧИРОКОС МАРФИК",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
+      "id": "408467368",
+      "name_lat": "ЧИФ РОЯЛ АКБЭР ЧЕРРИ РОУЗ",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ЧЕРРИ РОУЗ",
+      "breed": "МОПС",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1797289367",
-      "name_lat": "ЧИККИ",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "id": "54948674",
+      "name_lat": "ЧИРОКОС МАРФИК",
+      "name_ru": "ЧИРОКОС МАРФИК",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -4767,7 +4546,7 @@
     {
       "id": "582771201",
       "name_lat": "ЧИХОКЛАБ ЕНАЙ ВАЙТ ГОЛД",
-      "name_ru": "",
+      "name_ru": "ЧИХОКЛАБ ЕНАЙ ВАЙТ ГОЛД",
       "breed": "CHIHUAHUA LONG",
       "breed_en": "",
       "total_shows": 5,
@@ -4776,7 +4555,7 @@
     {
       "id": "1459197655",
       "name_lat": "ЧИНГИЗ С МЕДНОГО ОЗЕРА",
-      "name_ru": "",
+      "name_ru": "ЧИНГИЗ С МЕДНОГО ОЗЕРА",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 5,
@@ -4830,7 +4609,7 @@
     {
       "id": "1029119494",
       "name_lat": "ЧИ КЕН СО ВИЖН КОЛЛЕКШОН",
-      "name_ru": "",
+      "name_ru": "ЧИ КЕН СО ВИЖН КОЛЛЕКШОН",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
@@ -4839,7 +4618,7 @@
     {
       "id": "120448581",
       "name_lat": "ЧИККИ СТИЛЕР ОФ МАЙ ХАРТ",
-      "name_ru": "",
+      "name_ru": "ЧИККИ СТИЛЕР ОФ МАЙ ХАРТ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
@@ -4848,7 +4627,7 @@
     {
       "id": "576936116",
       "name_lat": "ЧИО-ЧИО-САН С КРУТОЯРА",
-      "name_ru": "",
+      "name_ru": "ЧИО-ЧИО-САН С КРУТОЯРА",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 4,
@@ -4857,7 +4636,7 @@
     {
       "id": "1508676492",
       "name_lat": "ЧИРОКОС ГЛЕДИС",
-      "name_ru": "",
+      "name_ru": "ЧИРОКОС ГЛЕДИС",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -4866,7 +4645,7 @@
     {
       "id": "1080844768",
       "name_lat": "ЧИЕКО МИЧИКО С АКУЛОВОЙ ГОРЫ",
-      "name_ru": "",
+      "name_ru": "ЧИЕКО МИЧИКО С АКУЛОВОЙ ГОРЫ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
@@ -4875,10 +4654,19 @@
     {
       "id": "1814390473",
       "name_lat": "ЧИЛИМГУР ХЭППИ",
-      "name_ru": "",
+      "name_ru": "ЧИЛИМГУР ХЭППИ",
       "breed": "NEWFOUNDLАND",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "451111512",
+      "name_lat": "ЧИА МИТСУ",
+      "name_ru": "",
+      "breed": "АКИТА",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -4909,6 +4697,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1300697076",
+      "name_lat": "ЧИАРА БЕЛЛА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "917026051",
       "name_lat": "ЧИТА",
       "name_ru": "",
@@ -4922,6 +4718,24 @@
       "name_lat": "ЧИКАГО НЬЮС",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "550938662",
+      "name_lat": "ЧИПОЛЛА С ТЕПЛОГО ДОМА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "370652343",
+      "name_lat": "ЧИКА СВЕТСКАЯ ЛЬВИЦА",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4945,24 +4759,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "176844282",
-      "name_lat": "ЧИПОЛЛА С ТЕПЛОГО ДОМА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "428591987",
-      "name_lat": "ЧИКА СВЕТСКАЯ ЛЬВИЦА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1317109074",
       "name_lat": "ЧИФ РОЯЛ АКБЭР УДАЛЬБЕРТА",
       "name_ru": "",
@@ -4972,37 +4768,45 @@
       "competition_dog_id": null
     },
     {
+      "id": "573882747",
+      "name_lat": "ЧИРИНА СЕВЕРНЫЙ АНГЕЛ",
+      "name_ru": "",
+      "breed": "ПТИ БРАБАНСОН",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "944424128",
       "name_lat": "ЧИКУМА КОТАРОУ",
-      "name_ru": "",
+      "name_ru": "ЧИКУМА КОТАРОУ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1717988898",
+      "id": "133280963",
       "name_lat": "ЧИКАГО ВИЛД ВЕСТ",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "name_ru": "ЧИКАГО ВИЛД ВЕСТ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1024137554",
-      "name_lat": "ЧИВИТЕЛЛА ИН- ВАЛЬ-ДИ",
-      "name_ru": "",
+      "id": "261516316",
+      "name_lat": "ЧИВИТЕЛЛА ИН-ВАЛЬ-ДИ",
+      "name_ru": "ЧИВИТЕЛЛА ИН-ВАЛЬ-ДИ",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1506140529",
+      "id": "1173045901",
       "name_lat": "ЧИНЗАНО ИЗ ЦАРСКОСЕЛЬСКОЙ УСАДЬБЫ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "name_ru": "ЧИНЗАНО ИЗ ЦАРСКОСЕЛЬСКОЙ УСАДЬБЫ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5010,17 +4814,26 @@
     {
       "id": "630342582",
       "name_lat": "ЧИЛИМГУ Р ЗАБАВА",
-      "name_ru": "",
+      "name_ru": "ЧИЛИМГУ Р ЗАБАВА",
       "breed": "ПЕМБРОК",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1086230479",
+      "id": "1563826952",
       "name_lat": "ЧИЛИМГУР ИСКАНДЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЧИЛИМГУР ИСКАНДЕР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "782889648",
+      "name_lat": "ЧИН-ЧИН ИЗ НОВО-ПЕРЕДЕЛКИНО",
+      "name_ru": "ЧИН-ЧИН ИЗ НОВО-ПЕРЕДЕЛКИНО",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5028,7 +4841,7 @@
     {
       "id": "286075883",
       "name_lat": "ЧИВАС ВОЛЬФ ГОРДОСТЬ АРИСТОКРАТА",
-      "name_ru": "",
+      "name_ru": "ЧИВАС ВОЛЬФ ГОРДОСТЬ АРИСТОКРАТА",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
@@ -5037,17 +4850,17 @@
     {
       "id": "1319939939",
       "name_lat": "ЧИНГИС ХАН ТАТЭ ТАЙЛЕР",
-      "name_ru": "",
+      "name_ru": "ЧИНГИС ХАН ТАТЭ ТАЙЛЕР",
       "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "354122527",
+      "id": "277997179",
       "name_lat": "ЧИП БЛЕК ПАНТЕР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЁРНЫЙ, КОРИЧНЕВЫЙ",
+      "name_ru": "ЧИП БЛЕК ПАНТЕР",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) ЧЕРНЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5055,17 +4868,17 @@
     {
       "id": "154061871",
       "name_lat": "ЧИЯ ИЗ ХОРОВОДА ЗВЕЗД",
-      "name_ru": "",
+      "name_ru": "ЧИЯ ИЗ ХОРОВОДА ЗВЕЗД",
       "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА МАЛИНУА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1952052228",
+      "id": "823906782",
       "name_lat": "ЧИЛИ ФРОМ ХАУС ИРЕН",
-      "name_ru": "",
-      "breed": "КА ДЕ БО",
+      "name_ru": "ЧИЛИ ФРОМ ХАУС ИРЕН",
+      "breed": "ЛЕОНБЕРГЕР МАЙОРСКИЙ МАСТИФ (КА ДЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -5073,26 +4886,17 @@
     {
       "id": "818838214",
       "name_lat": "ЧИЛИПЕППЕР'С УЛЬТИМА РЕЙ",
-      "name_ru": "",
+      "name_ru": "ЧИЛИПЕППЕР'С УЛЬТИМА РЕЙ",
       "breed": "ПУДЕЛЬ СРЕДНИЙ СЕРЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "797424793",
-      "name_lat": "ЧИН-ЧИН ИЗ НОВО- ПЕРЕДЕЛКИНО",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1177322104",
+      "id": "1529237917",
       "name_lat": "ЧИКА",
       "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ /",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5120,15 +4924,6 @@
       "name_lat": "ЧИА МИТСУ",
       "name_ru": "",
       "breed": "АКИТА / AKITA",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "451111512",
-      "name_lat": "ЧИА МИТСУ",
-      "name_ru": "",
-      "breed": "АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5179,15 +4974,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1300697076",
-      "name_lat": "ЧИАРА БЕЛЛА",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "468917262",
       "name_lat": "ЧИЛЛИ",
       "name_ru": "",
@@ -5206,15 +4992,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "33131189",
-      "name_lat": "ЧИМИТ ДОРЖИ",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "410190566",
       "name_lat": "ЧИЛИНХАН",
       "name_ru": "",
@@ -5224,10 +5001,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "99799810",
+      "id": "861227735",
+      "name_lat": "ЧИНГИЗХАН",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1478580643",
       "name_lat": "ЧИМНИ СВИТ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5238,6 +5024,14 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "859480367",
+      "name_lat": "ЧИЛЛИ",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -5260,6 +5054,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "212975865",
+      "name_lat": "ЧИЛЕСТА",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "228332499",
+      "name_lat": "ЧИНЗАНО БЬЯНКА ЛАКИ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ / BULLDOG",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "35932726",
       "name_lat": "ЧИХ БАЙ ЛАВ АВРОРА",
       "name_ru": "",
@@ -5269,28 +5080,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1772427969",
-      "name_lat": "ЧИВАС РЕГАЛ ИЗ СОЛНЕЧНОГО ДОМА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "706931164",
       "name_lat": "ЧИКОЛАТА ДОЛЬЧЕ МИЯ",
       "name_ru": "",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "228332499",
-      "name_lat": "ЧИНЗАНО БЬЯНКА ЛАКИ",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ / BULLDOG",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5336,15 +5129,6 @@
       "name_lat": "ЧИКИТА ИЗ ЦВЕТОЧНОЙ ДОЛИНЫ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "628461576",
-      "name_lat": "ЧИЛИТА-Ф ШАНКАРА",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5399,24 +5183,6 @@
       "name_lat": "ЧИЛИТА ВЭСТА МЭЙ",
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1871382892",
-      "name_lat": "ЧИКА БОМБ ИЗ ДОМА КОРОЛЕВОЙ НБТ",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1632875828",
-      "name_lat": "ЧИЛИМГУР ЕЗГЕДА Д-Ш",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5530,10 +5296,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "739302589",
+      "id": "1699220433",
       "name_lat": "ЧИХОКЛАБ НОРМА ШЕРИ ЛАВ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5593,19 +5359,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1010831910",
+      "id": "1873304677",
       "name_lat": "ЧИЛИМГУР ЮКИО",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "573882747",
-      "name_lat": "ЧИРИНА СЕВЕРНЫЙ АНГЕЛ",
-      "name_ru": "",
-      "breed": "ПТИ БРАБАНСОН",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5613,26 +5370,26 @@
     {
       "id": "1002295603",
       "name_lat": "ЧИНГИЗХАН ИЗ ТВЕРСКОГО ДОМА",
-      "name_ru": "",
+      "name_ru": "ЧИНГИЗХАН ИЗ ТВЕРСКОГО ДОМА",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "ROTTWEILER",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1152300505",
-      "name_lat": "ЧИЧЧОЛИНА ИЗ ДОМА ВЕНГРЭ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "id": "281835936",
+      "name_lat": "ЧИНШОУ ЖАННА-ЛУИЗА ВАЛЛЕН",
+      "name_ru": "ЧИНШОУ ЖАННА-ЛУИЗА ВАЛЛЕН",
+      "breed": "ШАР ПЕЙ ШНАУЦЕР ПЕРЕЦ С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "281835936",
-      "name_lat": "ЧИНШОУ ЖАННА-ЛУИЗА ВАЛЛЕН",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ ШНАУЦЕР ПЕРЕЦ С",
+      "id": "797619487",
+      "name_lat": "ЧИ ПОЛЛАРИ ФЛОРИ СВИТ КАНДЕЙ",
+      "name_ru": "ЧИ ПОЛЛАРИ ФЛОРИ СВИТ КАНДЕЙ",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5640,7 +5397,7 @@
     {
       "id": "359137372",
       "name_lat": "ЧИНГИЗХАН ИЗ ТВЕРСКОГО ДИНАМО",
-      "name_ru": "",
+      "name_ru": "ЧИНГИЗХАН ИЗ ТВЕРСКОГО ДИНАМО",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
@@ -5649,26 +5406,25 @@
     {
       "id": "1065940022",
       "name_lat": "ЧИХУА - БОМОНД ЗВЕР БРИЛЛИАНТ Г/Ш",
-      "name_ru": "",
+      "name_ru": "ЧИХУА - БОМОНД ЗВЕР БРИЛЛИАНТ Г/Ш",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "245239471",
-      "name_lat": "ЧИЛИМГУР Ё-МОЕ ЦАРЬ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
+      "id": "235528181",
+      "name_lat": "ЧИЛЛИ ПЕППЕР",
+      "name_ru": "ЧИЛЛИ ПЕППЕР",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "858445170",
-      "name_lat": "ЧИХОКЛАБ ИШИМИ ВЕНДЕТТА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "id": "245239471",
+      "name_lat": "ЧИЛИМГУР Ё-МОЕ ЦАРЬ",
+      "name_ru": "ЧИЛИМГУР Ё-МОЕ ЦАРЬ",
+      "breed": "НЕМЕЦКАЯ ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5676,7 +5432,7 @@
     {
       "id": "1652513671",
       "name_lat": "ЧИАРА С ЗЕЛЕНЫХ ПРОСТОРОВ",
-      "name_ru": "",
+      "name_ru": "ЧИАРА С ЗЕЛЕНЫХ ПРОСТОРОВ",
       "breed": "НЕМЕЦКИЙ ДОГ ПАЛЕВЫЙ, ТИГРОВЫЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -5685,7 +5441,7 @@
     {
       "id": "1865580844",
       "name_lat": "ЧИФ РОЯЛ АКБЭР ЧАЙФ КИТТИ",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР ЧАЙФ КИТТИ",
       "breed": "МОПС",
       "breed_en": "",
       "total_shows": 2,
@@ -5694,7 +5450,7 @@
     {
       "id": "566626151",
       "name_lat": "ЧИРОКОС БАДИ ШОКОЛАЙФ",
-      "name_ru": "",
+      "name_ru": "ЧИРОКОС БАДИ ШОКОЛАЙФ",
       "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
@@ -5703,17 +5459,17 @@
     {
       "id": "1166828383",
       "name_lat": "ЧИНГИЗ ОТ РУС ЭФЕНДИ",
-      "name_ru": "",
+      "name_ru": "ЧИНГИЗ ОТ РУС ЭФЕНДИ",
       "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "267889581",
+      "id": "259481670",
       "name_lat": "ЧИЛИМГУР КОНДОР",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "name_ru": "ЧИЛИМГУР КОНДОР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5721,17 +5477,17 @@
     {
       "id": "847005761",
       "name_lat": "ЧИХ БАЙ ЛАВ ФРЕЗИЯ",
-      "name_ru": "",
+      "name_ru": "ЧИХ БАЙ ЛАВ ФРЕЗИЯ",
       "breed": "ТИБЕТСКИЙ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "13223132",
+      "id": "1713935067",
       "name_lat": "ЧИХОКЛАБ ТИНА САРАМЕЯ",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ЧИХОКЛАБ ТИНА САРАМЕЯ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5739,7 +5495,7 @@
     {
       "id": "1434322393",
       "name_lat": "ЧИНЗАНО БЬЯНКО",
-      "name_ru": "",
+      "name_ru": "ЧИНЗАНО БЬЯНКО",
       "breed": "ПУДЕЛЬ ТОЙ СЕРЫЙ, РЫЖИЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -5748,26 +5504,26 @@
     {
       "id": "419414162",
       "name_lat": "ЧИББИ ЛАУТЕР ШТАРК",
-      "name_ru": "",
+      "name_ru": "ЧИББИ ЛАУТЕР ШТАРК",
       "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ ТЕРЬЕР)",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "458394402",
+      "id": "113096650",
       "name_lat": "ЧИЛИ ПЕРЧИК ФОР ОРТОММИ НАЙС",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "name_ru": "ЧИЛИ ПЕРЧИК ФОР ОРТОММИ НАЙС",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1577334734",
+      "id": "1147021959",
       "name_lat": "ЧИРОКОС ЮХАНА",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "name_ru": "ЧИРОКОС ЮХАНА",
+      "breed": "ДЛИННОШЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5775,17 +5531,8 @@
     {
       "id": "1881346663",
       "name_lat": "ЧИФ РОЯЛ АКБЭР САНТОНИЯ",
-      "name_ru": "",
+      "name_ru": "ЧИФ РОЯЛ АКБЭР САНТОНИЯ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1211884682",
-      "name_lat": "ЧИБСТЕН ОРАНЖЕВАЯ ПЕСНЯ",
-      "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -5793,19 +5540,18 @@
     {
       "id": "439460512",
       "name_lat": "ЧИЛИ ИСКАТЕЛЬ ПРИКЛЮЧЕНИЙ",
-      "name_ru": "",
+      "name_ru": "ЧИЛИ ИСКАТЕЛЬ ПРИКЛЮЧЕНИЙ",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1316353406",
-      "name_lat": "ЧИНГИСХАН",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
-      "total_shows": 1,
+      "id": "1655600370",
+      "name_lat": "ЧИРИ ИЗ СОЧИ СИТИ",
+      "name_ru": "ЧИРИ ИЗ СОЧИ СИТИ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -5872,10 +5618,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1605955015",
+      "id": "1694290494",
       "name_lat": "ЧИНГИЗ",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6007,10 +5753,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "631074256",
+      "id": "1756161317",
       "name_lat": "ЧИЛИ ПЕППЕР",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6115,10 +5861,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1613145610",
+      "id": "822888627",
       "name_lat": "ЧИАРЕТТА",
       "name_ru": "",
-      "breed": "ПЕМБРОК",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6169,10 +5915,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "144747240",
+      "id": "667507853",
       "name_lat": "ЧИТА",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6192,6 +5938,22 @@
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "767084477",
+      "name_lat": "ЧИЛИ ПЕППЕР",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ СРЕДНИЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "854057490",
+      "name_lat": "ЧИРИЗАРД",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА / CENTRAL ASIA SHEPHERD",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -6223,6 +5985,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1490098886",
+      "name_lat": "ЧИЭРИНА",
+      "name_ru": "",
+      "breed": "КОРСО / ITALIAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1495806149",
+      "name_lat": "ЧИПА",
+      "name_ru": "",
+      "breed": "GERMAN",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1275062908",
       "name_lat": "ЧИБАС",
       "name_ru": "",
@@ -6250,6 +6028,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "138359507",
+      "name_lat": "ЧИПО НТАНДА",
+      "name_ru": "",
+      "breed": "БАСЕНДЖИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1925335662",
       "name_lat": "ЧИО ЧИО САН",
       "name_ru": "",
@@ -6268,19 +6054,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "826226592",
-      "name_lat": "ЧИНУШКА",
+      "id": "1512981975",
+      "name_lat": "ЧИЛЕНТАНО",
       "name_ru": "",
-      "breed": "Ш",
-      "breed_en": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "752445975",
-      "name_lat": "ЧИЛЛИ",
+      "id": "826226592",
+      "name_lat": "ЧИНУШКА",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6313,10 +6098,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1199468968",
+      "id": "1447514425",
       "name_lat": "ЧИАРА",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6412,15 +6197,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "861227735",
-      "name_lat": "ЧИНГИЗХАН",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "792992007",
       "name_lat": "ЧИТА БРИТТА",
       "name_ru": "",
@@ -6443,15 +6219,6 @@
       "name_lat": "ЧИП",
       "name_ru": "",
       "breed": "СЕТТЕР ГОРДОН (ШОТЛАНДСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "885135506",
-      "name_lat": "ЧИНГИЗХАН",
-      "name_ru": "",
-      "breed": "КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6574,6 +6341,22 @@
       "competition_dog_id": null
     },
     {
+      "id": "1685298223",
+      "name_lat": "ЧИЛИ",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ДЛИННОШЕРСТНАЯ /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "940930994",
+      "name_lat": "ЧИЛИМГУР ЯХА",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1571136271",
       "name_lat": "ЧИЛИТА ТАСИ",
       "name_ru": "",
@@ -6592,19 +6375,79 @@
       "competition_dog_id": null
     },
     {
-      "id": "859480367",
-      "name_lat": "ЧИЛЛИ",
+      "id": "1886291191",
+      "name_lat": "ЧИЛЛИ ГЕРЛ",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "958075857",
+      "name_lat": "ЧИЛЛИ ГЕРЛ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1633996801",
+      "name_lat": "ЧИЛИНТАНО",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1850440509",
+      "name_lat": "ЧИКО РИО РИКО",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1222079847",
-      "name_lat": "ЧИПОЛИНО",
+      "id": "835777580",
+      "name_lat": "ЧИКАГО НАМБЕР УАН",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1695086684",
+      "name_lat": "ЧИНЗАНА БЬЯНКА РОУЗ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "551744446",
+      "name_lat": "ЧИМИТМА ИЗ РУССКОЙ ЗВЕЗДЫ",
+      "name_ru": "",
+      "breed": "СОБАКА)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1162747088",
+      "name_lat": "ЧИО ЧИО САН ИЗ ЛИГИ ЧЕМПИОНОВ",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "20633868",
+      "name_lat": "ЧИЛИ ПЕППЕР С ДВИНЫ",
+      "name_ru": "",
+      "breed": "ТАКСА АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6646,10 +6489,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "430473853",
+      "id": "104467269",
       "name_lat": "ЧИАНА КАРАМЕЛЬ",
       "name_ru": "",
-      "breed": "ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6736,10 +6579,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "590313519",
+      "id": "234002526",
       "name_lat": "ЧИАНА КВИН ИЗ ДОМА ГУЗИЙ",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6772,15 +6615,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "16259846",
-      "name_lat": "ЧИНЗАНА ИЗ СОЛНЕЧНОГО ДОМА",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1720182483",
       "name_lat": "ЧИЛИТА-Ф ЛАДА",
       "name_ru": "",
@@ -6799,10 +6633,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1779341257",
-      "name_lat": "ЧИХУА-БОМОНД ФРАНТА (Д- Ш)",
+      "id": "603913131",
+      "name_lat": "ЧИХУА-БОМОНД ФРАНТА (Д-Ш)",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6871,8 +6705,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "940601906",
-      "name_lat": "ЧИКОЛЕТТА- ЧИПОЛЕТТА",
+      "id": "807951948",
+      "name_lat": "ЧИКОЛЕТТА-ЧИПОЛЕТТА",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ",
       "breed_en": "",
@@ -6880,10 +6714,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1510569238",
+      "id": "542683066",
       "name_lat": "ЧИКИ ЭНЖЕЛ БАРД",
       "name_ru": "",
-      "breed": "РИЗЕНШНАУЦЕР ЧЁРНЫЙ / GIANT",
+      "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ / GIANT",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6893,15 +6727,6 @@
       "name_lat": "ЧИХУА-БОМОНД ФЛАФФИ ЧАРМ (Д-Ш)",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "696928873",
-      "name_lat": "ЧИФ РОЯЛ АКБЕР НЕОНЕЛЛА",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -6979,15 +6804,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "958362887",
-      "name_lat": "ЧИКО РИО РИКО",
-      "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1158888968",
       "name_lat": "ЧИНТАМАНИ ЯМАХА (Г/Ш)",
       "name_ru": "",
@@ -6997,10 +6813,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "55851608",
+      "id": "1976227197",
       "name_lat": "ЧИРЕЛЛИ АФИНА ХАНТЕР",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7037,15 +6853,6 @@
       "name_lat": "ЧИХУА-БОМОНД ЦВЕТАЛИНА",
       "name_ru": "",
       "breed": "CHIHUAHUA LONG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1551519871",
-      "name_lat": "ЧИКАГО НАМБЕР УАН",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7123,15 +6930,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "97566002",
-      "name_lat": "ЧИ ПОЛЛАРИ ФЛОРИ СВИТ КАНДЕЙ",
-      "name_ru": "",
-      "breed": "CHIHUAHUA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "625304583",
       "name_lat": "ЧИРОКОС АЛМАЗ",
       "name_ru": "",
@@ -7204,17 +7002,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "635670159",
-      "name_lat": "ЧИН ЧИН Ф.Д. КЛЯЙНЕН БЭРТИГЕН",
-      "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ / MINIATURE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "350959894",
-      "name_lat": "ЧИХУА- БОМОНД",
+      "id": "176622028",
+      "name_lat": "ЧИХУА-БОМОНД",
       "name_ru": "",
       "breed": "ЧИХУАХУА",
       "breed_en": "",
@@ -7249,10 +7038,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1643600034",
+      "id": "617600067",
       "name_lat": "ЧИЛИТА-Ф ОДЕТТА",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7312,10 +7101,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "599905409",
+      "id": "1656406876",
       "name_lat": "ЧИЛИМГУР ЕЛИЗАВЕТ А ПЕРВАЯ",
       "name_ru": "",
-      "breed": "НДЛЕНД /",
+      "breed": "НДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7348,6 +7137,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "778699327",
+      "name_lat": "ЧИВАС ДРИМ ДИВАЙН МУН",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "37795473",
       "name_lat": "ЧИКЕЗИ КЭРОЛАЙН",
       "name_ru": "",
@@ -7357,28 +7154,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "393145645",
+      "id": "647793040",
       "name_lat": "ЧИХУА-БОМОНД ИОЛИССА (Д-Ш)",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1886557020",
+      "id": "491125753",
       "name_lat": "ЧИЛЛИ ПЕППЕР С ГОРЫ МЕЗМАЙ",
       "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "265839939",
-      "name_lat": "ЧИА ЭССИ ТУАТАРА СТРАЙКЕР",
-      "name_ru": "",
-      "breed": "УИППЕТ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7402,6 +7190,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1786272757",
+      "name_lat": "ЧИЖИК-ПЫЖИК ИЗ ЦВЕТОЧНОЙ ДАЛИНЫ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1107423179",
       "name_lat": "ЧИХУА -БОМОНД КЭССИС ЛАЙЧИ",
       "name_ru": "",
@@ -7420,11 +7216,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1196314413",
+      "id": "746890128",
       "name_lat": "ЧИЛЛИ ЭСТЕР (К-Ш)",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1226833722",
+      "name_lat": "ЧИНТАМАНИ ЛАСКОВЫЙ МАЙ",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7434,6 +7238,14 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) / GERMAN",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1149816008",
+      "name_lat": "ЧИНШОУ РАЙСИНГ СИН",
+      "name_ru": "",
+      "breed": "ШАР-ПЕЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7483,10 +7295,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "12715312",
+      "id": "1546927244",
       "name_lat": "ЧИО-ШИК КОРОЛЕВЫ ЭРРЕРЫ",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7501,20 +7313,51 @@
       "competition_dog_id": null
     },
     {
-      "id": "290227064",
-      "name_lat": "ЧИНЗАНА БЬЯНКА РОУЗ",
+      "id": "1474095945",
+      "name_lat": "ЧИМГИ ТУРА ДОМОВЁНОК КУЗЯ",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "ЯКУТСКАЯ ЛАЙКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736532441",
+      "name_lat": "ЧИО ЧИО САН КЭНДИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1554759425",
+      "name_lat": "ЧИКИТА ЮНЕЛЬ МЭН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "765062177",
+      "name_lat": "ЧИСТАЯ ПОБЕДА",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1492400428",
-      "name_lat": "ЧИСТАЯ ПОБЕДА",
+      "id": "130210060",
+      "name_lat": "ЧИЛИ ФАЕР ШОУ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "921744163",
+      "name_lat": "Чилита из Чистого Золота",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНЫЙ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -7591,10 +7434,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1755526661",
+      "id": "1377224074",
       "name_lat": "ЧИО ЧИО САН ИЗ ДОМА ХЕЛЕНФИЛ",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7636,10 +7479,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "544081578",
+      "id": "58529531",
       "name_lat": "ЧИХ'ОРДА ПРИМА ПЕРСЕЯ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7663,10 +7506,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "994844810",
+      "id": "333286491",
       "name_lat": "ЧИЛЕСТА ЭСТЕРИ",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7726,10 +7569,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1400920876",
+      "id": "439311104",
       "name_lat": "ЧИХУА БОМОНД ЮВЭЛЛА РОССИ",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЁРСТНЫЙ",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7739,15 +7582,6 @@
       "name_lat": "ЧИО-ЧИО-САН ИЗ ЦВЕТНИКА",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "551744446",
-      "name_lat": "ЧИМИТМА ИЗ РУССКОЙ ЗВЕЗДЫ",
-      "name_ru": "",
-      "breed": "СОБАКА)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7780,15 +7614,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1369466741",
-      "name_lat": "ЧИФ РОЯЛ АКБЭР БЭЛЛА БЛЕЙК",
-      "name_ru": "",
-      "breed": "МОПС / PUG",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1926814167",
       "name_lat": "ЧИКА СЛАДКАЯ КЛУБНИКА",
       "name_ru": "",
@@ -7816,10 +7641,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "102638783",
+      "id": "1044008007",
       "name_lat": "ЧИБА БЬЮТИ НАЙ",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ /",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7829,24 +7654,6 @@
       "name_lat": "ЧИНАРА ИЗ АЛЕКСАНДРОВСКОЙ СЛОБОДЫ",
       "name_ru": "",
       "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1118108185",
-      "name_lat": "ЧИЛЛИ ПЕППЕР",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1870884872",
-      "name_lat": "ЧИЛЕСТА ДЕМИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7897,10 +7704,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1525823424",
+      "id": "1736469734",
       "name_lat": "ЧИЛИМГУР ПИРАНЬЯ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7942,15 +7749,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1162747088",
-      "name_lat": "ЧИО ЧИО САН ИЗ ЛИГИ ЧЕМПИОНОВ",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1427073094",
       "name_lat": "ЧИЛИ ИЗ СТЕПНОГО",
       "name_ru": "",
@@ -7978,10 +7776,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1033716844",
+      "id": "342720993",
       "name_lat": "ЧИЛИТА-Ф ЛУКСОР",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -7991,15 +7789,6 @@
       "name_lat": "ЧИКАБОН СИМА (Д-Ш)",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "988248261",
-      "name_lat": "ЧИРОКОС ЯНИНА",
-      "name_ru": "",
-      "breed": "джек рассел терьер",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8086,10 +7875,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1871021147",
+      "id": "1268423570",
       "name_lat": "ЧИЛИМГУР ЦЕСИС",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД /",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8104,10 +7893,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1174778897",
+      "id": "471545004",
       "name_lat": "ЧИЛИТА ЛЕКС ФАТИ",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8158,8 +7947,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1923654051",
-      "name_lat": "ЧИКИТА МУЛАТА ЧОКОЛАТА Д-Ш",
+      "id": "1888259114",
+      "name_lat": "ЧИКИТА МУЛАТА ЧОКОЛАТА",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
@@ -8239,19 +8028,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "190927688",
+      "id": "1162357758",
       "name_lat": "ЧИНГИЗ-ХАН ВОМ АРРИАН ХОФ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "20633868",
-      "name_lat": "ЧИЛИ ПЕППЕР С ДВИНЫ",
-      "name_ru": "",
-      "breed": "ТАКСА АМЕРИКАНСКИЙ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -8347,6 +8127,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "907163270",
+      "name_lat": "ЧИМИНА ДЕЛЛА ЛУНА",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "214197143",
       "name_lat": "ЧИХОКЛАБ МЭЙН ФОРС (Д-Ш)",
       "name_ru": "",
@@ -8374,20 +8162,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "768629171",
-      "name_lat": "ЧИБСТЕН ПЛАНЕТ ОФ ЛАВ",
+      "id": "1695116257",
+      "name_lat": "ЧИНГИЗ ИЗ НОВОЙ СИБИРИ",
       "name_ru": "",
-      "breed": "ШОТЛАНДСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "220969083",
-      "name_lat": "ЧИКАГО МОНТИ",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ КОРИЧНЕВЫЙ",
-      "breed_en": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
       "total_shows": 1,
       "competition_dog_id": null
     }

@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "QI",
-  "count": 10,
+  "count": 11,
   "dogs": [
     {
-      "id": "1049692615",
+      "id": "258790395",
       "name_lat": "QI YU GE BLACK LASER",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "2000874890",
+      "name_lat": "Q'IS FOR LOREVY OF GREAT PLASURE",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
+      "breed_en": "NOVA SCOTIA DUCK TOLLING RETRIEVER",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -22,10 +31,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "290679733",
+      "id": "10518606",
       "name_lat": "QING QUENTIN PEARL O T NORTH'T HOFKE VAN CORBAZI",
       "name_ru": "",
-      "breed": "БЕЛЬГИЙСКАЯ ОВЧАРКА (ГРЮНЕНДАЛЬ)",
+      "breed": "ШВЕЙЦАРСКАЯ БЕЛЬГИЙСКАЯ ОВЧАРКА (ГРЮНЕНДАЛ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null

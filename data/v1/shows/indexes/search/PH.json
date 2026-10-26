@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "PH",
-  "count": 81,
+  "count": 83,
   "dogs": [
     {
       "id": "82853647",
@@ -31,12 +31,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1362010029",
+      "id": "1938655201",
       "name_lat": "PHAR LEP HARDINNA EREK EA REBEL ERIK",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -67,10 +67,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1030273122",
+      "id": "1772342196",
       "name_lat": "PHAR LEP HARDINNA CHELENDZH BRING DZHOY",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -85,19 +85,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1264755695",
+      "id": "1584595871",
       "name_lat": "PHALDEROL BIRYUZA",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed": "КАВАЛЕР КОНТИНЕНТАЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1538721408",
+      "id": "448181782",
       "name_lat": "PHALDEROL BARVINOK",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -108,23 +108,32 @@
       "name_ru": "",
       "breed": "GERMAN SHORT-HAIRED",
       "breed_en": "",
-      "total_shows": 24,
+      "total_shows": 25,
       "competition_dog_id": null
     },
     {
-      "id": "648242411",
+      "id": "18995419",
       "name_lat": "PHAR LEP HARDINNA YUADA RADUYUSHAYA SERDCE",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1078439135",
+      "id": "1665197448",
+      "name_lat": "PHILFORT BRADLEY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1107794751",
       "name_lat": "PHAR LEP HARDINNA SHERRY HILL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -139,39 +148,48 @@
       "competition_dog_id": null
     },
     {
-      "id": "1324084258",
+      "id": "623003380",
       "name_lat": "PHAR LEP HARDINNA UNABI",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1523744472",
+      "id": "227422438",
       "name_lat": "PHAR LEP HARDINNA KHABI RENESSANS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "617692848",
+      "id": "1982978974",
       "name_lat": "PHAR LEP HARDINNA TENI MISSIS IN VAYT KHAUS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "286655145",
+      "id": "1341363837",
       "name_lat": "PHAR LEP HARDINNA PRIZ OF RIFORD",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "284747231",
+      "name_lat": "PHILIPPE WITTELSBACH DEL MONTE ALBAN",
+      "name_ru": "",
+      "breed": "ВЕЙМАРАНЕР КОРОТКОШЕРСТНЫЙ",
+      "breed_en": "WEIMARANER SHORT-HAIRED",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -179,17 +197,7 @@
       "name_lat": "PHROSIA OT NEVSKOGO HOBBITA",
       "name_ru": "",
       "breed": "БРЮССЕЛЬСКИЙ ГРИФФОН",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1293423261",
-      "name_lat": "PHILIPPE WITTELSBACH DEL MONTE ALBAN",
-      "name_ru": "",
-      "breed": "ВЕЙМАРАНЕР К-Ш",
-      "breed_en": "WEIMARANER SHORT-HAIRED",
-      "total_shows": 7,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -202,19 +210,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "370954678",
+      "id": "1780362136",
       "name_lat": "PHAR LEP HARDINNA FANNI KAPLAN",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "799741863",
+      "id": "127450237",
       "name_lat": "PHELINE DE LA GRANGE BAILLY",
       "name_ru": "",
-      "breed": "ПАПИЙОН",
+      "breed": "СОБАКА ФАЛЕН) ПАПИЙОН",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -229,30 +237,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "333889961",
+      "id": "1043364916",
       "name_lat": "PHIL CH SUNBRIAR GLORIOUS PERSPECTV",
       "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "778863458",
+      "id": "1910180020",
       "name_lat": "PHAR LEP HARDINNA OLDY RONNUS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "450717294",
+      "id": "1518555600",
       "name_lat": "PHAR LEP HARDINNA FRIMUNT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -274,46 +282,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "739853255",
+      "id": "1650817670",
       "name_lat": "PHOENIX RISE RAM ( )",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1977946101",
-      "name_lat": "PHILFORT BRADLEY",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
-      "id": "801484053",
+      "id": "1065615145",
       "name_lat": "PHAR LEP HARDINNA YVES SAINT-LAURENT",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1372923270",
+      "id": "1022043592",
       "name_lat": "PHAR LEP HARDINNA ESPANOLA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "191511524",
+      "id": "1220502498",
       "name_lat": "PHAR LEP HARDINNA UARD GEOR EBERSO",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -337,10 +336,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "884021632",
+      "id": "1922940859",
       "name_lat": "PHILFORT NAYMAY",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ /",
+      "breed": "CHIHUAHUA SMOOTH HAIRED",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -364,11 +363,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1871764224",
-      "name_lat": "PHOENIX'S DREAM EVA- KOROLEVA",
+      "id": "1102114956",
+      "name_lat": "PHOENIX'S DREAM EVA-KOROLEVA",
       "name_ru": "",
       "breed": "БЕЛЬГИЙСКИЙ ГРИФФОН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "121984580",
+      "name_lat": "PHOENIX DREAM DARLING SON",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -378,6 +385,14 @@
       "name_ru": "",
       "breed": "БОСТОН ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1561296781",
+      "name_lat": "PHOENIX`S DREAM DESIRE MOON",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -409,10 +424,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "837590722",
+      "id": "431627156",
       "name_lat": "PHILADELPHIA FOR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -427,10 +442,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1700104226",
+      "id": "1915182836",
       "name_lat": "PHAR LEP HARDINNA YALTA FORS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -445,10 +460,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "25500931",
+      "id": "411361683",
       "name_lat": "PHAR LEP HARDINNA HABI RENESSANS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -463,10 +478,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "139120408",
+      "id": "1308430758",
       "name_lat": "PHAR LEP HARDINNA SMART GODSEND",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -535,20 +550,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1344455476",
-      "name_lat": "PHOENIX'S DREAM MUFASA OGNENNYJ",
-      "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР",
-      "breed_en": "NORWICH TERRIER",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1253044366",
       "name_lat": "PHACELIA ARMIDA OTVAZNAYA",
       "name_ru": "",
       "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1344455476",
+      "name_lat": "PHOENIX'S DREAM MUFASA OGNENNYJ",
+      "name_ru": "",
+      "breed": "НОРВИЧ ТЕРЬЕР",
+      "breed_en": "NORWICH TERRIER",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -634,10 +649,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1208235349",
+      "id": "1736984553",
       "name_lat": "PHAR LEP HARDINNA GEKTOR",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -670,10 +685,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "89350034",
+      "id": "257962259",
       "name_lat": "PHALDEROL FLORIDA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -706,10 +721,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "23017924",
+      "id": "84972994",
       "name_lat": "PHAR LEP HARDINNA YAVVAS BRENDING",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -724,10 +739,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "217135759",
+      "id": "664016611",
       "name_lat": "PHENOMEN COCO",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

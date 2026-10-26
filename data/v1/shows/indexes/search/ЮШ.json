@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ЮШ",
-  "count": 20,
+  "count": 22,
   "dogs": [
+    {
+      "id": "755575651",
+      "name_lat": "ЮША ФОР ЗВЕЗДА УРАЛА",
+      "name_ru": "ЮША ФОР ЗВЕЗДА УРАЛА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
     {
       "id": "1792191992",
       "name_lat": "ЮШИН СЕРЖ УЛЬВАР",
@@ -13,18 +22,9 @@
       "competition_dog_id": null
     },
     {
-      "id": "755575651",
-      "name_lat": "ЮША ФОР ЗВЕЗДА УРАЛА",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "1333034395",
       "name_lat": "ЮША ФОМ ХАУС ШИРАН",
-      "name_ru": "",
+      "name_ru": "ЮША ФОМ ХАУС ШИРАН",
       "breed": "СХИППЕРКЕ",
       "breed_en": "",
       "total_shows": 14,
@@ -40,10 +40,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1742968534",
+      "id": "1809983887",
       "name_lat": "ЮША",
       "name_ru": "",
-      "breed": "ШАР ПЕЙ ШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -51,10 +51,18 @@
     {
       "id": "1515472555",
       "name_lat": "ЮША МЕЙ ИЗ ОЛИМПИК СИТИ",
-      "name_ru": "",
+      "name_ru": "ЮША МЕЙ ИЗ ОЛИМПИК СИТИ",
       "breed": "БУЛЬМАСТИФ",
       "breed_en": "BULLMASTIFF",
-      "total_shows": 7,
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1994972997",
+      "name_lat": "ЮША",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -69,7 +77,7 @@
     {
       "id": "1776811162",
       "name_lat": "ЮШЕН С БЕЛОЙ РЕКИ",
-      "name_ru": "",
+      "name_ru": "ЮШЕН С БЕЛОЙ РЕКИ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 6,
@@ -103,10 +111,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1979469861",
+      "id": "116491192",
       "name_lat": "ЮША ЮБОЧКА ИЗ ПЛЮША",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ /",
+      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -114,7 +122,7 @@
     {
       "id": "97858470",
       "name_lat": "ЮШИН АМОР ЛАВ",
-      "name_ru": "",
+      "name_ru": "ЮШИН АМОР ЛАВ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 7,
@@ -123,17 +131,17 @@
     {
       "id": "992304676",
       "name_lat": "ЮША ФРОМ ХАУС ИРЕН",
-      "name_ru": "",
+      "name_ru": "ЮША ФРОМ ХАУС ИРЕН",
       "breed": "КА ДЕ БО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1642024939",
+      "id": "1994234607",
       "name_lat": "ЮШЕЛЬ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -141,7 +149,7 @@
     {
       "id": "793025706",
       "name_lat": "ЮША БОГИНЯ ПАНСВЕТ",
-      "name_ru": "",
+      "name_ru": "ЮША БОГИНЯ ПАНСВЕТ",
       "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 2,
@@ -166,11 +174,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1994972997",
-      "name_lat": "ЮША",
+      "id": "1580089174",
+      "name_lat": "ЮША НО МИЧИГАН",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
+      "breed": "АКИТА /",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "133710455",
+      "name_lat": "ЮША ОФ ЛОКИШ ФЕСТ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },

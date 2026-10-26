@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "АЯ",
-  "count": 92,
+  "count": 96,
   "dogs": [
     {
       "id": "1532169709",
@@ -9,7 +9,7 @@
       "name_ru": "",
       "breed": "ЮЖНОРУССКАЯ ОВЧАРКА",
       "breed_en": "YUZHNORUSSKAYA OVCHARKA (SOUTH RUSSIAN SHEEPHERD DOG)",
-      "total_shows": 18,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
@@ -49,12 +49,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "1320809481",
+      "name_lat": "АЯ БЛЭК ЛЕДИ",
+      "name_ru": "АЯ БЛЭК ЛЕДИ",
+      "breed": "АНГЛИЙСКИЙ КОКЕР СПАНИЕЛЬ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1025220593",
       "name_lat": "Аякс Мечты Сбываются",
-      "name_ru": "",
+      "name_ru": "Аякс Мечты Сбываются",
       "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "707106180",
+      "name_lat": "АЯНАМИ АСТИ",
+      "name_ru": "",
+      "breed": "СИБИРСКИЙ ХАСКИ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -76,10 +93,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1951791172",
+      "id": "1871168224",
       "name_lat": "АЯНАМИ-РЕЙ ИЗ ДИНАСТИИ КОРОЛЕЙ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -121,46 +138,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1954962531",
-      "name_lat": "АЯ БЛЭК ЛЕДИ",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ АНГЛИЙСКИЙ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "954612415",
+      "id": "295053123",
       "name_lat": "АЯКС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "707106180",
-      "name_lat": "АЯНАМИ АСТИ",
-      "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ",
+      "id": "224976116",
+      "name_lat": "АЯКС ВАНДЕРФУЛ БИСТ RUELVEN DEW VERMILION",
+      "name_ru": "АЯКС ВАНДЕРФУЛ БИСТ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 1,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
       "id": "1802374110",
       "name_lat": "АЯКС ГРЕЙТ ХИРОУ",
-      "name_ru": "",
+      "name_ru": "АЯКС ГРЕЙТ ХИРОУ",
       "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "622004236",
-      "name_lat": "АЯКС ВАНДЕРФУЛ БИСТ",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "id": "1736161573",
+      "name_lat": "А Я НЕПОБЕДИМАЯ ОТ ЯВНОГО ЛИДЕРА",
+      "name_ru": "А Я НЕПОБЕДИМАЯ ОТ ЯВНОГО ЛИДЕРА",
+      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -177,25 +185,16 @@
     {
       "id": "926488982",
       "name_lat": "АЯМЭ МИТЦУКО",
-      "name_ru": "",
+      "name_ru": "АЯМЭ МИТЦУКО",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
     },
     {
-      "id": "937115247",
-      "name_lat": "АЯ ВИШЕНКА НА ТОРТЕ",
-      "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "87879943",
       "name_lat": "АЯКС БУЛЬ БОЛ",
-      "name_ru": "",
+      "name_ru": "АЯКС БУЛЬ БОЛ",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
       "total_shows": 6,
@@ -222,10 +221,27 @@
     {
       "id": "947815001",
       "name_lat": "АЯКС РИНГЛИДЕР ОФ ГОЛДЕН ПРАЙД",
-      "name_ru": "",
+      "name_ru": "АЯКС РИНГЛИДЕР ОФ ГОЛДЕН ПРАЙД",
       "breed": "МАЛЫЙ ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "351630419",
+      "name_lat": "АЯКС ИЗ ДИНАСТИИ РОТСТАР",
+      "name_ru": "АЯКС ИЗ ДИНАСТИИ РОТСТАР",
+      "breed": "МАЛЫЙ БРАБАНСОН",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "703869049",
+      "name_lat": "АЯКС ВЕСТВИК ПУЛЧЕР ЭТ ФОРТИС",
+      "name_ru": "АЯКС ВЕСТВИК ПУЛЧЕР ЭТ ФОРТИС",
+      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -256,15 +272,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "14868690",
-      "name_lat": "АЯКС ИЗ ДИНАСТИИ РОТСТАР",
-      "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "622467885",
       "name_lat": "АЯНАМИ РЕЙ",
       "name_ru": "",
@@ -274,21 +281,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1069599728",
+      "id": "1568818079",
       "name_lat": "АЯКС",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "630164197",
+      "id": "951145464",
       "name_lat": "АЯКС ТАЙГЕР ВУДС",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "name_ru": "АЯКС ТАЙГЕР ВУДС",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1794663453",
+      "name_lat": "А Я ЖГУЧИЙ ПЕРЧИК ИЗ ГРАФСТВА АРТ",
+      "name_ru": "",
+      "breed": "БРАБАНСОН",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -303,7 +319,7 @@
     {
       "id": "1624337722",
       "name_lat": "АЯМ КИТАНОСАМУРАЙ",
-      "name_ru": "",
+      "name_ru": "АЯМ КИТАНОСАМУРАЙ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 4,
@@ -321,7 +337,7 @@
     {
       "id": "302774102",
       "name_lat": "АЯН СМАРАГДЕН ОТ БАРБАЦУЦИ",
-      "name_ru": "",
+      "name_ru": "АЯН СМАРАГДЕН ОТ БАРБАЦУЦИ",
       "breed": "ПЕРЕЦ С СОЛЬЮ",
       "breed_en": "",
       "total_shows": 2,
@@ -346,15 +362,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1795885137",
-      "name_lat": "АЯН СМАРАГДЕН ОТ БАРБАЦУЦЫ",
-      "name_ru": "",
-      "breed": "SCHNAUZER BLACK",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "34833873",
       "name_lat": "АЯКС",
       "name_ru": "",
@@ -368,6 +375,15 @@
       "name_lat": "АЯНАХАРРУ",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ СОБАКА)",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1765407970",
+      "name_lat": "А Я ПРИМА ЛАВ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -445,15 +461,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1879312243",
-      "name_lat": "АЯКС ВАНДЕРФУЛ БИСТ RUELVEN DEW VERMILION",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "141224684",
       "name_lat": "АЯКО",
       "name_ru": "",
@@ -472,19 +479,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "703869049",
-      "name_lat": "АЯКС ВЕСТВИК ПУЛЧЕР ЭТ ФОРТИС",
-      "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД УАЙТ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "530625139",
+      "id": "1378368511",
       "name_lat": "АЯ ХЭЙСЕ",
       "name_ru": "",
-      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЁРНЫЙ",
+      "breed": "ЯПОНСКИЙ ХИН БЕЛО- ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -508,9 +506,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "293183969",
+      "name_lat": "АЯН",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "152802514",
       "name_lat": "АЯКС ТРОЯНСКИЙ ГЕРОЙ",
-      "name_ru": "",
+      "name_ru": "АЯКС ТРОЯНСКИЙ ГЕРОЙ",
       "breed": "ШОТЛАНДСКИЙ/СКОТЧ/ТЕРЬЕР ТАКСА СТ.Г/Ш",
       "breed_en": "",
       "total_shows": 3,
@@ -535,10 +542,36 @@
       "competition_dog_id": null
     },
     {
-      "id": "1829241625",
-      "name_lat": "АЯН ДОБРЫЙ ПОПУТЧИК",
+      "id": "435889725",
+      "name_lat": "АЯН ДЕС ГЛЕЙЗ",
       "name_ru": "",
       "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "911727033",
+      "name_lat": "А Я ИЗ ВОЙСКА ТАМЕРЛАНА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1829241625",
+      "name_lat": "АЯН ДОБРЫЙ ПОПУТЧИК",
+      "name_ru": "АЯН ДОБРЫЙ ПОПУТЧИК",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "964731698",
+      "name_lat": "А Я ВИТАЛИНА С ЗАПАДНОГО",
+      "name_ru": "А Я ВИТАЛИНА С ЗАПАДНОГО",
+      "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -598,6 +631,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "262903040",
+      "name_lat": "АЯ-ЧЕРРИ",
+      "name_ru": "",
+      "breed": "RUSSIAN TOY",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "291617117",
       "name_lat": "АЯШИМИ",
       "name_ru": "",
@@ -611,33 +652,6 @@
       "name_lat": "АЯКС",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДРАТХААР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "395364276",
-      "name_lat": "АЯН",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "171117942",
-      "name_lat": "АЯН",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "293183969",
-      "name_lat": "АЯН",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -724,6 +738,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "294568007",
+      "name_lat": "А Я КРАСОТКА",
+      "name_ru": "",
+      "breed": "ПОМЕРАНСКИЙ ШПИЦ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "954148613",
       "name_lat": "АЯКСА ЭЛЕГАНТ ЛЕДИ",
       "name_ru": "",
@@ -755,6 +778,15 @@
       "name_lat": "АЯКС СТЕНЛИ БАРС",
       "name_ru": "",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "856514668",
+      "name_lat": "А Я КРАСАВЧИК ЛАЙКИ",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

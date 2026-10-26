@@ -1,22 +1,22 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ОХ",
-  "count": 166,
+  "count": 189,
   "dogs": [
     {
-      "id": "530809949",
+      "id": "1389342273",
       "name_lat": "ОХОТНИЧЬЯ АКАДЕМИЯ БЕРТРАМ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ОХОТНИЧЬЯ АКАДЕМИЯ БЕРТРАМ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "182660932",
+      "id": "1816992448",
       "name_lat": "ОХОТНИЧЬЯ АКАДЕМИЯ ЖОЗЕФИНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -24,7 +24,7 @@
     {
       "id": "586862041",
       "name_lat": "ОХОТНИЦА ОРИВА",
-      "name_ru": "",
+      "name_ru": "ОХОТНИЦА ОРИВА",
       "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 10,
@@ -33,17 +33,17 @@
     {
       "id": "1483491711",
       "name_lat": "ОХ ЗЫС ПРЕТТИ ДОЛЛ ФРОМ ХАУС ОН ВИКТОРИ",
-      "name_ru": "",
+      "name_ru": "ОХ ЗЫС ПРЕТТИ ДОЛЛ ФРОМ ХАУС ОН ВИКТОРИ",
       "breed": "ПТИ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "868823470",
+      "id": "996431993",
       "name_lat": "ОХОТНИК СЕВЕРА ЛУЧИК СВЕТА",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ОХОТНИК СЕВЕРА ЛУЧИК СВЕТА",
+      "breed": "КОКЕР СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -51,26 +51,35 @@
     {
       "id": "274590470",
       "name_lat": "ОХОТНИК ВОСТОКА ЯВА ТАЙГИ",
-      "name_ru": "",
+      "name_ru": "ОХОТНИК ВОСТОКА ЯВА ТАЙГИ",
       "breed": "БАСЕНДЖИ ЗАПАДНОСИБИРСКАЯ",
       "breed_en": "",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
+      "id": "1166994159",
+      "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЛАУГХ ОФ АНГЕЛ",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ЛАУГХ ОФ АНГЕЛ",
+      "breed": "ШАР ПЕЙ ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1565473665",
       "name_lat": "ОХОТНИЧИЙ АЗАРТ ЯСЕК ПТАСЕК",
-      "name_ru": "",
+      "name_ru": "ОХОТНИЧИЙ АЗАРТ ЯСЕК ПТАСЕК",
       "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "DACHSHUND KANINCHEN WIRE-HAIRED",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1264277178",
+      "id": "946999631",
       "name_lat": "ОХОТЭСТЕТ АДЛЕР",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ (КУРЦХААР)",
+      "name_ru": "ОХОТЭСТЕТ АДЛЕР",
+      "breed": "НЕМЕЦКАЯ К-Ш ЛЕГАВАЯ (КУРЦХААР)",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -78,16 +87,16 @@
     {
       "id": "1687261933",
       "name_lat": "ОХОТНИЧИЙ АЗАРТ АРАГОРН",
-      "name_ru": "",
+      "name_ru": "ОХОТНИЧИЙ АЗАРТ АРАГОРН",
       "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
-      "total_shows": 5,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
       "id": "45460888",
       "name_lat": "ОХИТЭКА КЕРУК ЕНЕРДЖИ СТЕФФТИАМ",
-      "name_ru": "",
+      "name_ru": "ОХИТЭКА КЕРУК ЕНЕРДЖИ СТЕФФТИАМ",
       "breed": "МАЛАМУТ АЛЯСКИНСКИЙ",
       "breed_en": "",
       "total_shows": 3,
@@ -103,15 +112,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1166994159",
-      "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЛАУГХ ОФ АНГЕЛ",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
-      "breed_en": "",
-      "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
       "id": "1539758900",
       "name_lat": "ОХОТНИКИ НА ВЕДЬМ ДЕ МОН АМИ",
       "name_ru": "",
@@ -121,12 +121,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "964764695",
-      "name_lat": "Охотник Севера Илона",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 11,
+      "id": "1091916341",
+      "name_lat": "ОХОТНИК СЕВЕРА МИШКА",
+      "name_ru": "ОХОТНИК СЕВЕРА МИШКА",
+      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -141,7 +140,7 @@
     {
       "id": "876896836",
       "name_lat": "ОХОТНИКИ НА ВЕДЬМ КОЗЫРНАЯ ДАМА",
-      "name_ru": "",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ КОЗЫРНАЯ ДАМА",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 6,
@@ -154,6 +153,14 @@
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1368955953",
+      "name_lat": "ОХОТНИЧЬЯ АКАДЕМИЯ КОНАН",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -170,6 +177,15 @@
       "name_lat": "ОХОТНИК АЗОВА ЗОЛА",
       "name_ru": "",
       "breed": "GERMAN WIRE-HAIRED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "699801133",
+      "name_lat": "О ХАНСТВА BERNOL-CLASSIK",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -193,21 +209,30 @@
       "competition_dog_id": null
     },
     {
+      "id": "1864984076",
+      "name_lat": "ОХОТА ПОИСКА БУЛАТ",
+      "name_ru": "ОХОТА ПОИСКА БУЛАТ",
+      "breed": "ЛЕГАВАЯ /",
+      "breed_en": "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1202978251",
+      "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЖЕМЧУЖИНА ВОСТОКА",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ЖЕМЧУЖИНА ВОСТОКА",
+      "breed": "ШАР ПЕЙ",
+      "breed_en": "SHAR PEI",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
       "id": "1343656747",
       "name_lat": "ОХОТНИЧИЙ АЗАРТ ЧИ МИХАРА",
       "name_ru": "",
       "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "DACHSHUND MINIATURE WIRE-HAIRED",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1202978251",
-      "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЖЕМЧУЖИНА ВОСТОКА",
-      "name_ru": "",
-      "breed": "ШАР ПЕЙ",
-      "breed_en": "SHAR PEI",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -220,9 +245,18 @@
       "competition_dog_id": null
     },
     {
+      "id": "598120904",
+      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ЮЛИЙ ЦЕЗАРЬ",
+      "name_ru": "ОХОТНИЧИЙ ГЛАДИАТОР ЮЛИЙ ЦЕЗАРЬ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "410976340",
       "name_lat": "ОХОТНИКИ НА ВЕДЬМ ИСТИННЫЙ МАЧО",
-      "name_ru": "",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ИСТИННЫЙ МАЧО",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 7,
@@ -231,7 +265,7 @@
     {
       "id": "1894966455",
       "name_lat": "Охотники на Ведьм Елена Прекрасная",
-      "name_ru": "",
+      "name_ru": "Охотники на Ведьм Елена Прекрасная",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 10,
@@ -240,7 +274,7 @@
     {
       "id": "1143472448",
       "name_lat": "ОХАНА ХАМИ ЛИ ФИЛИПП",
-      "name_ru": "",
+      "name_ru": "ОХАНА ХАМИ ЛИ ФИЛИПП",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 6,
@@ -249,7 +283,7 @@
     {
       "id": "1318985207",
       "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЗАГАДКА ВОСТОКА",
-      "name_ru": "",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ЗАГАДКА ВОСТОКА",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 9,
@@ -258,16 +292,16 @@
     {
       "id": "416477849",
       "name_lat": "ОХОТА ПОИСКА БАЛЛАДА",
-      "name_ru": "",
+      "name_ru": "ОХОТА ПОИСКА БАЛЛАДА",
       "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1827154790",
-      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ЮЛИЙ ЦЕЗАРЬ",
-      "name_ru": "",
+      "id": "254203911",
+      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ЧЕРЧИЛЛЬ",
+      "name_ru": "ОХОТНИЧИЙ ГЛАДИАТОР ЧЕРЧИЛЛЬ",
       "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 5,
@@ -276,10 +310,10 @@
     {
       "id": "1054982639",
       "name_lat": "ОХАНА ХАМИ ЛИ ЗАГАДКА",
-      "name_ru": "",
+      "name_ru": "ОХАНА ХАМИ ЛИ ЗАГАДКА",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -292,28 +326,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "323578022",
-      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ЧЕРЧИЛЛЬ",
-      "name_ru": "",
-      "breed": "DACHSHUND",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "845366146",
-      "name_lat": "ОХОТНИК СЕВЕРА ЮСУП",
-      "name_ru": "",
-      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1282876227",
+      "id": "1648536111",
       "name_lat": "ОХОТА ПОИСКА ДОЗОР",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "name_ru": "ОХОТА ПОИСКА ДОЗОР",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -321,7 +337,7 @@
     {
       "id": "408096963",
       "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ДИНАСТИЯ",
-      "name_ru": "",
+      "name_ru": "ОХОТНИЧИЙ ГЛАДИАТОР ДИНАСТИЯ",
       "breed": "ТАКСА СТАНДАРТНАЯ жесткошерстная",
       "breed_en": "",
       "total_shows": 2,
@@ -330,16 +346,25 @@
     {
       "id": "304635296",
       "name_lat": "ОХАНА ХАМИ ЛИ ДЕЖА ВЮ",
-      "name_ru": "",
+      "name_ru": "ОХАНА ХАМИ ЛИ ДЕЖА ВЮ",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
+      "id": "1534641105",
+      "name_lat": "О ХАРА МОРИН",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР / AMERICAN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1589332587",
       "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР СТАВР",
-      "name_ru": "",
+      "name_ru": "ОХОТНИЧИЙ ГЛАДИАТОР СТАВР",
       "breed": "СКОТЧ ТАКСА СТАНД.ЖЕСТКОШЕРСТ",
       "breed_en": "",
       "total_shows": 2,
@@ -348,26 +373,26 @@
     {
       "id": "1316453603",
       "name_lat": "ОХОТНИКИ НА ВЕДЬМ ДОЛЬЧЕ ВИТА",
-      "name_ru": "",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ДОЛЬЧЕ ВИТА",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1866719815",
+      "id": "1253924651",
       "name_lat": "ОХОТА ПОИСКА БЛЮЗ",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "405221477",
+      "id": "1892492140",
       "name_lat": "ОХОТНИК СЕВЕРА ЛАУРА",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "name_ru": "ОХОТНИК СЕВЕРА ЛАУРА",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -384,10 +409,19 @@
     {
       "id": "543286908",
       "name_lat": "ОХАРА ФРОМ ХАУС НАТТИМ",
-      "name_ru": "",
+      "name_ru": "ОХАРА ФРОМ ХАУС НАТТИМ",
       "breed": "РОТВЕЙЛЕР",
       "breed_en": "",
       "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1140783363",
+      "name_lat": "ОХАРА КЭТИ-СКАРЛЕТ",
+      "name_ru": "ОХАРА КЭТИ-СКАРЛЕТ",
+      "breed": "БИШОН ФРИЗЕ",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -409,28 +443,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "440151250",
+      "id": "105964302",
       "name_lat": "ОХОТА ПОИСКА ЗОЛОТО",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1140783363",
-      "name_lat": "ОХАРА КЭТИ-СКАРЛЕТ",
-      "name_ru": "",
-      "breed": "БИШОН ФРИЗЕ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1922364932",
+      "id": "1861753521",
       "name_lat": "ОХАНА ХАМИ ЛИ ЦЕРЕРА",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
+      "name_ru": "ОХАНА ХАМИ ЛИ ЦЕРЕРА",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -438,17 +463,17 @@
     {
       "id": "331593650",
       "name_lat": "ОХОТНИК СЕВЕРА ИСИДОРА",
-      "name_ru": "",
+      "name_ru": "ОХОТНИК СЕВЕРА ИСИДОРА",
       "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
     },
     {
-      "id": "1759846602",
+      "id": "142630911",
       "name_lat": "ОХОТНИЧИЙ АЗАРТ ШАБЛИ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "name_ru": "ОХОТНИЧИЙ АЗАРТ ШАБЛИ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -456,8 +481,17 @@
     {
       "id": "592402776",
       "name_lat": "ОХИТЭКА КЕРУК АРЖАН-СУУ",
-      "name_ru": "",
+      "name_ru": "ОХИТЭКА КЕРУК АРЖАН-СУУ",
       "breed": "МАЛАМУТ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1536155363",
+      "name_lat": "О'ХАРА ИЗАБЕЛЛА ПРИМА СВОН",
+      "name_ru": "О'ХАРА ИЗАБЕЛЛА ПРИМА СВОН",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -472,10 +506,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "774077264",
+      "id": "1743042100",
       "name_lat": "ОХРА ИЗ ЦВЕТНОЙ АКВАРЕЛИ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ОХРА ИЗ ЦВЕТНОЙ АКВАРЕЛИ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -483,17 +517,26 @@
     {
       "id": "465617181",
       "name_lat": "ОХИТЭКА КЕРУК ВАЛЬКИРИЯ",
-      "name_ru": "",
+      "name_ru": "ОХИТЭКА КЕРУК ВАЛЬКИРИЯ",
       "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "375743029",
+      "id": "69431825",
       "name_lat": "ОХОТА ПОИСКА ЗАДИРА",
+      "name_ru": "ОХОТА ПОИСКА ЗАДИРА",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ ЛЕГАВАЯ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "341359489",
+      "name_lat": "О'ХАРА ИЗ ГАЛАКУНА",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ ЛЕГАВАЯ",
+      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -501,17 +544,17 @@
     {
       "id": "20182129",
       "name_lat": "ОХОТНИКИ НА ВЕДЬМ ПИКСИ ПАК ПАНДОРА",
-      "name_ru": "",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ПИКСИ ПАК ПАНДОРА",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "508074119",
+      "id": "419333446",
       "name_lat": "ОХРА",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКАЯ АКИТА /",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -535,12 +578,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "995878812",
+      "id": "243828264",
       "name_lat": "ОХАНА ХАМИ ЛИ КЛЕОПАТРА",
-      "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ / MALTESE",
+      "name_ru": "ОХАНА ХАМИ ЛИ КЛЕОПАТРА",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
-      "total_shows": 2,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -553,6 +596,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "732911514",
+      "name_lat": "О.ХАРА КЕТТИ СКАРЛЕТТ",
+      "name_ru": "О.ХАРА КЕТТИ СКАРЛЕТТ",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "492472440",
+      "name_lat": "ОХРА",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "710373790",
       "name_lat": "ОХРА ФАЙЕР ЛЕДИ",
       "name_ru": "",
@@ -562,12 +623,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "537143312",
-      "name_lat": "ОХОТА ПОИСКА БУЛАТ",
+      "id": "1629163703",
+      "name_lat": "О-ХЕЛЬМАН",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ ВЫЖЛА К-Ш",
-      "breed_en": "HUNGARIAN SHORT-HAIRED POINTER (VIZSLA)",
-      "total_shows": 2,
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -575,6 +636,24 @@
       "name_lat": "ОХТА",
       "name_ru": "",
       "breed": "ЛАЙКА / WEST SIBERIAN",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1740712569",
+      "name_lat": "О-ХЕЛЬМАН",
+      "name_ru": "",
+      "breed": "ПОДШЕРСТКОМ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1549627712",
+      "name_lat": "О-ХЕЛЬМАН",
+      "name_ru": "",
+      "breed": "ПОДШЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -607,10 +686,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "239554700",
+      "id": "967458695",
       "name_lat": "ОХОТНИЧИЙ АЗАРТ ЧИЕКО СТИЛЬНАЯ ШТУЧКА ИЗ СТРАНЫ",
       "name_ru": "",
-      "breed": "ТАКСА ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ",
+      "breed": "ТАКСА Ж-Ш ТАКСА СТАНДАРТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -625,10 +704,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1917211591",
+      "id": "1599383723",
       "name_lat": "ОХОТА ПОИСКА БРАВО",
       "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -652,11 +731,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1633298172",
+      "id": "895322521",
       "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР СПАРТА",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Ж-Ш",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1475358437",
+      "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЖИ ВАН ШИ",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ЖИ ВАН ШИ",
+      "breed": "ШАР ПЕЙ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -733,10 +820,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "426349590",
+      "id": "1584259309",
+      "name_lat": "О‘ХАРА КЭТИ- СКАРЛЕТТ",
+      "name_ru": "",
+      "breed": "БИВЕР ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "2009416",
       "name_lat": "ОХОТНИК СЕВЕРА ЛАЗУРНАЯ ЖЕМЧУЖИНА",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -771,7 +866,7 @@
     {
       "id": "108645803",
       "name_lat": "ОХОТНИК СЕВЕРА КЭШ КИПЕР",
-      "name_ru": "",
+      "name_ru": "ОХОТНИК СЕВЕРА КЭШ КИПЕР",
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 4,
@@ -780,17 +875,17 @@
     {
       "id": "1742370352",
       "name_lat": "ОХИКО МАМОРУ САИМИ",
-      "name_ru": "",
+      "name_ru": "ОХИКО МАМОРУ САИМИ",
       "breed": "СИБА",
       "breed_en": "SHIBA",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "306392620",
+      "id": "346965513",
       "name_lat": "ОХИТЭКА КЕРУК ГЕРМИОНА ГРЕЙНДЖЕР",
-      "name_ru": "",
-      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ /",
+      "name_ru": "ОХИТЭКА КЕРУК ГЕРМИОНА ГРЕЙНДЖЕР",
+      "breed": "АЛЯСКИНСКИЙ МАЛАМУТ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -805,20 +900,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1962557430",
+      "id": "12876314",
       "name_lat": "ОХОТНИЧЬЯ АКАДЕМИЯ АЛЕМАНА",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "341764233",
-      "name_lat": "ОХОТНИЧЬЯ АКАДЕМИЯ ВАЛЬТЕР",
+      "id": "1963812195",
+      "name_lat": "ОХТА ФРОМ ЗЕ СИЛЬВЕР ЭСТЭЙТ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
+      "breed": "ВЕЙМАРАНЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -841,17 +935,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1193374148",
-      "name_lat": "ОХОТНИЧИЙ АЗАРТ АДЖИКА",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1256836666",
-      "name_lat": "ОХОТНИК ВОСТОКА Г- ШАМАН",
+      "id": "1097906738",
+      "name_lat": "ОХОТНИК ВОСТОКА Г-ШАМАН",
       "name_ru": "",
       "breed": "ЗАПАДНОСИБИРСКАЯ",
       "breed_en": "",
@@ -859,10 +944,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1152162151",
+      "id": "1352556931",
+      "name_lat": "ОХ КАКАЯ УХ КАКАЯ ДЖЕК ВОРОБЕЙ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ МАЛЫЙ ШПИЦ (ОР. И ДР. ОКРАСЫ)",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "145052310",
+      "name_lat": "ОХОТНИЧИЙ АЗАРТ АДЖИКА",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1613941286",
       "name_lat": "ОХОТЫ ФЛОРИЗЕЛЬ",
       "name_ru": "",
-      "breed": "RAUHHAAR ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ /",
+      "breed": "RAUHHAAR ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -874,6 +976,15 @@
       "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "82872307",
+      "name_lat": "ОХАНА ИЗ ДОМА ЛАНКАСТЕР",
+      "name_ru": "ОХАНА ИЗ ДОМА ЛАНКАСТЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -895,21 +1006,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1187018851",
-      "name_lat": "ОХАНА ИЗ ДОМА ЛАНКАСТЕР",
-      "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "id": "41713984",
+      "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЛЕГЕНД АРИСЕС",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ЛЕГЕНД АРИСЕС",
+      "breed": "СЕРЕБРОМШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "41713984",
-      "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЛЕГЕНД АРИСЕС",
+      "id": "1650867055",
+      "name_lat": "ОХОТНИЦА РИЦА",
       "name_ru": "",
-      "breed": "СЕРЕБРОМШАР ПЕЙ",
+      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -922,12 +1033,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "2962043",
+      "id": "152792887",
       "name_lat": "ОХОТА ПОИСКА КУРАЖ",
-      "name_ru": "",
-      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЁРСТНАЯ",
+      "name_ru": "ОХОТА ПОИСКА КУРАЖ",
+      "breed": "ВЕНГЕРСКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1082343824",
+      "name_lat": "ОХОТНИЧИЙ АЗАРТ ЯСТРЕБ",
+      "name_ru": "ОХОТНИЧИЙ АЗАРТ ЯСТРЕБ",
+      "breed": "DACHSHUND ZWERG RAUHHAAR ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1004647754",
+      "name_lat": "О-ХАМЕР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -935,6 +1064,15 @@
       "name_lat": "Охотника",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1945635043",
+      "name_lat": "ОХОТА ПОИСКА ВЕСНА",
+      "name_ru": "ОХОТА ПОИСКА ВЕСНА",
+      "breed": "ЛЕГАВАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -985,18 +1123,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "1428743394",
-      "name_lat": "ОХОТА ПОИСКА ВЕСНА",
+      "id": "1186072400",
+      "name_lat": "О`ХАРА ИЗ ГОЛУБОГО",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ /",
-      "breed_en": "",
+      "breed": "КАВАЛЕР",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
       "id": "620811851",
       "name_lat": "ОХИТЭКА КЕРУК ВОЛЬТЕР",
-      "name_ru": "",
+      "name_ru": "ОХИТЭКА КЕРУК ВОЛЬТЕР",
       "breed": "МАЛАМУТ",
       "breed_en": "",
       "total_shows": 2,
@@ -1005,7 +1142,7 @@
     {
       "id": "1131051350",
       "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЗИМНЯЯ ВИШНЯ",
-      "name_ru": "",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ЗИМНЯЯ ВИШНЯ",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
       "total_shows": 2,
@@ -1014,9 +1151,17 @@
     {
       "id": "342446541",
       "name_lat": "ОХРАНА ДЛЯ КАРМАНА ЕНГЕЛЬ ЗОЛОТО",
-      "name_ru": "",
+      "name_ru": "ОХРАНА ДЛЯ КАРМАНА ЕНГЕЛЬ ЗОЛОТО",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "261249239",
+      "name_lat": "ОХОТНИКИ НА ВЕДЬМ ФИАММА ВИВА",
+      "name_ru": "ОХОТНИКИ НА ВЕДЬМ ФИАММА ВИВА",
+      "breed": "ШАР ПЕЙ ШНАУЦЕР ПЕРЕЦ С СОЛЬЮ",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1057,15 +1202,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1020445413",
-      "name_lat": "ОХРА",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1793822329",
       "name_lat": "ОХАНА",
       "name_ru": "",
@@ -1075,19 +1211,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1238434357",
-      "name_lat": "ОХРА ХАННИ ЛЕГЕНДЫ ПСКОВА",
+      "id": "893704433",
+      "name_lat": "О ХЭППИ ДЭЙ",
       "name_ru": "",
-      "breed": "ШИ-ТЦУ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "421392707",
-      "name_lat": "ОХОТНИК ВОСТОКА ЧЕЛСИ",
-      "name_ru": "",
-      "breed": "СИБИРСКАЯ ЛАЙКА /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1102,10 +1229,82 @@
       "competition_dog_id": null
     },
     {
-      "id": "718367484",
+      "id": "1264686361",
       "name_lat": "ОХОТА ПОИСКА ВЕЛЬВЕТ",
       "name_ru": "",
-      "breed": "ЛЕГАВАЯ /",
+      "breed": "ЛЕГАВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1841647820",
+      "name_lat": "ОХОТА ПОИСКА ВОЛЯ",
+      "name_ru": "",
+      "breed": "ЛЕГАВАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "158211005",
+      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ЮВЕНАЛИЯ ДИАНА",
+      "name_ru": "",
+      "breed": "ТАКСА АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1851794052",
+      "name_lat": "ОХОТНИЧИЙ АЗАРТ ОДИН",
+      "name_ru": "",
+      "breed": "ТАКСА АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "50440238",
+      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ИРИДА",
+      "name_ru": "",
+      "breed": "ТАКСА АМЕРИКАНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "456364319",
+      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ЮНИК",
+      "name_ru": "",
+      "breed": "ТАКСА НЕМЕЦКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1104933568",
+      "name_lat": "О'ХАРА ИЗ ЯР ГРАДА",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКАЯ АКИТА",
+      "breed_en": "AMERICAN AKITA",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1238434357",
+      "name_lat": "ОХРА ХАННИ ЛЕГЕНДЫ ПСКОВА",
+      "name_ru": "",
+      "breed": "ШИ-ТЦУ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "20452906",
+      "name_lat": "ОХОТНИК ВОСТОКА ЧЕЛСИ",
+      "name_ru": "",
+      "breed": "СИБИРСКАЯ ЛАЙКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1115,15 +1314,6 @@
       "name_lat": "ОХОТА ПОИСКА ВАНИЛЬ",
       "name_ru": "",
       "breed": "HUNGARIAN SHORT-",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "613625905",
-      "name_lat": "ОХОТА ПОИСКА ВОЛЯ",
-      "name_ru": "",
-      "breed": "ЛЕГАВАЯ /",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1165,10 +1355,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1066620663",
-      "name_lat": "ОХИТЭКА КЕРУК АК-ТАШ- ТУУ",
+      "id": "1185463373",
+      "name_lat": "ОХИТЭКА КЕРУК АК-ТАШ-ТУУ",
       "name_ru": "",
       "breed": "АКИТА АЛЯСКИНСКИЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1711843818",
+      "name_lat": "О'ХАРА СКАРЛЕТ",
+      "name_ru": "",
+      "breed": "МОПС",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1192,15 +1391,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "158211005",
-      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ЮВЕНАЛИЯ ДИАНА",
-      "name_ru": "",
-      "breed": "ТАКСА АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1225389231",
       "name_lat": "ОХОТНИК ЗА ПОБЕДОЙ",
       "name_ru": "",
@@ -1210,37 +1400,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1650867055",
-      "name_lat": "ОХОТНИЦА РИЦА",
-      "name_ru": "",
-      "breed": "КАВКАЗСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "526418690",
-      "name_lat": "ОХОТНИЧИЙ АЗАРТ ЯСТРЕБ",
-      "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1859251081",
+      "id": "1574938644",
       "name_lat": "ОХАНА ХАМИ ЛИ ЖАННЕ",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "178161907",
-      "name_lat": "ОХОТНИКИ НА ВЕДЬМ ЖИ ВАН ШИ",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1264,20 +1427,44 @@
       "competition_dog_id": null
     },
     {
-      "id": "674341785",
-      "name_lat": "ОХОТНИЧЬЯ АКАДЕМИЯ АРЕС",
+      "id": "266450924",
+      "name_lat": "О'ХАРА ПАБИРЖЕ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1963017674",
-      "name_lat": "ОХОТНИЧЬЯ АКАДЕМИЯ АЛЬФА",
+      "id": "426887626",
+      "name_lat": "ОХАРДИ СМЕЛОЕ СЕРДЦЕ",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ КУРЦХААР",
+      "breed": "МОПС / PUG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "529235937",
+      "name_lat": "О'ХАРА АМЕЛИЯ ВИНДЗОР",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "219240719",
+      "name_lat": "ОХАНА ХАМИ ЛИ КИАРА",
+      "name_ru": "",
+      "breed": "МАЛЬТЕЗЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "191720903",
+      "name_lat": "ОХОТНИК СЕВЕРА ИСКРЯЩИЙСЯ САПФИР",
+      "name_ru": "",
+      "breed": "НОВОШОТЛАНДСКИЙ РЕТРИВЕР",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1291,10 +1478,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1641211125",
+      "id": "1030805789",
       "name_lat": "ОХАНА С КАЗАНСКОЙ СТОРОНЫ",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1318,19 +1505,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "112655131",
+      "id": "1222324723",
       "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ТЕРРАНИЯ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1851794052",
-      "name_lat": "ОХОТНИЧИЙ АЗАРТ ОДИН",
-      "name_ru": "",
-      "breed": "ТАКСА АМЕРИКАНСКИЙ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1381,15 +1559,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "50440238",
-      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ИРИДА",
-      "name_ru": "",
-      "breed": "ТАКСА АМЕРИКАНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "95035551",
       "name_lat": "ОХРАНА ДЛЯ КАРМАНА О-НЯША",
       "name_ru": "",
@@ -1399,10 +1568,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "533266110",
+      "id": "648413648",
       "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР МАЛЫШ",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1462,29 +1631,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "1521347690",
+      "id": "681638954",
       "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР КРОНОС",
       "name_ru": "",
-      "breed": "С СОЛЬЮ АМЕРИКАНСКИЙ АМЕРИКАНСКИЙ АМЕРИКАНСКИЙ",
+      "breed": "С СОЛЬЮ АМЕРИКАНСКИЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "907179415",
+      "id": "1935242743",
       "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР МАКСИМУС ГЛАДИАТОР",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "456364319",
-      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ЮНИК",
+      "id": "910774768",
+      "name_lat": "О`ХАРА ИЗ ГОЛУБОГО ЗАЛИВА",
       "name_ru": "",
-      "breed": "ТАКСА НЕМЕЦКИЙ",
-      "breed_en": "",
+      "breed": "КАВАЛЕР КИНГ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1494,6 +1662,30 @@
       "name_ru": "",
       "breed": "ШАР ПЕЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1535441775",
+      "name_lat": "ОХОТНИК ВОСТОКА ХУМА",
+      "name_ru": "",
+      "breed": "ЗАПАДНОСИБИРСКАЯ ЛАЙКА",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "723903448",
+      "name_lat": "ОХОТНИК С ВОСТОКА",
+      "name_ru": "",
+      "breed": "ЗАПАДНО",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "259788700",
+      "name_lat": "ОХОТНИЧИЙ ГЛАДИАТОР ЦЕЛЬ",
+      "name_ru": "",
+      "breed": "DACHSHUND STANDARD",
       "total_shows": 1,
       "competition_dog_id": null
     }

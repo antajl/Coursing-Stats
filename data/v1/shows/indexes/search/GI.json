@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "GI",
-  "count": 550,
+  "count": 570,
   "dogs": [
     {
       "id": "1107049058",
@@ -13,12 +13,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1728414315",
+      "id": "541840226",
       "name_lat": "GIFT OF FATE STAR FREYER",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "STAFFORDSHIRE BULL TERRIER",
-      "total_shows": 91,
+      "total_shows": 92,
+      "competition_dog_id": null
+    },
+    {
+      "id": "167702219",
+      "name_lat": "GINNY Z MACHOVA GRUNTU",
+      "name_ru": "",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
+      "total_shows": 23,
       "competition_dog_id": null
     },
     {
@@ -40,15 +49,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "167702219",
-      "name_lat": "GINNY Z MACHOVA GRUNTU",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "TIBETAN MASTIFF (DO-KHYI)",
-      "total_shows": 20,
-      "competition_dog_id": null
-    },
-    {
       "id": "255631229",
       "name_lat": "GINGER ELF CROWN O'KENYA",
       "name_ru": "",
@@ -64,6 +64,15 @@
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "58221432",
+      "name_lat": "GINGER POVER KHARDI TOM",
+      "name_ru": "",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
+      "breed_en": "",
+      "total_shows": 18,
       "competition_dog_id": null
     },
     {
@@ -121,6 +130,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1374305492",
+      "name_lat": "GINGERSNAP KOMETA GALLEYA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "132150959",
       "name_lat": "GIVENCHY BORN TU WIH (Изм. по реш. ВК 26.03.26 В.53)",
       "name_ru": "",
@@ -130,48 +148,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "58221432",
-      "name_lat": "GINGER POVER KHARDI TOM",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
-      "breed_en": "",
-      "total_shows": 12,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1283164491",
+      "id": "307394935",
       "name_lat": "GIORGIO ARMANI IZ SEVERNOY IMPERII",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "1573747999",
+      "id": "30734200",
       "name_lat": "GI GI KLASS SHIKARNAYA SHTUCHKA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "FOX TERRIER (SMOOTH)",
       "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "675583289",
-      "name_lat": "GINGERSNAP KOMETA GALLEYA",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "id": "914340596",
+      "name_lat": "GIPERION BERN ZHELEZNOBOKIY",
+      "name_ru": "ГИПЕРИОН БЬЕРН ЖЕЛЕЗНОБОКИЙ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "171627093",
+      "id": "1647759972",
       "name_lat": "GINGER POVER KROULI MAKLAUD",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 19,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -184,10 +193,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "143605702",
+      "id": "46395294",
+      "name_lat": "GINKHAN DEN RIOKO",
+      "name_ru": "ГИНХАН ДЕН РИОКО",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "799456872",
+      "name_lat": "GINGER POVER VELIKIY GATSBY GINGER POVER",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "40361955",
       "name_lat": "GI GI KLASS YUSTAS",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -211,6 +238,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "819201804",
+      "name_lat": "GIOVANNA DELLE TERRE DEL MONVISO",
+      "name_ru": "",
+      "breed": "БЕРГАМСКАЯ ОВЧАРКА",
+      "breed_en": "BERGAMASCO SHEPHERD DOG",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1406241482",
       "name_lat": "GIN GOU BARCELONA",
       "name_ru": "",
@@ -220,48 +256,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "1964085088",
+      "id": "1128966236",
       "name_lat": "GIZMO FROM ELVEN STABLES",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
     },
     {
-      "id": "653443684",
+      "id": "1757148973",
       "name_lat": "GINGERSNAP SHAKIRA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "646262406",
+      "id": "1845271758",
+      "name_lat": "GINGERSNAP UOLTER",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "870637270",
       "name_lat": "GINGERSNAP KOSMOS",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "1677675009",
+      "id": "404047347",
       "name_lat": "GIVAYA LEGENDA RUBY ROSE",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ /",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "887474598",
-      "name_lat": "GINGER POVER VELIKIY GATSBY",
-      "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -274,12 +309,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1110883071",
-      "name_lat": "GIPERION BERN ZHELEZNOBOKIY",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 7,
+      "id": "408848589",
+      "name_lat": "GIDAORI FALKERIYA",
+      "name_ru": "ГИДАОРИ ФАЛКЕРИЯ",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "CHINESE CRESTED DOG",
+      "total_shows": 69,
+      "competition_dog_id": null
+    },
+    {
+      "id": "45912973",
+      "name_lat": "GIP GIP URA IZ DOMA KUNETS",
+      "name_ru": "ГИП ГИП УРА ИЗ ДОМА КУНЕЦ",
+      "breed": "АФФЕНПИНЧЕР",
+      "breed_en": "AFFENPINSCHER",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -288,61 +332,69 @@
       "name_ru": "",
       "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "408848589",
-      "name_lat": "GIDAORI FALKERIYA",
+      "id": "220756464",
+      "name_lat": "GINGER POVER KING OF LAVING KHART",
       "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "CHINESE CRESTED DOG",
-      "total_shows": 40,
+      "breed": "BORDEAUX БУЛЬДОГ",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "658110409",
+      "id": "201578654",
       "name_lat": "GINGER POVER DZHONNI DEPP",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙДОГ БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЛИ",
       "breed_en": "BULLDOG",
       "total_shows": 12,
       "competition_dog_id": null
     },
     {
-      "id": "1942621593",
+      "id": "1207314246",
       "name_lat": "GIPERION MELANI",
-      "name_ru": "",
-      "breed": "КОРСО",
+      "name_ru": "ГИПЕРИОН МЕЛАНИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
-      "id": "1658248827",
+      "id": "879730348",
       "name_lat": "GITTA VON ALASKA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "GERMAN SHEPHERD DOG DOUBLE COAT",
       "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1500764099",
+      "id": "110848242",
+      "name_lat": "GIVER JI NAIGEL",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1234003084",
       "name_lat": "GI GI KLASS SNEZHNAYA KOROLEVA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "46395294",
-      "name_lat": "GINKHAN DEN RIOKO",
+      "id": "208490597",
+      "name_lat": "GILZA RATNAYA SILA",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -355,30 +407,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "405705305",
+      "id": "1103133806",
+      "name_lat": "GIPERION ENTARIKA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1592183286",
       "name_lat": "GINGER LOVE KALINKA BRIGHT BERRY",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ БУЛЬДОГ",
+      "breed": "XL Бульдог",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "45912973",
-      "name_lat": "GIP GIP URA IZ DOMA KUNETS",
+      "id": "731847498",
+      "name_lat": "GIFTED GLEAM SHINES",
       "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР",
-      "breed_en": "AFFENPINSCHER",
-      "total_shows": 11,
-      "competition_dog_id": null
-    },
-    {
-      "id": "819201804",
-      "name_lat": "GIOVANNA DELLE TERRE DEL MONVISO",
-      "name_ru": "",
-      "breed": "БЕРГАМСКАЯ ОВЧАРКА",
-      "breed_en": "BERGAMASCO SHEPHERD DOG",
-      "total_shows": 3,
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -405,7 +455,7 @@
       "name_ru": "",
       "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -427,10 +477,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1608068820",
+      "id": "1218373013",
+      "name_lat": "Gigi vom Huhnegrab",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "968052873",
       "name_lat": "GINDER DEVIL COURAGE IMAGINE",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -454,19 +513,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1295385825",
+      "id": "1588077269",
       "name_lat": "GINNESS DARK DIESEL",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "234883752",
+      "id": "239769256",
       "name_lat": "GINGER POVER VAN GOG",
       "name_ru": "",
-      "breed": "БОКСЕР АМЕРИКАНСКИЙ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -481,10 +540,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "990358781",
+      "id": "1811147278",
       "name_lat": "GI GI KLASS CHIKAGO",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -526,15 +585,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "208490597",
-      "name_lat": "GILZA RATNAYA SILA",
-      "name_ru": "",
-      "breed": "ВОСТОЧНОЕВРОПЕЙСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "699023877",
       "name_lat": "GIRL OF MY DREAM",
       "name_ru": "",
@@ -544,19 +594,45 @@
       "competition_dog_id": null
     },
     {
+      "id": "447240655",
+      "name_lat": "GINDER DEVIL RELAX",
+      "name_ru": "",
+      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ МИНИАТЮРНАЯ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "974621358",
+      "name_lat": "GIVAYA LEGENDA OPERETTA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1636994416",
+      "name_lat": "GINGER KINGDOM JADIS WHITE WITCH",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "BEAGLE",
+      "total_shows": 49,
+      "competition_dog_id": null
+    },
+    {
       "id": "1936126893",
       "name_lat": "GIN NO KYOSEN SO ZVEZDNOGO PUTI",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "SHIBA",
-      "total_shows": 28,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "433872003",
+      "id": "1656312178",
       "name_lat": "GINGERSNAP BENEDICT CUMBERBATCH",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 19,
       "competition_dog_id": null
@@ -568,15 +644,6 @@
       "breed": "БИГЛЬ",
       "breed_en": "BEAGLE",
       "total_shows": 26,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1636994416",
-      "name_lat": "GINGER KINGDOM JADIS WHITE WITCH",
-      "name_ru": "",
-      "breed": "БИГЛЬ",
-      "breed_en": "BEAGLE",
-      "total_shows": 45,
       "competition_dog_id": null
     },
     {
@@ -598,21 +665,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "974621358",
-      "name_lat": "GIVAYA LEGENDA OPERETTA",
+      "id": "1841043007",
+      "name_lat": "GINGERSNAP FLAVIA",
       "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
-      "total_shows": 21,
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "BULL TERRIER STANDART",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "13935354",
-      "name_lat": "GINGERSNAP FLAVIA",
+      "id": "523917169",
+      "name_lat": "GIYA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "BULL TERRIER STANDART",
-      "total_shows": 7,
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -621,12 +688,12 @@
       "name_ru": "",
       "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
-      "id": "1178905611",
-      "name_lat": "GINGER FAIRYTALE O-LA- LA",
+      "id": "125617167",
+      "name_lat": "GINGER FAIRYTALE O-LA-LA",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "breed_en": "",
@@ -643,10 +710,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1922684348",
+      "id": "692864473",
       "name_lat": "GILDIBORD PEPPI DLINNYJ CHULOK",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -670,15 +737,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1580888925",
-      "name_lat": "Gigi vom Huhnegrab",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
       "id": "101757987",
       "name_lat": "GIPERION DAREN",
       "name_ru": "",
@@ -688,10 +746,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1716347265",
+      "id": "1296370299",
+      "name_lat": "GINGER GRACE TIMAR",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1356740380",
       "name_lat": "GINGERSNAP LADY IN RED",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -708,10 +775,18 @@
     {
       "id": "1814662182",
       "name_lat": "GISHEL POLYARNAYA NOCH",
-      "name_ru": "",
+      "name_ru": "ГИШЕЛЬ ПОЛЯРНАЯ НОЧЬ",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "832874216",
+      "name_lat": "GIZMO LIONTARI",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -733,10 +808,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "608200171",
+      "id": "1159940256",
       "name_lat": "GIPERION SHON",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -760,15 +835,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "110848242",
-      "name_lat": "GIVER JI NAIGEL",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1968227758",
       "name_lat": "GIPERION BYERN",
       "name_ru": "",
@@ -787,6 +853,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "164629342",
+      "name_lat": "GIVENCHY LOVES BEAUTY",
+      "name_ru": "",
+      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1934625929",
       "name_lat": "GINGER ELF APEROL SPICY GINGY",
       "name_ru": "",
@@ -798,19 +873,28 @@
     {
       "id": "178683830",
       "name_lat": "GIDAORI NOT FOR SALE",
-      "name_ru": "",
+      "name_ru": "ГИДАОРИ НОТ ФОР САЛЕ",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
-      "total_shows": 7,
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
-      "id": "952916774",
+      "id": "140465580",
+      "name_lat": "GINGER ELF PINOT NOIR",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 78,
+      "competition_dog_id": null
+    },
+    {
+      "id": "360312095",
       "name_lat": "GIACCARD ETRO PARFUME OT NEVSKOGO DUETA",
       "name_ru": "",
-      "breed": "ПАПИЙОН /",
+      "breed": "ПАПИЙОН",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 20,
       "competition_dog_id": null
     },
     {
@@ -850,30 +934,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "19209066",
+      "id": "1460939775",
+      "name_lat": "GINGER ELF REEDLY ROAD VINCERE",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 11,
+      "competition_dog_id": null
+    },
+    {
+      "id": "722736832",
       "name_lat": "GINGER LOVE KAMELIYA SIPENSIS",
       "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "731847498",
-      "name_lat": "GIFTED GLEAM SHINES",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "304223774",
-      "name_lat": "GINGER GRACE TIMAR",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -895,6 +969,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "382293886",
+      "name_lat": "GILDIBORD LEON LANCASTER",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "173023167",
       "name_lat": "GIPERION TSITSERON",
       "name_ru": "",
@@ -913,30 +996,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "382293886",
-      "name_lat": "GILDIBORD LEON LANCASTER",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1265786832",
+      "id": "723604577",
       "name_lat": "GINGERSNAP NEVERLAND",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "523917169",
-      "name_lat": "GIYA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -967,21 +1032,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "205335743",
+      "id": "116955188",
       "name_lat": "GIPERION INESA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "842425087",
+      "id": "816604808",
       "name_lat": "GIPERION BAMBITA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "name_ru": "ГИПЕРИОН БАМБИТА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1988319107",
+      "name_lat": "GILDIBORD ILAN ILLYUZIYA OBMANA",
+      "name_ru": "ГИЛЬДИБОРД ИЛАН ИЛЛЮЗИЯ ОБМАНА",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -991,15 +1065,6 @@
       "breed": "НЕМЕЦКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1186987140",
-      "name_lat": "GIYA",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1021,10 +1086,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1297322330",
+      "id": "808731373",
       "name_lat": "GINGERSNAP FERDINAND",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1057,21 +1122,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "999575418",
+      "id": "463275467",
       "name_lat": "GIBISCUS IZ TSVETOCHNYKH ELFOV",
       "name_ru": "",
-      "breed": "АФФЕНПИНЧЕР /",
+      "breed": "АФФЕНПИНЧЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1988319107",
-      "name_lat": "GILDIBORD ILAN ILLYUZIYA OBMANA",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1102,12 +1158,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "323236153",
+      "name_lat": "GILDIBORD AZARTNAYA AVANTURISTKA",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "555534689",
+      "name_lat": "GIPERION GELIYA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1915949458",
       "name_lat": "GIPERION TAMERLAN SHAYNI",
-      "name_ru": "",
+      "name_ru": "ГИПЕРИОН ТАМЕРЛАН ШАЙНИ",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1147,10 +1220,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "111292672",
+      "id": "1219044433",
       "name_lat": "GINGERSNAP VICTORIA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1174,10 +1247,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "449876642",
+      "id": "677428983",
+      "name_lat": "GINGER POVER NOUBL KING",
+      "name_ru": "",
+      "breed": "КЛАССИК",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "944933327",
       "name_lat": "GI GI KLASS UDALOY MOLODETS",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1189,15 +1270,6 @@
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "323236153",
-      "name_lat": "GILDIBORD AZARTNAYA AVANTURISTKA",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1228,10 +1300,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "670564394",
-      "name_lat": "GINGER POVER VELIKIY GATSBY GINGER POVER",
+      "id": "327897295",
+      "name_lat": "GI GI KLASS ZORRO",
       "name_ru": "",
-      "breed": "АРГЕНТИНСКИЙ БУЛЬДОГ",
+      "breed": "ТОЙ ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1241,15 +1313,6 @@
       "name_lat": "GILDIBORD MELDI DOBICHA METRA",
       "name_ru": "",
       "breed": "БОРДОСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1463308773",
-      "name_lat": "GI GI KLASS ZORRO",
-      "name_ru": "",
-      "breed": "КОВАЛЕНКО МАРИНА ГОРДЕЕВНА ТОЙ ФОКСТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1273,15 +1336,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1317117886",
-      "name_lat": "GINDER DEVIL RELAX",
-      "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "677475705",
       "name_lat": "GILDIBORD ANARKHIYA",
       "name_ru": "",
@@ -1291,21 +1345,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1896746917",
+      "id": "1080186680",
       "name_lat": "GIGULEVSKAYA GEMCHUGINA GHIVANSHI",
       "name_ru": "",
-      "breed": "НОРВИЧ ТЕРЬЕР /",
+      "breed": "НОРВИЧ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "140465580",
-      "name_lat": "GINGER ELF PINOT NOIR",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 42,
       "competition_dog_id": null
     },
     {
@@ -1363,6 +1408,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1408538277",
+      "name_lat": "GIVING JOY WARSTEINER",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 25,
+      "competition_dog_id": null
+    },
+    {
       "id": "1818661472",
       "name_lat": "GIDAORI MIDOU SONG (PUFF)",
       "name_ru": "",
@@ -1372,10 +1426,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "43787318",
+      "id": "1941361763",
+      "name_lat": "GIRO GRENVAGEN",
+      "name_ru": "ГИРО ГРЕНВАГЕН",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "854325689",
       "name_lat": "GIDDYGOLD SKY OF DIAMANT",
       "name_ru": "",
-      "breed": "СПРИНГЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "GOLDEN RETRIEVER",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1387,15 +1450,6 @@
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
       "total_shows": 14,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1408538277",
-      "name_lat": "GIVING JOY WARSTEINER",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 22,
       "competition_dog_id": null
     },
     {
@@ -1417,12 +1471,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "54357888",
+      "id": "34878933",
       "name_lat": "GILMOUR HIGH HOPES",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "196609628",
+      "name_lat": "GINGERSNAP URFIN DJUS",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "BULL TERRIER STANDART",
+      "total_shows": 15,
+      "competition_dog_id": null
+    },
+    {
+      "id": "554470678",
+      "name_lat": "GIDAORI MARENGO EYES",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "348734726",
+      "name_lat": "GINGER FAIRYTALE ZHUZHU",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1444,6 +1525,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1987604474",
+      "name_lat": "GIVAYA LEGENDA MOONLIGHT MIRACLE",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙДОГ БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1994577049",
       "name_lat": "GINGERSNAP ELITA",
       "name_ru": "",
@@ -1462,30 +1552,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1987604474",
-      "name_lat": "GIVAYA LEGENDA MOONLIGHT MIRACLE",
+      "id": "902260976",
+      "name_lat": "GIVYON SNOW VELVET",
       "name_ru": "",
-      "breed": "БОРДОСКИЙДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "554470678",
-      "name_lat": "GIDAORI MARENGO EYES",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
+      "breed": "ЯПОНСКИЙ ШПИЦ",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "348734726",
-      "name_lat": "GINGER FAIRYTALE ZHUZHU",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -1516,21 +1587,39 @@
       "competition_dog_id": null
     },
     {
-      "id": "1577709961",
-      "name_lat": "GINGERSNAP FALCONA",
+      "id": "191806250",
+      "name_lat": "GILDIBORD KLEOPATRA KONTSEPTSIYA KRASOTY",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "DOGUE DE BORDEAUX БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "196609628",
-      "name_lat": "GINGERSNAP URFIN DJUS",
+      "id": "187878321",
+      "name_lat": "GILDIBORD VILBERI VESENNIY VETER",
+      "name_ru": "ГИЛЬДИБОРД ВИЛБЕРИ ВЕСЕННИЙ ВЕТЕР",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "263870052",
+      "name_lat": "GINGERSNAP FALCONA",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "BULL TERRIER STANDART",
-      "total_shows": 12,
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "185114181",
+      "name_lat": "GIOVANNI GAUDI LA VITA BELLA",
+      "name_ru": "",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "breed_en": "",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -1543,12 +1632,30 @@
       "competition_dog_id": null
     },
     {
-      "id": "1433975486",
+      "id": "464170071",
+      "name_lat": "GINDGER ELF SECRET SANTA",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "768775641",
       "name_lat": "GIAN FRANCO FERRE",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 17,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1846976324",
+      "name_lat": "GILDIBORD KASSIOPEYA KOROLEVA KOSMOSA",
+      "name_ru": "ГИЛЬДИБОРД КАССИОПЕЯ КОРОЛЕВА КОСМОСА",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1579,15 +1686,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "191806250",
-      "name_lat": "GILDIBORD KLEOPATRA KONTSEPTSIYA KRASOTY",
-      "name_ru": "",
-      "breed": "DOGUE DE BORDEAUX БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "36409275",
       "name_lat": "GINGER ELF FIONA",
       "name_ru": "",
@@ -1602,32 +1700,14 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 20,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
-      "id": "840138581",
+      "id": "75515846",
       "name_lat": "GI GI KLASS AKKOLADA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "187878321",
-      "name_lat": "GILDIBORD VILBERI VESENNIY VETER",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "464170071",
-      "name_lat": "GINDGER ELF SECRET SANTA",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1642,29 +1722,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "557256627",
+      "id": "101494732",
       "name_lat": "GIFT OF FATE IZ SOZVEZDIYA STAFF",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР /",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "AMERICAN STAFFORDSHIRE TERRIER",
       "total_shows": 18,
       "competition_dog_id": null
     },
     {
-      "id": "1300735422",
-      "name_lat": "GILDIBORD KASSIOPEYA KOROLEVA KOSMOSA",
+      "id": "1537832999",
+      "name_lat": "GISELLE",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1941361763",
-      "name_lat": "GIRO GRENVAGEN",
-      "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР СПАНИЕЛЬ",
-      "breed_en": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "DOBERMANN",
       "total_shows": 11,
       "competition_dog_id": null
     },
@@ -1692,14 +1763,14 @@
       "name_ru": "",
       "breed": "ЧИХУАХУА ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1325694623",
+      "id": "179283412",
       "name_lat": "GIVE ME HOPE IZ DINASTII CHEMPIONOV",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1723,15 +1794,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "902260976",
-      "name_lat": "GIVYON SNOW VELVET",
-      "name_ru": "",
-      "breed": "ЯПОНСКИЙ ШПИЦ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1919812317",
       "name_lat": "GIFT ELVES ALSTEMERIYA ( )",
       "name_ru": "",
@@ -1741,48 +1803,38 @@
       "competition_dog_id": null
     },
     {
-      "id": "751157875",
-      "name_lat": "GINGER GLINTWEIN HMELNOY MED IZ",
+      "id": "2447729",
+      "name_lat": "GIVENCHI EURI-ESCOT",
       "name_ru": "",
-      "breed": "DACHSHUND NORMALGRUSSE KURZHAAR ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ /",
-      "breed_en": "",
-      "total_shows": 1,
+      "breed": "СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ)",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "427318256",
+      "id": "131674612",
       "name_lat": "GILDIBORD ODISSEYA OBYKNOVENNOE CHUDO",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "70992313",
-      "name_lat": "GI GI KLASS VAM I NE SNILOS‘",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1537832999",
-      "name_lat": "GISELLE",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "DOBERMANN",
-      "total_shows": 10,
-      "competition_dog_id": null
-    },
-    {
-      "id": "467639241",
-      "name_lat": "GINGER LOVE ZEPPOLE DI SAN",
       "name_ru": "",
       "breed": "БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 15,
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "176874714",
+      "name_lat": "GINGER GLINTWEIN HMELNOY MED IZ",
+      "name_ru": "",
+      "breed": "DACHSHUND NORMALGRUSSE KURZHAAR ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "237149690",
+      "name_lat": "GI GI KLASS VAM I NE SNILOS‘",
+      "name_ru": "",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
+      "breed_en": "",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1791,7 +1843,16 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 18,
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
+      "id": "467639241",
+      "name_lat": "GINGER LOVE ZEPPOLE DI SAN",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
@@ -1804,10 +1865,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "244759864",
+      "id": "839742457",
+      "name_lat": "GINGER LINEN ZHOFFREY",
+      "name_ru": "",
+      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1495512830",
+      "name_lat": "GINGER POVER BRED PITT",
+      "name_ru": "",
+      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1271539910",
       "name_lat": "GIVENCHY IZ SOZVEZDIYA STAFF",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 32,
       "competition_dog_id": null
@@ -1818,7 +1896,7 @@
       "name_ru": "",
       "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1831,21 +1909,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "839742457",
-      "name_lat": "GINGER LINEN ZHOFFREY",
-      "name_ru": "",
-      "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "474023278",
+      "id": "1724834487",
       "name_lat": "GIORDIANNA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1867,19 +1936,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "290929008",
-      "name_lat": "GIOVANNI GAUDI LA VITA BELLA",
-      "name_ru": "",
-      "breed": "ЦВЕРГПИНЧЕР /",
-      "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "925278917",
+      "id": "1905319401",
       "name_lat": "GI GI KLASS ABADDON",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -1891,6 +1951,33 @@
       "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "17424007",
+      "name_lat": "GIFT OF LIFE INCIPITA VITA",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "836471461",
+      "name_lat": "GINGERSNAP IVETT ASTRA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "BULL TERRIER STANDART",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1770801578",
+      "name_lat": "GIZMO GINGER SPICE",
+      "name_ru": "",
+      "breed": "ШИ ТЦУ",
+      "breed_en": "",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -1912,12 +1999,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "17424007",
-      "name_lat": "GIFT OF LIFE INCIPITA VITA",
+      "id": "1141052024",
+      "name_lat": "GINGER ELF SEMPER FIDELES",
       "name_ru": "",
-      "breed": "СИБА",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1939,10 +2026,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "117385577",
+      "id": "238393412",
       "name_lat": "GINGERSNAP CHERY WHITE ASTERIX",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "BULL TERRIER STANDART",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2020,19 +2107,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1649591238",
+      "id": "1328493942",
       "name_lat": "GINGER POVER TOM CRUISE",
       "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
+      "breed": "DOG БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "742606017",
+      "id": "423736732",
       "name_lat": "GIATSINT KAMEN NEBA",
       "name_ru": "",
-      "breed": "СИБИРСКИЙ ХАСКИ /",
+      "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2047,10 +2134,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "943851228",
+      "id": "141606427",
+      "name_lat": "GIPERION TITAN",
+      "name_ru": "ГИПЕРИОН ТИТАН",
+      "breed": "КОРСО",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "197682041",
       "name_lat": "GILI BLUE IZ VALLEY WINS",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР /",
+      "breed": "АВСТРАЛИЙСКИЙ ХИЛЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2065,21 +2160,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "836471461",
-      "name_lat": "GINGERSNAP IVETT ASTRA",
+      "id": "859113851",
+      "name_lat": "GINGERSNAP TORVI TENDER FOX",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР",
-      "breed_en": "BULL TERRIER STANDART",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1770801578",
-      "name_lat": "GIZMO GINGER SPICE",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 5,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -2128,10 +2214,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1791050894",
+      "id": "86779976",
       "name_lat": "GIVAYA LEGENDA MALE BLUES",
       "name_ru": "",
-      "breed": "БОРДОСКИЙДОГ БУЛЬДОГ",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2146,19 +2232,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1250615410",
+      "id": "1095172930",
       "name_lat": "GIVENCHY IZ DOLINY SOLNCA",
       "name_ru": "",
-      "breed": "БАССЕТ-ГРИФФОН ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "БАССЕТ-ГРИФФОН ИТАЛЬЯНСКИЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1800585774",
+      "id": "589161159",
       "name_lat": "GINDER DEVIL IDEAL MIST",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2169,7 +2255,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "WELSH CORGI PEMBROKE",
-      "total_shows": 27,
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -2209,10 +2295,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1268466183",
+      "id": "338744557",
+      "name_lat": "GILDIBORD LOKKI LIDER AZGARDA",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙДОГ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "588570700",
       "name_lat": "GIPERION CHINGIZ KHAN",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
@@ -2272,6 +2366,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1565312864",
+      "name_lat": "GIPERION MARTINI",
+      "name_ru": "ГИПЕРИОН МАРТИНИ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "907416075",
       "name_lat": "GINGERSNAP GABRIEL BATISTUTA",
       "name_ru": "",
@@ -2299,10 +2402,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "23950205",
+      "id": "1012171680",
       "name_lat": "GINGERSNAP MEDDI KRISTALL GEM",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -2314,6 +2417,22 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "571696658",
+      "name_lat": "GINGER FIRETAIL EDINSTVENNAYA MOYA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "649185935",
+      "name_lat": "GIVENCHY ORGANZA OT NEVSKOGO DUETA",
+      "name_ru": "",
+      "breed": "ЛЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН)",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2362,6 +2481,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1738837909",
+      "name_lat": "GIPERION AVRORA",
+      "name_ru": "ГИПЕРИОН АВРОРА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1883854348",
       "name_lat": "GIPERION LAKSHMI",
       "name_ru": "",
@@ -2398,10 +2526,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1174889906",
+      "id": "1943321907",
       "name_lat": "GIGULEVSKAYA GEMCHUGINA GOSPOGA UDACHA",
       "name_ru": "",
-      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР /",
+      "breed": "ВЕСТ ХАЙЛЕНД ВАЙТ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2416,21 +2544,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "811483140",
+      "id": "65655985",
       "name_lat": "GIPSY QUEEN",
       "name_ru": "",
-      "breed": "МАЛЫЙ БРАБАНСОН /",
+      "breed": "МАЛЫЙ БРАБАНСОН",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1125965043",
-      "name_lat": "GINGERSNAP TORVI TENDER FOX",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ / BULL",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2447,15 +2566,6 @@
       "name_lat": "GIVE ME LOVE FOR LIKE SILK",
       "name_ru": "",
       "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1377183143",
-      "name_lat": "GIPERION MARTINI",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2479,10 +2589,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "495958887",
+      "id": "1535799768",
       "name_lat": "GINDER DEVIL ENISEY",
       "name_ru": "",
-      "breed": "КОЛЛИ ДЛИННОШЕРСТНЫЙ",
+      "breed": "КОЛЛИ Д-Ш",
       "breed_en": "COLLIE ROUGH",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2493,6 +2603,14 @@
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1127478676",
+      "name_lat": "GINGER FAIRYTALE ELISA MAYA",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -2533,10 +2651,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "665875117",
+      "id": "1131541386",
       "name_lat": "GIORDAN DEL DYRIUM САНТО КАНЕ",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2551,19 +2669,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "625639014",
+      "id": "1207591606",
       "name_lat": "GINGERSNAP JEROME",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "999891192",
+      "id": "486812297",
       "name_lat": "Gingersnap Charodey",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2578,19 +2696,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1503706869",
-      "name_lat": "GINGER LOVE ZENFENDEL",
+      "id": "275841121",
+      "name_lat": "GINGER POVER OSTIN KING",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "275841121",
-      "name_lat": "GINGER POVER OSTIN KING",
+      "id": "845032643",
+      "name_lat": "GINGER LOVE ZENFENDEL",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2610,7 +2728,7 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -2623,6 +2741,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1237127039",
+      "name_lat": "GILDIBORD KASSIOPEA KOROLEVA KOSMOSA",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1029695340",
       "name_lat": "GILDIBORD MINELLI VIHOD NA SCENU",
       "name_ru": "",
@@ -2632,12 +2759,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1620750385",
+      "id": "615084485",
       "name_lat": "GINGER SPICE OF DAFT RAPTORS",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1670539861",
+      "name_lat": "GINGERSNAP ULMARA",
+      "name_ru": "",
+      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -2659,10 +2794,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1926578084",
+      "id": "1553299300",
+      "name_lat": "GINGER POVER BARCELONA",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "19174907",
       "name_lat": "GINO DELLA VALCUVIA",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА СТАНДАРТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2677,19 +2821,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "505989564",
-      "name_lat": "GINGER POVER BARCELONA",
-      "name_ru": "",
-      "breed": "СОБАКА БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1433429485",
+      "id": "1194302794",
       "name_lat": "GIPERION BAMBITA ДЖЕХАН ГИР",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2700,6 +2835,14 @@
       "name_ru": "",
       "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "976153822",
+      "name_lat": "GIN SHIRO GO FUEN NO OKA",
+      "name_ru": "",
+      "breed": "АКИТА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2740,6 +2883,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "355385413",
+      "name_lat": "GILDIBORD LORRANA LAVINA STRASTI",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1214560939",
       "name_lat": "GINGER FAIRYTALE ZGRAIA NADZEI",
       "name_ru": "",
@@ -2767,10 +2918,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "75750564",
+      "id": "421964821",
       "name_lat": "GINGER-M",
       "name_ru": "",
-      "breed": "POODLE MINIATURE TOY BLACK, WHITE, BROWN, SILVER, APRICOT, RED FAWN ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ /",
+      "breed": "POODLE MINIATURE TOY BLACK, WHITE, BROWN, SILVER, APRICOT, RED FAWN ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2782,6 +2933,15 @@
       "breed": "СОБАКА / CHINESE",
       "breed_en": "",
       "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "212113502",
+      "name_lat": "GISOLY ALEXANDRA ALEXANDRA",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "LABRADOR RETRIEVER",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -2812,10 +2972,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "603250660",
+      "id": "1811582401",
       "name_lat": "GI GI KLASS FORMULA LYUBVI",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2830,10 +2990,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1282390961",
+      "id": "647829580",
       "name_lat": "GIRLS (Изменено по решению ВК от 25.06.2026 В.",
       "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР /",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2866,10 +3026,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "487896005",
+      "id": "1903133042",
       "name_lat": "GIPERION ATLANT",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2893,21 +3053,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "601208180",
+      "id": "1568832125",
       "name_lat": "GINGERSNAP TSIMURA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1141052024",
-      "name_lat": "GINGER ELF SEMPER FIDELES",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -2938,6 +3089,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1762726060",
+      "name_lat": "GISELLE",
+      "name_ru": "",
+      "breed": "DOBERMANN",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1593478724",
       "name_lat": "GILMOR AYK",
       "name_ru": "",
@@ -2951,15 +3111,6 @@
       "name_lat": "GIGAN LEMON",
       "name_ru": "",
       "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1068646310",
-      "name_lat": "GIYA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2983,10 +3134,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "228505166",
+      "id": "1104732770",
       "name_lat": "GIALITIS HARSO GARRY POTER",
       "name_ru": "",
-      "breed": "МОПС ЧЁРНЫЙ",
+      "breed": "МОПС ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -3010,10 +3161,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1696937639",
+      "id": "330022323",
       "name_lat": "GINGER-M",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ БОЛЬШОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3055,6 +3206,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1107793310",
+      "name_lat": "GIGAN LEMON",
+      "name_ru": "",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "107346504",
+      "name_lat": "GILDIBORD ZHANNI ZHELEZNAYA LEDI",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1083250519",
       "name_lat": "GIBESOVY ZAHRADKY",
       "name_ru": "",
@@ -3064,10 +3232,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1603955723",
+      "id": "81590522",
       "name_lat": "GINGERSNAP ZINEDINE YAZID ZIDANE",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3118,10 +3286,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "178075744",
+      "id": "83539253",
       "name_lat": "GIGANT GOLD STAR GRACE",
       "name_ru": "",
-      "breed": "ИСПАНСКИЙ МАСТИФ /",
+      "breed": "ИСПАНСКИЙ МАСТИФ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3163,28 +3331,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "828363116",
+      "id": "972013212",
       "name_lat": "GIGGL JAMP ROCK'N'ROL",
       "name_ru": "",
-      "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1693071388",
-      "name_lat": "GILDIBORD ZHANNI ZHELEZNAYA LEDI",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "552975961",
-      "name_lat": "GINGER POVER BRED PITT",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
+      "breed": "ШИ ТЦУ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3208,11 +3358,46 @@
       "competition_dog_id": null
     },
     {
+      "id": "723566480",
+      "name_lat": "GINGER-M",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "225389344",
+      "name_lat": "GISELLE",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ / DOBERMANN BROWN & TAN",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1370960850",
+      "name_lat": "GIPERION KANG",
+      "name_ru": "ГИПЕРИОН КАНГ",
+      "breed": "ТИБЕТСКИЙ МАСТИФ",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1803883593",
       "name_lat": "GINGERSNAP VASHERON KONSTANTIN",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "639834017",
+      "name_lat": "GIPERION ELIT ESKALIBUR",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -3244,19 +3429,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1825647914",
+      "id": "864526693",
       "name_lat": "GIDVIN'S RIDDL SAYERY",
       "name_ru": "",
-      "breed": "SPANIEL",
+      "breed": "POINTING DOG ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "344294806",
+      "id": "821761130",
       "name_lat": "GINGER-M",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3316,8 +3501,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "644663109",
-      "name_lat": "GINGERSNAP JEAN- BAPTISTE",
+      "id": "1114740077",
+      "name_lat": "GINGERSNAP JEAN-BAPTISTE",
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
@@ -3352,6 +3537,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "911335211",
+      "name_lat": "GIOIA DELLA VITA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "89811263",
       "name_lat": "GIMLI IZ DOMA UVAROVYH",
       "name_ru": "",
@@ -3370,19 +3563,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "71498394",
+      "id": "67178975",
       "name_lat": "GINGERSNAP CHAMPION",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "203176401",
+      "id": "1625361326",
       "name_lat": "GIPERION TAMERLAN",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3394,15 +3587,6 @@
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "288878010",
-      "name_lat": "GIPERION AVRORA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3433,19 +3617,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "723566480",
-      "name_lat": "GINGER-M",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "589250431",
+      "id": "133829486",
       "name_lat": "GINGER GRAND SKIFIA",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ /",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3469,6 +3644,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "75267049",
+      "name_lat": "GILDIBORD APRIORI BEST",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1351725463",
       "name_lat": "GINGER ELF FEMME FATALE",
       "name_ru": "",
@@ -3487,19 +3670,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "225389344",
-      "name_lat": "GISELLE",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ / DOBERMANN BROWN & TAN",
+      "id": "1493559987",
+      "name_lat": "GIPERION VOLT",
+      "name_ru": "ГИПЕРИОН ВОЛЬТ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1189205523",
+      "name_lat": "GINGERSNAP JEAN- BATIST",
+      "name_ru": "",
+      "breed": "ЦВЕТНОЙ /",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "34445571",
+      "id": "775698960",
+      "name_lat": "GISELLE",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1540668394",
       "name_lat": "GINGER ELF AMONTILLADO",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3532,6 +3731,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "870121126",
+      "name_lat": "GIPERION ROMI",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "537832781",
       "name_lat": "GINGERSNAP VESPER VENESIA",
       "name_ru": "",
@@ -3541,13 +3749,13 @@
       "competition_dog_id": null
     },
     {
-      "id": "397047552",
+      "id": "10459",
       "name_lat": "GINURA JUTTA KULUMA",
       "name_ru": "",
       "breed": "УИППЕТ",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
+      "competition_dog_id": 10459
     },
     {
       "id": "1913341378",
@@ -3556,15 +3764,6 @@
       "breed": "ITALIAN SIGHTHOUND",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1237127039",
-      "name_lat": "GILDIBORD KASSIOPEA KOROLEVA KOSMOSA",
-      "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3640,10 +3839,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "884083303",
+      "id": "1159753952",
       "name_lat": "GI GI KLASS TAMERLAN",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3667,10 +3866,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1624179461",
+      "id": "1924459330",
+      "name_lat": "GISELLE",
+      "name_ru": "",
+      "breed": "DOBERMANN BROWN &",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "859070310",
       "name_lat": "GIPERBOREYSKAYA",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -3694,19 +3901,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "140214047",
+      "id": "161304718",
       "name_lat": "GIPERION BEYSI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО /",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
     },
     {
-      "id": "1498640718",
+      "id": "151367147",
       "name_lat": "GINGERSNAP VEYSMA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3730,39 +3937,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "775698960",
-      "name_lat": "GISELLE",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "218444781",
-      "name_lat": "GINGERSNAP JEAN- BATIST",
-      "name_ru": "",
-      "breed": "ЦВЕТНОЙ / BULL TERRIER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1358916343",
       "name_lat": "GIGULEVSKAYA GEMCHUGINA TSVETOCHNAYA",
       "name_ru": "",
       "breed": "ВЕСТ ХАЙЛЕНД",
       "breed_en": "",
       "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1493559987",
-      "name_lat": "GIPERION VOLT",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -3775,12 +3955,29 @@
       "competition_dog_id": null
     },
     {
-      "id": "1304105982",
+      "id": "1450513031",
       "name_lat": "GINGER ELF AMARONE",
       "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК /",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
       "total_shows": 14,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1204255358",
+      "name_lat": "GIPERION GVINEVRA",
+      "name_ru": "ГИПЕРИОН ГВИНЕВРА",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "997205115",
+      "name_lat": "GIPERION CHIO-CHIO SAN",
+      "name_ru": "",
+      "breed": "СИБА",
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
@@ -3820,6 +4017,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "397378427",
+      "name_lat": "GIACINT VOM HAUS ERFULLUNGEN VUNSCHEN",
+      "name_ru": "",
+      "breed": "ДОБЕРМАН",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "232805887",
       "name_lat": "GINGER FAIRYTALE GO TO VICTORY",
       "name_ru": "",
@@ -3838,19 +4044,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1334747739",
+      "id": "1288313685",
       "name_lat": "GILDIBORD ERA MILOSERDIYA",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "164629342",
-      "name_lat": "GIVENCHY LOVES BEAUTY",
-      "name_ru": "",
-      "breed": "ЧИХУАХУА КОРОТКОШЕРСТНАЯ",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -3883,12 +4080,29 @@
       "competition_dog_id": null
     },
     {
+      "id": "440488911",
+      "name_lat": "GINGER ELF SWEET TEMPTATION",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "798054016",
       "name_lat": "GISELLE TELMAN HAUS",
       "name_ru": "",
       "breed": "WELSH CORGI PEMBROKE",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1513564532",
+      "name_lat": "GIDDYGOLD HEART OF LOVE",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "GOLDEN RETRIEVER",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3937,15 +4151,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1513564532",
-      "name_lat": "GIDDYGOLD HEART OF LOVE",
-      "name_ru": "",
-      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "GOLDEN RETRIEVER",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "30645371",
       "name_lat": "GI-ZURI FO IGANTO",
       "name_ru": "",
@@ -3955,10 +4160,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "260748038",
+      "id": "1006896451",
       "name_lat": "GINGERSNAP YUSTAS MARSHALL",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "232555282",
+      "name_lat": "GIPERION SATIS",
+      "name_ru": "ГИПЕРИОН САТИС",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -3968,6 +4182,24 @@
       "name_lat": "GISELLE",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "52186201",
+      "name_lat": "GINGER POVER FLORENCIA SHOW QUEEN",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1985997941",
+      "name_lat": "GIVENCHY KIDDY WIN'S",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4045,15 +4277,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "52186201",
-      "name_lat": "GINGER POVER FLORENCIA SHOW QUEEN",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1083543906",
       "name_lat": "GINTSUBASA GO GINZA KAWAKITA",
       "name_ru": "",
@@ -4090,15 +4313,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1370960850",
-      "name_lat": "GIPERION KANG",
-      "name_ru": "",
-      "breed": "ТИБЕТСКИЙ МАСТИФ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "305389537",
       "name_lat": "GIFTLIFE IAGODKA MALINKA",
       "name_ru": "",
@@ -4126,15 +4340,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "832874216",
-      "name_lat": "GIZMO LIONTARI",
-      "name_ru": "",
-      "breed": "ШИ ТЦУ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "508753539",
       "name_lat": "GIRL WITH THE DRAGON TATTOO",
       "name_ru": "",
@@ -4144,10 +4349,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1829692096",
+      "id": "1116793966",
       "name_lat": "GILDIBORD BESSONNAYA NOCH",
       "name_ru": "",
-      "breed": "БОРДОСКИЙ ДОГ БУЛЬДОГ",
+      "breed": "БОРДОСКИЙ ДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4162,10 +4367,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "843196773",
-      "name_lat": "GIPERION SATIS",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "id": "216169707",
+      "name_lat": "GILDA vom FELDADLER",
+      "name_ru": "ГИЛЬДА ВОМ ФЕЛЬДАДЛЕР",
+      "breed": "НЕМЕЦКАЯ КОРОТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4180,19 +4385,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "79022227",
-      "name_lat": "GIPERION SHEN II",
+      "id": "1119434786",
+      "name_lat": "GIVE ME GLOW",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "562130458",
-      "name_lat": "GIVENCHY KIDDY WIN'S",
+      "id": "713497404",
+      "name_lat": "GIPERION SHEN II",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД БУЛЬДОГ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -4216,10 +4420,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "108759740",
+      "id": "1788326617",
       "name_lat": "GINA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ СЕТТЕР /",
+      "breed": "АНГЛИЙСКИЙ СЕТТЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4229,15 +4433,6 @@
       "name_lat": "GIVENCHY",
       "name_ru": "",
       "breed": "ДЖЕК РАССЕЛ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1762726060",
-      "name_lat": "GISELLE",
-      "name_ru": "",
-      "breed": "DOBERMANN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4261,19 +4456,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "167444352",
-      "name_lat": "GIORDIANNA",
+      "id": "1783031358",
+      "name_lat": "GILMOR AYK",
       "name_ru": "",
-      "breed": "КОРСО / ITALIAN CANE",
-      "breed_en": "",
+      "breed": "CHIHUAHUA",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "175524528",
+      "id": "167444352",
       "name_lat": "GIORDIANNA",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "КОРСО / ITALIAN CANE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4315,15 +4509,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "776719211",
-      "name_lat": "GIL GALAD",
-      "name_ru": "",
-      "breed": "ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "116875010",
       "name_lat": "GIVE ME MY",
       "name_ru": "",
@@ -4351,6 +4536,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1940611057",
+      "name_lat": "GINGER LOVE KEEPER OF RED GOLD",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "703105260",
+      "name_lat": "GIVAYA LEGENDA ZAHAR",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "BULLDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1646696469",
       "name_lat": "GINGERSNAP UNDERWOOD",
       "name_ru": "",
@@ -4369,29 +4572,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "212113502",
-      "name_lat": "GISOLY ALEXANDRA ALEXANDRA",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
-      "breed_en": "LABRADOR RETRIEVER",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1102596794",
       "name_lat": "GIVER JI CHEPRIYA PRINTSESSI MALINKI",
       "name_ru": "",
       "breed": "ШИ ТЦУ",
       "breed_en": "SHIH TZU",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1940611057",
-      "name_lat": "GINGER LOVE KEEPER OF RED GOLD",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4473,15 +4658,6 @@
       "name_ru": "",
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "703105260",
-      "name_lat": "GIVAYA LEGENDA ZAHAR",
-      "name_ru": "",
-      "breed": "БУЛЬДОГ",
-      "breed_en": "BULLDOG",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -4648,6 +4824,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "682969439",
+      "name_lat": "GIFT LUCKY VINNER",
+      "name_ru": "",
+      "breed": "ШИ - ТЦУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "192966959",
       "name_lat": "GIOTTO DEL PICCOLO TEMPO",
       "name_ru": "",
@@ -4675,6 +4859,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1807536232",
+      "name_lat": "GILDIBORD DZHEFRI DAR",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙДОГ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1827567051",
       "name_lat": "GINGERSNAP ATILLA",
       "name_ru": "",
@@ -4693,24 +4885,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "236039570",
-      "name_lat": "GINGER FAIRYTALE ELISA MAYA",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ / CAVALIER",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1907368487",
-      "name_lat": "GIPERION TITAN",
-      "name_ru": "",
-      "breed": "КОРСО / ITALIAN CANE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1944670232",
       "name_lat": "GIVENCGY JE T'AIME OT BELLA MAFIYA",
       "name_ru": "",
@@ -4724,15 +4898,6 @@
       "name_lat": "GINGER IVO STRAIGHT",
       "name_ru": "",
       "breed": "БИГЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1204255358",
-      "name_lat": "GIPERION GVINEVRA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4774,19 +4939,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1373847517",
+      "id": "1759300864",
       "name_lat": "GINGERSNAP LAGERTA",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР СТАНДАРТНЫЙ",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "921742221",
+      "id": "676148842",
       "name_lat": "GIPERION ABIGEL UDACHI",
       "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4837,15 +5002,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "778865671",
-      "name_lat": "GILDA vom FELDADLER",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ КОРОТКОШЁРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1237410301",
       "name_lat": "GIGANTELI DIESEL",
       "name_ru": "",
@@ -4864,10 +5020,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1941231486",
+      "id": "1784389634",
       "name_lat": "GIGANTIC DOG OLIVYA BERK",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДОГ ЧЁРНЫЙ, МРАМОРНЫЙ",
+      "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4891,26 +5047,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "404387436",
-      "name_lat": "GIPERION ENTARIKA",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "828385290",
       "name_lat": "GIPERION NIKOL",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "870121126",
-      "name_lat": "GIPERION ROMI",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
       "breed_en": "",
@@ -4922,15 +5060,6 @@
       "name_lat": "GILZA GRETA GARBO",
       "name_ru": "",
       "breed": "РУССКИЙ ОХОТНИЧИЙ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "397378427",
-      "name_lat": "GIACINT VOM HAUS ERFULLUNGEN VUNSCHEN",
-      "name_ru": "",
-      "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -4950,6 +5079,22 @@
       "name_ru": "",
       "breed": "БЕДЛИНГТОН МИНИАТЮРНЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "640719198",
+      "name_lat": "GILBERT IZ DOMA ELIV’S",
+      "name_ru": "",
+      "breed": "КЕРН ТЕРЬЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1936452187",
+      "name_lat": "GILDIBORD BEST OF BEST",
+      "name_ru": "",
+      "breed": "DOGUE DE",
       "total_shows": 1,
       "competition_dog_id": null
     }

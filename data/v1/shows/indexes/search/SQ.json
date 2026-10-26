@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "SQ",
-  "count": 2,
+  "count": 3,
   "dogs": [
     {
       "id": "1993011152",
@@ -19,6 +19,14 @@
       "breed": "И",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "806632937",
+      "name_lat": "SQUEEZE IN A HUG OF LEGENDS HEART",
+      "name_ru": "",
+      "breed": "БРАБАНСОН",
+      "total_shows": 2,
       "competition_dog_id": null
     }
   ]

@@ -1,15 +1,24 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AG",
-  "count": 341,
+  "count": 358,
   "dogs": [
+    {
+      "id": "111134365",
+      "name_lat": "A GRAND FUNK AND FUN DU LIA-PHAIL",
+      "name_ru": "",
+      "breed": "БЛАДХАУНД",
+      "breed_en": "BLOODHOUND",
+      "total_shows": 159,
+      "competition_dog_id": null
+    },
     {
       "id": "1154902349",
       "name_lat": "AGILE MIND",
       "name_ru": "",
       "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 38,
       "competition_dog_id": null
     },
     {
@@ -18,7 +27,7 @@
       "name_ru": "",
       "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 50,
+      "total_shows": 53,
       "competition_dog_id": null
     },
     {
@@ -27,16 +36,16 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 30,
+      "total_shows": 31,
       "competition_dog_id": null
     },
     {
-      "id": "631875286",
+      "id": "923888984",
       "name_lat": "AGRIA TWIST AND SHOUT",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -58,10 +67,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "411011471",
+      "id": "101777359",
       "name_lat": "AGENT 007 IZ VOISKA TAMERLANA",
       "name_ru": "",
-      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 25,
       "competition_dog_id": null
@@ -76,10 +85,28 @@
       "competition_dog_id": null
     },
     {
-      "id": "442009683",
+      "id": "404254308",
+      "name_lat": "AGAY KUZYUR-OK PAL'MA",
+      "name_ru": "АГАЙ КУЗЮР-ОК ПАЛЬМА",
+      "breed": "БОРДЕР КОЛЛИ",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
+      "id": "315670298",
+      "name_lat": "AGLAYA IZ MIMOLETNOGO VIDENIJA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "596693456",
       "name_lat": "AGANETTA AZHURNOE KRUZHEVO",
       "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
+      "breed": "БОРДОСКИЙ МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -94,15 +121,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "404254308",
-      "name_lat": "AGAY KUZYUR-OK PAL'MA",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "665688503",
       "name_lat": "AGENT IZ AFRICI",
       "name_ru": "",
@@ -112,21 +130,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "315670298",
-      "name_lat": "AGLAYA IZ MIMOLETNOGO VIDENIJA",
+      "id": "404742429",
+      "name_lat": "AGRON NERO CODA ASTIN",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ СРЕДНИЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed": "ЧАРЛЬЗ ЬНЫЙ ТОЙ СПАНИЕЛЬ (ПАПИЙОН -",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "937830177",
-      "name_lat": "AGRON NERO CODA ASTIN",
+      "id": "1977496715",
+      "name_lat": "AGATHA CHRISTIE",
       "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 7,
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
@@ -136,15 +153,6 @@
       "breed": "СИБИРСКИЙ ХАСКИ",
       "breed_en": "",
       "total_shows": 17,
-      "competition_dog_id": null
-    },
-    {
-      "id": "2000763868",
-      "name_lat": "AGATHA CHRISTIE",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 11,
       "competition_dog_id": null
     },
     {
@@ -229,6 +237,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "82168672",
+      "name_lat": "AGAY KUZYUR-OK EVEREST",
+      "name_ru": "АГАЙ КУЗЮР-ОК ЭВЕРЕСТ",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
+      "breed_en": "AUSTRALIAN SHEPHERD",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
       "id": "202377495",
       "name_lat": "AGIOTAGE ALLEGRO ASSAY",
       "name_ru": "",
@@ -238,28 +255,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "629943183",
+      "name_lat": "AGROFENA IZ STRANY TSVETOV",
+      "name_ru": "АГРОФЕНА ИЗ СТРАНЫ ЦВЕТОВ",
+      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
+      "breed_en": "BERNESE MOUNTAIN DOG",
+      "total_shows": 44,
+      "competition_dog_id": null
+    },
+    {
       "id": "709833620",
       "name_lat": "AGAIN LUCKY STAR S TAGANIEGO ROGA",
       "name_ru": "",
       "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "MINIATURE SCHNAUZER BLACK",
-      "total_shows": 22,
+      "total_shows": 24,
       "competition_dog_id": null
     },
     {
-      "id": "629943183",
-      "name_lat": "AGROFENA IZ STRANY TSVETOV",
-      "name_ru": "",
-      "breed": "БЕРНСКИЙ ЗЕННЕНХУНД",
-      "breed_en": "BERNESE MOUNTAIN DOG",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
-      "id": "50056186",
+      "id": "1311734462",
       "name_lat": "AGATA OBAYATELNAYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 24,
       "competition_dog_id": null
@@ -267,10 +284,10 @@
     {
       "id": "521317250",
       "name_lat": "AGAY KUZYUR-OK NUKIMI SORA",
-      "name_ru": "",
+      "name_ru": "АГАЙ КУЗЮР-ОК НУКИМИ СОРА",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -292,10 +309,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "40183586",
+      "id": "1399550828",
       "name_lat": "AGAT",
       "name_ru": "",
-      "breed": "ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА МИНИАТЮРНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -306,15 +323,6 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "82168672",
-      "name_lat": "AGAY KUZYUR-OK EVEREST",
-      "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
-      "breed_en": "AUSTRALIAN SHEPHERD",
       "total_shows": 4,
       "competition_dog_id": null
     },
@@ -355,6 +363,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "492400320",
+      "name_lat": "AGATIS ZNAMENITAYA OSOBA",
+      "name_ru": "АГАТИС ЗНАМЕНИТАЯ ОСОБА",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "863605548",
+      "name_lat": "AGISHA DLYA REGINY",
+      "name_ru": "АГИША ДЛЯ РЕГИНЫ",
+      "breed": "СХИППЕРКЕ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
       "id": "996539533",
       "name_lat": "AGAIN LOVE NIKICHA",
       "name_ru": "",
@@ -382,15 +408,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "863605548",
-      "name_lat": "AGISHA DLYA REGINY",
-      "name_ru": "",
-      "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
       "id": "1319431176",
       "name_lat": "AGAIN LOVE MISHEL",
       "name_ru": "",
@@ -409,19 +426,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "788408336",
+      "id": "614267244",
       "name_lat": "AGATA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
-      "id": "411571716",
+      "id": "126605297",
       "name_lat": "AGATA BLACK MAGIC",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -445,10 +462,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "211609156",
+      "id": "41320888",
+      "name_lat": "AGRAMER BORDOG APOLLON",
+      "name_ru": "",
+      "breed": "БОРДОСКИЙ ДОГ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1801320714",
       "name_lat": "AGUSHA (MINI)",
       "name_ru": "",
-      "breed": "КСОЛОИТЦКУИНТЛИ МИНИАТЮРНАЯ",
+      "breed": "БАСЕНДЖИ СОБАКА) МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -463,21 +488,20 @@
       "competition_dog_id": null
     },
     {
+      "id": "1280747454",
+      "name_lat": "AGIRA IZ URALSKOY DINASTII",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "162529726",
       "name_lat": "AGATA",
       "name_ru": "",
       "breed": "БАСЕНДЖИ КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ",
       "breed_en": "",
       "total_shows": 6,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1506908732",
-      "name_lat": "AGATIS ZNAMENITAYA OSOBA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -490,10 +514,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1421271310",
+      "id": "299268818",
       "name_lat": "AGAT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -513,7 +537,33 @@
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
       "breed_en": "",
-      "total_shows": 36,
+      "total_shows": 39,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1553802888",
+      "name_lat": "AGATA KRISTI II IZ LEGENDY ROKHA",
+      "name_ru": "",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 29,
+      "competition_dog_id": null
+    },
+    {
+      "id": "308553665",
+      "name_lat": "AGAY KUZYUR-OK ESIMI MICHIKO",
+      "name_ru": "",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 13,
+      "competition_dog_id": null
+    },
+    {
+      "id": "173999669",
+      "name_lat": "AGENT PROVOCATEUR DU TROISIEME JOUR",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -535,6 +585,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "472895927",
+      "name_lat": "AGAY MENEN BOLGON TUI",
+      "name_ru": "АГАЙ МЕНЕН БОЛГОН ТУИ",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "total_shows": 20,
+      "competition_dog_id": null
+    },
+    {
       "id": "153004264",
       "name_lat": "AGILERA GREYS",
       "name_ru": "",
@@ -544,12 +602,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "173999669",
-      "name_lat": "AGENT PROVOCATEUR DU TROISIEME JOUR",
-      "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "id": "1886525220",
+      "name_lat": "Agent Richard Dar",
+      "name_ru": "Агент Ричард Дар",
+      "breed": "НЬЮФАУНДЛЕНД",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 12,
       "competition_dog_id": null
     },
     {
@@ -562,21 +620,12 @@
       "competition_dog_id": 9673
     },
     {
-      "id": "1553802888",
-      "name_lat": "AGATA KRISTI II IZ LEGENDY ROKHA",
+      "id": "168313756",
+      "name_lat": "AGAIN LOVE DYNASTY",
       "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
       "breed_en": "",
-      "total_shows": 13,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1120206149",
-      "name_lat": "AGAY KUZYUR- OK ESIMI MICHIKO",
-      "name_ru": "",
-      "breed": "СИБА",
-      "breed_en": "",
-      "total_shows": 11,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -616,12 +665,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "472895927",
-      "name_lat": "AGAY MENEN BOLGON TUI",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "id": "1385289499",
+      "name_lat": "AGATIS CHERNICHNYY PAY",
+      "name_ru": "АГАТИС ЧЕРНИЧНЫЙ ПАЙ",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "880896368",
+      "name_lat": "AGATA JEWELRY",
+      "name_ru": "",
+      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
+      "breed_en": "",
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -652,10 +710,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1265865027",
+      "id": "1577723959",
       "name_lat": "AGATA TROPICHESKIJ SHTORM",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЁРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -670,21 +728,47 @@
       "competition_dog_id": null
     },
     {
-      "id": "1886525220",
-      "name_lat": "Agent Richard Dar",
+      "id": "147229772",
+      "name_lat": "AGLAYA IZ GRAFSKOGO POMESTIJA",
       "name_ru": "",
-      "breed": "НЬЮФАУНДЛЕНД",
+      "breed": "ШЕЛТИ",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "742866326",
+      "name_lat": "AGAIN LOVE KUMIR",
+      "name_ru": "",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 10,
+      "competition_dog_id": null
+    },
+    {
+      "id": "581357642",
+      "name_lat": "AGAY KUZYUR-OK TAYGRIS",
+      "name_ru": "",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "114898563",
+      "name_lat": "AGATA FOR QUICK CHASE",
+      "name_ru": "",
+      "breed": "КАВАЛЕР ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "463959173",
-      "name_lat": "AGAY KUZYUR-OK TAYGRIS",
-      "name_ru": "",
-      "breed": "КАРДИГАН",
+      "id": "26275269",
+      "name_lat": "AGNES DLYA INKRIVERS",
+      "name_ru": "АГНЕС ДЛЯ ИНКРИВЕРС",
+      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -706,15 +790,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "147229772",
-      "name_lat": "AGLAYA IZ GRAFSKOGO POMESTIJA",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1254871495",
       "name_lat": "AGAY KUZYUR-OK UOLTER DENNI",
       "name_ru": "",
@@ -724,10 +799,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "556259196",
+      "id": "306397977",
       "name_lat": "AGAT",
       "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ЖЕСТКОШЕРСТНАЯ",
+      "breed": "ТАКСА КРОЛИЧЬЯ Ж-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -751,15 +826,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "26275269",
-      "name_lat": "AGNES DLYA INKRIVERS",
-      "name_ru": "",
-      "breed": "ВЕЛЬШ КОРГИ КАРДИГАН",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "551843519",
       "name_lat": "AGLAYA",
       "name_ru": "",
@@ -769,19 +835,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "215520239",
+      "id": "1953095198",
       "name_lat": "AGILE MIND",
       "name_ru": "",
-      "breed": "ЛЕНД /",
+      "breed": "ЛЕНД",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1867321781",
+      "id": "1394731642",
+      "name_lat": "AGAT",
+      "name_ru": "",
+      "breed": "ПОЙНТЕР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1218097509",
+      "name_lat": "AGUL",
+      "name_ru": "",
+      "breed": "ВОСТОЧНОСИБИР",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1684006660",
       "name_lat": "AGLIYAR ODRI LEDI",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ С СЕРЕБРОМ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ С СЕРЕБРИСТЫМ ПОДПАЛОМ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -796,12 +878,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "963872793",
+      "id": "130287204",
       "name_lat": "AGAIN LOVE EXCLUSIVE",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ /",
-      "breed_en": "",
-      "total_shows": 27,
+      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
+      "total_shows": 28,
       "competition_dog_id": null
     },
     {
@@ -814,10 +895,27 @@
       "competition_dog_id": null
     },
     {
-      "id": "1732793374",
+      "id": "1389147394",
+      "name_lat": "AGURA IZ ORLINYKH SKAL",
+      "name_ru": "АГУРА ИЗ ОРЛИНЫХ СКАЛ",
+      "breed": "ЛЕОНБЕРГЕР",
+      "breed_en": "LEONBERGER",
+      "total_shows": 23,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1736712210",
+      "name_lat": "AGAPELLI GALATEA",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "366808130",
       "name_lat": "AGATIS VETER V PARUSAKH",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ / POODLE NAIN BLACK, WHITE, BROWN",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -895,10 +993,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1082699915",
+      "id": "220349826",
       "name_lat": "AGAIN LOVE IZABELLE",
       "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР /",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -913,6 +1011,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1947414597",
+      "name_lat": "AGERT-SUMRAK DAKOTA",
+      "name_ru": "АГЕРТ-СУМРАК ДАКОТА",
+      "breed": "ЗЕННЕНХУНД",
+      "breed_en": "",
+      "total_shows": 12,
+      "competition_dog_id": null
+    },
+    {
       "id": "1076225643",
       "name_lat": "AGERT-SUMRAK ERIKA",
       "name_ru": "",
@@ -922,8 +1029,17 @@
       "competition_dog_id": null
     },
     {
-      "id": "677024766",
-      "name_lat": "AGAY KUZYUR-OK CHON- LI JONDZHE",
+      "id": "30499670",
+      "name_lat": "AGNIA BEST SITE FOR NICOLAS",
+      "name_ru": "",
+      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "847600304",
+      "name_lat": "AGAY KUZYUR-OK CHON-LI JONDZHE",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
@@ -936,6 +1052,24 @@
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ Педро Иво",
       "breed_en": "FRENCH BULLDOG",
+      "total_shows": 9,
+      "competition_dog_id": null
+    },
+    {
+      "id": "660156676",
+      "name_lat": "Agha Djari's Turquoise",
+      "name_ru": "",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed_en": "",
+      "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "14389683",
+      "name_lat": "AGAIN LOVE DIANA",
+      "name_ru": "АГАИН ЛОВЕ ДИАНА",
+      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
@@ -954,7 +1088,7 @@
       "name_ru": "",
       "breed": "СЕНБЕРНАР ДЛИННОШЕРСТНЫЙ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
@@ -967,21 +1101,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "691909488",
-      "name_lat": "AGERT-SUMRAK DAKOTA",
-      "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "1192297767",
       "name_lat": "AGNY JULES VINSENT",
       "name_ru": "",
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "952542830",
+      "name_lat": "AGAY KUZYUR-OK DZHONATAN GRUT",
+      "name_ru": "АГАЙ КУЗЮР-ОК ДЖОНАТАН ГРУТ",
+      "breed": "БИГЛЬ",
+      "breed_en": "",
+      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -994,10 +1128,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "30499670",
-      "name_lat": "AGNIA BEST SITE FOR NICOLAS",
-      "name_ru": "",
-      "breed": "ЛАБРАДОР РЕТРИВЕР",
+      "id": "1742084659",
+      "name_lat": "AGAT SANTORI",
+      "name_ru": "АГАТ САНТОРИ",
+      "breed": "БИГЛЬ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -1009,6 +1143,15 @@
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1959786638",
+      "name_lat": "AGATA IZ LVINOGO PRAYDA (изменено по решению ВК от 27.01.2021 В.36)",
+      "name_ru": "",
+      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
+      "breed_en": "",
+      "total_shows": 10,
       "competition_dog_id": null
     },
     {
@@ -1030,12 +1173,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "660156676",
-      "name_lat": "Agha Djari's Turquoise",
+      "id": "657083376",
+      "name_lat": "AGUAFORTIS THOR",
       "name_ru": "",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "breed": "ПОРТУГАЛЬСКАЯ ВОДЯНАЯ",
       "breed_en": "",
-      "total_shows": 6,
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1057,10 +1200,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "34126894",
+      "id": "1626043255",
       "name_lat": "AGATHA BLACK STAR",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -1072,15 +1215,6 @@
       "breed": "ДОБЕРМАН",
       "breed_en": "",
       "total_shows": 7,
-      "competition_dog_id": null
-    },
-    {
-      "id": "168313756",
-      "name_lat": "AGAIN LOVE DYNASTY",
-      "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР МИНИАТЮРНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1111,15 +1245,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "192754249",
-      "name_lat": "AGATA IZ LVINOGO PRAYDA",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ) /",
-      "breed_en": "",
-      "total_shows": 9,
-      "competition_dog_id": null
-    },
-    {
       "id": "277240568",
       "name_lat": "AGUFORTIS THOR",
       "name_ru": "",
@@ -1147,30 +1272,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "954466865",
-      "name_lat": "AGAPELLI GALATEA",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "565072873",
       "name_lat": "AGILE PUMMEL VOM STERNENSCHLOSS",
       "name_ru": "",
       "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "BIEWER TERRIER",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "657083376",
-      "name_lat": "AGUAFORTIS THOR",
-      "name_ru": "",
-      "breed": "ПОРТУГАЛЬСКАЯ ВОДЯНАЯ",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1228,28 +1335,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "963013276",
-      "name_lat": "AGAJ KUZYUR-OK NORD- VOLT",
+      "id": "1387295594",
+      "name_lat": "AGAJ KUZYUR-OK NORD-VOLT",
       "name_ru": "",
       "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1389147394",
-      "name_lat": "AGURA IZ ORLINYKH SKAL",
-      "name_ru": "",
-      "breed": "ЛЕОНБЕРГЕР",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "14389683",
-      "name_lat": "AGAIN LOVE DIANA",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1264,8 +1353,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "610079960",
-      "name_lat": "AGNI ARS FARADAY FOR- MAGICKOR",
+      "id": "764873680",
+      "name_lat": "AGNI ARS FARADAY FOR-MAGICKOR",
       "name_ru": "",
       "breed": "ЧАУ-ЧАУ",
       "breed_en": "",
@@ -1282,37 +1371,37 @@
       "competition_dog_id": null
     },
     {
-      "id": "1597258370",
+      "id": "1189757542",
+      "name_lat": "AGATIS SAN-MISHEL",
+      "name_ru": "АГАТИС САН- МИШЕЛЬ",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1208964716",
       "name_lat": "AGATA GOLDEN",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ДЛИННОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Д-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "558621528",
+      "id": "1378919330",
       "name_lat": "AGVARRES DARSI OCHAROVATELNAYA",
       "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
+      "breed": "АМЕРИКАНСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "880896368",
-      "name_lat": "AGATA JEWELRY",
-      "name_ru": "",
-      "breed": "КОНТИНЕНТАЛЬНЫЙТОЙ СПАНИЕЛЬ (ПАПИЙОН - ФАЛЕН)",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "77008608",
+      "id": "258607029",
       "name_lat": "AGRAND FUNK AND FUN DU LIA-PHAIL",
       "name_ru": "",
-      "breed": "БЛАДХАУНД /",
+      "breed": "БЛАДХАУНД",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -1333,6 +1422,15 @@
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "179790010",
+      "name_lat": "A GRAND FUNK AND DU LIA-PHAIL",
+      "name_ru": "",
+      "breed": "БЛАДХАУНД",
+      "breed_en": "BLOODHOUND",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1390,6 +1488,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1770592870",
+      "name_lat": "AGNI ARS KISS",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "1593812246",
       "name_lat": "AGATA",
       "name_ru": "",
@@ -1435,6 +1542,23 @@
       "competition_dog_id": null
     },
     {
+      "id": "1344452709",
+      "name_lat": "AGATIS MARIO GOLD KORN",
+      "name_ru": "АГАТИС МАРИО ГОЛД КОРН",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "226878024",
+      "name_lat": "AGATA",
+      "name_ru": "",
+      "breed": "СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "320478268",
       "name_lat": "AGUA-STONE MASTERPIECE",
       "name_ru": "",
@@ -1444,12 +1568,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "404805365",
+      "id": "980025480",
       "name_lat": "AGERT-SUMRAK TAMIR",
       "name_ru": "",
-      "breed": "ЗЕННЕНХУНД /",
+      "breed": "ЗЕННЕНХУНД",
       "breed_en": "BERNESE MOUNTAIN DOG",
       "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
+      "id": "275194112",
+      "name_lat": "AGATIS NEGRITYONOK",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1462,11 +1594,45 @@
       "competition_dog_id": null
     },
     {
+      "id": "879596237",
+      "name_lat": "AGNIOLA BLACK LEXUS",
+      "name_ru": "",
+      "breed": "ПРЯМОШЕРСТНЫЙ РЕТРИВЕР / FLAT",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1244908538",
+      "name_lat": "AGLAYA",
+      "name_ru": "",
+      "breed": "GERMAN SHORT-HAIRED",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1724603817",
+      "name_lat": "AGAT",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "966125979",
       "name_lat": "AGUA-STONE LITTLE PRINCE",
       "name_ru": "",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1701387451",
+      "name_lat": "AGLAYA DLYA ELIZABETVILLAGE",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ДРАТХААР",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -1498,10 +1664,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1119735409",
+      "id": "541635852",
       "name_lat": "AGAY KUZUR-OK APPLE BLACK",
       "name_ru": "",
-      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА /",
+      "breed": "АВСТРАЛИЙСКАЯ ОВЧАРКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1534,21 +1700,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1742084659",
-      "name_lat": "AGAT SANTORI",
+      "id": "286645650",
+      "name_lat": "AGLAYA",
       "name_ru": "",
-      "breed": "БИГЛЬ",
+      "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
-      "id": "1701726375",
-      "name_lat": "AGATIS CHERNICHNYY PAY",
+      "id": "978340916",
+      "name_lat": "AGLAYA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 4,
+      "breed": "SHORT-HAIRED",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -1597,30 +1762,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "742866326",
-      "name_lat": "AGAIN LOVE KUMIR",
-      "name_ru": "",
-      "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
+      "id": "1180543002",
+      "name_lat": "AGLIYAR ENSAFI VARISA",
+      "name_ru": "АГЛИЯР ЕНСАФИ ВАРИСА",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1770592870",
-      "name_lat": "AGNI ARS KISS",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1344452709",
-      "name_lat": "AGATIS MARIO GOLD KORN",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
       "competition_dog_id": null
     },
     {
@@ -1642,20 +1789,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1234009686",
+      "id": "1393117394",
       "name_lat": "AGATA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
+      "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ / POODLE TOY BROWN, BLACK, WHITE, SILVER, APRICOT, RED FAWN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1189757542",
-      "name_lat": "AGATIS SAN-MISHEL",
+      "id": "961254139",
+      "name_lat": "AGITATION OT VOLNOGO PSA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ",
-      "breed_en": "",
+      "breed": "ЛХАССКИЙ АПСО",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -1666,6 +1812,15 @@
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1916030542",
+      "name_lat": "AGAT",
+      "name_ru": "",
+      "breed": "ТАКСА КРОЛИЧЬЯ Г-Ш",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -1680,28 +1835,37 @@
     {
       "id": "1482760593",
       "name_lat": "AGAIN LOVE ZHOZEFINA CHERRI E FLER",
-      "name_ru": "",
+      "name_ru": "АГАИН ЛОВЕ ЖОЗЕФИНА ЧЕРРИ Э ФЛЕР",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1695330112",
-      "name_lat": "AGATIS MYSTERI",
-      "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "171187994",
+      "id": "1655553356",
+      "name_lat": "AGATIS MYSTERI",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "820261743",
       "name_lat": "AGIDEL PRINCESSA ANKLAVA",
       "name_ru": "",
-      "breed": "КОРСО",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "28891237",
+      "name_lat": "AGRETA",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "",
+      "total_shows": 4,
       "competition_dog_id": null
     },
     {
@@ -1711,15 +1875,6 @@
       "breed": "ЙОРКШИРСКИЙ СТАФФОРДШИРСКИЙ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "749403928",
-      "name_lat": "AGRETA",
-      "name_ru": "",
-      "breed": "КОРСО",
-      "breed_en": "",
-      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1741,28 +1896,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1463453465",
-      "name_lat": "AGNIOLA BLACK LEXUS",
-      "name_ru": "",
-      "breed": "ПРЯМОШЁРСТНЫЙ РЕТРИВЕР / FLAT",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "249388480",
       "name_lat": "AGLIYAR JAKMEN DITER",
       "name_ru": "",
       "breed": "СЕРЕБРОМ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "19905575",
-      "name_lat": "AGAY KUZYUR-OK DZHONATAN GRUT",
-      "name_ru": "",
-      "breed": "БИГЛЬ / BEAGLE",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1777,10 +1914,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1197978996",
+      "id": "1866994050",
       "name_lat": "AGRIA OKLAHOMA",
       "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ГЛАДКОШЕРСТНЫЙ /",
+      "breed": "ФОКСТЕРЬЕР Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1795,10 +1932,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1822273739",
+      "id": "1472453570",
       "name_lat": "AGATA KRISTI DZHOJS",
       "name_ru": "",
-      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ /",
+      "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1849,10 +1986,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1724603817",
-      "name_lat": "AGAT",
+      "id": "689208970",
+      "name_lat": "AGATA IZ ZOLOTOY KOLYBELI",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ДРАТХААР",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1339403642",
+      "name_lat": "AGATA IZ ZOLOTOY KOLYBELY",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1876,46 +2022,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1908591538",
+      "id": "233620414",
       "name_lat": "AGATIS GRAND PRI",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1959786638",
-      "name_lat": "AGATA IZ LVINOGO PRAYDA (изменено по решению ВК от 27.01.2021 В.36)",
-      "name_ru": "",
-      "breed": "ЦВЕРГШПИЦ (ПОМЕРАНСКИЙ)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "974504630",
-      "name_lat": "AGLAYA DLYA ELIZABETVILLAGE",
-      "name_ru": "",
-      "breed": "БАССЕТ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1929890714",
-      "name_lat": "AGATA IZ ZOLOTOY KOLYBELI",
-      "name_ru": "",
-      "breed": "БИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1361104983",
-      "name_lat": "AGATA IZ ZOLOTOY KOLYBELY",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1923,19 +2033,18 @@
     {
       "id": "272479914",
       "name_lat": "AGAY KUZYUR-OK ZARIK GOLDEN",
-      "name_ru": "",
+      "name_ru": "АГАЙ КУЗЮР-ОК ЗАРИК ГОЛДЕН",
       "breed": "СИБА",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "114898563",
-      "name_lat": "AGATA FOR QUICK CHASE",
+      "id": "1831289018",
+      "name_lat": "AGNA NARCISSE LUNAIRE",
       "name_ru": "",
-      "breed": "КАВАЛЕР ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 2,
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -1943,15 +2052,6 @@
       "name_lat": "AGATA SHARM",
       "name_ru": "",
       "breed": "МАЛАМУТ АЛЯСКИНСКИЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "286645650",
-      "name_lat": "AGLAYA",
-      "name_ru": "",
-      "breed": "НЕМЕЦКИЙ КУРЦХААР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -1984,10 +2084,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1770143030",
+      "id": "826296879",
       "name_lat": "AGAT",
       "name_ru": "",
-      "breed": "БУЛЬТЕРЬЕР /",
+      "breed": "БУЛЬТЕРЬЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2011,15 +2111,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "606201332",
-      "name_lat": "AGAT",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ ТАКСА КРОЛИЧЬЯ ДЛИННОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ ТАКСА МИНИАТЮРНАЯ ЖЕСТКОШЕРСТНАЯ ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "659627943",
       "name_lat": "AGUA-STONE MADE IN HEAVEN",
       "name_ru": "",
@@ -2038,19 +2129,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "60965818",
+      "id": "1346831533",
       "name_lat": "AGNI ARS REALLY SUGAR",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1185240813",
+      "id": "1777808716",
       "name_lat": "AGNI ARS TEFFY",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2101,6 +2192,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "305794623",
+      "name_lat": "AGAY KUZYUR -OK UMA",
+      "name_ru": "",
+      "breed": "БИГЛЬ / BEAGLE",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1767950392",
       "name_lat": "AGIDEL’ ZHEMCHUZHNAYA REKA",
       "name_ru": "",
@@ -2134,15 +2233,6 @@
       "breed": "ЛАБРАДОР РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1071147660",
-      "name_lat": "AGAT",
-      "name_ru": "",
-      "breed": "ТАКСА КРОЛИЧЬЯ ГЛАДКОШЕРСТНАЯ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2209,10 +2299,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "959014785",
+      "id": "1560389053",
       "name_lat": "AGNI ZOLOTAJA MECHTA",
       "name_ru": "",
-      "breed": "АНГЛИЙСКИЙ ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed": "YAKUTSKAYA LAIKA",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2232,7 +2322,15 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 4,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1671523456",
+      "name_lat": "AGATIS SOLNAYA KARIERA SANADOR",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ",
+      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -2308,20 +2406,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "12105197",
-      "name_lat": "AGAIN-IM STAR KARUNA MOJ ANGEL",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
-      "breed_en": "ITALIAN CANE CORSO",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1622709764",
       "name_lat": "AGNE JAZZ OT BARBATSUTSY",
       "name_ru": "",
       "breed": "ШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "SCHNAUZER BLACK",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "12105197",
+      "name_lat": "AGAIN-IM STAR KARUNA MOJ ANGEL",
+      "name_ru": "",
+      "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
+      "breed_en": "ITALIAN CANE CORSO",
       "total_shows": 3,
       "competition_dog_id": null
     },
@@ -2348,6 +2446,15 @@
       "name_lat": "AGLAYA IZ SVITY EKATERINY",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1733312422",
+      "name_lat": "AGAY KUZYUR-OK TARANTELLA",
+      "name_ru": "АГАЙ КУЗЮР-ОК ТАРАНТЭЛЛА",
+      "breed": "БОРДЕР КОЛЛИ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2389,6 +2496,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1696287477",
+      "name_lat": "AGATAS VAIVORYKSTE",
+      "name_ru": "",
+      "breed": "ШНАУЦЕР П-С",
+      "breed_en": "SCHNAUZER P-S",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1220879672",
       "name_lat": "AGNI ARS LOVE'AT FIRST'SIGHT",
       "name_ru": "",
@@ -2421,15 +2537,6 @@
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ДОГ ЧЕРНЫЙ, МРАМОРНЫЙ, ПЛАЩЕВОЙ",
       "breed_en": "DEUTSCHE DOGGE BLACK, HARLEQUIN, OVERLAY",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1696287477",
-      "name_lat": "AGATAS VAIVORYKSTE",
-      "name_ru": "",
-      "breed": "ШНАУЦЕР П-С",
-      "breed_en": "SCHNAUZER P-S",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2506,15 +2613,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1733312422",
-      "name_lat": "AGAY KUZYUR-OK TARANTELLA",
-      "name_ru": "",
-      "breed": "БОРДЕР КОЛЛИ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "1667599105",
       "name_lat": "AGRIAS KLAUDINA",
       "name_ru": "",
@@ -2533,10 +2631,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "392155343",
+      "id": "498986246",
+      "name_lat": "AGAY KUZYUR-OK V-ASAMI",
+      "name_ru": "АГАЙ КУЗЮР-ОК В-АСАМИ",
+      "breed": "СИБА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "767013640",
       "name_lat": "AGATA IZ KO’MARINOY STAI",
       "name_ru": "",
-      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "breed": "РУССКИЙ ТОЙ Г-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -2556,6 +2663,14 @@
       "name_ru": "",
       "breed": "ЗЕННЕНХУНД БЕРНСКИЙ",
       "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "753359395",
+      "name_lat": "AGATA FLAFFI",
+      "name_ru": "",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ)",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -2614,10 +2729,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "611945293",
+      "id": "303726633",
       "name_lat": "AGATA",
       "name_ru": "",
-      "breed": "ЦВЕРГШНАУЦЕР ЧЁРНЫЙ",
+      "breed": "ЦВЕРГШНАУЦЕР ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2704,10 +2819,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1308788822",
+      "id": "133390625",
       "name_lat": "AGAT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ЖЕСТКОШЁРСТНАЯ ЛЕГАВАЯ (ДРАТХААР)",
+      "breed": "НЕМЕЦКАЯ Ж-Ш ЛЕГАВАЯ (ДРАТХААР)",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2722,15 +2837,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1219392170",
-      "name_lat": "AGRETA",
-      "name_ru": "",
-      "breed": "ИТАЛЬЯНСКИЙ КАНЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "501403880",
       "name_lat": "AGIZ",
       "name_ru": "",
@@ -2740,11 +2846,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1676519312",
+      "id": "1100921757",
       "name_lat": "AGLAYA LAV",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ ПУДЕЛЬ ТОЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ ТОЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1151913586",
+      "name_lat": "AGLAYA",
+      "name_ru": "",
+      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -2753,6 +2867,15 @@
       "name_lat": "AGLAYA LAV",
       "name_ru": "",
       "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ РЫЖИЙ (КРАСНЫЙ, АБРИКОСОВЫЙ), СЕРЫЙ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "176664972",
+      "name_lat": "AGGEY BESKONECHNAYA ENERGIYA",
+      "name_ru": "",
+      "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2803,8 +2926,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "197546237",
-      "name_lat": "AGAY KUZYUR- OK TSARINA",
+      "id": "1197809721",
+      "name_lat": "AGAY KUZYUR-OK TSARINA",
       "name_ru": "",
       "breed": "БИГЛЬ",
       "breed_en": "",
@@ -2812,8 +2935,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "139947998",
-      "name_lat": "AGAY KUZYUR- OK DEYL",
+      "id": "1320790978",
+      "name_lat": "AGAY KUZYUR-OK DEYL",
       "name_ru": "",
       "breed": "АКИТА",
       "breed_en": "",
@@ -2920,10 +3043,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "17998058",
+      "id": "1855505186",
+      "name_lat": "A GIFT OF ALKHABOR ALMIRA",
+      "name_ru": "",
+      "breed": "САМОЕД / SAMOYED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "432134094",
       "name_lat": "AGURA S IZJUMINKOI JULIANY",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЁРНЫЙ, БЕЛЫЙ / POODLE",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ / POODLE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2956,10 +3088,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "318364347",
+      "id": "667635359",
       "name_lat": "AGATIS CHAYNAYA ROZA",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЁРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
+      "breed": "ПУДЕЛЬ МИНИАТЮРНЫЙ ЧЕРНЫЙ, БЕЛЫЙ, КОРИЧНЕВЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -2983,24 +3115,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1856435990",
-      "name_lat": "AGAY KUZYUR-OK V- ASAMI",
-      "name_ru": "",
-      "breed": "СИБА / SHIBA",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1180543002",
-      "name_lat": "AGLIYAR ENSAFI VARISA",
-      "name_ru": "",
-      "breed": "СРЕДНЕАЗИАТСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1819815679",
       "name_lat": "AGAY KUZYUR-OK TOMMI",
       "name_ru": "",
@@ -3019,8 +3133,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "458267032",
-      "name_lat": "AGAY KUZYUR-OK CHOU- II",
+      "id": "1424603492",
+      "name_lat": "AGAY KUZYUR-OK CHOU-II",
       "name_ru": "",
       "breed": "СИБА",
       "breed_en": "",
@@ -3055,20 +3169,35 @@
       "competition_dog_id": null
     },
     {
-      "id": "541294872",
-      "name_lat": "AGGEY BESKONECHNAYA ENERGIYA",
-      "name_ru": "",
-      "breed": "GOLDEN RETRIEVER ЗОЛОТИСТЫЙ РЕТРИВЕР /",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "288443498",
       "name_lat": "AGNI ARS HONEY BUN",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1287409810",
+      "name_lat": "AGAPELLI ENJOY ME",
+      "name_ru": "",
+      "breed": "ПУДЕЛЬ ТОЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1041031542",
+      "name_lat": "AGATOVAYA BUSINKA IZ GRADA BELYKH BEREZ",
+      "name_ru": "",
+      "breed": "РУССКИЙ ТОЙ ГЛАДКОШЕРСТНЫЙ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1341461083",
+      "name_lat": "AGRAFENA S POVOLJYA",
+      "name_ru": "",
+      "breed": "ЦВЕРГШНАУЦЕР ПЕРЕЦ",
       "total_shows": 1,
       "competition_dog_id": null
     }

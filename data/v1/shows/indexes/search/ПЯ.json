@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ПЯ",
-  "count": 70,
+  "count": 76,
   "dogs": [
     {
       "id": "435621874",
@@ -15,10 +15,19 @@
     {
       "id": "570596660",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ОТ БУМАЖЕ",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ОТ БУМАЖЕ",
       "breed": "КЕРРИ СКОТЧ ТЕРЬЕР (ШОТЛАНДСКИЙ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "566380738",
+      "name_lat": "ПЯТНИЦА МАДМУАЗЕЛЬ КОКО",
+      "name_ru": "",
+      "breed": "БОРДЕР ТЕРЬЕР",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -36,61 +45,60 @@
       "name_ru": "",
       "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 17,
+      "total_shows": 19,
       "competition_dog_id": null
     },
     {
       "id": "691155291",
       "name_lat": "ПЯТНИЦА ЛИРИКА",
-      "name_ru": "",
+      "name_ru": "ПЯТНИЦА ЛИРИКА",
       "breed": "ИРЛАНДСКИЙ ВОЛЬФХАУНД",
       "breed_en": "",
-      "total_shows": 5,
-      "competition_dog_id": null
-    },
-    {
-      "id": "566380738",
-      "name_lat": "ПЯТНИЦА МАДМУАЗЕЛЬ КОКО",
-      "name_ru": "",
-      "breed": "БОРДЕР ТЕРЬЕР",
-      "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 6,
       "competition_dog_id": null
     },
     {
       "id": "1720515041",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЗАЧАРОВАННАЯ",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ЗАЧАРОВАННАЯ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
     },
     {
+      "id": "1637948566",
+      "name_lat": "ПЯТНИЦА",
+      "name_ru": "",
+      "breed": "БУЛЬДОГ",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1892577726",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ГРАНД МАСТЕР",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ГРАНД МАСТЕР",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "CHOW CHOW",
       "total_shows": 20,
       "competition_dog_id": null
     },
     {
-      "id": "606002042",
-      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ НАЙТВИШ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
+      "id": "1499540316",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЭКСКЛЮЗИВ (К/Ш)",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ЭКСКЛЮЗИВ (К/Ш)",
+      "breed": "ЧАУ ЧАУ",
       "total_shows": 15,
       "competition_dog_id": null
     },
     {
-      "id": "1499540316",
-      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЭКСКЛЮЗИВ (К/Ш)",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
+      "id": "606002042",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ НАЙТВИШ",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ НАЙТВИШ",
+      "breed": "ШЕЛТИ",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 15,
       "competition_dog_id": null
     },
     {
@@ -112,27 +120,18 @@
       "competition_dog_id": null
     },
     {
-      "id": "1877108545",
-      "name_lat": "ПЯТНИЦА",
-      "name_ru": "",
-      "breed": "БОКСЕР БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "790284601",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ",
       "breed": "ЙОРКШИРСКИЙ ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 14,
+      "total_shows": 16,
       "competition_dog_id": null
     },
     {
       "id": "38973906",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЗНАТНАЯ ОСОБА",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ЗНАТНАЯ ОСОБА",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 12,
@@ -141,7 +140,7 @@
     {
       "id": "696726575",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ДУША КОМПАНИИ",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ДУША КОМПАНИИ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 9,
@@ -154,15 +153,6 @@
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "485149224",
-      "name_lat": "ПЯТНИЦА",
-      "name_ru": "",
-      "breed": "ПОКЕТ БУЛЬДОГ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -184,6 +174,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1393877938",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ РУМИЯ",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ РУМИЯ",
+      "breed": "ШЕЛТИ БУЛЬДОГ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "1297031170",
       "name_lat": "ПЯТНИСТОГО МИРА ДЖЕРРИКИ",
       "name_ru": "",
@@ -195,46 +193,54 @@
     {
       "id": "544968004",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ХАН",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ХАН",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 8,
+      "total_shows": 9,
       "competition_dog_id": null
     },
     {
-      "id": "1226516223",
+      "id": "722737722",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ АСТРА",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ",
-      "breed_en": "",
-      "total_shows": 17,
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ АСТРА",
+      "breed": "ЧАУ-ЧАУ",
+      "total_shows": 22,
       "competition_dog_id": null
     },
     {
       "id": "1617581042",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЦВЕТОК САКУРЫ",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ЦВЕТОК САКУРЫ",
       "breed": "СИБА",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
     },
     {
+      "id": "362226503",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ГОТИКА",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ГОТИКА",
+      "breed": "ШЕЛТИ",
+      "breed_en": "",
+      "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
       "id": "761510144",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ГВОЗДЬ ПРОГРАММЫ (К.Ш.)",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ГВОЗДЬ ПРОГРАММЫ (К.Ш.)",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 8,
       "competition_dog_id": null
     },
     {
-      "id": "362226503",
-      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ГОТИКА",
+      "id": "1617261203",
+      "name_lat": "ПЯТНИЦА ИТС ЗЕ ДРИМ",
       "name_ru": "",
-      "breed": "ШЕЛТИ",
+      "breed": "БОРДЕР ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -265,12 +271,20 @@
       "competition_dog_id": null
     },
     {
-      "id": "1152531730",
-      "name_lat": "ПЯТНИЦА ИТС ЗЕ ДРИМ",
+      "id": "401050410",
+      "name_lat": "ПЯТНИЦА ИМ ИН ЛАВ",
       "name_ru": "",
-      "breed": "БОРДЕР ТЕРЬЕР /",
+      "breed": "БОРДЕР ТЕРЬЕР",
       "breed_en": "",
-      "total_shows": 9,
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1360315080",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ТАЙНА",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -285,7 +299,7 @@
     {
       "id": "1834701284",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ НЕВАДА",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ НЕВАДА",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 5,
@@ -301,6 +315,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "1278424177",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЭКСКЛЮЗИВ",
+      "name_ru": "",
+      "breed": "ЧАУ-ЧАУ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "276453387",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ГРАНД МАСТЕР (к/ш)",
       "name_ru": "",
@@ -310,30 +332,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1655471346",
+      "id": "899393180",
       "name_lat": "ПЯТНАШКА МАККНАТО",
       "name_ru": "",
-      "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
+      "breed": "ТАКСА СТАНДАРТНАЯ Г-Ш",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "163569986",
+      "id": "664541572",
       "name_lat": "ПЯТАЯ КОНТРАБАНДИСТКА",
-      "name_ru": "",
-      "breed": "ФОКСТЕРЬЕР ЖЕСТКОШЕРСТНЫЙ ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
+      "name_ru": "ПЯТАЯ КОНТРАБАНДИСТКА",
+      "breed": "ФОКСТЕРЬЕР Ж-Ш ТАКСА МИНИАТЮРНАЯ ГЛАДКОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "990452291",
-      "name_lat": "ПЯТНИЦА ИМ ИН ЛАВ",
-      "name_ru": "",
-      "breed": "БОРДЕР ТЕРЬЕР /",
-      "breed_en": "",
-      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -346,12 +359,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1261873585",
+      "id": "1673906674",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ НИДЖЕЛИЯ",
-      "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ НИДЖЕЛИЯ",
+      "breed": "ЧАУ ЧАУ",
       "breed_en": "",
-      "total_shows": 3,
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "24984879",
+      "name_lat": "ПЯТНЫШКО",
+      "name_ru": "",
+      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
+      "breed_en": "",
+      "total_shows": 2,
       "competition_dog_id": null
     },
     {
@@ -364,10 +386,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1270635572",
+      "id": "123719408",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ВАНЕССА",
       "name_ru": "",
-      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЁРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -375,7 +397,7 @@
     {
       "id": "1758819133",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ КАМЕЛИЯ",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ КАМЕЛИЯ",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 4,
@@ -384,16 +406,32 @@
     {
       "id": "1595393840",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЖЕМЧУЖИНА",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ЖЕМЧУЖИНА",
       "breed": "ШЕЛТИ",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
     },
     {
+      "id": "762243983",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ДАНАЯ (К.Ш.)",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1080222403",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЭЙВА",
+      "name_ru": "",
+      "breed": "SHEEPDOG",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "175110771",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ДИНАСТИЯ",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ДИНАСТИЯ",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
       "total_shows": 4,
@@ -429,19 +467,10 @@
     {
       "id": "648745060",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЧАРОДЕЙ    ( К.Ш. )",
-      "name_ru": "",
+      "name_ru": "ПЯТЫЙ ЭЛЕМЕНТ ЧАРОДЕЙ    ( К.Ш. )",
       "breed": "ЧАУ ЧАУ ТАТЬЯНА ГРИГОРЕНКО",
       "breed_en": "CHOW CHOW",
       "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "24984879",
-      "name_lat": "ПЯТНЫШКО",
-      "name_ru": "",
-      "breed": "КАВАЛЕР КИНГ ЧАРЛЬЗ СПАНИЕЛЬ",
-      "breed_en": "",
-      "total_shows": 1,
       "competition_dog_id": null
     },
     {
@@ -472,10 +501,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "118938172",
+      "id": "1960279703",
       "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЭТАЛОН",
       "name_ru": "",
-      "breed": "ЧАУ ЧАУ / CHOW CHOW",
+      "breed": "ЧАУ ЧАУ / CHOW",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -486,6 +515,22 @@
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1509169340",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ХОРС",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "667198240",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ АВРОРА",
+      "name_ru": "",
+      "breed": "ЧАУ ЧАУ",
       "total_shows": 1,
       "competition_dog_id": null
     },
@@ -508,8 +553,8 @@
       "competition_dog_id": null
     },
     {
-      "id": "1885198135",
-      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ГРАН- ПРИ (К.Ш.)",
+      "id": "662087665",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ГРАН-ПРИ (К.Ш.)",
       "name_ru": "",
       "breed": "ЧАУ ЧАУ",
       "breed_en": "",
@@ -616,20 +661,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "987491152",
-      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ РУМИЯ",
-      "name_ru": "",
-      "breed": "ШЕЛТИ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1253532398",
       "name_lat": "ПЯТИМОРЬЯ ФОРТУНА МИНИОН ДАБЛ",
       "name_ru": "",
       "breed": "СОЛЬЮ",
       "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "402273019",
+      "name_lat": "ПЯТЫЙ ЭЛЕМЕНТ ЯРУНА",
+      "name_ru": "",
+      "breed": "ШЕЛТИ",
       "total_shows": 1,
       "competition_dog_id": null
     }
