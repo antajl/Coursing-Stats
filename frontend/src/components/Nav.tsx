@@ -3,11 +3,13 @@ import { useState, useRef, useEffect, useCallback } from 'react'
 import { isLocalDev } from '../lib/env'
 import { NavDesktop } from './nav/NavDesktop'
 import { NavMobile } from './nav/NavMobile'
+import QuickSearchModal from './nav/QuickSearchModal'
 import type { OpenMenuId } from './nav/navLinks'
 
 export default function Nav() {
   const location = useLocation();
   const [sourcesOpen, setSourcesOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState<OpenMenuId>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -59,15 +61,19 @@ export default function Nav() {
   }, [location.pathname, location.search]);
 
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        setSearchOpen((prev) => !prev);
+      } else if (e.key === 'Escape') {
         setMobileMenuOpen(false);
         setSourcesOpen(false);
         setOpenMenu(null);
+        setSearchOpen(false);
       }
     };
-    document.addEventListener('keydown', handleEsc);
-    return () => document.removeEventListener('keydown', handleEsc);
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   return (
@@ -84,6 +90,7 @@ export default function Nav() {
         sourcesOpen={sourcesOpen}
         onSourcesMouseEnter={handleMouseEnter}
         onSourcesMouseLeave={handleMouseLeave}
+        onOpenSearch={() => setSearchOpen(true)}
       />
       <NavMobile
         isActive={isActive}
@@ -97,7 +104,9 @@ export default function Nav() {
         onToggleMobileMenu={toggleMobileMenu}
         onCloseMobileMenu={() => setMobileMenuOpen(false)}
         onToggleSources={toggleSources}
+        onOpenSearch={() => setSearchOpen(true)}
       />
+      <QuickSearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </nav>
   );
 }

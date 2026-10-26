@@ -1,4 +1,4 @@
-import { useRef, useCallback } from 'react'
+import { useRef, useCallback, useEffect } from 'react'
 import { SEO } from '../components/SEO'
 import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
 import { useGSAP, riseIn } from '../lib/motion'
@@ -12,6 +12,14 @@ import { ANIMATION, IMAGES } from '../lib/constants'
 export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null)
   const homeData = useHomeData()
+
+  // Lock root scroll on single-screen static dashboard
+  useEffect(() => {
+    document.documentElement.classList.add('home-static-locked')
+    return () => {
+      document.documentElement.classList.remove('home-static-locked')
+    }
+  }, [])
 
   // Memoize formatDate to prevent unnecessary re-renders
   const memoizedFormatDate = useCallback(formatDate, [])
@@ -110,17 +118,17 @@ export default function Home() {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="w-full max-w-[220px] sm:max-w-[260px] lg:max-w-[290px] h-auto drop-shadow-md pointer-events-none"
+                className="w-full max-w-[240px] sm:max-w-[275px] lg:max-w-[305px] 2xl:max-w-[340px] h-auto drop-shadow-md pointer-events-none"
               />
             </picture>
-            <div className="w-full max-w-[310px] pointer-events-auto">
+            <div className="w-full max-w-[330px] 2xl:max-w-[360px] pointer-events-auto">
               <HomeStatsPills stats={stats} showStats={showStats} />
             </div>
           </div>
         }
         metrics={
           /* Left block: Double Podium Rankings */
-          <div className="pointer-events-auto shrink-0 w-[960px] lg:w-[1040px] xl:w-[1140px] 2xl:w-[1220px] max-w-[calc(100vw-340px)] mr-auto">
+          <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-380px)] mr-auto">
             <SeasonTopSection
               competitionSlides={competitionSlides}
               racingSlides={racingSlides}

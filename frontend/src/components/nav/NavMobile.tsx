@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Icons } from '../../lib/icons'
 import FavoritesCapsule from './FavoritesCapsule'
 import { useNavLogoVisibility } from './useNavLogoVisibility'
 import { DATA_SOURCE_LINKS } from './navLinks'
@@ -15,6 +16,7 @@ type NavMobileProps = {
   onToggleMobileMenu: () => void
   onCloseMobileMenu: () => void
   onToggleSources: () => void
+  onOpenSearch: () => void
 }
 
 export function NavMobile({
@@ -29,6 +31,7 @@ export function NavMobile({
   onToggleMobileMenu,
   onCloseMobileMenu,
   onToggleSources,
+  onOpenSearch,
 }: NavMobileProps) {
   const { logoVisible, logoOpacity } = useNavLogoVisibility()
   return (
@@ -56,6 +59,15 @@ export function NavMobile({
           />
         </Link>
         <div className="flex min-w-0 flex-1 items-center justify-end gap-2">
+          <button
+            type="button"
+            onClick={onOpenSearch}
+            className="w-11 h-11 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center shrink-0 text-old-money-700"
+            aria-label="Быстрый поиск"
+            title="Быстрый поиск"
+          >
+            <Icons.search className="w-5 h-5 text-camel-700" aria-hidden />
+          </button>
           <FavoritesCapsule />
           <button
             onClick={onToggleMobileMenu}

@@ -49,12 +49,12 @@ export default function SeasonRacingCarousel({
         >
           <Link
             to={rankingHref}
-            className="truncate text-[12px] font-semibold text-camel-800 hover:underline"
+            className="truncate text-[12.5px] font-bold text-camel-800 hover:underline"
             title={`Рейтинг скорости: ${slide.breedLabel}`}
           >
             {slide.breedLabel}
           </Link>
-          <span className="shrink-0 text-[10px] text-charcoal-400">
+          <span className="shrink-0 text-[11px] font-semibold text-charcoal-600">
             · {slide.dogCount} соб.
           </span>
         </div>

@@ -74,14 +74,14 @@ export default function HomeSeasonTopRow({
     <div className="min-w-0 overflow-hidden">
       <OwnerCrownName name={name} breed={breed} dogId={dogId} kind="competition">
         <h3
-          className="text-xs font-bold leading-snug text-charcoal-900 truncate"
+          className="text-[13px] sm:text-sm 2xl:text-[15px] font-bold leading-snug text-charcoal-900 truncate"
           title={name}
         >
           {name}
         </h3>
       </OwnerCrownName>
       {breedDisplay || sex || meta ? (
-        <div className="flex items-center gap-1 text-[10px]">
+        <div className="flex items-center gap-1 text-[10.5px] 2xl:text-xs">
           {breedDisplay && (
             <span className="text-charcoal-600 font-medium truncate">
               {breedDisplay.primary}
@@ -110,15 +110,15 @@ export default function HomeSeasonTopRow({
 
   const renderMetricLine =
     showTitles != null ? (
-      <div className="flex items-center gap-1 text-[11px] text-charcoal-500 min-w-0">
-        <span className="shrink-0 text-charcoal-500">Титулы:</span>
-        <strong className="font-semibold text-camel-700 truncate">
+      <div className="flex items-center gap-1 text-[11.5px] text-charcoal-500 min-w-0">
+        <span className="shrink-0 text-charcoal-500 font-medium">Титулы:</span>
+        <strong className="font-bold text-camel-700 truncate">
           {showTitles}
         </strong>
       </div>
     ) : metric != null ? (
-      <div className="flex items-center gap-1 text-[11px] text-charcoal-500 min-w-0">
-        <strong className="font-semibold text-camel-700 truncate">{metric}</strong>
+      <div className="flex items-center gap-1 text-[11.5px] text-charcoal-500 min-w-0">
+        <strong className="font-bold text-camel-700 truncate">{metric}</strong>
       </div>
     ) : null
 

@@ -171,7 +171,7 @@ export function StartsLabel({
         </>
       )}
       <span
-        className={`inline-block text-right font-bold tabular-nums leading-none text-charcoal-800 ${
+        className={`inline-block text-right font-bold tabular-nums leading-none text-charcoal-900 ${
           isMd ? 'text-xs sm:text-base sm:w-[3ch]' : 'text-[10px] sm:text-xs'
         }`}
       >
@@ -255,7 +255,7 @@ const DogCardHeader: FC = function DogCardHeader() {
       <div className="flex items-center gap-1.5 min-w-0">
         <OwnerCrownName name={primary} dogId={dog.dog_id} kind="competition">
           <h3
-            className="text-xs font-bold leading-snug text-charcoal-900 truncate"
+            className="text-[13px] sm:text-sm 2xl:text-[15px] font-bold leading-snug text-charcoal-900 truncate"
             title={secondary ? `${primary} / ${secondary}` : primary}
           >
             {primary}
@@ -280,7 +280,7 @@ const DogCardHeader: FC = function DogCardHeader() {
           </HoverTooltip>
         ) : null}
       </div>
-      <div className="flex items-center gap-1 text-[10px]">
+      <div className="flex items-center gap-1 text-[10.5px] 2xl:text-xs">
         <span className="text-charcoal-600 font-medium truncate">
           {breedDisplay.primary}
         </span>
@@ -453,9 +453,9 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             <DogCardRank />
             <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-0.5 sm:gap-1">
               <DogCardHeader />
-              <div className="flex items-center gap-1 text-[10px] sm:text-[11px] text-charcoal-500">
+              <div className="flex items-center gap-1 text-[11px] sm:text-[11.5px] text-charcoal-600 font-medium">
                 <span>Индекс CS:</span>
-                <strong className="font-semibold text-charcoal-800 tabular-nums">
+                <strong className="font-bold text-charcoal-900 tabular-nums">
                   {formatIndexScore(dog)}
                 </strong>
               </div>
@@ -473,13 +473,13 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             <DogCardRank />
             <div className="flex min-h-0 min-w-0 flex-1 flex-col justify-center gap-0.5 sm:gap-1">
               <DogCardHeader />
-              <div className="flex items-center gap-1 text-[10px] sm:text-[11px] text-charcoal-500">
+              <div className="flex items-center gap-1 text-[11px] sm:text-[11.5px] text-charcoal-600 font-medium">
                 <span className="hidden sm:inline">Средняя скорость:</span>
                 <span className="sm:hidden">Ср. скор:</span>
-                <strong className="font-semibold text-charcoal-800 tabular-nums">
+                <strong className="font-bold text-charcoal-900 tabular-nums">
                   {dog.avg_speed ? dog.avg_speed.toFixed(1) : '—'}
                 </strong>
-                <span className="text-[9px] sm:text-[10px] text-charcoal-400">км/ч</span>
+                <span className="text-[9.5px] sm:text-[10.5px] text-charcoal-500 font-normal">км/ч</span>
               </div>
             </div>
 

@@ -22,6 +22,11 @@
   outline-offset: 2px;
 }
 
+input:focus-visible,
+textarea:focus-visible {
+  outline: none;
+}
+
 /* Remove default focus for mouse users */
 :focus:not(:focus-visible) {
   outline: none;

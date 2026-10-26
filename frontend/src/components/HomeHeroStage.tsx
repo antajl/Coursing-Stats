@@ -171,10 +171,10 @@ export default function HomeHeroStage({
       {/* Desktop Hero Overlay (>= 768px): Unified flex row prevents any overlap between logo and metrics */}
       <div
         ref={desktopOverlayRef}
-        className={`hidden md:block ${isStaticDashboard ? 'md:absolute md:top-3 lg:md:top-5' : 'md:fixed md:top-20'} inset-x-0 z-20 will-change-opacity pointer-events-none`}
+        className={`hidden md:block ${isStaticDashboard ? 'md:absolute md:top-3 lg:top-5' : 'md:fixed md:top-20'} inset-x-0 z-20 will-change-opacity pointer-events-none`}
       >
         <div
-          className={`w-full max-w-[2048px] mx-auto px-4 lg:px-6 flex justify-between items-start gap-4 lg:gap-6 ${
+          className={`w-full max-w-[2400px] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 flex justify-between items-start gap-4 lg:gap-6 ${
             reverseLayout ? 'flex-row-reverse' : ''
           }`}
         >
@@ -183,8 +183,8 @@ export default function HomeHeroStage({
             className={`pointer-events-auto shrink-0 w-fit ${
               isStaticDashboard
                 ? reverseLayout
-                  ? 'max-w-[340px] flex flex-col items-end'
-                  : 'max-w-[340px]'
+                  ? 'max-w-[370px] flex flex-col items-end'
+                  : 'max-w-[370px]'
                 : 'max-w-[45vw]'
             }`}
           >

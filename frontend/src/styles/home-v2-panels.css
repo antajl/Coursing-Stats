@@ -242,6 +242,14 @@
   padding-bottom: 0 !important;
 }
 
+.home-v2-static .home-v2-stage {
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  padding-bottom: 0 !important;
+}
+
 .home-v2-season-top--compact {
   margin-bottom: 0 !important;
   width: 100% !important;
@@ -268,13 +276,27 @@
   padding: 5px 12px;
   font-size: 13px;
 }
+@media (min-width: 1920px) {
+  .home-v2-season-top--compact .home-v2-col-head {
+    padding: 6px 14px;
+    font-size: 13.5px;
+  }
+}
 
-/* Slimmer dog rows in compact dashboard mode (saves ~70px of height) */
+/* Dog rows in compact dashboard mode */
 .home-v2-season-top--compact a.group {
-  min-height: 3.75rem !important;
-  height: 3.75rem !important;
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
+  min-height: 4.125rem !important;
+  height: 4.125rem !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+@media (min-width: 1920px) {
+  .home-v2-season-top--compact a.group {
+    min-height: 4.375rem !important;
+    height: 4.375rem !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+  }
 }
 
 /* Compact breed pagination dots & progress bar (saves ~30px of height) */
