@@ -26,7 +26,7 @@ export function parseCoursingCommentHistory(text: string | undefined | null): {
   return text
     .split(/\r?\n/)
     .map((line) => {
-      const match = line.trim().match(/^([\d,]+)\s*-\s*(.+)$/);
+      const match = line.trim().match(/^([\d.,]+)\s*-\s*(.+)$/);
       if (!match) return null;
 
       const time_seconds = parseFloat(match[1].replace(',', '.'));
@@ -58,7 +58,7 @@ export function statusFromCoursingNameCell(
   if (history.length > 0) return 'improved';
 
   const rgb = rgbFromCellStyle(nameCell);
-  if (rgb && (STATUS_BY_RGB[rgb] === 'new' || rgb === 'FFFFFF' || rgb === 'FFFF')) {
+  if (rgb && (rgb === 'B6D7A8' || rgb === 'FFFF00' || rgb === '9FC5E8')) {
     return 'new';
   }
 

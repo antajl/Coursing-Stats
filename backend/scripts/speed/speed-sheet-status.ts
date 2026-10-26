@@ -5,6 +5,7 @@ export type SpeedRecordStatus = 'new' | 'improved' | 'normal' | 'old';
 /** Заливка клички на листах Донино (см. docs/PARSING.md) */
 const STATUS_BY_RGB: Record<string, SpeedRecordStatus> = {
   B6D7A8: 'new',
+  FFFF00: 'improved',
   '9FC5E8': 'improved',
 };
 

@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": null,
   "rating_score_version": "cs-v1",
-  "count": 2007,
+  "count": 2010,
   "items": [
     {
       "dog_id": 1,
@@ -29945,6 +29945,51 @@
       "avg_judge_score": 85,
       "judge_eval_count": 4,
       "rating_score": 85.8,
+      "sex": "F"
+    },
+    {
+      "dog_id": 11059,
+      "name_lat": "MAGIYA URALA YABLOCHNYJ DZHEM",
+      "name_ru": "МАГИЯ УРАЛА ЯБЛОЧНЫЙ ДЖЕМ",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_score": 365,
+      "total_starts": 1,
+      "best_judge_score": 92,
+      "avg_judge_score": 91.25,
+      "judge_eval_count": 4,
+      "rating_score": 87.66,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11060,
+      "name_lat": "A-FLEYTA",
+      "name_ru": "А-ФЛЕЙТА",
+      "breed": "МЕТИС",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_score": 352,
+      "total_starts": 1,
+      "best_judge_score": 89,
+      "avg_judge_score": 88,
+      "judge_eval_count": 4,
+      "rating_score": 86.74,
+      "sex": "F"
+    },
+    {
+      "dog_id": 11061,
+      "name_lat": "TINA",
+      "name_ru": "ТИНА",
+      "breed": "МЕТИС",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_score": 338,
+      "total_starts": 1,
+      "best_judge_score": 92,
+      "avg_judge_score": 89,
+      "judge_eval_count": 4,
+      "rating_score": 87.1,
       "sex": "F"
     }
   ]

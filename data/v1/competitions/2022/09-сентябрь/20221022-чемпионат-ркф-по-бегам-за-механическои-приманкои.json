@@ -1,0 +1,352 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-26T09:03:11.439Z",
+  "source": "manual-entry",
+  "event_id": 20221022,
+  "event": {
+    "id": 20221022,
+    "year": 2022,
+    "date_start": "2022-09-11",
+    "date_end": "2022-09-11",
+    "rank_label": "Чемпионат РКФ",
+    "event_type": "bzmp",
+    "competition_kind": "",
+    "competition_type": "",
+    "title": "Чемпионат РКФ по бегам за механической приманкой, 11.09.2022 (Свердловская область, Большое Седельниково)",
+    "host_club": "РОО «СООиР СО»",
+    "region": "Свердловская область",
+    "location": "Свердловская область, д. Большое Седельниково",
+    "catalog_url": null,
+    "results_url": null,
+    "rules_url": null,
+    "results_pdf_url": null,
+    "confirmed": 1,
+    "last_modified": "2026-10-26T09:03:11.439Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": [
+      "Табуева Т.А.",
+      "Луговая К.И."
+    ],
+    "track_schemes": []
+  },
+  "result_count": 4,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20221022,
+      "dog_id": 11058,
+      "breed_class": "Далматин - Стандартный - Кобели",
+      "catalog_no": 44,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 450,
+        "heats": [
+          {
+            "heat_number": 31,
+            "bib_color": "red",
+            "total": null,
+            "judges": []
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят",
+      "dog": {
+        "id": 11058,
+        "dog_key": "symphony-of-stars-drako--далматин",
+        "name_lat": "SYMPHONY OF STARS DRAKO",
+        "name_ru": "СИМФОНИ ОФ СТАРС ДРАКО",
+        "breed": "ДАЛМАТИН",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20221022,
+      "dog_id": 11059,
+      "breed_class": "Ирландский Терьер - Стандартный - Кобели",
+      "catalog_no": 43,
+      "placement": 1,
+      "total_score": 365,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 450,
+        "heats": [
+          {
+            "heat_number": 29,
+            "bib_color": "red",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 41,
+            "bib_color": "red",
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 365,
+        "normalized_score": 365
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11059,
+        "dog_key": "magiya-urala-yablochnyj-dzhem--ирландскии-терьер",
+        "name_lat": "MAGIYA URALA YABLOCHNYJ DZHEM",
+        "name_ru": "МАГИЯ УРАЛА ЯБЛОЧНЫЙ ДЖЕМ",
+        "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20221022,
+      "dog_id": 11060,
+      "breed_class": "Метис - Стандартный - Суки",
+      "catalog_no": 43,
+      "placement": 1,
+      "total_score": 352,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 450,
+        "heats": [
+          {
+            "heat_number": 30,
+            "bib_color": "white",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 42,
+            "bib_color": "white",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 352,
+        "normalized_score": 352
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11060,
+        "dog_key": "a-fleyta--метис",
+        "name_lat": "A-FLEYTA",
+        "name_ru": "А-ФЛЕЙТА",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20221022,
+      "dog_id": 11061,
+      "breed_class": "Метис - Стандартный - Суки",
+      "catalog_no": 44,
+      "placement": 2,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "distance": 450,
+        "heats": [
+          {
+            "heat_number": 30,
+            "bib_color": "red",
+            "total": 161,
+            "penalty": "Ранний старт (штраф 10% от суммы баллов забега)",
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 42,
+            "bib_color": "red",
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Табуева Т.А.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Луговая К.И.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 338,
+        "normalized_score": 338
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11061,
+        "dog_key": "tina--метис",
+        "name_lat": "TINA",
+        "name_ru": "ТИНА",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    }
+  ]
+}

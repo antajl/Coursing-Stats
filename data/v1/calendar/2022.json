@@ -2,8 +2,8 @@
   "schema": "coursing-stats/calendar-v1",
   "year": 2022,
   "exported_at": "2026-09-28T13:21:42.917Z",
-  "event_count": 14,
-  "with_results": 14,
+  "event_count": 15,
+  "with_results": 15,
   "events": [
     {
       "id": 20221009,
@@ -289,6 +289,28 @@
         "Серова Т.Г.",
         "Яковлева Т.С.",
         "Кузнецова Н.Н."
+      ]
+    },
+    {
+      "id": 20221022,
+      "year": 2022,
+      "date_start": "2022-09-11",
+      "date_end": "2022-09-11",
+      "rank_label": "Чемпионат РКФ",
+      "event_type": "bzmp",
+      "competition_kind": "",
+      "competition_type": "",
+      "title": "Чемпионат РКФ по бегам за механической приманкой, 11.09.2022 (Свердловская область, Большое Седельниково)",
+      "host_club": "РОО «СООиР СО»",
+      "region": "Свердловская область",
+      "location": "Свердловская область, д. Большое Седельниково",
+      "has_results": true,
+      "results_file": "competitions/2022/09-сентябрь/20221022-чемпионат-ркф-по-бегам-за-механическои-приманкои.json",
+      "result_count": 4,
+      "participants_count": 4,
+      "judges": [
+        "Табуева Т.А.",
+        "Луговая К.И."
       ]
     },
     {
