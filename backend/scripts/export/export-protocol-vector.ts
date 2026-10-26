@@ -197,6 +197,16 @@ export function buildMetaRowsHtml(comp: CompetitionData, colspan: number): strin
   if (comp.event.judges && !isGenericJudgePlaceholder(comp.event.judges)) {
     html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Судьи:</b> ${escapeHtml(getJudgeString(comp.event.judges))}</td>\r\n    </tr>`;
   }
+  const links: string[] = [];
+  if (comp.event.catalog_url) {
+    links.push(`<a href="${escapeHtml(comp.event.catalog_url)}" target="_blank" rel="noopener">Каталог участников</a>`);
+  }
+  if (comp.event.rules_url) {
+    links.push(`<a href="${escapeHtml(comp.event.rules_url)}" target="_blank" rel="noopener">Регламент состязания</a>`);
+  }
+  if (links.length > 0) {
+    html += `\r\n    <tr class="meta-row">\r\n      <td colspan="${colspan}"><b>Документы:</b> ${links.join(' &bull; ')}</td>\r\n    </tr>`;
+  }
   return html;
 }
 

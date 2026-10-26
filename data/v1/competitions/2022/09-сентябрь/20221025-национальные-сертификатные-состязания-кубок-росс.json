@@ -1,0 +1,6110 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-26T13:02:12.582Z",
+  "source": "manual-entry",
+  "event_id": 20221025,
+  "event": {
+    "id": 20221025,
+    "year": 2022,
+    "date_start": "2022-09-24",
+    "date_end": "2022-09-25",
+    "rank_label": "Кубок России",
+    "event_type": "coursing",
+    "competition_kind": "Кубок России",
+    "competition_type": "Курсинг",
+    "title": "Национальные сертификатные состязания Кубок России по курсингу, 24-25.09.2022 (г. Санкт-Петербург)",
+    "host_club": "МОКО «Кеннел-клуб Санкт-Петербурга»",
+    "region": "г. Санкт-Петербург",
+    "location": "г. Санкт-Петербург",
+    "catalog_url": "https://drive.google.com/file/d/1Zi_dHExVx9_tW0Nj9jctZUJqhOi3lXMz/view?usp=sharing",
+    "results_url": null,
+    "rules_url": null,
+    "results_pdf_url": "https://drive.google.com/file/d/1qwrMTAKf8JNN8TUHeIHU-CmG0lxfGdVT/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-10-26T13:02:12.583Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": [
+      "Иванова Г.С.",
+      "Егорова М.А."
+    ],
+    "track_schemes": []
+  },
+  "result_count": 69,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20221025,
+      "dog_id": 10510,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 1,
+      "placement": 1,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 33,
+            "bib_color": "blue",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 82
+              }
+            ]
+          },
+          {
+            "heat_number": 47,
+            "bib_color": "blue",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 349,
+        "normalized_score": 349
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10510,
+        "dog_key": "tim-spirit-kajlas--басенджи",
+        "name_lat": "TIM SPIRIT KAJLAS",
+        "name_ru": "TIM SPIRIT KAJLAS",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20221025,
+      "dog_id": 11090,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 5,
+      "placement": 2,
+      "total_score": 342,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 34,
+            "bib_color": "red",
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  17,
+                  14,
+                  18,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 48,
+            "bib_color": "red",
+            "total": 165,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  18,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 81
+              }
+            ]
+          }
+        ],
+        "grand_total": 342,
+        "normalized_score": 342
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11090,
+        "dog_key": "winner-time-will-smit--басенджи",
+        "name_lat": "WINNER TIME WILL SMIT",
+        "name_ru": "ВИННЕР ТАЙМ УИЛЛ СМИТ",
+        "breed": "Басенджи",
+        "sex": "Кобель",
+        "owner": "Malysheva A."
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20221025,
+      "dog_id": 11091,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 3,
+      "placement": 3,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 35,
+            "bib_color": "red",
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  16,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  18,
+                  15,
+                  16,
+                  17
+                ],
+                "sum": 81
+              }
+            ]
+          },
+          {
+            "heat_number": 49,
+            "bib_color": "blue",
+            "total": 166,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  15,
+                  16
+                ],
+                "sum": 81
+              }
+            ]
+          }
+        ],
+        "grand_total": 333,
+        "normalized_score": 333
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11091,
+        "dog_key": "dragster-flou-s-knjazheskogo-dvora--басенджи",
+        "name_lat": "DRAGSTER FLOU S KNJAZHESKOGO DVORA",
+        "name_ru": "ДРАГСТЕР ФЛОУ С КНЯЖЕСКОГО ДВОРА",
+        "breed": "Басенджи",
+        "sex": "Кобель",
+        "owner": "Sadovnik E. V."
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20221025,
+      "dog_id": 9362,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 4,
+      "placement": 4,
+      "total_score": 318,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 34,
+            "bib_color": "blue",
+            "total": 166,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  16,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  14,
+                  17,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 80
+              }
+            ]
+          },
+          {
+            "heat_number": 47,
+            "bib_color": "red",
+            "total": 152,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  15,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  12,
+                  17,
+                  18,
+                  11,
+                  14
+                ],
+                "sum": 72
+              }
+            ]
+          }
+        ],
+        "grand_total": 318,
+        "normalized_score": 318
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9362,
+        "dog_key": "lider-s-knjazheskogo-dvora--басенджи",
+        "name_lat": "LIDER S KNJAZHESKOGO DVORA",
+        "name_ru": "LIDER S KNJAZHESKOGO DVORA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20221025,
+      "dog_id": 7894,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 2,
+      "placement": 5,
+      "total_score": 310,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 33,
+            "bib_color": "red",
+            "total": 170,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  17,
+                  14,
+                  16,
+                  17
+                ],
+                "sum": 80
+              }
+            ]
+          },
+          {
+            "heat_number": 49,
+            "bib_color": "red",
+            "total": 140,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  14,
+                  17,
+                  16,
+                  14,
+                  14
+                ],
+                "sum": 75
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  15,
+                  16
+                ],
+                "sum": 80
+              }
+            ]
+          }
+        ],
+        "grand_total": 310,
+        "normalized_score": 310
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Ранний старт (штраф 10% от суммы баллов забега)",
+      "dog": {
+        "id": 7894,
+        "dog_key": "рок-н-ролл-с-княжеского-двора-rok-n-roll--басенджи",
+        "name_lat": "РОК Н РОЛЛ С КНЯЖЕСКОГО ДВОРА /ROK N ROLL S KNJAZHESKOGO DVORA",
+        "name_ru": "РОК Н РОЛЛ С КНЯЖЕСКОГО ДВОРА /ROK N ROLL S KNJAZHESKOGO DVORA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20221025,
+      "dog_id": 6048,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 8,
+      "placement": 1,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 38,
+            "bib_color": "red",
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  15,
+                  16,
+                  19
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 52,
+            "bib_color": "red",
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              }
+            ]
+          }
+        ],
+        "grand_total": 354,
+        "normalized_score": 354
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 6048,
+        "dog_key": "shamika-iz-divnogo-sada--басенджи",
+        "name_lat": "SHAMIKA IZ DIVNOGO SADA",
+        "name_ru": "ШАМИКА ИЗ ДИВНОГО САДА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20221025,
+      "dog_id": 11092,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 6,
+      "placement": 2,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 37,
+            "bib_color": "blue",
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  13,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ]
+          },
+          {
+            "heat_number": 50,
+            "bib_color": "blue",
+            "total": 174,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ]
+          }
+        ],
+        "grand_total": 346,
+        "normalized_score": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11092,
+        "dog_key": "dzhessika--басенджи",
+        "name_lat": "DZHESSIKA",
+        "name_ru": "ДЖЕССИКА",
+        "breed": "Басенджи",
+        "sex": "Сука",
+        "owner": "Дегтярева Е."
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20221025,
+      "dog_id": 9358,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 7,
+      "placement": 3,
+      "total_score": 337,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 37,
+            "bib_color": "red",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  16,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 83
+              }
+            ]
+          },
+          {
+            "heat_number": 51,
+            "bib_color": "red",
+            "total": 166,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  15,
+                  17
+                ],
+                "sum": 81
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 85
+              }
+            ]
+          }
+        ],
+        "grand_total": 337,
+        "normalized_score": 337
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9358,
+        "dog_key": "glazur-s-knjazheskogo-dvora--басенджи",
+        "name_lat": "GLAZUR S KNJAZHESKOGO DVORA",
+        "name_ru": "GLAZUR S KNJAZHESKOGO DVORA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20221025,
+      "dog_id": 11093,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 9,
+      "placement": 4,
+      "total_score": 337,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 36,
+            "bib_color": "red",
+            "total": 174,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  14,
+                  16,
+                  18
+                ],
+                "sum": 82
+              }
+            ]
+          },
+          {
+            "heat_number": 52,
+            "bib_color": "blue",
+            "total": 163,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  16,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  14,
+                  16,
+                  17,
+                  15,
+                  16
+                ],
+                "sum": 78
+              }
+            ]
+          }
+        ],
+        "grand_total": 337,
+        "normalized_score": 337
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11093,
+        "dog_key": "shorena-iz-divnogo-sada--басенджи",
+        "name_lat": "SHORENA IZ DIVNOGO SADA",
+        "name_ru": "ШОРЕНА ИЗ ДИВНОГО САДА",
+        "breed": "Басенджи",
+        "sex": "Сука",
+        "owner": "Kolysheva E."
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20221025,
+      "dog_id": 51,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 10,
+      "placement": 5,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 36,
+            "bib_color": "blue",
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  17,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 50,
+            "bib_color": "red",
+            "total": 163,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  15,
+                  18
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  14,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 81
+              }
+            ]
+          }
+        ],
+        "grand_total": 336,
+        "normalized_score": 336
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 51,
+        "dog_key": "soneta-star-iz-divnogo-sada--басенджи",
+        "name_lat": "SONETA STAR IZ DIVNOGO SADA",
+        "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20221025,
+      "dog_id": 11094,
+      "breed_class": "Ирландский вольфхаунд - Стандартный - Кобели",
+      "catalog_no": 11,
+      "placement": 1,
+      "total_score": 346,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 60,
+            "bib_color": "red",
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  17,
+                  14,
+                  16,
+                  16
+                ],
+                "sum": 80
+              }
+            ]
+          },
+          {
+            "heat_number": 70,
+            "bib_color": "blue",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  17
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          }
+        ],
+        "grand_total": 346,
+        "normalized_score": 346
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11094,
+        "dog_key": "irlandskiy-rom-iz-volshebnogo-lesa--ирландскии-вольфхаунд",
+        "name_lat": "IRLANDSKIY ROM IZ VOLSHEBNOGO LESA",
+        "name_ru": "ИРЛАНДСКИЙ РОМ ИЗ ВОЛШЕБНОГО ЛЕСА",
+        "breed": "Ирландский вольфхаунд",
+        "sex": "Кобель",
+        "owner": "Кирюшина И. / Данилова И."
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20221025,
+      "dog_id": 10987,
+      "breed_class": "Ирландский вольфхаунд - Стандартный - Кобели",
+      "catalog_no": 12,
+      "placement": 2,
+      "total_score": 337,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 60,
+            "bib_color": "blue",
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 70,
+            "bib_color": "red",
+            "total": 164,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  12,
+                  16,
+                  17,
+                  15,
+                  15
+                ],
+                "sum": 75
+              }
+            ]
+          }
+        ],
+        "grand_total": 337,
+        "normalized_score": 337
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10987,
+        "dog_key": "boogie-woogie-woo-killkapi--ирландскии-вольфхаунд",
+        "name_lat": "BOOGIE WOOGIE WOO KILLKAPI",
+        "name_ru": "БУГИ-ВУГИ ВУ КИЛЛКАПИ",
+        "breed": "Ирландский вольфхаунд",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20221025,
+      "dog_id": 11095,
+      "breed_class": "Ирландский вольфхаунд - Стандартный - Кобели",
+      "catalog_no": 13,
+      "placement": null,
+      "total_score": 167,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 61,
+            "bib_color": "red",
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  16,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  16,
+                  14,
+                  16,
+                  17
+                ],
+                "sum": 79
+              }
+            ]
+          }
+        ],
+        "grand_total": 167,
+        "normalized_score": 167
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Снят владельцем",
+      "dog": {
+        "id": 11095,
+        "dog_key": "magiya-zelenogo-ostrova-gregory--ирландскии-вольфхаунд",
+        "name_lat": "MAGIYA ZELENOGO OSTROVA GREGORY",
+        "name_ru": "МАГИЯ ЗЕЛЕНОГО ОСТРОВА ГРЕГОРИ",
+        "breed": "Ирландский вольфхаунд",
+        "sex": "Кобель",
+        "owner": "Kostrova A."
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 20221025,
+      "dog_id": 10044,
+      "breed_class": "Ирландский вольфхаунд - Стандартный - Суки",
+      "catalog_no": 16,
+      "placement": 1,
+      "total_score": 330,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 63,
+            "bib_color": "red",
+            "total": 165,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  18,
+                  19
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 78
+              }
+            ]
+          },
+          {
+            "heat_number": 72,
+            "bib_color": "red",
+            "total": 165,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  16,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  14,
+                  16,
+                  17,
+                  16,
+                  15
+                ],
+                "sum": 78
+              }
+            ]
+          }
+        ],
+        "grand_total": 330,
+        "normalized_score": 330
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10044,
+        "dog_key": "horoshaya-traditsia-iz-volshebnogo-lesa--ирландскии-волкодав",
+        "name_lat": "HOROSHAYA TRADITSIA IZ VOLSHEBNOGO LESA",
+        "name_ru": "HOROSHAYA TRADITSIA IZ VOLSHEBNOGO LESA",
+        "breed": "ИРЛАНДСКИЙ ВОЛКОДАВ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 20221025,
+      "dog_id": 10988,
+      "breed_class": "Ирландский вольфхаунд - Стандартный - Суки",
+      "catalog_no": 14,
+      "placement": 2,
+      "total_score": 327,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 62,
+            "bib_color": "red",
+            "total": 168,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 79
+              }
+            ]
+          },
+          {
+            "heat_number": 71,
+            "bib_color": "red",
+            "total": 159,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  12,
+                  16,
+                  17,
+                  10,
+                  15
+                ],
+                "sum": 70
+              }
+            ]
+          }
+        ],
+        "grand_total": 327,
+        "normalized_score": 327
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10988,
+        "dog_key": "escho-odna-lyubov-iz-volshebnogo-lesa--ирландскии-вольфхаунд",
+        "name_lat": "ESCHO ODNA LYUBOV IZ VOLSHEBNOGO LESA",
+        "name_ru": "ЕЩЕ ОДНА ЛЮБОВЬ ИЗ ВОЛШЕБНОГО ЛЕСА",
+        "breed": "Ирландский вольфхаунд",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 20221025,
+      "dog_id": 10970,
+      "breed_class": "Ирландский вольфхаунд - Стандартный - Суки",
+      "catalog_no": 15,
+      "placement": null,
+      "total_score": 167,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 62,
+            "bib_color": "blue",
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  17,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  17,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 79
+              }
+            ]
+          }
+        ],
+        "grand_total": 167,
+        "normalized_score": 167
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Сошёл",
+      "dog": {
+        "id": 10970,
+        "dog_key": "eyo-velichestvo-udacha-iz-volshebnogo-le--ирландскии-волкодав",
+        "name_lat": "EYO VELICHESTVO UDACHA IZ VOLSHEBNOGO LESA",
+        "name_ru": "ЕЕ ВЕЛИЧЕСТВО УДАЧА ИЗ ВОЛШЕБНОГО ЛЕСА",
+        "breed": "Ирландский волкодав",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 20221025,
+      "dog_id": 9330,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный - Суки",
+      "catalog_no": 20,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 41,
+            "bib_color": "red",
+            "total": null,
+            "judges": []
+          }
+        ],
+        "grand_total": null,
+        "normalized_score": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Сошёл",
+      "dog": {
+        "id": 9330,
+        "dog_key": "donatella-vom-roten-schopf--малая-итальянская-борзая",
+        "name_lat": "DONATELLA VOM ROTEN SCHOPF",
+        "name_ru": "DONATELLA VOM ROTEN SCHOPF",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 20221025,
+      "dog_id": 10418,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Общая",
+      "catalog_no": 19,
+      "placement": 1,
+      "total_score": 371,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 40,
+            "bib_color": "red",
+            "total": 186,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  20,
+                  18,
+                  15,
+                  19,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 53,
+            "bib_color": "red",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 371,
+        "normalized_score": 371
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10418,
+        "dog_key": "mio-belissimo-allegra-vento--левретка",
+        "name_lat": "MIO BELISSIMO ALLEGRA VENTO",
+        "name_ru": "MIO BELISSIMO ALLEGRA VENTO",
+        "breed": "ЛЕВРЕТКА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 20221025,
+      "dog_id": 6137,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Общая",
+      "catalog_no": 18,
+      "placement": 2,
+      "total_score": 365,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 39,
+            "bib_color": "blue",
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  20,
+                  18,
+                  15,
+                  18,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 54,
+            "bib_color": "blue",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  19,
+                  16,
+                  18,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 365,
+        "normalized_score": 365
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 6137,
+        "dog_key": "perm-velikaya-zefir--малая-итальянская-борзая",
+        "name_lat": "PERM VELIKAYA ZEFIR",
+        "name_ru": "ПЕРМЬ ВЕЛИКАЯ ЗЕФИР",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 20221025,
+      "dog_id": 11096,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный-спринтеры - Общая",
+      "catalog_no": 17,
+      "placement": null,
+      "total_score": 160,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dnf",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 39,
+            "bib_color": "red",
+            "total": 160,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  16,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  14,
+                  15
+                ],
+                "sum": 76
+              }
+            ]
+          }
+        ],
+        "grand_total": 160,
+        "normalized_score": 160
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Сошёл",
+      "dog": {
+        "id": 11096,
+        "dog_key": "zak-chester-zoltan-iz-ozherelya--левретка",
+        "name_lat": "ZAK CHESTER ZOLTAN IZ OZHERELYA",
+        "name_ru": "ЗАК ЧЕСТЕР ЗОЛТАН ИЗ ОЖЕРЕЛЬЯ",
+        "breed": "Левретка",
+        "sex": "Кобель",
+        "owner": "Шаронина Д. П."
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 20221025,
+      "dog_id": 8501,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобели",
+      "catalog_no": 22,
+      "placement": 1,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 42,
+            "bib_color": "red",
+            "total": 168,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  19,
+                  17,
+                  16,
+                  19
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  14,
+                  17,
+                  15,
+                  15,
+                  20
+                ],
+                "sum": 81
+              }
+            ]
+          },
+          {
+            "heat_number": 56,
+            "bib_color": "blue",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 347,
+        "normalized_score": 347
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 8501,
+        "dog_key": "gakeru-abubakar--родезиискии-риджбек",
+        "name_lat": "GAKERU ABUBAKAR",
+        "name_ru": "ГАКЕРУ АБУБАКАР",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 20221025,
+      "dog_id": 11097,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобели",
+      "catalog_no": 21,
+      "placement": 2,
+      "total_score": 343,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 43,
+            "bib_color": "blue",
+            "total": 169,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  13,
+                  17,
+                  15,
+                  15,
+                  17
+                ],
+                "sum": 77
+              }
+            ]
+          },
+          {
+            "heat_number": 56,
+            "bib_color": "red",
+            "total": 174,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          }
+        ],
+        "grand_total": 343,
+        "normalized_score": 343
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11097,
+        "dog_key": "asadi-fuadi-fon-richard--родезиискии-риджбек",
+        "name_lat": "ASADI FUADI FON RICHARD",
+        "name_ru": "АСАДИ ФУАДИ ФОН РИЧАРД",
+        "breed": "Родезийский риджбек",
+        "sex": "Кобель",
+        "owner": "Малышева А."
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 20221025,
+      "dog_id": 10896,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобели",
+      "catalog_no": 23,
+      "placement": 3,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 42,
+            "bib_color": "red",
+            "total": 162,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  19,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  13,
+                  17,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 76
+              }
+            ]
+          },
+          {
+            "heat_number": 55,
+            "bib_color": "blue",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  14,
+                  16
+                ],
+                "sum": 82
+              }
+            ]
+          }
+        ],
+        "grand_total": 333,
+        "normalized_score": 333
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10896,
+        "dog_key": "grand-cortege-nembus-the-brightest--родезиискии-риджбек",
+        "name_lat": "GRAND CORTEGE NEMBUS THE BRIGHTEST",
+        "name_ru": "GRAND CORTEGE NEMBUS THE BRIGHTEST",
+        "breed": "Родезийский риджбек",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 20221025,
+      "dog_id": 10266,
+      "breed_class": "Родезийский риджбек - Стандартный - Кобели",
+      "catalog_no": 24,
+      "placement": 4,
+      "total_score": 332,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 43,
+            "bib_color": "blue",
+            "total": 166,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  12,
+                  16,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 78
+              }
+            ]
+          },
+          {
+            "heat_number": 55,
+            "bib_color": "red",
+            "total": 166,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  19,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  13,
+                  17,
+                  18,
+                  14,
+                  18
+                ],
+                "sum": 80
+              }
+            ]
+          }
+        ],
+        "grand_total": 332,
+        "normalized_score": 332
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10266,
+        "dog_key": "джелани-ред-трои--родезиискии-риджбек",
+        "name_lat": "ДЖЕЛАНИ РЕД ТРОЙ",
+        "name_ru": "ДЖЕЛАНИ РЕД ТРОЙ",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 20221025,
+      "dog_id": 293,
+      "breed_class": "Русская псовая борзая - Стандартный - Общая",
+      "catalog_no": 26,
+      "placement": 1,
+      "total_score": 363,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 44,
+            "bib_color": "red",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  17,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 57,
+            "bib_color": "red",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 363,
+        "normalized_score": 363
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 293,
+        "dog_key": "cavallierik-factotum--русская-псовая-борзая",
+        "name_lat": "CAVALLIERIK FACTOTUM",
+        "name_ru": "КАВАЛЛЬЕРИК ФАКТОУМ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 20221025,
+      "dog_id": 10991,
+      "breed_class": "Русская псовая борзая - Стандартный - Общая",
+      "catalog_no": 27,
+      "placement": 2,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 44,
+            "bib_color": "blue",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 58,
+            "bib_color": "red",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10991,
+        "dog_key": "vasilisa--русская-псовая-борзая",
+        "name_lat": "VASILISA",
+        "name_ru": "ВАСИЛИСА",
+        "breed": "Русская псовая борзая",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 20221025,
+      "dog_id": 7230,
+      "breed_class": "Русская псовая борзая - Стандартный - Общая",
+      "catalog_no": 25,
+      "placement": 3,
+      "total_score": 305,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 45,
+            "bib_color": "red",
+            "total": 149,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  12,
+                  15,
+                  15,
+                  12,
+                  12
+                ],
+                "sum": 66
+              }
+            ]
+          },
+          {
+            "heat_number": 58,
+            "bib_color": "blue",
+            "total": 156,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  12,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 74
+              }
+            ]
+          }
+        ],
+        "grand_total": 305,
+        "normalized_score": 305
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7230,
+        "dog_key": "васарт-гамбит-vasart-gambit--русская-псовая-борзая",
+        "name_lat": "ВАСАРТ ГАМБИТ /VASART GAMBIT",
+        "name_ru": "ВАСАРТ ГАМБИТ /VASART GAMBIT",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 20221025,
+      "dog_id": 17,
+      "breed_class": "Салюки - Стандартный - Суки",
+      "catalog_no": 28,
+      "placement": 1,
+      "total_score": 362,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_color": "red",
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 18,
+            "bib_color": "red",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 362,
+        "normalized_score": 362
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 17,
+        "dog_key": "ануш--салюки",
+        "name_lat": "АНУШ",
+        "name_ru": "АНУШ",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 20221025,
+      "dog_id": 18,
+      "breed_class": "Салюки - Стандартный - Суки",
+      "catalog_no": 29,
+      "placement": 2,
+      "total_score": 351,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_color": "red",
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ]
+          },
+          {
+            "heat_number": 18,
+            "bib_color": "blue",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          }
+        ],
+        "grand_total": 351,
+        "normalized_score": 351
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 18,
+        "dog_key": "арья--салюки",
+        "name_lat": "АРЬЯ",
+        "name_ru": "АРЬЯ",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 20221025,
+      "dog_id": 10237,
+      "breed_class": "Салюки - Стандартный - Суки",
+      "catalog_no": 30,
+      "placement": 3,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 2,
+            "bib_color": "blue",
+            "total": 168,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  17,
+                  15,
+                  16,
+                  17
+                ],
+                "sum": 80
+              }
+            ]
+          },
+          {
+            "heat_number": 17,
+            "bib_color": "red",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  16,
+                  18,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ]
+          }
+        ],
+        "grand_total": 339,
+        "normalized_score": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10237,
+        "dog_key": "al-nafiseh-eleeza--салюки",
+        "name_lat": "AL NAFISEH ELEEZA",
+        "name_ru": "AL NAFISEH ELEEZA",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 20221025,
+      "dog_id": 228,
+      "breed_class": "Слюги - Стандартный - Общая",
+      "catalog_no": 31,
+      "placement": 1,
+      "total_score": 358,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 68,
+            "bib_color": "red",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  19,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 78,
+            "bib_color": "red",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 358,
+        "normalized_score": 358
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 228,
+        "dog_key": "borzomir-barfar-aman--слюги",
+        "name_lat": "BORZOMIR BARFAR AMAN",
+        "name_ru": "BORZOMIR BARFAR AMAN",
+        "breed": "СЛЮГИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 20221025,
+      "dog_id": 7265,
+      "breed_class": "Слюги - Стандартный - Общая",
+      "catalog_no": 32,
+      "placement": 2,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 68,
+            "bib_color": "blue",
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  17,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 85
+              }
+            ]
+          },
+          {
+            "heat_number": 77,
+            "bib_color": "red",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7265,
+        "dog_key": "borzomir-bakhruz-aziza--слюги",
+        "name_lat": "BORZOMIR BAKHRUZ AZIZA",
+        "name_ru": "БОРЗОМИР БАХРУЗ АЗИЗА",
+        "breed": "СЛЮГИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 20221025,
+      "dog_id": 226,
+      "breed_class": "Слюги - Стандартный - Общая",
+      "catalog_no": 33,
+      "placement": 3,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 69,
+            "bib_color": "red",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  19,
+                  17
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 85
+              }
+            ]
+          },
+          {
+            "heat_number": 78,
+            "bib_color": "blue",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  16,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  16,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 354,
+        "normalized_score": 354
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 226,
+        "dog_key": "борзомир-галия-басма-borzomir-galija-bas--слюги",
+        "name_lat": "БОРЗОМИР ГАЛИЯ БАСМА /BORZOMIR GALIJA BASMA",
+        "name_ru": "БОРЗОМИР ГАЛИЯ БАСМА /BORZOMIR GALIJA BASMA",
+        "breed": "СЛЮГИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 20221025,
+      "dog_id": 234,
+      "breed_class": "Тазы - Стандартный - Общая",
+      "catalog_no": 36,
+      "placement": 1,
+      "total_score": 362,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 67,
+            "bib_color": "red",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  16,
+                  19
+                ],
+                "sum": 85
+              }
+            ]
+          },
+          {
+            "heat_number": 76,
+            "bib_color": "red",
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 362,
+        "normalized_score": 362
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 234,
+        "dog_key": "борзомир-дюна-borzomir-duna--тазы",
+        "name_lat": "БОРЗОМИР ДЮНА /BORZOMIR DUNA",
+        "name_ru": "БОРЗОМИР ДЮНА /BORZOMIR DUNA",
+        "breed": "ТАЗЫ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 35,
+      "event_id": 20221025,
+      "dog_id": 7956,
+      "breed_class": "Тазы - Стандартный - Общая",
+      "catalog_no": 34,
+      "placement": 2,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 66,
+            "bib_color": "red",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 76,
+            "bib_color": "blue",
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7956,
+        "dog_key": "borzomir-dzhamal--тазы",
+        "name_lat": "BORZOMIR DZHAMAL",
+        "name_ru": "БОРЗОМИР ДЖАМАЛЬ",
+        "breed": "ТАЗЫ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 36,
+      "event_id": 20221025,
+      "dog_id": 10550,
+      "breed_class": "Тазы - Стандартный - Общая",
+      "catalog_no": 37,
+      "placement": 3,
+      "total_score": 358,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 66,
+            "bib_color": "blue",
+            "total": 174,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  18,
+                  15,
+                  18,
+                  19
+                ],
+                "sum": 85
+              }
+            ]
+          },
+          {
+            "heat_number": 75,
+            "bib_color": "blue",
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  16,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 358,
+        "normalized_score": 358
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10550,
+        "dog_key": "borzomir-vasilja--тазы",
+        "name_lat": "BORZOMIR VASILJA",
+        "name_ru": "BORZOMIR VASILJA",
+        "breed": "ТАЗЫ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 37,
+      "event_id": 20221025,
+      "dog_id": 7959,
+      "breed_class": "Тазы - Стандартный - Общая",
+      "catalog_no": 35,
+      "placement": 4,
+      "total_score": 357,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 67,
+            "bib_color": "blue",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 85
+              }
+            ]
+          },
+          {
+            "heat_number": 75,
+            "bib_color": "red",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 357,
+        "normalized_score": 357
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7959,
+        "dog_key": "borzomir-dzhamil--тазы",
+        "name_lat": "BORZOMIR DZHAMIL",
+        "name_ru": "БОРЗОМИР ДЖАМИЛЬ",
+        "breed": "ТАЗЫ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 38,
+      "event_id": 20221025,
+      "dog_id": 10344,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 40,
+      "placement": 1,
+      "total_score": 365,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_color": "blue",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 20,
+            "bib_color": "red",
+            "total": 186,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  20
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 365,
+        "normalized_score": 365
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10344,
+        "dog_key": "havok--уиппет",
+        "name_lat": "HAVOK",
+        "name_ru": "HAVOK",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 39,
+      "event_id": 20221025,
+      "dog_id": 262,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 43,
+      "placement": 2,
+      "total_score": 362,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_color": "blue",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 20,
+            "bib_color": "blue",
+            "total": 186,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 362,
+        "normalized_score": 362
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 262,
+        "dog_key": "running-raiders-grim-reaper--уиппет",
+        "name_lat": "RUNNING RAIDERS GRIM REAPER",
+        "name_ru": "RUNNING RAIDERS GRIM REAPER",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 40,
+      "event_id": 20221025,
+      "dog_id": 27,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 42,
+      "placement": 3,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 4,
+            "bib_color": "red",
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  16,
+                  19
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 21,
+            "bib_color": "red",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 360,
+        "normalized_score": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 27,
+        "dog_key": "rider-of-rohan-brodwinek--уиппет",
+        "name_lat": "RIDER OF ROHAN BRODWINEK",
+        "name_ru": "RIDER OF ROHAN BRODWINEK",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 20221025,
+      "dog_id": 10077,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 41,
+      "placement": 4,
+      "total_score": 352,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 5,
+            "bib_color": "red",
+            "total": 170,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  17,
+                  15,
+                  16,
+                  19
+                ],
+                "sum": 82
+              }
+            ]
+          },
+          {
+            "heat_number": 21,
+            "bib_color": "blue",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 352,
+        "normalized_score": 352
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10077,
+        "dog_key": "let-it-be--уиппет",
+        "name_lat": "LET IT BE",
+        "name_ru": "LET IT BE",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 42,
+      "event_id": 20221025,
+      "dog_id": 7035,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 45,
+      "placement": 1,
+      "total_score": 373,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_color": "blue",
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  15,
+                  18,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 25,
+            "bib_color": "red",
+            "total": 190,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  20,
+                  19,
+                  18,
+                  20,
+                  20
+                ],
+                "sum": 97
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 373,
+        "normalized_score": 373
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7035,
+        "dog_key": "ashoka-tano--уиппет",
+        "name_lat": "ASHOKA TANO",
+        "name_ru": "АСОКА ТАНО",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 43,
+      "event_id": 20221025,
+      "dog_id": 93,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 53,
+      "placement": 2,
+      "total_score": 369,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_color": "red",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  15,
+                  18,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 25,
+            "bib_color": "blue",
+            "total": 187,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 369,
+        "normalized_score": 369
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 93,
+        "dog_key": "very-well-show-format--уиппет",
+        "name_lat": "VERY WELL SHOW FORMAT",
+        "name_ru": "VERY WELL SHOW FORMAT",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 44,
+      "event_id": 20221025,
+      "dog_id": 7032,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 44,
+      "placement": 3,
+      "total_score": 366,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_color": "blue",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 24,
+            "bib_color": "red",
+            "total": 187,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 366,
+        "normalized_score": 366
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7032,
+        "dog_key": "arwen-undomiel--уиппет",
+        "name_lat": "ARWEN UNDOMIEL",
+        "name_ru": "АРВЕН УНДОМИЭЛЬ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 45,
+      "event_id": 20221025,
+      "dog_id": 10472,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 51,
+      "placement": 4,
+      "total_score": 364,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_color": "red",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  17,
+                  15,
+                  18,
+                  19
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 22,
+            "bib_color": "blue",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 364,
+        "normalized_score": 364
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10472,
+        "dog_key": "garda--уиппет",
+        "name_lat": "GARDA",
+        "name_ru": "GARDA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 46,
+      "event_id": 20221025,
+      "dog_id": 10616,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 47,
+      "placement": 5,
+      "total_score": 362,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_color": "red",
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  15,
+                  18,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 22,
+            "bib_color": "red",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 362,
+        "normalized_score": 362
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10616,
+        "dog_key": "плеи-ит-слип-репит--уиппет",
+        "name_lat": "ПЛЕЙ ИТ СЛИП РЕПИТ",
+        "name_ru": "ПЛЕЙ ИТ СЛИП РЕПИТ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 47,
+      "event_id": 20221025,
+      "dog_id": 10257,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 48,
+      "placement": 6,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 9,
+            "bib_color": "blue",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 26,
+            "bib_color": "blue",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 361,
+        "normalized_score": 361
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10257,
+        "dog_key": "русски-парк-даная--уиппет",
+        "name_lat": "RUSSKI PARK DANAYA",
+        "name_ru": "РУССКИ ПАРК ДАНАЯ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 48,
+      "event_id": 20221025,
+      "dog_id": 377,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 52,
+      "placement": 7,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 8,
+            "bib_color": "blue",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  14,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 26,
+            "bib_color": "red",
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  19,
+                  19,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 360,
+        "normalized_score": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 377,
+        "dog_key": "kingdom-fly-grammy-grungery--уиппет",
+        "name_lat": "KINGDOM FLY GRAMMY GRUNGERY",
+        "name_ru": "KINGDOM FLY GRAMMY GRUNGERY",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 49,
+      "event_id": 20221025,
+      "dog_id": 9536,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 50,
+      "placement": 8,
+      "total_score": 358,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 6,
+            "bib_color": "blue",
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 83
+              }
+            ]
+          },
+          {
+            "heat_number": 23,
+            "bib_color": "red",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 358,
+        "normalized_score": 358
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9536,
+        "dog_key": "emerald-of-my-soul--уиппет",
+        "name_lat": "EMERALD OF MY SOUL",
+        "name_ru": "EMERALD OF MY SOUL",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 50,
+      "event_id": 20221025,
+      "dog_id": 10939,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 49,
+      "placement": 9,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 10,
+            "bib_color": "red",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  17,
+                  14,
+                  17,
+                  18
+                ],
+                "sum": 83
+              }
+            ]
+          },
+          {
+            "heat_number": 23,
+            "bib_color": "blue",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10939,
+        "dog_key": "amber-veiv-s-intriga--уиппет",
+        "name_lat": "AMBER VEIV'S INTRIGA",
+        "name_ru": "ЭМБЕР ВЕЙВ'С ИНТРИГА",
+        "breed": "Уиппет",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 51,
+      "event_id": 20221025,
+      "dog_id": 447,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 46,
+      "placement": 10,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 7,
+            "bib_color": "red",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  15,
+                  18,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 24,
+            "bib_color": "blue",
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          }
+        ],
+        "grand_total": 354,
+        "normalized_score": 354
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 447,
+        "dog_key": "мистресс-оф-коппер-хилл-mistress-of-copp--уиппет",
+        "name_lat": "МИСТРЕСС ОФ КОППЕР ХИЛЛ /MISTRESS OF COPPER HILL",
+        "name_ru": "МИСТРЕСС ОФ КОППЕР ХИЛЛ /MISTRESS OF COPPER HILL",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 52,
+      "event_id": 20221025,
+      "dog_id": 7287,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 56,
+      "placement": 1,
+      "total_score": 363,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_color": "red",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  15,
+                  18,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 27,
+            "bib_color": "blue",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  18
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 363,
+        "normalized_score": 363
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7287,
+        "dog_key": "itan-iz-sagi-o-gardarike--уиппет",
+        "name_lat": "ITAN IZ SAGI O GARDARIKE",
+        "name_ru": "ИТАН ИЗ САГИ О ГАРДАРИКЕ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 53,
+      "event_id": 20221025,
+      "dog_id": 7109,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 60,
+      "placement": 2,
+      "total_score": 363,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_color": "red",
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  17,
+                  19,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  15,
+                  18,
+                  18
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 27,
+            "bib_color": "red",
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 363,
+        "normalized_score": 363
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7109,
+        "dog_key": "fletcher-illustrious-winner--уиппет",
+        "name_lat": "FLETCHER ILLUSTRIOUS WINNER",
+        "name_ru": "ФЛЕТЧЕР ИЛЛАСТРИАС ВИННЕР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 54,
+      "event_id": 20221025,
+      "dog_id": 10972,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 54,
+      "placement": 3,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 12,
+            "bib_color": "blue",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  17,
+                  14,
+                  17,
+                  18
+                ],
+                "sum": 82
+              }
+            ]
+          },
+          {
+            "heat_number": 30,
+            "bib_color": "blue",
+            "total": 189,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  20,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 360,
+        "normalized_score": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10972,
+        "dog_key": "anahita-arva-s-dendi-dabl-win--уиппет",
+        "name_lat": "ANAHITA ARVA S DENDI DABL WIN",
+        "name_ru": "АНАХИТА АРВА С ДЕНДИ ДАБЛ ВИН",
+        "breed": "Уиппет",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 55,
+      "event_id": 20221025,
+      "dog_id": 10522,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 59,
+      "placement": 4,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 14,
+            "bib_color": "red",
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 29,
+            "bib_color": "blue",
+            "total": 186,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  19,
+                  20,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10522,
+        "dog_key": "stilar-halestorm--уиппет",
+        "name_lat": "STILAR HALESTORM",
+        "name_ru": "STILAR HALESTORM",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 56,
+      "event_id": 20221025,
+      "dog_id": 10618,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 55,
+      "placement": 5,
+      "total_score": 358,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_color": "blue",
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  17,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 30,
+            "bib_color": "red",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 358,
+        "normalized_score": 358
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10618,
+        "dog_key": "zhorzh-iz-sagi-o-gardarike--уиппет",
+        "name_lat": "ZHORZH IZ SAGI O GARDARIKE",
+        "name_ru": "ЖОРЖ ИЗ САГИ О ГАРДАРИКЕ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 57,
+      "event_id": 20221025,
+      "dog_id": 9415,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 58,
+      "placement": 6,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 13,
+            "bib_color": "red",
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 28,
+            "bib_color": "red",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9415,
+        "dog_key": "ратимир-идущии-к-славе-из-камелота--уиппет",
+        "name_lat": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
+        "name_ru": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 58,
+      "event_id": 20221025,
+      "dog_id": 10429,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 57,
+      "placement": 7,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 11,
+            "bib_color": "blue",
+            "total": 168,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  14,
+                  17,
+                  14,
+                  17,
+                  18
+                ],
+                "sum": 80
+              }
+            ]
+          },
+          {
+            "heat_number": 28,
+            "bib_color": "blue",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  20,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 353,
+        "normalized_score": 353
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10429,
+        "dog_key": "кетлин-рутгер--уиппет",
+        "name_lat": "KETLIN RUTGER",
+        "name_ru": "КЕТЛИН РУТГЕР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 59,
+      "event_id": 20221025,
+      "dog_id": 9388,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 62,
+      "placement": 1,
+      "total_score": 366,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_color": "red",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 31,
+            "bib_color": "red",
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  18,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 366,
+        "normalized_score": 366
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9388,
+        "dog_key": "entayli-yoz--уиппет",
+        "name_lat": "ENTAYLI YOZ",
+        "name_ru": "ЭНТАЙЛИ ЙОЗ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 60,
+      "event_id": 20221025,
+      "dog_id": 10975,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 61,
+      "placement": 2,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 15,
+            "bib_color": "blue",
+            "total": 170,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  17,
+                  15,
+                  16,
+                  18
+                ],
+                "sum": 81
+              }
+            ]
+          },
+          {
+            "heat_number": 32,
+            "bib_color": "red",
+            "total": 189,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  20,
+                  18,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10975,
+        "dog_key": "amber-veiv-s-kiss-of-the-sun--уиппет",
+        "name_lat": "AMBER VEIV'S KISS OF THE SUN",
+        "name_ru": "АМБЕР ВЕЙВ'С КИСС ОФ ЗЕ САН",
+        "breed": "Уиппет",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 61,
+      "event_id": 20221025,
+      "dog_id": 10958,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 63,
+      "placement": 3,
+      "total_score": 358,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 16,
+            "bib_color": "red",
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  16,
+                  19
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  14,
+                  18,
+                  15,
+                  15,
+                  18
+                ],
+                "sum": 80
+              }
+            ]
+          },
+          {
+            "heat_number": 31,
+            "bib_color": "blue",
+            "total": 191,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  19,
+                  20,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 97
+              }
+            ]
+          }
+        ],
+        "grand_total": 358,
+        "normalized_score": 358
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10958,
+        "dog_key": "laksheri-vipp-mirabella--уиппет",
+        "name_lat": "LAKSHERI VIPP MIRABELLA",
+        "name_ru": "ЛАКШЕРИ ВИПП МИРАБЕЛЛА",
+        "breed": "Уиппет",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 62,
+      "event_id": 20221025,
+      "dog_id": 7802,
+      "breed_class": "Уиппет - Юниоры - Общая",
+      "catalog_no": 39,
+      "placement": 1,
+      "total_score": 363,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Лучший юниор",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_color": "red",
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  18
+                ],
+                "sum": 94
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  19,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 19,
+            "bib_color": "red",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  16,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 363,
+        "normalized_score": 363
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7802,
+        "dog_key": "vizavi-angel-na-ladoshke--уиппет",
+        "name_lat": "VIZAVI ANGEL NA LADOSHKE",
+        "name_ru": "ВИЗАВИ АНГЕЛ НА ЛАДОШКЕ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 63,
+      "event_id": 20221025,
+      "dog_id": 463,
+      "breed_class": "Уиппет - Юниоры - Общая",
+      "catalog_no": 38,
+      "placement": 2,
+      "total_score": 357,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 3,
+            "bib_color": "blue",
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  15,
+                  18,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 19,
+            "bib_color": "blue",
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 357,
+        "normalized_score": 357
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 463,
+        "dog_key": "luxury-whipp-oniks--уиппет",
+        "name_lat": "LUXURY WHIPP ONIKS",
+        "name_ru": "ЛАКШЕРИ ВИПП ОНИКС",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 64,
+      "event_id": 20221025,
+      "dog_id": 10007,
+      "breed_class": "Фараонова собака - Стандартный - Общая",
+      "catalog_no": 64,
+      "placement": 1,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 64,
+            "bib_color": "blue",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  16,
+                  19
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  19,
+                  15,
+                  18,
+                  20
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 74,
+            "bib_color": "blue",
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10007,
+        "dog_key": "tieris-gellios--фараонова-собака",
+        "name_lat": "TIERIS GELLIOS",
+        "name_ru": "TIERIS GELLIOS",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 65,
+      "event_id": 20221025,
+      "dog_id": 277,
+      "breed_class": "Фараонова собака - Стандартный - Общая",
+      "catalog_no": 66,
+      "placement": 2,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 65,
+            "bib_color": "red",
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  17,
+                  19
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 74,
+            "bib_color": "red",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 354,
+        "normalized_score": 354
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 277,
+        "dog_key": "temple-veles-chocolate--фараонова-собака",
+        "name_lat": "TEMPLE VELES CHOCOLATE",
+        "name_ru": "TEMPLE VELES CHOCOLATE",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 66,
+      "event_id": 20221025,
+      "dog_id": 11056,
+      "breed_class": "Фараонова собака - Стандартный - Общая",
+      "catalog_no": 67,
+      "placement": 3,
+      "total_score": 345,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 64,
+            "bib_color": "red",
+            "total": 169,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  16,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 73,
+            "bib_color": "blue",
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 345,
+        "normalized_score": 345
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11056,
+        "dog_key": "litlar-s-n-yu-pesnya-vetra--фараонова-собака",
+        "name_lat": "LITLAR'S N'YU PESNYA VETRA",
+        "name_ru": "ЛИТЛАР'С НЬЮ ПЕСНЯ ВЕТРА",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": "Сука",
+        "owner": "Наянова Н. Е."
+      }
+    },
+    {
+      "id": 67,
+      "event_id": 20221025,
+      "dog_id": 11098,
+      "breed_class": "Фараонова собака - Стандартный - Общая",
+      "catalog_no": 65,
+      "placement": 4,
+      "total_score": 344,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 65,
+            "bib_color": "blue",
+            "total": 170,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  16,
+                  18,
+                  15,
+                  17,
+                  18
+                ],
+                "sum": 84
+              }
+            ]
+          },
+          {
+            "heat_number": 73,
+            "bib_color": "red",
+            "total": 174,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 344,
+        "normalized_score": 344
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11098,
+        "dog_key": "litlar-s-niju-missiya-vypolnima--фараонова-собака",
+        "name_lat": "LITLAR'S NIJU MISSIYA VYPOLNIMA",
+        "name_ru": "ЛИТЛАР'С НИДЗЮ МИССИЯ ВЫПОЛНИМА",
+        "breed": "Фараонова собака",
+        "sex": "Сука",
+        "owner": "Nayanova N. E."
+      }
+    },
+    {
+      "id": 68,
+      "event_id": 20221025,
+      "dog_id": 10525,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 69,
+      "placement": 1,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Победитель Кубка России",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 46,
+            "bib_color": "red",
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  18,
+                  15,
+                  14,
+                  16
+                ],
+                "sum": 80
+              }
+            ]
+          },
+          {
+            "heat_number": 59,
+            "bib_color": "red",
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 354,
+        "normalized_score": 354
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10525,
+        "dog_key": "tsvet-solntsa-drevnyaya-legenda--чирнеко-дель-этна",
+        "name_lat": "TSVET SOLNTSA DREVNYAYA LEGENDA",
+        "name_ru": "ЦВЕТ СОЛНЦА ДРЕВНЯЯ ЛЕГЕНДА",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 69,
+      "event_id": 20221025,
+      "dog_id": 11099,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 68,
+      "placement": 2,
+      "total_score": 314,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 46,
+            "bib_color": "blue",
+            "total": 163,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  18,
+                  18,
+                  15,
+                  14,
+                  15
+                ],
+                "sum": 80
+              }
+            ]
+          },
+          {
+            "heat_number": 59,
+            "bib_color": "blue",
+            "total": 151,
+            "judges": [
+              {
+                "judge_name": "Иванова Г.С.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Егорова М.А.",
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
+              }
+            ]
+          }
+        ],
+        "grand_total": 314,
+        "normalized_score": 314
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Ранний старт (штраф 10% от суммы баллов забега)",
+      "dog": {
+        "id": 11099,
+        "dog_key": "mia-santo-s-nord--чирнеко-дель-этна",
+        "name_lat": "MIA SANTO'S NORD",
+        "name_ru": "МИА САНТО'С НОРД",
+        "breed": "Чирнеко дель Этна",
+        "sex": "Кобель",
+        "owner": "Никитина В. В."
+      }
+    }
+  ]
+}
