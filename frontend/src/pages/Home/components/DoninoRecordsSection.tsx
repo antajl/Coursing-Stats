@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Icons } from '../../../lib/icons'
 import DoninoHomeRecordRow from '../../../components/DoninoHomeRecordRow'
@@ -20,6 +20,22 @@ function DoninoRecordsSectionInner({
 }: DoninoRecordsSectionProps) {
   const doninoCoursingRanked = rankCoursingRecords(doninoCoursingRecords)
   const showDoninoSection = loading || doninoSpeedRecords.length > 0 || doninoCoursingRecords.length > 0
+
+  const latestSpeedDate = useMemo(() => {
+    let max = ''
+    for (const r of doninoSpeedRecords) {
+      if (r.date && r.date > max) max = r.date
+    }
+    return max || null
+  }, [doninoSpeedRecords])
+
+  const latestCoursingDate = useMemo(() => {
+    let max = ''
+    for (const r of doninoCoursingRecords) {
+      if (r.date && r.date > max) max = r.date
+    }
+    return max || null
+  }, [doninoCoursingRecords])
 
   if (loading) return <DoninoRecordsSectionSkeleton />
   if (!showDoninoSection) return null
@@ -51,6 +67,7 @@ function DoninoRecordsSectionInner({
                     history={record.history}
                     speedKmh={record.speed_km_h}
                     trackType={record.track_type}
+                    latestDateInDataset={latestSpeedDate}
                   />
                   </div>
                 ))
@@ -76,6 +93,7 @@ function DoninoRecordsSectionInner({
                     history={record.history}
                     timeSeconds={record.time_seconds}
                     trackType={record.track_type}
+                    latestDateInDataset={latestCoursingDate}
                   />
                   </div>
                 ))

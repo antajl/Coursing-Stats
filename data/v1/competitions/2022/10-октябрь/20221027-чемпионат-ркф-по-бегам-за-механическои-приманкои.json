@@ -1,0 +1,694 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-26T14:02:16.234Z",
+  "source": "manual-entry",
+  "event_id": 20221027,
+  "event": {
+    "id": 20221027,
+    "year": 2022,
+    "date_start": "2022-10-08",
+    "date_end": "2022-10-08",
+    "rank_label": "Чемпионат РКФ\n(БЗМП)",
+    "event_type": "bzmp",
+    "competition_kind": "Соревнования РКФ",
+    "competition_type": "Бега за механической приманкой (курсинг)",
+    "title": "Чемпионат РКФ по бегам за механической приманкой (курсинг)",
+    "host_club": null,
+    "region": "Ярославская область",
+    "location": "Ярославская область",
+    "catalog_url": "https://drive.google.com/file/d/16JSloSK-y1EPxBTAV4joMmQX1K6ZCsHQ/view?usp=sharing",
+    "results_url": null,
+    "rules_url": null,
+    "results_pdf_url": null,
+    "confirmed": 1,
+    "last_modified": "2026-10-26T14:02:16.234Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": "Видус Г.С., Вронская О.В.",
+    "track_schemes": []
+  },
+  "result_count": 10,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20221027,
+      "dog_id": 9216,
+      "breed_class": "Американский голый терьер - Стандартный - Кобели",
+      "catalog_no": 1,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dropped_out",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "red",
+            "reason": "Сошёл",
+            "disqualified": false,
+            "dropped_out": true,
+            "scores": [
+              null,
+              null,
+              null,
+              null,
+              null
+            ],
+            "judges": [
+              {
+                "scores": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "sum": null
+              },
+              {
+                "scores": [
+                  null,
+                  null,
+                  null,
+                  null,
+                  null
+                ],
+                "sum": null
+              }
+            ],
+            "total": null
+          }
+        ],
+        "grand_total": null
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Сошёл",
+      "dog": {
+        "id": 9216,
+        "dog_key": "паик-paiyk--американскии-голыи-терье",
+        "name_lat": "ПАЙК /PAIYK",
+        "name_ru": "ПАЙК /PAIYK",
+        "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20221027,
+      "dog_id": 11032,
+      "breed_class": "Американский пит-бультерьер - Стандартный - Суки",
+      "catalog_no": 2,
+      "placement": 1,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 179
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 4,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  18
+                ],
+                "sum": 92
+              },
+              {
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 181
+          }
+        ],
+        "grand_total": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11032,
+        "dog_key": "brave-fighter-s-milk-and-honey--американскии-пит-бультер",
+        "name_lat": "BRAVE FIGHTER'S MILK AND HONEY",
+        "name_ru": "BRAVE FIGHTER'S MILK AND HONEY",
+        "breed": "Американский пит-бультерьер",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20221027,
+      "dog_id": 11101,
+      "breed_class": "Бельгийская овчарка (Малинуа) - Юниоры - Суки",
+      "catalog_no": 3,
+      "placement": 1,
+      "total_score": 176,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Лучший юниор",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 176
+          }
+        ],
+        "grand_total": 176
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11101,
+        "dog_key": "vilanta-diamond-grace-kelly-m--бельгииская-овчарка-мали",
+        "name_lat": "VILANTA DIAMOND GRACE KELLY (M)",
+        "name_ru": "ВИЛАНТА ДАЙМОНД ГРЕЙС КЕЛЛИ (М)",
+        "breed": "Бельгийская овчарка (Малинуа)",
+        "sex": "Сука",
+        "owner": "Опарина М. А."
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20221027,
+      "dog_id": 9220,
+      "breed_class": "Бигль - Стандартный - Общая",
+      "catalog_no": 4,
+      "placement": 1,
+      "total_score": 168,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 168
+          }
+        ],
+        "grand_total": 168
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9220,
+        "dog_key": "арес--бигль",
+        "name_lat": "АРЕС",
+        "name_ru": "АРЕС",
+        "breed": "БИГЛЬ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20221027,
+      "dog_id": 9448,
+      "breed_class": "Бигль - Стандартный - Общая",
+      "catalog_no": 5,
+      "placement": 2,
+      "total_score": 163,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  15,
+                  18
+                ],
+                "sum": 81
+              },
+              {
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  15,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 163
+          }
+        ],
+        "grand_total": 163
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9448,
+        "dog_key": "исла-саванна-джорджия--бигль",
+        "name_lat": "ИСЛА САВАННА ДЖОРДЖИЯ",
+        "name_ru": "ИСЛА САВАННА ДЖОРДЖИЯ",
+        "breed": "БИГЛЬ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20221027,
+      "dog_id": 9545,
+      "breed_class": "Бордер Колли - Стандартный - Суки",
+      "catalog_no": 6,
+      "placement": 1,
+      "total_score": 373,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 185
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 2,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              },
+              {
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 188
+          }
+        ],
+        "grand_total": 373
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9545,
+        "dog_key": "aisknekht-tequila--бордер-колли",
+        "name_lat": "AISKNEKHT TEQUILA",
+        "name_ru": "AISKNEKHT TEQUILA",
+        "breed": "БОРДЕР КОЛЛИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20221027,
+      "dog_id": 9230,
+      "breed_class": "Метис - Стандартный - Общая",
+      "catalog_no": 8,
+      "placement": 1,
+      "total_score": 182,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "blue",
+            "judges": [
+              {
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 182
+          }
+        ],
+        "grand_total": 182
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9230,
+        "dog_key": "пес--метис",
+        "name_lat": "PES",
+        "name_ru": "ПЕС",
+        "breed": "МЕТИС",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20221027,
+      "dog_id": 9236,
+      "breed_class": "Метис - Стандартный - Общая",
+      "catalog_no": 9,
+      "placement": 2,
+      "total_score": 181,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  18,
+                  16,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 181
+          }
+        ],
+        "grand_total": 181
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9236,
+        "dog_key": "кнопа--метис",
+        "name_lat": "KNOPA",
+        "name_ru": "КНОПА",
+        "breed": "МЕТИС",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20221027,
+      "dog_id": 9232,
+      "breed_class": "Метис - Стандартный - Общая",
+      "catalog_no": 7,
+      "placement": 3,
+      "total_score": 173,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  15,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 173
+          }
+        ],
+        "grand_total": 173
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9232,
+        "dog_key": "боня--метис",
+        "name_lat": "BONYA",
+        "name_ru": "БОНЯ",
+        "breed": "МЕТИС",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20221027,
+      "dog_id": 654,
+      "breed_class": "Цвергпинчер - Юниоры - Кобели",
+      "catalog_no": 10,
+      "placement": 1,
+      "total_score": 183,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "Лучший юниор",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": "red",
+            "judges": [
+              {
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "scores": [
+                  17,
+                  18,
+                  20,
+                  19,
+                  19
+                ],
+                "sum": 93
+              }
+            ],
+            "total": 183
+          }
+        ],
+        "grand_total": 183
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 654,
+        "dog_key": "цесвиль-гарден-иринус-голд-бреин-tsesvil--цвергпинчер",
+        "name_lat": "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН /TSESVIL GARDEN IRINUS GOLD BREIN",
+        "name_ru": "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН /TSESVIL GARDEN IRINUS GOLD BREIN",
+        "breed": "ЦВЕРГПИНЧЕР",
+        "sex": "Кобель",
+        "owner": null
+      }
+    }
+  ],
+  "results_pdf_url": "https://drive.google.com/file/d/1GOkygA8wrwn86DO4Oxs2w7PgezbKq2AX/view?usp=sharing",
+  "catalog_url": "https://drive.google.com/file/d/16JSloSK-y1EPxBTAV4joMmQX1K6ZCsHQ/view?usp=sharing"
+}

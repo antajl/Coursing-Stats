@@ -58,6 +58,22 @@ export default function DoninoRecordsColumns({
   const listLength = Math.max(speedRecords.length, coursingRecords.length)
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(listLength, [resetScrollKey])
 
+  const latestSpeedDate = useMemo(() => {
+    let max = ''
+    for (const r of speedRecords) {
+      if (r.date && r.date > max) max = r.date
+    }
+    return max || null
+  }, [speedRecords])
+
+  const latestCoursingDate = useMemo(() => {
+    let max = ''
+    for (const r of coursingRecords) {
+      if (r.date && r.date > max) max = r.date
+    }
+    return max || null
+  }, [coursingRecords])
+
   const visibleSpeed = speedRecords.slice(0, visibleCount)
   const visibleCoursing = coursingRecords.slice(0, visibleCount)
 
@@ -121,6 +137,7 @@ export default function DoninoRecordsColumns({
                   screenshotUrl={record.screenshot_url}
                   trackType={record.track_type}
                   rank={record.rank}
+                  latestDateInDataset={latestSpeedDate}
                 />
               ))
             ) : (
@@ -144,6 +161,7 @@ export default function DoninoRecordsColumns({
                   history={record.history}
                   timeSeconds={record.time_seconds}
                   rank={record.rank}
+                  latestDateInDataset={latestCoursingDate}
                 />
               ))
             ) : (

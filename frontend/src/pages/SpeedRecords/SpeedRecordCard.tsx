@@ -1,10 +1,11 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Image } from 'lucide-react'
 import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import SpeedHistorySparkline from '../../components/SpeedHistorySparkline'
 import SpeedStatusBadge from '../../components/SpeedStatusBadge'
-import { formatRecordDate, isRecentRecordDate } from '../../lib/recordDates'
+import { formatRecordDate, isRecentDoninoDate, parseRecordHistory } from '../../lib/recordDates'
 import { toDogTitleCase } from '../../lib/dogName'
 import { Icons } from '../../lib/icons'
 
@@ -24,19 +25,40 @@ interface SpeedRecordCardProps {
 
 export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
   const ChevronRight = Icons.chevronRight
-  const hasHistoryChart = Array.isArray(record.history) && record.history.length > 0
+  const historyItems = useMemo(() => parseRecordHistory(record.history), [record.history])
+  const hasHistoryChart = historyItems.length > 0
+  const isRecent = isRecentDoninoDate(record.date)
 
-  const isRecent = isRecentRecordDate(record.date)
-  const showNew = isRecent && record.status === 'new'
-  const showUpd = isRecent && !showNew && (record.status === 'improved' || hasHistoryChart)
+  const isNewDog = record.status === 'new' || (!hasHistoryChart && record.status !== 'improved')
+  const isImprovedDog = record.status === 'improved' || (hasHistoryChart && !isNewDog)
+
+  const showNew = isRecent && isNewDog
+  const showUpd = isRecent && !showNew && isImprovedDog
+
+  const prevSpeed = useMemo(() => {
+    if (!hasHistoryChart) return null
+    const speeds = historyItems
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .map((h: any) => Number(h.speed_km_h ?? h.speed ?? 0))
+      .filter((s) => s > 0)
+    return speeds.length > 0 ? Math.max(...speeds).toFixed(1) : null
+  }, [hasHistoryChart, historyItems])
 
   const speedBlock = (
     <div className="relative shrink-0">
       <span className="inline-block rounded-full bg-camel-600 px-3 py-1.5 text-xs font-bold text-white shadow-sm">
         {record.speed_km_h} км/ч
       </span>
-      {showNew && <SpeedStatusBadge variant="new" />}
-      {showUpd && <SpeedStatusBadge variant="upd" />}
+      {showNew && <SpeedStatusBadge variant="new" date={record.date} />}
+      {showUpd && (
+        <SpeedStatusBadge
+          variant="upd"
+          date={record.date}
+          currentValue={record.speed_km_h}
+          prevValue={prevSpeed}
+          unit="км/ч"
+        />
+      )}
     </div>
   )
 
@@ -86,12 +108,11 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
           )}
         </div>
 
-        <div className="hidden shrink-0 items-center gap-3 sm:col-start-3 sm:flex">
+        <div className="hidden shrink-0 items-center gap-2 sm:col-start-3 sm:flex">
           {speedBlock}
-          <ChevronRight
-            className="h-5 w-5 text-old-money-300 transition-all group-hover:translate-x-0.5 group-hover:text-camel-600"
-            strokeWidth={2}
-          />
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg text-charcoal-400 transition-colors group-hover:bg-cream-200 group-hover:text-charcoal-600">
+            <ChevronRight className="h-4 w-4" />
+          </div>
         </div>
       </Link>
 
@@ -100,12 +121,12 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
           href={record.screenshot_url}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Открыть скриншот"
-          title="Скриншот"
-          className="flex shrink-0 flex-col items-center justify-center gap-1 self-stretch border-l border-old-money-200 px-2.5 py-3 text-xs font-semibold text-old-money-600 transition-colors hover:bg-camel-50 hover:text-camel-700 sm:px-3"
+          className="hidden items-center justify-center border-l border-old-money-200 bg-cream-50/50 px-3 text-old-money-600 transition-colors hover:bg-cream-100 hover:text-charcoal-900 sm:flex"
+          aria-label="Скриншот радара"
+          title="Скриншот радара"
+          onClick={(e) => e.stopPropagation()}
         >
-          <Image size={16} strokeWidth={2} className="shrink-0" aria-hidden />
-          <span>Скрин</span>
+          <Image className="h-4 w-4" />
         </a>
       )}
     </div>

@@ -358,3 +358,31 @@ export function isRecentRecordDate(
   const diffDays = diffMs / (1000 * 60 * 60 * 24)
   return diffDays >= -1 && diffDays <= maxDays
 }
+
+/**
+ * Проверяет «свежесть» замера Донино:
+ * 1) либо в пределах maxDays (30 дней) от Date.now();
+ * 2) либо входит в последнюю проведённую сессию (в пределах batchWindowDays от максимальной даты в наборе данных).
+ */
+export function isRecentDoninoDate(
+  value: string | number | null | undefined,
+  latestDateInDataset?: string | number | null,
+  maxDays = DEFAULT_MAX_RECENT_RECORD_DAYS,
+  batchWindowDays = 14
+): boolean {
+  if (!value) return false
+
+  if (isRecentRecordDate(value, maxDays)) return true
+
+  if (latestDateInDataset) {
+    const recordDate = parseRecordDate(value)
+    const refDate = parseRecordDate(latestDateInDataset)
+    if (recordDate && refDate) {
+      const diffMs = refDate.getTime() - recordDate.getTime()
+      const diffDays = diffMs / (1000 * 60 * 60 * 24)
+      return diffDays >= -1 && diffDays <= batchWindowDays
+    }
+  }
+
+  return false
+}

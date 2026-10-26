@@ -1,8 +1,233 @@
 {
   "schema": "coursing-stats/index-top-speed-v1",
   "year": 2022,
-  "count": 130,
+  "count": 183,
   "items": [
+    {
+      "dog_id": 11107,
+      "name_lat": "SERYY",
+      "name_ru": "Серый",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 59.603,
+      "avg_speed": 59.17,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11108,
+      "name_lat": "GAMMI",
+      "name_ru": "Гамми",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 59.211,
+      "avg_speed": 59.11,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11109,
+      "name_lat": "DZHIM",
+      "name_ru": "Джим",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 59.016,
+      "avg_speed": 58.26,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11110,
+      "name_lat": "LARI",
+      "name_ru": "ЛАРИ",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 58.158,
+      "avg_speed": 57.65,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11111,
+      "name_lat": "BRUNO",
+      "name_ru": "Бруно",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 57.878,
+      "avg_speed": 57.51,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9374,
+      "name_lat": "КУПАВА ЯСНАЯ",
+      "name_ru": "КУПАВА ЯСНАЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 57.785,
+      "avg_speed": 57.65,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "aggression_count": 1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 78,
+      "name_lat": "GUY",
+      "name_ru": "GUY",
+      "breed": "УИППЕТ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 57.785,
+      "avg_speed": 52.55,
+      "total_starts": 2,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10960,
+      "name_lat": "DRUG SEREBRYANYY DZHIM BIM",
+      "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ДЖИМ БИМ",
+      "breed": "Русская псовая борзая",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 57.692,
+      "avg_speed": 55.47,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11112,
+      "name_lat": "VENYA",
+      "name_ru": "Веня",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 57.143,
+      "avg_speed": 56.87,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11113,
+      "name_lat": "BETMAN",
+      "name_ru": "Бэтман",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 56.782,
+      "avg_speed": 56.52,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9275,
+      "name_lat": "ХОРЛЕНДС ИНТЕРМАЛ ЭНЕРДЖИ",
+      "name_ru": "ХОРЛЕНДС ИНТЕРМАЛ ЭНЕРДЖИ",
+      "breed": "УИППЕТ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 56.782,
+      "avg_speed": 53.49,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9480,
+      "name_lat": "NAGAIKA",
+      "name_ru": "НАГАЙКА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 56.693,
+      "avg_speed": 52.77,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 11116,
+      "name_lat": "DENSI MINDAYT SAN",
+      "name_ru": "ДЕНСИ Миндайт сан",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 56.25,
+      "avg_speed": 55.18,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 11114,
+      "name_lat": "DZHINI LAMBOR (DZHOY)",
+      "name_ru": "ДЖИНИ ЛАМБОР (ДЖОЙ)",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 55.47,
+      "avg_speed": 54.68,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11103,
+      "name_lat": "BASYA",
+      "name_ru": "Бася",
+      "breed": "Левретка",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 55.47,
+      "avg_speed": 47.76,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11117,
+      "name_lat": "ROZA",
+      "name_ru": "Роза",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 54.878,
+      "avg_speed": 53.98,
+      "total_starts": 1,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
     {
       "dog_id": 10971,
       "name_lat": "FIONN CLANN LANCE LOMOND",
@@ -32,6 +257,48 @@
       "sex": "M"
     },
     {
+      "dog_id": 9484,
+      "name_lat": "LUNNAJA RADUGA ROSSIYA",
+      "name_ru": "ЛУННАЯ РАДУГА РОССИЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 53.571,
+      "avg_speed": 51.55,
+      "total_starts": 1,
+      "rank_delta": -1,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10522,
+      "name_lat": "STILAR HALESTORM",
+      "name_ru": "STILAR HALESTORM",
+      "breed": "УИППЕТ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 53.019,
+      "avg_speed": 52.94,
+      "total_starts": 1,
+      "rank_delta": -1,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11106,
+      "name_lat": "VIKI",
+      "name_ru": "Вики",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 53.019,
+      "avg_speed": 52.75,
+      "total_starts": 1,
+      "rank_delta": -1,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 7088,
       "name_lat": "STANGERS LAND VALDIVIA",
       "name_ru": "СТАНГЕРС ЛАНД ВАЛЬДИВИЯ",
@@ -41,9 +308,23 @@
       "best_speed": 52.986,
       "avg_speed": 49.55,
       "total_starts": 3,
-      "rank_delta": 7,
-      "rank_delta_breed": 5,
+      "rank_delta": 18,
+      "rank_delta_breed": 6,
       "sex": "F"
+    },
+    {
+      "dog_id": 11105,
+      "name_lat": "Shawati Kaylan",
+      "name_ru": "Shawati Kaylan",
+      "breed": "Салюки",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 52.863,
+      "avg_speed": 52,
+      "total_starts": 1,
+      "rank_delta": -2,
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 255,
@@ -83,8 +364,8 @@
       "best_speed": 52.676,
       "avg_speed": 50.01,
       "total_starts": 2,
-      "rank_delta": 16,
-      "rank_delta_breed": 14,
+      "rank_delta": 28,
+      "rank_delta_breed": 15,
       "sex": "F"
     },
     {
@@ -97,8 +378,8 @@
       "best_speed": 52.654,
       "avg_speed": 48.59,
       "total_starts": 3,
-      "rank_delta": 17,
-      "rank_delta_breed": 15,
+      "rank_delta": 29,
+      "rank_delta_breed": 16,
       "sex": "M"
     },
     {
@@ -111,9 +392,51 @@
       "best_speed": 52.456,
       "avg_speed": 49.13,
       "total_starts": 3,
-      "rank_delta": 1,
-      "rank_delta_breed": -1,
+      "rank_delta": 11,
+      "rank_delta_breed": 0,
       "sex": "M"
+    },
+    {
+      "dog_id": 11115,
+      "name_lat": "OLIVER",
+      "name_ru": "Оливер",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 52.402,
+      "avg_speed": 50.72,
+      "total_starts": 1,
+      "rank_delta": -7,
+      "rank_delta_breed": -6,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11104,
+      "name_lat": "LORELEYA",
+      "name_ru": "Лорелея",
+      "breed": "Русская псовая борзая",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 52.326,
+      "avg_speed": 49.21,
+      "total_starts": 1,
+      "rank_delta": -7,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9527,
+      "name_lat": "DODONA BALTAS VEJAS",
+      "name_ru": "DODONA BALTAS VEJAS",
+      "breed": "ПОДЕНКО ИБИЦЕНКО",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 52.098,
+      "avg_speed": 51.66,
+      "total_starts": 1,
+      "rank_delta": -7,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 5658,
@@ -125,7 +448,7 @@
       "best_speed": 51.916,
       "avg_speed": 47.63,
       "total_starts": 3,
-      "rank_delta": 29,
+      "rank_delta": 41,
       "rank_delta_breed": 25,
       "sex": "M"
     },
@@ -139,8 +462,8 @@
       "best_speed": 51.852,
       "avg_speed": 49.67,
       "total_starts": 2,
-      "rank_delta": 6,
-      "rank_delta_breed": 4,
+      "rank_delta": 13,
+      "rank_delta_breed": 3,
       "sex": "M"
     },
     {
@@ -167,7 +490,7 @@
       "best_speed": 51.767,
       "avg_speed": 47.69,
       "total_starts": 3,
-      "rank_delta": 19,
+      "rank_delta": 29,
       "rank_delta_breed": 16,
       "sex": "M"
     },
@@ -181,7 +504,7 @@
       "best_speed": 51.724,
       "avg_speed": 48.87,
       "total_starts": 3,
-      "rank_delta": 1,
+      "rank_delta": 9,
       "rank_delta_breed": -1,
       "sex": "F"
     },
@@ -195,7 +518,7 @@
       "best_speed": 51.618,
       "avg_speed": 49.01,
       "total_starts": 2,
-      "rank_delta": 14,
+      "rank_delta": 24,
       "rank_delta_breed": 12,
       "sex": "M"
     },
@@ -214,6 +537,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 9233,
+      "name_lat": "МИТЯ",
+      "name_ru": "МИТЯ",
+      "breed": "МЕТИС",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 51.355,
+      "avg_speed": 48.85,
+      "total_starts": 1,
+      "rank_delta": -12,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 10427,
       "name_lat": "SILVER SABLE",
       "name_ru": "SILVER SABLE",
@@ -223,7 +560,7 @@
       "best_speed": 51.345,
       "avg_speed": 49.61,
       "total_starts": 2,
-      "rank_delta": -8,
+      "rank_delta": -2,
       "rank_delta_breed": -9,
       "sex": "F"
     },
@@ -237,7 +574,7 @@
       "best_speed": 51.199,
       "avg_speed": 47.75,
       "total_starts": 2,
-      "rank_delta": 25,
+      "rank_delta": 40,
       "rank_delta_breed": 21,
       "sex": "F"
     },
@@ -251,9 +588,23 @@
       "best_speed": 51.116,
       "avg_speed": 49.02,
       "total_starts": 2,
-      "rank_delta": 2,
-      "rank_delta_breed": 1,
+      "rank_delta": 9,
+      "rank_delta_breed": 0,
       "sex": "M"
+    },
+    {
+      "dog_id": 10430,
+      "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+      "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+      "breed": "ЛЕВРЕТКА",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 50.992,
+      "avg_speed": 45.97,
+      "total_starts": 2,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 9456,
@@ -279,8 +630,22 @@
       "best_speed": 50.827,
       "avg_speed": 48.7,
       "total_starts": 2,
-      "rank_delta": 12,
+      "rank_delta": 20,
       "rank_delta_breed": 10,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9236,
+      "name_lat": "KNOPA",
+      "name_ru": "КНОПА",
+      "breed": "МЕТИС",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 50.704,
+      "avg_speed": 48.49,
+      "total_starts": 1,
+      "rank_delta": -17,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -293,8 +658,8 @@
       "best_speed": 50.684,
       "avg_speed": 48.84,
       "total_starts": 2,
-      "rank_delta": -4,
-      "rank_delta_breed": -5,
+      "rank_delta": 0,
+      "rank_delta_breed": -6,
       "sex": "M"
     },
     {
@@ -307,8 +672,8 @@
       "best_speed": 50.319,
       "avg_speed": 47.76,
       "total_starts": 2,
-      "rank_delta": -3,
-      "rank_delta_breed": -4,
+      "rank_delta": 2,
+      "rank_delta_breed": -5,
       "sex": "M"
     },
     {
@@ -321,7 +686,7 @@
       "best_speed": 50.179,
       "avg_speed": 46.42,
       "total_starts": 2,
-      "rank_delta": 29,
+      "rank_delta": 44,
       "rank_delta_breed": 21,
       "sex": "M"
     },
@@ -377,9 +742,23 @@
       "best_speed": 49.587,
       "avg_speed": 48.11,
       "total_starts": 2,
-      "rank_delta": -1,
+      "rank_delta": 6,
       "rank_delta_breed": -1,
       "sex": "M"
+    },
+    {
+      "dog_id": 11120,
+      "name_lat": "SHANI",
+      "name_ru": "Шани",
+      "breed": "Фараонова собака",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 49.519,
+      "avg_speed": 48.39,
+      "total_starts": 1,
+      "rank_delta": -24,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 9312,
@@ -394,6 +773,20 @@
       "rank_delta": -24,
       "rank_delta_breed": -1,
       "aggression_count": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9232,
+      "name_lat": "BONYA",
+      "name_ru": "БОНЯ",
+      "breed": "МЕТИС",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 49.383,
+      "avg_speed": 46.05,
+      "total_starts": 2,
+      "rank_delta": -24,
+      "rank_delta_breed": 0,
       "sex": "M"
     },
     {
@@ -434,7 +827,7 @@
       "best_speed": 49.219,
       "avg_speed": 47.21,
       "total_starts": 2,
-      "rank_delta": 3,
+      "rank_delta": 9,
       "rank_delta_breed": 3,
       "sex": "F"
     },
@@ -467,6 +860,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 9230,
+      "name_lat": "PES",
+      "name_ru": "ПЕС",
+      "breed": "МЕТИС",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 49.046,
+      "avg_speed": 48.98,
+      "total_starts": 1,
+      "rank_delta": -27,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 11053,
       "name_lat": "ARTEFAKT RICHARD",
       "name_ru": "АРТЕФАКТ РИЧАРД",
@@ -479,6 +886,20 @@
       "rank_delta": -27,
       "rank_delta_breed": -1,
       "sex": "M"
+    },
+    {
+      "dog_id": 11121,
+      "name_lat": "Brave Fighter's Pure Energy",
+      "name_ru": "Brave Fighter's Pure Energy (Пуля)",
+      "breed": "Американский пит-бультерьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 48.913,
+      "avg_speed": 47.56,
+      "total_starts": 1,
+      "rank_delta": -27,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10619,
@@ -504,7 +925,7 @@
       "best_speed": 48.875,
       "avg_speed": 47.57,
       "total_starts": 2,
-      "rank_delta": -7,
+      "rank_delta": -4,
       "rank_delta_breed": -5,
       "aggression_count": 1,
       "sex": "F"
@@ -566,18 +987,19 @@
       "sex": "M"
     },
     {
-      "dog_id": 78,
-      "name_lat": "GUY",
-      "name_ru": "GUY",
-      "breed": "УИППЕТ",
+      "dog_id": 7261,
+      "name_lat": "AL NAFISEH HAIFA",
+      "name_ru": "АЛЬ НАФИСЭХ ХАЙФА",
+      "breed": "САЛЮКИ",
       "year_from": 2022,
       "year_to": 2022,
-      "best_speed": 48.25,
-      "avg_speed": 47.68,
+      "best_speed": 48.518,
+      "avg_speed": 44.8,
       "total_starts": 1,
-      "rank_delta": -26,
-      "rank_delta_breed": -24,
-      "sex": "M"
+      "rank_delta": -27,
+      "rank_delta_breed": 0,
+      "aggression_count": 1,
+      "sex": "F"
     },
     {
       "dog_id": 7596,
@@ -591,6 +1013,20 @@
       "total_starts": 1,
       "rank_delta": "NEW",
       "rank_delta_breed": "NEW",
+      "sex": "F"
+    },
+    {
+      "dog_id": 11032,
+      "name_lat": "BRAVE FIGHTER'S MILK AND HONEY",
+      "name_ru": "BRAVE FIGHTER'S MILK AND HONEY",
+      "breed": "Американский пит-бультерьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 48.064,
+      "avg_speed": 40.7,
+      "total_starts": 1,
+      "rank_delta": -25,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -622,6 +1058,20 @@
       "sex": "F"
     },
     {
+      "dog_id": 11118,
+      "name_lat": "Volar Blek Shark Uma",
+      "name_ru": "Volar Blek Shark Uma",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 47.809,
+      "avg_speed": 36.78,
+      "total_starts": 1,
+      "rank_delta": -23,
+      "rank_delta_breed": -21,
+      "sex": "F"
+    },
+    {
       "dog_id": 9435,
       "name_lat": "ГРИНЧ НОЧНОЙ ПОЛЕТ",
       "name_ru": "ГРИНЧ НОЧНОЙ ПОЛЕТ",
@@ -634,6 +1084,20 @@
       "rank_delta": -22,
       "rank_delta_breed": -20,
       "sex": "M"
+    },
+    {
+      "dog_id": 11033,
+      "name_lat": "BRAVE FIGHTER'S ULTIMA",
+      "name_ru": "BRAVE FIGHTER'S ULTIMA",
+      "breed": "Американский пит-бультерьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 47.493,
+      "avg_speed": 45.68,
+      "total_starts": 1,
+      "rank_delta": -21,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10282,
@@ -692,6 +1156,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 10525,
+      "name_lat": "TSVET SOLNTSA DREVNYAYA LEGENDA",
+      "name_ru": "ЦВЕТ СОЛНЦА ДРЕВНЯЯ ЛЕГЕНДА",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 46.753,
+      "avg_speed": 43.55,
+      "total_starts": 2,
+      "rank_delta": -17,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 10023,
       "name_lat": "BLACK JACK",
       "name_ru": "BLACK JACK",
@@ -748,6 +1226,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 9222,
+      "name_lat": "NEZHNOYE PLAMYA ANTEN",
+      "name_ru": "NEZHNOYE PLAMYA ANTEN",
+      "breed": "ИРЛАНДСКИЙ ТЕРЬЕР",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 46.332,
+      "avg_speed": 43.53,
+      "total_starts": 1,
+      "rank_delta": -16,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 10973,
       "name_lat": "KETLIN FAUST",
       "name_ru": "КЕТЛИН ФАУСТ",
@@ -760,6 +1252,20 @@
       "rank_delta": -15,
       "rank_delta_breed": -13,
       "sex": "M"
+    },
+    {
+      "dog_id": 11122,
+      "name_lat": "Brave Fighter's Rainbow",
+      "name_ru": "Brave Fighter's Rainbow",
+      "breed": "Американский пит-бультерьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 46.095,
+      "avg_speed": 45.98,
+      "total_starts": 1,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10428,
@@ -776,6 +1282,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 10970,
+      "name_lat": "EYO VELICHESTVO UDACHA IZ VOLSHEBNOGO LESA",
+      "name_ru": "ЕЕ ВЕЛИЧЕСТВО УДАЧА ИЗ ВОЛШЕБНОГО ЛЕСА",
+      "breed": "Ирландский волкодав",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 46.036,
+      "avg_speed": 39.84,
+      "total_starts": 2,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 9257,
       "name_lat": "OBEREG RUSI AGAT",
       "name_ru": "ОБЕРЕГ РУСИ АГАТ",
@@ -787,6 +1307,34 @@
       "total_starts": 1,
       "rank_delta": -15,
       "rank_delta_breed": -1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11102,
+      "name_lat": "BORSHCHIK",
+      "name_ru": "Борщик (вне зачёта)",
+      "breed": "Ирландский вольфхаунд",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 45.743,
+      "avg_speed": 45.34,
+      "total_starts": 1,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11026,
+      "name_lat": "BRAVE FIGHTER'S UNCHAIN MY HEART",
+      "name_ru": "BRAVE FIGHTER'S UNCHAIN MY HEART",
+      "breed": "Американский пит-бультерьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 45.685,
+      "avg_speed": 45.1,
+      "total_starts": 1,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
       "sex": "M"
     },
     {
@@ -888,6 +1436,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 11129,
+      "name_lat": "BRODERIK",
+      "name_ru": "Бродерик",
+      "breed": "Ирландский терьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 44.832,
+      "avg_speed": 42.8,
+      "total_starts": 1,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 10187,
       "name_lat": "BRILLIANT FLASH",
       "name_ru": "BRILLIANT FLASH",
@@ -902,6 +1464,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 9216,
+      "name_lat": "ПАЙК /PAIYK",
+      "name_ru": "ПАЙК /PAIYK",
+      "breed": "АМЕРИКАНСКИЙ ГОЛЫЙ ТЕРЬЕР",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 44.665,
+      "avg_speed": 43.41,
+      "total_starts": 1,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 5907,
       "name_lat": "AMENEMHET ANDORA TA MALTA",
       "name_ru": "АМЕНЕМХЕТ АНДОРА ТА МАЛЬТА",
@@ -911,7 +1487,7 @@
       "best_speed": 44.351,
       "avg_speed": 42.78,
       "total_starts": 2,
-      "rank_delta": -3,
+      "rank_delta": 2,
       "rank_delta_breed": 1,
       "sex": "F"
     },
@@ -945,6 +1521,34 @@
       "sex": "F"
     },
     {
+      "dog_id": 9438,
+      "name_lat": "RUSSKIY FAVORIT BESSONNAYA NOCH",
+      "name_ru": "РУССКИЙ ФАВОРИТ БЕССОННАЯ НОЧЬ",
+      "breed": "АМЕРИКАНСКИЙ СТАФФОРДШИРСКИЙ ТЕРЬЕР",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 43.902,
+      "avg_speed": 41.39,
+      "total_starts": 1,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 11130,
+      "name_lat": "VETER",
+      "name_ru": "Ветер",
+      "breed": "Ирландский терьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 43.796,
+      "avg_speed": 42.88,
+      "total_starts": 1,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 481,
       "name_lat": "SIMPLE OBSESSION CHAPTER OF MY LIFE",
       "name_ru": "СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ",
@@ -959,6 +1563,20 @@
       "sex": "F"
     },
     {
+      "dog_id": 11035,
+      "name_lat": "YURATE YANTARNAYA KAPLYA",
+      "name_ru": "ЮРАТЕ ЯНТАРНАЯ КАПЛЯ",
+      "breed": "Ирландский терьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 43.636,
+      "avg_speed": 43.41,
+      "total_starts": 1,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 527,
       "name_lat": "CHARISMATIC DOG DULSINEA",
       "name_ru": "CHARISMATIC DOG DULSINEA",
@@ -968,7 +1586,7 @@
       "best_speed": 43.448,
       "avg_speed": 41.01,
       "total_starts": 2,
-      "rank_delta": 0,
+      "rank_delta": 6,
       "rank_delta_breed": 3,
       "sex": "F"
     },
@@ -1044,20 +1662,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 10430,
-      "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
-      "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
-      "breed": "ЛЕВРЕТКА",
-      "year_from": 2022,
-      "year_to": 2022,
-      "best_speed": 43.018,
-      "avg_speed": 42.92,
-      "total_starts": 1,
-      "rank_delta": "NEW",
-      "rank_delta_breed": "NEW",
-      "sex": "F"
-    },
-    {
       "dog_id": 11054,
       "name_lat": "DERZHAVA",
       "name_ru": "ДЕРЖАВА",
@@ -1067,7 +1671,7 @@
       "best_speed": 42.936,
       "avg_speed": 41.54,
       "total_starts": 1,
-      "rank_delta": -19,
+      "rank_delta": -18,
       "rank_delta_breed": -1,
       "sex": "F"
     },
@@ -1086,6 +1690,21 @@
       "sex": "F"
     },
     {
+      "dog_id": 43,
+      "name_lat": "SUNRISE LEUR ADAM",
+      "name_ru": "SUNRISE LEUR ADAM",
+      "breed": "БАСЕНДЖИ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 42.755,
+      "avg_speed": 39.25,
+      "total_starts": 2,
+      "rank_delta": -19,
+      "rank_delta_breed": 0,
+      "aggression_count": 1,
+      "sex": "M"
+    },
+    {
       "dog_id": 7365,
       "name_lat": "ROSSO BOREALE VARVARA",
       "name_ru": "РОССО БОРЕАЛЕ ВАРВАРА",
@@ -1100,6 +1719,20 @@
       "sex": "F"
     },
     {
+      "dog_id": 11126,
+      "name_lat": "House The Rainbow Uzochi Zikimo",
+      "name_ru": "House The Rainbow Uzochi Zikimo",
+      "breed": "Басенджи",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 42.553,
+      "avg_speed": 40.62,
+      "total_starts": 1,
+      "rank_delta": -20,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 7354,
       "name_lat": "GALMAD STAR VOIBOR",
       "name_ru": "ГАЛМАД СТАР ВОИБОР",
@@ -1109,7 +1742,7 @@
       "best_speed": 42.061,
       "avg_speed": 42.04,
       "total_starts": 1,
-      "rank_delta": -21,
+      "rank_delta": -20,
       "rank_delta_breed": -1,
       "sex": "M"
     },
@@ -1123,7 +1756,7 @@
       "best_speed": 41.901,
       "avg_speed": 41.81,
       "total_starts": 1,
-      "rank_delta": -21,
+      "rank_delta": -20,
       "rank_delta_breed": -11,
       "sex": "F"
     },
@@ -1137,7 +1770,7 @@
       "best_speed": 41.836,
       "avg_speed": 41.64,
       "total_starts": 1,
-      "rank_delta": -21,
+      "rank_delta": -20,
       "rank_delta_breed": -1,
       "sex": "M"
     },
@@ -1151,7 +1784,7 @@
       "best_speed": 41.711,
       "avg_speed": 41.38,
       "total_starts": 1,
-      "rank_delta": -21,
+      "rank_delta": -20,
       "rank_delta_breed": -4,
       "sex": "F"
     },
@@ -1179,22 +1812,22 @@
       "best_speed": 41.672,
       "avg_speed": 41.3,
       "total_starts": 1,
-      "rank_delta": -21,
+      "rank_delta": -20,
       "rank_delta_breed": -1,
       "sex": "M"
     },
     {
-      "dog_id": 10525,
-      "name_lat": "TSVET SOLNTSA DREVNYAYA LEGENDA",
-      "name_ru": "ЦВЕТ СОЛНЦА ДРЕВНЯЯ ЛЕГЕНДА",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "dog_id": 11132,
+      "name_lat": "DUDU SHERI",
+      "name_ru": "Дуду Шери",
+      "breed": "Пудель стандартный",
       "year_from": 2022,
       "year_to": 2022,
-      "best_speed": 41.632,
-      "avg_speed": 41.5,
+      "best_speed": 41.475,
+      "avg_speed": 40.18,
       "total_starts": 1,
-      "rank_delta": -21,
-      "rank_delta_breed": -1,
+      "rank_delta": -20,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -1212,6 +1845,20 @@
       "sex": "F"
     },
     {
+      "dog_id": 11127,
+      "name_lat": "LANTSELOT",
+      "name_ru": "Ланцелот",
+      "breed": "Басенджи",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 41.19,
+      "avg_speed": 40.82,
+      "total_starts": 1,
+      "rank_delta": -21,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
       "dog_id": 5735,
       "name_lat": "DZHANA DZHAN GENRI MORGAN",
       "name_ru": "ДЖАНА ДЖАН ГЕНРИ МОРГАН",
@@ -1224,6 +1871,20 @@
       "rank_delta": "NEW",
       "rank_delta_breed": "NEW",
       "aggression_count": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11128,
+      "name_lat": "SMART",
+      "name_ru": "Смарт",
+      "breed": "Басенджи",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 41.049,
+      "avg_speed": 39.39,
+      "total_starts": 1,
+      "rank_delta": -22,
+      "rank_delta_breed": -1,
       "sex": "M"
     },
     {
@@ -1264,9 +1925,37 @@
       "best_speed": 40.299,
       "avg_speed": 40.22,
       "total_starts": 1,
-      "rank_delta": -25,
+      "rank_delta": -24,
       "rank_delta_breed": -5,
       "sex": "F"
+    },
+    {
+      "dog_id": 11123,
+      "name_lat": "Pit4Life Good Girl",
+      "name_ru": "Pit4Life Good Girl",
+      "breed": "Американский пит-бультерьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 40.268,
+      "avg_speed": 39.76,
+      "total_starts": 1,
+      "rank_delta": -24,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10440,
+      "name_lat": "BLESK",
+      "name_ru": "BLESK",
+      "breed": "БАСЕНДЖИ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 40.268,
+      "avg_speed": 39.55,
+      "total_starts": 1,
+      "rank_delta": -24,
+      "rank_delta_breed": -2,
+      "sex": "M"
     },
     {
       "dog_id": 10494,
@@ -1278,8 +1967,8 @@
       "best_speed": 40.076,
       "avg_speed": 37.81,
       "total_starts": 2,
-      "rank_delta": -2,
-      "rank_delta_breed": -1,
+      "rank_delta": 4,
+      "rank_delta_breed": 0,
       "sex": "M"
     },
     {
@@ -1292,7 +1981,7 @@
       "best_speed": 40.034,
       "avg_speed": 39.84,
       "total_starts": 1,
-      "rank_delta": -26,
+      "rank_delta": -25,
       "rank_delta_breed": -5,
       "sex": "M"
     },
@@ -1306,7 +1995,7 @@
       "best_speed": 40.023,
       "avg_speed": 39.78,
       "total_starts": 1,
-      "rank_delta": -26,
+      "rank_delta": -25,
       "rank_delta_breed": -1,
       "sex": "M"
     },
@@ -1320,9 +2009,37 @@
       "best_speed": 39.865,
       "avg_speed": 38.48,
       "total_starts": 1,
-      "rank_delta": -26,
+      "rank_delta": -25,
       "rank_delta_breed": -2,
       "sex": "M"
+    },
+    {
+      "dog_id": 11125,
+      "name_lat": "Hassliebenk's Kraken",
+      "name_ru": "Hassliebenk's Kraken",
+      "breed": "Американский пит-бультерьер",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 39.648,
+      "avg_speed": 37.67,
+      "total_starts": 1,
+      "rank_delta": -24,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 564,
+      "name_lat": "SUNRISE LEUR ARISHA",
+      "name_ru": "SUNRISE LEUR ARISHA",
+      "breed": "БАСЕНДЖИ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 39.604,
+      "avg_speed": 38.68,
+      "total_starts": 2,
+      "rank_delta": -24,
+      "rank_delta_breed": -2,
+      "sex": "F"
     },
     {
       "dog_id": 7355,
@@ -1334,7 +2051,7 @@
       "best_speed": 39.594,
       "avg_speed": 38.25,
       "total_starts": 1,
-      "rank_delta": -25,
+      "rank_delta": -24,
       "rank_delta_breed": -1,
       "sex": "F"
     },
@@ -1348,8 +2065,8 @@
       "best_speed": 39.585,
       "avg_speed": 37.64,
       "total_starts": 2,
-      "rank_delta": -8,
-      "rank_delta_breed": 7,
+      "rank_delta": -4,
+      "rank_delta_breed": 6,
       "aggression_count": 4,
       "sex": "M"
     },
@@ -1363,8 +2080,8 @@
       "best_speed": 39.511,
       "avg_speed": 37.33,
       "total_starts": 2,
-      "rank_delta": -13,
-      "rank_delta_breed": 3,
+      "rank_delta": -9,
+      "rank_delta_breed": 2,
       "sex": "M"
     },
     {
@@ -1377,8 +2094,36 @@
       "best_speed": 39.416,
       "avg_speed": 37.31,
       "total_starts": 1,
-      "rank_delta": -27,
+      "rank_delta": -26,
       "rank_delta_breed": -1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 11131,
+      "name_lat": "BIMUSYA",
+      "name_ru": "Бимуся",
+      "breed": "Метис",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 38.71,
+      "avg_speed": 38.71,
+      "total_starts": 1,
+      "rank_delta": -26,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 11119,
+      "name_lat": "Volar Blek Shark Ultra",
+      "name_ru": "Volar Blek Shark Ultra",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 38.668,
+      "avg_speed": 38.67,
+      "total_starts": 1,
+      "rank_delta": -26,
+      "rank_delta_breed": -11,
       "sex": "F"
     },
     {
@@ -1391,23 +2136,23 @@
       "best_speed": 38.487,
       "avg_speed": 37.82,
       "total_starts": 1,
-      "rank_delta": -27,
+      "rank_delta": -26,
       "rank_delta_breed": -4,
       "sex": "M"
     },
     {
-      "dog_id": 564,
-      "name_lat": "SUNRISE LEUR ARISHA",
-      "name_ru": "SUNRISE LEUR ARISHA",
-      "breed": "БАСЕНДЖИ",
+      "dog_id": 11025,
+      "name_lat": "BRAVE FIGHTER'S TORETTO",
+      "name_ru": "BRAVE FIGHTER'S TORETTO",
+      "breed": "Американский пит-бультерьер",
       "year_from": 2022,
       "year_to": 2022,
-      "best_speed": 38.344,
-      "avg_speed": 38.24,
+      "best_speed": 38.257,
+      "avg_speed": 36.42,
       "total_starts": 1,
-      "rank_delta": "NEW",
-      "rank_delta_breed": "NEW",
-      "sex": "F"
+      "rank_delta": -26,
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 10266,
@@ -1419,7 +2164,7 @@
       "best_speed": 38.059,
       "avg_speed": 37.78,
       "total_starts": 1,
-      "rank_delta": -28,
+      "rank_delta": -26,
       "rank_delta_breed": -4,
       "sex": "M"
     },
@@ -1433,7 +2178,7 @@
       "best_speed": 37.844,
       "avg_speed": 37.84,
       "total_starts": 1,
-      "rank_delta": -28,
+      "rank_delta": -26,
       "rank_delta_breed": -1,
       "sex": "M"
     },
@@ -1447,7 +2192,7 @@
       "best_speed": 37.762,
       "avg_speed": 37.22,
       "total_starts": 1,
-      "rank_delta": -28,
+      "rank_delta": -26,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1461,7 +2206,7 @@
       "best_speed": 37.567,
       "avg_speed": 35.03,
       "total_starts": 2,
-      "rank_delta": -7,
+      "rank_delta": -6,
       "rank_delta_breed": 10,
       "sex": "F"
     },
@@ -1475,8 +2220,8 @@
       "best_speed": 37.543,
       "avg_speed": 36.06,
       "total_starts": 2,
-      "rank_delta": -29,
-      "rank_delta_breed": -6,
+      "rank_delta": -27,
+      "rank_delta_breed": -5,
       "sex": "F"
     },
     {
@@ -1489,7 +2234,7 @@
       "best_speed": 37.199,
       "avg_speed": 36.56,
       "total_starts": 1,
-      "rank_delta": -29,
+      "rank_delta": -27,
       "rank_delta_breed": 0,
       "aggression_count": 1,
       "sex": "M"
@@ -1504,8 +2249,8 @@
       "best_speed": 37.143,
       "avg_speed": 37.05,
       "total_starts": 1,
-      "rank_delta": -29,
-      "rank_delta_breed": -6,
+      "rank_delta": -27,
+      "rank_delta_breed": -5,
       "sex": "M"
     },
     {
@@ -1518,24 +2263,23 @@
       "best_speed": 37.084,
       "avg_speed": 37.01,
       "total_starts": 1,
-      "rank_delta": -29,
+      "rank_delta": -27,
       "rank_delta_breed": -4,
       "sex": "M"
     },
     {
-      "dog_id": 43,
-      "name_lat": "SUNRISE LEUR ADAM",
-      "name_ru": "SUNRISE LEUR ADAM",
-      "breed": "БАСЕНДЖИ",
+      "dog_id": 11124,
+      "name_lat": "Hassliebenk's Zuvembi",
+      "name_ru": "Hassliebenk's Zuvembi",
+      "breed": "Американский пит-бультерьер",
       "year_from": 2022,
       "year_to": 2022,
-      "best_speed": 36.652,
-      "avg_speed": 35.87,
+      "best_speed": 36.81,
+      "avg_speed": 36.68,
       "total_starts": 1,
-      "rank_delta": -29,
-      "rank_delta_breed": -6,
-      "aggression_count": 1,
-      "sex": "M"
+      "rank_delta": -27,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 51,
@@ -1547,8 +2291,8 @@
       "best_speed": 36.61,
       "avg_speed": 35.52,
       "total_starts": 1,
-      "rank_delta": -29,
-      "rank_delta_breed": -6,
+      "rank_delta": -27,
+      "rank_delta_breed": -5,
       "sex": "F"
     },
     {
@@ -1561,8 +2305,8 @@
       "best_speed": 36.543,
       "avg_speed": 36.54,
       "total_starts": 1,
-      "rank_delta": -29,
-      "rank_delta_breed": -6,
+      "rank_delta": -27,
+      "rank_delta_breed": -5,
       "sex": "M"
     },
     {
@@ -1575,8 +2319,8 @@
       "best_speed": 36.496,
       "avg_speed": 36.5,
       "total_starts": 1,
-      "rank_delta": -29,
-      "rank_delta_breed": -6,
+      "rank_delta": -27,
+      "rank_delta_breed": -5,
       "sex": "M"
     },
     {
@@ -1589,8 +2333,8 @@
       "best_speed": 36.292,
       "avg_speed": 35.43,
       "total_starts": 1,
-      "rank_delta": -28,
-      "rank_delta_breed": -5,
+      "rank_delta": -26,
+      "rank_delta_breed": -4,
       "sex": "M"
     },
     {
@@ -1603,8 +2347,8 @@
       "best_speed": 36.201,
       "avg_speed": 35.45,
       "total_starts": 1,
-      "rank_delta": -28,
-      "rank_delta_breed": -5,
+      "rank_delta": -26,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -1617,7 +2361,7 @@
       "best_speed": 36.176,
       "avg_speed": 36.06,
       "total_starts": 1,
-      "rank_delta": -28,
+      "rank_delta": -26,
       "rank_delta_breed": -4,
       "sex": "M"
     },
@@ -1645,7 +2389,7 @@
       "best_speed": 35.468,
       "avg_speed": 35.2,
       "total_starts": 1,
-      "rank_delta": -27,
+      "rank_delta": -25,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1659,8 +2403,8 @@
       "best_speed": 35.381,
       "avg_speed": 32.89,
       "total_starts": 2,
-      "rank_delta": -27,
-      "rank_delta_breed": -5,
+      "rank_delta": -25,
+      "rank_delta_breed": -4,
       "aggression_count": 1,
       "sex": "F"
     },
@@ -1674,8 +2418,8 @@
       "best_speed": 35.256,
       "avg_speed": 34.89,
       "total_starts": 1,
-      "rank_delta": -27,
-      "rank_delta_breed": -5,
+      "rank_delta": -25,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -1688,8 +2432,8 @@
       "best_speed": 35.046,
       "avg_speed": 34.47,
       "total_starts": 1,
-      "rank_delta": -27,
-      "rank_delta_breed": -5,
+      "rank_delta": -25,
+      "rank_delta_breed": -4,
       "sex": "M"
     },
     {
@@ -1702,8 +2446,8 @@
       "best_speed": 34.923,
       "avg_speed": 34.61,
       "total_starts": 1,
-      "rank_delta": -27,
-      "rank_delta_breed": -5,
+      "rank_delta": -25,
+      "rank_delta_breed": -4,
       "aggression_count": 2,
       "sex": "F"
     },
@@ -1717,22 +2461,8 @@
       "best_speed": 34.755,
       "avg_speed": 34.36,
       "total_starts": 1,
-      "rank_delta": -27,
-      "rank_delta_breed": -5,
-      "sex": "F"
-    },
-    {
-      "dog_id": 10970,
-      "name_lat": "EYO VELICHESTVO UDACHA IZ VOLSHEBNOGO LESA",
-      "name_ru": "ЕЕ ВЕЛИЧЕСТВО УДАЧА ИЗ ВОЛШЕБНОГО ЛЕСА",
-      "breed": "Ирландский волкодав",
-      "year_from": 2022,
-      "year_to": 2022,
-      "best_speed": 34.086,
-      "avg_speed": 34.09,
-      "total_starts": 1,
-      "rank_delta": -27,
-      "rank_delta_breed": 0,
+      "rank_delta": -25,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -1745,8 +2475,8 @@
       "best_speed": 33.97,
       "avg_speed": 33.97,
       "total_starts": 2,
-      "rank_delta": -26,
-      "rank_delta_breed": -4,
+      "rank_delta": -24,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -1759,7 +2489,7 @@
       "best_speed": 32.95,
       "avg_speed": 29.85,
       "total_starts": 1,
-      "rank_delta": -26,
+      "rank_delta": -24,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1773,9 +2503,23 @@
       "best_speed": 32.727,
       "avg_speed": 32.59,
       "total_starts": 1,
-      "rank_delta": -26,
-      "rank_delta_breed": -4,
+      "rank_delta": -24,
+      "rank_delta_breed": -3,
       "sex": "M"
+    },
+    {
+      "dog_id": 11133,
+      "name_lat": "DUSYA",
+      "name_ru": "Дуся (вне зачёта)",
+      "breed": "Немецкая овчарка",
+      "year_from": 2022,
+      "year_to": 2022,
+      "best_speed": 28.037,
+      "avg_speed": 28.04,
+      "total_starts": 1,
+      "rank_delta": -24,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10609,
@@ -1787,8 +2531,8 @@
       "best_speed": 27.233,
       "avg_speed": 26.38,
       "total_starts": 1,
-      "rank_delta": -26,
-      "rank_delta_breed": -4,
+      "rank_delta": -24,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -1801,8 +2545,8 @@
       "best_speed": 26.486,
       "avg_speed": 26.49,
       "total_starts": 1,
-      "rank_delta": -26,
-      "rank_delta_breed": -4,
+      "rank_delta": -24,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -1815,8 +2559,8 @@
       "best_speed": 26.486,
       "avg_speed": 26.49,
       "total_starts": 1,
-      "rank_delta": -26,
-      "rank_delta_breed": -4,
+      "rank_delta": -24,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -1829,7 +2573,7 @@
       "best_speed": 18.324,
       "avg_speed": 18.32,
       "total_starts": 1,
-      "rank_delta": -26,
+      "rank_delta": -24,
       "rank_delta_breed": 0,
       "sex": "F"
     }

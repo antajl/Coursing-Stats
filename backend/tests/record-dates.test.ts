@@ -15,6 +15,7 @@ import {
   speedRecordDedupeKey,
   time350ToSpeedKmh,
   isRecentRecordDate,
+  isRecentDoninoDate,
 } from '../../frontend/src/lib/recordDates'
 
 describe('recordDates', () => {
@@ -83,4 +84,18 @@ it('correctly identifies recent records within maxDays', () => {
     expect(isRecentRecordDate(null, 30, ref)).toBe(false)
     expect(isRecentRecordDate('', 30, ref)).toBe(false)
   })
+
+  it('correctly identifies recent Donino records relative to latest date in dataset', () => {
+    const latestDate = '2026-08-01'
+
+    // Run on the same day as latest session
+    expect(isRecentDoninoDate('2026-08-01', latestDate)).toBe(true)
+
+    // Run 5 days before latest session (part of same batch)
+    expect(isRecentDoninoDate('2026-07-27', latestDate)).toBe(true)
+
+    // Run 3 months before latest session
+    expect(isRecentDoninoDate('2026-05-10', latestDate)).toBe(false)
+  })
 });
+

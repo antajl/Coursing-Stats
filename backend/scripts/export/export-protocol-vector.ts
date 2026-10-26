@@ -85,6 +85,9 @@ export function normalizeBreed(b: string): string {
 
 export function parseBreedClass(breedClass?: string | null, defaultBreed: string = '', defaultSex: string = '') {
   let parts = (breedClass || '').split(' - ').map(s => s.trim());
+  if (parts.length === 1 && breedClass && breedClass.includes('_')) {
+    parts = breedClass.split('_').map(s => s.trim());
+  }
   if (parts[0] === 'Неявившиеся участники' || parts[0] === 'Неприбывшие участники') {
     parts = [];
   }
@@ -561,7 +564,7 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       background: #ffffff;
       color: #000000;
       font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-      font-size: 11pt;
+      font-size: ${comp.results.length <= 14 ? '10pt' : '11pt'};
       line-height: 1.25;
     }
     table.protocol-table {
@@ -578,21 +581,21 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       border-right: 1px solid #b2b2b2;
       border-bottom: 1px solid #b2b2b2;
       background-color: #ffffff;
-      padding: 4px 3px;
+      padding: ${comp.results.length <= 14 ? '2.5px 2px' : '4px 3px'};
       text-align: center;
       vertical-align: middle;
-      font-size: 10.5pt;
+      font-size: ${comp.results.length <= 14 ? '9.5pt' : '10.5pt'};
       font-weight: normal;
     }
     tr.top-title-row td {
       font-size: 14pt;
       font-weight: bold;
-      padding: 7px 4px;
+      padding: ${comp.results.length <= 14 ? '5px 4px' : '7px 4px'};
     }
     tr.meta-row td {
-      font-size: 10.5pt;
+      font-size: ${comp.results.length <= 14 ? '9.5pt' : '10.5pt'};
       font-weight: normal;
-      padding: 3.5px 4px;
+      padding: ${comp.results.length <= 14 ? '2.5px 3px' : '3.5px 4px'};
       text-align: center;
     }
     tr.col-header td {

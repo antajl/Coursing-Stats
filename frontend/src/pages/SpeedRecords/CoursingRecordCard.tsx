@@ -1,9 +1,10 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import CoursingHistorySparkline from '../../components/CoursingHistorySparkline'
 import DogSexIcon from '../../components/DogSexIcon'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import SpeedStatusBadge from '../../components/SpeedStatusBadge'
-import { formatRecordDate, isRecentRecordDate } from '../../lib/recordDates'
+import { formatRecordDate, isRecentDoninoDate, parseRecordHistory } from '../../lib/recordDates'
 import { toDogTitleCase } from '../../lib/dogName'
 import { Icons } from '../../lib/icons'
 
@@ -15,20 +16,49 @@ interface CoursingRecordCardProps {
     sex?: string
     time_seconds: number
     date: string
+    status?: string
     history?: unknown[]
   }
 }
 
 export default function CoursingRecordCard({ record }: CoursingRecordCardProps) {
   const ChevronRight = Icons.chevronRight
-  const hasHistoryChart = Array.isArray(record.history) && record.history.length > 0
+  const historyItems = useMemo(() => parseRecordHistory(record.history), [record.history])
+  const hasHistoryChart = historyItems.length > 0
+  const isRecent = isRecentDoninoDate(record.date)
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const recStatus = (record as any).status
+  const isNewDog = recStatus === 'new' || (!hasHistoryChart && recStatus !== 'improved')
+  const isImprovedDog = recStatus === 'improved' || (hasHistoryChart && !isNewDog)
+
+  const showNew = isRecent && isNewDog
+  const showUpd = isRecent && !showNew && isImprovedDog
+
+  const prevTime = useMemo(() => {
+    if (!hasHistoryChart) return null
+    const times = historyItems
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      .map((h: any) => Number(h.time_seconds ?? h.time ?? 0))
+      .filter((t) => t > 0)
+    return times.length > 0 ? Math.min(...times).toFixed(2) : null
+  }, [hasHistoryChart, historyItems])
 
   const timeBlock = (
     <div className="relative shrink-0">
       <span className="inline-block rounded-full bg-camel-600 px-3 py-1.5 text-sm font-bold text-white shadow-sm">
         {record.time_seconds} сек
       </span>
-      {isRecentRecordDate(record.date) && (hasHistoryChart || (record as any).status === 'improved') && <SpeedStatusBadge variant="upd" />}
+      {showNew && <SpeedStatusBadge variant="new" date={record.date} />}
+      {showUpd && (
+        <SpeedStatusBadge
+          variant="upd"
+          date={record.date}
+          currentValue={record.time_seconds}
+          prevValue={prevTime}
+          unit="сек"
+        />
+      )}
     </div>
   )
 
@@ -78,12 +108,11 @@ export default function CoursingRecordCard({ record }: CoursingRecordCardProps) 
           )}
         </div>
 
-        <div className="hidden shrink-0 items-center gap-3 sm:col-start-3 sm:flex">
+        <div className="hidden shrink-0 items-center gap-2 sm:col-start-3 sm:flex">
           {timeBlock}
-          <ChevronRight
-            className="h-5 w-5 text-old-money-300 transition-all group-hover:translate-x-0.5 group-hover:text-camel-600"
-            strokeWidth={2}
-          />
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg text-charcoal-400 transition-colors group-hover:bg-cream-200 group-hover:text-charcoal-600">
+            <ChevronRight className="h-4 w-4" />
+          </div>
         </div>
       </Link>
     </div>

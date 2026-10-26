@@ -2,7 +2,7 @@
   "schema": "coursing-stats/index-top-score-v1",
   "year": 2022,
   "rating_score_version": "cs-v1",
-  "count": 407,
+  "count": 411,
   "items": [
     {
       "dog_id": 10472,
@@ -294,6 +294,22 @@
       "sex": "M"
     },
     {
+      "dog_id": 9545,
+      "name_lat": "AISKNEKHT TEQUILA",
+      "name_ru": "AISKNEKHT TEQUILA",
+      "breed": "БОРДЕР КОЛЛИ",
+      "year": 2022,
+      "best_score": 373,
+      "total_starts": 1,
+      "best_judge_score": 94,
+      "avg_judge_score": 93.25,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 4,
+      "rating_score": 88.16,
+      "sex": "F"
+    },
+    {
       "dog_id": 5658,
       "name_lat": "VARVAR KONAN BESSTRASHNYI",
       "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
@@ -541,13 +557,13 @@
       "breed": "МЕТИС",
       "year": 2022,
       "best_score": 369,
-      "total_starts": 3,
+      "total_starts": 4,
       "best_judge_score": 98,
-      "avg_judge_score": 87.92,
+      "avg_judge_score": 88.29,
       "year_from": 2022,
       "year_to": 2022,
-      "judge_eval_count": 12,
-      "rating_score": 88.06,
+      "judge_eval_count": 14,
+      "rating_score": 88.53,
       "sex": "F"
     },
     {
@@ -984,6 +1000,22 @@
       "sex": "M"
     },
     {
+      "dog_id": 654,
+      "name_lat": "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН /TSESVIL GARDEN IRINUS GOLD BREIN",
+      "name_ru": "ЦЕСВИЛЬ ГАРДЕН ИРИНУС ГОЛД БРЕЙН /TSESVIL GARDEN IRINUS GOLD BREIN",
+      "breed": "ЦВЕРГПИНЧЕР",
+      "year": 2022,
+      "best_score": 183,
+      "total_starts": 1,
+      "best_judge_score": 93,
+      "avg_judge_score": 91.5,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 2,
+      "rating_score": 87.03,
+      "sex": "M"
+    },
+    {
       "dog_id": 23,
       "name_lat": "ХЕПИ ХЕПРИ ПЕГАСУС",
       "name_ru": "ХЕПИ ХЕПРИ ПЕГАСУС",
@@ -1402,6 +1434,22 @@
       "sex": "M"
     },
     {
+      "dog_id": 9230,
+      "name_lat": "PES",
+      "name_ru": "ПЕС",
+      "breed": "МЕТИС",
+      "year": 2022,
+      "best_score": 362,
+      "total_starts": 4,
+      "best_judge_score": 94,
+      "avg_judge_score": 86.93,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 14,
+      "rating_score": 87.8,
+      "sex": "M"
+    },
+    {
       "dog_id": 7070,
       "name_lat": "PRI CHUDA",
       "name_ru": "ПРИ ЧУДА",
@@ -1417,22 +1465,6 @@
       "rating_score": 87.9,
       "aggression_count": 1,
       "sex": "F"
-    },
-    {
-      "dog_id": 9230,
-      "name_lat": "PES",
-      "name_ru": "ПЕС",
-      "breed": "МЕТИС",
-      "year": 2022,
-      "best_score": 362,
-      "total_starts": 3,
-      "best_judge_score": 94,
-      "avg_judge_score": 86.25,
-      "year_from": 2022,
-      "year_to": 2022,
-      "judge_eval_count": 12,
-      "rating_score": 87.23,
-      "sex": "M"
     },
     {
       "dog_id": 9425,
@@ -1720,6 +1752,22 @@
       "year_to": 2022,
       "judge_eval_count": 8,
       "rating_score": 87.44,
+      "sex": "F"
+    },
+    {
+      "dog_id": 11032,
+      "name_lat": "BRAVE FIGHTER'S MILK AND HONEY",
+      "name_ru": "BRAVE FIGHTER'S MILK AND HONEY",
+      "breed": "Американский пит-бультерьер",
+      "year": 2022,
+      "best_score": 360,
+      "total_starts": 2,
+      "best_judge_score": 92,
+      "avg_judge_score": 86,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 8,
+      "rating_score": 86.79,
       "sex": "F"
     },
     {
@@ -3104,6 +3152,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 11101,
+      "name_lat": "VILANTA DIAMOND GRACE KELLY (M)",
+      "name_ru": "ВИЛАНТА ДАЙМОНД ГРЕЙС КЕЛЛИ (М)",
+      "breed": "Бельгийская овчарка (Малинуа)",
+      "year": 2022,
+      "best_score": 176,
+      "total_starts": 1,
+      "best_judge_score": 88,
+      "avg_judge_score": 88,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 2,
+      "rating_score": 86.31,
+      "sex": "F"
+    },
+    {
       "dog_id": 11025,
       "name_lat": "BRAVE FIGHTER'S TORETTO",
       "name_ru": "BRAVE FIGHTER'S TORETTO",
@@ -3915,13 +3979,13 @@
       "breed": "МЕТИС",
       "year": 2022,
       "best_score": 344,
-      "total_starts": 3,
+      "total_starts": 4,
       "best_judge_score": 92,
-      "avg_judge_score": 85,
+      "avg_judge_score": 85.21,
       "year_from": 2022,
       "year_to": 2022,
-      "judge_eval_count": 12,
-      "rating_score": 86.6,
+      "judge_eval_count": 14,
+      "rating_score": 86.87,
       "sex": "M"
     },
     {
@@ -5338,6 +5402,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 9220,
+      "name_lat": "АРЕС",
+      "name_ru": "АРЕС",
+      "breed": "БИГЛЬ",
+      "year": 2022,
+      "best_score": 333,
+      "total_starts": 2,
+      "best_judge_score": 88,
+      "avg_judge_score": 83.5,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 6,
+      "rating_score": 85.82,
+      "sex": "M"
+    },
+    {
       "dog_id": 10321,
       "name_lat": "KULIKOVO POLE VINTAGE",
       "name_ru": "KULIKOVO POLE VINTAGE",
@@ -5367,22 +5447,6 @@
       "year_to": 2022,
       "judge_eval_count": 4,
       "rating_score": 85.66,
-      "sex": "M"
-    },
-    {
-      "dog_id": 9220,
-      "name_lat": "АРЕС",
-      "name_ru": "АРЕС",
-      "breed": "БИГЛЬ",
-      "year": 2022,
-      "best_score": 333,
-      "total_starts": 1,
-      "best_judge_score": 88,
-      "avg_judge_score": 83.25,
-      "year_from": 2022,
-      "year_to": 2022,
-      "judge_eval_count": 4,
-      "rating_score": 85.58,
       "sex": "M"
     },
     {
@@ -5787,22 +5851,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 11032,
-      "name_lat": "BRAVE FIGHTER'S MILK AND HONEY",
-      "name_ru": "BRAVE FIGHTER'S MILK AND HONEY",
-      "breed": "Американский пит-бультерьер",
-      "year": 2022,
-      "best_score": 328,
-      "total_starts": 1,
-      "best_judge_score": 85,
-      "avg_judge_score": 82,
-      "year_from": 2022,
-      "year_to": 2022,
-      "judge_eval_count": 4,
-      "rating_score": 84.86,
-      "sex": "F"
-    },
-    {
       "dog_id": 9260,
       "name_lat": "ОБЕРЕГ РУСИ АМЕТИСТ",
       "name_ru": "ОБЕРЕГ РУСИ АМЕТИСТ",
@@ -5865,6 +5913,22 @@
       "judge_eval_count": 4,
       "rating_score": 84.63,
       "sex": "M"
+    },
+    {
+      "dog_id": 9448,
+      "name_lat": "ИСЛА САВАННА ДЖОРДЖИЯ",
+      "name_ru": "ИСЛА САВАННА ДЖОРДЖИЯ",
+      "breed": "БИГЛЬ",
+      "year": 2022,
+      "best_score": 163,
+      "total_starts": 1,
+      "best_judge_score": 82,
+      "avg_judge_score": 81.5,
+      "year_from": 2022,
+      "year_to": 2022,
+      "judge_eval_count": 2,
+      "rating_score": 85,
+      "sex": "F"
     },
     {
       "dog_id": 7894,

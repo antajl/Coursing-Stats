@@ -1,11 +1,17 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Minus, Circle } from 'lucide-react'
+import { Circle, Minus } from 'lucide-react'
+import CoursingHistorySparkline from './CoursingHistorySparkline'
 import DogSexIcon from './DogSexIcon'
 import OwnerCrownName from './OwnerCrownName'
-import SpeedStatusBadge from './SpeedStatusBadge'
 import SpeedHistorySparkline from './SpeedHistorySparkline'
-import CoursingHistorySparkline from './CoursingHistorySparkline'
-import { formatRecordDate, formatDoninoSpeedKmh, parseRecordHistory, isRecentRecordDate } from '../lib/recordDates'
+import SpeedStatusBadge from './SpeedStatusBadge'
+import {
+  formatRecordDate,
+  formatDoninoSpeedKmh,
+  parseRecordHistory,
+  isRecentDoninoDate,
+} from '../lib/recordDates'
 import { toDogTitleCase } from '../lib/dogName'
 import { buildCoursingTimeline } from './CoursingHistorySparkline'
 import { buildSpeedTimeline } from './SpeedHistorySparkline'
@@ -22,6 +28,7 @@ interface DoninoHomeRecordRowProps {
   timeSeconds?: number
   rise?: boolean
   trackType?: string | null
+  latestDateInDataset?: string | null
 }
 
 function getTrackTypeIcon(trackType: string | null | undefined) {
@@ -63,11 +70,37 @@ export default function DoninoHomeRecordRow({
   timeSeconds,
   rise = false,
   trackType,
+  latestDateInDataset,
 }: DoninoHomeRecordRowProps) {
-  const historyItems = parseRecordHistory(history)
-  const isRecent = isRecentRecordDate(date)
-  const showNew = isRecent && status === 'new'
-  const showUpd = isRecent && !showNew && (status === 'improved' || historyItems.length > 0)
+  const historyItems = useMemo(() => parseRecordHistory(history), [history])
+  const isRecent = useMemo(
+    () => isRecentDoninoDate(date, latestDateInDataset),
+    [date, latestDateInDataset]
+  )
+
+  const hasHistory = historyItems.length > 0
+  const isNewDog = status === 'new' || (!hasHistory && status !== 'improved')
+  const isImprovedDog = status === 'improved' || (hasHistory && !isNewDog)
+
+  const showNew = isRecent && isNewDog
+  const showUpd = isRecent && !showNew && isImprovedDog
+
+  const prevValue = useMemo(() => {
+    if (!hasHistory) return null
+    if (mode === 'speed') {
+      const speeds = historyItems
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .map((h: any) => Number(h.speed_km_h ?? h.speed ?? 0))
+        .filter((s) => s > 0)
+      return speeds.length > 0 ? Math.max(...speeds).toFixed(1) : null
+    } else {
+      const times = historyItems
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .map((h: any) => Number(h.time_seconds ?? h.time ?? 0))
+        .filter((t) => t > 0)
+      return times.length > 0 ? Math.min(...times).toFixed(2) : null
+    }
+  }, [hasHistory, historyItems, mode])
 
   const hasSparkline =
     mode === 'speed'
@@ -127,8 +160,21 @@ export default function DoninoHomeRecordRow({
           </span>
           {trackType && <TrackTypeBadge trackType={trackType} />}
         </div>
-        {showNew && <SpeedStatusBadge variant="new" />}
-        {showUpd && !showNew && <SpeedStatusBadge variant="upd" />}
+        {showNew && (
+          <SpeedStatusBadge
+            variant="new"
+            date={date}
+          />
+        )}
+        {showUpd && !showNew && (
+          <SpeedStatusBadge
+            variant="upd"
+            date={date}
+            currentValue={mode === 'speed' ? formatDoninoSpeedKmh(speedKmh) : formatTime(timeSeconds ?? 0)}
+            prevValue={prevValue}
+            unit={mode === 'speed' ? 'км/ч' : 'сек'}
+          />
+        )}
       </div>
     </Link>
   )
