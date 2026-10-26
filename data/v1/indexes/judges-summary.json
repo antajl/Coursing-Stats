@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/index-judges-summary-v1",
-  "count": 38,
+  "count": 39,
   "judges": [
     {
       "id": "Вронская О.В.",
@@ -82,13 +82,13 @@
     {
       "id": "Серова Т.Г.",
       "name": "Серова Т.Г.",
-      "total_evaluations": 5128,
-      "total_evaluations_count": 1026,
-      "avg_score": 16.362714508580343,
+      "total_evaluations": 5353,
+      "total_evaluations_count": 1071,
+      "avg_score": 16.357556510368017,
       "unique_breeds": 37,
       "unique_disciplines": 3,
-      "unique_events": 8,
-      "unique_dogs": 456
+      "unique_events": 9,
+      "unique_dogs": 485
     },
     {
       "id": "Рубина А.В.",
@@ -146,6 +146,17 @@
       "unique_dogs": 239
     },
     {
+      "id": "Полякова Г.Б.",
+      "name": "Полякова Г.Б.",
+      "total_evaluations": 2533,
+      "total_evaluations_count": 507,
+      "avg_score": 16.468614291354125,
+      "unique_breeds": 27,
+      "unique_disciplines": 3,
+      "unique_events": 6,
+      "unique_dogs": 318
+    },
+    {
       "id": "Кудрявцева Н.Г.",
       "name": "Кудрявцева Н.Г.",
       "total_evaluations": 2465,
@@ -157,17 +168,6 @@
       "unique_dogs": 188
     },
     {
-      "id": "Полякова Г.Б.",
-      "name": "Полякова Г.Б.",
-      "total_evaluations": 2313,
-      "total_evaluations_count": 463,
-      "avg_score": 16.35408560311284,
-      "unique_breeds": 27,
-      "unique_disciplines": 3,
-      "unique_events": 5,
-      "unique_dogs": 283
-    },
-    {
       "id": "Видус Г.С.",
       "name": "Видус Г.С.",
       "total_evaluations": 1665,
@@ -177,6 +177,17 @@
       "unique_disciplines": 1,
       "unique_events": 3,
       "unique_dogs": 157
+    },
+    {
+      "id": "Кузнецова Н.Н.",
+      "name": "Кузнецова Н.Н.",
+      "total_evaluations": 1640,
+      "total_evaluations_count": 328,
+      "avg_score": 17.04268292682927,
+      "unique_breeds": 20,
+      "unique_disciplines": 2,
+      "unique_events": 4,
+      "unique_dogs": 168
     },
     {
       "id": "Меркушенкова О.В.",
@@ -210,17 +221,6 @@
       "unique_disciplines": 1,
       "unique_events": 1,
       "unique_dogs": 152
-    },
-    {
-      "id": "Кузнецова Н.Н.",
-      "name": "Кузнецова Н.Н.",
-      "total_evaluations": 1420,
-      "total_evaluations_count": 284,
-      "avg_score": 17.027464788732395,
-      "unique_breeds": 20,
-      "unique_disciplines": 2,
-      "unique_events": 3,
-      "unique_dogs": 132
     },
     {
       "id": "Богаченко В.В.",
@@ -419,6 +419,17 @@
       "unique_disciplines": 1,
       "unique_events": 1,
       "unique_dogs": 38
+    },
+    {
+      "id": "Яковлева Т.С.",
+      "name": "Яковлева Т.С.",
+      "total_evaluations": 225,
+      "total_evaluations_count": 45,
+      "avg_score": 16.093333333333334,
+      "unique_breeds": 5,
+      "unique_disciplines": 1,
+      "unique_events": 1,
+      "unique_dogs": 45
     }
   ],
   "availableBreeds": [
