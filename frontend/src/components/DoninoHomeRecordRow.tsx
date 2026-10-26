@@ -6,6 +6,7 @@ import SpeedStatusBadge from './SpeedStatusBadge'
 import SpeedHistorySparkline from './SpeedHistorySparkline'
 import CoursingHistorySparkline from './CoursingHistorySparkline'
 import { formatRecordDate, formatDoninoSpeedKmh, parseRecordHistory, isRecentRecordDate } from '../lib/recordDates'
+import { toDogTitleCase } from '../lib/dogName'
 import { buildCoursingTimeline } from './CoursingHistorySparkline'
 import { buildSpeedTimeline } from './SpeedHistorySparkline'
 
@@ -99,7 +100,7 @@ export default function DoninoHomeRecordRow({
         <div className="flex min-w-0 items-center gap-1.5">
           <OwnerCrownName name={name} breed={breed} kind="donino">
             <span className="break-words font-serif text-sm font-bold leading-snug text-charcoal-900 line-clamp-2">
-              {name}
+              {toDogTitleCase(name)}
             </span>
           </OwnerCrownName>
           {sex && <DogSexIcon sex={sex} />}

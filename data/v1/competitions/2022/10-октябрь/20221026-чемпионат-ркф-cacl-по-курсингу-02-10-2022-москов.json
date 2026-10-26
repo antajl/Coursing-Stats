@@ -1,0 +1,6843 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-26T13:18:39.409Z",
+  "source": "manual-entry",
+  "event_id": 20221026,
+  "event": {
+    "id": 20221026,
+    "year": 2022,
+    "date_start": "2022-10-02",
+    "date_end": "2022-10-02",
+    "rank_label": "ЧРКФ",
+    "event_type": "coursing",
+    "competition_kind": "ЧРКФ",
+    "competition_type": "Курсинг",
+    "title": "Чемпионат РКФ - CACL по курсингу, 02.10.2022 (Московская обл., Михайловское)",
+    "host_club": "Минсельхоз РФ / КЛЖ «Фауна»",
+    "region": "Московская область",
+    "location": "Московская обл., д. Михайловское",
+    "catalog_url": "https://drive.google.com/file/d/1IzzNnbNB2RZq6SiqXbsVHByqh47yDQMW/view?usp=sharing",
+    "results_url": null,
+    "rules_url": null,
+    "results_pdf_url": "https://drive.google.com/file/d/12EJtNoMzlBN5IaEbVY9cH1Ipla_C08zf/view?usp=sharing",
+    "confirmed": 1,
+    "last_modified": "2026-10-26T13:18:39.409Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": [
+      "Козлова И.В.",
+      "Куликова Г.В."
+    ],
+    "track_schemes": []
+  },
+  "result_count": 79,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20221026,
+      "dog_id": 43,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 6,
+      "placement": 1,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 45,
+            "bib_color": 1,
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 67,
+            "bib_color": 2,
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 349,
+        "normalized_score": 349
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 43,
+        "dog_key": "sunrise-leur-adam--басенджи",
+        "name_lat": "SUNRISE LEUR ADAM",
+        "name_ru": "SUNRISE LEUR ADAM",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20221026,
+      "dog_id": 5939,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 2,
+      "placement": 2,
+      "total_score": 345,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 46,
+            "bib_color": 2,
+            "total": 170,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 68,
+            "bib_color": 2,
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 345,
+        "normalized_score": 345
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 5939,
+        "dog_key": "dammar-grand-asterion--басенджи",
+        "name_lat": "DAMMAR GRAND ASTERION",
+        "name_ru": "ДАММАР ГРАНД АСТЕРИОН",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20221026,
+      "dog_id": 10208,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 4,
+      "placement": 3,
+      "total_score": 342,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 46,
+            "bib_color": 1,
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 67,
+            "bib_color": 1,
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 342,
+        "normalized_score": 342
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10208,
+        "dog_key": "itury-puzzle-extraordinary-smart--басенджи",
+        "name_lat": "ITURY PUZZLE EXTRAORDINARY SMART",
+        "name_ru": "ITURY PUZZLE EXTRAORDINARY SMART",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20221026,
+      "dog_id": 9240,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 5,
+      "placement": 4,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 45,
+            "bib_color": 2,
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 77
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 68,
+            "bib_color": 1,
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 339,
+        "normalized_score": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9240,
+        "dog_key": "kilimanjaro-kaiser--басенджи",
+        "name_lat": "KILIMANJARO KAISER",
+        "name_ru": "KILIMANJARO KAISER",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20221026,
+      "dog_id": 10440,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 1,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 47,
+            "bib_color": 1,
+            "disqualified": true,
+            "reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": 0,
+        "normalized_score": 0
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Дисквалификация",
+      "dog": {
+        "id": 10440,
+        "dog_key": "blesk--басенджи",
+        "name_lat": "BLESK",
+        "name_ru": "BLESK",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20221026,
+      "dog_id": 5683,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 3,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 47,
+            "bib_color": 2,
+            "disqualified": true,
+            "reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": 0,
+        "normalized_score": 0
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Дисквалификация",
+      "dog": {
+        "id": 5683,
+        "dog_key": "хаус-зэ-рэинбоу-узочи-зикимо--басенджи",
+        "name_lat": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
+        "name_ru": "ХАУС ЗЭ РЭЙНБОУ УЗОЧИ ЗИКИМО",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20221026,
+      "dog_id": 51,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 7,
+      "placement": 1,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 48,
+            "bib_color": 2,
+            "total": 157,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  16,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 77
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  16,
+                  17,
+                  15,
+                  15,
+                  17
+                ],
+                "sum": 80
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 69,
+            "bib_color": 1,
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 333,
+        "normalized_score": 333
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 51,
+        "dog_key": "soneta-star-iz-divnogo-sada--басенджи",
+        "name_lat": "SONETA STAR IZ DIVNOGO SADA",
+        "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20221026,
+      "dog_id": 564,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 8,
+      "placement": 2,
+      "total_score": 301,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 48,
+            "bib_color": 1,
+            "total": 145,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  13,
+                  16,
+                  15,
+                  13,
+                  13
+                ],
+                "sum": 70
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  13,
+                  16,
+                  16,
+                  13,
+                  17
+                ],
+                "sum": 75
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 69,
+            "bib_color": 2,
+            "total": 156,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  14,
+                  17,
+                  17,
+                  14,
+                  14
+                ],
+                "sum": 76
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  15,
+                  17
+                ],
+                "sum": 80
+              }
+            ]
+          }
+        ],
+        "grand_total": 301,
+        "normalized_score": 301
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 564,
+        "dog_key": "sunrise-leur-arisha--басенджи",
+        "name_lat": "SUNRISE LEUR ARISHA",
+        "name_ru": "SUNRISE LEUR ARISHA",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20221026,
+      "dog_id": 9676,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 9,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dropped_out",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 49,
+            "bib_color": 1,
+            "disqualified": true,
+            "reason": "Сошёл"
+          }
+        ],
+        "grand_total": 0,
+        "normalized_score": 0
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Сошёл",
+      "dog": {
+        "id": 9676,
+        "dog_key": "sunrise-leur-jovellana--басенджи",
+        "name_lat": "SUNRISE LEUR JOVELLANA",
+        "name_ru": "САНРАЙЗ ЛЕЮР ЖОВЕЛЛАНА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20221026,
+      "dog_id": 9425,
+      "breed_class": "Ксолоитцкуинтли - Стандартный - Суки",
+      "catalog_no": 10,
+      "placement": 1,
+      "total_score": 351,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": 1,
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 23,
+            "bib_color": 1,
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 351,
+        "normalized_score": 351
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9425,
+        "dog_key": "wuno-zafira-blanco-iz-kanekso-stand--ксолоитцкуинтли-стандарт",
+        "name_lat": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+        "name_ru": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+        "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20221026,
+      "dog_id": 10430,
+      "breed_class": "Левретка - Стандартный - Общая",
+      "catalog_no": 13,
+      "placement": 1,
+      "total_score": 357,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": 2,
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "bib_color": 1,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 357,
+        "normalized_score": 357
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10430,
+        "dog_key": "grace-haund-elizabeth-her-excellence--левретка",
+        "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "breed": "ЛЕВРЕТКА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20221026,
+      "dog_id": 10528,
+      "breed_class": "Левретка - Стандартный - Общая",
+      "catalog_no": 12,
+      "placement": 2,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": 1,
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  17,
+                  19,
+                  16,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 24,
+            "bib_color": 2,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10528,
+        "dog_key": "магнифико-неро--левретка",
+        "name_lat": "МАГНИФИКО НЕРО",
+        "name_ru": "МАГНИФИКО НЕРО",
+        "breed": "ЛЕВРЕТКА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20221026,
+      "dog_id": 9527,
+      "breed_class": "Поденко ибиценко - Стандартный - Суки",
+      "catalog_no": 14,
+      "placement": 1,
+      "total_score": 345,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 50,
+            "bib_color": 1,
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 70,
+            "bib_color": 1,
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 345,
+        "normalized_score": 345
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9527,
+        "dog_key": "dodona-baltas-vejas--поденко-ибиценко",
+        "name_lat": "DODONA BALTAS VEJAS",
+        "name_ru": "DODONA BALTAS VEJAS",
+        "breed": "ПОДЕНКО ИБИЦЕНКО",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 20221026,
+      "dog_id": 9248,
+      "breed_class": "Родезийский риджбек - Ветераны - Кобели",
+      "catalog_no": 15,
+      "placement": 1,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Лучший ветеран",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 51,
+            "bib_color": 1,
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 71,
+            "bib_color": 1,
+            "total": 167,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 81
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          }
+        ],
+        "grand_total": 339,
+        "normalized_score": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9248,
+        "dog_key": "aries-khan-marlon-brando--родезиискии-риджбек",
+        "name_lat": "ARIES KHAN MARLON BRANDO",
+        "name_ru": "ARIES KHAN MARLON BRANDO",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 20221026,
+      "dog_id": 9335,
+      "breed_class": "Родезийский риджбек - Стандартный - Общая",
+      "catalog_no": 19,
+      "placement": 1,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 52,
+            "bib_color": 1,
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 72,
+            "bib_color": 2,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9335,
+        "dog_key": "solar-spirit-andromeda--родезиискии-риджбек",
+        "name_lat": "SOLAR SPIRIT ANDROMEDA",
+        "name_ru": "СОЛАР СПИРИТ АНДРОМЕДА",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 20221026,
+      "dog_id": 9367,
+      "breed_class": "Родезийский риджбек - Стандартный - Общая",
+      "catalog_no": 17,
+      "placement": 2,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 53,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 73,
+            "bib_color": 2,
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9367,
+        "dog_key": "ариес-хан-регулус-рэдклифф-aries-khan-re--родезиискии-риджбек",
+        "name_lat": "АРИЕС ХАН РЕГУЛУС РЭДКЛИФФ /ARIES KHAN REGULUS RADCLIFFE",
+        "name_ru": "АРИЕС ХАН РЕГУЛУС РЭДКЛИФФ /ARIES KHAN REGULUS RADCLIFFE",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 20221026,
+      "dog_id": 9255,
+      "breed_class": "Родезийский риджбек - Стандартный - Общая",
+      "catalog_no": 18,
+      "placement": 3,
+      "total_score": 351,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 53,
+            "bib_color": 2,
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 72,
+            "bib_color": 1,
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          }
+        ],
+        "grand_total": 351,
+        "normalized_score": 351
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9255,
+        "dog_key": "maendeleo-holy-lara-croft-aries-khan--родезиискии-риджбек",
+        "name_lat": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
+        "name_ru": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 20221026,
+      "dog_id": 9332,
+      "breed_class": "Родезийский риджбек - Стандартный - Общая",
+      "catalog_no": 16,
+      "placement": 4,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 52,
+            "bib_color": 2,
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 73,
+            "bib_color": 1,
+            "total": 164,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  15
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ]
+          }
+        ],
+        "grand_total": 336,
+        "normalized_score": 336
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9332,
+        "dog_key": "ариес-хан-регор-рембрандт-aries-khan-reg--родезиискии-риджбек",
+        "name_lat": "АРИЕС ХАН РЕГОР РЕМБРАНДТ /ARIES KHAN REGOR REMBRANDT",
+        "name_ru": "АРИЕС ХАН РЕГОР РЕМБРАНДТ /ARIES KHAN REGOR REMBRANDT",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 20221026,
+      "dog_id": 9590,
+      "breed_class": "Родезийский риджбек - Юниоры - Суки",
+      "catalog_no": 20,
+      "placement": 1,
+      "total_score": 352,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Лучший юниор",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 54,
+            "bib_color": 1,
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 74,
+            "bib_color": 1,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 352,
+        "normalized_score": 352
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9590,
+        "dog_key": "solar-spirit-bagheera--родезиискии-риджбек",
+        "name_lat": "SOLAR SPIRIT BAGHEERA",
+        "name_ru": "СОЛАР СПИРИТ БАГИРА",
+        "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 20221026,
+      "dog_id": 9469,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 23,
+      "placement": 1,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 56,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 75,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 361,
+        "normalized_score": 361
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9469,
+        "dog_key": "vasart-gumilev--русская-псовая-борзая",
+        "name_lat": "VASART GUMILEV",
+        "name_ru": "ВАСАРТ ГУМИЛЕВ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 20221026,
+      "dog_id": 293,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 22,
+      "placement": 2,
+      "total_score": 355,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 55,
+            "bib_color": 1,
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  15,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 76,
+            "bib_color": 1,
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 355,
+        "normalized_score": 355
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 293,
+        "dog_key": "cavallierik-factotum--русская-псовая-борзая",
+        "name_lat": "CAVALLIERIK FACTOTUM",
+        "name_ru": "КАВАЛЛЬЕРИК ФАКТОУМ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 20221026,
+      "dog_id": 9300,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 21,
+      "placement": 3,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 55,
+            "bib_color": 2,
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 75,
+            "bib_color": 2,
+            "total": 165,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  18,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  15,
+                  18
+                ],
+                "sum": 85
+              }
+            ]
+          }
+        ],
+        "grand_total": 341,
+        "normalized_score": 341
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9300,
+        "dog_key": "apriori-luxury-hmel--русская-псовая-борзая",
+        "name_lat": "APRIORI LUXURY HMEL",
+        "name_ru": "АПРИОРИ ЛЮКСУРИ ХМЕЛЬ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 20221026,
+      "dog_id": 9265,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 25,
+      "placement": 1,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 57,
+            "bib_color": 1,
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  16,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 78,
+            "bib_color": 2,
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9265,
+        "dog_key": "dorogoy-drug-fifa--русская-псовая-борзая",
+        "name_lat": "DOROGOY DRUG FIFA",
+        "name_ru": "ДОРОГОЙ ДРУГ ФИФА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 20221026,
+      "dog_id": 9481,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 29,
+      "placement": 2,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 58,
+            "bib_color": 1,
+            "total": 172,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 79,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  16,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 353,
+        "normalized_score": 353
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9481,
+        "dog_key": "lunnaja-raduga-revolution--русская-псовая-борзая",
+        "name_lat": "LUNNAJA RADUGA REVOLUTION",
+        "name_ru": "ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 20221026,
+      "dog_id": 7244,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 26,
+      "placement": 3,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 58,
+            "bib_color": 2,
+            "total": 162,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  14,
+                  17,
+                  16,
+                  14,
+                  14
+                ],
+                "sum": 75
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  16,
+                  19,
+                  17,
+                  16,
+                  19
+                ],
+                "sum": 87
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 78,
+            "bib_color": 1,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  19,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  16,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 339,
+        "normalized_score": 339
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7244,
+        "dog_key": "fajza--русская-псовая-борзая",
+        "name_lat": "FAJZA",
+        "name_ru": "ФАЙЗА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 20221026,
+      "dog_id": 10599,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 27,
+      "placement": null,
+      "total_score": 187,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 57,
+            "bib_color": 2,
+            "total": 187,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 77,
+            "bib_color": 2,
+            "disqualified": true,
+            "reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": 187,
+        "normalized_score": 187
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Дисквалификация",
+      "dog": {
+        "id": 10599,
+        "dog_key": "lunnaja-raduga-pangeya-ultima--русская-псовая-борзая",
+        "name_lat": "LUNNAJA RADUGA PANGEYA ULTIMA",
+        "name_ru": "ЛУННАЯ РАДУГА ПАНГЕЯ УЛЬТИМА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 20221026,
+      "dog_id": 9264,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 24,
+      "placement": null,
+      "total_score": 182,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dropped_out",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 59,
+            "bib_color": 1,
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 77,
+            "bib_color": 1,
+            "disqualified": true,
+            "reason": "Сошёл"
+          }
+        ],
+        "grand_total": 182,
+        "normalized_score": 182
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Сошёл",
+      "dog": {
+        "id": 9264,
+        "dog_key": "ах-шалунья--русская-псовая-борзая",
+        "name_lat": "AH SHALUNYA",
+        "name_ru": "АХ ШАЛУНЬЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 20221026,
+      "dog_id": 9268,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 28,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 59,
+            "bib_color": 2,
+            "disqualified": true,
+            "reason": "Дисквалификация"
+          }
+        ],
+        "grand_total": 0,
+        "normalized_score": 0
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Дисквалификация",
+      "dog": {
+        "id": 9268,
+        "dog_key": "лунная-радуга-реликвия--русская-псовая-борзая",
+        "name_lat": "LUNNAJA RADUGA RELIKVIA",
+        "name_ru": "ЛУННАЯ РАДУГА РЕЛИКВИЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 20221026,
+      "dog_id": 481,
+      "breed_class": "Русская псовая борзая - Юниоры - Суки",
+      "catalog_no": 31,
+      "placement": 1,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Лучший юниор",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 60,
+            "bib_color": 1,
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 80,
+            "bib_color": 2,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 360,
+        "normalized_score": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 481,
+        "dog_key": "simple-obsession-chapter-of-my-life--русская-псовая-борзая",
+        "name_lat": "SIMPLE OBSESSION CHAPTER OF MY LIFE",
+        "name_ru": "СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 20221026,
+      "dog_id": 11100,
+      "breed_class": "Русская псовая борзая - Юниоры - Суки",
+      "catalog_no": 30,
+      "placement": 2,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 60,
+            "bib_color": 2,
+            "total": 171,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  15,
+                  15
+                ],
+                "sum": 81
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 80,
+            "bib_color": 1,
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11100,
+        "dog_key": "apriori-luxiry-fokskhanter--русская-псовая-борзая",
+        "name_lat": "APRIORI LUXIRY FOKSKHANTER",
+        "name_ru": "АПРИОРИ ЛЮКСЮРИ ФОКСХАНТЕР",
+        "breed": "Русская псовая борзая",
+        "sex": "Сука",
+        "owner": "Vodyanava M. V."
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 20221026,
+      "dog_id": 9349,
+      "breed_class": "Салюки - Стандартный - Общая",
+      "catalog_no": 33,
+      "placement": 1,
+      "total_score": 366,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 62,
+            "bib_color": 2,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 82,
+            "bib_color": 2,
+            "total": 186,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 366,
+        "normalized_score": 366
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9349,
+        "dog_key": "salgreys-prodigy--салюки",
+        "name_lat": "SALGREYS PRODIGY",
+        "name_ru": "SALGREYS PRODIGY",
+        "breed": "САЛЮКИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 20221026,
+      "dog_id": 5712,
+      "breed_class": "Салюки - Стандартный - Общая",
+      "catalog_no": 36,
+      "placement": 2,
+      "total_score": 366,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 62,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 81,
+            "bib_color": 1,
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 366,
+        "normalized_score": 366
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 5712,
+        "dog_key": "aysara--салюки",
+        "name_lat": "AYSARA",
+        "name_ru": "АЙСАРА",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 20221026,
+      "dog_id": 10498,
+      "breed_class": "Салюки - Стандартный - Общая",
+      "catalog_no": 37,
+      "placement": 3,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 61,
+            "bib_color": 1,
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 83,
+            "bib_color": 1,
+            "total": 187,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              }
+            ]
+          }
+        ],
+        "grand_total": 360,
+        "normalized_score": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10498,
+        "dog_key": "salgreys-primavera--салюки",
+        "name_lat": "SALGREYS PRIMAVERA",
+        "name_ru": "SALGREYS PRIMAVERA",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 20221026,
+      "dog_id": 5784,
+      "breed_class": "Салюки - Стандартный - Общая",
+      "catalog_no": 35,
+      "placement": 4,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 61,
+            "bib_color": 2,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 82,
+            "bib_color": 1,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 360,
+        "normalized_score": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 5784,
+        "dog_key": "al-nafiseh-hiba--салюки",
+        "name_lat": "AL NAFISEH HIBA",
+        "name_ru": "АЛЬ НАФИСЭХ ХИБА",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 35,
+      "event_id": 20221026,
+      "dog_id": 869,
+      "breed_class": "Салюки - Стандартный - Общая",
+      "catalog_no": 34,
+      "placement": 5,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 63,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 81,
+            "bib_color": 2,
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  15,
+                  15
+                ],
+                "sum": 81
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 354,
+        "normalized_score": 354
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 869,
+        "dog_key": "al-nafiseh-gul-pari--салюки",
+        "name_lat": "AL NAFISEH GUL PARI",
+        "name_ru": "AL NAFISEH GUL PARI",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 36,
+      "event_id": 20221026,
+      "dog_id": 122,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 63,
+      "placement": 1,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 13,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 36,
+            "bib_color": 1,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 122,
+        "dog_key": "stangers-land-versailles-charman--уиппет",
+        "name_lat": "STANGERS LAND VERSAILLES CHARMAN",
+        "name_ru": "СТАНГЕРС ЛАНД ВЕРСАЛЬ ШАРМАН",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 37,
+      "event_id": 20221026,
+      "dog_id": 9336,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 58,
+      "placement": 2,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 13,
+            "bib_color": 2,
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 35,
+            "bib_color": 2,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9336,
+        "dog_key": "gordey--уиппет",
+        "name_lat": "GORDEY",
+        "name_ru": "GORDEY",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 38,
+      "event_id": 20221026,
+      "dog_id": 9534,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 61,
+      "placement": 3,
+      "total_score": 358,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 15,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "bib_color": 2,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 358,
+        "normalized_score": 358
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9534,
+        "dog_key": "kulikovo-pole-versk-lovets-udachi--уиппет",
+        "name_lat": "KULIKOVO POLE VERSK LOVETS UDACHI",
+        "name_ru": "KULIKOVO POLE VERSK LOVETS UDACHI",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 39,
+      "event_id": 20221026,
+      "dog_id": 577,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 60,
+      "placement": 4,
+      "total_score": 357,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 16,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 36,
+            "bib_color": 2,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  18,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 357,
+        "normalized_score": 357
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 577,
+        "dog_key": "kulikovo-pole-dante--уиппет",
+        "name_lat": "KULIKOVO POLE DANTE",
+        "name_ru": "КУЛИКОВО ПОЛЕ ДАНТЕ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 40,
+      "event_id": 20221026,
+      "dog_id": 10411,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 64,
+      "placement": 5,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 14,
+            "bib_color": 2,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 34,
+            "bib_color": 1,
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10411,
+        "dog_key": "valpain-pek-darling-of-fortune--уиппет",
+        "name_lat": "VALPAIN PEK DARLING OF FORTUNE",
+        "name_ru": "VALPAIN PEK DARLING OF FORTUNE",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 20221026,
+      "dog_id": 78,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 59,
+      "placement": 6,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 15,
+            "bib_color": 2,
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  16,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 35,
+            "bib_color": 1,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 353,
+        "normalized_score": 353
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 78,
+        "dog_key": "guy--уиппет",
+        "name_lat": "GUY",
+        "name_ru": "GUY",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 42,
+      "event_id": 20221026,
+      "dog_id": 255,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 56,
+      "placement": 7,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 12,
+            "bib_color": 1,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 34,
+            "bib_color": 2,
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 353,
+        "normalized_score": 353
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 255,
+        "dog_key": "eagle-black--уиппет",
+        "name_lat": "EAGLE BLACK",
+        "name_ru": "ЕАГЛЕ БЛАЦК",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 43,
+      "event_id": 20221026,
+      "dog_id": 10320,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 55,
+      "placement": 8,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 12,
+            "bib_color": 2,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 37,
+            "bib_color": 1,
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  18,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  16,
+                  19,
+                  19,
+                  16,
+                  20
+                ],
+                "sum": 90
+              }
+            ]
+          }
+        ],
+        "grand_total": 353,
+        "normalized_score": 353
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10320,
+        "dog_key": "djini-lambor--уиппет",
+        "name_lat": "DJINI LAMBOR",
+        "name_ru": "DJINI LAMBOR",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 44,
+      "event_id": 20221026,
+      "dog_id": 10255,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 57,
+      "placement": 9,
+      "total_score": 343,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 14,
+            "bib_color": 1,
+            "total": 169,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 81
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 88
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 38,
+            "bib_color": 1,
+            "total": 174,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              }
+            ]
+          }
+        ],
+        "grand_total": 343,
+        "normalized_score": 343
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10255,
+        "dog_key": "fierce-fireball-fifth-gear--уиппет",
+        "name_lat": "FIERCE FIREBALL FIFTH GEAR",
+        "name_ru": "FIERCE FIREBALL FIFTH GEAR",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 45,
+      "event_id": 20221026,
+      "dog_id": 7088,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 70,
+      "placement": 1,
+      "total_score": 372,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "bib_color": 1,
+            "total": 187,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  20,
+                  19,
+                  20
+                ],
+                "sum": 97
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 41,
+            "bib_color": 1,
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              }
+            ]
+          }
+        ],
+        "grand_total": 372,
+        "normalized_score": 372
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7088,
+        "dog_key": "stangers-land-valdivia--уиппет",
+        "name_lat": "STANGERS LAND VALDIVIA",
+        "name_ru": "СТАНГЕРС ЛАНД ВАЛЬДИВИЯ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 46,
+      "event_id": 20221026,
+      "dog_id": 600,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 65,
+      "placement": 2,
+      "total_score": 370,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "bib_color": 1,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  19,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 40,
+            "bib_color": 1,
+            "total": 187,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  18
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 370,
+        "normalized_score": 370
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 600,
+        "dog_key": "densi-midnight-sun--уиппет",
+        "name_lat": "DENSI MIDNIGHT SUN",
+        "name_ru": "ДЕНСИ МИДНАЙТ САН",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 47,
+      "event_id": 20221026,
+      "dog_id": 270,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 69,
+      "placement": 3,
+      "total_score": 364,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "bib_color": 2,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 42,
+            "bib_color": 2,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 364,
+        "normalized_score": 364
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 270,
+        "dog_key": "stangers-land-briza--уиппет",
+        "name_lat": "STANGERS LAND BRIZA",
+        "name_ru": "STANGERS LAND BRIZA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 48,
+      "event_id": 20221026,
+      "dog_id": 10537,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 67,
+      "placement": 4,
+      "total_score": 364,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "bib_color": 2,
+            "total": 188,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 96
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 42,
+            "bib_color": 1,
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 364,
+        "normalized_score": 364
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10537,
+        "dog_key": "horlend-s-intermal-energy--уиппет",
+        "name_lat": "HORLEND’S INTERMAL ENERGY",
+        "name_ru": "HORLEND’S INTERMAL ENERGY",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 49,
+      "event_id": 20221026,
+      "dog_id": 9412,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 73,
+      "placement": 5,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 18,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 40,
+            "bib_color": 2,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 361,
+        "normalized_score": 361
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9412,
+        "dog_key": "valpain-pek-dragons-daughter--уиппет",
+        "name_lat": "VALPAIN PEK DRAGONS DAUGHTER",
+        "name_ru": "VALPAIN PEK DRAGONS DAUGHTER",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 50,
+      "event_id": 20221026,
+      "dog_id": 10472,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 66,
+      "placement": 6,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "bib_color": 1,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 41,
+            "bib_color": 2,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10472,
+        "dog_key": "garda--уиппет",
+        "name_lat": "GARDA",
+        "name_ru": "GARDA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 51,
+      "event_id": 20221026,
+      "dog_id": 10616,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 68,
+      "placement": 7,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 22,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 43,
+            "bib_color": 1,
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10616,
+        "dog_key": "плеи-ит-слип-репит--уиппет",
+        "name_lat": "ПЛЕЙ ИТ СЛИП РЕПИТ",
+        "name_ru": "ПЛЕЙ ИТ СЛИП РЕПИТ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 52,
+      "event_id": 20221026,
+      "dog_id": 5646,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 71,
+      "placement": 8,
+      "total_score": 358,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 19,
+            "bib_color": 2,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "bib_color": 2,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 358,
+        "normalized_score": 358
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 5646,
+        "dog_key": "stangers-land-valencia--уиппет",
+        "name_lat": "STANGERS LAND VALENCIA",
+        "name_ru": "СТАНГЕРС ЛАНД ВАЛЕНСИЯ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 53,
+      "event_id": 20221026,
+      "dog_id": 10455,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 72,
+      "placement": 9,
+      "total_score": 358,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 21,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 43,
+            "bib_color": 2,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 358,
+        "normalized_score": 358
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10455,
+        "dog_key": "valpain-pek-daisy-doll--уиппет",
+        "name_lat": "VALPAIN PEK DAISY DOLL",
+        "name_ru": "VALPAIN PEK DAISY DOLL",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 54,
+      "event_id": 20221026,
+      "dog_id": 10534,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 74,
+      "placement": 10,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "bib_color": 2,
+            "total": 164,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  14,
+                  16,
+                  14,
+                  14,
+                  15
+                ],
+                "sum": 73
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 44,
+            "bib_color": 1,
+            "total": 170,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 78
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 334,
+        "normalized_score": 334
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10534,
+        "dog_key": "volar-blek-sharc-ultra--уиппет",
+        "name_lat": "VOLAR BLEK SHARC ULTRA",
+        "name_ru": "VOLAR BLEK SHARC ULTRA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 55,
+      "event_id": 20221026,
+      "dog_id": 10538,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 75,
+      "placement": null,
+      "total_score": 168,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dropped_out",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 18,
+            "bib_color": 2,
+            "total": 168,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 78
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 39,
+            "bib_color": 1,
+            "disqualified": true,
+            "reason": "Сошёл"
+          }
+        ],
+        "grand_total": 168,
+        "normalized_score": 168
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Сошёл",
+      "dog": {
+        "id": 10538,
+        "dog_key": "volar-blek-sharc-uma--уиппет",
+        "name_lat": "VOLAR BLEK SHARC UMA",
+        "name_ru": "VOLAR BLEK SHARC UMA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 56,
+      "event_id": 20221026,
+      "dog_id": 488,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 47,
+      "placement": 1,
+      "total_score": 367,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": 2,
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  19,
+                  19
+                ],
+                "sum": 93
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 27,
+            "bib_color": 2,
+            "total": 185,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 367,
+        "normalized_score": 367
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 488,
+        "dog_key": "varlok-yarkaya-molniya--уиппет",
+        "name_lat": "VARLOK YARKAYA MOLNIYA",
+        "name_ru": "VARLOK YARKAYA MOLNIYA",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 57,
+      "event_id": 20221026,
+      "dog_id": 7109,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 39,
+      "placement": 2,
+      "total_score": 367,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": 1,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "bib_color": 1,
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 367,
+        "normalized_score": 367
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7109,
+        "dog_key": "fletcher-illustrious-winner--уиппет",
+        "name_lat": "FLETCHER ILLUSTRIOUS WINNER",
+        "name_ru": "ФЛЕТЧЕР ИЛЛАСТРИАС ВИННЕР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 58,
+      "event_id": 20221026,
+      "dog_id": 9287,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 45,
+      "placement": 3,
+      "total_score": 366,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": 1,
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 26,
+            "bib_color": 2,
+            "total": 184,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  18,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 366,
+        "normalized_score": 366
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9287,
+        "dog_key": "valpain-pek-direct-hit--уиппет",
+        "name_lat": "VALPAIN PEK DIRECT HIT",
+        "name_ru": "VALPAIN PEK DIRECT HIT",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 59,
+      "event_id": 20221026,
+      "dog_id": 7289,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 42,
+      "placement": 4,
+      "total_score": 366,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": 1,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "bib_color": 1,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 366,
+        "normalized_score": 366
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7289,
+        "dog_key": "kulikovo-pole-germes--уиппет",
+        "name_lat": "KULIKOVO POLE GERMES",
+        "name_ru": "КУЛИКОВО ПОЛЕ ГЕРМЕС",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 60,
+      "event_id": 20221026,
+      "dog_id": 10619,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 46,
+      "placement": 5,
+      "total_score": 366,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": 2,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "bib_color": 2,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 366,
+        "normalized_score": 366
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10619,
+        "dog_key": "valpain-pek-kai--уиппет",
+        "name_lat": "VALPAIN PEK KAI",
+        "name_ru": "ВАЛЬПАЙН ПЭК КАЙ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 61,
+      "event_id": 20221026,
+      "dog_id": 9283,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 38,
+      "placement": 6,
+      "total_score": 362,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": 2,
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 25,
+            "bib_color": 1,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 362,
+        "normalized_score": 362
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9283,
+        "dog_key": "batman-night-shadow--уиппет",
+        "name_lat": "BATMAN NIGHT SHADOW",
+        "name_ru": "BATMAN NIGHT SHADOW",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 62,
+      "event_id": 20221026,
+      "dog_id": 9289,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 40,
+      "placement": 7,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": 2,
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  20
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 27,
+            "bib_color": 1,
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 361,
+        "normalized_score": 361
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9289,
+        "dog_key": "история-любви-эвр-быстрыи--уиппет",
+        "name_lat": "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
+        "name_ru": "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 63,
+      "event_id": 20221026,
+      "dog_id": 5658,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 48,
+      "placement": 8,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "bib_color": 2,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 361,
+        "normalized_score": 361
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 5658,
+        "dog_key": "varvar-konan-besstrashnyi--уиппет",
+        "name_lat": "VARVAR KONAN BESSTRASHNYI",
+        "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 64,
+      "event_id": 20221026,
+      "dog_id": 10153,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 43,
+      "placement": 9,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": 2,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 30,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10153,
+        "dog_key": "лакшери-випп-лазер--уиппет",
+        "name_lat": "ЛАКШЕРИ ВИПП ЛАЗЕР",
+        "name_ru": "ЛАКШЕРИ ВИПП ЛАЗЕР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 65,
+      "event_id": 20221026,
+      "dog_id": 10429,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 41,
+      "placement": 10,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 29,
+            "bib_color": 1,
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10429,
+        "dog_key": "кетлин-рутгер--уиппет",
+        "name_lat": "KETLIN RUTGER",
+        "name_ru": "КЕТЛИН РУТГЕР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 66,
+      "event_id": 20221026,
+      "dog_id": 463,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 44,
+      "placement": 11,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 7,
+            "bib_color": 1,
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 28,
+            "bib_color": 2,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 359,
+        "normalized_score": 359
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 463,
+        "dog_key": "luxury-whipp-oniks--уиппет",
+        "name_lat": "LUXURY WHIPP ONIKS",
+        "name_ru": "ЛАКШЕРИ ВИПП ОНИКС",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 67,
+      "event_id": 20221026,
+      "dog_id": 9343,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 51,
+      "placement": 1,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 11,
+            "bib_color": 2,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 32,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 361,
+        "normalized_score": 361
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9343,
+        "dog_key": "luxury-whipp-nikita--уиппет",
+        "name_lat": "LUXURY WHIPP NIKITA",
+        "name_ru": "ЛАКШЕРИ ВИПП НИКИТА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 68,
+      "event_id": 20221026,
+      "dog_id": 10461,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 49,
+      "placement": 2,
+      "total_score": 360,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": 1,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  20
+                ],
+                "sum": 89
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 32,
+            "bib_color": 2,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 360,
+        "normalized_score": 360
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10461,
+        "dog_key": "feel-my-heart-alethea--уиппет",
+        "name_lat": "FEEL MY HEART ALETHEA",
+        "name_ru": "FEEL MY HEART ALETHEA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 69,
+      "event_id": 20221026,
+      "dog_id": 9292,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 50,
+      "placement": 3,
+      "total_score": 356,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 11,
+            "bib_color": 1,
+            "total": 177,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 33,
+            "bib_color": 1,
+            "total": 179,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 356,
+        "normalized_score": 356
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9292,
+        "dog_key": "laving-briz-pelagea--уиппет",
+        "name_lat": "LAVING BRIZ PELAGEA",
+        "name_ru": "LAVING BRIZ PELAGEA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 70,
+      "event_id": 20221026,
+      "dog_id": 112,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 53,
+      "placement": 4,
+      "total_score": 355,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 9,
+            "bib_color": 2,
+            "total": 173,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 90
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 31,
+            "bib_color": 2,
+            "total": 182,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  19,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 355,
+        "normalized_score": 355
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 112,
+        "dog_key": "luxury-whipp-oxxy--уиппет",
+        "name_lat": "LUXURY WHIPP OXXY",
+        "name_ru": "ЛАКШЕРИ ВИПП ОКСИ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 71,
+      "event_id": 20221026,
+      "dog_id": 9389,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 54,
+      "placement": 5,
+      "total_score": 355,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": 2,
+            "total": 175,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  17,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 92
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 31,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 355,
+        "normalized_score": 355
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9389,
+        "dog_key": "wise-desire-show-format--уиппет",
+        "name_lat": "WISE DESIRE SHOW FORMAT",
+        "name_ru": "WISE DESIRE SHOW FORMAT /WISE DESIRE SHOW FORMAT",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 72,
+      "event_id": 20221026,
+      "dog_id": 248,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 52,
+      "placement": 6,
+      "total_score": 354,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": 1,
+            "total": 176,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  17,
+                  19,
+                  17,
+                  20
+                ],
+                "sum": 91
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 33,
+            "bib_color": 2,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 354,
+        "normalized_score": 354
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 248,
+        "dog_key": "luxury-whipp-omega--уиппет",
+        "name_lat": "LUXURY WHIPP OMEGA",
+        "name_ru": "ЛАКШЕРИ ВИПП ОМЕГА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 73,
+      "event_id": 20221026,
+      "dog_id": 5907,
+      "breed_class": "Фараонова собака - Стандартный - Суки",
+      "catalog_no": 76,
+      "placement": 1,
+      "total_score": 358,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 64,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 84,
+            "bib_color": 1,
+            "total": 178,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  19,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          }
+        ],
+        "grand_total": 358,
+        "normalized_score": 358
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 5907,
+        "dog_key": "amenemhet-andora-ta-malta--фараонова-собака",
+        "name_lat": "AMENEMHET ANDORA TA MALTA",
+        "name_ru": "АМЕНЕМХЕТ АНДОРА ТА МАЛЬТА",
+        "breed": "ФАРАОНОВА СОБАКА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 74,
+      "event_id": 20221026,
+      "dog_id": 7120,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 79,
+      "placement": 1,
+      "total_score": 373,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 65,
+            "bib_color": 1,
+            "total": 183,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  18,
+                  18,
+                  20
+                ],
+                "sum": 94
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 85,
+            "bib_color": 2,
+            "total": 190,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  19,
+                  19
+                ],
+                "sum": 95
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  18,
+                  19,
+                  19,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          }
+        ],
+        "grand_total": 373,
+        "normalized_score": 373
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7120,
+        "dog_key": "rosso-boreale-vittoriya-sida--чирнеко-дель-этна",
+        "name_lat": "ROSSO BOREALE VITTORIYA SIDA",
+        "name_ru": "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 75,
+      "event_id": 20221026,
+      "dog_id": 7363,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 77,
+      "placement": 2,
+      "total_score": 361,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 65,
+            "bib_color": 2,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 95
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 86,
+            "bib_color": 1,
+            "total": 180,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 92
+              }
+            ]
+          }
+        ],
+        "grand_total": 361,
+        "normalized_score": 361
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7363,
+        "dog_key": "rosso-boreale-vraent-kobi--чирнеко-дель-этна",
+        "name_lat": "ROSSO BOREALE VRAENT KOBI",
+        "name_ru": "РОССО БОРЕАЛЕ ВРАЕНТ КОБИ",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 76,
+      "event_id": 20221026,
+      "dog_id": 371,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 78,
+      "placement": 3,
+      "total_score": 343,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 66,
+            "bib_color": 1,
+            "total": 162,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  15,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  15,
+                  17,
+                  18,
+                  15,
+                  17
+                ],
+                "sum": 82
+              }
+            ]
+          },
+          {
+            "heat_number": 2,
+            "bib_number": 85,
+            "bib_color": 1,
+            "total": 181,
+            "judges": [
+              {
+                "judge_name": "Козлова И.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Куликова Г.В.",
+                "scores": [
+                  18,
+                  18,
+                  19,
+                  18,
+                  20
+                ],
+                "sum": 93
+              }
+            ]
+          }
+        ],
+        "grand_total": 343,
+        "normalized_score": 343
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 371,
+        "dog_key": "rosso-boreale-aurora--чирнеко-дель-этна",
+        "name_lat": "ROSSO BOREALE AURORA",
+        "name_ru": "ROSSO BOREALE AURORA",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 77,
+      "event_id": 20221026,
+      "dog_id": 6137,
+      "breed_class": "Левретка - Стандартный-спринтеры - Кобели",
+      "catalog_no": 11,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [],
+        "grand_total": 0,
+        "normalized_score": 0
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Неявка",
+      "dog": {
+        "id": 6137,
+        "dog_key": "perm-velikaya-zefir--малая-итальянская-борзая",
+        "name_lat": "PERM VELIKAYA ZEFIR",
+        "name_ru": "ПЕРМЬ ВЕЛИКАЯ ЗЕФИР",
+        "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 78,
+      "event_id": 20221026,
+      "dog_id": 9350,
+      "breed_class": "Салюки - Стандартный - Кобели",
+      "catalog_no": 32,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [],
+        "grand_total": 0,
+        "normalized_score": 0
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Неявка",
+      "dog": {
+        "id": 9350,
+        "dog_key": "рада-гравити-джи-декстер--салюки",
+        "name_lat": "РАДА ГРАВИТИ ДЖИ ДЕКСТЕР",
+        "name_ru": "РАДА ГРАВИТИ ДЖИ ДЕКСТЕР",
+        "breed": "САЛЮКИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 79,
+      "event_id": 20221026,
+      "dog_id": 9272,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 62,
+      "placement": null,
+      "total_score": 0,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "format": "coursing",
+        "heats": [],
+        "grand_total": 0,
+        "normalized_score": 0
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": "Неявка",
+      "dog": {
+        "id": 9272,
+        "dog_key": "mlechnyy-put-iz-poleta-mechti--уиппет",
+        "name_lat": "MLECHNYY PUT IZ POLETA MECHTI",
+        "name_ru": "MLECHNYY PUT IZ POLETA MECHTI",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    }
+  ]
+}

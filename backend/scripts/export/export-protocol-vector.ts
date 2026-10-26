@@ -990,9 +990,9 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       }
 
       // Case 1: Eliminated/Disqualified/Withdrawn/Injured in Heat 1 (single row)
-      const isFailedInHeat1 = (res.status === 'disqualified' || res.status === 'eliminated' || res.status === 'withdrawn' || res.status === 'injured' || res.status === 'dnf') && heats.length <= 1;
+      const isFailedInHeat1 = (res.status === 'disqualified' || res.status === 'eliminated' || res.status === 'withdrawn' || res.status === 'injured' || res.status === 'dnf' || res.status === 'dropped_out') && heats.length <= 1;
       if (isFailedInHeat1) {
-        const reason = res.status_reason || (res.status === 'injured' ? 'Травма' : (res.status === 'withdrawn' ? 'Снят' : (res.status === 'dnf' ? 'Сошёл' : 'Дисквалификация')));
+        const reason = res.status_reason || (res.status === 'injured' ? 'Травма' : (res.status === 'withdrawn' ? 'Снят' : ((res.status === 'dnf' || res.status === 'dropped_out') ? 'Сошёл' : 'Дисквалификация')));
         tableRowsHtml += `
           <tr class="participant-row">
             <td>${place}</td>
@@ -1009,9 +1009,9 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       }
 
       // Case 2: Eliminated/Disqualified/Withdrawn/Injured in Heat 2
-      const isFailedInHeat2 = (res.status === 'eliminated' || res.status === 'disqualified' || res.status === 'withdrawn' || res.status === 'injured') && heats.length > 1;
+      const isFailedInHeat2 = (res.status === 'eliminated' || res.status === 'disqualified' || res.status === 'withdrawn' || res.status === 'injured' || res.status === 'dnf' || res.status === 'dropped_out') && heats.length > 1;
       if (isFailedInHeat2) {
-        const reason = res.status_reason || (res.status === 'injured' ? 'Травма' : (res.status === 'withdrawn' ? 'Снят' : (res.status === 'dnf' ? 'Сошёл' : 'Дисквалификация')));
+        const reason = res.status_reason || (res.status === 'injured' ? 'Травма' : (res.status === 'withdrawn' ? 'Снят' : ((res.status === 'dnf' || res.status === 'dropped_out') ? 'Сошёл' : 'Дисквалификация')));
         tableRowsHtml += `
           <tr class="participant-row">
             <td rowspan="${maxJudges}">${place}</td>

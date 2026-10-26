@@ -5,6 +5,7 @@ import OwnerCrownName from '../../components/OwnerCrownName'
 import SpeedHistorySparkline from '../../components/SpeedHistorySparkline'
 import SpeedStatusBadge from '../../components/SpeedStatusBadge'
 import { formatRecordDate, isRecentRecordDate } from '../../lib/recordDates'
+import { toDogTitleCase } from '../../lib/dogName'
 import { Icons } from '../../lib/icons'
 
 interface SpeedRecordCardProps {
@@ -51,7 +52,7 @@ export default function SpeedRecordCard({ record }: SpeedRecordCardProps) {
             <div className="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
               <OwnerCrownName name={record.name} breed={record.breed} kind="donino">
                 <h3 className="break-words text-sm font-bold leading-snug text-charcoal-900 line-clamp-2">
-                  {record.name}
+                  {toDogTitleCase(record.name)}
                 </h3>
               </OwnerCrownName>
               <DogSexIcon sex={record.sex} />

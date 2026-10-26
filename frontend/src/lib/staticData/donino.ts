@@ -227,7 +227,8 @@ export async function getDoninoDog(
         : 0
   }
 
-  const sex = speedRecords.find((r) => r.sex)?.sex ?? null
+  const sex = speedRecords.find((r) => r.sex)?.sex ?? null;
+  const dogId = (speedRecords.find((r) => r.dog_id)?.dog_id) ?? (coursingRecords.find((r) => r.dog_id)?.dog_id) ?? null;
 
   return {
     success: true,
@@ -235,6 +236,7 @@ export async function getDoninoDog(
       name,
       breed,
       sex,
+      dog_id: dogId,
       speedRecords,
       coursingRecords,
       speedStats: {
