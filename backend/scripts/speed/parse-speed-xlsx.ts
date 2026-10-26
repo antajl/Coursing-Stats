@@ -83,13 +83,13 @@ function headerIndex(headers: string[], ...names: string[]): number {
   return -1;
 }
 
-const IGNORED_SHEETS = new Set(['2025 по породам', 'Абсолютный зачёт']);
+const IGNORED_SHEETS_PATTERN = /по породам/i;
 
 export function parseSpeedRecordsFromWorkbook(workbook: XLSX.WorkBook): ParsedSpeedRecord[] {
   const records: ParsedSpeedRecord[] = [];
 
   for (const sheetName of workbook.SheetNames) {
-    if (IGNORED_SHEETS.has(sheetName)) continue;
+    if (IGNORED_SHEETS_PATTERN.test(sheetName)) continue;
     const worksheet = workbook.Sheets[sheetName];
     if (!worksheet['!ref']) continue;
 
@@ -214,10 +214,17 @@ export function consolidateSpeedRecords(records: ParsedSpeedRecord[]): ParsedSpe
     // Дедупликация идентичных замеров (скорость + дата)
     const runMap = new Map<string, ParsedSpeedRecord>();
     for (const r of runs) {
-      const k = `${r.speed_km_h}_${r.date}`;
+      const k = r.screenshot_url
+        ? `${r.speed_km_h}_${r.screenshot_url}`
+        : `${r.speed_km_h}_${r.date}`;
       const existing = runMap.get(k);
-      if (!existing || (!existing.screenshot_url && r.screenshot_url)) {
+      if (!existing) {
         runMap.set(k, r);
+      } else {
+        const date = (existing.date && !r.date) ? existing.date : r.date;
+        const track_type = existing.track_type || r.track_type;
+        const screenshot_url = existing.screenshot_url || r.screenshot_url;
+        runMap.set(k, { ...existing, date, track_type, screenshot_url });
       }
     }
 
