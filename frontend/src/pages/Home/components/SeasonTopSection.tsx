@@ -111,7 +111,7 @@ function SeasonTopSectionInner({
         <div className="home-v2-columns" {...carousel.pauseHandlers}>
           <div
             className={`home-v2-col ${
-              effectiveMobileTab === 'shows' && hasCompetitions && hasShows ? 'hidden md:flex' : 'flex'
+              effectiveMobileTab === 'shows' && hasCompetitions && hasShows ? '!hidden md:!flex' : ''
             }`}
           >
             {hasCompetitions ? (
@@ -133,8 +133,8 @@ function SeasonTopSectionInner({
           <div
             className={`home-v2-col ${
               effectiveMobileTab === 'competitions' && hasCompetitions && hasShows
-                ? 'hidden md:flex'
-                : 'flex'
+                ? '!hidden md:!flex'
+                : ''
             }`}
           >
             {hasShows ? (

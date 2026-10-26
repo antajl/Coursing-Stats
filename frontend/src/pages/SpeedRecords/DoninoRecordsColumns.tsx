@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import DoninoListRecordRow from './DoninoListRecordRow'
 import DoninoColumnPlaque, { DoninoColumnShell } from './DoninoColumnPlaque'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'

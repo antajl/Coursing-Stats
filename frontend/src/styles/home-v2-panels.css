@@ -16,6 +16,9 @@
   display: flex;
   flex-direction: column;
 }
+.home-v2-col.hidden {
+  display: none !important;
+}
 /* Bottom timer: inset shadow follows border-radius (plain h-bar leaves corner gaps). */
 .home-breed-progress-track,
 .home-breed-progress-fill__bar {

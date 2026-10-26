@@ -145,8 +145,10 @@ export async function getDoninoDog(
     loadDoninoCoursingRecords(),
   ])
 
-  const speedRecords = allSpeed.filter((r) => r.name === name && r.breed === breed)
-  const coursingRecords = allCoursing.filter((r) => r.name === name && r.breed === breed)
+  const normName = String(name || '').trim().toLowerCase()
+  const normBreed = String(breed || '').trim().toLowerCase()
+  const speedRecords = allSpeed.filter((r) => String(r.name ?? '').trim().toLowerCase() === normName && String(r.breed ?? '').trim().toLowerCase() === normBreed)
+  const coursingRecords = allCoursing.filter((r) => String(r.name ?? '').trim().toLowerCase() === normName && String(r.breed ?? '').trim().toLowerCase() === normBreed)
 
   const allSpeedRuns: number[] = []
   for (const r of speedRecords) {
