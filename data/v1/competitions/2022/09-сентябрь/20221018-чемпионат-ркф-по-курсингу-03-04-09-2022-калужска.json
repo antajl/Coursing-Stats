@@ -1,0 +1,6068 @@
+{
+  "schema": "coursing-stats/competition-v1",
+  "exported_at": "2026-10-26T05:41:11.017Z",
+  "source": "manual-entry",
+  "event_id": 20221018,
+  "event": {
+    "id": 20221018,
+    "year": 2022,
+    "date_start": "2022-09-03",
+    "date_end": "2022-09-04",
+    "rank_label": "Чемпионат РКФ - CACL",
+    "event_type": "coursing",
+    "competition_kind": "",
+    "competition_type": "",
+    "title": "Чемпионат РКФ по курсингу, 03-04.09.2022 (Калужская обл., б/о Головинка)",
+    "host_club": null,
+    "region": "Калужская область",
+    "location": "Калужская область, б/о Головинка",
+    "catalog_url": null,
+    "results_url": null,
+    "rules_url": null,
+    "results_pdf_url": null,
+    "confirmed": 1,
+    "last_modified": "2026-10-26T05:41:11.017Z",
+    "scraped_at": null,
+    "telegram_url": null,
+    "full_title": null,
+    "event_date": null,
+    "protocol_location": null,
+    "judges": [
+      "Карелина Н.В.",
+      "Петровас Н.Е."
+    ],
+    "track_schemes": []
+  },
+  "result_count": 76,
+  "results": [
+    {
+      "id": 1,
+      "event_id": 20221018,
+      "dog_id": 622,
+      "breed_class": "Афганская борзая - Стандартный - Общая",
+      "catalog_no": 2,
+      "placement": 1,
+      "total_score": 341,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 58,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 65,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 170
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 622,
+        "dog_key": "salam-isfahan-farid--афганская-борзая",
+        "name_lat": "SALAM ISFAHAN FARID",
+        "name_ru": "САЛАМ ИСФАХАН ФАРИД",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 2,
+      "event_id": 20221018,
+      "dog_id": 8949,
+      "breed_class": "Афганская борзая - Стандартный - Общая",
+      "catalog_no": 1,
+      "placement": 2,
+      "total_score": 327,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 60,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165
+          },
+          {
+            "heat_number": 65,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 81
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 162
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 8949,
+        "dog_key": "salam-isfahan-fantastic-art--афганская-борзая",
+        "name_lat": "SALAM ISFAHAN FANTASTIC ART",
+        "name_ru": "САЛАМ ИСФАХАН ФАНТАСТИК АРТ",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 3,
+      "event_id": 20221018,
+      "dog_id": 10096,
+      "breed_class": "Афганская борзая - Стандартный - Общая",
+      "catalog_no": 3,
+      "placement": 3,
+      "total_score": 320,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 58,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  16,
+                  15
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 161
+          },
+          {
+            "heat_number": 68,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  15,
+                  15,
+                  15,
+                  16
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 159
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10096,
+        "dog_key": "salam-isfahan-tramontana-vlastelina-gor--афганская-борзая",
+        "name_lat": "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
+        "name_ru": "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
+        "breed": "АФГАНСКАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 4,
+      "event_id": 20221018,
+      "dog_id": 50,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 6,
+      "placement": 1,
+      "total_score": 327,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 69,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 74,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  14,
+                  14,
+                  14,
+                  14
+                ],
+                "sum": 71
+              }
+            ],
+            "total": 159
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 50,
+        "dog_key": "итури-паззл-екстраординари-смарт--басенджи",
+        "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 5,
+      "event_id": 20221018,
+      "dog_id": 9240,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 4,
+      "placement": 2,
+      "total_score": 327,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 70,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 74,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  14,
+                  14,
+                  14,
+                  14,
+                  14
+                ],
+                "sum": 70
+              }
+            ],
+            "total": 156
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9240,
+        "dog_key": "kilimanjaro-kaiser--басенджи",
+        "name_lat": "KILIMANJARO KAISER",
+        "name_ru": "KILIMANJARO KAISER",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 6,
+      "event_id": 20221018,
+      "dog_id": 10927,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 5,
+      "placement": null,
+      "total_score": 141,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 69,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  14,
+                  15,
+                  15,
+                  14,
+                  15
+                ],
+                "sum": 73
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  13,
+                  15,
+                  13,
+                  14,
+                  13
+                ],
+                "sum": 68
+              }
+            ],
+            "total": 141
+          },
+          {
+            "heat_number": 75,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10927,
+        "dog_key": "suntastic-viking-for-mysterious-talisman--басенджи",
+        "name_lat": "SUNTASTIC VIKING FOR MYSTERIOUS TALISMAN",
+        "name_ru": "САНТАСТИК ВИКИНГ ФОР МИСТЕРИУС ТАЛИСМАН",
+        "breed": "Басенджи",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 7,
+      "event_id": 20221018,
+      "dog_id": 7167,
+      "breed_class": "Басенджи - Стандартный - Кобели",
+      "catalog_no": 7,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 70,
+            "blanket": "white",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7167,
+        "dog_key": "itury-puzzle-izyum-v-chocolade--басенджи",
+        "name_lat": "ITURY PUZZLE IZYUM V CHOCOLADE",
+        "name_ru": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 8,
+      "event_id": 20221018,
+      "dog_id": 10526,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 10,
+      "placement": 1,
+      "total_score": 352,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 72,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 76,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 177
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10526,
+        "dog_key": "багира--басенджи",
+        "name_lat": "БАГИРА",
+        "name_ru": "БАГИРА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 9,
+      "event_id": 20221018,
+      "dog_id": 10985,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 12,
+      "placement": 2,
+      "total_score": 348,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 71,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 173
+          },
+          {
+            "heat_number": 78,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 175
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10985,
+        "dog_key": "olimpia-s-knjazheskogo-dvora--басенджи",
+        "name_lat": "OLIMPIA S KNJAZHESKOGO DVORA",
+        "name_ru": "ОЛИМПИЯ С КНЯЖЕСКОГО ДВОРА",
+        "breed": "Басенджи",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 10,
+      "event_id": 20221018,
+      "dog_id": 7474,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 9,
+      "placement": 3,
+      "total_score": 345,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 73,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 78,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 170
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7474,
+        "dog_key": "adebankes-gold-dust--басенджи",
+        "name_lat": "ADEBANKES GOLD DUST",
+        "name_ru": "АДЕБАНКЕС ГОЛД ДУСТ",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 11,
+      "event_id": 20221018,
+      "dog_id": 11039,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 8,
+      "placement": 4,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 72,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 76,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 171
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11039,
+        "dog_key": "adamant-spirit-galaktika--басенджи",
+        "name_lat": "ADAMANT SPIRIT GALAKTIKA",
+        "name_ru": "ADAMANT SPIRIT GALAKTIKA",
+        "breed": "Басенджи",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 12,
+      "event_id": 20221018,
+      "dog_id": 10609,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 13,
+      "placement": 5,
+      "total_score": 318,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 71,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 170
+          },
+          {
+            "heat_number": 77,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  13,
+                  13,
+                  13,
+                  12,
+                  13
+                ],
+                "sum": 64
+              }
+            ],
+            "total": 148
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10609,
+        "dog_key": "remisa-amita--басенджи",
+        "name_lat": "REMISA AMITA",
+        "name_ru": "РЕМИСА АМИТА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 13,
+      "event_id": 20221018,
+      "dog_id": 9675,
+      "breed_class": "Басенджи - Стандартный - Суки",
+      "catalog_no": 11,
+      "placement": null,
+      "total_score": 168,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 73,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 77,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9675,
+        "dog_key": "itury-puzzle-vilma--басенджи",
+        "name_lat": "ITURY PUZZLE VILMA",
+        "name_ru": "ИТУРИ ПАЗЗЛ ВИЛМА",
+        "breed": "БАСЕНДЖИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 14,
+      "event_id": 20221018,
+      "dog_id": 9637,
+      "breed_class": "Испанская борзая (Гальго) - Стандартный - Общая",
+      "catalog_no": 17,
+      "placement": 1,
+      "total_score": 359,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 1,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 177
+          },
+          {
+            "heat_number": 10,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 182
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9637,
+        "dog_key": "aria-amiga--испанскии-гальго",
+        "name_lat": "ARIA AMIGA",
+        "name_ru": "АРИЯ АМИГА",
+        "breed": "ИСПАНСКИЙ ГАЛЬГО",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 15,
+      "event_id": 20221018,
+      "dog_id": 11047,
+      "breed_class": "Испанская борзая (Гальго) - Стандартный - Общая",
+      "catalog_no": 15,
+      "placement": 2,
+      "total_score": 352,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 1,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 174
+          },
+          {
+            "heat_number": 10,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 178
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11047,
+        "dog_key": "bomber-alashir--испанская-борзая-гальго",
+        "name_lat": "BOMBER ALASHIR",
+        "name_ru": null,
+        "breed": "Испанская борзая (Гальго)",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 16,
+      "event_id": 20221018,
+      "dog_id": 9638,
+      "breed_class": "Испанская борзая (Гальго) - Стандартный - Общая",
+      "catalog_no": 16,
+      "placement": 3,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 2,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 11,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  16,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 175
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9638,
+        "dog_key": "aguerrida--испанскии-гальго",
+        "name_lat": "AGUERRIDA",
+        "name_ru": "АГУЕРРИДА",
+        "breed": "ИСПАНСКИЙ ГАЛЬГО",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 17,
+      "event_id": 20221018,
+      "dog_id": 11048,
+      "breed_class": "Испанская борзая (Гальго) - Стандартный - Общая",
+      "catalog_no": 14,
+      "placement": null,
+      "total_score": 174,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 2,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  19,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174
+          },
+          {
+            "heat_number": 11,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11048,
+        "dog_key": "bingo-alashir--испанская-борзая-гальго",
+        "name_lat": "BINGO ALASHIR",
+        "name_ru": "БИНГО АЛАШИР",
+        "breed": "Испанская борзая (Гальго)",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 18,
+      "event_id": 20221018,
+      "dog_id": 9425,
+      "breed_class": "Ксолоитцкуинтли Стандарт - Стандартный - Суки",
+      "catalog_no": 18,
+      "placement": 1,
+      "total_score": 345,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 28,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  14,
+                  19,
+                  19,
+                  19,
+                  15
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 170
+          },
+          {
+            "heat_number": 39,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  19,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 175
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9425,
+        "dog_key": "wuno-zafira-blanco-iz-kanekso-stand--ксолоитцкуинтли-стандарт",
+        "name_lat": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+        "name_ru": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+        "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 19,
+      "event_id": 20221018,
+      "dog_id": 10430,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный - Общая",
+      "catalog_no": 20,
+      "placement": 1,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 61,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 177
+          },
+          {
+            "heat_number": 67,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  19,
+                  19,
+                  19,
+                  16
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 173
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10430,
+        "dog_key": "grace-haund-elizabeth-her-excellence--левретка",
+        "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+        "breed": "ЛЕВРЕТКА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 20,
+      "event_id": 20221018,
+      "dog_id": 10528,
+      "breed_class": "Малая итальянская борзая (Левретка) - Стандартный - Общая",
+      "catalog_no": 19,
+      "placement": 2,
+      "total_score": 328,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 61,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  19,
+                  16
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 67,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  19,
+                  18,
+                  17,
+                  15
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  13,
+                  16,
+                  17,
+                  15,
+                  14
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 159
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10528,
+        "dog_key": "магнифико-неро--левретка",
+        "name_lat": "МАГНИФИКО НЕРО",
+        "name_ru": "МАГНИФИКО НЕРО",
+        "breed": "ЛЕВРЕТКА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 21,
+      "event_id": 20221018,
+      "dog_id": 293,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 23,
+      "placement": 1,
+      "total_score": 336,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 5,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 14,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 170
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 293,
+        "dog_key": "cavallierik-factotum--русская-псовая-борзая",
+        "name_lat": "CAVALLIERIK FACTOTUM",
+        "name_ru": "КАВАЛЛЬЕРИК ФАКТОУМ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 22,
+      "event_id": 20221018,
+      "dog_id": 7499,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 22,
+      "placement": 2,
+      "total_score": 320,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 6,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 14,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  15,
+                  14,
+                  13
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 158
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7499,
+        "dog_key": "dorogoy-drug-fartovyj--русская-псовая-борзая",
+        "name_lat": "DOROGOY DRUG FARTOVYJ",
+        "name_ru": "ДОРОГОЙ ДРУГ ФАРТОВЫЙ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 23,
+      "event_id": 20221018,
+      "dog_id": 10479,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 24,
+      "placement": 3,
+      "total_score": 305,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 5,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  15,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 159
+          },
+          {
+            "heat_number": 15,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  14,
+                  17,
+                  16,
+                  15,
+                  12
+                ],
+                "sum": 74
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  14,
+                  15,
+                  15,
+                  14,
+                  14
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 146
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10479,
+        "dog_key": "лунная-радуга-патронус--русская-псовая-борзая",
+        "name_lat": "ЛУННАЯ РАДУГА ПАТРОНУС",
+        "name_ru": "ЛУННАЯ РАДУГА ПАТРОНУС",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 24,
+      "event_id": 20221018,
+      "dog_id": 9484,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 28,
+      "placement": 1,
+      "total_score": 325,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 8,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 81
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  15,
+                  16
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 158
+          },
+          {
+            "heat_number": 16,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 167
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9484,
+        "dog_key": "lunnaja-raduga-rossiya--русская-псовая-борзая",
+        "name_lat": "LUNNAJA RADUGA ROSSIYA",
+        "name_ru": "ЛУННАЯ РАДУГА РОССИЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 25,
+      "event_id": 20221018,
+      "dog_id": 9481,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 27,
+      "placement": 2,
+      "total_score": 324,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 8,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  15
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 163
+          },
+          {
+            "heat_number": 17,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  16,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  15,
+                  15,
+                  15,
+                  15
+                ],
+                "sum": 75
+              }
+            ],
+            "total": 161
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9481,
+        "dog_key": "lunnaja-raduga-revolution--русская-псовая-борзая",
+        "name_lat": "LUNNAJA RADUGA REVOLUTION",
+        "name_ru": "ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 26,
+      "event_id": 20221018,
+      "dog_id": 10478,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 26,
+      "placement": 3,
+      "total_score": 306,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 7,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  15,
+                  15,
+                  16,
+                  15
+                ],
+                "sum": 76
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 17,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 78
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  14,
+                  15,
+                  14,
+                  14,
+                  15
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 150
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10478,
+        "dog_key": "лунная-радуга-панацея--русская-псовая-борзая",
+        "name_lat": "ЛУННАЯ РАДУГА ПАНАЦЕЯ",
+        "name_ru": "ЛУННАЯ РАДУГА ПАНАЦЕЯ",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 27,
+      "event_id": 20221018,
+      "dog_id": 11043,
+      "breed_class": "Русская псовая борзая - Стандартный - Суки",
+      "catalog_no": 25,
+      "placement": 4,
+      "total_score": 246,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 7,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  14,
+                  14,
+                  14,
+                  10,
+                  12
+                ],
+                "sum": 64
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  12,
+                  13,
+                  12,
+                  12,
+                  12
+                ],
+                "sum": 61
+              }
+            ],
+            "total": 125
+          },
+          {
+            "heat_number": 16,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  10,
+                  10,
+                  10,
+                  11,
+                  11
+                ],
+                "sum": 52
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  14,
+                  14,
+                  14,
+                  14,
+                  13
+                ],
+                "sum": 69
+              }
+            ],
+            "total": 121
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11043,
+        "dog_key": "lunnaja-raduga-vlast--русская-псовая-борзая",
+        "name_lat": "LUNNAJA RADUGA VLAST'",
+        "name_ru": "LUNNAJA RADUGA VLAST'",
+        "breed": "Русская псовая борзая",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 28,
+      "event_id": 20221018,
+      "dog_id": 9480,
+      "breed_class": "Русская псовая борзая - Юниоры - Суки",
+      "catalog_no": 29,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 9,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9480,
+        "dog_key": "nagaika--русская-псовая-борзая",
+        "name_lat": "NAGAIKA",
+        "name_ru": "НАГАЙКА",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 29,
+      "event_id": 20221018,
+      "dog_id": 9318,
+      "breed_class": "Салюки - Стандартный - Общая",
+      "catalog_no": 33,
+      "placement": 1,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 4,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 173
+          },
+          {
+            "heat_number": 13,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 177
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9318,
+        "dog_key": "салгреис-тэ-пауэр-оф-лав-salgreys-the-po--салюки",
+        "name_lat": "САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /SALGREYS THE POWER OF LOVE",
+        "name_ru": "САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /SALGREYS THE POWER OF LOVE",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 30,
+      "event_id": 20221018,
+      "dog_id": 9319,
+      "breed_class": "Салюки - Стандартный - Общая",
+      "catalog_no": 30,
+      "placement": 2,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 3,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 176
+          },
+          {
+            "heat_number": 13,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 171
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9319,
+        "dog_key": "al-nafiseh-homayoon--салюки",
+        "name_lat": "AL NAFISEH HOMAYOON",
+        "name_ru": "АЛЬ НАФИСЭХ ХОМЭЙЮН",
+        "breed": "САЛЮКИ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 31,
+      "event_id": 20221018,
+      "dog_id": 7261,
+      "breed_class": "Салюки - Стандартный - Общая",
+      "catalog_no": 31,
+      "placement": 3,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 4,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 177
+          },
+          {
+            "heat_number": 12,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 170
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7261,
+        "dog_key": "al-nafiseh-haifa--салюки",
+        "name_lat": "AL NAFISEH HAIFA",
+        "name_ru": "АЛЬ НАФИСЭХ ХАЙФА",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 32,
+      "event_id": 20221018,
+      "dog_id": 9679,
+      "breed_class": "Салюки - Стандартный - Общая",
+      "catalog_no": 32,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "disqualified",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 3,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Дисквалификация",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9679,
+        "dog_key": "al-nafiseh-haniya--салюки",
+        "name_lat": "AL NAFISEH HANIYA",
+        "name_ru": "АЛЬ НАФИСЭХ ХАНИЯ",
+        "breed": "САЛЮКИ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 33,
+      "event_id": 20221018,
+      "dog_id": 255,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 50,
+      "placement": 1,
+      "total_score": 352,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 18,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 177
+          },
+          {
+            "heat_number": 29,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 175
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 255,
+        "dog_key": "eagle-black--уиппет",
+        "name_lat": "EAGLE BLACK",
+        "name_ru": "ЕАГЛЕ БЛАЦК",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 34,
+      "event_id": 20221018,
+      "dog_id": 27,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 47,
+      "placement": 2,
+      "total_score": 351,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 18,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 176
+          },
+          {
+            "heat_number": 30,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 27,
+        "dog_key": "rider-of-rohan-brodwinek--уиппет",
+        "name_lat": "RIDER OF ROHAN BRODWINEK",
+        "name_ru": "RIDER OF ROHAN BRODWINEK",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 35,
+      "event_id": 20221018,
+      "dog_id": 577,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 51,
+      "placement": 3,
+      "total_score": 349,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 19,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 31,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 577,
+        "dog_key": "kulikovo-pole-dante--уиппет",
+        "name_lat": "KULIKOVO POLE DANTE",
+        "name_ru": "КУЛИКОВО ПОЛЕ ДАНТЕ",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 36,
+      "event_id": 20221018,
+      "dog_id": 9336,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 45,
+      "placement": 4,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 20,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 176
+          },
+          {
+            "heat_number": 29,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  18,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 171
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9336,
+        "dog_key": "gordey--уиппет",
+        "name_lat": "GORDEY",
+        "name_ru": "GORDEY",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 37,
+      "event_id": 20221018,
+      "dog_id": 9534,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 46,
+      "placement": 5,
+      "total_score": 345,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 20,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 174
+          },
+          {
+            "heat_number": 31,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9534,
+        "dog_key": "kulikovo-pole-versk-lovets-udachi--уиппет",
+        "name_lat": "KULIKOVO POLE VERSK LOVETS UDACHI",
+        "name_ru": "KULIKOVO POLE VERSK LOVETS UDACHI",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 38,
+      "event_id": 20221018,
+      "dog_id": 298,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 49,
+      "placement": 6,
+      "total_score": 344,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 19,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  18,
+                  14
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 170
+          },
+          {
+            "heat_number": 30,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 298,
+        "dog_key": "джини-ламбор--уиппет",
+        "name_lat": "ДЖИНИ ЛАМБОР",
+        "name_ru": "ДЖИНИ ЛАМБОР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 39,
+      "event_id": 20221018,
+      "dog_id": 7035,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 62,
+      "placement": 1,
+      "total_score": 357,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 22,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 178
+          },
+          {
+            "heat_number": 37,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  19,
+                  18,
+                  18,
+                  19,
+                  18
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 179
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7035,
+        "dog_key": "ashoka-tano--уиппет",
+        "name_lat": "ASHOKA TANO",
+        "name_ru": "АСОКА ТАНО",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 40,
+      "event_id": 20221018,
+      "dog_id": 5646,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 64,
+      "placement": 2,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 24,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 174
+          },
+          {
+            "heat_number": 32,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 179
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 5646,
+        "dog_key": "stangers-land-valencia--уиппет",
+        "name_lat": "STANGERS LAND VALENCIA",
+        "name_ru": "СТАНГЕРС ЛАНД ВАЛЕНСИЯ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 41,
+      "event_id": 20221018,
+      "dog_id": 270,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 57,
+      "placement": 3,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 23,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 34,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 178
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 270,
+        "dog_key": "stangers-land-briza--уиппет",
+        "name_lat": "STANGERS LAND BRIZA",
+        "name_ru": "STANGERS LAND BRIZA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 42,
+      "event_id": 20221018,
+      "dog_id": 7797,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 63,
+      "placement": 4,
+      "total_score": 353,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 22,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 177
+          },
+          {
+            "heat_number": 32,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 176
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7797,
+        "dog_key": "indiana-iz-sagi-o-gardarike--уиппет",
+        "name_lat": "INDIANA IZ SAGI O GARDARIKE",
+        "name_ru": "ИНДИАНА ИЗ САГИ О ГАРДАРИКЕ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 43,
+      "event_id": 20221018,
+      "dog_id": 377,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 55,
+      "placement": 5,
+      "total_score": 351,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 21,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 176
+          },
+          {
+            "heat_number": 38,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 175
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 377,
+        "dog_key": "kingdom-fly-grammy-grungery--уиппет",
+        "name_lat": "KINGDOM FLY GRAMMY GRUNGERY",
+        "name_ru": "KINGDOM FLY GRAMMY GRUNGERY",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 44,
+      "event_id": 20221018,
+      "dog_id": 9277,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 52,
+      "placement": 6,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 27,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 173
+          },
+          {
+            "heat_number": 37,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 177
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9277,
+        "dog_key": "dera-blue--уиппет",
+        "name_lat": "DERA BLUE",
+        "name_ru": "DERA BLUE",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 45,
+      "event_id": 20221018,
+      "dog_id": 617,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 65,
+      "placement": 7,
+      "total_score": 350,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 21,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 35,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 617,
+        "dog_key": "stangers-land-goldie-trish--уиппет",
+        "name_lat": "STANGERS LAND GOLDIE TRISH",
+        "name_ru": "СТАНГЕРС ЛАНД ГОЛДИ ТРИШ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 46,
+      "event_id": 20221018,
+      "dog_id": 10536,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 60,
+      "placement": 8,
+      "total_score": 347,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 24,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174
+          },
+          {
+            "heat_number": 36,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 173
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10536,
+        "dog_key": "amber-veivs-nensi--уиппет",
+        "name_lat": "AMBER VEIVS NENSI",
+        "name_ru": "AMBER VEIVS NENSI",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 47,
+      "event_id": 20221018,
+      "dog_id": 9292,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 56,
+      "placement": 9,
+      "total_score": 343,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 27,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 35,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  18,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 168
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9292,
+        "dog_key": "laving-briz-pelagea--уиппет",
+        "name_lat": "LAVING BRIZ PELAGEA",
+        "name_ru": "LAVING BRIZ PELAGEA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 48,
+      "event_id": 20221018,
+      "dog_id": 10455,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 58,
+      "placement": 10,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 26,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 36,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 168
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10455,
+        "dog_key": "valpain-pek-daisy-doll--уиппет",
+        "name_lat": "VALPAIN PEK DAISY DOLL",
+        "name_ru": "VALPAIN PEK DAISY DOLL",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 49,
+      "event_id": 20221018,
+      "dog_id": 9412,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 59,
+      "placement": 11,
+      "total_score": 337,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 23,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  18,
+                  18,
+                  18,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 33,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  16
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  18,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 166
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9412,
+        "dog_key": "valpain-pek-dragons-daughter--уиппет",
+        "name_lat": "VALPAIN PEK DRAGONS DAUGHTER",
+        "name_ru": "VALPAIN PEK DRAGONS DAUGHTER",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 50,
+      "event_id": 20221018,
+      "dog_id": 7032,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 61,
+      "placement": 12,
+      "total_score": 333,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 26,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  18,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 34,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  17,
+                  15
+                ],
+                "sum": 81
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 161
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7032,
+        "dog_key": "arwen-undomiel--уиппет",
+        "name_lat": "ARWEN UNDOMIEL",
+        "name_ru": "АРВЕН УНДОМИЭЛЬ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 51,
+      "event_id": 20221018,
+      "dog_id": 10472,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 53,
+      "placement": 13,
+      "total_score": 294,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 25,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  12,
+                  15,
+                  15,
+                  17,
+                  14
+                ],
+                "sum": 73
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  14,
+                  14,
+                  16,
+                  15,
+                  14
+                ],
+                "sum": 73
+              }
+            ],
+            "total": 146
+          },
+          {
+            "heat_number": 33,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  13,
+                  17,
+                  16,
+                  17,
+                  13
+                ],
+                "sum": 76
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  14,
+                  16,
+                  14,
+                  14,
+                  14
+                ],
+                "sum": 72
+              }
+            ],
+            "total": 148
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10472,
+        "dog_key": "garda--уиппет",
+        "name_lat": "GARDA",
+        "name_ru": "GARDA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 52,
+      "event_id": 20221018,
+      "dog_id": 9701,
+      "breed_class": "Уиппет - Стандартный - Суки",
+      "catalog_no": 54,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 25,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Снят",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9701,
+        "dog_key": "kingdom-fly-borra-agassi--уиппет",
+        "name_lat": "KINGDOM FLY BORRA AGASSI",
+        "name_ru": "KINGDOM FLY BORRA AGASSI",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 53,
+      "event_id": 20221018,
+      "dog_id": 10522,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 37,
+      "placement": 1,
+      "total_score": 352,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 42,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 47,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 177
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10522,
+        "dog_key": "stilar-halestorm--уиппет",
+        "name_lat": "STILAR HALESTORM",
+        "name_ru": "STILAR HALESTORM",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 54,
+      "event_id": 20221018,
+      "dog_id": 9287,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 34,
+      "placement": 2,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 40,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 48,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 170
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9287,
+        "dog_key": "valpain-pek-direct-hit--уиппет",
+        "name_lat": "VALPAIN PEK DIRECT HIT",
+        "name_ru": "VALPAIN PEK DIRECT HIT",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 55,
+      "event_id": 20221018,
+      "dog_id": 9415,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 36,
+      "placement": 3,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 40,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  16
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 47,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 170
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9415,
+        "dog_key": "ратимир-идущии-к-славе-из-камелота--уиппет",
+        "name_lat": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
+        "name_ru": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 56,
+      "event_id": 20221018,
+      "dog_id": 7109,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 38,
+      "placement": 4,
+      "total_score": 294,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 41,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  12,
+                  12,
+                  12,
+                  18,
+                  10
+                ],
+                "sum": 64
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  10,
+                  12,
+                  10,
+                  10,
+                  10
+                ],
+                "sum": 52
+              }
+            ],
+            "total": 116
+          },
+          {
+            "heat_number": 49,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 178
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7109,
+        "dog_key": "fletcher-illustrious-winner--уиппет",
+        "name_lat": "FLETCHER ILLUSTRIOUS WINNER",
+        "name_ru": "ФЛЕТЧЕР ИЛЛАСТРИАС ВИННЕР",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 57,
+      "event_id": 20221018,
+      "dog_id": 7289,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Кобели",
+      "catalog_no": 35,
+      "placement": 5,
+      "total_score": 290,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 41,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  12,
+                  12,
+                  12,
+                  18,
+                  10
+                ],
+                "sum": 64
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  10,
+                  12,
+                  10,
+                  10,
+                  10
+                ],
+                "sum": 52
+              }
+            ],
+            "total": 116
+          },
+          {
+            "heat_number": 48,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 174
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7289,
+        "dog_key": "kulikovo-pole-germes--уиппет",
+        "name_lat": "KULIKOVO POLE GERMES",
+        "name_ru": "КУЛИКОВО ПОЛЕ ГЕРМЕС",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 58,
+      "event_id": 20221018,
+      "dog_id": 9343,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 42,
+      "placement": 1,
+      "total_score": 340,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 43,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  15
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 167
+          },
+          {
+            "heat_number": 50,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 173
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9343,
+        "dog_key": "luxury-whipp-nikita--уиппет",
+        "name_lat": "LUXURY WHIPP NIKITA",
+        "name_ru": "ЛАКШЕРИ ВИПП НИКИТА",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 59,
+      "event_id": 20221018,
+      "dog_id": 10461,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 43,
+      "placement": 2,
+      "total_score": 339,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 44,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 50,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 167
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10461,
+        "dog_key": "feel-my-heart-alethea--уиппет",
+        "name_lat": "FEEL MY HEART ALETHEA",
+        "name_ru": "FEEL MY HEART ALETHEA",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 60,
+      "event_id": 20221018,
+      "dog_id": 9404,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 40,
+      "placement": 3,
+      "total_score": 337,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 43,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  15
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 168
+          },
+          {
+            "heat_number": 52,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 169
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9404,
+        "dog_key": "dessa-iz-sagi-o-gardarike--уиппет",
+        "name_lat": "DESSA IZ SAGI O GARDARIKE",
+        "name_ru": "DESSA IZ SAGI O GARDARIKE",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 61,
+      "event_id": 20221018,
+      "dog_id": 247,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 39,
+      "placement": 4,
+      "total_score": 335,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 44,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  18,
+                  17
+                ],
+                "sum": 87
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 169
+          },
+          {
+            "heat_number": 51,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  18,
+                  17,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 166
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 247,
+        "dog_key": "acuarela-delrio-douce-caramel--уиппет",
+        "name_lat": "ACUARELA DELRIO DOUCE CARAMEL",
+        "name_ru": "ACUARELA DELRIO DOUCE CARAMEL",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 62,
+      "event_id": 20221018,
+      "dog_id": 11046,
+      "breed_class": "Уиппет - Стандартный-спринтеры - Суки",
+      "catalog_no": 41,
+      "placement": 5,
+      "total_score": 331,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 45,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  17,
+                  17,
+                  16,
+                  15
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 51,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 169
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11046,
+        "dog_key": "acuarela-del-rio-erida--уиппет",
+        "name_lat": "ACUARELA DEL' RIO ERIDA",
+        "name_ru": "ACUARELA DEL' RIO ERIDA",
+        "breed": "Уиппет",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 63,
+      "event_id": 20221018,
+      "dog_id": 7802,
+      "breed_class": "Уиппет - Юниоры - Суки",
+      "catalog_no": 66,
+      "placement": null,
+      "total_score": 159,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 46,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  14,
+                  17,
+                  16,
+                  17,
+                  14
+                ],
+                "sum": 78
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  15,
+                  15
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 159
+          },
+          {
+            "heat_number": 53,
+            "blanket": "white",
+            "disqualified": true,
+            "disqualification_reason": "Снят",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7802,
+        "dog_key": "vizavi-angel-na-ladoshke--уиппет",
+        "name_lat": "VIZAVI ANGEL NA LADOSHKE",
+        "name_ru": "ВИЗАВИ АНГЕЛ НА ЛАДОШКЕ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 64,
+      "event_id": 20221018,
+      "dog_id": 269,
+      "breed_class": "Уиппет - Юниоры - Суки",
+      "catalog_no": 67,
+      "placement": null,
+      "total_score": 156,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 46,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  14,
+                  17,
+                  16,
+                  17,
+                  14
+                ],
+                "sum": 78
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  15,
+                  14
+                ],
+                "sum": 78
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 53,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Снят",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 269,
+        "dog_key": "stangers-land-daring-greatly--уиппет",
+        "name_lat": "STANGERS LAND DARING GREATLY",
+        "name_ru": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
+        "breed": "УИППЕТ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 65,
+      "event_id": 20221018,
+      "dog_id": 11049,
+      "breed_class": "Хортая борзая - Стандартный - Общая",
+      "catalog_no": 70,
+      "placement": null,
+      "total_score": 171,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 57,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  19,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 171
+          },
+          {
+            "heat_number": 66,
+            "blanket": "white",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11049,
+        "dog_key": "sparta--хортая-борзая",
+        "name_lat": "SPARTA",
+        "name_ru": "СПАРТА",
+        "breed": "Хортая борзая",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 66,
+      "event_id": 20221018,
+      "dog_id": 9584,
+      "breed_class": "Хортая борзая - Стандартный - Общая",
+      "catalog_no": 68,
+      "placement": null,
+      "total_score": 166,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 57,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  15
+                ],
+                "sum": 80
+              }
+            ],
+            "total": 166
+          },
+          {
+            "heat_number": 66,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9584,
+        "dog_key": "black-opium-for-russian-field--хортая-борзая",
+        "name_lat": "BLACK OPIUM FOR RUSSIAN FIELD",
+        "name_ru": "BLACK OPIUM FOR RUSSIAN FIELD",
+        "breed": "ХОРТАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 67,
+      "event_id": 20221018,
+      "dog_id": 9702,
+      "breed_class": "Хортая борзая - Стандартный - Общая",
+      "catalog_no": 69,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 59,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 9702,
+        "dog_key": "буревеи-фром-рашн-филд--хортая-борзая",
+        "name_lat": "БУРЕВЕЙ ФРОМ РАШН ФИЛД",
+        "name_ru": "БУРЕВЕЙ ФРОМ РАШН ФИЛД",
+        "breed": "ХОРТАЯ БОРЗАЯ",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 68,
+      "event_id": 20221018,
+      "dog_id": 7365,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 75,
+      "placement": 1,
+      "total_score": 338,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "Чемпион РКФ",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 56,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 172
+          },
+          {
+            "heat_number": 62,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 166
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7365,
+        "dog_key": "rosso-boreale-varvara--чирнеко-дель-этна",
+        "name_lat": "ROSSO BOREALE VARVARA",
+        "name_ru": "РОССО БОРЕАЛЕ ВАРВАРА",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 69,
+      "event_id": 20221018,
+      "dog_id": 383,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 73,
+      "placement": 2,
+      "total_score": 334,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "CACL",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 56,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  16,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  15,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 79
+              }
+            ],
+            "total": 162
+          },
+          {
+            "heat_number": 63,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 88
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 172
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 383,
+        "dog_key": "mia-santo-s-ilva-neva--чирнеко-дель-этна",
+        "name_lat": "MIA SANTO’S ILVA NEVA",
+        "name_ru": "MIA SANTO’S ILVA NEVA",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 70,
+      "event_id": 20221018,
+      "dog_id": 7820,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 71,
+      "placement": 3,
+      "total_score": 332,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 55,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  14,
+                  16,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 81
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  15,
+                  16,
+                  15,
+                  15,
+                  16
+                ],
+                "sum": 77
+              }
+            ],
+            "total": 158
+          },
+          {
+            "heat_number": 64,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 174
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7820,
+        "dog_key": "mia-santos-marco-qwinto--чирнеко-дель-этна",
+        "name_lat": "MIA SANTOS MARCO QWINTO",
+        "name_ru": "МИА САНТОС МАРКО КВИНТО",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 71,
+      "event_id": 20221018,
+      "dog_id": 10501,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 74,
+      "placement": 4,
+      "total_score": 322,
+      "judge_count": 2,
+      "qualification": "CC",
+      "vc": "",
+      "status": "finished",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 55,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  15,
+                  16,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  14,
+                  17,
+                  15,
+                  14,
+                  14
+                ],
+                "sum": 74
+              }
+            ],
+            "total": 156
+          },
+          {
+            "heat_number": 62,
+            "blanket": "red",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 84
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 166
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10501,
+        "dog_key": "колистос-сицилия--чирнеко-дель-этна",
+        "name_lat": "КОЛИСТОС СИЦИЛИЯ",
+        "name_ru": "КОЛИСТОС СИЦИЛИЯ",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 72,
+      "event_id": 20221018,
+      "dog_id": 7120,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 76,
+      "placement": null,
+      "total_score": 175,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 54,
+            "blanket": "white",
+            "judges": [
+              {
+                "judge_name": "Карелина Н.В.",
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  18,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_name": "Петровас Н.Е.",
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 175
+          },
+          {
+            "heat_number": 63,
+            "blanket": "white",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7120,
+        "dog_key": "rosso-boreale-vittoriya-sida--чирнеко-дель-этна",
+        "name_lat": "ROSSO BOREALE VITTORIYA SIDA",
+        "name_ru": "РОССО БОРЕАЛЕ ВИТТОРИЯ СИДА",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 73,
+      "event_id": 20221018,
+      "dog_id": 10509,
+      "breed_class": "Чирнеко дель Этна - Стандартный - Общая",
+      "catalog_no": 72,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "withdrawn",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": [
+          {
+            "heat_number": 54,
+            "blanket": "red",
+            "disqualified": true,
+            "disqualification_reason": "Сошёл",
+            "total": 0
+          }
+        ]
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10509,
+        "dog_key": "colistos-molly--чирнеко-дель-этна",
+        "name_lat": "COLISTOS MOLLY",
+        "name_ru": "COLISTOS MOLLY",
+        "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+        "sex": "Сука",
+        "owner": null
+      }
+    },
+    {
+      "id": 74,
+      "event_id": 20221018,
+      "dog_id": 7230,
+      "breed_class": "Русская псовая борзая - Стандартный - Кобели",
+      "catalog_no": 21,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": []
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 7230,
+        "dog_key": "васарт-гамбит-vasart-gambit--русская-псовая-борзая",
+        "name_lat": "ВАСАРТ ГАМБИТ /VASART GAMBIT",
+        "name_ru": "ВАСАРТ ГАМБИТ /VASART GAMBIT",
+        "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 75,
+      "event_id": 20221018,
+      "dog_id": 11045,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 44,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": []
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 11045,
+        "dog_key": "goldi-kraund-safari-sniper-shot--уиппет",
+        "name_lat": "GOLDI KRAUND SAFARI SNIPER SHOT",
+        "name_ru": "GOLDI KRAUND SAFARI SNIPER SHOT",
+        "breed": "Уиппет",
+        "sex": "Кобель",
+        "owner": null
+      }
+    },
+    {
+      "id": 76,
+      "event_id": 20221018,
+      "dog_id": 10341,
+      "breed_class": "Уиппет - Стандартный - Кобели",
+      "catalog_no": 48,
+      "placement": null,
+      "total_score": null,
+      "judge_count": 2,
+      "qualification": "",
+      "vc": "",
+      "status": "dns",
+      "raw_scores_json": {
+        "format": "coursing_v2",
+        "heats": []
+      },
+      "raw_text": "",
+      "judges": "",
+      "status_reason": null,
+      "dog": {
+        "id": 10341,
+        "dog_key": "sherwood-forest-hero--уиппет",
+        "name_lat": "SHERWOOD FOREST HERO",
+        "name_ru": "SHERWOOD FOREST HERO",
+        "breed": "УИППЕТ",
+        "sex": "Кобель",
+        "owner": null
+      }
+    }
+  ]
+}

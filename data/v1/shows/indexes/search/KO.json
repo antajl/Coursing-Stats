@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "KO",
-  "count": 1875,
+  "count": 1874,
   "dogs": [
     {
       "id": "1538081276",
@@ -91,6 +91,15 @@
       "breed": "БОРОДАТЫЙ КОЛЛИ",
       "breed_en": "BEARDED COLLIE",
       "total_shows": 24,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1060472907",
+      "name_lat": "KONSTANTA ROSS SHATENKA",
+      "name_ru": "КОНСТАНТА РОСС ШАТЕНКА",
+      "breed": "РУССКАЯ САЛОННАЯ",
+      "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE",
+      "total_shows": 41,
       "competition_dog_id": null
     },
     {
@@ -184,15 +193,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "955118104",
-      "name_lat": "KONSTANTA ROSS SHATENKA",
-      "name_ru": "",
-      "breed": "СОБАКА РЫЖИЙ",
-      "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE",
-      "total_shows": 18,
-      "competition_dog_id": null
-    },
-    {
       "id": "1638791679",
       "name_lat": "KOSMOS",
       "name_ru": "",
@@ -256,10 +256,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "52308675",
+      "id": "612448460",
       "name_lat": "KOVIMOTI MISTER PRESIDENT",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 27,
       "competition_dog_id": null
@@ -776,10 +776,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1285079803",
+      "id": "63254938",
       "name_lat": "KONSTANTA ROSS ILYUSYA",
       "name_ru": "",
-      "breed": "СОБАКА РЫЖИЙ",
+      "breed": "РУССКАЯ САЛОННАЯ СОБАКА РЫЖИЙ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -1045,10 +1045,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1193036390",
+      "id": "1527061617",
       "name_lat": "KONSTANTA ROSS ELVISMART",
       "name_ru": "",
-      "breed": "СОБАКА РЫЖИЙ",
+      "breed": "RUSSIAN SALON DOG RED",
       "breed_en": "RUSSKAYA SALONNAYA SOBAKA (RUSSIAN SALON DOG) RED, FAWN, CREAM, RED &WHITE, FAWN &WHITE, CREAM & WHITE",
       "total_shows": 11,
       "competition_dog_id": null
@@ -1738,10 +1738,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "853949238",
+      "id": "1350354785",
       "name_lat": "KONSTANTA ROSS ZIVERTA",
       "name_ru": "",
-      "breed": "СОБАКА РЫЖИЙ",
+      "breed": "RUSSIAN SALON DOG RED",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -2071,10 +2071,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "759077852",
+      "id": "85275463",
       "name_lat": "KONSTANTA ROSS GLYUKOZA-II",
       "name_ru": "",
-      "breed": "СОБАКА РЫЖИЙ",
+      "breed": "РУССКАЯ САЛОННАЯ",
       "breed_en": "",
       "total_shows": 17,
       "competition_dog_id": null
@@ -2224,10 +2224,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1150933868",
+      "id": "289002055",
       "name_lat": "KONSTANTA ROSS RIVERA",
       "name_ru": "",
-      "breed": "СОБАКА РЫЖИЙ",
+      "breed": "РУССКАЯ САЛОННАЯ СОБАКА РЫЖИЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -2422,19 +2422,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1616983351",
-      "name_lat": "KONSTANCIA IZ SCHNEIDER RICH",
+      "id": "1027802341",
+      "name_lat": "KONSTANTA ROSS YUNAYA ZARYA",
       "name_ru": "",
-      "breed": "ФАРАОНОВА СОБАКА",
+      "breed": "СОБАКА РЫЖИЙ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
     },
     {
-      "id": "1027802341",
-      "name_lat": "KONSTANTA ROSS YUNAYA ZARYA",
+      "id": "1616983351",
+      "name_lat": "KONSTANCIA IZ SCHNEIDER RICH",
       "name_ru": "",
-      "breed": "СОБАКА РЫЖИЙ",
+      "breed": "ФАРАОНОВА СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -2566,10 +2566,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1370344558",
+      "id": "1879802767",
       "name_lat": "KOMANDOR S TIHOGO OKEANA",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "КЛАССИК",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -3166,10 +3166,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "78302135",
+      "id": "1074915242",
       "name_lat": "KONDOR GELEZINIS VILKAS",
       "name_ru": "",
-      "breed": "GERMAN SHEPHERD DOG",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 34,
       "competition_dog_id": null
@@ -3747,10 +3747,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1786573878",
+      "id": "644720915",
       "name_lat": "KOIOS HESPERUS VAN EDELSIEGER",
       "name_ru": "",
-      "breed": "СОБАКА СРЕДНЯЯ",
+      "breed": "ГОЛАЯ СОБАКА СРЕДНЯЯ",
       "breed_en": "PERUVIAN HAIRLESS DOG (MEDIUM)",
       "total_shows": 15,
       "competition_dog_id": null
@@ -5272,6 +5272,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1615863968",
+      "name_lat": "KOLOKOLCHIK ZABAVNY",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "268623330",
       "name_lat": "KORONA ROSSI DOKTOR VATSON",
       "name_ru": "",
@@ -5285,15 +5294,6 @@
       "name_lat": "KORONA KAVKAZA KNYAZHE",
       "name_ru": "",
       "breed": "ПУДЕЛЬ ТОЙ КОРИЧНЕВЫЙ, ЧЕРНЫЙ, БЕЛЫЙ, СЕРЕБРИСТЫЙ, АБРИКОСОВЫЙ, КРАСНЫЙ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1615863968",
-      "name_lat": "KOLOKOLCHIK ZABAVNY",
-      "name_ru": "",
-      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5666,12 +5666,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "727963707",
+      "id": "590811663",
       "name_lat": "KOLLIKREYTS LARCHI LOYD",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
+      "id": "734432069",
+      "name_lat": "KONSTANTA ROSS POTSELUY",
+      "name_ru": "КОНСТАНТА РОСС ПОЦЕЛУЙ",
+      "breed": "РУССКАЯ САЛОННАЯ",
+      "breed_en": "",
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -5959,10 +5968,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "733970093",
+      "id": "965150738",
       "name_lat": "KONDOR DONBASS MASTER",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 18,
       "competition_dog_id": null
@@ -6945,10 +6954,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "611808763",
+      "id": "1943186074",
       "name_lat": "KONTANTA POSS DERJAVA",
       "name_ru": "",
-      "breed": "СОБАКА РЫЖИЙ",
+      "breed": "РУССКАЯ САЛОННАЯ СОБАКА РЫЖИЙ",
       "total_shows": 6,
       "competition_dog_id": null
     },
@@ -8004,15 +8013,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "734432069",
-      "name_lat": "KONSTANTA ROSS POTSELUY",
-      "name_ru": "",
-      "breed": "РУССКАЯ САЛОННАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "825015499",
       "name_lat": "KONTA VENESSEN NEWTON GREAT HUNTER",
       "name_ru": "",
@@ -8658,19 +8658,19 @@
       "competition_dog_id": null
     },
     {
+      "id": "804058344",
+      "name_lat": "KODRI VON KAISER STERN (Д/Ш)",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 5,
+      "competition_dog_id": null
+    },
+    {
       "id": "883005838",
       "name_lat": "KOTOMIN'S POKER FACE",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1414009341",
-      "name_lat": "KODRI VON KAISER STERN",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -9507,6 +9507,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1130372510",
+      "name_lat": "KONSTANTA ROSS CHIKSA",
+      "name_ru": "",
+      "breed": "СОБАКА РЫЖИЙ",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "878891317",
       "name_lat": "KOROL' CHARM CHAMPAGNE",
       "name_ru": "",
@@ -9547,15 +9556,6 @@
       "name_lat": "KOROLEVSTVO GORNIH PSOV VECTOR CONTROL",
       "name_ru": "",
       "breed": "АМЕРИКАНСКАЯ ОВЧАРКА МИНИАТЮРНАЯ",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1130372510",
-      "name_lat": "KONSTANTA ROSS CHIKSA",
-      "name_ru": "",
-      "breed": "СОБАКА РЫЖИЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -11073,10 +11073,28 @@
       "competition_dog_id": null
     },
     {
+      "id": "152252532",
+      "name_lat": "KOLIBRI GOLD VANILLA AIS-CREAM(PUFF)",
+      "name_ru": "",
+      "breed": "СОБАКА / CHINESE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1359238731",
       "name_lat": "KORA FOR V STLEOLEANY БЭСТ",
       "name_ru": "",
       "breed": "HAIRED",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "158252123",
+      "name_lat": "KONER BESKONECHNAYA ENERGIYA",
+      "name_ru": "",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -11172,15 +11190,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "152252532",
-      "name_lat": "KOLIBRI GOLD VANILLA AIS-CREAM(PUFF)",
-      "name_ru": "",
-      "breed": "СОБАКА / CHINESE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "624158536",
       "name_lat": "KORONA ROSSI CINA",
       "name_ru": "",
@@ -11239,15 +11248,6 @@
       "name_lat": "KORONA ASTRALIS PRINCE PERSII",
       "name_ru": "",
       "breed": "ДОБЕРМАН",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "158252123",
-      "name_lat": "KONER BESKONECHNAYA ENERGIYA",
-      "name_ru": "",
-      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -12882,10 +12882,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "342584056",
+      "id": "1413729438",
       "name_lat": "KORSAR",
       "name_ru": "",
-      "breed": "ЧЕРНО- ПОДПАЛЫЙ",
+      "breed": "ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -13811,6 +13811,14 @@
       "competition_dog_id": null
     },
     {
+      "id": "623155926",
+      "name_lat": "KOVIMOTI ARNOLD",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "338446199",
       "name_lat": "KOPPOD'ORO ARMAN ARMANY",
       "name_ru": "",
@@ -14427,15 +14435,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1723849640",
-      "name_lat": "KOVIMOTI MAKKINLI SNOUPIK",
-      "name_ru": "КОВИМОТИ МАККИНЛИ СНОУПИК",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "862030359",
       "name_lat": "KOPYE SARMATA-POLET VALKIRIY",
       "name_ru": "",
@@ -14481,10 +14480,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1439542784",
+      "id": "1466415318",
       "name_lat": "KORNET'S HEART AIRIS",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -14503,14 +14502,6 @@
       "name_lat": "KOSTA FELICITAS SAKURA",
       "name_ru": "",
       "breed": "ТАКСА СТАНДАРТНАЯ ГЛАДКОШЕРСТНАЯ",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1121285533",
-      "name_lat": "KOVIMOTI ARNOLD",
-      "name_ru": "",
-      "breed": "СОБАКА",
       "total_shows": 2,
       "competition_dog_id": null
     },
@@ -14622,10 +14613,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1830183740",
+      "id": "508272885",
       "name_lat": "KOSMOS",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -14993,6 +14984,15 @@
       "name_lat": "KORITZA FOR BOOMBOOGIE IZ STOLITSY URALA",
       "name_ru": "",
       "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1723849640",
+      "name_lat": "KOVIMOTI MAKKINLI SNOUPIK",
+      "name_ru": "",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -15663,19 +15663,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "804058344",
-      "name_lat": "KODRI VON KAISER STERN (Д/Ш)",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1309046161",
+      "id": "1464971326",
       "name_lat": "KORDELIA DI FIAMMA VIVO",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -15946,10 +15937,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1481726684",
+      "id": "1078640954",
       "name_lat": "KOLLIKREYTS LAGRUS LONG",
       "name_ru": "",
-      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null

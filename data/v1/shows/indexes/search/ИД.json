@@ -1,8 +1,17 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ИД",
-  "count": 286,
+  "count": 285,
   "dogs": [
+    {
+      "id": "170978811",
+      "name_lat": "ИДЕАЛ ДОГС ГИВ ЭМЕРАЛЬД К/Х",
+      "name_ru": "ИДЕАЛ ДОГС ГИВ ЭМЕРАЛЬД К/Х",
+      "breed": "ИСПАНСКАЯ ВОДЯНАЯ СОБАКА",
+      "breed_en": "SPANISH WATER DOG",
+      "total_shows": 39,
+      "competition_dog_id": null
+    },
     {
       "id": "1802818862",
       "name_lat": "ИДАЙ",
@@ -73,15 +82,6 @@
       "breed": "ИТАЛЬЯНСКИЙ КАНЕ КОРСО",
       "breed_en": "",
       "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1849842675",
-      "name_lat": "ИДЕАЛ ДОГС ГИВ ЭМЕРАЛЬД К/Х",
-      "name_ru": "ИДЕАЛ ДОГС ГИВ ЭМЕРАЛЬД К/Х",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 14,
       "competition_dog_id": null
     },
     {
@@ -175,10 +175,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "42230823",
+      "id": "143578957",
       "name_lat": "ИДЕАЛ ДОГС ГИВ ДЕЗЕРТ РОУЗ",
       "name_ru": "ИДЕАЛ ДОГС ГИВ ДЕЗЕРТ РОУЗ",
-      "breed": "СОБАКА",
+      "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -256,12 +256,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1533143806",
-      "name_lat": "ИДЕАЛ ДОГС ГИВ БОМБА НЬЮС",
-      "name_ru": "ИДЕАЛ ДОГС ГИВ БОМБА НЬЮС",
+      "id": "766701988",
+      "name_lat": "ИДЕАЛ ДОГС ГИВ БОМБА НЬЮС (К/Х)/",
+      "name_ru": "ИДЕАЛ ДОГС ГИВ БОМБА НЬЮС (К/Х)/",
       "breed": "ИСПАНСКАЯ ВОДЯНАЯ",
       "breed_en": "",
-      "total_shows": 7,
+      "total_shows": 8,
       "competition_dog_id": null
     },
     {
@@ -937,10 +937,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "937326904",
+      "id": "1376716046",
       "name_lat": "ИДЕАЛ БОЙ РИЧИ",
       "name_ru": "ИДЕАЛ БОЙ РИЧИ",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- БЕЛЫЙ",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО-БЕЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1237,15 +1237,6 @@
       "name_lat": "ИДЕАЛ ДОГС ГИВ ЭНДЛЕСС БЛОССОМ",
       "name_ru": "",
       "breed": "МАЙОРСКИЙ МАСТИФ (КА ДЕ БО) /",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "717229304",
-      "name_lat": "ИДЕАЛ ДОГС ГИВ БОМБА НЬЮС (К/Х)/",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },

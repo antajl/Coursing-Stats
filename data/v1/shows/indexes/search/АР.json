@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "АР",
-  "count": 4866,
+  "count": 4862,
   "dogs": [
     {
       "id": "821689055",
@@ -211,10 +211,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "975059566",
+      "id": "372446982",
       "name_lat": "АРТ ОВ КОСМОС СОНГ CHERNYI ZHEMCHUG TAIR ZAKHAR",
       "name_ru": "АРТ ОВ КОСМОС СОНГ",
-      "breed": "СОБАКА",
+      "breed": "БИВЕР ТЕРЬЕР",
       "breed_en": "",
       "total_shows": 23,
       "competition_dog_id": null
@@ -2878,6 +2878,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "962658989",
+      "name_lat": "АРИСТОКРАТ ПО ПРАВУ РОЖДЕНИЯ",
+      "name_ru": "АРИСТОКРАТ ПО ПРАВУ РОЖДЕНИЯ",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 6,
+      "competition_dog_id": null
+    },
+    {
       "id": "1370853273",
       "name_lat": "АРКТИК ГЛОУ ВИКИНГ",
       "name_ru": "",
@@ -3035,15 +3044,6 @@
       "name_lat": "АРНАТО БАЛДЕСАРИНИ МЭЙЗИКИН",
       "name_ru": "",
       "breed": "ЕВРАЗИЕР",
-      "breed_en": "",
-      "total_shows": 4,
-      "competition_dog_id": null
-    },
-    {
-      "id": "962658989",
-      "name_lat": "АРИСТОКРАТ ПО ПРАВУ РОЖДЕНИЯ",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -5832,10 +5832,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "133454893",
+      "id": "1743807595",
       "name_lat": "АРНО ДИА ФО МИСТЕРИ ЭМОУШЕНС",
       "name_ru": "",
-      "breed": "ШИ - ТЦУ",
+      "breed": "ши-тцу",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -8133,10 +8133,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "997532261",
+      "id": "1088753879",
       "name_lat": "АРАБЕЛЬ БЛАНШ",
       "name_ru": "АРАБЕЛЬ БЛАНШ",
-      "breed": "СОБАКА",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -9894,10 +9894,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1476264398",
+      "id": "1077825387",
       "name_lat": "АРВЕН ЕЛВЕН ПРИНЦЕСС",
       "name_ru": "АРВЕН ЕЛВЕН ПРИНЦЕСС",
-      "breed": "СОБАКА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -10064,10 +10064,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1442541198",
+      "id": "477141496",
       "name_lat": "АРИЕ ДЕР КРАФТ АВГУСТ",
       "name_ru": "АРИЕ ДЕР КРАФТ АВГУСТ",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА ДЛИННОШЕРСТНАЯ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -10796,10 +10796,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "336483946",
+      "id": "1429646773",
       "name_lat": "АРТ РЕБЕЛЛИОН БИСЯМОН НО КО",
       "name_ru": "АРТ РЕБЕЛЛИОН БИСЯМОН НО КО",
-      "breed": "СОБАКА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 10,
       "competition_dog_id": null
@@ -10831,10 +10831,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1030445152",
+      "id": "394183617",
       "name_lat": "АРИЙЦЫ УРАЛА БЕТТИ",
       "name_ru": "АРИЙЦЫ УРАЛА БЕТТИ",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 9,
       "competition_dog_id": null
@@ -12061,10 +12061,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1091550447",
+      "id": "163769144",
       "name_lat": "АРМУС ФОН ВЭСПЭН ХАУС",
       "name_ru": "АРМУС ФОН ВЭСПЭН ХАУС",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -12660,19 +12660,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "136056409",
-      "name_lat": "АРЕСВУМА ТАНГА ТАМБЭ",
+      "id": "1457253316",
+      "name_lat": "АРТ РЕБЕЛЛЕОН ФЛАЙИН БУЛЛЕТ",
       "name_ru": "",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
     },
     {
-      "id": "1457253316",
-      "name_lat": "АРТ РЕБЕЛЛЕОН ФЛАЙИН БУЛЛЕТ",
+      "id": "136056409",
+      "name_lat": "АРЕСВУМА ТАНГА ТАМБЭ",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -17168,15 +17168,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1383467671",
-      "name_lat": "АРИСТОКРАТ ПО ПРАВУ",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
       "id": "162257046",
       "name_lat": "АРТ КОТ ШЕЛЛИ",
       "name_ru": "",
@@ -17381,10 +17372,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1202400460",
+      "id": "1434907786",
       "name_lat": "АРД ФЕАИНН АРВЕН",
       "name_ru": "АРД ФЕАИНН АРВЕН",
-      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -17533,10 +17524,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "375202336",
+      "id": "899828470",
       "name_lat": "АРД ФЕАИНН АНГЕЛ",
       "name_ru": "АРД ФЕАИНН АНГЕЛ",
-      "breed": "ДОБЕРМАН ЧЕРНО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -17847,6 +17838,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "977097338",
+      "name_lat": "АРНИ",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
       "id": "1156279",
       "name_lat": "АРТЕ АНТИКА ЖЕ Т'ЭМ АМИ",
       "name_ru": "АРТЕ АНТИКА ЖЕ Т'ЭМ АМИ",
@@ -17982,15 +17982,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1661457755",
-      "name_lat": "АРДЕН СОЛ ЖАН ЖАК",
-      "name_ru": "АРДЕН СОЛ ЖАН ЖАК",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "69460836",
       "name_lat": "АРНОЛЬД ШВАРЦЕНЕГГЕР",
       "name_ru": "АРНОЛЬД ШВАРЦЕНЕГГЕР",
@@ -18081,6 +18072,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "363250022",
+      "name_lat": "АРСХАУС РЕДЖИНА ТЕССОРО ( ПУХ)",
+      "name_ru": "АРСХАУС РЕДЖИНА ТЕССОРО ( ПУХ)",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
       "id": "906386777",
       "name_lat": "АРЛЕН РУС УЛЬМА",
       "name_ru": "",
@@ -18139,15 +18139,6 @@
       "name_lat": "АРЕС БЛЭЙД ОФ ВИКТОРИ",
       "name_ru": "",
       "breed": "ФОКСТЕРЬЕР Г-Ш",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "363250022",
-      "name_lat": "АРСХАУС РЕДЖИНА ТЕССОРО ( ПУХ)",
-      "name_ru": "АРСХАУС РЕДЖИНА ТЕССОРО ( ПУХ)",
-      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -18382,15 +18373,6 @@
       "name_lat": "АРАБИКА",
       "name_ru": "",
       "breed": "МАЛАЯ ИТАЛЬЯНСКАЯ БОРЗАЯ (ЛЕВРЕТКА)",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "977097338",
-      "name_lat": "АРНИ",
-      "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -19641,10 +19623,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1364862295",
+      "id": "1016067728",
       "name_lat": "АРМИЯ ФОМ НЕО РАЙХ",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -20527,6 +20509,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "297198123",
+      "name_lat": "АРМАНИ ШАРМ МАТИЛЬДА",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1267444076",
       "name_lat": "АРКТИК ШАЙН ЗАРА",
       "name_ru": "",
@@ -20968,10 +20959,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "109712679",
+      "id": "963435087",
       "name_lat": "АРЛЕКИН ШОУ ПАПРИКА ИНСАЙД",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР- СПАНИЕЛЬ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР-СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -20990,15 +20981,6 @@
       "name_lat": "АРСЕНИЙ ОТ ОРЛОВЫХ",
       "name_ru": "",
       "breed": "СХИППЕРКЕ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "297198123",
-      "name_lat": "АРМАНИ ШАРМ МАТИЛЬДА",
-      "name_ru": "",
-      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -21049,10 +21031,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "343732018",
+      "id": "1712548447",
       "name_lat": "АРГУС С СОКОЛЬИХ ГОР",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -21655,10 +21637,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "969424479",
+      "id": "547601185",
       "name_lat": "АРТ РЕВЮ ОВРЕЛИЯ",
       "name_ru": "АРТ РЕВЮ ОВРЕЛИЯ",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -23940,10 +23922,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1494724324",
+      "id": "1848876269",
       "name_lat": "АРТУР АЛЕКСИС ГУД ЛАК",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -26647,10 +26629,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1219334967",
+      "id": "1651846624",
       "name_lat": "АРТ РЕБЕЛЛИОН БРЭЙК ПОЙНТ",
       "name_ru": "АРТ РЕБЕЛЛИОН БРЭЙК ПОЙНТ",
-      "breed": "СОБАКА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 6,
       "competition_dog_id": null
@@ -26764,10 +26746,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1344094236",
+      "id": "1277525498",
       "name_lat": "АРИЙЦЫ УРАЛА КАРАЧ",
       "name_ru": "АРИЙЦЫ УРАЛА КАРАЧ",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "total_shows": 5,
       "competition_dog_id": null
     },
@@ -27308,6 +27290,15 @@
       "name_lat": "Арилис Лайн Кей Ту Май Хард",
       "name_ru": "",
       "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
+      "id": "900091770",
+      "name_lat": "АРТ РЕБЕЛЛИОН БИ МАЙН ФОР ВАЙН",
+      "name_ru": "АРТ РЕБЕЛЛИОН БИ МАЙН ФОР ВАЙН",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -28013,15 +28004,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "900091770",
-      "name_lat": "АРТ РЕБЕЛЛИОН БИ МАЙН ФОР ВАЙН",
-      "name_ru": "АРТ РЕБЕЛЛИОН БИ МАЙН ФОР ВАЙН",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "1716278334",
       "name_lat": "АРТ РЕБЕЛЛИОН РЭЙНБОУ ФЛЕЙМ",
       "name_ru": "АРТ РЕБЕЛЛИОН РЭЙНБОУ ФЛЕЙМ",
@@ -28187,15 +28169,6 @@
       "name_lat": "АРМА",
       "name_ru": "",
       "breed": "GERMAN SPITZ TOY (POMERANIAN)",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1128109212",
-      "name_lat": "АРНИ",
-      "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -30532,10 +30505,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "459695013",
+      "id": "1046403359",
       "name_lat": "АРЕАЛ РОСЬ ОРСА",
       "name_ru": "АРЕАЛ РОСЬ ОРСА",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -30710,10 +30683,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1754286235",
+      "id": "1239968623",
       "name_lat": "АРМАГЕДДОН ДАЛЬ РОССО",
       "name_ru": "АРМАГЕДДОН ДАЛЬ РОССО",
-      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН КОРИЧНЕВО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -30791,10 +30764,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "984160463",
+      "id": "1849492948",
       "name_lat": "АРСХАУС МАКСИМУМ ЭФФЕКТ",
       "name_ru": "АРСХАУС МАКСИМУМ ЭФФЕКТ",
-      "breed": "СОБАКА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -30836,10 +30809,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1178952539",
+      "id": "37183856",
       "name_lat": "АРТ РЕБЕЛЛИОН РАЙЗИНГ НАЙТ",
       "name_ru": "АРТ РЕБЕЛЛИОН РАЙЗИНГ НАЙТ",
-      "breed": "СОБАКА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -32086,15 +32059,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1003229733",
-      "name_lat": "АРНИ",
-      "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "250358214",
       "name_lat": "АРТУР ДЮБОН",
       "name_ru": "",
@@ -32973,10 +32937,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1638985734",
+      "id": "1948555912",
       "name_lat": "АРИАНА",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО- ПОДПАЛЫЙ",
+      "breed": "ПУАЛЬ ФРИЗЕ МИНИАТЮРНЫЙ ЧЕРНО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -34861,6 +34825,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "716290904",
+      "name_lat": "АРТ РЕБЕЛЛИОН БЛЭК ГОЛД",
+      "name_ru": "",
+      "breed": "СОБАКА / CHINESE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "1778940921",
       "name_lat": "АРИЛИС ЛАЙН КИП СМАЙЛИНГ",
       "name_ru": "",
@@ -34918,6 +34891,15 @@
       "name_lat": "АРНИКА ВОЛШЕБНЫЙ ЦВЕТОК",
       "name_ru": "",
       "breed": "ЗОЛОТИСТЫЙ РЕТРИВЕР",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1011079041",
+      "name_lat": "АРТ РЕБЕЛЛИОН РОЯЛ АЙС",
+      "name_ru": "",
+      "breed": "СОБАКА / CHINESE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -34999,6 +34981,15 @@
       "name_lat": "АРТ ПАТИ КАССИОПЕЯ",
       "name_ru": "",
       "breed": "НЕМЕЦКИЙ ШПИЦ ТОЙ (ПОМЕРАНСКИЙ) БЕЛЫЙ, ЧЕРНЫЙ, КОРИЧНЕВЫЙ, ОРАНЖЕВЫЙ, СЕРЫЙ И ДРУГИЕ ОКРАСЫ",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1972160526",
+      "name_lat": "АРТ РЕБЕЛЛЕОН ФАЙНАЛ БОСС",
+      "name_ru": "",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -36362,10 +36353,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "901398907",
+      "id": "1132580677",
       "name_lat": "АРЕАЛ РОСЬ БАРСЕЛОНА",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -36542,10 +36533,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "117805257",
+      "id": "1710372803",
       "name_lat": "АРЛИН ЛИ ФОМ ФЕСТБУРГ",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -36794,10 +36785,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "694199230",
+      "id": "602232323",
       "name_lat": "АРИЕ ДЕР КРАФТ ГОДЗИЛЛА",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -37559,10 +37550,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "410988970",
+      "id": "31511432",
       "name_lat": "АРИЙЦЫ УРАЛА ВЕНЕРА",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -37802,19 +37793,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1467987193",
+      "id": "318581715",
       "name_lat": "АРЕАЛ РОСЬ ЦАРИНА",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1188065451",
+      "id": "1975174677",
       "name_lat": "АРЕАЛ РОСЬ ГРАФ АРТ",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -38063,10 +38054,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1112629515",
+      "id": "1840054453",
       "name_lat": "АРЕАЛ РОСЬ ЛЕРОЙ",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -38994,15 +38985,6 @@
       "name_lat": "АРТФОРМ СВИТОЗАР",
       "name_ru": "",
       "breed": "БАСЕНДЖИ / BASENJI",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "716290904",
-      "name_lat": "АРТ РЕБЕЛЛИОН БЛЭК ГОЛД",
-      "name_ru": "",
-      "breed": "СОБАКА / CHINESE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -40319,15 +40301,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "1011079041",
-      "name_lat": "АРТ РЕБЕЛЛИОН РОЯЛ АЙС",
-      "name_ru": "",
-      "breed": "СОБАКА / CHINESE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
       "id": "1476389821",
       "name_lat": "АРТЕМИДА ДЕЛА ЛУНА",
       "name_ru": "",
@@ -40688,10 +40661,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1269013389",
+      "id": "1955408193",
       "name_lat": "АРЛЕКИН ШОУ КАНТАТА ФОР МАЭСТРО",
       "name_ru": "",
-      "breed": "АМЕРИКАНСКИЙ КОКЕР- СПАНИЕЛЬ",
+      "breed": "АМЕРИКАНСКИЙ КОКЕР-СПАНИЕЛЬ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -40958,10 +40931,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "199159519",
+      "id": "2551999",
       "name_lat": "АРИАННА С ИЗЮМИНКОЙ ЮЛИАНЫ",
       "name_ru": "",
-      "breed": "ПУАЛЬ ФРИЗЕ ТОЙ ЧЕРНО- БЕЛЫЙ / CHIEN",
+      "breed": "ПУАЛЬ ФРИЗЕ ТОЙ ЧЕРНО-БЕЛЫЙ / CHIEN",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -41147,10 +41120,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1797369071",
+      "id": "539975549",
       "name_lat": "АРНО ДИА МИСТЕРИ ЭМОУШЕНС",
       "name_ru": "",
-      "breed": "ШИ - ТЦУ",
+      "breed": "ши-тцу",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -42024,15 +41997,6 @@
       "name_lat": "Арктическая сказка Барби",
       "name_ru": "",
       "breed": "САМОЕДСКАЯ СОБАКА",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1972160526",
-      "name_lat": "АРТ РЕБЕЛЛЕОН ФАЙНАЛ БОСС",
-      "name_ru": "",
-      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -43397,10 +43361,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1760781474",
+      "id": "1268355212",
       "name_lat": "АРЛЕН РУС ДОЛЬЧЕ ПАНИНО",
       "name_ru": "",
-      "breed": "ДОБЕРМАН КОРИЧНЕВО- ПОДПАЛЫЙ",
+      "breed": "ДОБЕРМАН КОРИЧНЕВО-ПОДПАЛЫЙ",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

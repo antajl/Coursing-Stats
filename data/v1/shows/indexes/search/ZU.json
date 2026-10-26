@@ -1,13 +1,13 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ZU",
-  "count": 184,
+  "count": 185,
   "dogs": [
     {
-      "id": "1949401875",
+      "id": "692555765",
       "name_lat": "ZURIONA PATRON",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
       "breed_en": "",
       "total_shows": 20,
       "competition_dog_id": null
@@ -58,10 +58,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1647010830",
+      "id": "1138073096",
       "name_lat": "ZURIONA TVOY ANGEL",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
       "breed_en": "",
       "total_shows": 7,
       "competition_dog_id": null
@@ -103,21 +103,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "1597817407",
-      "name_lat": "ZURIONA PRINTSESSA LEYA (изм. ВК 16.04.26 в. 44)",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 8,
-      "competition_dog_id": null
-    },
-    {
       "id": "1247901152",
       "name_lat": "ZUMBA DANCER STEP BY STEP",
       "name_ru": "",
       "breed": "ЧИХУАХУА ДЛИННОШЕРСТНАЯ",
       "breed_en": "",
       "total_shows": 8,
+      "competition_dog_id": null
+    },
+    {
+      "id": "145719176",
+      "name_lat": "ZURIONA PRINTSESSA LEYA",
+      "name_ru": "",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
+      "breed_en": "",
+      "total_shows": 7,
       "competition_dog_id": null
     },
     {
@@ -560,10 +560,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1368436122",
+      "id": "1644097176",
       "name_lat": "ZUMBA GELEZINIS VILKAS",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 15,
       "competition_dog_id": null
@@ -658,10 +658,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "393935335",
+      "id": "955612073",
       "name_lat": "ZUMMER AUS VIKVELT",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 5,
       "competition_dog_id": null
@@ -910,6 +910,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1497535211",
+      "name_lat": "ZURIONA PRINTSESSA LEYA (изм. ВК 16.04.26 в. 44)",
+      "name_ru": "",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ СОБАКА",
+      "breed_en": "",
+      "total_shows": 7,
+      "competition_dog_id": null
+    },
+    {
       "id": "1892351981",
       "name_lat": "ZUBERI OT SIGIRII",
       "name_ru": "",
@@ -982,10 +991,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1479873991",
+      "id": "1011646669",
       "name_lat": "ZURIONA ZAMIRA",
       "name_ru": "",
-      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ СОБАКА",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1215,6 +1224,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "795962829",
+      "name_lat": "ZURIONA MILEDI",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 3,
+      "competition_dog_id": null
+    },
+    {
       "id": "1983562678",
       "name_lat": "ZUIHOU GO GUMMA ARAKI",
       "name_ru": "",
@@ -1242,19 +1260,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "795962829",
-      "name_lat": "ZURIONA MILEDI",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1476568009",
+      "id": "1372105459",
       "name_lat": "ZURIONA VYUGA",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "ПИРЕНЕЙСКАЯ ГОРНАЯ",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -1264,6 +1273,15 @@
       "name_lat": "ZULYA",
       "name_ru": "",
       "breed": "МОПС",
+      "breed_en": "",
+      "total_shows": 2,
+      "competition_dog_id": null
+    },
+    {
+      "id": "923714279",
+      "name_lat": "ZURIONA KOKO DO ORO",
+      "name_ru": "",
+      "breed": "СОБАКА / PYRENEAN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1282,15 +1300,6 @@
       "name_lat": "ZUZZUSTYLE DOROTHEA",
       "name_ru": "",
       "breed": "ПОЛЬСКАЯ ПОДГАЛЯНСКАЯ ОВЧАРКА",
-      "breed_en": "",
-      "total_shows": 2,
-      "competition_dog_id": null
-    },
-    {
-      "id": "923714279",
-      "name_lat": "ZURIONA KOKO DO ORO",
-      "name_ru": "",
-      "breed": "СОБАКА / PYRENEAN",
       "breed_en": "",
       "total_shows": 2,
       "competition_dog_id": null
@@ -1519,6 +1528,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "795943652",
+      "name_lat": "ZURIONA SANTA KLAUS",
+      "name_ru": "",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "887615787",
       "name_lat": "ZUZZUSTYLE ANDROMEDA",
       "name_ru": "",
@@ -1585,15 +1603,6 @@
       "name_lat": "ZURIEL FROM DARSEL",
       "name_ru": "",
       "breed": "ВЕЛЬШ КОРГИ ПЕМБРОК",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "795943652",
-      "name_lat": "ZURIONA SANTA KLAUS",
-      "name_ru": "",
-      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

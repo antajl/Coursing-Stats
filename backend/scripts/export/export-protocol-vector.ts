@@ -492,8 +492,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
           ${renderRacingBibCell(heat3)}
           ${renderRacingTimeSpeed(heat3, h3Reason, dogDistance)}
           `}
-          <td>${vc}</td>
           <td>${qual}</td>
+          <td>${vc}</td>
         </tr>
       `;
     }
@@ -963,8 +963,8 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
               ${renderBibCellRowspan(heat1, maxJudges)}
               ${renderScores(j1_h1)}
               <td rowspan="${maxJudges}">${totalScore || (heat1?.total != null ? heat1.total : '')}</td>
-              <td rowspan="${maxJudges}">${vc}</td>
               <td rowspan="${maxJudges}">${qual}</td>
+              <td rowspan="${maxJudges}">${vc}</td>
             </tr>
             ${maxJudges >= 2 ? `
             <tr class="participant-row">
@@ -1016,8 +1016,8 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
             ${renderBibCellRowspan(heat2, maxJudges)}
             <td colspan="7" rowspan="${maxJudges}" class="status-cell">${escapeHtml(reason)}</td>
             <td rowspan="${maxJudges}">${totalScore}</td>
-            <td rowspan="${maxJudges}">${vc}</td>
             <td rowspan="${maxJudges}">${qual}</td>
+            <td rowspan="${maxJudges}">${vc}</td>
           </tr>
           <tr class="participant-row">
             ${renderScores(j2_h1)}
@@ -1046,8 +1046,8 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
           ${renderScores(j1_h2)}
           <td rowspan="${maxJudges}">${heat2?.total != null ? heat2.total : ''}</td>
           <td rowspan="${maxJudges}">${totalScore}</td>
-          <td rowspan="${maxJudges}">${vc}</td>
           <td rowspan="${maxJudges}">${qual}</td>
+          <td rowspan="${maxJudges}">${vc}</td>
         </tr>
         <tr class="participant-row">
           ${renderScores(j2_h1)}

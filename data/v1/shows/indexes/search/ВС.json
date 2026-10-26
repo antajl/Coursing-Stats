@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "ВС",
-  "count": 50,
+  "count": 51,
   "dogs": [
     {
       "id": "584162279",
@@ -55,6 +55,15 @@
       "breed": "ФРАНЦУЗСКИЙ БУЛЬДОГ",
       "breed_en": "",
       "total_shows": 16,
+      "competition_dog_id": null
+    },
+    {
+      "id": "606062729",
+      "name_lat": "ВСЕСЛАВА СЛАВНАЯ",
+      "name_ru": "ВСЕСЛАВА СЛАВНАЯ",
+      "breed": "СОБАКА",
+      "breed_en": "",
+      "total_shows": 26,
       "competition_dog_id": null
     },
     {

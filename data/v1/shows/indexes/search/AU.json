@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/show-search-v1",
   "prefix": "AU",
-  "count": 657,
+  "count": 656,
   "dogs": [
     {
       "id": "1592043406",
@@ -256,10 +256,11 @@
       "competition_dog_id": null
     },
     {
-      "id": "1192447304",
+      "id": "1919363019",
       "name_lat": "AURUM TIME ERALASH",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
       "total_shows": 55,
       "competition_dog_id": null
     },
@@ -867,6 +868,15 @@
       "competition_dog_id": null
     },
     {
+      "id": "1141993401",
+      "name_lat": "AURUM TIME ANTANANARIVO (PUFF)",
+      "name_ru": "",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
+      "breed_en": "",
+      "total_shows": 33,
+      "competition_dog_id": null
+    },
+    {
       "id": "614657692",
       "name_lat": "AUTOGRAPH NOLAN PARKER",
       "name_ru": "",
@@ -876,19 +886,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "827220782",
-      "name_lat": "AURUM TIME ANTANANARIVO (PUFF)",
-      "name_ru": "",
-      "breed": "СОБАКА",
-      "breed_en": "",
-      "total_shows": 30,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1157877273",
+      "id": "236134138",
       "name_lat": "AURUM TIME VICTORIA",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
       "breed_en": "",
       "total_shows": 16,
       "competition_dog_id": null
@@ -903,10 +904,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "349240658",
+      "id": "1875296540",
       "name_lat": "AUTBEK PIELOT",
       "name_ru": "",
-      "breed": "НЕМЕЦКАЯ ОВЧАРКА К-Ш",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 13,
       "competition_dog_id": null
@@ -1230,7 +1231,7 @@
       "name_ru": "",
       "breed": "КИТАЙСКАЯ ХОХЛАТАЯ СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
-      "total_shows": 6,
+      "total_shows": 21,
       "competition_dog_id": null
     },
     {
@@ -1817,10 +1818,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "86757383",
+      "id": "1089344932",
       "name_lat": "AURUM TIME OKSFORD",
       "name_ru": "",
-      "breed": "СОБАКА ГОЛАЯ",
+      "breed": "СОБАКА",
       "breed_en": "CHINESE CRESTED DOG",
       "total_shows": 10,
       "competition_dog_id": null
@@ -2239,10 +2240,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "1538567008",
+      "id": "181631574",
       "name_lat": "AUTBEK PANTERA",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 11,
       "competition_dog_id": null
@@ -2346,12 +2347,12 @@
       "competition_dog_id": null
     },
     {
-      "id": "1118806098",
+      "id": "1838681457",
       "name_lat": "AUTBEK LI-FRENSIS",
-      "name_ru": "",
-      "breed": "ДЛИННАЯ ОСТЕВАЯ",
+      "name_ru": "АУТБЕК ЛИ-ФРЕНСИС",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
-      "total_shows": 12,
+      "total_shows": 13,
       "competition_dog_id": null
     },
     {
@@ -2847,15 +2848,6 @@
       "competition_dog_id": null
     },
     {
-      "id": "104634499",
-      "name_lat": "AURUM TIME ANTANANARIVO",
-      "name_ru": "",
-      "breed": "КИТАЙСКАЯ ХОХЛАТАЯ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
       "id": "384423136",
       "name_lat": "AURUM BLACK EASTERN CHIC",
       "name_ru": "",
@@ -3087,10 +3079,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "959758658",
+      "id": "267606348",
       "name_lat": "AURONCO DI CADORE",
       "name_ru": "",
-      "breed": "ПУДЕЛЬ ФАНТОМ) МИНИАТЮРНЫЙ БЕЛО- ЧЕРНЫЙ",
+      "breed": "ПУДЕЛЬ ФАНТОМ) МИНИАТЮРНЫЙ БЕЛО-ЧЕРНЫЙ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3141,19 +3133,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1712701621",
-      "name_lat": "AURORA CHILD LOVE",
+      "id": "1944306532",
+      "name_lat": "AURUM TIME AVIGON",
       "name_ru": "",
-      "breed": "МАЛЬТЕЗЕ",
+      "breed": "СОБАКА",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
     },
     {
-      "id": "1944306532",
-      "name_lat": "AURUM TIME AVIGON",
+      "id": "1712701621",
+      "name_lat": "AURORA CHILD LOVE",
       "name_ru": "",
-      "breed": "СОБАКА",
+      "breed": "МАЛЬТЕЗЕ",
       "breed_en": "",
       "total_shows": 4,
       "competition_dog_id": null
@@ -3569,12 +3561,21 @@
       "competition_dog_id": null
     },
     {
-      "id": "998358427",
+      "id": "70279756",
       "name_lat": "AUFSTIEG CHESMENKA",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 4,
+      "competition_dog_id": null
+    },
+    {
+      "id": "1901596223",
+      "name_lat": "AUTBEK CRYSTAL",
+      "name_ru": "",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
+      "breed_en": "",
+      "total_shows": 3,
       "competition_dog_id": null
     },
     {
@@ -3582,15 +3583,6 @@
       "name_lat": "AUTOGRAPH ZHEZZIFINA",
       "name_ru": "",
       "breed": "РИЗЕНШНАУЦЕР ЧЕРНЫЙ",
-      "breed_en": "",
-      "total_shows": 3,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1507241661",
-      "name_lat": "AUTBEK CRYSTAL",
-      "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
       "breed_en": "",
       "total_shows": 3,
       "competition_dog_id": null
@@ -4436,10 +4428,10 @@
       "competition_dog_id": null
     },
     {
-      "id": "445662030",
+      "id": "1301139",
       "name_lat": "Autbek Silvestr Erben Welt Stern",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5358,6 +5350,24 @@
       "competition_dog_id": null
     },
     {
+      "id": "1756737820",
+      "name_lat": "AURUM TIME AMSTERDAM",
+      "name_ru": "",
+      "breed": "СОБАКА / CHINESE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
+      "id": "218116616",
+      "name_lat": "AURUM TIME ANTAVANARIVO (PUFF)",
+      "name_ru": "",
+      "breed": "СОБАКА / CHINESE",
+      "breed_en": "",
+      "total_shows": 1,
+      "competition_dog_id": null
+    },
+    {
       "id": "715405285",
       "name_lat": "AURORA ICECREAM",
       "name_ru": "",
@@ -5434,24 +5444,6 @@
       "name_lat": "AURUM VENDEE DOMINIKO DOLCE",
       "name_ru": "",
       "breed": "ТАКСА МИНИАТЮРНАЯ Д-Ш",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "1756737820",
-      "name_lat": "AURUM TIME AMSTERDAM",
-      "name_ru": "",
-      "breed": "СОБАКА / CHINESE",
-      "breed_en": "",
-      "total_shows": 1,
-      "competition_dog_id": null
-    },
-    {
-      "id": "218116616",
-      "name_lat": "AURUM TIME ANTAVANARIVO (PUFF)",
-      "name_ru": "",
-      "breed": "СОБАКА / CHINESE",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
@@ -5538,19 +5530,19 @@
       "competition_dog_id": null
     },
     {
-      "id": "1133850052",
+      "id": "159758274",
       "name_lat": "AUFSTIEG SHAKIRA",
       "name_ru": "",
-      "breed": "ОСТЕВАЯ ШЕРСТЬ С",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null
     },
     {
-      "id": "1577591557",
+      "id": "83916954",
       "name_lat": "AURUS VOM FROSTEN",
       "name_ru": "",
-      "breed": "ПОДШЕРСТКОМ",
+      "breed": "НЕМЕЦКАЯ ОВЧАРКА Д-Ш",
       "breed_en": "",
       "total_shows": 1,
       "competition_dog_id": null

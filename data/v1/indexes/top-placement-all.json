@@ -1,7 +1,7 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": null,
-  "count": 1995,
+  "count": 2000,
   "items": [
     {
       "dog_id": 182,
@@ -15,6 +15,20 @@
       "bronze": 5,
       "total_starts": 30,
       "sex": "F"
+    },
+    {
+      "dog_id": 50,
+      "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+      "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+      "breed": "БАСЕНДЖИ",
+      "year_from": 2017,
+      "year_to": 2026,
+      "gold": 14,
+      "silver": 3,
+      "bronze": 6,
+      "total_starts": 35,
+      "aggression_count": 1,
+      "sex": "M"
     },
     {
       "dog_id": 5962,
@@ -41,20 +55,6 @@
       "bronze": 4,
       "total_starts": 26,
       "sex": "F"
-    },
-    {
-      "dog_id": 50,
-      "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
-      "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
-      "breed": "БАСЕНДЖИ",
-      "year_from": 2017,
-      "year_to": 2026,
-      "gold": 13,
-      "silver": 3,
-      "bronze": 6,
-      "total_starts": 34,
-      "aggression_count": 1,
-      "sex": "M"
     },
     {
       "dog_id": 5735,
@@ -197,9 +197,9 @@
       "year_from": 2022,
       "year_to": 2026,
       "gold": 8,
-      "silver": 11,
+      "silver": 12,
       "bronze": 4,
-      "total_starts": 33,
+      "total_starts": 34,
       "sex": "F"
     },
     {
@@ -269,6 +269,19 @@
       "sex": "F"
     },
     {
+      "dog_id": 7365,
+      "name_lat": "ROSSO BOREALE VARVARA",
+      "name_ru": "РОССО БОРЕАЛЕ ВАРВАРА",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "year_from": 2021,
+      "year_to": 2026,
+      "gold": 7,
+      "silver": 4,
+      "bronze": 1,
+      "total_starts": 13,
+      "sex": "F"
+    },
+    {
       "dog_id": 263,
       "name_lat": "STANGERS LAND INGRID ELEGANT",
       "name_ru": "СТАНГЕРС ЛАНД ИНГРИД ЭЛЕГАНТ",
@@ -320,6 +333,19 @@
       "bronze": 0,
       "total_starts": 8,
       "sex": "M"
+    },
+    {
+      "dog_id": 10430,
+      "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+      "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+      "breed": "ЛЕВРЕТКА",
+      "year_from": 2020,
+      "year_to": 2022,
+      "gold": 7,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 9,
+      "sex": "F"
     },
     {
       "dog_id": 5658,
@@ -374,6 +400,20 @@
       "sex": "F"
     },
     {
+      "dog_id": 7261,
+      "name_lat": "AL NAFISEH HAIFA",
+      "name_ru": "АЛЬ НАФИСЭХ ХАЙФА",
+      "breed": "САЛЮКИ",
+      "year_from": 2022,
+      "year_to": 2025,
+      "gold": 6,
+      "silver": 5,
+      "bronze": 2,
+      "total_starts": 16,
+      "aggression_count": 1,
+      "sex": "F"
+    },
+    {
       "dog_id": 51,
       "name_lat": "SONETA STAR IZ DIVNOGO SADA",
       "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
@@ -401,20 +441,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 7261,
-      "name_lat": "AL NAFISEH HAIFA",
-      "name_ru": "АЛЬ НАФИСЭХ ХАЙФА",
-      "breed": "САЛЮКИ",
-      "year_from": 2022,
-      "year_to": 2025,
-      "gold": 6,
-      "silver": 5,
-      "bronze": 1,
-      "total_starts": 15,
-      "aggression_count": 1,
-      "sex": "F"
-    },
-    {
       "dog_id": 5664,
       "name_lat": "ROKSI IFE SHANI IZ SCHNEIDER RICH",
       "name_ru": "РОКСИ ИФЕ ШАНИ ИЗ ШНЕЙДЕР РИЧ",
@@ -425,19 +451,6 @@
       "silver": 4,
       "bronze": 7,
       "total_starts": 19,
-      "sex": "F"
-    },
-    {
-      "dog_id": 7365,
-      "name_lat": "ROSSO BOREALE VARVARA",
-      "name_ru": "РОССО БОРЕАЛЕ ВАРВАРА",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year_from": 2021,
-      "year_to": 2026,
-      "gold": 6,
-      "silver": 4,
-      "bronze": 1,
-      "total_starts": 12,
       "sex": "F"
     },
     {
@@ -558,19 +571,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 10430,
-      "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
-      "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
-      "breed": "ЛЕВРЕТКА",
-      "year_from": 2020,
-      "year_to": 2022,
-      "gold": 6,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 8,
-      "sex": "F"
-    },
-    {
       "dog_id": 9788,
       "name_lat": "ДИОСКУРИ АМАЛФЕЯ",
       "name_ru": "ДИОСКУРИ АМАЛФЕЯ",
@@ -670,8 +670,8 @@
       "year_to": 2026,
       "gold": 5,
       "silver": 4,
-      "bronze": 3,
-      "total_starts": 32,
+      "bronze": 4,
+      "total_starts": 33,
       "sex": "F"
     },
     {
@@ -686,6 +686,19 @@
       "bronze": 4,
       "total_starts": 18,
       "sex": "F"
+    },
+    {
+      "dog_id": 255,
+      "name_lat": "EAGLE BLACK",
+      "name_ru": "ЕАГЛЕ БЛАЦК",
+      "breed": "УИППЕТ",
+      "year_from": 2022,
+      "year_to": 2025,
+      "gold": 5,
+      "silver": 3,
+      "bronze": 3,
+      "total_starts": 16,
+      "sex": "M"
     },
     {
       "dog_id": 6036,
@@ -725,6 +738,19 @@
       "silver": 2,
       "bronze": 2,
       "total_starts": 18
+    },
+    {
+      "dog_id": 9343,
+      "name_lat": "LUXURY WHIPP NIKITA",
+      "name_ru": "ЛАКШЕРИ ВИПП НИКИТА",
+      "breed": "УИППЕТ",
+      "year_from": 2021,
+      "year_to": 2023,
+      "gold": 5,
+      "silver": 2,
+      "bronze": 1,
+      "total_starts": 12,
+      "sex": "F"
     },
     {
       "dog_id": 462,
@@ -776,6 +802,19 @@
       "silver": 1,
       "bronze": 4,
       "total_starts": 12
+    },
+    {
+      "dog_id": 383,
+      "name_lat": "MIA SANTO’S ILVA NEVA",
+      "name_ru": "MIA SANTO’S ILVA NEVA",
+      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
+      "year_from": 2020,
+      "year_to": 2025,
+      "gold": 5,
+      "silver": 1,
+      "bronze": 3,
+      "total_starts": 13,
+      "sex": "F"
     },
     {
       "dog_id": 6292,
@@ -840,19 +879,6 @@
       "silver": 1,
       "bronze": 0,
       "total_starts": 6
-    },
-    {
-      "dog_id": 383,
-      "name_lat": "MIA SANTO’S ILVA NEVA",
-      "name_ru": "MIA SANTO’S ILVA NEVA",
-      "breed": "ЧИРНЕКО ДЕЛЬ ЭТНА",
-      "year_from": 2020,
-      "year_to": 2025,
-      "gold": 5,
-      "silver": 0,
-      "bronze": 3,
-      "total_starts": 12,
-      "sex": "F"
     },
     {
       "dog_id": 5906,
@@ -942,9 +968,9 @@
       "year_from": 2021,
       "year_to": 2025,
       "gold": 4,
-      "silver": 6,
+      "silver": 7,
       "bronze": 1,
-      "total_starts": 12,
+      "total_starts": 13,
       "sex": "M"
     },
     {
@@ -997,19 +1023,6 @@
       "silver": 3,
       "bronze": 4,
       "total_starts": 14,
-      "sex": "M"
-    },
-    {
-      "dog_id": 255,
-      "name_lat": "EAGLE BLACK",
-      "name_ru": "ЕАГЛЕ БЛАЦК",
-      "breed": "УИППЕТ",
-      "year_from": 2022,
-      "year_to": 2025,
-      "gold": 4,
-      "silver": 3,
-      "bronze": 3,
-      "total_starts": 15,
       "sex": "M"
     },
     {
@@ -1145,19 +1158,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 9343,
-      "name_lat": "LUXURY WHIPP NIKITA",
-      "name_ru": "ЛАКШЕРИ ВИПП НИКИТА",
-      "breed": "УИППЕТ",
-      "year_from": 2021,
-      "year_to": 2023,
-      "gold": 4,
-      "silver": 2,
-      "bronze": 1,
-      "total_starts": 11,
-      "sex": "F"
-    },
-    {
       "dog_id": 10331,
       "name_lat": "STANGERS LAND BLACKTHORNE WINTER",
       "name_ru": "STANGERS LAND BLACKTHORNE WINTER",
@@ -1207,6 +1207,19 @@
       "silver": 2,
       "bronze": 0,
       "total_starts": 7,
+      "sex": "M"
+    },
+    {
+      "dog_id": 27,
+      "name_lat": "RIDER OF ROHAN BRODWINEK",
+      "name_ru": "RIDER OF ROHAN BRODWINEK",
+      "breed": "УИППЕТ",
+      "year_from": 2018,
+      "year_to": 2026,
+      "gold": 4,
+      "silver": 1,
+      "bronze": 3,
+      "total_starts": 28,
       "sex": "M"
     },
     {
@@ -1288,19 +1301,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 27,
-      "name_lat": "RIDER OF ROHAN BRODWINEK",
-      "name_ru": "RIDER OF ROHAN BRODWINEK",
-      "breed": "УИППЕТ",
-      "year_from": 2018,
-      "year_to": 2026,
-      "gold": 4,
-      "silver": 0,
-      "bronze": 3,
-      "total_starts": 27,
-      "sex": "M"
-    },
-    {
       "dog_id": 9388,
       "name_lat": "ENTAYLI YOZ",
       "name_ru": "ЭНТАЙЛИ ЙОЗ",
@@ -1377,6 +1377,19 @@
       "bronze": 0,
       "total_starts": 4,
       "sex": "M"
+    },
+    {
+      "dog_id": 9425,
+      "name_lat": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+      "name_ru": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
+      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
+      "year_from": 2022,
+      "year_to": 2023,
+      "gold": 4,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 4,
+      "sex": "F"
     },
     {
       "dog_id": 9545,
@@ -1652,6 +1665,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 9287,
+      "name_lat": "VALPAIN PEK DIRECT HIT",
+      "name_ru": "VALPAIN PEK DIRECT HIT",
+      "breed": "УИППЕТ",
+      "year_from": 2020,
+      "year_to": 2024,
+      "gold": 3,
+      "silver": 2,
+      "bronze": 1,
+      "total_starts": 18,
+      "sex": "M"
+    },
+    {
       "dog_id": 10007,
       "name_lat": "TIERIS GELLIOS",
       "name_ru": "TIERIS GELLIOS",
@@ -1808,6 +1834,19 @@
       "sex": "F"
     },
     {
+      "dog_id": 293,
+      "name_lat": "CAVALLIERIK FACTOTUM",
+      "name_ru": "КАВАЛЛЬЕРИК ФАКТОУМ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2022,
+      "year_to": 2024,
+      "gold": 3,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 6,
+      "sex": "M"
+    },
+    {
       "dog_id": 5738,
       "name_lat": "YAGODNAYA KARAMELKA",
       "name_ru": "ЯГОДНАЯ КАРАМЕЛЬКА",
@@ -1832,19 +1871,6 @@
       "silver": 1,
       "bronze": 1,
       "total_starts": 14,
-      "sex": "M"
-    },
-    {
-      "dog_id": 9287,
-      "name_lat": "VALPAIN PEK DIRECT HIT",
-      "name_ru": "VALPAIN PEK DIRECT HIT",
-      "breed": "УИППЕТ",
-      "year_from": 2020,
-      "year_to": 2024,
-      "gold": 3,
-      "silver": 1,
-      "bronze": 1,
-      "total_starts": 17,
       "sex": "M"
     },
     {
@@ -1884,7 +1910,7 @@
       "gold": 3,
       "silver": 1,
       "bronze": 1,
-      "total_starts": 13,
+      "total_starts": 14,
       "sex": "F"
     },
     {
@@ -2392,19 +2418,6 @@
       "total_starts": 3
     },
     {
-      "dog_id": 9425,
-      "name_lat": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
-      "name_ru": "WUNO ZAFIRA BLANCO IZ KANEKSO (STAND)",
-      "breed": "КСОЛОИТЦКУИНТЛИ СТАНДАРТ",
-      "year_from": 2022,
-      "year_to": 2023,
-      "gold": 3,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 3,
-      "sex": "F"
-    },
-    {
       "dog_id": 9444,
       "name_lat": "КАЛИ ПИТ ЛЕГИОН",
       "name_ru": "КАЛИ ПИТ ЛЕГИОН",
@@ -2595,8 +2608,8 @@
       "year_to": 2025,
       "gold": 2,
       "silver": 3,
-      "bronze": 6,
-      "total_starts": 11,
+      "bronze": 7,
+      "total_starts": 12,
       "sex": "M"
     },
     {
@@ -2715,6 +2728,19 @@
       "sex": "F"
     },
     {
+      "dog_id": 7474,
+      "name_lat": "ADEBANKES GOLD DUST",
+      "name_ru": "АДЕБАНКЕС ГОЛД ДУСТ",
+      "breed": "БАСЕНДЖИ",
+      "year_from": 2022,
+      "year_to": 2025,
+      "gold": 2,
+      "silver": 2,
+      "bronze": 3,
+      "total_starts": 10,
+      "sex": "F"
+    },
+    {
       "dog_id": 10514,
       "name_lat": "SOLAR SPIRIT AMON RA",
       "name_ru": "СОЛАР СПИРИТ АМОН РА",
@@ -2738,19 +2764,6 @@
       "silver": 2,
       "bronze": 2,
       "total_starts": 7,
-      "sex": "F"
-    },
-    {
-      "dog_id": 7474,
-      "name_lat": "ADEBANKES GOLD DUST",
-      "name_ru": "АДЕБАНКЕС ГОЛД ДУСТ",
-      "breed": "БАСЕНДЖИ",
-      "year_from": 2023,
-      "year_to": 2025,
-      "gold": 2,
-      "silver": 2,
-      "bronze": 2,
-      "total_starts": 9,
       "sex": "F"
     },
     {
@@ -2815,8 +2828,21 @@
       "gold": 2,
       "silver": 2,
       "bronze": 1,
-      "total_starts": 15,
+      "total_starts": 16,
       "sex": "F"
+    },
+    {
+      "dog_id": 9240,
+      "name_lat": "KILIMANJARO KAISER",
+      "name_ru": "KILIMANJARO KAISER",
+      "breed": "БАСЕНДЖИ",
+      "year_from": 2020,
+      "year_to": 2024,
+      "gold": 2,
+      "silver": 2,
+      "bronze": 1,
+      "total_starts": 13,
+      "sex": "M"
     },
     {
       "dog_id": 9414,
@@ -2871,6 +2897,20 @@
       "sex": "M"
     },
     {
+      "dog_id": 622,
+      "name_lat": "SALAM ISFAHAN FARID",
+      "name_ru": "САЛАМ ИСФАХАН ФАРИД",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "year_from": 2021,
+      "year_to": 2025,
+      "gold": 2,
+      "silver": 2,
+      "bronze": 0,
+      "total_starts": 6,
+      "aggression_count": 1,
+      "sex": "M"
+    },
+    {
       "dog_id": 756,
       "name_lat": "WILDABOUT DOUBLE ATOMIC RACE",
       "name_ru": "WILDABOUT DOUBLE ATOMIC RACE",
@@ -2921,6 +2961,19 @@
       "bronze": 0,
       "total_starts": 4,
       "sex": "M"
+    },
+    {
+      "dog_id": 10526,
+      "name_lat": "БАГИРА",
+      "name_ru": "БАГИРА",
+      "breed": "БАСЕНДЖИ",
+      "year_from": 2021,
+      "year_to": 2023,
+      "gold": 2,
+      "silver": 2,
+      "bronze": 0,
+      "total_starts": 7,
+      "sex": "F"
     },
     {
       "dog_id": 10622,
@@ -3028,19 +3081,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 293,
-      "name_lat": "CAVALLIERIK FACTOTUM",
-      "name_ru": "КАВАЛЛЬЕРИК ФАКТОУМ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2022,
-      "year_to": 2024,
-      "gold": 2,
-      "silver": 1,
-      "bronze": 1,
-      "total_starts": 5,
-      "sex": "M"
-    },
-    {
       "dog_id": 617,
       "name_lat": "STANGERS LAND GOLDIE TRISH",
       "name_ru": "СТАНГЕРС ЛАНД ГОЛДИ ТРИШ",
@@ -3050,7 +3090,7 @@
       "gold": 2,
       "silver": 1,
       "bronze": 1,
-      "total_starts": 15,
+      "total_starts": 16,
       "sex": "F"
     },
     {
@@ -3067,17 +3107,17 @@
       "sex": "F"
     },
     {
-      "dog_id": 9240,
-      "name_lat": "KILIMANJARO KAISER",
-      "name_ru": "KILIMANJARO KAISER",
-      "breed": "БАСЕНДЖИ",
-      "year_from": 2020,
+      "dog_id": 9484,
+      "name_lat": "LUNNAJA RADUGA ROSSIYA",
+      "name_ru": "ЛУННАЯ РАДУГА РОССИЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2021,
       "year_to": 2024,
       "gold": 2,
       "silver": 1,
       "bronze": 1,
-      "total_starts": 12,
-      "sex": "M"
+      "total_starts": 6,
+      "sex": "F"
     },
     {
       "dog_id": 9866,
@@ -3377,6 +3417,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 9481,
+      "name_lat": "LUNNAJA RADUGA REVOLUTION",
+      "name_ru": "ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2022,
+      "year_to": 2023,
+      "gold": 2,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 7,
+      "sex": "F"
+    },
+    {
       "dog_id": 10175,
       "name_lat": "BRIZ",
       "name_ru": "BRIZ",
@@ -3555,7 +3608,7 @@
       "gold": 2,
       "silver": 0,
       "bronze": 3,
-      "total_starts": 14,
+      "total_starts": 15,
       "sex": "M"
     },
     {
@@ -3619,7 +3672,20 @@
       "gold": 2,
       "silver": 0,
       "bronze": 1,
-      "total_starts": 6,
+      "total_starts": 7,
+      "sex": "F"
+    },
+    {
+      "dog_id": 7035,
+      "name_lat": "ASHOKA TANO",
+      "name_ru": "АСОКА ТАНО",
+      "breed": "УИППЕТ",
+      "year_from": 2021,
+      "year_to": 2025,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 8,
       "sex": "F"
     },
     {
@@ -3737,6 +3803,19 @@
       "silver": 0,
       "bronze": 1,
       "total_starts": 4
+    },
+    {
+      "dog_id": 10096,
+      "name_lat": "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
+      "name_ru": "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "year_from": 2018,
+      "year_to": 2022,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 4,
+      "sex": "F"
     },
     {
       "dog_id": 10469,
@@ -4101,19 +4180,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 9481,
-      "name_lat": "LUNNAJA RADUGA REVOLUTION",
-      "name_ru": "ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2022,
-      "year_to": 2023,
-      "gold": 2,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 6,
-      "sex": "F"
-    },
-    {
       "dog_id": 9594,
       "name_lat": "ALL SQUARE TURANDOT THE LADY OF INTRIGUE",
       "name_ru": "ОЛЛ СКУАРЕ ТУРАНДОТ ЗЕ ЛЭДИ ОФ ИНТРИГ",
@@ -4229,19 +4295,6 @@
       "bronze": 0,
       "total_starts": 10,
       "sex": "M"
-    },
-    {
-      "dog_id": 10096,
-      "name_lat": "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
-      "name_ru": "SALAM ISFAHAN TRAMONTANA VLASTELINA GOR",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "year_from": 2018,
-      "year_to": 2021,
-      "gold": 2,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 3,
-      "sex": "F"
     },
     {
       "dog_id": 10105,
@@ -4565,8 +4618,8 @@
       "year_to": 2023,
       "gold": 1,
       "silver": 4,
-      "bronze": 2,
-      "total_starts": 9,
+      "bronze": 3,
+      "total_starts": 10,
       "sex": "F"
     },
     {
@@ -4788,7 +4841,7 @@
       "gold": 1,
       "silver": 2,
       "bronze": 2,
-      "total_starts": 27,
+      "total_starts": 28,
       "sex": "M"
     },
     {
@@ -4970,7 +5023,7 @@
       "gold": 1,
       "silver": 2,
       "bronze": 1,
-      "total_starts": 11,
+      "total_starts": 12,
       "sex": "F"
     },
     {
@@ -5024,20 +5077,6 @@
       "bronze": 0,
       "total_starts": 10,
       "sex": "F"
-    },
-    {
-      "dog_id": 622,
-      "name_lat": "SALAM ISFAHAN FARID",
-      "name_ru": "САЛАМ ИСФАХАН ФАРИД",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "year_from": 2021,
-      "year_to": 2025,
-      "gold": 1,
-      "silver": 2,
-      "bronze": 0,
-      "total_starts": 5,
-      "aggression_count": 1,
-      "sex": "M"
     },
     {
       "dog_id": 712,
@@ -5236,19 +5275,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 10526,
-      "name_lat": "БАГИРА",
-      "name_ru": "БАГИРА",
-      "breed": "БАСЕНДЖИ",
-      "year_from": 2021,
-      "year_to": 2023,
-      "gold": 1,
-      "silver": 2,
-      "bronze": 0,
-      "total_starts": 6,
-      "sex": "F"
-    },
-    {
       "dog_id": 10889,
       "name_lat": "METEL' AVGUSTA AARON",
       "name_ru": "МЕТЕЛЬ АВГУСТА ААРОН",
@@ -5406,6 +5432,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 10461,
+      "name_lat": "FEEL MY HEART ALETHEA",
+      "name_ru": "FEEL MY HEART ALETHEA",
+      "breed": "УИППЕТ",
+      "year_from": 2021,
+      "year_to": 2023,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 2,
+      "total_starts": 11,
+      "sex": "F"
+    },
+    {
       "dog_id": 10475,
       "name_lat": "PODAROK IZ AFRIKI RAMLA RUKURU",
       "name_ru": "PODAROK IZ AFRIKI RAMLA RUKURU",
@@ -5428,8 +5467,21 @@
       "gold": 1,
       "silver": 1,
       "bronze": 2,
-      "total_starts": 5,
+      "total_starts": 6,
       "sex": "F"
+    },
+    {
+      "dog_id": 10522,
+      "name_lat": "STILAR HALESTORM",
+      "name_ru": "STILAR HALESTORM",
+      "breed": "УИППЕТ",
+      "year_from": 2020,
+      "year_to": 2023,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 2,
+      "total_starts": 8,
+      "sex": "M"
     },
     {
       "dog_id": 8,
@@ -5614,6 +5666,19 @@
       "sex": "F"
     },
     {
+      "dog_id": 9318,
+      "name_lat": "САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /SALGREYS THE POWER OF LOVE",
+      "name_ru": "САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /SALGREYS THE POWER OF LOVE",
+      "breed": "САЛЮКИ",
+      "year_from": 2022,
+      "year_to": 2024,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 4,
+      "sex": "F"
+    },
+    {
       "dog_id": 9359,
       "name_lat": "HOUSE THE RAINBOW YUNONA",
       "name_ru": "HOUSE THE RAINBOW YUNONA",
@@ -5624,19 +5689,6 @@
       "silver": 1,
       "bronze": 1,
       "total_starts": 8,
-      "sex": "F"
-    },
-    {
-      "dog_id": 9484,
-      "name_lat": "LUNNAJA RADUGA ROSSIYA",
-      "name_ru": "ЛУННАЯ РАДУГА РОССИЯ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2021,
-      "year_to": 2024,
-      "gold": 1,
-      "silver": 1,
-      "bronze": 1,
-      "total_starts": 5,
       "sex": "F"
     },
     {
@@ -6131,6 +6183,19 @@
       "silver": 1,
       "bronze": 0,
       "total_starts": 6,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9319,
+      "name_lat": "AL NAFISEH HOMAYOON",
+      "name_ru": "АЛЬ НАФИСЭХ ХОМЭЙЮН",
+      "breed": "САЛЮКИ",
+      "year_from": 2022,
+      "year_to": 2023,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 4,
       "sex": "M"
     },
     {
@@ -6777,7 +6842,7 @@
       "gold": 1,
       "silver": 0,
       "bronze": 2,
-      "total_starts": 13,
+      "total_starts": 14,
       "sex": "F"
     },
     {
@@ -6833,6 +6898,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 9415,
+      "name_lat": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
+      "name_ru": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
+      "breed": "УИППЕТ",
+      "year_from": 2022,
+      "year_to": 2024,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 2,
+      "total_starts": 9,
+      "sex": "M"
+    },
+    {
       "dog_id": 10348,
       "name_lat": "РИДЛИ РОАД КВИДДИЧ",
       "name_ru": "РИДЛИ РОАД КВИДДИЧ",
@@ -6844,19 +6922,6 @@
       "bronze": 2,
       "total_starts": 4,
       "sex": "M"
-    },
-    {
-      "dog_id": 10461,
-      "name_lat": "FEEL MY HEART ALETHEA",
-      "name_ru": "FEEL MY HEART ALETHEA",
-      "breed": "УИППЕТ",
-      "year_from": 2021,
-      "year_to": 2023,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 2,
-      "total_starts": 10,
-      "sex": "F"
     },
     {
       "dog_id": 10599,
@@ -7145,19 +7210,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 7035,
-      "name_lat": "ASHOKA TANO",
-      "name_ru": "АСОКА ТАНО",
-      "breed": "УИППЕТ",
-      "year_from": 2021,
-      "year_to": 2025,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 7,
-      "sex": "F"
-    },
-    {
       "dog_id": 7104,
       "name_lat": "GENDALF IZ SOZVEZDIYA SURSKIKH PSOV",
       "name_ru": "ГЕНДАЛЬФ ИЗ СОЗВЕЗДИЯ СУРСКИХ ПСОВ",
@@ -7314,19 +7366,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 9415,
-      "name_lat": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
-      "name_ru": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
-      "breed": "УИППЕТ",
-      "year_from": 2022,
-      "year_to": 2024,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 8,
-      "sex": "M"
-    },
-    {
       "dog_id": 9423,
       "name_lat": "РУССКИЙ ВЕТЕР ДЭГБИ",
       "name_ru": "РУССКИЙ ВЕТЕР ДЭГБИ",
@@ -7371,6 +7410,32 @@
       "breed": "ПОДЕНКО ИБИЦЕНКО",
       "year_from": 2024,
       "year_to": 2024,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 2,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9637,
+      "name_lat": "ARIA AMIGA",
+      "name_ru": "АРИЯ АМИГА",
+      "breed": "ИСПАНСКИЙ ГАЛЬГО",
+      "year_from": 2022,
+      "year_to": 2023,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 2,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9638,
+      "name_lat": "AGUERRIDA",
+      "name_ru": "АГУЕРРИДА",
+      "breed": "ИСПАНСКИЙ ГАЛЬГО",
+      "year_from": 2022,
+      "year_to": 2023,
       "gold": 1,
       "silver": 0,
       "bronze": 1,
@@ -7673,6 +7738,19 @@
       "bronze": 1,
       "total_starts": 4,
       "sex": "F"
+    },
+    {
+      "dog_id": 10479,
+      "name_lat": "ЛУННАЯ РАДУГА ПАТРОНУС",
+      "name_ru": "ЛУННАЯ РАДУГА ПАТРОНУС",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2021,
+      "year_to": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 5,
+      "sex": "M"
     },
     {
       "dog_id": 10512,
@@ -9042,19 +9120,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 9319,
-      "name_lat": "AL NAFISEH HOMAYOON",
-      "name_ru": "АЛЬ НАФИСЭХ ХОМЭЙЮН",
-      "breed": "САЛЮКИ",
-      "year_from": 2022,
-      "year_to": 2023,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 3,
-      "sex": "M"
-    },
-    {
       "dog_id": 9321,
       "name_lat": "ПАФИАНА /PAFIANA",
       "name_ru": "ПАФИАНА /PAFIANA",
@@ -9392,19 +9457,6 @@
       "breed": "ПОДЕНКО ИБИЦЕНКО",
       "year_from": 2024,
       "year_to": 2024,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "sex": "F"
-    },
-    {
-      "dog_id": 9638,
-      "name_lat": "AGUERRIDA",
-      "name_ru": "АГУЕРРИДА",
-      "breed": "ИСПАНСКИЙ ГАЛЬГО",
-      "year_from": 2023,
-      "year_to": 2023,
       "gold": 1,
       "silver": 0,
       "bronze": 0,
@@ -10398,19 +10450,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 10479,
-      "name_lat": "ЛУННАЯ РАДУГА ПАТРОНУС",
-      "name_ru": "ЛУННАЯ РАДУГА ПАТРОНУС",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2021,
-      "year_to": 2022,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 4,
-      "sex": "M"
-    },
-    {
       "dog_id": 10491,
       "name_lat": "ЭКЛИПС",
       "name_ru": "ЭКЛИПС",
@@ -11176,7 +11215,7 @@
       "gold": 1,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 1,
+      "total_starts": 2,
       "sex": "F"
     },
     {
@@ -11746,7 +11785,7 @@
       "gold": 0,
       "silver": 2,
       "bronze": 1,
-      "total_starts": 20,
+      "total_starts": 21,
       "sex": "M"
     },
     {
@@ -11981,7 +12020,7 @@
       "gold": 0,
       "silver": 2,
       "bronze": 0,
-      "total_starts": 8,
+      "total_starts": 9,
       "sex": "M"
     },
     {
@@ -12128,6 +12167,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 10528,
+      "name_lat": "МАГНИФИКО НЕРО",
+      "name_ru": "МАГНИФИКО НЕРО",
+      "breed": "ЛЕВРЕТКА",
+      "year_from": 2021,
+      "year_to": 2022,
+      "gold": 0,
+      "silver": 2,
+      "bronze": 0,
+      "total_starts": 4,
+      "sex": "M"
+    },
+    {
       "dog_id": 10994,
       "name_lat": "G-MINI FASHION LITTLE BLUE QUEEN MY DEAR FRIENDS",
       "name_ru": "G-MINI FASHION LITTLE BLUE QUEEN MY DEAR FRIENDS",
@@ -12150,7 +12202,7 @@
       "gold": 0,
       "silver": 1,
       "bronze": 5,
-      "total_starts": 11,
+      "total_starts": 12,
       "sex": "F"
     },
     {
@@ -12163,7 +12215,7 @@
       "gold": 0,
       "silver": 1,
       "bronze": 4,
-      "total_starts": 16,
+      "total_starts": 17,
       "sex": "F"
     },
     {
@@ -12216,6 +12268,19 @@
       "bronze": 3,
       "total_starts": 6,
       "sex": "M"
+    },
+    {
+      "dog_id": 10985,
+      "name_lat": "OLIMPIA S KNJAZHESKOGO DVORA",
+      "name_ru": "ОЛИМПИЯ С КНЯЖЕСКОГО ДВОРА",
+      "breed": "Басенджи",
+      "year_from": 2022,
+      "year_to": 2022,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 3,
+      "total_starts": 5,
+      "sex": "F"
     },
     {
       "dog_id": 37,
@@ -12324,6 +12389,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 8949,
+      "name_lat": "SALAM ISFAHAN FANTASTIC ART",
+      "name_ru": "САЛАМ ИСФАХАН ФАНТАСТИК АРТ",
+      "breed": "АФГАНСКАЯ БОРЗАЯ",
+      "year_from": 2021,
+      "year_to": 2025,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 2,
+      "total_starts": 6,
+      "sex": "M"
+    },
+    {
       "dog_id": 9412,
       "name_lat": "VALPAIN PEK DRAGONS DAUGHTER",
       "name_ru": "VALPAIN PEK DRAGONS DAUGHTER",
@@ -12333,7 +12411,7 @@
       "gold": 0,
       "silver": 1,
       "bronze": 2,
-      "total_starts": 13,
+      "total_starts": 14,
       "sex": "F"
     },
     {
@@ -12429,6 +12507,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 10478,
+      "name_lat": "ЛУННАЯ РАДУГА ПАНАЦЕЯ",
+      "name_ru": "ЛУННАЯ РАДУГА ПАНАЦЕЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year_from": 2021,
+      "year_to": 2022,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 2,
+      "total_starts": 4,
+      "sex": "F"
+    },
+    {
       "dog_id": 10499,
       "name_lat": "ИСТОРИЯ ЛЮБВИ АЛИСИЯ",
       "name_ru": "ИСТОРИЯ ЛЮБВИ АЛИСИЯ",
@@ -12440,19 +12531,6 @@
       "bronze": 2,
       "total_starts": 3,
       "sex": "F"
-    },
-    {
-      "dog_id": 10522,
-      "name_lat": "STILAR HALESTORM",
-      "name_ru": "STILAR HALESTORM",
-      "breed": "УИППЕТ",
-      "year_from": 2020,
-      "year_to": 2023,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 2,
-      "total_starts": 7,
-      "sex": "M"
     },
     {
       "dog_id": 18,
@@ -12766,19 +12844,6 @@
       "sex": "M"
     },
     {
-      "dog_id": 9318,
-      "name_lat": "САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /SALGREYS THE POWER OF LOVE",
-      "name_ru": "САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /SALGREYS THE POWER OF LOVE",
-      "breed": "САЛЮКИ",
-      "year_from": 2022,
-      "year_to": 2024,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 1,
-      "total_starts": 3,
-      "sex": "F"
-    },
-    {
       "dog_id": 9376,
       "name_lat": "ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ",
       "name_ru": "ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ",
@@ -13088,18 +13153,6 @@
       "bronze": 1,
       "total_starts": 5,
       "sex": "F"
-    },
-    {
-      "dog_id": 10478,
-      "name_lat": "ЛУННАЯ РАДУГА ПАНАЦЕЯ",
-      "name_ru": "ЛУННАЯ РАДУГА ПАНАЦЕЯ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year_from": 2021,
-      "year_to": 2021,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 1,
-      "total_starts": 3
     },
     {
       "dog_id": 10490,
@@ -15358,19 +15411,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 10528,
-      "name_lat": "МАГНИФИКО НЕРО",
-      "name_ru": "МАГНИФИКО НЕРО",
-      "breed": "ЛЕВРЕТКА",
-      "year_from": 2021,
-      "year_to": 2022,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 3,
-      "sex": "M"
-    },
-    {
       "dog_id": 10586,
       "name_lat": "VERNAYA KELTAM IZ VOLSHEBNOGO LESA",
       "name_ru": null,
@@ -15406,7 +15446,7 @@
       "gold": 0,
       "silver": 1,
       "bronze": 0,
-      "total_starts": 6,
+      "total_starts": 7,
       "sex": "F"
     },
     {
@@ -15860,6 +15900,19 @@
       "sex": "M"
     },
     {
+      "dog_id": 11047,
+      "name_lat": "BOMBER ALASHIR",
+      "name_ru": null,
+      "breed": "Испанская борзая (Гальго)",
+      "year_from": 2022,
+      "year_to": 2022,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 1,
+      "sex": "M"
+    },
+    {
       "dog_id": 112,
       "name_lat": "LUXURY WHIPP OXXY",
       "name_ru": "ЛАКШЕРИ ВИПП ОКСИ",
@@ -15988,19 +16041,6 @@
       "bronze": 3,
       "total_starts": 11,
       "sex": "M"
-    },
-    {
-      "dog_id": 10985,
-      "name_lat": "OLIMPIA S KNJAZHESKOGO DVORA",
-      "name_ru": "ОЛИМПИЯ С КНЯЖЕСКОГО ДВОРА",
-      "breed": "Басенджи",
-      "year_from": 2022,
-      "year_to": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 3,
-      "total_starts": 4,
-      "sex": "F"
     },
     {
       "dog_id": 296,
@@ -16157,19 +16197,6 @@
       "silver": 0,
       "bronze": 2,
       "total_starts": 2,
-      "sex": "M"
-    },
-    {
-      "dog_id": 8949,
-      "name_lat": "SALAM ISFAHAN FANTASTIC ART",
-      "name_ru": "САЛАМ ИСФАХАН ФАНТАСТИК АРТ",
-      "breed": "АФГАНСКАЯ БОРЗАЯ",
-      "year_from": 2021,
-      "year_to": 2025,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 2,
-      "total_starts": 5,
       "sex": "M"
     },
     {
@@ -16622,6 +16649,20 @@
       "silver": 0,
       "bronze": 1,
       "total_starts": 1
+    },
+    {
+      "dog_id": 577,
+      "name_lat": "KULIKOVO POLE DANTE",
+      "name_ru": "КУЛИКОВО ПОЛЕ ДАНТЕ",
+      "breed": "УИППЕТ",
+      "year_from": 2020,
+      "year_to": 2024,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 9,
+      "aggression_count": 1,
+      "sex": "M"
     },
     {
       "dog_id": 680,
@@ -17422,19 +17463,6 @@
       "silver": 0,
       "bronze": 1,
       "total_starts": 4,
-      "sex": "F"
-    },
-    {
-      "dog_id": 9637,
-      "name_lat": "ARIA AMIGA",
-      "name_ru": "АРИЯ АМИГА",
-      "breed": "ИСПАНСКИЙ ГАЛЬГО",
-      "year_from": 2023,
-      "year_to": 2023,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 1,
       "sex": "F"
     },
     {
@@ -18297,7 +18325,7 @@
       "gold": 0,
       "silver": 0,
       "bronze": 1,
-      "total_starts": 7,
+      "total_starts": 8,
       "sex": "F"
     },
     {
@@ -19291,20 +19319,6 @@
       "silver": 0,
       "bronze": 0,
       "total_starts": 2,
-      "sex": "M"
-    },
-    {
-      "dog_id": 577,
-      "name_lat": "KULIKOVO POLE DANTE",
-      "name_ru": "КУЛИКОВО ПОЛЕ ДАНТЕ",
-      "breed": "УИППЕТ",
-      "year_from": 2020,
-      "year_to": 2024,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 8,
-      "aggression_count": 1,
       "sex": "M"
     },
     {
@@ -21048,7 +21062,7 @@
       "gold": 0,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 17,
+      "total_starts": 18,
       "sex": "F"
     },
     {
@@ -21658,12 +21672,12 @@
       "name_lat": "KULIKOVO POLE VERSK LOVETS UDACHI",
       "name_ru": "KULIKOVO POLE VERSK LOVETS UDACHI",
       "breed": "УИППЕТ",
-      "year_from": 2023,
+      "year_from": 2022,
       "year_to": 2023,
       "gold": 0,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 1,
+      "total_starts": 2,
       "sex": "M"
     },
     {
@@ -21753,7 +21767,8 @@
       "gold": 0,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 1
+      "total_starts": 1,
+      "sex": "M"
     },
     {
       "dog_id": 9591,
@@ -22012,6 +22027,19 @@
       "bronze": 0,
       "total_starts": 4,
       "aggression_count": 1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9679,
+      "name_lat": "AL NAFISEH HANIYA",
+      "name_ru": "АЛЬ НАФИСЭХ ХАНИЯ",
+      "breed": "САЛЮКИ",
+      "year_from": 2022,
+      "year_to": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
       "sex": "F"
     },
     {
@@ -24627,7 +24655,7 @@
       "gold": 0,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 8,
+      "total_starts": 9,
       "sex": "F"
     },
     {
@@ -25761,10 +25789,49 @@
       "sex": "F"
     },
     {
+      "dog_id": 11043,
+      "name_lat": "LUNNAJA RADUGA VLAST'",
+      "name_ru": "LUNNAJA RADUGA VLAST'",
+      "breed": "Русская псовая борзая",
+      "year_from": 2022,
+      "year_to": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "sex": "F"
+    },
+    {
       "dog_id": 11045,
       "name_lat": "GOLDI KRAUND SAFARI SNIPER SHOT",
       "name_ru": "GOLDI KRAUND SAFARI SNIPER SHOT",
       "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 11046,
+      "name_lat": "ACUARELA DEL' RIO ERIDA",
+      "name_ru": "ACUARELA DEL' RIO ERIDA",
+      "breed": "Уиппет",
+      "year_from": 2022,
+      "year_to": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 11048,
+      "name_lat": "BINGO ALASHIR",
+      "name_ru": "БИНГО АЛАШИР",
+      "breed": "Испанская борзая (Гальго)",
       "year_from": 2022,
       "year_to": 2022,
       "gold": 0,
