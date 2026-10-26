@@ -29,9 +29,9 @@ export function HomeBreedCarouselPager({
   if (dots.length <= 1) return null
 
   return (
-    <div className="mt-auto border-t border-old-money-100">
+    <div className="mt-auto border-t border-old-money-100 home-breed-pager-wrapper">
       <nav
-        className="flex items-center justify-center gap-0.5 px-3 py-1"
+        className="flex items-center justify-center gap-0.5 px-3 py-0.5 home-breed-pager-nav"
         aria-label={ariaLabel}
       >
         {dots.map((dot, i) => {
@@ -42,7 +42,7 @@ export function HomeBreedCarouselPager({
               type="button"
               aria-label={dot.label}
               title={dot.label}
-              className="inline-flex min-h-[44px] min-w-[36px] items-center justify-center px-1 py-2 focus:outline-none"
+              className="inline-flex min-h-[44px] min-w-[36px] items-center justify-center px-1 py-1 focus:outline-none home-breed-pager-dot-btn"
               onClick={() => go(i)}
             >
               <span

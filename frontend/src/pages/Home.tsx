@@ -1,36 +1,34 @@
-import { useRef, useCallback, useState } from 'react'
+import { useRef, useCallback } from 'react'
 import { SEO } from '../components/SEO'
 import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
-import { useGSAP, prefersReducedMotion, riseIn } from '../lib/motion'
-import { Icons } from '../lib/icons'
+import { useGSAP, riseIn } from '../lib/motion'
 import HomeHeroStage from '../components/HomeHeroStage'
-import HomeDogSearch from '../components/HomeDogSearch'
-import MetricsWidget from '../components/MetricsWidget'
+import HomeStatsPills from '../components/HomeStatsPills'
 import { useHomeData } from './Home/hooks/useHomeData'
 import { SeasonTopSection } from './Home/components/SeasonTopSection'
-import { HomeFooter } from './Home/components/HomeFooter'
 import { formatDate } from './Home/utils/formatters'
 import { ANIMATION, IMAGES } from '../lib/constants'
 
 export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null)
   const homeData = useHomeData()
-  
+
   // Memoize formatDate to prevent unnecessary re-renders
   const memoizedFormatDate = useCallback(formatDate, [])
 
   const {
     stats,
     showStats,
-    featuredEvents,
-    featuredShows,
     competitionSlides,
     racingSlides,
     showSlides,
     topShowDogs,
-    doninoSpeedRecords, doninoCoursingRecords,
-    doninoSpeedSlides, doninoCoursingSlides,
-    heroLoading, seasonLoading, doninoLoading, loading,
+    doninoSpeedRecords,
+    doninoCoursingRecords,
+    doninoSpeedSlides,
+    doninoCoursingSlides,
+    seasonLoading,
+    loading,
     error,
   } = homeData
 
@@ -71,7 +69,9 @@ export default function Home() {
           <div className="home-v2-error" role="alert" aria-live="assertive">
             <h1 className="text-xl font-bold text-charcoal-900 mb-2">Ошибка загрузки данных</h1>
             <p>Не удалось загрузить данные главной страницы. Пожалуйста, попробуйте обновить страницу.</p>
-            <button onClick={() => window.location.reload()} aria-label="Обновить страницу">Обновить страницу</button>
+            <button onClick={() => window.location.reload()} aria-label="Обновить страницу">
+              Обновить страницу
+            </button>
           </div>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default function Home() {
   }
 
   return (
-    <div className="home-v2" ref={pageRef}>
+    <div className="home-v2 home-v2-static" ref={pageRef}>
       <h1 className="sr-only">Рейтинг и статистика собак: курсинг, бега, выставки</h1>
       <SEO
         title="Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки РКФ"
@@ -90,13 +90,15 @@ export default function Home() {
       <JsonLd data={organizationSchema} />
       <JsonLd data={webSiteSchema} />
 
-      {/* Desktop Hero Stage (>= 768px) and Mobile Initial Screen (< 768px) */}
+      {/* Single-Screen Executive Dashboard */}
       <HomeHeroStage
+        isStaticDashboard={true}
+        hideScrollCue={true}
+        disableScrollFade={true}
+        reverseLayout={true}
         children={
-          <div
-            className="flex flex-col items-start gap-4 lg:gap-6 select-none max-w-full"
-            style={{ width: 'clamp(280px, 26vw, 560px)' }}
-          >
+          /* Right block: Logo & Compact Database Statistics */
+          <div className="flex flex-col items-end text-right gap-2 select-none max-w-full">
             <picture>
               <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
               <img
@@ -108,81 +110,32 @@ export default function Home() {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-auto drop-shadow-md pointer-events-none"
+                className="w-full max-w-[220px] sm:max-w-[260px] lg:max-w-[290px] h-auto drop-shadow-md pointer-events-none"
               />
             </picture>
-            <div className="w-full max-w-[440px] ml-4 lg:ml-8 pointer-events-auto">
-              <HomeDogSearch className="w-full" />
+            <div className="w-full max-w-[310px] pointer-events-auto">
+              <HomeStatsPills stats={stats} showStats={showStats} />
             </div>
           </div>
         }
         metrics={
-          <MetricsWidget
-            events={featuredEvents}
-            shows={featuredShows}
-            stats={stats}
-            showStats={showStats}
-            loading={heroLoading}
-            formatDate={memoizedFormatDate}
-          />
-        }
-        onCloseMetrics={() => {
-          const target = document.getElementById('season-top') || document.getElementById('content-start') || document.querySelector('.home-v2-body')
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' })
-          } else {
-            window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
-          }
-        }}
-      />
-
-      <div className="wrap home-v2-body">
-        {/* Mobile Header: Logo & Search directly above SeasonTopSection */}
-        <div id="content-start" className="md:hidden flex flex-col items-center pt-2 pb-4 scroll-mt-14">
-          <img
-            src="/assets/hero/title-mobile.webp"
-            srcSet="/assets/hero/title-mobile.webp 1x, /assets/hero/title.webp 2x"
-            width={560}
-            height={350}
-            alt="Coursing Stats"
-            data-page-logo="mobile"
-            className="w-[280px] sm:w-[320px] max-w-[88vw] h-auto mx-auto drop-shadow-sm pointer-events-none select-none"
-            loading="lazy"
-            decoding="async"
-          />
-          <div className="w-full max-w-md px-2 pt-2 pb-2">
-            <HomeDogSearch className="w-full" />
+          /* Left block: Double Podium Rankings */
+          <div className="pointer-events-auto shrink-0 w-[960px] lg:w-[1040px] xl:w-[1140px] 2xl:w-[1220px] max-w-[calc(100vw-340px)] mr-auto">
+            <SeasonTopSection
+              competitionSlides={competitionSlides}
+              racingSlides={racingSlides}
+              showSlides={showSlides}
+              topShowDogs={topShowDogs}
+              doninoSpeedRecords={doninoSpeedRecords}
+              doninoCoursingRecords={doninoCoursingRecords}
+              doninoSpeedSlides={doninoSpeedSlides}
+              doninoCoursingSlides={doninoCoursingSlides}
+              loading={seasonLoading}
+              compact={true}
+            />
           </div>
-        </div>
-
-        {/* Tablet / compressed desktop (< 1024px): MetricsWidget in body flow to prevent covering hero logo */}
-        <div className="hidden md:block lg:hidden mb-8">
-          <MetricsWidget
-            events={featuredEvents}
-            shows={featuredShows}
-            stats={stats}
-            showStats={showStats}
-            loading={heroLoading}
-            formatDate={memoizedFormatDate}
-          />
-        </div>
-
-        {/* Season top & records section */}
-        <SeasonTopSection
-          competitionSlides={competitionSlides}
-          racingSlides={racingSlides}
-          showSlides={showSlides}
-          topShowDogs={topShowDogs}
-          doninoSpeedRecords={doninoSpeedRecords}
-          doninoCoursingRecords={doninoCoursingRecords}
-          doninoSpeedSlides={doninoSpeedSlides}
-          doninoCoursingSlides={doninoCoursingSlides}
-          loading={seasonLoading}
-        />
-
-        {/* Footer */}
-        <HomeFooter />
-      </div>
+        }
+      />
     </div>
   )
 }

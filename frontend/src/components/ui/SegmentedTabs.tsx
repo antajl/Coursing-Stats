@@ -14,6 +14,7 @@ interface SegmentedTabsProps<T extends string = string> {
   className?: string
   ariaLabel?: string
   breakpoint?: 'md' | 'lg' | 'all'
+  size?: 'sm' | 'md'
 }
 
 export function SegmentedTabs<T extends string = string>({
@@ -23,15 +24,20 @@ export function SegmentedTabs<T extends string = string>({
   className = '',
   ariaLabel = 'Переключение режима',
   breakpoint = 'md',
+  size = 'md',
 }: SegmentedTabsProps<T>) {
   const hideClass =
     breakpoint === 'lg' ? 'lg:hidden' : breakpoint === 'all' ? '' : 'md:hidden'
+
+  const isSm = size === 'sm'
 
   return (
     <div
       role="tablist"
       aria-label={ariaLabel}
-      className={`flex items-center justify-center p-1 bg-cream-100 rounded-xl border border-old-money-200/60 shadow-2xs ${hideClass} ${className}`.trim()}
+      className={`flex items-center justify-center ${
+        isSm ? 'p-0.5 rounded-lg bg-cream-100/80 border border-old-money-200/50' : 'p-1 rounded-xl bg-cream-100 border border-old-money-200/60'
+      } shadow-2xs ${hideClass} ${className}`.trim()}
     >
       {tabs.map((tab) => {
         const isActive = activeTab === tab.id
@@ -42,10 +48,12 @@ export function SegmentedTabs<T extends string = string>({
             role="tab"
             aria-selected={isActive}
             onClick={() => onChange(tab.id)}
-            className={`flex-1 flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg text-xs font-semibold transition-all ${
+            className={`flex-1 flex items-center justify-center gap-1.5 ${
+              isSm ? 'py-1 px-2.5 rounded-md text-[11px]' : 'py-2 px-3 rounded-lg text-xs'
+            } transition-all ${
               isActive
-                ? 'bg-white text-charcoal-900 shadow-sm border border-old-money-200/80'
-                : 'text-charcoal-600 hover:text-charcoal-900'
+                ? `bg-white text-charcoal-900 shadow-2xs border border-old-money-200/80 ${isSm ? 'font-semibold' : 'font-semibold'}`
+                : `text-charcoal-600 hover:text-charcoal-900 ${isSm ? 'font-medium' : 'font-medium'}`
             }`}
           >
             <span>{tab.label}</span>

@@ -7,12 +7,24 @@ interface HomeHeroStageProps {
   children?: ReactNode
   metrics?: ReactNode
   onCloseMetrics?: () => void
+  hideScrollCue?: boolean
+  disableScrollFade?: boolean
+  isStaticDashboard?: boolean
+  reverseLayout?: boolean
 }
 
 /**
  * Стартовый экран: статичная картинка с надписью и виджетом метрик.
  */
-export default function HomeHeroStage({ children, metrics, onCloseMetrics }: HomeHeroStageProps) {
+export default function HomeHeroStage({
+  children,
+  metrics,
+  onCloseMetrics,
+  hideScrollCue = false,
+  disableScrollFade = false,
+  isStaticDashboard = false,
+  reverseLayout = false,
+}: HomeHeroStageProps) {
   const rootRef = useRef<HTMLElement>(null)
   const mediaRef = useRef<HTMLDivElement>(null)
   const metricsRef = useRef<HTMLDivElement>(null)
@@ -21,6 +33,16 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
 
   // Scroll fade for desktop overlay (logo + search + metrics)
   useEffect(() => {
+    if (disableScrollFade) {
+      const overlayEl = desktopOverlayRef.current
+      if (overlayEl) {
+        overlayEl.style.opacity = '1'
+        overlayEl.style.pointerEvents = 'auto'
+        overlayEl.style.visibility = 'visible'
+      }
+      return
+    }
+
     const handleScroll = () => {
       if (window.innerWidth < BREAKPOINTS.MOBILE) return
 
@@ -40,7 +62,7 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
     handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [metrics])
+  }, [metrics, disableScrollFade])
 
   const [mobileClosed, setMobileClosed] = useState(false)
   const isClosingRef = useRef(false)
@@ -149,17 +171,32 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
       {/* Desktop Hero Overlay (>= 768px): Unified flex row prevents any overlap between logo and metrics */}
       <div
         ref={desktopOverlayRef}
-        className="hidden md:block md:fixed md:top-20 inset-x-0 z-20 will-change-opacity pointer-events-none"
+        className={`hidden md:block ${isStaticDashboard ? 'md:absolute md:top-3 lg:md:top-5' : 'md:fixed md:top-20'} inset-x-0 z-20 will-change-opacity pointer-events-none`}
       >
-        <div className="w-full max-w-[2048px] mx-auto px-4 lg:px-6 flex justify-between items-start gap-4 lg:gap-6">
-          <div ref={contentRef} className="pointer-events-auto shrink-0 w-fit max-w-[45vw]">
+        <div
+          className={`w-full max-w-[2048px] mx-auto px-4 lg:px-6 flex justify-between items-start gap-4 lg:gap-6 ${
+            reverseLayout ? 'flex-row-reverse' : ''
+          }`}
+        >
+          <div
+            ref={contentRef}
+            className={`pointer-events-auto shrink-0 w-fit ${
+              isStaticDashboard
+                ? reverseLayout
+                  ? 'max-w-[340px] flex flex-col items-end'
+                  : 'max-w-[340px]'
+                : 'max-w-[45vw]'
+            }`}
+          >
             {children}
           </div>
 
           {metrics && (
             <div
               data-metrics-panel="true"
-              className="pointer-events-auto shrink min-w-0 max-w-4xl hidden lg:block"
+              className={`pointer-events-auto shrink-0 min-w-0 ${
+                isStaticDashboard ? 'hidden md:block' : 'max-w-4xl hidden lg:block'
+              }`}
             >
               {metrics}
             </div>
@@ -174,32 +211,36 @@ export default function HomeHeroStage({ children, metrics, onCloseMetrics }: Hom
           data-metrics-panel="true"
           className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 pb-4 md:hidden will-change-opacity pointer-events-auto"
         >
-          {/* Mobile close button: smoothly collapses stage so content flies up */}
-          <div className="md:hidden flex justify-end pb-1.5">
-            <button
-              type="button"
-              onClick={handleCloseMobile}
-              className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md shadow text-xs font-semibold text-char-800 flex items-center gap-1.5 active:scale-95 border border-camel-200/80 transition-transform"
-              aria-label="Закрыть блок ближайших событий"
-            >
-              <Icons.close className="w-3.5 h-3.5 text-char-600" aria-hidden />
-              <span>Закрыть</span>
-            </button>
-          </div>
+          {/* Mobile close button: smoothly collapses stage so content flies up (hidden in static dashboard) */}
+          {!isStaticDashboard && (
+            <div className="md:hidden flex justify-end pb-1.5">
+              <button
+                type="button"
+                onClick={handleCloseMobile}
+                className="px-3 py-1 rounded-full bg-white/95 backdrop-blur-md shadow text-xs font-semibold text-char-800 flex items-center gap-1.5 active:scale-95 border border-camel-200/80 transition-transform"
+                aria-label="Закрыть блок ближайших событий"
+              >
+                <Icons.close className="w-3.5 h-3.5 text-char-600" aria-hidden />
+                <span>Закрыть</span>
+              </button>
+            </div>
+          )}
           {metrics}
         </div>
       )}
 
-      {/* Scroll cue is hidden on mobile (< 768px) and only visible on desktop */}
-      <button
-        type="button"
-        className="hidden md:inline-flex home-v2-scroll-cue group"
-        aria-label="Прокрутить к рейтингам сезона"
-        onClick={handleScrollDown}
-      >
-        <span>Рейтинги сезона</span>
-        <Icons.chevronDown className="w-3.5 h-3.5 text-camel-700 transition-transform duration-200 group-hover:translate-y-0.5" aria-hidden />
-      </button>
+      {/* Scroll cue is hidden in static dashboard and on mobile (< 768px) */}
+      {!hideScrollCue && (
+        <button
+          type="button"
+          className="hidden md:inline-flex home-v2-scroll-cue group"
+          aria-label="Прокрутить к рейтингам сезона"
+          onClick={handleScrollDown}
+        >
+          <span>Рейтинги сезона</span>
+          <Icons.chevronDown className="w-3.5 h-3.5 text-camel-700 transition-transform duration-200 group-hover:translate-y-0.5" aria-hidden />
+        </button>
+      )}
     </section>
   )
 }

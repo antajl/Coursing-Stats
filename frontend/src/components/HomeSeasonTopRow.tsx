@@ -65,7 +65,7 @@ export default function HomeSeasonTopRow({
   const breedDisplay = breed ? displayBreed(breed) : null
 
   const renderRank = (rankVal: number) => (
-    <div className="flex min-h-0 min-w-[2.75rem] sm:min-w-[3rem] shrink-0 flex-col items-center justify-start pt-1 pr-2 sm:pr-2.5 mr-2 sm:mr-2.5 border-r border-old-money-200/70 self-stretch">
+    <div className="flex min-h-0 min-w-[2.25rem] sm:min-w-[2.5rem] shrink-0 flex-col items-center justify-start pt-1 pr-1.5 sm:pr-2 mr-1.5 sm:mr-2 border-r border-old-money-200/70 self-stretch">
       <RankBadge rank={rankVal} />
     </div>
   )
@@ -160,7 +160,7 @@ export default function HomeSeasonTopRow({
           {renderMetricLine}
         </div>
 
-        <div className="mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/60 pl-2 sm:pl-2.5">
+        <div className="mr-0 flex min-h-0 w-auto shrink-0 min-w-[4.5rem] sm:min-w-[5rem] flex-col justify-center items-start border-l border-old-money-200/60 pl-2 sm:pl-2.5 pr-0.5">
           <div className="flex flex-col items-start gap-1 sm:gap-1.5">
             <StartsLabel starts={participations} size="md" label="Выставок" />
             {renderBestAwardOrMedals}

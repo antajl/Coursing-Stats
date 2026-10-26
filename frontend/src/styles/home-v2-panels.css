@@ -233,3 +233,66 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ========== Compact Static Dashboard ========== */
+.home-v2-static {
+  height: calc(100dvh - var(--cs-nav-offset)) !important;
+  max-height: calc(100dvh - var(--cs-nav-offset)) !important;
+  overflow: hidden !important;
+  padding-bottom: 0 !important;
+}
+
+.home-v2-season-top--compact {
+  margin-bottom: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.home-v2-season-top--compact .home-v2-columns {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: 12px 16px !important;
+  width: 100% !important;
+}
+.home-v2-season-top--compact .home-v2-col {
+  min-width: 0 !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  background: rgba(253, 251, 247, 0.95);
+  box-shadow: 0 4px 12px rgba(44, 39, 32, 0.05);
+}
+.home-v2-season-top--compact .home-breed-progress-track,
+.home-v2-season-top--compact .home-breed-progress-fill__bar {
+  border-radius: calc(12px - 1.5px) !important;
+}
+.home-v2-season-top--compact .home-v2-col-head {
+  padding: 5px 12px;
+  font-size: 13px;
+}
+
+/* Slimmer dog rows in compact dashboard mode (saves ~70px of height) */
+.home-v2-season-top--compact a.group {
+  min-height: 3.75rem !important;
+  height: 3.75rem !important;
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+/* Compact breed pagination dots & progress bar (saves ~30px of height) */
+.home-v2-season-top--compact .home-breed-pager-wrapper {
+  padding: 0 !important;
+}
+.home-v2-season-top--compact .home-breed-pager-nav {
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+.home-v2-season-top--compact .home-breed-pager-dot-btn {
+  min-height: 18px !important;
+  min-width: 20px !important;
+  padding: 2px 2px !important;
+}
+.home-v2-season-top--compact .home-breed-pager-dot-btn span {
+  height: 4px !important;
+}
+.home-v2-season-top--compact .home-breed-pager-dot-btn span.w-4 {
+  width: 14px !important;
+}

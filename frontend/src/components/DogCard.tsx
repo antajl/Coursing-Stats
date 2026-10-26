@@ -398,13 +398,18 @@ const DogCardStats: FC = function DogCardStats() {
 }
 
 const DogCardRank: FC<{ className?: string }> = function DogCardRank({ className = '' }) {
-  const { rank, dog } = useDogCardContext()
+  const { rank, dog, variant } = useDogCardContext()
   if (rank == null || rank <= 0) return null
   const delta = (dog as any)?.rank_delta
+  const isEmbedded = variant === 'embedded'
 
   return (
     <div
-      className={`flex min-h-0 min-w-[2.75rem] sm:min-w-[3rem] shrink-0 flex-col items-center justify-start pt-0.5 sm:pt-1 pr-2 sm:pr-2.5 mr-2 sm:mr-2.5 border-r border-old-money-200/70 self-stretch ${className}`}
+      className={`flex min-h-0 ${
+        isEmbedded
+          ? 'min-w-[2.25rem] sm:min-w-[2.5rem] pr-1.5 sm:pr-2 mr-1.5 sm:mr-2'
+          : 'min-w-[2.75rem] sm:min-w-[3rem] pr-2 sm:pr-2.5 mr-2 sm:mr-2.5'
+      } shrink-0 flex-col items-center justify-start pt-0.5 sm:pt-1 border-r border-old-money-200/70 self-stretch ${className}`}
     >
       <RankBadge rank={rank} delta={delta} />
     </div>
@@ -415,6 +420,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
   const yearBadge = dogYearBadge(dog, filterYear)
   const isTop3 = (type === 'combined' || type === 'speed') && rank != null && rank > 0 && rank <= 3
   const top3Wash = isTop3 ? TOP3_WASH[rank as 1 | 2 | 3] : ''
+  const isEmbedded = variant === 'embedded'
 
   const shellBase = variant === 'embedded' ? EMBEDDED_SHELL : CARD_SHELL
   const useFlexShell = type === 'combined' || type === 'speed'
@@ -434,6 +440,10 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
     [dog, type, filterYear, rank, variant]
   )
 
+  const statsColClass = isEmbedded
+    ? 'mr-0 flex min-h-0 w-auto shrink-0 min-w-[4.5rem] sm:min-w-[5rem] flex-col justify-center items-start border-l border-old-money-200/60 pl-2 sm:pl-2.5 pr-0.5'
+    : 'mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/60 pl-2 sm:pl-2.5'
+
   return (
     <DogCardContext.Provider value={contextValue}>
       <Link to={`/dog/${dog.dog_id}`} className={shellClass}>
@@ -451,7 +461,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
               </div>
             </div>
 
-            <div className="mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/60 pl-2 sm:pl-2.5">
+            <div className={statsColClass}>
               <div className="flex flex-col items-start gap-1 sm:gap-1.5">
                 <StartsLabel starts={dog.total_starts || 0} size="md" />
                 <DogCardMedals />
@@ -473,7 +483,7 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
               </div>
             </div>
 
-            <div className="mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/60 pl-2 sm:pl-2.5">
+            <div className={statsColClass}>
               <div className="flex flex-col items-start gap-1 sm:gap-1.5">
                 <StartsLabel starts={dog.total_starts || 0} size="md" />
                 <div className="flex items-baseline gap-1 sm:gap-1.5 leading-none whitespace-nowrap">
