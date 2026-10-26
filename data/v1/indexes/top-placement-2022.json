@@ -1,8 +1,24 @@
 {
   "schema": "coursing-stats/index-top-placement-v1",
   "year": 2022,
-  "count": 265,
+  "count": 297,
   "items": [
+    {
+      "dog_id": 9248,
+      "name_lat": "ARIES KHAN MARLON BRANDO",
+      "name_ru": "ARIES KHAN MARLON BRANDO",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2022,
+      "gold": 4,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 4,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": 0,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
     {
       "dog_id": 6048,
       "name_lat": "SHAMIKA IZ DIVNOGO SADA",
@@ -12,28 +28,12 @@
       "gold": 3,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 3,
+      "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": 0,
       "rank_delta_breed": 0,
       "sex": "F"
-    },
-    {
-      "dog_id": 9248,
-      "name_lat": "ARIES KHAN MARLON BRANDO",
-      "name_ru": "ARIES KHAN MARLON BRANDO",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2022,
-      "gold": 3,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 3,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": 0,
-      "rank_delta_breed": 0,
-      "sex": "M"
     },
     {
       "dog_id": 7088,
@@ -42,14 +42,30 @@
       "breed": "УИППЕТ",
       "year": 2022,
       "gold": 2,
-      "silver": 1,
+      "silver": 2,
       "bronze": 1,
-      "total_starts": 5,
+      "total_starts": 6,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": 7,
+      "rank_delta": 10,
       "rank_delta_breed": 1,
       "sex": "F"
+    },
+    {
+      "dog_id": 255,
+      "name_lat": "EAGLE BLACK",
+      "name_ru": "ЕАГЛЕ БЛАЦК",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 2,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 4,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": 10,
+      "rank_delta_breed": 1,
+      "sex": "M"
     },
     {
       "dog_id": 9343,
@@ -63,15 +79,15 @@
       "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
-      "rank_delta_breed": -1,
+      "rank_delta": -2,
+      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
-      "dog_id": 255,
-      "name_lat": "EAGLE BLACK",
-      "name_ru": "ЕАГЛЕ БЛАЦК",
-      "breed": "УИППЕТ",
+      "dog_id": 7261,
+      "name_lat": "AL NAFISEH HAIFA",
+      "name_ru": "АЛЬ НАФИСЭХ ХАЙФА",
+      "breed": "САЛЮКИ",
       "year": 2022,
       "gold": 2,
       "silver": 1,
@@ -79,9 +95,10 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": 8,
-      "rank_delta_breed": 1,
-      "sex": "M"
+      "rank_delta": -2,
+      "rank_delta_breed": 0,
+      "aggression_count": 1,
+      "sex": "F"
     },
     {
       "dog_id": 7499,
@@ -116,6 +133,54 @@
       "sex": "F"
     },
     {
+      "dog_id": 10444,
+      "name_lat": "ARTEFAKT JOIE DE VIVRE",
+      "name_ru": "ARTEFAKT JOIE DE VIVRE",
+      "breed": "ГРЕЙХАУНД",
+      "year": 2022,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -2,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 481,
+      "name_lat": "SIMPLE OBSESSION CHAPTER OF MY LIFE",
+      "name_ru": "СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2022,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": 33,
+      "rank_delta_breed": 2,
+      "sex": "F"
+    },
+    {
+      "dog_id": 5962,
+      "name_lat": "ARIES KHAN RIVIERA AL RISHA SANGREAL",
+      "name_ru": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2022,
+      "gold": 2,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -3,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 9217,
       "name_lat": "ЛАН БРАЙТ БУГАТТИ БЛЭК /LAN BRIGHT BUGATTI BLACK",
       "name_ru": "ЛАН БРАЙТ БУГАТТИ БЛЭК /LAN BRIGHT BUGATTI BLACK",
@@ -127,7 +192,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -2,
+      "rank_delta": -3,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -143,15 +208,15 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -2,
+      "rank_delta": -3,
       "rank_delta_breed": 0,
       "sex": "M"
     },
     {
-      "dog_id": 10444,
-      "name_lat": "ARTEFAKT JOIE DE VIVRE",
-      "name_ru": "ARTEFAKT JOIE DE VIVRE",
-      "breed": "ГРЕЙХАУНД",
+      "dog_id": 10493,
+      "name_lat": "ВАЛЬС ВАЛЕНТО ЮЛИСА",
+      "name_ru": "ВАЛЬС ВАЛЕНТО ЮЛИСА",
+      "breed": "ЛЕВРЕТКА",
       "year": 2022,
       "gold": 2,
       "silver": 0,
@@ -159,9 +224,9 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -2,
+      "rank_delta": -3,
       "rank_delta_breed": 0,
-      "sex": "M"
+      "sex": "F"
     },
     {
       "dog_id": 10991,
@@ -175,8 +240,8 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -2,
-      "rank_delta_breed": 0,
+      "rank_delta": -3,
+      "rank_delta_breed": -1,
       "sex": "F"
     },
     {
@@ -191,9 +256,41 @@
       "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": 0,
+      "rank_delta_breed": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 262,
+      "name_lat": "RUNNING RAIDERS GRIM REAPER",
+      "name_ru": "RUNNING RAIDERS GRIM REAPER",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -2,
       "rank_delta_breed": -1,
       "sex": "M"
+    },
+    {
+      "dog_id": 10472,
+      "name_lat": "GARDA",
+      "name_ru": "GARDA",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 1,
+      "bronze": 1,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -1,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10514,
@@ -223,8 +320,8 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": 82,
-      "rank_delta_breed": 10,
+      "rank_delta": 94,
+      "rank_delta_breed": 15,
       "sex": "F"
     },
     {
@@ -239,7 +336,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -255,27 +352,10 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": -1,
       "aggression_count": 1,
       "sex": "M"
-    },
-    {
-      "dog_id": 7261,
-      "name_lat": "AL NAFISEH HAIFA",
-      "name_ru": "АЛЬ НАФИСЭХ ХАЙФА",
-      "breed": "САЛЮКИ",
-      "year": 2022,
-      "gold": 1,
-      "silver": 1,
-      "bronze": 0,
-      "total_starts": 2,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -1,
-      "rank_delta_breed": 0,
-      "aggression_count": 1,
-      "sex": "F"
     },
     {
       "dog_id": 9367,
@@ -289,7 +369,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "aggression_count": 4,
       "sex": "M"
@@ -306,7 +386,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -322,7 +402,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -338,8 +418,25 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 7170,
+      "name_lat": "UILL OF ADAMANT",
+      "name_ru": "УИЛЛ ОФ АДАМАНТ",
+      "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -2,
+      "rank_delta_breed": -1,
+      "aggression_count": 3,
       "sex": "M"
     },
     {
@@ -354,7 +451,7 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -370,8 +467,24 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10510,
+      "name_lat": "TIM SPIRIT KAJLAS",
+      "name_ru": "TIM SPIRIT KAJLAS",
+      "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -2,
+      "rank_delta_breed": -1,
       "sex": "M"
     },
     {
@@ -386,9 +499,25 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "F"
+    },
+    {
+      "dog_id": 7289,
+      "name_lat": "KULIKOVO POLE GERMES",
+      "name_ru": "КУЛИКОВО ПОЛЕ ГЕРМЕС",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 4,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -2,
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 85,
@@ -402,14 +531,14 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "F"
     },
     {
-      "dog_id": 7289,
-      "name_lat": "KULIKOVO POLE GERMES",
-      "name_ru": "КУЛИКОВО ПОЛЕ ГЕРМЕС",
+      "dog_id": 9388,
+      "name_lat": "ENTAYLI YOZ",
+      "name_ru": "ЭНТАЙЛИ ЙОЗ",
       "breed": "УИППЕТ",
       "year": 2022,
       "gold": 1,
@@ -418,7 +547,23 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9415,
+      "name_lat": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
+      "name_ru": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -434,25 +579,8 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
-      "sex": "M"
-    },
-    {
-      "dog_id": 7170,
-      "name_lat": "UILL OF ADAMANT",
-      "name_ru": "УИЛЛ ОФ АДАМАНТ",
-      "breed": "БАСЕНДЖИ",
-      "year": 2022,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 2,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -1,
-      "rank_delta_breed": -1,
-      "aggression_count": 3,
       "sex": "M"
     },
     {
@@ -467,7 +595,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -483,15 +611,15 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
       "sex": "M"
     },
     {
-      "dog_id": 9388,
-      "name_lat": "ENTAYLI YOZ",
-      "name_ru": "ЭНТАЙЛИ ЙОЗ",
-      "breed": "УИППЕТ",
+      "dog_id": 9334,
+      "name_lat": "TINA TRADING GRAMMY GOLF",
+      "name_ru": "ТИНА ТРЕЙДИНГ ГРЕММИ ГОЛЬФ",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2022,
       "gold": 1,
       "silver": 0,
@@ -499,8 +627,25 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -1,
+      "rank_delta": -2,
       "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9381,
+      "name_lat": "SALGREYS TAKE MY BREATH AWAY",
+      "name_ru": "САЛГРЕЙС ТЭЙК МАЙ БРЕФ ЭВЕЙ",
+      "breed": "САЛЮКИ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -2,
+      "rank_delta_breed": 0,
+      "aggression_count": 1,
       "sex": "F"
     },
     {
@@ -515,8 +660,8 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": 26,
-      "rank_delta_breed": 5,
+      "rank_delta": 31,
+      "rank_delta_breed": 7,
       "sex": "F"
     },
     {
@@ -531,7 +676,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -2,
+      "rank_delta": -3,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -547,8 +692,8 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -2,
-      "rank_delta_breed": 0,
+      "rank_delta": -3,
+      "rank_delta_breed": -1,
       "sex": "F"
     },
     {
@@ -563,7 +708,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -2,
+      "rank_delta": -3,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -579,7 +724,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -2,
+      "rank_delta": -3,
       "rank_delta_breed": -1,
       "aggression_count": 1,
       "sex": "F"
@@ -589,22 +734,6 @@
       "name_lat": "STANGERS LAND DARING GREATLY",
       "name_ru": "СТАНГЕРС ЛАНД ДАРИНГ ГРЕЙТЛИ",
       "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": "NEW",
-      "rank_delta_breed": "NEW",
-      "sex": "F"
-    },
-    {
-      "dog_id": 481,
-      "name_lat": "SIMPLE OBSESSION CHAPTER OF MY LIFE",
-      "name_ru": "СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
       "year": 2022,
       "gold": 1,
       "silver": 0,
@@ -649,22 +778,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 5962,
-      "name_lat": "ARIES KHAN RIVIERA AL RISHA SANGREAL",
-      "name_ru": "АРИЕС ХАН РИВЬЕРА АЛЬ РИША САНГРИЭЛЬ",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
-      "year": 2022,
-      "gold": 1,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -6,
-      "rank_delta_breed": 0,
-      "sex": "F"
-    },
-    {
       "dog_id": 7186,
       "name_lat": "GORDEN MAGIK ODRI AMALI",
       "name_ru": "ГОРДЕН МАГИК ОДРИ АМАЛИ",
@@ -676,7 +789,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -6,
+      "rank_delta": -5,
       "rank_delta_breed": -1,
       "sex": "F"
     },
@@ -708,8 +821,24 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
+      "rank_delta": -6,
       "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 7802,
+      "name_lat": "VIZAVI ANGEL NA LADOSHKE",
+      "name_ru": "ВИЗАВИ АНГЕЛ НА ЛАДОШКЕ",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -6,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -724,7 +853,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
+      "rank_delta": -6,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -740,8 +869,24 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
-      "rank_delta_breed": -1,
+      "rank_delta": -6,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 8143,
+      "name_lat": "УНО ЗАФИРА БЛАНКА ИЗ КАНЕКСО",
+      "name_ru": "УНО ЗАФИРА БЛАНКА ИЗ КАНЕКСО",
+      "breed": "КСОЛОИТЦКУИНТЛИ (МЕКСИКАНСКАЯ ГОЛАЯ СОБАКА) СТАНДАРТ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -6,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -756,7 +901,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
+      "rank_delta": -6,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -772,7 +917,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
+      "rank_delta": -6,
       "rank_delta_breed": -3,
       "sex": "M"
     },
@@ -788,9 +933,41 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
-      "rank_delta_breed": -1,
+      "rank_delta": -6,
+      "rank_delta_breed": 0,
       "sex": "M"
+    },
+    {
+      "dog_id": 9302,
+      "name_lat": "APRIORI LUXURY MASTER",
+      "name_ru": "АПРИОРИ ЛУКСУРИ МАСТЕР",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -6,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9311,
+      "name_lat": "FEERIYA PAFF",
+      "name_ru": "ФЕЕРИЯ ПАФФ",
+      "breed": "ГРЕЙХАУНД",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -6,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 9321,
@@ -804,14 +981,14 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
+      "rank_delta": -6,
       "rank_delta_breed": 0,
       "sex": "F"
     },
     {
-      "dog_id": 9334,
-      "name_lat": "TINA TRADING GRAMMY GOLF",
-      "name_ru": "ТИНА ТРЕЙДИНГ ГРЕММИ ГОЛЬФ",
+      "dog_id": 9332,
+      "name_lat": "АРИЕС ХАН РЕГОР РЕМБРАНДТ /ARIES KHAN REGOR REMBRANDT",
+      "name_ru": "АРИЕС ХАН РЕГОР РЕМБРАНДТ /ARIES KHAN REGOR REMBRANDT",
       "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2022,
       "gold": 1,
@@ -820,8 +997,9 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
+      "rank_delta": -6,
       "rank_delta_breed": 0,
+      "aggression_count": 1,
       "sex": "M"
     },
     {
@@ -836,15 +1014,15 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
+      "rank_delta": -6,
       "rank_delta_breed": -3,
       "sex": "F"
     },
     {
-      "dog_id": 9381,
-      "name_lat": "SALGREYS TAKE MY BREATH AWAY",
-      "name_ru": "САЛГРЕЙС ТЭЙК МАЙ БРЕФ ЭВЕЙ",
-      "breed": "САЛЮКИ",
+      "dog_id": 9366,
+      "name_lat": "TINA TRADING PERSEUS PRIDE",
+      "name_ru": "ТИНА ТРЕЙДИНГ ПЕРСЕЙ ПРАЙД",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2022,
       "gold": 1,
       "silver": 0,
@@ -852,9 +1030,24 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -7,
+      "rank_delta": -6,
       "rank_delta_breed": 0,
-      "aggression_count": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9389,
+      "name_lat": "WISE DESIRE SHOW FORMAT",
+      "name_ru": "WISE DESIRE SHOW FORMAT /WISE DESIRE SHOW FORMAT",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -6,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -885,8 +1078,24 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
-      "rank_delta_breed": -1,
+      "rank_delta": -7,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9481,
+      "name_lat": "LUNNAJA RADUGA REVOLUTION",
+      "name_ru": "ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -7,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -901,7 +1110,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": -1,
       "aggression_count": 1,
       "sex": "F"
@@ -918,7 +1127,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": -3,
       "sex": "F"
     },
@@ -934,7 +1143,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": -3,
       "sex": "F"
     },
@@ -950,7 +1159,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -966,7 +1175,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": -3,
       "sex": "F"
     },
@@ -982,7 +1191,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": -1,
       "sex": "M"
     },
@@ -998,14 +1207,14 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "F"
     },
     {
-      "dog_id": 10493,
-      "name_lat": "ВАЛЬС ВАЛЕНТО ЮЛИСА",
-      "name_ru": "ВАЛЬС ВАЛЕНТО ЮЛИСА",
+      "dog_id": 10430,
+      "name_lat": "GRACE HAUND ELIZABETH HER EXCELLENCE",
+      "name_ru": "GRACE HAUND ELIZABETH HER EXCELLENCE",
       "breed": "ЛЕВРЕТКА",
       "year": 2022,
       "gold": 1,
@@ -1014,7 +1223,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1030,7 +1239,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -8,
+      "rank_delta": -7,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1078,8 +1287,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -10,
-      "rank_delta_breed": -2,
+      "rank_delta": -9,
+      "rank_delta_breed": -1,
       "sex": "M"
     },
     {
@@ -1094,7 +1303,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": -2,
       "sex": "M"
     },
@@ -1110,7 +1319,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1126,7 +1335,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": -1,
       "sex": "M"
     },
@@ -1142,7 +1351,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1158,7 +1367,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1174,7 +1383,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": -2,
       "sex": "F"
     },
@@ -1190,7 +1399,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1206,7 +1415,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1222,7 +1431,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1238,7 +1447,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1254,7 +1463,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1270,7 +1479,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": -1,
       "sex": "M"
     },
@@ -1286,7 +1495,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1302,7 +1511,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": -2,
       "sex": "M"
     },
@@ -1318,7 +1527,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1334,7 +1543,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1350,7 +1559,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1366,9 +1575,25 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "M"
+    },
+    {
+      "dog_id": 11039,
+      "name_lat": "ADAMANT SPIRIT GALAKTIKA",
+      "name_ru": "ADAMANT SPIRIT GALAKTIKA",
+      "breed": "Басенджи",
+      "year": 2022,
+      "gold": 1,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -8,
+      "rank_delta_breed": -1,
+      "sex": "F"
     },
     {
       "dog_id": 7070,
@@ -1382,9 +1607,41 @@
       "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
-      "rank_delta_breed": -2,
+      "rank_delta": -8,
+      "rank_delta_breed": -1,
       "aggression_count": 1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 7244,
+      "name_lat": "FAJZA",
+      "name_ru": "ФАЙЗА",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "total_starts": 4,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -5,
+      "rank_delta_breed": -1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9255,
+      "name_lat": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
+      "name_ru": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2022,
+      "gold": 0,
+      "silver": 2,
+      "bronze": 1,
+      "total_starts": 4,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -9,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -1396,12 +1653,28 @@
       "gold": 0,
       "silver": 2,
       "bronze": 0,
-      "total_starts": 3,
+      "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -9,
       "rank_delta_breed": -2,
       "sex": "F"
+    },
+    {
+      "dog_id": 5658,
+      "name_lat": "VARVAR KONAN BESSTRASHNYI",
+      "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 2,
+      "bronze": 0,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -9,
+      "rank_delta_breed": -2,
+      "sex": "M"
     },
     {
       "dog_id": 9230,
@@ -1415,24 +1688,24 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "M"
     },
     {
-      "dog_id": 9255,
-      "name_lat": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
-      "name_ru": "MAENDELEO HOLY LARA CROFT ARIES KHAN",
-      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "dog_id": 5668,
+      "name_lat": "OLIVIA S KNJAZHESKOGO DVORA",
+      "name_ru": "ОЛИВИЯ С КНЯЖЕСКОГО ДВОРА",
+      "breed": "БАСЕНДЖИ",
       "year": 2022,
       "gold": 0,
       "silver": 2,
       "bronze": 0,
-      "total_starts": 3,
+      "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
-      "rank_delta_breed": 0,
+      "rank_delta": -8,
+      "rank_delta_breed": -1,
       "sex": "F"
     },
     {
@@ -1447,24 +1720,8 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -9,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
-      "sex": "F"
-    },
-    {
-      "dog_id": 7244,
-      "name_lat": "FAJZA",
-      "name_ru": "ФАЙЗА",
-      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 1,
-      "bronze": 1,
-      "total_starts": 3,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -1,
-      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
@@ -1476,28 +1733,28 @@
       "gold": 0,
       "silver": 1,
       "bronze": 1,
-      "total_starts": 3,
+      "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -10,
+      "rank_delta": -8,
       "rank_delta_breed": -1,
       "sex": "M"
     },
     {
-      "dog_id": 262,
-      "name_lat": "RUNNING RAIDERS GRIM REAPER",
-      "name_ru": "RUNNING RAIDERS GRIM REAPER",
+      "dog_id": 247,
+      "name_lat": "ACUARELA DELRIO DOUCE CARAMEL",
+      "name_ru": "ACUARELA DELRIO DOUCE CARAMEL",
       "breed": "УИППЕТ",
       "year": 2022,
       "gold": 0,
       "silver": 1,
       "bronze": 1,
-      "total_starts": 2,
+      "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -10,
+      "rank_delta": -8,
       "rank_delta_breed": -2,
-      "sex": "M"
+      "sex": "F"
     },
     {
       "dog_id": 5784,
@@ -1511,7 +1768,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -10,
+      "rank_delta": -8,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1527,25 +1784,25 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -10,
+      "rank_delta": -8,
       "rank_delta_breed": -2,
       "sex": "M"
     },
     {
-      "dog_id": 10472,
-      "name_lat": "GARDA",
-      "name_ru": "GARDA",
+      "dog_id": 298,
+      "name_lat": "ДЖИНИ ЛАМБОР",
+      "name_ru": "ДЖИНИ ЛАМБОР",
       "breed": "УИППЕТ",
       "year": 2022,
       "gold": 0,
       "silver": 1,
-      "bronze": 1,
-      "total_starts": 2,
+      "bronze": 0,
+      "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -10,
+      "rank_delta": -8,
       "rank_delta_breed": -2,
-      "sex": "F"
+      "sex": "M"
     },
     {
       "dog_id": 600,
@@ -1559,8 +1816,8 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": 62,
-      "rank_delta_breed": 21,
+      "rank_delta": 77,
+      "rank_delta_breed": 25,
       "sex": "F"
     },
     {
@@ -1575,7 +1832,7 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -9,
       "rank_delta_breed": -3,
       "sex": "M"
     },
@@ -1591,8 +1848,8 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -6,
-      "rank_delta_breed": -2,
+      "rank_delta": -4,
+      "rank_delta_breed": -3,
       "sex": "M"
     },
     {
@@ -1607,14 +1864,47 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -12,
+      "rank_delta": -10,
       "rank_delta_breed": -1,
       "sex": "F"
     },
     {
-      "dog_id": 5658,
-      "name_lat": "VARVAR KONAN BESSTRASHNYI",
-      "name_ru": "ВАРВАР КОНАН БЕССТРАШНЫЙ",
+      "dog_id": 10526,
+      "name_lat": "БАГИРА",
+      "name_ru": "БАГИРА",
+      "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -10,
+      "rank_delta_breed": -1,
+      "sex": "F"
+    },
+    {
+      "dog_id": 50,
+      "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+      "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
+      "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -10,
+      "rank_delta_breed": -1,
+      "aggression_count": 1,
+      "sex": "M"
+    },
+    {
+      "dog_id": 7109,
+      "name_lat": "FLETCHER ILLUSTRIOUS WINNER",
+      "name_ru": "ФЛЕТЧЕР ИЛЛАСТРИАС ВИННЕР",
       "breed": "УИППЕТ",
       "year": 2022,
       "gold": 0,
@@ -1623,8 +1913,8 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -12,
-      "rank_delta_breed": -4,
+      "rank_delta": 103,
+      "rank_delta_breed": 46,
       "sex": "M"
     },
     {
@@ -1656,7 +1946,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -11,
-      "rank_delta_breed": -2,
+      "rank_delta_breed": -1,
       "sex": "F"
     },
     {
@@ -1688,7 +1978,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -10,
-      "rank_delta_breed": -3,
+      "rank_delta_breed": -4,
       "sex": "M"
     },
     {
@@ -1708,20 +1998,20 @@
       "sex": "F"
     },
     {
-      "dog_id": 10526,
-      "name_lat": "БАГИРА",
-      "name_ru": "БАГИРА",
-      "breed": "БАСЕНДЖИ",
+      "dog_id": 178,
+      "name_lat": "JELANY RED TROY",
+      "name_ru": "JELANY RED TROY",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2022,
       "gold": 0,
       "silver": 1,
       "bronze": 0,
-      "total_starts": 2,
+      "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -9,
       "rank_delta_breed": 0,
-      "sex": "F"
+      "sex": "M"
     },
     {
       "dog_id": 182,
@@ -1756,10 +2046,10 @@
       "sex": "F"
     },
     {
-      "dog_id": 5668,
-      "name_lat": "OLIVIA S KNJAZHESKOGO DVORA",
-      "name_ru": "ОЛИВИЯ С КНЯЖЕСКОГО ДВОРА",
-      "breed": "БАСЕНДЖИ",
+      "dog_id": 527,
+      "name_lat": "CHARISMATIC DOG DULSINEA",
+      "name_ru": "CHARISMATIC DOG DULSINEA",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
       "year": 2022,
       "gold": 0,
       "silver": 1,
@@ -1772,9 +2062,9 @@
       "sex": "F"
     },
     {
-      "dog_id": 7109,
-      "name_lat": "FLETCHER ILLUSTRIOUS WINNER",
-      "name_ru": "ФЛЕТЧЕР ИЛЛАСТРИАС ВИННЕР",
+      "dog_id": 7113,
+      "name_lat": "ЛАКШЕРИ ВИПП ОРХИДЕЯ",
+      "name_ru": "ЛАКШЕРИ ВИПП ОРХИДЕЯ",
       "breed": "УИППЕТ",
       "year": 2022,
       "gold": 0,
@@ -1783,9 +2073,10 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": "NEW",
-      "rank_delta_breed": "NEW",
-      "sex": "M"
+      "rank_delta": -10,
+      "rank_delta_breed": -4,
+      "aggression_count": 1,
+      "sex": "F"
     },
     {
       "dog_id": 8501,
@@ -1799,7 +2090,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1815,9 +2106,25 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "M"
+    },
+    {
+      "dog_id": 9318,
+      "name_lat": "САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /SALGREYS THE POWER OF LOVE",
+      "name_ru": "САЛГРЕЙС ТЭ ПАУЭР ОФ ЛАВ /SALGREYS THE POWER OF LOVE",
+      "breed": "САЛЮКИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 9404,
@@ -1831,7 +2138,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": -4,
       "sex": "F"
     },
@@ -1847,8 +2154,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
-      "rank_delta_breed": -2,
+      "rank_delta": -10,
+      "rank_delta_breed": -1,
       "sex": "M"
     },
     {
@@ -1863,7 +2170,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": -4,
       "sex": "F"
     },
@@ -1879,7 +2186,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1895,7 +2202,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": -3,
       "sex": "M"
     },
@@ -1911,7 +2218,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1927,7 +2234,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1943,7 +2250,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -1959,7 +2266,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": -4,
       "sex": "F"
     },
@@ -1975,7 +2282,23 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10492,
+      "name_lat": "APRIORI STAR STITCH SILVER WIND",
+      "name_ru": "APRIORI STAR STITCH SILVER WIND",
+      "breed": "ЛЕВРЕТКА",
+      "year": 2022,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -1991,8 +2314,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
-      "rank_delta_breed": -2,
+      "rank_delta": -10,
+      "rank_delta_breed": -1,
       "sex": "M"
     },
     {
@@ -2007,7 +2330,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -11,
+      "rank_delta": -10,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2055,7 +2378,23 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10971,
+      "name_lat": "FIONN CLANN LANCE LOMOND",
+      "name_ru": "ФИОНН КЛАНН ЛАНС ЛОМОНД",
+      "breed": "Грейхаунд",
+      "year": 2022,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2071,7 +2410,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2087,7 +2426,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": -2,
       "sex": "M"
     },
@@ -2103,7 +2442,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2119,7 +2458,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -2135,9 +2474,25 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "F"
+    },
+    {
+      "dog_id": 11042,
+      "name_lat": "ZORKO",
+      "name_ru": "ЗОРКО",
+      "breed": "Русская псовая борзая",
+      "year": 2022,
+      "gold": 0,
+      "silver": 1,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
+      "sex": "M"
     },
     {
       "dog_id": 78,
@@ -2148,12 +2503,28 @@
       "gold": 0,
       "silver": 0,
       "bronze": 3,
-      "total_starts": 5,
+      "total_starts": 6,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -11,
+      "rank_delta_breed": -4,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10985,
+      "name_lat": "OLIMPIA S KNJAZHESKOGO DVORA",
+      "name_ru": "ОЛИМПИЯ С КНЯЖЕСКОГО ДВОРА",
+      "breed": "Басенджи",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 3,
+      "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -13,
-      "rank_delta_breed": -4,
-      "sex": "M"
+      "rank_delta_breed": 0,
+      "sex": "F"
     },
     {
       "dog_id": 10475,
@@ -2167,25 +2538,25 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "F"
     },
     {
-      "dog_id": 10985,
-      "name_lat": "OLIMPIA S KNJAZHESKOGO DVORA",
-      "name_ru": "ОЛИМПИЯ С КНЯЖЕСКОГО ДВОРА",
-      "breed": "Басенджи",
+      "dog_id": 10960,
+      "name_lat": "DRUG SEREBRYANYY DZHIM BIM",
+      "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ДЖИМ БИМ",
+      "breed": "Русская псовая борзая",
       "year": 2022,
       "gold": 0,
       "silver": 0,
       "bronze": 2,
-      "total_starts": 3,
+      "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
-      "rank_delta_breed": 0,
-      "sex": "F"
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
+      "sex": "M"
     },
     {
       "dog_id": 10988,
@@ -2199,7 +2570,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": -2,
       "sex": "F"
     },
@@ -2215,7 +2586,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2228,10 +2599,42 @@
       "gold": 0,
       "silver": 0,
       "bronze": 1,
+      "total_starts": 4,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -12,
+      "rank_delta_breed": -4,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10429,
+      "name_lat": "KETLIN RUTGER",
+      "name_ru": "КЕТЛИН РУТГЕР",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
+      "rank_delta_breed": -4,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10461,
+      "name_lat": "FEEL MY HEART ALETHEA",
+      "name_ru": "FEEL MY HEART ALETHEA",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -12,
       "rank_delta_breed": -4,
       "sex": "F"
     },
@@ -2247,24 +2650,24 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": -4,
       "sex": "M"
     },
     {
-      "dog_id": 247,
-      "name_lat": "ACUARELA DELRIO DOUCE CARAMEL",
-      "name_ru": "ACUARELA DELRIO DOUCE CARAMEL",
-      "breed": "УИППЕТ",
+      "dog_id": 10965,
+      "name_lat": "ZVEZDNAYA RADUGA LORELEYA",
+      "name_ru": "ЗВЁЗДНАЯ РАДУГА ЛОРЕЛЕЯ",
+      "breed": "Русская псовая борзая",
       "year": 2022,
       "gold": 0,
       "silver": 0,
       "bronze": 1,
-      "total_starts": 2,
+      "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
-      "rank_delta_breed": -4,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
@@ -2279,9 +2682,25 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
-      "rank_delta_breed": -3,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
       "sex": "M"
+    },
+    {
+      "dog_id": 377,
+      "name_lat": "KINGDOM FLY GRAMMY GRUNGERY",
+      "name_ru": "KINGDOM FLY GRAMMY GRUNGERY",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -12,
+      "rank_delta_breed": -4,
+      "sex": "F"
     },
     {
       "dog_id": 383,
@@ -2295,7 +2714,7 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -13,
+      "rank_delta": -12,
       "rank_delta_breed": -3,
       "sex": "F"
     },
@@ -2311,8 +2730,8 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": 55,
-      "rank_delta_breed": 33,
+      "rank_delta": 65,
+      "rank_delta_breed": 39,
       "sex": "F"
     },
     {
@@ -2327,15 +2746,15 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -14,
+      "rank_delta": -13,
       "rank_delta_breed": -5,
       "sex": "M"
     },
     {
-      "dog_id": 10429,
-      "name_lat": "KETLIN RUTGER",
-      "name_ru": "КЕТЛИН РУТГЕР",
-      "breed": "УИППЕТ",
+      "dog_id": 10469,
+      "name_lat": "АДЕБАНКЕС ЛИМОНИТА",
+      "name_ru": "АДЕБАНКЕС ЛИМОНИТА",
+      "breed": "БАСЕНДЖИ",
       "year": 2022,
       "gold": 0,
       "silver": 0,
@@ -2343,25 +2762,25 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -14,
-      "rank_delta_breed": -5,
-      "sex": "M"
-    },
-    {
-      "dog_id": 10461,
-      "name_lat": "FEEL MY HEART ALETHEA",
-      "name_ru": "FEEL MY HEART ALETHEA",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 2,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -14,
-      "rank_delta_breed": -5,
+      "rank_delta": -13,
+      "rank_delta_breed": 0,
       "sex": "F"
+    },
+    {
+      "dog_id": 10522,
+      "name_lat": "STILAR HALESTORM",
+      "name_ru": "STILAR HALESTORM",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": -5,
+      "sex": "M"
     },
     {
       "dog_id": 180,
@@ -2375,9 +2794,25 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -14,
+      "rank_delta": -13,
       "rank_delta_breed": 0,
       "sex": "M"
+    },
+    {
+      "dog_id": 248,
+      "name_lat": "LUXURY WHIPP OMEGA",
+      "name_ru": "ЛАКШЕРИ ВИПП ОМЕГА",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": -5,
+      "sex": "F"
     },
     {
       "dog_id": 463,
@@ -2423,7 +2858,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": -6,
       "sex": "M"
     },
@@ -2439,8 +2874,24 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -3,
+      "rank_delta": -15,
+      "rank_delta_breed": -2,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9350,
+      "name_lat": "РАДА ГРАВИТИ ДЖИ ДЕКСТЕР",
+      "name_ru": "РАДА ГРАВИТИ ДЖИ ДЕКСТЕР",
+      "breed": "САЛЮКИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
       "sex": "M"
     },
     {
@@ -2455,7 +2906,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -2471,8 +2922,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -3,
+      "rank_delta": -15,
+      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
@@ -2487,7 +2938,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2503,7 +2954,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2519,15 +2970,15 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -3,
+      "rank_delta": -15,
+      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
-      "dog_id": 10469,
-      "name_lat": "АДЕБАНКЕС ЛИМОНИТА",
-      "name_ru": "АДЕБАНКЕС ЛИМОНИТА",
-      "breed": "БАСЕНДЖИ",
+      "dog_id": 10473,
+      "name_lat": "КСЕНИЯ ГРАНД ДАЧЕС",
+      "name_ru": "КСЕНИЯ ГРАНД ДАЧЕС",
+      "breed": "УИППЕТ",
       "year": 2022,
       "gold": 0,
       "silver": 0,
@@ -2535,25 +2986,9 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": 0,
+      "rank_delta": -15,
+      "rank_delta_breed": -6,
       "sex": "F"
-    },
-    {
-      "dog_id": 10510,
-      "name_lat": "TIM SPIRIT KAJLAS",
-      "name_ru": "TIM SPIRIT KAJLAS",
-      "breed": "БАСЕНДЖИ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": 0,
-      "sex": "M"
     },
     {
       "dog_id": 10944,
@@ -2567,7 +3002,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -2583,25 +3018,9 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": -6,
       "sex": "F"
-    },
-    {
-      "dog_id": 10960,
-      "name_lat": "DRUG SEREBRYANYY DZHIM BIM",
-      "name_ru": "ДРУГ СЕРЕБРЯНЫЙ ДЖИМ БИМ",
-      "breed": "Русская псовая борзая",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 1,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -3,
-      "sex": "M"
     },
     {
       "dog_id": 11000,
@@ -2615,7 +3034,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": -6,
       "sex": "F"
     },
@@ -2631,9 +3050,25 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": 0,
       "sex": "F"
+    },
+    {
+      "dog_id": 11020,
+      "name_lat": "FAIRA NGOZI NOELI",
+      "name_ru": "ФАЙРА НГОЗИ НОЭЛИ",
+      "breed": "Родезийский риджбек",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 1,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "M"
     },
     {
       "dog_id": 11021,
@@ -2647,7 +3082,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2663,7 +3098,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -2679,8 +3114,24 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9289,
+      "name_lat": "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
+      "name_ru": "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 5,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "M"
     },
     {
@@ -2695,40 +3146,8 @@
       "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
-      "sex": "M"
-    },
-    {
-      "dog_id": 9289,
-      "name_lat": "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
-      "name_ru": "ИСТОРИЯ ЛЮБВИ ЭВР БЫСТРЫЙ",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 4,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -13,
-      "rank_delta_breed": -3,
-      "sex": "M"
-    },
-    {
-      "dog_id": 298,
-      "name_lat": "ДЖИНИ ЛАМБОР",
-      "name_ru": "ДЖИНИ ЛАМБОР",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 3,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -17,
-      "rank_delta_breed": -7,
+      "rank_delta": -12,
+      "rank_delta_breed": -4,
       "sex": "M"
     },
     {
@@ -2740,11 +3159,11 @@
       "gold": 0,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 3,
+      "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -17,
-      "rank_delta_breed": -7,
+      "rank_delta_breed": -8,
       "sex": "M"
     },
     {
@@ -2756,12 +3175,44 @@
       "gold": 0,
       "silver": 0,
       "bronze": 0,
-      "total_starts": 3,
+      "total_starts": 4,
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -17,
-      "rank_delta_breed": -7,
+      "rank_delta_breed": -8,
       "sex": "M"
+    },
+    {
+      "dog_id": 51,
+      "name_lat": "SONETA STAR IZ DIVNOGO SADA",
+      "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
+      "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -16,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 7797,
+      "name_lat": "INDIANA IZ SAGI O GARDARIKE",
+      "name_ru": "ИНДИАНА ИЗ САГИ О ГАРДАРИКЕ",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": -6,
+      "sex": "F"
     },
     {
       "dog_id": 10319,
@@ -2775,15 +3226,63 @@
       "total_starts": 3,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -15,
       "rank_delta_breed": -6,
       "sex": "M"
     },
     {
-      "dog_id": 51,
-      "name_lat": "SONETA STAR IZ DIVNOGO SADA",
-      "name_ru": "СОНЕТА СТАР ИЗ ДИВНОГО САДА",
+      "dog_id": 10424,
+      "name_lat": "VASURU TAFFI’S NOW OR NEVER",
+      "name_ru": "VASURU TAFFI’S NOW OR NEVER",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": -6,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10440,
+      "name_lat": "BLESK",
+      "name_ru": "BLESK",
       "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10609,
+      "name_lat": "REMISA AMITA",
+      "name_ru": "РЕМИСА АМИТА",
+      "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 3,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
+      "dog_id": 577,
+      "name_lat": "KULIKOVO POLE DANTE",
+      "name_ru": "КУЛИКОВО ПОЛЕ ДАНТЕ",
+      "breed": "УИППЕТ",
       "year": 2022,
       "gold": 0,
       "silver": 0,
@@ -2791,9 +3290,10 @@
       "total_starts": 2,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": 0,
-      "sex": "F"
+      "rank_delta": 14,
+      "rank_delta_breed": 15,
+      "aggression_count": 1,
+      "sex": "M"
     },
     {
       "dog_id": 5683,
@@ -2841,7 +3341,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "F"
     },
     {
@@ -2860,22 +3360,6 @@
       "rank_delta_breed": 0,
       "aggression_count": 3,
       "sex": "M"
-    },
-    {
-      "dog_id": 7797,
-      "name_lat": "INDIANA IZ SAGI O GARDARIKE",
-      "name_ru": "ИНДИАНА ИЗ САГИ О ГАРДАРИКЕ",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 2,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
-      "sex": "F"
     },
     {
       "dog_id": 9242,
@@ -2906,8 +3390,24 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "M"
+    },
+    {
+      "dog_id": 9277,
+      "name_lat": "DERA BLUE",
+      "name_ru": "DERA BLUE",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": -6,
+      "sex": "F"
     },
     {
       "dog_id": 9286,
@@ -2922,23 +3422,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
-      "sex": "M"
-    },
-    {
-      "dog_id": 9415,
-      "name_lat": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
-      "name_ru": "РАТИМИР ИДУЩИЙ К СЛАВЕ ИЗ КАМЕЛОТА",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 2,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "M"
     },
     {
@@ -2954,8 +3438,56 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -3,
+      "rank_delta_breed": -2,
       "sex": "F"
+    },
+    {
+      "dog_id": 9536,
+      "name_lat": "EMERALD OF MY SOUL",
+      "name_ru": "EMERALD OF MY SOUL",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": -6,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9701,
+      "name_lat": "KINGDOM FLY BORRA AGASSI",
+      "name_ru": "KINGDOM FLY BORRA AGASSI",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": -6,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10004,
+      "name_lat": "BLUE WIND OF TRIUMPH",
+      "name_ru": "BLUE WIND OF TRIUMPH",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": -6,
+      "sex": "M"
     },
     {
       "dog_id": 10023,
@@ -2970,7 +3502,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "M"
     },
     {
@@ -2986,7 +3518,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "F"
     },
     {
@@ -3002,7 +3534,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "M"
     },
     {
@@ -3018,7 +3550,23 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
+      "sex": "M"
+    },
+    {
+      "dog_id": 10341,
+      "name_lat": "SHERWOOD FOREST HERO",
+      "name_ru": "SHERWOOD FOREST HERO",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 2,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -15,
+      "rank_delta_breed": -6,
       "sex": "M"
     },
     {
@@ -3034,39 +3582,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
-      "sex": "M"
-    },
-    {
-      "dog_id": 10424,
-      "name_lat": "VASURU TAFFI’S NOW OR NEVER",
-      "name_ru": "VASURU TAFFI’S NOW OR NEVER",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 2,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
-      "sex": "M"
-    },
-    {
-      "dog_id": 10440,
-      "name_lat": "BLESK",
-      "name_ru": "BLESK",
-      "breed": "БАСЕНДЖИ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 2,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": 0,
+      "rank_delta_breed": -6,
       "sex": "M"
     },
     {
@@ -3082,7 +3598,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "F"
     },
     {
@@ -3098,7 +3614,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "M"
     },
     {
@@ -3114,40 +3630,8 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "M"
-    },
-    {
-      "dog_id": 10609,
-      "name_lat": "REMISA AMITA",
-      "name_ru": "РЕМИСА АМИТА",
-      "breed": "БАСЕНДЖИ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 2,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": 0,
-      "sex": "F"
-    },
-    {
-      "dog_id": 10965,
-      "name_lat": "ZVEZDNAYA RADUGA LORELEYA",
-      "name_ru": "ЗВЁЗДНАЯ РАДУГА ЛОРЕЛЕЯ",
-      "breed": "Русская псовая борзая",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 2,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -3,
-      "sex": "F"
     },
     {
       "dog_id": 10973,
@@ -3162,7 +3646,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "M"
     },
     {
@@ -3178,7 +3662,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "F"
     },
     {
@@ -3216,23 +3700,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 50,
-      "name_lat": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
-      "name_ru": "ИТУРИ ПАЗЗЛ ЕКСТРАОРДИНАРИ СМАРТ",
-      "breed": "БАСЕНДЖИ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": 0,
-      "aggression_count": 1,
-      "sex": "M"
-    },
-    {
       "dog_id": 249,
       "name_lat": "LUXURY WHIPP NEW BELLE",
       "name_ru": "ЛАКШЕРИ ВИПП НЬЮ БЕЛЛЕ",
@@ -3245,13 +3712,13 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "F"
     },
     {
-      "dog_id": 377,
-      "name_lat": "KINGDOM FLY GRAMMY GRUNGERY",
-      "name_ru": "KINGDOM FLY GRAMMY GRUNGERY",
+      "dog_id": 447,
+      "name_lat": "МИСТРЕСС ОФ КОППЕР ХИЛЛ /MISTRESS OF COPPER HILL",
+      "name_ru": "МИСТРЕСС ОФ КОППЕР ХИЛЛ /MISTRESS OF COPPER HILL",
       "breed": "УИППЕТ",
       "year": 2022,
       "gold": 0,
@@ -3261,7 +3728,7 @@
       "year_from": 2022,
       "year_to": 2022,
       "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta_breed": -6,
       "sex": "F"
     },
     {
@@ -3281,23 +3748,6 @@
       "sex": "F"
     },
     {
-      "dog_id": 577,
-      "name_lat": "KULIKOVO POLE DANTE",
-      "name_ru": "КУЛИКОВО ПОЛЕ ДАНТЕ",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": "NEW",
-      "rank_delta_breed": "NEW",
-      "aggression_count": 1,
-      "sex": "M"
-    },
-    {
       "dog_id": 7032,
       "name_lat": "ARWEN UNDOMIEL",
       "name_ru": "АРВЕН УНДОМИЭЛЬ",
@@ -3309,8 +3759,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -14,
+      "rank_delta_breed": -5,
       "sex": "F"
     },
     {
@@ -3325,9 +3775,57 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -14,
+      "rank_delta_breed": -5,
       "sex": "M"
+    },
+    {
+      "dog_id": 7167,
+      "name_lat": "ITURY PUZZLE IZYUM V CHOCOLADE",
+      "name_ru": "ИТУРИ ПАЗЗЛ ИЗЮМ В ШОКОЛАДЕ",
+      "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 7230,
+      "name_lat": "ВАСАРТ ГАМБИТ /VASART GAMBIT",
+      "name_ru": "ВАСАРТ ГАМБИТ /VASART GAMBIT",
+      "breed": "РУССКАЯ ПСОВАЯ БОРЗАЯ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": -2,
+      "sex": "M"
+    },
+    {
+      "dog_id": 7341,
+      "name_lat": "EMPYREAN BLUE",
+      "name_ru": "ЕМПАЙРЕАН БЛУЕ",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
+      "sex": "F"
     },
     {
       "dog_id": 9235,
@@ -3341,7 +3839,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -13,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -3357,25 +3855,9 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -3,
+      "rank_delta": -13,
+      "rank_delta_breed": -2,
       "sex": "M"
-    },
-    {
-      "dog_id": 9277,
-      "name_lat": "DERA BLUE",
-      "name_ru": "DERA BLUE",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
-      "sex": "F"
     },
     {
       "dog_id": 9279,
@@ -3389,8 +3871,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -3405,8 +3887,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -3421,9 +3903,41 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -3,
+      "rank_delta": -13,
+      "rank_delta_breed": -2,
       "aggression_count": 2,
+      "sex": "F"
+    },
+    {
+      "dog_id": 9319,
+      "name_lat": "AL NAFISEH HOMAYOON",
+      "name_ru": "АЛЬ НАФИСЭХ ХОМЭЙЮН",
+      "breed": "САЛЮКИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": 0,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9320,
+      "name_lat": "БЕЛЬ ЭТУАЛЬ ДЭЙЛИ СМАЙЛ",
+      "name_ru": "БЕЛЬ ЭТУАЛЬ ДЭЙЛИ СМАЙЛ",
+      "breed": "САЛЮКИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": 0,
       "sex": "F"
     },
     {
@@ -3438,8 +3952,25 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
+      "sex": "M"
+    },
+    {
+      "dog_id": 9362,
+      "name_lat": "LIDER S KNJAZHESKOGO DVORA",
+      "name_ru": "LIDER S KNJAZHESKOGO DVORA",
+      "breed": "БАСЕНДЖИ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": 0,
+      "aggression_count": 1,
       "sex": "M"
     },
     {
@@ -3454,7 +3985,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -3470,8 +4001,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -3,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
       "sex": "M"
     },
     {
@@ -3486,8 +4017,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -3,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
@@ -3502,24 +4033,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -3,
-      "sex": "F"
-    },
-    {
-      "dog_id": 9536,
-      "name_lat": "EMERALD OF MY SOUL",
-      "name_ru": "EMERALD OF MY SOUL",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
@@ -3534,8 +4049,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -3550,7 +4065,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "aggression_count": 1,
       "sex": "M"
@@ -3567,8 +4082,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -3583,25 +4098,9 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
-    },
-    {
-      "dog_id": 9701,
-      "name_lat": "KINGDOM FLY BORRA AGASSI",
-      "name_ru": "KINGDOM FLY BORRA AGASSI",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
-      "sex": "F"
     },
     {
       "dog_id": 9712,
@@ -3615,7 +4114,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -3631,7 +4130,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -3647,25 +4146,9 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": -2,
       "sex": "F"
-    },
-    {
-      "dog_id": 10004,
-      "name_lat": "BLUE WIND OF TRIUMPH",
-      "name_ru": "BLUE WIND OF TRIUMPH",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
-      "sex": "M"
     },
     {
       "dog_id": 10044,
@@ -3679,7 +4162,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": -2,
       "sex": "F"
     },
@@ -3695,8 +4178,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -3,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
@@ -3711,8 +4194,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -3727,8 +4210,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "M"
     },
     {
@@ -3743,8 +4226,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -3759,7 +4242,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -3775,8 +4258,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "M"
     },
     {
@@ -3791,8 +4274,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -3807,15 +4290,15 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "M"
     },
     {
-      "dog_id": 10341,
-      "name_lat": "SHERWOOD FOREST HERO",
-      "name_ru": "SHERWOOD FOREST HERO",
-      "breed": "УИППЕТ",
+      "dog_id": 10349,
+      "name_lat": "БЕНУА",
+      "name_ru": "БЕНУА",
+      "breed": "БАСЕНДЖИ",
       "year": 2022,
       "gold": 0,
       "silver": 0,
@@ -3823,8 +4306,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": 0,
       "sex": "M"
     },
     {
@@ -3839,8 +4322,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "M"
     },
     {
@@ -3855,8 +4338,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -3,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
@@ -3871,8 +4354,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -3887,8 +4370,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -3903,8 +4386,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -3,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
       "sex": "F"
     },
     {
@@ -3919,8 +4402,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -3935,7 +4418,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -3951,7 +4434,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "M"
     },
@@ -3967,8 +4450,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -3,
+      "rank_delta": -12,
+      "rank_delta_breed": -2,
       "sex": "M"
     },
     {
@@ -3983,7 +4466,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": -4,
       "sex": "F"
     },
@@ -3999,7 +4482,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
+      "rank_delta": -12,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -4015,25 +4498,9 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
-    },
-    {
-      "dog_id": 10522,
-      "name_lat": "STILAR HALESTORM",
-      "name_ru": "STILAR HALESTORM",
-      "breed": "УИППЕТ",
-      "year": 2022,
-      "gold": 0,
-      "silver": 0,
-      "bronze": 0,
-      "total_starts": 1,
-      "year_from": 2022,
-      "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
-      "sex": "M"
     },
     {
       "dog_id": 10535,
@@ -4047,8 +4514,24 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -15,
-      "rank_delta_breed": -5,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
+      "sex": "F"
+    },
+    {
+      "dog_id": 10536,
+      "name_lat": "AMBER VEIVS NENSI",
+      "name_ru": "AMBER VEIVS NENSI",
+      "breed": "УИППЕТ",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -12,
+      "rank_delta_breed": -3,
       "sex": "F"
     },
     {
@@ -4068,6 +4551,22 @@
       "sex": "F"
     },
     {
+      "dog_id": 10596,
+      "name_lat": "ARIES KHAN GRETEL GRIMM PRIMROSE",
+      "name_ru": "АРИЕС ХАН ГРЕТЕЛЬ ГРИММ ПРИМРОУЗ",
+      "breed": "РОДЕЗИЙСКИЙ РИДЖБЕК",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": 0,
+      "sex": "F"
+    },
+    {
       "dog_id": 10930,
       "name_lat": "GRAND CORTEGE NOBLE QUEEN",
       "name_ru": "ГРАНД КОРТЕЖ НОБЛ КВИН",
@@ -4079,7 +4578,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -13,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -4095,8 +4594,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -4111,8 +4610,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -3,
+      "rank_delta": -13,
+      "rank_delta_breed": -2,
       "sex": "M"
     },
     {
@@ -4127,8 +4626,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -4143,8 +4642,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -4159,8 +4658,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "M"
     },
     {
@@ -4175,8 +4674,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "M"
     },
     {
@@ -4191,8 +4690,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -4207,7 +4706,7 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -13,
       "rank_delta_breed": 0,
       "sex": "F"
     },
@@ -4223,8 +4722,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -3,
+      "rank_delta": -13,
+      "rank_delta_breed": -2,
       "sex": "M"
     },
     {
@@ -4239,8 +4738,8 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
-      "rank_delta_breed": -6,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
       "sex": "F"
     },
     {
@@ -4255,9 +4754,25 @@
       "total_starts": 1,
       "year_from": 2022,
       "year_to": 2022,
-      "rank_delta": -16,
+      "rank_delta": -13,
       "rank_delta_breed": 0,
       "sex": "F"
+    },
+    {
+      "dog_id": 11045,
+      "name_lat": "GOLDI KRAUND SAFARI SNIPER SHOT",
+      "name_ru": "GOLDI KRAUND SAFARI SNIPER SHOT",
+      "breed": "Уиппет",
+      "year": 2022,
+      "gold": 0,
+      "silver": 0,
+      "bronze": 0,
+      "total_starts": 1,
+      "year_from": 2022,
+      "year_to": 2022,
+      "rank_delta": -13,
+      "rank_delta_breed": -4,
+      "sex": "M"
     }
   ]
 }

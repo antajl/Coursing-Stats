@@ -248,5 +248,34 @@ describe('show judge name deduplication', () => {
         showJudgeMergeKeyFromRaw('Nikolay Sedykh'),
       )
     })
+    it('handles inverted patronymic when given name or surname endings match', () => {
+      expect(showJudgeMergeKeyFromRaw('Рашидовна Чайковская Флера')).toBe(
+        showJudgeMergeKeyFromRaw('Чайковская Флера Рашидовна'),
+      )
+      expect(showJudgeMergeKeyFromRaw('Львовна Швец Ирина')).toBe(
+        showJudgeMergeKeyFromRaw('Швец Ирина Львовна'),
+      )
+      expect(showJudgeMergeKeyFromRaw('Викторовна Галиаскарова Лариса')).toBe(
+        showJudgeMergeKeyFromRaw('Галиаскарова Лариса Викторовна'),
+      )
+    })
+
+    it('merges Given Last and Last Given in Latin names', () => {
+      expect(showJudgeMergeKeyFromRaw('Juliya Olkova')).toBe(
+        showJudgeMergeKeyFromRaw('Olkova Juliya'),
+      )
+      expect(showJudgeMergeKeyFromRaw('Sonia Kelveri-Philippou')).toBe(
+        showJudgeMergeKeyFromRaw('Kelveri-Philippou Sonia'),
+      )
+      expect(showJudgeMergeKeyFromRaw('Nemanja Jovanovic')).toBe(
+        showJudgeMergeKeyFromRaw('Jovanovic Nemanja'),
+      )
+    })
+
+    it('cleans soft hyphens and trailing hyphen spaces', () => {
+      expect(normalizeShowJudgeDisplayName('Крюкова Елена Валенти-новна')).toBe('крюкова елена валентиновна')
+      expect(normalizeShowJudgeDisplayName('Agafonova- Tripoli Elena')).toBe('agafonova-tripoli elena')
+      expect(normalizeShowJudgeDisplayName('– Жеребцова Алла Анатольевна 12 12 2021')).toBe('жеребцова алла анатольевна')
+    })
   })
 })

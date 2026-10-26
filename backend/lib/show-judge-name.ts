@@ -124,6 +124,7 @@ export const COMMON_GIVEN_NAMES = new Set([
   'тамара', 'раиса', 'алла', 'валерий', 'инна', 'жанна', 'станислав', 'лилия',
   'эльвира', 'майя', 'нелли', 'диана', 'виолетта', 'евгений', 'евгения',
   'валерия', 'олеся', 'реваз', 'златко', 'душан', 'зоран',
+  'флера', 'шамиль', 'эсенгельды', 'заур', 'мадина', 'наиля', 'роберт', 'эмилия', 'ираида', 'лидия', 'георгий', 'эдуард', 'вера',
 ])
 
 export const COMMON_LATIN_GIVEN_NAMES = new Set([
@@ -139,6 +140,7 @@ export const COMMON_LATIN_GIVEN_NAMES = new Set([
   'lyudmila', 'inessa', 'nina', 'tamara', 'raisa', 'alla', 'valery', 'valerii', 'inna', 'zhanna',
   'stanislav', 'liliya', 'elvira', 'evgeny', 'evgeniy', 'evgenia', 'valeria', 'denis', 'dzianis', 'revaz',
   'dusan', 'zlatko', 'zoran',
+  'juliya', 'sviatlana', 'tijana', 'nemanja', 'sonia', 'mile', 'zaur', 'jovica', 'gertruda', 'refet', 'dalibor', 'esengeldy', 'mica', 'jane', 'sadiq', 'rale', 'ratibor', 'anatoli', 'aleksandar', 'tamara', 'bojan', 'miodrag', 'zeljko', 'voislav', 'vojislav', 'dragan', 'branko', 'sinisa', 'goran', 'predrag',
 ])
 
 /** Известные опечатки в выгрузках РКФ (точные токены после lower+ё→е). */
@@ -207,12 +209,19 @@ export function normalizeShowJudgeDisplayName(raw: string): string {
     '',
   )
 
+  // Удаляем случайно просочившиеся в имя даты
+  normalized = normalized.replace(/\s+\d{2}\s+\d{2}\s+\d{4}\b/g, '')
+  // Удаляем лидирующие и средние лишние тире
+  normalized = normalized.replace(/^[-–—\s]+/g, '').replace(/\s+[-–—]\s+/g, ' ')
+  // Убираем пробелы после дефиса (agafonova- tripoli)
+  normalized = normalized.replace(/\b([а-яёa-z]+)-\s+([а-яёa-z]+)\b/gi, '$1-$2')
+
   // Склеиваем дефисные переносы строк из PDF (например, "валенти-новна" → "валентиновна")
   normalized = normalized.replace(/([а-яё]{2,})-([а-яё]{2,})/gi, (match, p1, p2) => {
-    if (/^(?:новна|ровна|евна|овна|ична|вич|ович|евич|ва|ин|ский|ская|цкая|цкий|баев|баева)$/i.test(p2)) {
+    if (/^(?:новна|ровна|евна|овна|ична|инична|вич|ович|евич|ва|ова|ева|ина|ына|ин|ын|ский|ская|цкая|цкий|баев|баева|бург)$/i.test(p2)) {
       return p1 + p2
     }
-    if (/^(?:валенти|александ|владими|мордвино|краковс|оболенс|сенашен|переведен)$/i.test(p1)) {
+    if (/^(?:валенти|александ|владими|мордвино|краковс|оболенс|сенашен|переведен|денисо|крюко)$/i.test(p1)) {
       return p1 + p2
     }
     return match
@@ -332,8 +341,14 @@ export function parseShowJudgeNameParts(normalized: string): ShowJudgeNameParts 
     const pFirst = parts[0] || ''
     const pLast = parts[parts.length - 1] || ''
 
-    if (COMMON_LATIN_GIVEN_NAMES.has(pLast) && !COMMON_LATIN_GIVEN_NAMES.has(pFirst)) {
-      // Порядок Surname Given: "Lychkovskaya Natalya"
+    const pFirstIsSlavicSurname = /(?:ova|eva|ina|yna|ov|ev|in|yn|skaya|skiy|sky|ckiy|tsky|enko|ykh|ikh|ich|chuk)$/i.test(pFirst)
+    const pLastIsSlavicSurname = /(?:ova|eva|ina|yna|ov|ev|in|yn|skaya|skiy|sky|ckiy|tsky|enko|ykh|ikh|ich|chuk)$/i.test(pLast)
+
+    if (
+      (COMMON_LATIN_GIVEN_NAMES.has(pLast) && !COMMON_LATIN_GIVEN_NAMES.has(pFirst)) ||
+      (pFirstIsSlavicSurname && !pLastIsSlavicSurname && !COMMON_LATIN_GIVEN_NAMES.has(pFirst))
+    ) {
+      // Порядок Surname Given: "Lychkovskaya Natalya", "Olkova Juliya"
       const last = pFirst
       const first = pLast
       const middle = parts.length > 2 ? parts.slice(1, -1).join(' ') : ''
@@ -345,7 +360,7 @@ export function parseShowJudgeNameParts(normalized: string): ShowJudgeNameParts 
         middleInitial: middle ? middle.replace(/\./g, '').charAt(0) : '',
       }
     } else {
-      // Порядок Given [Middle] Surname: "Natalia Lychkovskaya", "Dusan Paunovic"
+      // Порядок Given [Middle] Surname: "Natalia Lychkovskaya", "Dusan Paunovic", "Juliya Olkova"
       const first = pFirst
       const last = pLast
       const middle = parts.length > 2 ? parts.slice(1, -1).join(' ') : ''
@@ -376,6 +391,28 @@ export function parseShowJudgeNameParts(normalized: string): ShowJudgeNameParts 
       }
     } else if (COMMON_GIVEN_NAMES.has(parts[1])) {
       // [Отчество] [Имя] [Фамилия]
+      const first = parts[1]
+      const last = parts.slice(2).join(' ')
+      return {
+        last,
+        first,
+        middle,
+        firstInitial: first ? first.replace(/\./g, '').charAt(0) : '',
+        middleInitial: middle ? middle.replace(/\./g, '').charAt(0) : '',
+      }
+    } else if (/(?:ова|ева|ина|ына|ская|цкая|ов|ев|ин|ын|ский|цкий|ых|их|енко|ян|дзе|швили)$/iu.test(parts[1])) {
+      // [Отчество] [Фамилия] [Имя] по фамильному суффиксу
+      const last = parts[1]
+      const first = parts.slice(2).join(' ')
+      return {
+        last,
+        first,
+        middle,
+        firstInitial: first ? first.replace(/\./g, '').charAt(0) : '',
+        middleInitial: middle ? middle.replace(/\./g, '').charAt(0) : '',
+      }
+    } else if (/(?:ова|ева|ина|ына|ская|цкая|ов|ев|ин|ын|ский|цкий|ых|их|енко|ян|дзе|швили)$/iu.test(parts[2])) {
+      // [Отчество] [Имя] [Фамилия] по фамильному суффиксу
       const first = parts[1]
       const last = parts.slice(2).join(' ')
       return {

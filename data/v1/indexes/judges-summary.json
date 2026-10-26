@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/index-judges-summary-v1",
-  "count": 36,
+  "count": 38,
   "judges": [
     {
       "id": "Вронская О.В.",
@@ -298,6 +298,28 @@
       "unique_disciplines": 1,
       "unique_events": 1,
       "unique_dogs": 87
+    },
+    {
+      "id": "[\"Куликова Г.В.\"",
+      "name": "[\"Куликова Г.В.\"",
+      "total_evaluations": 850,
+      "total_evaluations_count": 170,
+      "avg_score": 17.98,
+      "unique_breeds": 8,
+      "unique_disciplines": 1,
+      "unique_events": 1,
+      "unique_dogs": 85
+    },
+    {
+      "id": "\"Луговая К.И.\"]",
+      "name": "\"Луговая К.И.\"]",
+      "total_evaluations": 850,
+      "total_evaluations_count": 170,
+      "avg_score": 17.730588235294118,
+      "unique_breeds": 8,
+      "unique_disciplines": 1,
+      "unique_events": 1,
+      "unique_dogs": 85
     },
     {
       "id": "Луговая К.И.",
