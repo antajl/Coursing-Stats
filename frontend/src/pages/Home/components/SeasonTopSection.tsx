@@ -107,7 +107,15 @@ function SeasonTopSectionInner({
     () => [
       { id: 'sport' as const, label: 'Соревнования' },
       { id: 'shows' as const, label: 'Выставки РКФ' },
-      { id: 'donino' as const, label: 'Рекорды Донино' },
+      {
+        id: 'donino' as const,
+        label: (
+          <>
+            <span className="xs:hidden">Донино</span>
+            <span className="hidden xs:inline">Рекорды Донино</span>
+          </>
+        ),
+      },
     ],
     [],
   )

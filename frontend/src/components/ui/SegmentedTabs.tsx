@@ -48,12 +48,12 @@ export function SegmentedTabs<T extends string = string>({
             role="tab"
             aria-selected={isActive}
             onClick={() => onChange(tab.id)}
-            className={`flex-1 flex items-center justify-center gap-1.5 ${
-              isSm ? 'py-1 px-2.5 rounded-md text-[11px]' : 'py-2 px-3 rounded-lg text-xs'
+            className={`flex-1 flex items-center justify-center gap-1 sm:gap-1.5 whitespace-nowrap min-w-0 ${
+              isSm ? 'py-1 px-1.5 sm:px-2.5 rounded-md text-[11px]' : 'py-2 px-1.5 sm:px-3 rounded-lg text-[11.5px] sm:text-xs'
             } transition-all ${
               isActive
-                ? `bg-white text-charcoal-900 shadow-2xs border border-old-money-200/80 ${isSm ? 'font-semibold' : 'font-semibold'}`
-                : `text-charcoal-600 hover:text-charcoal-900 ${isSm ? 'font-medium' : 'font-medium'}`
+                ? `bg-white text-charcoal-900 shadow-2xs border border-old-money-200/80 font-semibold`
+                : `text-charcoal-600 hover:text-charcoal-900 font-medium border border-transparent`
             }`}
           >
             <span>{tab.label}</span>
