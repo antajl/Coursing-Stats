@@ -133,8 +133,8 @@ export default function Home() {
                 className="w-full max-w-[280px] xl:max-w-[320px] 2xl:max-w-[345px] 3xl:max-w-[420px] h-auto drop-shadow-md pointer-events-none"
               />
             </picture>
-            <div className="w-full max-w-[295px] 3xl:max-w-[360px] pointer-events-auto">
-              <HomeStatsPills stats={stats} showStats={showStats} />
+            <div className="w-full max-w-[295px] 3xl:max-w-[360px] pointer-events-auto mt-2.5 xl:mt-3 mr-3 xl:mr-5 2xl:mr-6 3xl:mr-7">
+              <HomeStatsPills stats={stats} showStats={showStats} loading={seasonLoading} />
             </div>
           </div>
         }
@@ -160,10 +160,10 @@ export default function Home() {
       {/* =========================================================================
           MOBILE (< 768px): Natural, touch-friendly, scrollable flow
       ========================================================================= */}
-      <div className="md:hidden flex flex-col min-h-screen pb-12">
+      <div className="md:hidden flex flex-col pb-6">
         {/* Hero Banner: Borzoi in Motion across full width (Native, Smooth bottom fade) */}
         <div
-          className="relative w-full h-[175px] xs:h-[195px] sm:h-[225px] overflow-hidden select-none pointer-events-none mb-2"
+          className="relative w-full h-[140px] xs:h-[155px] sm:h-[180px] overflow-hidden select-none pointer-events-none mb-1"
           style={{
             WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 72%, rgba(0,0,0,0.85) 84%, transparent 100%)',
             maskImage: 'linear-gradient(to bottom, black 0%, black 72%, rgba(0,0,0,0.85) 84%, transparent 100%)',
@@ -180,19 +180,19 @@ export default function Home() {
               src="/assets/hero/background.webp"
               alt=""
               role="presentation"
-              className="w-full h-full object-cover object-[center_60%]"
+              className="w-full h-full object-cover object-[center_68%]"
               loading="eager"
               fetchPriority="high"
             />
           </picture>
           {/* Bottom soft gradient overlay into om-50 */}
-          <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#faf8f4] via-[#faf8f4]/70 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-[#faf8f4] via-[#faf8f4]/70 to-transparent pointer-events-none" />
         </div>
 
         {/* Content Container */}
-        <div className="wrap px-3 sm:px-4 relative z-10 flex flex-col gap-3.5">
+        <div className="wrap !pb-2 px-3 sm:px-4 relative z-10 flex flex-col gap-2.5">
           {/* Database Statistics */}
-          <HomeStatsPills stats={stats} showStats={showStats} />
+          <HomeStatsPills stats={stats} showStats={showStats} loading={seasonLoading} />
 
           {/* Seasonal Ratings & Leaders */}
           <SeasonTopSection

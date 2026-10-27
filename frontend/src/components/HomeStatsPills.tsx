@@ -3,6 +3,7 @@ import type { HeroStats, HeroShowStats } from './Hero'
 interface HomeStatsPillsProps {
   stats: HeroStats | null
   showStats: HeroShowStats | null
+  loading?: boolean
 }
 
 function formatNumber(value: number): string {
@@ -18,8 +19,56 @@ function formatNumber(value: number): string {
   return value.toLocaleString('ru-RU')
 }
 
-export default function HomeStatsPills({ stats, showStats }: HomeStatsPillsProps) {
-  if (!stats && !showStats) return null
+export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsPillsProps) {
+  if (loading || (!stats && !showStats)) {
+    return (
+      <div className="flex flex-col gap-1.5 3xl:gap-2 w-full max-w-full pointer-events-auto select-none" aria-busy="true" aria-label="Загрузка статистики">
+        {/* Спорт скелетон */}
+        <div className="bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-md p-2.5 3xl:p-3 animate-pulse">
+          <div className="flex items-center justify-between pb-1 mb-1 3xl:pb-1.5 3xl:mb-1.5 border-b border-camel-200/50">
+            <div className="h-3 w-16 bg-camel-200/60 rounded" />
+            <div className="h-2.5 w-20 bg-charcoal-200/50 rounded" />
+          </div>
+          <div className="grid grid-cols-3 text-center divide-x divide-camel-200/50">
+            <div className="px-1 flex flex-col items-center gap-1 py-0.5">
+              <div className="h-4 w-8 bg-charcoal-300/40 rounded" />
+              <div className="h-2 w-12 bg-charcoal-200/40 rounded" />
+            </div>
+            <div className="px-1 flex flex-col items-center gap-1 py-0.5">
+              <div className="h-4 w-10 bg-charcoal-300/40 rounded" />
+              <div className="h-2 w-14 bg-charcoal-200/40 rounded" />
+            </div>
+            <div className="px-1 flex flex-col items-center gap-1 py-0.5">
+              <div className="h-4 w-8 bg-charcoal-300/40 rounded" />
+              <div className="h-2 w-10 bg-charcoal-200/40 rounded" />
+            </div>
+          </div>
+        </div>
+
+        {/* Выставки скелетон */}
+        <div className="bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-md p-2.5 3xl:p-3 animate-pulse">
+          <div className="flex items-center justify-between pb-1 mb-1 3xl:pb-1.5 3xl:mb-1.5 border-b border-camel-200/50">
+            <div className="h-3 w-24 bg-camel-200/60 rounded" />
+            <div className="h-2.5 w-20 bg-charcoal-200/50 rounded" />
+          </div>
+          <div className="grid grid-cols-3 text-center divide-x divide-camel-200/50">
+            <div className="px-1 flex flex-col items-center gap-1 py-0.5">
+              <div className="h-4 w-10 bg-charcoal-300/40 rounded" />
+              <div className="h-2 w-12 bg-charcoal-200/40 rounded" />
+            </div>
+            <div className="px-1 flex flex-col items-center gap-1 py-0.5">
+              <div className="h-4 w-12 bg-charcoal-300/40 rounded" />
+              <div className="h-2 w-12 bg-charcoal-200/40 rounded" />
+            </div>
+            <div className="px-1 flex flex-col items-center gap-1 py-0.5">
+              <div className="h-4 w-10 bg-charcoal-300/40 rounded" />
+              <div className="h-2 w-10 bg-charcoal-200/40 rounded" />
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-col gap-1.5 3xl:gap-2 w-full max-w-full pointer-events-auto select-none">

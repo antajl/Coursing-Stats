@@ -64,89 +64,42 @@ export function useHomeData() {
   useEffect(() => {
     let isMounted = true
 
-    // 1. Critical Above-the-fold Data (Hero Stage & MetricsWidget)
-    // Only ~40KB total JSON payload — resolves in ~150-200ms to achieve sub-second LCP
-    async function fetchHeroStage() {
+    async function loadAllHomeData() {
       try {
-        const [statsData, showStatsData, eventsData, showsCalData] = await Promise.all([
+        const [
+          statsData,
+          showStatsData,
+          placementData,
+          scoreData,
+          speedData,
+          showHomeTopData,
+          doninoSpeedData,
+          doninoCoursingData,
+        ] = await Promise.all([
           api.getStats(),
           api.getShowHeroStats(),
-          api.getEvents(String(CURRENT_SEASON)),
-          getShowFeatured(String(CURRENT_SEASON)),
-        ])
-
-        if (!isMounted) return
-
-        if (statsData.success) {
-          const validatedStats = validateHeroStats(statsData.data)
-          if (validatedStats) {
-            setStats(validatedStats)
-          } else {
-            console.warn('HeroStats validation failed:', statsData.data)
-          }
-        }
-
-        if (showStatsData.success && showStatsData.data) {
-          const validatedShowStats = validateHeroShowStats(showStatsData.data)
-          if (validatedShowStats) {
-            setShowStats(validatedShowStats)
-          } else {
-            console.warn('HeroShowStats validation failed:', showStatsData.data)
-          }
-        }
-
-        if (eventsData.success) {
-          const validatedEvents = validateArray<CalendarEvent>(eventsData.data)
-          if (validatedEvents) {
-            let picked = pickFeaturedEvents(validatedEvents)
-            // If current season has fewer than 3 events, pull previous season's calendar
-            if (picked.length < 3) {
-              try {
-                const prevCal = await api.getEvents(String(CURRENT_SEASON - 1))
-                if (prevCal.success) {
-                  const prevEvents = validateArray<CalendarEvent>(prevCal.data)
-                  if (prevEvents) {
-                    picked = pickFeaturedEvents([...validatedEvents, ...prevEvents])
-                  }
-                }
-              } catch {}
-            }
-            setFeaturedEvents(picked)
-          } else {
-            console.warn('Events validation failed:', eventsData.data)
-          }
-        }
-
-        if (showsCalData.success) {
-          const validatedShows = validateArray<ShowRkfCalendarEntry>(showsCalData.data)
-          if (validatedShows) {
-            setFeaturedShows(pickFeaturedShows(validatedShows, 3))
-          } else {
-            console.warn('Shows validation failed:', showsCalData.data)
-          }
-        }
-      } catch (err) {
-        if (!isMounted) return
-        console.warn('Hero stage data fetch warning:', err)
-      } finally {
-        if (isMounted) {
-          setHeroLoading(false)
-        }
-      }
-    }
-
-    // 2. Below-the-fold Data (Season Top Rankings)
-    async function fetchSeasonTop() {
-      try {
-        const [placementData, scoreData, speedData, showHomeTopData] = await Promise.all([
           api.getTopPlacement(String(CURRENT_SEASON), '', 0, 'gold', null, 0),
           api.getTopScore(String(CURRENT_SEASON), '', 0, 'rating_score', null, 0),
           api.getTopSpeed(String(CURRENT_SEASON), '', 0, 'best_speed', null, 0),
           getShowHomeTop(String(CURRENT_SEASON)),
+          api.getSpeedRecords('', '', 1000),
+          api.getCoursingRecords('', 1000),
         ])
 
         if (!isMounted) return
 
+        // 1. Process Hero Stats
+        if (statsData.success) {
+          const validatedStats = validateHeroStats(statsData.data)
+          if (validatedStats) setStats(validatedStats)
+        }
+
+        if (showStatsData.success && showStatsData.data) {
+          const validatedShowStats = validateHeroShowStats(showStatsData.data)
+          if (validatedShowStats) setShowStats(validatedShowStats)
+        }
+
+        // 2. Process Season Top Rankings
         const placement = extractTopDogs(placementData.success ? placementData.data : null)
         const score = extractTopDogs(scoreData.success ? scoreData.data : null)
         if (placement.length > 0 || score.length > 0) {
@@ -194,26 +147,8 @@ export function useHomeData() {
             ])
           }
         }
-      } catch (err) {
-        if (!isMounted) return
-        console.warn('Season top data fetch warning:', err)
-      } finally {
-        if (isMounted) {
-          setSeasonLoading(false)
-        }
-      }
-    }
 
-    // 3. Below-the-fold Data (Donino Records)
-    async function fetchDoninoRecords() {
-      try {
-        const [doninoSpeedData, doninoCoursingData] = await Promise.all([
-          api.getSpeedRecords('', '', 1000),
-          api.getCoursingRecords('', 1000),
-        ])
-
-        if (!isMounted) return
-
+        // 3. Process Donino Records
         if (doninoSpeedData.success) {
           const validatedSpeedRecords = validateArray<SpeedRecord>(doninoSpeedData.data)
           if (validatedSpeedRecords) {
@@ -230,18 +165,18 @@ export function useHomeData() {
         }
       } catch (err) {
         if (!isMounted) return
-        console.warn('Donino data fetch warning:', err)
+        console.warn('Home data fetch warning:', err)
+        setError(err instanceof Error ? err : new Error(String(err)))
       } finally {
         if (isMounted) {
+          setHeroLoading(false)
+          setSeasonLoading(false)
           setDoninoLoading(false)
         }
       }
     }
 
-    // Fire all three stages in parallel, but allow each stage to unblock its UI immediately
-    fetchHeroStage()
-    fetchSeasonTop()
-    fetchDoninoRecords()
+    loadAllHomeData()
 
     return () => {
       isMounted = false

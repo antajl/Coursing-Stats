@@ -164,6 +164,16 @@
   }
 }
 
+@media (max-width: 767px) {
+  .home-v2-block {
+    margin-bottom: 12px;
+  }
+  .home-v2-foot {
+    margin-top: 8px;
+    padding-top: 16px;
+  }
+}
+
 /* Низкие окна / landscape phone — сжимаем intro, чтобы всё осталось в кадре */
 @media (max-height: 720px) {
   .home-v2:not(.home-v2--revealed) .home-v2-eyebrow {
