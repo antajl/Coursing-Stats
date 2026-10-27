@@ -64,10 +64,10 @@ export function NavDesktop({
       >
         <img
           src="/assets/brand/logo.svg"
-          width={295}
+          width={315}
           height={48}
           alt="Курсинг Статс"
-          className="h-[38px] xl:h-[44px] 2xl:h-[48px] w-auto"
+          className="h-[46px] xl:h-[50px] 2xl:h-[52px] w-auto"
           style={{ objectFit: 'contain' }}
           loading="eager"
           decoding="async"
