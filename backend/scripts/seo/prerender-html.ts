@@ -303,7 +303,7 @@ export function build404Html(spaHtml: string): string {
     `  <nav class="nav-glass sticky top-0 z-50 relative border-b border-cream-300/20 shadow-[0_4px_7px_-2px_rgba(43,37,32,0.34)] print:hidden">`,
     `    <div class="flex h-14 sm:h-16 w-full items-center justify-between px-3 sm:px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">`,
     `      <a href="/" class="flex min-w-0 shrink-0 items-center gap-2 transition-opacity hover:opacity-85" aria-label="Coursing Stats">`,
-    `        <img src="/assets/brand/logo.svg" width="315" height="48" alt="Курсинг Статс" class="h-10 sm:h-12 w-auto" style="object-fit: contain;">`,
+    `        <img src="/assets/brand/logo.svg" width="322" height="54" alt="Курсинг Статс" class="h-11 sm:h-12 w-auto" style="object-fit: contain;">`,
     `      </a>`,
     `      <div class="hidden md:flex items-center gap-4 lg:gap-6 text-sm font-medium text-old-money-700">`,
     `        <a href="/competitions" class="hover:text-camel-800 transition-colors">Соревнования</a>`,

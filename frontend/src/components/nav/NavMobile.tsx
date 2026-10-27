@@ -44,10 +44,10 @@ export function NavMobile({
         >
           <img
             src="/assets/brand/logo.svg"
-            width={315}
-            height={48}
+            width={322}
+            height={54}
             alt="Курсинг Статс"
-            className="h-9 sm:h-10 w-auto"
+            className="h-10 sm:h-11 w-auto"
             loading="eager"
             decoding="async"
             style={{ objectFit: 'contain' }}

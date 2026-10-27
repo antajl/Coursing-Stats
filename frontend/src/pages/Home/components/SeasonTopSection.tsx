@@ -153,9 +153,7 @@ function SeasonTopSectionInner({
     <section
       id="season-top"
       className={`home-v2-block scroll-mt-20 ${
-        compact
-          ? 'home-v2-season-top--compact bg-white/92 backdrop-blur-md rounded-2xl border border-camel-200/70 shadow-xl p-2.5 sm:p-3'
-          : ''
+        compact ? 'home-v2-season-top--compact' : ''
       }`}
       {...(!compact ? { 'data-home-reveal': true } : {})}
     >
@@ -166,7 +164,7 @@ function SeasonTopSectionInner({
         onChange={(tab) => setActiveTab(tab as HubCategoryTab)}
         breakpoint="all"
         size={compact ? 'sm' : 'md'}
-        className={compact ? 'mb-2' : 'mb-4'}
+        className={compact ? 'mb-2.5' : 'mb-4'}
         ariaLabel="Разделы рейтингов и достижений"
       />
 

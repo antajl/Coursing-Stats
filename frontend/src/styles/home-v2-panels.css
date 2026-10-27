@@ -275,16 +275,27 @@
   width: 100% !important;
   box-sizing: border-box !important;
 }
+.home-v2-season-top--compact [role="tablist"] {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(216, 181, 122, 0.7) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(44, 39, 32, 0.06) !important;
+}
 .home-v2-season-top--compact .home-v2-col {
   min-width: 0 !important;
   overflow: hidden !important;
-  border-radius: 12px !important;
-  background: rgba(253, 251, 247, 0.95);
-  box-shadow: 0 4px 12px rgba(44, 39, 32, 0.05);
+  border-radius: 14px !important;
+  border: 1px solid rgba(216, 181, 122, 0.7) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(252, 250, 247, 0.95)) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 16px rgba(44, 39, 32, 0.08) !important;
 }
 .home-v2-season-top--compact .home-breed-progress-track,
 .home-v2-season-top--compact .home-breed-progress-fill__bar {
-  border-radius: calc(12px - 1.5px) !important;
+  border-radius: calc(14px - 1.5px) !important;
 }
 .home-v2-season-top--compact .home-v2-col-head {
   padding: 5px 12px;
