@@ -239,7 +239,7 @@ export function CoursingColumn({
           <div className="flex-1">
             {visibleCoursingEvents.map((event, idx) => {
               const cardClass =
-                'block border-b border-forest-200/80 py-3 h-[6.5rem] transition-colors last:border-b-0 hover:bg-forest-50/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
+                'block border-b border-forest-200/80 py-2 transition-colors last:border-b-0 hover:bg-forest-50/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-camel-500'
               const cardBody = (
                 <>
                   <div className="min-w-0 flex-shrink-0">
@@ -285,7 +285,7 @@ export function CoursingColumn({
           </div>
 
           {coursingEvents.length > 3 && (
-            <div className="mt-auto pt-3 text-center shrink-0 min-h-[2.25rem] flex items-center justify-center">
+            <div className="mt-auto pt-2 text-center shrink-0 flex items-center justify-center">
               <button
                 type="button"
                 onClick={onToggleShowAll}

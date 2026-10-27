@@ -406,7 +406,8 @@ export default function DogProfile() {
         theme: 'camel',
       })
     }
-    if (hasSpeedRecords || hasCoursingRecords) {
+    // Донино скрыто для собак со спортивными состязаниями (чистота спортивного профиля)
+    if ((hasSpeedRecords || hasCoursingRecords) && !showCoursingColumn && !showRacingColumn) {
       tabs.push({
         id: 'donino',
         label: 'Донино',
@@ -897,7 +898,7 @@ export default function DogProfile() {
         )}
 
         {/* Десктопное Донино: CollapsibleSection внизу */}
-        {(hasSpeedRecords || hasCoursingRecords) && (
+        {(hasSpeedRecords || hasCoursingRecords) && !showCoursingColumn && !showRacingColumn && (
           <div className="hidden md:block">
             <CollapsibleSection
               title="Рекорды Донино"

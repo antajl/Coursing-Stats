@@ -90,7 +90,7 @@ export function DisciplineStatsCard({
   const t = THEME[theme]
   return (
     <div
-      className={`flex h-[24rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-4 sm:p-5 xl:p-6 md:h-[25rem] ${t.cardBorder}`}
+      className={`flex h-[20.5rem] shrink-0 flex-col overflow-hidden rounded-xl border bg-white p-3.5 sm:p-4 md:h-[21rem] ${t.cardBorder}`}
     >
       <div className="mb-4 flex items-center justify-between gap-1.5 shrink-0 min-w-0">
         <h2 className="text-base sm:text-lg font-bold tracking-tight text-charcoal-800 md:text-xl truncate shrink min-w-0">
@@ -208,7 +208,7 @@ export function DisciplineHistoryCard({
     label ?? (theme === 'forest' ? 'Состязаний' : theme === 'warm-blue' ? 'Забегов' : 'Выставок')
   return (
     <div
-      className={`flex flex-col rounded-xl border bg-white p-4 sm:p-5 xl:p-6 lg:flex-1 lg:min-h-[26rem] ${t.cardBorder}`}
+      className={`flex flex-col rounded-xl border bg-white p-3.5 sm:p-4 lg:flex-1 lg:min-h-0 ${t.cardBorder}`}
     >
       {participations != null && participations > 0 ? (
         <div className="mb-3 flex shrink-0 items-baseline justify-between gap-2 border-b border-old-money-100 pb-2">

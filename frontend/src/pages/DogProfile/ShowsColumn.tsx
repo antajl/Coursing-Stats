@@ -262,7 +262,7 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
               const entryTitles = parseShowTitles(entry.title || '')
               const rowKey = `${entry.exhibition_id}-${idx}`
               const rowClass =
-                'block border-b border-camel-200/80 py-3 h-[6.5rem] text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60'
+                'block border-b border-camel-200/80 py-2 text-inherit no-underline transition-colors last:border-b-0 hover:bg-camel-50/60'
               const rowBody = (
                 <>
                   <div className="min-w-0 flex-shrink-0 break-words text-xs font-bold uppercase tracking-wide text-camel-700">
@@ -314,7 +314,7 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
           </div>
 
           {history.length > 3 && (
-            <div className="mt-auto pt-3 text-center shrink-0 min-h-[2.25rem] flex items-center justify-center">
+            <div className="mt-auto pt-2 text-center shrink-0 flex items-center justify-center">
               <button
                 type="button"
                 onClick={() => setShowAll((v) => !v)}
