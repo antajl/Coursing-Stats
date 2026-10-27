@@ -88,12 +88,20 @@ export default function ShowExhibitionDetail() {
           title="Выставка не найдена"
           message={error || `ID: ${id}`}
           action={
-            <Link
-              to="/shows?tab=ranking"
-              className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
-            >
-              К рейтингу выставок
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Link
+                to="/shows?tab=calendar"
+                className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
+              >
+                К календарю выставок
+              </Link>
+              <Link
+                to="/shows?tab=ranking"
+                className="rounded-xl border-2 border-camel-300 bg-white px-4 py-2 text-sm font-semibold text-camel-700 transition-all hover:border-camel-400 hover:bg-camel-50"
+              >
+                К рейтингу выставок
+              </Link>
+            </div>
           }
         />
       </div>

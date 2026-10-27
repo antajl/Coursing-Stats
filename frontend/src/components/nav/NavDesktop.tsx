@@ -55,19 +55,33 @@ export function NavDesktop({
       <Link
         to="/"
         ref={logoRef}
-        className="flex min-w-0 shrink-0 items-center transition-opacity duration-[300ms] ease-linear"
+        className="flex min-w-0 shrink-0 items-center transition-all duration-300 hover:opacity-90 active:scale-95"
         style={{
-          opacity: Math.max(logoOpacity, 0.85),
-          pointerEvents: 'auto',
+          opacity: logoOpacity,
+          pointerEvents: logoVisible ? 'auto' : 'none',
         }}
         aria-label="Главная страница Курсинг Статс"
+        title="Курсинг Статс"
       >
+        {/* Full typographic brand mark on xl and larger screens (>= 1280px) */}
         <img
           src="/assets/brand/logo.svg"
-          width={322}
-          height={54}
+          width={348}
+          height={62}
           alt="Курсинг Статс"
-          className="h-[48px] xl:h-[52px] 2xl:h-[54px] w-auto"
+          className="hidden xl:block h-[52px] xl:h-[55px] 2xl:h-[58px] w-auto"
+          style={{ objectFit: 'contain' }}
+          loading="eager"
+          decoding="async"
+        />
+
+        {/* Compact emblem badge on md to xl screens (768px - 1279px) to prevent overlap with navigation links */}
+        <img
+          src="/assets/brand/logo-badge.svg"
+          width={60}
+          height={62}
+          alt="Курсинг Статс"
+          className="block xl:hidden h-[46px] w-auto drop-shadow-xs"
           style={{ objectFit: 'contain' }}
           loading="eager"
           decoding="async"

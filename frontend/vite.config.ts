@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { createRequire } from 'node:module'
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { homePhotosPlugin } from './vite-plugin-home-photos.ts'
@@ -8,6 +9,8 @@ import { visualizer } from 'rollup-plugin-visualizer'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const DATA_V1_ROOT = path.resolve(__dirname, '../data/v1')
+const require = createRequire(import.meta.url)
+let devArchiveDb: any = null
 
 const CONTENT_TYPES: Record<string, string> = {
   '.json': 'application/json; charset=utf-8',
@@ -66,6 +69,27 @@ function serveDataV1(): Plugin {
     const filePath = path.join(DATA_V1_ROOT, relativePath)
 
     if (!filePath.startsWith(DATA_V1_ROOT) || !fs.existsSync(filePath) || !fs.statSync(filePath).isFile()) {
+      if (relativePath.startsWith('shows/protocols/')) {
+        const id = path.basename(relativePath, '.json')
+        const sqlitePath = path.resolve(__dirname, '../data/local/exhibitions-rkf-archive.sqlite')
+        if (fs.existsSync(sqlitePath)) {
+          try {
+            if (!devArchiveDb) {
+              const Database = require('better-sqlite3')
+              devArchiveDb = new Database(sqlitePath, { readonly: true })
+            }
+            const row = devArchiveDb.prepare('SELECT data FROM exhibitions_rkf WHERE id = ?').get(id)
+            if (row?.data) {
+              res.setHeader('Content-Type', 'application/json; charset=utf-8')
+              res.setHeader('Content-Encoding', 'gzip')
+              res.end(row.data)
+              return
+            }
+          } catch (e) {
+            console.error('[vite dev] SQLite read error for protocol:', id, e)
+          }
+        }
+      }
       res.statusCode = 404
       res.end('Not found')
       return

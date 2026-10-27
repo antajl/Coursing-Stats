@@ -44,8 +44,8 @@ export function NavMobile({
         >
           <img
             src="/assets/brand/logo.svg"
-            width={322}
-            height={54}
+            width={348}
+            height={62}
             alt="Курсинг Статс"
             className="h-10 sm:h-11 w-auto"
             loading="eager"

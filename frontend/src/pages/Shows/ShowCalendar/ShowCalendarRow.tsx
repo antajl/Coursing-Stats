@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import type { ShowRkfCalendarEntry } from '../../../lib/staticData'
 import {
   collectGroupRanks,
+  exhibitionHasProtocol,
   formatChildHeading,
   formatNkpDisplay,
   type RkfCalendarGroup,
@@ -70,7 +71,7 @@ export function ShowCalendarRow({
     if (isLc && exhibition.lc_exhibition_id) {
       return `/shows/exhibition/${exhibition.lc_exhibition_id}`
     }
-    if (exhibition.source === 'rkf' && exhibition.id) {
+    if (exhibition.source === 'rkf' && exhibition.id && hasProtocol) {
       return `/shows/exhibition/${exhibition.id}`
     }
     return null
@@ -306,10 +307,11 @@ export function ShowCalendarRow({
             const childReport = child.reports_link?.trim() || null
             const childBisReport = child.bis_reports_link?.trim() || null
             const childNotStarted = isShowNotStartedYet(child.date)
+            const childHasProtocol = exhibitionHasProtocol(child)
             const childLcPath =
               child.has_lc_protocol && child.lc_exhibition_id
                 ? `/shows/exhibition/${child.lc_exhibition_id}`
-                : child.source === 'rkf' && child.id
+                : child.source === 'rkf' && child.id && childHasProtocol
                   ? `/shows/exhibition/${child.id}`
                   : null
             const childRanks = rankTokens(child)
