@@ -161,26 +161,12 @@ export default function Home() {
           MOBILE (< 768px): Natural, touch-friendly, scrollable flow
       ========================================================================= */}
       <div className="md:hidden flex flex-col min-h-screen pb-12">
-        {/* 1. Centered Mobile Logo (comfortable distance from header, no touching) */}
-        <div className="wrap px-4 pt-5 pb-1 flex justify-center select-none">
-          <img
-            src="/assets/hero/title-mobile.webp"
-            srcSet="/assets/hero/title-mobile.webp 1x, /assets/hero/title.webp 2x"
-            width={560}
-            height={350}
-            alt="Coursing Stats"
-            data-page-logo="mobile"
-            className="w-[195px] xs:w-[220px] sm:w-[250px] h-auto drop-shadow-sm pointer-events-none"
-            loading="eager"
-          />
-        </div>
-
-        {/* 2. Hero Banner: Borzoi in Motion (Full Bleed, Dog Centered, No Giant Sky Gap) */}
+        {/* Hero Banner: Borzoi in Motion across full width (Native, Smooth bottom fade) */}
         <div
-          className="relative w-full h-[155px] xs:h-[175px] sm:h-[200px] overflow-hidden select-none pointer-events-none -mt-1"
+          className="relative w-full h-[175px] xs:h-[195px] sm:h-[225px] overflow-hidden select-none pointer-events-none mb-2"
           style={{
-            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 15%, black 25%, black 75%, rgba(0,0,0,0.85) 85%, transparent 100%)',
-            maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 15%, black 25%, black 75%, rgba(0,0,0,0.85) 85%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 72%, rgba(0,0,0,0.85) 84%, transparent 100%)',
+            maskImage: 'linear-gradient(to bottom, black 0%, black 72%, rgba(0,0,0,0.85) 84%, transparent 100%)',
           }}
         >
           <picture>
@@ -194,19 +180,17 @@ export default function Home() {
               src="/assets/hero/background.webp"
               alt=""
               role="presentation"
-              className="w-full h-full object-cover object-[center_68%] scale-120"
+              className="w-full h-full object-cover object-[center_60%]"
               loading="eager"
               fetchPriority="high"
             />
           </picture>
-          {/* Top soft gradient overlay into om-50 */}
-          <div className="absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-[#faf8f4] via-[#faf8f4]/60 to-transparent pointer-events-none" />
-          {/* Bottom soft gradient overlay to om-50 */}
-          <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-[#faf8f4] via-[#faf8f4]/70 to-transparent pointer-events-none" />
+          {/* Bottom soft gradient overlay into om-50 */}
+          <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#faf8f4] via-[#faf8f4]/70 to-transparent pointer-events-none" />
         </div>
 
-        {/* 3. Mobile Content: comfortably underneath dog banner */}
-        <div className="wrap px-3 sm:px-4 relative z-10 -mt-2 flex flex-col gap-3.5">
+        {/* Content Container */}
+        <div className="wrap px-3 sm:px-4 relative z-10 flex flex-col gap-3.5">
           {/* Database Statistics */}
           <HomeStatsPills stats={stats} showStats={showStats} />
 
