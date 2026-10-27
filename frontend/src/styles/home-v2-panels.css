@@ -250,6 +250,15 @@
   padding-bottom: 0 !important;
 }
 
+/* На мобилке статичный дашборд: stage — flex-колонка, мобильный блок растягивается */
+@media (max-width: 767px) {
+  .home-v2-static .home-v2-stage {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+}
+
 .home-v2-season-top--compact {
   margin-bottom: 0 !important;
   width: 100% !important;
