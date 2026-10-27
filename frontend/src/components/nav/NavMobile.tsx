@@ -39,21 +39,16 @@ export function NavMobile({
       <div className="md:hidden flex items-center justify-between h-12 pl-2 pr-2 gap-2">
         <Link
           to="/"
-          className="transition-opacity duration-[200ms] ease-linear"
-          style={{
-            opacity: logoOpacity * 0.8,
-            pointerEvents: logoVisible ? 'auto' : 'none',
-          }}
-          aria-hidden={!logoVisible}
-          tabIndex={logoVisible ? undefined : -1}
+          className="flex items-center min-w-0 shrink-0"
+          aria-label="Главная страница Coursing Stats"
         >
           <img
             src="/assets/brand/logo-mobile.webp"
             width={400}
             height={79}
             alt="Coursing Stats"
-            className="h-10 w-auto"
-            loading="lazy"
+            className="h-9 w-auto"
+            loading="eager"
             decoding="async"
             style={{ objectFit: 'contain' }}
           />

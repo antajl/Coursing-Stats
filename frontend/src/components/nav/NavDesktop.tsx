@@ -57,31 +57,30 @@ export function NavDesktop({
         ref={logoRef}
         className="flex min-w-0 shrink-0 items-center transition-opacity duration-[300ms] ease-linear"
         style={{
-          opacity: logoOpacity * 0.8,
-          pointerEvents: logoVisible ? 'auto' : 'none',
+          opacity: Math.max(logoOpacity, 0.85),
+          pointerEvents: 'auto',
         }}
-        aria-hidden={!logoVisible}
-        tabIndex={logoVisible ? undefined : -1}
+        aria-label="Главная страница Coursing Stats"
       >
         <img
           src="/assets/brand/logo.webp"
           width={1128}
           height={224}
           alt="Coursing Stats"
-          className="h-[52px] lg:h-[61px] w-auto"
+          className="h-[44px] xl:h-[52px] 2xl:h-[61px] w-auto"
           style={{ objectFit: 'contain' }}
-          loading="lazy"
+          loading="eager"
           decoding="async"
         />
       </Link>
 
       <div
         ref={navCenterRef}
-        className="absolute left-1/2 flex -translate-x-1/2 items-center gap-0.5 lg:gap-1"
+        className="absolute left-1/2 flex -translate-x-1/2 items-center gap-0.5 xl:gap-1"
       >
         <Link
           to="/"
-          className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-5 lg:text-sm ${
+          className={`group relative shrink-0 px-2 py-1 text-xs font-semibold whitespace-nowrap transition-all duration-300 xl:px-3.5 2xl:px-5 2xl:text-sm ${
             isActive('/') ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
         >
@@ -100,8 +99,8 @@ export function NavDesktop({
           ariaLabel="Соревнования - рейтинг, архив, судьи"
           label={
             <>
-              <span className="lg:hidden">Соревн.</span>
-              <span className="hidden lg:inline">Соревнования</span>
+              <span className="xl:hidden">Соревн.</span>
+              <span className="hidden xl:inline">Соревнования</span>
             </>
           }
           items={competitionsItems}
@@ -130,8 +129,8 @@ export function NavDesktop({
           ariaLabel="Курсинг Донино - записи и статистика"
           label={
             <>
-              <span className="lg:hidden">Донино</span>
-              <span className="hidden lg:inline">Курсинг Донино</span>
+              <span className="xl:hidden">Донино</span>
+              <span className="hidden xl:inline">Курсинг Донино</span>
             </>
           }
           items={DONINO_MENU_ITEMS}
@@ -149,7 +148,7 @@ export function NavDesktop({
         />
         <Link
           to="/about"
-          className={`group relative shrink-0 px-2.5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 lg:px-5 lg:text-sm ${
+          className={`group relative shrink-0 px-2 py-1 text-xs font-semibold whitespace-nowrap transition-all duration-300 xl:px-3.5 2xl:px-5 2xl:text-sm ${
             isAboutActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
         >
@@ -160,17 +159,17 @@ export function NavDesktop({
         </Link>
       </div>
 
-      <div className="flex shrink-0 items-center gap-2 lg:gap-2.5">
+      <div className="flex shrink-0 items-center gap-1.5 lg:gap-2 2xl:gap-2.5">
         <button
           type="button"
           onClick={onOpenSearch}
-          className="flex items-center gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all text-xs font-semibold shadow-sm group cursor-pointer"
+          className="flex items-center justify-center gap-2 w-9 h-9 2xl:w-auto 2xl:h-auto 2xl:px-3 2xl:py-1.5 rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all text-xs font-semibold shadow-sm group cursor-pointer shrink-0"
           title="Быстрый поиск (Ctrl+K)"
           aria-label="Быстрый поиск по базе (Ctrl+K)"
         >
-          <Icons.search className="w-3.5 h-3.5 text-camel-700 transition-transform group-hover:scale-110" aria-hidden />
-          <span className="hidden xl:inline">Поиск</span>
-          <kbd className="hidden sm:inline-flex items-center text-[10px] font-mono px-1.5 py-0.5 rounded border border-old-money-200 bg-old-money-100 text-charcoal-500">
+          <Icons.search className="w-4 h-4 2xl:w-3.5 2xl:h-3.5 text-camel-700 transition-transform group-hover:scale-110" aria-hidden />
+          <span className="hidden 2xl:inline">Поиск</span>
+          <kbd className="hidden 2xl:inline-flex items-center text-[10px] font-mono px-1.5 py-0.5 rounded border border-old-money-200 bg-old-money-100 text-charcoal-500">
             Ctrl K
           </kbd>
         </button>
@@ -183,10 +182,10 @@ export function NavDesktop({
           <button
             aria-expanded={sourcesOpen}
             aria-label="Источники данных"
-            className="w-11 h-11 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center shrink-0"
+            className="w-9 h-9 2xl:w-11 2xl:h-11 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center shrink-0"
             title="Источники данных"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-old-money-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 2xl:h-5 2xl:w-5 text-old-money-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
           </button>

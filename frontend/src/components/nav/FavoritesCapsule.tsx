@@ -95,8 +95,8 @@ export default function FavoritesCapsule() {
     : 'flex items-center overflow-hidden rounded-full border border-amber-300/80 bg-amber-50/90 text-amber-900'
 
   const linkHover = onAccount
-    ? 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-charcoal-200/40 md:gap-1.5 md:px-2.5'
-    : 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-amber-100/80 md:gap-1.5 md:px-2.5'
+    ? 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-charcoal-200/40 2xl:gap-1.5 2xl:px-2.5'
+    : 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-amber-100/80 2xl:gap-1.5 2xl:px-2.5'
 
   const starClass = onAccount
     ? 'h-3.5 w-3.5 shrink-0 fill-current text-charcoal-400'
@@ -112,7 +112,7 @@ export default function FavoritesCapsule() {
           aria-label={`Избранная собака: ${fullTitle}`}
         >
           <Star className={starClass} aria-hidden />
-          <span className="hidden max-w-[5.5rem] truncate text-[11px] font-semibold leading-none md:inline lg:max-w-[6.5rem] lg:text-xs">
+          <span className="hidden max-w-[6.5rem] truncate text-xs font-semibold leading-none 2xl:inline">
             {shortLabel}
           </span>
         </Link>

@@ -118,7 +118,7 @@ export default function Home() {
         reverseLayout={true}
         children={
           /* Right block: Logo & Compact Database Statistics */
-          <div className="flex flex-col items-end text-right gap-2 select-none max-w-full">
+          <div className="flex flex-col items-end text-right gap-1.5 2xl:gap-2 select-none max-w-full">
             <picture>
               <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
               <img
@@ -130,17 +130,17 @@ export default function Home() {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="w-full max-w-[240px] sm:max-w-[275px] lg:max-w-[305px] 2xl:max-w-[340px] h-auto drop-shadow-md pointer-events-none"
+                className="w-full max-w-[205px] sm:max-w-[230px] lg:max-w-[260px] 2xl:max-w-[340px] h-auto drop-shadow-md pointer-events-none"
               />
             </picture>
-            <div className="w-full max-w-[310px] 2xl:max-w-[360px] pointer-events-auto">
+            <div className="w-full max-w-[285px] 2xl:max-w-[360px] pointer-events-auto">
               <HomeStatsPills stats={stats} showStats={showStats} />
             </div>
           </div>
         }
         metrics={
           /* Left block: Double Podium Rankings */
-          <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(880px,52vw,1320px)] 2xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-360px)] mr-auto">
+          <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(760px,46vw,1180px)] 2xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-340px)] mr-auto">
             <SeasonTopSection
               competitionSlides={competitionSlides}
               racingSlides={racingSlides}
@@ -161,8 +161,8 @@ export default function Home() {
           MOBILE (< 768px): Natural, touch-friendly, scrollable flow
       ========================================================================= */}
       <div className="md:hidden flex flex-col min-h-screen pb-12">
-        {/* 1. Centered Mobile Logo */}
-        <div className="wrap px-4 pt-3 pb-1 flex justify-center select-none">
+        {/* 1. Centered Mobile Logo (breathing room from header, gently overlaps dog banner) */}
+        <div className="wrap px-4 pt-6 sm:pt-8 flex justify-center select-none relative z-10 -mb-6 sm:-mb-8">
           <img
             src="/assets/hero/title-mobile.webp"
             srcSet="/assets/hero/title-mobile.webp 1x, /assets/hero/title.webp 2x"
@@ -175,8 +175,14 @@ export default function Home() {
           />
         </div>
 
-        {/* 2. Hero Banner: Borzoi in Motion (Full Bleed, Native, smooth fade transitions) */}
-        <div className="relative w-full h-[185px] xs:h-[210px] sm:h-[240px] overflow-hidden select-none pointer-events-none mb-2">
+        {/* 2. Hero Banner: Borzoi in Motion (Full Bleed, Enlarged, Seamless alpha mask fade) */}
+        <div
+          className="relative w-full h-[220px] xs:h-[245px] sm:h-[275px] overflow-hidden select-none pointer-events-none"
+          style={{
+            WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 16%, black 28%, black 72%, rgba(0,0,0,0.85) 84%, transparent 100%)',
+            maskImage: 'linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 16%, black 28%, black 72%, rgba(0,0,0,0.85) 84%, transparent 100%)',
+          }}
+        >
           <picture>
             <source
               media="(max-width: 768px)"
@@ -188,22 +194,23 @@ export default function Home() {
               src="/assets/hero/background.webp"
               alt=""
               role="presentation"
-              className="w-full h-full object-cover object-[center_35%]"
+              className="w-full h-full object-cover object-[center_35%] scale-110"
               loading="eager"
               fetchPriority="high"
             />
           </picture>
-          {/* Top soft gradient from om-50 */}
-          <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-[#faf8f4] via-[#faf8f4]/60 to-transparent pointer-events-none" />
-          {/* Bottom soft gradient to om-50 */}
-          <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#faf8f4] via-[#faf8f4]/70 to-transparent pointer-events-none" />
+          {/* Top soft gradient overlay into om-50 */}
+          <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-[#faf8f4] via-[#faf8f4]/60 to-transparent pointer-events-none" />
+          {/* Bottom soft gradient overlay to om-50 */}
+          <div className="absolute inset-x-0 bottom-0 h-18 bg-gradient-to-t from-[#faf8f4] via-[#faf8f4]/70 to-transparent pointer-events-none" />
         </div>
 
-        <div className="wrap px-3 sm:px-4 flex flex-col gap-3.5">
-          {/* 3. Database Statistics */}
+        {/* 3. Mobile Content: gently overlaps bottom of dog banner */}
+        <div className="wrap px-3 sm:px-4 relative z-10 -mt-6 sm:-mt-8 flex flex-col gap-3.5">
+          {/* Database Statistics */}
           <HomeStatsPills stats={stats} showStats={showStats} />
 
-          {/* 4. Seasonal Ratings & Leaders */}
+          {/* Seasonal Ratings & Leaders */}
           <SeasonTopSection
             competitionSlides={competitionSlides}
             racingSlides={racingSlides}
@@ -217,7 +224,7 @@ export default function Home() {
             compact={false}
           />
 
-          {/* 5. Footer */}
+          {/* Footer */}
           <HomeFooter />
         </div>
       </div>
