@@ -457,14 +457,23 @@ export default function DogProfile() {
   }, [availableTabs, activeDiscipline, fromSpeedRecords, fromCoursingRecords])
 
 
-  // Linked show dog on legacy URL → canonical /dog/{competition_id}
-  if (
-    !showsLoading &&
-    isLegacyShowRoute &&
-    showDog?.competition_dog_id != null &&
-    Number.isFinite(Number(showDog.competition_dog_id))
-  ) {
-    return <Navigate to={`/dog/${showDog.competition_dog_id}`} replace />
+  // Canonical redirect for show dog on legacy show route, alias ID, or linked sports profile
+  if (!showsLoading && showDog) {
+    if (
+      showDog.competition_dog_id != null &&
+      Number.isFinite(Number(showDog.competition_dog_id)) &&
+      String(showDog.competition_dog_id) !== String(competitionId)
+    ) {
+      return <Navigate to={`/dog/${showDog.competition_dog_id}`} replace />
+    }
+    if (
+      !dog &&
+      competitionId &&
+      showDog.id &&
+      String(showDog.id) !== String(competitionId)
+    ) {
+      return <Navigate to={`/dog/${showDog.id}`} replace />
+    }
   }
 
   // Legacy /shows/dog/{catalog}/{breed} → /dog/{stableId} (never catalog #)

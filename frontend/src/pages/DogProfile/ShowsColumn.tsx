@@ -107,8 +107,12 @@ export function ShowsColumn({ dog, rank, breed }: ShowsColumnProps) {
   const dogBreed = breed || dog.breed || ''
   const rankingUrl = `/shows?tab=ranking${dogBreed ? `&breed=${encodeURIComponent(dogBreed)}` : ''}`
 
-  const has2026 = rank?.yearBreedRank != null
-  const allTimeRank = rank?.breedRank ?? dog.breed_rank ?? null
+  const has2026 = rank?.yearBreedRank != null && rank.yearBreedRank > 0
+  const allTimeRank = (rank?.breedRank != null && rank.breedRank > 0)
+    ? rank.breedRank
+    : (dog.breed_rank != null && dog.breed_rank > 0)
+      ? dog.breed_rank
+      : null
   const hasHistory = allTimeRank != null
 
   const headerLink = (

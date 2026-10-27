@@ -92,8 +92,8 @@ export function CoursingColumn({
     ? procoursingUrlForEventId(eventResultsUrls, avgJudgeScoreEventId)
     : null
 
-  const has2026 = rank?.yearBreedRank != null
-  const hasHistory = rank?.breedRank != null
+  const has2026 = rank?.yearBreedRank != null && rank.yearBreedRank > 0
+  const hasHistory = rank?.breedRank != null && rank.breedRank > 0
   const hasAnyRank = has2026 || hasHistory || rank?.rank != null
   const startsCount = coursingEvents.length
   const competitionsCount = startsCount || (typeof coursing.total_starts === 'number' ? coursing.total_starts : 0)
