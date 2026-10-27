@@ -181,15 +181,12 @@ export function NavDesktop({
         <button
           type="button"
           onClick={onOpenSearch}
-          className="flex items-center justify-center gap-2 w-9 h-9 2xl:w-auto 2xl:h-auto 2xl:px-3 2xl:py-1.5 rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all text-xs font-semibold shadow-sm group cursor-pointer shrink-0"
-          title="Быстрый поиск (Ctrl+K)"
-          aria-label="Быстрый поиск по базе (Ctrl+K)"
+          className="flex items-center justify-center gap-1.5 w-9 h-9 2xl:w-auto 2xl:h-auto 2xl:px-2.5 2xl:py-1.5 rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all text-xs font-semibold shadow-sm group cursor-pointer shrink-0"
+          title="Быстрый поиск"
+          aria-label="Быстрый поиск по базе"
         >
           <Icons.search className="w-4 h-4 2xl:w-3.5 2xl:h-3.5 text-camel-700 transition-transform group-hover:scale-110" aria-hidden />
           <span className="hidden 2xl:inline">Поиск</span>
-          <kbd className="hidden 2xl:inline-flex items-center text-[10px] font-mono px-1.5 py-0.5 rounded border border-old-money-200 bg-old-money-100 text-charcoal-500">
-            Ctrl K
-          </kbd>
         </button>
         <FavoritesCapsule />
         <div

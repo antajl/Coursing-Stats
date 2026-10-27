@@ -48,7 +48,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":30,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[18,18,18,18,18],\"sum\":180},{\"judge_number\":2,\"scores\":[19,18,17,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 30,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  19,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТРУБЕЦКОВЪ ЗЛАТ ФЕНИКС</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>30</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>180</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9468,
@@ -77,7 +121,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":39,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[18,18,17,18,18],\"sum\":180},{\"judge_number\":2,\"scores\":[18,19,18,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 39,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              }
+            ],
+            "total": 180,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ГРАНАТ</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>39</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>180</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 450,
@@ -106,7 +194,51 @@
       "vc": "19",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":5,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[18,18,17,18,19],\"sum\":179},{\"judge_number\":2,\"scores\":[18,18,17,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 5,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  19
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА ГРИДЕНЬ</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>5</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>179</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9467,
@@ -135,7 +267,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":40,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,19,18,17,18],\"sum\":177},{\"judge_number\":2,\"scores\":[17,18,18,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 40,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ГОРНОСТАЙ</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>40</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>177</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9308,
@@ -164,7 +340,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":17,\"bib_color\":\"#f0ffff\",\"judges\":[{\"judge_number\":1,\"scores\":[17,18,17,17,18],\"sum\":174},{\"judge_number\":2,\"scores\":[17,18,17,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЕЙ /<br>BOREY</font></td>\n<td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>17</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>174</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9466,
@@ -191,7 +411,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":16,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,18,17,17,18],\"sum\":174},{\"judge_number\":2,\"scores\":[17,17,18,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 16,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ЦАРСКИЙ ЧЕРВОНЕЦ</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>16</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>174</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 7226,
@@ -220,7 +484,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":40,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[16,18,17,16,18],\"sum\":172},{\"judge_number\":2,\"scores\":[17,18,17,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 40,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 172,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ЦАГРИ</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>40</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>172</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9301,
@@ -249,7 +557,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":23,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,16,17,18],\"sum\":168},{\"judge_number\":2,\"scores\":[17,17,16,16,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 23,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  18
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">KONZA LYTHE DOT COM</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>23</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>168</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9470,
@@ -276,7 +628,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":3,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[16,16,16,16,17],\"sum\":164},{\"judge_number\":2,\"scores\":[16,17,16,17,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ ЛУКСУРИ МАСТЕР /<br>APRIORI LUXURY MASTER</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>3</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>164</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9302,
@@ -303,7 +699,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":3,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[15,17,16,16,16],\"sum\":163},{\"judge_number\":2,\"scores\":[16,17,17,16,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 3,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ ЛЮКСУРИ ХМЕЛЬ /<br>APRIORI LUXURY HMEL</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>3</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>163</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9300,
@@ -330,7 +770,51 @@
       "vc": "19",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":28,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[18,19,18,18,19],\"sum\":186},{\"judge_number\":2,\"scores\":[19,19,19,18,19],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 28,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  19,
+                  19,
+                  19,
+                  18,
+                  19
+                ],
+                "sum": 94
+              }
+            ],
+            "total": 186,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">34</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БЫСТРА</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>28</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>186</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9489,
@@ -359,7 +843,51 @@
       "vc": "19",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":28,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[18,18,18,18,19],\"sum\":183},{\"judge_number\":2,\"scores\":[18,19,18,18,19],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 28,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 183,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">36</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЕРЗА-2</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>28</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>183</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9486,
@@ -388,7 +916,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":10,\"bib_color\":\"black\",\"judges\":[{\"judge_number\":1,\"scores\":[18,19,18,18,18],\"sum\":179},{\"judge_number\":2,\"scores\":[18,17,18,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 10,
+            "bib_color": "black",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 91
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">42</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">КУПАВА ЯСНАЯ</font></td>\n<td rowspan=\"2\" bgcolor=\"#000000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#ffffff\"><i>10</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>179</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9374,
@@ -417,7 +989,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":36,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[18,18,17,18,18],\"sum\":179},{\"judge_number\":2,\"scores\":[18,18,18,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 36,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">65</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВОЗЛЮБА ИЗ РАЗДОЛЬЯ</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>36</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>179</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9511,
@@ -446,7 +1062,51 @@
       "vc": "19",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":15,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,19,18,17,19],\"sum\":179},{\"judge_number\":2,\"scores\":[18,18,18,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 15,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  19,
+                  18,
+                  17,
+                  19
+                ],
+                "sum": 90
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 179,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">40</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ФАЙЗА /<br>FAJZA</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>15</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>179</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 7244,
@@ -473,7 +1133,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":39,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[18,17,17,18,18],\"sum\":178},{\"judge_number\":2,\"scores\":[18,18,18,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 39,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 178,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">6</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН БАРРАКУДА /<br>BORZIE-SENAVIAN BARRAKUDA</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>39</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>178</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 570,
@@ -500,7 +1204,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":35,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[18,18,17,18,18],\"sum\":176},{\"judge_number\":2,\"scores\":[18,18,17,17,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 35,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">7</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">61</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВАСАРТ БЛЕСТКА</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>35</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>176</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9483,
@@ -529,7 +1277,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":1,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,18,17,17,17],\"sum\":176},{\"judge_number\":2,\"scores\":[18,18,18,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  18,
+                  18
+                ],
+                "sum": 90
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">8</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ ЛУКСУРИ ФОКСХАНТЕР /<br>APRIORI LUXURY FOKSKHANTER</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>1</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>176</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9488,
@@ -556,7 +1348,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":36,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,17,18,18],\"sum\":176},{\"judge_number\":2,\"scores\":[18,18,17,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 36,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">9</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АВАНТЮРА ИЗ ДИНАСТИИ ЗОЛОТЬКО</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>36</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>176</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9498,
@@ -585,7 +1421,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":2,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,18,17,18,18],\"sum\":176},{\"judge_number\":2,\"scores\":[17,18,17,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 176,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА ДЕРЖАВА</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>2</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>176</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9487,
@@ -614,7 +1494,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":26,\"bib_color\":\"#f0ffff\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,17,17,18],\"sum\":174},{\"judge_number\":2,\"scores\":[18,17,17,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 26,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">11</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">38</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ДЖИВА</font></td>\n<td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>26</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>174</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9500,
@@ -643,7 +1567,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":2,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,18,17,17,18],\"sum\":174},{\"judge_number\":2,\"scores\":[17,18,17,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 2,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">12</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА ДИАНА</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>2</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>174</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9482,
@@ -672,7 +1640,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":20,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,18,17,17,18],\"sum\":174},{\"judge_number\":2,\"scores\":[17,17,17,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">13</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АЗАРТНАЯ ОХОТА ГРЕЗА</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>20</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>174</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9377,
@@ -701,7 +1713,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":41,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,18,17,17,18],\"sum\":173},{\"judge_number\":2,\"scores\":[17,18,17,17,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 41,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 173,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ЦАРИНА /<br>BORZIE-SENAVIAN CARINA</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>41</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>173</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9494,
@@ -728,7 +1784,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":4,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,18,18,17,18],\"sum\":172},{\"judge_number\":2,\"scores\":[17,16,17,17,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 4,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  16,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 172,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">54</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СОКОЛКА</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>4</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>172</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9506,
@@ -757,7 +1857,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":38,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[18,17,17,16,16],\"sum\":171},{\"judge_number\":2,\"scores\":[17,18,18,17,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 38,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  18,
+                  18,
+                  17,
+                  17
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН АНАКОНДА</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>38</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9493,
@@ -786,7 +1930,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":12,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,17,17,18],\"sum\":171},{\"judge_number\":2,\"scores\":[17,17,17,17,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 12,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">51</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ОБЕРЕГ РУСИ ВЕРНАЯ СЕРДЦЕМ /<br>OBEREG RUSI VERNAYA SERDCZEM</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>12</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9306,
@@ -813,7 +2001,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":26,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[16,17,17,16,18],\"sum\":171},{\"judge_number\":2,\"scores\":[17,17,18,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 26,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  18
+                ],
+                "sum": 84
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 171,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БЕЛАЯ СТЕПЬ</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>26</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>171</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9499,
@@ -842,7 +2074,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":16,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[16,19,18,16,17],\"sum\":170},{\"judge_number\":2,\"scores\":[16,18,17,16,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 16,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  19,
+                  18,
+                  16,
+                  17
+                ],
+                "sum": 86
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  18,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 170,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">44</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА РЕВОЛЮЦИЯ /<br>LUNNAJA RADUGA REVOLUTION</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>16</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">19</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>170</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9481,
@@ -869,7 +2145,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":29,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,16,16,17,17],\"sum\":169},{\"judge_number\":2,\"scores\":[18,17,16,18,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 29,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  16,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  17,
+                  16,
+                  18,
+                  17
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">20</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">63</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ВЕСНА СЛАВНАЯ ДЛЯ ТРУБЕЦКОВЪ</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>29</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9508,
@@ -898,7 +2218,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":1,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[16,17,17,17,16],\"sum\":169},{\"judge_number\":2,\"scores\":[17,17,16,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 1,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  18,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 169,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">21</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">АПРИОРИ ЛУКСУРИ СОЛОВУШКА</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>1</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>169</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9495,
@@ -927,7 +2291,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":13,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[16,16,16,15,16],\"sum\":168},{\"judge_number\":2,\"scores\":[18,18,18,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 13,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  18,
+                  17,
+                  18
+                ],
+                "sum": 89
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">22</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">50</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ОБЕРЕГ РУСИ ВЕДУНЬЯ /<br>OBEREG RUSI VEDUN'YA</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>13</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>168</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9263,
@@ -956,7 +2364,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":12,\"bib_color\":\"#f0ffff\",\"judges\":[{\"judge_number\":1,\"scores\":[16,17,16,17,17],\"sum\":168},{\"judge_number\":2,\"scores\":[17,17,17,17,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 12,
+            "bib_color": "#f0ffff",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  17,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">23</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">49</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ОБЕРЕГ РУСИ БЕГУЩАЯ ПО ВОЛНАМ /<br>OBEREG RUSI BEGUSCHAYA PO VOLNAM</font></td>\n<td rowspan=\"2\" bgcolor=\"#f0ffff\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>12</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>168</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9497,
@@ -983,7 +2435,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":17,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[16,17,16,16,17],\"sum\":165},{\"judge_number\":2,\"scores\":[16,17,17,16,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 17,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 165,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">24</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БЕРЕГИНЯ /<br>BEREGINYA</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>17</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>165</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9496,
@@ -1010,7 +2506,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":29,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,15,15,16,16],\"sum\":163},{\"judge_number\":2,\"scores\":[18,18,15,18,15],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 29,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  15,
+                  15,
+                  16,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  18,
+                  15,
+                  18,
+                  15
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">25</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">57</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ТРУБЕЦКОВЪ ЛИРА</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>29</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>163</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9502,
@@ -1039,7 +2579,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":23,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[16,16,16,16,16],\"sum\":163},{\"judge_number\":2,\"scores\":[17,17,16,17,16],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 23,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">26</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">41</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">KONZA LYTHE DECLASSIFIED</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>23</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>163</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9501,
@@ -1066,7 +2650,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":8,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[16,17,16,15,16],\"sum\":163},{\"judge_number\":2,\"scores\":[16,17,17,16,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 8,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 80
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">27</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">53</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">СИМПЛЕ ОБСЕССИОН ЧАПТЕР ОФ МАЙ ЛАЙФ /<br>SIMPLE OBSESSION CHAPTER OF MY LIFE</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>8</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>163</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 481,
@@ -1093,7 +2721,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":41,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[16,17,17,15,17],\"sum\":163},{\"judge_number\":2,\"scores\":[16,16,17,16,16],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 41,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  15,
+                  17
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  16,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 81
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">28</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">52</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ПЕРМЬ ВЕЛИКАЯ САФЬЯНА</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>41</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>163</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9515,
@@ -1122,7 +2794,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":26,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[16,16,16,16,17],\"sum\":163},{\"judge_number\":2,\"scores\":[16,17,16,16,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 26,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  16,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 163,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">29</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">33</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БУЗИНА</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>26</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>163</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9490,
@@ -1151,7 +2867,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":20,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[15,17,16,15,16],\"sum\":161},{\"judge_number\":2,\"scores\":[16,17,17,16,16],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 20,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  15,
+                  17,
+                  16,
+                  15,
+                  16
+                ],
+                "sum": 79
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 82
+              }
+            ],
+            "total": 161,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">30</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">46</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЛУННАЯ РАДУГА ТАНГО В НОЧИ</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>20</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>161</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9510,
@@ -1180,7 +2940,51 @@
       "vc": "10",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":25,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[10,14,14,10,10],\"sum\":116},{\"judge_number\":2,\"scores\":[10,10,10,15,13],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 25,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  10,
+                  14,
+                  14,
+                  10,
+                  10
+                ],
+                "sum": 58
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  10,
+                  10,
+                  10,
+                  15,
+                  13
+                ],
+                "sum": 58
+              }
+            ],
+            "total": 116,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">31</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">37</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">DONSKOI CARABOSSE</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>25</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">14</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>116</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9514,
@@ -1207,7 +3011,51 @@
       "vc": "10",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":6,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[5,10,10,15,10],\"sum\":101},{\"judge_number\":2,\"scores\":[10,10,10,11,10],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 6,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  5,
+                  10,
+                  10,
+                  15,
+                  10
+                ],
+                "sum": 50
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  10,
+                  10,
+                  10,
+                  11,
+                  10
+                ],
+                "sum": 51
+              }
+            ],
+            "total": 101,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">32</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">48</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Стандартный</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">НАГАЙКА /<br>NAGAIKA</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>6</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">5</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">15</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">10</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>101</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9480,
@@ -1234,7 +3082,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":43,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[18,17,17,18,18],\"sum\":174},{\"judge_number\":2,\"scores\":[17,17,17,17,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 43,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  18,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 88
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 86
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">67</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ЕГОР</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>43</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>174</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 5764,
@@ -1263,7 +3155,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":37,\"bib_color\":\"#00a2e8\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,16,17,16],\"sum\":168},{\"judge_number\":2,\"scores\":[17,17,17,17,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 37,
+            "bib_color": "#00a2e8",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  17,
+                  16
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">68</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ДЖАББАР</font></td>\n<td rowspan=\"2\" bgcolor=\"#00a2e8\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>37</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>168</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 5673,
@@ -1292,7 +3228,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":42,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[16,17,17,16,16],\"sum\":166},{\"judge_number\":2,\"scores\":[17,17,17,16,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 42,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  16,
+                  16
+                ],
+                "sum": 82
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  16,
+                  17
+                ],
+                "sum": 84
+              }
+            ],
+            "total": 166,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">66</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ДАВИЛО II</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>42</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>166</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9378,
@@ -1319,7 +3299,51 @@
       "vc": "16",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":31,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[16,17,16,16,16],\"sum\":164},{\"judge_number\":2,\"scores\":[16,17,17,17,16],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 31,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  16,
+                  17,
+                  16,
+                  16,
+                  16
+                ],
+                "sum": 81
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  16,
+                  17,
+                  17,
+                  17,
+                  16
+                ],
+                "sum": 83
+              }
+            ],
+            "total": 164,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">4</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">69</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Кобель</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ЗАТЕВАЙ</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>31</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>164</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9518,
@@ -1348,7 +3372,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":13,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,17,17,17],\"sum\":177},{\"judge_number\":2,\"scores\":[18,19,18,18,19],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 13,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  18,
+                  19,
+                  18,
+                  18,
+                  19
+                ],
+                "sum": 92
+              }
+            ],
+            "total": 177,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">1</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">71</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ФОНЭЗЕЛ ХРАБРАЯ ЛЕДИ ЭТ ОБЕРЕГ РУСИ</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>13</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>177</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9519,
@@ -1377,7 +3445,51 @@
       "vc": "18",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":37,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,18,17,17,18],\"sum\":174},{\"judge_number\":2,\"scores\":[17,17,17,18,18],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 37,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  18,
+                  17,
+                  17,
+                  18
+                ],
+                "sum": 87
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  18,
+                  18
+                ],
+                "sum": 87
+              }
+            ],
+            "total": 174,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">2</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">70</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">БОРЗЫЕ-СЕНАВИАН ДОРА</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>37</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">18</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>174</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 5774,
@@ -1406,7 +3518,51 @@
       "vc": "17",
       "status": "finished",
       "status_reason": null,
-      "raw_scores_json": "{\"heats\":[{\"heat_number\":1,\"bib_number\":33,\"bib_color\":\"red\",\"judges\":[{\"judge_number\":1,\"scores\":[17,17,16,16,17],\"sum\":168},{\"judge_number\":2,\"scores\":[17,17,17,17,17],\"sum\":null}],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null},{\"heat_number\":2,\"bib_number\":null,\"bib_color\":null,\"judges\":[],\"total\":null,\"disqualified\":false,\"disqualification_reason\":null}]}",
+      "raw_scores_json": {
+        "heats": [
+          {
+            "heat_number": 1,
+            "bib_number": 33,
+            "bib_color": "red",
+            "judges": [
+              {
+                "judge_number": 1,
+                "scores": [
+                  17,
+                  17,
+                  16,
+                  16,
+                  17
+                ],
+                "sum": 83
+              },
+              {
+                "judge_number": 2,
+                "scores": [
+                  17,
+                  17,
+                  17,
+                  17,
+                  17
+                ],
+                "sum": 85
+              }
+            ],
+            "total": 168,
+            "disqualified": false,
+            "disqualification_reason": null
+          },
+          {
+            "heat_number": 2,
+            "bib_number": null,
+            "bib_color": null,
+            "judges": [],
+            "total": null,
+            "disqualified": false,
+            "disqualification_reason": null
+          }
+        ]
+      },
       "raw_text": "\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">3</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">72</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Русская псовая борзая</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Юниоры</font></td>\n<td rowspan=\"2\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">Сука</font></td>\n<td rowspan=\"2\" align=\"left\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">ФУРИЯ ИЗ КРЫЛАТОЙ ЛЕГЕНДЫ</font></td>\n<td rowspan=\"2\" bgcolor=\"#ff0000\"><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\"><i>33</i></font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">16</font></td>\n<td><font style=\"font-size:10pt\" face=\"Arial\" color=\"#000000\">17</font></td>\n<td rowspan=\"2\"><font style=\"font-size:11pt\" face=\"Arial\" color=\"#000000\"><b>168</b></font></td>\n",
       "judges": "Крылова Е.В., Рубина А.В.",
       "dog_id": 9376,

@@ -303,7 +303,7 @@
   backdrop-filter: blur(12px) !important;
   -webkit-backdrop-filter: blur(12px) !important;
   box-shadow: 0 4px 12px rgba(44, 39, 32, 0.06) !important;
-  padding: 2px !important;
+  padding: 0 12px !important;
   box-sizing: border-box !important;
 }
 

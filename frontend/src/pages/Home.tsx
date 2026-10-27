@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect, useState } from 'react'
+import { useRef, useCallback, useEffect } from 'react'
 import { SEO } from '../components/SEO'
 import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
 import { useGSAP, riseIn } from '../lib/motion'
@@ -9,33 +9,11 @@ import { SeasonTopSection } from './Home/components/SeasonTopSection'
 import { HomeFooter } from './Home/components/HomeFooter'
 import { formatDate } from './Home/utils/formatters'
 import { ANIMATION, IMAGES } from '../lib/constants'
-import {
-  HomeConceptSwitcher,
-  ConceptSymmetricFinal,
-  type HomeConceptMode,
-} from './Home/components/HomeConcepts'
+import { ConceptSymmetricFinal } from './Home/components/HomeConcepts'
 
 export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null)
   const homeData = useHomeData()
-
-  // Interactive concept mode switcher
-  const [conceptMode, setConceptMode] = useState<HomeConceptMode>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('cs_home_concept') as HomeConceptMode
-      if (saved === 'symmetric-final' || saved === 'as-is') {
-        return saved
-      }
-    }
-    return 'symmetric-final'
-  })
-
-  const handleSetConcept = (m: HomeConceptMode) => {
-    setConceptMode(m)
-    try {
-      localStorage.setItem('cs_home_concept', m)
-    } catch {}
-  }
 
   // Lock root scroll on single-screen static dashboard ONLY on desktop (>= 768px)
   useEffect(() => {
@@ -139,32 +117,7 @@ export default function Home() {
         hideScrollCue={true}
         disableScrollFade={true}
         reverseLayout={true}
-        children={
-          conceptMode === 'symmetric-final' ? (
-            <ConceptSymmetricFinal stats={stats} showStats={showStats} />
-          ) : (
-            /* Right block: Logo & Compact Database Statistics (As-is) */
-            <div className="flex flex-col items-end text-right gap-1.5 3xl:gap-2 select-none max-w-full">
-              <picture>
-                <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
-                <img
-                  src="/assets/hero/title.webp"
-                  width={IMAGES.HERO_TITLE.WIDTH}
-                  height={IMAGES.HERO_TITLE.HEIGHT}
-                  alt="Coursing Stats"
-                  data-page-logo="desktop"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  className="w-full max-w-[280px] xl:max-w-[320px] 2xl:max-w-[345px] 3xl:max-w-[420px] h-auto drop-shadow-md pointer-events-none"
-                />
-              </picture>
-              <div className="w-full max-w-[295px] 3xl:max-w-[360px] pointer-events-auto mt-2.5 xl:mt-3 mr-3 xl:mr-5 2xl:mr-6 3xl:mr-7">
-                <HomeStatsPills stats={stats} showStats={showStats} loading={seasonLoading} />
-              </div>
-            </div>
-          )
-        }
+        children={<ConceptSymmetricFinal stats={stats} showStats={showStats} />}
         metrics={
           /* Left block: Double Podium Rankings */
           <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(900px,53vw,1040px)] 3xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-340px)] mr-auto">
@@ -239,9 +192,6 @@ export default function Home() {
           <HomeFooter />
         </div>
       </div>
-
-      {/* Interactive Concept Switcher for Review */}
-      <HomeConceptSwitcher mode={conceptMode} setMode={handleSetConcept} />
     </div>
   )
 }

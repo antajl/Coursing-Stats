@@ -486,12 +486,13 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
             <div className={statsColClass}>
               <div className="flex flex-col items-start gap-1 sm:gap-1.5">
                 <StartsLabel starts={dog.total_starts || 0} size="md" />
-                <div className="flex items-baseline gap-1 sm:gap-1.5 leading-none whitespace-nowrap">
-                  <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700">
+                <div className="flex items-center gap-1 sm:gap-1.5 leading-none whitespace-nowrap">
+                  <span className="text-base sm:text-lg font-bold tabular-nums text-camel-700 leading-none">
                     {dog.best_speed ? dog.best_speed.toFixed(1) : '—'}
                   </span>
-                  <span className="text-[8px] font-semibold uppercase tracking-wide text-charcoal-500">
-                    макс. км/ч
+                  <span className="flex flex-col text-[7.5px] sm:text-[8px] font-semibold uppercase tracking-wide text-charcoal-500 leading-[1.1]">
+                    <span>макс.</span>
+                    <span>км/ч</span>
                   </span>
                 </div>
               </div>
