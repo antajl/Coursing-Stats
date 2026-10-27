@@ -1,5 +1,5 @@
 import { useState, useRef, useMemo, useEffect } from 'react'
-import { useParams, Link, useNavigate, useLocation, Navigate } from 'react-router-dom'
+import { useParams, Link, useNavigate, useLocation, Navigate, useSearchParams } from 'react-router-dom'
 import { Rabbit, Gauge, Sparkles, Timer } from 'lucide-react'
 import {
   useDogProfile,
@@ -85,6 +85,10 @@ export default function DogProfile() {
   const fromSpeedRecords = location.state?.from === 'speed-records'
   const fromCoursingRecords = location.state?.from === 'coursing-records'
 
+  const [searchParams] = useSearchParams()
+  const queryName = searchParams.get('name')
+  const queryBreed = searchParams.get('breed')
+
   const profileId = competitionId || ''
   const { data: dogDataResult, isLoading: loading } = useDogProfile(profileId)
   const { data: eventsData } = useDogEvents(profileId)
@@ -135,9 +139,9 @@ export default function DogProfile() {
         const result = await resolveShowDogDetail({
           profileId: profileId || (isLegacyShowRoute ? showRouteDogId : null),
           competitionId: dog?.id ? String(dog.id) : competitionId,
-          nameLat: dog?.name_lat || '',
-          nameRu: dog?.name_ru || '',
-          breed: dog?.breed || showRouteBreed,
+          nameLat: dog?.name_lat || queryName || '',
+          nameRu: dog?.name_ru || queryName || '',
+          breed: dog?.breed || showRouteBreed || queryBreed,
         })
         if (!cancelled) {
           setShowDog(result.success && result.data ? result.data : null)
@@ -152,7 +156,7 @@ export default function DogProfile() {
     return () => {
       cancelled = true
     }
-  }, [competitionId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId])
+  }, [competitionId, dog, loading, showRouteDogId, showRouteBreed, isLegacyShowRoute, profileId, queryName, queryBreed])
 
   // 0ms Latency: предрасчитанные ранги курсинга и бегов доступны синхронно через useMemo (без моргания)
   const precomputedSportRanks = useMemo<ProfileHeaderRank[]>(() => {

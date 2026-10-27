@@ -24,7 +24,8 @@ export function exhibitionDogProfilePath(dogName: string, breed: string): string
   const name = splitDogNameDisplay(dogName).name.trim()
   const breedTrim = breed.trim()
   if (!name || !breedTrim) return null
-  return `/dog/${stableShowProfileId(name, breedTrim)}`
+  const id = stableShowProfileId(name, breedTrim)
+  return `/dog/${id}?name=${encodeURIComponent(name)}&breed=${encodeURIComponent(breedTrim)}`
 }
 
 export function mainRingTabShortLabel(rows: MainRingRow[]): string {

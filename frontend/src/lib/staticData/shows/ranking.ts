@@ -8,6 +8,8 @@ import {
   type ShowTitleCounts,
 } from '../../../../../backend/lib/show-award-ranking'
 import { bestShowGradeLabel } from '../../../../../backend/lib/show-grades'
+import { canonicalBreed } from '../../breedMapping'
+import { transliterateCyrillicToLatin } from '../../dogName'
 import { type ApiResult, fetchJson } from '../core'
 
 /** Годовые индексы рейтинга на CDN; all-time dog-ranking.json >25 MB и не деплоится. */
@@ -254,18 +256,22 @@ async function loadShardedLookup(): Promise<ShowDogLookup | null> {
 }
 
 /** Полная карточка выставочной собаки (titles + history) из шарда dog-details/. */
-export async function getShowDogDetail(id: string): Promise<ApiResult<ShowDog>> {
+export async function getShowDogDetail(id: string, depth = 0): Promise<ApiResult<ShowDog>> {
+  if (depth > 3) return { success: false, error: `Show dog alias loop detected for ${id}` }
   const shard = showDogDetailShard(id)
   console.debug('[getShowDogDetail] Loading shard:', shard, 'for ID:', id)
-  const pack = await fetchJson<Record<string, ShowDog>>(`shows/indexes/dog-details/${shard}.json`)
+  const pack = await fetchJson<Record<string, ShowDog | { alias_to: string }>>(`shows/indexes/dog-details/${shard}.json`)
   console.debug('[getShowDogDetail] Shard loaded, keys:', pack ? Object.keys(pack).length : 'null')
   const raw = pack?.[id]
   if (!raw) {
     console.debug('[getShowDogDetail] Dog not found in shard:', id)
     return { success: false, error: `Show dog ${id} not found` }
   }
-  console.debug('[getShowDogDetail] Dog found:', raw.name_lat)
-  return { success: true, data: hydrateShowDog(raw) }
+  if ('alias_to' in raw && (raw as any).alias_to) {
+    return getShowDogDetail(String((raw as any).alias_to), depth + 1)
+  }
+  console.debug('[getShowDogDetail] Dog found:', (raw as ShowDog).name_lat)
+  return { success: true, data: hydrateShowDog(raw as ShowDog) }
 }
 
 /** Найти id выставочной собаки по competition id или кличке+породе, затем загрузить detail. */
@@ -289,13 +295,23 @@ export async function resolveShowDogDetail(opts: {
   }
 
   if (lookup?.byNameBreed && opts.breed) {
-    const breedKey = opts.breed.toUpperCase().replace(/\s+/g, ' ').trim()
-    for (const name of [opts.nameLat, opts.nameRu]) {
-      if (!name) continue
-      const nameKey = name.toUpperCase().replace(/\s+/g, ' ').trim()
-      const key = `${nameKey}|${breedKey}`
-      const id = lookup.byNameBreed[key]
-      if (id) return getShowDogDetail(id)
+    const rawBreedKey = opts.breed.toUpperCase().replace(/\s+/g, ' ').trim()
+    const canBreedKey = canonicalBreed(opts.breed).toUpperCase().replace(/\s+/g, ' ').trim()
+    const breedKeys = Array.from(new Set([rawBreedKey, canBreedKey].filter(Boolean)))
+
+    for (const rawName of [opts.nameLat, opts.nameRu]) {
+      if (!rawName) continue
+      const nameKey = rawName.toUpperCase().replace(/\s+/g, ' ').trim()
+      const translit = transliterateCyrillicToLatin(nameKey).toUpperCase().replace(/\s+/g, ' ').trim()
+      const nameKeys = Array.from(new Set([nameKey, translit].filter(Boolean)))
+
+      for (const nk of nameKeys) {
+        for (const bk of breedKeys) {
+          const key = `${nk}|${bk}`
+          const id = lookup.byNameBreed[key]
+          if (id) return getShowDogDetail(id)
+        }
+      }
     }
   }
 

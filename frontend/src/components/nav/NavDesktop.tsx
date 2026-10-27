@@ -181,11 +181,11 @@ export function NavDesktop({
         <button
           type="button"
           onClick={onOpenSearch}
-          className="flex items-center justify-center gap-1.5 w-9 h-9 2xl:w-auto 2xl:h-auto 2xl:px-2.5 2xl:py-1.5 rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all text-xs font-semibold shadow-sm group cursor-pointer shrink-0"
+          className="flex items-center justify-center gap-1.5 h-9 w-9 2xl:w-auto 2xl:px-3 rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all text-xs font-semibold shadow-2xs group cursor-pointer shrink-0"
           title="Быстрый поиск"
           aria-label="Быстрый поиск по базе"
         >
-          <Icons.search className="w-4 h-4 2xl:w-3.5 2xl:h-3.5 text-camel-700 transition-transform group-hover:scale-110" aria-hidden />
+          <Icons.search className="w-4 h-4 text-camel-700 transition-transform group-hover:scale-110" aria-hidden />
           <span className="hidden 2xl:inline">Поиск</span>
         </button>
         <FavoritesCapsule />
@@ -197,10 +197,10 @@ export function NavDesktop({
           <button
             aria-expanded={sourcesOpen}
             aria-label="Источники данных"
-            className="w-9 h-9 2xl:w-11 2xl:h-11 border-2 border-old-money-300 rounded-lg bg-old-money-50 hover:bg-old-money-100 transition-colors flex items-center justify-center shrink-0"
+            className="flex items-center justify-center h-9 w-9 rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all shadow-2xs group cursor-pointer shrink-0"
             title="Источники данных"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 2xl:h-5 2xl:w-5 text-old-money-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-camel-700 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
             </svg>
           </button>

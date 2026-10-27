@@ -91,12 +91,12 @@ export default function FavoritesCapsule() {
   const multi = favoriteIds.length > 1
 
   const shellClass = onAccount
-    ? 'flex items-center overflow-hidden rounded-full border border-charcoal-300/70 bg-cream-100/80 text-charcoal-500 opacity-60'
-    : 'flex items-center overflow-hidden rounded-full border border-amber-300/80 bg-amber-50/90 text-amber-900'
+    ? 'flex items-center h-11 md:h-9 overflow-hidden rounded-lg border border-charcoal-300/70 bg-cream-100/80 text-charcoal-500 opacity-60 shadow-2xs'
+    : 'flex items-center h-11 md:h-9 overflow-hidden rounded-lg border border-old-money-300 bg-white/90 hover:bg-old-money-50 hover:border-camel-400 text-charcoal-700 transition-all shadow-2xs group'
 
   const linkHover = onAccount
-    ? 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-charcoal-200/40 2xl:gap-1.5 2xl:px-2.5'
-    : 'flex shrink-0 items-center gap-1 px-2 py-1.5 hover:bg-amber-100/80 2xl:gap-1.5 2xl:px-2.5'
+    ? 'flex shrink-0 items-center gap-1.5 h-full px-2.5 2xl:px-3 hover:bg-charcoal-200/40 text-xs font-semibold transition-colors'
+    : 'flex shrink-0 items-center gap-1.5 h-full px-2.5 2xl:px-3 hover:bg-old-money-100/60 text-xs font-semibold text-charcoal-700 group-hover:text-charcoal-900 transition-colors'
 
   const starClass = onAccount
     ? 'h-3.5 w-3.5 shrink-0 fill-current text-charcoal-400'
@@ -121,8 +121,8 @@ export default function FavoritesCapsule() {
             type="button"
             className={
               onAccount
-                ? 'shrink-0 border-l border-charcoal-300/60 px-1.5 py-1.5 text-[10px] font-bold leading-none text-charcoal-500 hover:bg-charcoal-200/40'
-                : 'shrink-0 border-l border-amber-300/60 px-1.5 py-1.5 text-[10px] font-bold leading-none text-amber-700 hover:bg-amber-100'
+                ? 'flex items-center justify-center h-full shrink-0 border-l border-charcoal-300/60 px-1.5 text-[10px] font-bold text-charcoal-500 hover:bg-charcoal-200/40 transition-colors'
+                : 'flex items-center justify-center h-full shrink-0 border-l border-old-money-200 px-1.5 text-[10px] font-bold text-charcoal-500 hover:text-charcoal-800 hover:bg-old-money-100 transition-colors'
             }
             aria-expanded={open}
             aria-label="Выбрать другую избранную собаку"
