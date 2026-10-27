@@ -130,17 +130,17 @@ export default function Home() {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="w-full max-w-[195px] lg:max-w-[215px] 3xl:max-w-[340px] h-auto drop-shadow-md pointer-events-none"
+                className="w-full max-w-[235px] lg:max-w-[255px] 3xl:max-w-[340px] h-auto drop-shadow-md pointer-events-none"
               />
             </picture>
-            <div className="w-full max-w-[265px] 3xl:max-w-[360px] pointer-events-auto">
+            <div className="w-full max-w-[295px] 3xl:max-w-[360px] pointer-events-auto">
               <HomeStatsPills stats={stats} showStats={showStats} />
             </div>
           </div>
         }
         metrics={
           /* Left block: Double Podium Rankings */
-          <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(740px,43vw,860px)] 3xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-320px)] mr-auto">
+          <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(860px,49vw,980px)] 3xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-340px)] mr-auto">
             <SeasonTopSection
               competitionSlides={competitionSlides}
               racingSlides={racingSlides}
