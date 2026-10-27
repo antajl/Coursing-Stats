@@ -127,7 +127,7 @@ export default function ShowCalendar() {
     [filteredGroups],
   )
   const hasActiveFilters = Boolean(
-    filterYear !== CURRENT_SEASON || filterMonth || searchQuery || filterLcOnly || quickPreset,
+    filterYear !== CURRENT_SEASON || filterMonth || searchQuery || quickPreset,
   )
 
   const activeFilterChips = useMemo(() => {
@@ -153,13 +153,6 @@ export default function ShowCalendar() {
         onRemove: () => setQuickPreset(null),
       })
     }
-    if (filterLcOnly) {
-      chips.push({
-        key: 'lc',
-        label: 'С протоколом',
-        onRemove: () => setFilterLcOnly(false),
-      })
-    }
     return chips
   }, [filterYear, filterMonth, quickPreset])
 
@@ -167,7 +160,6 @@ export default function ShowCalendar() {
     setFilterYear(CURRENT_SEASON)
     setFilterMonth('')
     setSearchQuery('')
-    setFilterLcOnly(false)
     setQuickPreset(null)
   }
 

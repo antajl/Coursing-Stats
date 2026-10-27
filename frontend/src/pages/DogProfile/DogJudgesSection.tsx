@@ -92,6 +92,32 @@ const PLACEMENT_STYLES: Record<number, { bg: string; text: string; border: strin
   3: { bg: 'bg-amber-50', text: 'text-amber-800', border: 'border-amber-200' },
 }
 
+/**
+ * Склонение слова «эксперт» по правилам русского языка:
+ * 1 эксперт, 2 эксперта, 5 экспертов, 21 эксперт, 22 эксперта...
+ */
+export function formatExpertsCount(count: number): string {
+  const mod10 = Math.abs(count) % 10
+  const mod100 = Math.abs(count) % 100
+  if (mod100 >= 11 && mod100 <= 19) return `${count} экспертов`
+  if (mod10 === 1) return `${count} эксперт`
+  if (mod10 >= 2 && mod10 <= 4) return `${count} эксперта`
+  return `${count} экспертов`
+}
+
+/**
+ * Склонение для кнопки раскрытия списка:
+ * 21 эксперта, 5 экспертов, 22 экспертов...
+ */
+export function formatAllExpertsButton(count: number): string {
+  const mod10 = Math.abs(count) % 10
+  const mod100 = Math.abs(count) % 100
+  if (mod10 === 1 && mod100 !== 11) {
+    return `Показать всех ${count} эксперта`
+  }
+  return `Показать всех ${count} экспертов`
+}
+
 export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
   const [expandedJudgeKey, setExpandedJudgeKey] = useState<string | null>(null)
   const [showAllJudges, setShowAllJudges] = useState(false)
@@ -330,7 +356,7 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
 
         <div className="flex items-center gap-1.5 text-xs text-charcoal-600 font-medium bg-cream-100/70 px-3 py-1.5 rounded-xl border border-old-money-200/70 self-start sm:self-auto">
           <Scale className="w-3.5 h-3.5 text-camel-700" aria-hidden />
-          <span>{coursingJudges.length} экспертов</span>
+          <span>{formatExpertsCount(coursingJudges.length)}</span>
         </div>
       </div>
 
@@ -346,7 +372,7 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
               </h3>
             </div>
             <span className="text-[11px] text-forest-800 bg-forest-50 px-2 py-0.5 rounded-full font-medium border border-forest-200">
-              {higherThanCareer.length} экспертов
+              {formatExpertsCount(higherThanCareer.length)}
             </span>
           </div>
 
@@ -371,7 +397,7 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
               </h3>
             </div>
             <span className="text-[11px] text-rose-800 bg-rose-50 px-2 py-0.5 rounded-full font-medium border border-rose-200">
-              {lowerThanCareer.length} экспертов
+              {formatExpertsCount(lowerThanCareer.length)}
             </span>
           </div>
 
@@ -398,7 +424,7 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
             <span className="group-hover:underline">
               {showAllJudges
                 ? 'Свернуть до основных'
-                : `Показать всех ${coursingJudges.length} экспертов`}
+                : formatAllExpertsButton(coursingJudges.length)}
             </span>
             {showAllJudges ? (
               <ChevronUp className="w-3.5 h-3.5 text-camel-600 transition-transform group-hover:-translate-y-0.5" aria-hidden />

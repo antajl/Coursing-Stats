@@ -61,30 +61,42 @@ export function HomeConceptSwitcher({
 
 // =========================================================================
 // Concept Symmetric Final:
-// 1. Верхний таб ровно на уровне левого SegmentedTabs (h-30 mb-2.5)
+// 1. Верхний таб ровно на уровне левого SegmentedTabs (home-v2-stats-cockpit-tab: h=34px, mb-2.5)
 // 2. Тело карточки с точно такой же шапкой home-v2-col-head (Статистика | Россия · 240+ пород | с 2015 года)
 // 3. Белый чистый фон обоих секторов (Спорт и Выставки)
-// 4. Точная высота, идеально совпадающая с левыми колонками подиума
+// 4. Точная высота, идеально совпадающая с левыми колонками подиума (.home-v2-stats-cockpit: 276.5px / 292.5px)
 // =========================================================================
 export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
   return (
     <div className="w-[330px] xl:w-[360px] 2xl:w-[380px] 3xl:w-[420px] flex flex-col pointer-events-auto text-left select-none">
-      {/* 1. ВЕРХНЯЯ ПОЛОСА: Точно на высоте левых табов ([Соревнования | Выставки | Донино]) */}
-      <div className="h-[30px] mb-2.5 px-3 rounded-xl bg-white/90 backdrop-blur-md border border-camel-300/80 shadow-xs flex items-center justify-between text-xs">
-        <span className="text-[11px] font-bold text-camel-900 uppercase tracking-wider flex items-center gap-1.5">
-          <Layers className="w-3.5 h-3.5 text-camel-700" aria-hidden />
+      {/* 1. ВЕРХНЯЯ ПОЛОСА: Точно такой же формы и высоты как SegmentedTabs слева */}
+      <div
+        role="tablist"
+        aria-label="Реестр и база данных"
+        className="home-v2-stats-cockpit-tab mb-2.5 flex items-center gap-1 select-none"
+      >
+        <div
+          role="tab"
+          aria-selected="true"
+          className="flex-1 flex items-center justify-center gap-1 sm:gap-1.5 whitespace-nowrap min-w-0 py-1 px-1.5 sm:px-2.5 rounded-md text-[11px] bg-white text-charcoal-900 shadow-2xs border border-old-money-200/80 font-semibold"
+        >
+          <Layers className="w-3.5 h-3.5 text-camel-700 shrink-0" aria-hidden />
           <span>База данных и реестр</span>
-        </span>
-        <span className="text-[10px] font-semibold text-charcoal-600 flex items-center gap-1">
-          <ShieldCheck className="w-3 h-3 text-camel-700" aria-hidden />
-          <span>РФ • с 2015 года</span>
-        </span>
+        </div>
+        <div
+          role="tab"
+          aria-selected="false"
+          className="flex items-center justify-center gap-1 whitespace-nowrap min-w-0 py-1 px-2 sm:px-2.5 rounded-md text-[11px] text-charcoal-600 font-medium"
+        >
+          <ShieldCheck className="w-3 h-3 text-camel-700 shrink-0" aria-hidden />
+          <span>РФ · с 2015 года</span>
+        </div>
       </div>
 
       {/* 2. ТЕЛО КАРТОЧКИ: Точно совпадает по высоте и стилю с левыми колонками (.home-v2-col) */}
-      <div className="h-[282px] 2xl:h-[288px] bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-2xl border border-camel-300/80 shadow-md flex flex-col justify-between overflow-hidden relative">
+      <div className="home-v2-stats-cockpit flex flex-col justify-between overflow-hidden relative">
         {/* Шапка карточки — точная копия плашки над подиумами (home-v2-col-head) */}
-        <div className="home-v2-col-head home-v2-col-head--tabs !py-1.5 !px-3 shrink-0">
+        <div className="home-v2-col-head home-v2-col-head--tabs !px-3 shrink-0">
           <span className="font-serif font-bold text-camel-900 text-xs 2xl:text-[13px] shrink-0">
             Статистика
           </span>
@@ -97,9 +109,9 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
         </div>
 
         {/* Внутренние белые секторы (Спорт и Выставки) */}
-        <div className="p-2.5 2xl:p-3 flex flex-col gap-2 my-auto">
+        <div className="p-2 2xl:p-2.5 flex flex-col gap-1.5 2xl:gap-2 my-auto">
           {/* Сектор 1: Спорт и бега борзых */}
-          <div className="bg-white/95 rounded-xl p-2.5 border border-camel-200/80 shadow-2xs">
+          <div className="bg-white/95 rounded-xl p-2 2xl:p-2.5 border border-camel-200/80 shadow-2xs">
             <div className="flex items-center justify-between pb-1 mb-1 border-b border-camel-200/40">
               <span className="text-[10.5px] 2xl:text-[11px] font-bold uppercase tracking-wider text-camel-900 flex items-center gap-1.5">
                 <Trophy className="w-3 h-3 text-camel-700" aria-hidden />
@@ -130,7 +142,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           </div>
 
           {/* Сектор 2: Выставки РКФ */}
-          <div className="bg-white/95 rounded-xl p-2.5 border border-old-money-200/80 shadow-2xs">
+          <div className="bg-white/95 rounded-xl p-2 2xl:p-2.5 border border-old-money-200/80 shadow-2xs">
             <div className="flex items-center justify-between pb-1 mb-1 border-b border-old-money-200/40">
               <span className="text-[10.5px] 2xl:text-[11px] font-bold uppercase tracking-wider text-charcoal-800 flex items-center gap-1.5">
                 <Award className="w-3 h-3 text-forest-700" aria-hidden />
@@ -161,8 +173,8 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
           </div>
         </div>
 
-        {/* 3. НИЖНЯЯ СТРОКА: Статус архива и кнопки прямого перехода */}
-        <div className="px-3 py-2 bg-cream-50/70 border-t border-camel-200/50 flex items-center justify-between gap-2 shrink-0">
+        {/* 3. НИЖНЯЯ СТРОКА: Статус архива и кнопки прямого перехода (нижний срез карточки) */}
+        <div className="px-3 py-1.5 2xl:py-2 bg-cream-50/70 border-t border-camel-200/50 flex items-center justify-between gap-2 shrink-0">
           <span className="text-[10px] 2xl:text-[10.5px] text-charcoal-600 font-medium flex items-center gap-1 truncate">
             <Sparkles className="w-3 h-3 text-camel-600 shrink-0" aria-hidden />
             <span>Единая база родословных и карьер</span>
@@ -183,9 +195,6 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
             </Link>
           </div>
         </div>
-
-        {/* Тонкая золотая полоска по нижнему краю (в точности рифмуется с прогресс-баром слева) */}
-        <div className="absolute inset-x-0 bottom-0 h-[2px] bg-camel-500/80 pointer-events-none" />
       </div>
     </div>
   )

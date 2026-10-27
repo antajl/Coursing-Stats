@@ -110,8 +110,14 @@ export function rebuildCalendarIndexes(): { total: number; years: number } {
                 event.participants_count = uniqueDogs
                 fileChanged = true
               }
+              if (Array.isArray(event.judges)) {
+                event.judges = event.judges.filter(Boolean).join(', ')
+                fileChanged = true
+              }
               if (compDoc.event?.judges && (!event.judges || event.judges === '')) {
-                event.judges = compDoc.event.judges
+                event.judges = Array.isArray(compDoc.event.judges)
+                  ? compDoc.event.judges.filter(Boolean).join(', ')
+                  : compDoc.event.judges
                 fileChanged = true
               }
               if (compDoc.event?.results_pdf_url && !event.results_pdf_url) {

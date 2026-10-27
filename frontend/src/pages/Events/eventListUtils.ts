@@ -13,7 +13,7 @@ export interface CalendarEvent {
   location?: string | null
   results_url?: string | null
   has_results?: boolean
-  judges?: string | null
+  judges?: string | string[] | null
   participants_count?: number
   result_count?: number
   results_file?: string | null
@@ -149,7 +149,7 @@ export function formatRowDateParts(
 }
 
 export function normalizeRankLabel(rankLabel?: string | null): string {
-  if (!rankLabel) return ''
+  if (!rankLabel || typeof rankLabel !== 'string') return ''
   return rankLabel
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/[ \t]+\n/g, '\n')
@@ -159,6 +159,7 @@ export function normalizeRankLabel(rankLabel?: string | null): string {
 
 /** Сокращения дисциплин для заголовка календаря */
 export function normalizeDisciplineLabel(label: string): string {
+  if (!label || typeof label !== 'string') return ''
   const trimmed = label.trim()
   if (/бега\s+за\s+механической\s+приманкой/i.test(trimmed)) return 'БЗМП'
   if (trimmed.toUpperCase() === 'БЗМП') return 'БЗМП'
@@ -254,8 +255,12 @@ export function isImportantCompetition(competitionKind?: string | null): boolean
   return upper.includes('ЧЕМПИОНАТ РОССИИ') || upper.includes('КУБОК РОССИИ')
 }
 
-export function parseJudgeNames(judges?: string | null): string[] {
+export function parseJudgeNames(judges?: string | string[] | null): string[] {
   if (!judges) return []
+  if (Array.isArray(judges)) {
+    return judges.flatMap((j) => (typeof j === 'string' ? parseJudgeNames(j) : [])).filter(Boolean)
+  }
+  if (typeof judges !== 'string') return []
 
   let cleaned = judges.replace(/<br\s*\/?>/gi, ', ').trim()
 
@@ -282,7 +287,7 @@ export function parseJudgeNames(judges?: string | null): string[] {
   return names
 }
 
-export function formatJudgesShort(judges?: string | null): string {
+export function formatJudgesShort(judges?: string | string[] | null): string {
   return parseJudgeNames(judges).join(', ')
 }
 
@@ -291,10 +296,10 @@ export function formatJudgesShort(judges?: string | null): string {
  * 1-й судья — «Главный судья: X»
  * 2-й и последующие — «судья: Y» (или «судьи: Y, Z»)
  */
-export function formatCompetitionJudgesWithRoles(judgesRaw?: string | null): string {
+export function formatCompetitionJudgesWithRoles(judgesRaw?: string | string[] | null): string {
   if (!judgesRaw) return ''
   const names = parseJudgeNames(judgesRaw)
-  if (names.length === 0) return judgesRaw.trim()
+  if (names.length === 0) return typeof judgesRaw === 'string' ? judgesRaw.trim() : ''
   if (names.length === 1) return `Главный судья: ${names[0]}`
   if (names.length === 2) return `Главный судья: ${names[0]}, судья: ${names[1]}`
   return `Главный судья: ${names[0]}, судьи: ${names.slice(1).join(', ')}`
