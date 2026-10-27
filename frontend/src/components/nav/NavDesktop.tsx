@@ -60,14 +60,14 @@ export function NavDesktop({
           opacity: Math.max(logoOpacity, 0.85),
           pointerEvents: 'auto',
         }}
-        aria-label="Главная страница Coursing Stats"
+        aria-label="Главная страница Курсинг Статс"
       >
         <img
-          src="/assets/brand/logo.webp"
-          width={1128}
-          height={224}
-          alt="Coursing Stats"
-          className="h-[44px] xl:h-[52px] 2xl:h-[61px] w-auto"
+          src="/assets/brand/logo.svg"
+          width={295}
+          height={48}
+          alt="Курсинг Статс"
+          className="h-[38px] xl:h-[44px] 2xl:h-[48px] w-auto"
           style={{ objectFit: 'contain' }}
           loading="eager"
           decoding="async"

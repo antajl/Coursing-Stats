@@ -40,14 +40,14 @@ export function NavMobile({
         <Link
           to="/"
           className="flex items-center min-w-0 shrink-0"
-          aria-label="Главная страница Coursing Stats"
+          aria-label="Главная страница Курсинг Статс"
         >
           <img
-            src="/assets/brand/logo-mobile.webp"
-            width={400}
-            height={79}
-            alt="Coursing Stats"
-            className="h-9 w-auto"
+            src="/assets/brand/logo.svg"
+            width={295}
+            height={48}
+            alt="Курсинг Статс"
+            className="h-8 sm:h-9 w-auto"
             loading="eager"
             decoding="async"
             style={{ objectFit: 'contain' }}
