@@ -158,18 +158,22 @@ export function buildEventTitle(comp: CompetitionData): string {
   const ev = comp.event;
   let baseTitle = (ev.full_title || ev.title || 'Соревнования').trim();
 
+  const isValidDate = (d?: string | null): boolean =>
+    Boolean(d && d !== 'null' && d !== 'undefined' && /^\d{4}-\d{2}-\d{2}$/.test(d));
+
   let dateStr = '';
-  if (ev.date_start && ev.date_end && ev.date_start !== ev.date_end) {
-    const s = ev.date_start.split('-');
-    const e = ev.date_end.split('-');
+  if (isValidDate(ev.date_start) && isValidDate(ev.date_end) && ev.date_start !== ev.date_end) {
+    const s = ev.date_start!.split('-');
+    const e = ev.date_end!.split('-');
     if (s[0] === e[0] && s[1] === e[1]) {
       dateStr = `${s[2]}-${e[2]}.${e[1]}.${e[0]}`;
     } else {
       dateStr = `${s[2]}.${s[1]}.${s[0]} - ${e[2]}.${e[1]}.${e[0]}`;
     }
-  } else if (ev.date_start || ev.date) {
-    const d = (ev.date_start || ev.date || '').split('-');
-    if (d.length === 3) dateStr = `${d[2]}.${d[1]}.${d[0]}`;
+  } else if (isValidDate(ev.date_start) || isValidDate(ev.date)) {
+    const raw = isValidDate(ev.date_start) ? ev.date_start! : ev.date!;
+    const d = raw.split('-');
+    dateStr = `${d[2]}.${d[1]}.${d[0]}`;
   }
 
   let locStr = '';
