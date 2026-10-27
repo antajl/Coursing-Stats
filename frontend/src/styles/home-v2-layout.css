@@ -36,6 +36,11 @@
   }
 }
 
+/* Резерв под скроллбар — иначе после unlock контент сдвигается по X */
+html {
+  scrollbar-gutter: stable;
+}
+
 /* Главная на всю ширину viewport — контент центрирует .wrap */
 main:has(.home-v2) {
   max-width: none !important;
@@ -86,7 +91,9 @@ main:has(.home-v2) {
   }
 }
 @media (max-width: 767px) {
-  .home-v2-stage--closed {
+  .home-v2-stage--closed,
+  .home-v2-static .home-v2-stage,
+  .home-v2-stage.hidden {
     display: none !important;
   }
 }
@@ -129,11 +136,16 @@ main:has(.home-v2) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 48%;
   will-change: transform, opacity;
   user-select: none;
   pointer-events: none;
   filter: saturate(0.94) contrast(1.04);
+}
+@media (min-width: 2000px) and (min-height: 1100px) {
+  .home-v2-stage-layer {
+    object-position: center 40%;
+  }
 }
 /*
  * Шов на границе: размазаннее (~72px), без плотной «полки» в центре.

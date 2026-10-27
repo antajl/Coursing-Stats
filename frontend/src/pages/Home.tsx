@@ -134,14 +134,14 @@ export default function Home() {
                   className="w-full max-w-[240px] sm:max-w-[275px] lg:max-w-[305px] 2xl:max-w-[340px] h-auto drop-shadow-md pointer-events-none"
                 />
               </picture>
-              <div className="w-full max-w-[330px] 2xl:max-w-[360px] pointer-events-auto">
+              <div className="w-full max-w-[310px] 2xl:max-w-[360px] pointer-events-auto">
                 <HomeStatsPills stats={stats} showStats={showStats} />
               </div>
             </div>
           }
           metrics={
             /* Left block: Double Podium Rankings */
-            <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-380px)] mr-auto">
+            <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(880px,52vw,1320px)] 2xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-360px)] mr-auto">
               <SeasonTopSection
                 competitionSlides={competitionSlides}
                 racingSlides={racingSlides}
@@ -163,8 +163,22 @@ export default function Home() {
           MOBILE (< 768px): Natural, touch-friendly, scrollable flow
       ========================================================================= */}
       <div className="md:hidden flex flex-col min-h-screen pb-12">
-        {/* Hero Banner: Borzoi in Motion */}
-        <div className="relative w-full h-[200px] xs:h-[230px] sm:h-[260px] overflow-hidden select-none pointer-events-none">
+        {/* 1. Centered Mobile Logo */}
+        <div className="wrap px-4 pt-3 pb-1 flex justify-center select-none">
+          <img
+            src="/assets/hero/title-mobile.webp"
+            srcSet="/assets/hero/title-mobile.webp 1x, /assets/hero/title.webp 2x"
+            width={560}
+            height={350}
+            alt="Coursing Stats"
+            data-page-logo="mobile"
+            className="w-[210px] xs:w-[240px] sm:w-[270px] h-auto drop-shadow-sm pointer-events-none"
+            loading="eager"
+          />
+        </div>
+
+        {/* 2. Hero Banner: Borzoi in Motion (Full Bleed, Native, smooth fade transitions) */}
+        <div className="relative w-full h-[185px] xs:h-[210px] sm:h-[240px] overflow-hidden select-none pointer-events-none mb-2">
           <picture>
             <source
               media="(max-width: 768px)"
@@ -181,30 +195,17 @@ export default function Home() {
               fetchPriority="high"
             />
           </picture>
-          {/* Soft gradient fade into om-50 */}
-          <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-om-50 to-transparent" />
+          {/* Top soft gradient from om-50 */}
+          <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-[#faf8f4] via-[#faf8f4]/60 to-transparent pointer-events-none" />
+          {/* Bottom soft gradient to om-50 */}
+          <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-[#faf8f4] via-[#faf8f4]/70 to-transparent pointer-events-none" />
         </div>
 
-        {/* Mobile Content Container */}
-        <div className="wrap px-3 sm:px-4 -mt-10 relative z-10 flex flex-col gap-4">
-          {/* Centered Mobile Logo */}
-          <div className="flex justify-center select-none">
-            <img
-              src="/assets/hero/title-mobile.webp"
-              srcSet="/assets/hero/title-mobile.webp 1x, /assets/hero/title.webp 2x"
-              width={560}
-              height={350}
-              alt="Coursing Stats"
-              data-page-logo="mobile"
-              className="w-[220px] xs:w-[250px] sm:w-[280px] h-auto drop-shadow-md pointer-events-none"
-              loading="eager"
-            />
-          </div>
-
-          {/* Database Statistics */}
+        <div className="wrap px-3 sm:px-4 flex flex-col gap-3.5">
+          {/* 3. Database Statistics */}
           <HomeStatsPills stats={stats} showStats={showStats} />
 
-          {/* Seasonal Ratings & Leaders */}
+          {/* 4. Seasonal Ratings & Leaders */}
           <SeasonTopSection
             competitionSlides={competitionSlides}
             racingSlides={racingSlides}
@@ -218,7 +219,7 @@ export default function Home() {
             compact={false}
           />
 
-          {/* Footer */}
+          {/* 5. Footer */}
           <HomeFooter />
         </div>
       </div>
