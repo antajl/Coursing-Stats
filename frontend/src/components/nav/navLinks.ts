@@ -79,11 +79,15 @@ export function competitionsMenuItems(calendarVisible: boolean): NavMenuItem[] {
   ]
 }
 
-const SHOWS_CALENDAR_ITEM: NavMenuItem = {
-  to: '/shows?tab=calendar',
-  label: 'Календарь',
+const SHOWS_ARCHIVE_ITEM: NavMenuItem = {
+  to: '/shows?tab=archive',
+  label: 'Архив',
   icon: Icons.calendar,
-  isActive: showTabActive('calendar'),
+  isActive: (pathname: string, search: string) => {
+    if (pathname !== '/shows') return false
+    const current = new URLSearchParams(search).get('tab')
+    return current === 'archive' || current === 'calendar'
+  },
 }
 
 export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
@@ -94,7 +98,7 @@ export function showsMenuItems(calendarVisible: boolean): NavMenuItem[] {
       icon: Icons.medal,
       isActive: showTabActive('ranking'),
     },
-    ...(calendarVisible ? [SHOWS_CALENDAR_ITEM] : []),
+    ...(calendarVisible ? [SHOWS_ARCHIVE_ITEM] : []),
     {
       to: '/shows?tab=judges',
       label: 'Судьи',

@@ -41,7 +41,9 @@ function rankTokens(exhibition: ShowRkfCalendarEntry): string[] {
 
 function rowSurfaceClass(isMulti: boolean, hasProtocol: boolean): string {
   if (isMulti) {
-    return 'border border-camel-200/90 border-l-4 border-l-camel-600 bg-[#FDFBF7] hover:bg-camel-50/80 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
+    return hasProtocol
+      ? 'border border-warm-blue-200/90 border-l-4 border-l-warm-blue-500 bg-[#FDFBF7] hover:bg-warm-blue-50/50 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
+      : 'border border-camel-200/90 border-l-4 border-l-camel-600 bg-[#FDFBF7] hover:bg-camel-50/80 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
   }
   return hasProtocol
     ? 'border border-warm-blue-200/90 border-l-4 border-l-warm-blue-500 bg-warm-blue-50/50 hover:bg-warm-blue-100/70 shadow-[0_1px_2px_rgba(0,0,0,0.02)]'
@@ -84,6 +86,15 @@ export function ShowCalendarRow({
   const place = exhibition.city || exhibition.location || ''
   const subtitle = isMulti ? null : monoSubtitle(exhibition)
   const ranks = isMulti ? collectGroupRanks(group.children) : rankTokens(exhibition)
+  const protocolsCount = group.children.filter(exhibitionHasProtocol).length
+  const multiLabel = (() => {
+    const total = formatShowCount(group.children.length)
+    if (protocolsCount === 0) return total
+    if (protocolsCount === group.children.length) {
+      return `${total} · все с протоколом`
+    }
+    return `${total} · ${protocolsCount} с протоколом`
+  })()
 
   const openReport = () => {
     if (reportUrl) {
@@ -151,9 +162,13 @@ export function ShowCalendarRow({
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
               {/* Multi-indicator pill on left of title */}
               {isMulti && (
-                <span className="inline-flex items-center gap-1 rounded bg-camel-200/80 px-2 py-0.5 text-[11px] font-semibold text-camel-900 border border-camel-300">
+                <span className={`inline-flex items-center gap-1 rounded px-2 py-0.5 text-[11px] font-semibold border ${
+                  protocolsCount > 0
+                    ? 'bg-warm-blue-100 text-warm-blue-900 border-warm-blue-300'
+                    : 'bg-camel-200/80 text-camel-900 border-camel-300'
+                }`}>
                   {expanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
-                  <span>{formatShowCount(group.children.length)}</span>
+                  <span>{multiLabel}</span>
                 </span>
               )}
 
@@ -217,7 +232,7 @@ export function ShowCalendarRow({
               className="w-full flex items-center justify-center gap-1.5 rounded-md bg-camel-100/90 py-1.5 text-xs font-semibold text-camel-900 border border-camel-200/90 active:bg-camel-200 transition-colors"
             >
               {expanded ? <ChevronUp className="h-3.5 w-3.5" /> : <ChevronDown className="h-3.5 w-3.5" />}
-              <span>{expanded ? 'Свернуть список' : `Показать ${formatShowCount(group.children.length)}`}</span>
+              <span>{expanded ? 'Свернуть список' : `Показать ${multiLabel}`}</span>
             </button>
           </div>
         )}

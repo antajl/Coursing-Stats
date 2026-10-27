@@ -87,8 +87,9 @@ export function ShowCalendarToolbar({
             filterLcOnly ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE
           }`}
           aria-pressed={filterLcOnly}
+          title={filterLcOnly ? 'Показаны только выставки с опубликованными протоколами' : 'Показаны все выставки года (включая расписание)'}
         >
-          С протоколом
+          {filterLcOnly ? 'С протоколом' : 'Все события'}
         </button>
       </div>
     </div>

@@ -13,16 +13,27 @@ const ShowCalendar = lazy(() => import('./Shows/ShowCalendar'))
 
 function Shows() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const tab = searchParams.get('tab') || 'ranking'
+  const rawTab = searchParams.get('tab') || 'ranking'
   const calendarVisible = usePublicCalendarVisible('shows')
 
-  if (tab === 'champions' || (!calendarVisible && tab === 'calendar')) {
+  if (rawTab === 'champions') {
+    return <Navigate to="/shows?tab=ranking" replace />
+  }
+
+  // Redirect legacy ?tab=calendar to ?tab=archive
+  if (rawTab === 'calendar') {
+    const next = new URLSearchParams(searchParams)
+    next.set('tab', 'archive')
+    return <Navigate to={`/shows?${next.toString()}`} replace />
+  }
+
+  if (!calendarVisible && rawTab === 'archive') {
     return <Navigate to="/shows?tab=ranking" replace />
   }
 
   const activeTab =
-    tab === 'judges' || tab === 'ranking' || (calendarVisible && tab === 'calendar')
-      ? tab
+    rawTab === 'judges' || rawTab === 'ranking' || (calendarVisible && rawTab === 'archive')
+      ? rawTab
       : 'ranking'
 
   const handleTabChange = (newTab: string) => {
@@ -33,7 +44,7 @@ function Shows() {
 
   const tabs = [
     { id: 'ranking', label: 'Рейтинг' },
-    ...(calendarVisible ? [{ id: 'calendar', label: 'Календарь' }] : []),
+    ...(calendarVisible ? [{ id: 'archive', label: 'Архив' }] : []),
     { id: 'judges', label: 'Судьи' },
   ]
 
@@ -85,12 +96,12 @@ function Shows() {
             </Suspense>
           </div>
         )}
-        {calendarVisible && activeTab === 'calendar' && (
+        {calendarVisible && activeTab === 'archive' && (
           <div
-            key="calendar"
-            id="tab-panel-calendar"
+            key="archive"
+            id="tab-panel-archive"
             role="tabpanel"
-            aria-labelledby="tab-calendar"
+            aria-labelledby="tab-archive"
             className="cs-tab-panel-enter"
           >
             <Suspense fallback={fallback}>

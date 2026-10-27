@@ -1441,7 +1441,7 @@ export function exhibitionMeta(entry: {
     breadcrumbs,
     jsonLd,
     sectionLinks: [
-      { href: '/shows?tab=calendar', label: 'Календарь выставок' },
+      { href: '/shows?tab=archive', label: 'Архив выставок' },
       { href: '/shows?tab=ranking', label: 'Рейтинг' },
       { href: '/guide', label: 'Справочник' },
     ],

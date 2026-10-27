@@ -38,7 +38,13 @@ export default function ShowCalendar() {
     if (!monthParam || monthParam === 'from_previous') return ''
     return monthParam
   })
-  const [filterLcOnly, setFilterLcOnly] = useState(() => searchParams.get('lc') === '1')
+  const [filterLcOnly, setFilterLcOnly] = useState(() => {
+    const lc = searchParams.get('lc')
+    const protocol = searchParams.get('protocol')
+    const all = searchParams.get('all')
+    if (all === '1' || lc === '0' || protocol === '0') return false
+    return true
+  })
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [quickPreset, setQuickPreset] = useState<QuickPreset>(null)
   const [expandedKeys, setExpandedKeys] = useState<Set<string>>(() => new Set())
@@ -70,8 +76,12 @@ export default function ShowCalendar() {
         else params.delete('month')
         if (searchQuery) params.set('search', searchQuery)
         else params.delete('search')
-        if (filterLcOnly) params.set('lc', '1')
-        else params.delete('lc')
+        if (!filterLcOnly) {
+          params.set('all', '1')
+          params.delete('lc')
+        } else {
+          params.delete('all')
+        }
         return params
       },
       { replace: true },
@@ -225,10 +235,14 @@ export default function ShowCalendar() {
       bottomLeft={
         <>
           <p className="hidden sm:block text-xs text-charcoal-500">
-            {`Всего событий: ${exhibitions.length} · отфильтровано: ${filteredGroups.length} · с результатом: ${withResultCount}`}
+            {filterLcOnly
+              ? `Выставок с протоколом: ${withResultCount} · всего в базе: ${exhibitions.length}`
+              : `Всего событий: ${exhibitions.length} · отфильтровано: ${filteredGroups.length} · с результатом: ${withResultCount}`}
           </p>
           <p className="sm:hidden text-xs text-charcoal-500">
-            {`${filteredGroups.length} из ${exhibitions.length} · с рез.: ${withResultCount}`}
+            {filterLcOnly
+              ? `${withResultCount} с протоколом из ${exhibitions.length}`
+              : `${filteredGroups.length} из ${exhibitions.length} · с рез.: ${withResultCount}`}
           </p>
         </>
       }

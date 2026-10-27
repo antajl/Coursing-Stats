@@ -1,4 +1,4 @@
-import { useRef, useCallback, useEffect } from 'react'
+import { useRef, useCallback, useEffect, useState } from 'react'
 import { SEO } from '../components/SEO'
 import { JsonLd, organizationSchema, webSiteSchema } from '../components/JsonLd'
 import { useGSAP, riseIn } from '../lib/motion'
@@ -9,10 +9,36 @@ import { SeasonTopSection } from './Home/components/SeasonTopSection'
 import { HomeFooter } from './Home/components/HomeFooter'
 import { formatDate } from './Home/utils/formatters'
 import { ANIMATION, IMAGES } from '../lib/constants'
+import {
+  HomeConceptSwitcher,
+  Concept1RightHub,
+  Concept2StatsRibbon,
+  Concept3SymmetricCockpit,
+  type HomeConceptMode,
+} from './Home/components/HomeConcepts'
 
 export default function Home() {
   const pageRef = useRef<HTMLDivElement>(null)
   const homeData = useHomeData()
+
+  // Interactive concept mode switcher
+  const [conceptMode, setConceptMode] = useState<HomeConceptMode>(() => {
+    if (typeof window !== 'undefined') {
+      return (localStorage.getItem('cs_home_concept') as HomeConceptMode) || 'concept-1'
+    }
+    return 'concept-1'
+  })
+
+  const handleSetConcept = (m: HomeConceptMode) => {
+    setConceptMode(m)
+    try {
+      localStorage.setItem('cs_home_concept', m)
+    } catch {}
+  }
+
+  const handleOpenSearch = useCallback(() => {
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
+  }, [])
 
   // Lock root scroll on single-screen static dashboard ONLY on desktop (>= 768px)
   useEffect(() => {
@@ -117,26 +143,34 @@ export default function Home() {
         disableScrollFade={true}
         reverseLayout={true}
         children={
-          /* Right block: Logo & Compact Database Statistics */
-          <div className="flex flex-col items-end text-right gap-1.5 3xl:gap-2 select-none max-w-full">
-            <picture>
-              <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
-              <img
-                src="/assets/hero/title.webp"
-                width={IMAGES.HERO_TITLE.WIDTH}
-                height={IMAGES.HERO_TITLE.HEIGHT}
-                alt="Coursing Stats"
-                data-page-logo="desktop"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                className="w-full max-w-[280px] xl:max-w-[320px] 2xl:max-w-[345px] 3xl:max-w-[420px] h-auto drop-shadow-md pointer-events-none"
-              />
-            </picture>
-            <div className="w-full max-w-[295px] 3xl:max-w-[360px] pointer-events-auto mt-2.5 xl:mt-3 mr-3 xl:mr-5 2xl:mr-6 3xl:mr-7">
-              <HomeStatsPills stats={stats} showStats={showStats} loading={seasonLoading} />
+          conceptMode === 'concept-1' ? (
+            <Concept1RightHub stats={stats} showStats={showStats} onOpenSearch={handleOpenSearch} />
+          ) : conceptMode === 'concept-2' ? (
+            <div className="w-0 h-0 opacity-0 pointer-events-none" />
+          ) : conceptMode === 'concept-3' ? (
+            <Concept3SymmetricCockpit stats={stats} showStats={showStats} onOpenSearch={handleOpenSearch} />
+          ) : (
+            /* Right block: Logo & Compact Database Statistics (As-is) */
+            <div className="flex flex-col items-end text-right gap-1.5 3xl:gap-2 select-none max-w-full">
+              <picture>
+                <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
+                <img
+                  src="/assets/hero/title.webp"
+                  width={IMAGES.HERO_TITLE.WIDTH}
+                  height={IMAGES.HERO_TITLE.HEIGHT}
+                  alt="Coursing Stats"
+                  data-page-logo="desktop"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-full max-w-[280px] xl:max-w-[320px] 2xl:max-w-[345px] 3xl:max-w-[420px] h-auto drop-shadow-md pointer-events-none"
+                />
+              </picture>
+              <div className="w-full max-w-[295px] 3xl:max-w-[360px] pointer-events-auto mt-2.5 xl:mt-3 mr-3 xl:mr-5 2xl:mr-6 3xl:mr-7">
+                <HomeStatsPills stats={stats} showStats={showStats} loading={seasonLoading} />
+              </div>
             </div>
-          </div>
+          )
         }
         metrics={
           /* Left block: Double Podium Rankings */
@@ -156,6 +190,11 @@ export default function Home() {
           </div>
         }
       />
+
+      {/* Concept 2: Floating Stats Ribbon at screen bottom */}
+      {conceptMode === 'concept-2' && (
+        <Concept2StatsRibbon stats={stats} showStats={showStats} onOpenSearch={handleOpenSearch} />
+      )}
 
       {/* =========================================================================
           MOBILE (< 768px): Natural, touch-friendly, scrollable flow
@@ -212,6 +251,9 @@ export default function Home() {
           <HomeFooter />
         </div>
       </div>
+
+      {/* Interactive Concept Switcher for Review */}
+      <HomeConceptSwitcher mode={conceptMode} setMode={handleSetConcept} />
     </div>
   )
 }
