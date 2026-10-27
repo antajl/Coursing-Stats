@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 import OwnerCrownName from '../../components/OwnerCrownName'
 import DogSexIcon from '../../components/DogSexIcon'
-import type { DogTitle } from '../../lib/qualificationTitles'
+import { isCertificateToken, type DogTitle } from '../../lib/qualificationTitles'
 import { DogProfileAwardsBar } from './DogProfileAwardsBar'
 import { parseDogName, toDogTitleCase, formatNameWithNonBreakingSpaces } from '../../lib/dogName'
 import { displayBreed } from '../../lib/breedMapping'
@@ -64,7 +64,9 @@ export function DogProfileHeader({
 }: DogProfileHeaderProps) {
   const { primary, secondary } = parseDogName(dog.name_lat, dog.name_ru)
   const breedDisplay = displayBreed(dog.breed)
-  const hasTitles = showTitles.length > 0 || competitionTitles.length > 0
+  const hasTitles =
+    showTitles.some((t) => !isCertificateToken(t.title)) ||
+    competitionTitles.some((t) => !isCertificateToken(t.title))
   const { isFavorite, toggleFavorite } = useFavorites()
   const [loadingFavorite, setLoadingFavorite] = useState(false)
   const dogId = String(dog.id)

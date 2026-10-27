@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/index-judges-summary-v1",
-  "count": 33,
+  "count": 32,
   "judges": [
     {
       "id": "Вронская О.В.",
@@ -16,9 +16,9 @@
     {
       "id": "Карелина Н.В.",
       "name": "Карелина Н.В.",
-      "total_evaluations": 11025,
-      "total_evaluations_count": 2205,
-      "avg_score": 16.367437641723356,
+      "total_evaluations": 11035,
+      "total_evaluations_count": 2207,
+      "avg_score": 16.36647032170367,
       "unique_breeds": 39,
       "unique_disciplines": 3,
       "unique_events": 29,
@@ -353,17 +353,6 @@
       "unique_disciplines": 1,
       "unique_events": 1,
       "unique_dogs": 45
-    },
-    {
-      "id": "Судья 2",
-      "name": "Судья 2",
-      "total_evaluations": 0,
-      "total_evaluations_count": 0,
-      "avg_score": null,
-      "unique_breeds": 3,
-      "unique_disciplines": 1,
-      "unique_events": 1,
-      "unique_dogs": 10
     }
   ],
   "availableBreeds": [

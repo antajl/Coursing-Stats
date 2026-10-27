@@ -421,7 +421,7 @@ const POPULAR_BREEDS = [
 
 const QUICK_NAV_SHORTCUTS = [
   { label: 'Рейтинг спорта', to: '/competitions?tab=ranking', icon: 'medal' as const },
-  { label: 'Выставки РКФ', to: '/shows?tab=ranking', icon: 'award' as const },
+  { label: 'Рейтинг выставок', to: '/shows?tab=ranking', icon: 'award' as const },
   { label: 'Рекорды Донино', to: '/speed-records?tab=records', icon: 'speed' as const },
   { label: 'Календарь', to: '/competitions?tab=archive', icon: 'calendar' as const },
   { label: 'Судьи', to: '/competitions?tab=judges', icon: 'club' as const },

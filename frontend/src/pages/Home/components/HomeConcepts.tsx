@@ -56,13 +56,20 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
         {/* Внутренние белые секторы (Спорт и Выставки) */}
         <div className="p-2 2xl:p-2.5 flex flex-col gap-1.5 2xl:gap-2 my-auto">
           {/* Сектор 1: Спорт и бега борзых */}
-          <div className="bg-white/95 rounded-xl p-2 2xl:p-2.5 border border-camel-200/80 shadow-2xs">
+          <Link
+            to="/competitions"
+            className="group block bg-white/95 hover:bg-cream-50/80 rounded-xl p-2 2xl:p-2.5 border border-camel-200/80 hover:border-camel-300 shadow-2xs transition-all text-inherit no-underline"
+            aria-label="Перейти в раздел Спорт: состязания, курсинг и бега"
+          >
             <div className="flex items-center justify-between pb-1 mb-1 border-b border-camel-200/40">
               <span className="text-[10.5px] 2xl:text-[11px] font-bold uppercase tracking-wider text-camel-900 flex items-center gap-1.5">
                 <Trophy className="w-3 h-3 text-camel-700" aria-hidden />
                 <span>Спорт и бега</span>
               </span>
-              <span className="text-[9px] text-charcoal-600 font-medium">курсинг & рейсинг</span>
+              <span className="text-[9px] text-charcoal-600 font-medium flex items-center gap-0.5">
+                <span>курсинг & рейсинг</span>
+                <ArrowRight className="w-2.5 h-2.5 text-camel-500 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" aria-hidden />
+              </span>
             </div>
             <div className="grid grid-cols-3 text-center divide-x divide-camel-200/50">
               <div className="px-1">
@@ -84,16 +91,23 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
                 <div className="text-[8.5px] 2xl:text-[9px] text-charcoal-600 font-semibold uppercase tracking-wider">собак</div>
               </div>
             </div>
-          </div>
+          </Link>
 
-          {/* Сектор 2: Выставки РКФ */}
-          <div className="bg-white/95 rounded-xl p-2 2xl:p-2.5 border border-old-money-200/80 shadow-2xs">
+          {/* Сектор 2: Выставки */}
+          <Link
+            to="/shows"
+            className="group block bg-white/95 hover:bg-cream-50/80 rounded-xl p-2 2xl:p-2.5 border border-old-money-200/80 hover:border-old-money-300 shadow-2xs transition-all text-inherit no-underline"
+            aria-label="Перейти в раздел Выставки: каталоги, ринги, собаки"
+          >
             <div className="flex items-center justify-between pb-1 mb-1 border-b border-old-money-200/40">
               <span className="text-[10.5px] 2xl:text-[11px] font-bold uppercase tracking-wider text-charcoal-800 flex items-center gap-1.5">
                 <Award className="w-3 h-3 text-forest-700" aria-hidden />
-                <span>Выставки РКФ</span>
+                <span>Выставки</span>
               </span>
-              <span className="text-[9px] text-charcoal-600 font-medium">все ранги & ринги</span>
+              <span className="text-[9px] text-charcoal-600 font-medium flex items-center gap-0.5">
+                <span>все ранги & ринги</span>
+                <ArrowRight className="w-2.5 h-2.5 text-old-money-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" aria-hidden />
+              </span>
             </div>
             <div className="grid grid-cols-3 text-center divide-x divide-old-money-200/50">
               <div className="px-1">
@@ -115,7 +129,7 @@ export function ConceptSymmetricFinal({ stats, showStats }: HomeConceptsProps) {
                 <div className="text-[8.5px] 2xl:text-[9px] text-charcoal-600 font-semibold uppercase tracking-wider">собак</div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
 
         {/* 3. НИЖНЯЯ СТРОКА: Статус архива и кнопки прямого перехода (нижний срез карточки) */}

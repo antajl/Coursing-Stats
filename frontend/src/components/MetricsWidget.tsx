@@ -64,7 +64,7 @@ export default function MetricsWidget({
             ]}
           />
           <MetricsCard
-            title="Выставки РКФ"
+            title="Выставки"
             variant="secondary"
             className="flex-1 flex flex-col justify-center"
             metrics={[

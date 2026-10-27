@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import { ChevronRight } from 'lucide-react'
 import type { HeroStats, HeroShowStats } from './Hero'
 
 interface HomeStatsPillsProps {
@@ -74,10 +76,17 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
     <div className="flex flex-col gap-1.5 3xl:gap-2 w-full max-w-full pointer-events-auto select-none">
       {/* Спорт */}
       {stats && (
-        <div className="bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-md p-2.5 3xl:p-3 hover:shadow-lg transition-shadow">
+        <Link
+          to="/competitions"
+          className="group block bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-xs hover:shadow-md active:scale-[0.99] p-2.5 3xl:p-3 transition-all text-inherit no-underline"
+          aria-label="Перейти в раздел Спорт: турниры, результаты, собаки"
+        >
           <div className="flex items-center justify-between pb-1 mb-1 3xl:pb-1.5 3xl:mb-1.5 border-b border-camel-200/50">
             <span className="text-xs sm:text-[12.5px] 3xl:text-[13px] font-bold uppercase tracking-wider text-camel-800">Спорт</span>
-            <span className="text-[10px] 3xl:text-[11px] text-charcoal-600 font-medium">курсинг & бега</span>
+            <span className="text-[10px] 3xl:text-[11px] text-charcoal-600 font-medium flex items-center gap-0.5">
+              <span>курсинг & бега</span>
+              <ChevronRight className="w-3.5 h-3.5 text-camel-600/70 group-hover:text-camel-800 group-hover:translate-x-0.5 transition-all" aria-hidden />
+            </span>
           </div>
           <div className="grid grid-cols-3 text-center divide-x divide-camel-200/50">
             <div className="px-1">
@@ -99,15 +108,22 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
               <div className="text-[9.5px] 3xl:text-[10.5px] text-charcoal-500 font-medium uppercase tracking-tight">собак</div>
             </div>
           </div>
-        </div>
+        </Link>
       )}
 
-      {/* Выставки РКФ */}
+      {/* Выставки */}
       {showStats && (
-        <div className="bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-md p-2.5 3xl:p-3 hover:shadow-lg transition-shadow">
+        <Link
+          to="/shows"
+          className="group block bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-xs hover:shadow-md active:scale-[0.99] p-2.5 3xl:p-3 transition-all text-inherit no-underline"
+          aria-label="Перейти в раздел Выставки: каталоги, ринги, собаки"
+        >
           <div className="flex items-center justify-between pb-1 mb-1 3xl:pb-1.5 3xl:mb-1.5 border-b border-camel-200/50">
-            <span className="text-xs sm:text-[12.5px] 3xl:text-[13px] font-bold uppercase tracking-wider text-camel-800">Выставки РКФ</span>
-            <span className="text-[10px] 3xl:text-[11px] text-charcoal-600 font-medium">каталоги & ринги</span>
+            <span className="text-xs sm:text-[12.5px] 3xl:text-[13px] font-bold uppercase tracking-wider text-camel-800">Выставки</span>
+            <span className="text-[10px] 3xl:text-[11px] text-charcoal-600 font-medium flex items-center gap-0.5">
+              <span>каталоги & ринги</span>
+              <ChevronRight className="w-3.5 h-3.5 text-camel-600/70 group-hover:text-camel-800 group-hover:translate-x-0.5 transition-all" aria-hidden />
+            </span>
           </div>
           <div className="grid grid-cols-3 text-center divide-x divide-camel-200/50">
             <div className="px-1">
@@ -129,7 +145,7 @@ export default function HomeStatsPills({ stats, showStats, loading }: HomeStatsP
               <div className="text-[9.5px] 3xl:text-[10.5px] text-charcoal-500 font-medium uppercase tracking-tight">собак</div>
             </div>
           </div>
-        </div>
+        </Link>
       )}
     </div>
   )

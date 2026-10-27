@@ -41,6 +41,37 @@ export function formatTitleLine({ title, count }: DogTitle): string {
   return count > 1 ? `${title} ×${count}` : title
 }
 
+/**
+ * Проверяет, является ли токен обычным/кандидатским сертификатом, а не полноценным титулом.
+ * Сертификаты (скрываются из строки титулов профиля собаки):
+ * — CAC, JCAC, VCAC, CACIB, CACL, CACIL, RegCACL, CACLBr и все резервы (R.JCAC, R.CACIB и др.)
+ * — CW (Class Winner / победитель класса)
+ * — СС, ЮСС, ВСС (сертификаты соответствия)
+ * — КЧК, ЮКЧК, ВКЧК, КЧП, ЮКЧП, ВКЧП (кандидаты в чемпионы клуба / породы)
+ *
+ * Полноценные титулы и звания:
+ * — Выставки: BIS, BIG, ЛПП / BOB, BOS, ЛЮ, ЛВ, ЛЩ, ЛБ, ЧРКФ, ЮЧРКФ, ВЧРКФ, П «России», П Москвы и т.д.
+ * — Спорт: ЧР РК, ГЧР РК, ЧРКФ РК, ГЧРКФ РК, ПКР РК, ПЧ РК, ПЧРКФ РК, C.I.C., лиги Донино.
+ */
+export function isCertificateToken(rawTitle: string): boolean {
+  if (!rawTitle) return false
+  const norm = rawTitle.toUpperCase().replace(/\s+/g, '')
+
+  // Любые вариации CAC (CAC, CACIB, JCAC, VCAC, R.JCAC, R.CAC, CACL, CACIL, RegCACL, CACLBr и т.д.)
+  if (norm.includes('CAC')) return true
+
+  // Победитель класса (Class Winner)
+  if (norm === 'CW' || norm.startsWith('CW')) return true
+
+  // Сертификаты соответствия (СС, ЮСС, ВСС, CC, JCC, VCC)
+  if (/^(Ю|В|J|V|R)?(CC|СС)$/.test(norm)) return true
+
+  // Кандидаты в чемпионы клуба / породы (КЧК, ЮКЧК, ВКЧК, КЧП, ЮКЧП, ВКЧП)
+  if (/^(Ю|В|J|V|R)?(КЧК|КЧП)$/.test(norm)) return true
+
+  return false
+}
+
 export function parseQualificationTitles(qualification: string | null | undefined): string[] {
   if (!qualification?.trim()) return []
   return qualification

@@ -5,6 +5,7 @@ import { competitionTitleDisplayName } from '../../../../backend/lib/competition
 import {
   compareDogProfileTitles,
   formatTitleLine,
+  isCertificateToken,
   titleBadgeClass,
   type DogTitle,
 } from '../../lib/qualificationTitles'
@@ -25,29 +26,12 @@ type DogProfileAwardsBarProps = {
   achievements?: DogAchievementItem[]
 }
 
-function isCertificateToken(rawTitle: string): boolean {
-  const norm = rawTitle.toUpperCase().replace(/\s+/g, '')
-  return (
-    norm.startsWith('CAC') ||
-    norm.startsWith('REGCAC') ||
-    norm.startsWith('RCAC') ||
-    norm.startsWith('R.CAC') ||
-    norm === 'CC' ||
-    norm === 'ЮСС' ||
-    norm === 'СС' ||
-    norm.startsWith('КЧК') ||
-    norm.startsWith('ЮКЧК') ||
-    norm.includes('CACL') ||
-    norm.includes('CACIL')
-  )
-}
-
 export function DogProfileAwardsBar({
   competitionTitles,
   showTitles,
   achievements = [],
 }: DogProfileAwardsBarProps): ReactNode {
-  // Оставляем только полноценные титулы
+  // Оставляем только полноценные титулы (без обычных/кандидатских сертификатов)
   const pureCompTitles = competitionTitles.filter((item) => !isCertificateToken(item.title))
   const pureShowTitles = showTitles.filter((item) => !isCertificateToken(item.title))
 

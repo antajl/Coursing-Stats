@@ -106,7 +106,7 @@ function SeasonTopSectionInner({
   const mainTabs = useMemo(
     () => [
       { id: 'sport' as const, label: 'Соревнования' },
-      { id: 'shows' as const, label: 'Выставки РКФ' },
+      { id: 'shows' as const, label: 'Выставки' },
       {
         id: 'donino' as const,
         label: (

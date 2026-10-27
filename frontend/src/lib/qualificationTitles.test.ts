@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import {
   buildDogProfileTitleGroups,
   classifyDogProfileTitle,
+  isCertificateToken,
   mergeDogProfileTitles,
   resolveCompetitionTitles,
   resolveShowTitles,
@@ -90,5 +91,61 @@ describe('buildDogProfileTitleGroups', () => {
     expect(byTitle.CAC).toBe(3)
     expect(byTitle.ЛПП).toBe(1)
     expect(byTitle.CW).toBe(1)
+  })
+})
+
+describe('isCertificateToken', () => {
+  it('correctly identifies candidate/class certificates to filter from title bars', () => {
+    // Show certificates
+    expect(isCertificateToken('JCAC')).toBe(true)
+    expect(isCertificateToken('R.JCAC')).toBe(true)
+    expect(isCertificateToken('CAC')).toBe(true)
+    expect(isCertificateToken('R.CAC')).toBe(true)
+    expect(isCertificateToken('RCAC')).toBe(true)
+    expect(isCertificateToken('CACIB')).toBe(true)
+    expect(isCertificateToken('R.CACIB')).toBe(true)
+    expect(isCertificateToken('VCAC')).toBe(true)
+    expect(isCertificateToken('R.VCAC')).toBe(true)
+    expect(isCertificateToken('CW')).toBe(true)
+    expect(isCertificateToken('СС')).toBe(true)
+    expect(isCertificateToken('ЮСС')).toBe(true)
+    expect(isCertificateToken('ВСС')).toBe(true)
+    expect(isCertificateToken('CC')).toBe(true)
+    expect(isCertificateToken('КЧК')).toBe(true)
+    expect(isCertificateToken('ЮКЧК')).toBe(true)
+    expect(isCertificateToken('ВКЧК')).toBe(true)
+    expect(isCertificateToken('КЧП')).toBe(true)
+    expect(isCertificateToken('ЮКЧП')).toBe(true)
+
+    // Sport certificates
+    expect(isCertificateToken('CACL')).toBe(true)
+    expect(isCertificateToken('R.CACL')).toBe(true)
+    expect(isCertificateToken('CACIL')).toBe(true)
+    expect(isCertificateToken('R.CACIL')).toBe(true)
+    expect(isCertificateToken('RegCACL')).toBe(true)
+    expect(isCertificateToken('CACLBr')).toBe(true)
+
+    // Genuine titles must NOT be treated as certificates
+    expect(isCertificateToken('BIS')).toBe(false)
+    expect(isCertificateToken('BIG')).toBe(false)
+    expect(isCertificateToken('ЛПП')).toBe(false)
+    expect(isCertificateToken('BOB')).toBe(false)
+    expect(isCertificateToken('ЛППП')).toBe(false)
+    expect(isCertificateToken('BOS')).toBe(false)
+    expect(isCertificateToken('ЛЮ')).toBe(false)
+    expect(isCertificateToken('ЛВ')).toBe(false)
+    expect(isCertificateToken('ЛЩ')).toBe(false)
+    expect(isCertificateToken('ЛБ')).toBe(false)
+    expect(isCertificateToken('ЧРКФ')).toBe(false)
+    expect(isCertificateToken('ЮЧРКФ')).toBe(false)
+    expect(isCertificateToken('ВЧРКФ')).toBe(false)
+    expect(isCertificateToken('П Москвы')).toBe(false)
+    expect(isCertificateToken('П «России»')).toBe(false)
+    expect(isCertificateToken('ЧР РК')).toBe(false)
+    expect(isCertificateToken('ГЧР РК')).toBe(false)
+    expect(isCertificateToken('ЧРКФ РК')).toBe(false)
+    expect(isCertificateToken('ПКР РК')).toBe(false)
+    expect(isCertificateToken('ПЧРКФ РК')).toBe(false)
+    expect(isCertificateToken('C.I.C.')).toBe(false)
   })
 })

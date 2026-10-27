@@ -57,7 +57,7 @@ export default function EventListCard({
         <div className="w-px bg-charcoal-200/70 mx-0.5 self-stretch hidden md:block" />
         <div className="flex-1 flex flex-col justify-between space-y-1.5">
           <div className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 pb-0.5">
-            Выставки РКФ
+            Выставки
           </div>
           {shows.length > 0 ? (
             shows.slice(0, 3).map((show) => (

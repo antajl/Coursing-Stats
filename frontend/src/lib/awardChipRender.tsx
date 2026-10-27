@@ -22,6 +22,7 @@ import {
   classifyDogProfileTitle,
   compareDogProfileTitles,
   formatTitleLine,
+  isCertificateToken,
   showAwardBadgeClass,
   titleBadgeClass,
   type DogTitle,
@@ -145,12 +146,14 @@ export function renderAllDogTitlesSingleLine({
   competitionTitles: DogTitle[]
   showTitles: DogTitle[]
 }): ReactNode {
-  const hasComp = competitionTitles.length > 0
-  const hasShow = showTitles.length > 0
+  const pureCompTitles = competitionTitles.filter((item) => !isCertificateToken(item.title))
+  const pureShowTitles = showTitles.filter((item) => !isCertificateToken(item.title))
+  const hasComp = pureCompTitles.length > 0
+  const hasShow = pureShowTitles.length > 0
   if (!hasComp && !hasShow) return null
 
-  const sortedComp = sortDogTitlesByCoolness(competitionTitles)
-  const sortedShow = sortDogTitlesByCoolness(showTitles)
+  const sortedComp = sortDogTitlesByCoolness(pureCompTitles)
+  const sortedShow = sortDogTitlesByCoolness(pureShowTitles)
 
   const renderChip = (item: DogTitle, keyPrefix: string) => {
     const showKey = matchShowAwardToken(item.title)
