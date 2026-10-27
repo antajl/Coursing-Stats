@@ -94,14 +94,16 @@ export function NavDesktop({
       >
         <Link
           to="/"
-          className={`group relative shrink-0 px-2 py-1 text-xs font-semibold whitespace-nowrap transition-all duration-300 xl:px-3.5 2xl:px-5 2xl:text-sm ${
+          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
             isActive('/') ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
         >
           <span className="relative z-10">Главная</span>
-          <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-            isActive('/') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-          }`}></span>
+          <span
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
+              isActive('/') ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            }`}
+          />
         </Link>
         <NavMenuDropdown
           open={openMenu === 'competitions'}
@@ -162,14 +164,16 @@ export function NavDesktop({
         />
         <Link
           to="/about"
-          className={`group relative shrink-0 px-2 py-1 text-xs font-semibold whitespace-nowrap transition-all duration-300 xl:px-3.5 2xl:px-5 2xl:text-sm ${
+          className={`group relative flex shrink-0 items-center whitespace-nowrap py-2 px-2.5 text-xs font-semibold transition-colors duration-300 lg:px-3.5 lg:text-sm 2xl:px-5 ${
             isAboutActive ? 'text-camel-700' : 'text-charcoal-700 hover:text-charcoal-900'
           }`}
         >
           <span className="relative z-10">О проекте</span>
-          <span className={`absolute bottom-0 left-0 w-full h-0.5 bg-camel-600 transition-transform duration-300 ${
-            isAboutActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
-          }`}></span>
+          <span
+            className={`pointer-events-none absolute bottom-0 left-0 h-0.5 w-full origin-left bg-camel-600 transition-transform duration-300 ${
+              isAboutActive ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+            }`}
+          />
         </Link>
       </div>
 
