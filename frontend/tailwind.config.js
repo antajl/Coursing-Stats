@@ -13,6 +13,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '2100px',
+      },
       colors: {
         // Exact colors from Claude mockup
         'om': {

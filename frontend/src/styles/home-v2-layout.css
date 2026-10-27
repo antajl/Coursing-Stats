@@ -135,13 +135,13 @@ main:has(.home-v2) {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 53%;
+  object-position: center 54%;
   will-change: transform, opacity;
   user-select: none;
   pointer-events: none;
   filter: saturate(0.94) contrast(1.04);
 }
-@media (min-width: 2000px) and (min-height: 1100px) {
+@media (min-width: 2100px) and (min-height: 1100px) {
   .home-v2-stage-layer {
     object-position: center 40%;
   }
