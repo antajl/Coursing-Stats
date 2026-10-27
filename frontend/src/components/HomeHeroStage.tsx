@@ -141,7 +141,7 @@ export default function HomeHeroStage({
   return (
     <section
       ref={rootRef}
-      className={`home-v2-stage ${isStaticDashboard ? 'hidden md:flex' : 'flex'} flex-col justify-start ${mobileClosed ? 'home-v2-stage--closed' : ''}`}
+      className={`home-v2-stage flex flex-col justify-start ${mobileClosed ? 'home-v2-stage--closed' : ''}`}
       aria-label="Главный экран"
     >
       <div ref={mediaRef} className="home-v2-stage-media block" aria-hidden>

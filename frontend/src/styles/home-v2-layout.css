@@ -92,8 +92,7 @@ main:has(.home-v2) {
 }
 @media (max-width: 767px) {
   .home-v2-stage--closed,
-  .home-v2-static .home-v2-stage,
-  .home-v2-stage.hidden {
+  .home-v2-static .home-v2-stage {
     display: none !important;
   }
 }

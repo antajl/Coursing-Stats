@@ -111,53 +111,51 @@ export default function Home() {
       {/* =========================================================================
           DESKTOP (>= 768px): Single-Screen Static Executive Dashboard
       ========================================================================= */}
-      <div className="hidden md:block">
-        <HomeHeroStage
-          isStaticDashboard={true}
-          hideScrollCue={true}
-          disableScrollFade={true}
-          reverseLayout={true}
-          children={
-            /* Right block: Logo & Compact Database Statistics */
-            <div className="flex flex-col items-end text-right gap-2 select-none max-w-full">
-              <picture>
-                <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
-                <img
-                  src="/assets/hero/title.webp"
-                  width={IMAGES.HERO_TITLE.WIDTH}
-                  height={IMAGES.HERO_TITLE.HEIGHT}
-                  alt="Coursing Stats"
-                  data-page-logo="desktop"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  className="w-full max-w-[240px] sm:max-w-[275px] lg:max-w-[305px] 2xl:max-w-[340px] h-auto drop-shadow-md pointer-events-none"
-                />
-              </picture>
-              <div className="w-full max-w-[310px] 2xl:max-w-[360px] pointer-events-auto">
-                <HomeStatsPills stats={stats} showStats={showStats} />
-              </div>
-            </div>
-          }
-          metrics={
-            /* Left block: Double Podium Rankings */
-            <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(880px,52vw,1320px)] 2xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-360px)] mr-auto">
-              <SeasonTopSection
-                competitionSlides={competitionSlides}
-                racingSlides={racingSlides}
-                showSlides={showSlides}
-                topShowDogs={topShowDogs}
-                doninoSpeedRecords={doninoSpeedRecords}
-                doninoCoursingRecords={doninoCoursingRecords}
-                doninoSpeedSlides={doninoSpeedSlides}
-                doninoCoursingSlides={doninoCoursingSlides}
-                loading={seasonLoading}
-                compact={true}
+      <HomeHeroStage
+        isStaticDashboard={true}
+        hideScrollCue={true}
+        disableScrollFade={true}
+        reverseLayout={true}
+        children={
+          /* Right block: Logo & Compact Database Statistics */
+          <div className="flex flex-col items-end text-right gap-2 select-none max-w-full">
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
+              <img
+                src="/assets/hero/title.webp"
+                width={IMAGES.HERO_TITLE.WIDTH}
+                height={IMAGES.HERO_TITLE.HEIGHT}
+                alt="Coursing Stats"
+                data-page-logo="desktop"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="w-full max-w-[240px] sm:max-w-[275px] lg:max-w-[305px] 2xl:max-w-[340px] h-auto drop-shadow-md pointer-events-none"
               />
+            </picture>
+            <div className="w-full max-w-[310px] 2xl:max-w-[360px] pointer-events-auto">
+              <HomeStatsPills stats={stats} showStats={showStats} />
             </div>
-          }
-        />
-      </div>
+          </div>
+        }
+        metrics={
+          /* Left block: Double Podium Rankings */
+          <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(880px,52vw,1320px)] 2xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-360px)] mr-auto">
+            <SeasonTopSection
+              competitionSlides={competitionSlides}
+              racingSlides={racingSlides}
+              showSlides={showSlides}
+              topShowDogs={topShowDogs}
+              doninoSpeedRecords={doninoSpeedRecords}
+              doninoCoursingRecords={doninoCoursingRecords}
+              doninoSpeedSlides={doninoSpeedSlides}
+              doninoCoursingSlides={doninoCoursingSlides}
+              loading={seasonLoading}
+              compact={true}
+            />
+          </div>
+        }
+      />
 
       {/* =========================================================================
           MOBILE (< 768px): Natural, touch-friendly, scrollable flow
