@@ -1,5 +1,4 @@
-import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
-import { Rabbit, Sparkles } from 'lucide-react'
+import type { ReactNode } from 'react'
 import HoverTooltip from '../../components/ui/HoverTooltip'
 import { matchShowAwardToken } from '../../../../backend/lib/show-award-ranking'
 import { competitionTitleDisplayName } from '../../../../backend/lib/competition-titles'
@@ -11,57 +10,57 @@ import {
 } from '../../lib/qualificationTitles'
 import { awardTooltipForDogTitle } from '../../lib/awardTooltip'
 
+export interface DogAchievementItem {
+  id: string
+  label: string
+  sublabel?: string
+  icon: ReactNode
+  color: string
+  tooltip: string
+}
+
 type DogProfileAwardsBarProps = {
   competitionTitles: DogTitle[]
   showTitles: DogTitle[]
+  achievements?: DogAchievementItem[]
+}
+
+function isCertificateToken(rawTitle: string): boolean {
+  const norm = rawTitle.toUpperCase().replace(/\s+/g, '')
+  return (
+    norm.startsWith('CAC') ||
+    norm.startsWith('REGCAC') ||
+    norm.startsWith('RCAC') ||
+    norm.startsWith('R.CAC') ||
+    norm === 'CC' ||
+    norm === 'ЮСС' ||
+    norm === 'СС' ||
+    norm.startsWith('КЧК') ||
+    norm.startsWith('ЮКЧК') ||
+    norm.includes('CACL') ||
+    norm.includes('CACIL')
+  )
 }
 
 export function DogProfileAwardsBar({
   competitionTitles,
   showTitles,
+  achievements = [],
 }: DogProfileAwardsBarProps): ReactNode {
-  const scrollRef = useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(false)
+  // Оставляем только полноценные титулы
+  const pureCompTitles = competitionTitles.filter((item) => !isCertificateToken(item.title))
+  const pureShowTitles = showTitles.filter((item) => !isCertificateToken(item.title))
 
-  const hasComp = competitionTitles.length > 0
-  const hasShow = showTitles.length > 0
+  const hasComp = pureCompTitles.length > 0
+  const hasShow = pureShowTitles.length > 0
+  const hasAchievements = achievements.length > 0
 
-  const updateScrollIndicators = useCallback(() => {
-    const el = scrollRef.current
-    if (!el) return
-    const tolerance = 2
-    const isLeft = el.scrollLeft > tolerance
-    const isRight = el.scrollLeft + el.clientWidth < el.scrollWidth - tolerance
-    setCanScrollLeft(isLeft)
-    setCanScrollRight(isRight)
-  }, [])
+  if (!hasComp && !hasShow && !hasAchievements) return null
 
-  useEffect(() => {
-    updateScrollIndicators()
-    const el = scrollRef.current
-    if (!el) return
-
-    const handleResize = () => updateScrollIndicators()
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [updateScrollIndicators, competitionTitles, showTitles])
-
-  const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
-    const el = scrollRef.current
-    if (!el) return
-    if (el.scrollWidth > el.clientWidth && e.deltaY !== 0) {
-      el.scrollLeft += e.deltaY
-      updateScrollIndicators()
-    }
-  }
-
-  if (!hasComp && !hasShow) return null
-
-  const sortedComp = [...competitionTitles].sort((a, b) =>
+  const sortedComp = [...pureCompTitles].sort((a, b) =>
     compareDogProfileTitles(a.title, b.title),
   )
-  const sortedShow = [...showTitles].sort((a, b) =>
+  const sortedShow = [...pureShowTitles].sort((a, b) =>
     compareDogProfileTitles(a.title, b.title),
   )
 
@@ -90,54 +89,52 @@ export function DogProfileAwardsBar({
   }
 
   return (
-    <div className="relative mt-3.5 pt-3 border-t border-old-money-200/80">
-      {/* Плавные маски-градиенты по краям при переполнении */}
-      {canScrollLeft && (
-        <div
-          className="pointer-events-none absolute left-0 top-3 bottom-0 w-8 bg-gradient-to-r from-white via-white/80 to-transparent z-10"
-          aria-hidden
-        />
-      )}
-      {canScrollRight && (
-        <div
-          className="pointer-events-none absolute right-0 top-3 bottom-0 w-8 bg-gradient-to-l from-white via-white/80 to-transparent z-10"
-          aria-hidden
-        />
-      )}
-
-      <div
-        ref={scrollRef}
-        onScroll={updateScrollIndicators}
-        onWheel={handleWheel}
-        className="flex w-full items-center gap-3 overflow-x-auto no-scrollbar py-0.5 scroll-smooth"
-        tabIndex={0}
-        aria-label="Награды и титулы собаки"
-      >
-        <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 min-w-min">
+    <div className="mt-3.5 pt-3 border-t border-old-money-200/70">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_auto] gap-3 lg:gap-6 items-center">
+        {/* СЛЕВА: Титулы спорта и выставок */}
+        <div className="space-y-1.5 min-w-0">
           {hasComp && (
-            <div className="flex shrink-0 items-center gap-1.5 bg-forest-50/50 px-2.5 py-1 rounded-xl border border-forest-200/70">
-              <span className="inline-flex shrink-0 items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-forest-800">
-                <Rabbit className="h-3.5 w-3.5 text-forest-600" aria-hidden />
-                Спорт:
+            <div className="grid grid-cols-[4.5rem_1fr] sm:grid-cols-[5rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
+                Спорт
               </span>
-              <div className="flex items-center gap-1">
+              <div className="flex flex-wrap items-center gap-1.5 min-w-0">
                 {sortedComp.map((item) => renderChip(item, 'comp'))}
               </div>
             </div>
           )}
 
           {hasShow && (
-            <div className="flex shrink-0 items-center gap-1.5 bg-camel-50/50 px-2.5 py-1 rounded-xl border border-camel-200/70">
-              <span className="inline-flex shrink-0 items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-camel-900">
-                <Sparkles className="h-3.5 w-3.5 text-camel-700" aria-hidden />
-                Выставки:
+            <div className="grid grid-cols-[4.5rem_1fr] sm:grid-cols-[5rem_1fr] items-baseline gap-2">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal-400 select-none">
+                Выставки
               </span>
-              <div className="flex items-center gap-1">
+              <div className="flex flex-wrap items-center gap-1.5 min-w-0">
                 {sortedShow.map((item) => renderChip(item, 'show'))}
               </div>
             </div>
           )}
         </div>
+
+        {/* СПРАВА: Ачивки и рейтинги (максимум 2 в строку / 2 колонки) */}
+        {hasAchievements && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 shrink-0 pt-1 lg:pt-0 border-t lg:border-t-0 border-old-money-100 max-w-full lg:max-w-md">
+            {achievements.map((ach) => (
+              <HoverTooltip key={ach.id} label={ach.tooltip} placement="top" portal>
+                <div
+                  className={`inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-semibold tabular-nums whitespace-nowrap transition-transform hover:scale-105 justify-start ${ach.color}`}
+                  tabIndex={0}
+                >
+                  {ach.icon}
+                  <span className="truncate">{ach.label}</span>
+                  {ach.sublabel && (
+                    <span className="text-[10px] font-normal opacity-75 truncate">· {ach.sublabel}</span>
+                  )}
+                </div>
+              </HoverTooltip>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )

@@ -263,6 +263,7 @@ export function dogNameMatchesQuery(
 /** Предотвращает висячие предлоги и короткие частицы питомников в конце строк */
 export function formatNameWithNonBreakingSpaces(name: string): string {
   if (!name) return ''
-  // Привязываем неразрывным пробелом короткие приставки и служебные частицы
-  return name.replace(/(^|\s)(аль|дэ|де|фон|ван|из|со|от|ди|ля|ле)\s+/gi, '$1$2\u00A0')
+  return name
+    .replace(/(^|[\s"«(])(аль|дэ|де|фон|ван|из|со|от|ди|ля|ле|al|de|van|von|el)\s+/gi, '$1$2\u00A0')
+    .replace(/(аль|al)\s+(равда|rawda)/gi, '$1\u00A0$2')
 }

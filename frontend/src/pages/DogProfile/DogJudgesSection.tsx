@@ -387,23 +387,23 @@ export function DogJudgesSection({ judgeStats }: DogJudgesSectionProps) {
         </div>
       </div>
 
-      {/* Кнопка Показать всех / Свернуть (сохраняет единую структуру 2 колонок!) */}
+      {/* Кнопка Показать всех / Свернуть в едином стиле сайта */}
       {hasMore && (
-        <div className="mt-4 pt-3 text-center border-t border-old-money-100">
+        <div className="mt-4 pt-3 text-center border-t border-old-money-100 flex items-center justify-center min-h-[44px]">
           <button
             type="button"
             onClick={() => setShowAllJudges((v) => !v)}
-            className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl text-xs font-semibold text-charcoal-700 bg-cream-100/80 hover:bg-cream-200/80 border border-old-money-200/90 transition-all min-h-[44px]"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-camel-700 hover:text-camel-900 transition-colors cursor-pointer group"
           >
-            <span>
+            <span className="group-hover:underline">
               {showAllJudges
                 ? 'Свернуть до основных'
-                : `Показать всех экспертов (${coursingJudges.length})`}
+                : `Показать всех ${coursingJudges.length} экспертов`}
             </span>
             {showAllJudges ? (
-              <ChevronUp className="w-3.5 h-3.5" aria-hidden />
+              <ChevronUp className="w-3.5 h-3.5 text-camel-600 transition-transform group-hover:-translate-y-0.5" aria-hidden />
             ) : (
-              <ChevronDown className="w-3.5 h-3.5" aria-hidden />
+              <ChevronDown className="w-3.5 h-3.5 text-camel-600 transition-transform group-hover:translate-y-0.5" aria-hidden />
             )}
           </button>
         </div>
