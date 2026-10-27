@@ -183,8 +183,8 @@ export default function HomeHeroStage({
             className={`pointer-events-auto shrink-0 w-fit ${
               isStaticDashboard
                 ? reverseLayout
-                  ? 'max-w-[370px] flex flex-col items-end'
-                  : 'max-w-[370px]'
+                  ? 'max-w-[390px] 3xl:max-w-[450px] flex flex-col items-end'
+                  : 'max-w-[390px] 3xl:max-w-[450px]'
                 : 'max-w-[45vw]'
             }`}
           >

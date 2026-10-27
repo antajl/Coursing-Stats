@@ -130,7 +130,7 @@ export default function Home() {
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
-                className="w-full max-w-[235px] lg:max-w-[255px] 3xl:max-w-[340px] h-auto drop-shadow-md pointer-events-none"
+                className="w-full max-w-[280px] xl:max-w-[320px] 2xl:max-w-[345px] 3xl:max-w-[420px] h-auto drop-shadow-md pointer-events-none"
               />
             </picture>
             <div className="w-full max-w-[295px] 3xl:max-w-[360px] pointer-events-auto">
