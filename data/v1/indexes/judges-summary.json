@@ -1,6 +1,6 @@
 {
   "schema": "coursing-stats/index-judges-summary-v1",
-  "count": 32,
+  "count": 33,
   "judges": [
     {
       "id": "Вронская О.В.",
@@ -353,6 +353,17 @@
       "unique_disciplines": 1,
       "unique_events": 1,
       "unique_dogs": 45
+    },
+    {
+      "id": "Судья 2",
+      "name": "Судья 2",
+      "total_evaluations": 0,
+      "total_evaluations_count": 0,
+      "avg_score": null,
+      "unique_breeds": 3,
+      "unique_disciplines": 1,
+      "unique_events": 1,
+      "unique_dogs": 10
     }
   ],
   "availableBreeds": [

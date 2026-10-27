@@ -26,7 +26,8 @@
     "event_date": null,
     "protocol_location": null,
     "judges": "Егорова М.А., Козлова И.В.",
-    "track_schemes": []
+    "track_schemes": [],
+    "results_pdf_url": "https://drive.google.com/file/d/1CglvcjcwowkWujufkm_tqb0LipZTiTfK/view?usp=sharing"
   },
   "result_count": 89,
   "results": [
@@ -528,7 +529,7 @@
                   14,
                   15
                 ],
-                "sum": 150
+                "sum": 75
               },
               {
                 "judge_number": 2,
@@ -539,10 +540,10 @@
                   15,
                   15
                 ],
-                "sum": null
+                "sum": 75
               }
             ],
-            "total": null,
+            "total": 150,
             "disqualified": false,
             "disqualification_reason": null
           },
