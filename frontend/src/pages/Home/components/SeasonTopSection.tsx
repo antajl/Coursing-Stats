@@ -1,12 +1,10 @@
 import { memo, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Icons } from '../../../lib/icons'
 import SeasonCompetitionsCarousel from './SeasonCompetitionsCarousel'
 import SeasonRacingCarousel from './SeasonRacingCarousel'
 import SeasonShowsCarousel from './SeasonShowsCarousel'
 import SeasonDoninoSpeedCarousel from './SeasonDoninoSpeedCarousel'
 import SeasonDoninoCoursingCarousel from './SeasonDoninoCoursingCarousel'
-import { SectionHead } from './SectionHead'
 import { SeasonTopSectionSkeleton } from './SeasonTopSectionSkeleton'
 import DoninoHomeRecordRow from '../../../components/DoninoHomeRecordRow'
 import HomeSeasonTopRow from '../../../components/HomeSeasonTopRow'
@@ -143,13 +141,6 @@ function SeasonTopSectionInner({
 
   if (loading) return <SeasonTopSectionSkeleton />
 
-  const sectionHref =
-    activeTab === 'sport'
-      ? '/competitions?tab=ranking'
-      : activeTab === 'shows'
-        ? `/shows?tab=ranking&year=${CURRENT_SEASON}`
-        : '/speed-records'
-
   return (
     <section
       id="season-top"
@@ -160,15 +151,6 @@ function SeasonTopSectionInner({
       }`}
       {...(!compact ? { 'data-home-reveal': true } : {})}
     >
-      {!compact && (
-        <SectionHead
-          icon={Icons.trophy}
-          title="Рейтинги и достижения"
-          href={sectionHref}
-          linkLabel="Перейти в раздел"
-        />
-      )}
-
       {/* Main 3 Category Tabs */}
       <SegmentedTabs
         tabs={mainTabs}
