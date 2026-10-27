@@ -272,7 +272,7 @@ export function Concept3SymmetricCockpit({
       <div className="flex items-center justify-between pb-2.5 border-b border-camel-200/60">
         <div className="flex items-center gap-2">
           <span className="w-7 h-7 rounded-lg bg-camel-100 border border-camel-300 flex items-center justify-center text-camel-800 shrink-0">
-            <Icons.layers className="w-4 h-4 text-camel-700" aria-hidden />
+            <Layers className="w-4 h-4 text-camel-700" aria-hidden />
           </span>
           <div>
             <div className="text-sm font-bold text-charcoal-900 font-serif">Единый архив</div>
@@ -339,14 +339,14 @@ export function Concept3SymmetricCockpit({
           className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg bg-camel-100 hover:bg-camel-200 border border-camel-300 text-xs font-semibold text-camel-900 transition-colors"
         >
           <span>Календарь</span>
-          <Icons.arrowRight className="w-3 h-3 text-camel-700" aria-hidden />
+          <ArrowRight className="w-3 h-3 text-camel-700" aria-hidden />
         </Link>
         <Link
           to="/shows"
           className="flex items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg bg-old-money-100 hover:bg-old-money-200 border border-old-money-300 text-xs font-semibold text-charcoal-800 transition-colors"
         >
           <span>Выставки</span>
-          <Icons.arrowRight className="w-3 h-3 text-charcoal-600" aria-hidden />
+          <ArrowRight className="w-3 h-3 text-charcoal-600" aria-hidden />
         </Link>
       </div>
     </div>
