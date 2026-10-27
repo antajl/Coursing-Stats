@@ -187,10 +187,41 @@ type ShowRankingEntry = {
  * and exceeds Cloudflare Pages file limits. Enable with PRERENDER_SHOW_ONLY=1.
  * Optional PRERENDER_SHOW_ONLY_MAX (default 2000) caps how many extra pages to write.
  */
+function loadDetailsAliasMap(): Map<string, string> {
+  const aliasMap = new Map<string, string>()
+  const detailsDir = path.join(ROOT, 'data/v1/shows/indexes/dog-details')
+  if (!fs.existsSync(detailsDir)) return aliasMap
+  for (let i = 0; i < 256; i++) {
+    const shard = String(i).padStart(3, '0')
+    const file = path.join(detailsDir, `${shard}.json`)
+    if (!fs.existsSync(file)) continue
+    try {
+      const pack = JSON.parse(fs.readFileSync(file, 'utf8'))
+      for (const [id, dog] of Object.entries(pack)) {
+        if ((dog as any).alias_to) {
+          aliasMap.set(id, String((dog as any).alias_to))
+        }
+      }
+    } catch {}
+  }
+  return aliasMap
+}
+
 function collectShowOnlyDogs(): Map<string, ShowRankingEntry> {
   const map = new Map<string, ShowRankingEntry>()
   if (process.env.PRERENDER_SHOW_ONLY === '0') return map
   if (!fs.existsSync(SHOW_RANKING_GLOB_DIR)) return map
+
+  const aliasMap = loadDetailsAliasMap()
+  function resolveCanonical(id: string): string {
+    let curr = String(id)
+    let depth = 0
+    while (aliasMap.has(curr) && depth < 5) {
+      curr = aliasMap.get(curr)!
+      depth++
+    }
+    return curr
+  }
 
   const files = fs
     .readdirSync(SHOW_RANKING_GLOB_DIR)
@@ -218,10 +249,11 @@ function collectShowOnlyDogs(): Map<string, ShowRankingEntry> {
       if (entry.competition_dog_id != null && entry.competition_dog_id !== '') continue
       const idNum = Number(entry.id)
       if (!Number.isFinite(idNum) || idNum < SHOW_ONLY_ID_MIN) continue
-      const id = String(entry.id)
+      const origId = String(entry.id)
+      const id = resolveCanonical(origId)
       const prev = map.get(id)
       if (!prev || (entry.total_shows || 0) > (prev.total_shows || 0)) {
-        map.set(id, entry)
+        map.set(id, { ...entry, id })
       }
     }
   }
@@ -231,6 +263,17 @@ function collectShowOnlyDogs(): Map<string, ShowRankingEntry> {
 function prerenderShowOnlyDogs(spaHtml: string): number {
   const dogs = collectShowOnlyDogs()
   if (dogs.size === 0) return 0
+
+  // Clean up any stale alias directories in dist so alias URLs correctly fallback to SPA shell
+  const aliasMap = loadDetailsAliasMap()
+  for (const aliasId of aliasMap.keys()) {
+    const aliasDir = path.join(DIST, 'dog', aliasId)
+    if (fs.existsSync(aliasDir)) {
+      try {
+        fs.rmSync(aliasDir, { recursive: true, force: true })
+      } catch {}
+    }
+  }
 
   const maxExtra = Math.max(0, Number(process.env.PRERENDER_SHOW_ONLY_MAX || 15000) || 15000)
   // Prefer dogs with more shows

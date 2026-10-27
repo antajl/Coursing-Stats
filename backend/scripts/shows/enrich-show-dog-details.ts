@@ -231,6 +231,88 @@ async function main() {
     const val = pack[targetId]
     console.log(`Target ${targetName} (${targetId}):`, val ? (val.alias_to ? `alias_to -> ${val.alias_to}` : 'direct object') : 'MISSING!')
   }
+
+  console.log('=== Step 6: Canonicalizing all dog-ranking-*.json files ===')
+  const showIdxDir = 'data/v1/shows/indexes'
+  const allAliases = new Map<string, string>()
+  for (const [_, pack] of shardsData.entries()) {
+    for (const [id, val] of Object.entries(pack)) {
+      if ((val as any).alias_to) {
+        allAliases.set(id, String((val as any).alias_to))
+      }
+    }
+  }
+
+  function resolveCanonical(id: string): string {
+    let curr = String(id)
+    let depth = 0
+    while (allAliases.has(curr) && depth < 5) {
+      curr = allAliases.get(curr)!
+      depth++
+    }
+    return curr
+  }
+
+  const rankingFiles = fs.readdirSync(showIdxDir).filter((f) => /^dog-ranking-.*\.json$/.test(f))
+  let totalFilesUpdated = 0
+
+  for (const f of rankingFiles) {
+    const full = path.join(showIdxDir, f)
+    let raw: any
+    try {
+      raw = JSON.parse(fs.readFileSync(full, 'utf8'))
+    } catch {
+      continue
+    }
+
+    const isArray = Array.isArray(raw)
+    const isPage0 = !isArray && Array.isArray(raw.dogs)
+    const dogsList: any[] = isArray ? raw : isPage0 ? raw.dogs : []
+    if (dogsList.length === 0) continue
+
+    let modified = false
+    const canonicalMap = new Map<string, any>()
+
+    for (const dog of dogsList) {
+      const origId = String(dog.id)
+      const canId = resolveCanonical(origId)
+      if (canId !== origId) {
+        modified = true
+      }
+      const canDog = { ...dog, id: canId }
+      if (canonicalMap.has(canId)) {
+        modified = true
+        const prev = canonicalMap.get(canId)
+        prev.rank_score = Math.max(prev.rank_score || 0, canDog.rank_score || 0)
+        prev.total_shows = Math.max(prev.total_shows || 0, canDog.total_shows || 0)
+        if (canDog.titles) {
+          prev.titles = prev.titles || {}
+          for (const [t, c] of Object.entries(canDog.titles)) {
+            prev.titles[t] = Math.max(prev.titles[t] || 0, Number(c) || 0)
+          }
+        }
+      } else {
+        canonicalMap.set(canId, canDog)
+      }
+    }
+
+    if (modified) {
+      const remappedDogs = [...canonicalMap.values()].sort((a, b) => (b.rank_score || 0) - (a.rank_score || 0))
+      remappedDogs.forEach((d, idx) => { d.rank = idx + 1 })
+
+      if (isArray) {
+        fs.writeFileSync(full, JSON.stringify(remappedDogs))
+      } else if (isPage0) {
+        raw.dogs = remappedDogs.slice(0, 400)
+        raw.count = raw.dogs.length
+        raw.total_count = remappedDogs.length
+        fs.writeFileSync(full, JSON.stringify(raw))
+      }
+      totalFilesUpdated++
+      console.log(`Canonicalized ${f}: ${dogsList.length} -> ${remappedDogs.length} dogs (0 aliases remaining)`)
+    }
+  }
+  console.log(`Step 6 complete: ${totalFilesUpdated} ranking files canonicalized.`)
 }
 
 main().catch(console.error)

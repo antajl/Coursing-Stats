@@ -349,6 +349,25 @@ function linkShowDogsByUniqueName(
   return { linked }
 }
 
+function loadAliasMapFromDetails(detailsDir: string): Map<string, string> {
+  const map = new Map<string, string>()
+  if (!fs.existsSync(detailsDir)) return map
+  for (let i = 0; i < 256; i++) {
+    const shard = String(i).padStart(3, '0')
+    const file = path.join(detailsDir, `${shard}.json`)
+    if (!fs.existsSync(file)) continue
+    try {
+      const pack = JSON.parse(fs.readFileSync(file, 'utf8'))
+      for (const [id, dog] of Object.entries(pack)) {
+        if ((dog as any).alias_to) {
+          map.set(id, String((dog as any).alias_to))
+        }
+      }
+    } catch {}
+  }
+  return map
+}
+
 function assignStableProfileIds(dogs: ShowDog[]): Map<string, string> {
   for (const dog of dogs) {
     if (/^\d+$/.test(dog.id) && Number(dog.id) < SHOW_PROFILE_ID_BASE) {
@@ -527,6 +546,27 @@ async function main() {
 
   const idByKey = assignStableProfileIds(dogs)
   console.log(`Assigned stable profile ids for ${dogs.length} dogs`)
+
+  const detailsDir = path.join(INDEXES_DIR, 'dog-details')
+  const aliasLookup = loadAliasMapFromDetails(detailsDir)
+  if (aliasLookup.size > 0) {
+    let remapped = 0
+    for (const dog of dogs) {
+      let curr = String(dog.id)
+      let depth = 0
+      while (aliasLookup.has(curr) && depth < 5) {
+        curr = aliasLookup.get(curr)!
+        depth++
+      }
+      if (curr !== String(dog.id)) {
+        dog.id = curr
+        remapped++
+      }
+    }
+    if (remapped > 0) {
+      console.log(`Remapped ${remapped} dogs to canonical IDs from dog-details`)
+    }
+  }
 
   // Save year-specific ranking
   const PAGES_LIMIT_BYTES = 25 * 1024 * 1024

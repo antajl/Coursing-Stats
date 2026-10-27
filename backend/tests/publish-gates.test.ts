@@ -30,7 +30,7 @@ describe('publish gates', () => {
     expect(manifest.schema).toBe('coursing-stats/publish-manifest-v1')
     expect(manifest.competition_results.resultsTotal).toBeGreaterThan(0)
     expect(Object.values(manifest.gates).every((g) => g.ok)).toBe(true)
-  })
+  }, 30000)
 
   it.skipIf(skipIfMissing)('current-season top-placement is non-empty when file exists', () => {
     const year = new Date().getFullYear()

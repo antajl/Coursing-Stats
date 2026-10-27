@@ -219,6 +219,52 @@ function main() {
     }
   }
 
+  // Show ranking canonical integrity: no ranking file should contain alias IDs
+  const showDetailsDir = path.join(dataRoot, 'shows/indexes/dog-details')
+  const showIndexesDir = path.join(dataRoot, 'shows/indexes')
+  if (fs.existsSync(showDetailsDir) && fs.existsSync(showIndexesDir)) {
+    const aliasSet = new Set<string>()
+    for (let i = 0; i < 256; i++) {
+      const shard = String(i).padStart(3, '0')
+      const file = path.join(showDetailsDir, `${shard}.json`)
+      if (!fs.existsSync(file)) continue
+      try {
+        const pack = readJson(file) as Record<string, unknown>
+        for (const [id, val] of Object.entries(pack)) {
+          if ((val as any).alias_to) aliasSet.add(id)
+        }
+      } catch {}
+    }
+
+    let aliasRankingViolations = 0
+    const rankingFiles = fs.readdirSync(showIndexesDir).filter((f) => /^dog-ranking-.*\.json$/.test(f))
+    for (const f of rankingFiles) {
+      try {
+        const raw = readJson(path.join(showIndexesDir, f))
+        const dogs: any[] = Array.isArray(raw) ? raw : (raw as any).dogs || (raw as any).items || []
+        for (const d of dogs) {
+          if (d.id && aliasSet.has(String(d.id))) {
+            aliasRankingViolations++
+          }
+        }
+      } catch {}
+    }
+
+    if (aliasRankingViolations === 0) {
+      gates.push({
+        ok: true,
+        label: 'show_ranking_canonical_integrity',
+        detail: `all ${rankingFiles.length} show ranking files use 100% canonical dog IDs (0 aliases)`,
+      })
+    } else {
+      gates.push({
+        ok: false,
+        label: 'show_ranking_canonical_integrity',
+        detail: `found ${aliasRankingViolations} alias ID(s) inside show ranking files; run yarn enrich-show-dog-details`,
+      })
+    }
+  }
+
   // Judges integrity: summary must match individual detail files
   const judgesSummaryRel = 'indexes/judges-summary.json'
   if (fs.existsSync(path.join(dataRoot, judgesSummaryRel))) {
