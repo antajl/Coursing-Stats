@@ -105,7 +105,7 @@ export default function Home() {
         disableScrollFade={true}
         reverseLayout={true}
         children={
-          /* Right block: Logo & Compact Database Statistics (desktop only) */
+          /* Right block: Logo & Compact Database Statistics */
           <div className="flex flex-col items-end text-right gap-2 select-none max-w-full">
             <picture>
               <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />

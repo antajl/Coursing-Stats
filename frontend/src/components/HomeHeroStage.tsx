@@ -204,62 +204,16 @@ export default function HomeHeroStage({
         </div>
       </div>
 
-      {/* Mobile Hero Content (< 768px): лого по центру + навигационные кнопки, без тяжёлого подиума */}
-      <div
-        ref={metricsRef}
-        className="relative z-40 w-full md:hidden will-change-opacity pointer-events-auto flex flex-col items-center justify-end flex-1 px-4 pb-8 pt-2 gap-4"
-      >
-        {/* На статическом дашборде: лого центрированно + кнопки разделов */}
-        {isStaticDashboard && (
-          <>
-            {/* Лого мобайл — центрированно */}
-            <div className="flex flex-col items-center text-center gap-3 w-full max-w-xs">
-              <picture>
-                <source media="(max-width: 768px)" srcSet="/assets/hero/title-mobile.webp" width={560} height={350} />
-                <img
-                  src="/assets/hero/title.webp"
-                  width={560}
-                  height={350}
-                  alt="Coursing Stats"
-                  loading="eager"
-                  fetchPriority="high"
-                  decoding="async"
-                  className="w-full max-w-[200px] h-auto drop-shadow-md pointer-events-none mx-auto"
-                />
-              </picture>
-            </div>
-
-            {/* Кнопки быстрой навигации по разделам */}
-            <div className="flex flex-col gap-2 w-full max-w-xs">
-              <a
-                href="/competitions?tab=ranking"
-                className="flex items-center justify-between px-4 py-3 rounded-xl bg-white/90 backdrop-blur-md border border-camel-200/70 shadow-sm text-sm font-semibold text-charcoal-800 transition-colors min-h-[44px] active:bg-camel-50/90"
-              >
-                <span>Соревнования</span>
-                <Icons.chevronRight className="w-4 h-4 text-camel-600 shrink-0" aria-hidden />
-              </a>
-              <a
-                href="/shows?tab=ranking"
-                className="flex items-center justify-between px-4 py-3 rounded-xl bg-white/90 backdrop-blur-md border border-camel-200/70 shadow-sm text-sm font-semibold text-charcoal-800 transition-colors min-h-[44px] active:bg-camel-50/90"
-              >
-                <span>Выставки РКФ</span>
-                <Icons.chevronRight className="w-4 h-4 text-camel-600 shrink-0" aria-hidden />
-              </a>
-              <a
-                href="/speed-records"
-                className="flex items-center justify-between px-4 py-3 rounded-xl bg-white/90 backdrop-blur-md border border-camel-200/70 shadow-sm text-sm font-semibold text-charcoal-800 transition-colors min-h-[44px] active:bg-camel-50/90"
-              >
-                <span>Рекорды Донино</span>
-                <Icons.chevronRight className="w-4 h-4 text-camel-600 shrink-0" aria-hidden />
-              </a>
-            </div>
-          </>
-        )}
-
-        {/* Для нестатических страниц — старый metrics + кнопка закрытия */}
-        {!isStaticDashboard && metrics && (
-          <>
-            <div className="md:hidden flex justify-end pb-1.5 w-full">
+      {/* Mobile Metrics (< 768px) */}
+      {metrics && (
+        <div
+          ref={metricsRef}
+          data-metrics-panel="true"
+          className="relative z-40 w-full max-w-xl mx-auto px-3 pt-2 pb-4 md:hidden will-change-opacity pointer-events-auto"
+        >
+          {/* Mobile close button: smoothly collapses stage so content flies up (hidden in static dashboard) */}
+          {!isStaticDashboard && (
+            <div className="md:hidden flex justify-end pb-1.5">
               <button
                 type="button"
                 onClick={handleCloseMobile}
@@ -270,10 +224,10 @@ export default function HomeHeroStage({
                 <span>Закрыть</span>
               </button>
             </div>
-            {metrics}
-          </>
-        )}
-      </div>
+          )}
+          {metrics}
+        </div>
+      )}
 
       {/* Scroll cue is hidden in static dashboard and on mobile (< 768px) */}
       {!hideScrollCue && (
