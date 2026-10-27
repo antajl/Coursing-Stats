@@ -38,13 +38,7 @@ export default function ShowCalendar() {
     if (!monthParam || monthParam === 'from_previous') return ''
     return monthParam
   })
-  const [filterLcOnly, setFilterLcOnly] = useState(() => {
-    const lc = searchParams.get('lc')
-    const protocol = searchParams.get('protocol')
-    const all = searchParams.get('all')
-    if (all === '1' || lc === '0' || protocol === '0') return false
-    return true
-  })
+  
   const [searchQuery, setSearchQuery] = useState(() => searchParams.get('search') || '')
   const [quickPreset, setQuickPreset] = useState<QuickPreset>(null)
   const [expandedKeys, setExpandedKeys] = useState<Set<string>>(() => new Set())
@@ -76,31 +70,26 @@ export default function ShowCalendar() {
         else params.delete('month')
         if (searchQuery) params.set('search', searchQuery)
         else params.delete('search')
-        if (!filterLcOnly) {
-          params.set('all', '1')
-          params.delete('lc')
-        } else {
-          params.delete('all')
-        }
+        
         return params
       },
       { replace: true },
     )
-  }, [filterYear, filterMonth, searchQuery, filterLcOnly, setSearchParams])
+  }, [filterYear, filterMonth, searchQuery, setSearchParams])
 
   useEffect(() => {
     setExpandedKeys(new Set())
-  }, [filterYear, filterMonth, filterLcOnly, searchQuery, quickPreset])
+  }, [filterYear, filterMonth, searchQuery, quickPreset])
 
   const filteredGroups = useMemo(
     () =>
       filterShowCalendarGroups(exhibitions, {
         filterMonth,
-        filterLcOnly,
+        filterLcOnly: true,
         searchQuery,
         quickPreset,
       }),
-    [exhibitions, searchQuery, filterLcOnly, quickPreset, filterMonth],
+    [exhibitions, searchQuery, quickPreset, filterMonth],
   )
 
   const monthGroups = useMemo(
@@ -127,7 +116,6 @@ export default function ShowCalendar() {
   const { visibleCount, loadMoreRef, hasMore } = useInfiniteScroll(flatVisible.length, [
     filterYear,
     filterMonth,
-    filterLcOnly,
     searchQuery,
     quickPreset,
     flatVisible.length,
@@ -173,7 +161,7 @@ export default function ShowCalendar() {
       })
     }
     return chips
-  }, [filterLcOnly, filterYear, filterMonth, quickPreset])
+  }, [filterYear, filterMonth, quickPreset])
 
   const handleResetFilters = () => {
     setFilterYear(CURRENT_SEASON)
@@ -225,26 +213,20 @@ export default function ShowCalendar() {
           onYearChange={setFilterYear}
           filterMonth={filterMonth}
           onMonthChange={setFilterMonth}
-          filterLcOnly={filterLcOnly}
-          onLcOnlyChange={setFilterLcOnly}
           onClearQuickPreset={() => setQuickPreset(null)}
           availableMonths={availableMonths}
         />
       }
       trailing={<div className="hidden sm:block"><ShowCalendarHint /></div>}
       bottomLeft={
-        <>
-          <p className="hidden sm:block text-xs text-charcoal-500">
-            {filterLcOnly
-              ? `Выставок с протоколом: ${withResultCount} · всего в базе: ${exhibitions.length}`
-              : `Всего событий: ${exhibitions.length} · отфильтровано: ${filteredGroups.length} · с результатом: ${withResultCount}`}
+        <div className="flex items-center gap-2 text-xs text-charcoal-500">
+          <p className="hidden sm:block">
+            {`Выставок с протоколом: ${filteredGroups.length} из ${withResultCount} за ${filterYear || CURRENT_SEASON} год`}
           </p>
-          <p className="sm:hidden text-xs text-charcoal-500">
-            {filterLcOnly
-              ? `${withResultCount} с протоколом из ${exhibitions.length}`
-              : `${filteredGroups.length} из ${exhibitions.length} · с рез.: ${withResultCount}`}
+          <p className="sm:hidden">
+            {`${filteredGroups.length} выставок с протоколом`}
           </p>
-        </>
+        </div>
       }
     />
   )

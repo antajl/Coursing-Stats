@@ -22,9 +22,7 @@ export interface ShowCalendarToolbarProps {
   onMonthChange: (month: string) => void
   monthDropdownOpen?: boolean
   onMonthDropdownOpenChange?: (open: boolean) => void
-  filterLcOnly: boolean
-  onLcOnlyChange: (value: boolean) => void
-  onClearQuickPreset: () => void
+onClearQuickPreset: () => void
   availableMonths?: Set<string>
 }
 
@@ -37,9 +35,7 @@ export function ShowCalendarToolbar({
   onYearChange,
   filterMonth,
   onMonthChange,
-  filterLcOnly,
-  onLcOnlyChange,
-  onClearQuickPreset,
+onClearQuickPreset,
   availableMonths,
 }: ShowCalendarToolbarProps) {
   return (
@@ -80,17 +76,7 @@ export function ShowCalendarToolbar({
           availableMonthsByYear={availableMonths ? { [filterYear]: availableMonths } : undefined}
         />
 
-        <button
-          type="button"
-          onClick={() => onLcOnlyChange(!filterLcOnly)}
-          className={`${TOOLBAR_CHIP} ${
-            filterLcOnly ? TOOLBAR_CHIP_ACTIVE : TOOLBAR_CHIP_IDLE
-          }`}
-          aria-pressed={filterLcOnly}
-          title={filterLcOnly ? 'Показаны только выставки с опубликованными протоколами' : 'Показаны все выставки года (включая расписание)'}
-        >
-          {filterLcOnly ? 'С протоколом' : 'Все события'}
-        </button>
+        
       </div>
     </div>
   )

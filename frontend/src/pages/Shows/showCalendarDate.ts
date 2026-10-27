@@ -1,6 +1,7 @@
 import type { ShowRkfCalendarEntry } from '../../lib/staticData'
 import { formatMonthShortRu } from '../Events/eventListUtils'
 import {
+  exhibitionHasProtocol,
   groupMatchesSearch,
   groupRkfMonoVariants,
   type RkfCalendarGroup,
@@ -78,7 +79,8 @@ export function filterShowCalendarGroups(
     })
   }
 
-  const groups = groupRkfMonoVariants(monthFiltered)
+  const baseFiltered = opts.filterLcOnly ? monthFiltered.filter(exhibitionHasProtocol) : monthFiltered
+  const groups = groupRkfMonoVariants(baseFiltered)
   return groups.filter((group) => {
     if (opts.filterLcOnly && !group.hasProtocol) return false
     if (upcomingRange) {

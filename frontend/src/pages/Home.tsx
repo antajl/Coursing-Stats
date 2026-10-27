@@ -11,9 +11,7 @@ import { formatDate } from './Home/utils/formatters'
 import { ANIMATION, IMAGES } from '../lib/constants'
 import {
   HomeConceptSwitcher,
-  Concept1RightHub,
-  Concept2StatsRibbon,
-  Concept3SymmetricCockpit,
+  ConceptSymmetricFinal,
   type HomeConceptMode,
 } from './Home/components/HomeConcepts'
 
@@ -24,9 +22,12 @@ export default function Home() {
   // Interactive concept mode switcher
   const [conceptMode, setConceptMode] = useState<HomeConceptMode>(() => {
     if (typeof window !== 'undefined') {
-      return (localStorage.getItem('cs_home_concept') as HomeConceptMode) || 'concept-1'
+      const saved = localStorage.getItem('cs_home_concept') as HomeConceptMode
+      if (saved === 'symmetric-final' || saved === 'as-is') {
+        return saved
+      }
     }
-    return 'concept-1'
+    return 'symmetric-final'
   })
 
   const handleSetConcept = (m: HomeConceptMode) => {
@@ -35,10 +36,6 @@ export default function Home() {
       localStorage.setItem('cs_home_concept', m)
     } catch {}
   }
-
-  const handleOpenSearch = useCallback(() => {
-    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true }))
-  }, [])
 
   // Lock root scroll on single-screen static dashboard ONLY on desktop (>= 768px)
   useEffect(() => {
@@ -143,12 +140,8 @@ export default function Home() {
         disableScrollFade={true}
         reverseLayout={true}
         children={
-          conceptMode === 'concept-1' ? (
-            <Concept1RightHub stats={stats} showStats={showStats} onOpenSearch={handleOpenSearch} />
-          ) : conceptMode === 'concept-2' ? (
-            <div className="w-0 h-0 opacity-0 pointer-events-none" />
-          ) : conceptMode === 'concept-3' ? (
-            <Concept3SymmetricCockpit stats={stats} showStats={showStats} onOpenSearch={handleOpenSearch} />
+          conceptMode === 'symmetric-final' ? (
+            <ConceptSymmetricFinal stats={stats} showStats={showStats} />
           ) : (
             /* Right block: Logo & Compact Database Statistics (As-is) */
             <div className="flex flex-col items-end text-right gap-1.5 3xl:gap-2 select-none max-w-full">
@@ -190,11 +183,6 @@ export default function Home() {
           </div>
         }
       />
-
-      {/* Concept 2: Floating Stats Ribbon at screen bottom */}
-      {conceptMode === 'concept-2' && (
-        <Concept2StatsRibbon stats={stats} showStats={showStats} onOpenSearch={handleOpenSearch} />
-      )}
 
       {/* =========================================================================
           MOBILE (< 768px): Natural, touch-friendly, scrollable flow
