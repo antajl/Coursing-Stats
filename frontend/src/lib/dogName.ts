@@ -259,3 +259,10 @@ export function dogNameMatchesQuery(
   const tokens = dogQuerySearchTokens(query)
   return tokens.some((token) => haystack.includes(token))
 }
+
+/** Предотвращает висячие предлоги и короткие частицы питомников в конце строк */
+export function formatNameWithNonBreakingSpaces(name: string): string {
+  if (!name) return ''
+  // Привязываем неразрывным пробелом короткие приставки и служебные частицы
+  return name.replace(/(^|\s)(аль|дэ|де|фон|ван|из|со|от|ди|ля|ле)\s+/gi, '$1$2\u00A0')
+}

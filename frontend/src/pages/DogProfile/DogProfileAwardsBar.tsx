@@ -50,7 +50,6 @@ export function DogProfileAwardsBar({
   const handleWheel = (e: React.WheelEvent<HTMLDivElement>) => {
     const el = scrollRef.current
     if (!el) return
-    // Горизонтальный скролл колесиком мыши при переполнении
     if (el.scrollWidth > el.clientWidth && e.deltaY !== 0) {
       el.scrollLeft += e.deltaY
       updateScrollIndicators()
@@ -91,7 +90,7 @@ export function DogProfileAwardsBar({
   }
 
   return (
-    <div className="relative mt-3 pt-3 border-t border-old-money-100">
+    <div className="relative mt-3.5 pt-3 border-t border-old-money-200/80">
       {/* Плавные маски-градиенты по краям при переполнении */}
       {canScrollLeft && (
         <div
@@ -110,39 +109,34 @@ export function DogProfileAwardsBar({
         ref={scrollRef}
         onScroll={updateScrollIndicators}
         onWheel={handleWheel}
-        className="flex w-full items-center gap-2 overflow-x-auto no-scrollbar py-0.5 scroll-smooth"
+        className="flex w-full items-center gap-3 overflow-x-auto no-scrollbar py-0.5 scroll-smooth"
         tabIndex={0}
         aria-label="Награды и титулы собаки"
       >
-        <div className="flex items-center gap-2 mx-auto min-w-min">
-
-        {hasComp && (
-          <div className="flex shrink-0 items-center gap-1.5">
-            <span className="inline-flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-old-money-500">
-              <Rabbit className="h-3.5 w-3.5 text-old-money-400" aria-hidden />
-              Спорт:
-            </span>
-            <div className="flex items-center gap-1">
-              {sortedComp.map((item) => renderChip(item, 'comp'))}
-                    </div>
-      </div>
-    )}
-
-        {hasComp && hasShow && (
-          <span className="mx-1 h-3.5 w-px shrink-0 bg-old-money-200" aria-hidden />
-        )}
-
-        {hasShow && (
-          <div className="flex shrink-0 items-center gap-1.5">
-            <span className="inline-flex shrink-0 items-center gap-1 text-[10px] font-bold uppercase tracking-wider text-old-money-500">
-              <Sparkles className="h-3.5 w-3.5 text-old-money-400" aria-hidden />
-              Выставки:
-            </span>
-            <div className="flex items-center gap-1">
-              {sortedShow.map((item) => renderChip(item, 'show'))}
+        <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 min-w-min">
+          {hasComp && (
+            <div className="flex shrink-0 items-center gap-1.5 bg-forest-50/50 px-2.5 py-1 rounded-xl border border-forest-200/70">
+              <span className="inline-flex shrink-0 items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-forest-800">
+                <Rabbit className="h-3.5 w-3.5 text-forest-600" aria-hidden />
+                Спорт:
+              </span>
+              <div className="flex items-center gap-1">
+                {sortedComp.map((item) => renderChip(item, 'comp'))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+
+          {hasShow && (
+            <div className="flex shrink-0 items-center gap-1.5 bg-camel-50/50 px-2.5 py-1 rounded-xl border border-camel-200/70">
+              <span className="inline-flex shrink-0 items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-camel-900">
+                <Sparkles className="h-3.5 w-3.5 text-camel-700" aria-hidden />
+                Выставки:
+              </span>
+              <div className="flex items-center gap-1">
+                {sortedShow.map((item) => renderChip(item, 'show'))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
