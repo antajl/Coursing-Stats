@@ -5,6 +5,8 @@ import {
   getEventSubtitle,
   normalizeDisciplineLabel,
   parseRankLabelStructure,
+  parseJudgeNames,
+  formatCompetitionJudgesWithRoles,
 } from '../../frontend/src/pages/Events/eventListUtils'
 
 describe('calendar display utils', () => {
@@ -59,5 +61,17 @@ describe('calendar display utils', () => {
   it('short month labels are consistent (no mixed long/short)', () => {
     expect(formatRowDateParts('2026-07-18', '2026-07-19')?.month).toBe('июл')
     expect(formatRowDateParts('2026-08-01', '2026-08-02')?.month).toBe('авг')
+  })
+
+  it('handles judges as array without throwing', () => {
+    expect(parseJudgeNames(['Орлова М.О.', 'Крылова Е.В.'])).toEqual(['Орлова М.О.', 'Крылова Е.В.'])
+    expect(formatCompetitionJudgesWithRoles(['Орлова М.О.', 'Крылова Е.В.'])).toBe('Главный судья: Орлова М.О., судья: Крылова Е.В.')
+  })
+
+  it('handles null and undefined judges gracefully', () => {
+    expect(parseJudgeNames(null)).toEqual([])
+    expect(parseJudgeNames(undefined)).toEqual([])
+    expect(formatCompetitionJudgesWithRoles(null)).toBe('')
+    expect(formatCompetitionJudgesWithRoles(undefined)).toBe('')
   })
 })
