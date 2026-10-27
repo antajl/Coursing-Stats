@@ -28,7 +28,7 @@ export default function HomeStatsPills({ stats, showStats }: HomeStatsPillsProps
         <div className="bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-md p-2.5 sm:p-3 hover:shadow-lg transition-shadow">
           <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-camel-200/50">
             <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-camel-800">Спорт</span>
-            <span className="text-[10.5px] sm:text-[11px] text-charcoal-400 font-medium">курсинг & бега</span>
+            <span className="text-[10.5px] sm:text-[11px] text-charcoal-600 font-medium">курсинг & бега</span>
           </div>
           <div className="grid grid-cols-3 text-center divide-x divide-camel-200/50">
             <div className="px-1.5">
@@ -58,7 +58,7 @@ export default function HomeStatsPills({ stats, showStats }: HomeStatsPillsProps
         <div className="bg-gradient-to-br from-white/95 to-cream-50/95 backdrop-blur-md rounded-xl border border-camel-200/70 shadow-md p-2.5 sm:p-3 hover:shadow-lg transition-shadow">
           <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-camel-200/50">
             <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-camel-800">Выставки РКФ</span>
-            <span className="text-[10.5px] sm:text-[11px] text-charcoal-400 font-medium">каталоги & ринги</span>
+            <span className="text-[10.5px] sm:text-[11px] text-charcoal-600 font-medium">каталоги & ринги</span>
           </div>
           <div className="grid grid-cols-3 text-center divide-x divide-camel-200/50">
             <div className="px-1.5">

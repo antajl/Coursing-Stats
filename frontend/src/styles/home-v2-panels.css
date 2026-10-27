@@ -235,31 +235,34 @@
 }
 
 /* ========== Compact Static Dashboard ========== */
-.home-v2-static {
-  height: calc(100dvh - var(--cs-nav-offset)) !important;
-  max-height: calc(100dvh - var(--cs-nav-offset)) !important;
-  overflow: hidden !important;
-  padding-bottom: 0 !important;
-}
+@media (min-width: 768px) {
+  .home-v2-static {
+    height: calc(100dvh - var(--cs-nav-offset)) !important;
+    max-height: calc(100dvh - var(--cs-nav-offset)) !important;
+    overflow: hidden !important;
+    padding-bottom: 0 !important;
+  }
 
-.home-v2-static .home-v2-stage {
-  height: 100% !important;
-  min-height: 0 !important;
-  max-height: 100% !important;
-  overflow: hidden !important;
-  padding-bottom: 0 !important;
+  .home-v2-static .home-v2-stage {
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    overflow: hidden !important;
+    padding-bottom: 0 !important;
+  }
+
+  .home-v2-season-top--compact .home-v2-columns {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 12px 16px !important;
+    width: 100% !important;
+  }
 }
 
 .home-v2-season-top--compact {
   margin-bottom: 0 !important;
   width: 100% !important;
   box-sizing: border-box !important;
-}
-.home-v2-season-top--compact .home-v2-columns {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
-  gap: 12px 16px !important;
-  width: 100% !important;
 }
 .home-v2-season-top--compact .home-v2-col {
   min-width: 0 !important;

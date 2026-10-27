@@ -8,21 +8,32 @@
   }
 }
 
-/* Статичный дашборд главной страницы — страница не скроллится */
-html.home-hero-locked,
-html.home-hero-locked body,
-html.home-static-locked,
-html.home-static-locked body,
-html:has(.home-v2-static),
-html:has(.home-v2-static) body {
-  overflow: hidden !important;
-  overscroll-behavior: none;
-  height: 100% !important;
-  scrollbar-gutter: auto;
-}
-/* Резерв под скроллбар — иначе после unlock контент сдвигается по X */
-html {
-  scrollbar-gutter: stable;
+/* Статичный дашборд главной страницы — страница не скроллится ТОЛЬКО на десктопе (>= 768px) */
+@media (min-width: 768px) {
+  html.home-hero-locked,
+  html.home-hero-locked body,
+  html.home-static-locked,
+  html.home-static-locked body,
+  html:has(.home-v2-static),
+  html:has(.home-v2-static) body {
+    overflow: hidden !important;
+    overscroll-behavior: none;
+    height: 100% !important;
+    scrollbar-gutter: auto;
+  }
+
+  .cs-page-shell:has(.home-v2-static) {
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  main:has(.home-v2-static) {
+    height: calc(100dvh - var(--cs-nav-offset)) !important;
+    max-height: calc(100dvh - var(--cs-nav-offset)) !important;
+    overflow: hidden !important;
+  }
 }
 
 /* Главная на всю ширину viewport — контент центрирует .wrap */
@@ -35,19 +46,6 @@ main:has(.home-v2) {
   padding-left: 0 !important;
   padding-right: 0 !important;
   padding-bottom: 0 !important;
-}
-
-.cs-page-shell:has(.home-v2-static) {
-  height: 100dvh !important;
-  max-height: 100dvh !important;
-  min-height: 0 !important;
-  overflow: hidden !important;
-}
-
-main:has(.home-v2-static) {
-  height: calc(100dvh - var(--cs-nav-offset)) !important;
-  max-height: calc(100dvh - var(--cs-nav-offset)) !important;
-  overflow: hidden !important;
 }
 /* Фон как у .cs-page-shell — без отдельного «бежевого» оверрайда,
    иначе при settle виден один цвет, а после появления body — другой. */
