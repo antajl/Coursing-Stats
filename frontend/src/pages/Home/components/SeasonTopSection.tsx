@@ -111,8 +111,8 @@ function SeasonTopSectionInner({
         id: 'donino' as const,
         label: (
           <>
-            <span className="xs:hidden">Донино</span>
-            <span className="hidden xs:inline">Рекорды Донино</span>
+            <span className="md:hidden">Донино</span>
+            <span className="hidden md:inline">Рекорды Донино</span>
           </>
         ),
       },

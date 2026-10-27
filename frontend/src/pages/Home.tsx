@@ -140,7 +140,7 @@ export default function Home() {
         }
         metrics={
           /* Left block: Double Podium Rankings */
-          <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(860px,49vw,980px)] 3xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-340px)] mr-auto">
+          <div className="pointer-events-auto shrink-0 w-full md:w-[clamp(900px,53vw,1040px)] 3xl:w-[clamp(980px,58vw,1360px)] max-w-[calc(100vw-340px)] mr-auto">
             <SeasonTopSection
               competitionSlides={competitionSlides}
               racingSlides={racingSlides}
