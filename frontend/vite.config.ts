@@ -5,6 +5,7 @@ import { createRequire } from 'node:module'
 import { defineConfig, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 import { homePhotosPlugin } from './vite-plugin-home-photos.ts'
+import { cloudflareTunnelPlugin } from './vite-plugin-cloudflared.ts'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
@@ -126,6 +127,7 @@ export default defineConfig(({ mode }) => {
     react(),
     syncBotBanners(),
     serveDataV1(),
+    cloudflareTunnelPlugin(),
     homePhotosPlugin({
       publicHomeDir: path.resolve(__dirname, 'public/assets/home'),
       outFile: path.resolve(__dirname, 'src/lib/homePhotos.generated.ts'),
@@ -169,6 +171,7 @@ export default defineConfig(({ mode }) => {
       cssMinify: 'esbuild',
     },
     server: {
+      allowedHosts: true,
       watch: {
         ignored: ['**/data/v1/**', '**/data/local/**'],
       },

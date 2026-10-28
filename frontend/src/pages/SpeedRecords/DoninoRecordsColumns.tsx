@@ -96,7 +96,7 @@ export default function DoninoRecordsColumns({
   )
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2.5 sm:space-y-4">
       {/* Мобильный переключатель дисциплин */}
       <SegmentedTabs
         breakpoint="lg"

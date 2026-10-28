@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Info, FileText, ChevronDown } from 'lucide-react'
+import { Info, FileText, ChevronDown, X } from 'lucide-react'
 import { toolbarPillTriggerClass } from '../../lib/toolbar'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
@@ -81,6 +81,9 @@ export default function EventsToolbar({
   const disciplineLabel =
     DISCIPLINE_OPTIONS.find((d) => d.value === filterDiscipline)?.label || 'Дисциплина'
 
+  const isYearNonDefault = filterYear !== '' && filterYear !== CURRENT_SEASON
+  const hasActiveFilters = Boolean(isYearNonDefault || filterMonth || filterDiscipline || searchQuery)
+
   const handleDisciplineToggle = (d: string) => {
     onFilterDisciplineChange(filterDiscipline === d ? '' : d)
   }
@@ -105,31 +108,30 @@ export default function EventsToolbar({
     </ModernDropdown>
   )
 
+  const trailingMobile = (
+    <ModernDropdown
+      closeOnScroll
+      trigger={
+        <button
+          type="button"
+          className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-old-money-300/80 bg-cream-50 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 transition-all cursor-pointer shadow-2xs"
+          aria-label="Об архиве и источниках"
+          title="Об архиве"
+        >
+          <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+        </button>
+      }
+      width="320px"
+      portal
+    >
+      {ARCHIVE_MODAL_CONTENT}
+    </ModernDropdown>
+  )
+
   const filters = (
-    <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full min-w-0">
-      {/* Строка 1 на мобилке: Поиск + Об архиве */}
-      <div className="flex items-center gap-2 w-full sm:hidden">
-        <ToolbarSearch
-          value={searchQuery}
-          onChange={onSearchChange}
-          placeholder="Название, клуб, регион…"
-          className="flex-1 min-w-0"
-        />
-        <div className="shrink-0">{trailing}</div>
-      </div>
-
-      {/* Поиск на десктопе */}
-      <div className="hidden sm:flex min-w-0 items-center gap-2 sm:w-auto">
-        <ToolbarSearch
-          value={searchQuery}
-          onChange={onSearchChange}
-          placeholder="Название, клуб, регион…"
-          className="w-auto min-w-[200px]"
-        />
-      </div>
-
-      {/* Строка 2 на мобилке / продолжение на десктопе */}
-      <div className="flex max-w-full flex-wrap items-center gap-1.5 sm:gap-2">
+    <div className="w-full min-w-0">
+      {/* Мобильная строка (32px): Год/Месяц + Дисциплина + Поиск + (i) */}
+      <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0">
         <MonthYearDropdown
           selectedYear={filterYear}
           onSelectYear={onFilterYearChange}
@@ -140,8 +142,7 @@ export default function EventsToolbar({
           availableMonthsByYear={availableMonthsByYear}
         />
 
-        {/* Выбор дисциплины выпадающим списком на мобилке */}
-        <div className="shrink-0 sm:hidden">
+        <div className="shrink-0">
           <ModernDropdown
             trigger={
               <button
@@ -178,7 +179,7 @@ export default function EventsToolbar({
                   type="button"
                   role="menuitem"
                   onClick={() => {
-                    onFilterDisciplineChange(d.value)
+                    handleDisciplineToggle(d.value)
                     setDisciplineDropdownOpen(false)
                   }}
                   className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
@@ -194,26 +195,68 @@ export default function EventsToolbar({
           </ModernDropdown>
         </div>
 
-        {/* Кнопки дисциплин на десктопе */}
-        <div className="hidden sm:flex items-center gap-1 rounded-full border border-old-money-200/80 bg-cream-50 p-0.5">
-          {DISCIPLINE_OPTIONS.map((d) => {
-            const active = filterDiscipline === d.value
-            return (
-              <button
-                key={d.value}
-                type="button"
-                onClick={() => handleDisciplineToggle(d.value)}
-                className={`rounded-full px-2.5 py-1 text-xs font-semibold transition-colors cursor-pointer ${
-                  active
-                    ? 'bg-camel-500 text-charcoal-900 shadow-2xs'
-                    : 'text-charcoal-600 hover:text-charcoal-900 hover:bg-cream-200/60'
-                }`}
-                aria-pressed={active}
-              >
-                {d.label}
-              </button>
-            )
-          })}
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={onSearchChange}
+          placeholder="Поиск…"
+          className="flex-1 min-w-[70px]"
+        />
+
+        {hasActiveFilters && (
+          <button
+            type="button"
+            onClick={onResetFilters}
+            className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+            title="Сбросить фильтры"
+            aria-label="Сбросить фильтры"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        )}
+        <div className="shrink-0">{trailingMobile}</div>
+      </div>
+
+      {/* Десктопная строка: поиск слева + фильтры */}
+      <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
+        <div className="flex min-w-0 items-center gap-2 sm:w-auto">
+          <ToolbarSearch
+            value={searchQuery}
+            onChange={onSearchChange}
+            placeholder="Название, клуб, регион…"
+            className="w-auto min-w-[200px]"
+          />
+        </div>
+
+        <div className="flex max-w-full flex-wrap items-center gap-1.5 sm:gap-2">
+          <MonthYearDropdown
+            selectedYear={filterYear}
+            onSelectYear={onFilterYearChange}
+            selectedMonth={filterMonth}
+            onSelectMonth={onFilterMonthChange}
+            sortedYears={sortedYears}
+            currentSeason={CURRENT_SEASON}
+            availableMonthsByYear={availableMonthsByYear}
+          />
+
+          <div className="flex items-center gap-1 bg-cream-50 p-0.5 rounded-full border border-old-money-200 h-8">
+            {DISCIPLINE_OPTIONS.map((d) => {
+              const active = filterDiscipline === d.value
+              return (
+                <button
+                  key={d.value}
+                  type="button"
+                  onClick={() => handleDisciplineToggle(d.value)}
+                  className={`px-2.5 py-1 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                    active
+                      ? 'bg-camel-500 text-charcoal-900 shadow-2xs'
+                      : 'text-charcoal-700 hover:text-charcoal-900 hover:bg-cream-100'
+                  }`}
+                >
+                  {d.label}
+                </button>
+              )
+            })}
+          </div>
         </div>
       </div>
     </div>

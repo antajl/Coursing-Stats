@@ -27,9 +27,9 @@ export default function MedalBadge({ variant, count, size = 'md', className = ''
     <div
       className={`inline-flex items-center justify-center rounded-full font-bold tabular-nums ${sizeClass} ${className}`}
       style={{
-        backgroundColor: isZero ? 'transparent' : styles.bg,
-        color: isZero ? 'var(--charcoal-400)' : styles.text,
-        border: isZero ? `1px solid ${styles.bg}` : 'none',
+        backgroundColor: isZero ? 'rgba(129, 121, 110, 0.08)' : styles.bg,
+        color: isZero ? 'var(--charcoal-400, #9e9689)' : styles.text,
+        border: 'none',
       }}
       role="img"
       aria-label={`${variant} medal: ${count}`}

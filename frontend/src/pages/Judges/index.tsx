@@ -192,18 +192,175 @@ export default function Judges() {
           canonicalUrl="https://coursing-stats.ru/competitions?tab=judges"
         />
       )}
-      <div className="mb-4">
+      <div className="mb-2 sm:mb-4">
         <PageToolbar
           bare
           filters={
-            <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full">
-              <ToolbarSearch
-                value={searchQuery}
-                onChange={setSearchQuery}
-                placeholder="Фамилия судьи…"
-                className="w-full sm:w-auto min-w-0 sm:min-w-[200px] max-w-sm"
-              />
-              <div className="flex max-w-full items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 w-full sm:w-auto sm:flex-wrap">
+            <div className="w-full min-w-0">
+              {/* Мобильная консоль: 2 компактные строки */}
+              <div className="flex flex-col gap-1.5 w-full sm:hidden">
+                {/* Строка 1: [Год ∨] [Порода ∨] [Дисциплина ∨] + [X] */}
+                <div className="flex items-center gap-1.5 w-full min-w-0">
+                  {/* Year Dropdown */}
+                  <ModernDropdown
+                    trigger={
+                      <button
+                        type="button"
+                        className={`shrink-0 ${toolbarPillTriggerClass(isYearNonDefault)}`}
+                      >
+                        <span>{!filterYear ? 'Все года' : filterYear}</span>
+                        <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                      </button>
+                    }
+                    isOpen={yearOpen}
+                    onOpenChange={setYearOpen}
+                    width="130px"
+                  >
+                    <div className="p-1 max-h-60 overflow-y-auto" role="menu">
+                      <button
+                        type="button"
+                        role="menuitem"
+                        onClick={() => {
+                          setFilterYear('')
+                          setYearOpen(false)
+                        }}
+                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                          !filterYear
+                            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                            : 'text-charcoal-700 hover:bg-camel-100'
+                        }`}
+                      >
+                        Все года
+                      </button>
+                      {availableYears.map((year) => (
+                        <button
+                          key={year}
+                          type="button"
+                          role="menuitem"
+                          onClick={() => {
+                            setFilterYear(year)
+                            setYearOpen(false)
+                          }}
+                          className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                            filterYear === year
+                              ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                              : 'text-charcoal-700 hover:bg-camel-100'
+                          }`}
+                        >
+                          {year}
+                        </button>
+                      ))}
+                    </div>
+                  </ModernDropdown>
+
+                  {/* Breed Dropdown */}
+                  <BreedSearchDropdown
+                    breeds={availableBreeds}
+                    selectedBreed={filterBreed}
+                    onSelect={setFilterBreed}
+                    trigger={
+                      <button
+                        type="button"
+                        className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+                      >
+                        <span className="truncate max-w-[100px]">
+                          {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                        </span>
+                        <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                      </button>
+                    }
+                    dogIndex={dogIndex}
+                  />
+
+                  {/* Discipline Dropdown */}
+                  <ModernDropdown
+                    trigger={
+                      <button
+                        type="button"
+                        className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterDiscipline))}`}
+                      >
+                        <span className="truncate max-w-[85px]">
+                          {filterDiscipline
+                            ? DISCIPLINE_OPTIONS.find((d) => d.value === filterDiscipline)?.label
+                            : 'Дисциплина'}
+                        </span>
+                        <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                      </button>
+                    }
+                    isOpen={disciplineOpen}
+                    onOpenChange={setDisciplineOpen}
+                    width="160px"
+                  >
+                    <div className="p-1 max-h-60 overflow-y-auto" role="menu">
+                      <button
+                        type="button"
+                        role="menuitem"
+                        onClick={() => {
+                          setFilterDiscipline('')
+                          setDisciplineOpen(false)
+                        }}
+                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                          !filterDiscipline
+                            ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                            : 'text-charcoal-700 hover:bg-camel-100'
+                        }`}
+                      >
+                        Все дисциплины
+                      </button>
+                      {DISCIPLINE_OPTIONS.map((d) => (
+                        <button
+                          key={d.value}
+                          type="button"
+                          role="menuitem"
+                          onClick={() => {
+                            setFilterDiscipline(d.value)
+                            setDisciplineOpen(false)
+                          }}
+                          className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                            filterDiscipline === d.value
+                              ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                              : 'text-charcoal-700 hover:bg-camel-100'
+                          }`}
+                        >
+                          {d.label}
+                        </button>
+                      ))}
+                    </div>
+                  </ModernDropdown>
+
+                  {hasActiveFilters && (
+                    <button
+                      type="button"
+                      onClick={clearFilters}
+                      className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+                      title="Сбросить фильтры"
+                      aria-label="Сбросить фильтры"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+                  )}
+                </div>
+
+                {/* Строка 2: Инлайн-поиск на всю ширину */}
+                <div className="w-full">
+                  <ToolbarSearch
+                    value={searchQuery}
+                    onChange={setSearchQuery}
+                    placeholder="Фамилия судьи…"
+                    className="w-full min-w-0"
+                  />
+                </div>
+              </div>
+
+              {/* Десктопная строка */}
+              <div className="hidden sm:flex sm:items-center gap-2 w-full">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={setSearchQuery}
+                  placeholder="Фамилия судьи…"
+                  className="w-auto min-w-[200px] max-w-sm"
+                />
+                <div className="flex max-w-full items-center gap-1.5 flex-wrap">
                 {/* Year Dropdown */}
                 <ModernDropdown
                   trigger={
@@ -340,7 +497,7 @@ export default function Judges() {
                       setFilterBreed('')
                       setFilterDiscipline('')
                     }}
-                    className="shrink-0 inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-medium text-old-money-600 hover:text-charcoal-900 hover:bg-cream-100 transition-colors"
+                    className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-3 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
                     title="Сбросить все фильтры"
                   >
                     <X className="h-3.5 w-3.5" />
@@ -350,7 +507,8 @@ export default function Judges() {
 
               </div>
             </div>
-          }
+          </div>
+        }
           trailing={
             <div className="hidden sm:flex items-center gap-2">
               <RecordSortBar

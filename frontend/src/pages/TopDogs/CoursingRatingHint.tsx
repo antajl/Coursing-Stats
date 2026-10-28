@@ -60,10 +60,10 @@ export const RATING_MODAL_CONTENT = (
       </div>
     </div>
 
-    <div className="border-t border-old-money-200/80 pt-2.5 mt-2.5 text-[10.5px] leading-relaxed text-charcoal-600 flex items-start gap-1.5">
-      <FileText className="h-3.5 w-3.5 text-camel-700 shrink-0 mt-0.5" aria-hidden />
+    <div className="border-t border-old-money-200/80 pt-2.5 mt-2.5 text-[10px] sm:text-[10.5px] leading-relaxed text-charcoal-500 flex items-start gap-1.5">
+      <FileText className="h-3.5 w-3.5 text-camel-700/80 shrink-0 mt-0.5" aria-hidden />
       <p>
-        <strong className="text-charcoal-800 font-semibold">Примечание:</strong> спортивная статистика и результаты состязаний систематизированы на основе официальных протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами.
+        <strong className="text-charcoal-700 font-medium">Примечание:</strong> спортивная статистика и результаты состязаний систематизированы на основе официальных протоколов организаторов, полевых секретариатов и материалов ProCoursing.ru. Сведения могут содержать ошибки или быть неполными из-за фрагментарности открытых источников и ручного ведения ранних баз организаторами.
       </p>
     </div>
   </div>
@@ -116,11 +116,12 @@ export default function CoursingRatingHint({
         trigger={
           <button
             type="button"
-            className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer shadow-2xs"
+            className="relative inline-flex h-8 w-8 sm:w-auto shrink-0 items-center justify-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50 sm:px-2.5 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer shadow-2xs before:absolute before:-inset-1.5 before:content-[''] sm:before:hidden"
             aria-label="О рейтинге и источниках данных"
+            title="О рейтинге и источниках данных"
           >
-            <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-            <span>О рейтинге</span>
+            <Info className="h-4 w-4 sm:h-3.5 sm:w-3.5 text-camel-700 shrink-0" aria-hidden />
+            <span className="hidden sm:inline">О рейтинге</span>
           </button>
         }
         width="340px"

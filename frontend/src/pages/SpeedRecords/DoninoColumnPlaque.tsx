@@ -67,7 +67,7 @@ export function DoninoColumnShell({
       {plaque}
       <div
         ref={listRef}
-        className="flex flex-col divide-y divide-old-money-100 pl-[3px]"
+        className="flex flex-col divide-y divide-old-money-100"
       >
         {children}
       </div>

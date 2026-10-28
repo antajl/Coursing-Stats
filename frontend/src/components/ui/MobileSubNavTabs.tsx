@@ -42,7 +42,7 @@ export function MobileSubNavTabs<T extends string = string>({
     <div
       role="tablist"
       aria-label={ariaLabel}
-      className={`relative mb-5 ${hideClass} border-b border-old-money-200/90 ${className}`.trim()}
+      className={`relative mb-3 sm:mb-4 ${hideClass} border-b border-old-money-200/90 ${className}`.trim()}
     >
       <div
         className={

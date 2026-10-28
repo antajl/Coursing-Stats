@@ -70,6 +70,7 @@ export default function ShowRankingFilters({
   onGroupChange,
   awardMins,
   onAwardMinChange,
+  onResetFilters,
   onResetPanelFilters,
   dropdownRef,
   trailing,
@@ -87,6 +88,7 @@ export default function ShowRankingFilters({
 
   const panelFilterCount = (filterGroup ? 1 : 0) + awardMinCount
   const hasPanelFilters = panelFilterCount > 0
+  const hasAnyFilter = Boolean(yearIsNonDefault || filterBreed || hasPanelFilters || searchQuery)
 
   const yearTrigger = (
     <button
@@ -117,107 +119,84 @@ export default function ShowRankingFilters({
   )
 
   return (
-    <div className="mb-4" ref={dropdownRef}>
+    <div className="mb-2 sm:mb-4" ref={dropdownRef}>
       <PageToolbar
         bare
         topRowClassName="flex-wrap md:flex-nowrap"
         filters={
-          <div className="flex flex-col md:flex-row md:items-center gap-2 w-full min-w-0">
-            {/* Строка 1 на мобилке: Поиск + О рейтинге */}
-            <div className="flex items-center gap-2 w-full md:hidden">
-              <ToolbarSearch
-                value={searchQuery}
-                onChange={onSearchChange}
-                placeholder="Кличка, порода…"
-                className="flex-1 min-w-0"
-              />
-              <div className="shrink-0">
-                {trailing ?? <ShowRatingHint embedded />}
-              </div>
-            </div>
-
-            {/* Строка 2 на мобилке / левая группа на десктопе */}
-            <div className="flex flex-wrap items-center gap-1.5 shrink-0 w-full md:w-auto">
-              <div className="hidden md:block">
-                <ToolbarSearch
-                  value={searchQuery}
-                  onChange={onSearchChange}
-                  placeholder="Кличка, порода…"
-                  className="sm:w-44 md:w-40 lg:w-48"
-                />
-              </div>
-
-              {/* Выбор года */}
-              <div className="shrink-0">
-                <ModernDropdown
-                  trigger={yearTrigger}
-                  isOpen={yearDropdownOpen}
-                  onOpenChange={setYearDropdownOpen}
-                  width="120px"
-                >
-                  <div className="p-1 min-w-[100px]">
-                    <div className="max-h-60 overflow-y-auto" role="menu">
-                      <button
-                        type="button"
-                        role="menuitem"
-                        onClick={() => {
-                          onYearChange('')
-                          setYearDropdownOpen(false)
-                        }}
-                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
-                          !filterYear
-                            ? 'bg-camel-500 text-charcoal-900 font-medium'
-                            : 'text-charcoal-700 hover:bg-camel-100'
-                        }`}
-                      >
-                        Все года
-                      </button>
-                      {sortedYears.map((year) => (
+          <div className="w-full min-w-0">
+            {/* Мобильная версия: 2 компактные строки */}
+            <div className="flex flex-col gap-1.5 w-full md:hidden">
+              {/* Строка 1: [Год ∨] [Порода ∨] [Награды ∨] + [ⓘ] */}
+              <div className="flex items-center gap-1.5 w-full min-w-0">
+                <div className="shrink-0">
+                  <ModernDropdown
+                    trigger={yearTrigger}
+                    isOpen={yearDropdownOpen}
+                    onOpenChange={setYearDropdownOpen}
+                    width="120px"
+                  >
+                    <div className="p-1 min-w-[100px]">
+                      <div className="max-h-60 overflow-y-auto" role="menu">
                         <button
-                          key={year}
                           type="button"
                           role="menuitem"
                           onClick={() => {
-                            onYearChange(year)
+                            onYearChange('')
                             setYearDropdownOpen(false)
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
-                            filterYear === year
+                            !filterYear
                               ? 'bg-camel-500 text-charcoal-900 font-medium'
                               : 'text-charcoal-700 hover:bg-camel-100'
                           }`}
                         >
-                          {year}
+                          Все года
                         </button>
-                      ))}
+                        {sortedYears.map((year) => (
+                          <button
+                            key={year}
+                            type="button"
+                            role="menuitem"
+                            onClick={() => {
+                              onYearChange(year)
+                              setYearDropdownOpen(false)
+                            }}
+                            className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
+                              filterYear === year
+                                ? 'bg-camel-500 text-charcoal-900 font-medium'
+                                : 'text-charcoal-700 hover:bg-camel-100'
+                            }`}
+                          >
+                            {year}
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </ModernDropdown>
-              </div>
+                  </ModernDropdown>
+                </div>
 
-              {/* Выбор породы выпадающим списком на мобилке */}
-              <div className="shrink-0 md:hidden">
-                <BreedSearchDropdown
-                  breeds={breedValues}
-                  selectedBreed={filterBreed}
-                  onSelect={onBreedChange}
-                  trigger={
-                    <button
-                      type="button"
-                      className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
-                    >
-                      <span className="truncate max-w-[130px]">
-                        {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
-                      </span>
-                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                    </button>
-                  }
-                  dogIndex={dogIndex}
-                />
-              </div>
+                <div className="shrink-0">
+                  <BreedSearchDropdown
+                    breeds={breedValues}
+                    selectedBreed={filterBreed}
+                    onSelect={onBreedChange}
+                    trigger={
+                      <button
+                        type="button"
+                        className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+                      >
+                        <span className="truncate max-w-[110px]">
+                          {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                        </span>
+                        <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                      </button>
+                    }
+                    dogIndex={dogIndex}
+                  />
+                </div>
 
-              {/* Панель фильтров наград и групп */}
-              <div className="shrink-0">
+                <div className="shrink-0">
                 <ToolbarFiltersDropdown
                   active={hasPanelFilters}
                   activeCount={panelFilterCount}
@@ -280,8 +259,167 @@ export default function ShowRankingFilters({
                     </div>
                   </div>
                 </ToolbarFiltersDropdown>
+                </div>
+
+                <div className="ml-auto shrink-0 flex items-center gap-1.5">
+                  {hasAnyFilter && (
+                    <button
+                      type="button"
+                      onClick={onResetFilters}
+                      className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+                      title="Сбросить фильтры"
+                      aria-label="Сбросить фильтры"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+                  )}
+                  {trailing ?? <ShowRatingHint embedded compact />}
+                </div>
+              </div>
+
+              {/* Строка 2: Инлайн-поиск */}
+              <div className="w-full">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка, порода…"
+                  className="w-full min-w-0"
+                />
               </div>
             </div>
+
+            {/* Десктопная строка: Поиск + Год + Награды */}
+            <div className="hidden md:flex md:items-center gap-2 w-full min-w-0">
+              <div className="flex items-center gap-1.5 shrink-0">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка, порода…"
+                  className="sm:w-44 md:w-40 lg:w-48"
+                />
+
+                <ModernDropdown
+                  trigger={yearTrigger}
+                  isOpen={yearDropdownOpen}
+                  onOpenChange={setYearDropdownOpen}
+                  width="120px"
+                >
+                  <div className="p-1 min-w-[100px]">
+                    <div className="max-h-60 overflow-y-auto" role="menu">
+                      <button
+                        type="button"
+                        role="menuitem"
+                        onClick={() => {
+                          onYearChange('')
+                          setYearDropdownOpen(false)
+                        }}
+                        className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
+                          !filterYear
+                            ? 'bg-camel-500 text-charcoal-900 font-medium'
+                            : 'text-charcoal-700 hover:bg-camel-100'
+                        }`}
+                      >
+                        Все года
+                      </button>
+                      {sortedYears.map((year) => (
+                        <button
+                          key={year}
+                          type="button"
+                          role="menuitem"
+                          onClick={() => {
+                            onYearChange(year)
+                            setYearDropdownOpen(false)
+                          }}
+                          className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
+                            filterYear === year
+                              ? 'bg-camel-500 text-charcoal-900 font-medium'
+                              : 'text-charcoal-700 hover:bg-camel-100'
+                          }`}
+                        >
+                          {year}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </ModernDropdown>
+
+                <div className="shrink-0">
+                <ToolbarFiltersDropdown
+                  active={hasPanelFilters}
+                  activeCount={panelFilterCount}
+                  fillContent
+                  panelClassName="md:w-[min(320px,calc(100vw-2rem))]"
+                  onReset={onResetPanelFilters}
+                  label="Награды"
+                >
+                  <div className="flex flex-col gap-3 p-3">
+                    {onGroupChange && (
+                      <div className="space-y-1">
+                        <label className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-600">
+                          Группа пород
+                        </label>
+                        <select
+                          value={filterGroup}
+                          onChange={(e) => onGroupChange(e.target.value)}
+                          className="w-full h-8 text-xs rounded-lg border border-old-money-200 bg-white px-2.5 text-charcoal-800 focus:border-camel-500 focus:outline-none focus:ring-1 focus:ring-camel-500"
+                        >
+                          <option value="">Все группы FCI</option>
+                          {FCI_GROUPS.map((g) => (
+                            <option key={g} value={g}>
+                              {g}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    )}
+
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[11px] font-semibold uppercase tracking-wider text-charcoal-600">
+                          Минимум наград
+                        </span>
+                        {hasAwardMins && (
+                          <span className="text-[10px] text-camel-700 font-medium">
+                            активно: {awardMinCount}
+                          </span>
+                        )}
+                      </div>
+                      <div className="grid grid-cols-2 gap-2 max-h-56 overflow-y-auto pr-0.5">
+                        {SHOW_FILTER_AWARD_KEYS.map((key) => (
+                          <label key={key} className="block space-y-0.5">
+                            <span className="text-[11px] font-medium text-charcoal-600">
+                              {SHOW_AWARD_BADGE[key]}
+                            </span>
+                            <input
+                              type="text"
+                              inputMode="numeric"
+                              placeholder="мин."
+                              value={awardMins[key] || ''}
+                              onChange={(e) =>
+                                onAwardMinChange(key, e.target.value.replace(/[^0-9]/g, ''))
+                              }
+                              className={`${TOOLBAR_NUMBER_INPUT} !h-8`}
+                            />
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </ToolbarFiltersDropdown>
+                </div>
+
+                {hasAnyFilter && (
+                  <button
+                    type="button"
+                    onClick={onResetFilters}
+                    className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-3 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
+                    title="Сбросить все фильтры"
+                  >
+                    <X className="h-3.5 w-3.5" />
+                    <span>Сбросить</span>
+                  </button>
+                )}
+              </div>
 
             {/* Разделитель между поиском/годом и породами на десктопе */}
             <div
@@ -300,7 +438,8 @@ export default function ShowRankingFilters({
               />
             </div>
           </div>
-        }
+        </div>
+      }
         trailing={<div className="hidden md:block">{trailing ?? <ShowRatingHint embedded />}</div>}
       />
     </div>

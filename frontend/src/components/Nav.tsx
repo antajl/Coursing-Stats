@@ -58,7 +58,19 @@ export default function Nav() {
 
   useEffect(() => {
     setOpenMenu(null);
+    setMobileMenuOpen(false);
   }, [location.pathname, location.search]);
+
+  // Lock background scroll when mobile drawer is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      const orig = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = orig;
+      };
+    }
+  }, [mobileMenuOpen]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

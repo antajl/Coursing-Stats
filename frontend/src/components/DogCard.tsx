@@ -233,13 +233,7 @@ const TOP3_BAR: Record<1 | 2 | 3, string> = {
 
 /** Vertical accent outside the row (needs parent list gutter, e.g. pl-[3px]). */
 export function Top3AccentBar({ rank }: { rank: number }) {
-  if (rank < 1 || rank > 3) return null
-  return (
-    <span
-      aria-hidden
-      className={`pointer-events-none absolute -left-[3px] inset-y-0 z-[1] w-[3px] ${TOP3_BAR[rank as 1 | 2 | 3]}`}
-    />
-  )
+  return null
 }
 
 // Compound components
@@ -409,7 +403,7 @@ const DogCardRank: FC<{ className?: string }> = function DogCardRank({ className
         isEmbedded
           ? 'min-w-[2.25rem] sm:min-w-[2.5rem] pr-1.5 sm:pr-2 mr-1.5 sm:mr-2'
           : 'min-w-[2.75rem] sm:min-w-[3rem] pr-2 sm:pr-2.5 mr-2 sm:mr-2.5'
-      } shrink-0 flex-col items-center justify-start pt-0.5 sm:pt-1 border-r border-old-money-200/70 self-stretch ${className}`}
+      } shrink-0 flex-col items-center justify-start pt-0.5 sm:pt-1 border-r border-old-money-200/40 self-stretch ${className}`}
     >
       <RankBadge rank={rank} delta={delta} />
     </div>
@@ -441,8 +435,8 @@ const DogCardInner = function DogCard({ dog, type, filterYear, rank, variant = '
   )
 
   const statsColClass = isEmbedded
-    ? 'mr-0 flex min-h-0 w-auto shrink-0 min-w-[4.5rem] sm:min-w-[5rem] flex-col justify-center items-start border-l border-old-money-200/60 pl-2 sm:pl-2.5 pr-0.5'
-    : 'mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/60 pl-2 sm:pl-2.5'
+    ? 'mr-0 flex min-h-0 w-auto shrink-0 min-w-[4.5rem] sm:min-w-[5rem] flex-col justify-center items-start border-l border-old-money-200/35 pl-2 sm:pl-2.5 pr-0.5'
+    : 'mr-6 sm:mr-7 flex min-h-0 w-[6.5rem] sm:w-[8.5rem] shrink-0 flex-col justify-center items-start border-l border-old-money-200/35 pl-2 sm:pl-2.5'
 
   return (
     <DogCardContext.Provider value={contextValue}>

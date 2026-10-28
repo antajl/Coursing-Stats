@@ -71,7 +71,7 @@ export function HomeBreedCarouselPager({
                 animationPlayState: paused ? 'paused' : 'running',
               }}
               onAnimationEnd={() => {
-                if (driveAutoplay && !paused) go(index + 1)
+                if (driveAutoplay && !paused) go(index + 1, 1)
               }}
             />
           ) : null}

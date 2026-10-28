@@ -41,7 +41,7 @@ React 19 + Vite + Tailwind SPA (деплой на Yandex Object Storage). Дан
 ## Workflows
 
 ```bash
-yarn run dev
+yarn run dev                  # Vite + автоматический Cloudflare Tunnel для телефона
 cd frontend; yarn run build
 ```
 
@@ -53,6 +53,7 @@ SEO prerender: `yarn run prerender-seo` после `frontend build` (CI). По �
 - Не хардкодить counters — `manifest.json`.
 - Performance ranking shows: отдельный backlog; не ломать lean indexes.
 - React Query: не шарить один `queryKey` между `useApi` и `useStaticData` с разным shape (годы календаря: `['api','years']` vs `['staticData','years']`) — иначе dropdown «Год» схлопывается до 5 лет.
+- **Mobile Carousel Invariant**: мобильные карусели и слайдеры пород реализуются через непрерывный 3-слотовый трек `[prev, current, next]` со сдвигом `translateX(calc(-100% + ${dragOffset}px))` и прямым тактильным 1:1 откликом на свайп. Запрещено использовать подмену одного элемента с `opacity: 0` или цепочками `requestAnimationFrame` (приводит к миганию, белым экранам и залипанию в скрытом состоянии).
 - **S3 SPA Fallback Invariant**: никогда не настраивать S3 `--error-document` на статический `404.html` без JS и не вырезать `<script type="module">` из fallback-страниц. S3 не имеет собственного серверного роутинга, поэтому `--error-document` обязан отдавать рабочую SPA-оболочку (`index.html`), иначе при прямом переходе из поиска на непререндеренные профили собак пользователи получают 404.
 
 ## See also

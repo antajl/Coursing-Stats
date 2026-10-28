@@ -5,7 +5,7 @@ export const TOOLBAR_CHIP_IDLE =
   'border-old-money-200 bg-cream-50 text-charcoal-700 hover:bg-old-money-50'
 
 export const TOOLBAR_CHIP_ACTIVE =
-  'border-camel-500 bg-camel-500 text-charcoal-900'
+  'border-camel-500 bg-camel-500 text-charcoal-900 shadow-2xs'
 
 /** Pill filter trigger with chevron (ModernDropdown). */
 export function toolbarPillTriggerClass(active: boolean, extra = '') {

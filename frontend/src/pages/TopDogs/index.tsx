@@ -231,6 +231,10 @@ export default function TopDogs() {
     setFilterSpeedFrom('')
   }, [activeSeason])
 
+  const [selectedMobileColumn, setSelectedMobileColumn] = useState<'coursing' | 'racing' | null>(null)
+  const activeMobileColumn =
+    selectedMobileColumn ?? (filteredCombined.length === 0 && filteredSpeed.length > 0 ? 'racing' : 'coursing')
+
   const showListSkeleton = isInitialLoad && loading
 
   return (
@@ -264,6 +268,10 @@ export default function TopDogs() {
         onResetPanelFilters={handleResetPanelFilters}
         dropdownRef={dropdownRef}
         trailing={<CoursingRatingHint embedded variant="unified" />}
+        activeMobileColumn={activeMobileColumn}
+        onMobileColumnChange={setSelectedMobileColumn}
+        coursingCount={filteredCombined.length}
+        racingCount={filteredSpeed.length}
       />
 
       {showListSkeleton ? (
@@ -282,6 +290,8 @@ export default function TopDogs() {
             })
           }}
           disclaimerMode="column"
+          activeMobileColumn={activeMobileColumn}
+          onMobileColumnChange={setSelectedMobileColumn}
         />
       )}
     </div>

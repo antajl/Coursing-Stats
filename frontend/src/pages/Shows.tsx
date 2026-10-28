@@ -16,6 +16,23 @@ function Shows() {
   const rawTab = searchParams.get('tab') || 'ranking'
   const calendarVisible = usePublicCalendarVisible('shows')
 
+  // Warm the other heavy tab while the user is already on /shows.
+  // IMPORTANT: Keep this hook before any early returns to respect Rules of Hooks!
+  useEffect(() => {
+    const idle =
+      typeof window !== 'undefined' && 'requestIdleCallback' in window
+        ? window.requestIdleCallback.bind(window)
+        : (cb: () => void) => window.setTimeout(cb, 400)
+    const id = idle(() => prefetchShowsHeavyTabs())
+    return () => {
+      if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && typeof id === 'number') {
+        window.cancelIdleCallback(id)
+      } else {
+        window.clearTimeout(id as number)
+      }
+    }
+  }, [])
+
   if (rawTab === 'champions') {
     return <Navigate to="/shows?tab=ranking" replace />
   }
@@ -47,22 +64,6 @@ function Shows() {
     ...(calendarVisible ? [{ id: 'archive', label: 'Архив' }] : []),
     { id: 'judges', label: 'Судьи' },
   ]
-
-  // Warm the other heavy tab while the user is already on /shows.
-  useEffect(() => {
-    const idle =
-      typeof window !== 'undefined' && 'requestIdleCallback' in window
-        ? window.requestIdleCallback.bind(window)
-        : (cb: () => void) => window.setTimeout(cb, 400)
-    const id = idle(() => prefetchShowsHeavyTabs())
-    return () => {
-      if (typeof window !== 'undefined' && 'cancelIdleCallback' in window && typeof id === 'number') {
-        window.cancelIdleCallback(id)
-      } else {
-        window.clearTimeout(id as number)
-      }
-    }
-  }, [])
 
   const fallback = <LoadingCard count={6} variant="shows" />
 

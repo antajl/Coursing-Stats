@@ -243,14 +243,100 @@ export default function ShowJudges() {
       <PageToolbar
         bare
         filters={
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full">
-            <ToolbarSearch
-              value={searchQuery}
-              onChange={setSearchQuery}
-              placeholder="Фамилия судьи…"
-              className="w-full sm:w-auto min-w-0 sm:min-w-[200px] max-w-sm"
-            />
-              <div className="flex max-w-full items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 w-full sm:w-auto sm:flex-wrap">
+          <div className="w-full min-w-0">
+            {/* Мобильная компактная строка (32px): Год + Порода + Инлайн-поиск */}
+            <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0">
+              {/* Year Dropdown */}
+              <ModernDropdown
+                trigger={
+                  <button
+                    type="button"
+                    className={`shrink-0 ${toolbarPillTriggerClass(isYearNonDefault)}`}
+                  >
+                    <span>{!filterYear ? 'Все года' : filterYear}</span>
+                    <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                  </button>
+                }
+                isOpen={yearOpen}
+                onOpenChange={setYearOpen}
+                width="130px"
+              >
+                <div className="p-1 max-h-60 overflow-y-auto" role="menu">
+                  <button
+                    type="button"
+                    role="menuitem"
+                    onClick={() => {
+                      setFilterYear('')
+                      setYearOpen(false)
+                    }}
+                    className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                      !filterYear
+                        ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                        : 'text-charcoal-700 hover:bg-camel-100'
+                    }`}
+                  >
+                    Все года
+                  </button>
+                  {SHOW_YEARS.map((year) => (
+                    <button
+                      key={year}
+                      type="button"
+                      role="menuitem"
+                      onClick={() => {
+                        setFilterYear(year)
+                        setYearOpen(false)
+                      }}
+                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                        filterYear === year
+                          ? 'bg-camel-500 text-charcoal-900 font-semibold'
+                          : 'text-charcoal-700 hover:bg-camel-100'
+                      }`}
+                    >
+                      {year}
+                    </button>
+                  ))}
+                </div>
+              </ModernDropdown>
+
+              {/* Breed Dropdown */}
+              <BreedSearchDropdown
+                breeds={availableBreeds}
+                selectedBreed={filterBreed}
+                onSelect={(breed) => {
+                  setFilterBreed(breed)
+                  if (breed) setUserWantsFull(true)
+                }}
+                trigger={
+                  <button
+                    type="button"
+                    className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+                  >
+                    <span className="truncate max-w-[120px]">
+                      {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                    </span>
+                    <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                  </button>
+                }
+              />
+
+              {/* Inline Search */}
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Фамилия…"
+                className="flex-1 min-w-[70px]"
+              />
+            </div>
+
+            {/* Десктопная строка */}
+            <div className="hidden sm:flex sm:items-center gap-2 w-full">
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Фамилия судьи…"
+                className="w-auto min-w-[200px] max-w-sm"
+              />
+              <div className="flex max-w-full items-center gap-1.5 flex-wrap">
                 {/* Year Dropdown */}
                 <ModernDropdown
                   trigger={
@@ -342,7 +428,8 @@ export default function ShowJudges() {
 
             </div>
           </div>
-        }
+        </div>
+      }
         trailing={
           <div className="hidden sm:flex items-center gap-2">
             <RecordSortBar

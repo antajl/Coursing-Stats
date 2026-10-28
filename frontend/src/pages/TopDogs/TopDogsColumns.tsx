@@ -1,10 +1,8 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Star } from 'lucide-react'
 import DogCard, { DOG_CARD_HEIGHT_CLASS } from '../../components/DogCard'
 import EmptyState from '../../components/EmptyState'
 import DoninoColumnPlaque, { DoninoColumnShell } from '../SpeedRecords/DoninoColumnPlaque'
-import CoursingRatingHint from './CoursingRatingHint'
-import { SegmentedTabs } from '../../components/ui/SegmentedTabs'
 import { useInfiniteScroll } from '../../hooks/useInfiniteScroll'
 import { useListReveal } from '../../hooks/useListReveal'
 import { parseDogName } from '../../lib/dogName'
@@ -63,6 +61,8 @@ interface TopDogsColumnsProps {
   favorites: Set<string>
   onToggleFavorite: (dogId: string, meta?: FavoriteDogMeta) => void
   disclaimerMode?: string
+  activeMobileColumn?: 'coursing' | 'racing'
+  onMobileColumnChange?: (col: 'coursing' | 'racing') => void
 }
 
 export default function TopDogsColumns({
@@ -71,11 +71,120 @@ export default function TopDogsColumns({
   filterYear,
   favorites,
   onToggleFavorite,
-  disclaimerMode = 'column',
+  activeMobileColumn: activeMobileColumnProp,
+  onMobileColumnChange: onMobileColumnChangeProp,
 }: TopDogsColumnsProps) {
   const [selectedMobileColumn, setSelectedMobileColumn] = useState<'coursing' | 'racing' | null>(null)
   const activeMobileColumn =
-    selectedMobileColumn ?? (filteredCombined.length === 0 && filteredSpeed.length > 0 ? 'racing' : 'coursing')
+    activeMobileColumnProp ??
+    selectedMobileColumn ??
+    (filteredCombined.length === 0 && filteredSpeed.length > 0 ? 'racing' : 'coursing')
+  const handleMobileColumnChange = onMobileColumnChangeProp ?? setSelectedMobileColumn
+
+  // Жест свайпа влево/вправо на мобильных экранах
+  const [dragOffset, setDragOffset] = useState<number | null>(null)
+  const [isTransitioning, setIsTransitioning] = useState(false)
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
+  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
+  const transitionTimeoutRef = useRef<number | null>(null)
+  const hadMovedRef = useRef(false)
+
+  // Плавная анимация скольжения колонок при изменении активной дисциплины
+  useEffect(() => {
+    setIsTransitioning(true)
+    const timer = setTimeout(() => {
+      setIsTransitioning(false)
+    }, 320)
+    return () => clearTimeout(timer)
+  }, [activeMobileColumn])
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
+    const touch = e.touches[0]
+    touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
+    gestureLockRef.current = null
+    hadMovedRef.current = false
+    if (transitionTimeoutRef.current) {
+      clearTimeout(transitionTimeoutRef.current)
+      transitionTimeoutRef.current = null
+    }
+    setIsTransitioning(false)
+    setDragOffset(0)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    const touch = e.touches[0]
+    const dx = touch.clientX - touchStartRef.current.x
+    const dy = touch.clientY - touchStartRef.current.y
+
+    if (Math.abs(dx) > 10 || Math.abs(dy) > 10) {
+      hadMovedRef.current = true
+    }
+
+    // Если направление еще не заблокировано, определяем вертикальный скролл vs горизонтальный свайп
+    if (!gestureLockRef.current) {
+      const absDx = Math.abs(dx)
+      const absDy = Math.abs(dy)
+      if (absDx < 8 && absDy < 8) return
+      if (absDy >= absDx) {
+        // Вертикальный скролл страницы: не перехватываем жест
+        gestureLockRef.current = 'vertical'
+        return
+      }
+      gestureLockRef.current = 'horizontal'
+    }
+
+    if (gestureLockRef.current === 'horizontal') {
+      // Упругое сопротивление (rubber-band) при попытке свайпа за край
+      const isAtLeftEdge = activeMobileColumn === 'coursing' && dx > 0
+      const isAtRightEdge = activeMobileColumn === 'racing' && dx < 0
+      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
+      setDragOffset(appliedDx)
+    }
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+
+    const isHorizontal = gestureLockRef.current === 'horizontal'
+    const touch = e.changedTouches[0]
+    const dx = touch.clientX - touchStartRef.current.x
+    const dt = Date.now() - touchStartRef.current.time
+    const velocity = Math.abs(dx) / (dt || 1)
+
+    touchStartRef.current = null
+    gestureLockRef.current = null
+
+    if (isHorizontal) {
+      const isSwipeLeft = dx < -45 || (dx < -20 && velocity > 0.25)
+      const isSwipeRight = dx > 45 || (dx > 20 && velocity > 0.25)
+
+      setIsTransitioning(true)
+      setDragOffset(null)
+
+      if (activeMobileColumn === 'coursing' && isSwipeLeft) {
+        handleMobileColumnChange('racing')
+      } else if (activeMobileColumn === 'racing' && isSwipeRight) {
+        handleMobileColumnChange('coursing')
+      }
+
+      transitionTimeoutRef.current = window.setTimeout(() => {
+        setIsTransitioning(false)
+        hadMovedRef.current = false
+      }, 320)
+    } else {
+      setDragOffset(null)
+      hadMovedRef.current = false
+    }
+  }
+
+  const handleTouchCancel = () => {
+    touchStartRef.current = null
+    gestureLockRef.current = null
+    setDragOffset(null)
+    hadMovedRef.current = false
+  }
 
   const listLength = Math.max(filteredCombined.length, filteredSpeed.length)
 
@@ -125,7 +234,8 @@ export default function TopDogsColumns({
           breed={dog.breed}
           isFav={favorites.has(String(dog.dog_id))}
           onToggle={onToggleFavorite}
-        />        <DogCard
+        />
+        <DogCard
           dog={dog}
           type="combined"
           filterYear={filterYear}
@@ -147,7 +257,8 @@ export default function TopDogsColumns({
           breed={dog.breed}
           isFav={favorites.has(String(dog.dog_id))}
           onToggle={onToggleFavorite}
-        />        <DogCard dog={dog} type="speed" filterYear={filterYear} rank={dog.rank} variant="embedded" />
+        />
+        <DogCard dog={dog} type="speed" filterYear={filterYear} rank={dog.rank} variant="embedded" />
       </div>
     ) : (
       <DogCardPlaceholder slotKey={slotKey} />
@@ -167,45 +278,65 @@ export default function TopDogsColumns({
       <p className="py-6 text-center text-sm text-charcoal-500">Нет данных</p>
     )
 
+  const isDragging = dragOffset !== null && dragOffset !== 0
+  const isAnimating = isDragging || isTransitioning
+  const mobileTransform = `translateX(calc(${activeMobileColumn === 'coursing' ? '0%' : '-100%'} + ${dragOffset ?? 0}px))`
+
   return (
     <div className="space-y-4">
-      {/* Mobile discipline switcher (< lg) */}
-      <SegmentedTabs
-        breakpoint="lg"
-        tabs={[
-          {
-            id: 'coursing',
-            label: 'Курсинг',
-            hint: <CoursingRatingHint embedded as="span" />,
-            count: filteredCombined.length,
-          },
-          {
-            id: 'racing',
-            label: 'Рейсинг',
-            count: filteredSpeed.length,
-          },
-        ]}
-        activeTab={activeMobileColumn}
-        onChange={(id) => setSelectedMobileColumn(id as 'coursing' | 'racing')}
-        ariaLabel="Дисциплины рейтинга"
-      />
+      {/* Мобильный свайп-контейнер и десктопная двухколоночная сетка */}
+      <div
+        className="w-full relative overflow-hidden touch-pan-y"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        onTouchCancel={handleTouchCancel}
+        onClickCapture={(e) => {
+          if (hadMovedRef.current) {
+            e.preventDefault()
+            e.stopPropagation()
+          }
+        }}
+      >
+        <div
+          className={`flex w-full items-start lg:grid lg:grid-cols-2 lg:gap-8 lg:!transform-none ${
+            isDragging ? '' : 'transition-transform duration-300 ease-out'
+          }`}
+          style={{
+            transform: typeof window !== 'undefined' && window.innerWidth >= 1024 ? 'none' : mobileTransform,
+          }}
+        >
+          {/* Слайд 1: Курсинг */}
+          <div
+            className={`w-full shrink-0 lg:w-auto lg:shrink transition-opacity duration-200 ${
+              !isAnimating && activeMobileColumn === 'racing'
+                ? 'h-0 overflow-hidden opacity-0 lg:h-auto lg:overflow-visible lg:opacity-100'
+                : 'h-auto opacity-100'
+            }`}
+          >
+            <DoninoColumnShell
+              plaque={<div className="hidden lg:block">{coursingPlaque}</div>}
+              listRef={coursingRevealRef}
+            >
+              {coursingList}
+            </DoninoColumnShell>
+          </div>
 
-      <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2 lg:gap-8">
-        <div className={activeMobileColumn === 'racing' ? 'hidden lg:block' : 'block'}>
-          <DoninoColumnShell
-            plaque={<div className="hidden lg:block">{coursingPlaque}</div>}
-            listRef={coursingRevealRef}
+          {/* Слайд 2: Рейсинг */}
+          <div
+            className={`w-full shrink-0 lg:w-auto lg:shrink transition-opacity duration-200 ${
+              !isAnimating && activeMobileColumn === 'coursing'
+                ? 'h-0 overflow-hidden opacity-0 lg:h-auto lg:overflow-visible lg:opacity-100'
+                : 'h-auto opacity-100'
+            }`}
           >
-            {coursingList}
-          </DoninoColumnShell>
-        </div>
-        <div className={activeMobileColumn === 'coursing' ? 'hidden lg:block' : 'block'}>
-          <DoninoColumnShell
-            plaque={<div className="hidden lg:block">{racingPlaque}</div>}
-            listRef={speedRevealRef}
-          >
-            {speedList}
-          </DoninoColumnShell>
+            <DoninoColumnShell
+              plaque={<div className="hidden lg:block">{racingPlaque}</div>}
+              listRef={speedRevealRef}
+            >
+              {speedList}
+            </DoninoColumnShell>
+          </div>
         </div>
       </div>
 

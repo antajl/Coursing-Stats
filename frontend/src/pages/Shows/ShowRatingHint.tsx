@@ -80,17 +80,23 @@ const TOOLTIP_CONTENT = (
 
 interface ShowRatingHintProps {
   embedded?: boolean
+  compact?: boolean
 }
 
-export default function ShowRatingHint({ embedded: _embedded }: ShowRatingHintProps) {
+export default function ShowRatingHint({ embedded: _embedded, compact }: ShowRatingHintProps) {
   const trigger = (
     <button
       type="button"
-      className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer shadow-2xs whitespace-nowrap"
+      className={
+        compact
+          ? 'inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-old-money-300/80 bg-cream-50 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 transition-all cursor-pointer shadow-2xs'
+          : 'inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50 px-3 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 transition-all cursor-pointer shadow-2xs whitespace-nowrap'
+      }
       aria-label="О рейтинге выставок"
+      title="О рейтинге выставок"
     >
       <Info className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-      <span>О рейтинге</span>
+      {!compact && <span>О рейтинге</span>}
     </button>
   )
 

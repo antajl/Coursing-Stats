@@ -4,9 +4,12 @@
  * — .cs-page-blobs: мягкие пятна; позиции/появление — PageAtmosphereBlobs.tsx
  */
 
-/* Предотвращает вспышку белого при первой загрузке */
+/* Предотвращает вспышку белого при первой загрузке и паразитный горизонтальный скролл на мобильных */
+html,
 body {
   background-color: #f5f1e8;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 .cs-page-shell {

@@ -148,27 +148,186 @@ export default function DoninoPageToolbar({
         bare
         topRowClassName="flex-wrap md:flex-nowrap"
         filters={
-          <div className="flex flex-col md:flex-row md:items-center gap-2 w-full min-w-0">
-            {/* Строка 1 на мобилке: Поиск на всю ширину */}
-            <div className="w-full md:hidden">
-              <ToolbarSearch
-                value={searchQuery}
-                onChange={onSearchChange}
-                placeholder="Кличка, порода…"
-                className="w-full min-w-0"
-              />
+          <div className="w-full min-w-0">
+            {/* Мобильная консоль: 2 компактные строки */}
+            <div className="flex flex-col gap-1.5 w-full md:hidden">
+              {/* Строка 1: [Год ∨] [Пол ∨] [Порода ∨] + [Пороги ∨] + [X] */}
+              <div className="flex items-center gap-1.5 w-full min-w-0">
+                <ModernDropdown
+                  trigger={
+                    <button
+                      type="button"
+                      className={toolbarPillTriggerClass(isYearActive)}
+                    >
+                      {yearTriggerLabel}
+                      <PillChevron />
+                    </button>
+                  }
+                  isOpen={yearDropdownOpen}
+                  onOpenChange={setYearDropdownOpen}
+                  width="120px"
+                >
+                  <div className="max-h-60 overflow-y-auto p-1" role="menu">
+                    <button
+                      type="button"
+                      role="menuitem"
+                      onClick={() => {
+                        if (onYearChange) {
+                          onYearChange('')
+                        } else {
+                          clearAllYears()
+                        }
+                        setYearDropdownOpen(false)
+                      }}
+                      className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
+                        filterYears.length === 0
+                          ? 'bg-camel-500 text-charcoal-900'
+                          : 'text-charcoal-700 hover:bg-camel-100'
+                      }`}
+                    >
+                      Все года
+                    </button>
+                    {sortedYears.map((year) => {
+                      const active = filterYears.length === 1 && filterYears[0] === year
+                      return (
+                        <button
+                          key={year}
+                          type="button"
+                          role="menuitem"
+                          onClick={() => {
+                            if (onYearChange) {
+                              onYearChange(year)
+                            } else {
+                              clearAllYears()
+                              onToggleFilter('year', year)
+                            }
+                            setYearDropdownOpen(false)
+                          }}
+                          className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
+                            active
+                              ? 'bg-camel-500 text-charcoal-900'
+                              : 'text-charcoal-700 hover:bg-camel-100'
+                          }`}
+                        >
+                          {year}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </ModernDropdown>
+
+                <ModernDropdown
+                  trigger={
+                    <button
+                      type="button"
+                      className={toolbarPillTriggerClass(filterSexes.length > 0)}
+                    >
+                      {sexTriggerLabel}
+                      <PillChevron />
+                    </button>
+                  }
+                  isOpen={sexDropdownOpen}
+                  onOpenChange={setSexDropdownOpen}
+                  width="140px"
+                >
+                  <div className="p-1" role="menu">
+                    <button
+                      type="button"
+                      role="menuitem"
+                      onClick={() => {
+                        for (const s of [...filterSexes]) onToggleFilter('sex', s)
+                        setSexDropdownOpen(false)
+                      }}
+                      className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
+                        filterSexes.length === 0
+                          ? 'bg-camel-500 text-charcoal-900'
+                          : 'text-charcoal-700 hover:bg-camel-100'
+                      }`}
+                    >
+                      Все
+                    </button>
+                    {sexes.map((sex) => {
+                      const active = filterSexes.includes(sex)
+                      return (
+                        <button
+                          key={sex}
+                          type="button"
+                          role="menuitem"
+                          onClick={() => onToggleFilter('sex', sex)}
+                          className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-left text-sm transition-colors ${
+                            active
+                              ? 'bg-camel-500 text-charcoal-900'
+                              : 'text-charcoal-700 hover:bg-camel-100'
+                          }`}
+                        >
+                          <DogSexIcon sex={sex} />
+                          {sexLabel(sex)}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </ModernDropdown>
+
+                <div className="shrink-0">
+                  <BreedSearchDropdown
+                    breeds={breeds}
+                    selectedBreed={filterBreeds[0] || ''}
+                    onSelect={(breed) => {
+                      if (onBreedChange) {
+                        onBreedChange(breed)
+                      } else {
+                        for (const b of [...filterBreeds]) onToggleFilter('breed', b)
+                        if (breed) onToggleFilter('breed', breed)
+                      }
+                    }}
+                    trigger={
+                      <button
+                        type="button"
+                        className={`shrink-0 ${toolbarPillTriggerClass(filterBreeds.length > 0)}`}
+                      >
+                        <span className="truncate max-w-[100px]">
+                          {filterBreeds.length > 0 ? formatBreedName(filterBreeds[0]) : 'Порода'}
+                        </span>
+                        <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+                      </button>
+                    }
+                    dogIndex={dogIndex}
+                  />
+                </div>
+
+                {hasActiveFilters && (
+                  <button
+                    type="button"
+                    onClick={onClearFilters}
+                    className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+                    title="Сбросить фильтры"
+                    aria-label="Сбросить фильтры"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                )}
+              </div>
+
+              {/* Строка 2: Инлайн-поиск */}
+              <div className="w-full">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка собаки…"
+                  className="w-full min-w-0"
+                />
+              </div>
             </div>
 
-            {/* Строка 2 на мобилке / левая группа на десктопе */}
-            <div className="flex max-w-full flex-wrap items-center gap-1.5 shrink-0 w-full md:w-auto">
-              <div className="hidden md:block">
+            {/* Десктопная группа */}
+            <div className="hidden md:flex md:items-center gap-2 w-full min-w-0">
+              <div className="flex max-w-full flex-wrap items-center gap-1.5 shrink-0 w-full md:w-auto">
                 <ToolbarSearch
                   value={searchQuery}
                   onChange={onSearchChange}
                   placeholder="Кличка, порода…"
                   className="sm:w-44 md:w-40 lg:w-48"
                 />
-              </div>
               <ModernDropdown
                 trigger={
                   <button
@@ -360,40 +519,12 @@ export default function DoninoPageToolbar({
                 </ToolbarFiltersDropdown>
               ) : null}
 
-              {/* Выбор породы выпадающим списком на мобилке */}
-              <div className="shrink-0 md:hidden">
-                <BreedSearchDropdown
-                  breeds={breeds}
-                  selectedBreed={filterBreeds[0] || ''}
-                  onSelect={(breed) => {
-                    if (onBreedChange) {
-                      onBreedChange(breed)
-                    } else {
-                      for (const b of [...filterBreeds]) onToggleFilter('breed', b)
-                      if (breed) onToggleFilter('breed', breed)
-                    }
-                  }}
-                  trigger={
-                    <button
-                      type="button"
-                      className={`shrink-0 ${toolbarPillTriggerClass(filterBreeds.length > 0)}`}
-                    >
-                      <span className="truncate max-w-[130px]">
-                        {filterBreeds.length > 0 ? formatBreedName(filterBreeds[0]) : 'Порода'}
-                      </span>
-                      <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                    </button>
-                  }
-                  dogIndex={dogIndex}
-                />
-              </div>
-
-              {/* Сброс фильтров на мобилке */}
+              {/* Сброс фильтров на десктопе */}
               {hasActiveFilters && (
                 <button
                   type="button"
                   onClick={onClearFilters}
-                  className="md:hidden shrink-0 inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-medium text-old-money-600 hover:text-charcoal-900 hover:bg-cream-100 transition-colors"
+                  className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-3 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
                   title="Сбросить все фильтры"
                 >
                   <X className="h-3.5 w-3.5" />
@@ -422,7 +553,8 @@ export default function DoninoPageToolbar({
               />
             </div>
           </div>
-        }
+        </div>
+      }
       />
       {view === 'table' && filterSexes.length > 0 && (
         <p className="mt-2 text-xs text-old-money-500">
