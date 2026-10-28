@@ -304,6 +304,38 @@ function main() {
     }
   }
 
+  // Show judges cleanliness: judges.json must not contain breed names or variety fragments
+  const showJudgesRel = 'shows/indexes/judges.json'
+  if (fs.existsSync(path.join(dataRoot, showJudgesRel))) {
+    const showJudges = readJson(path.join(dataRoot, showJudgesRel)) as Array<{ name?: string }>
+    const suspectBreeds = [
+      'овчарка', 'терьер', 'ретривер', 'бульдог', 'корги', 'шпиц', 'пудель', 'хаски', 'доберман',
+      'ротвейлер', 'мопс', 'бигль', 'колли', 'шелти', 'мальтезе', 'басенджи', 'сиба', 'пинчер',
+      'спаниель', 'такса', 'собака', 'мастиф', 'болонка', 'борзая', 'боксер', 'гриффон', 'дог',
+      'зенненхунд', 'маламут', 'самоед', 'акита', 'шнауцер', 'булли', 'выжла', 'курцхаар'
+    ]
+    let corruptShowJudges = 0
+    for (const j of showJudges) {
+      const name = (j.name || '').toLowerCase()
+      if (suspectBreeds.some((b) => name.includes(b))) {
+        corruptShowJudges++
+      }
+    }
+    if (corruptShowJudges === 0) {
+      gates.push({
+        ok: true,
+        label: 'show_judges_cleanliness',
+        detail: `all ${showJudges.length} show judges verified clean (0 breed fragments / noise)`,
+      })
+    } else {
+      gates.push({
+        ok: false,
+        label: 'show_judges_cleanliness',
+        detail: `found ${corruptShowJudges} corrupt breed entries in show judges; run backend/scripts/repair/purge-corrupted-judges.ts`,
+      })
+    }
+  }
+
   const oversized: Array<{ path: string; bytes: number }> = []
   const fileEntries: Array<{ path: string; bytes: number; sha256?: string }> = []
   const relFiles = walkFiles(dataRoot)

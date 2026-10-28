@@ -69,19 +69,21 @@ export function ShowCalendarToolbar({
           placeholder="Поиск…"
         />
 
-        {hasActiveFilters && (
-          <button
-            type="button"
-            onClick={handleReset}
-            className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
-            title="Сбросить фильтры"
-            aria-label="Сбросить фильтры"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-        <div className="shrink-0">
-          <ShowCalendarHint compact />
+        <div className="ml-auto shrink-0 flex items-center gap-1.5">
+          {hasActiveFilters && (
+            <button
+              type="button"
+              onClick={handleReset}
+              className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+              title="Сбросить фильтры"
+              aria-label="Сбросить фильтры"
+            >
+              <X className="h-4 w-4" />
+            </button>
+          )}
+          <div className="shrink-0">
+            <ShowCalendarHint compact />
+          </div>
         </div>
       </div>
 

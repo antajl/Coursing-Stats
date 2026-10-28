@@ -5,6 +5,7 @@ import {
   glueWrappedTitleParts,
   SHOW_AWARD_BADGE,
 } from '../../../lib/show-award-ranking'
+import { normalizeShowJudgeDisplayName } from '../../../lib/show-judge-name'
 import type { ParsedCertDog, ParseCertificatePdfResult, PdfItem } from './types'
 import {
   DATE_RE,
@@ -38,32 +39,25 @@ export function isPlausibleJudgeName(raw: string): boolean {
   const name = normToken(raw)
   if (name.length < 5) return false
   if (DATE_RE.test(name) || isCertToken(name) || isGrade(name) || isClass(name)) return false
-  if (/^(ЛПП|BOB|BOS|CAC|ОЧ\.?Х|НЕЯВ)/i.test(name)) return false
-  // Reject pure breed-like single ALLCAPS phrases without a second name token… allow 2+ words ALLCAPS
-  const words = name.split(/\s+/).filter(Boolean)
-  if (words.length < 2) return false
-  // Must look like a person: has lowercase somewhere OR (2–4 ALLCAPS words typical for FIO)
+  if (/^(ЛПП|BOB|BOS|CAC|ОЧ\.?[ХX]|НЕЯВ)/i.test(name)) return false
+  
   // Reject admin notes
   if (/\b(решени[ею]\s+вк|вопрос\s+\d+|по\s+решению\s+вк|изменено\s+по\s+решению)\b/iu.test(name)) return false
 
   // Reject show/breed phrases without person names
   if (/^(отл\s+сас|отл\s+\d|выставке\s+моно|вельш\s+корги|такса\s+(?:кроличья|стандартная|миниатюрная))/iu.test(name)) return false
 
-  // Must look like a person: has lowercase somewhere OR (2–5 ALLCAPS words typical for FIO)
-  const hasLower = /[a-zа-яё]/.test(name)
-  if (hasLower) {
-    const breedish = /^(?:ОВЧАРКА|ТЕРЬЕР|РЕТРИВЕР|БУЛЬДОГ|КОРГИ|ШПИЦ|ПУДЕЛЬ|ХАСКИ|ДОБЕРМАН|РОТВЕЙЛЕР|МОПС|БИГЛЬ|КОЛЛИ|ШЕЛТИ|МАЛЬТЕЗЕ|БАСЕНДЖИ|СИБА|ПИНЧЕР|СПАНИЕЛЬ|ТАКСА)/iu
-    if (words.length >= 2 && breedish.test(words[0]) && breedish.test(words[1])) return false
-    return /[A-Za-zА-Яа-яЁё]/.test(name)
-  }
-  if (words.length >= 2 && words.length <= 5 && words.every((w) => /^[А-ЯЁA-Z][А-ЯЁA-Z'’\-]*$/.test(w))) {
-    // Filter obvious breed words as first token
-    const breedish =
-      /ОВЧАРКА|ТЕРЬЕР|РЕТРИВЕР|БУЛЬДОГ|КОРГИ|ШПИЦ|ПУДЕЛЬ|ХАСКИ|ДОБЕРМАН|РОТВЕЙЛЕР|МОПС|БИГЛЬ|КОЛЛИ|ШЕЛТИ|МАЛЬТЕЗЕ|БАСЕНДЖИ|СИБА|ПИНЧЕР|СПАНИЕЛЬ/i
-    if (breedish.test(name)) return false
-    return true
-  }
-  return false
+  const words = name.split(/\s+/).filter(Boolean)
+  if (words.length < 2) return false
+
+  // Must normalize to a valid non-empty judge name (rejecting breeds, titles, single words)
+  const normalized = normalizeShowJudgeDisplayName(name)
+  if (!normalized) return false
+
+  const finalWords = normalized.split(/\s+/).filter(Boolean)
+  if (finalWords.length < 2) return false
+
+  return true
 }
 
 function parseDogWindow(

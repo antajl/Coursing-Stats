@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import DogCard from '../../../components/DogCard'
 import type { HomeBreedCarouselApi } from '../hooks/useHomeBreedCarousel'
 import { HomeBreedCarouselPager } from './HomeBreedCarouselPager'
+import { HomeSubSectionCapsule } from './SeasonTopSection'
 import type { BreedSlide } from '../utils/breedSeasonSlides'
 
 const CURRENT_SEASON = new Date().getFullYear()
@@ -11,6 +12,7 @@ interface SeasonRacingCarouselProps {
   carousel: HomeBreedCarouselApi
   syncDots: { key: string; label: string }[]
   driveAutoplay?: boolean
+  onToggleDiscipline?: () => void
 }
 
 export default function SeasonRacingCarousel({
@@ -18,6 +20,7 @@ export default function SeasonRacingCarousel({
   carousel,
   syncDots,
   driveAutoplay = false,
+  onToggleDiscipline,
 }: SeasonRacingCarouselProps) {
   const { index, trackStyle, getAdjacent, touchHandlers } = carousel
   const { prev: prevSlide, current: slide, next: nextSlide } = getAdjacent(slides)
@@ -77,7 +80,7 @@ export default function SeasonRacingCarousel({
       className="flex min-h-0 min-w-0 flex-1 flex-col home-breed-carousel-swipeable"
       {...touchHandlers}
     >
-      <div className="home-v2-col-head home-v2-col-head--tabs">
+      <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
         <span className="hidden md:inline shrink-0">Рейсинг</span>
         <div className="overflow-hidden flex min-w-0 flex-1">
           <div className="flex w-full will-change-transform" style={trackStyle}>
@@ -86,9 +89,18 @@ export default function SeasonRacingCarousel({
             {renderHeaderItem(nextSlide)}
           </div>
         </div>
-        <span className="shrink-0 text-[11px] font-normal text-old-money-600">
-          Скорость км/ч
-        </span>
+        <div className="shrink-0 flex items-center gap-1.5 ml-auto">
+          <span className="hidden md:inline shrink-0 text-[11px] font-normal text-old-money-600">
+            Скорость км/ч
+          </span>
+          {onToggleDiscipline && (
+            <HomeSubSectionCapsule
+              currentLabel="Рейсинг"
+              isFirst={false}
+              onToggle={onToggleDiscipline}
+            />
+          )}
+        </div>
       </div>
 
       <div className="overflow-hidden flex-1 flex flex-col">

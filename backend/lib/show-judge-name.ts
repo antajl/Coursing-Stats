@@ -165,6 +165,83 @@ function fixJudgeScriptHomoglyphs(s: string): string {
  * Нормализация имени судьи выставок для дедупликации.
  * Убирает скобки/страны, ё→е, омоглифы, переносы строк, OCR-разрывы слов, удвоения.
  */
+const DISTINCT_CYR = /[бгджзийлпфцчшщъыьэюя]/i
+const DISTINCT_LAT = /[dfgjqruvwz]/i
+
+const LAT_TO_CYR_LOOKALIKE: Record<string, string> = {
+  a: 'а', c: 'с', e: 'е', o: 'о', p: 'р', x: 'х', y: 'у', k: 'к', m: 'м', h: 'н', b: 'в'
+}
+
+const CYR_TO_LAT_LOOKALIKE: Record<string, string> = {
+  а: 'a', с: 'c', е: 'e', о: 'o', р: 'p', х: 'x', у: 'y', к: 'k', м: 'm', н: 'h', в: 'b'
+}
+
+function fixWordMixedScript(s: string): string {
+  return s
+    .split(/\s+/)
+    .map((word) => {
+      if (DISTINCT_LAT.test(word) && !DISTINCT_CYR.test(word)) {
+        return word.replace(/[асеорхукмнв]/gi, (ch) => {
+          const lower = ch.toLowerCase()
+          const lat = CYR_TO_LAT_LOOKALIKE[lower] || lower
+          return ch === lower ? lat : lat.toUpperCase()
+        })
+      }
+      if (DISTINCT_CYR.test(word) && !DISTINCT_LAT.test(word)) {
+        return word.replace(/[aceopxykmhb]/gi, (ch) => {
+          const lower = ch.toLowerCase()
+          const cyr = LAT_TO_CYR_LOOKALIKE[lower] || lower
+          return ch === lower ? cyr : cyr.toUpperCase()
+        })
+      }
+      return word
+    })
+    .join(' ')
+}
+
+export const KNOWN_BREED_AND_NOISE_PHRASES: string[] = [
+  'миниатюрная американская овчарка', 'белая швейцарская овчарка', 'староанглийская овчарка',
+  'немецкая овчарка', 'бельгийская овчарка', 'восточноевропейская овчарка', 'среднеазиатская овчарка',
+  'кавказская овчарка', 'австралийская овчарка', 'пиренейская овчарка', 'каталонская овчарка', 'овчарка',
+  'вест хайленд вайт терьер', 'вест хайленд уайт терьер', 'джек рассел терьер', 'парсон рассел терьер',
+  'йоркширский терьер', 'керн терьер', 'бордер терьер', 'бедлингтон терьер', 'бостон терьер',
+  'ирландский волкодав', 'ирландский вольфхаунд', 'ирландский терьер', 'русский черный терьер',
+  'черный терьер', 'американский стаффордширский терьер', 'стаффордширский бультерьер',
+  'бультерьер стандартный', 'бультерьер миниатюрный', 'бультерьер', 'фокстерьер гладкошерстный',
+  'фокстерьер жесткошерстный', 'фокстерьер', 'эрдельтерьер', 'ягдтерьер', 'чешский терьер', 'терьер',
+  'такса стандартная', 'такса миниатюрная', 'такса кроличья', 'такса',
+  'миниатюрная гладкошерстная', 'миниатюрная длинношерстная', 'миниатюрная жесткошерстная',
+  'стандартная гладкошерстная', 'стандартная длинношерстная', 'стандартная жесткошерстная',
+  'кроличья гладкошерстная', 'кроличья длинношерстная', 'кроличья жесткошерстная',
+  'золотистый ретривер', 'лабрадор ретривер', 'прямошерстный ретривер', 'курчавошерстный ретривер',
+  'новошотландский ретривер', 'чесапик бей ретривер', 'ретривер',
+  'английский кокер спаниель', 'американский кокер спаниель', 'русский охотничий спаниель',
+  'вельш спрингер спаниель', 'английский спрингер спаниель',
+  'кавалер кинг чарльз спаниель', 'кинг чарльз спаниель', 'той спаниель', 'спаниель',
+  'немецкий шпиц', 'померанский шпиц', 'малый шпиц', 'средний шпиц', 'вольфшпиц', 'японский шпиц', 'шпиц',
+  'бернский зенненхунд', 'большой швейцарский зенненхунд', 'энтлебухер зенненхунд', 'аппенцеллер зенненхунд', 'зенненхунд',
+  'бельгийский гриффон', 'брюссельский гриффон', 'пти брабансон', 'гриффон',
+  'итальянский кане корсо', 'кане корсо', 'аргентинский дог', 'немецкий дог', 'бордоский дог', 'дог',
+  'тибетский мастиф', 'испанский мастиф', 'английский мастиф', 'пиренейский мастиф', 'майоркский мастиф', 'неаполитанский мастиф', 'мастиф', 'бульмастиф',
+  'французский бульдог', 'английский бульдог', 'американский бульдог', 'континентальный бульдог', 'бульдог',
+  'американский булли', 'булли',
+  'бишон фризе', 'русская цветная болонка', 'мальтезе', 'болоньезе',
+  'русская псовая борзая', 'афганская борзая', 'малая итальянская борзая', 'испанская борзая', 'венгерская борзая', 'грейхаунд', 'уиппет', 'салюки', 'азавак', 'слюги', 'борзая',
+  'сибирский хаски', 'хаски', 'аляскинский маламут', 'маламут', 'самоедская собака', 'самоед', 'басенджи', 'сиба', 'акита', 'американская акита',
+  'цвергшнауцер', 'ризеншнауцер', 'миттельшнауцер', 'шнауцер',
+  'цвергпинчер', 'немецкий пинчер', 'пинчер', 'доберман', 'ротвейлер',
+  'сенбернар', 'ньюфаундленд', 'леонбергер', 'хотошо', 'ховаварт', 'бурбуль', 'московская сторожевая',
+  'немецкий боксер', 'боксер', 'чихуахуа', 'мопс', 'пекинес', 'ши тцу', 'японский хин', 'папийон',
+    'немецкий померанский', 'померанский', 'бассет хаунд', 'бладхаунд', 'шар пей', 'бордер колли',
+  'пудель той', 'чау чау', 'шнауцер', 'эрдельтерьер', 'чихуахуа', 'шьен партиколор',
+  'лхасский апсо', 'другие окрасы', 'немецкий курцхаар', 'шьен партиколор а пуаль', 'шьен партиколор а', 'венгерская выжла', 'выжла', 'собака) стандартная', 'собака стандартная', 'собака)', 'собака', 'метис', 'без породы',
+  'siberian husky', 'tibetan mastiff', 'border terrier', 'french bulldog', 'belgian shepherd',
+  'australian shepherd', 'golden retriever', 'labrador retriever', 'welsh corgi', 'poodle',
+  'airedale terrier', 'fox terrier', 'bull terrier', 'miniature schnauzer', 'giant schnauzer',
+  'german shepherd', 'cane corso', 'great dane', 'dogue de bordeaux', 'bernese mountain dog',
+  'english bulldog', 'american bulldog', 'staffordshire bull terrier', 'jack russell terrier'
+].sort((a, b) => b.length - a.length)
+
 export function normalizeShowJudgeDisplayName(raw: string): string {
   let normalized = raw.normalize('NFKC').trim()
 
@@ -179,12 +256,25 @@ export function normalizeShowJudgeDisplayName(raw: string): string {
     }
   }
 
+  // Переводим в нижний регистр и чиним смешанные омоглифы по словам
+  normalized = normalized.toLowerCase().replace(/ё/g, 'е')
+  normalized = fixWordMixedScript(normalized)
+
+  // Удаляем нумерацию списков (например, "8) yuliya ol'kova")
+  normalized = normalized.replace(/^\s*\d{1,2}\s*[.)]\s*/iu, '')
+  // Удаляем префиксы дат протоколов и номера вопросов вида "19.01.22 вопрос 23) "
+  normalized = normalized.replace(/^\s*\d{2}[\s.]\d{2}[\s.]\d{2,4}\s*/iu, '')
+  normalized = normalized.replace(/^\s*вопрос\s+\d+\s*\)?\s*[-–—:]*\s*/iu, '')
+
   // Удаляем административные пометки выставочной комиссии
   normalized = normalized.replace(/\(.*решени[ею].*\)/gi, '')
   normalized = normalized.replace(/\b(изменено\s+по\s+решению\s+вк|вопрос\s+\d+|решени[ею]\s+вк).*$/iu, '')
 
-  // Удаляем префиксы дат протоколов вида "19.01.22 вопрос 23) "
-  normalized = normalized.replace(/^\s*\d{2}\.\d{2}\.\d{2,4}\s*(?:вопрос\s+\d+\s*\)?\s*[-–—:]*\s*)?/iu, '')
+  // Отсекаем числовые токены, номера родословных, классы и дрессировочные сертификаты
+  if (/^(?:\d|ккл|окд|згс|угс|бх|bh|ипо|ipo|игп|igp)/iu.test(normalized)) {
+    return ''
+  }
+  normalized = normalized.replace(/^[(]+\s*/iu, '')
 
   // Вычленяем судью из расписаний типа "17.04.2022 седых н.е. - шнауцер..."
   const schedMatch = normalized.match(/^\d{2}\.\d{2}\.\d{4}\s+([а-яa-z\s.]+?)\s+-\s+.*$/iu)
@@ -192,32 +282,69 @@ export function normalizeShowJudgeDisplayName(raw: string): string {
     normalized = schedMatch[1]
   }
 
-  // Отрезаем прилипшие в поле судьи названия пород
-  normalized = normalized.replace(
-    /^(?:вельш\s+корги(?:\s+кардиган|\s+пемброк)?|золотистый\s+ретривер|пудель(?:\s+миниатюрный|\s+большой|\s+той)?|кавалер\s+кинг\s+чарльз(?:\s+спаниель)?|немецкий\s+шпиц(?:\s+малый)?|джек\s+рассел(?:\s+терьер)?|американская\s+акита|доберман|леонбергер|лабрадор(?:\s+ретривер)?|бигль|мопс|чихуахуа|такса)\s+/iu,
-    '',
-  )
-
   // Отрезаем пометки внимания в конце
   normalized = normalized.replace(/\s+внимание.*$/iu, '').replace(/[!?:;]+$/g, '')
-
-  normalized = normalized.toLowerCase().replace(/ё/g, 'е')
-  normalized = normalized.replace(/\([^)]*\)/g, '')
-
+  normalized = normalized.replace(/\([^)]*\)/g, ' ')
   normalized = normalized.replace(
     /\s*[-–—]\s*(serbia|russia|rf|rkf|azerbaijan|azerba[iy]dzhan|kazakhstan|kazahstan|ukraine|belarus|poland|germany|france|italy|spain|finland|sweden|norway|china|japan|korea|usa|uk|россия|ркф|украина|беларусь|казахстан|азербайджан)\s*$/iu,
     '',
   )
 
+  // Удаляем титулы и пометки выставочных рингов (ЛПП, JCAC, CACIB и т.д.)
+  normalized = normalized.replace(/(?<=^|\s)(?:лпп|cacib|rcacib|cac|rcac|vcac|чркф|кчк|вкчк|ючркф|bob|bos|bis|big|отл|очхор|хор|уд|сс|чк|пк)(?=\s|$)/giu, ' ')
+  normalized = normalized.replace(/(?<=^|\s)[j][cс][aа][cс](?=\s|$)/giu, ' ')
+  normalized = normalized.replace(/(?<=^|\s)[vв][cс][aа][cс](?=\s|$)/giu, ' ')
+  normalized = normalized.replace(/^[vв]\s+[чc]\s+[vв][cс][aа][cс]\s+/giu, ' ')
+  normalized = normalized.replace(/(?<=^|\s)v\s+ч\s+vсас(?=\s|$)/giu, ' ')
+
+  // Удаляем прилипшие названия пород и разновидностей в начале и конце
+  let strippedBreed = true
+  while (strippedBreed) {
+    strippedBreed = false
+    normalized = normalized.trim()
+    for (const phrase of KNOWN_BREED_AND_NOISE_PHRASES) {
+      if (normalized === phrase) {
+        return ''
+      }
+      if (normalized.startsWith(phrase + ' ')) {
+        normalized = normalized.slice(phrase.length).trim()
+        strippedBreed = true
+        break
+      }
+      if (normalized.endsWith(' ' + phrase)) {
+        normalized = normalized.slice(0, -phrase.length).trim()
+        strippedBreed = true
+        break
+      }
+    }
+    // Отрезаем незакрытые скобки породных окрасов перед реальным именем
+    const parenClean = normalized.replace(/^\s*\([a-zа-яё\s.,;()/-]+?\s+(?=[a-zа-яё]{3,}\s+[a-zа-яё])/giu, '')
+    if (parenClean !== normalized) {
+      normalized = parenClean.trim()
+      strippedBreed = true
+    }
+  }
+
+  // Отрезаем остаточные одиночные породные слова по краям
+  const singleBreedRe = /^(?:овчарка|терьер|ретривер|бульдог|корги|шпиц|пудель|хаски|доберман|ротвейлер|мопс|бигль|колли|шелти|мальтезе|басенджи|сиба|пинчер|спаниель|такса|собака|той|мастиф|болонка|борзая|боксер|гриффон|дог|зенненхунд|маламут|самоед|акита|шнауцер|булли|курцхаар|дратхаар|выжла|веймаранер)\s+/giu
+  const singleBreedEndRe = /\s+(?:овчарка|терьер|ретривер|бульдог|корги|шпиц|пудель|хаски|доберман|ротвейлер|мопс|бигль|колли|шелти|мальтезе|басенджи|сиба|пинчер|спаниель|такса|собака|той|мастиф|болонка|борзая|боксер|гриффон|дог|зенненхунд|маламут|самоед|акита|шнауцер|булли|курцхаар|дратхаар|выжла|веймаранер)$/giu
+  normalized = normalized.replace(singleBreedRe, '')
+  normalized = normalized.replace(singleBreedEndRe, '')
+  normalized = normalized.replace(/\s+/g, ' ').trim()
+  if (!normalized || KNOWN_BREED_AND_NOISE_PHRASES.includes(normalized) || normalized.length < 4) {
+    return ''
+  }
+
   // Удаляем случайно просочившиеся в имя даты
   normalized = normalized.replace(/\s+\d{2}\s+\d{2}\s+\d{4}\b/g, '')
-  // Удаляем лидирующие и средние лишние тире
-  normalized = normalized.replace(/^[-–—\s]+/g, '').replace(/\s+[-–—]\s+/g, ' ')
+  // Удаляем лидирующие и хвостовые тире и пунктуацию
+  normalized = normalized.replace(/^[-–—\s.,;:]+/g, '').replace(/[-–—\s.,;:]+$/g, '')
+  normalized = normalized.replace(/\s+[-–—]\s+/g, ' ')
   // Убираем пробелы после дефиса (agafonova- tripoli)
-  normalized = normalized.replace(/\b([а-яёa-z]+)-\s+([а-яёa-z]+)\b/gi, '$1-$2')
+  normalized = normalized.replace(/\b([а-яa-z]+)-\s+([а-яa-z]+)\b/g, '$1-$2')
 
   // Склеиваем дефисные переносы строк из PDF (например, "валенти-новна" → "валентиновна")
-  normalized = normalized.replace(/([а-яё]{2,})-([а-яё]{2,})/gi, (match, p1, p2) => {
+  normalized = normalized.replace(/([а-я]{2,})-([а-я]{2,})/g, (match, p1, p2) => {
     if (/^(?:новна|ровна|евна|овна|ична|инична|вич|ович|евич|ва|ова|ева|ина|ына|ин|ын|ский|ская|цкая|цкий|баев|баева|бург)$/i.test(p2)) {
       return p1 + p2
     }
@@ -233,6 +360,9 @@ export function normalizeShowJudgeDisplayName(raw: string): string {
 
   // Исправляем типичные OCR-разрывы слов в фамилиях, именах и отчествах
   normalized = normalized
+    .replace(/(?<=^|\s)ч\s+айковс/giu, 'чайковс')
+    .replace(/(?<=^|\s)м\s+ордвинов/giu, 'мордвинов')
+    .replace(/(?<=^|\s)к\s+раковск/giu, 'краковск')
     .replace(/(?<=^|\s)мищенк\s+о(?=\s|$)/g, 'мищенко')
     .replace(/(?<=^|\s)чайковс\s+кая(?=\s|$)/g, 'чайковская')
     .replace(/(?<=^|\s)гаврило\s+ва(?=\s|$)/g, 'гаврилова')
@@ -278,13 +408,13 @@ export function normalizeShowJudgeDisplayName(raw: string): string {
     .replace(/(?<=^|\s)владими\s+рович(?=\s|$)/g, 'владимирович')
     .replace(/(?<=^|\s)валенти\s+нович(?=\s|$)/g, 'валентинович')
     .replace(/(?<=^|\s)викторов\s+на(?=\s|$)/g, 'викторовна')
-    .replace(/(?<=^|\s)([а-яё]{3,})ов\s+на(?=\s|$)/g, '$1овна')
-    .replace(/(?<=^|\s)([а-яё]{3,})ев\s+на(?=\s|$)/g, '$1евна')
-    .replace(/(?<=^|\s)([а-яё]{3,})ин\s+ич(?=\s|$)/g, '$1инична')
-    .replace(/(?<=^|\s)([а-яё]{3,})ск\s+ая(?=\s|$)/g, '$1ская')
-    .replace(/(?<=^|\s)([а-яё]{3,})цк\s+ая(?=\s|$)/g, '$1цкая')
-    .replace(/(?<=^|\s)([а-яё]{3,})ск\s+ий(?=\s|$)/g, '$1ский')
-    .replace(/(?<=^|\s)([а-яё]{3,})цк\s+ий(?=\s|$)/g, '$1цкий')
+    .replace(/(?<=^|\s)([а-я]{3,})ов\s+на(?=\s|$)/g, '$1овна')
+    .replace(/(?<=^|\s)([а-я]{3,})ев\s+на(?=\s|$)/g, '$1евна')
+    .replace(/(?<=^|\s)([а-я]{3,})ин\s+ич(?=\s|$)/g, '$1инична')
+    .replace(/(?<=^|\s)([а-я]{3,})ск\s+ая(?=\s|$)/g, '$1ская')
+    .replace(/(?<=^|\s)([а-я]{3,})цк\s+ая(?=\s|$)/g, '$1цкая')
+    .replace(/(?<=^|\s)([а-я]{3,})ск\s+ий(?=\s|$)/g, '$1ский')
+    .replace(/(?<=^|\s)([а-я]{3,})цк\s+ий(?=\s|$)/g, '$1цкий')
 
   let words = normalized.split(/\s+/).filter(Boolean)
   words = words.map((word) => {
@@ -318,8 +448,18 @@ export function normalizeShowJudgeDisplayName(raw: string): string {
     words = words.slice(0, -2)
   }
 
-  normalized = words.join(' ')
-  return normalized.trim()
+  normalized = words.join(' ').trim()
+
+  // Если осталась чистая порода, шум или менее 2 слов (нет связки Фамилия+Имя) — отсекаем
+  if (!normalized || KNOWN_BREED_AND_NOISE_PHRASES.includes(normalized) || normalized.length < 4) {
+    return ''
+  }
+  const finalWords = normalized.split(' ').filter((w) => w.length > 0 && !/^[-–—]+$/.test(w))
+  if (finalWords.length < 2) {
+    return ''
+  }
+
+  return finalWords.join(' ').trim()
 }
 
 export interface ShowJudgeNameParts {

@@ -195,6 +195,7 @@ export default function ShowCalendar() {
   const pageToolbar = (
     <PageToolbar
       bare
+      topRowClassName="flex-nowrap"
       filters={
         <ShowCalendarToolbar
           searchQuery={searchQuery}

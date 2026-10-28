@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import DoninoHomeRecordRow from '../../../components/DoninoHomeRecordRow'
 import type { HomeBreedCarouselApi } from '../hooks/useHomeBreedCarousel'
 import { HomeBreedCarouselPager } from './HomeBreedCarouselPager'
+import { HomeSubSectionCapsule } from './SeasonTopSection'
 import type { BreedSlide } from '../utils/breedSeasonSlides'
 import type { CoursingRecord } from '../types'
 
@@ -10,6 +11,7 @@ interface SeasonDoninoCoursingCarouselProps {
   carousel: HomeBreedCarouselApi
   syncDots: { key: string; label: string }[]
   driveAutoplay?: boolean
+  onToggleSubTab?: () => void
 }
 
 export default function SeasonDoninoCoursingCarousel({
@@ -17,6 +19,7 @@ export default function SeasonDoninoCoursingCarousel({
   carousel,
   syncDots,
   driveAutoplay = false,
+  onToggleSubTab,
 }: SeasonDoninoCoursingCarouselProps) {
   const { index, trackStyle, getAdjacent, touchHandlers } = carousel
   const { prev: prevSlide, current: slide, next: nextSlide } = getAdjacent(slides)
@@ -82,7 +85,7 @@ export default function SeasonDoninoCoursingCarousel({
       className="flex min-h-0 min-w-0 flex-1 flex-col home-breed-carousel-swipeable"
       {...touchHandlers}
     >
-      <div className="home-v2-col-head home-v2-col-head--tabs">
+      <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
         <span className="hidden md:inline shrink-0">Бега 350 м</span>
         <div className="overflow-hidden flex min-w-0 flex-1">
           <div className="flex w-full will-change-transform" style={trackStyle}>
@@ -91,9 +94,18 @@ export default function SeasonDoninoCoursingCarousel({
             {renderHeaderItem(nextSlide)}
           </div>
         </div>
-        <span className="shrink-0 text-[11px] font-normal text-old-money-600">
-          Спринт сек
-        </span>
+        <div className="shrink-0 flex items-center gap-1.5 ml-auto">
+          <span className="hidden md:inline shrink-0 text-[11px] font-normal text-old-money-600">
+            Спринт сек
+          </span>
+          {onToggleSubTab && (
+            <HomeSubSectionCapsule
+              currentLabel="Бега 350 м"
+              isFirst={false}
+              onToggle={onToggleSubTab}
+            />
+          )}
+        </div>
       </div>
 
       <div className="overflow-hidden flex-1 flex flex-col">

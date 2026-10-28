@@ -3,6 +3,7 @@ import DogCard from '../../../components/DogCard'
 import CoursingRatingHint from '../../TopDogs/CoursingRatingHint'
 import type { HomeBreedCarouselApi } from '../hooks/useHomeBreedCarousel'
 import { HomeBreedCarouselPager } from './HomeBreedCarouselPager'
+import { HomeSubSectionCapsule } from './SeasonTopSection'
 import type { BreedSlide } from '../utils/breedSeasonSlides'
 import type { CombinedRankingDog } from '../../TopDogs/mergeCombinedRanking'
 
@@ -13,6 +14,7 @@ interface SeasonCompetitionsCarouselProps {
   carousel: HomeBreedCarouselApi
   syncDots: { key: string; label: string }[]
   driveAutoplay?: boolean
+  onToggleDiscipline?: () => void
 }
 
 export default function SeasonCompetitionsCarousel({
@@ -20,6 +22,7 @@ export default function SeasonCompetitionsCarousel({
   carousel,
   syncDots,
   driveAutoplay = false,
+  onToggleDiscipline,
 }: SeasonCompetitionsCarouselProps) {
   const { index, trackStyle, getAdjacent, touchHandlers } = carousel
   const { prev: prevSlide, current: slide, next: nextSlide } = getAdjacent(slides)
@@ -72,7 +75,7 @@ export default function SeasonCompetitionsCarousel({
       className="flex min-h-0 min-w-0 flex-1 flex-col home-breed-carousel-swipeable"
       {...touchHandlers}
     >
-      <div className="home-v2-col-head home-v2-col-head--tabs">
+      <div className="home-v2-col-head home-v2-col-head--tabs !flex-nowrap gap-1.5 sm:gap-2">
         <span className="hidden md:inline shrink-0">Курсинг</span>
         <div className="overflow-hidden flex min-w-0 flex-1">
           <div className="flex w-full will-change-transform" style={trackStyle}>
@@ -81,10 +84,19 @@ export default function SeasonCompetitionsCarousel({
             {renderHeaderItem(nextSlide)}
           </div>
         </div>
-        <span className="inline-flex shrink-0 items-center gap-1 text-[11px] font-normal text-old-money-600">
-          Зачёт сезона
-          <CoursingRatingHint embedded />
-        </span>
+        <div className="shrink-0 flex items-center gap-1.5 ml-auto">
+          <span className="inline-flex items-center gap-1 text-[11px] font-normal text-old-money-600">
+            <span className="hidden sm:inline">Зачёт сезона</span>
+            <CoursingRatingHint embedded />
+          </span>
+          {onToggleDiscipline && (
+            <HomeSubSectionCapsule
+              currentLabel="Курсинг"
+              isFirst={true}
+              onToggle={onToggleDiscipline}
+            />
+          )}
+        </div>
       </div>
 
       <div className="overflow-hidden flex-1 flex flex-col">

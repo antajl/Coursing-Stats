@@ -277,5 +277,22 @@ describe('show judge name deduplication', () => {
       expect(normalizeShowJudgeDisplayName('Agafonova- Tripoli Elena')).toBe('agafonova-tripoli elena')
       expect(normalizeShowJudgeDisplayName('– Жеребцова Алла Анатольевна 12 12 2021')).toBe('жеребцова алла анатольевна')
     })
+
+    it('drops pure breed names and strips breed prefixes from judge names', () => {
+      // Pure breeds and varieties -> empty string (dropped)
+      expect(normalizeShowJudgeDisplayName('Миниатюрная Гладкошерстная')).toBe('')
+      expect(normalizeShowJudgeDisplayName('Бишон Фризе')).toBe('')
+      expect(normalizeShowJudgeDisplayName('Немецкая Овчарка')).toBe('')
+      expect(normalizeShowJudgeDisplayName('Русский Черный Терьер')).toBe('')
+      expect(normalizeShowJudgeDisplayName('Австралийская Овчарка')).toBe('')
+      expect(normalizeShowJudgeDisplayName('Афганская Борзая')).toBe('')
+      expect(normalizeShowJudgeDisplayName('Бельгийская Овчарка ЛПП')).toBe('')
+
+      // Breed prefix attached to real judge -> clean judge name
+      expect(normalizeShowJudgeDisplayName('Сибирский Хаски Патрина Марина')).toBe('патрина марина')
+      expect(normalizeShowJudgeDisplayName('Бельгийский Гриффон Kazlauskaite R')).toBe('kazlauskaite r')
+      expect(normalizeShowJudgeDisplayName('Французский Бульдог Wang Zhiwei Aidy')).toBe('wang zhiwei aidy')
+      expect(normalizeShowJudgeDisplayName('Вест Хайленд Вайт Терьер Кузнецов Александр')).toBe('кузнецов александр')
+    })
   })
 })

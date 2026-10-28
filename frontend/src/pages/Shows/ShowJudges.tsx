@@ -11,7 +11,6 @@ import { initialSeasonYearFilter, resolveActiveSeason } from '../../lib/season'
 import { useShowJudges, useShowJudgesPage0 } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import SkeletonLoader from '../../components/SkeletonLoader'
-import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import type { ShowJudge } from '../../lib/staticData'
 import {
   matchesBreedFilter,
@@ -26,13 +25,6 @@ const SHOW_JUDGES_ACTIVE_SEASON = resolveActiveSeason(SHOW_YEARS)
 /** Full judges.json (~12 MB) must not race page0 — wait after first paint. */
 const FULL_JUDGES_DELAY_MS = 2500
 
-type SortKey = 'exhibitions' | 'breeds' | 'excellent'
-
-const SORT_OPTIONS: Array<{ field: SortKey; label: string }> = [
-  { field: 'exhibitions', label: 'Выставки' },
-  { field: 'breeds', label: 'Породы' },
-  { field: 'excellent', label: '% отлично' },
-]
 
 const MIN_GRADED_FOR_RATE = 30
 
@@ -62,8 +54,6 @@ export default function ShowJudges() {
   )
   const [filterBreed, setFilterBreed] = useState('')
   const [yearOpen, setYearOpen] = useState(false)
-  const [sortKey, setSortKey] = useState<SortKey>('exhibitions')
-  const [sortDir, setSortDir] = useState<'desc' | 'asc'>('desc')
   const [visibleCount, setVisibleCount] = useState(20)
   const [allowFullLoad, setAllowFullLoad] = useState(false)
   const [userWantsFull, setUserWantsFull] = useState(false)
@@ -144,29 +134,14 @@ export default function ShowJudges() {
   }, [judges, searchQuery, filterBreed, filterYear])
 
   const sortedJudges = useMemo(() => {
-    const dir = sortDir === 'desc' ? 1 : -1
     return [...filteredJudges].sort((a, b) => {
-      let cmp = 0
-      if (sortKey === 'breeds') {
-        const aVal = a.unique_breeds ?? a.breeds?.length ?? 0
-        const bVal = b.unique_breeds ?? b.breeds?.length ?? 0
-        cmp = bVal - aVal
-      } else if (sortKey === 'excellent') {
-        const aRate = judgeExcellentRate(a, filterYear)
-        const bRate = judgeExcellentRate(b, filterYear)
-        if (aRate == null && bRate == null) cmp = 0
-        else if (aRate == null) return 1
-        else if (bRate == null) return -1
-        else cmp = bRate - aRate
-      } else {
-        const aVal = filterYear ? (a.by_year?.[filterYear] ?? 0) : a.total_judged
-        const bVal = filterYear ? (b.by_year?.[filterYear] ?? 0) : b.total_judged
-        cmp = bVal - aVal
-      }
-      if (cmp !== 0) return cmp * dir
+      const aVal = filterYear ? (a.by_year?.[filterYear] ?? 0) : a.total_judged
+      const bVal = filterYear ? (b.by_year?.[filterYear] ?? 0) : b.total_judged
+      const cmp = bVal - aVal
+      if (cmp !== 0) return cmp
       return a.name.localeCompare(b.name, 'ru')
     })
-  }, [filteredJudges, filterYear, sortKey, sortDir])
+  }, [filteredJudges, filterYear])
 
   useEffect(() => {
     observerRef.current = new IntersectionObserver(
@@ -191,14 +166,6 @@ export default function ShowJudges() {
     }
   }, [visibleCount, sortedJudges.length, judgesPartial, page0Judges.length])
 
-  const selectSort = (key: SortKey) => {
-    if (key === sortKey) {
-      setSortDir((d) => (d === 'desc' ? 'asc' : 'desc'))
-    } else {
-      setSortKey(key)
-      setSortDir('desc')
-    }
-  }
 
   const isYearNonDefault = filterYear !== '' && filterYear !== SHOW_JUDGES_ACTIVE_SEASON
   const hasActiveFilters = Boolean(isYearNonDefault || filterBreed || searchQuery)
@@ -430,26 +397,6 @@ export default function ShowJudges() {
           </div>
         </div>
       }
-        trailing={
-          <div className="hidden sm:flex items-center gap-2">
-            <RecordSortBar
-              options={SORT_OPTIONS}
-              sortField={sortKey}
-              sortDirection={sortDir}
-              onSort={(field) => selectSort(field as SortKey)}
-            />
-          </div>
-        }
-        bottomLeft={
-          <div className="sm:hidden w-full flex items-center justify-between">
-            <RecordSortBar
-              options={SORT_OPTIONS}
-              sortField={sortKey}
-              sortDirection={sortDir}
-              onSort={(field) => selectSort(field as SortKey)}
-            />
-          </div>
-        }
       />
 
       {sortedJudges.length === 0 ? (
