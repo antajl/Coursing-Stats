@@ -295,6 +295,12 @@ export default function DoninoPageToolbar({
                   />
                 </div>
 
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка собаки…"
+                />
+
                 {hasActiveFilters && (
                   <button
                     type="button"
@@ -307,16 +313,6 @@ export default function DoninoPageToolbar({
                   </button>
                 )}
               </div>
-
-              {/* Строка 2: Инлайн-поиск */}
-              <div className="w-full">
-                <ToolbarSearch
-                  value={searchQuery}
-                  onChange={onSearchChange}
-                  placeholder="Кличка собаки…"
-                  className="w-full min-w-0"
-                />
-              </div>
             </div>
 
             {/* Десктопная группа */}
@@ -326,7 +322,6 @@ export default function DoninoPageToolbar({
                   value={searchQuery}
                   onChange={onSearchChange}
                   placeholder="Кличка, порода…"
-                  className="sm:w-44 md:w-40 lg:w-48"
                 />
               <ModernDropdown
                 trigger={

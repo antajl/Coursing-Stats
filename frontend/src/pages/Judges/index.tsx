@@ -14,16 +14,7 @@ import { DEFAULT_ACTIVE_SEASON, initialSeasonYearFilter, resolveActiveSeason } f
 import { useJudges, useCompetingBreeds, useYears } from '../../hooks/useStaticData'
 import EmptyState from '../../components/EmptyState'
 import LoadingCard from '../../components/LoadingCard'
-import RecordSortBar from '../SpeedRecords/RecordSortBar'
 import { useListReveal } from '../../hooks/useListReveal'
-
-type SortKey = 'evals' | 'events' | 'avg'
-
-const SORT_OPTIONS: Array<{ field: SortKey; label: string }> = [
-  { field: 'evals', label: 'Забеги' },
-  { field: 'events', label: 'Турниры' },
-  { field: 'avg', label: 'Ср. балл' },
-]
 
 const DISCIPLINE_OPTIONS = [
   { value: 'coursing', label: 'Курсинг' },
@@ -67,8 +58,6 @@ export default function Judges() {
   const [filterDiscipline, setFilterDiscipline] = useState('')
   const [yearOpen, setYearOpen] = useState(false)
   const [disciplineOpen, setDisciplineOpen] = useState(false)
-  const [sortKey, setSortKey] = useState<SortKey>('evals')
-  const [sortDir, setSortDir] = useState<'desc' | 'asc'>('desc')
   const [isInitialLoad, setIsInitialLoad] = useState(true)
   const [visibleCount, setVisibleCount] = useState(20)
   const observerRef = useRef<IntersectionObserver | null>(null)
@@ -115,35 +104,13 @@ export default function Judges() {
     return judge.name?.toLowerCase().includes(query)
   })
 
-  const selectSort = (key: SortKey) => {
-    if (key === sortKey) {
-      setSortDir((d) => (d === 'desc' ? 'asc' : 'desc'))
-    } else {
-      setSortKey(key)
-      setSortDir('desc')
-    }
-  }
-
   const sortedJudges = useMemo(() => {
-    const dir = sortDir === 'desc' ? 1 : -1
     return [...filteredJudges].sort((a, b) => {
-      let cmp = 0
-      if (sortKey === 'events') {
-        cmp = (b.unique_events ?? 0) - (a.unique_events ?? 0)
-      } else if (sortKey === 'avg') {
-        const aAvg = typeof a.avg_score === 'number' ? a.avg_score : null
-        const bAvg = typeof b.avg_score === 'number' ? b.avg_score : null
-        if (aAvg == null && bAvg == null) cmp = 0
-        else if (aAvg == null) return 1
-        else if (bAvg == null) return -1
-        else cmp = bAvg - aAvg
-      } else {
-        cmp = (b.total_evaluations_count ?? 0) - (a.total_evaluations_count ?? 0)
-      }
-      if (cmp !== 0) return cmp * dir
+      const cmp = (b.total_evaluations_count ?? 0) - (a.total_evaluations_count ?? 0)
+      if (cmp !== 0) return cmp
       return String(a.name || '').localeCompare(String(b.name || ''), 'ru')
     })
-  }, [filteredJudges, sortKey, sortDir])
+  }, [filteredJudges])
 
   const listRevealRef = useListReveal(!loading && sortedJudges.length > 0)
 
@@ -197,10 +164,8 @@ export default function Judges() {
           bare
           filters={
             <div className="w-full min-w-0">
-              {/* Мобильная консоль: 2 компактные строки */}
-              <div className="flex flex-col gap-1.5 w-full sm:hidden">
-                {/* Строка 1: [Год ∨] [Порода ∨] [Дисциплина ∨] + [X] */}
-                <div className="flex items-center gap-1.5 w-full min-w-0">
+              {/* Мобильная строка (32px): Год + Порода + Дисциплина + Поиск + Сброс */}
+              <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0">
                   {/* Year Dropdown */}
                   <ModernDropdown
                     trigger={
@@ -328,6 +293,12 @@ export default function Judges() {
                     </div>
                   </ModernDropdown>
 
+                  <ToolbarSearch
+                    value={searchQuery}
+                    onChange={setSearchQuery}
+                    placeholder="Фамилия судьи…"
+                  />
+
                   {hasActiveFilters && (
                     <button
                       type="button"
@@ -341,24 +312,12 @@ export default function Judges() {
                   )}
                 </div>
 
-                {/* Строка 2: Инлайн-поиск на всю ширину */}
-                <div className="w-full">
-                  <ToolbarSearch
-                    value={searchQuery}
-                    onChange={setSearchQuery}
-                    placeholder="Фамилия судьи…"
-                    className="w-full min-w-0"
-                  />
-                </div>
-              </div>
-
               {/* Десктопная строка */}
               <div className="hidden sm:flex sm:items-center gap-2 w-full">
                 <ToolbarSearch
                   value={searchQuery}
                   onChange={setSearchQuery}
                   placeholder="Фамилия судьи…"
-                  className="w-auto min-w-[200px] max-w-sm"
                 />
                 <div className="flex max-w-full items-center gap-1.5 flex-wrap">
                 {/* Year Dropdown */}
@@ -489,14 +448,10 @@ export default function Judges() {
                 </ModernDropdown>
 
                 {/* Reset Filters button */}
-                {(isYearNonDefault || filterBreed || filterDiscipline) && (
+                {hasActiveFilters && (
                   <button
                     type="button"
-                    onClick={() => {
-                      setFilterYear(activeSeason)
-                      setFilterBreed('')
-                      setFilterDiscipline('')
-                    }}
+                    onClick={clearFilters}
                     className="shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-200 bg-cream-50 px-3 text-xs font-semibold text-charcoal-600 hover:border-camel-500 hover:text-charcoal-900 hover:bg-cream-100 transition-colors cursor-pointer"
                     title="Сбросить все фильтры"
                   >
@@ -509,26 +464,6 @@ export default function Judges() {
             </div>
           </div>
         }
-          trailing={
-            <div className="hidden sm:flex items-center gap-2">
-              <RecordSortBar
-                options={SORT_OPTIONS}
-                sortField={sortKey}
-                sortDirection={sortDir}
-                onSort={(field) => selectSort(field as SortKey)}
-              />
-            </div>
-          }
-          bottomLeft={
-            <div className="sm:hidden w-full flex items-center justify-between">
-              <RecordSortBar
-                options={SORT_OPTIONS}
-                sortField={sortKey}
-                sortDirection={sortDir}
-                onSort={(field) => selectSort(field as SortKey)}
-              />
-            </div>
-          }
         />
       </div>
 

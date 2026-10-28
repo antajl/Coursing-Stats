@@ -141,7 +141,6 @@ export default function ShowExhibitionDetail() {
                   value={searchQuery}
                   onChange={setSearchQuery}
                   placeholder="Кличка или порода…"
-                  className="!w-auto min-w-[180px] flex-1 max-w-md"
                 />
                 {availableAwards.length > 0 ? (
                   <ToolbarFiltersDropdown

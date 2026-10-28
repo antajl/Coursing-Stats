@@ -156,8 +156,9 @@ export default function ModernDropdown({
       const triggerRect = triggerRef.current?.getBoundingClientRect()
       if (!triggerRect) return
 
-      const dropdownWidth = width ? parseInt(width) : triggerRect.width
-      const maxLeft = window.innerWidth - dropdownWidth - 8
+      const parsedWidth = width ? parseInt(width, 10) : triggerRect.width
+      const dropdownWidth = Math.min(parsedWidth, Math.max(200, window.innerWidth - 16))
+      const maxLeft = Math.max(8, window.innerWidth - dropdownWidth - 8)
       setPosition({
         top: triggerRect.bottom + 4,
         left: Math.max(8, Math.min(triggerRect.left, maxLeft)),
@@ -185,19 +186,20 @@ export default function ModernDropdown({
     }
 
     const handleResize = () => {
-      if (closeOnScroll) {
-        close()
-        return
-      }
+      // Window resize (including mobile virtual keyboard popping up) updates coordinates without closing
       updatePosition()
     }
 
     window.addEventListener('scroll', handleScroll, true)
     window.addEventListener('resize', handleResize)
+    window.visualViewport?.addEventListener('resize', handleResize)
+    window.visualViewport?.addEventListener('scroll', handleResize)
 
     return () => {
       window.removeEventListener('scroll', handleScroll, true)
       window.removeEventListener('resize', handleResize)
+      window.visualViewport?.removeEventListener('resize', handleResize)
+      window.visualViewport?.removeEventListener('scroll', handleResize)
     }
   }, [isOpen, width, closeOnScroll])
 

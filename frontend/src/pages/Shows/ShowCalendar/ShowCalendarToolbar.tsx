@@ -67,7 +67,6 @@ export function ShowCalendarToolbar({
           value={searchQuery}
           onChange={onSearchChange}
           placeholder="Поиск…"
-          className="flex-1 min-w-[70px]"
         />
 
         {hasActiveFilters && (
@@ -93,7 +92,6 @@ export function ShowCalendarToolbar({
             value={searchQuery}
             onChange={onSearchChange}
             placeholder="Название, город, клуб, НКП…"
-            className="w-auto min-w-[200px]"
           />
 
           <MonthYearDropdown

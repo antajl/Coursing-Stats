@@ -261,6 +261,12 @@ export default function ShowRankingFilters({
                 </ToolbarFiltersDropdown>
                 </div>
 
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка, порода…"
+                />
+
                 <div className="ml-auto shrink-0 flex items-center gap-1.5">
                   {hasAnyFilter && (
                     <button
@@ -276,16 +282,6 @@ export default function ShowRankingFilters({
                   {trailing ?? <ShowRatingHint embedded compact />}
                 </div>
               </div>
-
-              {/* Строка 2: Инлайн-поиск */}
-              <div className="w-full">
-                <ToolbarSearch
-                  value={searchQuery}
-                  onChange={onSearchChange}
-                  placeholder="Кличка, порода…"
-                  className="w-full min-w-0"
-                />
-              </div>
             </div>
 
             {/* Десктопная строка: Поиск + Год + Награды */}
@@ -295,7 +291,6 @@ export default function ShowRankingFilters({
                   value={searchQuery}
                   onChange={onSearchChange}
                   placeholder="Кличка, порода…"
-                  className="sm:w-44 md:w-40 lg:w-48"
                 />
 
                 <ModernDropdown

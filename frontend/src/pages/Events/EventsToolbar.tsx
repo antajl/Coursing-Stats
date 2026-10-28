@@ -199,7 +199,6 @@ export default function EventsToolbar({
           value={searchQuery}
           onChange={onSearchChange}
           placeholder="Поиск…"
-          className="flex-1 min-w-[70px]"
         />
 
         {hasActiveFilters && (
@@ -218,14 +217,11 @@ export default function EventsToolbar({
 
       {/* Десктопная строка: поиск слева + фильтры */}
       <div className="hidden sm:flex sm:items-center gap-2 w-full min-w-0">
-        <div className="flex min-w-0 items-center gap-2 sm:w-auto">
-          <ToolbarSearch
-            value={searchQuery}
-            onChange={onSearchChange}
-            placeholder="Название, клуб, регион…"
-            className="w-auto min-w-[200px]"
-          />
-        </div>
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={onSearchChange}
+          placeholder="Название, клуб, регион…"
+        />
 
         <div className="flex max-w-full flex-wrap items-center gap-1.5 sm:gap-2">
           <MonthYearDropdown

@@ -83,147 +83,125 @@ export default function TopDogsFilters({
 
   return (
     <div className="mb-2.5 sm:mb-4" ref={dropdownRef}>
-      {/* 1. Мобильная консоль: Фильтры + Инфо в Строке 1, Дисциплина + Единая кнопка перехода в Строке 2 */}
-      <div className="flex flex-col gap-2 w-full lg:hidden mb-2.5">
-        {/* Строка 1: Фильтры (Год + Порода + Поиск + Инфо + Сброс) */}
-        <div className="flex items-center gap-1.5 w-full">
-          {/* Выбор года */}
-          <div className="shrink-0">
-            <ModernDropdown
-              trigger={yearTrigger}
-              isOpen={isOpen}
-              onOpenChange={setIsOpen}
-              width="120px"
-            >
-              <div className="p-1 min-w-[100px]">
-                <div className="max-h-60 overflow-y-auto" role="menu">
+      {/* 1. Мобильная консоль: единый компактный ряд (Дисциплина + Год + Порода + Поиск + Сброс + Инфо) */}
+      <div className="flex items-center gap-1.5 w-full lg:hidden mb-2.5 overflow-x-auto no-scrollbar py-0.5">
+        {/* Кнопка-капсула дисциплины с иконкой и точками-вкладками */}
+        {activeMobileColumn && onMobileColumnChange && (
+          <button
+            type="button"
+            onClick={() => onMobileColumnChange(isCoursing ? 'racing' : 'coursing')}
+            className="relative shrink-0 inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-300/80 bg-cream-50/90 px-2.5 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 active:scale-95 transition-all shadow-2xs touch-manipulation cursor-pointer before:absolute before:-inset-1.5 before:content-['']"
+            title={`Переключить на ${isCoursing ? 'рейсинг' : 'курсинг'} (или смахните экран)`}
+            aria-label={`Переключить на ${isCoursing ? 'рейсинг' : 'курсинг'}`}
+          >
+            <ArrowLeftRight className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+            <span className="font-serif text-xs font-bold text-charcoal-900 tracking-tight whitespace-nowrap">
+              {isCoursing ? 'Курсинг' : 'Рейсинг'}
+            </span>
+            <div className="flex items-center gap-0.5 shrink-0" aria-hidden>
+              <span
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  isCoursing ? 'w-2.5 bg-camel-600' : 'w-1 bg-old-money-300'
+                }`}
+              />
+              <span
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  !isCoursing ? 'w-2.5 bg-camel-600' : 'w-1 bg-old-money-300'
+                }`}
+              />
+            </div>
+          </button>
+        )}
+
+        {/* Выбор года */}
+        <div className="shrink-0">
+          <ModernDropdown
+            trigger={yearTrigger}
+            isOpen={isOpen}
+            onOpenChange={setIsOpen}
+            width="120px"
+          >
+            <div className="p-1 min-w-[100px]">
+              <div className="max-h-60 overflow-y-auto" role="menu">
+                <button
+                  role="menuitem"
+                  onClick={() => {
+                    onYearChange('')
+                    setIsOpen(false)
+                  }}
+                  className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
+                    !filterYear
+                      ? 'bg-camel-500 text-charcoal-900'
+                      : 'text-charcoal-700 hover:bg-camel-100'
+                  }`}
+                >
+                  Все года
+                </button>
+                {sortedYears.map((year) => (
                   <button
+                    key={year}
                     role="menuitem"
                     onClick={() => {
-                      onYearChange('')
+                      onYearChange(year)
                       setIsOpen(false)
                     }}
                     className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                      !filterYear
+                      filterYear === year
                         ? 'bg-camel-500 text-charcoal-900'
                         : 'text-charcoal-700 hover:bg-camel-100'
                     }`}
                   >
-                    Все года
+                    {year}
                   </button>
-                  {sortedYears.map((year) => (
-                    <button
-                      key={year}
-                      role="menuitem"
-                      onClick={() => {
-                        onYearChange(year)
-                        setIsOpen(false)
-                      }}
-                      className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
-                        filterYear === year
-                          ? 'bg-camel-500 text-charcoal-900'
-                          : 'text-charcoal-700 hover:bg-camel-100'
-                      }`}
-                    >
-                      {year}
-                    </button>
-                  ))}
-                </div>
+                ))}
               </div>
-            </ModernDropdown>
-          </div>
-
-          {/* Выбор породы */}
-          <div className="shrink-0">
-            <BreedSearchDropdown
-              breeds={breedValues}
-              selectedBreed={filterBreed}
-              onSelect={onBreedChange}
-              trigger={
-                <button
-                  type="button"
-                  className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
-                >
-                  <span className="truncate max-w-[85px]">
-                    {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
-                  </span>
-                  <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                </button>
-              }
-              dogIndex={dogIndex}
-            />
-          </div>
-
-          {/* Поиск — занимает всю оставшуюся ширину строки */}
-          <div className="flex-1 min-w-0">
-            <ToolbarSearch
-              value={searchQuery}
-              onChange={onSearchChange}
-              placeholder="Кличка…"
-              className="w-full"
-            />
-          </div>
-
-          {/* Сброс фильтров (если активны) */}
-          {(isYearNonDefault || filterBreed) && (
-            <button
-              type="button"
-              onClick={onResetFilters}
-              className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
-              title="Сбросить фильтры"
-              aria-label="Сбросить фильтры"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
-
-          {/* Кнопка Инфо о рейтинге (i) */}
-          {trailing && <div className="shrink-0">{trailing}</div>}
+            </div>
+          </ModernDropdown>
         </div>
 
-        {/* Строка 2: Дисциплина слева + Единая стабильная кнопка переключения справа (фиксированный порядок элементов) */}
-        {activeMobileColumn && onMobileColumnChange && (
-          <div className="flex items-center justify-between gap-2 w-full px-0.5 pt-0.5">
-            {/* Активная дисциплина с бейджем количества собак */}
-            <div className="flex items-center gap-2 min-w-0">
-              <span className="font-serif text-sm font-bold text-charcoal-900 tracking-tight whitespace-nowrap">
-                {isCoursing ? 'Курсинг' : 'Рейсинг'}
-              </span>
-              <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[11px] font-semibold bg-camel-100/90 text-camel-800 border border-camel-200/60 leading-none">
-                {isCoursing ? coursingCount ?? 0 : racingCount ?? 0}
-              </span>
-            </div>
+        {/* Выбор породы */}
+        <div className="shrink-0">
+          <BreedSearchDropdown
+            breeds={breedValues}
+            selectedBreed={filterBreed}
+            onSelect={onBreedChange}
+            trigger={
+              <button
+                type="button"
+                className={`shrink-0 ${toolbarPillTriggerClass(Boolean(filterBreed))}`}
+              >
+                <span className="truncate max-w-[85px]">
+                  {filterBreed ? formatBreedName(filterBreed) : 'Порода'}
+                </span>
+                <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
+              </button>
+            }
+            dogIndex={dogIndex}
+          />
+        </div>
 
-            {/* Единая стабильная кнопка: фиксированный порядок [Иконка | Название | Количество | Точки] */}
-            <button
-              type="button"
-              onClick={() => onMobileColumnChange(isCoursing ? 'racing' : 'coursing')}
-              className="relative inline-flex h-8 items-center gap-1.5 rounded-full border border-old-money-300/90 bg-cream-50 px-2.5 text-xs font-semibold text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 active:scale-95 transition-all shadow-2xs touch-manipulation cursor-pointer before:absolute before:-inset-2 before:content-['']"
-              title={`Перейти к рейтингу ${isCoursing ? 'рейсинга' : 'курсинга'}`}
-              aria-label={`Перейти к рейтингу ${isCoursing ? 'рейсинга' : 'курсинга'}`}
-            >
-              <ArrowLeftRight className="h-3 w-3 text-camel-700 shrink-0" aria-hidden />
-              <span className="whitespace-nowrap">
-                {isCoursing ? 'Рейсинг' : 'Курсинг'}
-              </span>
-              <span className="text-[10.5px] font-normal text-charcoal-500">
-                {isCoursing ? racingCount ?? 0 : coursingCount ?? 0}
-              </span>
-              <div className="flex items-center gap-1 ml-0.5" aria-hidden>
-                <span
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    isCoursing ? 'w-3.5 bg-camel-600' : 'w-1.5 bg-old-money-300'
-                  }`}
-                />
-                <span
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    !isCoursing ? 'w-3.5 bg-camel-600' : 'w-1.5 bg-old-money-300'
-                  }`}
-                />
-              </div>
-            </button>
-          </div>
+        {/* Поиск */}
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={onSearchChange}
+          placeholder="Кличка…"
+        />
+
+        {/* Сброс фильтров (если активны) */}
+        {(isYearNonDefault || filterBreed) && (
+          <button
+            type="button"
+            onClick={onResetFilters}
+            className="relative shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors before:absolute before:-inset-1.5 before:content-['']"
+            title="Сбросить фильтры"
+            aria-label="Сбросить фильтры"
+          >
+            <X className="h-4 w-4" />
+          </button>
         )}
+
+        {/* Кнопка Инфо о рейтинге (i) */}
+        {trailing && <div className="shrink-0">{trailing}</div>}
       </div>
 
       {/* 2. Десктопный тулбар (чистый 1 ряд) */}
@@ -237,7 +215,6 @@ export default function TopDogsFilters({
                 value={searchQuery}
                 onChange={onSearchChange}
                 placeholder="Кличка, порода…"
-                className="w-44 lg:w-48"
               />
 
               <div className="shrink-0">

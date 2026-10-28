@@ -1,5 +1,5 @@
-import { memo, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { memo, useMemo, useState, useRef } from 'react'
+import { ArrowLeftRight } from 'lucide-react'
 import SeasonCompetitionsCarousel from './SeasonCompetitionsCarousel'
 import SeasonRacingCarousel from './SeasonRacingCarousel'
 import SeasonShowsCarousel from './SeasonShowsCarousel'
@@ -37,6 +37,101 @@ interface SeasonTopSectionProps {
   loading: boolean
   compact?: boolean
   singleColumn?: boolean
+}
+
+function HomeSubSectionSwitcher({
+  currentLabel,
+  currentCount,
+  onToggle,
+  isFirst,
+  compact = false,
+  singleColumn = false,
+}: {
+  currentLabel: string
+  currentCount?: number
+  onToggle: () => void
+  isFirst: boolean
+  compact?: boolean
+  singleColumn?: boolean
+}) {
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null)
+  const isHorizontalRef = useRef<boolean | null>(null)
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY }
+    isHorizontalRef.current = null
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!touchStartRef.current) return
+    const dx = e.touches[0].clientX - touchStartRef.current.x
+    const dy = e.touches[0].clientY - touchStartRef.current.y
+    if (isHorizontalRef.current === null) {
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return
+      if (Math.abs(dy) >= Math.abs(dx)) {
+        isHorizontalRef.current = false
+        return
+      }
+      isHorizontalRef.current = true
+    }
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartRef.current || !isHorizontalRef.current) {
+      touchStartRef.current = null
+      isHorizontalRef.current = null
+      return
+    }
+    const dx = e.changedTouches[0].clientX - touchStartRef.current.x
+    touchStartRef.current = null
+    isHorizontalRef.current = null
+
+    // Свайп влево переключает на второй подраздел, свайп вправо — на первый
+    if ((dx < -40 && isFirst) || (dx > 40 && !isFirst)) {
+      onToggle()
+    }
+  }
+
+  return (
+    <div
+      className={`flex items-center justify-between w-full select-none touch-pan-y ${
+        singleColumn ? '' : 'md:hidden'
+      } ${compact ? 'mb-1.5' : 'mb-2.5'}`}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
+      <button
+        type="button"
+        onClick={onToggle}
+        className="relative inline-flex h-8 items-center gap-2 rounded-full border border-old-money-300/80 bg-cream-50/90 px-3 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 active:scale-95 transition-all shadow-2xs touch-manipulation cursor-pointer before:absolute before:-inset-1.5 before:content-['']"
+        title="Переключить подраздел (или смахните экран влево/вправо)"
+        aria-label="Переключить подраздел"
+      >
+        <ArrowLeftRight className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+        <span className="font-serif text-xs font-bold text-charcoal-900 tracking-tight whitespace-nowrap">
+          {currentLabel}
+        </span>
+        {currentCount !== undefined && currentCount > 0 && (
+          <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10.5px] font-semibold bg-camel-100/90 text-camel-800 border border-camel-200/60 leading-none">
+            {currentCount}
+          </span>
+        )}
+        <div className="flex items-center gap-0.5 shrink-0 ml-1" aria-hidden>
+          <span
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              isFirst ? 'w-2.5 bg-camel-600' : 'w-1 bg-old-money-300'
+            }`}
+          />
+          <span
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              !isFirst ? 'w-2.5 bg-camel-600' : 'w-1 bg-old-money-300'
+            }`}
+          />
+        </div>
+      </button>
+    </div>
+  )
 }
 
 function SeasonTopSectionInner({
@@ -120,33 +215,6 @@ function SeasonTopSectionInner({
     [],
   )
 
-  // Sport Subtabs for Mobile (< md)
-  const sportSubTabs = useMemo(
-    () => [
-      { id: 'coursing' as const, label: 'Курсинг', count: currentCompSlide?.dogCount },
-      { id: 'racing' as const, label: 'Рейсинг', count: currentRacingSlide?.dogCount },
-    ],
-    [currentCompSlide?.dogCount, currentRacingSlide?.dogCount],
-  )
-
-  // Shows Subtabs for Mobile (< md)
-  const showsSubTabs = useMemo(
-    () => [
-      { id: 'by-breed' as const, label: 'По породам', count: currentShowSlide?.dogCount },
-      { id: 'all-breeds' as const, label: 'Все породы', count: topShowDogs.length },
-    ],
-    [currentShowSlide?.dogCount, topShowDogs.length],
-  )
-
-  // Donino Subtabs for Mobile (< md)
-  const doninoSubTabs = useMemo(
-    () => [
-      { id: 'speed' as const, label: 'Замер скорости', count: currentDoninoSpeedSlide?.dogCount },
-      { id: 'coursing' as const, label: 'Бега 350 м', count: currentDoninoCoursingSlide?.dogCount },
-    ],
-    [currentDoninoSpeedSlide?.dogCount, currentDoninoCoursingSlide?.dogCount],
-  )
-
   if (loading) return <SeasonTopSectionSkeleton />
 
   return (
@@ -157,7 +225,7 @@ function SeasonTopSectionInner({
       }`}
       {...(!compact ? { 'data-home-reveal': true } : {})}
     >
-      {/* Main 3 Category Tabs */}
+      {/* Главные 3 вкладки: Соревнования, Выставки, Донино */}
       <SegmentedTabs
         tabs={mainTabs}
         activeTab={activeTab}
@@ -169,19 +237,24 @@ function SeasonTopSectionInner({
       />
 
       {/* ─────────────────────────────────────────────────────────────
-          TAB 1: SPORT (COURSING & RACING)
+          ТАБ 1: СОРЕВНОВАНИЯ (КУРСИНГ И РЕЙСИНГ)
       ────────────────────────────────────────────────────────────── */}
       {activeTab === 'sport' && (
         <div>
-          {/* Subtabs (< md or if singleColumn) */}
-          <SegmentedTabs
-            tabs={sportSubTabs}
-            activeTab={activeSportSubTab}
-            onChange={(tab) => setActiveSportSubTab(tab as SportSubTab)}
-            breakpoint={singleColumn ? 'all' : 'md'}
-            size={compact ? 'sm' : 'md'}
-            className={compact ? 'mb-1.5' : 'mb-3.5'}
-            ariaLabel="Виды спортивных состязаний"
+          {/* Подзаголовок и функциональный переключатель дисциплин */}
+          <HomeSubSectionSwitcher
+            currentLabel={activeSportSubTab === 'coursing' ? 'Курсинг' : 'Рейсинг'}
+            currentCount={
+              activeSportSubTab === 'coursing'
+                ? currentCompSlide?.dogCount
+                : currentRacingSlide?.dogCount
+            }
+            isFirst={activeSportSubTab === 'coursing'}
+            onToggle={() =>
+              setActiveSportSubTab((prev) => (prev === 'coursing' ? 'racing' : 'coursing'))
+            }
+            compact={compact}
+            singleColumn={singleColumn}
           />
 
           <div
@@ -224,19 +297,24 @@ function SeasonTopSectionInner({
       )}
 
       {/* ─────────────────────────────────────────────────────────────
-          TAB 2: SHOWS (BREED CAROUSEL + ALL-BREEDS ABSOLUTE LEADERS)
+          ТАБ 2: ВЫСТАВКИ (ПО ПОРОДАМ И АБСОЛЮТНЫЕ ЛИДЕРЫ)
       ────────────────────────────────────────────────────────────── */}
       {activeTab === 'shows' && (
         <div>
-          {/* Subtabs (< md or if singleColumn) */}
-          <SegmentedTabs
-            tabs={showsSubTabs}
-            activeTab={activeShowsSubTab}
-            onChange={(tab) => setActiveShowsSubTab(tab as ShowsSubTab)}
-            breakpoint={singleColumn ? 'all' : 'md'}
-            size={compact ? 'sm' : 'md'}
-            className={compact ? 'mb-1.5' : 'mb-3.5'}
-            ariaLabel="Режим выставочного рейтинга"
+          {/* Подзаголовок и функциональный переключатель выставочных разделов */}
+          <HomeSubSectionSwitcher
+            currentLabel={activeShowsSubTab === 'by-breed' ? 'По породам' : 'Все породы'}
+            currentCount={
+              activeShowsSubTab === 'by-breed'
+                ? currentShowSlide?.dogCount
+                : topShowDogs.length
+            }
+            isFirst={activeShowsSubTab === 'by-breed'}
+            onToggle={() =>
+              setActiveShowsSubTab((prev) => (prev === 'by-breed' ? 'all-breeds' : 'by-breed'))
+            }
+            compact={compact}
+            singleColumn={singleColumn}
           />
 
           <div
@@ -300,19 +378,24 @@ function SeasonTopSectionInner({
       )}
 
       {/* ─────────────────────────────────────────────────────────────
-          TAB 3: DONINO (SPEED RADAR & 350M RUN CAROUSELS)
+          ТАБ 3: ДОНИНО (ЗАМЕР СКОРОСТИ И БЕГА 350 М)
       ────────────────────────────────────────────────────────────── */}
       {activeTab === 'donino' && (
         <div>
-          {/* Subtabs (< md or if singleColumn) */}
-          <SegmentedTabs
-            tabs={doninoSubTabs}
-            activeTab={activeDoninoSubTab}
-            onChange={(tab) => setActiveDoninoSubTab(tab as DoninoSubTab)}
-            breakpoint={singleColumn ? 'all' : 'md'}
-            size={compact ? 'sm' : 'md'}
-            className={compact ? 'mb-1.5' : 'mb-3.5'}
-            ariaLabel="Виды замеров Донино"
+          {/* Подзаголовок и функциональный переключатель замеров Донино */}
+          <HomeSubSectionSwitcher
+            currentLabel={activeDoninoSubTab === 'speed' ? 'Замер скорости' : 'Бега 350 м'}
+            currentCount={
+              activeDoninoSubTab === 'speed'
+                ? currentDoninoSpeedSlide?.dogCount
+                : currentDoninoCoursingSlide?.dogCount
+            }
+            isFirst={activeDoninoSubTab === 'speed'}
+            onToggle={() =>
+              setActiveDoninoSubTab((prev) => (prev === 'speed' ? 'coursing' : 'speed'))
+            }
+            compact={compact}
+            singleColumn={singleColumn}
           />
 
           <div
