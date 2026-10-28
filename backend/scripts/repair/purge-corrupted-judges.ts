@@ -74,39 +74,14 @@ export function purgeCorruptedJudges() {
   }
 
   console.log(`Merging ${aliasMap.size} aliased entries into canonical judges...`)
-  for (const [oldId, targetId] of aliasMap.entries()) {
-    const oldJ = byId.get(oldId)
-    const targetJ = byId.get(targetId)
-    if (oldJ && targetJ) {
-      console.log(`  - MERGE: [${oldId}] "${oldJ.name}" (${oldJ.total_judged}) -> [${targetId}] "${targetJ.name}" (${targetJ.total_judged})`)
-      targetJ.total_judged = (targetJ.total_judged || 0) + (oldJ.total_judged || 0)
-      const mergedBreeds = new Set([...(targetJ.breeds || []), ...(oldJ.breeds || [])])
-      targetJ.breeds = Array.from(mergedBreeds)
-      targetJ.unique_breeds = targetJ.breeds.length
-      if (oldJ.exhibitions_count) {
-        targetJ.exhibitions_count = (targetJ.exhibitions_count || 0) + oldJ.exhibitions_count
-      }
-    }
-  }
 
-  // Filter out dropped and aliased judges
-  const cleanedJudges = judges.filter((j) => !toDrop.has(j.id) && !aliasMap.has(j.id))
-  cleanedJudges.sort((a, b) => (b.total_judged || 0) - (a.total_judged || 0))
-
-  fs.writeFileSync(judgesPath, JSON.stringify(cleanedJudges), 'utf8')
-  console.log(`Saved cleaned judges.json: ${cleanedJudges.length} judges remaining`)
-
-  // Update judges-page0.json
-  writeJudgesPage0(cleanedJudges)
-  console.log('Regenerated judges-page0.json')
-
-  // Now process judge-details/pack-*.json
+  // First process judge-details/pack-*.json so we have true counts
+  const detailsByKey = new Map<string, any>()
+  let packFiles: string[] = []
   if (fs.existsSync(DETAILS_DIR)) {
-    console.log('Cleaning judge-details pack files...')
-    const packFiles = fs.readdirSync(DETAILS_DIR).filter((f) => /^pack-.*\.json$/.test(f))
-    const detailsByKey = new Map<string, any>()
+    console.log('Loading judge-details pack files...')
+    packFiles = fs.readdirSync(DETAILS_DIR).filter((f) => /^pack-.*\.json$/.test(f))
 
-    // Load all details from packs
     for (const f of packFiles) {
       const full = path.join(DETAILS_DIR, f)
       try {
@@ -121,13 +96,13 @@ export function purgeCorruptedJudges() {
       }
     }
 
-    // Process drops
+    // Process drops in details
     for (const id of toDrop) {
       const key = showJudgeDetailFileKey(id)
       detailsByKey.delete(key)
     }
 
-    // Process aliases (merge detail into target detail)
+    // Process aliases in details (merge detail into target detail)
     for (const [oldId, targetId] of aliasMap.entries()) {
       const oldKey = showJudgeDetailFileKey(oldId)
       const targetKey = showJudgeDetailFileKey(targetId)
@@ -143,8 +118,48 @@ export function purgeCorruptedJudges() {
             existingExIds.add(ex.id)
           }
         }
-        targetDetail.total_judged = (targetDetail.total_judged || 0) + (oldDetail.total_judged || 0)
-        targetDetail.breeds_judged = Array.from(new Set([...(targetDetail.breeds_judged || []), ...(oldDetail.breeds_judged || [])]))
+        targetDetail.total_judged = targetDetail.exhibitions.length
+
+        // Merge breeds
+        const breedCounts = new Map<string, number>()
+        for (const b of targetDetail.breeds || []) {
+          breedCounts.set(b.breed, (breedCounts.get(b.breed) || 0) + (b.count || 0))
+        }
+        for (const b of oldDetail.breeds || []) {
+          breedCounts.set(b.breed, (breedCounts.get(b.breed) || 0) + (b.count || 0))
+        }
+        targetDetail.breeds = Array.from(breedCounts.entries())
+          .map(([breed, count]) => ({ breed, count }))
+          .sort((a, b) => b.count - a.count)
+        targetDetail.unique_breeds = targetDetail.breeds.length
+
+        // Merge strictness
+        if (oldDetail.strictness && targetDetail.strictness) {
+          const g1 = targetDetail.strictness.grades || {}
+          const g2 = oldDetail.strictness.grades || {}
+          const grades: Record<string, number> = {}
+          for (const k of new Set([...Object.keys(g1), ...Object.keys(g2)])) {
+            grades[k] = (g1[k] || 0) + (g2[k] || 0)
+          }
+          const graded = (targetDetail.strictness.graded || 0) + (oldDetail.strictness.graded || 0)
+          const excellent = grades.excellent || 0
+          targetDetail.strictness = {
+            graded,
+            grades,
+            excellent_rate: graded > 0 ? excellent / graded : 0,
+            below_excellent_rate: graded > 0 ? (graded - excellent) / graded : 0,
+          }
+        } else if (oldDetail.strictness && !targetDetail.strictness) {
+          targetDetail.strictness = oldDetail.strictness
+        }
+
+        // Merge by_year
+        if (oldDetail.by_year) {
+          targetDetail.by_year = targetDetail.by_year || {}
+          for (const [yr, cnt] of Object.entries(oldDetail.by_year)) {
+            targetDetail.by_year[yr] = (targetDetail.by_year[yr] || 0) + Number(cnt)
+          }
+        }
       } else if (oldDetail && !targetDetail) {
         oldDetail.id = targetId
         detailsByKey.set(targetKey, oldDetail)
@@ -152,7 +167,7 @@ export function purgeCorruptedJudges() {
       detailsByKey.delete(oldKey)
     }
 
-    // Process renames
+    // Process renames in details
     for (const [oldId, { newId, norm }] of renameMap.entries()) {
       const oldKey = showJudgeDetailFileKey(oldId)
       const newKey = showJudgeDetailFileKey(newId)
@@ -166,7 +181,47 @@ export function purgeCorruptedJudges() {
       }
     }
 
-    // Re-pack into 256 shards
+    // Ensure strict mathematical consistency in all details
+    for (const detail of detailsByKey.values()) {
+      if (detail.exhibitions) {
+        detail.total_judged = detail.exhibitions.length
+      }
+      if (detail.breeds) {
+        detail.unique_breeds = detail.breeds.length
+      }
+    }
+  }
+
+  // Filter out dropped and aliased judges, then sync exactly from detail
+  const cleanedJudges = judges.filter((j) => !toDrop.has(j.id) && !aliasMap.has(j.id))
+  for (const j of cleanedJudges) {
+    const key = showJudgeDetailFileKey(j.id)
+    const detail = detailsByKey.get(key)
+    if (detail) {
+      j.total_judged = detail.total_judged
+      j.unique_breeds = detail.unique_breeds
+      j.breeds = (detail.breeds || []).map((b: any) => b.breed)
+      j.graded = detail.strictness ? detail.strictness.graded : 0
+      if (detail.strictness?.excellent_rate != null) {
+        j.excellent_rate = detail.strictness.excellent_rate
+      }
+      if (detail.by_year) {
+        j.by_year = detail.by_year
+      }
+    }
+  }
+  cleanedJudges.sort((a, b) => (b.total_judged || 0) - (a.total_judged || 0))
+
+  fs.writeFileSync(judgesPath, JSON.stringify(cleanedJudges), 'utf8')
+  console.log(`Saved cleaned judges.json: ${cleanedJudges.length} judges remaining`)
+
+  // Update judges-page0.json
+  writeJudgesPage0(cleanedJudges)
+  console.log('Regenerated judges-page0.json')
+
+  // Re-pack into 256 shards
+  if (detailsByKey.size > 0 && packFiles.length > 0) {
+    console.log('Writing cleaned judge-details pack files...')
     const buckets = new Map<string, Record<string, any>>()
     for (const [key, detail] of detailsByKey.entries()) {
       const shard = cdnPackShardKey(key)

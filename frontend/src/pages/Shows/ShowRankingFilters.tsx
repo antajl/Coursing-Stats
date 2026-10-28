@@ -127,8 +127,14 @@ export default function ShowRankingFilters({
           <div className="w-full min-w-0">
             {/* Мобильная версия: 2 компактные строки */}
             <div className="flex flex-col gap-1.5 w-full md:hidden">
-              {/* Строка 1: [Год ∨] [Порода ∨] [Награды ∨] + [ⓘ] */}
+              {/* Строка 1: [Поиск] [Год ∨] [Порода ∨] [Награды ∨] + [ⓘ] */}
               <div className="flex items-center gap-1.5 w-full min-w-0">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка, порода…"
+                />
+
                 <div className="shrink-0">
                   <ModernDropdown
                     trigger={yearTrigger}
@@ -260,12 +266,6 @@ export default function ShowRankingFilters({
                   </div>
                 </ToolbarFiltersDropdown>
                 </div>
-
-                <ToolbarSearch
-                  value={searchQuery}
-                  onChange={onSearchChange}
-                  placeholder="Кличка, порода…"
-                />
 
                 <div className="ml-auto shrink-0 flex items-center gap-1.5">
                   {hasAnyFilter && (

@@ -1,5 +1,5 @@
 import { memo, useMemo, useState, useRef } from 'react'
-import { ArrowLeftRight } from 'lucide-react'
+import { ArrowLeftRight, Gauge, Timer, Trophy, Award, Crown } from 'lucide-react'
 import SeasonCompetitionsCarousel from './SeasonCompetitionsCarousel'
 import SeasonRacingCarousel from './SeasonRacingCarousel'
 import SeasonShowsCarousel from './SeasonShowsCarousel'
@@ -41,49 +41,48 @@ interface SeasonTopSectionProps {
 
 export interface HomeSubSectionCapsuleProps {
   currentLabel: string
-  isFirst: boolean
+  isFirst?: boolean
   onToggle: () => void
   widthClass?: string
 }
 
+function getSectionIcon(label: string) {
+  if (label.includes('скорост')) return Gauge
+  if (label.includes('350')) return Timer
+  if (label.includes('Курсинг')) return Trophy
+  if (label.includes('Рейсинг')) return Timer
+  if (label.includes('Все')) return Crown
+  if (label.includes('пород')) return Award
+  return Trophy
+}
+
 export function HomeSubSectionCapsule({
   currentLabel,
-  isFirst,
   onToggle,
   widthClass,
 }: HomeSubSectionCapsuleProps) {
+  const Icon = getSectionIcon(currentLabel)
   const resolvedWidth =
     widthClass ??
     (currentLabel.includes('скорост') || currentLabel.includes('350')
-      ? 'w-[138px]'
-      : currentLabel.includes('пород')
+      ? 'w-[136px]'
+      : currentLabel.includes('пород') || currentLabel.includes('Все')
         ? 'w-[118px]'
-        : 'w-[98px]')
+        : 'w-[102px]')
 
   return (
     <button
       type="button"
       onClick={onToggle}
-      className={`relative shrink-0 md:hidden flex h-7 items-center justify-between rounded-full border border-old-money-300/80 bg-cream-50/90 px-2 text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 active:scale-95 transition-all shadow-2xs touch-manipulation cursor-pointer before:absolute before:-inset-2 before:content-[''] ${resolvedWidth}`}
+      className={`relative shrink-0 md:hidden flex h-7 items-center justify-between rounded-lg border border-old-money-200/90 bg-cream-50/95 px-2 text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 active:scale-95 transition-all shadow-2xs touch-manipulation cursor-pointer before:absolute before:-inset-2 before:content-[''] ${resolvedWidth}`}
       title="Переключить подраздел"
       aria-label="Переключить подраздел"
     >
-      <ArrowLeftRight className="h-3 w-3 text-camel-700 shrink-0" aria-hidden />
+      <Icon className="h-3 w-3 text-camel-700 shrink-0" aria-hidden />
       <span className="font-serif text-[11px] font-bold text-charcoal-900 tracking-tight whitespace-nowrap text-center flex-1 px-1">
         {currentLabel}
       </span>
-      <div className="flex items-center gap-0.5 shrink-0" aria-hidden>
-        <span
-          className={`h-1.5 rounded-full transition-all duration-300 ${
-            isFirst ? 'w-2 bg-camel-600' : 'w-1 bg-old-money-300'
-          }`}
-        />
-        <span
-          className={`h-1.5 rounded-full transition-all duration-300 ${
-            !isFirst ? 'w-2 bg-camel-600' : 'w-1 bg-old-money-300'
-          }`}
-        />
-      </div>
+      <ArrowLeftRight className="h-3 w-3 text-charcoal-400 shrink-0" aria-hidden />
     </button>
   )
 }

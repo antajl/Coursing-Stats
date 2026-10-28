@@ -168,7 +168,8 @@ export function ShowCalendarRow({
                     : 'bg-camel-200/80 text-camel-900 border-camel-300'
                 }`}>
                   {expanded ? <ChevronUp className="h-3 w-3" /> : <ChevronDown className="h-3 w-3" />}
-                  <span>{multiLabel}</span>
+                  <span className="sm:hidden">{formatShowCount(group.children.length)}</span>
+                  <span className="hidden sm:inline">{multiLabel}</span>
                 </span>
               )}
 

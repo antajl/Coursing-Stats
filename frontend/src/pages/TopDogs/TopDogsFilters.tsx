@@ -1,5 +1,5 @@
 import { useMemo, useState, type ReactNode } from 'react'
-import { ChevronDown, X, ArrowLeftRight } from 'lucide-react'
+import { ChevronDown, X, ArrowLeftRight, Trophy, Timer } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
@@ -83,8 +83,15 @@ export default function TopDogsFilters({
 
   return (
     <div className="mb-2.5 sm:mb-4" ref={dropdownRef}>
-      {/* 1. Мобильная консоль: единый компактный ряд (Фильтры слева, Инфо + Дисциплина справа) */}
+      {/* 1. Мобильная консоль: единый компактный ряд (Поиск + Фильтры слева, Инфо + Дисциплина справа) */}
       <div className="flex items-center gap-1.5 w-full lg:hidden mb-2.5 overflow-x-auto no-scrollbar py-0.5">
+        {/* Поиск */}
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={onSearchChange}
+          placeholder="Кличка…"
+        />
+
         {/* Выбор года */}
         <div className="shrink-0">
           <ModernDropdown
@@ -152,13 +159,6 @@ export default function TopDogsFilters({
           />
         </div>
 
-        {/* Поиск */}
-        <ToolbarSearch
-          value={searchQuery}
-          onChange={onSearchChange}
-          placeholder="Кличка…"
-        />
-
         {/* Правая часть: Сброс + Кнопка дисциплины + Инфо */}
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
           {/* Сброс фильтров (если активны) */}
@@ -174,31 +174,24 @@ export default function TopDogsFilters({
             </button>
           )}
 
-          {/* Кнопка-капсула дисциплины с иконкой и точками-вкладками */}
+          {/* Кнопка дисциплины (Raycast-бейдж с тематической иконкой) */}
           {activeMobileColumn && onMobileColumnChange && (
             <button
               type="button"
               onClick={() => onMobileColumnChange(isCoursing ? 'racing' : 'coursing')}
-              className="relative shrink-0 flex h-8 w-[98px] items-center justify-between rounded-full border border-old-money-300/80 bg-cream-50/90 px-2 hover:border-camel-500 hover:bg-cream-100 hover:text-charcoal-900 active:scale-95 transition-all shadow-2xs touch-manipulation cursor-pointer before:absolute before:-inset-1.5 before:content-['']"
+              className="relative shrink-0 flex h-8 w-[104px] items-center justify-between rounded-lg border border-old-money-200/90 bg-cream-50/95 px-2 text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 active:scale-95 transition-all shadow-2xs touch-manipulation cursor-pointer before:absolute before:-inset-1.5 before:content-['']"
               title={`Переключить на ${isCoursing ? 'рейсинг' : 'курсинг'} (или смахните экран)`}
               aria-label={`Переключить на ${isCoursing ? 'рейсинг' : 'курсинг'}`}
             >
-              <ArrowLeftRight className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+              {isCoursing ? (
+                <Trophy className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+              ) : (
+                <Timer className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
+              )}
               <span className="font-serif text-xs font-bold text-charcoal-900 tracking-tight whitespace-nowrap text-center flex-1 px-1">
                 {isCoursing ? 'Курсинг' : 'Рейсинг'}
               </span>
-              <div className="flex items-center gap-0.5 shrink-0" aria-hidden>
-                <span
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    isCoursing ? 'w-2.5 bg-camel-600' : 'w-1 bg-old-money-300'
-                  }`}
-                />
-                <span
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    !isCoursing ? 'w-2.5 bg-camel-600' : 'w-1 bg-old-money-300'
-                  }`}
-                />
-              </div>
+              <ArrowLeftRight className="h-3 w-3 text-charcoal-400 shrink-0" aria-hidden />
             </button>
           )}
 

@@ -10,6 +10,7 @@ interface PageToolbarContextValue {
   bottomRight?: ReactNode
   bare?: boolean
   topRowClassName?: string
+  bottomRowClassName?: string
 }
 
 const PageToolbarContext = createContext<PageToolbarContextValue | null>(null)
@@ -33,6 +34,7 @@ interface PageToolbarProps {
   bare?: boolean
   /** Extra classes on the filters row (e.g. pr-* to clear a corner footnote chip) */
   topRowClassName?: string
+  bottomRowClassName?: string
 }
 
 // Compound components
@@ -63,11 +65,11 @@ function PageToolbarTopRow({ children }: { children?: ReactNode }) {
 }
 
 function PageToolbarBottom() {
-  const { bottomLeft, bottomRight } = usePageToolbarContext()
+  const { bottomLeft, bottomRight, bottomRowClassName = '' } = usePageToolbarContext()
   const showBottom = Boolean(bottomLeft || bottomRight)
   if (!showBottom) return null
   return (
-    <div className="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5">
+    <div className={`flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5 ${bottomRowClassName}`.trim()}>
       {bottomLeft}
       {bottomRight}
     </div>
@@ -89,6 +91,7 @@ export default function PageToolbar({
   bottomRight,
   bare = false,
   topRowClassName = '',
+  bottomRowClassName = '',
 }: PageToolbarProps) {
   const showBottom = Boolean(bottomLeft || bottomRight)
   const showEnd = Boolean(exportAction || trailing)
@@ -102,8 +105,9 @@ export default function PageToolbar({
       bottomRight,
       bare,
       topRowClassName,
+      bottomRowClassName,
     }),
-    [filters, exportAction, trailing, bottomLeft, bottomRight, bare, topRowClassName]
+    [filters, exportAction, trailing, bottomLeft, bottomRight, bare, topRowClassName, bottomRowClassName]
   )
 
   return (
@@ -122,7 +126,7 @@ export default function PageToolbar({
             </div>
 
             {showBottom && (
-              <div className="flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5">
+              <div className={`flex w-full flex-wrap items-center justify-between gap-x-4 gap-y-1 border-t border-old-money-200/60 pt-2.5 ${bottomRowClassName}`.trim()}>
                 {bottomLeft}
                 {bottomRight}
               </div>

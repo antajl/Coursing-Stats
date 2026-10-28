@@ -208,19 +208,17 @@ export default function ShowCalendar() {
           onMonthChange={setFilterMonth}
           onClearQuickPreset={() => setQuickPreset(null)}
           availableMonths={availableMonths}
+          totalCount={filteredGroups.length}
         />
       }
-      trailing={<div className="hidden sm:block"><ShowCalendarHint /></div>}
       bottomLeft={
-        <div className="flex items-center gap-2 text-xs text-charcoal-500">
-          <p className="hidden sm:block">
+        <div className="hidden sm:flex items-center gap-2 text-xs text-charcoal-500">
+          <p>
             {`Выставок с протоколом: ${filteredGroups.length} из ${withResultCount} за ${filterYear || CURRENT_SEASON} год`}
-          </p>
-          <p className="sm:hidden">
-            {`${filteredGroups.length} выставок с протоколом`}
           </p>
         </div>
       }
+      bottomRowClassName="hidden sm:flex"
     />
   )
 

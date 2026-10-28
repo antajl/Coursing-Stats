@@ -130,8 +130,14 @@ export default function EventsToolbar({
 
   const filters = (
     <div className="w-full min-w-0">
-      {/* Мобильная строка (32px): Год/Месяц + Дисциплина + Поиск + (i) */}
+      {/* Мобильная строка (32px): Поиск + Год/Месяц + Дисциплина + (i) */}
       <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0">
+        <ToolbarSearch
+          value={searchQuery}
+          onChange={onSearchChange}
+          placeholder="Поиск…"
+        />
+
         <MonthYearDropdown
           selectedYear={filterYear}
           onSelectYear={onFilterYearChange}
@@ -194,12 +200,6 @@ export default function EventsToolbar({
             </div>
           </ModernDropdown>
         </div>
-
-        <ToolbarSearch
-          value={searchQuery}
-          onChange={onSearchChange}
-          placeholder="Поиск…"
-        />
 
         <div className="ml-auto shrink-0 flex items-center gap-1.5">
           {hasActiveFilters && (

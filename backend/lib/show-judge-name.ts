@@ -260,11 +260,11 @@ export function normalizeShowJudgeDisplayName(raw: string): string {
   normalized = normalized.toLowerCase().replace(/ё/g, 'е')
   normalized = fixWordMixedScript(normalized)
 
-  // Удаляем нумерацию списков (например, "8) yuliya ol'kova")
-  normalized = normalized.replace(/^\s*\d{1,2}\s*[.)]\s*/iu, '')
   // Удаляем префиксы дат протоколов и номера вопросов вида "19.01.22 вопрос 23) "
   normalized = normalized.replace(/^\s*\d{2}[\s.]\d{2}[\s.]\d{2,4}\s*/iu, '')
   normalized = normalized.replace(/^\s*вопрос\s+\d+\s*\)?\s*[-–—:]*\s*/iu, '')
+  // Удаляем нумерацию списков (например, "8) yuliya ol'kova")
+  normalized = normalized.replace(/^\s*\d{1,2}\s*\)\s*/iu, '')
 
   // Удаляем административные пометки выставочной комиссии
   normalized = normalized.replace(/\(.*решени[ею].*\)/gi, '')
