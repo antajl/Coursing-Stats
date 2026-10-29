@@ -17,6 +17,7 @@
     "elo:recalibrate": "npx tsx backend/scripts/elo/recalibrate-params.ts",
     "elo:build": "yarn run elo:extract && yarn run elo:generate && yarn run elo:verify",
     "publish-gates": "npx tsx backend/scripts/publish/verify-publish-gates.ts",
+    "compress-assets": "node backend/scripts/ops/compress-dist-assets.cjs",
     "audit-duplicate-dogs": "npx tsx backend/scripts/audit/audit-duplicate-dogs.ts",
     "prepare-duplicate-candidates": "npx tsx backend/scripts/audit/prepare-duplicate-candidates.ts",
     "audit-duplicate-events": "npx tsx backend/scripts/audit/audit-duplicate-events.ts",
