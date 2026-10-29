@@ -49,6 +49,20 @@ GitHub Actions запускается в чистом контейнере, из
 
 ---
 
+### Предварительное сжатие ассетов Gzip Level 9 (S3 Native Compression)
+Yandex Object Storage (как и любой S3-бакет) **не сжимает статические файлы на лету**.
+Без предварительного сжатия браузеры и поисковые аудиторы (Google PageSpeed Insights) скачивают «сырые» файлы: 141 КБ для `index.css` и 470 КБ для `index.js`, что приводит к задержке критической цепочки запросов более 1.4 секунды на мобильных устройствах.
+
+В пайплайне деплоя внедрено нативное предварительное сжатие:
+1. `yarn run compress-assets` (`backend/scripts/ops/compress-dist-assets.cjs`): сжимает все `.js` и `.css` файлы в `frontend/dist/assets/` через `zlib.gzipSync(..., { level: 9 })`, уменьшая общий вес бандла на **72%** (CSS с 141 КБ до 25 КБ, JS с 470 КБ до 138 КБ).
+2. `aws s3 sync` заливает CSS-файлы с параметрами:
+   `--content-encoding gzip --content-type "text/css; charset=utf-8"`
+3. `aws s3 sync` заливает JS-файлы с параметрами:
+   `--content-encoding gzip --content-type "application/javascript; charset=utf-8"`
+4. В `<head>` входного `frontend/index.html` вшит критический baseline-CSS (фон `#FAF8F4`, системный шрифт и базовые стили `#root > main`), что полностью устраняет вспышку нестилизованного контента (FOUC) и обеспечивает мгновенный First Contentful Paint (FCP) в пределах 250–350 мс.
+
+---
+
 ## Политика кэширования (S3 / Yandex Object Storage)
 
 Для идеальных показателей Core Web Vitals и оптимизации трафика деплой `deploy.yml` выставляет строгие заголовки `Cache-Control`:
