@@ -1,0 +1,41 @@
+name: Сообщение об ошибке (Bug Report)
+description: Создать отчет о найденной ошибке в работе сайта, бота или протоколов
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за помощь в улучшении платформы CoursingStats.
+  - type: textarea
+    id: description
+    attributes:
+      label: Описание проблемы
+      description: Четкое и краткое описание того, в чем заключается ошибка.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Шаги для воспроизведения
+      description: Последовательность действий, приводящая к ошибке.
+      placeholder: |
+        1. Открыть страницу '...'
+        2. Нажать на '...'
+        3. Наблюдать ошибку
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Ожидаемое поведение
+      description: Что должно было произойти при корректной работе.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Окружение
+      description: Устройство, браузер или клиент Telegram (например, Chrome 130 / Windows, Safari / iOS).
+    validations:
+      required: false

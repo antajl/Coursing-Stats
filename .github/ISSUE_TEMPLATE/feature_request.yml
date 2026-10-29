@@ -1,0 +1,30 @@
+name: Предложение по улучшению (Feature Request)
+description: Предложить новую функцию, раздел или улучшение для CoursingStats
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Предложите идею по развитию кинологической платформы CoursingStats.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Связанная проблема
+      description: С какой задачей или ограничением связано ваше предложение.
+    validations:
+      required: false
+  - type: textarea
+    id: solution
+    attributes:
+      label: Предлагаемое решение
+      description: Подробное описание того, как должна работать новая функциональность.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Альтернативы
+      description: Рассматривались ли другие варианты решения задачи.
+    validations:
+      required: false
