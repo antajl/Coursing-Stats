@@ -1,7 +1,7 @@
 import type Database from 'better-sqlite3';
 import { computeCoursingRatingScore } from '../rating/coursing-rating-score';
 
-/** Метрики очков: avg, judge_eval_count, rating_score (индекс CS). */
+/** Метрики очков: avg, judge_eval_count, score_std_dev, rating_score (индекс CS v2). */
 export function attachScoreMetrics(
   db: Database.Database,
   scoreRows: Record<string, unknown>[],
@@ -45,14 +45,25 @@ export function attachScoreMetrics(
       sums && evalCount > 0
         ? Math.round((sums.reduce((a, b) => a + b, 0) / evalCount) * 100) / 100
         : null;
+
+    let stdDev: number | null = null;
+    if (sums && evalCount > 1 && avg != null) {
+      const variance =
+        sums.reduce((a, b) => a + Math.pow(b - avg, 2), 0) / (evalCount - 1);
+      stdDev = Math.round(Math.sqrt(variance) * 100) / 100;
+    }
+
     const row = item as Record<string, unknown>;
     row.avg_judge_score = avg;
     row.judge_eval_count = evalCount;
+    row.score_std_dev = stdDev;
     row.rating_score = computeCoursingRatingScore({
       avg_judge_score: avg,
       best_judge_score: row.best_judge_score as number | null,
       total_starts: row.total_starts as number,
       judge_eval_count: evalCount,
+      breed: row.breed as string | null | undefined,
+      score_std_dev: stdDev,
     });
   }
 }

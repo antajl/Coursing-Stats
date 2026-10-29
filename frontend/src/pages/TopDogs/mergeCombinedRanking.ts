@@ -131,16 +131,30 @@ function mergeEloOnly(into: CombinedRankingDog, from: LooseDog): CombinedRanking
   }
 }
 
-/** Season standing B: standingScore → CS → starts → dog_id. Elo never sorts. */
+/** 
+ * Olympic season standing cascade:
+ * 1. Gold medals (victories) — primary sporting tier (more golds = higher rank).
+ * 2. Season standing score (density of medals / efficiency).
+ * 3. CS v2 index — decider/tie-breaker of racing quality and technique.
+ * 4. Experience (total_starts) — breaks remaining ties.
+ * 5. Deterministic fallback by dog_id.
+ */
 function compareSeasonStanding(a: CombinedRankingDog, b: CombinedRankingDog): number {
+  // 1. Primary: Gold medals (championship victories)
+  const goldDiff = (b.gold ?? 0) - (a.gold ?? 0)
+  if (goldDiff !== 0) return goldDiff
+
+  // 2. Secondary: Season standing score (density of medals / efficiency)
   const sA = standingScore(a)
   const sB = standingScore(b)
   if (Math.abs(sA - sB) > STANDING_MIN_GAP) return sB - sA
 
+  // 3. Quality tie-breaker: CS v2 index (evaluations technique)
   const csA = a.rating_score ?? 0
   const csB = b.rating_score ?? 0
-  if (Math.abs(csA - csB) > CS_TIE_GAP) return csB - csA
+  if (Math.abs(csA - csB) > 0.05) return csB - csA
 
+  // 4. Starts
   const starts = (b.total_starts ?? 0) - (a.total_starts ?? 0)
   if (starts !== 0) return starts
 

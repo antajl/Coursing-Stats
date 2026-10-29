@@ -456,6 +456,137 @@ export default function DogProfile() {
     }
   }, [availableTabs, activeDiscipline, fromSpeedRecords, fromCoursingRecords])
 
+  const activeIndex = Math.max(
+    0,
+    availableTabs.findIndex((t) => t.id === activeDiscipline),
+  )
+
+  // Жест свайпа влево/вправо на мобильных экранах между вкладками дисциплин
+  const [dragOffset, setDragOffset] = useState<number | null>(null)
+  const [isTransitioning, setIsTransitioning] = useState(false)
+  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null)
+  const gestureLockRef = useRef<'horizontal' | 'vertical' | null>(null)
+  const transitionTimeoutRef = useRef<number | null>(null)
+  const hadMovedRef = useRef(false)
+
+  // Плавная анимация скольжения при изменении активной дисциплины
+  useEffect(() => {
+    setIsTransitioning(true)
+    const timer = window.setTimeout(() => {
+      setIsTransitioning(false)
+    }, 320)
+    return () => clearTimeout(timer)
+  }, [activeDiscipline])
+
+  useEffect(() => {
+    return () => {
+      if (transitionTimeoutRef.current) {
+        clearTimeout(transitionTimeoutRef.current)
+      }
+    }
+  }, [])
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (typeof window !== 'undefined' && window.innerWidth >= 1024) return
+    if (availableTabs.length <= 1) return
+    const touch = e.touches[0]
+    touchStartRef.current = { x: touch.clientX, y: touch.clientY, time: Date.now() }
+    gestureLockRef.current = null
+    hadMovedRef.current = false
+    if (transitionTimeoutRef.current) {
+      clearTimeout(transitionTimeoutRef.current)
+      transitionTimeoutRef.current = null
+    }
+    setIsTransitioning(false)
+    setDragOffset(0)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    if (availableTabs.length <= 1) return
+    const touch = e.touches[0]
+    const dx = touch.clientX - touchStartRef.current.x
+    const dy = touch.clientY - touchStartRef.current.y
+
+    if (Math.abs(dx) > 10 || Math.abs(dy) > 10) {
+      hadMovedRef.current = true
+    }
+
+    // Если направление еще не заблокировано, определяем вертикальный скролл vs горизонтальный свайп
+    if (!gestureLockRef.current) {
+      const absDx = Math.abs(dx)
+      const absDy = Math.abs(dy)
+      if (absDx < 8 && absDy < 8) return
+      if (absDy >= absDx) {
+        // Вертикальный скролл страницы: не перехватываем жест
+        gestureLockRef.current = 'vertical'
+        return
+      }
+      gestureLockRef.current = 'horizontal'
+    }
+
+    if (gestureLockRef.current === 'horizontal') {
+      // Упругое сопротивление (rubber-band) при попытке свайпа за край
+      const isAtLeftEdge = activeIndex === 0 && dx > 0
+      const isAtRightEdge = activeIndex === availableTabs.length - 1 && dx < 0
+      const appliedDx = isAtLeftEdge || isAtRightEdge ? dx * 0.22 : dx
+      setDragOffset(appliedDx)
+    }
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartRef.current || (typeof window !== 'undefined' && window.innerWidth >= 1024)) return
+    if (availableTabs.length <= 1) {
+      touchStartRef.current = null
+      gestureLockRef.current = null
+      setDragOffset(null)
+      hadMovedRef.current = false
+      return
+    }
+
+    const isHorizontal = gestureLockRef.current === 'horizontal'
+    const touch = e.changedTouches[0]
+    const dx = touch.clientX - touchStartRef.current.x
+    const dt = Date.now() - touchStartRef.current.time
+    const velocity = Math.abs(dx) / (dt || 1)
+
+    touchStartRef.current = null
+    gestureLockRef.current = null
+
+    if (isHorizontal) {
+      const isSwipeLeft = dx < -45 || (dx < -20 && velocity > 0.25)
+      const isSwipeRight = dx > 45 || (dx > 20 && velocity > 0.25)
+
+      setIsTransitioning(true)
+      setDragOffset(null)
+
+      if (isSwipeLeft && activeIndex < availableTabs.length - 1) {
+        setActiveDiscipline(availableTabs[activeIndex + 1].id)
+      } else if (isSwipeRight && activeIndex > 0) {
+        setActiveDiscipline(availableTabs[activeIndex - 1].id)
+      }
+
+      transitionTimeoutRef.current = window.setTimeout(() => {
+        setIsTransitioning(false)
+        hadMovedRef.current = false
+      }, 320)
+    } else {
+      setDragOffset(null)
+      hadMovedRef.current = false
+    }
+  }
+
+  const handleTouchCancel = () => {
+    touchStartRef.current = null
+    gestureLockRef.current = null
+    setDragOffset(null)
+    hadMovedRef.current = false
+  }
+
+  const isDragging = dragOffset !== null && dragOffset !== 0
+  const isAnimating = isDragging || isTransitioning
+  const mobileTransform = `translateX(calc(-${activeIndex * 100}% + ${dragOffset ?? 0}px))`
+
 
   // Canonical redirect for show dog on legacy show route, alias ID, or linked sports profile
   if (!showsLoading && showDog) {
@@ -632,6 +763,91 @@ export default function DogProfile() {
     ),
   )
 
+  const renderTabContent = (tabId: DisciplineTabId) => {
+    switch (tabId) {
+      case 'coursing':
+        return showCoursingColumn ? (
+          <>
+            <CoursingColumn
+              hasCoursingData={hasCoursingData}
+              hasCourseMedals={hasCourseMedals}
+              coursing={coursing}
+              coursingEvents={coursingEvents}
+              visibleCoursingEvents={visibleCoursingEvents}
+              eventResultsUrls={eventResultsUrls}
+              bestScoreEventId={bestScoreEventId}
+              bestJudgeScoreEventId={bestJudgeScoreEventId}
+              avgJudgeScoreEventId={avgJudgeScoreEventId}
+              showAllCoursingEvents={showAllCoursingEvents}
+              onToggleShowAll={() => setShowAllCoursingEvents((v) => !v)}
+              rank={headerRanks.find((r) => r.key === 'coursing')}
+              breed={headerBreed}
+            />
+            {judgeStats && (
+              <div className="mt-6">
+                <DogJudgesSection judgeStats={judgeStats} competitions={events} />
+              </div>
+            )}
+          </>
+        ) : (
+          <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
+        )
+      case 'racing':
+        return showRacingColumn ? (
+          <RacingColumn
+            hasRacingData={hasRacingData}
+            hasRacingMedals={hasRacingMedals}
+            racing={racing}
+            racingEvents={racingEvents}
+            visibleRacingEvents={visibleRacingEvents}
+            eventResultsUrls={eventResultsUrls}
+            bestSpeedEventId={bestSpeedEventId}
+            avgSpeedEventId={avgSpeedEventId}
+            showAllRacingEvents={showAllRacingEvents}
+            onToggleShowAll={() => setShowAllRacingEvents((v) => !v)}
+            rank={headerRanks.find((r) => r.key === 'racing')}
+            breed={headerBreed}
+          />
+        ) : (
+          <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
+        )
+      case 'shows':
+        return showDog ? (
+          <ShowsColumn
+            dog={showDog}
+            rank={headerRanks.find((r) => r.key === 'shows')}
+            breed={headerBreed}
+          />
+        ) : (
+          <EmptyDisciplineColumn title="Выставки" theme="camel" />
+        )
+      case 'donino':
+        return (
+          <div className="space-y-4">
+            {hasSpeedRecords && speedStats ? (
+              <DoninoSpeedColumn
+                speedStats={speedStats}
+                visibleSpeedHistory={visibleSpeedHistory}
+                showAllSpeedHistory={showAllSpeedHistory}
+                onToggleShowAll={() => setShowAllSpeedHistory((v) => !v)}
+              />
+            ) : null}
+
+            {hasCoursingRecords && coursingStats ? (
+              <DoninoCoursingColumn
+                coursingStats={coursingStats}
+                visibleCoursingDoninoHistory={visibleCoursingDoninoHistory}
+                showAllCoursingDoninoHistory={showAllCoursingDoninoHistory}
+                onToggleShowAll={() => setShowAllCoursingDoninoHistory((v) => !v)}
+              />
+            ) : null}
+          </div>
+        )
+      default:
+        return null
+    }
+  }
+
   return (
     <>
       <SEO
@@ -723,9 +939,11 @@ export default function DogProfile() {
                   key={tab.id}
                   type="button"
                   role="tab"
+                  id={`tab-${tab.id}`}
+                  aria-controls={`tabpanel-${tab.id}`}
                   aria-selected={isActive}
                   onClick={() => setActiveDiscipline(tab.id)}
-                  className={`flex items-center justify-center gap-1.5 rounded-xl py-2 px-1.5 text-xs font-semibold transition-all min-w-0 ${
+                  className={`flex items-center justify-center gap-1.5 rounded-xl py-2 px-1.5 min-h-[44px] text-xs font-semibold transition-all min-w-0 ${
                     availableTabs.length > 3 ? 'shrink-0 px-3' : 'w-full'
                   } ${
                     isActive
@@ -758,96 +976,51 @@ export default function DogProfile() {
             })}
           </div>
         )}
-        {/* Мобильный вид: отображение только выбранной дисциплины */}
+        {/* Мобильный вид: горизонтальный свайп-трек между дисциплинами */}
         <div className="mb-6 block lg:hidden">
           {availableTabs.length === 0 ? (
             <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
           ) : (
-            <>
-              {activeDiscipline === 'coursing' && (
-                showCoursingColumn ? (
-                  <>
-                    <CoursingColumn
-                      hasCoursingData={hasCoursingData}
-                      hasCourseMedals={hasCourseMedals}
-                      coursing={coursing}
-                      coursingEvents={coursingEvents}
-                      visibleCoursingEvents={visibleCoursingEvents}
-                      eventResultsUrls={eventResultsUrls}
-                      bestScoreEventId={bestScoreEventId}
-                      bestJudgeScoreEventId={bestJudgeScoreEventId}
-                      avgJudgeScoreEventId={avgJudgeScoreEventId}
-                      showAllCoursingEvents={showAllCoursingEvents}
-                      onToggleShowAll={() => setShowAllCoursingEvents((v) => !v)}
-                      rank={headerRanks.find((r) => r.key === 'coursing')}
-                      breed={headerBreed}
-                    />
-                    {judgeStats && (
-                      <div className="mt-6">
-                        <DogJudgesSection judgeStats={judgeStats} competitions={events} />
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <EmptyDisciplineColumn title="Курсинг / БЗМП" theme="forest" />
-                )
-              )}
-
-              {activeDiscipline === 'racing' && (
-                showRacingColumn ? (
-                  <RacingColumn
-                    hasRacingData={hasRacingData}
-                    hasRacingMedals={hasRacingMedals}
-                    racing={racing}
-                    racingEvents={racingEvents}
-                    visibleRacingEvents={visibleRacingEvents}
-                    eventResultsUrls={eventResultsUrls}
-                    bestSpeedEventId={bestSpeedEventId}
-                    avgSpeedEventId={avgSpeedEventId}
-                    showAllRacingEvents={showAllRacingEvents}
-                    onToggleShowAll={() => setShowAllRacingEvents((v) => !v)}
-                    rank={headerRanks.find((r) => r.key === 'racing')}
-                    breed={headerBreed}
-                  />
-                ) : (
-                  <EmptyDisciplineColumn title="Бега борзых" theme="warm-blue" />
-                )
-              )}
-
-              {activeDiscipline === 'shows' && (
-                showDog ? (
-                  <ShowsColumn
-                    dog={showDog}
-                    rank={headerRanks.find((r) => r.key === 'shows')}
-                    breed={headerBreed}
-                  />
-                ) : (
-                  <EmptyDisciplineColumn title="Выставки" theme="camel" />
-                )
-              )}
-
-              {activeDiscipline === 'donino' && (
-                <div className="space-y-4">
-                  {hasSpeedRecords && speedStats ? (
-                    <DoninoSpeedColumn
-                      speedStats={speedStats}
-                      visibleSpeedHistory={visibleSpeedHistory}
-                      showAllSpeedHistory={showAllSpeedHistory}
-                      onToggleShowAll={() => setShowAllSpeedHistory((v) => !v)}
-                    />
-                  ) : null}
-
-                  {hasCoursingRecords && coursingStats ? (
-                    <DoninoCoursingColumn
-                      coursingStats={coursingStats}
-                      visibleCoursingDoninoHistory={visibleCoursingDoninoHistory}
-                      showAllCoursingDoninoHistory={showAllCoursingDoninoHistory}
-                      onToggleShowAll={() => setShowAllCoursingDoninoHistory((v) => !v)}
-                    />
-                  ) : null}
-                </div>
-              )}
-            </>
+            <div
+              className="w-full relative overflow-hidden touch-pan-y"
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+              onTouchCancel={handleTouchCancel}
+              onClickCapture={(e) => {
+                if (hadMovedRef.current) {
+                  e.preventDefault()
+                  e.stopPropagation()
+                }
+              }}
+            >
+              <div
+                className={`flex w-full items-start ${
+                  isDragging ? '' : 'transition-transform duration-300 ease-out'
+                }`}
+                style={{
+                  transform: mobileTransform,
+                }}
+              >
+                {availableTabs.map((tab, idx) => {
+                  const isCurrent = idx === activeIndex
+                  const shouldCollapse = !isAnimating && !isCurrent
+                  return (
+                    <div
+                      key={tab.id}
+                      id={`tabpanel-${tab.id}`}
+                      role="tabpanel"
+                      aria-labelledby={`tab-${tab.id}`}
+                      className={`w-full shrink-0 transition-opacity duration-200 ${
+                        shouldCollapse ? 'h-0 overflow-hidden opacity-0' : 'h-auto opacity-100'
+                      }`}
+                    >
+                      {renderTabContent(tab.id)}
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
           )}
         </div>
 

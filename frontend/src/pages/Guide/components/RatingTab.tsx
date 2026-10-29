@@ -60,16 +60,18 @@ export default function RatingTab() {
 
           <div className="rounded-xl border border-old-money-200 bg-white p-3.5 shadow-2xs">
             <div className="text-[11px] font-bold uppercase tracking-wider text-camel-800">
-              Индекс стабильности CS v1
+              Индекс стабильности CS v2
             </div>
             <div className="mt-1.5 rounded-md border border-old-money-200 bg-old-money-50/60 p-2 font-mono text-[11px] leading-relaxed text-charcoal-800">
-              <p>μ̃ = (μ × n + 85 × 12) / (n + 12)</p>
-              <p>P = B &gt; μ̃ ? 0,15 × min(B − μ̃, 4) : 0</p>
+              <p>μ_norm = μ + (85 − baseline_breed)</p>
+              <p>μ̃ = (μ_norm × n + 85 × 12) / (n + 12)</p>
+              <p>P = B_norm &gt; μ̃ ? 0,15 × min(B_norm − μ̃, 4) : 0</p>
               <p>E = min(2, 0,5 × log₂(S + 1))</p>
-              <p className="mt-1 font-semibold text-camel-800">CS = round(μ̃ + P + E, 2)</p>
+              <p>V = σ &gt; 4 ? min(0,5, 0,08 × (σ − 4)) : 0</p>
+              <p className="mt-1 font-semibold text-camel-800">CS = round(μ̃ + P + E − V, 2)</p>
             </div>
             <p className="mt-2 text-[11px] text-old-money-600">
-              μ̃ — байесовское среднее, P — пиковый бонус (до +0.6), E — опыт за число забегов (до +2.0).
+              μ_norm — внутрипородный базис, μ̃ — байес, P — пик (+0.6), E — опыт (+2.0), V — поправка на стабильность (-0.5).
             </p>
           </div>
         </div>
@@ -82,7 +84,7 @@ export default function RatingTab() {
         </p>
         <AbbreviationsDropdown
           rows={RATING_ABBREVIATIONS}
-          refTag={<RefTag>Спецификации рейтинговых алгоритмов CS v1 и Elo v2 · Coursing Stats</RefTag>}
+          refTag={<RefTag>Спецификации рейтинговых алгоритмов CS v2 · Coursing Stats</RefTag>}
         />
       </SectionCard>
 

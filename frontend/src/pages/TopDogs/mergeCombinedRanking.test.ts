@@ -15,13 +15,13 @@ describe('medalStrength / standingScore', () => {
   })
 })
 
-describe('buildCombinedRanking season standing B', () => {
-  it('ranks by standingScore and ignores higher Elo', () => {
+describe('buildCombinedRanking season standing', () => {
+  it('ranks by Gold first and ignores higher Elo', () => {
     const rows = buildCombinedRanking(
       [
         {
           dog_id: 1,
-          name_lat: 'Medals',
+          name_lat: 'TopGold',
           breed: 'x',
           gold: 5,
           silver: 1,
@@ -51,15 +51,30 @@ describe('buildCombinedRanking season standing B', () => {
     expect(rows[1].elo_rating).toBe(1600)
   })
 
-  it('uses CS when standingScores are within gap', () => {
+  it('uses standingScore and CS v2 when gold medals are equal', () => {
     const rows = buildCombinedRanking(
       [
-        { dog_id: 1, name_lat: 'A', breed: 'x', gold: 2, total_starts: 5 },
-        { dog_id: 2, name_lat: 'B', breed: 'x', gold: 2, total_starts: 5 },
+        { dog_id: 1, name_lat: 'MorePodiums', breed: 'x', gold: 2, silver: 1, total_starts: 3 },
+        { dog_id: 2, name_lat: 'FewerPodiums', breed: 'x', gold: 2, silver: 0, total_starts: 5 },
       ],
       [
-        { dog_id: 1, rating_score: 84, judge_eval_count: 5 },
-        { dog_id: 2, rating_score: 87, judge_eval_count: 5 },
+        { dog_id: 1, rating_score: 85.5, judge_eval_count: 6 },
+        { dog_id: 2, rating_score: 86.5, judge_eval_count: 10 },
+      ],
+      []
+    )
+    expect(rows[0].dog_id).toBe(1)
+  })
+
+  it('uses CS v2 as tie-breaker when medals and standing scores are equal', () => {
+    const rows = buildCombinedRanking(
+      [
+        { dog_id: 1, name_lat: 'LowerCS', breed: 'x', gold: 2, total_starts: 4 },
+        { dog_id: 2, name_lat: 'HigherCS', breed: 'x', gold: 2, total_starts: 4 },
+      ],
+      [
+        { dog_id: 1, rating_score: 86.0, judge_eval_count: 8 },
+        { dog_id: 2, rating_score: 87.5, judge_eval_count: 8 },
       ],
       []
     )

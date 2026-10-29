@@ -171,8 +171,8 @@ export function buildTopIndexes(db: Database.Database) {
       )
       .all(year) as Record<string, unknown>[];
     attachScoreMetrics(db, score, year);
-    sortScoreItems(score);
-    for (const s of score) {
+    const sortedScore = sortScoreItems(score);
+    for (const s of sortedScore) {
       const count = getAggCount(Number(s.dog_id));
       if (count) s.aggression_count = count;
       const sex = getSex(Number(s.dog_id));
@@ -183,8 +183,8 @@ export function buildTopIndexes(db: Database.Database) {
       schema: 'coursing-stats/index-top-score-v1',
       year,
       rating_score_version: COURSING_RATING_SCORE_VERSION,
-      count: score.length,
-      items: score,
+      count: sortedScore.length,
+      items: sortedScore,
     });
   }
 
@@ -204,9 +204,9 @@ export function buildTopIndexes(db: Database.Database) {
     items: placementAll,
   });
 
-  const scoreAll = db.prepare(SCORE_ALL_YEARS_SQL).all() as Record<string, unknown>[];
-  attachScoreMetrics(db, scoreAll);
-  sortScoreItems(scoreAll);
+  const rawScoreAll = db.prepare(SCORE_ALL_YEARS_SQL).all() as Record<string, unknown>[];
+  attachScoreMetrics(db, rawScoreAll);
+  const scoreAll = sortScoreItems(rawScoreAll);
   for (const s of scoreAll) {
     const count = getAggCount(Number(s.dog_id));
     if (count) s.aggression_count = count;

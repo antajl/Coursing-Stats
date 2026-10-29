@@ -15,14 +15,14 @@ verified: 2026-10-01
 |------|--|
 | UI список курсинг/БЗМП | **Зачёт сезона** (`standingScore`) — медали + CS тай-брейк |
 | Медали (данные) | `indexes/top-placement-*.json` |
-| Очки CS (данные) | `indexes/top-score-*.json` (`rating_score`, version **cs-v1**) |
+| Очки CS (данные) | `indexes/top-score-*.json` (`rating_score`, version **cs-v2**) |
 | Терминология | Участия в спорте называть **забеги** (заб.), не «старты» |
 | Elo | **Удалён** из UI и пайплайна |
 | Мерджить в одно число | **Запрещено** (каскад: standing → CS → забеги) |
 | `standingScore` | `(3×1м + 1×2м + 0.5×3м) / (забегов + 4)` — при равных медалях выше меньше забегов |
 | `total_starts` | finished **и** disqualified (участвовали); **не** dns/неявка |
 | `total_score` | = grand_total протокола; **не** делить на судей; в формулу CS **не** входит напрямую |
-| CS formula | `backend/lib/rating/coursing-rating-score.ts` (Bayesian avg + peak + starts) |
+| CS formula | `backend/lib/rating/coursing-rating-score.ts` (CS v2: внутрипородный базис + Bayesian avg + peak + starts − stability penalty) |
 | Calendar prod | `ui-flags.publicCalendars.competitions: true` |
 | Профиль собаки | CDN `indexes/dog-profiles/pack-XXX.json` (`byId`) — не per-id, не `dogs/by-id` |
 | Судьи | `indexes/judges-summary.json`, `judge-details/{key}.json` — **не** show judges |

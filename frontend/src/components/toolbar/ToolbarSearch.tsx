@@ -25,13 +25,13 @@ export default function ToolbarSearch({
     if (isOpen) {
       const timer = setTimeout(() => {
         inputRef.current?.focus()
-        if (value) {
-          inputRef.current?.select()
+        if (inputRef.current?.value) {
+          inputRef.current.select()
         }
       }, 50)
       return () => clearTimeout(timer)
     }
-  }, [isOpen, value])
+  }, [isOpen])
 
   const trigger = (
     <button

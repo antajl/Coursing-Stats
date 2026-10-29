@@ -36,10 +36,10 @@ export const RATING_MODAL_CONTENT = (
         <div className="leading-tight">
           <div className="flex items-center gap-1 font-semibold text-charcoal-900">
             <Award className="h-3.5 w-3.5 text-amber-600 shrink-0" aria-hidden />
-            <span>Медали (главный критерий)</span>
+            <span>Медали и победы (главный критерий)</span>
           </div>
           <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
-            Золото ценнее серебра и бронзы. При равенстве наград выше собака с <strong>меньшим</strong> числом забегов.
+            Золотые медали ставят собаку выше в таблице. При равных победах решает серебро/бронза и эффективность (меньше забегов на медаль).
           </p>
         </div>
       </div>
@@ -51,10 +51,10 @@ export const RATING_MODAL_CONTENT = (
         <div className="leading-tight">
           <div className="flex items-center gap-1 font-semibold text-charcoal-900">
             <Zap className="h-3.5 w-3.5 text-camel-600 shrink-0" aria-hidden />
-            <span>Индекс CS (тай-брейкер)</span>
+            <span>Индекс CS v2 (тай-брейкер)</span>
           </div>
           <p className="text-[11px] text-charcoal-600 mt-0.5 leading-snug">
-            Средняя судейская оценка за технику забегов. Разрешает ничьи при одинаковых медалях.
+            Оценка качества бега с внутрипородной калибровкой и фактором стабильности. Разрешает ничьи при одинаковых медалях.
           </p>
         </div>
       </div>
@@ -77,18 +77,17 @@ const TOOLTIP_CONTENT = (
 
     <ol className="list-decimal space-y-1.5 pl-4 text-[11px] leading-snug text-charcoal-700">
       <li>
-        <strong>Медали</strong> — первичный критерий (золото ценнее серебра и бронзы). При одинаковом наборе
-        наград выше тот, кто собрал его за <strong>меньшее</strong> число забегов (выше эффективность).
+        <strong>Медали и победы</strong> — первичный критерий (золото важнее серебра). При равных победах решает серебро/бронза и эффективность (меньше забегов на медаль).
       </li>
       <li>
-        Индекс <strong>CS</strong> используется при равных результатах по медалям. Учитывает стабильность и
+        Индекс <strong>CS v2</strong> используется как решающий тай-брейк качества бега при равных медалях. Учитывает стабильность и
         максимальные оценки судей за технику бега (курсинг / БЗМП).
       </li>
     </ol>
 
     <div className="space-y-1.5 border-t border-old-money-200/80 pt-2 text-[11px] leading-snug text-charcoal-700">
       <p>
-        <strong>CS</strong> — средняя оценка судей с учётом пиковых результатов и опыта. Используется для
+        <strong>CS v2</strong> — оценка судей с внутрипородной калибровкой, учётом пиков, опыта и стабильности. Используется для
         разрешения ничьих при равных медалях.
       </p>
     </div>

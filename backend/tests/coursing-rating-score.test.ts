@@ -1,7 +1,17 @@
 import { describe, expect, it } from 'vitest';
-import { computeCoursingRatingScore } from '../lib/rating/coursing-rating-score';
+import {
+  computeCoursingRatingScore,
+  COURSING_RATING_VERSION,
+  COURSING_RATING_SCORE_VERSION,
+  getBreedBaseline,
+} from '../lib/rating/coursing-rating-score';
 
 describe('computeCoursingRatingScore', () => {
+  it('has correct version tag v2', () => {
+    expect(COURSING_RATING_VERSION).toBe('v2');
+    expect(COURSING_RATING_SCORE_VERSION).toBe('cs-v2');
+  });
+
   it('returns null without judge evaluations', () => {
     expect(
       computeCoursingRatingScore({
@@ -69,5 +79,52 @@ describe('computeCoursingRatingScore', () => {
     const s16 = computeCoursingRatingScore({ ...base, total_starts: 16 });
     const s100 = computeCoursingRatingScore({ ...base, total_starts: 100 });
     expect(s16).toBe(s100);
+  });
+
+  it('normalizes breed baselines fairly (equal relative outperformance = equal CS)', () => {
+    // Whippet baseline is 86.0; +3.0 outperformance -> avg 89.0
+    const whippet = computeCoursingRatingScore({
+      avg_judge_score: 89.0,
+      best_judge_score: 92.0,
+      total_starts: 5,
+      judge_eval_count: 20,
+      breed: 'УИППЕТ',
+    });
+
+    // RPB baseline is 83.0; +3.0 outperformance -> avg 86.0
+    const rpb = computeCoursingRatingScore({
+      avg_judge_score: 86.0,
+      best_judge_score: 89.0,
+      total_starts: 5,
+      judge_eval_count: 20,
+      breed: 'РУССКАЯ ПСОВАЯ БОРЗАЯ',
+    });
+
+    expect(whippet).not.toBeNull();
+    expect(rpb).not.toBeNull();
+    expect(whippet).toBe(rpb);
+  });
+
+  it('applies stability penalty when score variance is high', () => {
+    const base = {
+      avg_judge_score: 88,
+      best_judge_score: 92,
+      total_starts: 5,
+      judge_eval_count: 20,
+    };
+    const consistent = computeCoursingRatingScore({ ...base, score_std_dev: 2.0 });
+    const erratic = computeCoursingRatingScore({ ...base, score_std_dev: 8.0 });
+
+    expect(consistent).not.toBeNull();
+    expect(erratic).not.toBeNull();
+    expect(consistent!).toBeGreaterThan(erratic!);
+  });
+
+  it('correctly maps known breed baselines with fallback', () => {
+    expect(getBreedBaseline('Уиппет')).toBe(86.0);
+    expect(getBreedBaseline('Русская псовая борзая')).toBe(83.0);
+    expect(getBreedBaseline('Родезийский риджбек')).toBe(82.5);
+    expect(getBreedBaseline('Неизвестная порода')).toBe(85.0);
+    expect(getBreedBaseline(null)).toBe(85.0);
   });
 });
