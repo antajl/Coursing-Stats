@@ -1,5 +1,5 @@
 import { memo, useMemo, useState, useRef } from 'react'
-import { ArrowLeftRight, Gauge, Timer, Trophy, Award, Crown } from 'lucide-react'
+import { ArrowLeftRight } from 'lucide-react'
 import SeasonCompetitionsCarousel from './SeasonCompetitionsCarousel'
 import SeasonRacingCarousel from './SeasonRacingCarousel'
 import SeasonShowsCarousel from './SeasonShowsCarousel'
@@ -46,43 +46,22 @@ export interface HomeSubSectionCapsuleProps {
   widthClass?: string
 }
 
-function getSectionIcon(label: string) {
-  if (label.includes('скорост')) return Gauge
-  if (label.includes('350')) return Timer
-  if (label.includes('Курсинг')) return Trophy
-  if (label.includes('Рейсинг')) return Timer
-  if (label.includes('Все')) return Crown
-  if (label.includes('пород')) return Award
-  return Trophy
-}
-
 export function HomeSubSectionCapsule({
   currentLabel,
   onToggle,
-  widthClass,
 }: HomeSubSectionCapsuleProps) {
-  const Icon = getSectionIcon(currentLabel)
-  const resolvedWidth =
-    widthClass ??
-    (currentLabel.includes('скорост') || currentLabel.includes('350')
-      ? 'w-[136px]'
-      : currentLabel.includes('пород') || currentLabel.includes('Все')
-        ? 'w-[118px]'
-        : 'w-[102px]')
-
   return (
     <button
       type="button"
       onClick={onToggle}
-      className={`relative shrink-0 md:hidden flex h-7 items-center justify-between rounded-lg border border-old-money-200/90 bg-cream-50/95 px-2 text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 active:scale-95 transition-all shadow-2xs touch-manipulation cursor-pointer before:absolute before:-inset-2 before:content-[''] ${resolvedWidth}`}
+      className="relative shrink-0 md:hidden inline-flex h-7 items-center gap-1.5 rounded-md px-1.5 text-charcoal-900 hover:bg-camel-200/30 active:bg-camel-200/50 active:scale-95 transition-all touch-manipulation cursor-pointer before:absolute before:-inset-2 before:content-['']"
       title="Переключить подраздел"
       aria-label="Переключить подраздел"
     >
-      <Icon className="h-3 w-3 text-camel-700 shrink-0" aria-hidden />
-      <span className="font-serif text-[11px] font-bold text-charcoal-900 tracking-tight whitespace-nowrap text-center flex-1 px-1">
+      <span className="font-serif text-[12px] font-bold text-charcoal-900 tracking-tight whitespace-nowrap">
         {currentLabel}
       </span>
-      <ArrowLeftRight className="h-3 w-3 text-charcoal-400 shrink-0" aria-hidden />
+      <ArrowLeftRight className="h-3 w-3 text-camel-700 shrink-0" aria-hidden />
     </button>
   )
 }

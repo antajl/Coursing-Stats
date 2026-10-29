@@ -1176,6 +1176,7 @@ export function eventMetaFromEntry(entry: {
         organizer: {
           '@type': 'Organization',
           name: organizerName,
+          url: 'https://rkf.org.ru',
         },
         ...(location
           ? {

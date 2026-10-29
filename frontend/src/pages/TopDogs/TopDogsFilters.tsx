@@ -1,5 +1,5 @@
 import { useMemo, useState, type ReactNode } from 'react'
-import { ChevronDown, X, ArrowLeftRight, Trophy, Timer } from 'lucide-react'
+import { ChevronDown, X, ArrowLeftRight } from 'lucide-react'
 import PageToolbar from '../../components/toolbar/PageToolbar'
 import ToolbarSearch from '../../components/toolbar/ToolbarSearch'
 import ModernDropdown from '../../components/ui/ModernDropdown'
@@ -174,24 +174,19 @@ export default function TopDogsFilters({
             </button>
           )}
 
-          {/* Кнопка дисциплины (Raycast-бейдж с тематической иконкой) */}
+          {/* Кнопка дисциплины (Чистый призрак со стрелочкой) */}
           {activeMobileColumn && onMobileColumnChange && (
             <button
               type="button"
               onClick={() => onMobileColumnChange(isCoursing ? 'racing' : 'coursing')}
-              className="relative shrink-0 flex h-8 w-[104px] items-center justify-between rounded-lg border border-old-money-200/90 bg-cream-50/95 px-2 text-charcoal-800 hover:border-camel-500 hover:bg-cream-100 active:scale-95 transition-all shadow-2xs touch-manipulation cursor-pointer before:absolute before:-inset-1.5 before:content-['']"
+              className="relative shrink-0 inline-flex h-8 items-center gap-1.5 rounded-md px-2 text-charcoal-900 hover:bg-cream-200/60 active:bg-cream-200/90 active:scale-95 transition-all touch-manipulation cursor-pointer before:absolute before:-inset-1.5 before:content-['']"
               title={`Переключить на ${isCoursing ? 'рейсинг' : 'курсинг'} (или смахните экран)`}
               aria-label={`Переключить на ${isCoursing ? 'рейсинг' : 'курсинг'}`}
             >
-              {isCoursing ? (
-                <Trophy className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-              ) : (
-                <Timer className="h-3.5 w-3.5 text-camel-700 shrink-0" aria-hidden />
-              )}
-              <span className="font-serif text-xs font-bold text-charcoal-900 tracking-tight whitespace-nowrap text-center flex-1 px-1">
+              <span className="font-serif text-xs font-bold text-charcoal-900 tracking-tight whitespace-nowrap">
                 {isCoursing ? 'Курсинг' : 'Рейсинг'}
               </span>
-              <ArrowLeftRight className="h-3 w-3 text-charcoal-400 shrink-0" aria-hidden />
+              <ArrowLeftRight className="h-3 w-3 text-camel-700 shrink-0" aria-hidden />
             </button>
           )}
 

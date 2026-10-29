@@ -289,6 +289,7 @@ describe('prerender-seo helpers', () => {
     expect(sportsEvent.eventAttendanceMode).toBe('https://schema.org/OfflineEventAttendanceMode')
     expect(sportsEvent.organizer['@type']).toBe('Organization')
     expect(sportsEvent.organizer.name).toBe('Российская кинологическая федерация (РКФ)')
+    expect(sportsEvent.organizer.url).toBe('https://rkf.org.ru')
     expect(sportsEvent.award).toContain('Юнион Светлый (Уиппет, 369 б., ПЧРКФ РК)')
     expect(sportsEvent.competitor[0].name).toBe('Юнион Светлый')
   })

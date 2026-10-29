@@ -119,6 +119,7 @@ export function sportsEventSchema(options: {
   endDate?: string | null
   location?: string | null
   organizer?: string | null
+  organizerUrl?: string | null
   description?: string
 }): Record<string, unknown> {
   const startIso = toIsoDate(options.startDate)
@@ -137,6 +138,7 @@ export function sportsEventSchema(options: {
     organizer: {
       '@type': 'Organization',
       name: options.organizer || 'Российская кинологическая федерация (РКФ)',
+      url: options.organizerUrl || 'https://rkf.org.ru',
     },
     ...(options.location
       ? {
