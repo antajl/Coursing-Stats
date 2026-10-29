@@ -75,7 +75,8 @@ export default function ShowRankingFilters({
   dropdownRef,
   trailing,
 }: ShowRankingFiltersProps) {
-  const [yearDropdownOpen, setYearDropdownOpen] = useState(false)
+  const [mobileYearDropdownOpen, setMobileYearDropdownOpen] = useState(false)
+  const [desktopYearDropdownOpen, setDesktopYearDropdownOpen] = useState(false)
 
   const sortedYears = useMemo(
     () => [...yearValues].sort((a, b) => Number(b) - Number(a)),
@@ -138,8 +139,8 @@ export default function ShowRankingFilters({
                 <div className="shrink-0">
                   <ModernDropdown
                     trigger={yearTrigger}
-                    isOpen={yearDropdownOpen}
-                    onOpenChange={setYearDropdownOpen}
+                    isOpen={mobileYearDropdownOpen}
+                    onOpenChange={setMobileYearDropdownOpen}
                     width="120px"
                   >
                     <div className="p-1 min-w-[100px]">
@@ -149,7 +150,7 @@ export default function ShowRankingFilters({
                           role="menuitem"
                           onClick={() => {
                             onYearChange('')
-                            setYearDropdownOpen(false)
+                            setMobileYearDropdownOpen(false)
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
                             !filterYear
@@ -166,7 +167,7 @@ export default function ShowRankingFilters({
                             role="menuitem"
                             onClick={() => {
                               onYearChange(year)
-                              setYearDropdownOpen(false)
+                              setMobileYearDropdownOpen(false)
                             }}
                             className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
                               filterYear === year
@@ -295,8 +296,8 @@ export default function ShowRankingFilters({
 
                 <ModernDropdown
                   trigger={yearTrigger}
-                  isOpen={yearDropdownOpen}
-                  onOpenChange={setYearDropdownOpen}
+                  isOpen={desktopYearDropdownOpen}
+                  onOpenChange={setDesktopYearDropdownOpen}
                   width="120px"
                 >
                   <div className="p-1 min-w-[100px]">
@@ -306,7 +307,7 @@ export default function ShowRankingFilters({
                         role="menuitem"
                         onClick={() => {
                           onYearChange('')
-                          setYearDropdownOpen(false)
+                          setDesktopYearDropdownOpen(false)
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
                           !filterYear
@@ -323,7 +324,7 @@ export default function ShowRankingFilters({
                           role="menuitem"
                           onClick={() => {
                             onYearChange(year)
-                            setYearDropdownOpen(false)
+                            setDesktopYearDropdownOpen(false)
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors cursor-pointer ${
                             filterYear === year

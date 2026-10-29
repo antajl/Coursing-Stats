@@ -150,11 +150,35 @@ export default function ModernDropdown({
   const [position, setPosition] = useState({ top: 0, left: 0, width: 0 })
 
   useEffect(() => {
-    if (!isOpen || !triggerRef.current) return
+    if (!isOpen || !triggerRef.current) {
+      setPositionReady(false)
+      return
+    }
+
+    let cancelled = false
+
+    const isTriggerVisible = (el: HTMLElement) => {
+      if (el.offsetParent === null && window.getComputedStyle(el).position !== 'fixed') {
+        return false
+      }
+      const rect = el.getBoundingClientRect()
+      return rect.width > 0 || rect.height > 0
+    }
 
     const updatePosition = () => {
-      const triggerRect = triggerRef.current?.getBoundingClientRect()
-      if (!triggerRect) return
+      const trigger = triggerRef.current
+      if (!trigger || cancelled) return false
+
+      if (!isTriggerVisible(trigger)) {
+        setPositionReady(false)
+        return false
+      }
+
+      const triggerRect = trigger.getBoundingClientRect()
+      if (triggerRect.width === 0 && triggerRect.height === 0) {
+        setPositionReady(false)
+        return false
+      }
 
       const parsedWidth = width ? parseInt(width, 10) : triggerRect.width
       const dropdownWidth = Math.min(parsedWidth, Math.max(200, window.innerWidth - 16))
@@ -164,15 +188,21 @@ export default function ModernDropdown({
         left: Math.max(8, Math.min(triggerRect.left, maxLeft)),
         width: dropdownWidth,
       })
+      return true
     }
 
     // Calculate position immediately to prevent flash
-    updatePosition()
+    const initialOk = updatePosition()
+    if (initialOk) {
+      setPositionReady(true)
+    }
 
     // Use requestAnimationFrame to ensure position is set before render
-    requestAnimationFrame(() => {
-      updatePosition()
-      setPositionReady(true)
+    const rafId = requestAnimationFrame(() => {
+      if (!cancelled) {
+        const ok = updatePosition()
+        setPositionReady(ok)
+      }
     })
 
     const handleScroll = (e: Event) => {
@@ -196,6 +226,8 @@ export default function ModernDropdown({
     window.visualViewport?.addEventListener('scroll', handleResize)
 
     return () => {
+      cancelled = true
+      cancelAnimationFrame(rafId)
       window.removeEventListener('scroll', handleScroll, true)
       window.removeEventListener('resize', handleResize)
       window.visualViewport?.removeEventListener('resize', handleResize)

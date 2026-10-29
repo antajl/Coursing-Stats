@@ -54,7 +54,8 @@ export default function TopDogsFilters({
   coursingCount,
   racingCount,
 }: TopDogsFiltersProps) {
-  const [isOpen, setIsOpen] = useState(false)
+  const [mobileYearOpen, setMobileYearOpen] = useState(false)
+  const [desktopYearOpen, setDesktopYearOpen] = useState(false)
 
   const sortedYears = useMemo(
     () => [...yearValues].map(String).sort((a, b) => Number(b) - Number(a)),
@@ -96,8 +97,8 @@ export default function TopDogsFilters({
         <div className="shrink-0">
           <ModernDropdown
             trigger={yearTrigger}
-            isOpen={isOpen}
-            onOpenChange={setIsOpen}
+            isOpen={mobileYearOpen}
+            onOpenChange={setMobileYearOpen}
             width="120px"
           >
             <div className="p-1 min-w-[100px]">
@@ -106,7 +107,7 @@ export default function TopDogsFilters({
                   role="menuitem"
                   onClick={() => {
                     onYearChange('')
-                    setIsOpen(false)
+                    setMobileYearOpen(false)
                   }}
                   className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                     !filterYear
@@ -122,7 +123,7 @@ export default function TopDogsFilters({
                     role="menuitem"
                     onClick={() => {
                       onYearChange(year)
-                      setIsOpen(false)
+                      setMobileYearOpen(false)
                     }}
                     className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                       filterYear === year
@@ -211,8 +212,8 @@ export default function TopDogsFilters({
               <div className="shrink-0">
                 <ModernDropdown
                   trigger={yearTrigger}
-                  isOpen={isOpen}
-                  onOpenChange={setIsOpen}
+                  isOpen={desktopYearOpen}
+                  onOpenChange={setDesktopYearOpen}
                   width="120px"
                 >
                   <div className="p-1 min-w-[100px]">
@@ -221,7 +222,7 @@ export default function TopDogsFilters({
                         role="menuitem"
                         onClick={() => {
                           onYearChange('')
-                          setIsOpen(false)
+                          setDesktopYearOpen(false)
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           !filterYear
@@ -237,7 +238,7 @@ export default function TopDogsFilters({
                           role="menuitem"
                           onClick={() => {
                             onYearChange(year)
-                            setIsOpen(false)
+                            setDesktopYearOpen(false)
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                             filterYear === year

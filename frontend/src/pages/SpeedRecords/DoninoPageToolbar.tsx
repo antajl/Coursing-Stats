@@ -89,8 +89,10 @@ export default function DoninoPageToolbar({
   hasActiveFilters,
   dogIndex: propDogIndex,
 }: DoninoPageToolbarProps) {
-  const [yearDropdownOpen, setYearDropdownOpen] = useState(false)
-  const [sexDropdownOpen, setSexDropdownOpen] = useState(false)
+  const [mobileYearDropdownOpen, setMobileYearDropdownOpen] = useState(false)
+  const [desktopYearDropdownOpen, setDesktopYearDropdownOpen] = useState(false)
+  const [mobileSexDropdownOpen, setMobileSexDropdownOpen] = useState(false)
+  const [desktopSexDropdownOpen, setDesktopSexDropdownOpen] = useState(false)
 
   const hasThresholdFilters = Boolean(
     filterMinSpeed || filterMaxSpeed || filterMinTime || filterMaxTime,
@@ -169,8 +171,8 @@ export default function DoninoPageToolbar({
                       <PillChevron />
                     </button>
                   }
-                  isOpen={yearDropdownOpen}
-                  onOpenChange={setYearDropdownOpen}
+                  isOpen={mobileYearDropdownOpen}
+                  onOpenChange={setMobileYearDropdownOpen}
                   width="120px"
                 >
                   <div className="max-h-60 overflow-y-auto p-1" role="menu">
@@ -183,7 +185,7 @@ export default function DoninoPageToolbar({
                         } else {
                           clearAllYears()
                         }
-                        setYearDropdownOpen(false)
+                        setMobileYearDropdownOpen(false)
                       }}
                       className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                         filterYears.length === 0
@@ -207,7 +209,7 @@ export default function DoninoPageToolbar({
                               clearAllYears()
                               onToggleFilter('year', year)
                             }
-                            setYearDropdownOpen(false)
+                            setMobileYearDropdownOpen(false)
                           }}
                           className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                             active
@@ -232,8 +234,8 @@ export default function DoninoPageToolbar({
                       <PillChevron />
                     </button>
                   }
-                  isOpen={sexDropdownOpen}
-                  onOpenChange={setSexDropdownOpen}
+                  isOpen={mobileSexDropdownOpen}
+                  onOpenChange={setMobileSexDropdownOpen}
                   width="140px"
                 >
                   <div className="p-1" role="menu">
@@ -242,7 +244,7 @@ export default function DoninoPageToolbar({
                       role="menuitem"
                       onClick={() => {
                         for (const s of [...filterSexes]) onToggleFilter('sex', s)
-                        setSexDropdownOpen(false)
+                        setMobileSexDropdownOpen(false)
                       }}
                       className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                         filterSexes.length === 0
@@ -335,8 +337,8 @@ export default function DoninoPageToolbar({
                     <PillChevron />
                   </button>
                 }
-                isOpen={yearDropdownOpen}
-                onOpenChange={setYearDropdownOpen}
+                isOpen={desktopYearDropdownOpen}
+                onOpenChange={setDesktopYearDropdownOpen}
                 width="120px"
               >
                 <div className="max-h-60 overflow-y-auto p-1" role="menu">
@@ -349,7 +351,7 @@ export default function DoninoPageToolbar({
                       } else {
                         clearAllYears()
                       }
-                      setYearDropdownOpen(false)
+                      setDesktopYearDropdownOpen(false)
                     }}
                     className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                       filterYears.length === 0
@@ -373,7 +375,7 @@ export default function DoninoPageToolbar({
                             clearAllYears()
                             onToggleFilter('year', year)
                           }
-                          setYearDropdownOpen(false)
+                          setDesktopYearDropdownOpen(false)
                         }}
                         className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                           active
@@ -400,8 +402,8 @@ export default function DoninoPageToolbar({
                     <PillChevron />
                   </button>
                 }
-                isOpen={sexDropdownOpen}
-                onOpenChange={setSexDropdownOpen}
+                isOpen={desktopSexDropdownOpen}
+                onOpenChange={setDesktopSexDropdownOpen}
                 width="140px"
               >
                 <div className="p-1" role="menu">
@@ -410,7 +412,7 @@ export default function DoninoPageToolbar({
                     role="menuitem"
                     onClick={() => {
                       for (const s of [...filterSexes]) onToggleFilter('sex', s)
-                      setSexDropdownOpen(false)
+                      setDesktopSexDropdownOpen(false)
                     }}
                     className={`w-full rounded-md px-3 py-2 text-left text-sm transition-colors ${
                       filterSexes.length === 0

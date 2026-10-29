@@ -56,8 +56,10 @@ export default function Judges() {
 
   const [filterBreed, setFilterBreed] = useState('')
   const [filterDiscipline, setFilterDiscipline] = useState('')
-  const [yearOpen, setYearOpen] = useState(false)
-  const [disciplineOpen, setDisciplineOpen] = useState(false)
+  const [mobileYearOpen, setMobileYearOpen] = useState(false)
+  const [desktopYearOpen, setDesktopYearOpen] = useState(false)
+  const [mobileDisciplineOpen, setMobileDisciplineOpen] = useState(false)
+  const [desktopDisciplineOpen, setDesktopDisciplineOpen] = useState(false)
   const [isInitialLoad, setIsInitialLoad] = useState(true)
   const [visibleCount, setVisibleCount] = useState(20)
   const observerRef = useRef<IntersectionObserver | null>(null)
@@ -183,8 +185,8 @@ export default function Judges() {
                         <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
                       </button>
                     }
-                    isOpen={yearOpen}
-                    onOpenChange={setYearOpen}
+                    isOpen={mobileYearOpen}
+                    onOpenChange={setMobileYearOpen}
                     width="130px"
                   >
                     <div className="p-1 max-h-60 overflow-y-auto" role="menu">
@@ -193,7 +195,7 @@ export default function Judges() {
                         role="menuitem"
                         onClick={() => {
                           setFilterYear('')
-                          setYearOpen(false)
+                          setMobileYearOpen(false)
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           !filterYear
@@ -210,7 +212,7 @@ export default function Judges() {
                           role="menuitem"
                           onClick={() => {
                             setFilterYear(year)
-                            setYearOpen(false)
+                            setMobileYearOpen(false)
                           }}
                           className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                             filterYear === year
@@ -258,8 +260,8 @@ export default function Judges() {
                         <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
                       </button>
                     }
-                    isOpen={disciplineOpen}
-                    onOpenChange={setDisciplineOpen}
+                    isOpen={mobileDisciplineOpen}
+                    onOpenChange={setMobileDisciplineOpen}
                     width="160px"
                   >
                     <div className="p-1 max-h-60 overflow-y-auto" role="menu">
@@ -268,7 +270,7 @@ export default function Judges() {
                         role="menuitem"
                         onClick={() => {
                           setFilterDiscipline('')
-                          setDisciplineOpen(false)
+                          setMobileDisciplineOpen(false)
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           !filterDiscipline
@@ -333,8 +335,8 @@ export default function Judges() {
                       <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
                     </button>
                   }
-                  isOpen={yearOpen}
-                  onOpenChange={setYearOpen}
+                  isOpen={desktopYearOpen}
+                  onOpenChange={setDesktopYearOpen}
                   width="130px"
                 >
                   <div className="p-1 max-h-60 overflow-y-auto" role="menu">
@@ -343,7 +345,7 @@ export default function Judges() {
                       role="menuitem"
                       onClick={() => {
                         setFilterYear('')
-                        setYearOpen(false)
+                        setDesktopYearOpen(false)
                       }}
                       className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                         !filterYear
@@ -360,7 +362,7 @@ export default function Judges() {
                         role="menuitem"
                         onClick={() => {
                           setFilterYear(year)
-                          setYearOpen(false)
+                          setDesktopYearOpen(false)
                         }}
                         className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                           filterYear === year
@@ -408,8 +410,8 @@ export default function Judges() {
                       <ChevronDown className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
                     </button>
                   }
-                  isOpen={disciplineOpen}
-                  onOpenChange={setDisciplineOpen}
+                  isOpen={desktopDisciplineOpen}
+                  onOpenChange={setDesktopDisciplineOpen}
                   width="150px"
                 >
                   <div className="p-1 max-h-60 overflow-y-auto" role="menu">
@@ -418,7 +420,7 @@ export default function Judges() {
                       role="menuitem"
                       onClick={() => {
                         setFilterDiscipline('')
-                        setDisciplineOpen(false)
+                        setDesktopDisciplineOpen(false)
                       }}
                       className={`w-full text-left px-3 py-2 text-sm rounded-md transition-colors ${
                         !filterDiscipline
