@@ -854,13 +854,20 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
   }
   baselineGrades.dq = baselineGradeCounts.get('dq') || 0
 
+  // Adult conformation grades total (excludes baby and puppy grades which cannot receive 'excellent')
+  const baselineAdultGraded =
+    (baselineGrades.excellent || 0) +
+    (baselineGrades.very_good || 0) +
+    (baselineGrades.good || 0) +
+    (baselineGrades.satisfactory || 0) +
+    (baselineGrades.dq || 0)
   const baselineExcellent = baselineGrades.excellent || 0
-  const baselineExcellentRate = baselineGradedTotal > 0 ? baselineExcellent / baselineGradedTotal : 0
-  const baselineBelowExcellentRate = baselineGradedTotal > 0 ? (baselineGradedTotal - baselineExcellent) / baselineGradedTotal : 0
+  const baselineExcellentRate = baselineAdultGraded > 0 ? baselineExcellent / baselineAdultGraded : 0
+  const baselineBelowExcellentRate = baselineAdultGraded > 0 ? (baselineAdultGraded - baselineExcellent) / baselineAdultGraded : 0
 
   const baseline = {
     schema: 'coursing-stats/show-judges-strictness-baseline-v1',
-    graded: baselineGradedTotal,
+    graded: baselineAdultGraded,
     excellent_rate: baselineExcellentRate,
     below_excellent_rate: baselineBelowExcellentRate,
     grades: baselineGrades,
@@ -959,13 +966,19 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       }
       grades.dq = acc.gradeCounts.get('dq') || 0
 
+      const adultGraded =
+        (grades.excellent || 0) +
+        (grades.very_good || 0) +
+        (grades.good || 0) +
+        (grades.satisfactory || 0) +
+        (grades.dq || 0)
       const excellent = grades.excellent || 0
-      const excellentRate = excellent / acc.gradedTotal
-      const belowExcellentRate = (acc.gradedTotal - excellent) / acc.gradedTotal
+      const excellentRate = adultGraded > 0 ? excellent / adultGraded : null
+      const belowExcellentRate = adultGraded > 0 ? (adultGraded - excellent) / adultGraded : null
       excellent_rate = excellentRate
 
       strictness = {
-        graded: acc.gradedTotal,
+        graded: adultGraded,
         grades,
         excellent_rate: excellentRate,
         below_excellent_rate: belowExcellentRate,
@@ -980,6 +993,7 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       let excellent = 0
       let graded = 0
       for (const [gk, n] of gMap) {
+        if (gk === 'very_promising' || gk === 'promising') continue
         graded += n
         if (gk === 'excellent') excellent += n
       }
@@ -1013,7 +1027,7 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       breeds,
       by_year: byYear,
       excellent_rate,
-      graded: acc.gradedTotal,
+      graded: strictness ? strictness.graded : 0,
       ...(Object.keys(by_year_excellent).length > 0
         ? { by_year_excellent, by_year_graded: byYearGraded }
         : {}),

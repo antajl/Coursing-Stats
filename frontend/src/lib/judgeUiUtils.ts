@@ -58,10 +58,11 @@ export function getJudgeInitials(name: string): string {
 }
 
 /**
- * Categorizes a judge's strictness based on their excellent rate:
- * - >= 80%: Лояльный (зеленый)
- * - 70% - 79.9%: Умеренная строгость (янтарный)
- * - < 70%: Строгий (розовый/красный)
+ * Categorizes a show judge's strictness based on their adult excellent rate:
+ * Calibrated against 1,600+ RKF judges and 2.5M+ adult conformation evaluations:
+ * - >= 95%: Лояльный (зеленый, топ-25% самых мягких судей)
+ * - 88% - 94.9%: Умеренная строгость (янтарный, средние 50% судей, медиана 93.4%)
+ * - < 88%: Строгий (розовый/красный, нижние 25% судей)
  * - < 30 оценок: Мало данных
  */
 export function getStrictnessBadge(
@@ -86,7 +87,7 @@ export function getStrictnessBadge(
 
   const pct = Math.round(excellentRate * 100)
 
-  if (pct >= 80) {
+  if (pct >= 95) {
     return {
       label: 'Лояльный',
       detail: `${pct}% «отлично»`,
@@ -98,7 +99,7 @@ export function getStrictnessBadge(
     }
   }
 
-  if (pct >= 70) {
+  if (pct >= 88) {
     return {
       label: 'Умеренный',
       detail: `${pct}% «отлично»`,

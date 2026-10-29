@@ -776,13 +776,20 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
   }
   baselineGrades.dq = baselineGradeCounts.get('dq') || 0
 
+  // Adult conformation grades total (excludes baby and puppy grades which cannot receive 'excellent')
+  const baselineAdultGraded =
+    (baselineGrades.excellent || 0) +
+    (baselineGrades.very_good || 0) +
+    (baselineGrades.good || 0) +
+    (baselineGrades.satisfactory || 0) +
+    (baselineGrades.dq || 0)
   const baselineExcellent = baselineGrades.excellent || 0
-  const baselineExcellentRate = baselineGradedTotal > 0 ? baselineExcellent / baselineGradedTotal : 0
-  const baselineBelowExcellentRate = baselineGradedTotal > 0 ? (baselineGradedTotal - baselineExcellent) / baselineGradedTotal : 0
+  const baselineExcellentRate = baselineAdultGraded > 0 ? baselineExcellent / baselineAdultGraded : 0
+  const baselineBelowExcellentRate = baselineAdultGraded > 0 ? (baselineAdultGraded - baselineExcellent) / baselineAdultGraded : 0
 
   const baseline = {
     schema: 'coursing-stats/show-judges-strictness-baseline-v1',
-    graded: baselineGradedTotal,
+    graded: baselineAdultGraded,
     excellent_rate: baselineExcellentRate,
     below_excellent_rate: baselineBelowExcellentRate,
     grades: baselineGrades,
@@ -817,10 +824,16 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
     const total_judged = exhibitionList.length
     const unique_breeds = breedEntries.length
 
+    const adultGraded =
+      (acc.gradeCounts.get('excellent') || 0) +
+      (acc.gradeCounts.get('very_good') || 0) +
+      (acc.gradeCounts.get('good') || 0) +
+      (acc.gradeCounts.get('satisfactory') || 0) +
+      (acc.gradeCounts.get('dq') || 0)
     let excellent_rate: number | null = null
-    if (acc.gradedTotal > 0) {
+    if (adultGraded > 0) {
       const excellent = acc.gradeCounts.get('excellent') || 0
-      excellent_rate = excellent / acc.gradedTotal
+      excellent_rate = excellent / adultGraded
     }
 
     list.push({
@@ -831,7 +844,7 @@ function buildJudgesIndex(exhibitions: ShowExhibition[]): {
       breeds: breedEntries,
       by_year: byYear,
       excellent_rate,
-      graded: acc.gradedTotal,
+      graded: adultGraded,
       by_year_breeds,
     })
     details.push({

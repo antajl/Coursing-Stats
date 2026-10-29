@@ -481,14 +481,16 @@ function buildDogJudgesStats(rows: CompetitionHistoryRow[]): DogJudgesStats | nu
     if (!hasScores && entry.disciplines.has('racing') && !entry.disciplines.has('coursing')) {
       verdict = 'racing_only';
     } else {
+      // Require at least 2 heats or 2 events before issuing a verdict to avoid single-run flukes
+      const hasEnoughRuns = entry.co_judge_diffs.length >= 2 || entry.events.size >= 2;
       const favorsByDiff = coJudgeDiff !== null && coJudgeDiff >= 2.0;
       const strictByDiff = coJudgeDiff !== null && coJudgeDiff <= -2.0;
-      const favorsByPlace = avgPlacement !== null && dogAvgPlacement !== null && avgPlacement <= 1.5 && (dogAvgPlacement - avgPlacement >= 0.5);
-      const strictByPlace = avgPlacement !== null && dogAvgPlacement !== null && avgPlacement >= 3.0 && (avgPlacement - dogAvgPlacement >= 1.0);
+      const favorsByPlace = hasScores && avgPlacement !== null && dogAvgPlacement !== null && avgPlacement <= 1.5 && (dogAvgPlacement - avgPlacement >= 0.5);
+      const strictByPlace = hasScores && avgPlacement !== null && dogAvgPlacement !== null && avgPlacement >= 3.0 && (avgPlacement - dogAvgPlacement >= 1.0);
 
-      if (favorsByDiff || favorsByPlace) {
+      if (hasEnoughRuns && (favorsByDiff || favorsByPlace)) {
         verdict = 'favors';
-      } else if (strictByDiff || strictByPlace) {
+      } else if (hasEnoughRuns && (strictByDiff || strictByPlace)) {
         verdict = 'strict';
       }
     }

@@ -70,7 +70,12 @@ export function sumBreedCounts(
 }
 
 export function buildStrictness(grades: Record<GradeFilterKey, number>) {
-  const graded = Object.values(grades).reduce((a, b) => a + b, 0)
+  const graded =
+    (grades.excellent || 0) +
+    (grades.very_good || 0) +
+    (grades.good || 0) +
+    (grades.satisfactory || 0) +
+    (grades.dq || 0)
   if (graded === 0) {
     return {
       graded: 0,

@@ -323,18 +323,18 @@ export function JudgeDetailHeader({
                 <div className="relative h-2.5 overflow-hidden rounded-full bg-cream-200 border border-old-money-200/50">
                   {/* Visual zones background */}
                   <div className="absolute inset-0 flex">
-                    <div className="w-[70%] bg-rose-100/50 border-r border-rose-200/50" title="Зона строгости (<70%)" />
-                    <div className="w-[10%] bg-amber-100/50 border-r border-amber-200/50" title="Умеренная зона (70-80%)" />
-                    <div className="w-[20%] bg-emerald-100/50" title="Лояльная зона (>80%)" />
+                    <div className="w-[88%] bg-rose-100/50 border-r border-rose-200/50" title="Зона высокой строгости (<88%)" />
+                    <div className="w-[7%] bg-amber-100/50 border-r border-amber-200/50" title="Умеренная зона (88-95%)" />
+                    <div className="w-[5%] bg-emerald-100/50" title="Лояльная зона (≥95%)" />
                   </div>
 
                   {/* Judge's filled value */}
                   {judgePctNumber != null && (
                     <div
                       className={`absolute inset-y-0 left-0 rounded-full transition-all duration-500 opacity-80 ${
-                        judgePctNumber >= 80
+                        judgePctNumber >= 95
                           ? 'bg-emerald-500'
-                          : judgePctNumber >= 70
+                          : judgePctNumber >= 88
                             ? 'bg-amber-500'
                             : 'bg-rose-500'
                       }`}
@@ -353,9 +353,9 @@ export function JudgeDetailHeader({
                 </div>
 
                 <div className="mt-2 flex justify-between text-[11px] font-medium text-charcoal-500">
-                  <span className="text-rose-700">Строгий &lt;70%</span>
-                  <span className="text-amber-700">Умеренный 70–80%</span>
-                  <span className="text-emerald-700">Лояльный &gt;80%</span>
+                  <span className="text-rose-700">Строгий &lt;88%</span>
+                  <span className="text-amber-700">Умеренный 88–95%</span>
+                  <span className="text-emerald-700">Лояльный ≥95%</span>
                 </div>
 
                 <p className="mt-2.5 text-center text-xs text-charcoal-500">
