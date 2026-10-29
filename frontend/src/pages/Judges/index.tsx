@@ -164,8 +164,14 @@ export default function Judges() {
           bare
           filters={
             <div className="w-full min-w-0">
-              {/* Мобильная строка (32px): Год + Порода + Дисциплина + Поиск + Сброс */}
+              {/* Мобильная строка (32px): Поиск + Год + Порода + Дисциплина + Сброс */}
               <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0">
+                  <ToolbarSearch
+                    value={searchQuery}
+                    onChange={setSearchQuery}
+                    placeholder="Фамилия судьи…"
+                  />
+
                   {/* Year Dropdown */}
                   <ModernDropdown
                     trigger={
@@ -293,22 +299,18 @@ export default function Judges() {
                     </div>
                   </ModernDropdown>
 
-                  <ToolbarSearch
-                    value={searchQuery}
-                    onChange={setSearchQuery}
-                    placeholder="Фамилия судьи…"
-                  />
-
                   {hasActiveFilters && (
-                    <button
-                      type="button"
-                      onClick={clearFilters}
-                      className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
-                      title="Сбросить фильтры"
-                      aria-label="Сбросить фильтры"
-                    >
-                      <X className="h-4 w-4" />
-                    </button>
+                    <div className="ml-auto shrink-0">
+                      <button
+                        type="button"
+                        onClick={clearFilters}
+                        className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+                        title="Сбросить фильтры"
+                        aria-label="Сбросить фильтры"
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
                   )}
                 </div>
 

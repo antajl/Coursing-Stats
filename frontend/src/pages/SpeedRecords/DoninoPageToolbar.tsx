@@ -151,8 +151,14 @@ export default function DoninoPageToolbar({
           <div className="w-full min-w-0">
             {/* Мобильная консоль: 2 компактные строки */}
             <div className="flex flex-col gap-1.5 w-full md:hidden">
-              {/* Строка 1: [Год ∨] [Пол ∨] [Порода ∨] + [Пороги ∨] + [X] */}
+              {/* Строка 1: [Поиск] [Год ∨] [Пол ∨] [Порода ∨] + [X] */}
               <div className="flex items-center gap-1.5 w-full min-w-0">
+                <ToolbarSearch
+                  value={searchQuery}
+                  onChange={onSearchChange}
+                  placeholder="Кличка собаки…"
+                />
+
                 <ModernDropdown
                   trigger={
                     <button
@@ -295,22 +301,18 @@ export default function DoninoPageToolbar({
                   />
                 </div>
 
-                <ToolbarSearch
-                  value={searchQuery}
-                  onChange={onSearchChange}
-                  placeholder="Кличка собаки…"
-                />
-
                 {hasActiveFilters && (
-                  <button
-                    type="button"
-                    onClick={onClearFilters}
-                    className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
-                    title="Сбросить фильтры"
-                    aria-label="Сбросить фильтры"
-                  >
-                    <X className="h-4 w-4" />
-                  </button>
+                  <div className="ml-auto shrink-0">
+                    <button
+                      type="button"
+                      onClick={onClearFilters}
+                      className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+                      title="Сбросить фильтры"
+                      aria-label="Сбросить фильтры"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+                  </div>
                 )}
               </div>
             </div>

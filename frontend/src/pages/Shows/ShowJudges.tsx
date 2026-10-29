@@ -211,8 +211,15 @@ export default function ShowJudges() {
         bare
         filters={
           <div className="w-full min-w-0">
-            {/* Мобильная компактная строка (32px): Год + Порода + Инлайн-поиск */}
+            {/* Мобильная компактная строка (32px): Поиск + Год + Порода + Сброс */}
             <div className="flex sm:hidden items-center gap-1.5 w-full min-w-0">
+              {/* Inline Search */}
+              <ToolbarSearch
+                value={searchQuery}
+                onChange={setSearchQuery}
+                placeholder="Фамилия…"
+              />
+
               {/* Year Dropdown */}
               <ModernDropdown
                 trigger={
@@ -286,13 +293,23 @@ export default function ShowJudges() {
                 }
               />
 
-              {/* Inline Search */}
-              <ToolbarSearch
-                value={searchQuery}
-                onChange={setSearchQuery}
-                placeholder="Фамилия…"
-                className="flex-1 min-w-[70px]"
-              />
+              {/* Reset Filters button on mobile */}
+              {(isYearNonDefault || filterBreed) && (
+                <div className="ml-auto shrink-0">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setFilterYear(SHOW_JUDGES_ACTIVE_SEASON)
+                      setFilterBreed('')
+                    }}
+                    className="shrink-0 inline-flex h-8 w-8 items-center justify-center rounded-full border border-old-money-200 bg-cream-50 text-charcoal-500 hover:text-charcoal-800 transition-colors cursor-pointer"
+                    title="Сбросить фильтры"
+                    aria-label="Сбросить фильтры"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                </div>
+              )}
             </div>
 
             {/* Десктопная строка */}
@@ -301,7 +318,6 @@ export default function ShowJudges() {
                 value={searchQuery}
                 onChange={setSearchQuery}
                 placeholder="Фамилия судьи…"
-                className="w-auto min-w-[200px] max-w-sm"
               />
               <div className="flex max-w-full items-center gap-1.5 flex-wrap">
                 {/* Year Dropdown */}
