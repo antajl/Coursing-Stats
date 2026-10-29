@@ -1,6 +1,8 @@
 <div align="center">
 
-  <img src="frontend/public/assets/brand/logo.webp" alt="CoursingStats Logo" width="120" height="120" />
+  <a href="https://coursing-stats.ru">
+    <img src="frontend/public/assets/brand/logo-badge.svg" alt="CoursingStats Logo" width="120" height="124" />
+  </a>
 
   # CoursingStats
 
@@ -15,7 +17,7 @@
       <img src="https://img.shields.io/badge/Telegram_Bot-@coursing__stats__bot-2CA5E0?style=flat-square&logo=telegram&logoColor=white" alt="Telegram Bot" />
     </a>
     <a href="https://github.com/antajl/Coursing-Stats/actions">
-      <img src="https://img.shields.io/badge/Tests-332_passed-3178c6?style=flat-square" alt="Tests" />
+      <img src="https://img.shields.io/badge/Tests-383_passed-3178c6?style=flat-square" alt="Tests" />
     </a>
     <a href="https://react.dev">
       <img src="https://img.shields.io/badge/React-19-087ea4?style=flat-square&logo=react&logoColor=white" alt="React 19" />
@@ -73,7 +75,7 @@ flowchart LR
 
     subgraph Storage[Хранение и CDN]
         CDN[Static CDN /data/v1/]
-        Turso[(Turso Edge SQLite)]
+        Protocols[51k+ Gzip протоколов выставок S3]
     end
 
     subgraph Clients[Интерфейсы]
@@ -110,7 +112,7 @@ flowchart LR
 ## Архитектура и технические решения
 
 - **CDN Packs Pattern (ADR-014):** Профили собак и судей упаковываются в блочные шарды (`pack-*`), что исключает генерацию сотен тысяч мелких сетевых запросов.
-- **Edge SQLite (Turso):** Протоколы рингов выставок хранятся в распределенной базе Turso (libSQL) и запрашиваются клиентом по требованию в режиме fallback.
+- **Gzip Static Protocols:** Все 51 429 протоколов выставок (2019–2026) отдаются напрямую из Яндекс S3 CDN в сжатом виде gzip, полностью исключая задержки базы данных.
 - **Serverless Telegram Bot:** Бот развернут в Cloudflare Workers с многоуровневым KV-кэшированием и отдачей легковесных карточек.
 - **AI-First архитектура:** Кодовая база снабжена контекстными инструкциями для AI-ассистентов (`AGENTS.md`, каталог `.agents/skills/`, 17 инженерных шпаргалок в `docs/sheets/`).
 
@@ -120,7 +122,7 @@ flowchart LR
 
 - **Frontend:** React 19, TypeScript, Vite, Tailwind CSS, TanStack React Query, GSAP, Lucide Icons.
 - **Pipelines & Data:** Node.js, TSX, Vitest, Cheerio, ExcelJS, PDF parsing (pdfjs, paddle-ocr), Zod.
-- **Infrastructure:** Yandex Object Storage (Static CDN), Turso (libSQL/SQLite), Cloudflare Workers, GitHub Actions CI/CD.
+- **Infrastructure:** Yandex Object Storage (Static CDN S3), Cloudflare Workers & KV, GitHub Actions CI/CD.
 
 ---
 
