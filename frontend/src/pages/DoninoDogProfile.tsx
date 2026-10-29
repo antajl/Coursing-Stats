@@ -335,7 +335,7 @@ export default function DoninoDogProfile() {
   )
   const seoCanonical = useMemo(() => {
     if (!name || !breed) return undefined
-    return `https://coursing-stats.ru/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}`
+    return `https://coursing-stats.ru/donino-dog/${encodeURIComponent(name)}/${encodeURIComponent(breed)}/`
   }, [name, breed])
 
   // Early returns (must be after all hooks)

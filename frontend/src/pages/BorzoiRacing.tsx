@@ -16,7 +16,7 @@ function BorzoiRacing() {
       <SEO
         title="Бега борзых — соревнования, правила и статистика"
         description="Бега борзых (coursing): официальные соревнования, правила, статистика и рекорды. Рейтинги борзых по скорости и результатам. Руководство для участников."
-        canonicalUrl="https://coursing-stats.ru/borzoi-racing"
+        canonicalUrl="https://coursing-stats.ru/borzoi-racing/"
         keywords="бега борзых, курсинг, соревнования борзых, правила курсинга, статистика бега, рекорды скорости борзых"
       />
       <JsonLd data={breadcrumbListSchema([

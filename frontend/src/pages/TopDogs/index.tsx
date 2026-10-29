@@ -243,7 +243,7 @@ export default function TopDogs() {
         <SEO
           title="Рейтинг собак: курсинг и бега борзых 2026"
           description="Рейтинг собак по курсингу и бегам борзых сезона 2026 года: лидеры по породам (уиппеты, РПБ, басенджи, грейхаунды), медали, очки CS и динамика позиций."
-          canonicalUrl="https://coursing-stats.ru/competitions?tab=ranking"
+          canonicalUrl="https://coursing-stats.ru/competitions/"
         />
       )}
 

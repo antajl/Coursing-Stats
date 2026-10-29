@@ -95,7 +95,7 @@ export default function ShowDogProfile() {
       <SEO
         title={title}
         description={description}
-        canonicalUrl={`https://coursing-stats.ru/shows/dog/${showDogId}`}
+        canonicalUrl={`https://coursing-stats.ru/shows/dog/${showDogId}/`}
       />
       
       <div className="container mx-auto px-4 py-8">

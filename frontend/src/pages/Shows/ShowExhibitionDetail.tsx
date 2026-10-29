@@ -126,7 +126,7 @@ export default function ShowExhibitionDetail() {
         title={seoTitle}
         description={seoDescription}
         keywords={`${exhibition.title}, выставка РКФ, результаты, ${exhibition.location || ''}`}
-        canonicalUrl={`https://coursing-stats.ru/shows/exhibition/${id}`}
+        canonicalUrl={`https://coursing-stats.ru/shows/exhibition/${id}/`}
       />
       <ExhibitionHeader exhibition={exhibition} />
 

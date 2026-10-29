@@ -53,9 +53,18 @@ interface RankBadgeProps {
 }
 
 const RANK_IMAGES = {
-  1: '/assets/badges/coursing-stats-1.webp',
-  2: '/assets/badges/coursing-stats-2.webp',
-  3: '/assets/badges/coursing-stats-3.webp',
+  1: {
+    src: '/assets/badges/coursing-stats-1.webp',
+    srcSet: '/assets/badges/coursing-stats-1-40.webp 1x, /assets/badges/coursing-stats-1.webp 2x',
+  },
+  2: {
+    src: '/assets/badges/coursing-stats-2.webp',
+    srcSet: '/assets/badges/coursing-stats-2-40.webp 1x, /assets/badges/coursing-stats-2.webp 2x',
+  },
+  3: {
+    src: '/assets/badges/coursing-stats-3.webp',
+    srcSet: '/assets/badges/coursing-stats-3-40.webp 1x, /assets/badges/coursing-stats-3.webp 2x',
+  },
 }
 
 export default function RankBadge({ rank, delta, className = '', hideDelta = false }: RankBadgeProps) {
@@ -65,7 +74,7 @@ export default function RankBadge({ rank, delta, className = '', hideDelta = fal
 
   // Top 3: image badge
   if (rank <= 3) {
-    const imageSrc = RANK_IMAGES[rank as keyof typeof RANK_IMAGES]
+    const badge = RANK_IMAGES[rank as keyof typeof RANK_IMAGES]
     return (
       <div
         className={`flex flex-col items-center justify-center ${hideDelta ? 'min-h-0 min-w-0' : 'min-h-[44px] min-w-[44px]'} ${className}`}
@@ -73,9 +82,10 @@ export default function RankBadge({ rank, delta, className = '', hideDelta = fal
       >
         <div className="w-9 h-9 sm:w-10 sm:h-10">
           <img
-            src={imageSrc}
-            width={256}
-            height={213}
+            src={badge.src}
+            srcSet={badge.srcSet}
+            width={36}
+            height={30}
             alt={`Rank ${rank}`}
             className="w-full h-full object-contain"
             loading="lazy"

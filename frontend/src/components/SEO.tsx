@@ -23,10 +23,29 @@ const DEFAULT_KEYWORDS = [
   'Coursing Stats',
 ].join(', ')
 
+function normalizeCanonicalUrl(url?: string): string | undefined {
+  if (!url) return undefined
+  try {
+    const parsed = new URL(url)
+    // Гарантируем завершающий слэш для директорий/страниц (кроме файлов с расширением)
+    const lastPart = parsed.pathname.split('/').pop() || ''
+    if (!parsed.pathname.endsWith('/') && !lastPart.includes('.')) {
+      parsed.pathname = `${parsed.pathname}/`
+    }
+    // Очищаем поисковые параметры (e.g. ?tab=...) для предотвращения дублей в canonical
+    parsed.search = ''
+    parsed.hash = ''
+    return parsed.toString()
+  } catch {
+    return url.endsWith('/') ? url : `${url}/`
+  }
+}
+
 export function SEO({ title, description, keywords, ogImage, noIndex, canonicalUrl }: SEOProps) {
   const fullTitle = title.includes('Coursing Stats') ? title : `${title} | Coursing Stats`
   const defaultImage = 'https://coursing-stats.ru/og-image.png'
-  const siteUrl = 'https://coursing-stats.ru'
+  const siteUrl = 'https://coursing-stats.ru/'
+  const normalizedCanonical = normalizeCanonicalUrl(canonicalUrl)
 
   useEffect(() => {
     document.title = fullTitle
@@ -45,13 +64,13 @@ export function SEO({ title, description, keywords, ogImage, noIndex, canonicalU
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords || DEFAULT_KEYWORDS} />
 
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {normalizedCanonical && <link rel="canonical" href={normalizedCanonical} />}
 
       {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl || siteUrl} />
+      <meta property="og:url" content={normalizedCanonical || siteUrl} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage || defaultImage} />
@@ -63,7 +82,7 @@ export function SEO({ title, description, keywords, ogImage, noIndex, canonicalU
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={canonicalUrl || siteUrl} />
+      <meta name="twitter:url" content={normalizedCanonical || siteUrl} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage || defaultImage} />

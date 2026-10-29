@@ -687,13 +687,14 @@ export default function DogProfile() {
   const dogBreed = displayBreed(headerDog.breed || headerBreed || '').primary || headerDog.breed || headerBreed || ''
   const dogTitles = titles.map((t) => t.title).join(', ')
 
-  const profilePath = dog
+  const rawPath = dog
     ? `/dog/${dog.id}`
     : showDog
       ? showDogProfilePath(showDog)
       : competitionId
         ? `/dog/${competitionId}`
         : '/'
+  const profilePath = rawPath.endsWith('/') ? rawPath : `${rawPath}/`
   const canonicalUrl = `https://coursing-stats.ru${profilePath}`
 
   const seoFacts: string[] = []

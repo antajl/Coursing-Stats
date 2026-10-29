@@ -90,7 +90,7 @@ export default function Guide() {
         title={`Справочник — ${section.label}`}
         description={section.description}
         keywords={section.keywords}
-        canonicalUrl={`https://coursing-stats.ru/guide?tab=${activeTab}`}
+        canonicalUrl="https://coursing-stats.ru/guide/"
       />
       <JsonLd data={faqPageSchema(GUIDE_FAQS)} />
       <MobileSubNavTabs

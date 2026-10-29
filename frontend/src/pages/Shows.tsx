@@ -73,7 +73,7 @@ function Shows() {
       <SEO
         title="Рейтинг выставочных собак РКФ"
         description="Рейтинг собак по выставкам РКФ: награды дня (CAC, BOB, ЧРКФ и др.), профили и статистика судей. Ссылки на оригиналы rkf.online."
-        canonicalUrl="https://coursing-stats.ru/shows"
+        canonicalUrl="https://coursing-stats.ru/shows/"
         keywords="рейтинг выставок, выставки собак, РКФ, CAC, BOB, ЧРКФ, судьи выставок"
       />
       <MobileSubNavTabs

@@ -117,7 +117,7 @@ export default function EventResults() {
         title={`${eventName}${dateSuffix} — результаты соревнований`}
         description={description}
         keywords={`${eventName}, ${eventType}, ${event.location || ''}, результаты соревнований, результаты забегов, статистика, РКФ, ${eventDate}`}
-        canonicalUrl={`https://coursing-stats.ru/event/${id}`}
+        canonicalUrl={`https://coursing-stats.ru/event/${id}/`}
       />
       <JsonLd
         data={{

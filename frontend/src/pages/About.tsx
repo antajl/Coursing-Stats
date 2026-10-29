@@ -122,7 +122,7 @@ export default function AboutPage() {
         title="О проекте Coursing Stats — независимый архив соревнований и выставок собак в России"
         description="Некоммерческий электронный архив соревнований по курсингу, бегов борзых, выставок РКФ и замеров Донино в России. Профили собак, протоколы забегов и статистика."
         keywords="Coursing Stats, архив соревнований, курсинг, бега борзых, выставки собак, РКФ, протоколы, Донино, рейтинг борзых, Россия"
-        canonicalUrl="https://coursing-stats.ru/about"
+        canonicalUrl="https://coursing-stats.ru/about/"
         jsonLd={{
           '@context': 'https://schema.org',
           '@type': 'AboutPage',

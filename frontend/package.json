@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "optimize-images": "node scripts/optimize-images.js",
+    "optimize-images": "node scripts/optimize-images.js && node ../backend/scripts/ops/optimize-critical-images.cjs",
     "analyze": "vite build --mode analyze"
   },
   "dependencies": {

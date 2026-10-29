@@ -11,14 +11,35 @@
   <meta name="keywords" content="курсинг, бега борзых, статистика курсинга, рейтинг собак, рекорды Донино, выставки, РКФ" data-rh="true" />
     <meta name="author" content="Coursing Stats" />
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SKPEE7PZ0"></script>
+    <!-- Google Analytics (Delayed execution for Core Web Vitals / LCP / FCP) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-3SKPEE7PZ0');
+
+      (function() {
+        var gtmLoaded = false;
+        function loadGTM() {
+          if (gtmLoaded) return;
+          gtmLoaded = true;
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-3SKPEE7PZ0';
+          document.head.appendChild(s);
+        }
+        var events = ['pointerdown', 'touchstart', 'scroll', 'keydown'];
+        function onInteract() {
+          events.forEach(function(e) { window.removeEventListener(e, onInteract); });
+          loadGTM();
+        }
+        events.forEach(function(e) { window.addEventListener(e, onInteract, { passive: true, once: true }); });
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(function() { setTimeout(loadGTM, 2500); });
+        } else {
+          setTimeout(loadGTM, 3500);
+        }
+      })();
     </script>
     
     <!-- Open Graph / Facebook -->
@@ -48,7 +69,7 @@
     </noscript>
 
     <!-- Preload Hero Image (LCP Optimization: Mobile & Desktop) -->
-    <link rel="preload" as="image" href="/assets/hero/background-mobile.webp" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/hero/background-mobile-480.webp" imagesrcset="/assets/hero/background-mobile-480.webp 480w, /assets/hero/background-mobile.webp 820w" imagesizes="(max-width: 480px) 480px, 768px" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
     <link rel="preload" as="image" href="/assets/hero/background.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
 
     <script>
