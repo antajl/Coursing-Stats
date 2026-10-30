@@ -240,6 +240,51 @@ export default function EventHeader({ event, results }: EventHeaderProps) {
             </div>
           </div>
         )}
+
+        {(() => {
+          const DONINO_SERIES_STAGES = [
+            { id: '2026004', label: 'I этап (9 авг)' },
+            { id: '2022001', label: 'II этап (20 сен)' },
+            { id: '2026005', label: 'III этап (31 окт)' },
+          ]
+          const isDoninoSeries = DONINO_SERIES_STAGES.some((s) => s.id === String(event.id))
+          if (!isDoninoSeries) return null
+
+          return (
+            <div className="mt-3.5 pt-3 border-t border-amber-200/70 flex flex-wrap items-center justify-between gap-2.5">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-semibold text-amber-900">
+                  Серия Донино 2026:
+                </span>
+                <div className="flex flex-wrap items-center gap-1.5">
+                  {DONINO_SERIES_STAGES.map((stage) => {
+                    const isCurrent = String(event.id) === stage.id
+                    return (
+                      <Link
+                        key={stage.id}
+                        to={`/event/${stage.id}/`}
+                        className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium transition-colors ${
+                          isCurrent
+                            ? 'bg-amber-600 text-white shadow-2xs font-semibold'
+                            : 'border border-amber-300/80 bg-amber-50/80 text-amber-900 hover:bg-amber-100 hover:border-amber-400'
+                        }`}
+                      >
+                        {stage.label}
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+              <Link
+                to="/speed-records/"
+                className="inline-flex items-center gap-1 text-xs font-medium text-amber-800 hover:text-amber-900 hover:underline"
+              >
+                <span>Рекорды Донино</span>
+                <span aria-hidden>→</span>
+              </Link>
+            </div>
+          )
+        })()}
       </div>
     </div>
   )

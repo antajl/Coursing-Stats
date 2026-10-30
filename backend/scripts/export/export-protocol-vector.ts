@@ -330,6 +330,17 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
   const totalCols = overallMaxHeats === 1 ? 12 : (overallMaxHeats === 2 ? 15 : 18);
   const metaRowsHtml = buildMetaRowsHtml(comp, totalCols);
 
+  const isLeagueComp =
+    comp.event.competition_kind === 'Клубный чемпионат' ||
+    comp.event.title?.includes('Клубный чемпионат') ||
+    comp.results.some(r =>
+      (r.qualification && ['Прогресс', 'Чемпионы', 'Чемпионов', 'Абсолют', 'Юниор'].includes(r.qualification.trim())) ||
+      (r.breed_class && /(?:Прогресс|Чемпион|Абсолют)/i.test(r.breed_class))
+    );
+
+  const qualColTitle = isLeagueComp ? 'Лига' : 'СС';
+  const titleColTitle = isLeagueComp ? 'Переход<br>в лигу' : 'Титул';
+
   let colHeaderHtml = '';
   if (overallMaxHeats === 1) {
     colHeaderHtml = `
@@ -344,8 +355,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       <td>Забег</td>
       <td>Попона</td>
       <td>Время<br>Скорость</td>
-      <td>СС</td>
-      <td>Титул</td>
+      <td>${qualColTitle}</td>
+      <td>${titleColTitle}</td>
     </tr>`;
   } else if (overallMaxHeats === 2) {
     colHeaderHtml = `
@@ -363,8 +374,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       <td>Забег<br>2</td>
       <td>Попона</td>
       <td>Время 2<br>Скорость</td>
-      <td>СС</td>
-      <td>Титул</td>
+      <td>${qualColTitle}</td>
+      <td>${titleColTitle}</td>
     </tr>`;
   } else {
     colHeaderHtml = `
@@ -385,8 +396,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       <td>Забег<br>3</td>
       <td>Попона</td>
       <td>Время 3<br>Скорость</td>
-      <td>СС</td>
-      <td>Титул</td>
+      <td>${qualColTitle}</td>
+      <td>${titleColTitle}</td>
     </tr>`;
   }
 
@@ -418,7 +429,7 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
       const breed = escapeHtml(info.breed);
       let sex = escapeHtml(normalizeSex(dog?.sex || '') || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
-      const className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
+      let className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
 
       const heats = res.raw_scores_json?.heats || [];
       let heat1: Heat | null = null;
@@ -438,6 +449,41 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       const place = res.placement ? res.placement : '';
       const vc = res.vc ? escapeHtml(res.vc) : '';
       const qual = res.qualification ? escapeHtml(res.qualification) : '';
+
+      let leagueCell = '';
+      let targetLeagueCell = '';
+
+      if (isLeagueComp) {
+        const lMatch = className.match(/\((Прогресс|Чемпионы|Чемпионов|Абсолют)\)/i);
+        if (lMatch) {
+          leagueCell = lMatch[1].replace(/чемпионов/i, 'Чемпионы');
+          className = className.replace(/\s*\([^)]+\)/g, '').trim();
+        } else if (/юниор/i.test(className)) {
+          leagueCell = 'Юниор';
+        } else {
+          leagueCell = 'Прогресс';
+        }
+
+        const qualRaw = (res.qualification || '').trim();
+        if (qualRaw) {
+          if (/чемпион/i.test(qualRaw)) {
+            targetLeagueCell = /прогресс/i.test(leagueCell) ? '<b>→ Чемпионы</b>' : 'Чемпионы';
+          } else if (/абсолют/i.test(qualRaw)) {
+            targetLeagueCell = /чемпион/i.test(leagueCell) ? '<b>→ Абсолют</b>' : 'Абсолют';
+          } else if (/прогресс/i.test(qualRaw)) {
+            targetLeagueCell = 'Прогресс';
+          } else {
+            targetLeagueCell = escapeHtml(qualRaw);
+          }
+        } else if (res.status !== 'finished' && res.status !== 'dns') {
+          targetLeagueCell = '—';
+        } else {
+          targetLeagueCell = leagueCell;
+        }
+      } else {
+        leagueCell = qual;
+        targetLeagueCell = vc;
+      }
 
       let h1Reason: string | null = null;
       let h2Reason: string | null = null;
@@ -504,8 +550,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
           ${renderRacingBibCell(heat3)}
           ${renderRacingTimeSpeed(heat3, h3Reason, dogDistance)}
           `}
-          <td>${qual}</td>
-          <td>${vc}</td>
+          <td>${leagueCell}</td>
+          <td>${targetLeagueCell}</td>
         </tr>
       `;
     }
@@ -525,7 +571,7 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
       const breed = escapeHtml(info.breed);
       let sex = escapeHtml(normalizeSex(dog?.sex || '') || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
-      const className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
+      let className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
 
       tableRowsHtml += `
         <tr class="dns-row">
@@ -695,8 +741,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       <col style="width: 4.5%;">
       <col style="width: 4.0%;">
       <col style="width: 10.0%;">
-      <col style="width: 3.0%;">
-      <col style="width: 5.0%;">
+      <col style="width: ${isLeagueComp ? '3.8%' : '3.0%'};">
+      <col style="width: ${isLeagueComp ? '4.2%' : '5.0%'};">
     </colgroup>` : overallMaxHeats === 2 ? `
     <colgroup>
       <col style="width: 3.0%;">
@@ -712,8 +758,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       <col style="width: 3.8%;">
       <col style="width: 3.2%;">
       <col style="width: 8.0%;">
-      <col style="width: 2.5%;">
-      <col style="width: 7.0%;">
+      <col style="width: ${isLeagueComp ? '3.8%' : '2.5%'};">
+      <col style="width: ${isLeagueComp ? '5.7%' : '7.0%'};">
     </colgroup>` : `
     <colgroup>
       <col style="width: 3.0%;">
@@ -732,8 +778,8 @@ export function buildRacingProtocolHtml(comp: CompetitionData): string {
       <col style="width: 3.5%;">
       <col style="width: 3.0%;">
       <col style="width: 7.0%;">
-      <col style="width: 2.3%;">
-      <col style="width: 5.2%;">
+      <col style="width: ${isLeagueComp ? '3.5%' : '2.3%'};">
+      <col style="width: ${isLeagueComp ? '4.0%' : '5.2%'};">
     </colgroup>`}
     <tbody>
       ${tableRowsHtml}
@@ -927,7 +973,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
       const breed = escapeHtml(info.breed);
       let sex = escapeHtml(normalizeSex(dog?.sex || '') || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
-      const className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
+      let className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
 
       const heats = res.raw_scores_json?.heats || [];
       const heat1 = heats[0] || null;
@@ -1088,7 +1134,7 @@ export function buildCoursingProtocolHtml(comp: CompetitionData): string {
       const info = parseBreedClass(res.breed_class, dog?.breed, dog?.sex);
       const breed = escapeHtml(info.breed);
       let sex = escapeHtml(normalizeSex(dog?.sex || '') || (info.category === 'Кобели' ? 'Кобель' : info.category === 'Суки' ? 'Сука' : ''));
-      const className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
+      let className = escapeHtml(info.className).replace('Стандартный-спринтеры', 'Стандартный-<br>спринтеры');
 
       tableRowsHtml += `
         <tr class="dns-row">
@@ -1860,6 +1906,52 @@ const TOOLBAR_CSS = `
       background: #333333;
       border-color: #333333;
     }
+    .cs-toolbar-series {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-left: 6px;
+      padding-left: 8px;
+      border-left: 1px solid #b2b2b2;
+    }
+    .cs-series-label {
+      font-size: 11px;
+      color: #8c6d37;
+      font-weight: bold;
+      margin-right: 2px;
+      white-space: nowrap;
+    }
+    .cs-btn-stage {
+      padding: 2px 8px;
+      font-size: 11px;
+      border-radius: 12px;
+      border-color: #d8c29d;
+      background: #faf6ee;
+      color: #634d26;
+      font-weight: 500;
+    }
+    .cs-btn-stage:hover {
+      background: #ebdcc3;
+      border-color: #8c6d37;
+      color: #3b280c;
+    }
+    .cs-stage-active {
+      background: #8c6d37 !important;
+      border-color: #8c6d37 !important;
+      color: #ffffff !important;
+      font-weight: bold !important;
+    }
+    .cs-btn-donino {
+      background: #faf6ee;
+      border-color: #d8c29d;
+      color: #634d26;
+      font-weight: 600;
+    }
+    .cs-btn-donino:hover {
+      background: #ebdcc3;
+      border-color: #8c6d37;
+      color: #3b280c;
+    }
     @media print {
       .cs-toolbar {
         display: none !important;
@@ -1874,6 +1966,15 @@ export function buildToolbarHtml(comp: CompetitionData): string {
   const catalogUrl = comp.event.catalog_url?.trim() || null;
   const rulesUrl = comp.event.rules_url?.trim() || null;
 
+  const doninoSeries = [
+    { id: '2026004', label: 'I этап (9 авг)', url: '/protocols/2026004.html' },
+    { id: '2022001', label: 'II этап (20 сен)', url: '/protocols/2022001.html' },
+    { id: '2026005', label: 'III этап (31 окт)', url: '/event/2026005' },
+  ];
+  const isDoninoSeries =
+    doninoSeries.some(s => s.id === String(eventId)) ||
+    (comp.event.host_club?.includes('Донино') && comp.event.competition_kind === 'Клубный чемпионат');
+
   return `
 <header class="cs-toolbar">
   <div class="cs-toolbar-inner">
@@ -1885,8 +1986,20 @@ export function buildToolbarHtml(comp: CompetitionData): string {
       <span class="cs-toolbar-divider"></span>
       <span class="cs-toolbar-brand">CoursingStats</span>
       <span class="cs-toolbar-title">${escapeHtml(title)}</span>
+      ${isDoninoSeries ? `
+      <div class="cs-toolbar-series">
+        <span class="cs-series-label">Серия Донино 2026:</span>
+        ${doninoSeries.map(s => `
+        <a href="${s.url}" class="cs-btn cs-btn-stage ${s.id === String(eventId) ? 'cs-stage-active' : ''}" title="${escapeHtml(s.label)}">${escapeHtml(s.label)}</a>
+        `).join('')}
+      </div>` : ''}
     </div>
     <div class="cs-toolbar-actions">
+      ${isDoninoSeries ? `
+      <a href="/speed-records" class="cs-btn cs-btn-donino" title="База рекордов и замеров скорости в Донино">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        <span>Рекорды Донино</span>
+      </a>` : ''}
       ${pdfUrl ? `
       <a href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener noreferrer" class="cs-btn" title="PDF-файл протокола">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
