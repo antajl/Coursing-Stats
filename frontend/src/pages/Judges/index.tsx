@@ -19,7 +19,7 @@ import { useListReveal } from '../../hooks/useListReveal'
 const DISCIPLINE_OPTIONS = [
   { value: 'coursing', label: 'Курсинг' },
   { value: 'bzmp', label: 'БЗМП' },
-  { value: 'racing', label: 'Бега' },
+  { value: 'racing', label: 'Рейсинг' },
 ] as const
 
 export default function Judges() {

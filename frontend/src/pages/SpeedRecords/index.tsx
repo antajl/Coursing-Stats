@@ -1,5 +1,5 @@
 import { useMemo, useEffect } from 'react'
-import { useSearchParams } from 'react-router-dom'
+import { useSearchParams, useNavigate } from 'react-router-dom'
 import { SEO } from '../../components/SEO'
 import DoninoAttribution from '../../components/DoninoAttribution'
 import { useYandexGoal } from '../../components/YandexMetrica'
@@ -12,13 +12,18 @@ import { MobileSubNavTabs } from '../../components/ui/MobileSubNavTabs'
 
 function SpeedRecords() {
   const [searchParams, setSearchParams] = useSearchParams()
+  const navigate = useNavigate()
   const rawTab = searchParams.get('tab')
   const rawView = searchParams.get('view')
   const view = rawTab === 'stats' || rawView === 'stats' ? 'stats' : 'table'
   const page = useSpeedRecordsPage()
   const { reachGoal } = useYandexGoal()
 
-  const handleTabChange = (newTab: 'records' | 'stats') => {
+  const handleTabChange = (newTab: 'records' | 'stats' | 'championship') => {
+    if (newTab === 'championship') {
+      navigate('/donino/championship')
+      return
+    }
     const next = new URLSearchParams(searchParams)
     if (newTab === 'stats') {
       next.set('tab', 'stats')
@@ -33,6 +38,7 @@ function SpeedRecords() {
   const tabs = [
     { id: 'records', label: 'Записи' },
     { id: 'stats', label: 'Статистика' },
+    { id: 'championship', label: 'Чемпионат' },
   ]
 
   // Отслеживание просмотра рекордов скорости
@@ -72,7 +78,7 @@ function SpeedRecords() {
       <MobileSubNavTabs
         tabs={tabs}
         activeTab={view === 'stats' ? 'stats' : 'records'}
-        onChange={(id) => handleTabChange(id as 'records' | 'stats')}
+        onChange={(id) => handleTabChange(id as 'records' | 'stats' | 'championship')}
         ariaLabel="Разделы Донино"
       />
 

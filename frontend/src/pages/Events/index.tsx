@@ -10,6 +10,7 @@ import {
   getEventYear,
   parseDate,
   getEventDiscipline,
+  eventMatchesDiscipline,
 } from './eventListUtils'
 import EventsToolbar, { CURRENT_SEASON } from './EventsToolbar'
 import EventsMonthList from './EventsMonthList'
@@ -150,7 +151,7 @@ export default function Events() {
           const hasProtocol = Boolean(event.has_results) || Boolean(event.results_url?.trim())
           if (!hasProtocol) return false
         }
-        if (filterDiscipline && getEventDiscipline(event) !== filterDiscipline) return false
+        if (filterDiscipline && !eventMatchesDiscipline(event, filterDiscipline)) return false
 
         if (searchQuery) {
           const query = searchQuery.toLowerCase()

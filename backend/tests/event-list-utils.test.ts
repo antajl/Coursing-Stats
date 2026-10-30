@@ -4,6 +4,7 @@ import {
   getEventHeadline,
   getEventSubtitle,
   getEventDiscipline,
+  eventMatchesDiscipline,
   normalizeDisciplineLabel,
   parseRankLabelStructure,
   parseJudgeNames,
@@ -67,6 +68,48 @@ describe('calendar display utils', () => {
   it('handles judges as array without throwing', () => {
     expect(parseJudgeNames(['Орлова М.О.', 'Крылова Е.В.'])).toEqual(['Орлова М.О.', 'Крылова Е.В.'])
     expect(formatCompetitionJudgesWithRoles(['Орлова М.О.', 'Крылова Е.В.'])).toBe('Главный судья: Орлова М.О., судья: Крылова Е.В.')
+  })
+
+
+  it('matches discipline correctly including other events that are racing', () => {
+    const clubDoninoRacing = {
+      id: 2026004,
+      date_start: '2026-08-09',
+      rank_label: 'I Клубный чемпионат Донино\n(Бега борзых)',
+      event_type: 'other',
+      competition_kind: 'Клубный чемпионат',
+      competition_type: 'Бега борзых',
+      title: 'I Клубный чемпионат Донино по бегам борзых',
+    }
+
+    const officialRacing = {
+      id: 1316,
+      date_start: '2026-05-16',
+      event_type: 'racing',
+      competition_kind: 'ЧРКФ',
+      title: 'Чемпионат РКФ',
+    }
+
+    const officialCoursing = {
+      id: 2026002,
+      date_start: '2026-08-22',
+      event_type: 'coursing',
+      competition_kind: 'Кубок России',
+      title: 'Кубок России по курсингу борзых',
+    }
+
+    // Racing filter includes both official racing and club racing
+    expect(eventMatchesDiscipline(clubDoninoRacing, 'racing')).toBe(true)
+    expect(eventMatchesDiscipline(officialRacing, 'racing')).toBe(true)
+    expect(eventMatchesDiscipline(officialCoursing, 'racing')).toBe(false)
+
+    // Other filter includes club championships
+    expect(eventMatchesDiscipline(clubDoninoRacing, 'other')).toBe(true)
+    expect(eventMatchesDiscipline(officialRacing, 'other')).toBe(false)
+
+    // Coursing filter
+    expect(eventMatchesDiscipline(clubDoninoRacing, 'coursing')).toBe(false)
+    expect(eventMatchesDiscipline(officialCoursing, 'coursing')).toBe(true)
   })
 
   it('maps club championships and friendly runs to other discipline', () => {

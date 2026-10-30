@@ -19,7 +19,12 @@ export default function Nav() {
     location.pathname === '/procoursing' ||
     location.pathname === '/protocol-builder' ||
     (isLocalDev && location.pathname.startsWith('/event/'))
-  const isSpeedRecordsActive = location.pathname === '/speed-records';
+  const isSpeedRecordsActive =
+    location.pathname === '/speed-records' ||
+    location.pathname.startsWith('/speed-records/') ||
+    location.pathname === '/donino/championship' ||
+    location.pathname.startsWith('/donino/') ||
+    location.pathname.startsWith('/donino-');
   const isShowsActive =
     location.pathname === '/shows' || location.pathname.startsWith('/shows/')
   const isGuideActive = location.pathname === '/guide';

@@ -31,6 +31,87 @@ export function getEventDiscipline(event: { event_type?: string | null; competit
   return event.event_type || 'other';
 }
 
+export function isEventRacing(event: {
+  event_type?: string | null
+  competition_kind?: string | null
+  competition_type?: string | null
+  rank_label?: string | null
+  title?: string | null
+  full_title?: string | null
+}): boolean {
+  if (event.event_type === 'racing') return true
+  const text = [
+    event.competition_type || '',
+    event.rank_label || '',
+    event.title || '',
+    event.full_title || '',
+  ]
+    .join(' ')
+    .toLowerCase()
+  return text.includes('рейсинг') || text.includes('бега') || text.includes('бегам')
+}
+
+export function isEventCoursing(event: {
+  event_type?: string | null
+  competition_kind?: string | null
+  competition_type?: string | null
+  rank_label?: string | null
+  title?: string | null
+  full_title?: string | null
+}): boolean {
+  if (event.event_type === 'coursing') return true
+  const text = [
+    event.competition_type || '',
+    event.rank_label || '',
+    event.title || '',
+    event.full_title || '',
+  ]
+    .join(' ')
+    .toLowerCase()
+  return text.includes('курсинг')
+}
+
+export function isEventBzmp(event: {
+  event_type?: string | null
+  competition_kind?: string | null
+  competition_type?: string | null
+  rank_label?: string | null
+  title?: string | null
+  full_title?: string | null
+}): boolean {
+  if (event.event_type === 'bzmp') return true
+  const text = [
+    event.competition_type || '',
+    event.rank_label || '',
+    event.title || '',
+    event.full_title || '',
+  ]
+    .join(' ')
+    .toLowerCase()
+  return text.includes('бзмп')
+}
+
+export function eventMatchesDiscipline(
+  event: CalendarEvent,
+  filterDiscipline: string,
+): boolean {
+  if (!filterDiscipline) return true
+  const baseDiscipline = getEventDiscipline(event)
+  if (filterDiscipline === 'other') {
+    return baseDiscipline === 'other'
+  }
+  if (baseDiscipline === filterDiscipline) {
+    return true
+  }
+  if (baseDiscipline === 'other') {
+    if (filterDiscipline === 'racing') return isEventRacing(event)
+    if (filterDiscipline === 'coursing') return isEventCoursing(event)
+    if (filterDiscipline === 'bzmp') return isEventBzmp(event)
+  }
+  return false
+}
+
+
 export const DISCIPLINE_BORDER: Record<string, string> = {
   coursing: 'border-l-forest-300',
   bzmp: 'border-l-blue-500',
@@ -53,7 +134,7 @@ export const DISCIPLINE_BADGE: Record<string, { bg: string; text: string; label:
   racing: {
     bg: 'bg-rose-100',
     text: 'text-rose-700',
-    label: 'Бега',
+    label: 'Рейсинг',
   },
   other: {
     bg: 'bg-amber-100',

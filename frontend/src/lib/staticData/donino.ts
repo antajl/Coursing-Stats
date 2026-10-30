@@ -266,3 +266,128 @@ export async function getDoninoDog(
     },
   }
 }
+export interface ChampionshipHeat {
+  heat_no: number
+  time: number | null
+  rank?: number | null
+  disqualified?: boolean
+}
+
+export interface ChampionshipResult {
+  id: number
+  catalog_no?: number | null
+  dog_id?: number | null
+  dog_name: string
+  name_ru: string
+  name_lat: string
+  breed: string
+  sex: string
+  breed_class: string
+  league: 'Абсолют' | 'Чемпионов' | 'Прогресс' | 'Юниоры'
+  placement: number
+  total_score: number | null
+  status: string
+  status_reason?: string | null
+  heats: ChampionshipHeat[]
+}
+
+export interface ChampionshipWinner {
+  dog_name: string
+  breed: string
+  breed_class: string
+  league: string
+  placement: number
+  time: number | null
+}
+
+export interface ChampionshipStage {
+  id: number
+  stage_num: number
+  date_start: string
+  date_end?: string | null
+  title: string
+  discipline: string
+  location: string
+  judge: string
+  participants_count: number
+  has_results: boolean
+  status: 'completed' | 'upcoming'
+  catalog_url?: string | null
+  rules_url?: string | null
+  results_pdf_url?: string | null
+  protocol_url?: string | null
+  classes_count?: number
+  winners?: ChampionshipWinner[]
+  results?: ChampionshipResult[]
+}
+
+export interface ChampionshipStandingHistory {
+  stage_num: number
+  date: string
+  placement: number
+  total_score: number | null
+  league: string
+  breed_class: string
+  status: string
+}
+
+export interface ChampionshipStanding {
+  dog_key: string
+  dog_id?: number | null
+  name: string
+  name_ru: string
+  name_lat: string
+  breed: string
+  sex: string
+  current_league: 'Абсолют' | 'Чемпионов' | 'Прогресс' | 'Юниоры'
+  wins_count: number
+  consecutive_losses: number
+  best_time: number | null
+  stages_count: number
+  status_badge: string
+  promotion_label?: string | null
+  history: ChampionshipStandingHistory[]
+}
+
+export interface ChampionshipPromotion {
+  stage_from: number
+  stage_to: number
+  dog_name: string
+  breed: string
+  from_league: string
+  to_league: string
+  reason: string
+}
+
+export interface ChampionshipData {
+  schema_version: string
+  generated_at: string
+  series_title: string
+  season: number
+  organizer: string
+  series_director: string
+  track_length_meters: number
+  reglament_pdf_url: string | null
+  stages: ChampionshipStage[]
+  standings: ChampionshipStanding[]
+  promotions: {
+    after_stage_1: ChampionshipPromotion[]
+    after_stage_2: ChampionshipPromotion[]
+  }
+  stats: {
+    total_dogs_participated: number
+    dogs_in_absolut: number
+    dogs_in_champions: number
+    dogs_in_progress: number
+    dogs_in_juniors: number
+    promotions_count: number
+  }
+}
+
+export async function getDoninoChampionship(): Promise<ApiResult<ChampionshipData>> {
+  const data = await fetchJson<ChampionshipData>('donino/championship.json')
+  if (!data || !data.stages) {
+    return { success: false, error: 'Championship data unavailable' }
+  }
+  return { success: true, data }
+}

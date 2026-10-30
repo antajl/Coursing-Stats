@@ -10,7 +10,7 @@ export const DISCIPLINES = [
   { value: '', label: 'Все' },
   { value: 'coursing', label: 'Курсинг' },
   { value: 'bzmp', label: 'БЗМП' },
-  { value: 'racing', label: 'Бега' },
+  { value: 'racing', label: 'Рейсинг' },
 ] as const
 
 export const CRITERIA_META = [

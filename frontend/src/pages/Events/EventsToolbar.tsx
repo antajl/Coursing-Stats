@@ -14,14 +14,14 @@ export const CURRENT_SEASON = resolveActiveSeason()
 export const DISCIPLINE_OPTIONS = [
   { value: 'coursing', label: 'Курсинг' },
   { value: 'bzmp', label: 'БЗМП' },
-  { value: 'racing', label: 'Бега' },
+  { value: 'racing', label: 'Рейсинг' },
   { value: 'other', label: 'Другие' },
 ] as const
 
 const LEGEND = [
   { key: 'coursing', label: 'Курсинг', tip: 'Курсинг борзых' },
   { key: 'bzmp', label: 'БЗМП', tip: 'Бега за механическим зайцем (БЗМП)' },
-  { key: 'racing', label: 'Бега', tip: 'Бега борзых' },
+  { key: 'racing', label: 'Рейсинг', tip: 'Бега борзых (рейсинг)' },
   { key: 'other', label: 'Другие', tip: 'Прочие дисциплины' },
 ] as const
 

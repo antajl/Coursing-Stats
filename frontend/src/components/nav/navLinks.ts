@@ -121,6 +121,12 @@ export const DONINO_MENU_ITEMS: NavMenuItem[] = [
     icon: Icons.trend,
     isActive: doninoTabActive('stats'),
   },
+  {
+    to: '/donino/championship',
+    label: 'Клубный чемпионат',
+    icon: Icons.championship,
+    isActive: (pathname: string) => pathname === '/donino/championship' || pathname === '/donino-championship',
+  },
 ]
 
 export const GUIDE_MENU_ITEMS: NavMenuItem[] = [

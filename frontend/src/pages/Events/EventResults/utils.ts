@@ -14,16 +14,60 @@ export function formatDateLong(dateStr: string | null | undefined): string {
   return date.toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })
 }
 
+export function normalizeBreed(b: string): string {
+  if (!b) return ''
+  const s = b.trim().toLowerCase()
+  if (s.includes('уиппет')) return 'Уиппет'
+  if (s.includes('грейхаунд')) return 'Грейхаунд'
+  if (s.includes('левретка')) return 'Левретка'
+  if (s.includes('басенджи')) return 'Басенджи'
+  if (s.includes('русская псовая') || s.includes('рпб')) return 'Русская псовая борзая'
+  if (s.includes('салюки')) return 'Салюки'
+  if (s.includes('азавак')) return 'Азавак'
+  if (s.includes('афган') || s.includes('афганская')) return 'Афганская борзая'
+  if (s.includes('ирландский волкодав')) return 'Ирландский волкодав'
+  if (s.includes('дирхаунд')) return 'Дирхаунд'
+  if (s.includes('фараонова')) return 'Фараонова собака'
+  if (s.includes('родезийский')) return 'Родезийский риджбек'
+  if (s.includes('хортая')) return 'Хортая борзая'
+  if (s.includes('чирнеко')) return 'Чирнеко дель Этна'
+  if (s.includes('гальго') || s.includes('испанская')) return 'Испанская борзая (гальго)'
+  return b.trim()
+}
+
+export function parseBreedClass(breedClass?: string | null, defaultBreed: string = '', defaultSex: string = '') {
+  let parts = (breedClass || '').split(' - ').map(s => s.trim())
+  if (parts.length === 1 && breedClass && breedClass.includes('_')) {
+    parts = breedClass.split('_').map(s => s.trim())
+  }
+  if (parts[0] === 'Неявившиеся участники' || parts[0] === 'Неприбывшие участники') {
+    parts = []
+  }
+  const breed = parts[0] || normalizeBreed(defaultBreed) || ''
+  const className = parts[1] || 'Стандартный'
+  let category = parts[2] || defaultSex || 'Микс'
+
+  if (category === 'Кобель' || category === 'Кобели') category = 'Кобели'
+  else if (category === 'Сука' || category === 'Суки') category = 'Суки'
+  else category = 'Микс'
+
+  const groupHeader = `${breed} - ${className} - ${category}`
+  return { breed, className, category, groupHeader }
+}
+
 export function groupResultsByBreedClass(results: Result[]): {
   grouped: Record<string, Result[]>
   sortedGroups: string[]
 } {
   const grouped = results.reduce<Record<string, Result[]>>((acc, result) => {
     // Неявки всегда в отдельной группе в конце списка (как в modern-протоколах)
-    const groupKey =
-      (result.status === 'dns' || result.status === 'absent')
-        ? 'Неприбывшие участники'
-        : result.breed_class || 'Другие'
+    if (result.status === 'dns' || result.status === 'absent') {
+      if (!acc['Неприбывшие участники']) acc['Неприбывшие участники'] = []
+      acc['Неприбывшие участники'].push(result)
+      return acc
+    }
+    const info = parseBreedClass(result.breed_class, result.dog?.breed, result.dog?.sex)
+    const groupKey = info.groupHeader || result.breed_class || 'Другие'
     if (!acc[groupKey]) acc[groupKey] = []
     acc[groupKey].push(result)
     return acc
@@ -33,7 +77,13 @@ export function groupResultsByBreedClass(results: Result[]): {
     // "Неявившиеся участники" всегда в самом низу
     if (a === 'Неявившиеся участники' || a === 'Неприбывшие участники') return 1
     if (b === 'Неявившиеся участники' || b === 'Неприбывшие участники') return -1
-    return a.localeCompare(b)
+
+    // Порядок каталога (хронологический порядок забегов состязания)
+    const minA = Math.min(...grouped[a].map(d => d.catalog_no || 9999))
+    const minB = Math.min(...grouped[b].map(d => d.catalog_no || 9999))
+    if (minA !== minB) return minA - minB
+
+    return a.localeCompare(b, 'ru')
   })
 
   for (const groupKey of sortedGroups) {
@@ -41,7 +91,10 @@ export function groupResultsByBreedClass(results: Result[]): {
       const aDns = (a.status === 'dns' || a.status === 'absent') ? 1 : 0
       const bDns = (b.status === 'dns' || b.status === 'absent') ? 1 : 0
       if (aDns !== bDns) return aDns - bDns
-      return (a.placement || 999) - (b.placement || 999)
+      const pa = a.placement || 999
+      const pb = b.placement || 999
+      if (pa !== pb) return pa - pb
+      return (a.catalog_no || 999) - (b.catalog_no || 999)
     })
   }
 
@@ -49,68 +102,13 @@ export function groupResultsByBreedClass(results: Result[]): {
 }
 
 /**
- * Racing-specific grouping: League → Breed → Class
- * Uses separate `league` field and `breed_class` (format: "Порода - Класс")
+ * Racing grouping: delegates to unified canonical catalog order matching protocol_cs
  */
 export function groupRacingResults(results: Result[]): {
   grouped: Record<string, Result[]>
   sortedGroups: string[]
 } {
-  const grouped = results.reduce<Record<string, Result[]>>((acc, result) => {
-    // Неявки всегда в отдельной группе в конце списка
-    if ((result.status === 'dns' || result.status === 'absent')) {
-      if (!acc['Неприбывшие участники']) acc['Неприбывшие участники'] = []
-      acc['Неприбывшие участники'].push(result)
-      return acc
-    }
-
-    // Group by league (fallback to breed_class if no league field)
-    const groupKey = (result as any).league || result.breed_class || 'Другие'
-    if (!acc[groupKey]) acc[groupKey] = []
-    acc[groupKey].push(result)
-    return acc
-  }, {})
-
-  // Custom sort order for leagues
-  const leagueOrder = ['Абсолют', 'Чемпионы', 'Прогресс', 'Юниор']
-  const sortedGroups = Object.keys(grouped).sort((a, b) => {
-    // "Неприбывшие участники" always at the bottom
-    if (a === 'Неприбывшие участники') return 1
-    if (b === 'Неприбывшие участники') return -1
-    
-    const aIndex = leagueOrder.indexOf(a)
-    const bIndex = leagueOrder.indexOf(b)
-    
-    // Both in predefined order
-    if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex
-    // Only a in predefined order
-    if (aIndex !== -1) return -1
-    // Only b in predefined order
-    if (bIndex !== -1) return 1
-    // Neither in predefined order - alphabetical
-    return a.localeCompare(b)
-  })
-
-  // Sort results within each group by breed, then class, then by placement
-  for (const groupKey of sortedGroups) {
-    grouped[groupKey].sort((a, b) => {
-      const aDns = (a.status === 'dns' || a.status === 'absent') ? 1 : 0
-      const bDns = (b.status === 'dns' || b.status === 'absent') ? 1 : 0
-      if (aDns !== bDns) return aDns - bDns
-      
-      // Sort by breed
-      const breedCompare = (a.dog?.breed || '').localeCompare(b.dog?.breed || '')
-      if (breedCompare !== 0) return breedCompare
-      
-      // Sort by breed_class (which is "Порода - Класс")
-      const breedClassCompare = (a.breed_class || '').localeCompare(b.breed_class || '')
-      if (breedClassCompare !== 0) return breedClassCompare
-      
-      return (a.placement || 999) - (b.placement || 999)
-    })
-  }
-
-  return { grouped, sortedGroups }
+  return groupResultsByBreedClass(results)
 }
 
 export function parseRawScores(rawScoresJson: string | RawScores | null | undefined): RawScores | null {
