@@ -8,8 +8,8 @@
     <meta name="theme-color" content="#F5F1E8" />
     <title data-rh="true">Страница не найдена | Coursing Stats</title>
   <meta name="description" content="Страница не найдена." data-rh="true" />
-  <meta name="keywords" content="курсинг, бега борзых, статистика курсинга, рейтинг собак, рекорды Донино, выставки, РКФ" data-rh="true" />
-    <meta name="author" content="Coursing Stats" />
+  <meta name="keywords" content="курсинг статс, coursing stats, курсинг, бега борзых, статистика курсинга, рейтинг собак, рекорды Донино, выставки, РКФ" data-rh="true" />
+    <meta name="author" content="Курсинг Статс (Coursing Stats)" />
 
     <!-- Google Analytics (Delayed execution for Core Web Vitals / LCP / FCP) -->
     <script>
@@ -72,6 +72,40 @@
     <link rel="preload" as="image" href="/assets/hero/background-mobile-480.webp" imagesrcset="/assets/hero/background-mobile-480.webp 480w, /assets/hero/background-mobile.webp 820w" imagesizes="(max-width: 480px) 480px, 768px" type="image/webp" media="(max-width: 768px)" fetchpriority="high">
     <link rel="preload" as="image" href="/assets/hero/background.webp" type="image/webp" media="(min-width: 769px)" fetchpriority="high">
 
+    <!-- Critical baseline styles to eliminate FOUC and ensure instant FCP -->
+    <style>
+      html, body {
+        background-color: #faf8f4;
+        color: #252320;
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+      #root > main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 16px;
+        color: #81796e;
+      }
+      #root > main h1 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #252320;
+        margin: 0 0 0.5rem 0;
+      }
+      #root > main p {
+        font-size: 0.875rem;
+        color: #81796e;
+        margin: 0 0 1rem 0;
+      }
+      #root > main nav a {
+        color: #9e711d;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 600;
+      }
+    </style>
+
     <script>
       // 1. Очищаем параметр ?_csrb из адресной строки после перезагрузки с cache-bust (для чистого URL)
       (function () {
@@ -111,18 +145,15 @@
         }, true);
       })();
     </script>
-    <script type="module" crossorigin src="/assets/index-1793030067661-DwOesLoM.js"></script>
-    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-1793030067661-hePW80VL.js">
-    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-1793030067661-DhKygbVt.js">
-    <link rel="modulepreload" crossorigin href="/assets/react-dom-1793030067661-D8t-o8L1.js">
-    <link rel="modulepreload" crossorigin href="/assets/preload-helper-1793030067661-Czpn1I53.js">
-    <link rel="modulepreload" crossorigin href="/assets/QueryClientProvider-1793030067661-3x3Ut6Gg.js">
-    <link rel="modulepreload" crossorigin href="/assets/createLucideIcon-1793030067661-CSuFAgGt.js">
-    <link rel="modulepreload" crossorigin href="/assets/cdn-packs-1793030067661-ClBWvxeU.js">
-    <link rel="modulepreload" crossorigin href="/assets/dogs-1793030067661-3IKxODkt.js">
-    <link rel="modulepreload" crossorigin href="/assets/show-award-ranking-1793030067661-DUD7ZVzy.js">
-    <link rel="modulepreload" crossorigin href="/assets/staticData-1793030067661-CYm_VuQm.js">
-    <link rel="stylesheet" crossorigin href="/assets/index-tDN_2r2F.css">
+    <script type="module" crossorigin src="/assets/index-1793355700871-GXUNk-Yx.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/rolldown-runtime-1793355700871-hePW80VL.js">
+    <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-1793355700871-Bqash158.js">
+    <link rel="modulepreload" crossorigin href="/assets/preload-helper-1793355700871-Czpn1I53.js">
+    <link rel="modulepreload" crossorigin href="/assets/QueryClientProvider-1793355700871-DIBYAQuj.js">
+    <link rel="modulepreload" crossorigin href="/assets/createLucideIcon-1793355700871-BuYtfFVQ.js">
+    <link rel="modulepreload" crossorigin href="/assets/show-award-ranking-1793355700871-Cff9ExVw.js">
+    <link rel="modulepreload" crossorigin href="/assets/staticData-1793355700871-C10UoNrW.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-ByZ-20z0.css">
     <meta name="robots" content="noindex, nofollow" />
 </head>
   <body>

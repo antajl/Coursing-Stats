@@ -12,6 +12,8 @@ interface SEOProps {
 
 /** Короткий дефолт под RU-нишу; на страницах — точечные keywords. */
 const DEFAULT_KEYWORDS = [
+  'курсинг статс',
+  'coursing stats',
   'курсинг',
   'бега борзых',
   'статистика курсинга',
@@ -20,7 +22,6 @@ const DEFAULT_KEYWORDS = [
   'выставки собак',
   'РКФ',
   'борзые',
-  'Coursing Stats',
 ].join(', ')
 
 function normalizeCanonicalUrl(url?: string): string | undefined {

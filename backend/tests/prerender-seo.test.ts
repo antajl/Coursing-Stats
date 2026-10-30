@@ -368,8 +368,10 @@ describe('prerender-seo helpers', () => {
     expect(Array.isArray(graph)).toBe(true)
     const website = graph.find((item) => item['@type'] === 'WebSite')
     expect(website).toBeDefined()
-    expect(website.name).toBe('Coursing Stats')
+    expect(website.name).toContain('Coursing Stats')
+    expect(website.name).toContain('Курсинг Статс')
     expect(website.alternateName).toContain('ProCoursing')
+    expect(website.alternateName).toContain('Курсинг Статс')
 
     const org = graph.find((item) => item['@type'] === 'Organization')
     expect(org).toBeDefined()

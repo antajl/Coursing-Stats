@@ -39,6 +39,7 @@ export function collectSitemapUrls(sources: SitemapUrlSources): SitemapUrl[] {
 
   for (const b of CORE_BREED_HUBS) {
     out.push({ loc: `/breeds/${b.slug}/`, changefreq: 'weekly', priority: '0.85' })
+    out.push({ loc: `/rating/${b.slug}/`, changefreq: 'weekly', priority: '0.85' })
   }
 
   for (const id of sources.eventIds) {
@@ -232,6 +233,11 @@ export function buildSitemap(db: Database.Database) {
     ...STATIC_PAGES,
     ...CORE_BREED_HUBS.map((b) => ({
       loc: `/breeds/${b.slug}/`,
+      changefreq: 'weekly',
+      priority: '0.85',
+    })),
+    ...CORE_BREED_HUBS.map((b) => ({
+      loc: `/rating/${b.slug}/`,
       changefreq: 'weekly',
       priority: '0.85',
     })),

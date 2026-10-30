@@ -37,25 +37,25 @@ export type BreadcrumbItem = { name: string; url: string }
 export const HUB_PAGES: HubMeta[] = [
   {
     path: '/',
-    title: 'Coursing Stats — Рейтинг и статистика собак: курсинг, бега, выставки РКФ',
+    title: 'Курсинг Статс (Coursing Stats) — Рейтинг и статистика собак: курсинг, бега, выставки РКФ',
     description:
-      'Статистика и рейтинги собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ. Карьера собаки, награды, медали и рейтинг с 2015 года.',
-    h1: 'Рейтинг и статистика собак: курсинг, бега, выставки',
+      'Курсинг Статс (Coursing Stats) — статистика и рейтинги собак в России: курсинг и бега борзых, рекорды Донино, выставки РКФ. Карьера собаки, награды, медали и рейтинг с 2015 года.',
+    h1: 'Курсинг Статс: рейтинг и статистика собак в курсинге, бегах и выставках',
     paragraph:
-      'Статистика выступлений, награды, медали и рейтинги собак: курсинг и бега борзых, выставки РКФ и замеры скорости в Донино с 2015 года.',
+      'Курсинг Статс (Coursing Stats) — статистика выступлений, награды, медали и рейтинги собак: курсинг и бега борзых, выставки РКФ и замеры скорости в Донино с 2015 года.',
   },
   {
     path: '/competitions',
-    title: 'Календарь и результаты соревнований по курсингу 2026 — Расписание и рейтинг РКФ | Coursing Stats',
+    title: 'Календарь и результаты соревнований по курсингу 2026 — Расписание и рейтинг РКФ | Курсинг Статс (Coursing Stats)',
     description:
-      'Расписание и календарь соревнований по курсингу и бегам борзых 2026 года: даты состязаний РКФ, регламенты, официальные протоколы и результаты забегов. Медальный зачёт, единый рейтинг, очки CS и рекорды пород на Coursing Stats.',
+      'Расписание и календарь соревнований по курсингу и бегам борзых 2026 года: даты состязаний РКФ, регламенты, официальные протоколы и результаты забегов. Медальный зачёт, единый рейтинг, очки CS и рекорды пород на Курсинг Статс (Coursing Stats).',
     h1: 'Расписание соревнований, результаты и рейтинг собак в курсинге',
     paragraph:
       'Календарь состязаний по курсингу и бегам борзых на 2026 год, официальные протоколы РКФ с 2015 года, турнирная таблица, медальный зачёт, очки CS и результаты забегов.',
   },
   {
     path: '/shows',
-    title: 'Рейтинг выставочных собак РКФ 2026 — Топ чемпионов и судьи | Coursing Stats',
+    title: 'Рейтинг выставочных собак РКФ 2026 — Топ чемпионов и судьи | Курсинг Статс (Coursing Stats)',
     description:
       'Рейтинг собак по выставкам РКФ 2026 года: награды дня (CAC, BOB, ЧРКФ и др.), профили чемпионов и статистика судей. Ссылки на оригиналы rkf.online.',
     h1: 'Рейтинг выставочных собак РКФ 2026',
@@ -64,7 +64,7 @@ export const HUB_PAGES: HubMeta[] = [
   },
   {
     path: '/speed-records',
-    title: 'Курсинг Донино — результаты забегов, замеры скорости (км/ч) и рекорды борзых | Coursing Stats',
+    title: 'Курсинг Донино — результаты забегов, замеры скорости (км/ч) и рекорды борзых | Курсинг Статс (Coursing Stats)',
     description:
       'База бегового клуба «Курсинг в Донино»: результаты забегов, радарные замеры скорости (км/ч) и таблица рекордов борзых на 350 м (сек). Салюки, уиппеты, РПБ, басенджи на полигоне в Раменском районе.',
     h1: 'Курсинг Донино: замеры скорости радаром и рекорды забегов на 350 м',
@@ -73,7 +73,7 @@ export const HUB_PAGES: HubMeta[] = [
   },
   {
     path: '/guide',
-    title: 'Справочник — Скорость пород борзых, рекорды, титулы и протоколы | Coursing Stats',
+    title: 'Справочник — Скорость пород борзых, рекорды, титулы и протоколы | Курсинг Статс (Coursing Stats)',
     description:
       'Справочник Coursing Stats: скорость бега и рекорды пород борзых (салюки, уиппет, РПБ, левретка в км/ч), титулы курсинга и выставок РКФ, чтение протоколов забегов.',
     h1: 'Справочник: рекорды скорости пород, титулы и правила курсинга',
@@ -82,7 +82,7 @@ export const HUB_PAGES: HubMeta[] = [
   },
   {
     path: '/about',
-    title: 'О проекте Coursing Stats | Coursing Stats',
+    title: 'О проекте Курсинг Статс | Coursing Stats',
     description:
       'Информация о проекте Coursing Stats: стек технологий, архитектура, реализованные улучшения, исходный код.',
     h1: '',
@@ -413,8 +413,8 @@ export function homepageJsonLd(): Record<string, unknown> {
         '@type': 'WebSite',
         '@id': `${SITE_ORIGIN}/#website`,
         url: `${SITE_ORIGIN}/`,
-        name: 'Coursing Stats',
-        alternateName: ['Курсинг Статс', 'ProCoursing', 'CoursingStats'],
+        name: 'Курсинг Статс (Coursing Stats)',
+        alternateName: ['Курсинг Статс', 'Coursing Stats', 'КурсингСтатс', 'CoursingStats', 'coursing-stats.ru', 'ProCoursing'],
         description:
           'Единая всероссийская база и статистика курсинга, бегов борзых и выставок собак РКФ с 2015 года.',
         inLanguage: 'ru-RU',
@@ -422,7 +422,8 @@ export function homepageJsonLd(): Record<string, unknown> {
       {
         '@type': 'Organization',
         '@id': `${SITE_ORIGIN}/#organization`,
-        name: 'Coursing Stats',
+        name: 'Курсинг Статс (Coursing Stats)',
+        alternateName: ['Курсинг Статс', 'Coursing Stats', 'CoursingStats', 'coursing-stats.ru'],
         url: `${SITE_ORIGIN}/`,
         logo: `${SITE_ORIGIN}/og-image.png`,
         sameAs: ['https://t.me/coursing_stats_bot'],
@@ -880,12 +881,12 @@ export function dogMetaFromProfile(profile: {
   const medalSummary = gold > 0 ? `${gold} побед (золото)` : medals.length > 0 ? medals.join(', ') : ''
 
   const title = breed
-    ? `${displayName} (${breed}) — профиль собаки, результаты забегов и медали | Coursing Stats`
-    : `${displayName} — профиль собаки, результаты забегов и медали | Coursing Stats`
+    ? `${displayName} (${breed}) — профиль собаки, результаты забегов и медали | Курсинг Статс (Coursing Stats)`
+    : `${displayName} — профиль собаки, результаты забегов и медали | Курсинг Статс (Coursing Stats)`
   const description =
     facts.length > 0
-      ? `${displayName}${breed ? ` (${breed})` : ''}: ${medalSummary ? `${medalSummary}, ` : ''}${facts.join('; ')}. Профиль спортивной карьеры собаки, результаты забегов и оценки судей на Coursing Stats.`
-      : `Профиль спортивной карьеры и результаты собаки ${displayName}${breed ? ` (${breed})` : ''}: курсинг, бега борзых, медали и рекорды на Coursing Stats.`
+      ? `${displayName}${breed ? ` (${breed})` : ''}: ${medalSummary ? `${medalSummary}, ` : ''}${facts.join('; ')}. Профиль спортивной карьеры собаки, результаты забегов и оценки судей на Курсинг Статс (Coursing Stats).`
+      : `Профиль спортивной карьеры и результаты собаки ${displayName}${breed ? ` (${breed})` : ''}: курсинг, бега борзых, медали и рекорды на Курсинг Статс (Coursing Stats).`
 
   const breadcrumbs = [
     { name: 'Главная', url: '/' },
@@ -972,11 +973,11 @@ export function dogMetaFromShowRanking(entry: {
   }
 
   const title = breed
-    ? `${displayName} (${breed}) — выставочная карьера и награды РКФ | Coursing Stats`
-    : `${displayName} — выставочная карьера и награды РКФ | Coursing Stats`
+    ? `${displayName} (${breed}) — выставочная карьера и награды РКФ | Курсинг Статс (Coursing Stats)`
+    : `${displayName} — выставочная карьера и награды РКФ | Курсинг Статс (Coursing Stats)`
   const description =
     facts.length > 0
-      ? `${displayName}${breed ? ` (${breed})` : ''}: ${facts.join('; ')}. Профиль выставочной карьеры, оценки экспертов и награды РКФ на Coursing Stats.`
+      ? `${displayName}${breed ? ` (${breed})` : ''}: ${facts.join('; ')}. Профиль выставочной карьеры, оценки экспертов и награды РКФ на Курсинг Статс (Coursing Stats).`
       : `Выставочный профиль и награды собаки ${displayName}${breed ? ` (${breed})` : ''} на выставках РКФ на Coursing Stats.`
 
   const breadcrumbs = [
@@ -1534,8 +1535,8 @@ export interface BreedHubMetaInput {
 }
 
 export function breedHubMeta(input: BreedHubMetaInput): SimpleEntityMeta {
-  const title = `${input.nameRu} (${input.nameLat}) — рейтинг в курсинге, результаты забегов и рекорды скорости | Coursing Stats`
-  const description = `Всероссийский рейтинг породы ${input.nameRu} (${input.nameLat}, ${input.fci}) в курсинге и бегах борзых: топ сезона, рекорды скорости в Донино (км/ч), протоколы соревнований РКФ и результаты забегов на Coursing Stats.`
+  const title = `${input.nameRu} (${input.nameLat}) — рейтинг в курсинге, результаты забегов и рекорды скорости | Курсинг Статс (Coursing Stats)`
+  const description = `Всероссийский рейтинг породы ${input.nameRu} (${input.nameLat}, ${input.fci}) в курсинге и бегах борзых: топ сезона, рекорды скорости в Донино (км/ч), протоколы соревнований РКФ и результаты забегов на Курсинг Статс (Coursing Stats).`
   const url = `${SITE_ORIGIN}/breeds/${input.slug}/`
 
   const breadcrumbs = [

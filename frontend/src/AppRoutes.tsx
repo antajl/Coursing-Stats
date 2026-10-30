@@ -116,6 +116,8 @@ export default function AppRoutes() {
         <Route path="/speed-records" element={<SpeedRecords />} />
         <Route path="/breeds/:slug" element={<BreedHub />} />
         <Route path="/breed/:slug" element={<BreedHub />} />
+        <Route path="/rating/:slug" element={<BreedHub />} />
+        <Route path="/ratings/:slug" element={<BreedHub />} />
         <Route path="/guide" element={<Guide />} />
         <Route path="/about" element={<About />} />
         <Route path="/donino-dog/:name/:breed" element={<DoninoDogProfile />} />

@@ -766,6 +766,7 @@ function prerenderBreedHubs(spaHtml: string): number {
 
     writeHtml(path.join(DIST, 'breeds', b.slug, 'index.html'), html)
     writeHtml(path.join(DIST, 'breed', b.slug, 'index.html'), html)
+    writeHtml(path.join(DIST, 'rating', b.slug, 'index.html'), html)
     written++
   }
   return written
